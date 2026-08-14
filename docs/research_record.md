@@ -426,7 +426,7 @@ $$\sqrt{\varphi} = \frac{1}{C_{2,3}} = \frac{1}{C_{3,2}}$$
 **完整證明鏈：**
 
 ```
-Fibonacci Anyon F-matrix: F[0,1] = 1/√φ
+Fibonacci Anyon F-matrix: $F^{\tau\tau\tau}_{\tau;\tau,1} = 1/\sqrt{\varphi}$
     ↓
 Quantum Group U_q(sl₂):  √[2]_q = √φ  (q = e^{iπ/5})
     ↓

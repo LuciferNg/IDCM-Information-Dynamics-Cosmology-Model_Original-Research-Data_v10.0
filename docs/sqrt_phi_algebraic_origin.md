@@ -23,7 +23,7 @@
 $$F = \begin{pmatrix} 1/\varphi & 1/\sqrt{\varphi} \\ 1/\sqrt{\varphi} & -1/\varphi \end{pmatrix}$$
 
 **$\sqrt{\varphi}$ 直接出現喺 F-matrix 嘅非對角元素中！**
-$$F[0,1] = F[1,0] = 1/\sqrt{\varphi} = 0.786151$$
+$$F^{\tau\tau\tau}_{\tau;\tau,1} = F^{\tau\tau\tau}_{\tau;1,\tau} = 1/\sqrt{\varphi} = 0.786151$$
 
 ---
 
@@ -77,7 +77,7 @@ $C^3 / Z_5$，其中 $Z_5$ 作用係 $(x,y,z) \rightarrow (\omega x, \omega^2 y,
 
 ## 五、結論
 
-$$\sqrt{\varphi} = \text{波函數重整化} = \sqrt{[2]_q} \text{ 當 } q = e^{i\pi/5} = \frac{1}{F[0,1]} \text{ 喺 Fibonacci Anyon 中}$$
+$$ \sqrt{\varphi} = \text{波函數重整化} = \sqrt{[2]_q} \text{ 當 } q = e^{i\pi/5} = \frac{1}{F^{\tau\tau\tau}_{\tau;\tau,1}} \text{ 喺 Fibonacci Anyon 中}$$
 
 **即係：Up 夸克嘅 Z-factor $\sqrt{\varphi}$ 係 CY₃ 緊緻化嘅代數硬編碼，**
 **等同於 Quantum Group $U_q(sl_2)$ 喺第 5 次單位根時嘅量子維度平方根。**
