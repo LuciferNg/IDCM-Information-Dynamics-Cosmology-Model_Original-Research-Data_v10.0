@@ -197,3 +197,23 @@ else:
   3. gauge 跑動近似太粗糙
   4. 需要 MSSM 而非 SM RGE
 """)
+
+# 儲存結果
+with open("data/yukawa_rge_results.txt", "w") as f:
+    f.write("IDCM v10.0 — 1-loop Yukawa RGE 結果\n")
+    f.write("=" * 60 + "\n")
+    f.write(f"高能邊界 μ₀ = {mu_0/1000:.1e} GeV\n")
+    f.write(f"低能終點 μ_f = {mu_f/1000:.1f} GeV\n")
+    f.write(f"\nUp 高能 Yukawa: Y(μ₀) = {Y_up_high:.6e}\n")
+    f.write(f"Up 低能 Yukawa: Y(M_Z) = {Y_up_low:.6e}\n")
+    f.write(f"Up Z-factor = {Z_up:.6f}\n")
+    f.write(f"√φ = {target:.6f}\n")
+    f.write(f"diff = {abs(Z_up - target):.6f}\n\n")
+    for name, mass in masses_phys.items():
+        Y_high = mass / v_weak
+        Y_low = run_single_yukawa(Y_high, mu_0, mu_f, n_steps=2000)
+        Z = Y_low / Y_high
+        k = math.log(Z) / math.log(φ) if Z > 0 else 0
+        f.write(f"{name}: Z={Z:.6f}, k={k:.4f}\n")
+
+print("\n已儲存 data/yukawa_rge_results.txt ✅")
