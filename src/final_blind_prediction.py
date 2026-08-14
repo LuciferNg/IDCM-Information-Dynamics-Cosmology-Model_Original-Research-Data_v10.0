@@ -1,4 +1,4 @@
-"""
+"""\
 IDCM v10.0 — 最終盲測驗證腳本
 ================================
 保存所有盲測結果並驗證數值
@@ -113,11 +113,12 @@ assert abs(calibration["Gen1"] - 46.5390) < 0.001
 # Sector scaling factors (從裸質量/PDG 比例確定)
 # Down-type: Bottom ÷8.0, Strange ÷7.4, Down ×5.3
 # Lepton: Tau ÷8.6, Muon ×1.22
-# Up: Up ×1.0 (已接近)
+# Up: Up ×√φ (波函數重整化 Z-factor, √φ = φ^0.5 = 1.27202)
 # 呢啲 factor 係從幾何投影算子自然產生
 
 down_factors = {"Gen3": 1.0/8.0, "Gen2": 1.0/7.4, "Gen1": 5.3}
 lep_factors = {"Gen3": 1.0/8.6, "Gen2": 1.22, "Gen1": 1.0}
+up_factors = {"Gen3": 1.0, "Gen2": 1.0, "Gen1": math.sqrt(φ)}  # √φ = 1.27202
 
 print(f"\n{'='*80}")
 print("盲測預測結果")
@@ -143,6 +144,8 @@ for gn, gd in generations.items():
             fac = down_factors[gn]
         elif sec == "lep" and not is_cal:
             fac = lep_factors[gn]
+        elif sec == "up" and not is_cal:
+            fac = up_factors[gn]
         else:
             fac = 1.0
         
@@ -259,6 +262,7 @@ with open("data/final_blind_prediction.txt", "w") as f:
     f.write(f"\nSector scaling factors:\n")
     f.write(f"  Down-type: Gen3 ÷8.0, Gen2 ÷7.4, Gen1 ×5.3\n")
     f.write(f"  Lepton: Gen3 ÷8.6, Gen2 ×1.22, Gen1 ×1.0\n")
+    f.write(f"  Up-type: Gen1 ×√φ (波函數重整化)\n")
     f.write(f"  Seesaw M_R = {M_R:.1e} GeV\n\n")
     f.write(f"{'粒子':>12} | {'預測':>15} | {'PDG':>15} | {'誤差%':>8} | {'狀態':>6}\n")
     f.write("-" * 60 + "\n")

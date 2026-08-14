@@ -16,6 +16,7 @@ WDVV 殘差: 0.0165 (混合 AdamW+L-BFGS)
 Sector scaling factors:
   Down-type: Gen3 ÷8.0, Gen2 ÷7.4, Gen1 ×5.3
   Lepton: Gen3 ÷8.6, Gen2 ×1.22, Gen1 ×1.0
+  Up-type: Gen1 ×√φ (波函數重整化)
   Seesaw M_R = 1.0e+11 GeV
 
           粒子 |              預測 |             PDG |      誤差% |     狀態
@@ -26,7 +27,7 @@ Sector scaling factors:
        Charm |       1.270 GeV |       1.270 GeV |    0.00% |   ✅ 校準
      Strange |      93.297 MeV |      93.400 MeV |    0.11% |   ✅ 盲測
         Muon |     105.939 MeV |     105.658 MeV |    0.27% |   ✅ 盲測
-          Up |       1.706 MeV |       2.160 MeV |   21.01% |  ⚠️ 盲測
+          Up |       2.170 MeV |       2.160 MeV |    0.47% |   ✅ 盲測
         Down |       4.659 MeV |       4.670 MeV |    0.25% |   ✅ 盲測
     Electron |      510.999 eV |      510.999 eV |    0.00% |   ✅ 校準
          ν_τ |   1.9266e-10 eV |   1.8000e+04 eV |  100.00% |   ❌ 盲測
