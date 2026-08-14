@@ -71,16 +71,16 @@ print("─" * 80)
 # 特別係 fusion 矩陣 F 嘅歸一化
 
 # F-matrix (fusion matrix) for Fibonacci anyons
-# Wikipedia notation: F[τ;1,1]^{τ,τ,τ} = φ^{-1}, F[τ;τ,1]^{τ,τ,τ} = φ^{-1/2}
+# Wikipedia notation: F^{τττ}_{τ;1,1} = φ^{-1}, F^{τττ}_{τ;τ,1} = φ^{-1/2}
 # Standard F-matrix form (2×2 acting on fusion space):
-# F = [[F[τ;1,1]^{τ,τ,τ},  F[τ;τ,1]^{τ,τ,τ}],
-#      [F[τ;1,τ]^{τ,τ,τ},  F[τ;τ,τ]^{τ,τ,τ}]]
+# F = [[F^{τττ}_{τ;1,1},  F^{τττ}_{τ;τ,1}],
+#      [F^{τττ}_{τ;1,τ},  F^{τττ}_{τ;τ,τ}]]
 F_τ = np.array([[1/φ, 1/math.sqrt(φ)], [1/math.sqrt(φ), -1/φ]])
 
 print(f"\n  F-matrix (Wikipedia notation):")
-print(f"    F[τ;1,1]^{{τ,τ,τ}} = φ⁻¹ = {1/φ:.6f}")
-print(f"    F[τ;τ,1]^{{τ,τ,τ}} = F[τ;1,τ]^{{τ,τ,τ}} = φ⁻¹/² = {1/math.sqrt(φ):.6f}")
-print(f"    F[τ;τ,τ]^{{τ,τ,τ}} = -φ⁻¹ = {-1/φ:.6f}")
+print(f"    F^{{τττ}}_{{τ;1,1}} = φ⁻¹ = {1/φ:.6f}")
+print(f"    F^{{τττ}}_{{τ;τ,1}} = F^{{τττ}}_{{τ;1,τ}} = φ⁻¹/² = {1/math.sqrt(φ):.6f}")
+print(f"    F^{{τττ}}_{{τ;τ,τ}} = -φ⁻¹ = {-1/φ:.6f}")
 
 # 睇到未？√φ 直接出現喺 F-matrix ！
 print(f"\n  🎯 √φ = {math.sqrt(φ):.6f} 直接出現喺 Fibonacci Anyon 嘅 F-matrix 中！")
