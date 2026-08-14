@@ -116,11 +116,11 @@ U_6 = U_6[:, np.argsort(evals_6)[::-1]]
 up_in_6, down_in_6 = [0, 2, 4], [1, 3, 5]
 up_list, down_list = [], []
 for i in range(6):
-    v = U_6[:, i]
-    if sum(abs(v[j])**2 for j in up_in_6) > sum(abs(v[j])**2 for j in down_in_6):
-        up_list.append(v)
+    vec = U_6[:, i]
+    if sum(abs(vec[j])**2 for j in up_in_6) > sum(abs(vec[j])**2 for j in down_in_6):
+        up_list.append(vec)
     else:
-        down_list.append(v)
+        down_list.append(vec)
 
 U_6_up = np.array(up_list[:3]).T if len(up_list) >= 3 else U_6[:, :3]
 U_6_down = np.array(down_list[:3]).T if len(down_list) >= 3 else U_6[:, 3:6]

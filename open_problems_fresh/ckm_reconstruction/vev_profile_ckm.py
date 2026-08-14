@@ -289,13 +289,13 @@ down_weight = np.array([0, 1, 0, 1, 0, 1])  # indices 1,4,7 in doublet_idx
 
 up_vecs, down_vecs = [], []
 for i in range(6):
-    v = U_6[:, i]
+    vec = U_6[:, i]
     w_up = np.sum(np.abs(v)**2 * up_weight)
     w_down = np.sum(np.abs(v)**2 * down_weight)
     if w_up > w_down:
-        up_vecs.append(v)
+        up_vecs.append(vec)
     else:
-        down_vecs.append(v)
+        down_vecs.append(vec)
 
 # 確保 3+3
 U_6_up = np.array(up_vecs[:3]).T if len(up_vecs) >= 3 else U_6[:, :3]

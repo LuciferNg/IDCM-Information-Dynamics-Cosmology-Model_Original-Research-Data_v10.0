@@ -359,9 +359,9 @@ for i in range(6):
 # 對每個 eigenvector 計算 up/down 成分
 print(f"\n  Eigenvector up/down 成分:")
 for i in range(6):
-    v = U_6[:, i]
-    w_up = sum(abs(v[j])**2 * up_weight[j] for j in range(6))
-    w_down = sum(abs(v[j])**2 * down_weight[j] for j in range(6))
+    vec = U_6[:, i]
+    w_up = sum(abs(vec[j])**2 * up_weight[j] for j in range(6))
+    w_down = sum(abs(vec[j])**2 * down_weight[j] for j in range(6))
     print(f"    λ_{i+1}: up={w_up:.4f}, down={w_down:.4f}")
 
 # 用 weight 分離 up/down subspace
@@ -371,12 +371,12 @@ for i in range(6):
 up_vecs = []
 down_vecs = []
 for i in range(6):
-    v = U_6[:, i]
+    vec = U_6[:, i]
     w_up = sum(abs(v[j])**2 * up_weight[j] for j in range(6))
     if w_up > 0.5:
-        up_vecs.append(v)
+        up_vecs.append(vec)
     else:
-        down_vecs.append(v)
+        down_vecs.append(vec)
 
 # 如果多過或少過 3 個, 調整
 U_6_up = np.array(up_vecs[:3]).T if len(up_vecs) >= 3 else U_6[:, :3]
@@ -471,7 +471,7 @@ U_6p = U_6p[:, idx_6p]
 up_vecs_p = []
 down_vecs_p = []
 for i in range(6):
-    v = U_6p[:, i]
+    vec = U_6p[:, i]
     w_up = sum(abs(v[j])**2 * up_weight[j] for j in range(6))
     if w_up > 0.5:
         up_vecs_p.append(v)

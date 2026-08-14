@@ -164,13 +164,13 @@ for a in range(3):
 # Classify each eigenvector
 up_list, down_list = [], []
 for i in range(6):
-    v = U_6[:, i]
+    vec = U_6[:, i]
     ov_up = sum(abs(np.vdot(U_6_up_ref[:, j], v))**2 for j in range(3))
     ov_down = sum(abs(np.vdot(U_6_down_ref[:, j], v))**2 for j in range(3))
     if ov_up > ov_down:
-        up_list.append(v)
+        up_list.append(vec)
     else:
-        down_list.append(v)
+        down_list.append(vec)
 
 U_6_up = np.array(up_list[:3]).T if len(up_list) >= 3 else U_6[:, :3]
 U_6_down = np.array(down_list[:3]).T if len(down_list) >= 3 else U_6[:, 3:6]
@@ -246,9 +246,9 @@ U_m = U_m[:, idx_m]
 # 用 3×3 基底分類 up/down
 up_list_m, down_list_m = [], []
 for i in range(6):
-    v = U_m[:, i]
-    ov_up = sum(abs(v[up_in_6[j]])**2 for j in range(3))
-    ov_down = sum(abs(v[down_in_6[j]])**2 for j in range(3))
+    vec = U_m[:, i]
+    ov_up = sum(abs(vec[up_in_6[j]])**2 for j in range(3))
+    ov_down = sum(abs(vec[down_in_6[j]])**2 for j in range(3))
     if ov_up > ov_down:
         up_list_m.append(v)
     else:

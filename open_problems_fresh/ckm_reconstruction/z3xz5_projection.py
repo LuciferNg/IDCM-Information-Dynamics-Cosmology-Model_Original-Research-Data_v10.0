@@ -390,7 +390,7 @@ down_labels = [1, 3, 5]  # indices 1,4,7 in doublet_idx
 up_vecs_z5 = []
 down_vecs_z5 = []
 for i in range(6):
-    v = evecs_mix[:, i]
+    vec = evecs_mix[:, i]
     w_up = sum(abs(v[j])**2 for j in up_labels)
     w_down = sum(abs(v[j])**2 for j in down_labels)
     if w_up > w_down:
