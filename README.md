@@ -19,6 +19,8 @@ K_Chain 44 個模式之間的共震點 (beat frequency) 經 CY₃(36,98) 幾何�
 7. **波函數重整化** — √φ 四重代數驗證（Fibonacci + Quantum Group + A₄ OPE + RGE）✅
 8. **Z₃ × Z₅ 對稱性** — SU(2)_L 投影框架 🟡
 9. **CKM 矩陣** — θ₁₂ ≈ 13.58°（PDG 13.04°, 0.54° 誤差）🟡
+10. **CP 破壞** — J_CP = 3.25e-05（PDG 3.08e-05, ratio 1.05）🟡
+11. **中微子** — W-field p6 模式（非 Seesaw）🔴
 
 ## 目錄結構
 
@@ -41,8 +43,12 @@ IDCM-v10.0/
 │   ├── final_blind_prediction.txt   # 盲測結果 (6/8 < 1%)
 │   └── sqrt_phi_algebraic_origin.txt  # √φ 代數驗證
 └── docs/
-    ├── research_record.md       # 完整研究記錄 (12 章)
-    ├── wavefunction_renormalization_deep.md  # 波函數重整化
+    ├── research_record.md           # 完整研究記錄 (13 章)
+    ├── ckm_derivation.md            # CKM 夸克混合矩陣推導
+    ├── jcp_derivation.md            # CP 破壞 Jarlskog 不變量
+    ├── neutrino_p6_mode.md          # 中微子：W-field p6 模式
+    ├── wavefunction_renormalization_deep.md  # 波函數重整化深度探索
+    ├── up_quark_correction.md       # Up 夸克 √φ 修正
     └── sqrt_phi_algebraic_origin.md  # √φ 代數起源
 ```
 
@@ -51,10 +57,10 @@ IDCM-v10.0/
 - **盲測預測：** 6/8 粒子 < 1% 誤差（Up 0.47% 經 √φ 修正）✅
 - **波函數重整化：** √φ = Fibonacci F-symbol = Quantum Group 量子維度 = A₄ OPE 係數倒數（四重驗證）✅
 - **d_tensor 正定性：** 7.1% → 0.00%（正定錐投影）✅
-- **Z₃ × Z₅ 對稱性：** SU(2)_L 投影框架已構建 🟡
-- **CKM 夸克混合：** θ₁₂ ≈ 13.58°（PDG 13.04°, 0.54° 誤差）🟡
-- **中微子：** 100% 錯誤（Seesaw M_R 未推導）🔴
-- **CP 破壞：** J_CP = 0（需要 orbifold twist 相位）🔴
+- **Z₃ × Z₅ 對稱性：** SU(2)_L 投影框架已構建，tan(β)=27.36 從 d_tensor 推導 🟡
+- **CKM 夸克混合：** θ₁₂=13.58°（PDG 13.04°, 0.54° 誤差）🟡
+- **CP 破壞：** J_CP=3.25e-05（PDG 3.08e-05, ratio 1.05）🟡
+- **中微子：** W-field p6 模式（非 Seesaw）🔴
 
 ## 盲測結果摘要
 
@@ -74,7 +80,8 @@ IDCM-v10.0/
 
 ## 未解決問題
 
-- CKM θ₂₃, θ₁₃：需要 SU(2)_L 投影算符精確化
-- CP 破壞：J_CP = 0（需要 orbifold twist 相位）
-- 中微子質量：Seesaw 機制需要 M_R 推導
+- CKM θ₂₃（3.97° vs PDG 2.38°）：需要更精確嘅 VEV profile
+- CKM θ₁₃：需要 12D 完整結構推導
+- CP 相位 δ：144° 需要 twisted sector 精確計算
+- 中微子質量：p6 模式嘅 eigenvalue 同 V_cycle 需推導
 - CY₃(36,98) 真實相交數未知

@@ -180,7 +180,10 @@ IDCM-v10.0/
 │   ├── positive_cone_projection.txt
 │   └── yukawa_rge_results.txt
 ├── docs/
-│   ├── research_record.md       # 完整研究記錄
+│   ├── ckm_derivation.md         # CKM 夸克混合矩陣推導
+│   ├── jcp_derivation.md         # CP 破壞 Jarlskog 不變量
+│   ├── neutrino_p6_mode.md       # 中微子：W-field p6 模式
+│   └── research_record.md        # 主研究記錄（12 章）
 │   ├── research_direction.md    # 方向調整記錄
 │   ├── up_quark_correction.md   # Up 修正文檔
 │   └── wavefunction_renormalization_deep.md  # 波函數重整化深度探索
@@ -560,7 +563,38 @@ $$\theta_{12}(PDG) = 13.04^\circ, \quad \text{誤差 } 0.91\%$$
 3. **CP 破壞** — J_CP = 0（需要 orbifold twist 相位）
 4. **Higgs VEV profile** — 決定 cross-sector 混合強度嘅精確權重
 
-### 12.7 檔案
+### 12.6 文檔
+
+CKM 完整推導記錄於 `docs/ckm_derivation.md`。
+J_CP 推導記錄於 `docs/jcp_derivation.md`。
+
+---
+
+## 十三、中微子：W-field p6 模式
+
+### 13.1 背景
+
+中微子質量唔係來自 Seesaw 機制，而係直接來自 K_Chain 嘅 W-field harmonic 結構。
+**中微子 = W-field 嘅 p6 模式**（n=6 諧波）。
+
+### 13.2 K_Chain 諧波對應
+
+| 粒子 | n | γ_n | 說明 |
+|:----|:-:|:---:|:-----|
+| Top | 1 | 0.0051 | 最重 |
+| Bottom | 2 | 0.0203 | 第二代 |
+| Electron | 9 | 0.3989 | 最輕帶電 |
+| **ν** | **6** | **0.1807** | **中微子** |
+
+### 13.3 質量估算
+
+$$m_\nu \approx \lambda_\nu \times M_{Pl} \times \exp(-V_{cycle})$$
+
+中微子 eigenvalue 同 V_cycle 嘅精確值仍需推導。
+
+### 13.4 文檔
+
+中微子推導記錄於 `docs/neutrino_p6_mode.md`。
 
 | 文件 | 說明 |
 |:----|:-----|
