@@ -9,62 +9,47 @@ Gemini 指出嘅「密集度陷阱」完全正確：
 - 任何數字都可以 match 到 0.001%
 - 呢個係**數學必然，唔係物理正確**
 
-### ✅ 三大新方向
+### ✅ 實際完成路線
 
-#### 1. 選擇律 (Selection Rules) — 從拓撲出發
+1. **選擇律 + 算子化** — 自動排除 91.7% 嘅 beat
+2. **Z₃ Orbifold 投影** — 36→12 維，幽靈態消除
+3. **WDVV 方程求解** — 混合優化 (AdamW+L-BFGS)，11 正 + 1 零
+4. **盲測預測** — 5/8 < 1% 誤差
+5. **自洽投影矩陣** — P₃×₁₂ 構建（CKM 未吻合）
+6. **質量標度校準** — λ=51.56 → 173 GeV
 
-K_Chain 嘅真實對稱性：
-- **Z₂ 對偶**: γ_n + γ_{44-n} = 4 → 對應 charge conjugation
-- **平移對稱**: 44-site 環 → 對應 momentum conservation
-- **時間反演**: 波動方程 time-reversal symmetric → 對應 detailed balance
+### 未解決問題
 
-但真正嘅選擇律來自 CY₃(36,98) 投影：
-- 36 Kähler moduli → U(1)ⁿ 規範群
-- 98 complex structure moduli → 形狀 twisting
-- 只有特定 Hodge cycle 嘅 beat 先投影到 4D
-
-#### 2. 幾何指數壓抑 — 解釋質量層級
-
-質量跨度 m_e/m_t ~ 10⁻⁶ 需要指數壓抑：
-```
-m = M_Pl × exp(-V_cycle) × f(beat)
-```
-
-- V_cycle = CY₃ cycle 體積 (Planck units)
-- exp(-V_cycle) 提供 10⁻⁶ 到 10⁻²² 嘅壓抑
-- f(beat) = K_Chain beat ratio 提供代間精細結構
-
-#### 3. 盲測預測 — 最終驗證
-
-用 IDCM 框架預測一個未被精準測量嘅物理量：
-- CKM 矩陣某個相角
-- 中微子質量平方差 ratio
-- PMNS 矩陣元素
+- CKM 角：三種方法均未吻合 PDG
+- CP 破壞：J_CP=0，未推導
+- 中微子質量：Seesaw 參數 M_R 無推導
+- d_{ijk} 初始值：φ^{-γ/3} 係假設，非拓撲推導
 
 ### 工作目錄結構
 
 ```
 IDCM-v10.0/
-├── README.md              # 項目說明
+├── README.md
 ├── src/
-│   ├── kchain_wave_params.py    # 44 模式波參數
-│   ├── beat_frequencies.py      # Beat 分析 (已標記為密集度陷阱)
-│   ├── selection_rules.py       # 選擇律 (初步)
-│   ├── geometric_suppression.py # 指數壓抑模型 (初步)
-│   └── exhaustive_match.py      # 窮舉法 (已棄用)
+│   ├── kchain_wave_params.py        # 44 模式波參數
+│   ├── beat_frequencies.py          # 🚫 凍結（密集度陷阱）
+│   ├── projection_operator.py       # 134×946 投影算子
+│   ├── orbifold_projection.py       # Z₃ orbifold
+│   ├── selection_rules.py           # 選擇律概念
+│   ├── derive_dijk.py               # 三重約束推導
+│   ├── derive_dijk_wdvv_solver.py   # 36D WDVV
+│   ├── hybrid_wdvv_solver.py        # 混合優化
+│   ├── final_fine_tune.py           # 最後微雕
+│   ├── final_blind_prediction.py    # 盲測驗證
+│   ├── self_consistent_projection.py # 自洽投影矩陣
+│   └── ckm_computation.py           # CKM 計算
 ├── data/
-│   ├── exhaustive_match_results.txt
-│   └── structural_matches.txt
+│   ├── eigenvalues_final.npy        # 最終本徵值
+│   ├── d_tensor_final.npy           # 最終 d_{ijk}
+│   ├── final_blind_prediction.txt   # 盲測結果
+│   └── ckm_*.txt                    # CKM 結果（皆未吻合 PDG）
 ├── docs/
-│   └── (日後推導文檔)
-└── notebooks/
-    └── (日後分析)
+│   ├── research_record.md           # 完整研究記錄（已更新）
+│   └── research_direction.md        # 本文件
+└── README.md                        # 已更新
 ```
-
-### 下一步行動
-
-1. [ ] 凍結所有 beat search 腳本
-2. [ ] 推導 CY₃(36,98) 嘅真實 cycle volume 分佈
-3. [ ] 從 K_Chain Z₂ + 平移對稱定義量子數
-4. [ ] 建立質量 = M_Pl × exp(-V) × beat 嘅完整模型
-5. [ ] 預測一個未知量做盲測
