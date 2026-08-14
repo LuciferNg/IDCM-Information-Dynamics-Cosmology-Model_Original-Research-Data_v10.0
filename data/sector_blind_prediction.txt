@@ -1,0 +1,21 @@
+IDCM v10.0 — 量子數分區段盲測預測
+
+校準: 3 點 (Top, Charm, Electron)
+盲測: 5 點
+
+         Top: pred=1.7276e+05 MeV, pdg=1.7276e+05 MeV, err=0.00%
+      Bottom: pred=3.3507e+04 MeV, pdg=4.1800e+03 MeV, err=701.60%
+         Tau: pred=1.5340e+04 MeV, pdg=1.7769e+03 MeV, err=763.33%
+       Charm: pred=1.2700e+03 MeV, pdg=1.2700e+03 MeV, err=0.00%
+     Strange: pred=6.9040e+02 MeV, pdg=9.3400e+01 MeV, err=639.18%
+        Muon: pred=8.6835e+01 MeV, pdg=1.0566e+02 MeV, err=17.81%
+          Up: pred=1.7061e+00 MeV, pdg=2.1600e+00 MeV, err=21.01%
+        Down: pred=8.7897e-01 MeV, pdg=4.6700e+00 MeV, err=81.18%
+    Electron: pred=5.1100e-01 MeV, pdg=5.1100e-01 MeV, err=0.00%
+         ν_τ: pred=1.9266e-16 MeV, pdg=1.8000e-02 MeV, err=100.00%
+         ν_μ: pred=1.0416e-16 MeV, pdg=9.0000e-03 MeV, err=100.00%
+
+中微子 (Seesaw M_R = 1.0e+11 GeV):
+  ν_τ: m_ν = 0.000000 eV
+  ν_μ: m_ν = 0.000000 eV
+  Δm²₂₁ = 1.260014e-85 eV²

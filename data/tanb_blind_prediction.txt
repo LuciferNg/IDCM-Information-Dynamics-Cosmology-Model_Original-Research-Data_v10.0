@@ -1,0 +1,21 @@
+IDCM v10.0 — 雙希格斯 tanβ 盲測預測
+
+tanβ = 7.5, sinβ = 0.9912, cosβ = 0.1322
+校準: 3 點, 盲測: 8 點
+
+         Top (Gen3):     up, pred=1.7276e+05 MeV, pdg=1.7276e+05 MeV, err=0.00%
+      Bottom (Gen3):   down, pred=4.4676e+03 MeV, pdg=4.1800e+03 MeV, err=6.88%
+         Tau (Gen3): lepton, pred=2.0453e+03 MeV, pdg=1.7769e+03 MeV, err=15.11%
+       Charm (Gen2):     up, pred=1.2700e+03 MeV, pdg=1.2700e+03 MeV, err=0.00%
+     Strange (Gen2):   down, pred=9.2053e+01 MeV, pdg=9.3400e+01 MeV, err=1.44%
+        Muon (Gen2): lepton, pred=1.1578e+01 MeV, pdg=1.0566e+02 MeV, err=89.04%
+          Up (Gen1):     up, pred=1.2796e+01 MeV, pdg=2.1600e+00 MeV, err=492.39%
+        Down (Gen1):   down, pred=8.7897e-01 MeV, pdg=4.6700e+00 MeV, err=81.18%
+    Electron (Gen1): lepton, pred=5.1100e-01 MeV, pdg=5.1100e-01 MeV, err=0.00%
+         ν_τ (Gen1):    nu1, pred=1.9266e-16 MeV, pdg=1.8000e-02 MeV, err=100.00%
+         ν_μ (Gen1):    nu2, pred=1.0416e-16 MeV, pdg=9.0000e-03 MeV, err=100.00%
+
+中微子:
+  ν_τ: m_ν = 0.000000 eV
+  ν_μ: m_ν = 0.000000 eV
+  Δm²₂₁ = 1.260014e-85 eV²
