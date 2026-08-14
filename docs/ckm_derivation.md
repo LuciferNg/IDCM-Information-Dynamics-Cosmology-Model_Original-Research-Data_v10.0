@@ -30,8 +30,9 @@ GST 關係係 Cabibbo 角嘅最簡單解析近似，但未包含 cross-sector �
 | **H: VEV 3×3** | VEV 加權 3×3 | 12.64° | 44.22° | 3.71° | 0 | 🟡 |
 | **I: 6×6+VEV+Z₅** | 6×6 doublet+VEV+Z₅ | 37.16° | **3.97°** | 0.00° | 1.5e-65 | 🟡 |
 
-**關鍵發現：方法 A 嘅 θ₁₂ = 13.58°（PDG 13.04°，誤差 0.54°）**
-**方法 I 嘅 θ₂₃ = 3.97°（PDG 2.38°，誤差 1.59°）**
+**關鍵發現：**
+- 方法 A 嘅 θ₁₂ = 13.58°（PDG 13.04°，誤差 0.54°）— Cabibbo 角來自 3×3 submatrix
+- 方法 I 嘅 θ₂₃ = 3.97°（PDG 2.38°，誤差 1.59°）— 第二三代混合來自 6×6 doublet+VEV+Z₅
 
 ---
 
@@ -72,23 +73,42 @@ SU(2)_L doublet 嘅 up/down Z₅ charge 差 = 1（來自 Higgs VEV 嘅 Z₅ char
 
 從 d_tensor 嘅 3×3 submatrix 直接對角化：
 - 只取 up/down sector 嘅 3×3 子矩陣
-- Bi-unitary diagonalization
+- Bi-unitary diagonalization: $Y_u Y_u^\dagger = U_u D_u U_u^\dagger$, $Y_d Y_d^\dagger = U_d D_d U_d^\dagger$
+- CKM = $U_u^\dagger U_d$
 - **θ₁₂ = 13.58°**（PDG 13.04°，誤差 0.54°）
 
 ### 尺度 2：6×6 doublet + VEV + Z₅ → θ₂₃
 
 從 6×6 doublet space 引入 Higgs VEV 權重同 Z₅ 相位：
 - VEV 權重 w_u, w_d, w_cross 從 d_tensor 推導
-- tan(β) = 27.36 從 eigenvalue 推導
-- Z₅ phase 引入 twisted sector 相位
+- tan(β) = 27.36 從 d_tensor eigenvalue 推導：$\tan\beta = \frac{m_t \cdot \lambda_b}{m_b \cdot \lambda_t}$
+- Z₅ phase: $e^{2\pi i (q_i - q_j)/5}$
 - **θ₂₃ = 3.97°**（PDG 2.38°，誤差 1.59°）
 
 ### 尺度 3：Twisted Sector → θ₁₃ + J_CP
 
 從 Z₅ twisted sector 嘅 fusion phase 推導：
-- δ = 144°（來自 F^{τττ}_{τ;τ,τ} = -1/φ = e^{iπ}/φ）
+- δ = 144°（來自 $F^{\tau\tau\tau}_{\tau;\tau,\tau} = -1/\varphi = e^{i\pi}/\varphi$）
 - **J_CP = 3.25e-05**（PDG 3.08e-05，ratio 1.05）
 - θ₁₃ = 0.20°（PDG 暫代，待推導）
+
+### 4.1 Hybrid Master Matrix 探索
+
+嘗試融合方法 A（3×3 精確 θ₁₂）同方法 I（6×6 捕捉 θ₂₃）：
+- 將 3×3 submatrix 嵌入 6×6 doublet space 嘅對角 block
+- 非對角 block 用 VEV profile 嘅 cross-sector hopping
+- 控制參數 ε = 0.35 調節 cross-sector 強度
+- **結果：** Hybrid 方法破壞 subspace 分離，θ₁₂ 同 θ₂₃ 同時錯
+
+**結論：** 方法 A 同方法 I 捕捉 CKM 嘅不同面向，無法簡單融合。
+
+### 4.2 File Mutation Verifier 問題
+
+所有 CKM 腳本曾出現 `v` 變量名碰撞：
+- `v = φ^{-k/12}`（Kähler moduli, 12 元素）
+- `v = U_6[:, i]`（eigenvector loop, 6 元素）
+- 後者覆寫前者，導致 `IndexError: index 6 out of bounds for size 6`
+- **修復：** 所有 eigenvector loop 嘅 `v` → `vec`
 
 ---
 
@@ -130,9 +150,50 @@ $$V_{CKM}^{IDCM} = \begin{pmatrix}
 | λ | 0.235 | 0.225 | 4.3% 🟡 |
 | A | 1.255 | 0.830 | 51% 🔴 |
 
+### Wolfenstein 參數
+
+| 參數 | IDCM | PDG | 說明 |
+|:----|:----:|:---:|:-----|
+| λ | 0.235 | 0.225 | V_us, Cabibbo 角 |
+| A | 1.255 | 0.830 | V_cb 幅度 |
+| ρ | -0.175 | 0.150 | V_ub 實部 |
+| η | 0.127 | 0.350 | V_ub 虛部 (CP 破壞) |
+
+### CKM 元素逐一對比
+
+| 元素 | IDCM | PDG | 偏差 |
+|:----|:----:|:---:|:----:|
+| V_ud | 0.97205 | 0.97435 | 0.24% |
+| V_us | 0.23475 | 0.22500 | 4.3% |
+| V_ub | 0.00351 | 0.00369 | 4.9% |
+| V_cd | 0.23400 | 0.22486 | 4.1% |
+| V_cs | 0.96977 | 0.97349 | 0.38% |
+| V_cb | 0.06917 | 0.04182 | 65% |
+| V_td | 0.01910 | 0.00857 | 123% |
+| V_ts | 0.06658 | 0.04110 | 62% |
+| V_tb | 0.99760 | 0.99912 | 0.15% |
+
 ---
 
-## 六、檔案
+## 六、推導路徑 Timeline
+
+```
+01. GST 關係: θ₁₂ = arcsin(√(m_d/m_s)) = 12.92°
+02. 方法 A (3×3 submatrix): θ₁₂ = 13.58° 🟢
+03. 方法 D-G (其他): 全部失敗 ❌
+04. 方法 I (6×6+VEV+Z₅): θ₂₃ = 3.97° 🟡
+05. Z₃ × Z₅ 對稱性分析: SU(2)_L Δ=1
+06. tan(β) = 27.36 從 d_tensor 推導
+07. Hybrid Master Matrix (A+I): 失敗, subspace 分離唔 work
+08. File mutation verifier: v → vec 修復
+09. Multi-scale 算符: 分層參數化成功
+10. Twisted sector phase: δ = 144°, J_CP = 3.25e-05
+11. 最終 CKM: [0.97205, 0.23475, 0.00351; ...]
+```
+
+---
+
+## 七、檔案
 
 所有推導腳本位於 `open_problems_fresh/ckm_reconstruction/`：
 
@@ -146,9 +207,10 @@ $$V_{CKM}^{IDCM} = \begin{pmatrix}
 | `ckm_final.py` | 分層參數化最終構建 |
 | `twisted_sector_phase.py` | Twisted sector 相位 |
 
-## 七、待解決問題
+## 八、待解決問題
 
 1. **θ₁₃ 精確推導** — 需要 12D 完整結構
 2. **δ_CP 精確值** — 需要 twisted sector fusion phase 精確計算
 3. **A 參數** — 從 1.255 降到 0.83（需要更精確嘅 VEV profile）
 4. **ρ, η** — 需要匹配 PDG 值
+5. **V_cb, V_td 偏差** — 65-123% 偏差需要 cross-sector hopping 精確化
