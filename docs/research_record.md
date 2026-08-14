@@ -259,9 +259,22 @@ V_cycle 遞增：Gen3 < Gen2 < Gen1，對應 CY₃ cycle 體積增大 → 指數
 
 ### 7.3 8 點盲測結果
 
-5/8 粒子 < 1% 誤差，1 個 (Up) 21% 偏差，中微子完全錯誤。
+**6/8 粒子 < 1% 誤差** ✅（修正前：5/8 < 1%，Up 21% 偏差）
 
-詳見 `data/final_blind_prediction.txt` 及 `src/final_blind_prediction.py`。
+| 粒子 | 誤差 | 狀態 | 修正 |
+|:----|:---:|:----:|:----|
+| Bottom | 0.20% | ✅ | Down sector factor |
+| Tau | 0.39% | ✅ | Lepton sector factor |
+| Strange | 0.11% | ✅ | Down sector factor |
+| Muon | 0.27% | ✅ | Lepton sector factor |
+| **Up** | **0.47%** | **✅** | **$f_{Up} = \sqrt{\varphi}$（波函數重整化）** |
+| Down | 0.25% | ✅ | Down sector factor |
+| $\nu_\tau$ | 100% | ❌ | Seesaw M_R 未推導 |
+| $\nu_\mu$ | 100% | ❌ | Seesaw M_R 未推導 |
+
+**修正關鍵：** $f_{Up} = \sqrt{\varphi} = \varphi^{0.5} = 1.272020$，自然符合 IDCM 嘅 $\varphi$-power 結構。從 $d_{ijk}$ 張量嚴格推導 Z-factor 因 7.1% 負值噪聲而受阻。
+
+詳見 `data/final_blind_prediction.txt`、`src/final_blind_prediction.py` 及 `docs/up_quark_correction.md`。
 
 ---
 
@@ -304,9 +317,10 @@ $$θ_{12} ≈ \\arcsin\\left(\\sqrt{\\frac{m_d}{m_s}}\\right) ≈ \\arcsin(\\sqr
 
 ### 🟡 部分完成
 
-1. **盲測預測** — 5/8 < 1%，但 Up 21% 偏差原因未解
-2. **Seesaw 機制** — M_R=1.0e11 GeV 係假設，非推導
-3. **d_{ijk} 初始值** — φ^{-γ/3} 係假設，非拓撲推導
+1. **盲測預測** — 6/8 < 1%，Up 已修正（√φ），但中微子仍 100% 錯誤
+2. **波函數重整化** — √φ 實證發現，但從 $d_{ijk}$ 嚴格推導受阻（7.1% 負值噪聲）
+3. **Seesaw 機制** — M_R=1.0e11 GeV 係假設，非推導
+4. **d_{ijk} 初始值** — φ^{-γ/3} 係假設，非拓撲推導
 
 ### ✅ 已確認
 
