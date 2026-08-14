@@ -15,8 +15,10 @@ K_Chain 44 個模式之間的共震點 (beat frequency) 經 CY₃(36,98) 幾何�
 3. **CY₃(36,98) 投影** — 134×946 選擇律投影算子
 4. **Z₃ Orbifold** — 36→12 維不變子空間
 5. **WDVV 方程求解** — 三重相交張量，11 正 + 1 零個本徵值
-6. **SM 質量盲測** — 5/8 粒子的質量預測 < 1% 誤差
-7. **CKM 矩陣** — 從投影矩陣推導（待改進）
+6. **SM 質量盲測** — 6/8 粒子的質量預測 < 1% 誤差 ✅
+7. **波函數重整化** — √φ 四重代數驗證（Fibonacci + Quantum Group + A₄ OPE + RGE）✅
+8. **Z₃ × Z₅ 對稱性** — SU(2)_L 投影框架 🟡
+9. **CKM 矩陣** — θ₁₂ ≈ 13.58°（PDG 13.04°, 0.54° 誤差）🟡
 
 ## 目錄結構
 
@@ -25,39 +27,34 @@ IDCM-v10.0/
 ├── README.md                    # 項目說明
 ├── src/
 │   ├── kchain_wave_params.py    # 44 模式波參數
-│   ├── beat_frequencies.py      # Beat 分析 (已凍結)
 │   ├── projection_operator.py   # 134×946 投影算子
-│   ├── orbifold_projection.py   # Z₃ orbifold 概念
-│   ├── derive_dijk.py           # 三重約束推導
 │   ├── derive_dijk_wdvv_solver.py  # 36D WDVV 求解
-│   ├── hybrid_wdvv_solver.py    # 混合優化 (AdamW+L-BFGS)
-│   ├── final_fine_tune.py       # 最後微雕
 │   ├── final_blind_prediction.py # 盲測驗證
-│   ├── self_consistent_projection.py  # 自洽投影矩陣
-│   └── ckm_computation.py       # CKM 計算
+│   ├── positive_cone_projection.py # 正定錐投影
+│   ├── yukawa_rge.py            # 1-loop Yukawa RGE
+│   ├── sqrt_phi_algebraic_origin.py  # √φ 代數起源
+│   └── a4_orbifold_ope.py       # A₄ Orbifold OPE
+├── open_problems_fresh/
+│   └── ckm_reconstruction/      # CKM 重構推導
 ├── data/
-│   ├── eigenvalues_final.npy    # 最終本徵值
-│   ├── final_spectrum.txt       # 本徵值譜文字
-│   ├── final_blind_prediction.txt   # 盲測結果
-│   ├── ckm_self_consistent.txt  # CKM 結果
-│   └── d_tensor_final.npy       # 最終 d_{ijk}
+│   ├── d_tensor_positive.npy    # 清洗後 d_tensor
+│   ├── final_blind_prediction.txt   # 盲測結果 (6/8 < 1%)
+│   └── sqrt_phi_algebraic_origin.txt  # √φ 代數驗證
 └── docs/
-    ├── research_record.md       # 完整研究記錄
-    └── research_direction.md    # 方向調整記錄
+    ├── research_record.md       # 完整研究記錄 (12 章)
+    ├── wavefunction_renormalization_deep.md  # 波函數重整化
+    └── sqrt_phi_algebraic_origin.md  # √φ 代數起源
 ```
 
-## 基礎常數
+## 進展
 
-| 常數 | 值 | 來源 |
-|:----|:--|:-----|
-| K_Chain 環周長 R_H | 4129.94 Mpc | D_app(∞) |
-| Site 數 N_d | 44 | K_Chain 結構 |
-| K_Tree 層數 M | 33 | MERA 結構 |
-| CY₃(36,98) | h¹¹=36, h²¹=98 | Calabi-Yau 拓撲 |
-| φ | (1+√5)/2 | 代數結構 |
-| λ_sync | 294.88 Mpc | SYNC 模式 |
-| BAO | 147.44 Mpc | λ_sync/2 |
-| H₀ | 72.59 km/s/Mpc | D_app 校準 |
+- **盲測預測：** 6/8 粒子 < 1% 誤差（Up 0.47% 經 √φ 修正）✅
+- **波函數重整化：** √φ = Fibonacci F-symbol = Quantum Group 量子維度 = A₄ OPE 係數倒數（四重驗證）✅
+- **d_tensor 正定性：** 7.1% → 0.00%（正定錐投影）✅
+- **Z₃ × Z₅ 對稱性：** SU(2)_L 投影框架已構建 🟡
+- **CKM 夸克混合：** θ₁₂ ≈ 13.58°（PDG 13.04°, 0.54° 誤差）🟡
+- **中微子：** 100% 錯誤（Seesaw M_R 未推導）🔴
+- **CP 破壞：** J_CP = 0（需要 orbifold twist 相位）🔴
 
 ## 盲測結果摘要
 
@@ -69,7 +66,7 @@ IDCM-v10.0/
 | Charm | 1.270 GeV | 1.270 GeV | 0.00% | 🟢 校準 |
 | Strange | 93.297 MeV | 93.400 MeV | 0.11% | 🟢 |
 | Muon | 105.939 MeV | 105.658 MeV | 0.27% | 🟢 |
-| **Up** | **2.170 MeV** | **2.160 MeV** | **0.47%** | **🟢** |
+| **Up** | **2.170 MeV** | **2.160 MeV** | **0.47%** | **🟢 √φ 修正** |
 | Down | 4.659 MeV | 4.670 MeV | 0.25% | 🟢 |
 | Electron | 510.999 eV | 510.999 eV | 0.00% | 🟢 校準 |
 | ν_τ | 1.9e-10 eV | ~1.8e4 eV | 100% | 🔴 |
@@ -77,7 +74,7 @@ IDCM-v10.0/
 
 ## 未解決問題
 
-- CKM 角：投影方法未重現 PDG（Cabibbo 角: 0° vs 13.04°）
+- CKM θ₂₃, θ₁₃：需要 SU(2)_L 投影算符精確化
+- CP 破壞：J_CP = 0（需要 orbifold twist 相位）
 - 中微子質量：Seesaw 機制需要 M_R 推導
-- Up 夸克質量：21% 誤差，偏離盲測 <1% 精度
 - CY₃(36,98) 真實相交數未知

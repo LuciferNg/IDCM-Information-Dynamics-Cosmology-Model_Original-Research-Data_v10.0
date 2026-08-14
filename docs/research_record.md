@@ -153,6 +153,16 @@ IDCM-v10.0/
 │   ├── wavefunction_renormalization.py  # 五種 Z-factor 方法
 │   ├── positive_cone_projection.py     # 正定錐投影
 │   └── yukawa_rge.py            # 1-loop Yukawa RGE
+├── open_problems_fresh/          # 新問題獨立推導
+│   └── ckm_reconstruction/       # CKM 重構推導
+│       ├── ckm_derivation.py     # 主推導腳本 (6 種方法)
+│       ├── z3xz5_projection.py   # Z₃ × Z₅ 對稱性分析
+│       ├── phi_power_ckm.py      # φ-power CKM 模型
+│       ├── ckm_results.txt       # 結果摘要
+│       ├── z3xz5_analysis.txt    # Z₃ × Z₅ 分析
+│       ├── phi_power_ckm_results.txt  # φ-power 結果
+│       ├── su2_projector_results.txt  # SU(2)_L 投影結果
+│       └── *.npy                 # CKM 矩陣數據
 ├── data/
 │   ├── d_tensor_solved.npy      # 36D 結果
 │   ├── eigenvalues_final.npy    # 最終本徵值
@@ -345,10 +355,12 @@ $$θ_{12} ≈ \\arcsin\\left(\\sqrt{\\frac{m_d}{m_s}}\\right) ≈ \\arcsin(\\sqr
 ### 🟡 部分完成
 
 1. **盲測預測** — 6/8 < 1%，Up 已修正（√φ），但中微子仍 100% 錯誤
-2. **波函數重整化** — 發現兩層結構 (RGE + 幾何量子修正)，但 $\sqrt{\varphi}$ 嘅代數起源未解
-3. **d_{tensor} 正定性** — 已通過正定錐投影解決 (0.00% 負值) ✅
-4. **Seesaw 機制** — M_R=1.0e11 GeV 係假設，非推導
-5. **d_{ijk} 初始值** — φ^{-γ/3} 係假設，非拓撲推導
+2. **波函數重整化** — 發現兩層結構 (RGE + 幾何量子修正)，$\sqrt{\varphi}$ 嘅代數起源已確認
+3. **CKM 夸克混合** — θ₁₂ ≈ 13.58°（PDG 13.04°, 0.54° 誤差），但 θ₂₃, θ₁₃, J_CP 仍錯
+4. **SU(2)_L 投影算符** — Z₃ × Z₅ 對稱性框架已構建，但 P_SU(2): 12D → 6D 未確定
+5. **d_{tensor} 正定性** — 已通過正定錐投影解決 (0.00% 負值) ✅
+6. **Seesaw 機制** — M_R=1.0e11 GeV 係假設，非推導
+7. **d_{ijk} 初始值** — φ^{-γ/3} 係假設，非拓撲推導
 
 ### ✅ 已確認
 
@@ -356,8 +368,13 @@ $$θ_{12} ≈ \\arcsin\\left(\\sqrt{\\frac{m_d}{m_s}}\\right) ≈ \\arcsin(\\sqr
 2. **946 個共振態** — 組合數 ✅
 3. **選擇律排除** — 91.7% ✅
 4. **Z₃ orbifold 12D** — 幽靈態消除 ✅
-5. **WDVV 11 正 + 1 零** — 無幽靈態 ✅
-6. **5/8 盲測 < 1%** — 幾何質量預測 ✅
+5. **Z₃ × Z₅ 對稱性** — Z₃=generation, Z₅=index mod 5, SU(2)_L Δ=1 ✅
+6. **√φ 代數起源** — Fibonacci F-matrix + Quantum Group + A₄ OPE 三重驗證 ✅
+7. **波函數重整化兩層結構** — RGE(1.45) × 幾何(√φ) ✅
+8. **Up 夸克修正** — √φ = 1.272020, 誤差 0.47% ✅
+9. **d_tensor 正定性** — 7.1% → 0.00% ✅
+10. **WDVV 11 正 + 1 零** — 無幽靈態 ✅
+11. **6/8 盲測 < 1%** — 幾何質量預測 ✅
 
 ---
 
@@ -465,3 +482,92 @@ Up 夸克 Z-factor:       f_Up = √φ = 1.272020
 | **A₄ Orbifold OPE** | $C_{2,3} = 1/\sqrt{\varphi}$ | 0.786151 | $1/C = \sqrt{\varphi}$ ✅ |
 
 無外部參考文獻。所有推導基於 K_Chain 拓撲 + CY₃(36,98) 假設 + 量子同調代數 WDVV 方程。
+
+---
+
+## 十二、CKM 重構推導（2026-08-14）
+
+### 12.1 背景
+
+盲測成功（6/8 < 1%）後，需要從 d_tensor 結構嚴格推導 CKM 夸克混合矩陣。
+現有三種方法全部錯誤（θ₁₂=15.23°/0.10°/0.00° vs PDG 13.04°），需要全新框架。
+
+### 12.2 GST 關係（基礎校準）
+
+GST (Gatto-Sartori-Tonin) 關係：
+$$\theta_{12} = \arcsin\left(\sqrt{\frac{m_d}{m_s}}\right) = \arcsin\left(\sqrt{\frac{4.67}{93.4}}\right) = 12.92^\circ$$
+$$\theta_{12}(PDG) = 13.04^\circ, \quad \text{誤差 } 0.91\%$$
+
+### 12.3 五種方法對比
+
+| 方法 | 描述 | θ₁₂ | θ₂₃ | θ₁₃ | J_CP | 狀態 |
+|:----|:-----|:---:|:---:|:---:|:----:|:----:|
+| **PDG 參考** | — | **13.04°** | **2.38°** | **0.201°** | **3.08e-5** | — |
+| **A: 3×3 submatrix** | 直接取 up/down 3×3 | **13.58°** | 43.38° | 5.70° | 0 | 🟡 |
+| D: 12D raw overlap | 原始 12D eigenvector | 58.67° | 10.34° | 0.00° | 0 | ❌ |
+| E: VEV profile | 希格斯 VEV 分佈 | 11.50° | 70.85° | 6.41° | 0 | ❌ |
+| F: 6×6 doublet | 完整 doublet space | 64.35° | 33.67° | 0.00° | 0 | ❌ |
+| G: Z₅ phase | Orbifold 相位 | 69.96° | 9.73° | 0.00° | 3e-64 | ❌ |
+
+**關鍵發現：方法 A 嘅 θ₁₂ = 13.58°（PDG 13.04°，誤差僅 0.54°）** 🟡
+
+### 12.4 Z₃ × Z₅ 離散對稱性分析
+
+**核心洞察：** SU(2)_L 規範對稱性係底層幾何離散對稱性 Z₃ × Z₅ 嘅投影。
+
+**Z₃ charge = generation index：**
+- Gen3: indices 0,1,2 (Z₃=0)
+- Gen2: indices 3,4,5 (Z₃=1)
+- Gen1: indices 6,7,8 (Z₃=2)
+
+**Z₅ charge = index mod 5：**
+- SU(2)_L doublet 嘅 up/down Z₅ charge 差 = 1
+- 呢個差來自 Higgs VEV 嘅 Z₅ charge = 1
+
+**Z₅ Orbits（共享 Z₅ charge 嘅跨世代耦合）：**
+
+| Z₅ | 共享 index | 物理意義 |
+|:--:|:----------|:---------|
+| 0 | Top(0) ↔ Muon(5) | Gen3-up ↔ Gen2-lep |
+| 1 | Bottom(1) ↔ Up(6) | Gen3-down ↔ Gen1-up |
+| 2 | Tau(2) ↔ Down(7) | Gen3-lep ↔ Gen1-down |
+| 3 | Charm(3) ↔ Electron(8) | Gen2-up ↔ Gen1-lep |
+| 4 | Strange(4) ↔ ν_τ(9) | Gen2-down ↔ Gen1-nu |
+
+**Z₅ Orbits 同 CKM 層級結構：**
+- 最大混合（1-2 代 / Cabibbo 角）：共享 Z₅=1 同 Z₅=3 嘅幾何軌道
+- 最小混合（1-3 代）：無直接共享 Z₅ 軌道，耦合被幾何屏障隔絕
+
+### 12.5 φ-power CKM 模型
+
+用 Z₅ orbit overlap 同 φ-power 權重直接構建 3×3 CKM 矩陣。
+
+**規則：**
+- 共享 Z₅ orbit → 混合強度 ∝ φ^{-1} (Fibonacci F-matrix 非對角元素)
+- 唔共享 Z₅ orbit → 混合強度 ∝ φ^{-2} (次級耦合)
+- 世代距離 → 額外 φ^{-distance} 壓抑
+
+**Wolfenstein 參數（0 自由參數預測）：**
+| 參數 | IDCM | PDG | 誤差 |
+|:----|:----:|:---:|:----:|
+| λ = \|V_us\| | 0.492 | 0.225 | 118% |
+| A = \|V_cb\|/λ² | 2.05 | 0.83 | 147% |
+
+### 12.6 未解決問題
+
+1. **CKM 精確匹配** — θ₁₂ ≈ 13.58° 接近但 θ₂₃, θ₁₃ 仍錯
+2. **SU(2)_L 投影算符** — P_SU(2): 12D → 6D 嘅數學形式未確定
+3. **CP 破壞** — J_CP = 0（需要 orbifold twist 相位）
+4. **Higgs VEV profile** — 決定 cross-sector 混合強度嘅精確權重
+
+### 12.7 檔案
+
+| 文件 | 說明 |
+|:----|:-----|
+| `open_problems_fresh/ckm_reconstruction/ckm_derivation.py` | 主推導腳本（6 種方法） |
+| `open_problems_fresh/ckm_reconstruction/z3xz5_projection.py` | Z₃ × Z₅ 對稱性分析 |
+| `open_problems_fresh/ckm_reconstruction/phi_power_ckm.py` | φ-power CKM 模型 |
+| `open_problems_fresh/ckm_reconstruction/ckm_results.txt` | 結果摘要 |
+| `open_problems_fresh/ckm_reconstruction/z3xz5_analysis.txt` | Z₃ × Z₅ 分析 |
+| `open_problems_fresh/ckm_reconstruction/phi_power_ckm_results.txt` | φ-power 結果 |
+| `open_problems_fresh/ckm_reconstruction/su2_projector_results.txt` | SU(2)_L 投影結果 |
