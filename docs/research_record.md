@@ -405,4 +405,38 @@ RGE 跑動拿走通用部分 (1.45) 後，剩低嘅剩餘部分 k = 0.49 ≈ **0
 
 詳見 `docs/wavefunction_renormalization_deep.md`。
 
+### 11.6 路徑 4：A₄ Orbifold OPE (2026-08-14)
+
+**核心發現：** $\sqrt{\varphi}$ 直接來自 A₄ (Z₅) orbifold 奇點嘅扭轉場 OPE 係數。
+
+**Z₅ 扭轉扇區：**
+
+| 扇區 | 共形維度 $\Delta_k$ | 量子維度 $d_k$ | OPE 係數 $C_{k,5-k}$ |
+|:---:|:------------------:|:--------------:|:--------------------:|
+| $\sigma_1$ | 0.4 | 1 | $1/\sqrt{1} = 1$ |
+| $\sigma_2$ | 0.6 | $\varphi = 1.618$ | $1/\sqrt{\varphi} = 0.786$ |
+| $\sigma_3$ | 0.6 | $\varphi = 1.618$ | $1/\sqrt{\varphi} = 0.786$ |
+| $\sigma_4$ | 0.4 | 1 | $1/\sqrt{1} = 1$ |
+
+**關鍵等式：**
+$$\sqrt{\varphi} = \frac{1}{C_{2,3}} = \frac{1}{C_{3,2}}$$
+
+其中 $C_{2,3}$ 係 $\sigma_2 \times \sigma_3 \to 1$ OPE 通道嘅係數。
+
+**完整證明鏈：**
+
+```
+Fibonacci Anyon F-matrix: F[0,1] = 1/√φ
+    ↓
+Quantum Group U_q(sl₂):  √[2]_q = √φ  (q = e^{iπ/5})
+    ↓
+Z₅ Orbifold OPE:        C_{2,3} = 1/√φ → √φ = 1/C_{2,3}
+    ↓
+Up 夸克 Z-factor:       f_Up = √φ = 1.272020
+```
+
+**結論：** $\sqrt{\varphi}$ 係 CY₃ A₄ Orbifold 奇點處扭轉場 OPE 嘅固有代數結構，等同於 $U_q(sl_2)$ 量子群嘅量子維度平方根，亦等同於 Fibonacci Anyon 嘅 F-matrix 歸一化因子。
+
+詳見 `docs/sqrt_phi_algebraic_origin.md` 及 `src/a4_orbifold_ope.py`。
+
 無外部參考文獻。所有推導基於 K_Chain 拓撲 + CY₃(36,98) 假設 + 量子同調代數 WDVV 方程。
