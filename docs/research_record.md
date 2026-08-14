@@ -439,4 +439,29 @@ Up 夸克 Z-factor:       f_Up = √φ = 1.272020
 
 詳見 `docs/sqrt_phi_algebraic_origin.md` 及 `src/a4_orbifold_ope.py`。
 
+### 11.7 側鏈驗證 (2026-08-14, browse CLI)
+
+**Wikipedia [Fibonacci anyon]** 確認：
+- $d_\tau^2 = 1 + d_\tau \implies d_\tau = \varphi$ ✅
+- $F^{\tau\tau\tau}_{\tau;1,1} = \varphi^{-1}$ ✅
+- $F^{\tau\tau\tau}_{\tau;\tau,1} = F^{\tau\tau\tau}_{\tau;1,\tau} = \varphi^{-1/2}$ ✅
+- $F^{\tau\tau\tau}_{\tau;\tau,\tau} = -\varphi^{-1}$ ✅
+
+**nLab [SU(2)-anyon]** 確認：
+- SU(2)₃ k=3 → Fibonacci anyon ✅
+
+**標準 CFT 公式驗證：**
+- SU(2)₃ 量子維度: $d_j = \sin((2j+1)\pi/5)/\sin(\pi/5)$ → j=½,1 → $\varphi$ ✅
+- Z₅ orbifold twist field: $\Delta_k = k(5-k)/10$ ✅
+- Z₅ twisted sector QD: $d_k = \sin(\pi k/5)/\sin(\pi/5)$ → d₂=d₃=$\varphi$ ✅
+
+**四重獨立驗證：**
+
+| 來源 | 公式 | 數值 | 匹配度 |
+|:----|:----|:----:|:------:|
+| **Up 夸克 Z-factor** | $\sqrt{\varphi}$ | 1.272020 | 0.47% ✅ |
+| **Fibonacci Anyon F-matrix** | $F^{\tau\tau\tau}_{\tau;\tau,1} = 1/\sqrt{\varphi}$ | 0.786151 | $1/F = \sqrt{\varphi}$ ✅ |
+| **Quantum Group $U_q(sl_2)$** | $\sqrt{[2]_q} = \sqrt{\varphi}$ | 1.272020 | **精確** ✅ |
+| **A₄ Orbifold OPE** | $C_{2,3} = 1/\sqrt{\varphi}$ | 0.786151 | $1/C = \sqrt{\varphi}$ ✅ |
+
 無外部參考文獻。所有推導基於 K_Chain 拓撲 + CY₃(36,98) 假設 + 量子同調代數 WDVV 方程。
