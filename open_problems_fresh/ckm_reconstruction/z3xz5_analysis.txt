@@ -1,0 +1,21 @@
+IDCM v10.0 — Z₃ × Z₅ 對稱性分析結果
+============================================================
+
+Z₃ charge = generation index (floor(i/3))
+Z₅ charge = index mod 5
+SU(2)_L doublet: up/down Z₅ charge diff = 1 (Higgs VEV)
+
+Z₅ orbits:
+  Z₅=0: Top, Muon, ν_μ
+  Z₅=1: Bottom, Up, Goldstone
+  Z₅=2: Tau, Down
+  Z₅=3: Charm, Electron
+  Z₅=4: Strange, ν_τ
+
+V_CKM (Z₃×Z₅):
+  [0.000000, 0.000000, 0.000000]
+  [0.000000, 0.000000, 0.000000]
+  [0.000000, 0.000000, 0.000000]
+θ₁₂ = 26.0314°
+θ₂₃ = 13.7370°
+θ₁₃ = 0.0000°
