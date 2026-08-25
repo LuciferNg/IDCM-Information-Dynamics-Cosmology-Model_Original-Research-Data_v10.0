@@ -1,0 +1,15 @@
+{
+  "total": 946,
+  "pass": 946,
+  "fail": 0,
+  "max_dev": 5.551115123125783e-16,
+  "fail_list": [],
+  "structure": {
+    "rows": 43,
+    "row_length_rule": "44 - d",
+    "factorization": "946 = 2 × L₅ × (N_d − 1) = 2 × 11 × 43",
+    "lucas_L5": 11,
+    "comment": "可分離 = 1D×1D 外積結構, 43 個行標度 × 1 條萬有包絡"
+  },
+  "pass_rate": 1.0
+}

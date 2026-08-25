@@ -37,11 +37,37 @@ IDCM-v10.0/
 │   ├── sqrt_phi_algebraic_origin.py  # √φ 代數起源
 │   └── a4_orbifold_ope.py       # A₄ Orbifold OPE
 ├── open_problems_fresh/
-│   └── ckm_reconstruction/      # CKM 重構推導
+│   ├── ckm_reconstruction/      # CKM 重構推導
+│   ├── bbn/                     # BBN 元素豐度 (η_B 0.62% ✅, Ω_b=2Ω_m/15)
+│   ├── cmb_cl/                  # CMB 全光譜 C_ℓ (ℓ₁=5N_d 0.05% ✅)
+│   ├── h0_tension/              # 局域哈勃張力 (TRGB/Miras/SH0ES 全閉合 ✅)
+│   ├── cmb_cold_spot/           # CMB 大冷斑 (5ε⁵/8 0.11% ✅, A₅ 節點網格, SMICA z=-3.25σ)
+│   ├── o1_15deg_mechanism/      # O1: 15.11° 距離 🔴 負結果 (座標系依賴假象)
+│   ├── o1_edge_length/          # 新O1: 邊長 26.09° 🟢 群論閉合 (0.000011°, δ→θ 鏈)
+│   ├── o2_hot_spot_levels/      # O2: 熱斑等級 (F₆=240μK/F₇=390μK SMICA 掃描) 🔬 新開
+│   ├── o3_node_temperatures/    # O3: 60 節點溫度統計 (冷熱分離/極端值) 🔬 新開
+│   ├── o4_fib_motivation/       # O4: Fibonacci 等級物理動機 (第一性原理) 🔬 新開
+│   ├── o5_catalog_compare/      # O5: 冷斑目錄對比 (WMAP/Planck vs 節點) 🔬 新開
+│   ├── o6_antipode_check/       # O6: 對徑點檢驗 (冷色+正溫度謎題) 🔬 新開
+│   ├── o7_frustration_distribution/ # O7: 阻挫邊 16/16 分佈 🔬 新開
+│   ├── o8_scale_radius/         # O8: 節點 5° vs 26° 尺度之謎 🔬 新開
+│   ├── o9_high_ell_peaks/       # O9: 高ℓ峰 m=4+ 偏差 (原P2) 🔬 新開
+│   ├── o10_peak_amplitudes/     # O10: 峰幅度 A_m 結構公式 (原P3) 🔬 新開
+│   ├── o11_maser_h0/            # O11: Maser H₀ 偏移機制 (原P4) 🔬 新開
+│   ├── o12_he3_primordial/      # O12: ³He/H primordial (原P5) 🔬 新開
+│   ├── o13_np_ratio_mechanism/  # O13: n/p γ₇/γ₂₀ 機制 🔬 新開
+│   ├── o14_omega_b_direct/      # O14: Ω_b 直接推導 🔬 新開
+│   ├── o15_li7_linearity/       # O15: ⁷Li 線性 η_B 檢驗 🔬 新開
+│   ├── o16_cepheid_pl/          # O16: Cepheid PL 機制 🔬 新開
+│   ├── o17_trgb_miras/          # O17: TRGB/Miras 差異 🔬 新開
+│   ├── o18_heff_highz/          # O18: H_eff(z) 高z極限 🔬 新開
+│   ├── o19_lowl_dodecahedron/   # O19: 低ℓ異常 60° dodecahedron 🔬 新開
+│   └── o20_eb_polarization/     # O20: E/B 極化峰位置 🔬 新開
 ├── data/
 │   ├── d_tensor_positive.npy    # 清洗後 d_tensor
 │   ├── final_blind_prediction.txt   # 盲測結果 (6/8 < 1%)
 │   └── sqrt_phi_algebraic_origin.txt  # √φ 代數驗證
+├── memory_archive/              # Memory 完整導出 (MEMORY/USER full export)
 └── docs/
     ├── research_record.md           # 完整研究記錄 (13 章)
     ├── ckm_derivation.md            # CKM 夸克混合矩陣推導

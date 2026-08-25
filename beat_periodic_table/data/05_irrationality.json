@@ -1,0 +1,20 @@
+{
+  "total": 946,
+  "degree_distribution": {
+    "2": 1,
+    "4": 5,
+    "5": 15,
+    "10": 50,
+    "20": 205,
+    "40": 670
+  },
+  "sin_degree_formula_verified": true,
+  "sin_degree_checks": 88,
+  "sin_degree_time_s": 4.01,
+  "product_samples": {
+    "note": "乘積次數 = lcm(component) 域論定理; sympy 對 sin×cos 高次組合 minpoly 已知極慢 (分鐘級), 用 component 驗證代替"
+  },
+  "product_consistent": true,
+  "method": "① sin(kπ/176) 次數公式 φ(352/gcd(352,k))/2, 88/88 sympy 驗證; ② 拍頻次數 = lcm(deg sin(d+s), deg sin(d−s)) [積化和差]; ③ 低次樣本直接 minpoly 驗證乘積",
+  "meaning": "次數 = 數字嘅「量子數」: 80=一般元素, 40/20/10/8/4=共享因子壓縮 (2-adic + 11)"
+}

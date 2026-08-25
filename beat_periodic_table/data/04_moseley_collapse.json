@@ -1,0 +1,10 @@
+{
+  "total": 946,
+  "pass": 946,
+  "fail": 0,
+  "max_dev": 1.4210854715202004e-14,
+  "envelope": "4·cos(sπ/176)",
+  "fail_list": [],
+  "pass_rate": 1.0,
+  "meaning": "946 個無理數嘅資訊量 = 43 個行標度 S(d) × 1 條萬有包絡 C(s) — Mendeleev/Moseley 式結構: 元素周期表有例外, 呢張表 946/946 零例外!"
+}

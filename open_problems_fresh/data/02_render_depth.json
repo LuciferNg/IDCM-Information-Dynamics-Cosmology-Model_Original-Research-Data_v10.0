@@ -1,0 +1,15 @@
+{
+  "formula": "t_render = (R_H/c) \u00d7 N_d/(N_d\u22121)",
+  "t_render_Gyr": 13.783319975909647,
+  "R_H_c_Gyr": 13.47006270372988,
+  "T_sync_Gyr": 84.63490006686331,
+  "Nd": 44,
+  "n_propagating": 43,
+  "n_nyquist": 1,
+  "planck_2018_Gyr": 13.787,
+  "dev_pct": 0.02669198585880661,
+  "sigma": 0.18400120451769197,
+  "identity_Tsync": 1.7763568394002505e-15,
+  "zero_free_params": true,
+  "framework": "v10.0 non-expanding"
+}

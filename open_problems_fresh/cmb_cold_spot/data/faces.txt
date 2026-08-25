@@ -1,0 +1,66 @@
+# V=60 E=120 F=62 chi=2
+# 三角形 20, 正方形 30, 五邊形 12
+# 阻挫邊總數 64 (飽和)
+# face_type vertices... color
+S [0, 9, 58, 50] colors=[1, 0, 1, 0] frust=0
+P [9, 0, 20, 27, 33] colors=[0, 1, 0, 1, 1] frust=1
+S [20, 0, 41, 55] colors=[0, 1, 0, 1] frust=0
+T [41, 0, 50] colors=[0, 1, 0] frust=1
+P [1, 2, 28, 36, 15] colors=[0, 1, 1, 0, 1] frust=1
+S [2, 1, 48, 56] colors=[1, 0, 1, 0] frust=0
+S [1, 15, 55, 25] colors=[0, 1, 1, 0] frust=2
+T [1, 25, 48] colors=[0, 0, 1] frust=1
+S [2, 23, 44, 28] colors=[1, 0, 0, 1] frust=2
+T [23, 2, 56] colors=[0, 1, 0] frust=1
+P [3, 5, 34, 44, 23] colors=[1, 0, 1, 0, 0] frust=1
+S [5, 3, 54, 57] colors=[0, 1, 0, 1] frust=0
+S [3, 23, 56, 26] colors=[1, 0, 0, 1] frust=2
+T [3, 26, 54] colors=[1, 1, 0] frust=1
+P [4, 6, 12, 19, 24] colors=[0, 1, 0, 0, 1] frust=1
+S [6, 4, 52, 42] colors=[1, 0, 1, 0] frust=0
+S [4, 24, 44, 34] colors=[0, 1, 0, 1] frust=0
+T [4, 34, 52] colors=[0, 1, 1] frust=1
+S [5, 31, 52, 34] colors=[0, 0, 1, 1] frust=2
+T [31, 5, 57] colors=[0, 0, 1] frust=1
+S [12, 6, 32, 49] colors=[0, 1, 1, 0] frust=2
+T [32, 6, 42] colors=[1, 1, 0] frust=1
+P [7, 10, 42, 52, 31] colors=[1, 0, 0, 1, 0] frust=1
+S [10, 7, 39, 59] colors=[0, 1, 1, 0] frust=2
+S [7, 31, 57, 35] colors=[1, 0, 1, 0] frust=0
+T [7, 35, 39] colors=[1, 0, 1] frust=1
+T [8, 10, 59] colors=[1, 0, 0] frust=1
+S [10, 8, 32, 42] colors=[0, 1, 1, 0] frust=2
+P [8, 11, 16, 49, 32] colors=[1, 0, 1, 0, 1] frust=1
+S [11, 8, 59, 43] colors=[0, 1, 0, 1] frust=0
+T [9, 16, 58] colors=[0, 1, 1] frust=1
+S [16, 9, 33, 49] colors=[1, 0, 1, 0] frust=0
+S [16, 11, 40, 58] colors=[1, 0, 0, 1] frust=2
+T [40, 11, 43] colors=[0, 0, 1] frust=1
+S [19, 12, 33, 27] colors=[0, 0, 1, 1] frust=2
+T [33, 12, 49] colors=[1, 0, 0] frust=1
+P [13, 17, 50, 58, 40] colors=[0, 1, 0, 1, 0] frust=1
+S [17, 13, 47, 53] colors=[1, 0, 1, 0] frust=0
+T [13, 37, 47] colors=[0, 1, 1] frust=1
+S [37, 13, 40, 43] colors=[1, 0, 0, 1] frust=2
+T [14, 17, 53] colors=[1, 1, 0] frust=1
+S [17, 14, 41, 50] colors=[1, 1, 0, 0] frust=2
+P [14, 18, 25, 55, 41] colors=[1, 0, 0, 1, 0] frust=1
+S [18, 14, 53, 51] colors=[0, 1, 0, 1] frust=0
+T [15, 20, 55] colors=[1, 0, 1] frust=1
+S [20, 15, 36, 27] colors=[0, 1, 0, 1] frust=0
+S [18, 22, 48, 25] colors=[0, 1, 1, 0] frust=2
+T [22, 18, 51] colors=[1, 0, 1] frust=1
+S [24, 19, 36, 28] colors=[1, 0, 0, 1] frust=2
+T [19, 27, 36] colors=[0, 1, 0] frust=1
+S [21, 22, 51, 45] colors=[0, 1, 1, 0] frust=2
+P [22, 21, 26, 56, 48] colors=[1, 0, 1, 0, 1] frust=1
+S [26, 21, 30, 54] colors=[1, 0, 1, 0] frust=0
+T [30, 21, 45] colors=[1, 0, 0] frust=1
+T [24, 28, 44] colors=[1, 1, 0] frust=1
+S [29, 30, 45, 46] colors=[1, 1, 0, 0] frust=2
+P [30, 29, 35, 57, 54] colors=[1, 1, 0, 1, 0] frust=1
+S [35, 29, 38, 39] colors=[0, 1, 0, 1] frust=0
+T [38, 29, 46] colors=[0, 1, 0] frust=1
+S [37, 38, 46, 47] colors=[1, 0, 0, 1] frust=2
+P [38, 37, 43, 59, 39] colors=[0, 1, 1, 0, 1] frust=1
+P [46, 45, 51, 53, 47] colors=[0, 0, 1, 0, 1] frust=1

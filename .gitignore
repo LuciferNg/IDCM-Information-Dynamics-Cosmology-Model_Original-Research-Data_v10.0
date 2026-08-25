@@ -1,3 +1,23 @@
-IDCM-v10.0
+# IDCM v10.0 .gitignore
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated figures (regenerate from scripts)
+# *.png — keep tracked if important, add here if auto-generated

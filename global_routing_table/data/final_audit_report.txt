@@ -1,0 +1,87 @@
+驗證總結: 86 通過, 0 錯誤, 0 警告
+  ✅ 檔案存在: docs/01_global_routing_table_record.md
+  ✅ 檔案存在: docs/02_fusion_and_wfield_record.md
+  ✅ 檔案存在: data/hop_matrix.npy
+  ✅ 檔案存在: data/next_hop_table.npy
+  ✅ 檔案存在: data/weighted_delay_matrix.npy
+  ✅ 檔案存在: data/ladder_amplitude.npy
+  ✅ 檔案存在: data/edge_betweenness.npy
+  ✅ 檔案存在: data/node_betweenness.npy
+  ✅ 檔案存在: data/path_count_matrix.npy
+  ✅ 檔案存在: data/routing_table_plain.txt
+  ✅ 檔案存在: data/directions_1_4_analysis.txt
+  ✅ 檔案存在: data/space_comm_bom.txt
+  ✅ 檔案存在: data/wfield_resonance_theory.txt
+  ✅ 檔案存在: data/fusion_hop_matrix.npy
+  ✅ 檔案存在: data/fusion_next_hop_table.npy
+  ✅ 檔案存在: data/fusion_routing_plain.txt
+  ✅ 檔案存在: data/fusion_stats.npy
+  ✅ 檔案存在: data/frustration_routing_optimization.txt
+  ✅ 檔案存在: data/wfield_pde_results.txt
+  ✅ V=60: 
+  ✅ E=120: 
+  ✅ deg=4-regular: 
+  ✅ threshold=28.923°: 
+  ✅ frust=32: 
+  ✅ Doc1: V=60: '60' 存在
+  ✅ Doc1: E=120: '120' 存在
+  ✅ Doc1: frust=32: '32' 存在
+  ✅ 直徑=8: 
+  ✅ hop[0,57]=8: 
+  ✅ Doc1: 直徑=8: '8' 存在
+  ✅ 跳數分佈正確: actual={0: 60, 1: 240, 2: 480, 3: 660, 4: 720, 5: 660, 6: 480, 7: 240, 8: 60}
+  ✅ 跳數分佈對稱: 
+  ✅ 冷斑 BFS 分佈正確: actual={0: 1, 1: 4, 2: 8, 3: 11, 4: 12, 5: 11, 6: 8, 7: 4, 8: 1}
+  ✅ node BC 全部一致: 
+  ✅ node BC = 0.051130: 
+  ✅ frust BC mean = 0.031780: 
+  ✅ norm BC mean = 0.034669: 
+  ✅ wdelay max = 5.4705: 
+  ✅ wdelay[0,57] = 5.4705: 
+  ✅ fusion hop shape: shape=(2640, 2640)
+  ✅ fusion diam = 30: 
+  ✅ fusion mean = 15.0: 
+  ✅ fusion symmetric: 
+  ✅ fusion[0, 57*44+0] = 8: 
+  ✅ fusion[0, 57*44+22] = 30: 
+  ✅ Doc2: fusion 直徑=30: '30' 存在
+  ✅ Doc2: fusion 節點=2640: '2640' 存在
+  ✅ fusion next-hop 500 抽樣: errors=0
+  ✅ 路徑長度 8: actual=8
+  ✅ 路徑起點 0: 
+  ✅ 路徑終點 57: 
+  ✅ 每跳 hop 遞減: 
+  ✅ 所有阻挫邊距離 26.09°±0.08°: 
+  ✅ 最小距離: min=26.0913
+  ✅ 最大距離: max=26.1664
+  ✅ 30 對最遠節點: actual=30
+  ✅ Doc1: CMB 160.40 GHz: '160.40' 存在
+  ✅ Doc1: F5 8.82 MHz: '8.82' 存在
+  ✅ Doc1: F8 37.48 MHz: '37.48' 存在
+  ✅ Doc1: K_Chain 融合: '2640' 存在
+  ✅ Doc1: BOM ~$100K: '100K' 存在
+  ✅ Doc1 引用: hop_matrix.npy
+  ✅ Doc1 引用: path_count_matrix.npy
+  ✅ Doc1 引用: next_hop_table.npy
+  ✅ Doc1 引用: weighted_delay_matrix.npy
+  ✅ Doc1 引用: ladder_amplitude.npy
+  ✅ Doc1 引用: edge_betweenness.npy
+  ✅ Doc1 引用: node_betweenness.npy
+  ✅ Doc1 引用: routing_table_plain.txt
+  ✅ Doc1 引用: directions_1_4_analysis.txt
+  ✅ Doc1 引用: fusion_logical_nodes.npy
+  ✅ Doc1 引用: space_comm_bom.txt
+  ✅ Doc1 引用: wfield_resonance_theory.txt
+  ✅ Doc1 引用: fusion_hop_matrix.npy
+  ✅ Doc1 引用: fusion_next_hop_table.npy
+  ✅ Doc1 引用: fusion_stats.npy
+  ✅ Doc1 引用: fusion_routing_plain.txt
+  ✅ Doc2 引用: fusion_hop_matrix.npy
+  ✅ Doc2 引用: fusion_next_hop_table.npy
+  ✅ Doc2 引用: fusion_routing_plain.txt
+  ✅ Doc2 引用: fusion_stats.npy
+  ✅ Doc2 引用: wfield_resonance_theory.txt
+  ✅ Doc2 引用: space_comm_bom.txt
+  ✅ PDE arrival shape: 
+  ✅ PDE 所有非源節點到達: sum(arrival<=0)=1
+  ✅ PDE-hop 相關性 > 0.99: r=0.9953

@@ -1,0 +1,77 @@
+{
+  "checks": {
+    "count": {
+      "expected": 946,
+      "actual": 946,
+      "pass": true
+    },
+    "sample_irrational": {
+      "pass": true,
+      "samples": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "is_irrational": true
+        },
+        {
+          "pair": [
+            7,
+            44
+          ],
+          "is_irrational": true
+        },
+        {
+          "pair": [
+            10,
+            24
+          ],
+          "is_irrational": true
+        },
+        {
+          "pair": [
+            19,
+            33
+          ],
+          "is_irrational": true
+        },
+        {
+          "pair": [
+            1,
+            44
+          ],
+          "is_irrational": true
+        }
+      ]
+    },
+    "separability_sample": {
+      "samples": 50,
+      "max_dev": 4.440892098500626e-16,
+      "pass": true
+    },
+    "hypotenuse": {
+      "max_dev": 6.661338147750939e-16,
+      "pass": true
+    },
+    "generations": {
+      "all_d14": true,
+      "pass": true
+    },
+    "sum_duality": {
+      "samples": 50,
+      "max_dev": 4.440892098500626e-16,
+      "pass": true
+    },
+    "z2_duality": {
+      "pass": true
+    },
+    "uniqueness": {
+      "total": 946,
+      "unique": 946,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "total_checks": 8
+}

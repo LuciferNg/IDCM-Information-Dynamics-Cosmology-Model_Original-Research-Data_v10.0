@@ -1,0 +1,9 @@
+IDCM v10.0 — 4 線推導結果
+1. CKM δ_CP = 144° (Z₅ twisted sector), J_CP = 1.88e-05
+   J_CP needed = 3.08e-05, sin(δ) needed = 0.9629
+2. PMNS J_CP (beat) = -0.022437
+   PMNS J_CP (struct) = -0.022752
+3. Δm²₃₁ = 1.561712e-03 eV², need 2.45e-3
+   Δm²₂₁ (Z₃ corrected) = 6.628010e-05 eV², PDG 7.53e-05
+4. tan(θ₁₂) = √2 × cos(π/16) × sin(π/176) / sin(3π/88)
+   = 0.2316035403

@@ -1,0 +1,30 @@
+{
+  "name": "IDCM_A5_Blind_Prediction",
+  "version": "1.0",
+  "date": "2026-08-16",
+  "pre_registered_predictions": {
+    "P0": "median d_node < 9.6 deg for E>150 EeV events",
+    "P1": ">50% of E>150 EeV events within 8 deg of nodes (MC null: 31.4%)",
+    "P2": ">50% of E>150 EeV events within 10 deg of nodes (MC null: 47.6%)"
+  },
+  "method": {
+    "null": "MC scramble RA, keep dec field (conservative)",
+    "test": "binomial test P(\u2265k hits | N, p=0.314)",
+    "radius_primary": "8 deg",
+    "radius_secondary": "10 deg"
+  },
+  "falsification": {
+    "condition": "median d_node > 12 deg OR <30% within 8 deg (N\u226520)",
+    "p_value_reject": "p > 0.05"
+  },
+  "success": {
+    "p_0.01": "3\u03c3 evidence",
+    "p_0.001": "3.3\u03c3 strong",
+    "p_1e-6": "5\u03c3 discovery"
+  },
+  "power_analysis": {
+    "N_for_3sigma": 20,
+    "N_for_5sigma": 50,
+    "assumed_hit_rate": 0.75
+  }
+}

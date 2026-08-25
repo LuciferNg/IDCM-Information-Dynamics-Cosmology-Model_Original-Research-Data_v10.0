@@ -1,0 +1,11 @@
+{
+  "lambda_min": 2.5349304743017888e-26,
+  "E_gzk_GeV": 48910295446.01218,
+  "dispersion": {
+    "n1_dt_090510_s": 195730218598556.06,
+    "obs_limit_s": 0.8,
+    "status": "effect too small for current data"
+  },
+  "unique_prediction": "direction-dependent dispersion (A5 lattice orientation)",
+  "falsifiable": "N>100 GRBs with no direction correlation would falsify"
+}

@@ -1,0 +1,23 @@
+{
+  "hypotenuse": {
+    "rule": "B(d,88−d) = 4sin²(dπ/176) = 88-site 對偶鏈譜 γ'_d",
+    "checks": 43,
+    "max_dev": 6.661338147750939e-16,
+    "pass": true,
+    "significance": "拍頻表斜邊 = O34 對偶鏈 (88-site) 頭 43 個模態 — 表內含母譜!"
+  },
+  "left_edge": {
+    "rule": "B(d,d+2) = 4·S(d)·C(d+2) (n=1 行)",
+    "checks": 43,
+    "max_dev": 4.440892098500626e-16,
+    "pass": true
+  },
+  "top_row": {
+    "rule": "B(1,2n+1) = 4·S(1)·C(2n+1) (相鄰間隔)",
+    "checks": 43,
+    "max_dev": 2.5673907444456745e-16,
+    "pass": true,
+    "zero_point": "n=43.5 (半整數 = 觀察者子空間, O36)",
+    "zero_verified": true
+  }
+}

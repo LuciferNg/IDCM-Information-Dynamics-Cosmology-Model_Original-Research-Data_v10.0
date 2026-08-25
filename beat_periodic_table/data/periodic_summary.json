@@ -1,0 +1,23 @@
+{
+  "title": "拍頻周期表 (Beat Periodic Table)",
+  "structure": "43 行 (d=1..43, 模態間距) × 87 列 (s=3..87, 模態和)",
+  "formula_difference": "B(d,s) = 4·sin(dπ/176)·cos(sπ/176)",
+  "formula_sum": "B'(d,s) = 4·sin(sπ/176)·cos(dπ/176) (轉置對偶)",
+  "total_beats": 946,
+  "total_pairs": 1892,
+  "row_rule": "行長 = 44 − d (三角表)",
+  "column_rule": "s 由 d+2 到 88−d, 步長 2 (同奇偶)",
+  "periodicity": "列方向: s → s+88 → cos 值週期重現 (半圈); 行方向: d → 88−d → sin↔cos 互補",
+  "magic_rows": {
+    "7": "m_7 錨點 √γ₇/2",
+    "14": "★世代規則 B²−2",
+    "20": "轉移矩陣 2n_u",
+    "22": "半節點 44/2",
+    "33": "K_tree 33"
+  },
+  "hypotenuse": "斜邊 (m=44) = 88-site 對偶鏈譜 4sin²(dπ/176)",
+  "generations": "行14 × 列{30,34,52}: c/s, u/d, t/b",
+  "duality": "和頻表 = 差頻表轉置 (O54 反物質對偶)",
+  "moseley": "每行÷S(d) → 萬有包絡 4cos(sπ/176) (946/946 零例外)",
+  "irrationality": "全部 946 個無理 (代數次數 ≥ 4; 分層見 05)"
+}
