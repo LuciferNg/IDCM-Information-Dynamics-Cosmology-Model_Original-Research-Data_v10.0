@@ -11,7 +11,8 @@ from itertools import combinations
 # ============================================================
 # 基本常數
 # ============================================================
-R_H = 4129.94        # Mpc, K_Chain 環周長
+R_world = 4129.94  # Mpc, K_Chain 環周長
+R_H = R_world  # deprecated alias (O73)
 Nd = 44              # site 數
 c = 299792.458       # km/s, 光速
 Gyr = 3.15576e16     # s/Gyr
@@ -19,7 +20,7 @@ hbar = 6.582119569e-16  # eV·s
 
 Mpc_to_km = 3.085677581e19
 c_ms = c * 1e3
-omega_scale = 88 * c_ms / (R_H * Mpc_to_km * 1e3)
+omega_scale = 88 * c_ms / (R_world * Mpc_to_km * 1e3)
 
 
 @dataclass

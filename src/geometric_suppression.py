@@ -11,7 +11,8 @@ import math
 # ============================================================
 φ = (1 + math.sqrt(5)) / 2
 φ_inv = 1 / φ
-R_H = 4129.94  # Mpc
+R_world = 4129.94  # Mpc
+R_H = R_world  # deprecated alias (O73)
 Nd = 44
 hbar = 6.582119569e-16  # eV·s
 c = 299792.458  # km/s

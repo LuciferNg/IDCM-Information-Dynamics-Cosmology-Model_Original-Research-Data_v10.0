@@ -1,0 +1,106 @@
+"""
+O73 攻堅 07: 新參數命名設計 + src rename 影響評估
+=================================================================
+用戶指示: 「執行O73，但新參數不能再叫哈伯常數」
+
+背景: IDCM 冇膨脹 (PARADIGM BREAK 2026-08-12)
+      H₀ = 72.59 嘅真實身份 = 世界環角頻率 (script 03 已證)
+      - ΛCDM: H₀ = 膨脹率 (scale factor 變化率) — IDCM 冇呢樣嘢!
+      - IDCM: ω_ring = c/R_world = 世界環角頻率 (幾何量)
+
+命名要求:
+  1. 唔可以叫「哈伯常數」/ H₀ (ΛCDM 包袱)
+  2. 要反映真實身份: 世界環嘅角頻率
+  3. 要避免同 ΛCDM H₀ 混淆
+  4. 單位: (km/s)/Mpc 或 rad/Gyr — 頻率本質
+"""
+import re, os
+
+print("=" * 74)
+print("1. 命名候選")
+print("=" * 74)
+candidates = {
+    "ω_ring":      "世界環角頻率 (world ring angular frequency)",
+    "Ω_ring":      "同 ω 但大寫 (容易同 Ω 密度參數混淆 ✗)",
+    "ν_ring":      "ν 通常係線頻率 (cycle/s), ω 係角頻率 — ν 啱線頻率",
+    "f_ring":      "f 通常係線頻率 — 但數值係角頻率 (2π 問題)",
+    "ω_world":     "世界角頻率 (同 ω_ring 等效)",
+    "c/R_world":   "直接寫公式 (最無歧義但唔係名)",
+    "R_ring⁻¹":    "半徑倒數 × c — 幾何導出",
+}
+for k, v in candidates.items():
+    print(f"  {k:14s}: {v}")
+
+print()
+print("=" * 74)
+print("2. 物理身份判讀 (script 03 結論)")
+print("=" * 74)
+print("""
+  數值 72.59 (km/s)/Mpc:
+    - 身份 = 角頻率 ω (因為 T_ring = 2π/ω = 84.63 Gyr ✅)
+    - 唔係線頻率 f (f = ω/2π = 11.55 /Gyr, T = 13.47 Gyr ✗)
+    - 唔係膨脹率 (IDCM 冇 scale factor)
+
+  單位 (km/s)/Mpc 其實 = 1/時間:
+    (km/s)/Mpc = (km/s)/(3.086e19 km) = 3.24e-20 /s = rad/s 嘅角頻率制
+    → 72.59 (km/s)/Mpc = 2.35e-18 rad/s
+    → 呢個係角頻率單位, 唔係「速度/距離」嘅物理意義
+    → 「哈伯常數」個名令人以為係膨脹率, 但單位本身就係頻率!
+
+  結論: ω_ring = 72.59 (km/s)/Mpc = 世界環角頻率
+        (ΛCDM 將佢誤讀做膨脹率, IDCM 還原做角頻率)
+""")
+
+print("=" * 74)
+print("3. src/kchain_wave_params.py rename 影響")
+print("=" * 74)
+src_path = "../../src/kchain_wave_params.py"
+with open(src_path) as f:
+    content = f.read()
+
+# 統計 H0/H₀/R_H 出現
+h0_count = len(re.findall(r'\bH0\b', content))
+rh_count = len(re.findall(r'\bR_H\b', content))
+print(f"  H0 出現: {h0_count} 次")
+print(f"  R_H 出現: {rh_count} 次")
+print(f"  總行數: {len(content.splitlines())}")
+
+print()
+print("  影響分析:")
+print("  - H0 = 72.59: rename → omega_ring = 72.59 (同一數值)")
+print("  - R_H = 4129.94: 注釋話「環周長」→ 實證係「半徑」")
+print("    → rename → R_world = 4129.94 (世界環半徑)")
+print("    → 但 λ_n = R_H/n 嘅用法 (44 段鏈) 保持 — 鏈長 = R_world")
+print("    → 需要澄清: 鏈係「半徑展開」唔係「周長展開」?")
+print("    → 或者: 44 段鏈 = 周長 2πR_world 嘅離散化?")
+print("    → 技術決定: 鏈長 L_chain 保持 = 4129.94 (數字不變)")
+print("                環周長 L_ring = 2π·4129.94 = 25949.2")
+print()
+
+print("=" * 74)
+print("4. 推薦命名方案")
+print("=" * 74)
+print("""
+  ★ 主參數: ω_ring = 72.59 (km/s)/Mpc
+     世界環角頻率 (world ring angular frequency)
+     - 舊名 H₀ 徹底停用 (IDCM 文檔)
+     - 數值不變, 身份修正
+
+  ★ 幾何量: R_world = 4129.94 Mpc (世界環半徑)
+     - 舊名 R_H 停用 (R_H 有 Hubble 包袱)
+     - 鏈長 L_chain = R_world (44-site 鏈 = 半徑展開, 保持現有代數)
+     - 環周長 L_ring = 2π·R_world (物理環)
+
+  ★ 導出量:
+     - λ_sync = L_ring/88 = 294.88 Mpc (同步波長, 原定義不變)
+     - T_ring = 2π/ω_ring = 84.63 Gyr (世界環周期, = 舊 T_sync)
+     - r_s = λ_sync/2 = 147.44 Mpc (聲學視界, dev 0.24%)
+
+  ★ 對照表 (文檔用):
+     | 舊 (ΛCDM 包袱) | 新 (IDCM)          | 數值            |
+     |:---------------|:-------------------|:----------------|
+     | H₀             | ω_ring             | 72.59 (km/s)/Mpc |
+     | R_H            | R_world            | 4129.94 Mpc      |
+     | T_sync         | T_ring             | 84.63 Gyr        |
+     | H₀ = c/R_H    | ω_ring = c/R_world | 恆等            |
+""")

@@ -13,7 +13,8 @@ from dataclasses import dataclass
 # ============================================================
 φ = (1 + math.sqrt(5)) / 2
 φ_inv = 1 / φ
-R_H = 4129.94
+R_world = 4129.94
+R_H = R_world  # deprecated alias (O73)
 Nd = 44
 M_Pl = 1.220890e22  # MeV
 
@@ -26,7 +27,7 @@ total_moduli = h11 + h21  # 134
 # K_Chain 能量
 hbar = 6.582119569e-16
 c = 299792.458
-omega_scale = 88 * c * 1e3 / (R_H * 3.085677581e19 * 1e3)
+omega_scale = 88 * c * 1e3 / (R_world * 3.085677581e19 * 1e3)
 E_n = [hbar * omega_scale * math.sin(math.pi * n / 88) for n in range(1, Nd + 1)]
 
 

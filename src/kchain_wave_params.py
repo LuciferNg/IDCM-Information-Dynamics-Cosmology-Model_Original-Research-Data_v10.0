@@ -10,10 +10,18 @@ from dataclasses import dataclass, field
 # ============================================================
 # 基本常數
 # ============================================================
-R_H = 4129.94        # Mpc, K_Chain 環周長
+R_world = 4129.94       # Mpc, 世界環半徑 (world ring radius)
+                        # ⚠️ O73 (2026-08-25): 舊名 R_world (Hubble 包袱) 已停用
+                        # 幾何角色 = 半徑 (T_ring = 2πR_world/c = 84.63 Gyr)
+                        # 44-site 鏈長 L_chain = R_world (離散化, 保持原代數)
+R_H = R_world          # 🛑 deprecated alias (O73 rename, 向後兼容)
 Nd = 44              # site 數
 c = 299792.458       # km/s, 光速
-H0 = 72.59           # km/s/Mpc
+omega_ring = 72.59     # (km/s)/Mpc, 世界環角頻率 (world ring angular frequency)
+                        # ⚠️ O73 (2026-08-25): 舊名 H₀/哈伯常數 已停用
+                        # 身份 = 角頻率 ω (T_ring × ω_ring = 2π ✅ script 03/08)
+                        # 唔係膨脹率! IDCM 冇 scale factor (PARADIGM BREAK)
+H0 = omega_ring       # 🛑 deprecated alias (O73 rename, 向後兼容)
 
 # 單位轉換
 Mpc_to_km = 3.085677581e19
@@ -21,9 +29,9 @@ Gyr = 3.15576e16     # s/Gyr
 hbar = 6.582119569e-16  # eV·s
 
 # 導出量
-dx = R_H / Nd        # Mpc, site 間距
+dx = R_world / Nd        # Mpc, site 間距
 c_ms = c * 1e3       # m/s
-omega_scale = 88 * c_ms / (R_H * Mpc_to_km * 1e3)  # rad/s 標度因子
+omega_scale = 88 * c_ms / (R_world * Mpc_to_km * 1e3)  # rad/s 標度因子
 
 
 @dataclass
@@ -53,7 +61,7 @@ def compute_modes() -> list[KChainMode]:
     modes = []
     for n in range(1, Nd + 1):
         # 波長
-        λ_n = R_H / n
+        λ_n = R_world / n
 
         # 角頻率 (rad/s)
         ω_n = omega_scale * math.sin(math.pi * n / 88)
