@@ -67,6 +67,18 @@ t19 = outs.get("19_h5_cross_lock", "")
 check("交叉 z = 0.32σ", "0.3188" in t19)
 check("巧合概率 ~1.8e-4", "0.000177" in t19 or "1.8e-4" in t19)
 
+# A7. I 分歧修正 (script 20) — 反幻覺確認
+t20 = outs.get("20_lcdm_i_divergence", "")
+check("I_full 含 radiation = 3.1159", "3.11588" in t20 or "3.1159" in t20)
+check("I* = 3.1838 = 24/7 - 6π/77", "3.18377" in t20 and "6π/77" in t20)
+check("radiation 貢獻 = -0.49%", "0.49" in t20)
+
+# A8. H7 預言閾值 (script 21)
+t21 = outs.get("21_h7_thresholds", "")
+check("20+ Maser → z~2σ", "1.94" in t21 or "2σ" in t21)
+check("ngVLA 100 → z~13σ", "13" in t21 or "4.33" in t21)
+check("P4 加權平均 67.93", "67.93" in t21)
+
 print()
 print("─" * 74)
 print("B. 文件 ↔ 腳本一致性 (docs 記載 vs scripts 輸出)")
@@ -100,6 +112,16 @@ check("docs/08 記載唯一性 + I 分歧", "唯一" in d08 and "1.6" in d08)
 # B5. docs/09 H5
 d09 = doc_contents.get("09_h5_cross_lock.md", "")
 check("docs/09 記載交叉鎖定 + 1.8e-4", "1.8e-4" in d09 and "0.32" in d09)
+
+# B7. docs/11 H7 預言
+d11 = doc_contents.get("11_h7_predictions.md", "")
+check("docs/11 記載 7 個預言 + P1-P7", "P7" in d11 and "預言" in d11)
+check("docs/11 記載加權平均 67.93", "67.93" in d11)
+
+# B8. docs/12 I 分歧修正
+d12 = doc_contents.get("12_lcdm_i_divergence.md", "")
+check("docs/12 記載 2.18% 修正", "2.18" in d12)
+check("docs/12 記載 I* = 24/7 - 6π/77", "6π/77" in d12 and "77" in d12)
 
 # B6. docs/03 rename
 d03 = doc_contents.get("03_identity_rename.md", "")
