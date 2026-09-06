@@ -233,12 +233,12 @@ pr = open(os.path.join(BASE, "01_problem_record.md")).read()
 n_res = re.search(r"(\d+)/(\d+) PASS", res)
 n_fin = re.search(r"(\d+)/(\d+) PASS", fin)
 n_pr = re.search(r"(\d+)/(\d+) PASS", pr)
-check("RESULT.md 491/491", n_res and n_res.group(1) == "567" and n_res.group(2) == "567")
-check("final_result.md 491/491", n_fin and n_fin.group(1) == "567" and n_fin.group(2) == "567")
-check("problem_record 491/491", n_pr and n_pr.group(1) == "567" and n_pr.group(2) == "567")
+check("RESULT.md 491/491", n_res and n_res.group(1) == "637" and n_res.group(2) == "637")
+check("final_result.md 491/491", n_fin and n_fin.group(1) == "637" and n_fin.group(2) == "637")
+check("problem_record 491/491", n_pr and n_pr.group(1) == "637" and n_pr.group(2) == "637")
 
 # F2. 時序索引完整性
-check("problem_record §七 T1-T28 存在", all(f"T{i}" in pr for i in range(1, 29)))
+check("problem_record §七 T1-T29 存在", all(f"T{i}" in pr for i in range(1, 30)))
 check("T14 → docs/12, T15 → docs/13, T17 → docs/14, T18-21 → docs/15-18 映射",
       all(f"docs/{i}" in pr for i in (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25)))
 check("§八 U1-U7 存在", all(f"U{i}" in pr for i in range(1, 8)))
