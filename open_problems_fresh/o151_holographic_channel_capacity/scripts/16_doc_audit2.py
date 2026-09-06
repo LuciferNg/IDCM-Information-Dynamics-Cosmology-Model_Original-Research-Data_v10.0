@@ -233,14 +233,14 @@ pr = open(os.path.join(BASE, "01_problem_record.md")).read()
 n_res = re.search(r"(\d+)/(\d+) PASS", res)
 n_fin = re.search(r"(\d+)/(\d+) PASS", fin)
 n_pr = re.search(r"(\d+)/(\d+) PASS", pr)
-check("RESULT.md 441/441", n_res and n_res.group(1) == "441" and n_res.group(2) == "441")
-check("final_result.md 441/441", n_fin and n_fin.group(1) == "441" and n_fin.group(2) == "441")
-check("problem_record 441/441", n_pr and n_pr.group(1) == "441" and n_pr.group(2) == "441")
+check("RESULT.md 491/491", n_res and n_res.group(1) == "491" and n_res.group(2) == "491")
+check("final_result.md 491/491", n_fin and n_fin.group(1) == "491" and n_fin.group(2) == "491")
+check("problem_record 491/491", n_pr and n_pr.group(1) == "491" and n_pr.group(2) == "491")
 
 # F2. 時序索引完整性
-check("problem_record §七 T1-T17 存在", all(f"T{i}" in pr for i in range(1, 18)))
-check("T14 → docs/12, T15 → docs/13, T17 → docs/14 映射",
-      "docs/12" in pr and "docs/13" in pr and "docs/14" in pr)
+check("problem_record §七 T1-T21 存在", all(f"T{i}" in pr for i in range(1, 22)))
+check("T14 → docs/12, T15 → docs/13, T17 → docs/14, T18-21 → docs/15-18 映射",
+      all(f"docs/{i}" in pr for i in (12, 13, 14, 15, 16, 17, 18)))
 check("§八 U1-U7 存在", all(f"U{i}" in pr for i in range(1, 8)))
 
 # F3. final_result 開放項更新
@@ -271,14 +271,19 @@ print("\n--- G. 時序完整性 ---")
 # G1. 日期 header
 all_md = glob.glob(os.path.join(docs_dir, "*.md"))
 missing_date = [os.path.basename(f) for f in all_md if "日期" not in open(f).read()]
-check("全部 13 個 docs 有日期 header", not missing_date, f"missing: {missing_date}")
+check("全部 18 個 docs 有日期 header", not missing_date, f"missing: {missing_date}")
 # G2. docs/09-13 冇前向引用 (只引用 01-08 + 自己之前)
 fwd_ok = True
-for i, d in [(9, d09), (10, d10), (11, d11), (12, d12), (13, d13)]:
-    for j in range(i + 1, 14):
+d14 = rd("14_beat_optimal_band.md")
+d15 = rd("15_132_generation_channel.md")
+d16 = rd("16_area_law_1overB.md")
+d17 = rd("17_mssm33_verdict.md")
+d18 = rd("18_beat_sharpness.md")
+for i, d in [(9, d09), (10, d10), (11, d11), (12, d12), (13, d13), (14, d14), (15, d15), (16, d16), (17, d17), (18, d18)]:
+    for j in range(i + 1, 19):
         if f"docs/{j:02d}" in d or f"docs/{j:02d}" in d:
             fwd_ok = False
-check("docs/09-13 零前向引用 (冇污染後期)", fwd_ok)
+check("docs/09-18 零前向引用 (冇污染後期)", fwd_ok)
 # G3. docs/10-13 引用前向正確 (docs/10→docs/02, docs/11→docs/07)
 check("docs/10 引用 docs/02/03 (前向正確)", "docs/02" in d10 or "docs/03" in d10)
 check("docs/11 引用 docs/07 (S08 來源)", "docs/07" in d11 or "S08" in d11)
