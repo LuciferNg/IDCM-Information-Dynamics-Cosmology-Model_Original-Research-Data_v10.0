@@ -268,7 +268,7 @@ check("T", "docs/07-08 正文冇自指 (唔係回溯改寫)",
 import glob
 all_md = glob.glob(os.path.join(docs_dir, "*.md"))
 missing_date = [os.path.basename(f) for f in all_md if "日期" not in open(f).read()]
-check("T", "全部 8 個 docs 有日期 header", not missing_date, f"missing: {missing_date}")
+check("T", "全部 docs 有日期 header", not missing_date, f"missing: {missing_date}")
 # docs/04 嘅「🟡 唔喺 O151 解決」vs docs/08 嘅解析 — 歷史記錄一致 (docs/04 記錄當時狀態, docs/08 記錄後來解析)
 check("T", "docs/04 標 🟡 遺留 + docs/08 解析 = 時序一致 (冇回溯改寫)",
       "🟡 O41 遺留" in t04 if (t04 := open(os.path.join(docs_dir, "04_transmission_mechanism.md")).read()) else False)
