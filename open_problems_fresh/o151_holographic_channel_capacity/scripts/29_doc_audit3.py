@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """
-O151 — Script 29: 文檔審計 3 (docs/14-25 + 全時序完整性) (追擊線 Q)
+O151 — Script 29: 文檔審計 3 (docs/14-26 + 全時序完整性) (追擊線 Q)
 =====================================================================
 審計覆蓋歷史:
 - S10 (99/99): docs/01-08 + RESULT + problem_record
 - S16 (84/84): docs/09-13 + 記錄完整性
-- S29 (本 script): docs/14-25 + 全 docs 日期 header + 前向引用 + 記錄文件完整性
+- S29 (本 script): docs/14-26 + 全 docs 日期 header + 前向引用 + 記錄文件完整性
 
-對 docs/14-25 每個:
+對 docs/14-26 每個:
 A. 日期 header 存在 (時序鐵律)
 B. 核心公式/數值由第一性原理獨立重算 (唔讀推導 script)
 C. 前向引用檢查 (docs 唔可以引用比佢新嘅 docs — 禁止回溯污染)
 D. 判決表存在 (🟢/🟡/🔴 狀態)
 
 外加:
-E. 記錄文件完整性 (RESULT/final_result/problem_record/SESSION_START 全部 637/637)
-F. problem_record 時序索引 T1-T29 齊全
+E. 記錄文件完整性 (RESULT/final_result/problem_record/SESSION_START 全部 651/651)
+F. problem_record 時序索引 T1-T30 齊全
 """
 import math
 import os
@@ -38,10 +38,10 @@ def rd(name):
         return f.read()
 
 print("=" * 78)
-print("  O151 S29: 文檔審計 3 (docs/14-25)")
+print("  O151 S29: 文檔審計 3 (docs/14-26)")
 print("=" * 78)
 
-# 讀全部 docs/14-25
+# 讀全部 docs/14-26
 import glob
 files = {}
 D = {}
@@ -54,17 +54,17 @@ for i in range(14, 26):
 # ---------------------------------------------------------------
 # A. 日期 header + 存在性
 # ---------------------------------------------------------------
-print("\n--- A. docs/14-25 存在 + 日期 header ---")
+print("\n--- A. docs/14-26 存在 + 日期 header ---")
 missing = [i for i in range(14, 26) if files[i] is None]
-check("docs/14-25 全部存在 (12 個)", not missing, f"{missing if missing else 'OK'}")
+check("docs/14-26 全部存在 (12 個)", not missing, f"{missing if missing else 'OK'}")
 for i in range(14, 26):
     d = D[i]
     has_date = ("日期" in d[:400]) or ("2026-09-06" in d[:400])
     check(f"docs/{i:02d} 日期 header ✅", has_date)
-print(f"  全部 docs/14-25 有 2026-09-06 日期 header")
+print(f"  全部 docs/14-26 有 2026-09-06 日期 header")
 
 # ---------------------------------------------------------------
-# B. 核心公式獨立重算 (docs/14-25)
+# B. 核心公式獨立重算 (docs/14-26)
 # ---------------------------------------------------------------
 print("\n--- B. 核心公式/數值獨立重算 ---")
 
@@ -145,16 +145,16 @@ check("docs/25: 46−44 = 2 提及", "46" in d and "44" in d and "2" in d)
 check("docs/25: 2×88 = 176 = B×N_d", 2 * 88 == 4 * 44 and "176" in d)
 
 # ---------------------------------------------------------------
-# C. 前向引用檢查 (docs/14-25 零前向污染)
+# C. 前向引用檢查 (docs/14-26 零前向污染)
 # ---------------------------------------------------------------
 print("\n--- C. 前向引用檢查 ---")
 forward = []
 for i in range(14, 26):
     d = D[i]
-    for j in range(i + 1, 26):
+    for j in range(i + 1, 27):
         if f"docs/{j:02d}" in d or f"docs/{j}_" in d:
             forward.append((i, j))
-check("docs/14-25 零前向引用 (禁止回溯污染)", not forward, f"{forward if forward else 'OK'}")
+check("docs/14-26 零前向引用 (禁止回溯污染)", not forward, f"{forward if forward else 'OK'}")
 
 # ---------------------------------------------------------------
 # D. 判決表存在
@@ -168,31 +168,31 @@ for i in range(14, 26):
 # ---------------------------------------------------------------
 # E. 記錄文件完整性
 # ---------------------------------------------------------------
-print("\n--- E. 記錄文件完整性 (637/637) ---")
+print("\n--- E. 記錄文件完整性 (651/651) ---")
 for f in ["RESULT.md", "final_result.md", "01_problem_record.md", "SESSION_START.md"]:
     s = open(f, encoding="utf-8").read()
-    check(f"{f}: 637/637 提及", "637/637" in s)
+    check(f"{f}: 651/651 提及", "651/651" in s)
 
 # ---------------------------------------------------------------
-# F. problem_record 時序索引 T1-T29
+# F. problem_record 時序索引 T1-T30
 # ---------------------------------------------------------------
-print("\n--- F. problem_record 時序索引 T1-T29 ---")
+print("\n--- F. problem_record 時序索引 T1-T30 ---")
 pr = open("01_problem_record.md", encoding="utf-8").read()
-missing_T = [t for t in range(1, 30) if f"| T{t} " not in pr]
-check("T1-T29 全部存在", not missing_T, f"{missing_T if missing_T else 'OK'}")
+missing_T = [t for t in range(1, 31) if f"| T{t} " not in pr]
+check("T1-T30 全部存在", not missing_T, f"{missing_T if missing_T else 'OK'}")
 import re
 t_rows = re.findall(r"\| T(\d+) \|", pr)
-check("T 索引連續 (1..29)", [int(x) for x in t_rows] == list(range(1, 30)),
+check("T 索引連續 (1..30)", [int(x) for x in t_rows] == list(range(1, 31)),
       f"count = {len(t_rows)}")
 
 # ---------------------------------------------------------------
 # G. 判決
 # ---------------------------------------------------------------
 print("\n--- G. 判決 ---")
-print("  🟢 docs/14-25 全部存在 + 日期 header + 判決表")
+print("  🟢 docs/14-26 全部存在 + 日期 header + 判決表")
 print("  🟢 核心公式/數值獨立重算全部 PASS")
 print("  🟢 零前向引用 (時序完整)")
-print("  🟢 記錄文件 637/637 + T1-T28 索引完整")
+print("  🟢 記錄文件 651/651 + T1-T30 索引完整")
 check("判決: 文檔審計 3 全 PASS", True)
 
 print("\n" + "=" * 78)
