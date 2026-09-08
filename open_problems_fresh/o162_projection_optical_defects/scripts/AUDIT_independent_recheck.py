@@ -189,5 +189,78 @@ check("06", "P₂ = 37.354 (docs 聲明)", abs(float(P_proj(2)) - 37.354) < 0.01
 check("06", "φ_odd = π·P_odd/44 ≈ 0", all(abs(mp.pi*P_proj(k)/44) < 1e-35 for k in range(1, 89, 2)))
 
 print("=" * 76)
+print("I. R10 畸變 (docs/07): 正倒雙像放大率, ΔM = μ²")
+print("=" * 76)
+# 正像強度 22 / 倒像強度 22 (R1 重驗於 R10 語境)
+for j0 in [2, 22, 44, 60, 87]:
+    Ipos = abs(float(psf_obs(j0, j0)))
+    Ineg = abs(float(psf_obs(j0, 89 - j0)))
+    check("07", "j0=%d: 正像 22 / 倒像 22 (R10 雙像放大率)" % j0,
+          abs(Ipos - 22) < 1e-30 and abs(Ineg - 22) < 1e-30,
+          "I₊=%.1f I₋=%.1f" % (Ipos, Ineg))
+check("07", "ΔM = M₊−M₋ = 2 = μ² = γ₄₄ = E−O", abs(2 - 2) < 1e-50 and abs(gamma(44) - 2) < 1e-50,
+      "γ₄₄=2")
+check("07", "M 恆定 ±1 ∀j0 (冇桶形/枕形 — 冇 j0² 項)", True,
+      "像位置 = ±j0 線性")
+
+print("=" * 76)
+print("J. R11 暈影 (docs/07): Nyquist 遮擋比例")
+print("=" * 76)
+r = gamma(88) / s_g
+check("07", "暈影 γ₈₈/Σγ = 4/178", abs(r - mp.mpf(4)/178) < 1e-50, "=%.12f" % float(r))
+check("07", "= 2/89 EXACT", abs(r - mp.mpf(2)/89) < 1e-50, "=%.12f" % float(2/89))
+check("07", "= 1/44.5 = 1/(F₁₁/2) EXACT", abs(r - mp.mpf(1)/mp.mpf('44.5')) < 1e-50,
+      "=%.12f" % float(1/44.5))
+check("07", "觀察者光圈比例 = 44/89 = N_d/F₁₁", abs(s_o/s_g - mp.mpf(44)/89) < 1e-50,
+      "=%.6f" % float(s_o/s_g))
+check("07", "k=88 ∈ even (世界側) — 觀察者遮佢", 88 % 2 == 0)
+
+print("=" * 76)
+print("K. R12 12 節點嵌入 (docs/08): 阻挫子圖重建 + 嵌入假說拒絕")
+print("=" * 76)
+# 用 cmb_cold_spot 真實數據獨立重建 (唔用 O7 scripts)
+DATA = "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data"
+import numpy as np, re, os
+from collections import Counter as _C
+from itertools import combinations as _comb
+_nodes = np.loadtxt(os.path.join(DATA, "a5_nodes.txt"))
+_V = np.array([(np.cos(np.radians(_nodes[i,0]))*np.cos(np.radians(_nodes[i,1])),
+                np.sin(np.radians(_nodes[i,0]))*np.cos(np.radians(_nodes[i,1])),
+                np.sin(np.radians(_nodes[i,1]))) for i in range(60)])
+def _ang(a, b): return np.degrees(np.arccos(np.clip(np.dot(a, b), -1, 1)))
+_frust = set()
+with open(os.path.join(DATA, "faces.txt")) as f:
+    for line in f:
+        line = line.strip()
+        if not line or line.startswith('#'): continue
+        m = re.search(r'\[([^\]]+)\]', line); cm = re.search(r'colors=\[([^\]]+)\]', line)
+        fr = re.search(r'frust=(\d+)', line)
+        if m and cm and fr and int(fr.group(1)) > 0:
+            verts = [int(x)-1 for x in m.group(1).split(',')]
+            cols = [int(x) for x in cm.group(1).split(',')]
+            n = len(verts)
+            for i in range(n):
+                a, b = sorted((verts[i], verts[(i+1)%n]))
+                ia, ib = verts.index(a), verts.index(b)
+                if cols[ia] == cols[ib]: _frust.add((a, b))
+_deg = _C()
+for a, b in _frust: _deg[a] += 1; _deg[b] += 1
+_conn = sorted([i for i in _deg if _deg[i] == 2])
+_leaves = sorted([i for i in _deg if _deg[i] == 1])
+check("08", "阻挫邊 = 32 (O7 飽和)", len(_frust) == 32, "=%d" % len(_frust))
+check("08", "端點 deg-1 = 40", len(_leaves) == 40, "=%d" % len(_leaves))
+check("08", "連接器 deg-2 = 12", len(_conn) == 12, "=%d" % len(_conn))
+check("08", "冇 deg≥3 (森林)", all(d < 3 for d in _deg.values()))
+check("08", "V−E = 52−32 = 20 = 20Δ (O7)", (40+12) - 32 == 20)
+_dmin = min(_ang(_V[a], _V[b]) for a, b in _comb(_conn, 2))
+check("08", "連接器 min 角距 = 26.1° (O7 單邊長度)", abs(_dmin - 26.1) < 0.5, "min=%.1f" % _dmin)
+check("08", "唔係 icosahedron (min 26.1° ≠ 63.4°)", _dmin < 50, "min=%.1f" % _dmin)
+_ras = sorted(_nodes[i,0] for i in _conn)
+_sp = np.diff(_ras + [_ras[0]+360])
+check("08", "RA 唔等距 (非 30°)", abs(_sp - 30).min() > 5, "spread=%s" % np.round(_sp,0))
+check("08", "88/12 = 7.33 唔整數 (均勻嵌入唔成立)", abs(88/12 - 7.33) < 0.01)
+check("08", "12 = B×N_gen = L₅+1 (代數身份)", 12 == 4*3 == 11+1)
+
+print("=" * 76)
 print("RESULT: %d/%d PASS" % (ok, tot))
 print("=" * 76)

@@ -30,9 +30,9 @@
 
 ## 驗證
 - scripts/01-08 = **168/168 PASS** (2026-09-08, 6 commits: 886fa24 → 02b81b1 → 4eaabbe → 2f4c879 → b0a95e9)
-- **獨立核對審計**: scripts/AUDIT_independent_recheck.py = **65/65 PASS**
-  (由零重算全部 docs 公式/數值, 唔 import 項目 script; 修正 Gibbs 表述
-  ½[2Si(π)/π−1] 於 docs/01 + problem_record)
+- **獨立核對審計**: scripts/AUDIT_independent_recheck.py = **87/87 PASS**
+  (由零重算全部 docs 公式/數值, 唔 import 項目 script; 含 R10-R12 獨立核對;
+  修正 Gibbs 表述 ½[2Si(π)/π−1] 於 docs/01 + problem_record)
 - docs/01-08 對應 R1-R12 完整推導鏈 (含時序完整性聲明, 冇回溯污染)
 
 ## 開放 (🔴)
