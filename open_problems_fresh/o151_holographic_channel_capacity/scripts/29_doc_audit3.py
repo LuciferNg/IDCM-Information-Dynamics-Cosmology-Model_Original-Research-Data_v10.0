@@ -145,16 +145,36 @@ check("docs/25: 46−44 = 2 提及", "46" in d and "44" in d and "2" in d)
 check("docs/25: 2×88 = 176 = B×N_d", 2 * 88 == 4 * 44 and "176" in d)
 
 # ---------------------------------------------------------------
-# C. 前向引用檢查 (docs/14-26 零前向污染)
+# C. 前向引用檢查 (docs/01-26 全範圍, 3 個已知跨目錄/同 commit 白名單)
 # ---------------------------------------------------------------
-print("\n--- C. 前向引用檢查 ---")
+print("\n--- C. 前向引用檢查 (docs/01-26, 白名單排除) ---")
+import glob as _glob
+_ALL = {}
+for i in range(1, 27):
+    m = _glob.glob(f"docs/{i:02d}_*.md")
+    if m:
+        _ALL[i] = open(m[0], encoding="utf-8").read()
+
+WHITELIST = {
+    (4, 5): "docs/05 = o59_z3_12_subspace/docs/05_su12_extension_closure.md (跨目錄引用, 合法)",
+    (4, 23): "docs/23 = global_routing 其他項目文檔 (跨目錄引用, 合法)",
+    (6, 7): "docs/06 = 驗證報告 (活索引), a9f08f2 後追擊輪 docs/07 寫入, 629112c 審計同步加驗證行 (記錄更新, 非污染)",
+    (6, 8): "docs/06 = 驗證報告 (活索引), a9f08f2 後追擊輪 docs/08 寫入, 629112c 審計同步加驗證行 (記錄更新, 非污染)",
+    (6, 9): "docs/09 同 commit 629112c 寫入, docs/06 驗證報告同步加引用 (合法記錄更新)",
+}
 forward = []
-for i in range(14, 26):
-    d = D[i]
+for i in range(1, 27):
+    if i not in _ALL:
+        continue
+    d = _ALL[i]
     for j in range(i + 1, 27):
         if f"docs/{j:02d}" in d or f"docs/{j}_" in d:
-            forward.append((i, j))
-check("docs/14-26 零前向引用 (禁止回溯污染)", not forward, f"{forward if forward else 'OK'}")
+            if (i, j) in WHITELIST:
+                print(f"  ⚪ ({i},{j}) 白名單: {WHITELIST[(i, j)]}")
+            else:
+                forward.append((i, j))
+check("docs/01-26 零前向引用 (3 已知跨目錄/同 commit 白名單排除)", not forward,
+      f"{forward if forward else 'OK'}")
 
 # ---------------------------------------------------------------
 # D. 判決表存在
