@@ -85,6 +85,7 @@ Connection: A_k = −μ²cos(2θ_k), 錨點 k=44 零點, 總 holonomy = μ²
 | T1 | 2026-09-08 | scripts/01_noether_current.py | 34/34 PASS | docs/01_noether_current.md |
 | T2 | 2026-09-08 | scripts/02_link_variables.py | 35/35 PASS | docs/02_link_variables.md |
 | T3 | 2026-09-08 | scripts/03_constraint_multiplier.py | 25/25 PASS | docs/03_constraint_multiplier.md |
+| T4 | 2026-09-08 | scripts/04_doc_crosscheck.py (收尾核對) | 80/80 PASS | docs/01-03 + final_result.md |
 
 **依賴鏈**: O159 (S = Σ|Δφ|²+μ²Σ|φ|², μ²=2, U(1)+Q=44, connection A_k, 零偏差定理)
 → O161 → O122 (feynman_rules_wfield 對接: 離散 Noether 全鏈)
@@ -99,4 +100,11 @@ Connection: A_k = −μ²cos(2θ_k), 錨點 k=44 零點, 總 holonomy = μ²
   (2θ₈₈ = π, 實翻轉) — 已修正
 - script 03 C5 初版宣稱「乘子傳播子平均 ≈ O159」→ 假 (Jensen 凸性 mean(G') >
   mean(G)); 修正為「split 括住 O159 + Jensen 不等號」— off-shell 差異係約束後果
-- 全部 FAIL 係 check 自身 bug, 修正後 94/94 全綠 (零推導污染)
+- ★T4 收尾核對 (scripts/04, 80/80 獨立重算) 捉到 2 個真錯誤:
+  1. **winding 圈數混淆**: 22.25 = F₁₁/4 = **2L₅ + ¼** (唔係 L₅ + ¼ = 11.25!);
+     22.5π 相位 = 11.25 圈 = L₅+¼ 圈, 22π = 11 圈 = L₅ 圈 (初版將 π 數當圈數)
+     → docs/02 §4 + script 02 C4 + final_result 已修正
+  2. **88 links holonomy**: 88·(π/88) = **π** → e^{iπ} = **−1** (反週期 = J² = −1),
+     唔係初版寫嘅 π/2 = i → docs/02 §6 + script 02 C6 已修正
+- 全部 FAIL 係 check 自身 bug (3 個) 或真宣稱錯誤 (2 個), 修正後 174/174 全綠
+  (94/94 推導 + 80/80 核對) — 零推導污染, 修正全部標註 ⚠️/修正日期

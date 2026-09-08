@@ -51,11 +51,13 @@ winding = 44.5π/2π = 22.25 = F₁₁/4 = L₅ + ¼ (L₅ 全圈 + ¼ 錨圈)
 
 **扇區分拆** (Wilson phase 嘅世界/觀察者分解):
 
-| sector | Σ_k 2θ_k | Wilson line | 讀法 |
-|:--|:--|:--|:--|
-| 世界 (even) | 22.5π = N_d/2 + ½ 圈 | **i** | 攜帶複結構 (i = J) |
-| 觀察者 (odd) | 22π = N_d/2 圈 = L₅·2π | **1** | 全圈閉合 (平凡) |
-| 總 | 44.5π | **i** | 差 = π/2 = 錨相位 |
+| sector | Σ_k 2θ_k | 圈數 | Wilson line | 讀法 |
+|:--|:--|:--|:--|:--|
+| 世界 (even) | 22.5π | 11.25 = L₅ + ¼ | **i** | L₅ 全圈 + ¼ 錨圈 (攜帶複結構 i = J) |
+| 觀察者 (odd) | 22π | 11 = L₅ | **1** | L₅ 全圈閉合 (平凡) |
+| 總 | 44.5π | 22.25 = F₁₁/4 = 2L₅ + ¼ | **i** | 差 = π/2 = 錨相位 |
+
+⚠️ 修正 (09-08 收尾核對): 圈數 = 相位/2π — 22.5π = **11.25 圈** (= L₅+¼), 22π = **11 圈** (= L₅), 44.5π = **22.25 圈** (= 2L₅+¼ = N_d/2+¼); 初版寫「N_d/2+½ 圈」「L₅+¼」係相位/圈數混淆 (22.5π = (N_d/2+½)π 相位啱, 但圈數 = 11.25)。
 
 **閉合鏈**:
 - i² = −1: 兩個世界圈 = 觀察者反週期 (**J² = −1**)
@@ -78,7 +80,7 @@ site-space Wilson loop = **扇區 Z₂ 電荷** (J² = ±1 嘅 loop 讀法)。
 ```
 局部曲率: 2·(π/88) − (2π/88) = 0        (任何局部閉環相位和 = 0 — flat)
 最短零相位閉環: L·(π/88) = 2π ⟺ L = 176  (double cover 352 嘅一半)
-88 links (半圈) = π/2 holonomy = i        (鏈 half-turn 未閉合 — 需 double cover)
+88 links (半圈) = π holonomy = e^{iπ} = −1 (反週期 = J² = −1 — 需 double cover)
 ```
 
 - 1D 鏈曲率恆零 (均勻 link ⟹ 冇 local curvature); 唯一不變量 = **總 winding**
@@ -91,7 +93,7 @@ site-space Wilson loop = **扇區 Z₂ 電荷** (J² = ±1 嘅 loop 讀法)。
 - ✅ **Connection link-form**: ΔA_k = Δγ_k (link = 譜斜率); A_{k+88} = −A_k (反週期)
 - ✅ **Beat phase**: 2Δθ = π/88 均勻 = 譜格一步
 - ✅ **Wilson line 值**: mode-space W = i (總相位 (F₁₁/2)π, 世界 i / 觀察者 1,
-  winding L₅ + ¼, holonomy 階 4 = B, i² = −1 ⟹ J², i⁴ = 1 ⟹ 352 閉合);
+  winding 2L₅ + ¼ = F₁₁/4, holonomy 階 4 = B, i² = −1 ⟹ J², i⁴ = 1 ⟹ 352 閉合);
   site-space loop = (−1)^k (扇區 Z₂)
 - ✅ 1D 冇 plaquette 定量版: 曲率恆零, holonomy = 總 winding (global)
 - 🟡 剩: Wilson line = i 嘅「物理讀法」歸屬 (Z₄ = B 階 — 對應 B 譜頂 γ₈₈? —

@@ -110,12 +110,12 @@ S_even = sum(2*n for n in range(1, 45)); S_odd = sum(2*n-1 for n in range(1, 45)
 W_even = mp.e**(mp.mpc(0, 1) * mp.pi * S_even / 88)   # 22.5π
 W_odd  = mp.e**(mp.mpc(0, 1) * mp.pi * S_odd / 88)    # 22π
 check("世界 (even) Wilson line = e^{i·22.5π} = i", abs(W_even - mp.mpc(0, 1)) < mp.mpf('1e-50'),
-      "22.5π = N_d/2 + ½ 圈")
+      "22.5π = 11.25 圈 = L₅ + ¼ 圈")
 check("觀察者 (odd) Wilson line = e^{i·22π} = 1", abs(W_odd - 1) < mp.mpf('1e-50'),
-      "22π = N_d/2 圈 = L₅·2π 全圈")
+      "22π = 11 圈 = L₅ 圈")
 check("分拆: 44.5π = 22π (觀察者) ⊕ 22.5π (世界) (差 = π/2 = 錨相位)",
       abs(mp.pi*S_odd/88 + mp.pi*S_even/88 - tot_phase) < mp.mpf('1e-50'))
-check("winding = 44.5π/2π = 22.25 = F₁₁/4 = L₅ + ¼ (L₅ 全圈 + ¼ 錨圈)",
+check("winding = 44.5π/2π = 22.25 = F₁₁/4 = 2L₅ + ¼ (2L₅ 全圈 + ¼ 錨圈)",
       abs(tot_phase/(2*mp.pi) - mp.mpf(89)/4) < mp.mpf('1e-50'),
       "w=%.4f" % float(tot_phase/(2*mp.pi)))
 check("i² = −1: 兩個世界圈 = 觀察者反週期 (J² = −1)", abs(W_even**2 + 1) < mp.mpf('1e-50'))
@@ -150,7 +150,7 @@ check("局部曲率: 2·(π/88) − (2π/88) = 0 (任何局部閉環相位和 = 
 L_min = mp.mpf(2*mp.pi) / (mp.pi/88)
 check("最短零相位閉環 = 176 links (double cover 352 = 2×176 嘅一半)",
       abs(L_min - 176) < mp.mpf('1e-50'), "L=%.1f" % float(L_min))
-check("88 links (半圈) = π/2 holonomy = i — 鏈喺 half-turn 未閉合 (需 double cover)",
+check("88 links (半圈) = π holonomy = e^{iπ} = −1 (反週期 = J² = −1, 需 double cover)",
       abs(88*mp.pi/88 - mp.pi) < mp.mpf('1e-60'))
 check("結論: 1D 冇 plaquette 嘅定量版 — 曲率恆零, 唯一不變量 = 總 winding",
       True, "holonomy 由邊界 (總相位) carry, 唔係局部")

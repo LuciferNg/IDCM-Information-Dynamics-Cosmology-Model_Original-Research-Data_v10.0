@@ -15,7 +15,7 @@ link 變數由譜導出 (U_k = e^{ikπ/88}, γ_k = |1−U_k|²)、Wilson line = 
 - **T1 電荷 = 譜流通量**: staircase J_k = Σ_{j≤k}w_j = (−1)^k⌈k/2⌉; Q = J_88 = 44; Σ|J_k| = 1980 = Σ_even k
 - **T2 link 變數**: U_k = e^{i·2θ_k} = e^{ikπ/88}; **γ_k = |1 − U_k|²** (譜 = link 振幅平方)
 - **T2 connection link-form**: ΔA_k = Δγ_k (link = 譜斜率); A_{k+88} = −A_k (反週期)
-- **T2 Wilson line**: Π_k U_k = **i** — 總相位 44.5π = (F₁₁/2)π; 世界 i / 觀察者 1; winding 22.25 = F₁₁/4 = L₅ + ¼; i² = −1 (J²), i⁴ = 1 (352 = B·N_d)
+- **T2 Wilson line**: Π_k U_k = **i** — 總相位 44.5π = (F₁₁/2)π; 世界 i / 觀察者 1; winding 22.25 = F₁₁/4 = 2L₅ + ¼; i² = −1 (J²), i⁴ = 1 (352 = B·N_d)
 - **T2 Wilson loop**: e^{i·88·2θ_k} = e^{ikπ} = (−1)^k (扇區 Z₂ 週期因子)
 - **T3 乘子**: S' = S + λ·C, C = Σ_even|Φ|² − Σ_odd|Φ|² (Δ = 0); 扇區隙 2λ = E−O = 2 ⟹ λ = 1; **μ² = 2λ = 2** (四重身份: μ² = E−O = γ₄₄ = BC-cost = 2λ)
 - **T3 轉移成本**: ΔS'(transfer δ) = 2λδ = μ²δ (質量 = sector-locking 價格)
