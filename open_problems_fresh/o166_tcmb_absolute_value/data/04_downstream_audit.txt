@@ -1,0 +1,72 @@
+==========================================================================
+  O166 — 04: 下游文檔衝擊審計
+==========================================================================
+
+  引用位置總數: 15
+  [C-需核對] cmb_cl/03_first_results.md
+        T_CMB = 2×T_Pl×exp(-74)×(CY₃/10²)×(1-φ⁻⁹) = 2.7284 K (0.01%)
+  [✅] 檔案存在: cmb_cl/03_first_results.md
+  [C-需核對] cmb_cl/01_problem_record.md
+        CMB 存在已經解決 — exp(−74) 公式
+  [✅] 檔案存在: cmb_cl/01_problem_record.md
+  [C-需核對] cmb_cl/06_complete_record.md
+        H1: exp(−74) 公式 2.7284 K (0.01%) 已閉合
+  [✅] 檔案存在: cmb_cl/06_complete_record.md
+  [C-需核對] cmb_cl/scripts/02_acoustic_peaks_structural.py
+        T_CMB = 2×T_Pl×exp(-74)×... 2.7284K
+  [✅] 檔案存在: cmb_cl/scripts/02_acoustic_peaks_structural.py
+  [C-需核對] o83_correlator_cmb/docs/02_derivation_record.md
+        T_CMB = 2×T_Pl×exp(-74)×... = 2.7283 K (0.10%)
+  [✅] 檔案存在: o83_correlator_cmb/docs/02_derivation_record.md
+  [C-需核對] o83_correlator_cmb/scripts/05_thermal_state.py
+        check dev<1% (0.104%) — 1% 鬆容差
+  [✅] 檔案存在: o83_correlator_cmb/scripts/05_thermal_state.py
+  [B-受影響] o112_968_tcmb_cross_validation/01_problem_record.md
+        T_CMB = 2.7283 K (Planck 2018) 標記錯誤
+  [✅] 檔案存在: o112_968_tcmb_cross_validation/01_problem_record.md
+  [C-需核對] o112_968_tcmb_cross_validation/docs/01_problem_record.md
+        T_CMB = 2.7283 K — 結構閉合公式 (O83, 17/17)
+  [✅] 檔案存在: o112_968_tcmb_cross_validation/docs/01_problem_record.md
+  [A-輸入(閉合穩健)] bbn/06_complete_record.md
+        T_CMB = 2.7284 K 入 n_γ
+  [✅] 檔案存在: bbn/06_complete_record.md
+  [A-輸入(閉合穩健)] bbn/scripts/02_eta_b_structural.py
+        T_cmb = 2.7284
+  [✅] 檔案存在: bbn/scripts/02_eta_b_structural.py
+  [C-需核對] o73_h0_first_principles/docs/04_bbn_lock.md
+        「結構 T_CMB = 2.7284 K」(cmb_cl 已閉合, 0.01%)
+  [✅] 檔案存在: o73_h0_first_principles/docs/04_bbn_lock.md
+  [C-需核對] o73_h0_first_principles/scripts/10c_bbn_lock_pure.py
+        T_CMB 結構 = 2.7284 K (IDCM cmb_cl, 0.01%)
+  [✅] 檔案存在: o73_h0_first_principles/scripts/10c_bbn_lock_pure.py
+  [C-需核對] ktree_structure/04_verification_record.md
+        T_CMB 2.7284 vs 2.72548 0.107%
+  [✅] 檔案存在: ktree_structure/04_verification_record.md
+  [C-需核對] ktree_structure/00_master_verification.py
+        T_cmb_idcm = 2.7284; T_cmb_formula = 2*T_pl*exp(-74)...
+  [✅] 檔案存在: ktree_structure/00_master_verification.py
+  [A-輸入(閉合穩健)] scripts/integrity_check.py
+        T = 2.7284
+  [✅] 檔案存在: scripts/integrity_check.py
+
+─── 判定彙總 ───
+  [A] 輸入引用 (閉合穩健, 只需更新標記): 3
+      bbn η_B 鏈: T=2.7284 → T=Fixsen 2.72548, η_B 6.0622→6.0817e-10, dev 0.62%→0.30% (更佳)
+  [B] 受影響 (宣稱結構閉合嘅本體): 1
+      o112「T_CMB = 2.7283 K (Planck 2018)」— 2.7283 唔係 Planck 2018 值 (Fixsen 2009 = 2.72548)
+  [C] 需核對 (0.01% 宣稱 vs 實算 0.104%): 11
+      cmb_cl/o83/o73/ktree_structure 全部 0.01% 宣稱 → 實算 dev 0.104%, 本 O 降級
+  [✅] [B] 受影響位置已識別 (o112 值標記錯誤)
+  [✅] [C] 0.01% 宣稱不符位置已識別
+
+─── 下游閉合健在性 ───
+  bbn η_B:      🟢 健在 (Fixsen T → dev 0.30%, 更好)
+  o73 ω_ring:   🟢 健在 (BBN 鎖定 0.19% 唔靠 T 結構值)
+  cmb_cl C_ℓ:   🟢 健在 (峰位/振幅閉合同 T_CMB 絕對值無關)
+  o41 冷斑 μK:  🟢 健在 (A = 88×61/40 = 134.2 μK 係 δT 波動, 唔靠 T_CMB)
+  ktree_structure: 🟢 健在 (0.107% 已係誠實標記)
+  [✅] [下游] 全部閉合健在, 只係「結構 T_CMB」標記需更新
+
+══════════════════════════════════════════════════════════════════════════
+  O166-04 結果: 18/18 PASS
+══════════════════════════════════════════════════════════════════════════
