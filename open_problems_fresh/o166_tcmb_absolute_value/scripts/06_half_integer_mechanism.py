@@ -26,8 +26,8 @@ print("  O166 — 06: Q3 半整數機制嘗試")
 print("=" * 74)
 
 M0 = mpf('27.900915e6')            # eV
-kT = mpf('2.3486e-4')              # eV (Fixsen 2.72548)
 kB_eVK = mpf('8.617333262e-5')     # eV/K
+kT = kB_eVK*mpf('2.72548')         # eV — 精確 (Fixsen), 唔用四捨五入 2.3486e-4
 F = kT/M0
 T_fix = mpf('2.72548'); sig_fix = mpf('0.00057')
 print(f"  kT/M₀ = {float(F):.6e}   ln = {float(ln(F)):.6f}")
