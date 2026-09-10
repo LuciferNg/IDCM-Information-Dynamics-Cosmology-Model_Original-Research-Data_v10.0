@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O169 — 04: e 形 vs φ 形機制裁決 (P4, gate ④)
+O168 — 10: e 形 vs φ 形機制裁決 (P4, gate ④)
 =============================================
 問題: kT/M₀ = 8.4176e-12, 兩個候選:
   e 形: e^{-51/2} = e^{-25.5} (dev 0.069%), 51 = N_gen·F_proj
@@ -23,7 +23,7 @@ def check(name, cond, detail=""):
     print(f"  [{'OK ' if cond else 'XX '}] {name}" + (f" — {detail}" if detail else ""))
 
 print("="*74)
-print("  O169 — 04: e 形 vs φ 形機制裁決")
+print("  O168 — 10: e 形 vs φ 形機制裁決")
 print("="*74)
 
 kT = mpf('2.3486e-4'); M0 = mpf('27.900915e6')
@@ -80,5 +80,5 @@ check("[5] 裁決: 兩者 🟡, φ 形域默認, e 形唔死 (E_proj 家族指�
       "機制 = gate ①② (½ 來源 + k=53 通道), 唔係 fit 分勝負")
 
 print(f"\n{'='*74}")
-print(f"  O169-04 e vs φ: {sum(results)}/{len(results)} PASS")
+print(f"  O168-10 e vs φ: {sum(results)}/{len(results)} PASS")
 print(f"{'='*74}")

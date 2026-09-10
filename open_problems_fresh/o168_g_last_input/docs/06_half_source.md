@@ -1,6 +1,6 @@
-# docs/01 — ½ 第一性來源調查 (P1, gate ①)
+# docs/06 — ½ 第一性來源調查 (P1, gate ①)
 
-> 對應: scripts/01_half_source.py (22/22 PASS)
+> 對應: scripts/07_half_source.py (22/22 PASS)
 > 判準: 半層 ½ 嘅結構來源係咩? 邊個閉合結構產生「觀察者坐喺層間」?
 
 ## 問題

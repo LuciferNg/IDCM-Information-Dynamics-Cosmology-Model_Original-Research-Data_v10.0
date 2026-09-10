@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O169 — 06: e 底數機制審計 (P6-P8, O168 移交手尾)
+O168 — 12: e 底數機制審計 (P6-P8, O168 移交手尾)
 =================================================
 P6: e^{-44} (O53 m₄₄ = 950.006 MeV) / e^{33} (O160 M_GUT = M_Z·e^{33}) 點解用 e?
     → R12 域: e 超越數 ∉ ℚ(√5) ∪ ℚ(ζ₈₈)⁺; 掃描有冇乾淨替代底
@@ -17,7 +17,7 @@ def check(name, cond, detail=""):
     print(f"  [{'OK ' if cond else 'XX '}] {name}" + (f" — {detail}" if detail else ""))
 
 print("="*74)
-print("  O169 — 06: e 底數機制審計")
+print("  O168 — 12: e 底數機制審計")
 print("="*74)
 
 MP_eV = mpf('1.220910e28')
@@ -107,5 +107,5 @@ check("[E] e 底機制 🔴 開放 (框架裂縫), 候選全 🟡", True,
       "e^-44/e^33 冇域相容替代; (44/45)^1958 0.04% 冇機制")
 
 print(f"\n{'='*74}")
-print(f"  O169-06 e 底機制: {sum(results)}/{len(results)} PASS")
+print(f"  O168-12 e 底機制: {sum(results)}/{len(results)} PASS")
 print(f"{'='*74}")

@@ -1,6 +1,6 @@
-# docs/05 — α-wall 標度指數分析 (P5, gate ⑤) ★★
+# docs/10 — α-wall 標度指數分析 (P5, gate ⑤) ★★
 
-> 對應: scripts/05_alpha_wall.py (7/7 PASS)
+> 對應: scripts/11_alpha_wall.py (7/7 PASS)
 > 判準: O166 宣稱 T ∝ M_P^{1/3} (α-test 實測 0.3333); e/φ 形 T = M₀·F 宣稱 α = 1。牆成立定溶解?
 
 ## 問題

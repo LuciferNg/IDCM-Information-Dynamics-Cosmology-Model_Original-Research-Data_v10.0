@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O169 — 01: ½ 第一性來源調查 (P1, gate ①)
+O168 — 07: ½ 第一性來源調查 (P1, gate ①)
 ==========================================
 候選 ½ 來源 (全部已閉合結構):
   A. half-site D-D 鏈 (O159): ghost 端點 0.5/88.5, 實模 u_k(j) ∝ sin((j-½)·2θ_k)
@@ -21,7 +21,7 @@ def check(name, cond, detail=""):
     print(f"  [{'OK ' if cond else 'XX '}] {name}" + (f" — {detail}" if detail else ""))
 
 print("="*74)
-print("  O169 — 01: ½ 第一性來源調查")
+print("  O168 — 07: ½ 第一性來源調查")
 print("="*74)
 
 # 結構常數
@@ -115,5 +115,5 @@ check("[5d] 26 = 2F₇ = 17+9 = 33−7 (三身份)", mpf(26) == 2*F7 and mpf(26)
 check("[5e] k = 2·26+1 = 53 = 2N_d − F₅·L₄", 2*26+1 == 53 and 2*int(Nd)-int(F5)*int(L4) == 53, "88−35")
 
 print(f"\n{'='*74}")
-print(f"  O169-01 ½ 來源: {sum(results)}/{len(results)} PASS")
+print(f"  O168-07 ½ 來源: {sum(results)}/{len(results)} PASS")
 print(f"{'='*74}")

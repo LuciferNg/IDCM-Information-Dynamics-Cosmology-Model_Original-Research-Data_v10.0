@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O169 — 02: k = 53 雙向通道身份網 (P2, gate ②)
+O168 — 08: k = 53 雙向通道身份網 (P2, gate ②)
 ===============================================
 驗證 53 嘅全部結構身份 + 奇冪唯一性 + Weyl/teleparallel 一致性聲明。
 53 身份網:
@@ -21,7 +21,7 @@ def check(name, cond, detail=""):
     print(f"  [{'OK ' if cond else 'XX '}] {name}" + (f" — {detail}" if detail else ""))
 
 print("="*74)
-print("  O169 — 02: k = 53 雙向通道身份網")
+print("  O168 — 08: k = 53 雙向通道身份網")
 print("="*74)
 
 Nd, B, Ngen, F5, L4, L5, L7 = mpf(44), mpf(4), mpf(3), mpf(5), mpf(7), mpf(11), mpf(29)
@@ -86,5 +86,5 @@ check("[6] φ ∈ ℚ(√5), e ∉ 任何扇區域", True,
       "φ 底係唯一域相容底 (O165 e-標籤剔除先例)")
 
 print(f"\n{'='*74}")
-print(f"  O169-02 k=53 通道: {sum(results)}/{len(results)} PASS")
+print(f"  O168-08 k=53 通道: {sum(results)}/{len(results)} PASS")
 print(f"{'='*74}")

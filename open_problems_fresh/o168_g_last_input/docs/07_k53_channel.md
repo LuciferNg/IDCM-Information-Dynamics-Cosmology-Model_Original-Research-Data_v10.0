@@ -1,6 +1,6 @@
-# docs/02 — k = 53 雙向通道身份網 (P2, gate ②)
+# docs/07 — k = 53 雙向通道身份網 (P2, gate ②)
 
-> 對應: scripts/02_k53_channel.py (18/18 PASS)
+> 對應: scripts/08_k53_channel.py (18/18 PASS)
 > 判準: 點解係 φ^{−53} 而唔係 φ^{−54}? 53 有冇被結構強逼?
 
 ## 問題

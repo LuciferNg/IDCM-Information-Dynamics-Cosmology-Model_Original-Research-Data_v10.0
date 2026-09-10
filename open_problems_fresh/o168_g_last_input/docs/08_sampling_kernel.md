@@ -1,6 +1,6 @@
-# docs/03 — 88/90 sampling kernel 正式計算 (P3, gate ③)
+# docs/08 — 88/90 sampling kernel 正式計算 (P3, gate ③)
 
-> 對應: scripts/03_sampling_kernel.py (6/6 PASS)
+> 對應: scripts/09_sampling_kernel.py (6/6 PASS)
 > 判準: φ^{−53} 殘餘 0.353% 係咪由 88/90 = 44/45 震鈴平滑化 (Lanczos/Fejér) 解釋?
 
 ## 問題

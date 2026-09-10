@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O169 — 03: 88/90 sampling kernel 正式計算 (P3, gate ③)
+O168 — 09: 88/90 sampling kernel 正式計算 (P3, gate ③)
 ========================================================
 問題: φ^-53 殘餘 0.353% 係咪由 88/90 = 44/45 震鈴平滑化解釋?
 驗證:
@@ -21,7 +21,7 @@ def check(name, cond, detail=""):
     print(f"  [{'OK ' if cond else 'XX '}] {name}" + (f" — {detail}" if detail else ""))
 
 print("="*74)
-print("  O169 — 03: 88/90 sampling kernel")
+print("  O168 — 09: 88/90 sampling kernel")
 print("="*74)
 
 kT = mpf('2.3486e-4'); M0 = mpf('27.900915e6')
@@ -102,5 +102,5 @@ check("[6] kernel 路線 (幅度因子) 🔴 唔閉合 0.353%", True,
       "需要 1.0035, kernel 畀 0.01-1 級 — 唔對路")
 
 print(f"\n{'='*74}")
-print(f"  O169-03 sampling kernel: {sum(results)}/{len(results)} PASS")
+print(f"  O168-09 sampling kernel: {sum(results)}/{len(results)} PASS")
 print(f"{'='*74}")

@@ -1,6 +1,6 @@
-# docs/06 — e 底數機制審計 (P6-P8, O168 移交手尾)
+# docs/11 — e 底數機制審計 (P6-P8, O168 移交手尾)
 
-> 對應: scripts/06_ebase_mechanism.py (10/10 PASS)
+> 對應: scripts/12_ebase_mechanism.py (10/10 PASS)
 > 判準: e^{−44} (O53) / e^{33} (O160) 點解用 e? e^{−44}/(2F_proj) = 0.145% 候選? 雙尺度裂縫?
 
 ## P6a: e^{−44} (O53 階梯錨, m₄₄ = 950.006 MeV)

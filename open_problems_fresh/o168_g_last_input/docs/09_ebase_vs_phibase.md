@@ -1,6 +1,6 @@
-# docs/04 — e 形 vs φ 形機制裁決 (P4, gate ④)
+# docs/09 — e 形 vs φ 形機制裁決 (P4, gate ④)
 
-> 對應: scripts/04_ebase_vs_phibase.py (12/12 PASS)
+> 對應: scripts/10_ebase_vs_phibase.py (12/12 PASS)
 > 判準: e 形 (0.069%) 定 φ 形 (0.353%)? 靠 fit 定靠機制?
 
 ## 問題
@@ -28,7 +28,7 @@
 
 - **51** = N_gen·F_proj = 3×17 (e 形指數)
 - **53** = 2N_d − F₅·L₄ = 88−35 (φ 形指數)
-- **25.5 = N_gen·F_proj/2** = E_proj 家族孖生 (E_proj = 28.5 = N_gen·f_proj/2, O158 已閉合) — script 01 [3★]
+- **25.5 = N_gen·F_proj/2** = E_proj 家族孖生 (E_proj = 28.5 = N_gen·f_proj/2, O158 已閉合) — script 07 [3★]
 - 53 − 51 = 2 = μ²; 52 = N_d + 2B = 4F₇ (兩者中間)
 
 ### [4] R12 域判準 (O165 定案)

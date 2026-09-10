@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O169 — 05: α-wall 標度指數分析 (P5, gate ⑤)
+O168 — 11: α-wall 標度指數分析 (P5, gate ⑤)
 =============================================
 O166 宣稱 T ∝ M_P^{1/3} (α-test 實測 0.3333, 用 m_p ∝ M_P 假設)。
 e/φ 形 T = M₀·F 宣稱 α = 1。牆: 1 vs 1/3。
@@ -24,7 +24,7 @@ def check(name, cond, detail=""):
     print(f"  [{'OK ' if cond else 'XX '}] {name}" + (f" — {detail}" if detail else ""))
 
 print("="*74)
-print("  O169 — 05: α-wall 標度指數分析")
+print("  O168 — 11: α-wall 標度指數分析")
 print("="*74)
 
 # O166 投影常數 (o168 scripts/05 同款)
@@ -95,5 +95,5 @@ check("[6] gate ⑤ 裁決: 牆溶解 (慣例 artifact), 候選 α-生存", True
       "e/φ 形唔再被 α-test 殺 — 機制 (gate ①②) 先係判準")
 
 print(f"\n{'='*74}")
-print(f"  O169-05 α-wall: {sum(results)}/{len(results)} PASS")
+print(f"  O168-11 α-wall: {sum(results)}/{len(results)} PASS")
 print(f"{'='*74}")
