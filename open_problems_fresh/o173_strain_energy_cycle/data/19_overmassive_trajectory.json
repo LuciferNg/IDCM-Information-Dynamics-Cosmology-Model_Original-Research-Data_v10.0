@@ -1,0 +1,14 @@
+{
+  "JADES": {
+    "z": 6.7,
+    "M_BH": 407380277.80411273,
+    "M_star": 831763771.102671,
+    "ratio": 0.4897788193684462,
+    "over": 149.87231872674454
+  },
+  "alpha": 1.7358717328032467,
+  "prediction": "ratio(z) = (1/306)*(13.8/t(z))^1.74",
+  "z2_pred_pct": 3.957962138088786,
+  "z4_pred_pct": 14.220202775361217,
+  "verdict": "overmassive = seed-first transient, not tension; falsifiable at z=2-4"
+}

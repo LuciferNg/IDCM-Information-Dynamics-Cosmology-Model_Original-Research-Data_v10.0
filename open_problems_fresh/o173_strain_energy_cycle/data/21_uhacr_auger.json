@@ -1,0 +1,13 @@
+{
+  "auger_2018": {
+    "events": 5514,
+    "threshold": "20 EeV",
+    "SBG": "4.0\u03c3",
+    "gammaAGN": "2.7\u03c3",
+    "SwiftBAT": "3.2\u03c3",
+    "CenA": "3.1\u03c3 (19 vs 6)",
+    "2MRS": "2.7\u03c3"
+  },
+  "verdict": "directional support for P9/P11 (AGN correlations 2.7-3.2\u03c3); quantitative source model \ud83d\udfe1; SBG 4.0\u03c3 needs interpretation",
+  "falsifiable": "AGN correlation vanishes -> P9 wrong; Cen A >5\u03c3 with Auger upgrade -> support"
+}

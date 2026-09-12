@@ -1,0 +1,15 @@
+{
+  "slope_idcm": -1.0,
+  "obs_slopes": {
+    "JADES": -1.78,
+    "CEERS": -2.18,
+    "EIGER": -1.0
+  },
+  "definition": "N(z) = LRD/condensation event number density, mass-complete sample, slope -1.00\u00b10.2, z=2-9",
+  "luminosity_bias": {
+    "JADES": -0.78,
+    "CEERS": -1.18
+  },
+  "peak": "convolution of formation rate x lifetime + selection, not contradiction",
+  "falsifiable": "slope outside [-1.2, -0.8] after LF correction -> P1 wrong"
+}
