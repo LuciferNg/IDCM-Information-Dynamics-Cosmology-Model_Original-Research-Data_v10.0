@@ -1,0 +1,99 @@
+{
+  "summary": [
+    {
+      "P": "P1",
+      "desc": "N(z) \u221d 1/(1+z)",
+      "status": "\ud83d\udfe1",
+      "note": "\u5b9a\u7fa9\u5f85\u91d8 (docs/15); crystal_stress LRD N(z) \u6295\u5f71\u5df2\u505a"
+    },
+    {
+      "P": "P2",
+      "desc": "\u6709\u9650\u6c60\u8b49\u507d",
+      "status": "\u2705",
+      "note": "COSMOS-Web 434"
+    },
+    {
+      "P": "P3",
+      "desc": "10% Eddington",
+      "status": "\u2705",
+      "note": "434 LRD"
+    },
+    {
+      "P": "P4",
+      "desc": "\u62cd\u983b null",
+      "status": "\u2705",
+      "note": "crystal_stress"
+    },
+    {
+      "P": "P5",
+      "desc": "\u5bbf\u4e3b\u5e72\u6d89\u5426\u6c7a",
+      "status": "\u2705",
+      "note": "docs/07"
+    },
+    {
+      "P": "P6",
+      "desc": "\u5187\u8001\u5316",
+      "status": "\u2705",
+      "note": "crystal_stress"
+    },
+    {
+      "P": "P7",
+      "desc": "\u7a2e\u5b50\u4e0a\u9650",
+      "status": "\u2705",
+      "note": "434 + UHz1 \u03b4_eff 91.4"
+    },
+    {
+      "P": "P8",
+      "desc": "\u5187 Hawking",
+      "status": "\u2705",
+      "note": "null (\u5187\u84b8\u767c\u89c0\u6e2c)"
+    },
+    {
+      "P": "P9",
+      "desc": "UHECR \u8fd4\u6c60\u7c3d\u540d",
+      "status": "\ud83d\udfe1",
+      "note": "Auger UHECR-Cen A/AGN \u95dc\u806f\u65b9\u5411\u652f\u6301"
+    },
+    {
+      "P": "P10",
+      "desc": "\u5187\u56de\u6536\u4e2d",
+      "status": "\u2705",
+      "note": "null (BHMF \u5187\u840e\u7e2e\u7aef)"
+    },
+    {
+      "P": "P11",
+      "desc": "\u5674\u6d41/UHECR \u8fd4\u6c60",
+      "status": "\ud83d\udfe1",
+      "note": "\u540c P9 (AGN \u5674\u6d41=\u8fd4\u6c60\u901a\u9053\u89c0\u6e2c)"
+    },
+    {
+      "P": "P12",
+      "desc": "1/306 \u7d05\u79fb\u5e73\u7a69",
+      "status": "\ud83d\udfe1",
+      "note": "JWST overmassive \u5f35\u529b\u5019\u9078"
+    },
+    {
+      "P": "P13",
+      "desc": "\u5187 1e12+",
+      "status": "\u2705",
+      "note": "\u2605Abell 1201 3.0e10 = 0.91\u00d7 \u4e0a\u9650"
+    },
+    {
+      "P": "P14",
+      "desc": "M_BH/M_star = 1/306",
+      "status": "\u2705",
+      "note": "\u6a23\u672c\u5b9a\u7fa9\u6e2c\u8a66 (docs/16)"
+    },
+    {
+      "P": "P15",
+      "desc": "\u6b98\u9ab8 = \u5f62\u6210\u53f2\u00d72%",
+      "status": "\ud83d\udfe1",
+      "note": "\u5c40\u90e8 WD 7.2% (\u74b0\u5883\u6548\u61c9, \u6578\u91cf\u7d1a\u4e00\u81f4)"
+    }
+  ],
+  "new_findings": [
+    "Abell 1201 3.0e10 (lensing) = 0.91x M_BH_max 3.3e10 - existing-data cap",
+    "Holberg+16 WD density 4.8e-3 pc^-3 - order-of-magnitude P15 check",
+    "JWST overmassive BH = P12 tension candidate (honest \ud83d\udfe1)"
+  ]
+}

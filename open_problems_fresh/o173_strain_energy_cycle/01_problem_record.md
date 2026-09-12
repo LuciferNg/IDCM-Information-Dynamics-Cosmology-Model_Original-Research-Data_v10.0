@@ -84,6 +84,8 @@ UHECR (E_GZK = hc/(L_P·φ⁴⁴)) + LRD 輻射 (1.54 M☉/yr/核) 持續放走�
 | 16 | 16_galaxy_death_vs_cycle.py | 星系死亡 vs 冇熱寂: 層級分離 (用戶矛盾質疑) | 8/8 | docs/13 |
 | 17 | 17_node_mechanism.py | 新節點機制: 問題重構 (固定節點閉環 + 開放口精確化) | 6/6 | docs/14 |
 | 18 | 18_adjudication_plan.py | 觀測裁決計劃審計 (用戶四數據庫提案: R1-R4) | 10/10 | docs/15 |
+| 19 | 19_sample_definition_test.py | ★P14 樣本定義測試 (R3 即時張力裁決) | 8/8 | docs/16 |
+| 20 | 20_existing_data_audit.py | ★現有數據先行驗證盤點 (P1-P15: 10/15 ✅) | 9/9 | docs/17 |
 
 **誠實修正記錄**:
 - ⚠️ 交接文檔「凝聚時標 3.2e7 yr = 6.97e6/1.54」算術錯誤: 正確 4.54 Myr

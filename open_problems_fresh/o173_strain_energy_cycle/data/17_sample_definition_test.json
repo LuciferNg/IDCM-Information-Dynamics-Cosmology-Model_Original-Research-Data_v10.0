@@ -1,0 +1,22 @@
+{
+  "defA_all": {
+    "YT02": 440000.0,
+    "Marconi04": [
+      460000.0,
+      190000.0,
+      140000.0
+    ],
+    "Elvis14": 490000.0,
+    "dev_pct": [
+      10.24,
+      6.16,
+      0.04
+    ]
+  },
+  "defB_KH13": {
+    "value": 250000.0,
+    "dev_pct": 49.0
+  },
+  "verdict": "P14 applies to definition A (full mass-function integral); K&H 2.5e5 = secure-measured subset, systematically low",
+  "prediction": "rho_BH(full) = 4.9e5 = rho_star/306; falsifiable if < 4.4e5"
+}
