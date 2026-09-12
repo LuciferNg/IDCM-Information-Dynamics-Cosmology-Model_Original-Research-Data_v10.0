@@ -1,0 +1,26 @@
+{
+  "falsification": {
+    "ratio_budget": 47.31601812540634,
+    "ratio_base": 12.994685447106956,
+    "t_exhaust_pool_Gyr": 0.23247941047882786
+  },
+  "ring_cycles": {
+    "N": 131,
+    "t_true_Gyr": 11100.64,
+    "T_ring_Gyr": 84.6349,
+    "cap_131_Msun": 204986877031021.25,
+    "obs_frac_of_cap_pct": 36.119097805653695
+  },
+  "mechanism": [
+    "D-D cavity (O159)",
+    "Noether conjugate inflow (O161)",
+    "mu2 constraint (O161 T3)",
+    "limit cycle V''=8 (O39)",
+    "RG fixed point I=88",
+    "frustration bit-flip (O7)"
+  ],
+  "steady_state": {
+    "R_rel_node8_Msun_yr": 6730.85550941724,
+    "N(z)": "4^{-ell} = 1/(1+z)"
+  }
+}

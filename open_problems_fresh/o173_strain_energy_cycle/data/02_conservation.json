@@ -1,0 +1,17 @@
+{
+  "sum_gamma": 178.0,
+  "sum_even": 90.0,
+  "sum_odd": 88.0,
+  "mu2": 2.0,
+  "Q": 44.0,
+  "J88": 44.0,
+  "J87": -44.0,
+  "sum_abs_J": 1980.0,
+  "wilson_line": "i",
+  "holonomy_88": "-1",
+  "i4": "1",
+  "vev2": 61.5,
+  "Vpp": 8.0,
+  "lambda_self": 0.016260162601626018,
+  "RG_invariant": 88.0
+}

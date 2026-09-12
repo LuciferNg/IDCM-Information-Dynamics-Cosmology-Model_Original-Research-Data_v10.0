@@ -1,0 +1,35 @@
+{
+  "action": "S = sum_k (gamma_k + mu^2)|Phi_k|^2",
+  "propagator": {
+    "G44": 0.25,
+    "G88": 0.16666666666666666
+  },
+  "connection": {
+    "A44": 0,
+    "A88": 2,
+    "cycle_gap": 2
+  },
+  "cavity": {
+    "BC": "D-D",
+    "boundary_flux": 0,
+    "total_E": "conserved"
+  },
+  "constraint": {
+    "mu2": 2,
+    "lambda": 1,
+    "E_minus_O": 2,
+    "driver": "geometric identity"
+  },
+  "noether": {
+    "Q": 44,
+    "sum_J": 0,
+    "wilson_line": "i",
+    "closure": "i^4 = 1 (352 = B*N_d)"
+  },
+  "cycle": {
+    "path": "44 (A=0) <-> 88 (A=mu^2)",
+    "dQ": 0,
+    "dE": 0,
+    "period": "T_ring 84.63 Gyr"
+  }
+}

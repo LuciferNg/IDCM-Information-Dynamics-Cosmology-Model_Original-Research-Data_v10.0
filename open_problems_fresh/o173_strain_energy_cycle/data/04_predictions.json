@@ -1,0 +1,35 @@
+{
+  "timescales": {
+    "t_cond_Myr": 4.536046799566426,
+    "T_ring_Gyr": 84.6349,
+    "T_beat_Gyr": 45963.0,
+    "tau_Gyr": 13.4701,
+    "t_true_Gyr": 11100.64
+  },
+  "P1": {
+    "N(z)": "1/(1+z) no cutoff",
+    "anchors": 4
+  },
+  "P2": {
+    "max_events_finite_pool": 9.172369467982845,
+    "observed": 434,
+    "overdraw": 47.31601812540634
+  },
+  "P3": {
+    "lambda_Edd": 0.1,
+    "status": "falsifiable"
+  },
+  "P4": {
+    "T_beat_over_age": 3330.6521739130435,
+    "status": "null"
+  },
+  "P5": {
+    "interference_ratio": 4.958164642375169,
+    "obs_range": "30-1000",
+    "status": "naive failed, freefall+merger scaffold"
+  },
+  "P6": {
+    "ring_cycles": 131.0,
+    "window_frac": 0.15915538389009734
+  }
+}
