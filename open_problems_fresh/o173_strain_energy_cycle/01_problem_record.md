@@ -78,6 +78,7 @@ UHECR (E_GZK = hc/(L_P·φ⁴⁴)) + LRD 輻射 (1.54 M☉/yr/核) 持續放走�
 | 10 | 10_doc_crosscheck2.py | 文檔獨立核對 2 (Q7/Q3/Q4) | 23/23 | docs/06-08 |
 | 11 | 11_blackhole_phases.py | 黑洞三狀態測試 (用戶挑戰1: 回收→三狀態) | 10/10 | docs/09 |
 | 12 | 12_galaxy_debris_test.py | 星系殘骸測試 (用戶挑戰2: 唔回收→殘骸) | 11/11 | docs/09 |
+| 13 | 13_ton618_permanence.py | TON 618 永久性 + 上限閉環 (用戶提問) | 9/9 | docs/10 |
 
 **誠實修正記錄**:
 - ⚠️ 交接文檔「凝聚時標 3.2e7 yr = 6.97e6/1.54」算術錯誤: 正確 4.54 Myr

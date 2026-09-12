@@ -1,0 +1,20 @@
+{
+  "permanence": "quasi-permanent: projection truncation boundary, no Hawking (Hayward core)",
+  "upper_bound": {
+    "mid": 32670000000.0,
+    "range": [
+      10000000000.0,
+      500000000000.0
+    ],
+    "source": "M_BH/M_star (P12) \u00d7 M_host_max (cD 1e13-1e14)"
+  },
+  "TON618": {
+    "M": [
+      40700000000.0,
+      66000000000.0
+    ],
+    "x_mid_upper": 1.245791245791246,
+    "status": "near upper bound, growth decelerating"
+  },
+  "P13": "no single SMBH > ~1e11 (0.1-0.5% \u00d7 heaviest host)"
+}
