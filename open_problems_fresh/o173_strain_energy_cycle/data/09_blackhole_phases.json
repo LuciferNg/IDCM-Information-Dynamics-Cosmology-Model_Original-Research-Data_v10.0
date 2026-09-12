@@ -1,0 +1,22 @@
+{
+  "three_state": {
+    "forming": "AGN/LRD observed",
+    "stable": "M87/SgrA* observed",
+    "recycling": "no evidence (mass fn monotonic)"
+  },
+  "tau_rec": {
+    "UHECR_upper_bound_yr": 7.124681933842239e+16,
+    "x_universe_age": 5162812.995537855,
+    "frac_lost_in_13.8Gyr": 1.9369285714285713e-07
+  },
+  "T_ring": {
+    "Gyr": 84.6349,
+    "x_universe_age": 6.132963768115942
+  },
+  "clarity": "return = infall transformation (channel 1); BH body = projection truncation boundary (permanent, no channel 2)",
+  "predictions": [
+    "P10 no recycling-state black holes",
+    "P11 return signature = jet/UHECR not BH disappearance"
+  ],
+  "verdict": "IDCM two-state prediction (no recycling) is the only branch consistent with observation"
+}

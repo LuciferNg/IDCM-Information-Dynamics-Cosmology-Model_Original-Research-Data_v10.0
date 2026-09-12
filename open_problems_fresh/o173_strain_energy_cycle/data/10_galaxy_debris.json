@@ -1,0 +1,20 @@
+{
+  "user_dichotomy": [
+    "recycle -> 3 states (not seen)",
+    "no recycle -> galaxy debris (not seen)"
+  ],
+  "quant": {
+    "rho_star": 150000000.0,
+    "rho_bh": 490000.0,
+    "ratio_pct": 0.32666666666666666,
+    "need_x_growth": 306.1224489795918,
+    "t_to_devour_yr": 88150933107.62671
+  },
+  "third_channel": "BH = transformer (T_pipe\u2020): infall -> sync return; body = quasi-permanent boundary; growth limited",
+  "predictions": [
+    "P10 no recycling-state BHs",
+    "P11 return signature = jet/UHECR",
+    "P12 M_BH/M_star flat ~0.1-0.5% (no debris-ification)"
+  ],
+  "verdict": "transformer model is the only branch satisfying both user challenges"
+}
