@@ -1,0 +1,13 @@
+{
+  "theorem2": "dS/dt = R_write - R_dissipate; R_write = 61.5 k_B/T_ring structural; cycle closure \u222edS=0",
+  "R_write_kB_per_Gyr": 0.7266505897685234,
+  "R_write_kB_per_yr": 7.266505897685234e-10,
+  "noether": "J88=+44, J87=-44, sum=0 -> R_diss = R_write steady state",
+  "cycle": "limit cycle V''=8, symplectic J^2=-1, Poincare recurrence",
+  "pools_per_cycle": 364.0533147674503,
+  "pools_per_cycle_candidate": "B*L4*F7 = 364 (dev 0.014%, yellow)",
+  "thermal_dissipation_bits_per_cycle": 4.794939590775801e+82,
+  "write_bits_per_cycle": 88.72574501467125,
+  "control_parameter": "write is phase-level control, not thermal energy equivalent",
+  "correction": "O173 final '36% per cycle' = 131-cycle average; actual rate = 364 pools/cycle"
+}

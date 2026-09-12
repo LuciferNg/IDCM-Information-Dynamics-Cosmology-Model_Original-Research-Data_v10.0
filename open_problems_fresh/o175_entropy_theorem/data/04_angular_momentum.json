@@ -1,0 +1,19 @@
+{
+  "source": "phase winding: uniform gradient theta_k = k*pi/176, Wilson = i, winding 22.25 = F11/4; Noether Q = 44 conserved",
+  "a0_m_s2": 1.1224506353268578e-10,
+  "R_c_kpc": 48.48257888805409,
+  "V_max_kms": 409.7809396929605,
+  "j_spec_m2_s": 6.1303886991105365e+26,
+  "j_spec_kmkpc": 19867.236735484894,
+  "fall_slope": "IDCM alpha = 1/4 + beta in [0.55, 0.75] brackets obs [0.52, 0.64]",
+  "MW_check": {
+    "v_kms": 205.6327911297161,
+    "obs_v": 220,
+    "dev_pct": 6.530549486492675,
+    "j_kmkpc": 1069.2905138745239,
+    "obs_j": "1900\u00b1400",
+    "sigma": 2.1,
+    "status": "yellow"
+  },
+  "status": "source closed (structural), quantitative anchor order-of-magnitude (yellow)"
+}

@@ -1,0 +1,8 @@
+{
+  "theorem3": "budget persistence: geometric invariant (61.5 = 44*B(n) = 88*E_min) + mu2 driver constant + conservative reflux (V''=8, J^2=-1)",
+  "budget_triple_identity": "61.5 = 44 x 123/88 = 88 x 123/176",
+  "driver": "mu2 = E - O = 2 = 2*lambda (sector-locking multiplier, O161 T3)",
+  "reflux": "V''=8 conservative oscillator + symplectic J^2=-1 (Liouville)",
+  "prediction": "A(t) = 134.2 uK no secular drift (budget non-depletion)",
+  "account": "world 90 = 61.5+28.5; observer 88 = 61.5+26.5; diff = mu2 = 2"
+}

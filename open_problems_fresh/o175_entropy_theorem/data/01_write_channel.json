@@ -1,0 +1,19 @@
+{
+  "theorem1": "write is thermodynamically reversible: dE = T_write*dS, T_write = gamma = 192 uK",
+  "dE_write_max_uK": 268.3636363636364,
+  "dS_write_max_kB": 1.3977272727272727,
+  "E_min": 0.6988636363636364,
+  "E_min_finite_size": "ln2 + 1/176 + O(1/N^2)",
+  "budget": 61.5,
+  "write_bits_per_cycle": 88.72574501467125,
+  "config_capacity_bits": 20,
+  "node_mean_null": {
+    "obs": 0.24434538002980624,
+    "candidate": 0.7333333333333333,
+    "dev_pct": 66.68017545048097,
+    "verdict": "REFUTED"
+  },
+  "open": [
+    "node-mean identity refuted -> budget is per-mode (44) accounting"
+  ]
+}
