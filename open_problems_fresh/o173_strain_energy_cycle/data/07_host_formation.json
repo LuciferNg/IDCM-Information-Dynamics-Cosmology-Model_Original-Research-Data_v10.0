@@ -1,0 +1,18 @@
+{
+  "naive_interference_ratio": 4.958164642375169,
+  "obs_ratio_range": [
+    30.0,
+    1000.0
+  ],
+  "freefall": {
+    "d30": 172.60069524773067,
+    "d100": 1015.0374377332099
+  },
+  "host_prediction": {
+    "median_d30": 1203026845.8766828,
+    "median_d100": 7074810941.000473,
+    "M87_d100": 6597743345265.864
+  },
+  "parametric": "M_host/M_core = [(1+\u03b4)^{3/2} \u2212 1]\u00b7g, g\u2208[0.05,0.3]",
+  "status": "\ud83d\udfe1 \u652f\u67b6\u5b9a\u91cf, \u7b49 JWST \u5bbf\u4e3b\u8cea\u91cf"
+}

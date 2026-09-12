@@ -1,0 +1,36 @@
+{
+  "ton618": {
+    "M_Hb": 66000000000.0,
+    "M_CIV": 40700000000.0,
+    "z": 2.219,
+    "strain_demand": 996181711376542.0,
+    "x_pool": 636.6251723968406
+  },
+  "universe": {
+    "rho_BH": [
+      250000.0,
+      490000.0
+    ],
+    "V_Mpc3": 12000000000000.0,
+    "M_total": [
+      3e+18,
+      5.88e+18
+    ]
+  },
+  "seed": {
+    "quota_node": 26079755000.0,
+    "seed_d0": 1065514.47028,
+    "seed_d30": 330392250.84320605,
+    "seed_d100": 1942984663.3089104,
+    "UHz1_1.7e9": "direct hit"
+  },
+  "verdict": "SMBH mass = accretion+merger dominated; pool = seed supplier; T_pipe\u2020 = return channel",
+  "predictions": [
+    "P7 seed-environment",
+    "P8 no Hawking",
+    "P9 UHECR-SMBH return signature"
+  ],
+  "open": [
+    "T_pipe\u2020 return timescale"
+  ]
+}

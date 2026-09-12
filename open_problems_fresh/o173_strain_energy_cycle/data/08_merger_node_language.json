@@ -1,0 +1,24 @@
+{
+  "axioms": [
+    "60 nodes fixed (A5 graph)",
+    "condensates = local excitations",
+    "BH = T_pipe\u2020 region (O121)",
+    "merger = phase lock (O60)"
+  ],
+  "conservation": {
+    "mass": "M_f = M1+M2",
+    "charge": "Q local redistribution",
+    "entropy": "S' < S1+S2 (coherent)",
+    "nodes": "60 invariant"
+  },
+  "TON618_ladder": {
+    "seed": 1943000000.0,
+    "doublings": [
+      4.388670988455627,
+      5.086108218435196
+    ],
+    "interpretation": "4.4-5.1 \u4ee3\u500d\u5316\u5408\u4f75\u968e\u68af"
+  },
+  "formalism": "|\u03a6a>\u2297|\u03a6b> \u2192 |\u03a6'ab> (phase-locked coherent)",
+  "status": "\ud83d\udfe2 \u7bc0\u9ede\u8a9e\u8a00\u5f62\u5f0f\u5316\u5b8c\u6210"
+}
