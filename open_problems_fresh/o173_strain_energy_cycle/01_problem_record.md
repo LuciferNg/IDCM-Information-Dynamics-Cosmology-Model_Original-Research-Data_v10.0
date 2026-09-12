@@ -89,6 +89,7 @@ UHECR (E_GZK = hc/(L_P·φ⁴⁴)) + LRD 輻射 (1.54 M☉/yr/核) 持續放走�
 | 21 | 21_overmassive_trajectory.py | ★P12 overmassive → 種子先行演化預言 (P12′) | 5/5 | docs/18 |
 | 22 | 22_p1_definition.py | P1 定義釘死 (mass-complete 斜率 -1.00±0.2) | 4/4 | docs/19 |
 | 23 | 23_uhacr_auger.py | P9/P11 UHECR 返池簽名: Auger 對比 | 4/4 | docs/20 |
+| 24 | 24_negentropy_supply.py | ★低熵物質供應: 熵論重構 (Landauer 對偶) | 6/6 | docs/21 |
 
 **誠實修正記錄**:
 - ⚠️ 交接文檔「凝聚時標 3.2e7 yr = 6.97e6/1.54」算術錯誤: 正確 4.54 Myr

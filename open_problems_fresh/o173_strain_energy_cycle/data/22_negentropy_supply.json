@@ -1,0 +1,12 @@
+{
+  "landauer_duality": "write exists (O7), erase absent (no heat bath) -> net negentropy",
+  "E_write_J": 1.852830958e-27,
+  "supply_chain": "strain->matter->radiation->pool->write->strain",
+  "topology": "frustration cannot relax (O7) + limit cycle V''=8 (O39)",
+  "no_heat_death_condition": "continuous write (observer budget O41) + info conservation Q=44 + topological stock",
+  "open": [
+    "formal entropy theorem \ud83d\udd34",
+    "budget persistence \ud83d\udfe1",
+    "disc angular momentum source \ud83d\udfe1"
+  ]
+}
