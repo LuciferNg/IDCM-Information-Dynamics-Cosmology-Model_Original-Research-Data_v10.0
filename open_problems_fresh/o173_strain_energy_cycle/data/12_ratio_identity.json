@@ -1,0 +1,29 @@
+{
+  "identity": {
+    "306": "L6*F_proj = 18*17",
+    "also": [
+      "2*C(18,2)",
+      "Sigma_gamma + alpha^-1(M_Z) = 178+128"
+    ]
+  },
+  "ratio": {
+    "1/306_pct": 0.32679738562091504,
+    "obs_pct": 0.32666666666666666,
+    "rho_bh_pred": 490196.07843137253,
+    "dev_pct": 0.040016006402561026
+  },
+  "t_devour": {
+    "Gyr": 88.14477176617008,
+    "T_ring_ratio": 1.041470738030884
+  },
+  "host_predictions": {
+    "LRD_median": 2132820000.0,
+    "M87": 1989000000000.0,
+    "TON618_range": [
+      12454200000000.0,
+      20196000000000.0
+    ]
+  },
+  "P14": "M_BH/M_star = 1/(L6*F_proj) = 1/306 (structure identity)",
+  "recycle_timescale": "no independent scale; recycling = 1/306 fixed-point maintenance (testable via z-evolution)"
+}
