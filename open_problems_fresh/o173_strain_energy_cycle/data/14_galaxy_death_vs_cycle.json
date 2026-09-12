@@ -1,0 +1,11 @@
+{
+  "paradox": "galaxy death (local) vs no heat death (global)",
+  "resolution": "level separation: galaxy = local condensate (gas-limited lifetime); universe = Noether cycle (limit cycle T_ring)",
+  "phase": {
+    "age/T_ring": 0.16305330307001012,
+    "SFRD_now_frac": 0.1
+  },
+  "staggered": "downsizing: ellipticals dead z~1, spirals still forming",
+  "cycle": "condensation -> shutdown -> debris return -> pool regen -> new condensation (new nodes, P1)",
+  "honest_open": "new-node emergence mechanism not derived (Lagrangian-level) - P1 4^-ell layer structure"
+}

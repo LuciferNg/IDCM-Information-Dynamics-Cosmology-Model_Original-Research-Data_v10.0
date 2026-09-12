@@ -1,0 +1,19 @@
+{
+  "debris": {
+    "rho_star": 150000000.0,
+    "f_debris": 0.02,
+    "rho_debris": 3000000.0,
+    "R_debris": 0.0004,
+    "t_double_Gyr": 7.5
+  },
+  "cleaning": [
+    "stellar BH = T_pipe\u2020 transformer (O121 generic)",
+    "WD/NS -> infall/merger -> return"
+  ],
+  "decay": {
+    "SFRD_drop": 10.0,
+    "fixed_point": 4000000.0
+  },
+  "P15": "debris density = SFH x f_debris (no excess accumulation)",
+  "verdict": "transformer + P1 decay -> no explosive debris accumulation"
+}
