@@ -8,12 +8,12 @@
 >   (G=1/4); 可證偽預言 ξ 隨 z 增長 (ξ(3)/ξ(0)=4094); r0 數值候選 =
 >   R_H/(2³L₅²) = 4.27 Mpc 落入 Zhang+26 [3.4,4.5] h⁻¹Mpc (h=1);
 >   🔴 propagator→實空間映射 (晶格間距 a) + halo bias 推導未有 — docs/07+08
-> - **D6** 🔴 **未解 (09-13, scripts/11 9/9 + 13 10/10 + 14 觀測測試, docs/09+11)**:
->   ★P(δ̂) = arcsine (O157 零偏差定理, 零新常數) ✅;
->   **Gaussian δ_env 被 UHz1 錨證偽** (O176 docs/11 模型無關);
->   logN 候選 (μ=0.862 由 LRD 中位釘死) s≈1.2 命中高端密度 (7.7% vs 7.2%)
->   + 中位 Δ0.42 dex; ★譜身份 ΣA² = N·μ² = 176, Σγ² = 3Σγ+μ² = 536;
->   🔴 s 無算子身份 + δ̂×δ_env 合成未微觀推導 + 完整 BHMF 樣本校準
+> - **D6** 🔴 **未解 (09-13, scripts/11 9/9 + 13 10/10 + 14 觀測 + 15 雙樣本 5/5,
+>   docs/09+11+12)**: ★P(δ̂) = arcsine (O157) ✅; Gaussian δ_env 被 UHz1 錨證偽
+>   (O176 docs/11); ★logN δ_env 候選 (μ=0.862 釘死) s*≈1.2 **雙樣本相容**
+>   (Kocevski+25 69 AGN + Harikane+23 10 AGN [arXiv 2303.11946 提取, data/harikane23_10agn.json]);
+>   ★種子→觀測 gap 0.64 dex = 吸積增長層 (O173 支持); arcsine 低質量端 Harikane 2/10 ✓;
+>   🔴 s 無算子身份 + 完整 BHMF (含選擇函數) 校準 + 吸積 forward-model
 > - **D7** 🟡 **推測級維持 (09-13, scripts/12 6/6, docs/10)**: 中心模 δ̂=0 →
 >   M_base = 1.914e6 典型種子質量 (arcsine 中位); 質量階梯 8^ℓ = B^{3ℓ/2} 候選;
 >   等 BHMF 斷裂數據 (data-gated)
