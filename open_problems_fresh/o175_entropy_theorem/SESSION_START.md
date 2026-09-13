@@ -8,9 +8,9 @@
 >   ★ **A = T_write × E_min = 192×(123/176) = 134.182 vs 冷斑 134.2 (dev 0.014%)**
 >   — 冷斑 = 寫入溫度 × Landauer 最小寫入能量單位 (取代 √2 描述, dev 1.17% → 0.014%);
 >   誠實負結果: A₅ 節點冇 ≥192μK (max 132.9) — 192μK 係寫入場特徵, 唔係節點溫度;
->   🟡 剩: 全圖 wavelet 搜索 192μK 特徵 + 0.014% 偏差嘅 EXACT 代數橋 (88×61/40 ↔ 192×123/176)
+>   🟡 剩: 全圖 wavelet 搜索 192μK 特徵 + 0.014% 偏差嘅 EXACT 代數橋 (88×61/40 ↔ 192×123/176); **Commander 基線 (scripts/14 + docs/08)**: RMS(|b|>30°)=109.9μK 符合 CMB, 192μK=0.57σ 高斯一致 (|T|>192μK 8.43% vs 期望 8.9% 無異常), 冷斑 Commander −109 vs SMICA −134.2μK (map 差異 ~20%)
 > - **D3** ✅ **已閉合** (09-13, scripts/08 v2 3/3 + 11: 9/9, docs/07 v2 + docs/10; 同源已補錄入 o173 SESSION_START): **池釋放能量率 = UHECR 總能量率** — R_rel·M☉·c²/V_comov = 1.00265e45 vs ℒ_UHECR = 1e45 (**dev 0.26%**, 總量形式 dev 0.25%); O7/O173「UHECR = 阻挫邊重聯 = 池釋放同事件」CONFIRMED; ⚠️ round-1「證偽 deficit 2.45e5」係 J/erg + 體積 bug 假象, 已撤回; BH 轉化層 (η=φ⁻²¹ 確認 + ρ_BH·φ⁻²¹·c²/t_H = 1.3–2.6e45) + 再生側 (返池率 8.9e3–1.7e4 vs R_rel) order-level 交叉; 剩餘 🟡: f_return 因子 (ρ_BH 精度), R_rel ≈ 306×22 身份 (dev 0.017%)
-> - **D4** 🟡/🟢 角動量 j_spec (09-13 攻堅, scripts/12 + docs/11): **1.9× 因子解析閉合** — j_spec (核心 j) vs Fall (恆星盤 j) 係定義性比 = R_c/(2R_d) = 2, R_d(M_c) = R_c/4 = 12.12 kpc = R_world/(4·44³) (零新常數, dev 0.66% vs Fall 10⁴); R_d(M) 單 power-law 外推**被否決** (L* 低估 2×) → 剩餘: R_d(M) 多錨形式 + MW 2.1σ (√3 觀察)
+> - **D4** 🟡/🟢 角動量 j_spec (09-13 攻堅, scripts/12 + docs/11 解析 + scripts/13 + docs/07 SPARC 實測): **1.9× 因子解析閉合** — j_spec (核心 j) vs Fall (恆星盤 j) 係定義性比 = R_c/(2R_d) = 2, R_d(M_c) = R_c/4 = 12.12 kpc = R_world/(4·44³) (零新常數, dev 0.66% vs Fall 10⁴); R_d(M) 單 power-law 外推**被否決** (L* 低估 2×) → 剩餘: R_d(M) 多錨形式 + MW 2.1σ (√3 觀察); **SPARC 實測 (Lelli+16 下載)**: disk-only Fall 斜率 0.450±0.019 (Fall+13 帶含 ellipticals, disk-only 已知偏低), j_spec=19,867 超出 SPARC 覆蓋 (max 7,017, 對應 M=6.8e11 冇樣本) → 等大質量端樣本
 > - **D15** 🔀 **→ O180** (09-13 用戶指示開新 O 系列): 相位繞數 → 空間投影嚴格場論翻譯 (θ_k = kπ/176 winding → ψ_k(1) 邊界值機制, 投影核 K(ℓ)) — 見 o180_winding_fieldtheory_translation/
 > - **監測** 🟡 冷斑 A = 134.2 μK 冇長期漂移 (P-B1) — 單 epoch, 等 Planck 多期數據
 > - **D19** ✅ 池/圈 = 364 身份 (09-13 補錄, 來源 final_result 剩餘 #2): **已由 O177 閉合** (2026-09-13, 1 script 23/23) — 364 = B·L₄·F₇ = B(F₁₁+μ²) = 8(N_d+1)+B 家族四 (o160 T21); 零參數預言 R_rel = 364·E_strain/T_ring (dev 0.019%); 池週轉時標 t_turn = T_ring/364 = 232.5 Myr
