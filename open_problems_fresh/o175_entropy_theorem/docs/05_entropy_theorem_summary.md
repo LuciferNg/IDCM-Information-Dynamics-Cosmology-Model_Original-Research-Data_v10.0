@@ -52,4 +52,7 @@ R_dissipate = 返池重阻挫率 = R_write (Noether ΣJ=0 強逼, 穩態)
 - ✅ 池/圈 = 364 身份 (B·L₄·F₇) — O177 已閉合 (09-13, 23/23; o177_pool_turnover_364/)
 - 🟡 j_spec 定量 1.9× Fall locus — 需要盤尺度-質量關係 IDCM 側閉合 (O32-adjacent)
 - 🟡 冷斑 A 冇漂移 — 單 epoch 數據 (側推識別, O41 誠實標記)
-- 🟡 相位繞數 → 空間投影嘅嚴格場論翻譯 (ψ_k(1) 邊界值機制, O158 系)
+- 🟡 D1 null 轉正候選: 11/45 一致未證明 (dev 0.0405% << 噪聲地板 3.08%; 11/15 null 確鑿 21.7σ) — docs/06
+- 🔴 D2: 192 μK 全圖 wavelet 搜索 (A₅ 冇特徵, max 132.9; √2 描述降級) — docs/08
+- 🟡 D3: naive「池支付 UHECR」讀法證偽 (deficit 2.45e5) → 黑洞轉化通道閉合待攻 — docs/07
+- 🔀 相位繞數 → 空間投影嚴格場論翻譯: **已拆出 O180** (09-13 用戶指示, o180_winding_fieldtheory_translation/)

@@ -1,6 +1,6 @@
 # O175 — 正式熵定理 (Formal Entropy Theorem: Write-Dissipation Balance)
 
-## 狀態: 🟢 已閉合 (2026-09-13; 6 scripts 119/119 PASS + 獨立核對 44/44 + 閉合後二次核對 50/50; 池/圈 364 → O177 閉合)
+## 狀態: 🟢 已閉合 (2026-09-13; 6 scripts 119/119 PASS + 獨立核對 44/44 + 閉合後二次核對 50/50; 池/圈 364 → O177 閉合) · 🟡 遺留攻堅在 O175 內推 (D1-D4; D15 → O180)
 
 ## 結論
 IDCM 熵定理由三定理閉合, 零新常數: ① 寫入可逆 (ΔE = T_write·ΔS, 零熵稅),
@@ -42,11 +42,15 @@ O7 → O41 → O161 → O39 → O173 → O175; O159 (J²=−1) + O32 (a₀) + O6
 - 時序完整性: scripts 00-06 + docs/01-05 mtime 遞增, 冇回溯污染
 - 誠實修正: 3 個 check 自身 bug (單位/τ/L₇ 錯) + 1 個 O173 算術張力記錄
 - 池/圈 364 → O177 閉合 (23/23): 結構身份 B·L₄·F₇ = B(F₁₁+μ²) = 8(N_d+1)+B
+- 遺留攻堅 (用戶指示在 O175 內推): D1 8/8 (docs/06) + D3 3/3 (docs/07) + D2 探測 (docs/08); D15 → O180
 
 ## 剩餘開放 (誠實)
-- 🟡 j_spec 定量 1.9× Fall locus — 需盤尺度-質量關係 IDCM 側閉合 (O32-adjacent)
+- 🟡 D1 null 轉正候選: 11/45 = (11/15)/N_gen 一致未證明 (dev 0.0405% << 噪聲地板 3.08%; 11/15 null 確鑿 21.7σ) — 升級需結構 1/3 推導 (docs/06)
+- 🔴 D2: T_write = 192 μK 全圖 wavelet 搜索 (data-gated; A₅ 冇特徵, max 132.9, docs/08)
+- 🟡 D3: 黑洞轉化通道 → UHECR 能量閉合 (naive「池支付」讀法已證偽, deficit 2.45e5, docs/07)
+- 🟡 D4 j_spec 定量 1.9× Fall locus — 需盤尺度-質量關係 IDCM 側閉合 (O32-adjacent)
 - 🟡 冷斑 A 冇漂移 — 單 epoch (側推識別, O41 標記)
-- 🟡 相位繞數 → 空間投影嚴格場論翻譯 (ψ_k(1) 邊界值機制, O158 系)
+- 🔀 相位繞數 → 空間投影場論翻譯: **已拆出 O180** (09-13 用戶指示, o180_winding_fieldtheory_translation/)
 
 ## 檔案
-scripts/00-06 (119+48 PASS), docs/01-05, data/01-04
+scripts/00-09 (119+50+11 PASS), docs/01-08, data/01-04

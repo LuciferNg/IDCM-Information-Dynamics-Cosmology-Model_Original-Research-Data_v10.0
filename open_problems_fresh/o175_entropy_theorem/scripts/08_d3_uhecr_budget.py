@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O178-D3: 耗散熵流 vs UHECR 預算 — 定量閉合嘗試 (O175 SESSION_START D3)
+O175 遺留攻堅 D3: 耗散熵流 vs UHECR 預算 — 定量閉合嘗試 (用戶指示: 在 O175 內推)
 =====================================================================
 Observed anchor (Auger-constrained, independent 2024/2025 papers):
   L_UHECR ~ 10^45 erg Mpc^-3 yr^-1 (production rate density, above 0.6-5 EeV)
