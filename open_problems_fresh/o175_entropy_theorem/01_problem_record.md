@@ -90,6 +90,12 @@ O173 docs/21 已建立**熵論重構** (Landauer 對偶: 寫入存在 O7, 抹除
 | 09-13 | D3 修正 (08 v2): 池釋放率密度 (comoving) = 1.00265e45 = ℒ_UHECR (**dev 0.26%**, 總量 0.25%) | **D3 閉合 ✅**; v1 假 deficit 撤回 |
 | 09-13 | D3 BH 通道 (11): η = φ⁻²¹ 確認 (TON 618 M·φ²¹ ✓) + ρ_BH·φ⁻²¹·c²/t_H = 1.3–2.6e45 + 返池率 8.9e3–1.7e4 vs R_rel | order-level 交叉 (9/9) |
 | 09-13 | D4 (12): 1.9× 因子 = 定義性 core/disk 比 (j_spec/2 = 9,934 = Fall 10⁴, dev 0.66%; R_d(M_c) = R_c/4 = 12.12 kpc 零新常數); R_d(M) 單 power-law 外推 L* 低估 2× | 因子閉合 ✅; 外推負結果; MW 2.1σ 維持 |
+| 09-13 | 開放科學數據抓取 (13_data_fetch): SPARC 4 mrt + Posti2018 (92) + Mancera2021 (152) + Auger (109) 免費公開渠道 | 4 數據集落盤 data/ |
+| 09-13 | D4 真數據閉合 (14_fall_locus_closure): **j*(M_c) = 9,770 vs IDCM 9,935 (dev −1.66%, Posti 2018 r=0.944) PASS**; j_bar +20.7% ORDER; R_d(M) 外推 −28.5% FAIL (方法不確定性) | T2b 定量閉合 ✅; R_d(M) 維持 🟡 |
+| 09-13 | D3 強化探針 (15_uhecr): Auger 109 事件最近節點 9.67° vs MC 10.18° (dev −5.0%) | 初步, 統計不足 (featured sample) |
+| 09-13 | Commander/SMICA 全圖解鎖 (16): D1 跨圖 ⟨|δT|⟩/A Commander 0.2393 vs SMICA 0.2443 (**dev −2.1%**) + 冷斑 −123.8 (dev 7.8%); D2 單 bandpass 冇 192 (91.5 μK, 3.7σ) | 5/5 |
+| 09-13 | **D2 閉合 (17): 多尺度 DoG 6 帶 × SMICA/Commander 三重排除 → 0 寫入特徵**; 195.3μK 假候選 = mask 邊界 artifact; r=0.999 | **D2 ✅ 閉合 (docs/15)**; T_write = 熱力學等效溫度 |
+| 09-13 | NILC 第三圖確認: ⟨|δT|⟩/A = 0.2516 (dev ≤5%), 6 帶冇 ≥192 (max 144.5) | D2 負結果三圖確認 |
 
 ### 依賴鏈 (結構)
 

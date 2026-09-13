@@ -1,6 +1,6 @@
 # O175 — 正式熵定理 (Formal Entropy Theorem: Write-Dissipation Balance)
 
-## 狀態: 🟢 已閉合 (2026-09-13; 6 scripts 119/119 PASS + 獨立核對 44/44 + 閉合後二次核對 50/50; 池/圈 364 → O177 閉合) · 🟡 遺留攻堅在 O175 內推 (D1-D4; D15 → O180)
+## 狀態: 🟢 已閉合 (2026-09-13; 6 scripts 119/119 PASS + 獨立核對 44/44 + 閉合後二次核對 50/50; 池/圈 364 → O177 閉合; 遺留攻堅: D2 ✅ 閉合 (docs/15 負結果), D3 ✅, D4 🟢/🟡, D1 🟡) · D15 → O180
 
 ## 結論
 IDCM 熵定理由三定理閉合, 零新常數: ① 寫入可逆 (ΔE = T_write·ΔS, 零熵稅),
@@ -43,10 +43,11 @@ O7 → O41 → O161 → O39 → O173 → O175; O159 (J²=−1) + O32 (a₀) + O6
 - 誠實修正: 3 個 check 自身 bug (單位/τ/L₇ 錯) + 1 個 O173 算術張力記錄
 - 池/圈 364 → O177 閉合 (23/23): 結構身份 B·L₄·F₇ = B(F₁₁+μ²) = 8(N_d+1)+B
 - 遺留攻堅 (用戶指示在 O175 內推): D1 8/8 (docs/06) + D1 二輪 5/5 (docs/09) + D3 3/3 (docs/07) + D3 BH 9/9 (docs/10) + D4 5/5 (docs/11) + D2 探測 (docs/08); D15 → O180
-- **開放科學數據層 (docs/12,13)**: SPARC/Posti2018(92)/Mancera2021(152)/Auger(109) 免費公開渠道落盤 data/; **j*(M_c) Fall locus 真數據閉合 dev −1.66%** (script 14, Posti 2018 外推 r=0.944); Auger 幾何探針初步 (script 15, −5.0% 統計不足); Planck 4 map 下載中 (data/planck/, D1/D2 解鎖)
+- **開放科學數據層 (docs/12,13)**: SPARC/Posti2018(92)/Mancera2021(152)/Auger(109) 免費公開渠道落盤 data/; **j*(M_c) Fall locus 真數據閉合 dev −1.66%** (script 14, Posti 2018 外推 r=0.944); Auger 幾何探針初步 (script 15, −5.0% 統計不足); **Planck 全圖解鎖**: SMICA/Commander/NILC 三圖 (scripts 16+17), D1 跨圖一致 dev ≤5%, **D2 閉合** (0 真實 192μK 特徵, 三重排除)
+- 閉合後二次核對全部 scripts 重跑 (2026-09-13 18:xx): 00-12 全綠 (119/119 + 50/50 + 8/8 + 3/3 + 5/5 + 9/9 + 5/5 + 9/9) + 13-17 數據層 (14: 2P/3F 預期內, 16: 5/5, 17: 2/2) + sibling 13_d4/14_d2 完成
 
 ## 剩餘開放 (誠實)
-- 🟡 D1 null 轉正候選: 11/15 null 確鑿 (21.7σ); 11/45 = (11/15)/N_gen 候選一致 (dev 0.0405%) 但**巧合風險升級** (docs/09: 高斯基線 A/σ = 2.93 預言 0.272 + 相位階梯相稱性否決) — 升級正式否決; 鑑別測試 data-gated (全 88 格 + Commander/SEVEM)
+- 🟡 D1 null 轉正候選: 11/15 null 確鑿 (21.7σ); 11/45 = (11/15)/N_gen 候選一致 (dev 0.0405%) 但**巧合風險升級** (docs/09: 高斯基線 A/σ = 2.93 預言 0.272 + 相位階梯相稱性否決) — 升級正式否決; 鑑別測試**部分完成** (docs/15: Commander 0.2393 + NILC 0.2516 vs SMICA 0.2443, 三圖一致 dev ≤5% — 落喺 generic band, 支持巧合判讀); 剩 🔴: 全 88 格座標 (B₅ 補集) 未有結構定義
 - 🔴 D2: T_write = 192 μK 全圖 wavelet 搜索 → **✅ 閉合 (docs/15, 負結果當 PASS)**: SMICA+Commander 多尺度 6 帶 × 極值統計 → 0 真實特徵 (4 初步候選全排除: 帶1 兩圖位置唔同/pipeline、帶2 點源 min −5484μK、帶3-6 冇 ≥192); |b|>20 假候選 195.3μK 係 mask 邊界洩漏 artifact; **T_write 判為熱力學等效溫度 (唔係 CMB 特徵)**, CMB 唯一節點對應 = 冷斑 A = 134.2μK (代數橋 A = γ×123/176)
 - ✅ D3 **已閉合** (docs/07 v2 + docs/10): 池釋放 = UHECR 總能量率 (dev 0.26%, 零新常數); round-1 證偽撤回 (J/erg + 體積 bug); BH 轉化層/再生側 order-level 交叉
 - 🟡/🟢 D4 j_spec (docs/11): 1.9× 因子 = 定義性 core/disk 比 (R_d(M_c) = R_c/4, dev 0.66%); R_d(M) 單 power-law 否決 (L* 低估 2×); MW 2.1σ 維持; **docs/12: j*(M_c) Fall locus 真數據定量閉合 (dev −1.66%, Posti 2018 92 星系 r=0.944) ✅**; R_d(M) 外推不確定性維持 🟡 (單 power-law 外推 1 dex 唔可靠)
@@ -54,4 +55,4 @@ O7 → O41 → O161 → O39 → O173 → O175; O159 (J²=−1) + O32 (a₀) + O6
 - 🔀 相位繞數 → 空間投影場論翻譯: **已拆出 O180** (09-13 用戶指示, o180_winding_fieldtheory_translation/)
 
 ## 檔案
-scripts/00-12 (119+50+30 PASS), docs/01-11, data/01-04
+scripts/00-17 (核心 119/119 + 二次核對 50/50 + 攻堅 30/30 + 數據層 17: 5/5, 14: 2P/3F, 15: 探針, 16: 5/5, 17: 2/2), docs/01-15, data/ (01-04 json + sparc/vizier/auger/planck)
