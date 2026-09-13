@@ -18,9 +18,10 @@ def check(name, cond, info=""):
 required = ["SESSION_START.md", "01_problem_record.md", "final_result.md",
             "docs/01_lucas_dual_and_budget_quantum.md", "docs/02_rs1_bridge_scan.md",
             "docs/03_session_push_closure.md", "docs/04_power_sum_closed_form.md",
+            "docs/05_external_extensions.md",
             "scripts/01_verify_lucas_family.py", "scripts/02_rs1_bridge_scan.py",
             "scripts/03_session_push_closure.py", "scripts/04_doc_integrity_audit.py",
-            "scripts/05_power_sum_closed_forms.py"]
+            "scripts/05_power_sum_closed_forms.py", "scripts/06_external_extensions.py"]
 mt = {}
 for f in required:
     p = os.path.join(D, f)
@@ -35,6 +36,7 @@ opening = ["docs/01_lucas_dual_and_budget_quantum.md", "scripts/01_verify_lucas_
 attacks = ["docs/02_rs1_bridge_scan.md", "scripts/02_rs1_bridge_scan.py"]
 closing = ["docs/03_session_push_closure.md", "scripts/03_session_push_closure.py",
            "docs/04_power_sum_closed_form.md", "scripts/05_power_sum_closed_forms.py",
+           "docs/05_external_extensions.md", "scripts/06_external_extensions.py",
            "scripts/04_doc_integrity_audit.py", "01_problem_record.md", "final_result.md"]
 max_open = max(mt[f] for f in opening)
 min_att = min(mt[f] for f in attacks)
@@ -54,14 +56,18 @@ check("mtime: record & final updated at close (>= attacks)",
 docs = {f: open(os.path.join(D, f), encoding="utf-8").read() for f in
         ["docs/01_lucas_dual_and_budget_quantum.md", "docs/02_rs1_bridge_scan.md",
          "docs/03_session_push_closure.md", "docs/04_power_sum_closed_form.md",
+         "docs/05_external_extensions.md",
          "01_problem_record.md", "final_result.md"]}
 close_docs = ["docs/03_session_push_closure.md", "docs/04_power_sum_closed_form.md",
+              "docs/05_external_extensions.md",
               "01_problem_record.md", "final_result.md"]
 tier1 = {"198": "198", "321": "321", "832": "832", "9350": "9350"}   # original (docs/01 + close)
 tier2 = {"823": "823", "880": "880", "912": "912", "1792": "1792",
          "parity-gap": "parity-gap"}                                  # session-push (close docs only)
 tier3 = {"C(2n,n)": "C(2n,n)", "C(8,4)": "C(8,4)", "131": "131",
          "sqrt5*phi^-n": "φ^{−n}"}                                   # round-2 (docs/04 + close docs only)
+tier4 = {"Kummer": "Kummer", "Fisher": "Fisher", "n_first": "n_first",
+         "trap ⑦": "trap ⑦"}                                        # round-3 (docs/05 + close docs only)
 for k, v in tier1.items():
     check(f"consistency: '{k}' in docs/01 + docs/03 + record + final",
           all(v in docs[d] for d in ["docs/01_lucas_dual_and_budget_quantum.md",
@@ -69,15 +75,23 @@ for k, v in tier1.items():
                                      "01_problem_record.md", "final_result.md"]))
 for k, v in tier2.items():
     check(f"consistency(new): '{k}' in docs/03 + record + final (not backdated into docs/01/02)",
-          all(v in docs[d] for d in close_docs) and
+          all(v in docs[d] for d in ["docs/03_session_push_closure.md",
+                                     "01_problem_record.md", "final_result.md"]) and
           all(v not in docs[d] for d in ["docs/01_lucas_dual_and_budget_quantum.md",
                                          "docs/02_rs1_bridge_scan.md"]))
 for k, v in tier3.items():
-    check(f"consistency(round2): '{k}' in docs/04 + record + final (not backdated into docs/01/02/03)",
+    check(f"consistency(round2): '{k}' in docs/04 + record + final (not backdated into docs/01/02)",
           all(v in docs[d] for d in ["docs/04_power_sum_closed_form.md",
                                      "01_problem_record.md", "final_result.md"]) and
           all(v not in docs[d] for d in ["docs/01_lucas_dual_and_budget_quantum.md",
                                          "docs/02_rs1_bridge_scan.md"]))
+for k, v in tier4.items():
+    check(f"consistency(round3): '{k}' in docs/05 + record + final (not backdated into docs/01/02/03)",
+          all(v in docs[d] for d in ["docs/05_external_extensions.md",
+                                     "01_problem_record.md", "final_result.md"]) and
+          all(v not in docs[d] for d in ["docs/01_lucas_dual_and_budget_quantum.md",
+                                         "docs/02_rs1_bridge_scan.md",
+                                         "docs/03_session_push_closure.md"]))
 
 # 4. SESSION_START snapshot unchanged (still opening state, no closure claim)
 ss = open(os.path.join(D, "SESSION_START.md"), encoding="utf-8").read()
