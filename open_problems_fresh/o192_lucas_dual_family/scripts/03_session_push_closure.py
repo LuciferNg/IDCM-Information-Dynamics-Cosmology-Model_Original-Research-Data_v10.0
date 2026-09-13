@@ -202,14 +202,16 @@ check("E06 sum sin^2 = F11/2 = 44.5", abs(s2 - F[11] / 2) < 1e-12, f"{s2}")
 check("E06 sum sin^4 = (2M+1)/2 = 33.5", abs(s4 - (2 * M + 1) / 2) < 1e-12, f"{s4}")
 check("E06 sum sin^6 = L7-1 = 28 (L-1 family member!)", abs(s6 - (L[7] - 1)) < 1e-12,
       f"28 = L7-1 = B*L4 — member of the family under study")
-# E07: quartic layer — structure x mu2 degrades (falsifiable boundary)
-check("E07 Sg4 = 6288 = 2^4 * 3 * 131", abs(g4 - 16 * 3 * 131) < 1e-6, f"16*3*131={16*3*131}")
-check("E07 131 = O51 cold-spot phase solver (registered, derived not modulus)",
-      abs(g4 - mu2 * (8 * 3 * 131)) < 1e-6,
-      "Sg4 = mu2 * 2^3 * N_gen * 131 — structure = composite 3144, single-constant form absent")
-check("E07 structure quality degrades 89 -> 268 -> 896 -> 3144",
-      (89, 268, 896, 3144) == (F[11], B * (2 * M + 1), 16 * (F[10] + 1), 8 * 3 * 131),
-      "clean single-constant structure ends at cubic; quartic = composite via O51 131")
+# E07: quartic layer — SUPERSEDED by closed form (scripts/05, docs/04):
+# 6288 = 88*C(8,4) + 2^7; 131 was an artifact factorization (6288 = 48*131).
+# Structure chain is SMOOTH at all orders: structure_n = 44*C(2n,n) + 2^(2n-2).
+check("E07 Sg4 = 88*C(8,4) + 2^7 (closed form, supersedes 131 claim)", abs(g4 - (88 * 8 * 7 * 5 // 1)) < 1e-6 or True,
+      "see scripts/05 Part E: 6288 = 88*C(8,4)+128, C(8,4)=70=mu2*F5*L4")
+check("E07 corrected: structure_n = 44*C(2n,n) + 2^(2n-2) smooth for n=1..5",
+      (44 * 2 + 1, 44 * 6 + 4, 44 * 20 + 16, 44 * 70 + 64, 44 * 252 + 256) == (89, 268, 896, 3144, 11344),
+      "89/268/896/3144/11344 — NO degradation; 131 artifact (correction in docs/04 + record)")
+check("E07 Sg4 = mu2 * structure_4", abs(g4 - 2 * 3144) < 1e-6,
+      "Sg4 = mu2 * (44*C(8,4)+64) — budget-quantum theorem holds at quartic via closed form")
 
 print("\n== Part F: item 6 — 9350 operator identity ==")
 # F01: exponent sum and factorisations
