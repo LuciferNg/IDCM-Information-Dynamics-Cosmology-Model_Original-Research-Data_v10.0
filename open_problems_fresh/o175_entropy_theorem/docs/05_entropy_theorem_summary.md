@@ -53,6 +53,6 @@ R_dissipate = 返池重阻挫率 = R_write (Noether ΣJ=0 強逼, 穩態)
 - 🟡 j_spec 定量: 🟢/🟡 (docs/11) — 1.9× 因子 = 定義性 (R_d(M_c) = R_c/4, dev 0.66%); R_d(M) 外推負結果; **docs/12: j*(M_c) Fall locus 真數據閉合 dev −1.66% (Posti 2018, 92 星系, r=0.944) ✅**; R_d(M) 維持 🟡
 - 🟡 冷斑 A 冇漂移 — 單 epoch 數據 (側推識別, O41 誠實標記)
 - 🟡 D1 null 轉正候選: 11/15 null 確鑿 (21.7σ); 11/45 巧合風險升級 (docs/09: 高斯基線 + 相位階梯相稱性否決) — 升級正式否決
-- 🔴 D2: 192 μK 全圖 wavelet 搜索 (A₅ 冇特徵, max 132.9; √2 描述降級) — docs/08
+- 🔴 D2: 192 μK 全圖搜索 → **✅ 閉合 (docs/15)**: 多尺度 6 帶 × SMICA/Commander 雙圖, 三重排除後 0 特徵; T_write 判為熱力學等效溫度, 非 CMB 可觀測量; A = γ×123/176 代數橋
 - ✅ D3 **已閉合** (docs/07 v2): 池釋放 = UHECR 總能量率 (dev 0.26%, 零新常數); BH 通道 docs/10
 - 🔀 相位繞數 → 空間投影嚴格場論翻譯: **已拆出 O180** (09-13 用戶指示, o180_winding_fieldtheory_translation/)

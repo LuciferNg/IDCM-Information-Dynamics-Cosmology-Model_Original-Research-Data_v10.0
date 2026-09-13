@@ -47,7 +47,7 @@ O7 → O41 → O161 → O39 → O173 → O175; O159 (J²=−1) + O32 (a₀) + O6
 
 ## 剩餘開放 (誠實)
 - 🟡 D1 null 轉正候選: 11/15 null 確鑿 (21.7σ); 11/45 = (11/15)/N_gen 候選一致 (dev 0.0405%) 但**巧合風險升級** (docs/09: 高斯基線 A/σ = 2.93 預言 0.272 + 相位階梯相稱性否決) — 升級正式否決; 鑑別測試 data-gated (全 88 格 + Commander/SEVEM)
-- 🔴 D2: T_write = 192 μK 全圖 wavelet 搜索 (data-gated; A₅ 冇特徵, max 132.9, docs/08)
+- 🔴 D2: T_write = 192 μK 全圖 wavelet 搜索 → **✅ 閉合 (docs/15, 負結果當 PASS)**: SMICA+Commander 多尺度 6 帶 × 極值統計 → 0 真實特徵 (4 初步候選全排除: 帶1 兩圖位置唔同/pipeline、帶2 點源 min −5484μK、帶3-6 冇 ≥192); |b|>20 假候選 195.3μK 係 mask 邊界洩漏 artifact; **T_write 判為熱力學等效溫度 (唔係 CMB 特徵)**, CMB 唯一節點對應 = 冷斑 A = 134.2μK (代數橋 A = γ×123/176)
 - ✅ D3 **已閉合** (docs/07 v2 + docs/10): 池釋放 = UHECR 總能量率 (dev 0.26%, 零新常數); round-1 證偽撤回 (J/erg + 體積 bug); BH 轉化層/再生側 order-level 交叉
 - 🟡/🟢 D4 j_spec (docs/11): 1.9× 因子 = 定義性 core/disk 比 (R_d(M_c) = R_c/4, dev 0.66%); R_d(M) 單 power-law 否決 (L* 低估 2×); MW 2.1σ 維持; **docs/12: j*(M_c) Fall locus 真數據定量閉合 (dev −1.66%, Posti 2018 92 星系 r=0.944) ✅**; R_d(M) 外推不確定性維持 🟡 (單 power-law 外推 1 dex 唔可靠)
 - 🟡 冷斑 A 冇漂移 — 單 epoch (側推識別, O41 標記)

@@ -66,6 +66,8 @@ O173 docs/21 已建立**熵論重構** (Landauer 對偶: 寫入存在 O7, 抹除
 | 13 | 13_data_fetch.py | 開放科學數據抓取: SPARC/Posti2018/Mancera2021/Auger | 4 數據集 | docs/12,13 |
 | 14 | 14_fall_locus_closure.py | D4 真數據閉合: j*(M_c) Fall locus 外推 | 2 PASS/3 FAIL | docs/12 |
 | 15 | 15_uhecr_geometry_probe.py | D3 強化: Auger 109 事件 vs 60 節點幾何 (初步) | 探針 | docs/13 |
+| 16 | 16_d1_d2_commander_unlock.py | D1 跨地圖驗證 (Commander 0.2393, dev 2.1%) + D2 單 bandpass | 5/5 | docs/15 |
+| 17 | 17_d2_multiscale_wavelet.py | D2 閉合: 多尺度 DoG 6 帶 × 雙圖, 三重排除 → 0 寫入特徵 | 2/2 | docs/15 |
 
 ### 事件時間線 (2026-09-13)
 
