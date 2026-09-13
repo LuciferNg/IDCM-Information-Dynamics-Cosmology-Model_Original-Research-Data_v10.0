@@ -19,20 +19,21 @@
 - **D14 閉合** (sibling 完成): 電荷均分三重路徑 + 表示論路徑 (J_k 微觀)
 - **D6 🟡 部分閉合 (全結構候選)**: P(δ̂) = arcsine ✅ (O157); Gaussian δ_env 被 UHz1 錨證偽;
   ★logN 全結構: μ = φ⁻¹ + L₅/(F₅·N_gen²) (dev 0.10%),
-  s² = B·N_gen²·Var_pop(ln(1+δ̂₊)) → s=1.187 (dev 1.05%); 雙樣本相容;
-  🔴 k=36 微觀動力學 + 11/45 轉正 (data-gated) + 吸積 forward-model
+  s² = B·N_gen²·Var_pop(ln(1+δ̂₊)) → s=1.187 (dev 1.05%); ★k=36 = N/2−F_proj+N_gen²
+  (O121 黑洞通道); 11/45 雙通道一致; ★固定增長核被證偽 → 需質量依賴增長;
+  🔴 k=36 模態映射 + 11/45 轉正 (data-gated) + Eddington forward-model
 - **D5 部分閉合**: 場論鏈 S_ℓ → G(n) → ξ=1/γ_1; r0 候選 R_H/(2³L₅²) = 4.268 Mpc
 
 ## 依賴
 O171 → O173 (P1/P1′) → O140 → O159/O161 → O76
 
 ## 驗證統計
-185/186 (scripts/01-18 + sibling 平行 07/08 = 20 scripts; 唯一 FAIL 係 14/T1
+192/193 (scripts/01-19 + sibling 平行 07/08 = 21 scripts; 唯一 FAIL 係 14/T1
 = 有意義證偽: arcsine 單通道到唔到 5.2e8, 證明 δ_env 重尾必需);
-本 agent 主鏈 152/152 全 PASS (01-13 + 15-18)
+本 agent 主鏈 159/159 全 PASS (01-13 + 15-19)
 
 ## 剩餘開放 (誠實)
-- 🔴 D6: k=36 微觀動力學 (池週轉→B·N_gen²); 11/45 轉正 (O175 data-gated); 吸積 forward-model
+- 🔴 D6: k=36 模態-通道映射; 11/45 轉正 (O175 data-gated); Eddington forward-model (質量依賴增長 + 選擇函數)
 - 🟡 D5: 晶格間距 a 定義 (propagator→實空間映射); halo bias 推導
 - 🟡 D7: 中心模觀測對應 — 等 BHMF 斷裂數據 (data-gated)
 - 🟡 P1 z<2 反彈測試 (D17, 等數據) · 🟡 O171 本體 (D18, 外判)
