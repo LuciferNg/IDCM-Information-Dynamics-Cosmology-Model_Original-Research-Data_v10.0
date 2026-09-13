@@ -50,7 +50,7 @@ R_dissipate = 返池重阻挫率 = R_write (Noether ΣJ=0 強逼, 穩態)
 ## 誠實開放口
 
 - ✅ 池/圈 = 364 身份 (B·L₄·F₇) — O177 已閉合 (09-13, 23/23; o177_pool_turnover_364/)
-- 🟡 j_spec 定量 1.9× Fall locus — 需要盤尺度-質量關係 IDCM 側閉合 (O32-adjacent)
+- 🟡 j_spec 定量: 🟢/🟡 (docs/11) — 1.9× 因子 = 定義性 (R_d(M_c) = R_c/4, dev 0.66%); R_d(M) 外推負結果
 - 🟡 冷斑 A 冇漂移 — 單 epoch 數據 (側推識別, O41 誠實標記)
 - 🟡 D1 null 轉正候選: 11/15 null 確鑿 (21.7σ); 11/45 巧合風險升級 (docs/09: 高斯基線 + 相位階梯相稱性否決) — 升級正式否決
 - 🔴 D2: 192 μK 全圖 wavelet 搜索 (A₅ 冇特徵, max 132.9; √2 描述降級) — docs/08
