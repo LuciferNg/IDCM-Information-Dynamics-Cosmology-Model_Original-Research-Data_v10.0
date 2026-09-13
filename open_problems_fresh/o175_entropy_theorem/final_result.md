@@ -42,15 +42,15 @@ O7 → O41 → O161 → O39 → O173 → O175; O159 (J²=−1) + O32 (a₀) + O6
 - 時序完整性: scripts 00-06 + docs/01-05 mtime 遞增, 冇回溯污染
 - 誠實修正: 3 個 check 自身 bug (單位/τ/L₇ 錯) + 1 個 O173 算術張力記錄
 - 池/圈 364 → O177 閉合 (23/23): 結構身份 B·L₄·F₇ = B(F₁₁+μ²) = 8(N_d+1)+B
-- 遺留攻堅 (用戶指示在 O175 內推): D1 8/8 (docs/06) + D1 二輪 5/5 (docs/09) + D3 3/3 (docs/07) + D2 探測 (docs/08); D15 → O180
+- 遺留攻堅 (用戶指示在 O175 內推): D1 8/8 (docs/06) + D1 二輪 5/5 (docs/09) + D3 3/3 (docs/07) + D3 BH 9/9 (docs/10) + D2 探測 (docs/08); D15 → O180
 
 ## 剩餘開放 (誠實)
 - 🟡 D1 null 轉正候選: 11/15 null 確鑿 (21.7σ); 11/45 = (11/15)/N_gen 候選一致 (dev 0.0405%) 但**巧合風險升級** (docs/09: 高斯基線 A/σ = 2.93 預言 0.272 + 相位階梯相稱性否決) — 升級正式否決; 鑑別測試 data-gated (全 88 格 + Commander/SEVEM)
 - 🔴 D2: T_write = 192 μK 全圖 wavelet 搜索 (data-gated; A₅ 冇特徵, max 132.9, docs/08)
-- 🟡 D3: 黑洞轉化通道 → UHECR 能量閉合 (naive「池支付」讀法已證偽, deficit 2.45e5, docs/07)
+- ✅ D3 **已閉合** (docs/07 v2 + docs/10): 池釋放 = UHECR 總能量率 (dev 0.26%, 零新常數); round-1 證偽撤回 (J/erg + 體積 bug); BH 轉化層/再生側 order-level 交叉
 - 🟡 D4 j_spec 定量 1.9× Fall locus — 需盤尺度-質量關係 IDCM 側閉合 (O32-adjacent)
 - 🟡 冷斑 A 冇漂移 — 單 epoch (側推識別, O41 標記)
 - 🔀 相位繞數 → 空間投影場論翻譯: **已拆出 O180** (09-13 用戶指示, o180_winding_fieldtheory_translation/)
 
 ## 檔案
-scripts/00-10 (119+50+16 PASS), docs/01-09, data/01-04
+scripts/00-11 (119+50+25 PASS), docs/01-10, data/01-04

@@ -54,5 +54,5 @@ R_dissipate = 返池重阻挫率 = R_write (Noether ΣJ=0 強逼, 穩態)
 - 🟡 冷斑 A 冇漂移 — 單 epoch 數據 (側推識別, O41 誠實標記)
 - 🟡 D1 null 轉正候選: 11/15 null 確鑿 (21.7σ); 11/45 巧合風險升級 (docs/09: 高斯基線 + 相位階梯相稱性否決) — 升級正式否決
 - 🔴 D2: 192 μK 全圖 wavelet 搜索 (A₅ 冇特徵, max 132.9; √2 描述降級) — docs/08
-- 🟡 D3: naive「池支付 UHECR」讀法證偽 (deficit 2.45e5) → 黑洞轉化通道閉合待攻 — docs/07
+- ✅ D3 **已閉合** (docs/07 v2): 池釋放 = UHECR 總能量率 (dev 0.26%, 零新常數); BH 通道 docs/10
 - 🔀 相位繞數 → 空間投影嚴格場論翻譯: **已拆出 O180** (09-13 用戶指示, o180_winding_fieldtheory_translation/)

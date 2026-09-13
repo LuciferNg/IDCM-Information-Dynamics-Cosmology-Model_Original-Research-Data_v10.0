@@ -35,16 +35,15 @@ crystal_stress LRD 本體論討論 (2026-09-11) 確立:
 
 ## 閉合後衍生開放問題 (09-13 補錄)
 
-> - **D3** 🟡 耗散熵流 vs UHECR 預算 (同源: O175 D3; 根源 O7/O173: UHECR = 阻挫邊重聯 = 同事件):
->   09-13 定量閉合嘗試 (O175 scripts/08 + docs/07) — naive「池支付 UHECR 能量」讀法**證偽**:
->   ℒ_UHECR ≈ 10^45 erg Mpc⁻³ yr⁻¹ (Auger-constrained, 兩份獨立 2024/25 論文一致) vs
->   池釋放率 R_rel·c²/V_univ = 4.08e39 erg Mpc⁻³ yr⁻¹ → **deficit 2.4523e5** (池週轉 59.35 次後
->   總處理 1.66e61 erg vs UHECR 總預算 4.07e66 erg, 同 deficit); 寫入通道 6.5e-41 erg Mpc⁻³ yr⁻¹
->   (11 數量級以下 — O175 定理1「寫入係控制參數」獨立重現).
->   → 通道重定向: UHECR 能量 = **黑洞轉化** (O121/O173: SMBH = 轉化器, P14 M_BH/M* = 1/306),
->   同主流物理 (AGN/GRB 為 UHECR 源) 一致.
->   🔴 剩餘閉合: BH 轉化通道 → UHECR 能量率定量 (P14 質量函數 × 吸積效率 × UHECR 份額 ~10^-4?)
->   🟡 事件率閉合: 阻挫邊重聯率 vs Auger 事件率 (同能量預算問題分開)
+> - **D3** ✅ **已閉合** (09-13; 同源 O175 D3; 根源 O7/O173: UHECR = 阻挫邊重聯 = 同事件):
+>   定量閉合 (O175 scripts/08 v2 + docs/07, 11 + docs/10) — **池釋放能量率 = UHECR 總能量率**:
+>   R_rel·M☉·c²/V_comov = 1.00265e45 vs ℒ_UHECR ≈ 10^45 erg Mpc⁻³ yr⁻¹ (Auger-constrained,
+>   兩份獨立 2024/25 論文一致) → **dev 0.26%** (總量形式 dev 0.25%).
+>   ⚠️ 誠實修正: 09-13 初版「naive 讀法證偽 deficit 2.45e5」係 **J/erg 單位 bug (10⁷) + 體積錯配
+>   (W-world 2.95e11 vs comoving 1.2e13, 40.7×)** 嘅假象 — 已撤回 (O175 docs/07 v1→v2 修正清單).
+>   結構層: 應變需求 M/η 確認 η = φ⁻²¹ (TON 618: 4.07e10·φ²¹ = 9.96e14 ✓); BH 轉化層
+>   ρ_BH·φ⁻²¹·c²/t_H = 1.3–2.6e45 (order-level); 再生側返池率 8.9e3–1.7e4 M☉/yr vs R_rel = 6.7e3
+>   (ratio 1.32–2.59). 剩餘 🟡: f_return 因子 (ρ_BH 精度), R_rel ≈ 306×22 (dev 0.017%, 觀察)
 > - **D5** 🟡 凝聚場實空間化 (同源: O174 D5 正典; 根源 O173 P1: 凝聚場 2-點函數):
 >   09-13 譜結構閉合 (O174 scripts/08+10+12) — 主導模 n=1 (G_max ≈ 0.4997),
 >   ξ_modes → 1/2 收斂; ★ r0 候選唯一命中 Zhang+26 [3.4,4.5] h⁻¹Mpc:

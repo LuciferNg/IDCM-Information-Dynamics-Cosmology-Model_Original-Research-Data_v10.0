@@ -5,7 +5,7 @@
 > **衍生開放問題** (來源: docs/08 跨 O 盤點 + docs/05 O174 審計):
 > - **D1** 🟡 null 轉正候選 (09-13 攻堅 2 輪: scripts/07 + docs/06, scripts/10 + docs/09): 60·B(n)·⟨|cosθ|⟩ = 20.4917 = 61.5/3 = (N_d−dimC)/2 (dev 0.0405%); 11/15 null 確鑿 (21.7σ). **第二輪 (docs/09)**: ① 相位階梯相稱性**被否決** (近整數 13.3% ≈ 隨機期望 — A₅ 相位唔係 176-Laplacian 格相位); ② 高斯基線: A/σ = 2.93 (冷斑 ≈ 3σ), 高斯預言 ⟨|x|⟩/A = 0.272 vs 實測 0.2443 (dev 10%), 採樣散佈 12.6% ≫ 0.04% → **11/45 巧合風險升級, 升級 ✅ 正式否決** (兩個獨立負結果). 鑑別測試 data-gated: 全 88 格 + Commander/SEVEM 多圖
 > - **D2** 🔴 T_write = 192 μK 觀測對應 (09-13 探測, scripts/09 + docs/08): A₅ 冇節點 ≥ 192 μK (max 132.9); 192/134.2 = 1.4307 vs √2 dev 1.17% — √2 描述降級; 全圖 wavelet 搜索 data-gated
-> - **D3** 🟡 耗散熵流 vs UHECR 預算 (09-13 攻堅完成, scripts/08 + docs/07; 同源已補錄入 o173 SESSION_START): naive「池支付 UHECR 能量」讀法**證偽** — ℒ_UHECR ≈ 10^45 erg Mpc⁻³ yr⁻¹ (Auger) vs 池釋放 4.08e39, deficit 2.4523e5; 寫入通道 11 數量級以下 (控制參數重現) → 通道重定向黑洞轉化 (O121/O173, 同主流 AGN/GRB 一致); 閉合待 BH 通道能量率
+> - **D3** ✅ **已閉合** (09-13, scripts/08 v2 3/3 + 11: 9/9, docs/07 v2 + docs/10; 同源已補錄入 o173 SESSION_START): **池釋放能量率 = UHECR 總能量率** — R_rel·M☉·c²/V_comov = 1.00265e45 vs ℒ_UHECR = 1e45 (**dev 0.26%**, 總量形式 dev 0.25%); O7/O173「UHECR = 阻挫邊重聯 = 池釋放同事件」CONFIRMED; ⚠️ round-1「證偽 deficit 2.45e5」係 J/erg + 體積 bug 假象, 已撤回; BH 轉化層 (η=φ⁻²¹ 確認 + ρ_BH·φ⁻²¹·c²/t_H = 1.3–2.6e45) + 再生側 (返池率 8.9e3–1.7e4 vs R_rel) order-level 交叉; 剩餘 🟡: f_return 因子 (ρ_BH 精度), R_rel ≈ 306×22 身份 (dev 0.017%)
 > - **D4** 🟡 角動量 j_spec = 19,867 km/s·kpc: Fall [0.52,0.64] 被 IDCM [0.55,0.75] 括住 — 等更精確 Fall 數據 (P-D1/P-D2)
 > - **D15** 🔀 **→ O180** (09-13 用戶指示開新 O 系列): 相位繞數 → 空間投影嚴格場論翻譯 (θ_k = kπ/176 winding → ψ_k(1) 邊界值機制, 投影核 K(ℓ)) — 見 o180_winding_fieldtheory_translation/
 > - **監測** 🟡 冷斑 A = 134.2 μK 冇長期漂移 (P-B1) — 單 epoch, 等 Planck 多期數據
