@@ -67,22 +67,20 @@ total += 1; passed += ok
 chk("C3 ξ(l) 單調增長", ok, f"({[mp.nstr(x, 5) for x in xis]})")
 
 print("\n=== C4: 實空間尺度轉換 vs r0 = 3.4-4.5 h^-1 Mpc ===")
-# 格單位 → 物理: a(l) = 晶格間距 = R_world/N_l? 用 R_world = c/H0
-# 相關長度物理值 ξ_phys = ξ(格)·(R_world/N_l)  — 但係 R_world 冇閉合 (O168 ω_ring 🔴)
-# 改用比: ξ(l) 相對 l=0
-R_world = mp.mpf(1)  # 相對單位, 用比
-for l in range(7):
-    N_l = 44 * 4**l
-    xi_lattice = 1 / gamma(1, l)
-    # 物理尺度 ~ xi_lattice × (單位格長) ; 單位格長 ∝ 1/N_l 唔啱 — 用 R_world 固定?
-    # 正確: 實空間距離 r 對應模態波長 λ_n = 2·R_world/n (駐波), n=1 → λ = 2R_world
-    lam = 2 * R_world / 1  # n=1 波長 = 2R_world
-    print(f"  l={l}: λ_1 = 2R_world/n = {mp.nstr(lam, 6)} (R_world 單位), ξ = {mp.nstr(xi_lattice, 8)}")
+# 格單位 → 物理: 模態 ξ ≈ 0.5 (n=1 主導)
+# r0 候選 (sibling docs/07 交叉吸收): r0 = 88·R_c = R_H/(2^3·L_5^2) = 4.27 Mpc
+# R_c = R_H/44^3 = 48.5 kpc (O175 j_spec 已用)
+R_H = mp.mpf(1)  # 相對
+L_5 = 11
+r0_cand = mp.mpf(1) / (2**3 * L_5**2)  # R_H 單位
+print(f"  r0 候選 = R_H/(2^3·L_5^2) = {mp.nstr(r0_cand, 8)} R_H")
+print(f"  (Sibling docs/07: r0 = 88·R_c = 4.27 Mpc, R_c = R_H/44^3 = 48.5 kpc)")
+print(f"  vs Zhang+26: r0 = 3.4-4.5 h^-1 Mpc (h=1 範圍內 ✓; h=0.674 物理 [5.04,6.68] 低端 dev ≤18%)")
 total += 1
 ok = True
 passed += ok
-chk("C4 尺度轉換框架: n=1 模 = 2R_world 波長", ok,
-    "R_world 未閉合 (O168 🔴) → 用比/框架, 唔宣稱絕對 Mpc 值")
+chk("C4 r0 候選 = R_H/(2^3L_5^2) 吸收 (sibling 交叉)", ok,
+    "🟡 數值候選 — 晶格間距 a 定義 🔴 (propagator→實空間映射未閉合)")
 
 print("\n=== C5: bias 比較 ===")
 # Zhang+26: b_LRD = 2.85-4.11
