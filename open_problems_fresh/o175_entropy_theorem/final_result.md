@@ -43,12 +43,13 @@ O7 → O41 → O161 → O39 → O173 → O175; O159 (J²=−1) + O32 (a₀) + O6
 - 誠實修正: 3 個 check 自身 bug (單位/τ/L₇ 錯) + 1 個 O173 算術張力記錄
 - 池/圈 364 → O177 閉合 (23/23): 結構身份 B·L₄·F₇ = B(F₁₁+μ²) = 8(N_d+1)+B
 - 遺留攻堅 (用戶指示在 O175 內推): D1 8/8 (docs/06) + D1 二輪 5/5 (docs/09) + D3 3/3 (docs/07) + D3 BH 9/9 (docs/10) + D4 5/5 (docs/11) + D2 探測 (docs/08); D15 → O180
+- **開放科學數據層 (docs/12,13)**: SPARC/Posti2018(92)/Mancera2021(152)/Auger(109) 免費公開渠道落盤 data/; **j*(M_c) Fall locus 真數據閉合 dev −1.66%** (script 14, Posti 2018 外推 r=0.944); Auger 幾何探針初步 (script 15, −5.0% 統計不足); Planck 4 map 下載中 (data/planck/, D1/D2 解鎖)
 
 ## 剩餘開放 (誠實)
 - 🟡 D1 null 轉正候選: 11/15 null 確鑿 (21.7σ); 11/45 = (11/15)/N_gen 候選一致 (dev 0.0405%) 但**巧合風險升級** (docs/09: 高斯基線 A/σ = 2.93 預言 0.272 + 相位階梯相稱性否決) — 升級正式否決; 鑑別測試 data-gated (全 88 格 + Commander/SEVEM)
 - 🔴 D2: T_write = 192 μK 全圖 wavelet 搜索 (data-gated; A₅ 冇特徵, max 132.9, docs/08)
 - ✅ D3 **已閉合** (docs/07 v2 + docs/10): 池釋放 = UHECR 總能量率 (dev 0.26%, 零新常數); round-1 證偽撤回 (J/erg + 體積 bug); BH 轉化層/再生側 order-level 交叉
-- 🟡/🟢 D4 j_spec (docs/11): 1.9× 因子 = 定義性 core/disk 比 (R_d(M_c) = R_c/4, dev 0.66%); R_d(M) 單 power-law 否決 (L* 低估 2×); MW 2.1σ 維持
+- 🟡/🟢 D4 j_spec (docs/11): 1.9× 因子 = 定義性 core/disk 比 (R_d(M_c) = R_c/4, dev 0.66%); R_d(M) 單 power-law 否決 (L* 低估 2×); MW 2.1σ 維持; **docs/12: j*(M_c) Fall locus 真數據定量閉合 (dev −1.66%, Posti 2018 92 星系 r=0.944) ✅**; R_d(M) 外推不確定性維持 🟡 (單 power-law 外推 1 dex 唔可靠)
 - 🟡 冷斑 A 冇漂移 — 單 epoch (側推識別, O41 標記)
 - 🔀 相位繞數 → 空間投影場論翻譯: **已拆出 O180** (09-13 用戶指示, o180_winding_fieldtheory_translation/)
 

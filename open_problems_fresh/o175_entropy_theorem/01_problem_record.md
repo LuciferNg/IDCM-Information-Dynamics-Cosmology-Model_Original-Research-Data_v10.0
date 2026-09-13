@@ -63,6 +63,9 @@ O173 docs/21 已建立**熵論重構** (Landauer 對偶: 寫入存在 O7, 抹除
 | 10 | 10_d1_phase_ladder_analysis.py | 遺留攻堅 D1 第二輪: 相位階梯相稱性 + 高斯基線 + 阻挫密度 | 5/5 | docs/09 |
 | 11 | 11_d3_bh_channel_closure.py | 遺留攻堅 D3 第二輪: BH 轉化層 (η=φ⁻²¹ 驗證 + ρ_BH·φ⁻²¹·c²/t_H) + 再生側 | 9/9 | docs/10 |
 | 12 | 12_d4_disk_scale_closure.py | 遺留攻堅 D4: 1.9× 因子解析 (R_d(M_c) = R_c/4) + R_d(M) 外推測試 | 5/5 | docs/11 |
+| 13 | 13_data_fetch.py | 開放科學數據抓取: SPARC/Posti2018/Mancera2021/Auger | 4 數據集 | docs/12,13 |
+| 14 | 14_fall_locus_closure.py | D4 真數據閉合: j*(M_c) Fall locus 外推 | 2 PASS/3 FAIL | docs/12 |
+| 15 | 15_uhecr_geometry_probe.py | D3 強化: Auger 109 事件 vs 60 節點幾何 (初步) | 探針 | docs/13 |
 
 ### 事件時間線 (2026-09-13)
 
