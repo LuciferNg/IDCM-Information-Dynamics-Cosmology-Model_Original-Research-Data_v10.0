@@ -32,24 +32,45 @@ for f in required:
 # 2. mtime monotonicity: derivation opening <= attacks <= SESSION_START(handoff) <= closing
 # SESSION_START is a HANDOFF written at end of previous session (references docs/02 sections),
 # so it sits between attacks and closing — correct workflow, not backdating.
+# FINAL-AUDIT AWARE (09-13): round-1 docs may receive recorded precision corrections at
+# final audit (docs/02 B06: control-prediction vs actual ratio split). Working-tree mtimes
+# then no longer reflect creation order, so ORDER uses git first-commit time per file
+# (created(); robust to corrections). Freshness (record/final at close) uses working mtime.
+def created(f):
+    try:
+        repo = os.path.dirname(D)  # open_problems_fresh
+        r = subprocess.run(["git", "-C", repo, "log", "--diff-filter=A", "--format=%ct",
+                            "--", os.path.join("o192_lucas_dual_family", f)],
+                           capture_output=True, text=True)
+        if r.stdout.strip():
+            return float(r.stdout.split()[0])
+    except Exception:
+        pass
+    return os.path.getmtime(os.path.join(D, f))
+
 opening = ["docs/01_lucas_dual_and_budget_quantum.md", "scripts/01_verify_lucas_family.py"]
 attacks = ["docs/02_rs1_bridge_scan.md", "scripts/02_rs1_bridge_scan.py"]
 closing = ["docs/03_session_push_closure.md", "scripts/03_session_push_closure.py",
            "docs/04_power_sum_closed_form.md", "scripts/05_power_sum_closed_forms.py",
            "docs/05_external_extensions.md", "scripts/06_external_extensions.py",
            "scripts/04_doc_integrity_audit.py", "01_problem_record.md", "final_result.md"]
-max_open = max(mt[f] for f in opening)
-min_att = min(mt[f] for f in attacks)
-min_close = min(mt[f] for f in closing)
-check("mtime: opening docs (docs01/scripts01) <= attacks (docs02/scripts02)",
+max_open = max(created(f) for f in opening)
+min_att = min(created(f) for f in attacks)
+min_close = min(created(f) for f in closing)
+check("mtime(created): opening docs (docs01/scripts01) <= attacks (docs02/scripts02)",
       max_open <= min_att, f"open_max={max_open:.0f} att_min={min_att:.0f}")
-check("mtime: SESSION_START = handoff (>= attacks, < closing)",
-      mt["SESSION_START.md"] >= min_att and mt["SESSION_START.md"] < min_close,
-      f"ss={mt['SESSION_START.md']:.0f} att_min={min_att:.0f} close_min={min_close:.0f}")
-check("mtime: attacks <= closing (docs03/scripts03/record/final)",
+check("mtime(created): SESSION_START = handoff (>= attacks, <= closing; same-commit equality ok)",
+      created("SESSION_START.md") >= min_att and created("SESSION_START.md") <= min_close,
+      f"ss={created('SESSION_START.md'):.0f} att_min={min_att:.0f} close_min={min_close:.0f}")
+check("mtime(created): attacks <= closing (docs03/scripts03/record/final)",
       min_att <= min_close, f"att_min={min_att:.0f} close_min={min_close:.0f}")
-check("mtime: record & final updated at close (>= attacks)",
-      mt["01_problem_record.md"] >= min_att and mt["final_result.md"] >= min_att)
+check("mtime: record & final working-tree updated at close (>= working attacks)",
+      mt["01_problem_record.md"] >= mt["docs/02_rs1_bridge_scan.md"] and
+      mt["final_result.md"] >= mt["docs/02_rs1_bridge_scan.md"])
+# recorded-correction gate: any round-1 doc re-touched at final audit must be recorded
+rec = open(os.path.join(D, "01_problem_record.md"), encoding="utf-8").read()
+check("final-audit corrections recorded (B06 precision in honesty log + timeline)",
+      "32.99996" in rec and "final audit" in rec and "B06" in rec)
 
 # 3. doc consistency, tiered: original numbers in original docs + close docs;
 #    session-push numbers only in close docs (docs/01/02 must stay historical — no backdating)

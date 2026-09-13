@@ -156,15 +156,17 @@ exp_shown = len({nf for _, nf, hit in PR if hit or ident.get(nf)})
 check("A5 registration: all pool-hit + identity-tagged first-appearances covered (18/24 for p<=99)",
       shown == exp_shown, f"shown={shown} expected={exp_shown} (12 pool-hits + 6 identity-only)")
 
-# Fisher exact test for A4 (rigor): primes vs composites halves hitting pool
-def fisher_exact(a, b, c, d):  # 2x2: [[a,b],[c,d]]
-    n = a + b + c + d
-    def fac(x):
-        return math.factorial(x)
-    return fac(a + b) * fac(c + d) * fac(a + c) * fac(b + d) / (fac(a) * fac(b) * fac(c) * fac(d) * fac(n))
+# Fisher exact test for A4 (rigor): primes vs composites halves hitting pool.
+# NOTE (final audit 09-13): original computed the POINT-MASS P(observed table) = 0.178,
+# mislabeled "one-sided two-tail". Standard one-sided Fisher tail = 0.34. Conclusion
+# unchanged (p >> 0.05 = density artifact). Corrected here; docs/05 + record updated.
+def fisher_one_sided(a, b, c, d):  # 2x2: [[a,b],[c,d]] — P(hits >= a) given margins
+    r1, c1, n = a + b, a + c, a + b + c + d
+    return sum(math.comb(c1, x) * math.comb(n - c1, r1 - x) / math.comb(n, r1)
+               for x in range(a, min(r1, c1) + 1))
 # table: primes(hit, miss) vs composites(hit, miss)
-fe = fisher_exact(hits_p, len(PR) - hits_p, hits_c, len(comps) - hits_c)
-print(f"  INFO A4b: Fisher exact p = {fe:.3f} (one-sided two-tail via hypergeometric)")
+fe = fisher_one_sided(hits_p, len(PR) - hits_p, hits_c, len(comps) - hits_c)
+print(f"  INFO A4b: Fisher exact p = {fe:.3f} (one-sided tail; point-mass = 0.178)")
 check("A4b null control significant? NO (p > 0.05) — prime-half hits = density artifact",
       fe > 0.05, f"p={fe:.3f} — no structural enhancement of (p+1)/2 into registered pool")
 
