@@ -1,0 +1,3 @@
+# Planck CMB maps: 大 binary runtime data, 唔入 git (開放科學渠道可重新下載)
+data/planck/*.fits
+data/planck/*.fits.*
