@@ -1,7 +1,7 @@
 # O198 SESSION_START — 種子質譜兩通道預言驗證
 
 ## 狀態
-🟢 **已閉合 — scripts/01-05 全 PASS (37/37), 記錄已寫, 已 commit**
+🟢 **已閉合 — scripts/01-06 全 PASS (48/48), 記錄已寫 (docs/01-03)**
 
 ## 今次 session 做咗
 1. 讀 O195/O196/O197 閉合狀態（O197 docs/01 攞預言 1-4 + 參數）
@@ -10,6 +10,8 @@
 4. **(本 session 攻堅)**: 攞 Harikane+23 Table 3 實測 λ_Edd → scripts/05 (8/8)
    + docs/02 + data/harikane23_table3_eddington.json; scripts/04 V2 denominator
    更新 N=306 → N=434 — 全庫 37/37
+5. **(接力攻堅)**: scripts/06 成長閉合 (11/11) + docs/03 — 中位張力 🟢 閉合
+   — 全庫 48/48
 
 ## 核心結果
 - **預言 2 直接支持**: GLASS_160133 (2.3e6) + GLASS_150029 (3.7e6) 喺通道 A 帶
@@ -22,15 +24,21 @@
   預測中位 5.40e6, 張力 −1.78 ln 結構性 (2.5σ/3.7σ); 均勻成長排除 (g≤1.14 vs
   需 5.92, 矛盾 5.2×); **選擇階梯支持** (M-λ ρ=−0.648, p=0.024); L_min 重反演
   1.02e45 (實測 λ 自洽)
+- **★★成長閉合 (scripts/06, docs/03)**: t_ef = 5.0e8 yr (λ=f_bar=0.1, ε=0.1,
+  零新常數); **z_f* = 13.43 反演 → 成長後預測中位 3.17e7 vs 3.2e7 (−0.010 ln)**;
+  ★**channel-resolved duty-cycle**: 通道 B (環境過密) seed full-time 成長 +
+  通道 A (譜偏差) seed fresh (冇環境供應) — forward 中位 2.34e7 (−0.31 ln) 閉合;
+  高端 seed 中位 z=0.12 落 logN 主體; 低端 2 粒 fresh (T≤66/303 Myr) 保留通道 A 帶
 - **校正**: O197「−0.84」= Gaussian 指數斜率; 全 PDF −4.23/dex @1e8
 
 ## 開放項（見 problem_record §五）
 1. 🟡 w 需 mass-complete 低端樣本收窄
-2. 🟡 中位張力剩 ~0.37 dex 結構缺口 (virial 系統修正 or 更大樣本)
+2. 🟢 中位張力閉合 (channel-resolved duty-cycle, docs/03)
 3. 🟡 UHz1 denominator 已收窄至 N=434 (Akins+2024 COSMOS-Web 實測)
-4. 🔴 種子全 PDF 尾 vs 觀測 BHMF 展平機制
+4. 🔴 種子全 PDF 尾 vs 觀測 BHMF 展平機制 (候選: λ 散射成長卷積)
+5. 🟡 z_f* = 13.43 結構身份 (13 = F₇ 候選, 未證)
 
 ## 交收
-已閉合 🟢。若續推: 開放項 2 剩餘缺口最可攻 (virial 系統修正測量 — 文獻
-0.3-0.5 dex vs 需 0.77 dex, 或者攞更大 z>4 AGN 樣本如 Maiolino+23/
-Kocevski+24 做獨立驗證) 或開放項 1 (data-gated)。
+已閉合 🟢 (48/48)。若續推: 開放項 4 最可攻 (λ 散射成長卷積展平機制 —
+σ_lnλ=1.39 已量, 推導 mass-dependent 成長點展平 −4.23/dex → −0.82/dex)
+或開放項 5 (z_f 結構身份) / 開放項 1 (data-gated)。
