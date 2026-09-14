@@ -188,6 +188,66 @@ print(f"  z-score = {z_U:.2f}, P = {1-Phi(z_U):.2e} (logN 尾)")
 T("T8f UHz1 自洽: 成長後種子仍喺 logN 尾 (P<1e-2)", (1-Phi(z_U)) < 1e-2,
   f"M_seed = {M_seed_UHz1:.2e}, z = {z_U:.2f}, P = {1-Phi(z_U):.2e}")
 
+print("\n== T8h: ★duty-cycle 並存模型 (高端 full-time 成長 + 低端 fresh) ==")
+# 統一圖像 (調和 docs/02 V4「均勻成長排除」):
+#   均勻成長 (所有種子同一個 g) 被排除 (V4: g=5.92 vs g≤1.14 矛盾 5.2×)。
+#   但 per-object duty-cycle 成長唔係均勻:
+#     高端種子: 成長時間 ≈ 全宇宙時間 t(z_obs)−t(z_f*)  (active 得耐)
+#     低端 2 粒: fresh burst, T_active ≤ 66/303 Myr (啱啱 active, 高 λ)
+#   ⟹ M_obs = M_seed × exp(T_active/t_ef), T_active per-object
+# 測試: duty-cycle forward — 高端 full-time, 低端 fresh (T_active 由通道 A 帶約束)
+print("  Duty-cycle 圖像: 種子 z_f 形成, active 相位隨機;")
+print("  - 高端種子 (長 active): G = exp((t(z_obs)−t(z_f*))/t_ef) ∈ [2.5, 7.8]")
+print("  - 低端 2 粒 (fresh, 高 λ): T_active ≤ 66/303 Myr ⟹ G ≈ 1 (seed 留喺通道 A 帶)")
+# 高端 8 粒成長後 vs 通道 B logN 預測中位 (截斷 M>M_turn)
+high8 = [d for d in data if d["M_BH"] >= M_turn]
+G_high = [math.exp((t_z(d["z"]) - tzf) / 0.5) for d in high8]
+M_seed_high = [d["M_BH"] / g for d, g in zip(high8, G_high)]
+med_seed_high = sorted(M_seed_high)[len(M_seed_high)//2]
+print(f"  高端 8 粒成長後 seed: {[f'{m:.1e}' for m in sorted(M_seed_high)]}")
+print(f"  高端 seed 中位 = {med_seed_high:.2e} (vs logN 中位 6.98e6)")
+# 高端 seed 中位應該落喺 logN 主體 (唔應該過份偏)
+z_seed_med = (math.log(med_seed_high) - mu_lnM) / sig_lnM
+print(f"  z-score = {z_seed_med:.2f}")
+ok_dc1 = abs(z_seed_med) < 1.5
+T("T8h1 高端 seed 中位 ∈ logN 主體 (|z|<1.5, 唔需種子過份偏離)",
+  ok_dc1, f"z = {z_seed_med:.2f}, seed 中位 {med_seed_high:.2e}")
+# 低端 2 粒 fresh: seed = M_obs ∈ 通道 A 帶 (預言 2 直接保留)
+low_seed_ok = all(2.017e6 <= d["M_BH"] <= M_turn for d in low2)
+T("T8h2 低端 2 粒 fresh (G=1): seed = M_obs ∈ 通道 A 帶 (預言 2 保留)",
+  low_seed_ok, "GLASS_160133 2.3e6, GLASS_150029 3.7e6 ∈ [2.02e6, 5.41e6]")
+# duty-cycle forward 中位: 通道 A (譜偏差) seed fresh + 通道 B (環境過密) 成長
+# 物理: 通道 A = 內稟譜偏差 (冇環境供應 ⟹ fresh); 通道 B = 環境過密
+#       (有過密環境供應 ⟹ 可持續成長) — channel-resolved duty-cycle
+def fwd_median_chan(z_f, Lmin=3e43, n=300000):
+    """channel-resolved forward: A fresh + B full-time 成長"""
+    tzf_d = t_z(z_f)
+    tobs_list = [t_z(d["z"]) for d in data]
+    vals = []
+    for _ in range(n):
+        lam_i = rng.choice(lams_obs)
+        t_obs = rng.choice(tobs_list)
+        if rng.random() < w:
+            M = rng.choice(A_masses)        # 通道 A: fresh, 冇成長
+            M_obs = M
+        else:
+            M = math.exp(rng.gauss(mu_lnM, sig_lnM))   # 通道 B: full-time 成長
+            M_obs = M * math.exp((t_obs - tzf_d) / 0.5)
+        if lam_i * L_EDD * M_obs >= Lmin:
+            vals.append(math.log(M_obs))
+    vals.sort()
+    return math.exp(vals[len(vals)//2]) if vals else 0.0
+med_chan = fwd_median_chan(z_f_star)
+print(f"  channel-resolved forward 中位 (z_f*={z_f_star:.1f}) = {med_chan:.2e} vs 觀測 {obs_med:.2e}")
+T("T8h3 channel-resolved forward 中位閉合 (|Δln| < 0.5)",
+  abs(math.log(med_chan/obs_med)) < 0.5,
+  f"預測 {med_chan:.2e} vs 觀測 {obs_med:.2e} ({math.log(med_chan/obs_med):+.2f} ln) — 通道 A fresh + 通道 B 成長")
+print("  ⟹ 中位張力 resolution = channel-resolved duty-cycle:")
+print("     通道 A (譜偏差 seed): fresh — 冇環境供應, 啱啱 active (高 λ, 低 M, 留喺通道 A 帶)")
+print("     通道 B (環境過密 seed): full-time 成長 — 過密環境持續供應, 推高中位")
+print("     ★結構意義: 通道 A/B 唔單止質量域分離, 仲有成長動力學分離 (環境供應)")
+print("     可證偽預言: 通道 A seed 應顯示 fresh 特徵 (高 λ, 冇成長史); M_obs 同 λ 反相關 (ρ=−0.648, p=0.024 ✓)")
+
 print("\n== T8g: 成長後高端斜率 vs 觀測 BHMF (開放項 4 方向) ==")
 # 成長係 ln M 平移 (G 同 M 無關) ⟹ 種子譜斜率不變 (pure shift 唔改 slope)
 # 但 λ-scatter 令成長因子本身有分布 ⟹ 展平機制候選 (開放項 4)

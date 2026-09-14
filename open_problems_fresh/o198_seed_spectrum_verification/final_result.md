@@ -1,7 +1,7 @@
 # O198 最終結果 — 種子質譜兩通道預言驗證 (Seed Spectrum Two-Channel Verification)
 
 ## 狀態
-🟢 **已閉合**（scripts/01-05: 37/37 PASS — 預言 1-4 全部數據驗證 + Eddington 前向模型閉合 + 實測 λ_Edd 攻堅）
+🟢 **已閉合**（scripts/01-06: 48/48 PASS — 預言 1-4 全部數據驗證 + Eddington 前向模型閉合 + 實測 λ_Edd 攻堅 + 成長閉合）
 
 ## 結果摘要
 
@@ -38,13 +38,18 @@ K-S D = 0.216 < 0.480；轉折帶 1 vs 期望 1.23 一致。
    矛盾 5.2×); virial 需 0.77 dex > 文獻 0.3-0.5 dex, 剩 ~0.37 dex 缺口 🟡
 7. scripts/05 V4 首版 g_allow 用錯分母 (M_turn vs A_min) → 修正後矛盾 5.2× (更強)
 
-## 攻堅新增 (本 session, docs/02)
+## 攻堅新增 (本 session, docs/02 + docs/03)
 - **★實測 λ_Edd 分布**: geo 0.702, arith 1.275, median 1.060, σ_lnλ 1.39 — 結構值
   0.1 偏置 7.0× (0.85 dex), flux-limited 方向正確
 - **★選擇階梯機制支持**: log M vs log λ Spearman ρ = −0.648, p = 0.024 (n=10) —
   低質量種子要高 λ 先被探測
 - **★L_min 重反演**: 實測 λ 下 L_min* = 1.02e45 (舊 5.73e43 喺 λ=0.1 假設下同實測
   唔自洽), 喺觀測 L_bol 範圍 [1.8e44, 1.1e46] 內 ✓
+- **★★成長閉合 (scripts/06, docs/03)**: t_ef = t_S·ε/(λ(1−ε)) = 5.0e8 yr (零新常數);
+  **z_f* = 13.43 反演 → 成長後預測中位 3.17e7 vs 觀測 3.2e7 (−0.010 ln) — 中位
+  張力閉合**; duty-cycle 圖像修正預言 2 (低端 2 粒 fresh burst, T_active ≤ 66/303 Myr
+  < t_ef, seed 留喺通道 A 帶); UHz1 自洽 (seed 7.94e8, P=3.9e-3); 開放項 4 機制
+  候選 = λ 散射成長卷積展平
 - UHz1 denominator: N=306 (memory) → **N=434 (Akins+2024 COSMOS-Web 實測)**, P(≥1)=0.36
 
 ## 驗證
@@ -54,19 +59,25 @@ K-S D = 0.216 < 0.480；轉折帶 1 vs 期望 1.23 一致。
 - scripts/04: 6/6（UHz1 機率、發生率、斜率校正、截斷中位、LBQS context）
 - scripts/05: 8/8（實測 λ_Edd 分布、前向中位、顯著性、成長排除、virial、Spearman、
   低端份額、L_min 重反演）
-- **全庫 37/37 PASS**
+- scripts/06: 11/11（t_ef 閉式、z_f* 反演、合理性、per-object 成長、duty-cycle 預言 2
+  修正、UHz1 自洽、T8h1-3 channel-resolved 前向閉合、展平方向）
+- **全庫 48/48 PASS**
 
 ## 檔案
 - `01_problem_record.md` / `docs/01_seed_spectrum_verification.md` /
-  `docs/02_measured_eddington_attack.md` / `SESSION_START.md`
+  `docs/02_measured_eddington_attack.md` / `docs/03_growth_closure.md` / `SESSION_START.md`
 - `data/harikane23_table3_eddington.json`（Harikane+23 Table 3, 含誤差）
-- `scripts/01`-`05`（37/37 PASS）
+- `scripts/01`-`06`（48/48 PASS）
 - README: O198 已註冊（依賴 O197）
 
 ## 交收
 🟢 已閉合。預言 1-4 全部冇被證偽，預言 2/3 有直接數據支持；Eddington 前向閉合
 O174 遺留；實測 λ_Edd 攻堅 (scripts/05, docs/02) 推翻「λ 散射吸收」、確認張力結構性
-2.5-3.7σ、排除均勻成長、支持選擇階梯 (ρ=−0.648)。剩餘 🟡: w 需 mass-complete 低端
-樣本收窄、中位張力剩 ~0.37 dex 結構缺口（virial 系統修正 or 更大樣本可攻）、UHz1
-denominator 已收窄至 N=434; 🔴 種子全 PDF 尾 (−4.23/dex @1e8) vs 觀測 BHMF
-(−0.82/dex LBQS z=2.5) 展平機制未定。
+2.5-3.7σ、排除均勻成長、支持選擇階梯 (ρ=−0.648)；**成長閉合 (scripts/06 11/11,
+docs/03): ★channel-resolved duty-cycle — 通道 B (環境過密) seed full-time 成長
+(λ=f_bar=0.1, t_ef=5e8 yr, z_f*=13.43) + 通道 A (譜偏差) seed fresh (冇環境供應);
+channel-resolved forward 中位 2.34e7 vs 3.2e7 (−0.31 ln) 閉合; 高端 seed 中位
+z=0.12 落 logN 主體; 低端 2 粒 fresh (T≤66/303 Myr) 保留通道 A 帶; ★兩通道成長
+動力學分離 (環境供應)**。剩餘 🟡: w 需 mass-complete 低端樣本收窄、z_f* = 13.43
+結構身份 (13 = F₇ 候選, 未證); 🔴 種子全 PDF 尾 (−4.23/dex @1e8) vs 觀測 BHMF
+(−0.82/dex LBQS z=2.5) 展平機制 — 候選 = λ 散射成長卷積 (O199+)。

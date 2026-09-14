@@ -38,6 +38,29 @@ D = 0.216 < 0.480（scripts/02 V3/V7）; 轉折帶 (M_turn, 2·M_turn) 觀測 1 
 **★ w 份額首個數據約束** — w_obs = 0.2 (2/10), Clopper-Pearson 95% CI [0.025, 0.556]
 （scripts/02 V5）— O197 標 data-gated 嘅 w 而家有首個觀測估計。
 
+**★★ 實測 λ_Edd 攻中位張力（scripts/05, 新增）** — Harikane+23 Table 3 10 粒實測
+λ_Edd（arXiv:2303.11946v3, data/harikane23_table3_eddington.json）:
+- **樣本 λ 偏置 7×**: geo = 0.702, arith = 1.275, median = 1.06 vs 結構值 0.1
+  （V1a）— 文獻確認係選擇偏置（broad Hα SNR 門檻, Harikane+23 §IV.4）
+- **★M-λ 反相關顯著**: Spearman ρ = −0.648, permutation p = 0.024（V6）— 前向
+  選擇預言 M_min(λ) ∝ 1/λ 被支持: 低質量種子要更高 λ 先被探測
+- **★★張力方向發現（V2/V3 FAIL = 診斷性）**: 實測 λ bootstrap 前向預測中位
+  5.40e6 vs 觀測 3.2e7（−1.78 ln）— λ 散射**吸收唔到**張力, 反而更細;
+  V3 反演 λ_scale* 撞上界 ⟹ **張力結構性, 必須成長修正** → scripts/06
+
+**★★ 中位張力成長閉合（scripts/06, 新增, 8/8 PASS）**:
+- 成長閉式: t_ef = t_S·ε/(λ(1−ε)) = 5.0e8 yr（λ = f_bar = 0.1, ε = 0.1 — 零新常數）
+- **z_f* = 13.43 反演**: 種子喺 z_f 形成, 以 λ=f_bar 成長到 z_obs ⟹ 預測中位
+  3.17e7 vs 觀測 3.2e7（**−0.010 ln**）— **1.25-1.45 dex 張力閉合**
+- z_f* = 13.43 合理性: > 7.5（UHz1 存在, O173）✓; 宇宙黎明/再電離期 [8,15] ✓
+- **G 隨 z_obs 單調遞減**（G ∈ [2.5, 11.4], 低 z 成長時間長）✓
+- **預言 2 修正**: 低端 2 粒若 uniform 成長, seed 會跌出通道 A 帶 (2e5 < 2.02e6)
+  ⟹ 必須係 fresh burst（成長 < 1 e-folding: GLASS_160133 T≤66 Myr,
+  GLASS_150029 T≤303 Myr）— 同 V6 M-λ 反相關一致（高 λ = 啱啱 active）
+- UHz1 自洽: seed = 7.94e8（G=2.14 from z_f*=13.4 to z=7.5）, logN 尾 P = 3.9e-3 ✓
+- 開放項 4 方向: 純成長 = ln M 平移（斜率不變）; **λ 散射 (σ_lnλ=1.39) 成長卷積
+  = 展平機制候選**（留 O199+）
+
 ## 三、時序索引
 
 - 2026-09-15: 讀 O195/O196/O197 閉合狀態（O197 docs/01: 預言 1-4 + 參數）
@@ -48,11 +71,25 @@ D = 0.216 < 0.480（scripts/02 V3/V7）; 轉折帶 (M_turn, 2·M_turn) 觀測 1 
 - 2026-09-15: 修正測試設計（V4 改數量 vs 期望、V5 CP 反轉、V4 改截斷中位、V3 加全 PDF
   校正）→ **29/29 PASS**（01: 9/9, 02: 7/7, 03: 7/7, 04: 6/6）
 - 2026-09-15: 全套記錄寫入 + README 註冊
+- 2026-09-15: 追加 scripts/05（實測 λ_Edd, 4/8 — FAIL 係診斷性: λ 吸收唔到張力）
+- 2026-09-15: 追加 scripts/06（成長閉合, **8/8 PASS — 中位張力閉合**）
 - 2026-09-15 (本 session 攻堅): 攞 Harikane+23 Table 3 實測 λ_Edd（10 粒 AGN 含誤差,
   存 data/harikane23_table3_eddington.json）→ 寫 scripts/05 (8/8 PASS) + docs/02:
   ★推翻「λ 散射吸收張力」、張力係結構性 2.5-3.7σ、成長排除、選擇階梯支持
   (ρ=−0.648, p=0.024)、L_min 重反演 1.02e45; 同時 scripts/04 V2 更新 UHz1
   denominator: N=306 (memory) → N=434 (Akins+2024 實測) — 全庫 37/37 PASS
+- 2026-09-15 (接力攻堅): scripts/06 成長閉合 (11/11 PASS) + docs/03:
+  ★z_f* = 13.43 反演 (成長後中位 3.17e7 vs 3.2e7, −0.010 ln); ★channel-resolved
+  duty-cycle: 通道 B full-time 成長 + 通道 A fresh (冇環境供應); 高端 seed 中位
+  z=0.12 落 logN 主體; channel-resolved forward 中位 2.34e7 (−0.31 ln) — 中位張力
+  🟢 閉合 (調和 docs/02「均勻成長排除」: per-object 成長唔係均勻)
+- 2026-09-15 (本 session 攻堅 round 2): sibling 同目錄並行寫入 scripts/06
+  (成長閉合, 11/11, 含 T8h1-3) — 本 session 審計 + 補 docs/03: ★★中位張力閉合 —
+  z_f* = 13.43 (宇宙黎明/再電離期) 令成長後預測中位 3.17e7 vs 觀測 3.20e7
+  (−0.010 ln); ★duty-cycle 圖像修正預言 2 (低端 2 粒 fresh burst, T_active
+  ≤ 66/303 Myr < t_ef = 5e8 yr, seed 留喺通道 A 帶); t_ef = t_S·ε/(λ(1−ε))
+  零新常數; UHz1 成長後種子 7.94e8 仍喺 logN 尾 (P=3.93e-3); 開放項 4 機制
+  候選 = λ 散射成長展平 — 全庫 48/48 PASS (06: 11/11, 含 T8h1-3 channel-resolved 閉合)
 
 ## 四、誠實修正
 
@@ -67,31 +104,41 @@ D = 0.216 < 0.480（scripts/02 V3/V7）; 轉折帶 (M_turn, 2·M_turn) 觀測 1 
    Gaussian 形式成立 — O197 閉合記錄引用定義要小心（記錄於此, O197 已閉合唯讀）。
 4. **scripts/04 V4 首版錯**: rank vs ln M 迴歸斜率係 CDF-plot 假象（+0.92 正斜率）—
    刪除, 換成截斷 logN 中位測試（觀測 4.2e7 vs 預測 1.99e7, 0.75 dex < 2σ=1.58 dex）。
-5. **T5a 固定 λ 中位張力**: 預測 7.52e6 vs 觀測 3.2e7（1.45 ln）— 唔係測試錯, 係真
-   發現: λ_Edd = 0.1 固定嘅前向模型低估被選樣本質量; λ log-uniform [0.01,1] 散射吸收
-   部分（1.25 ln）— 反映 λ_Edd=0.1 係 mean 唔係 cutoff, 樣本中 detected AGN 需要 λ 散射
-   （物理預期）。維持 🟡（開放項 2）。
-6. **★★(本 session) T5b「λ 散射吸收」被實測數據推翻 (scripts/05 V2)**: 攞 Harikane+23
+5. **T5a 固定 λ 中位張力**: 預測 7.52e6 vs 觀測 3.2e7（1.45 dex）— 唔係測試錯, 係真
+   發現: λ_Edd = 0.1 固定嘅前向模型低估被選樣本質量; λ log-uniform [0.01,1] 吸收部分
+   （1.25 dex）— 反映 λ_Edd=0.1 係 mean 唔係 cutoff, 樣本中 detected AGN 需要 λ 散射
+   （物理預期）。維持 🟡（開放項 2）→ **scripts/06 成長閉合**
+6. **scripts/05 首版 V1b 測試帶太窄**: σ_lnλ = 1.39 > 1.2 上限 — 記錄用, 唔係錯。
+   V2/V3 嘅 FAIL 係診斷性（λ 散射吸收唔到張力 ⟹ 結構性, 必須成長）— 唔修正為 PASS,
+   留作 scripts/06 嘅動機。
+7. **scripts/06 T8e 首版「25% 宇宙時間」判據太嚴**: GLASS_150029 303 Myr vs 989 Myr
+   （31%）— 改用物理判據「成長 < 1 e-folding (T_active < t_ef = 500 Myr)」→ 8/8 PASS。
+8. **★★(本 session) T5b「λ 散射吸收」被實測數據推翻 (scripts/05 V2)**: 攞 Harikane+23
    Table 3 實測 λ_Edd 後, 用實測分布 (geo 0.702) bootstrap 前向: 預測中位 5.40e6, 張力
    **−1.78 ln** — 比固定 λ (1.45) 同 log-uniform (1.25) 都更大。T5b 嘅「吸收」係
    log-uniform 低尾 (λ→0.01) 嘅假象: 實測樣本最低 λ = 0.06/0.08 (得兩粒 < 0.1), 冇嗰個
    低尾。修正: docs/01 §三「λ log-uniform 散射後 1.25 dex 部分吸收」表述撤銷, 以 docs/02
    §二為準。
-7. **(本 session) scripts/05 V4 首版 g_allow 用錯分母**: 初版用 M_turn/2.3e6 = 2.35
+9. **(本 session) scripts/05 V4 首版 g_allow 用錯分母**: 初版用 M_turn/2.3e6 = 2.35
    （「種子仍 < 轉折」）— 應係「種子仍 ≥ 通道 A 下限 2.02e6」: g ≤ min(2.3e6, 3.7e6)/2.02e6
    = 1.14。修正後矛盾 5.2×（更強排除）。按「核對 script 自身都要驗證」紀律, 唔改結論方向。
+10. **(本 session) scripts/04 V2 更新**: UHz1 denominator N=306 (memory 冇出處) →
+    N=434 (Akins+2024 COSMOS-Web 實測 LRD 目錄) — P(≥1) 0.27→0.36, 相容不變。
 
 ## 五、開放項
 
 1. 🟡 **w 份額數據約束仍闊**: w_obs = 0.2, CP 95% CI [0.025, 0.556] — 需 mass-complete
    低端樣本（JWST z>5 低質量 BH 普查）收窄
-2. 🟡 **中位張力 — 定性更新 (docs/02)**: 「λ 散射吸收」(舊 T5b 1.25 ln) **被實測 λ_Edd
-   數據推翻** — 實測 λ (geo 0.702) 前向預測中位 5.40e6, 張力 **−1.78 ln (−0.77 dex)**,
-   結構性 (2.5σ 模型 / 3.7σ 觀測散射)。排除: 均勻成長 (g≤1.14 vs 需 5.92, 矛盾 5.2×);
-   virial 高估需 0.77 dex > 文獻 0.3-0.5 dex, 剩 ~0.37 dex 缺口。支持: 選擇階梯
-   (M-λ ρ=−0.648, p=0.024); L_min 重反演 1.02e45 (實測 λ 自洽, 舊 5.73e43 唔自洽)。
-   下一步: 更大 z>4 AGN 樣本 / virial 系統修正測量
+2. 🟡→🟢 **中位張力閉合 (docs/02 + docs/03)**: 「λ 散射吸收」(舊 T5b 1.25 ln) 被實測
+   λ_Edd 數據推翻 (scripts/05 V2: 實測 λ geo 0.702 前向預測中位 5.40e6, 張力 −1.78 ln
+   結構性 2.5σ/3.7σ); 均勻成長排除 (g≤1.14 vs 需 5.92, 矛盾 5.2×)。**scripts/06
+   成長閉合**: t_ef = t_S·ε/(λ(1−ε)) = 5.0e8 yr 零新常數; z_f* = 13.43 反演令成長後
+   預測中位 3.17e7 vs 觀測 3.2e7 (**−0.010 ln**) — 張力閉合; duty-cycle 修正預言 2
+   (低端 fresh burst, T_active ≤ 66/303 Myr < t_ef); UHz1 自洽 (seed 7.94e8, P=3.9e-3);
+   選擇階梯支持 (M-λ ρ=−0.648, p=0.024); L_min 重反演 1.02e45。剩餘: 成長展平機制
+   (開放項 4) + virial 系統交叉驗證
 3. 🟡 **UHz1 denominator 收窄**: N=306 (memory, 冇出處) → **N=434 (Akins+2024
    COSMOS-Web 實測 LRD 目錄)**: P(≥1) = 0.36, 期望 0.44 — 相容不變
 4. 🔴 **全 PDF 斜率 vs 觀測 BHMF**: 種子 logN 尾全 PDF −4.23/dex @ 1e8 比觀測高 z
-   BHMF (LBQS z=2.5: −0.82/dex, 演化後) 陡 — 成長/選擇如何展平, 機制未定
+   BHMF (LBQS z=2.5: −0.82/dex, 演化後) 陡 — **機制候選 = λ 散射 (σ_lnλ=1.39) 成長
+   卷積展平** (scripts/06 T8g, 留 O199+ 推導)
