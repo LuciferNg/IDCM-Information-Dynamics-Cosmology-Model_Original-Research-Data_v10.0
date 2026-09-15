@@ -166,6 +166,25 @@ a_n = ±2·R^{−n}·sin(nδ)/n + O((R/|r₃|)ⁿ)
    直接用 2·sin(nδ)/n, dev 1e-44。
 4. T1 首版「Δθ 冇身份」初步 — 加 Re(r₁) ≈ 1/136 🟡 候選 (唔閉合)。
 
+## 十、驗證（主體 scripts/01-07）
+
+> ⚠️ **文檔完整性恢復 (2026-09-15 審計)**: 本節原 §十「驗證」喺攻堅延伸
+> (scripts/08-13) 插入時被覆蓋丟失，由 git commit 52fff5b 原版恢復 —
+> 內容係主體閉合嘅驗證記錄，非新推導。
+
+- scripts/01: T1 Δθ 高精度鎖定 (dps=100) + 結構字典掃描 6/6
+- scripts/02: T2 基礎 (v₁₁(σ_m) 公式 PASS, 分母檢查 FAIL → 修正)
+- scripts/02b: v₁₁(κ) 序列發現 (Fibonacci×11 模式)
+- scripts/02c: H1 Fibonacci×11^j 外推 (m≤130) + H2 mod-11 收縮
+- scripts/02d: H1' mod-11 大域 (m≤1000) + H3 mod-121 ⟺ v₁₁≥2
+- scripts/02e: A) 11-free 自相似 119 類全一致 + B) f=0 ⟺ {1,2,3,5}
+- scripts/02f: T2-3 Legendre 完整和修正 3/3
+- scripts/03: T3 冪和 11-adic 6/6
+- scripts/04: T4 α=0 Darboux 論證 6/6 (sin(δ)=ε 精確, c=2 擬合)
+- scripts/05: T4b c=μ² EXACT (spread 1e-15) + T5 j₁ 統一 4/4
+- scripts/06: T6 完整漸近 2/2 (主導精確 1e-44 + 第三根殘差)
+- scripts/07: 綜合 11/11 PASS
+
 ## 十一、攻堅延伸（scripts/08-13, 「不開新 O 就地推到底」）
 
 ### 攻堅 1 🟢→🔴 Re(r₁) ≈ 1/136 降級為巧合 (scripts/08-10)

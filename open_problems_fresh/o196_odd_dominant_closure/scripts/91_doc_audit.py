@@ -148,7 +148,7 @@ expected = {
     "scripts/02_proof_and_growth.py", "scripts/03_growth_closed_form.py",
     "scripts/04_growth_alpha.py", "scripts/05_alpha_interference.py",
     "scripts/06_singularity_index.py", "scripts/07_final_closure.py",
-    "scripts/90_verify_all.py", "scripts/91_doc_audit.py",
+    "scripts/90_verify_all.py", "scripts/91_doc_audit.py", "scripts/92_chain_continuity.py",
     "11adic_extension/01_problem_record.md",
     "11adic_extension/SESSION_START.md", "11adic_extension/final_result.md",
     "11adic_extension/docs/01_closure.md",
