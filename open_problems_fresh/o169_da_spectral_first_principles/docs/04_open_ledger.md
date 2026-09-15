@@ -148,10 +148,35 @@ DESI fiducial 147.09            → χ² = 2.465/5
    - 只讀 `$1` → **多檔案 call 會靜默跳過其餘檔案** (skill 規則 4「一次過 backup」實際失效)
    - 只用 basename → 唔同目錄同名檔案 (本次 25 個 `SESSION_START.md`) 會互撞覆蓋
    - 修復: 巡迴所有參數 + 父目錄限定命名 + 同秒自動加序號 + 失敗 exit 1
-2. **repo 級 `scripts/integrity_check.py:174`** 內含舊 D_app 定義 → **呢個係全 repo 完整性檢查器**,
-   會繼續「通過」已證偽公式。⚠️ 未改 (唔屬 O 目錄, 待用戶指示)。
+2. **repo 級 `scripts/integrity_check.py`** 內含舊 D_app 定義 → **呢個係全 repo 完整性檢查器**,
+   會繼續「通過」已證偽公式。✅ **已修 (見 §E6)**。
 
 ### E5. 未動嘅嘢 (交回原則)
 
 本程序**只寫 SESSION_START.md 嘅修正段**, 冇改任何 O 嘅 `01_problem_record.md` / `docs/` /
 `final_result.md` — 重驗與重推結果由該 O 專屬 session 自行寫入 (避免上游越權覆蓋下游結論)。
+
+### E6. 全 repo 完整性檢查器修復 ✅ (2026-09-15, 用戶指示「先處理A」)
+
+`open_problems_fresh/scripts/integrity_check.py` (191L → 約 330L) 三個已確認 bug 全部修好。
+備份: `~/.hermes/backups/scripts__integrity_check.py.v22pre.20260915_193502`。
+
+| # | Bug | 症狀 | 修法 |
+|:-:|:----|:-----|:-----|
+| 1 | **Stale REPO 路徑** | 硬編碼 `.../IDCM/IDCM-v10.0/open_problems_fresh` (舊 partial copy, 冇 `bbn`/`cmb_cl`/`h0_tension`) → 18/18 檔全部**假 MISSING**, 文檔檢查 0/17 | 由 `os.path.dirname(os.path.dirname(os.path.abspath(__file__)))` 推導 → 唔再隨 repo 搬位而斷 |
+| 2 | **假綠燈 (fake green)** | 明明全 MISSING + 0/17, 最終仍印 `✅ 檔案: 18/18` + `✅ 數據完整性檢查全部通過!`, exit 0 (最終結果 hardcode, 冇 assert) | 逐項 `assert` 進 `FAIL` 清單 + 真統計 + **非零 exit code** (`1` = 硬失敗, `2` = 有 stale 聲稱) |
+| 3 | **驗證已證偽公式** | `D_app` 用 `E(ℓ) = 1 + 2φ⁻¹ℓ` (O169 用 DESI DR2 D_M×6 排除 4.88σ) | 改為零參數新律 `E(ℓ) = ℓ + √5/2`, 並**加入伸長回歸測試**: 新式 χ² 必須 ≈ 2.4647/5 且 6/6 \|σ\| ≤ 1; 舊式 \|σ\|max = 3.71 > 3 必須被拒 |
+
+**順帶修正**: `Ω_Λ` 由已撤銷嘅 O37 版 `4/(φ⁴−1) = 0.683282` 改為 **O39 版 `41/60 = 0.683333`**
+(PARADIGM BREAK 2026-08-12; 引用 W-field 勢必須用 O39 版)。
+
+**驗證** (全部實跑, 非聲稱):
+- 由 `/tmp` 執行 → REPO 仍正確解析 (cwd 無關性) ✅
+- 假 REPO 測試 → 硬失敗清單 + **exit 1** ✅
+- 正常執行 → 檔案 18/18、文檔結構聲稱 15/15、物理重算全綠、**exit 2** (3 項 stale 待 h0_tension 更新) ✅
+- 新式 χ² = 2.4647/5 \|σ\|max = 0.995; 舊式 χ² = 27.1635 \|σ\|max = 3.713 (被拒) ✅
+- 下游 `o166_tcmb_absolute_value/scripts/04_downstream_audit.py` 仍 **18/18 PASS** (T = 2.7284 字串保留) ✅
+
+**🔴 未動 (依交回原則)**: `h0_tension/06_complete_record.md` 嘅 `H_eff(0.03) = 73.13` / `0.12%`
+係依賴已證偽伸長嘅 stale 聲稱 → 本檢查器**只標 🔴 唔代改數值**, 更新由擁有該結論嘅
+`h0_tension` O 執行 (新結構值 **66.33**, vs SH0ES 73.04 → **6.5σ** 偏離)。

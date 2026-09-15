@@ -58,4 +58,34 @@
 - `../o169_da_spectral_first_principles/docs/01_elongation_falsification.md` — 證偽全表 (七 tracer)
 - `../o169_da_spectral_first_principles/docs/02_delta_spectral_closure.md` — 譜閉合 + 恆等式 11/11 + C = −φ⁻³
 - `../o169_da_spectral_first_principles/docs/03_window_selection.md` — K = 22 Z₂ 窗口唯一性
-- `../o169_da_spectral_first_principles/docs/04_open_ledger.md` — 誠實帳簿 + 跨 O 影響
+- `../o169_da_spectral_first_principles/docs/04_open_ledger.md` — 誠實帳簿 + 跨 O 影響 (§E6 = 檢查器修復)
+
+### ⑥ 全 repo 完整性檢查器已改為報 🔴 (2026-09-15, 附加)
+
+`open_problems_fresh/scripts/integrity_check.py` (O169 §E6 已修) 現時會對本 O 嘅
+`06_complete_record.md` 報 **3 項 stale** 並以 **exit 2** 結束:
+
+```
+🔴 h0_tension/06_complete_record.md: '73.13' 仍存在 — H_eff(0.03) 舊伸長值 → 新結構值 66.33
+🔴 h0_tension/06_complete_record.md: '0.12%' 仍存在 — vs SH0ES 匹配率 → 新式 6.5σ 偏離
+```
+
+**即係**: 只要 `06_complete_record.md` 未更新, 全 repo 檢查器就會一直非零退出。
+檢查器**唔會代本 O 改數值** (交回原則) — 呢個 🔴 要由本 O session 喺執行 ③ 之後自行清除。
+
+新舊對照 (供 ③ 重推用, 實跑數值):
+
+| z | 文檔/舊式 H_eff | 新式 H_eff |
+|--:|--:|--:|
+| 0.01 | 72.75 | 65.39 |
+| 0.03 | **73.13** | **66.33** |
+| 0.05 | 73.55 | 67.29 |
+| 0.10 | 74.81 | 69.77 |
+| 0.20 | 77.96 | 75.00 |
+| 0.50 | 90.37 | 92.21 |
+| z→0 | 72.59 (= c/R_H) | 64.93 |
+
+★ `H₀_idcm = c/R_H = 72.59` 係**結構定義, 唔經伸長, 保持不變** (檢查器仍 ✅)。
+崩潰嘅只係 **H_eff = c/(dD/dz)** 呢條投影 Jacobian 鏈 — 新式 z=0.03 得 66.33,
+vs SH0ES 73.04 → **6.5σ**; vs Planck 67.40 → 1.6%; vs TRGB 69.85 → 5.0%。
+即「匹配 SH0ES 0.12%」呢個結論喺新形式下**反轉**。
