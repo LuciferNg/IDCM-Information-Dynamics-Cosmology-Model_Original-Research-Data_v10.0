@@ -28,7 +28,7 @@ from pathlib import Path
 from scipy.integrate import quad
 
 BASE = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh")
-DATA = BASE / "o198_seed_spectrum_verification/data/harikane23_table3_eddington.json"
+DATA = BASE / "o197_density_synthesis/verification/data/harikane23_table3_eddington.json"
 
 M_base = 1.914e6
 mu = 0.862478
@@ -104,8 +104,7 @@ def fwd_median_growth(z_f, Lmin=3e43, n=300000):
         lam_i = rng.choice(lams_obs)
         M = draw_seed(rng)
         t_obs = rng.choice(tobs_list)
-        G = math.exp((t_obs - tzf) / (t_ef / 3.156e16 * 1e9 * 1e9))  # yr→Gyr 單位處理
-        # 正確: t_ef 用 Gyr: 5e8 yr = 0.5 Gyr
+        # t_ef = 5e8 yr = 0.5 Gyr (時間單位: Gyr)
         M_obs = M * math.exp((t_obs - tzf) / 0.5)
         if lam_i * L_EDD * M_obs >= Lmin:
             vals.append(math.log(M_obs))
@@ -197,7 +196,7 @@ print("\n== T8h: ★duty-cycle 並存模型 (高端 full-time 成長 + 低端 fr
 #   ⟹ M_obs = M_seed × exp(T_active/t_ef), T_active per-object
 # 測試: duty-cycle forward — 高端 full-time, 低端 fresh (T_active 由通道 A 帶約束)
 print("  Duty-cycle 圖像: 種子 z_f 形成, active 相位隨機;")
-print("  - 高端種子 (長 active): G = exp((t(z_obs)−t(z_f*))/t_ef) ∈ [2.5, 7.8]")
+print(f"  - 高端種子 (長 active): G = exp((t(z_obs)−t(z_f*))/t_ef) ∈ [{min(grow):.2f}, {max(grow):.2f}]")
 print("  - 低端 2 粒 (fresh, 高 λ): T_active ≤ 66/303 Myr ⟹ G ≈ 1 (seed 留喺通道 A 帶)")
 # 高端 8 粒成長後 vs 通道 B logN 預測中位 (截斷 M>M_turn)
 high8 = [d for d in data if d["M_BH"] >= M_turn]

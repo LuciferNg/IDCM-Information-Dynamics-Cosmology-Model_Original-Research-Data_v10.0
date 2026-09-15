@@ -81,6 +81,16 @@ etc.), 閉合需 0.77 dex — 唔夠, 剩餘 ~0.37 dex 結構缺口 🟡。
 
 - Harikane+23 Table 3 (arXiv:2303.11946v3): 10 粒 AGN 嘅 M_BH / L_bol /
   λ_Edd (含非對稱誤差), 已存 `data/harikane23_table3_eddington.json`
+- **z (紅移) 追溯** *(審計 2026-09-15 補註)*: data JSON 嘅 `z` 欄位 = `None`
+  (Table 3 冇 z); z 由 **scripts/06 內部 `zs` map** 補入 — 來源係 Harikane+23
+  **Table 1** (CEERS_00746 z=5.624 = CEERS 3210, Kocevski+23)。z map 全文列於
+  `01_problem_record.md` §五.2b (O197 root) 以供追溯。data 檔本身唔改動。
 - λ 自洽檢查: λ = L_bol/(L_Edd·M) 9/10 一致 (容差 10%); CEERS_00397
   λ_tab=2.02 vs λ_re=2.22 (論文取捨值差異, 用論文值)
+- **重建偏差主因（審計 2026-09-16 補註, 見 `docs/04` F2）**: 逐物件隱含
+  L_Edd = L_bol/(λ·M) 嘅 median = 1.301e38 / geo 1.296e38（論文側 ≈ 1.30e38,
+  scripts 用精確標準值 1.26e38）; 但逐物件 spread = **1.15×** ≫ 3% 常數差 ⟹
+  λ 重建偏差由 **L_bol / M_BH 嘅 2 有效數字 rounding (±5%)** 主導, 常數選擇
+  不可分辨。9/10 物件嘅 L_need 落喺 L_bol±5% 內。**唔改常數**（改會令記錄過嘅
+  數字位移 = 無收益回溯污染）。
 - N=434: little_red_dots records/02 (Akins+2024, COSMOS-Web 0.54 deg²)

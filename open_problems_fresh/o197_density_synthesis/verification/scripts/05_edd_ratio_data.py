@@ -29,7 +29,7 @@ import json, math, random, statistics
 from pathlib import Path
 
 BASE = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh")
-DATA = BASE / "o198_seed_spectrum_verification/data/harikane23_table3_eddington.json"
+DATA = BASE / "o197_density_synthesis/verification/data/harikane23_table3_eddington.json"
 
 M_base = 1.914e6
 mu = 0.862478

@@ -1,5 +1,8 @@
 # O198 SESSION_START — 種子質譜兩通道預言驗證
 
+> **⚠️ 已合併回 O197 (2026-09-15, 用戶指示「不開新O」)** — 本目錄現為
+> `o197_density_synthesis/verification/`。O198 不再係獨立 O。
+
 ## 狀態
 🟢 **已閉合 — scripts/01-06 全 PASS (48/48), 記錄已寫 (docs/01-03)**
 
@@ -37,6 +40,21 @@
 3. 🟡 UHz1 denominator 已收窄至 N=434 (Akins+2024 COSMOS-Web 實測)
 4. 🔴 種子全 PDF 尾 vs 觀測 BHMF 展平機制 (候選: λ 散射成長卷積)
 5. 🟡 z_f* = 13.43 結構身份 (13 = F₇ 候選, 未證)
+6. 🟡 T9g 層級自我相似重述 (審計 F1 — 需層級歸一化推導)
+7. 🟡 數據/腳本衞生 (審計 F2/F3/F5)
+
+## 獨立記錄審計 (2026-09-15, 三層)
+1. **層 1 數值** `verification/scripts/90_audit_records.py` — **105/106 PASS**（1 項不符 =
+   設計上嘅 A16b/F1）; 全部數值宣稱獨立重算一致。詳細: `docs/04_record_audit.md`。
+   發現: F1 🔴 T9g 同義反覆 (docs/04 T9g 已修正標 🟡); F2 🟡 L_Edd 1.26e38 vs 論文隱含
+   1.30e38 (首版「8/10 dev<1%」誤記, 已獨立更正 — 偏差由 L_bol 2sf rounding 主導, 唔改常數);
+   F3 🟡 lambda_lo/hi 係誤差唔係 bounds; F4 🟡 PASS 計數含恆真項; F5 🟡 scripts/06 硬編碼
+   print + 死碼 (已修); F6 🟡 T3b「中位」實為幾何均值 (無影響); F7 🟡 審計計數跨文檔漂移
+   (99/100 → 104/105 → 105/106, 已同步)。
+2. **層 2 文檔** `verification/scripts/91_doc_audit.py` — 69 組數值出現檢查 + 跨文檔一致性
+   + 48 check ID 覆蓋 + 檔案時序 + 目錄範圍 + 污染檢查 + 第三方法 MC (換 seed)。
+3. **層 3 鏈連貫** `verification/scripts/92_chain_continuity.py` — **45/45 PASS**。
+詳細: `verification/docs/05_record_closeout.md`。
 
 ## 交收
 已閉合 🟢 (48/48)。若續推: 開放項 4 最可攻 (λ 散射成長卷積展平機制 —
