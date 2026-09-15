@@ -50,33 +50,27 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
 
   ⚠️ 掃描: v9.0 值 6.503 喺現行腳本/文檔嘅殘留
     README.md:110  | **O169** | **D_A(ℓ) 譜第一原理: δ 群延遲修正起源 (Spectral Origin of δ)** | 🟡 **部分閉合 (09-15: 觀測閉合 🟢 / 第一原理 🔴)** | **★★ 舊
-    o77_occam_deep/SESSION_START.md:46  Ω_DM/Ω_b = F₇/L₀ = 13/2 = 6.5            EXACT   (v9.0 P_n 給 6.5030)
-    o77_occam_deep/SESSION_START.md:50  【v9.0 殘留值】Ω_DM/Ω_b = 6.5030  (P_n 唯一數值輸出)
-    o77_occam_deep/SESSION_START.md:60  - `scripts/01_occam_verification.py:94` — `obs_odm_ob = (0.3167 − 0.04221)/0.04221  # 6.5030`
-    o77_occam_deep/SESSION_START.md:61  - `scripts/02_docs_crosscheck.py:81,232` — `(文檔: 6.503, 偏差 0.046%)` 偏差檢查
-    o77_occam_deep/SESSION_START.md:62  - `docs/05_closure_record.md:40`, `docs/06_verification_report.md:31` — 表列 `6.503`
-    o77_occam_deep/SESSION_START.md:66  1. [ ] **6.5030 → 13/2**: 全部 `6.503` 引用改為 `13/2 = F₇/L₀ = 6.5` EXACT
-    o77_occam_deep/SESSION_START.md:67  2. [ ] `scripts/02:232` 嘅 `abs(odm_ob − 6.503)/6.503*100` 偏差檢查 → 改為**零偏差**驗證
-    o77_occam_deep/SESSION_START.md:70  4. [ ] `docs/05:40`、`docs/06:31` 表內「vs 6.503, 0.05%」欄 → 「== 13/2, 0%」
-    o77_occam_deep/SESSION_START.md:75  - `Ω_DM/Ω_b = 13/2 = F₇/L₀` — 純 F-數 (本 O 已用正確式, 只係攞 6.503 做「文檔值」對照)
+    o77_occam_deep/SESSION_START.md:33  - `P_n = 1 + 2φ⁻¹n + K₂n²` **亦屬受證偽** (同一個「每層增益」語義, 真值 = 1); v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`
+    o77_occam_deep/SESSION_START.md:38  - `scripts/01_occam_verification.py:94` — `obs_odm_ob = (0.3167 − 0.04221)/0.04221  # 6.5030`
+    o77_occam_deep/SESSION_START.md:39  - `scripts/02_docs_crosscheck.py:81,232` — `(文檔: 6.503, 偏差 0.046%)` 偏差檢查
+    o77_occam_deep/SESSION_START.md:40  - `docs/05_closure_record.md:40`, `docs/06_verification_report.md:31` — 表列 `6.503`
+    o77_occam_deep/SESSION_START.md:41  - **6.5030 → 13/2**: 全部 `6.503` 引用改為 `13/2 = F₇/L₀ = 6.5` EXACT
+    o77_occam_deep/SESSION_START.md:42  - `scripts/02:232` 嘅 `abs(odm_ob − 6.503)/6.503*100` 偏差檢查 → 改為**零偏差**驗證
+    o77_occam_deep/SESSION_START.md:44  - `docs/05:40`、`docs/06:31` 表內「vs 6.503, 0.05%」欄 → 「== 13/2, 0%」
     o77_occam_deep/docs/06_verification_report.md:31  | Ω_DM/Ω_b = 13/2 | 6.5 (vs 6.503, 0.05%) | ✅ |
     o77_occam_deep/docs/05_closure_record.md:40  | 3 | Ω_DM/Ω_b = 13/2 | 6.5 | 6.503 | 0.05% | ✅ |
     o77_occam_deep/scripts/02_docs_crosscheck.py:81  print(f"✅ Ω_DM/Ω_b = 13/2 = {odm_ob:.1f} (文檔: 6.503, 偏差 0.046%)")
     o77_occam_deep/scripts/02_docs_crosscheck.py:232  ("05", "Ω_DM/Ω_b 0.05%", 0.05, abs(odm_ob - 6.503)/6.503*100, 0.005),
     o77_occam_deep/scripts/01_occam_verification.py:94  obs_odm_ob = (0.3167 - 0.04221) / 0.04221  # 6.5030
-    bbn/SESSION_START.md:30  Ω_DM/Ω_b = F₇/L₀ = 13/2 = 6.5            EXACT   (v9.0 P_n 給 6.5030)
-    bbn/SESSION_START.md:34  【v9.0 殘留值】Ω_DM/Ω_b = 6.5030  (P_n 唯一數值輸出)
-    bbn/SESSION_START.md:44  - `scripts/02_eta_b_structural.py:8,31,71` — `Omega_DM_Ob = 6.5030` (v9.0 P_n 輸出)
-    bbn/SESSION_START.md:45  - `scripts/07_he3_and_omegab.py:11,67,94,97,132,133,137,138` — `Ω_b = Ω_m/(1+6.5030)`
-    bbn/SESSION_START.md:47  - `01_problem_record.md:79` — `Ω_DM/Ω_b = 6.5030 (幾何分配)`
-    bbn/SESSION_START.md:48  - `03_first_results.md:24` — `Ω_b = Ω_m/(1+6.5030) = 0.04221`
-    bbn/SESSION_START.md:49  - `06_complete_record.md:44` — 表列 `Ω_DM/Ω_b | 6.5030 | 幾何分配 P_n`
-    bbn/SESSION_START.md:51  - `08_omegab_direct.md:17,22,37,41,69` — ⚠️ **本檔已自述 6.5030 被 13/2 取代, 方向正確** (唔使改, 只作佐證)
-    bbn/SESSION_START.md:58  (ii) Ω_DM/Ω_b 用 v9.0 P_n 輸出 `6.5030`
-    bbn/SESSION_START.md:62  3. [ ] **Ω_DM/Ω_b 更新**: `6.5030` → **`13/2 = F₇/L₀ = 6.5`** (06:44 表)
-    bbn/SESSION_START.md:66  5. [ ] **腳本更新**: `scripts/02:31` `Omega_DM_Ob = 6.5030` → `13/2`;
-    bbn/SESSION_START.md:67  `scripts/07:94` `Omega_b = Omega_m/(1+6.5030)` → `Omega_m*2/15`
-    bbn/SESSION_START.md:71  ⚠️ **唔准**為咗保住 6.0622e-10 而回頭用 O37 Ω_Λ 或 6.5030 —— 兩者皆已失效。
+    bbn/SESSION_START.md:12  - `P_n = 1 + 2φ⁻¹n + K₂n²` **亦屬受證偽** (同一個「每層增益」語義, 真值 = 1); v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`
+    bbn/SESSION_START.md:17  - `scripts/02_eta_b_structural.py:8,31,71` — `Omega_DM_Ob = 6.5030` (v9.0 P_n 輸出)
+    bbn/SESSION_START.md:18  - `scripts/07_he3_and_omegab.py:11,67,94,97,132,133,137,138` — `Ω_b = Ω_m/(1+6.5030)`
+    bbn/SESSION_START.md:20  - `01_problem_record.md:79` — `Ω_DM/Ω_b = 6.5030 (幾何分配)`
+    bbn/SESSION_START.md:21  - `03_first_results.md:24` — `Ω_b = Ω_m/(1+6.5030) = 0.04221`
+    bbn/SESSION_START.md:22  - `06_complete_record.md:44` — 表列 `Ω_DM/Ω_b | 6.5030 | 幾何分配 P_n`
+    bbn/SESSION_START.md:24  - `08_omegab_direct.md:17,22,37,41,69` — ⚠️ **本檔已自述 6.5030 被 13/2 取代, 方向正確** (唔使改, 只作佐證)
+    bbn/SESSION_START.md:27  - **Ω_DM/Ω_b 更新**: `6.5030` → **`13/2 = F₇/L₀ = 6.5`** (06:44 表)
+    bbn/SESSION_START.md:28  - **腳本更新**: `scripts/02:31` `Omega_DM_Ob = 6.5030` → `13/2`;
     bbn/03_first_results.md:24  Ω_b = Ω_m/(1+6.5030) = 0.04221
     bbn/08_omegab_direct.md:17  ### 1.1 之前嘅鏈（需要 Ω_DM/Ω_b = 6.5030 幾何分配）
     bbn/08_omegab_direct.md:22  Ω_b = Ω_m/(1+6.5030) = 0.04221
@@ -96,24 +90,21 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
     bbn/scripts/07_he3_and_omegab.py:133  print(f"驗證: Ω_DM/Ω_b = 13/2 = 6.5 ≈ 6.5030 (0.05%)!")
     bbn/scripts/07_he3_and_omegab.py:137  print(f"  Ω_DM/Ω_b = (15-2)/2 = 13/2 = 6.5 ≈ 6.5030 (0.05%!)")
     bbn/scripts/07_he3_and_omegab.py:138  print(f"  之前 Ω_DM/Ω_b = 6.5030 係幾何分配 P_n 計出嚟")
-    o166_tcmb_absolute_value/SESSION_START.md:80  Ω_DM/Ω_b = F₇/L₀ = 13/2 = 6.5            EXACT   (v9.0 P_n 給 6.5030)
-    o166_tcmb_absolute_value/SESSION_START.md:84  【v9.0 殘留值】Ω_DM/Ω_b = 6.5030  (P_n 唯一數值輸出)
-    o166_tcmb_absolute_value/SESSION_START.md:94  - `scripts/03_projection_closure.py:33` — `Omega_DM_Ob = mpf('6.5030')  # 幾何分配 (bbn)`
-    o166_tcmb_absolute_value/SESSION_START.md:95  - `scripts/05_audit_independent.py:21` — `Omega_b = (1 − Omega_Lambda)/(1 + mpf('6.5030'))`
-    o166_tcmb_absolute_value/SESSION_START.md:99  1. [ ] **6.5030 → 13/2**: 兩個腳本嘅 `6.5030` 改為 `13/2` (= 6.5 EXACT)
+    o166_tcmb_absolute_value/SESSION_START.md:67  - `P_n = 1 + 2φ⁻¹n + K₂n²` **亦屬受證偽** (同一個「每層增益」語義, 真值 = 1); v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`
+    o166_tcmb_absolute_value/SESSION_START.md:72  - `scripts/03_projection_closure.py:33` — `Omega_DM_Ob = mpf('6.5030')  # 幾何分配 (bbn)`
+    o166_tcmb_absolute_value/SESSION_START.md:73  - `scripts/05_audit_independent.py:21` — `Omega_b = (1 − Omega_Lambda)/(1 + mpf('6.5030'))`
+    o166_tcmb_absolute_value/SESSION_START.md:74  - **6.5030 → 13/2**: 兩個腳本嘅 `6.5030` 改為 `13/2` (= 6.5 EXACT)
     o166_tcmb_absolute_value/scripts/05_audit_independent.py:21  Omega_b = (1 - Omega_Lambda)/(1 + mpf('6.5030'))
     o166_tcmb_absolute_value/scripts/03_projection_closure.py:33  Omega_DM_Ob = mpf('6.5030')               # 幾何分配 (bbn)
     o116_dm_abundance/final_result.md:13  - v9.0 精確化 (66): P_n = 1 + 2φ⁻¹n + K₂n², K₂ = 2(h²¹−h¹¹)/h²¹ − 2φ⁻¹ = 0.029238 → Ω_DM/Ω_b = 6.5030 (0.05%)
     o116_dm_abundance/SESSION_START.md:26  | `66_dm_cy3_exact.md` + `66_verify_cy3.py` | **CY₃ 投影算子精確計算 → Ω_DM/Ω_b = 6.5030** | 這是否就是 v10.0 已閉合的 13/2 = 6
-    o116_dm_abundance/SESSION_START.md:125  Ω_DM/Ω_b = F₇/L₀ = 13/2 = 6.5            EXACT   (v9.0 P_n 給 6.5030)
-    o116_dm_abundance/SESSION_START.md:129  【v9.0 殘留值】Ω_DM/Ω_b = 6.5030  (P_n 唯一數值輸出)
-    o116_dm_abundance/SESSION_START.md:139  - `final_result.md:13` — `P_n = 1 + 2φ⁻¹n + K₂n² ... → Ω_DM/Ω_b = 6.5030`
-    o116_dm_abundance/SESSION_START.md:140  - `docs/02_verification_report.md:20,21,41,42,43,50,52,57,58,59` — P_n 表 + 6.5030 + ★「同一結構 / 跨尺度幾何不變量」
-    o116_dm_abundance/SESSION_START.md:141  - `docs/04_audit_20260903.md:11,27,33,42,61` — 6.5030 重現記錄
-    o116_dm_abundance/SESSION_START.md:142  - `scripts/02_dm_abundance_audit.py:7,19,115,153,169,185` — `ratio_cy3 = 6.5030`
-    o116_dm_abundance/SESSION_START.md:152  3. [ ] **6.5030 → 13/2**: `scripts/02:115` `ratio_cy3 = 6.5030` 應改為 `13/2` EXACT,
-    o116_dm_abundance/SESSION_START.md:154  4. [ ] `docs/02:50,52` 表列 6.5030 → 13/2 (v9.0 欄保留作歷史, 但標明已取代)
-    o116_dm_abundance/SESSION_START.md:157  ⚠️ **唔准**因為 6.5030 同 6.5 只差 0.05% 就當「等價」—— 前者係已證偽公式嘅輸出,
+    o116_dm_abundance/SESSION_START.md:58  - `P_n = 1 + 2φ⁻¹n + K₂n²` **亦屬受證偽** (同一個「每層增益」語義, 真值 = 1); v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`
+    o116_dm_abundance/SESSION_START.md:66  - `final_result.md:13` — `P_n = 1 + 2φ⁻¹n + K₂n² ... → Ω_DM/Ω_b = 6.5030`
+    o116_dm_abundance/SESSION_START.md:67  - `docs/02_verification_report.md:20,21,41,42,43,50,52,57,58,59` — P_n 表 + 6.5030 + ★「同一結構 / 跨尺度幾何不變量」
+    o116_dm_abundance/SESSION_START.md:68  - `docs/04_audit_20260903.md:11,27,33,42,61` — 6.5030 重現記錄
+    o116_dm_abundance/SESSION_START.md:69  - `scripts/02_dm_abundance_audit.py:7,19,115,153,169,185` — `ratio_cy3 = 6.5030`
+    o116_dm_abundance/SESSION_START.md:73  - **6.5030 → 13/2**: `scripts/02:115` `ratio_cy3 = 6.5030` 應改為 `13/2` EXACT,
+    o116_dm_abundance/SESSION_START.md:74  - `docs/02:50,52` 表列 6.5030 → 13/2 (v9.0 欄保留作歷史, 但標明已取代)
     o116_dm_abundance/docs/02_verification_report.md:21  | 66_dm_cy3_exact.md | CY₃ 投影算子 → Ω_DM/Ω_b = 6.5030 | ✅ 0.05% |
     o116_dm_abundance/docs/02_verification_report.md:43  → Ω_DM/Ω_b = 6.5030 (0.05% vs 6.5)
     o116_dm_abundance/docs/02_verification_report.md:50  | Ω_DM/Ω_b | 6.5030 (CY₃ 投影) | 13/2 = F₇/L₀ = 6.5 | 0.05% ✅ |
@@ -130,28 +121,24 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
     o116_dm_abundance/scripts/02_dm_abundance_audit.py:153  check("66 用 u 代理: 6.5030 (0.05%)", abs(r_u - 6.5030) < 0.01, f"({r_u:.4f})")
     o116_dm_abundance/scripts/02_dm_abundance_audit.py:169  check("66 腳本可執行 (22/22 PASS)", True, "(Ω_DM/Ω_b = 6.5030, Δ=0.05%)")
     o116_dm_abundance/scripts/02_dm_abundance_audit.py:185  "closure_chain": "v9.0 66 (6.5030, 0.05%) → v10.0 O14 (13/2 = F7/L0)",
-    ktree_structure/SESSION_START.md:78  Ω_DM/Ω_b = F₇/L₀ = 13/2 = 6.5            EXACT   (v9.0 P_n 給 6.5030)
-    ktree_structure/SESSION_START.md:82  【v9.0 殘留值】Ω_DM/Ω_b = 6.5030  (P_n 唯一數值輸出)
-    ktree_structure/SESSION_START.md:92  - `00_master_verification.py:232` — `Omega_b = Omega_m / (1 + 6.5030)`
-    ktree_structure/SESSION_START.md:93  - `00_master_verification.py:269` — `check("Ω_DM/Ω_b = 6.5030", 6.5030, 6.5030, 0.1, "幾何分配")`
-    ktree_structure/SESSION_START.md:94  - `04_verification_record.md:140` — 表列 `Ω_DM/Ω_b | 6.5030 | 6.5030 | 0.000%`
-    ktree_structure/SESSION_START.md:95  - `04_verification_record.md:182`, `07_doc_audit_record.md:21` — `Ω_b = 0.04221/(1+6.503)`
-    ktree_structure/SESSION_START.md:96  - `08_structural_proof_FORCE_DENSITY.md:158` — 「與幾何分配 P_n 計算得出嘅 6.5030 偏差 0.05%」
-    ktree_structure/SESSION_START.md:100  1. [ ] **6.5030 → 13/2**: 全部引用改為 `13/2 = F₇/L₀ = 6.5` EXACT
-    ktree_structure/SESSION_START.md:101  2. [ ] `00_master_verification.py:269` 嘅 `check(..., 6.5030, 6.5030, 0.1, "幾何分配")`
-    ktree_structure/SESSION_START.md:103  3. [ ] `00_master_verification.py:232` `Omega_b = Omega_m/(1+6.5030)` → `Omega_m*2/15`
+    ktree_structure/SESSION_START.md:10  - `P_n = 1 + 2φ⁻¹n + K₂n²` **亦屬受證偽** (同一個「每層增益」語義, 真值 = 1); v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`
+    ktree_structure/SESSION_START.md:17  - `00_master_verification.py:232` — `Omega_b = Omega_m / (1 + 6.5030)`
+    ktree_structure/SESSION_START.md:18  - `00_master_verification.py:269` — `check("Ω_DM/Ω_b = 6.5030", 6.5030, 6.5030, 0.1, "幾何分配")`
+    ktree_structure/SESSION_START.md:19  - `04_verification_record.md:140` — 表列 `Ω_DM/Ω_b | 6.5030 | 6.5030 | 0.000%`
+    ktree_structure/SESSION_START.md:20  - `04_verification_record.md:182`, `07_doc_audit_record.md:21` — `Ω_b = 0.04221/(1+6.503)`
+    ktree_structure/SESSION_START.md:21  - `08_structural_proof_FORCE_DENSITY.md:158` — 「與幾何分配 P_n 計算得出嘅 6.5030 偏差 0.05%」
+    ktree_structure/SESSION_START.md:22  - **6.5030 → 13/2**: 全部引用改為 `13/2 = F₇/L₀ = 6.5` EXACT
+    ktree_structure/SESSION_START.md:23  - `00_master_verification.py:232` `Omega_b = Omega_m/(1+6.5030)` → `Omega_m*2/15`
     ktree_structure/07_doc_audit_record.md:21  | 3 | Ω_b = 0.04221/(1+6.503) | **Ω_b = Ω_m/(1+6.503)**, 比較用 Ω_b h² | `00_master_verification.py` |
     ktree_structure/00_master_verification.py:232  Omega_b = Omega_m / (1 + 6.5030)
     ktree_structure/00_master_verification.py:269  check("Ω_DM/Ω_b = 6.5030", 6.5030, 6.5030, 0.1, "幾何分配")
     ktree_structure/04_verification_record.md:140  | Ω_DM/Ω_b | 6.5030 | 6.5030 | 0.000% |
     ktree_structure/04_verification_record.md:182  | 3 | Ω_b = 0.04221/(1+6.503) | **Ω_b = Ω_m/(1+6.503)**, 比較用 Ω_b h² | 分母錯 + 比較量錯 (h 依賴) |
     ktree_structure/08_structural_proof_FORCE_DENSITY.md:158  **與幾何分配 P_n 計算得出嘅 6.5030 偏差 0.05%。** ✅
-    o168_g_last_input/SESSION_START.md:70  Ω_DM/Ω_b = F₇/L₀ = 13/2 = 6.5            EXACT   (v9.0 P_n 給 6.5030)
-    o168_g_last_input/SESSION_START.md:74  【v9.0 殘留值】Ω_DM/Ω_b = 6.5030  (P_n 唯一數值輸出)
-    o168_g_last_input/SESSION_START.md:84  - `scripts/01_o38_verify_g_inversion.py:77` — `Omega_b = (1 − Omega_Lambda)/(1 + mpf('6.5030'))`
-    o168_g_last_input/SESSION_START.md:86  - `scripts/05_gemini_analysis.py:47` — `Omega_L = mpf(4)/(phi**4−1)`; `Omega_b = (1−Omega_L)/(1+6.5030)`
-    o168_g_last_input/SESSION_START.md:91  1. [ ] **雙重更正**: 四個腳本同時用咗 **已撤銷 O37 Ω_Λ** (`4/(φ⁴−1)`) 同 **v9.0 P_n `6.5030`**:
-    o168_g_last_input/SESSION_START.md:93  `Omega_b = (1−Omega_L)/(1 + mpf('6.5030'))` → **`(1−Omega_L)*2/15`**
+    o168_g_last_input/SESSION_START.md:57  - `P_n = 1 + 2φ⁻¹n + K₂n²` **亦屬受證偽** (同一個「每層增益」語義, 真值 = 1); v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`
+    o168_g_last_input/SESSION_START.md:62  - `scripts/01_o38_verify_g_inversion.py:77` — `Omega_b = (1 − Omega_Lambda)/(1 + mpf('6.5030'))`
+    o168_g_last_input/SESSION_START.md:64  - `scripts/05_gemini_analysis.py:47` — `Omega_L = mpf(4)/(phi**4−1)`; `Omega_b = (1−Omega_L)/(1+6.5030)`
+    o168_g_last_input/SESSION_START.md:67  - `Omega_b = (1−Omega_L)/(1 + mpf('6.5030'))` → **`(1−Omega_L)*2/15`**
     o168_g_last_input/scripts/05_gemini_analysis.py:47  Omega_L = mpf(4)/(phi**4-1); Omega_b = (1-Omega_L)/(1+mpf('6.5030'))
     o168_g_last_input/scripts/04_audit_independent.py:56  Omega_b = (1-Omega_L)/(1+mpf('6.5030'))
     o168_g_last_input/scripts/11_alpha_wall.py:31  Omega_L = mpf(4)/(phi**4-1); Omega_b = (1-Omega_L)/(1+mpf('6.5030'))
@@ -168,8 +155,8 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
     scripts/integrity_check.py:384  # --- 3e. B′ 回歸: v9.0 P_n 輸出 6.5030 殘留掃描 ---
     scripts/integrity_check.py:385  print("\n  [3e] B′ 回歸測試: v9.0 P_n 輸出 6.5030 殘留掃描 (O169 docs/05)")
     scripts/integrity_check.py:414  print(f"        → 唔屬本檢查器職權 (要該 O 自行清理); 本檢查器自身已零 6.5030 依賴")
-    o169_da_spectral_first_principles/final_result.md:47  「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` + v9.0 P_n `6.5030`」相乘。現行 v10.0 結構鏈給 **6.0636×10⁻¹⁰**
-    o169_da_spectral_first_principles/final_result.md:50  - **v9.0 `6.5030` 殘留**: 30 個檔案 (非 O169 活躍腳本 15 個) — 已交回各 O 自行清理, 檢查器唔代改。
+    o169_da_spectral_first_principles/final_result.md:48  「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` + v9.0 P_n `6.5030`」相乘。現行 v10.0 結構鏈給 **6.0636×10⁻¹⁰**
+    o169_da_spectral_first_principles/final_result.md:51  - **v9.0 `6.5030` 殘留**: 30 個檔案 (非 O169 活躍腳本 15 個) — 已交回各 O 自行清理, 檢查器唔代改。
     o169_da_spectral_first_principles/01_problem_record.md:73  | 10 | `scripts/10_bprime_pn_verdict.py` | B′ 判定 (三問) + `6.5030` 殘留普查 + η_B 各版本精算 | **P_n 屬 A 類 (受證偽)**; 6.503
     o169_da_spectral_first_principles/01_problem_record.md:100  順帶: Ω_Λ 由已撤銷 O37 版 `4/(φ⁴−1)` 改為 O39 版 `41/60`; Ω_b 由 v9.0 `6.5030` 鏈
     o169_da_spectral_first_principles/01_problem_record.md:110  3. **承載性**: 唯一輸出 `6.5030` 已由 v10.0 `F₇/L₀ = 13/2` 取代, 但**殘留 30 檔**
@@ -182,17 +169,17 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:106  | **★ bbn 文檔實際用: `Ω_m(O37)/(1+6.5030)`** | **0.042212239** | **6.062198e-10** | **−0.0000%** | −0.6197% |
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:112  (ii) Ω_DM/Ω_b = 6.5030            ← v9.0 P_n 輸出 (非 v10.0 F₇/L₀ = 6.5)
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:142  | B′-2 | `6.5030` 殘留 67 處待清理 (跨 7 個 O 目錄 + repo 檢查器) | 🔴 已交回 |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:151  > `bbn/scripts/02,07` 用 v9.0 `6.5030`、`bbn/06` 用已撤銷 O37 Ω_Λ。
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:193  ### E7. 第二輪交回 — B′ (P_n) + v9.0 6.5030 殘留 + bbn η_B 雙重 stale (2026-09-15)
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:204  | Q3 承載性 | 唯一輸出 `6.5030` 已由 v10.0 `F₇/L₀ = 13/2` 取代; 但**殘留 30 個檔案** |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:207  精算 (mpmath dps=40) 顯示該值**精確重現**於「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` × v9.0 P_n `6.5030`」
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:213  | ★ bbn 文檔實際用 `Ω_m(O37)/(1+6.5030)` | 0.042212239 | 6.062198e-10 | **−0.0000%** | −0.6197% |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:222  | 2 | `o116_dm_abundance` | 追加 | ★ B′ 結案; docs/02「跨尺度幾何不變量」宣稱更正; `scripts/02:115` 6.5030 → 13/2 |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:224  | 4 | `o77_occam_deep` | 追加 | 6.5030 → 13/2; 偏差檢查改零偏差 |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:225  | 5 | `o166_tcmb_absolute_value` | 追加 | `scripts/03,05` 6.5030 → 13/2; Ω_Λ 版本 |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:226  | 6 | `o168_g_last_input` | 追加 | 4 個腳本**雙重更正** (O37 Ω_Λ + 6.5030) |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:230  `bbn` 確實零命中。但 B′ 路徑係經 **`P_n`** 同 **`6.5030`**, 屬另一個關鍵詞族, 第一輪未掃。
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:237  **🔴 未閉合 (交回後仍屬各 O)**: v9.0 `6.5030` 殘留 30 個檔案 (非 O169 活躍 `.py` 15 個);
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:157  > `bbn/scripts/02,07` 用 v9.0 `6.5030`、`bbn/06` 用已撤銷 O37 Ω_Λ。
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:199  ### E7. 第二輪交回 — B′ (P_n) + v9.0 6.5030 殘留 + bbn η_B 雙重 stale (2026-09-15)
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:210  | Q3 承載性 | 唯一輸出 `6.5030` 已由 v10.0 `F₇/L₀ = 13/2` 取代; 但**殘留 30 個檔案** |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:213  精算 (mpmath dps=40) 顯示該值**精確重現**於「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` × v9.0 P_n `6.5030`」
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:219  | ★ bbn 文檔實際用 `Ω_m(O37)/(1+6.5030)` | 0.042212239 | 6.062198e-10 | **−0.0000%** | −0.6197% |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:228  | 2 | `o116_dm_abundance` | 追加 | ★ B′ 結案; docs/02「跨尺度幾何不變量」宣稱更正; `scripts/02:115` 6.5030 → 13/2 |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:230  | 4 | `o77_occam_deep` | 追加 | 6.5030 → 13/2; 偏差檢查改零偏差 |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:231  | 5 | `o166_tcmb_absolute_value` | 追加 | `scripts/03,05` 6.5030 → 13/2; Ω_Λ 版本 |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:232  | 6 | `o168_g_last_input` | 追加 | 4 個腳本**雙重更正** (O37 Ω_Λ + 6.5030) |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:236  `bbn` 確實零命中。但 B′ 路徑係經 **`P_n`** 同 **`6.5030`**, 屬另一個關鍵詞族, 第一輪未掃。
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:248  **🔴 未閉合 (交回後仍屬各 O)**: v9.0 `6.5030` 殘留 30 個檔案 (非 O169 活躍 `.py` 15 個);
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:17  Q3 承載性:   P_n 嘅數值輸出 (Ω_DM/Ω_b = 6.5030) 喺現行 v10.0 鏈仲有冇承載?
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:35  RATIO_V9 = mp.mpf("6.5030")          # v9.0 CY₃ 二階輸出
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:96  # P_n 唯一數值輸出: Ω_DM/Ω_b = 6.5030 (v9.0 CY₃ 二階)
@@ -202,16 +189,14 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:167  「Ω_m(O37)/(1+6.5030)」行 (dev 0.0000%) — 即該數值係**雙重 stale**:
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:169  (ii) Ω_DM/Ω_b 用 v9.0 P_n 輸出 6.5030 (非 v10.0 F₇/L₀ = 6.5)
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:184  Q3 承載性   : P_n 唯一輸出 6.5030 已被 v10.0 的 F₇/L₀ = 6.5 取代
-    o14_omega_b_direct/SESSION_START.md:121  Ω_DM/Ω_b = F₇/L₀ = 13/2 = 6.5            EXACT   (v9.0 P_n 給 6.5030)
-    o14_omega_b_direct/SESSION_START.md:125  【v9.0 殘留值】Ω_DM/Ω_b = 6.5030  (P_n 唯一數值輸出)
-    o14_omega_b_direct/SESSION_START.md:136  - `scripts/01_omegab_direct_derive.py:260,263,268,272` — 路徑 D: `Omega_DM_Ob_Pn = 6.5030`
-    o14_omega_b_direct/SESSION_START.md:137  - `scripts/03_full_verify.py:122` — `abs(13/2 - 6.5030)/6.5030*100` 偏差檢查
-    o14_omega_b_direct/SESSION_START.md:148  3. [ ] **腳本更新**: `scripts/01:272` `Omega_DM_Ob_Pn = 6.5030` → `13/2`;
-    o14_omega_b_direct/SESSION_START.md:149  `scripts/03:122` 偏差檢查 `abs(13/2 − 6.5030)/6.5030` → 改為**零偏差**驗證 `13/2 == 6.5`
+    o169_da_spectral_first_principles/scripts/11_session_start_slim.py:35  "v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`")
+    o14_omega_b_direct/SESSION_START.md:56  - `P_n = 1 + 2φ⁻¹n + K₂n²` **亦屬受證偽** (同一個「每層增益」語義, 真值 = 1); v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`
+    o14_omega_b_direct/SESSION_START.md:64  - `scripts/01_omegab_direct_derive.py:260,263,268,272` — 路徑 D: `Omega_DM_Ob_Pn = 6.5030`
+    o14_omega_b_direct/SESSION_START.md:65  - `scripts/03_full_verify.py:122` — `abs(13/2 - 6.5030)/6.5030*100` 偏差檢查
     o14_omega_b_direct/scripts/01_omegab_direct_derive.py:268  # Ω_DM/Ω_b = 6.5030 已從 P_n 得出
     o14_omega_b_direct/scripts/01_omegab_direct_derive.py:272  Omega_DM_Ob_Pn = 6.5030
     o14_omega_b_direct/scripts/03_full_verify.py:122  add("Ω_DM/Ω_b 偏差 0.05%", abs(13/2 - 6.5030)/6.5030*100, 5, "01_problem_record.md")
-    → 共 162 處
+    → 共 147 處
 
 [Q3b] P_n 殘留嘅數值代價: η_B 各版本精算 (mpmath dps=40)
 ------------------------------------------------------------------------------
@@ -240,7 +225,7 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
   Q1 結構角色 : 索引定義唔同, 但宣稱嘅「每層因子」係同一個 2φ⁻¹  → 同一對象
   Q2 導數身份 : 2φ⁻¹ = 「每層增益」被 O169 證偽 (真值 = 1)      → 🔴 受影響
   Q3 承載性   : P_n 唯一輸出 6.5030 已被 v10.0 的 F₇/L₀ = 6.5 取代
-                但 162 處殘留 (含活躍腳本)               → 🔴 需清理
+                但 147 處殘留 (含活躍腳本)               → 🔴 需清理
 
   ★ B' 判定: **P_n 屬 A 類 (受證偽), 唔係 B 類**
      理由: (i) 文檔明確自稱 "projection jacobian" + "跨尺度自相似"

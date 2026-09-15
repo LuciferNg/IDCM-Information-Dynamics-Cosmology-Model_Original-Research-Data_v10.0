@@ -27,6 +27,7 @@ APPLY = "--apply" in sys.argv
 
 HDR1 = "## ⚠️ O169 修正交回 (2026-09-15)"
 HDR2 = "## ⚠️ O169 修正交回 — 第二輪 (B′) (2026-09-15)"
+HDR3 = "## ⚠️ O169 修正點 (2026-09-15)"          # 精簡後格式 (本工具產出)
 
 CORR_BASE = ("- 伸長定律 `E = 1 + 2φ⁻¹ℓ` **已證偽** (DESI DR2 D_M×6 排除 4.88σ) → "
              "`E(ℓ) = ℓ + 1.11911398` (= ⟨γ⟩_odd/2·ℓ + 1/⟨v_g⟩_{1..22}); "
@@ -90,7 +91,10 @@ def dedupe(seq):
 
 def build_head(path, text):
     """head = 第一個 O169 段之前嘅內容。新建檔 (整檔都係交回) 另作處理。"""
-    idx = min([p for p in (text.find(HDR1), text.find(HDR2)) if p >= 0])
+    pos = [p for p in (text.find(HDR1), text.find(HDR2), text.find(HDR3)) if p >= 0]
+    if not pos:
+        return text.rstrip()                      # 冇可辨識段頭 → 原樣 (防禦)
+    idx = min(pos)
     head = text[:idx].rstrip()
     head = re.sub(r"\n+-{3,}\s*$", "", head).rstrip()      # 去掉尾隨 ---
     return head
@@ -120,6 +124,8 @@ for root, dirs, fs in os.walk(REPO):
     rel = os.path.relpath(path, REPO)
     with open(path, encoding="utf-8") as f:
         text = f.read()
+    if HDR3 in text and HDR1 not in text and HDR2 not in text:
+        continue                                  # 已精簡 → 跳過 (idempotent)
     if "O169 修正交回" not in text:
         continue
 
@@ -178,4 +184,7 @@ for rel, a, b, newf, npb in sorted(report):
     tot_o += a; tot_n += b
     print(f"  {d:<38}{a:>7}{b:>7}{(a-b)/a*100:>6.0f}%{npb:>6}{'  (新建)' if newf else ''}")
 print("-" * 78)
-print(f"  {len(report)} 檔: {tot_o} → {tot_n} bytes (省 {(tot_o-tot_n)/tot_o*100:.0f}%)")
+if report:
+    print(f"  {len(report)} 檔: {tot_o} → {tot_n} bytes (省 {(tot_o-tot_n)/tot_o*100:.0f}%)")
+else:
+    print("  0 檔 — 全部已係精簡格式 (idempotent, 無需改動)")
