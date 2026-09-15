@@ -424,6 +424,28 @@ chk("g", "UHz1 G ≈ 2.14", abs(G_U / 2.14 - 1) < 0.05, f"得 {G_U:.3f}")
 
 print()
 print("=" * 78)
+print("(h) RESULT_TEMPLATE 段序符合性 (狀態→結論→關鍵公式→依賴)")
+print("=" * 78)
+TPL_ORDER = ["狀態", "結論", "關鍵公式", "依賴"]
+fr_secs = re.findall(r"^## (.+?)$", TXT["fr"], re.M)
+idx = []
+for s in fr_secs:
+    for i, t in enumerate(TPL_ORDER):
+        if s.startswith(t):
+            idx.append(i)
+            break
+chk("h", f"final_result 四段齊 + 依 template 序 (實得 {[TPL_ORDER[i] for i in idx]})",
+    len(idx) == 4 and idx == sorted(idx), f"章節: {fr_secs}")
+chk("h", "final_result 狀態 emoji 統一 (🟢/🟡/🔴)",
+    any(s.startswith("狀態") and any(e in s for e in "🟢🟡🔴") for s in fr_secs))
+dep = re.search(r"## 依賴\n+(.+)", TXT["fr"])
+chk("h", "final_result 依賴用 → 箭頭", bool(dep) and "→" in dep.group(1))
+chk("h", "final_result 有關鍵公式段且非空",
+    bool(re.search(r"## 關鍵公式\n+(-\s*.+\n?)+", TXT["fr"])))
+chk("h", "final_result 有合併警告 (本 entry 特殊狀態)", "已合併回 O197" in TXT["fr"])
+
+print()
+print("=" * 78)
 print(f"文檔審計總計: {len(PASS)}/{len(PASS) + len(FAIL)} PASS")
 print("=" * 78)
 if FAIL:

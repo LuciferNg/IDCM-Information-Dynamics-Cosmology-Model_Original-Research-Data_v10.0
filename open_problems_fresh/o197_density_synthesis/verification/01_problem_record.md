@@ -204,7 +204,7 @@ M_BH/L_bol/λ_Edd/FWHM **40/40 項** 中 JSON; z 值（scripts/06 人手補入�
 
 ## 四-C、★★記錄閉合審計 — 層 2 文檔 + 層 3 鏈連貫 (2026-09-15/16)
 
-**層 2 `verification/scripts/91_doc_audit.py` — 40/40 PASS**（只讀, 唔驗物理, 驗「記錄」本身）:
+**層 2 `verification/scripts/91_doc_audit.py` — 45/45 PASS**（只讀, 唔驗物理, 驗「記錄」本身）:
 | 段 | 檢查 | 結果 |
 |:---|:---|:---|
 | a | 69 組權威數值 → 必須有文檔記錄（首選文檔覆蓋率另報） | PASS |
@@ -214,6 +214,7 @@ M_BH/L_bol/λ_Edd/FWHM **40/40 項** 中 JSON; z 值（scripts/06 人手補入�
 | e | 目錄範圍: `verification/` 冇預期外檔案（冇越界寫入） | PASS |
 | f | 污染: O197 主 docs 只有合併記錄形式（冇新推導）; 冇 O199/O200 污染; 冇改寫 O197 結論字句 | PASS |
 | g | 第三方法 MC（換 seed 20260915 + 自寫梯形宇宙學積分）: 5.40e6 / g=5.92 / t(5)=1.1706 / z_f*=13.51 / 3.213e7 / G=2.152 | PASS |
+| h | `RESULT_TEMPLATE.md` 段序符合性（狀態→結論→關鍵公式→依賴 + emoji + → 箭頭 + 合併警告） | PASS |
 
 **層 3 `verification/scripts/92_chain_continuity.py` — 45/45 PASS**（驗「鏈」有冇斷）:
 上游 O173/O174/O176/O197 目錄 + 依賴檔案存在; 交叉引用（problem_record→O197 docs/01 §三、
@@ -245,7 +246,7 @@ N=434←Akins+2024、λ_Edd 表←arXiv:2303.11946）; 依賴方向一致; 時�
     checker bug — (i) needles 用 AND 語義（同一值嘅多個顯示形式應為 ANY-of）、(ii) 要求
     「每份文檔都要有」（過嚴, 應為「任一 O198 文檔有」）、(iii) 用 doc↔script mtime 判時序
     （後期合法 patch 會令 mtime 後移）。92 首版 1 個 FAIL 亦係 checker bug（「四-B」子章節被
-    當新編號）。全部已修, 現 91 40/40、92 45/45。
+    當新編號）。全部已修, 現 91 45/45、92 45/45。
 
 ## 五、開放項
 

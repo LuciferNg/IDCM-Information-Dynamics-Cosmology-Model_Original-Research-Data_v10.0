@@ -27,7 +27,7 @@ O173（M_base / f_bar）→ O174（μ, s 結構化值 + 前向遺留）→ O176�
 |:---|:---|:---|
 | 主腳本 | `scripts/01-06` | **48/48 PASS**（01:9, 02:7, 03:7, 04:6, 05:8, 06:11） |
 | 層 1 數值審計 | `scripts/90_audit_records.py` | **105/106**（1 FAIL = 設計上嘅 A16b/F1） |
-| 層 2 文檔審計 | `scripts/91_doc_audit.py` | **40/40 PASS** |
+| 層 2 文檔審計 | `scripts/91_doc_audit.py` | **45/45 PASS** |
 | 層 3 鏈連貫 | `scripts/92_chain_continuity.py` | **45/45 PASS** |
 
 ## 核心結果（壓縮）

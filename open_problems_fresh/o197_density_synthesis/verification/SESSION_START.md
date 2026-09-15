@@ -51,8 +51,9 @@
    F3 🟡 lambda_lo/hi 係誤差唔係 bounds; F4 🟡 PASS 計數含恆真項; F5 🟡 scripts/06 硬編碼
    print + 死碼 (已修); F6 🟡 T3b「中位」實為幾何均值 (無影響); F7 🟡 審計計數跨文檔漂移
    (99/100 → 104/105 → 105/106, 已同步)。
-2. **層 2 文檔** `verification/scripts/91_doc_audit.py` — 69 組數值出現檢查 + 跨文檔一致性
-   + 48 check ID 覆蓋 + 檔案時序 + 目錄範圍 + 污染檢查 + 第三方法 MC (換 seed)。
+2. **層 2 文檔** `verification/scripts/91_doc_audit.py` — **45/45 PASS**: 69 組數值出現檢查
+   + 跨文檔一致性 + 48 check ID 覆蓋 + 檔案時序 + 目錄範圍 + 污染檢查 + 第三方法 MC (換 seed)
+   + `RESULT_TEMPLATE` 段序符合性。
 3. **層 3 鏈連貫** `verification/scripts/92_chain_continuity.py` — **45/45 PASS**。
 詳細: `verification/docs/05_record_closeout.md`。
 
