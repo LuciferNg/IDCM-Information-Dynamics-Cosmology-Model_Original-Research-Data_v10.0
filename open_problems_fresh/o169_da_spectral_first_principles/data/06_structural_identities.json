@@ -1,0 +1,19 @@
+{
+  "test": "O169/06 結構身份",
+  "passed": 11,
+  "failed": 0,
+  "C_structural": -0.2360679774997897,
+  "E_form": "E(l) = l + sqrt5/2 = (l+1/2) + phi^-1 = 1 + l + phi^-3/2",
+  "delta_form": "delta(l) = -phi^-3 (l - 1/2)",
+  "identities": [
+    "2phi^-1 - phi^-3 = 1",
+    "sqrt5/2 = 1/2+phi^-1 = 1+phi^-3/2",
+    "1/2 = log4(2)",
+    "phi^-3 = sqrt5-2 = 2phi^-1-1",
+    "E(1/2) = phi"
+  ],
+  "degeneracy": {
+    "sqrt5_2": 1.118033988749895,
+    "inv_mean_vg_1_22": 1.119113982034844
+  }
+}
