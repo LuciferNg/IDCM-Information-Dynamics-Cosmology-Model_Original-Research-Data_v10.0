@@ -31,8 +31,9 @@ O51 (譜結構 γ_n/Σγ/Z₂, 82 group delay FAIL) → O76 (D_A 原始形式) �
 O169 → O39/O76/O51/O167 (伸長公式需換新形式) ; O117 (D_H 側另議)
 
 ## 修正交回 (2026-09-15, 用戶指示)
-33 個受影響 O 目錄嘅 `SESSION_START.md` 已寫入「O169 修正交回」段 (受影響檔案定位 + 交回任務 + 免重做清單);
-其中 8 個原本冇 SESSION_START.md 者新建 (o51/o91/o92/o71/o141/h0_tension/p7_reionization/ktree_structure)。
+37 個受影響 O 目錄嘅 `SESSION_START.md` 已寫入「O169 修正點」段 (格式: **修正點 + 問題** —
+上游改咗乜 + 本 O 每個 file:line 問題定位);
+其中 9 個原本冇 SESSION_START.md 者新建 (o51/o91/o92/o71/o141/h0_tension/p7_reionization/ktree_structure + bbn)。
 各 O 原有結論**未改動** — 重驗由該 O 專屬 session 執行。清單與判定見 `docs/04_open_ledger.md` §E。
 
 ## 第二輪: B′ 判定 + 全 repo 檢查器 (2026-09-15, 「先處理A」+「繼續任務」)
