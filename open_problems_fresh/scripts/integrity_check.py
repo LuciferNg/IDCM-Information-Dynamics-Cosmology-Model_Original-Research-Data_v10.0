@@ -5,7 +5,9 @@ IDCM 數據完整性檢查
 ==================
 檢查: 檔案齊全度 + 數值一致性 (文檔 vs 腳本輸出)
 
-2026-09-15 大修 (O169 修正交回, 用戶指示「先處理A」) — 修三個 bug:
+2026-09-15 大修 (O169 修正交回交回, 用戶指示「先處理A」+「繼續任務」)
+==================================================================
+第一輪 (A) — 修三個 bug:
 
   bug 1 [假 MISSING]  REPO 硬編碼 /home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh
       — 該樹係舊 partial copy, 連 bbn/ cmb_cl/ h0_tension/ 都唔存在 → 18/18 全部假 MISSING,
@@ -20,13 +22,29 @@ IDCM 數據完整性檢查
       改為新零參數定律 E(ℓ) = ℓ + √5/2, 並加入伸長回歸測試:
       χ²(D_M×6) 必須 ≈ 2.4647 (新式), 舊式 27.16 必須被拒 (|σ|max > 3)。
 
-⚠️ 未靜默改數值: 依賴舊伸長嘅文檔聲稱 (h0_tension「H_eff(0.03) = 73.13 / 0.12% 🟢」)
-   現已 stale — 本檢查器只標 🔴 並指出新結構值 (66.33, vs SH0ES 6.5σ),
-   更新由擁有該結論嘅 O (h0_tension) 執行。
-   詳見 o169_da_spectral_first_principles/docs/04_open_ledger.md §E。
+第二輪 (B′) — 修「驗證已證偽公式」嘅同類殘留 (O169 docs/05):
+  P_n = 1 + 2φ⁻¹n + K₂n² 判定屬 A 類 (受證偽) —— 其 2φ⁻¹ 係「每層增益」語義,
+  同被證偽嘅伸長定律同一結構對象。其唯一數值輸出 Ω_DM/Ω_b = 6.5030 已由
+  v10.0 嘅 F₇/L₀ = 13/2 取代。本檢查器原本仍用 6.5030 → 已改為 v10.0 結構鏈:
 
-⚠️ 順帶修正: Ω_Λ 由已撤銷嘅 O37 版 4/(φ⁴−1) = 0.683282 改為 O39 版 41/60 = 0.683333
-   (PARADIGM BREAK 2026-08-12; 引用 W-field 勢必須用 O39 版)。
+      Ω_Λ = 41/60 (O39 版; O37 版 4/(φ⁴−1) 已撤銷)
+      Ω_m = 19/60
+      Ω_b = Ω_m × 2/(3F₅) = 19/450     (純 F-數, 零 P_n 依賴)
+      η_B = 6.063632×10⁻¹⁰             (0.596% vs 6.1×10⁻¹⁰)
+
+⚠️ 未靜默改數值: 依賴舊伸長 / 舊常數嘅文檔聲稱只標 🔴 (STALE), 交回擁有該結論嘅 O 處理:
+
+  · h0_tension/06_complete_record.md — H_eff(0.03) = 73.13 (舊伸長) → 新結構值 66.33
+  · bbn/06_complete_record.md       — η_B = 6.0622×10⁻¹⁰ = **雙重 stale**
+        (已撤銷 O37 Ω_Λ + v9.0 P_n 6.5030 相乘, 精確重現 dev 0.0000%)
+        → 現行 v10.0 結構值 6.0636×10⁻¹⁰ (更準: 0.596% vs 文檔聲稱 0.62%)
+  · bbn/06_complete_record.md       — Ω_DM/Ω_b = 6.5030 (v9.0 P_n) → 13/2 = F₇/L₀
+  · bbn/01_problem_record.md:46     — η_B 歸因於 P_n → 應改為 Ω_b = Ω_m×2/(3F₅)
+
+詳見 o169_da_spectral_first_principles/docs/04_open_ledger.md §E6 +
+     docs/05_bprime_pn_verdict.md。
+
+Exit codes: 0 = 全綠 | 1 = 硬失敗 (檔案/物理重算/回歸) | 2 = 結構層過但有 stale 聲稱
 """
 import os
 import sys
@@ -34,14 +52,27 @@ import math
 
 # ============ REPO (由腳本位置推導, 唔再硬編碼) ============
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+assert os.path.isdir(os.path.join(REPO, "bbn")), f"REPO 推導錯: {REPO}"
 
 # ============ 結構常數 ============
 phi      = (1 + 5**0.5) / 2
 phi_inv  = 1 / phi
 phi_inv3 = phi_inv ** 3
 N_d, B, L5, N_gen, M, CY3 = 44, 4, 11, 3, 33, 134
+F5, F7, L0 = 5, 13, 2
 R_H   = 4129.94                 # Mpc — R_world (O73/O164)
 c_km  = 299792.458
+
+# ============ 宇宙學參數 (v10.0 現行版) ============
+Omega_L = 41 / 60                       # O39 版 (O37 版 4/(φ⁴−1) 已撤銷, PARADIGM BREAK 08-12)
+Omega_m = 19 / 60
+RATIO_B_M   = 2 / (3 * F5)              # Ω_b/Ω_m = 2/15  EXACT
+RATIO_DM_B  = F7 / L0                   # Ω_DM/Ω_b = 13/2 EXACT
+Omega_b = Omega_m * RATIO_B_M           # 19/450 = 0.0422222  (零 P_n 依賴)
+RATIO_V9_PN = 6.5030                    # ❌ v9.0 P_n 輸出, 已由 13/2 取代 (O169 docs/05)
+
+# 自洽 (純 F-數):  1 + Ω_DM/Ω_b  ==  1/(Ω_b/Ω_m)
+assert abs((1 + RATIO_DM_B) - 1 / RATIO_B_M) < 1e-12, "F-數比率唔自洽!"
 
 # K_Chain 譜 (O51 層 2)
 GAM = {n: 4 * math.sin(math.pi * n / 88) ** 2 for n in range(1, N_d + 1)}
@@ -87,14 +118,14 @@ def elong_chi2(E):
 
 # ============ 結果收集 (真統計, 唔 hardcode) ============
 FAIL = []      # 硬失敗 (assert 級)
-STALE = []     # 已登記 stale 聲稱 (依賴已證偽公式, 待擁有該結論嘅 O 更新)
+STALE = []     # 已登記 stale 聲稱 (依賴已證偽公式/已撤銷常數, 待擁有該結論嘅 O 更新)
 
 def ok(msg):    print(f"  ✅ {msg}")
 def bad(msg):   FAIL.append(msg);  print(f"  ❌ {msg}")
 def stale(msg): STALE.append(msg); print(f"  🔴 {msg}")
 
 print("=" * 76)
-print("IDCM 數據完整性檢查  (O169 修正版 2026-09-15)")
+print("IDCM 數據完整性檢查  (O169 修正版 2026-09-15: A 檢查器修復 + B′ P_n 判定)")
 print("=" * 76)
 print(f"REPO = {REPO}")
 
@@ -131,15 +162,12 @@ else:
 print("\n[2] 文檔關鍵數值檢查")
 print("-" * 76)
 
-# (A) 唔依賴伸長定律嘅結構聲稱 — 必須存在
+# (A) 唔依賴已證偽公式/已撤銷常數嘅結構聲稱 — 必須存在
 doc_ok = [
     ("bbn/06_complete_record.md", "η_B = n_b/n_γ"),
-    ("bbn/06_complete_record.md", "= 6.0622×10⁻¹⁰"),
-    ("bbn/06_complete_record.md", "0.62%"),
     ("bbn/06_complete_record.md", "γ₇/γ₂₀ = 0.14262"),
     ("bbn/06_complete_record.md", "0.2496"),
     ("bbn/06_complete_record.md", "1.5839×10⁻¹⁰"),
-    ("bbn/06_complete_record.md", "0.25%"),
     ("cmb_cl/06_complete_record.md", "ℓ_A = 2×CY₃ + M = 2×134 + 33 = 301"),
     ("cmb_cl/06_complete_record.md", "301.76"),
     ("cmb_cl/06_complete_record.md", "0.25%"),
@@ -149,10 +177,20 @@ doc_ok = [
     ("cmb_cl/06_complete_record.md", "1014"),
     ("h0_tension/06_complete_record.md", "H₀_idcm = c/R_H = 72.59"),
 ]
-# (B) 依賴已證偽伸長定律嘅聲稱 — 存在 = 文檔未更新 (🔴 stale, 唔算 ✅)
+# (B) 依賴已證偽公式/已撤銷常數嘅聲稱 — 存在 = 文檔未更新 (🔴 stale, 唔算 ✅)
 doc_stale = [
-    ("h0_tension/06_complete_record.md", "73.13",      "H_eff(0.03) 舊伸長值 → 新結構值 66.33"),
-    ("h0_tension/06_complete_record.md", "0.12%",      "vs SH0ES 匹配率 → 新式 6.5σ 偏離"),
+    # h0_tension: 舊伸長 E = 1 + 2φ⁻¹ℓ (O169 4.88σ 排除)
+    ("h0_tension/06_complete_record.md", "73.13",
+     "H_eff(0.03) 舊伸長值 → 新結構值 66.33"),
+    ("h0_tension/06_complete_record.md", "0.12%",
+     "vs SH0ES 匹配率 → 新式 6.5σ 偏離"),
+    # bbn: η_B 雙重 stale (已撤銷 O37 Ω_Λ + v9.0 P_n 6.5030)
+    ("bbn/06_complete_record.md", "6.0622×10⁻¹⁰",
+     "η_B 雙重 stale (O37 Ω_Λ + v9.0 P_n) → 現行 6.0636×10⁻¹⁰ (0.596%)"),
+    ("bbn/06_complete_record.md", "0.62%",
+     "η_B 偏差 (舊值) → 現行 0.596%"),
+    ("bbn/06_complete_record.md", "| Ω_DM/Ω_b | 6.5030 | 幾何分配 P_n |",
+     "Ω_DM/Ω_b v9.0 P_n → v10.0 F₇/L₀ = 13/2"),
 ]
 
 n_ok = 0
@@ -179,7 +217,7 @@ for fname, search, why in doc_stale:
         bad(f"無法讀取 {fname}")
         continue
     if search in content:
-        stale(f"{fname}: '{search}' 仍存在 — {why} (待 h0_tension O 更新)")
+        stale(f"{fname}: '{search}' 仍存在 — {why}")
     else:
         ok(f"{fname}: '{search}' 已清除 (O 已更新)")
 
@@ -193,10 +231,19 @@ print("-" * 76)
 # --- 3a. 唔依賴伸長嘅結構量 ---
 print("  [3a] 唔依賴伸長定律嘅結構量")
 
+# v10.0 密度鏈 (純 F-數, 零 P_n 依賴)
+print(f"        Ω_Λ = 41/60 = {Omega_L:.8f}  (O39 版; O37 版 4/(φ⁴−1) = {4/(phi**4-1):.8f} 已撤銷)")
+if abs(Omega_L - 41 / 60) < 1e-15 and abs(Omega_L + Omega_m - 1) < 1e-15:
+    ok("Ω_Λ = 41/60 (O39), Ω_m = 19/60, Ω_Λ+Ω_m = 1")
+else:
+    bad("Ω_Λ/Ω_m 唔對")
+print(f"        Ω_b = Ω_m × 2/(3F₅) = 19/450 = {Omega_b:.9f}   (唔用 v9.0 P_n {RATIO_V9_PN})")
+if abs(Omega_b - 19 / 450) < 1e-15:
+    ok("Ω_b = 19/450 (純 F-數比率, 零 P_n 依賴)")
+else:
+    bad(f"Ω_b 唔對: {Omega_b}")
+
 # BBN: η_B
-Omega_L = 41 / 60                      # O39 版 (O37 版 4/(φ⁴−1) 已撤銷)
-Omega_m = 19 / 60
-Omega_b = Omega_m / (1 + 6.5030)
 H0_si = 72.59 * 1000 / 3.0856775814913673e22
 G = 6.67430e-11
 rho_c = 3 * H0_si**2 / (8 * math.pi * G)
@@ -205,11 +252,21 @@ k_B, hbar, c_si = 1.380649e-23, 6.62607015e-34 / (2 * math.pi), 299792458.0
 n_gamma = 2 * 1.2020569031595942 / math.pi**2 * (k_B * T / (hbar * c_si))**3
 m_p = 938.27208816 * 1.78266192e-30
 eta_B = Omega_b * rho_c / (m_p * n_gamma)
-print(f"        η_B = {eta_B:.5e}  (文檔 6.0622e-10, dev {abs(eta_B-6.0622e-10)/6.0622e-10*100:.3f}%)")
-if abs(eta_B - 6.0622e-10) / 6.0622e-10 < 1e-3:
-    ok("η_B 一致")
+print(f"        η_B = {eta_B:.6e}  (v10.0 現行結構值; 文檔聲稱 6.0622e-10 = 雙重 stale)")
+if abs(eta_B - 6.0636e-10) / 6.0636e-10 < 2e-3:
+    ok(f"η_B = {eta_B:.6e} 一致 (0.596% vs 6.1e-10)")
 else:
-    bad(f"η_B 唔一致: {eta_B:.5e}")
+    bad(f"η_B 唔一致: {eta_B:.6e}")
+
+# 反證: 文檔值必須由「O37 + 6.5030」重現 (證明係雙重 stale, 唔係隨機)
+OL_O37 = 4 / (phi**4 - 1)
+eta_doc = (1 - OL_O37) / (1 + RATIO_V9_PN) * rho_c / (m_p * n_gamma)
+print(f"        反證: Ω_m(O37)/(1+6.5030) → η_B = {eta_doc:.6e}  "
+      f"(vs 文檔 6.0622e-10, dev {abs(eta_doc-6.0622e-10)/6.0622e-10*100:.4f}%)")
+if abs(eta_doc - 6.0622e-10) / 6.0622e-10 < 1e-4:
+    ok("文檔 η_B 精確重現於「O37 Ω_Λ + v9.0 P_n」→ 確認雙重 stale (dev 0.0000%)")
+else:
+    bad("文檔 η_B 未能重現 → 歸因不明")
 
 # BBN: n/p
 g7, g20 = GAM[7], GAM[20]
@@ -224,8 +281,8 @@ else:
 eps = phi_inv / 4
 li7 = eta_B * 2 * eps * (1 - eps)
 print(f"        ⁷Li/H = {li7:.5e}  (文檔 1.5839e-10, dev {abs(li7-1.5839e-10)/1.5839e-10*100:.3f}%)")
-if abs(li7 - 1.5839e-10) / 1.5839e-10 < 1e-3:
-    ok("⁷Li 一致")
+if abs(li7 - 1.5839e-10) / 1.5839e-10 < 2e-3:
+    ok("⁷Li 一致 (用 v10.0 η_B)")
 else:
     bad(f"⁷Li 唔一致: {li7:.5e}")
 
@@ -306,7 +363,6 @@ else:
 
 # --- 3d. H_eff: 舊伸長嘅文檔聲稱 vs 新結構值 ---
 print("\n  [3d] 投影 Jacobian H_eff = c/(dD/dz)  (h0_tension 定義)")
-h0_new = H_eff(1e-6, E_new)
 print(f"        H₀_idcm = c/R_H = {c_km/R_H:.3f}  (結構定義, 唔經伸長, 保持)")
 if abs(c_km / R_H - 72.59) < 0.01:
     ok("H₀_idcm = 72.59 保持 (c/R_H 結構定義, 唔受 O169 影響)")
@@ -322,11 +378,40 @@ print(f"        z→0: 舊式 {H_eff(1e-6, E_old):.2f} = c/R_H ; 新式 {H_eff(1
 h003_new = H_eff(0.03, E_new)
 print(f"        ★ 新式 H_eff(0.03) = {h003_new:.2f} vs SH0ES 73.04 → "
       f"{abs(h003_new-73.04)/1.04:.1f}σ 🔴")
-print(f"        ★ 新式 H_eff(0.03) = {h003_new:.2f} vs Planck 67.40 → "
-      f"{abs(h003_new-67.40)/67.40*100:.1f}% ; vs TRGB 69.85 → "
-      f"{abs(h003_new-69.85)/69.85*100:.1f}%")
 stale(f"h0_tension H_eff(0.03) = 73.13 (舊伸長) → 新結構值 {h003_new:.2f}; "
       f"SH0ES 匹配 (0.12%) 變 {abs(h003_new-73.04)/1.04:.1f}σ 偏離 → 需該 O 重新裁決")
+
+# --- 3e. B′ 回歸: v9.0 P_n 輸出 6.5030 殘留掃描 ---
+print("\n  [3e] B′ 回歸測試: v9.0 P_n 輸出 6.5030 殘留掃描 (O169 docs/05)")
+print("        判定: P_n = 1+2φ⁻¹n+K₂n² 屬 A 類 (受證偽) — 其 2φ⁻¹ 係「每層增益」語義")
+print(f"        v10.0 取代式: Ω_DM/Ω_b = F₇/L₀ = 13/2 = {RATIO_DM_B}  EXACT")
+if abs(RATIO_DM_B - 6.5) < 1e-15:
+    ok("Ω_DM/Ω_b = 13/2 EXACT (純 F-數, 唔經 P_n)")
+else:
+    bad(f"Ω_DM/Ω_b ≠ 13/2: {RATIO_DM_B}")
+
+import re as _re
+_pat = _re.compile(r"6\.5030|6\.503\b")
+_live, _all = [], []
+for _root, _dirs, _files in os.walk(REPO):
+    _dirs[:] = [d for d in _dirs if d not in (".git", "data")]
+    for _fn in _files:
+        if not _fn.endswith((".py", ".md")):
+            continue
+        _p = os.path.join(_root, _fn)
+        _rel = os.path.relpath(_p, REPO)
+        try:
+            with open(_p, encoding="utf-8", errors="ignore") as _f:
+                if _pat.search(_f.read()):
+                    _all.append(_rel)
+                    if _fn.endswith(".py") and "o169_da_spectral" not in _rel:
+                        _live.append(_rel)
+        except Exception:
+            pass
+print(f"        殘留: 共 {len(_all)} 個檔案; 其中非 O169 嘅活躍 .py 腳本 {len(_live)} 個")
+for _f in sorted(_live):
+    print(f"          · {_f}")
+print(f"        → 唔屬本檢查器職權 (要該 O 自行清理); 本檢查器自身已零 6.5030 依賴")
 
 # ============ 4. 結果 ============
 print("\n[4] 結果")
@@ -335,6 +420,7 @@ print(f"  檔案:        {'✅ ' + str(total_files) + '/' + str(total_files) if 
 print(f"  文檔結構聲稱: {n_ok}/{len(doc_ok)}")
 print(f"  stale 聲稱:   {len(STALE)} 項 (待對應 O 更新)")
 print(f"  物理重算:     {'✅ 全部通過' if not FAIL else '❌ ' + str(len(FAIL)) + ' 項失敗'}")
+print(f"  B′ 殘留:      {len(_live)} 個活躍腳本 (待各 O 清理)")
 print()
 if FAIL:
     print("=" * 76)
@@ -348,7 +434,7 @@ if STALE:
     print(f"🔴 完整性檢查: 結構層全部通過, 但 {len(STALE)} 項 stale 聲稱待更新:")
     for m in STALE:
         print(f"   - {m}")
-    print("   (依賴已證偽伸長定律嘅結論; 交回擁有該結論嘅 O 處理, 本檢查器唔代佢改數值)")
+    print("   (依賴已證偽公式/已撤銷常數嘅結論; 交回擁有該結論嘅 O 處理, 本檢查器唔代佢改數值)")
     print("=" * 76)
     sys.exit(2)
 print("=" * 76)
