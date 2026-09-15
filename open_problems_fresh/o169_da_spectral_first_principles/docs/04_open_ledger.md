@@ -78,3 +78,80 @@ DESI fiducial 147.09            → χ² = 2.465/5
 | O51/82 | C_final = 0.0759×√5 補齊 → 證偽; 正確 C = −φ⁻³ |
 | O39 / O167 | 引用 D_app 公式處需換新形式 |
 | O117 | D_H ≠ dD_A/dz 保持; D_H 缺口未閉合 |
+
+## E. 修正交回執行記錄 (2026-09-15, 用戶指示)
+
+> 用戶指示: 「在受影響 O 系列嘅 SESSION_START 寫入修正部分及要求該 session 重新驗證和推導
+> 未閉合或已證偽部分, 交回專屬 session 處理」。本節記錄執行結果。
+
+### E1. 影響面精確判定 (grep 而非推斷)
+
+全 repo grep 舊伸長係數 (`2φ⁻¹` / `1.236068` / `0.1697` / `0.169733`), 命中 40 個目錄。
+再逐條判讀, `2φ⁻¹` 有**兩個唔同角色**, 必須分開:
+
+| 角色 | 內容 | 判定 |
+|:--|:--|:--|
+| **A. 伸長/投影因子** | `1 + 2φ⁻¹ℓ` 出現喺 D_app / D_A | **受影響** (被證偽) |
+| **B. φ-代數常數** | `Ω_b = 2φ⁻¹/(5(φ⁴−1))`、`2φ⁻¹/100`、`2ε = 2φ⁻¹/B`、`S_fib = φ⁻¹ᵏ`、`W₀² = 1.23607` | **唔受影響** (純數值角色) |
+| **B′. 同形函數 (🟡 待核對)** | `P_n = 1 + 2φ⁻¹n + K₂n²` (質量分配, O14/o116/ckm_reconstruction/bbn) | 函數形同被證偽嘅伸長一樣 → 需獨立核對「每層增益」係咪同一結構對象 |
+
+### E2. 交回清單 (33 個目錄, 全部已寫入 SESSION_START.md)
+
+| # | 目錄 | 交回重點 |
+|--:|:--|:--|
+| 1 | `o76_z_redshift_translation` | 伸長定律原始定義者: z_eff 指數 2φ⁻¹/ln4 → 1/ln4; Nyquist πR 0.9990 重審 |
+| 2 | `o51_kchain_origin` | §9.13 C = −0.1697 → 升級為「已被 O169 取代」; 裁決 C_delay 身份 |
+| 3 | `o167_cmb_h0_tension` | O-A 分流可閉合; ★θ* 用嘅 D_A(z*) = (24/7)R 需重推 (E = 3.4286 vs 新 6.171) |
+| 4 | `o117_dh_line_of_sight` | C_DM/C_DH 重推; D_H ≠ dD_A/dz 保留 |
+| 5 | `o170_phase_depth_distance` | 全部 scripts C_D = −0.1697 → 新形; kernel scan baseline |
+| 6 | `o93_cc_hz` | 9 個 route scripts + verifier |
+| 7 | `o91_s8_tension` | 7 scripts + CMB normalization |
+| 8 | `o92_kids_s8` | ★docs/99「C = −0.1697 (理論推導, 非擬合)」係錯嘅 |
+| 9 | `o99_light_ontology` | ★scripts/05:57 嘅 check 鎖死舊公式 |
+| 10 | `o104_i_star_d_app_bridge` | I* ↔ D_app bridge 重推 |
+| 11 | `o71_sum_mnu` | DESI DR2 raw analysis 重跑 |
+| 12 | `o141_data_source_preference` | ★LRG1 −3.05σ → −1.00σ → 數據源偏好結論可能反轉 |
+| 13 | `o140_finite_spectral_relativity` | FSR 觀測測試 |
+| 14 | `o100_cl_to_pk` | ★line 141 把 C 當加數寫 (形狀錯) |
+| 15 | `o118_desi_highz_residuals` | χ² 42.23 → 18.09 重算 |
+| 16 | `o86_sm_gr_coupling` | SM×GR Lagrangian 投影度規項 |
+| 17 | `o33_projection_mechanism` | ★重開「伸長因子 ↔ Ω_m/Ω_Λ」開放問題 |
+| 18 | `o18_heff_highz` | ★★H(z) 由 dE/dℓ = 2φ⁻¹ → 1, 公式全變 |
+| 19 | `o73_h0_first_principles` | 參數鏈接地圖 |
+| 20 | `o11_maser_h0` | Mendeleev D_app |
+| 21 | `o97_phi_cosmic_origin` | ★「D_app 每層因子 = √5」歸屬更正 |
+| 22 | `o110_system_integration` | D_app 引用 |
+| 23 | `o72_kchain_ktree_reality` | H 系列框架 |
+| 24 | `o32_galaxy_rotation` | 宇宙學尺度引用 |
+| 25 | `o31_xi_zeros_fixedpoints` | DESI/JWST 驗證 |
+| 26 | `little_red_dots` | ★#17 D_app/N(z) 互補關係重推 |
+| 27 | `crystal_stress` | 同上 #17 |
+| 28 | `h0_tension` (舊目錄) | H₀ 投影公式 60 重驗 |
+| 29 | `p7_reionization` | d_L = D_app 前向模型 |
+| 30 | `ktree_structure` | master verification + 基礎文章 |
+| 31 | `o39_wfield_condensate` | ★「每層 φ⁻¹ 增益」證偽; (Ω_Λ/Ω_m)·φ⁻¹ = 4/3 機制重論證 |
+| 32 | `o14_omega_b_direct` | 🟡 P_n 核對 |
+| 33 | `o116_dm_abundance` | 🟡 P_n 核對 + C 引用 |
+
+新建 SESSION_START.md (原本冇): o51, o91, o92, o71, o141, h0_tension, p7_reionization, ktree_structure。
+其餘 25 個為**追加** (原有內容零改動, 只加註)。
+
+### E3. 核對過但唔受影響 (免重做)
+
+`o163_dm_identity`、`o15_li7_linearity`、`o10_peak_amplitudes`、`o121_black_hole_entropy`、`bbn`、
+`ckm_reconstruction`、`o75_naming_convention`、`o69`(γ_n 譜) 等 — 命中都係 φ-代數常數角色 (B),
+唔係伸長因子。⚠️ `o121` 嘅 `W₀² = ε/(2κ) = 1.23607` 同 `2φ⁻¹` 數值相同 — 值得該 O 自查係咪巧合。
+
+### E4. 交回程序本身發現嘅基建問題 🔴
+
+1. **`~/.hermes/scripts/pre-patch-backup.sh` 有兩個 bug** (已修, 原檔備份喺 `~/.hermes/backups/`):
+   - 只讀 `$1` → **多檔案 call 會靜默跳過其餘檔案** (skill 規則 4「一次過 backup」實際失效)
+   - 只用 basename → 唔同目錄同名檔案 (本次 25 個 `SESSION_START.md`) 會互撞覆蓋
+   - 修復: 巡迴所有參數 + 父目錄限定命名 + 同秒自動加序號 + 失敗 exit 1
+2. **repo 級 `scripts/integrity_check.py:174`** 內含舊 D_app 定義 → **呢個係全 repo 完整性檢查器**,
+   會繼續「通過」已證偽公式。⚠️ 未改 (唔屬 O 目錄, 待用戶指示)。
+
+### E5. 未動嘅嘢 (交回原則)
+
+本程序**只寫 SESSION_START.md 嘅修正段**, 冇改任何 O 嘅 `01_problem_record.md` / `docs/` /
+`final_result.md` — 重驗與重推結果由該 O 專屬 session 自行寫入 (避免上游越權覆蓋下游結論)。
