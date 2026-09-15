@@ -1,4 +1,9 @@
-# O200 — 干涉相位與 11-adic 延伸 (Interference Phase & 11-adic Extensions)
+# O196/11adic_extension — 干涉相位與 11-adic 延伸
+
+> **⚠️ 合併狀態**: 本目錄原名 **o200_interference_11adic**（誤開, 未經用戶批准）。
+> 2026-09-15 用戶指示合併回 O196 ⟹ git mv 入
+> `o196_odd_dominant_closure/11adic_extension/` — 內容全部歸 O196 名下。
+> 主記錄見 `../docs/01_closure.md`（O196 docs 冇此延伸章節, 以本目錄 docs 為準）。
 
 > **狀態**: 🟢 已閉合 (2026-09-15)
 > **scripts**: 01-07 · **綜合**: 11/11 PASS

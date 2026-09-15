@@ -1,4 +1,10 @@
-# SESSION_START — o200_interference_11adic
+# SESSION_START — o196/11adic_extension (干涉相位與 11-adic 延伸)
+
+> **⚠️ 合併狀態**: 本目錄原名 **o200_interference_11adic**（誤開, 未經用戶批准）。
+> 2026-09-15 用戶指示「沒喊過開O199和O200，把所有O199和O200問題合併回O196」
+> ⟹ 全部內容 git mv 入 **O196 `o196_odd_dominant_closure/11adic_extension/`**。
+> 以下「O200」字樣一律指 O196 就地攻堅延伸，唔係獨立 O。
+> 主 O196 記錄見 `../SESSION_START.md §二b` + `../final_result.md 攻堅延伸`。
 
 > **日期**: 2026-09-15
 > **狀態**: 🟢 已閉合 — scripts/01-07 (綜合 11/11 PASS)
