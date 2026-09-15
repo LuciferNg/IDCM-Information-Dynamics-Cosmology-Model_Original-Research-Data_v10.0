@@ -24,6 +24,8 @@
 | 12 | 2026-09-15 | 攻堅 4 | f(d) 完整值分佈 🟡: 區塊結構確認 (長 5 常數, δ∈{0,1,2}) | scripts/13 | 部分 PASS |
 | 13 | 2026-09-15 | 合併回 O196 | 用戶指示合併 ⟹ git mv 入 o196_odd_dominant_closure/11adic_extension/ | SESSION_START.md, final_result.md | git mv 保留歷史 |
 | 14 | 2026-09-15 | 閉合審計 | 獨立驗證 44/44 PASS; 文檔標題/依賴鏈合併標記修正 | ../scripts/90_verify_all.py | 44/44 PASS |
+| 15 | 2026-09-15 | 鏈連續性審計 | 依賴鏈 + 交叉引用 + 常數來源 65/65 PASS; §十 驗證章節由 git 52fff5b 原版還原 | ../scripts/92_chain_continuity.py | 65/65 PASS |
+| 16 | 2026-09-15 | 修正輪 | final_result 重構為 RESULT_TEMPLATE 段序 (狀態→結論→關鍵公式→依賴) | final_result.md, ../scripts/91_doc_audit.py | 91: 46/46 PASS |
 
 ## 一、問題陳述
 

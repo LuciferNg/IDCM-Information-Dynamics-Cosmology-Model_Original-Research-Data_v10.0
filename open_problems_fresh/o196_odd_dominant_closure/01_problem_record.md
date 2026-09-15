@@ -15,6 +15,8 @@
 | 9 | 2026-09-15 | 攻堅延伸 2 | Re(r₁)≈1/136 降級巧合 (極點推離 12 階 dev 4.9e-33); |r_k|≈j_k/2 根譜統一 | 11adic_extension/scripts/08-12 | scripts/10, 12 |
 | 10 | 2026-09-15 | 合併回 O196 | 用戶指示「沒喊過開O199和O200」⟹ git mv 全部內容入 O196 | SESSION_START.md §二b, final_result.md | git mv 保留歷史 |
 | 11 | 2026-09-15 | 閉合審計 | 獨立驗證 script 44/44 PASS; 文檔標題/依賴鏈合併標記修正; 時序索引建立 | scripts/90_verify_all.py | 44/44 PASS |
+| 12 | 2026-09-15 | 鏈連續性審計 | 依賴鏈 O190→O196 + 上游來源 + 交叉引用目標 + 常數來源追溯 65/65 PASS; 恢復 11adic docs §十 驗證章節 (攻堅延伸插入時被覆蓋, 由 git 52fff5b 原版還原) | scripts/92_chain_continuity.py | 65/65 PASS |
+| 13 | 2026-09-15 | 修正輪 | final_result 重構為 RESULT_TEMPLATE 段序 (狀態→結論→關鍵公式→依賴); 91 加 template 段序符合性檢查 | final_result.md, 11adic_extension/final_result.md, scripts/91_doc_audit.py | 91: 46/46 PASS |
 
 ## 一、問題陳述
 

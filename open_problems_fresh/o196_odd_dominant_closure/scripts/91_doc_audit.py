@@ -140,6 +140,26 @@ for doc in DOCS:
     if "O199" in cleaned:
         check(f"無 O199 污染 ({doc.name})", False, "O199 喺合併語境外出現")
 
+# ============ D) RESULT_TEMPLATE 段序符合性 (2026-09-15 修正輪) ============
+print("\n== D) RESULT_TEMPLATE 段序符合性 (狀態→結論→關鍵公式→依賴) ==")
+TPL_ORDER = ["狀態", "結論", "關鍵公式", "依賴"]
+for label, p in [("O196 final_result", BASE/"final_result.md"),
+                 ("11adic_extension final_result", BASE/"11adic_extension/final_result.md")]:
+    secs = re.findall(r'^## (.+?)$', text_for(p), re.M)
+    idx = []
+    for s in secs:
+        for i, t in enumerate(TPL_ORDER):
+            if s.startswith(t):
+                idx.append(i); break
+    check(f"{label}: 四段齊 + 依 template 序",
+          len(idx) == 4 and idx == sorted(idx), f"{secs}")
+    check(f"{label}: 狀態 emoji 統一 (🟢/🟡/🔴)",
+          any(s.startswith("狀態") and any(e in s for e in "🟢🟡🔴") for s in secs))
+    # 依賴箭頭 → 表示「依賴於」
+    t = text_for(p)
+    dep = re.search(r'## 依賴\n+(.+)', t)
+    check(f"{label}: 依賴用 → 箭頭", bool(dep) and "→" in dep.group(1))
+
 # 範圍檢查: 目錄內應該只有預期文件
 print("\n== C) 目錄範圍檢查 ==")
 expected = {
