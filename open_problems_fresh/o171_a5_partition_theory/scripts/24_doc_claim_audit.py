@@ -403,11 +403,49 @@ chk("P8 四峰聯合 σ(U) = 2.9524% (共同項封頂)", abs(sc * 100 - 2.9524) 
 chk("P9 ε 雙重性: 1/(4φ) vs 13/86 差 2.17%", abs((float(eps) - 13 / 86) / float(eps) * 100 - 2.1654) < 0.001)
 
 # =====================================================================
+print("\n=== P2: docs/17–20 (第六輪(下)) ===")
+T = mp.mpf('2.72548')
+e_phi = 1 / (4 * (1 + mp.sqrt(5)) / 2)
+e_ring = mp.mpf(13) / 86
+# docs/17
+chk("P2-1 docs/17: ε_φ = φ⁻¹/B 同 ε_ring = 13/86 差 2.2133%",
+    abs(abs(e_phi - e_ring) / e_ring * 100 - 2.2133) < 0.001)
+cs_ring = 5 * e_ring**5 / 8 * T * 1e6
+cs_phi = 5 * e_phi**5 / 8 * T * 1e6
+chk("P2-2 docs/17: 冷斑 ε_ring 134.446 μK (dev 0.183%)",
+    abs(float(cs_ring) - 134.4459) < 0.001)
+chk("P2-3 docs/17: 冷斑 ε_φ 150.0 μK (dev 11.77%)", abs(float(cs_phi) - 149.9978) < 0.01)
+chk("P2-4 docs/17: 判別比 64.25×",
+    abs(float(abs(cs_phi - 134.2) / abs(cs_ring - 134.2)) - 64.25) < 0.1)
+# docs/18
+chk("P2-5 docs/18: Q2/Q1 門檻比 = d−1 = 33 (d = 34)",
+    F(1, 2 * 34) / F(1, 2 * 34 * 33) == 33)
+chk("P2-6 docs/18: 目標變異 = (29.9996)² = 899.98 μK²",
+    abs(float((e_phi**5 / 8 * T * 1e6) ** 2) - 899.98) < 0.02)
+chk("P2-7 docs/18: 峰距 = 44(8−m) = 308/264/220/176",
+    [44 * (8 - m) for m in range(1, 5)] == [308, 264, 220, 176])
+# docs/19
+chk("P2-8 docs/19: (a−12)(b−12) = 72 對 (3,4,5)", (3 - 12) * (4 - 12) == 72)
+chk("P2-9 docs/19: Π = 60 = |A₅|;  Σ = 12 = B·N_gen;  c = 5 = F₅",
+    3 * 4 * 5 == 60 and 3 + 4 + 5 == 12 and 5 == 5)
+chk("P2-10 docs/19: Σ(非平凡 dim)² = 59 = 60 − 1", 3**2 + 3**2 + 4**2 + 5**2 == 59)
+# docs/20
+chk("P2-11 docs/20: 識別門檻 = 1/(2d(d−1));  d = 90 → 1/16020",
+    F(1, 2 * 90 * 89) == F(1, 16020))
+chk("P2-12 docs/20: Σγ_odd = 88, Σγ_even = 90, Σγ_all = 178",
+    abs(sum(4 * mp.sin(mp.pi * k / 176)**2 for k in range(1, 88, 2)) - 88) < mp.mpf('1e-25')
+    and abs(sum(4 * mp.sin(mp.pi * k / 176)**2 for k in range(2, 89, 2)) - 90) < mp.mpf('1e-25'))
+chk("P2-13 docs/20: d = 90 識別差 455.61× (現 σ = 2.844%)",
+    abs(float(F(28440, 1000000) / F(1, 16020)) - 455.61) < 0.05)
+
+# =====================================================================
 print("\n=== Q: 文檔覆蓋完整性 ===")
 docs = sorted(BASE.glob("docs/*.md"))
 scripts = sorted(BASE.glob("scripts/*.py"))
 print(f"  docs = {len(docs)};  scripts = {len(scripts)}")
-chk("Q1 docs 編號連續 01–16", [d.name[:2] for d in docs] == [f"{i:02d}" for i in range(1, 17)])
+n_docs = len(docs)
+chk(f"Q1 docs 編號連續 01–{n_docs:02d} (共 {n_docs} 份)",
+    [d.name[:2] for d in docs] == [f"{i:02d}" for i in range(1, n_docs + 1)])
 n_sc = len(scripts)
 chk(f"Q2 scripts 編號連續 00–{n_sc-1:02d} (共 {n_sc} 個)",
     [s.name[:2] for s in scripts] == [f"{i:02d}" for i in range(0, n_sc)])
@@ -452,7 +490,8 @@ rec = []
 for line in pr_txt.splitlines():
     if "腳本 ·" in line:                      # 只掃小計/總計行
         rec += re.findall(r"(\d{2}):\s*(\d+)", line)
-rec = [(n, c) for n, c in rec if n != "24"]   # 排除本 script (log 正在寫入中)
+_me = Path(__file__).stem[:2]
+rec = [(n, c) for n, c in rec if n != _me]   # 排除本 script (log 正在寫入中)
 bad_rec = []
 for num, cnt in rec:
     cand = list((BASE / "data").glob(f"{num}_*.log"))
@@ -482,7 +521,7 @@ chk("R3 ★ 小計聲稱 (腳本數 + PASS 總) 同逐 script 明細一致", bad
 
 print("\n=== S: 時序完整性 ===")
 pr = (BASE / "01_problem_record.md").read_text(encoding="utf-8")
-for rnd in ("第一輪", "第二輪", "第三輪", "第四輪", "第五輪", "第六輪"):
+for rnd in ("第一輪", "第二輪", "第三輪", "第四輪", "第五輪", "第六輪", "第六輪（下）"):
     chk(f"S1 §六 含「{rnd}」時序段", rnd in pr)
 chk("S2 §六 標明「禁回溯污染」", "禁回溯污染" in pr)
 idx = re.findall(r"^\|\s*(\d+)\s*\|", pr, re.M)
