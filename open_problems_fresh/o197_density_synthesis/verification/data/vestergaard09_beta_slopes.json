@@ -1,0 +1,28 @@
+{
+  "source": "Vestergaard & Osmer 2009, ApJ 699, 800 (arXiv:0904.3348v1) — 本地 PDF 抽取 (pdftotext)",
+  "definition": "Ψ(M_BH,z) = comoving space density of black holes per unit BH mass (Ψ = dN/dM); 單位 Gpc^-3 M☉^-1 (Table 6/7/9)",
+  "beta_definition": "高質量端斜率 β, 由 Ψ ∝ M^β 擬合 (Vestergaard+08 方法); 即 d lnΨ/d lnM",
+  "footnote6_LBQS": {
+    "note": "PDF footnote 6 原文逐 bin 值; 質量 bin 下限選取以確保 (近乎) 完備",
+    "bins": [
+      {"z_bin": "[0.2:0.5]", "beta": -3.0, "mass_min_dex": 8.8},
+      {"z_bin": "[0.5:1.0]", "beta": -3.4, "mass_min_dex": 9.2},
+      {"z_bin": "[1.0:1.5]", "beta": -2.7, "mass_min_dex": 9.6},
+      {"z_bin": "[1.5:2.0]", "beta": -2.9, "mass_min_dex": 9.6},
+      {"z_bin": "[2.0:3.0]", "beta": -2.6, "mass_min_dex": 10.0}
+    ],
+    "uncertainty_range": [0.4, 1.4],
+    "uncertainty_note": "論文: uncertainties ranging between 0.4 to 1.4; 冇逐 bin 個別 σ"
+  },
+  "other_samples": {
+    "BQS": {"beta": -3.6, "sigma": 1.0, "mass_min_dex": 8.6},
+    "SDSS_DR3_z_lt_3.8": {"beta": -3.3, "sigma": null},
+    "SDSS_color_selected_z_3.6_5": {"beta": -1.75, "sigma": 0.56, "mass_min_dex": 8.6}
+  },
+  "quotes": {
+    "summary": "amplitudes and slopes (of about β ≈ −3.3 with uncertainties between 0.4 and 1.4) of the high mass end of the mass functions for different redshift bins and across quasar samples for redshifts below ∼3.5",
+    "flatter": "for the well-defined and complete SDSS color-selected sample of quasar at redshifts between 3.6 and 5 we find a somewhat flatter slope of β = −1.75 ± 0.56",
+    "turnover_caveat": "mass functions show turn-overs toward low masses due to incompleteness"
+  },
+  "data_file_note": "LBQS_zbin 逐點值喺 o174_condensation_rate_lagrangian/data/vestergaard09_bqs_bhmf.json (Psi = dN/dM, Gpc^-3 M☉^-1)"
+}

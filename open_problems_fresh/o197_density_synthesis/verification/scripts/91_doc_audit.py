@@ -40,6 +40,10 @@ DOCS = {
     "d2":  BASE / "docs/02_measured_eddington_attack.md",
     "d3":  BASE / "docs/03_growth_closure.md",
     "d4":  BASE / "docs/04_record_audit.md",
+    "d5":  BASE / "docs/05_record_closeout.md",
+    "d6":  BASE / "docs/06_tail_shape_attack.md",
+    "d7":  BASE / "docs/07_zf_structural_attack.md",
+    "d8":  BASE / "docs/08_w_fraction_attack.md",
 }
 TXT = {k: rd(v) for k, v in DOCS.items()}
 
@@ -179,8 +183,36 @@ CHECKS = [
     ("高端 seed z = 0.12", ["0.12"], ["pr", "d3", "ss", "fr"], "T8h1"),
     ("channel forward 2.34e7", ["2.34e7"], ["pr", "d3", "ss", "fr"], "T8h3"),
     ("channel 張力 −0.31 ln", ["-0.31"], ["pr", "d3", "ss", "fr"], "T8h3"),
+    # scripts/07 開放項 4 攻堅
+    ("★記錄目標 −0.82/dex 係全局 OLS", ["-0.82"], ["pr", "d6"], "B1 重現"),
+    ("論文 β = −2.6 (z=2.5 bin)", ["-2.6"], ["d6"], "footnote 6"),
+    ("β 不確定度 0.4–1.4", ["0.4"], ["d6"], "footnote 6"),
+    ("修正後斜率比 1.76", ["1.76"], ["pr", "d6"], "C2"),
+    ("模型 β 窗平均 −4.58", ["-4.58"], ["d6"], "C1"),
+    ("顯著性 1.4σ–5.0σ", ["1.41σ", "4.95σ"], ["d6"], "C3"),
+    ("λ 散射 G 跨 72 dex", ["72"], ["d6"], "D2 證偽"),
+    ("★z=0.35 預測中位 1.2e15", ["1.2e15", "1.20e15"], ["pr", "d6"], "D4 新證偽"),
+    ("★需 seed 0.58 M☉ (次恆星)", ["0.58"], ["pr", "d6"], "D4b"),
+    ("★z_f ≤ 2.26 (seed ≥ 100 M☉)", ["2.26"], ["d6"], "D4c"),
+    ("形成時間散佈 σ_tf = 2.30 Gyr", ["2.30"], ["d6"], "D5"),
+    ("層級疊加 −1.53/dex", ["-1.53"], ["d6"], "D6"),
+    # scripts/08 開放項 5 攻堅
+    ("z_f* 獨立重現 13.42", ["13.42"], ["d7"], "A1"),
+    ("★channel-resolved 反演 22.68", ["22.68"], ["pr", "d7"], "A2 模型依賴"),
+    ("★z_f* 全變動範圍 spread 22.67", ["22.67"], ["pr", "d7"], "A6"),
+    ("L_min 掃描 27.21→7.33", ["27.21", "7.33"], ["d7"], "A3"),
+    ("t_f = t_ef → z = 9.59", ["9.59"], ["d7"], "B"),
+    ("t_f = t_S → z = 10.36", ["10.36"], ["d7"], "B"),
+    ("13 命中 10 條 (11 → 15)", ["10條", "15"], ["d7"], "C form density"),
+    # scripts/09 開放項 1 攻堅
+    ("w_obs = 0.20 (2/10)", ["0.20"], ["pr", "d8"], "W1"),
+    ("選擇偏置 2.9%", ["2.9"], ["d8"], "W1"),
+    ("CP CI [0.025, 0.556]", ["0.556"], ["d8"], "W2"),
+    ("7/7 候選全落 CI", ["7/7"], ["d8"], "W2b"),
+    ("0.2 命中 237 條", ["237"], ["d8"], "W3"),
+    ("需 n ≈ 97", ["97"], ["pr", "d8"], "W4"),
 ]
-ALLDOC = ("pr", "d1", "d2", "d3", "ss", "fr", "d4")
+ALLDOC = ("pr", "d1", "d2", "d3", "ss", "fr", "d4", "d5", "d6", "d7", "d8")
 bad = []
 cov = {}
 for name, needles, dkeys, why in CHECKS:
@@ -216,17 +248,27 @@ chk("b", "docs/02 同時記舊 5.73e43 + 新 1.02e45 (新舊對比清楚)",
 # T5b 撤銷必須有標記 (禁止靜默改寫)
 chk("b", "problem_record 有 T5b 撤銷標記 (⚠️ 撤銷)", "⚠️ 撤銷" in TXT["pr"] or "撤銷" in TXT["pr"])
 chk("b", "problem_record 有 N=434 更新標記 (⚠️ 更新)", "⚠️ 更新" in TXT["pr"])
-# 計數一致性: 48/48 喺所有相關文檔
+# 計數一致性 (09-16 攻堅後: 四層各自獨立; 舊值保留為「計數沿革」)
 for k in ["pr", "ss", "fr"]:
-    chk("b", f"{k} 記 48/48 PASS", "48/48" in NT[k])
-# 審計計數: 全部文檔同一數字
-tally = set()
-for k, t in TXT.items():
-    for m in re.finditer(r"(\d+)/(\d+)\s*PASS", norm(t)):
-        if int(m.group(2)) > 50 and int(m.group(2)) != 48:
-            tally.add((k, m.group(0)))
-chk("b", "審計計數 (90 腳本) 文檔間一致", len(set(x[1] for x in tally)) <= 1,
-    f"出現: {sorted(set(x[1] for x in tally))}")
+    chk("b", f"{k} 記主腳本 83/83 PASS", "83/83" in NT[k])
+for k in ["pr", "ss", "fr"]:
+    chk("b", f"{k} 記層 1 125/126 PASS", "125/126" in NT[k])
+for k in ["ss", "fr"]:
+    chk("b", f"{k} 記層 2 62/62 PASS", "62/62" in NT[k])
+# 舊計數必須保留為歷史 (禁止刪除歷史 = 另一種回溯污染)
+chk("b", "計數沿革保留: 主腳本 48/48 仍見於時序索引 (歷史)", "48/48" in NT["pr"])
+chk("b", "計數沿革保留: 層 1 105/106 仍見於 §四-B/§四-E (歷史)", "105/106" in NT["pr"])
+chk("b", "計數沿革保留: 層 2 45/45 仍見於 §四-C (歷史)", "45/45" in NT["pr"])
+# 每層計數分母唯一 ⟹ 跨文檔一致 (唔會同其他層混淆)
+def tally_den(den):
+    vals = set()
+    for k, t in TXT.items():
+        for m in re.finditer(r"(\d+)/" + den + r"\b", norm(t)):
+            vals.add(m.group(0))
+    return vals
+for den, name in [("83", "主腳本"), ("126", "層 1"), ("62", "層 2")]:
+    v = tally_den(den)
+    chk("b", f"{name} 計數 (/ {den}) 文檔間一致", len(v) <= 1, f"出現: {sorted(v)}")
 
 print()
 print("=" * 78)
@@ -239,6 +281,10 @@ TEST_IDS = {
     "04": ["V1", "V2", "V3", "V3b", "V4", "V5"],
     "05": ["V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8"],
     "06": ["T8a", "T8a'", "T8b", "T8c", "T8d", "T8e", "T8f", "T8h1", "T8h2", "T8h3", "T8g"],
+    "07": ["A1", "A2", "B1", "B2", "C1", "C2", "C3", "C4", "D1", "D2", "D3", "D4", "D4b",
+           "D4c", "D5", "D6"],
+    "08": ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "C1", "C2", "D1", "D2"],
+    "09": ["W1", "W1b", "W2", "W2b", "W3", "W3b", "W4"],
 }
 # 對每個 script 嘅「發現」層: 文檔必須覆蓋該 script 嘅主題 (用主題關鍵詞檢查, 唔要求逐 ID 出現)
 TOPIC = {
@@ -248,13 +294,17 @@ TOPIC = {
     "04": ("UHz1 + 斜率", ["1.016e-3", "3.085", "-4.23", "1.99e7"]),
     "05": ("實測 λ 攻堅", ["0.702", "5.40e6", "-1.78", "5.92", "-0.648", "1.02e45"]),
     "06": ("成長閉合", ["5.0e8", "13.43", "3.17e7", "66", "303", "7.94e8", "8.66e6", "2.34e7"]),
+    "07": ("開放項 4 尾斜率攻堅", ["-2.6", "1.76", "1.2e15", "0.58", "2.26"]),
+    "08": ("開放項 5 z_f* 可識別性", ["22.68", "22.67", "9.59", "10.36", "13.42"]),
+    "09": ("開放項 1 w 份額", ["0.556", "2.9", "237", "97"]),
 }
+DOCKEYS = ("pr", "d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "ss", "fr")
 for sid, (topic, keys) in TOPIC.items():
-    missing = [k for k in keys if not any(norm(k) in NT[d] for d in ("pr", "d1", "d2", "d3", "ss", "fr"))]
+    missing = [k for k in keys if not any(norm(k) in NT[d] for d in DOCKEYS)]
     chk("c", f"scripts/{sid} 主題「{topic}」全部關鍵值有文檔記錄", not missing,
         f"缺: {missing}" if missing else f"{len(keys)} 個關鍵值全中")
 n_checks = sum(len(v) for v in TEST_IDS.values())
-chk("c", f"scripts/01-06 共 {n_checks} 個 check ID 已枚舉 (48 PASS)", n_checks == 48,
+chk("c", f"scripts/01-09 共 {n_checks} 個 check ID 已枚舉 (83 PASS)", n_checks == 83,
     f"實數 {n_checks}")
 
 print()
@@ -313,10 +363,15 @@ want = {
     "docs/01_seed_spectrum_verification.md", "docs/02_measured_eddington_attack.md",
     "docs/03_growth_closure.md", "docs/04_record_audit.md",
     "docs/05_record_closeout.md",
+    "docs/06_tail_shape_attack.md", "docs/07_zf_structural_attack.md",
+    "docs/08_w_fraction_attack.md", "docs/09_attack_round_closeout.md",
     "data/harikane23_table3_eddington.json",
+    "data/vestergaard09_beta_slopes.json",
     "scripts/01_two_channel_spectrum.py", "scripts/02_harikane_placement.py",
     "scripts/03_eddington_forward.py", "scripts/04_uhz1_tail.py",
     "scripts/05_edd_ratio_data.py", "scripts/06_growth_closure.py",
+    "scripts/07_tail_shape.py", "scripts/08_zf_structural.py",
+    "scripts/09_w_fraction.py",
     "scripts/90_audit_records.py", "scripts/91_doc_audit.py",
     "scripts/92_chain_continuity.py",
 }

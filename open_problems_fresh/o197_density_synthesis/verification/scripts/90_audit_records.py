@@ -603,6 +603,150 @@ chkbool("F6", "★scripts/03 T3b 標籤: exp(E[ln M]) 係幾何均值, 非中位
         True, f"(幾何均值 {geo_pos:.3e} vs 真中位 {med_pos:.3e}, 差 {abs(geo_pos/med_pos-1)*100:.0f}%) "
               f"— 結論 (證偽) 唔變")
 
+# ============================================================
+print()
+print("=" * 78)
+print("G. 09-16 開放項攻堅 (scripts/07/08/09, docs/06/07/08) 獨立重算")
+print("=" * 78)
+# 全部用 mpmath dps=60 + 自寫 OLS/binomial-tail (唔用 scipy), 唔 import scripts/07-09
+
+VEST_A = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/"
+              "o174_condensation_rate_lagrangian/data/vestergaard09_bqs_bhmf.json")
+VA = json.load(open(VEST_A))
+ptsA = sorted([(d["logM"], d["Psi"]) for d in VA["LBQS_zbin"] if d["z"] == 2.5 and d["Psi"]])
+print(f"  LBQS z=2.5 逐點: {len(ptsA)} 點, logM {ptsA[0][0]}–{ptsA[-1][0]}")
+
+# G1/G2 全局 OLS vs 高端 2 點斜率 (開放項 4 比較修正)
+xsA = [mp.mpf(str(x)) for x, _ in ptsA]
+ysA = [mp.log(mp.mpf(str(p))) for _, p in ptsA]
+nA = len(xsA); mxA = sum(xsA) / nA; myA = sum(ysA) / nA
+b_all_A = sum((x - mxA) * (y - myA) for x, y in zip(xsA, ysA)) / sum((x - mxA) ** 2 for x in xsA)
+chk("G1", "★記錄「−0.82/dex」= 全局 OLS 跨峰值 (獨立重算)", b_all_A, mp.mpf("-0.823"), 5e-3)
+mass_min_A = mp.mpf("10.0")
+tailA = [p for p in ptsA if mp.mpf(str(p[0])) >= mass_min_A]
+b_tail_A = ((mp.log(mp.mpf(str(tailA[-1][1]))) - mp.log(mp.mpf(str(tailA[0][1]))))
+            / (mp.mpf(str(tailA[-1][0])) - mp.mpf(str(tailA[0][0]))))
+print(f"    高端 2 點 (logM ≥ 10.0, {len(tailA)} 點) 直接斜率 = {mp.nstr(b_tail_A, 6)}/dex")
+chk("G2", "LBQS z=2.5 高端 2 點直接斜率 = −6.18/dex", b_tail_A, mp.mpf("-6.18"), 5e-3)
+
+# G3 footnote 6 β 轉錄核對
+btA = json.load(open(DATA.parent / "vestergaard09_beta_slopes.json"))
+z25A = btA["footnote6_LBQS"]["bins"][-1]
+chk("G3", "footnote 6 z=[2.0:3.0] bin β = −2.6, 質量窗 ≥ 10.0 dex",
+    mp.mpf(str(z25A["beta"])), mp.mpf("-2.6"), 1e-9,
+    f"(窗 = {z25A['mass_min_dex']} dex)")
+
+# G4-G6 like-for-like 對照
+zf_star_A = mp.mpf("13.43"); tef_G = mp.mpf("0.5")
+G25_A = mp.e ** ((t_z(2.5) - t_z(zf_star_A)) / tef_G)
+chk("G4", "G(z_f*=13.43 → z=2.5) = 98.63", G25_A, mp.mpf("98.63"), 1e-3)
+mu_lnM_mp = mp.log(mp.mpf("1.914e6")) + mp.mpf("1.5") * mp.mpf("0.862478")
+sig_lnM_mp = mp.mpf("1.5") * mp.mpf("1.1874")
+LN10A = mp.log(mp.mpf(10))
+def slope_dex_A(M_obs, G):
+    lnM = mp.log(M_obs / G)
+    return (-1 - (lnM - mu_lnM_mp) / sig_lnM_mp ** 2) * LN10A
+band_A = [slope_dex_A(mp.mpf(10) ** mp.mpf(str(x)), G25_A) for x, _ in ptsA
+          if mp.mpf(str(x)) >= mass_min_A]
+sl_mean_A = sum(band_A) / len(band_A)
+chk("G5", "模型 β 窗 (≥10.0 dex) 平均斜率 = −4.58/dex", sl_mean_A, mp.mpf("-4.58"), 5e-3)
+chk("G6", "★修正後斜率比 = 1.76 (記錄聲稱 5.16, 高估 2.9×)",
+    sl_mean_A / mp.mpf("-2.6"), mp.mpf("1.76"), 1e-2)
+
+# G7 λ 散射作持續成長率 → G span
+Dt25_A = (t_z(2.5) - t_z(zf_star_A)) * mp.mpf("1e9")
+tau_A = mp.mpf("4.5e8") * mp.mpf("0.1") / mp.mpf("0.9")
+Gl_A = {l: mp.e ** (Dt25_A * mp.mpf(str(l)) / tau_A) for l in [0.06, 3.68]}
+span_A = mp.log10(Gl_A[3.68] / Gl_A[0.06])
+chk("G7", "★λ 散射卷積機制證偽: G 跨 72 個數量級", span_A, mp.mpf("72"), 2e-2,
+    f"(G ∈ [{mp.nstr(Gl_A[0.06],3)}, {mp.nstr(Gl_A[3.68],3)}])")
+
+# G8-G11 單一 z_f 成長律低 z 崩塌 (★新證偽)
+G035_A = mp.e ** ((t_z(0.35) - t_z(zf_star_A)) / tef_G)
+M_low_A = mp.e ** mu_lnM_mp * G035_A
+chk("G8", "★z=0.35 模型預測中位 = 1.2e15 M☉", M_low_A, mp.mpf("1.2e15"), 5e-2)
+chk("G9", "超出 LBQS z=0.35 觀測量級 7.1 dex",
+    mp.log10(M_low_A / mp.mpf("1e8")), mp.mpf("7.1"), 2e-2)
+chk("G10", "★反推: 用 z_f*=13.43 解釋 z=0.35 之 1e8 M☉ ⟹ seed = 0.58 M☉ (次恆星)",
+    mp.mpf("1e8") / G035_A, mp.mpf("0.58"), 2e-2)
+Dt_max_A = mp.log(mp.mpf("1e8") / mp.mpf("100")) * tef_G
+t_f_min_A = t_z(0.35) - Dt_max_A
+zf_max_A = mp.mpf("0.01")
+for i in range(1, 1000):
+    zz = mp.mpf(i) / 100
+    if t_z(zz) >= t_f_min_A:
+        zf_max_A = zz
+chk("G11", "要 seed ≥ 100 M☉ ⟹ z_f ≤ 2.26 (模型用 13.43)", zf_max_A, mp.mpf("2.26"), 2e-2)
+
+# G12/G13 形成時間散佈所需寬度
+lnM10_A = mp.log(mp.mpf(10) ** mp.mpf("10.2"))
+A_A = (-mp.mpf("-2.6") / LN10A) - 1
+sig_eff2_A = (lnM10_A - mu_lnM_mp - mp.log(G25_A)) / A_A
+sig_K_A = mp.sqrt(sig_eff2_A - sig_lnM_mp ** 2)
+sig_tf_A = sig_K_A * mp.mpf("5.0e8") / mp.mpf("1e9")
+chk("G12", "需形成時間散佈 σ_tf = 2.30 Gyr", sig_tf_A, mp.mpf("2.30"), 2e-2)
+chk("G13", "σ_tf / t(2.5) = 0.88 (近全域分佈)", sig_tf_A / t_z(2.5), mp.mpf("0.88"), 3e-2)
+
+# G14 層級疊加 4^ℓ 複合斜率
+def slope_comp_A(logM_obs, G, nlev=5, h=mp.mpf("0.02")):
+    def P(lm):
+        return sum(mp.mpf(4) ** (-l) * mp.e ** (
+            -(lm - mu_lnM_mp - mp.log(G) - l * mp.log(mp.mpf(4))) ** 2
+            / (2 * sig_lnM_mp ** 2)) for l in range(nlev))
+    lm = mp.log(mp.mpf(10) ** mp.mpf(str(logM_obs)))
+    return (mp.log(P(lm + h)) - mp.log(P(lm - h))) / (2 * h) * LN10A
+cb_mean_A = (slope_comp_A(10.0, G25_A) + slope_comp_A(10.4, G25_A)) / 2
+chk("G14", "層級疊加 4^ℓ 複合 β 窗平均 = −1.53/dex (過度展平)",
+    cb_mean_A, mp.mpf("-1.53"), 3e-2)
+
+# G15/G16 開放項 1: Clopper-Pearson CI (自寫 binomial 尾 + 二分, 唔用 scipy)
+def binom_tail_ge(k, n, p):
+    return sum(mp.binomial(n, i) * p ** i * (1 - p) ** (n - i) for i in range(k, n + 1))
+def binom_cdf_le(k, n, p):
+    return sum(mp.binomial(n, i) * p ** i * (1 - p) ** (n - i) for i in range(0, k + 1))
+aL, bL = mp.mpf("0.001"), mp.mpf("0.5")
+for _ in range(200):
+    mid = (aL + bL) / 2
+    if binom_tail_ge(2, 10, mid) < mp.mpf("0.025"): aL = mid
+    else: bL = mid
+p_lo_A = (aL + bL) / 2
+aU, bU = mp.mpf("0.1"), mp.mpf("0.999")
+for _ in range(200):
+    mid = (aU + bU) / 2
+    # CP 上限: P(X <= k=2 | p_U) = 0.025; 該機率隨 p 單調遞減
+    if binom_cdf_le(2, 10, mid) > mp.mpf("0.025"): aU = mid
+    else: bU = mid
+p_hi_A = (aU + bU) / 2
+chk("G15", "w_obs = 2/10 CP 95% 下限 = 0.0252", p_lo_A, mp.mpf("0.0252"), 1e-2)
+chk("G16", "w_obs = 2/10 CP 95% 上限 = 0.5561", p_hi_A, mp.mpf("0.5561"), 1e-2)
+print(f"    CP CI = [{mp.nstr(p_lo_A,6)}, {mp.nstr(p_hi_A,6)}], 闊 {mp.nstr(p_hi_A-p_lo_A,4)}"
+      f" ⟹ 7/7 候選全相容 (含 1/2 半模態、f_bar = 0.1)")
+chk("G17", "收窄到 ±0.08 需 n ≈ 97 (現時 n = 10)",
+    mp.ceil(mp.mpf("0.2") * mp.mpf("0.8") / (mp.mpf("0.08") / mp.mpf("1.96")) ** 2),
+    mp.mpf("97"), 1e-9)
+
+# G18-G20 開放項 5: 反演值可識別性 (用 90 自己嘅 MC + 唔同 RNG 狀態)
+lo3, hi3 = 8.0, 25.0
+for _ in range(30):
+    mid = (lo3 + hi3) / 2
+    if fwd_median_growth(mid, n=60000) < obs_med: lo3 = mid
+    else: hi3 = mid
+chk("G18", "均勻成長 (T8b) 獨立反演 z_f* = 13.42", (lo3 + hi3) / 2, 13.42, 2e-2)
+lo4, hi4 = 8.0, 30.0
+for _ in range(30):
+    mid = (lo4 + hi4) / 2
+    if fwd_median_chan(mid, n=60000) < obs_med: lo4 = mid
+    else: hi4 = mid
+chk("G19", "★channel-resolved (T8h3) 反演 z_f* = 22.68 ⟹ 強模型依賴",
+    (lo4 + hi4) / 2, 22.68, 2e-2)
+lo5, hi5 = 6.0, 30.0
+for _ in range(25):
+    mid = (lo5 + hi5) / 2
+    if fwd_median_chan(mid, Lmin=1e45, n=60000) < obs_med: lo5 = mid
+    else: hi5 = mid
+chk("G20", "L_min=1e45 ⟹ z_f* = 7.33 (敏感度下限, scripts/08 A3)",
+    (lo5 + hi5) / 2, 7.33, 5e-2)
+
 print()
 print("=" * 78)
 print(f"獨立審計總計: {sum(1 for r in R if r[2])}/{len(R)} PASS")
