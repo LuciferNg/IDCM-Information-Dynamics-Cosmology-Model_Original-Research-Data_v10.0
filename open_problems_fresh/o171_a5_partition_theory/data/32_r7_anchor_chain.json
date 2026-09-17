@@ -1,0 +1,19 @@
+{
+  "link1_eps_derivation": "OK (結構, 由 φ 導出)",
+  "link2_anchor_is_map_rms": false,
+  "link2_ratio_anchor_vs_full_rms": 3.6926221636719574,
+  "link2_ratio_anchor_vs_single_mode": 34.75901301363595,
+  "link3_arithmetic": "OK (107× / 1.93× 定義一致)",
+  "link3_conclusion": "撤銷 (環2 失效)",
+  "r7_final_z_D1": 1.034,
+  "r7_final_z_As": 2.101,
+  "coldspot_selfclosed_eps_ring": true,
+  "coldspot_eps_phi_excluded_pct": 11.771825248760129,
+  "coldspot_peak_ratio_binned": 1.7596342535084284,
+  "coldspot_peak_ratio_raw": 1.6809941950341258,
+  "coldspot_peak_ratio_has_structure": false,
+  "amplitude_ratio_binned": 2.5422324257952233,
+  "amplitude_ratio_raw": 2.661162822586835,
+  "amplitude_ratio_has_structure": false,
+  "verdict": "R7 絕對錨定鏈條環2 失效 ⇒ 環3 (107×→1.93×) 撤銷; R7 振幅通道回到 🔴 (z = 1.03σ D₁ / 2.10σ A_s); 冷斑自身閉合 (ε_ring 路線 0.18%) 但唔能提供峰高尺度 (無結構比)"
+}

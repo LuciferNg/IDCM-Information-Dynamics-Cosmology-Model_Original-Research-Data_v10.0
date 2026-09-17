@@ -439,6 +439,74 @@ chk("P2-13 docs/20: d = 90 識別差 455.61× (現 σ = 2.844%)",
     abs(float(F(28440, 1000000) / F(1, 16020)) - 455.61) < 0.05)
 
 # =====================================================================
+print("\n=== P3: docs/21–23 (第七輪) ===")
+# 真實 Planck 全譜 (官方 PR3 R3.01)
+_pk = BASE / "data" / "planck" / "COM_PowerSpect_CMB-TT-full_R3.01.txt"
+_spec = []
+for _ln in _pk.read_text(encoding="utf-8").splitlines():
+    if _ln.startswith("#") or not _ln.strip():
+        continue
+    _p = _ln.split()
+    _spec.append((int(float(_p[0])), mp.mpf(_p[1])))
+_Ssum = sum((2 * e + 1) * D / (2 * e * (e + 1)) for e, D in _spec)
+_rms = mp.sqrt(_Ssum)
+_dtt = _rms / (T * 1e6)
+_anchor = e_phi**5 / 8
+# docs/21
+chk("P3-1 docs/21: 全譜 2507 點 (ℓ=2..2508)", len(_spec) == 2507)
+chk("P3-2 docs/21: Σw = 12271.551 μK²", abs(float(_Ssum) - 12271.551) < 0.01,
+    f"({float(_Ssum):.3f})")
+chk("P3-3 docs/21: 圖 rms = 110.777 μK", abs(float(_rms) - 110.77703) < 0.001,
+    f"({float(_rms):.5f})")
+chk("P3-4 docs/21: ΔT/T = 4.0644962e-5", abs(float(_dtt) - 4.0644962e-5) < 1e-12)
+chk("P3-5 docs/21: 錨/圖 rms = 3.6926222", abs(float(_dtt / _anchor) - 3.6926222) < 1e-6)
+chk("P3-6 docs/21: 5 峰 delta-sum = 38.8147 μK² (0.316%)",
+    abs(float(sum((2 * e + 1) * mp.mpf(D) / (2 * e * (e + 1))
+                  for e, D in {220: 6373.42, 528: 2673.14, 792: 2322.29,
+                               1012: 952.17, 1188: 1166.43}.items())) - 38.8147) < 0.001)
+chk("P3-7 docs/21: docs/18 基線 Σw = 36.4028 μK²",
+    abs(float(sum((2 * e + 1) * mp.mpf(D) / (2 * e * (e + 1))
+                  for e, D in {220: 5816.4797, 528: 2579.2168, 792: 2552.7278,
+                               1012: 1246.2912, 1188: 822.1860}.items())) - 36.4028) < 0.001)
+_tgt = (float(_anchor) * 2.72548e6) ** 2
+chk("P3-8 docs/21: Δℓ_eff = 899.97/36.4028 = 24.7227",
+    abs(_tgt / 36.4028 - 24.7227) < 0.001)
+chk("P3-9 docs/21: o77 obs_rms 係 hardcode 常數 1.1e-5",
+    "obs_rms = 1.1e-5" in (BASE.parent / "o77_occam_deep" / "scripts" /
+                           "01_occam_verification.py").read_text(encoding="utf-8"))
+# docs/22
+_s_D1 = 165.4180814864716 / 5816.479677744882
+_s_rd = 0.26 / 147.09
+chk("P3-10 docs/22: σ(D₁)/σ(r_d) = 16.089",
+    abs(_s_D1 / _s_rd - 16.089) < 0.01, f"({_s_D1/_s_rd:.3f})")
+_s_rr = math.hypot(0.25 / 144.46, 0.26 / 147.09)
+chk("P3-11 docs/22: σ(r*/r_d) = 0.24737%", abs(_s_rr - 0.0024737) < 1e-7)
+chk("P3-12 docs/22: 55/56 z = 7.219σ", abs((1 / 56) / _s_rr - 7.219) < 0.01)
+chk("P3-13 docs/22: 420/421 z = 1.344σ", abs((1 / 421) / _s_rd - 1.344) < 0.01)
+chk("P3-14 docs/22: 33/34 A_s 通道 z = 2.101σ", abs((1 / 34) / 0.014 - 2.101) < 0.01)
+chk("P3-15 docs/22: 33/34 D₁ 通道 z = 1.034σ", abs((1 / 34) / _s_D1 - 1.034) < 0.01)
+_rr_obs = mp.mpf('144.46') / mp.mpf('147.09')
+chk("P3-16 docs/22: r*/r_d dev vs 55/56 = −0.002349%",
+    abs(float((_rr_obs / (mp.mpf(55) / 56) - 1) * 100) + 0.002349) < 1e-5)
+chk("P3-17 docs/22: r_d 無修正 dev = +0.23693%",
+    abs(float((mp.mpf('147.4385') / mp.mpf('147.09') - 1) * 100) - 0.23693) < 1e-4)
+# docs/23
+_ph = (1 + mp.sqrt(5)) / 2
+chk("P3-18 docs/23: φ⁵ = 5φ + 3", abs(float(_ph**5 - (5 * _ph + 3))) < 1e-25)
+chk("P3-19 docs/23: 無錨差 = σ(U)/0.0303% = 106.71",
+    abs(0.032334 / 0.000303 - 106.71) < 0.01)
+chk("P3-20 docs/23: 有錨差 = σ(D₁)/(1/68) = 1.9339",
+    abs(_s_D1 * 68 - 1.9339) < 0.001)
+chk("P3-21 docs/23: 冷斑/√D₁ = 1.759634 (分箱) / 1.680994 (原始全譜)",
+    abs(float(mp.mpf('134.2') / mp.sqrt(mp.mpf('5816.4797'))) - 1.759634) < 1e-5
+    and abs(float(mp.mpf('134.2') / mp.sqrt(mp.mpf('6373.42'))) - 1.680994) < 1e-5)
+chk("P3-22 docs/23: √D₁/(ε_φ⁵/8·T) = 2.542232 (分箱) / 2.661163 (原始全譜)",
+    abs(float(mp.sqrt(mp.mpf('5816.4797')) / (_anchor * T * 1e6)) - 2.542232) < 1e-5
+    and abs(float(mp.sqrt(mp.mpf('6373.42')) / (_anchor * T * 1e6)) - 2.661163) < 1e-5)
+chk("P3-23 docs/23: 5ε_ring⁵/8·T = 134.446 μK",
+    abs(float(5 * e_ring**5 / 8 * T * 1e6) - 134.4459) < 0.001)
+
+# =====================================================================
 print("\n=== Q: 文檔覆蓋完整性 ===")
 docs = sorted(BASE.glob("docs/*.md"))
 scripts = sorted(BASE.glob("scripts/*.py"))
@@ -462,7 +530,7 @@ chk("Q3 所有 scripts 都被至少一份 doc 提及", missing == [], f"(缺 {mi
 bad = []
 for d in docs:
     txt = d.read_text(encoding="utf-8")
-    for m in re.findall(r"scripts/(\d{2}_[a-z0-9_]+)\.py", txt):
+    for m in re.findall(r"(?<![\w/])scripts/(\d{2}_[a-z0-9_]+)\.py", txt):
         if not (BASE / "scripts" / f"{m}.py").exists():
             bad.append((d.name, m))
 print(f"  引用不存在 script 嘅 doc: {bad}")
@@ -471,8 +539,11 @@ chk("Q4 所有 doc 引用嘅 script 都存在", bad == [], f"(壞引用 {bad})")
 print("\n=== R: PASS 數聲稱 vs 實際 log ===")
 mismatch = []
 total_actual = 0
+_self = Path(__file__).stem
 for s in scripts:
     lg = BASE / "data" / f"{s.stem}.log"
+    if s.stem == _self:
+        continue          # 本 script 之 log 正被 shell 重定向截斷, 讀唔到完整內容
     if not lg.exists():
         mismatch.append((s.stem, "缺 log"))
         continue
@@ -482,7 +553,7 @@ for s in scripts:
     total_actual += p
     if f_:
         mismatch.append((s.stem, f"有 {f_} FAIL"))
-print(f"  實際總 PASS = {total_actual};  FAIL 腳本 = {mismatch}")
+print(f"  實際總 PASS (不含本 script {_self}) = {total_actual};  FAIL 腳本 = {mismatch}")
 chk("R1 全部 log 存在且 0 FAIL", mismatch == [], f"(問題 {mismatch})")
 # ★ 逐條核對 §六/§七 記錄嘅 per-script PASS 數
 pr_txt = (BASE / "01_problem_record.md").read_text(encoding="utf-8")

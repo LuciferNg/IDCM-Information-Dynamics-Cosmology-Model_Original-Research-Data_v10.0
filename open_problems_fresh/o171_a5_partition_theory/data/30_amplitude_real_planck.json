@@ -1,0 +1,17 @@
+{
+  "full_spectrum_rms_muK": 110.77703238996273,
+  "full_spectrum_dTdT": 4.064496249833524e-05,
+  "eps_phi5_8": 1.1007073211605742e-05,
+  "eps_ring5_8": 9.86585023045241e-06,
+  "ratio_full_over_eps_phi": 3.6926221636719574,
+  "o77_source_hardcoded": true,
+  "o77_claimed_dev_pct": 0.06,
+  "actual_dev_vs_1.1e-5_pct": 269.4996590757749,
+  "best_band_dev_pct": 6,
+  "dl_eff_required": 23.186402837006675,
+  "dl_eff_struct_hits": 116,
+  "dl_eff_null_mean": 78.5,
+  "ratio_struct_hits": 64,
+  "ratio_null_mean": 52.63333333333333,
+  "verdict": "絕對振幅錨定未通過驗證: ε⁵/8 非 CMB 圖 rms; o77 之 0.06% 對比硬編常數"
+}
