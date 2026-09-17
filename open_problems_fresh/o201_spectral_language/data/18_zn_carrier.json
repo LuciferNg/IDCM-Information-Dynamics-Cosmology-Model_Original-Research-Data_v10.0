@@ -1,0 +1,25 @@
+{
+  "T1_1d_forced": {
+    "evidence": "單指標觀測量家族 ⇒ 1-參數譜 ⇒ cyclic",
+    "2d_torus_excluded": {
+      "M8": "O(64)",
+      "M44": "O(1936)",
+      "M88": "O(7744)"
+    }
+  },
+  "T2_generator_invariance": {
+    "generators": [
+      1,
+      3,
+      5,
+      9,
+      13,
+      21
+    ],
+    "same_spectrum": true,
+    "connectedness_forces_gcd1": true
+  },
+  "T3_ring_unique": "U1 + S1 + T1 + T2 ⇒ C_N 唯一",
+  "remaining": "平移不變性本身 (Abel 公設) 🔴 → O95/O96",
+  "verdict": "🟡 1D + cyclic + 2-regular 由觀測量強迫; Abel 公設維持 🔴 (O95/O96 級)"
+}
