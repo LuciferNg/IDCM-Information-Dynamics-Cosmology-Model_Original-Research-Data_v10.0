@@ -57,7 +57,7 @@
     "law": "標度 = 1/(2N), N 結構強迫",
     "sector_sums": {
       "Sum_gamma_odd": "88.0",
-      "Sum_gamma_even": "88.0",
+      "Sum_gamma_even": "90.0",
       "note": "★ 兩扇區相等 = 88"
     },
     "table": {
@@ -76,7 +76,7 @@
         "source": "r44 (e^{−44} φ-形殘餘)"
       },
       "N=92": {
-        "identity": "Σγ_even + μ² = 88 + 4",
+        "identity": "Σγ_even + μ² = 90 + 2",
         "one_over_2N_pct": 0.5434782608695652,
         "registered_pct": 0.543,
         "dev_pct": 0.08807750820720998,

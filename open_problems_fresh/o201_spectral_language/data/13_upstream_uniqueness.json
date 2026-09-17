@@ -1,0 +1,57 @@
+{
+  "force_chain": {
+    "U1_ring_laplacian_unique": {
+      "steps": [
+        "μ² = 2 (O169 T6b)",
+        "γ_{N/2} = 2μ² = 4",
+        "λ_max = 2d ⇒ d = 2",
+        "連通 2-正則 = C_N 唯一",
+        "K_chain = C_N Laplacian 譜唯一"
+      ],
+      "premises": {
+        "Z_N_translation_invariance": "🔴 O95/O96",
+        "mu2": "✅ O169 T6b",
+        "N=88": "✅ U2"
+      },
+      "verdict": "🟡 條件閉合: given Z_N + μ²=2 + N=88, 譜唯一; Z_N 本身 🔴"
+    },
+    "U2_N_88_unique": {
+      "candidates": [
+        88
+      ],
+      "unique": true
+    },
+    "U3_quadratic_self_ref": {
+      "beat_matrix_unique": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ],
+      "attracting_fixed_point": true,
+      "verdict": "✅ 唯一"
+    },
+    "U4_language_closure": {
+      "spectrum_implies_graph": "✅ S1",
+      "observables_are_spectral": "✅",
+      "why_ZN": "🔴 O95/O96"
+    }
+  },
+  "verdict": "環 Laplacian ✅ 結構強迫 (given 3 前提); 二次自指 ✅; 譜分解語言 🟡; Z_N 🔴 → O95/O96"
+}

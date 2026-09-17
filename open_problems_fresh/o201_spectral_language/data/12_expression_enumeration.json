@@ -1,0 +1,522 @@
+{
+  "grammar": {
+    "L0_individual": "γ_n (1..44), cos_n (1..44), Σγ_odd, Σγ_even, Σγ, Σγ^k (k=1..6), Σγ^k_odd (k=1..6), φ, φ⁻¹, L_n (0..12), F_n (0..12), N_d, B, N_gen, L_4, L_5, F_5, L_6, F_7, K_tree, F_proj, h11, mu2, F(γ)",
+    "L0_families": "⟨sec⟩_{1..K}, ⟨v_g⟩_{1..K}, 1/⟨v_g⟩_{1..K}, 1/⟨sec⟩_{1..K} (K=1..44) — 窗讀法",
+    "CORE_rule": "組合層排除 38 個非特徵 γ_n 及全部 cos_n; 保留 {γ_1, γ_2, γ_11, γ_22, γ_33, γ_44}",
+    "ops": "unary {sqrt, inv, sq, neg}; binary {+, −, ×, ÷}",
+    "max_depth": 4,
+    "tol": "判別 1e-9 / 語法可達 註冊精度",
+    "verification": "mpmath 遞歸重算"
+  },
+  "search_space": {
+    "n_atoms_L0": 139,
+    "n_CORE": 57,
+    "n_families": 176,
+    "n_pool0": 125,
+    "n_pool1": 615,
+    "n_pool2": 64428,
+    "capped": false,
+    "unary_trials": 500,
+    "binary_trials": 90312,
+    "mitm_d3": 42612,
+    "mitm_d4_exact": 4316676,
+    "range_clip": "[1e-9, 1e9]",
+    "dedupe": "(exponent, mantissa@12)",
+    "max_depth": 4,
+    "tol": "註冊精度 (整數 1e-9)"
+  },
+  "completeness": {
+    "total": [
+      66,
+      67,
+      0.9850746268656716
+    ],
+    "discriminating_tol_1e9": {
+      "noninteger": 17,
+      "noninteger_n": 26,
+      "noninteger_rate": 0.6538461538461539,
+      "integer_trivial": 41,
+      "integer_n": 41,
+      "total_rate": 0.8656716417910447
+    },
+    "grammar_reachability_registered_precision": 0.9850746268656716,
+    "family_reads": [
+      "b_spec"
+    ]
+  },
+  "depth_histogram": {
+    "d=0": 17,
+    "d=1": 2,
+    "d=2": 45,
+    "d=3": 1,
+    "family": 1
+  },
+  "misses": [
+    "one_over_137"
+  ],
+  "misses_integer": [],
+  "misses_noninteger": [
+    "one_over_137"
+  ],
+  "hits": {
+    "N_d": {
+      "expr": "N_d",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "B": {
+      "expr": "B",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "N_gen": {
+      "expr": "N_gen",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "L5": {
+      "expr": "L_5",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "F_proj": {
+      "expr": "F_proj",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "K_tree": {
+      "expr": "K_tree",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "Sum_gamma": {
+      "expr": "Sg_all",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "Sum_gamma_odd": {
+      "expr": "N_d",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "Sum_gamma_even": {
+      "expr": "Sg_even",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "mu2": {
+      "expr": "mu2",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "h11": {
+      "expr": "h11",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "h21": {
+      "expr": "(mu2 × sq(L_4))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "h11_plus_h21": {
+      "expr": "(N_d + Sg_all)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "beat_dim": {
+      "expr": "(Sg^3 + F_9)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "sum_inv_gamma_odd": {
+      "expr": "(Sg^6_odd ÷ F_8)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "B_Nd_176": {
+      "expr": "(N_d × B)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "Sum_Gamma88_178": {
+      "expr": "(mu2 × F_11)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "L10_123": {
+      "expr": "L_10",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "W_sq": {
+      "expr": "(L_10 × inv(mu2))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "f_unproj": {
+      "expr": "((inv(F_5) + inv(h11)) × N_gen)",
+      "depth": 2,
+      "dev": 4.878048780487805e-17,
+      "strict_1e9": true
+    },
+    "eps_exact": {
+      "expr": "((inv(B) × inv(L_10)) × L_9)",
+      "depth": 2,
+      "dev": 3.5789473684210523e-17,
+      "strict_1e9": true
+    },
+    "E_min": {
+      "expr": "((L_10 ÷ sq(N_d)) × L_5)",
+      "depth": 2,
+      "dev": 5.203252032520325e-17,
+      "strict_1e9": true
+    },
+    "alpha_inv_0": {
+      "expr": "(F_5 + Sg^2_odd)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "alpha_inv_MZ": {
+      "expr": "(L_4 + sq(L_5))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "V_capacity_264": {
+      "expr": "(N_d × sqrt(h11))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "V_capacity_528": {
+      "expr": "(N_d × sqrt(F_12))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "V_Lambda": {
+      "expr": "(Sg^2 + sqrt(L_10))",
+      "depth": 2,
+      "dev": 2.9802330876509544e-05,
+      "strict_1e9": false
+    },
+    "C_12_2_66": {
+      "expr": "(L_5 + F_10)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "L4L5_77": {
+      "expr": "(N_d + K_tree)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "dim_SU12_143": {
+      "expr": "(L_5 × F_7)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "L4L5_minus_mu2_75": {
+      "expr": "(N_gen × sq(F_5))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "F10_55": {
+      "expr": "F_10",
+      "depth": 0,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "Tr_chi_30": {
+      "expr": "(F_5 + sq(F_5))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "B_L4_28": {
+      "expr": "(N_d − sq(B))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "pool_turnover_364": {
+      "expr": "(Sg^3_odd − L_9)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "A5_order_60": {
+      "expr": "(N_d + sq(B))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "gamma_192": {
+      "expr": "(N_gen × sq(F_6))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "Sigma_Gamma_5940": {
+      "expr": "((Sg^3_odd + Sg^5_odd) - N_d)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "phase_space_1496": {
+      "expr": "(N_d × F_9)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "r_d_num_420": {
+      "expr": "(sq(F_8) + neg(F_8))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "r_d_den_421": {
+      "expr": "(Sg^2_odd + sq(F_proj))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "mean_gamma_ratio": {
+      "expr": "(Sg_all × inv(N_d))",
+      "depth": 2,
+      "dev": 2.6666666666666667e-17,
+      "strict_1e9": true
+    },
+    "even_over_odd": {
+      "expr": "(Sg_even × inv(N_d))",
+      "depth": 2,
+      "dev": 5.217391304347826e-17,
+      "strict_1e9": true
+    },
+    "omega_dm_over_b": {
+      "expr": "(L_4 − inv(mu2))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "baryon_split": {
+      "expr": "(inv(N_gen) − inv(F_5))",
+      "depth": 2,
+      "dev": 2.5e-17,
+      "strict_1e9": true
+    },
+    "baryon_over_matter": {
+      "expr": "((inv(h11) − inv(F_10)) × K_tree)",
+      "depth": 2,
+      "dev": 5.263157894736842e-17,
+      "strict_1e9": true
+    },
+    "b_spec": {
+      "family": "1/⟨v_g⟩_{1..22}",
+      "K": 1,
+      "strict_1e9": true
+    },
+    "sqrt5_over_2": {
+      "expr": "(phi − inv(mu2))",
+      "depth": 2,
+      "dev": 1.3576994500440997e-16,
+      "strict_1e9": true
+    },
+    "phi_const": {
+      "expr": "phi",
+      "depth": 0,
+      "dev": 9.38147246726953e-17,
+      "strict_1e9": true
+    },
+    "gamma_1_val": {
+      "expr": "g1",
+      "depth": 0,
+      "dev": 6.392489081356813e-26,
+      "strict_1e9": true
+    },
+    "gamma_11_val": {
+      "expr": "g11",
+      "depth": 0,
+      "dev": 8.740098436420132e-17,
+      "strict_1e9": true
+    },
+    "gamma_33_val": {
+      "expr": "g33",
+      "depth": 0,
+      "dev": 1.429368369396595e-17,
+      "strict_1e9": true
+    },
+    "Omega_Lambda_old": {
+      "expr": "((B ÷ sqrt(F_5)) × sq(inv_phi))",
+      "depth": 3,
+      "dev": 9.411784853964767e-17,
+      "strict_1e9": true
+    },
+    "mu_logN": {
+      "expr": "((inv(F_7) ÷ sqrt(Sg^4_odd)) × Sg^3_odd)",
+      "depth": 2,
+      "dev": 2.1593975785676242e-06,
+      "strict_1e9": false
+    },
+    "s_logN": {
+      "expr": "(L_9 ÷ sq(F_6))",
+      "depth": 2,
+      "dev": 8.421761832575375e-05,
+      "strict_1e9": false
+    },
+    "sin2_theta23": {
+      "expr": "((inv(mu2) ÷ sq(phi)) × N_gen)",
+      "depth": 2,
+      "dev": 5.4073658491173e-05,
+      "strict_1e9": false
+    },
+    "mW_over_mZ": {
+      "expr": "((neg(N_d) ÷ sqrt(L_11)) + B)",
+      "depth": 2,
+      "dev": 0.00042811986460678924,
+      "strict_1e9": false
+    },
+    "piR_intercept": {
+      "expr": "((L_5 ÷ sqrt(L_9)) - g2)",
+      "depth": 2,
+      "dev": 2.2550616021411294e-07,
+      "strict_1e9": false
+    },
+    "C_old": {
+      "expr": "((neg(F_5) ÷ sq(h11)) × N_d)",
+      "depth": 2,
+      "dev": 0.000312825101668158,
+      "strict_1e9": false
+    },
+    "lambda_88_over_33": {
+      "expr": "(N_gen − inv(N_gen))",
+      "depth": 2,
+      "dev": 6.25e-17,
+      "strict_1e9": true
+    },
+    "L5_minus_1_10": {
+      "expr": "(N_d − F_9)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "N_gen_sq_9": {
+      "expr": "sq(N_gen)",
+      "depth": 1,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "B_sq_16": {
+      "expr": "sq(B)",
+      "depth": 1,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "twoB_sq_32": {
+      "expr": "(N_d − sqrt(F_12))",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "Nd_minus_B_40": {
+      "expr": "(N_d − B)",
+      "depth": 2,
+      "dev": 0.0,
+      "strict_1e9": true
+    },
+    "cosmological_crack": {
+      "expr": "(sq(g11) × inv(Sg_even))",
+      "depth": 2,
+      "dev": 4.152433960891481e-05,
+      "strict_1e9": false
+    }
+  },
+  "null_control": {
+    "per_tol": [
+      {
+        "tol": "1e-9",
+        "real_hits": 17,
+        "real_n": 26,
+        "null_real_rate": 0.008333333333333333,
+        "int_hits": 41,
+        "int_n": 41,
+        "null_int_rate": 1.0
+      },
+      {
+        "tol": "1e-6",
+        "real_hits": 22,
+        "real_n": 26,
+        "null_real_rate": 0.7666666666666667,
+        "int_hits": 41,
+        "int_n": 41,
+        "null_int_rate": 1.0
+      },
+      {
+        "tol": "1e-5",
+        "real_hits": 26,
+        "real_n": 26,
+        "null_real_rate": 1.0,
+        "int_hits": 41,
+        "int_n": 41,
+        "null_int_rate": 1.0
+      },
+      {
+        "tol": "1e-3",
+        "real_hits": 26,
+        "real_n": 26,
+        "null_real_rate": 1.0,
+        "int_hits": 41,
+        "int_n": 41,
+        "null_int_rate": 1.0
+      }
+    ],
+    "integer_trivial": true,
+    "discriminating_tol": "1e-9",
+    "real_discriminating": true
+  },
+  "target_sets": {
+    "all": 67,
+    "atom_level_trivial": 7,
+    "derived_non_atom": 60,
+    "script_01_57_reference": "D1 n_derived (定義唔同)"
+  },
+  "registered_reconstruction": {
+    "V_Lambda": {
+      "expr": "F(γ) + L₆ + F₂ (= F(γ)+19)",
+      "depth": 3,
+      "full_precision": "283.082129232580245",
+      "dev": 5.35e-17,
+      "note": "註冊值 283.0821 係 4 位截斷 ⇒ 1e-9 枚舉對唔上; 全精度閉式全部葉喺池內 (d=3)。鬆容差枚舉另見 Sg²+√123 (dev 2.98e-05, 非判別假命中)"
+    }
+  },
+  "comparison": {
+    "script_01_07_lower_bound": "36/57 = 63.2%",
+    "docs_09_hand_tree": "40/57 = 70.2%",
+    "auto_discriminating": "58/67 = 86.6% (非整數證據 17/26 = 65.4%)",
+    "auto_reachability": "66/67 = 98.5% (非判別)"
+  }
+}

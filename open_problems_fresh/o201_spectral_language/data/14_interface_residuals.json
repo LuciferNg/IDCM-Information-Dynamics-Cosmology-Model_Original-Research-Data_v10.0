@@ -1,0 +1,53 @@
+{
+  "delta": {
+    "value": "-0.00016396465837977987173",
+    "inverse": "6098.87526911",
+    "A1_candidate": {
+      "expr": "(L₆+1)(L₁₂−1) = 6099",
+      "dev_pct": 0.0020451040023845906,
+      "status": "🔴 邊緣 (script 10 null P = 0.017)"
+    },
+    "A2_N_form": {
+      "N": "3049.43763455",
+      "nearest": [
+        3049,
+        3050
+      ]
+    },
+    "A3_null_P": 0.004,
+    "status": "🔴 維持未導出"
+  },
+  "N_selection": {
+    "rule_A": {
+      "expr": "N = 2N_d·K_tree/m + B",
+      "deviations": [
+        0.0,
+        0.0,
+        0.09970089730808145
+      ]
+    },
+    "rule_B": {
+      "expr": "N = φ-冪 + 修正",
+      "corrections": [
+        -18,
+        26,
+        65
+      ]
+    },
+    "rule_C": {
+      "expr": "N = 2a + 2^j",
+      "a_seq": [
+        33,
+        34,
+        44,
+        55
+      ]
+    },
+    "rule_D": {
+      "expr": "N = a/m + b (a = 2N_d·K_tree, b = B)",
+      "third_dev_pct": 0.09970089730808145
+    },
+    "null_A": 1.0,
+    "status": "🟡 統一規則未閉合: Rule A 2/3 EXACT + 0.1% 第三點, 機制未明; N 逐案結構維持"
+  }
+}

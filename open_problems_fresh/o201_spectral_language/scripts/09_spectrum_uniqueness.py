@@ -155,7 +155,8 @@ print("""
         ⇒ 透明邊 = %d − %d = %d = N = 88   ★ 88 = 120 − 32 (直接, 唔係雙覆蓋)
 """ % (A5_DEG, A5_DEG, A5_E, FRUST, A5_E, FRUST, A5_E - FRUST))
 print("  [S3b] 雙覆蓋: 44-鏈 P₄₄ ↔ 88-環 (O201/05)  ⇒ N = 2·N_d = 2×44 = %d ✓" % (2 * Nd))
-print("  [S3c] 自對偶模: k = N/2 = 44 ⇒ γ = 4sin²(π/2) = μ² = 4 (單重)")
+print("  [S3c] Nyquist 模: k = N/2 = 44 ⇒ γ = 4sin²(π/2) = 4 = B (單重); "
+      "自對偶 μ² 模 = k = N/4 = 22 ⇒ γ₂₂ = 4sin²(π/4) = 2 = μ²")
 print("  [S3d] CRT: 88 = 2³·11 ⇒ Z_88 ≅ Z_8 × Z_11 (gcd(8,11)=1) ✓  (O197 r2)")
 print("\n  [唯一性檢定] 同時滿足下列全部嘅 N:")
 cons = {
@@ -266,6 +267,10 @@ for r in rows:
     check("S1 N=%-4d Σd² = 4N ⇒ Var(d) = 0" % N, abs(r[6]) < mp.mpf('1e-30'))
 check("S1 λ_max = 4 = μ² 且單重 (N 偶)", True)
 check("S1 恆等式 Σsin² = N/2", abs(mp.fsum([mp.sin(k * PI / 8) ** 2 for k in range(8)]) - 4) < mp.mpf('1e-30'))
+check("S3c μ² = γ₂₂ = 2 EXACT (O169 T6b 註冊; v1 誤寫 μ² = γ₄₄ = 4)",
+      abs(4 * mp.sin(22 * PI / 88) ** 2 - 2) < mp.mpf('1e-30'))
+check("S3c γ₄₄ = 4 = B (Nyquist 模, 唔係 μ²)",
+      abs(4 * mp.sin(44 * PI / 88) ** 2 - 4) < mp.mpf('1e-30'))
 check("S1 恆等式 Σsin⁴ = 3N/8", abs(mp.fsum([mp.sin(k * PI / 8) ** 4 for k in range(8)]) - 3) < mp.mpf('1e-30'))
 
 check("S2 |f'(φ)| = 1/φ² < 1 (吸引)", abs(1 / PHI ** 2) < 1)

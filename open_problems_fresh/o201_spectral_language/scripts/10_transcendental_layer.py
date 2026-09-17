@@ -30,6 +30,13 @@ O201 scripts/10 -- 超越層形式化 (Transcendental Layer Formalization)
 ## 版本史
   v1 (2026-09-17): 首版。O168 final_result:54 曾把「N-規律統一審計」標 🔴 (N 唔線性);
                   本 script 指出律係 1/(2N) **統一**, N 逐案結構 ⇒ 由 🔴 升 🟡 (機制統一, N 選擇未統一)。
+  v2 (2026-09-17): **修正約定錯誤**。v1 用 K_chain 譜 (4sin²(kπ/88), k=0..87) 計扇區和 ⇒
+                  Σγ_odd = Σγ_even = 88, 並把 92 = Σγ_even + μ² 寫成 88 + 4 (μ² = 4)。
+                  但 O39/O159/O169 註冊 **μ² = 2** (O169 T6b: γ₂₂ = 2 = μ²; K_chain 中 γ₄₄ = 4 = B 係 Nyquist)。
+                  正確約定 = **176-Laplacian 半集** (γ_k = 4sin²(kπ/176), k=1..88, O159/O192):
+                  Σγ_odd = 88, Σγ_even = 90, Σ = 178 = 88C(2,1)+2 (O192 閉式 ✓),
+                  E − O = 2 = γ₄₄ = μ² (O159 三合一) ⇒ **92 = 90 + 2**。
+                  T1 嘅 γ₄₄ = 4 = μ² 標籤亦改為 γ₄₄ = 4 = B。
 """
 import os
 import sys
@@ -76,7 +83,7 @@ for n in (1, 2, 3, 5, 11, 22, 44):
     print("  n=%-3d γ_n = %-22s 最小多項式次數 ≤ %s  %s"
           % (n, mp.nstr(g, 16), deg, "✓ ≤ 20" if deg and deg <= 20 else "✗"))
 print("\n  [特例] γ₁₁ = 4sin²(π/8) = 2 − √2 = %s" % mp.nstr(2 - mp.sqrt(2), 18))
-print("  [特例] γ₂₂ = 2 (= μ²/2, 有理);  γ₄₄ = 4 (= μ², 有理)")
+print("  [特例] γ₂₂ = 2 = **μ²** (自對偶模, O169 T6b);  γ₄₄ = 4 = B (Nyquist 模)")
 
 # 相位身份驗證: γ_n = 2 − (ζ^n + ζ^{−n})
 zeta = mp.e ** (2j * PI / 88)
@@ -160,17 +167,23 @@ print("""
 print("=" * 78)
 print("T3. ★★ 統一界面律 — 所有裂縫/殘餘標度 = 1/(2N), N 結構強迫")
 print("=" * 78)
-S_odd = mp.fsum([G88[k] for k in range(1, 88, 2)])
-S_even = mp.fsum([G88[k] for k in range(0, 88, 2)])
-print("\n  [前置] 88-環扇區和: Σγ_odd = %s, Σγ_even = %s, Σγ_all = %s"
+# ★ 修正 (v2, 2026-09-17): 扇區和必須用 **176-Laplacian 半集** (γ_k = 4sin²(kπ/176), k=1..88),
+#   即 O159/O192 嘅約定。v1 用 K_chain (4sin²(kπ/88), k=0..87) 得 Σ_even = 88 並配 μ² = 4,
+#   ⇒ 同 O39/O159/O169 註冊嘅 **μ² = 2** 矛盾 (K_chain 中 μ² = γ₂₂ = 2; γ₄₄ = 4 = B 係 Nyquist)。
+G176 = [4 * mp.sin(k * PI / 176) ** 2 for k in range(0, 89)]
+S_odd = mp.fsum([G176[k] for k in range(1, 89, 2)])
+S_even = mp.fsum([G176[k] for k in range(2, 89, 2)])
+print("\n  [前置] 176-Laplacian 半集扇區和: Σγ_odd = %s, Σγ_even = %s, Σγ_all = %s"
       % (mp.nstr(S_odd, 12), mp.nstr(S_even, 12), mp.nstr(S_odd + S_even, 12)))
-print("         ★ Σγ_odd = Σγ_even = 88 (兩扇區**相等**) ⇒ 92 = Σγ_even + μ² = %s"
-      % mp.nstr(S_even + 4, 10))
+print("         ★ Σγ_even − Σγ_odd = %s = μ² (O159 三合一: E−O = γ₄₄ = μ² = 2)"
+      % mp.nstr(S_even - S_odd, 6))
+print("         ⇒ 92 = Σγ_even + μ² = %s + 2 = %s"
+      % (mp.nstr(S_even, 6), mp.nstr(S_even + 2, 10)))
 
 N_IDS = {
     67:  ("2K_tree + 1 = 2×33+1",      0.746, "crack (O168 docs/18:20)"),
     70:  ("2N_d − L₆ = 88 − 18",       0.719, "r44 (e^{−44} φ-形殘餘)"),
-    92:  ("Σγ_even + μ² = 88 + 4",     0.543, "r33 (e^{33} φ-形殘餘)"),
+    92:  ("Σγ_even + μ² = 90 + 2",     0.543, "r33 (e^{33} φ-形殘餘)"),
     118: ("2(F₁₀+B) = 2(55+4)",        0.424, "r25 (e^{−25.5} φ-形殘餘)"),
 }
 print("\n  [統一表] 標度 = 1/(2N)")
@@ -309,7 +322,8 @@ for n, _, deg in pslq_rows:
     check("T1 PSLQ n=%-3d 最小多項式次數 ≤ 20" % n, deg is not None and deg <= 20)
 check("T1 γ₁₁ = 2 − √2 EXACT", abs(G88[11] - (2 - mp.sqrt(2))) < mp.mpf('1e-55'))
 check("T1 γ₂₂ = 2 EXACT", abs(G88[22] - 2) < mp.mpf('1e-55'))
-check("T1 γ₄₄ = 4 = μ² EXACT", abs(G88[44] - 4) < mp.mpf('1e-55'))
+check("T1 γ₂₂ = 2 = μ² EXACT (自對偶模, O169 T6b 註冊)", abs(G88[22] - 2) < mp.mpf('1e-55'))
+check("T1 γ₄₄ = 4 = B (Nyquist 模; v1 誤寫 = μ²)", abs(G88[44] - 4) < mp.mpf('1e-55'))
 for n in (1, 11, 22, 44):
     z = mp.e ** (2j * PI / 88)
     check("T1 相位身份 γ_%-3d = 2 − ζⁿ − ζ^{−n}" % n,
@@ -330,8 +344,11 @@ check("T2 4 個 e-出現點殘餘全落 0.4-0.75% 帶",
 
 # T3
 check("T3 Σγ_odd = 88", abs(S_odd - 88) < mp.mpf('1e-50'))
-check("T3 Σγ_even = 88 (★ 兩扇區相等)", abs(S_even - 88) < mp.mpf('1e-50'))
-check("T3 92 = Σγ_even + μ²", abs(S_even + 4 - 92) < mp.mpf('1e-50'))
+check("T3 Σγ_even = 90 (176-Laplacian 半集; O159: 21B+γ₄₄+γ₈₈ = 84+2+4)",
+      abs(S_even - 90) < mp.mpf('1e-50'))
+check("T3 Σγ_even − Σγ_odd = 2 = μ² (O159 三合一)",
+      abs(S_even - S_odd - 2) < mp.mpf('1e-50'))
+check("T3 92 = Σγ_even + μ² = 90 + 2", abs(S_even + 2 - 92) < mp.mpf('1e-50'))
 check("T3 67 = 2K_tree+1 = 67", 2 * KTREE + 1 == 67)
 check("T3 70 = 2N_d − L₆ = 88−18", 2 * Nd - 18 == 70)
 check("T3 118 = 2(F₁₀+B) = 2(55+4)", 2 * (F10 + B) == 118)
