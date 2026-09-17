@@ -17,11 +17,13 @@ O201 scripts/20 -- δ 超越性裁定 + 最佳有理近似 (δ Transcendence Adj
        全部代數; π 超越但係「相位模」(docs/11)
      - ⇒ δ 結構上唔可能由譜原子 EXACT 表達 — 「未搵到」升級為「證明唔可能」
   T2 最佳有理近似 (紀錄用, 唔宣稱閉合):
-     1/|δ| = 6098.87520884073
-     候選 (L6+1)(L12-1) - mu^2/B^2 = 6099 - 1/8 = 6098.875  dev 3.4e-8
-     (1/8 = mu^2/B^2 = γ_44/B^2 有結構身份; 但 δ 超越 ⇒ 只係近似)
-  T3 null control: 隨機目標喺 [4000, 8000] 撞「(L_m+1)(L_n-1) - 1/8」型
-     嘅概率 — 證明 3.4e-8 唔係池密度假象
+     1/|δ| = 6098.875269106894563829   (mpmath dps=50 計算值)
+     候選 (L6+1)(L12-1) - mu^2/B^2 = 6099 - 1/8 = 6098.875  dev 4.412e-8
+     (1/8 = mu^2/B^2; mu^2 = 2 喺 O159/O169 嘅 176-Laplacian 約定 = γ_44;
+      注意 88-環約定 γ_44 = 4 (Nyquist 原子) ⇒ γ_44/B^2 = 1/4 ≠ 1/8 —
+      兩種約定唔可以混用。δ 超越 ⇒ 只係近似, 唔係身份)
+  T3 null control: 隨機目標喺 [3000, 9000] 撞「(L_m+1)(L_n-1) - 1/8」型
+     嘅概率 — 檢查 4.4e-8 唔係池密度假象
   T4 δ 嘅身份閉合: δ 嘅角色 = e-φ 界面嘅超越殘餘 (O165 e 剔除 + O168
      e ≈ φ^2·27/26 0.016% 級 嘅精確量化) — 呢個係「身份」唔係「冇身份」
   T5 27/26 結構化: 27 = 3^3 = N_gen^3, 26 = 2·13 = 2·F_7
@@ -29,10 +31,14 @@ O201 scripts/20 -- δ 超越性裁定 + 最佳有理近似 (δ Transcendence Adj
 
 ## 版本史
   v1 (2026-09-17): 首版 — δ 超越性裁定。
+  v2 (2026-09-17): 審計修正 — docstring 手寫值更正 (1/|δ| 6098.87520884073 →
+      6098.87526910689, dev 3.4e-8 → 4.412e-8, 同計算值一致); 移除恆真 check;
+      加入真搜索 check (池內最近目標) + 約定歧義註 (γ_44 雙約定)。
 """
 import os
 import sys
 import json
+import math
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
@@ -72,7 +78,8 @@ cand = (L6 + 1) * (ob.LUC[12] - 1) - mp.mpf(1) / 8   # 19×321 − 1/8
 dev_cand = abs(cand - inv) / inv
 print("  1/|δ| = %s" % mp.nstr(inv, 18))
 print("  (L₆+1)(L₁₂−1) − μ²/B² = 6099 − 1/8 = %s" % mp.nstr(cand, 18))
-print("  dev = %.3e  (1/8 = μ²/B² = γ₄₄/B² 有身份; 但 δ 超越 ⇒ 只係近似)" % float(dev_cand))
+print("  dev = %.3e  (1/8 = μ²/B², μ² = 2 = γ₂₂ (88-環) = γ₄₄ (176-Laplacian); δ 超越 ⇒ 只係近似)"
+      % float(dev_cand))
 print("  其他近似:")
 for name, v in [
     ("(L6+1)(L12-1)        ", (L6 + 1) * (ob.LUC[12] - 1)),
@@ -101,7 +108,7 @@ for _ in range(NR):
 P = hits / NR
 print("  (L_m+1)(L_n-1) − 1/8 池 (%d 值) 對隨機目標 1e-6 窗命中率 = %.4f"
       % (len(pool), P))
-print("  目標 1/|δ| = 6098.875 dev 3.4e-8 — 池密度檢查 %s"
+print("  目標 1/|δ| = 6098.875269... dev 4.4e-8 — 池密度檢查 %s"
       % ("✅ 顯著 (比 null 細 1000 倍以上)" if P < 1e-4 else "⚠️ 池太密"))
 
 print("\n" + "=" * 78)
@@ -142,7 +149,7 @@ out = {
     "T4_role": "δ = e-φ 界面嘅超越殘餘; 殘餘族 (r44/r33) 由 δ 導出已閉合 (docs/18)",
     "T5_27_26": "27 = N_gen³, 26 = 2F_7 ⇒ e ≈ φ²·N_gen³/(2F_7) (O168)",
     "verdict": "🔴→🔒 δ 超越性證明閉合: 唔係「未搵到譜表達」, 係結構上唔可能; "
-               "殘餘族生成元角色維持 (docs/18); 最佳近似 dev 3.4e-8 記錄唔宣稱",
+               "殘餘族生成元角色維持 (docs/18); 最佳近似 dev 4.4e-8 記錄唔宣稱",
 }
 d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 with open(os.path.join(d, "20_delta_transcendence.json"), "w") as f:
@@ -164,11 +171,19 @@ def check(label, cond):
         print("  FAIL  %s" % label)
 
 
-check("T1 δ 超越 (e 超越 + 代數閉包論證)", True)  # 數學論證, script 驗證定義
-check("T1 δ 定義重現 -1.6396466e-4", abs(delta + mp.mpf("1.6396466e-4")) < mp.mpf("1e-9"))
+check("T1 代數閉包前提: (1+δ)·φ²·(27/26) = e EXACT (δ 嘅定義)",
+      abs((1 + delta) * PHI ** 2 * mp.mpf(27) / mp.mpf(26) - mp.e) < mp.mpf("1e-48"))
+check("T1 φ² 代數 (φ² 嘅最小多項式 y²−3y+1 = 0): φ⁴−3φ²+1 = 0 EXACT",
+      abs(PHI ** 4 - 3 * PHI ** 2 + 1) < mp.mpf("1e-48"))
+check("T1 27/26 = N_gen³/(N_gen³−1) 有理 (代數)", mp.mpf(27) / mp.mpf(26) == mp.mpf(Ngen ** 3) / mp.mpf(Ngen ** 3 - 1))
+check("T1 27/26 係真分數且最簡 (gcd(27,26) = 1)", math.gcd(27, 26) == 1)
+check("T1 δ 定義重現 -1.6396466e-4 (8 位有效數字, |diff| < 1e-11)",
+      abs(delta + mp.mpf("1.6396466e-4")) < mp.mpf("1e-11"))
 check("T1 δ_ln = −ln(1+δ) = 2lnφ + ln(27/26) − 1 EXACT",
       abs(-mp.log(1 + delta) - (2 * mp.log(PHI) + mp.log(mp.mpf(27) / mp.mpf(26)) - 1)) < mp.mpf("1e-40"))
 check("T2 1/8 = μ²/B² 身份", abs(mp.mpf(1) / 8 - mp.mpf(2) / 16) < mp.mpf("1e-35"))
+check("T2 候選係 (L_m+1)(L_n−1) − 1/8 池內最近目標 (真搜索)",
+      min(abs(v - inv) / inv for v in pool) == dev_cand and float(dev_cand) < 1e-7)
 check("T2 候選 dev < 1e-6", float(dev_cand) < 1e-6)
 check("T3 null P 低 (< 0.01)", P < 0.01)
 check("T5 27 = N_gen³", Ngen ** 3 == 27)

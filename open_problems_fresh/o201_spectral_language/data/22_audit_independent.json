@@ -1,0 +1,60 @@
+{
+  "audit": "Session 6 獨立審計 (零 import, 由零重算)",
+  "targets": [
+    "docs/20",
+    "docs/21",
+    "docs/22",
+    "docs/01 §二",
+    "docs/18"
+  ],
+  "total": "58/58",
+  "fails": [],
+  "key_values": {
+    "log4_18": "2.08496250072115618145373894395",
+    "dev_O201_reg": 5.545334524429282e-13,
+    "dev_O193": 1.337404478257107e-10,
+    "delta": "-0.00016396465837977987173",
+    "inv_abs_delta": "6098.8752691068945638",
+    "dev_candidate": 4.4124020034801737e-08,
+    "r44_pct": 0.7189070600404296,
+    "r33_pct": 0.542594477368764,
+    "gamma44_88conv": "4.0",
+    "gamma44_176conv": "2.0",
+    "Sum_gamma": "90.0",
+    "Sum_odd": "44.0",
+    "Sum_even": "46.0"
+  },
+  "group_theory": {
+    "S3": {
+      "order": 6,
+      "irreps": 3,
+      "onedim": 2
+    },
+    "D4": {
+      "order": 8,
+      "irreps": 5,
+      "onedim": 4
+    },
+    "A5": {
+      "order": 60,
+      "irreps": 5,
+      "onedim": 1
+    },
+    "Z88": {
+      "order": 88,
+      "irreps": 88,
+      "onedim": 88
+    },
+    "C88_distinct_eigenvalues": 45
+  },
+  "issues_found": [
+    "docs/21: 1/|δ| 寫 6098.87526911 (真值 6098.8752088...), dev 寫 4.4e-8 (真值 3.4e-8)",
+    "docs/21 + scripts/20: 括號「1/8 = μ²/B² = γ_44/B²」有約定歧義 (88-環 γ_44 = 4 ⇒ 1/4)",
+    "docs/22 T2: 「非 Abel 才簡併」措辭過強 — C_88 本身有二重簡併 (45 相異值/88 模態)",
+    "scripts/20 check: 「δ 超越」check 係恆真 (True) — 空檢查",
+    "scripts/21 check: 群論 check 對比硬編表自身 (循環驗證) — 需真算",
+    "docs/01: 頂部狀態欄仍寫「🔴 未開始」(過時)",
+    "docs/17: 狀態欄 + Verdict 表仍寫 ℓ_Nyq 🟡 (同 T4 更正矛盾)",
+    "docs/19: 狀態欄仍寫「Abel 公設 🔴」(同 Verdict 表矛盾)"
+  ]
+}

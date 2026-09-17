@@ -13,9 +13,11 @@ O201 scripts/21 -- Z_N Abel 公設閉合 (Abelian Axiom Closure)
      ⇒ 「88 個模態」本身強迫 Abel — 唔係公設
      數值: Z_88 特徵標 88 個 (全部一維); S_3 只有 3 個不可約表示
      (1,1,2 維), D_4 只有 5 個 (< 8) ⇒ 非 Abel 冇 88 個一維特徵標
-  T2 ★ 非 Abel 簡併: 非 Abel 群 Laplacian 譜帶表示維度簡併
-     (multiplicity ≥ dim ρ), 唔可能係 88 個獨立單指標值;
-     觀察者讀數 = |1−χ|² 需要一維 χ
+  T2 ★ 讀數結構: 非 Abel 群嘅不可約表示維度 d_ρ ≥ 2 ⇒ 模態必須由
+     多分量對象標籤, 唔可能係 88 個獨立單指標值; 觀察者讀數 = |1−χ|²
+     需要一維 χ。⚠️ 注意 (2026-09-17 審計修正): 「簡併」唔係非 Abel 專有 —
+     C_88 譜本身有 k ↔ 88−k 二重簡併 (88 模態 / 45 相異值); 論證嘅關鍵係
+     **標籤結構** (88 個一維特徵標), 唔係「有冇簡併」。
   T3 ★ 預算均勻 ⟹ 平移不變: O41 觀察者預算 B(n) = L10/(2N_d) 對全部
      mode 均勻 ⟹ 冇特殊 site ⟹ 群作用自由可遷 (Cayley 圖)
      + docs/19 T2 生成元不變性 ⟹ 平移不變自然成立
@@ -24,11 +26,14 @@ O201 scripts/21 -- Z_N Abel 公設閉合 (Abelian Axiom Closure)
 
 ## 版本史
   v1 (2026-09-17): 首版 — Abel 公設閉合。
+  v2 (2026-09-17): 審計修正 — 群論事實改為真算 (共軛類 + 交換子子群,
+      唔再對硬編表自查); T2 措辭修正 (簡併唔係非 Abel 專有)。
 """
 import os
 import sys
 import json
 import math
+import itertools
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
@@ -135,26 +140,106 @@ def check(label, cond):
         print("  FAIL  %s" % label)
 
 
-def n_irreps_and_onedim(G_name):
-    """回傳 (|G|, #不可約表示, #一維). 用已知群論數據."""
-    data = {
-        "Z88": (88, 88, 88),
-        "S3": (6, 3, 2),
-        "D4": (8, 5, 4),
-        "A5": (60, 5, 1),
-    }
-    return data[G_name]
+def conj_classes(elems, mul, inv):
+    """共軛類 = 不可約表示數 (Burnside)"""
+    seen, cls = set(), []
+    for x in elems:
+        if x in seen:
+            continue
+        orb = {mul(mul(g, x), inv(g)) for g in elems}
+        seen |= orb
+        cls.append(orb)
+    return cls
 
 
-for G, (order, nirr, n1) in [("Z88", (88, 88, 88)), ("S3", (6, 3, 2)),
-                             ("D4", (8, 5, 4)), ("A5", (60, 5, 1))]:
-    got = n_irreps_and_onedim(G)
-    check("T1 %s: |G|=%d, irreps=%d, onedim=%d" % (G, order, nirr, n1),
-          got == (order, nirr, n1))
-check("T1 Z_88 一維特徵標 = 88 = |G| (Abel 唯一滿額)",
-      n_irreps_and_onedim("Z88")[2] == 88 == n_irreps_and_onedim("Z88")[0])
-check("T1 非 Abel 一維特徵標 < |G| (S3: 2 < 6)", n_irreps_and_onedim("S3")[2] < 6)
-check("T1 A5: 一維只有 1 (trivial) < 60", n_irreps_and_onedim("A5")[2] == 1)
+def commutator_closure(elems, mul, inv):
+    """交換子子群 [G,G] 嘅閉包 — 一維特徵標數 = |G| / |[G,G]|"""
+    e = next(x for x in elems if all(mul(x, y) == y for y in elems))
+    gen = {mul(mul(a, b), mul(inv(a), inv(b))) for a in elems for b in elems} - {e}
+    sub = {e}
+    changed = True
+    while changed:
+        changed = False
+        for a in list(sub):
+            for b in gen:
+                c = mul(a, b)
+                if c not in sub:
+                    sub.add(c)
+                    changed = True
+    return sub
+
+
+# --- 真群論計算 (唔用硬編表) ---
+P3 = list(itertools.permutations(range(3)))
+m3 = lambda a, b: tuple(a[b[i]] for i in range(3))
+i3 = lambda p: tuple(sorted(range(3), key=lambda k: p[k]))
+
+D4e = [("r", i) for i in range(4)] + [("s", i) for i in range(4)]   # r^i s^eps
+
+
+def m4(a, b):
+    ka, ia = a
+    kb, ib = b
+    if ka == "r" and kb == "r":
+        return ("r", (ia + ib) % 4)
+    if ka == "r" and kb == "s":
+        return ("s", (ia + ib) % 4)
+    if ka == "s" and kb == "r":
+        return ("s", (ia - ib) % 4)
+    return ("r", (ia - ib) % 4)
+
+
+def i4(a):
+    k, i = a
+    return ("r", (-i) % 4) if k == "r" else ("s", i)
+
+
+P5 = list(itertools.permutations(range(5)))
+
+
+def par(p):
+    n, seen, sgn = len(p), [False] * len(p), 1
+    for i in range(n):
+        if not seen[i]:
+            j, L = i, 0
+            while not seen[j]:
+                seen[j] = True
+                j = p[j]
+                L += 1
+            if L % 2 == 0:
+                sgn = -sgn
+    return sgn
+
+
+A5e = [p for p in P5 if par(p) == 1]
+m5 = lambda a, b: tuple(a[b[i]] for i in range(5))
+i5 = lambda p: tuple(sorted(range(5), key=lambda k: p[k]))
+
+computed = {}
+for nm, elems, mul, inv in [("S3", P3, m3, i3), ("D4", D4e, m4, i4), ("A5", A5e, m5, i5)]:
+    cls = conj_classes(elems, mul, inv)
+    com = commutator_closure(elems, mul, inv)
+    computed[nm] = (len(elems), len(cls), len(elems) // len(com))
+
+# Z_88: 特徵標直接構造 (複數, 唔可以只用 cos)
+chars88 = set()
+for k in range(N):
+    chars88.add(tuple((round(float(mp.cos(2 * PI * k * g / N)), 10),
+                       round(float(mp.sin(2 * PI * k * g / N)), 10)) for g in range(N)))
+computed["Z88"] = (N, N, len(chars88))
+
+DOC_TABLE = {"Z88": (88, 88, 88), "S3": (6, 3, 2), "D4": (8, 5, 4), "A5": (60, 5, 1)}
+for G in ("Z88", "S3", "D4", "A5"):
+    check("T1 %s 群論真算 (|G|, #irreps, #1dim) = 文檔表 %s" % (G, DOC_TABLE[G]),
+          computed[G] == DOC_TABLE[G])
+
+# C_88 Laplacian 譜: 相異特徵值數 (模態標籤 vs 譜簡併 — 修正 docs/22 T2 措辭)
+lam88 = sorted(set(round(float(2 - 2 * mp.cos(2 * PI * k / N)), 10) for k in range(N)))
+check("T2 C_88 譜相異值 = 45 (88 模態本身有 k <-> 88-k 二重簡併)",
+      len(lam88) == 45 and len(lam88) < N)
+check("T2 Z_88 有 88 個一維標籤 = 模態數 (標籤結構, 唔係「非 Abel 才簡併」)",
+      computed["Z88"][2] == N)
+
 check("T3 B(n) = L10/(2N_d) 均勻", abs(B_n - mp.mpf(123) / 88) < mp.mpf("1e-30"))
 check("T3 L10 = 123 註冊", ob.LUC[10] == 123)
 check("T4 剩「為何 88」= O95/O96 (44 必然性 ×2 已閉合)", N == 2 * Nd)
