@@ -1,0 +1,77 @@
+{
+  "F_gamma_independent": "264.0821292325802448541102",
+  "F_gamma_registered": "264.08212923258026",
+  "F_gamma_dev": 5.735295250223877e-17,
+  "kappa_nonzero": 1341,
+  "kappa_shape": [
+    36,
+    36,
+    36
+  ],
+  "mu_logN": "0.86247843319433929265",
+  "mu_logN_registered": "0.862478",
+  "s_logN": "1.1873615201218720889",
+  "s_logN_registered": "1.1874",
+  "var_pop": "0.039161871651836746038",
+  "var_pop_registered": "0.039162",
+  "mean_ln_1_dhat_plus": "0.480905496027426",
+  "mean_registered": "0.48091",
+  "dhat_plus_definition": "delta_hat_plus = gamma_k/2 - 1, 176-ring k=45..88 (44 modes)",
+  "crack": "0.0074626865671641791045",
+  "crack_percent": "0.746268656716",
+  "criterion_steps": [
+    "(1) 語法合法 (SPECTRAL/STRUCT/GEOM; LIT/OBS 禁)",
+    "(2) 每葉獨立出處 (O + file:line)",
+    "(3) 零自由參數",
+    "(4) 精度證據 (dev vs 觀測; 落陷阱窗 ⇒ 不足)",
+    "(5) 機制證據 (null test / 零擬合算子 / 整族排除)",
+    "(6) 數域相容 {Q, Q(sqrt5), Q(zeta_176)^+}"
+  ],
+  "targets": {
+    "V_Lambda": {
+      "verdict": "✅ 表達層合格 (精度 🟡 / 機制 ✅)",
+      "value": "283.08212923258024485",
+      "dev_formula": 1.0326537864758708e-07,
+      "dev_obs": 2.4478416266224854e-05,
+      "step4_precision": false,
+      "step5_mechanism": true,
+      "step5_src": "機制證據 ✅ — O62 docs/01:32-35 — random t 0/10000, random κ 0/500, γ 方案唯一命中, 其他自然方案(φ^-i,2^-i,Lucas)全部唔中"
+    },
+    "mu_logN": {
+      "verdict": "🟡 表達層形式合格 (精度不足 + 機制 🔴)",
+      "value": "0.86247843319433929265",
+      "dev_formula": 5.022671178773824e-07,
+      "dev_obs": null,
+      "step4_precision": false,
+      "step5_mechanism": false,
+      "step5_src": "機制證據 🔴 — O197 docs/10 R4: 11/45 轉正 **否定** (巧合風險, 觀測支持已撤); φ⁻¹ 主導 ✅ (母方程根)"
+    },
+    "s_logN": {
+      "verdict": "✅ 表達層合格 (精度 🟡 / 機制 ✅)",
+      "value": "1.1873615201218720889",
+      "dev_formula": 3.24068368939794e-05,
+      "dev_obs": null,
+      "step4_precision": false,
+      "step5_mechanism": true,
+      "step5_src": "機制證據 ✅ — 零擬合算子: Var_pop 作用於譜強迫 δ̂₊ (零自由參數); 36 = B·N_gen² = h¹¹ 雙身份 (O197 T4)"
+    },
+    "crack": {
+      "verdict": "🟡 表達層形式合格 (精度不足 + 機制 🟡)",
+      "value": "0.0074626865671641791045",
+      "dev_formula": 0.0,
+      "dev_obs": 0.0003601296466728022,
+      "step4_precision": false,
+      "step5_mechanism": false,
+      "step5_src": "機制證據 🟡 — O168 final_result:49 r 族 1/(2N) 全命中; 但 final_result:54 N-規律統一審計 ⇒ 🔴 (N 唔線性); docs/11:67 標「框架外標度」"
+    }
+  },
+  "injections": {
+    "C1a 裸數 LIT": true,
+    "C1b 無出處": true,
+    "C1c 觀測混入": true,
+    "C1d 擬合常數": true
+  },
+  "completeness_form": 0.7017543859649122,
+  "completeness_form_mech": 0.6666666666666666,
+  "remaining": "表達層搜尋係人手指定樹, 未做自動枚舉"
+}

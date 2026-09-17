@@ -1,0 +1,126 @@
+{
+  "T1_pi_phase_modulus": {
+    "identity": "4sin^2(pi n/88) = 2 - (zeta_88^n + zeta_88^-n), zeta_88 = e^(2 pi i/88)",
+    "value_field": "Q(zeta_88)^+, [Q(zeta_88)^+ : Q] = phi(88)/2 = 20",
+    "pslq_min_poly_degree": {
+      "n=1": 20,
+      "n=2": 20,
+      "n=3": 20,
+      "n=5": 20,
+      "n=11": 20,
+      "n=22": 20,
+      "n=44": 20
+    },
+    "gamma_11": "2 - sqrt(2)",
+    "criterion": "π 只准出現喺相位/索引位置 (2πk/N); 值層含 π ⇒ 非法",
+    "verdict": "✅ π = 相位模 (唔係值); 值域全代數"
+  },
+  "T2_e_continuum_limit": {
+    "statement": "e ∉ Q̄ ⇒ e ∉ 譜語言值域 ⇒ 含 e 嘅閉式必然係近似 (邏輯上不可能 EXACT)",
+    "e_shadow": "e ≈ phi^2 * 27/26 = phi^2 * N_gen^3/(N_gen^3-1)",
+    "delta": "-0.0001639646584",
+    "delta_dev_pct": 0.016396465837977988,
+    "delta_structural_search": {
+      "target_1_over_abs_delta": "6098.87526911",
+      "best_candidates": [
+        {
+          "a": 19,
+          "b": 321,
+          "product": 6099,
+          "dev_pct": 0.002045145827743768
+        },
+        {
+          "a": 321,
+          "b": 19,
+          "product": 6099,
+          "dev_pct": 0.002045145827743768
+        },
+        {
+          "a": 35,
+          "b": 174,
+          "product": 6090,
+          "dev_pct": 0.1455230467140581
+        }
+      ],
+      "best_identity": "(L_6+1)(L_12-1) = 19 x 321 = 6099",
+      "null_control": {
+        "samples": 2000,
+        "P_hit_lt_2e-5": 0.017,
+        "threshold": 0.001
+      },
+      "status": "🔴 未導出 (最佳候選 dev 0.0020% 但 null P 0.017 ⇒ 邊緣, 唔算命中)"
+    },
+    "criterion": "含超越數目標 ⇒ 標「邊界近似」, 唔准標閉合",
+    "verdict": "✅ e = 連續極限記號 (唔係值); 4 個出現點全部帶殘餘 (無反例)"
+  },
+  "T3_unified_interface_law": {
+    "law": "標度 = 1/(2N), N 結構強迫",
+    "sector_sums": {
+      "Sum_gamma_odd": "88.0",
+      "Sum_gamma_even": "88.0",
+      "note": "★ 兩扇區相等 = 88"
+    },
+    "table": {
+      "N=67": {
+        "identity": "2K_tree + 1 = 2×33+1",
+        "one_over_2N_pct": 0.746268656716418,
+        "registered_pct": 0.746,
+        "dev_pct": 0.03601296466728669,
+        "source": "crack (O168 docs/18:20)"
+      },
+      "N=70": {
+        "identity": "2N_d − L₆ = 88 − 18",
+        "one_over_2N_pct": 0.7142857142857143,
+        "registered_pct": 0.719,
+        "dev_pct": 0.6556725610967553,
+        "source": "r44 (e^{−44} φ-形殘餘)"
+      },
+      "N=92": {
+        "identity": "Σγ_even + μ² = 88 + 4",
+        "one_over_2N_pct": 0.5434782608695652,
+        "registered_pct": 0.543,
+        "dev_pct": 0.08807750820720998,
+        "source": "r33 (e^{33} φ-形殘餘)"
+      },
+      "N=118": {
+        "identity": "2(F₁₀+B) = 2(55+4)",
+        "one_over_2N_pct": 0.423728813559322,
+        "registered_pct": 0.424,
+        "dev_pct": 0.06395906619763513,
+        "source": "r25 (e^{−25.5} φ-形殘餘)"
+      }
+    },
+    "euler_maclaurin": {
+      "N=67": {
+        "em_residual": 0.007444123083729,
+        "one_over_2N": 0.007462686567164179,
+        "ratio": 0.997512493219686,
+        "predicted_ratio": 0.9975124378109452
+      },
+      "N=70": {
+        "em_residual": 0.007125850687179938,
+        "one_over_2N": 0.007142857142857143,
+        "ratio": 0.9976190962051914,
+        "predicted_ratio": 0.9976190476190476
+      },
+      "N=92": {
+        "em_residual": 0.005424937104344677,
+        "one_over_2N": 0.005434782608695652,
+        "ratio": 0.9981884271994206,
+        "predicted_ratio": 0.9981884057971014
+      },
+      "N=118": {
+        "em_residual": 0.004231303308326144,
+        "one_over_2N": 0.00423728813559322,
+        "ratio": 0.9985875807649699,
+        "predicted_ratio": 0.998587570621469
+      }
+    },
+    "verdict": "★★ 5 個標度全部 = 1/(2N), 機制 = Euler–Maclaurin 一階; O168 🔴 ⇒ 🟡"
+  },
+  "remaining": [
+    "π: 為何相位模係 2π/N (上游)",
+    "e: 為何 δ = e/(φ²·27/26) − 1 係呢個值 (即 e 為何偏偏係 e)",
+    "N 嘅選擇律 (逐案結構, 未統一)"
+  ]
+}

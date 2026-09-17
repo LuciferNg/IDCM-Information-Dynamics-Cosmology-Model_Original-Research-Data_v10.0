@@ -1,0 +1,153 @@
+{
+  "D1_transport": {
+    "equation": "d tau/dn = sec theta_n = 1/cos(pi n/88); tau_K = sum_{n=1}^K sec_n; <sec>_K = tau_K/K",
+    "assembly_law": "E(ell) = ell + <sec>_{1..K(z)}  (O169 docs/04:131)",
+    "values": {
+      "K=21": {
+        "tau_K": "23.4854930151712",
+        "mean_sec": "1.11835681024625"
+      },
+      "K=22": {
+        "tau_K": "24.8997065775443",
+        "mean_sec": "1.13180484443383"
+      },
+      "K=28": {
+        "tau_K": "34.7597070894244",
+        "mean_sec": "1.24141811033659"
+      }
+    },
+    "registered": {
+      "mean_sec_1_21": "1.118356810 (O169 docs/09:61)",
+      "mean_sec_1_28": "piR 截距 (dev 9.35e-6, O169 docs/09:76)"
+    }
+  },
+  "D2_Kz_law_derived": {
+    "conditions": [
+      "(i) K = L4 * N_eff",
+      "(ii) N_eff(0) = N_gen = 3",
+      "(iii) N_eff(F_proj) = B = 4",
+      "(iv) N_eff affine (unique)"
+    ],
+    "solution": "N_eff(z) = N_gen + z/F_proj, slope = (B-N_gen)/F_proj = 1/17",
+    "window": {
+      "K_min": 21,
+      "K_max": 28,
+      "registered_window": [
+        21,
+        28
+      ],
+      "match": true
+    },
+    "alternative_slopes_tested": [
+      {
+        "slope": "1/17",
+        "N_eff(F_proj)": "4.0",
+        "valid": true
+      },
+      {
+        "slope": "2/17",
+        "N_eff(F_proj)": "5.0",
+        "valid": false
+      },
+      {
+        "slope": "3/17",
+        "N_eff(F_proj)": "6.0",
+        "valid": false
+      },
+      {
+        "slope": "4/17",
+        "N_eff(F_proj)": "7.0",
+        "valid": false
+      },
+      {
+        "slope": "5/17",
+        "N_eff(F_proj)": "8.0",
+        "valid": false
+      },
+      {
+        "slope": "6/17",
+        "N_eff(F_proj)": "9.0",
+        "valid": false
+      },
+      {
+        "slope": "7/17",
+        "N_eff(F_proj)": "10.0",
+        "valid": false
+      },
+      {
+        "slope": "8/17",
+        "N_eff(F_proj)": "11.0",
+        "valid": false
+      }
+    ],
+    "verdict": "✅ 唯一確定 (端點 + 仿射)",
+    "remaining": "為何 K = L4 * N_eff (乘 L4 嘅理由)"
+  },
+  "D3_half_power_fixed_point": {
+    "self_dual_mode": 22,
+    "theta_22": "pi/4 EXACT",
+    "cos2_theta_22": "1/2 EXACT",
+    "kernel": "r_k = 2 pi R_w cos^2 theta_k",
+    "r_22_over_r_max": "1/2",
+    "piR_identity": "pi R = r_22 = pi R_w = 半功率點",
+    "Z2_fixed_point": {
+      "involution": "n -> N_d - n",
+      "unique_fixed_point": 22,
+      "note": "r_{44-n} = 2 pi R_w sin^2 theta_n ≠ r_n ⇒ 固定點係核中點值, 唔係對稱點"
+    },
+    "verdict": "✅ 閉合"
+  },
+  "D4_window_ladder": {
+    "formula": "z_j = (2j-1) F_proj/(2 L4), j=1..L4+1",
+    "first_step": "z_1 = 17/14 = 1.214286 (K: 21 -> 22)",
+    "n_steps": 8,
+    "values": {
+      "j=1": {
+        "z_derived": "1.2142857142857",
+        "z_registered": "1.2142857142857",
+        "dev": "1.8907308e-40"
+      },
+      "j=2": {
+        "z_derived": "3.6428571428571",
+        "z_registered": "3.6428571428571",
+        "dev": "2.5209744e-41"
+      },
+      "j=3": {
+        "z_derived": "6.0714285714286",
+        "z_registered": "6.0714285714286",
+        "dev": "4.5377539e-41"
+      },
+      "j=4": {
+        "z_derived": "8.5",
+        "z_registered": "8.5",
+        "dev": "0.0"
+      },
+      "j=5": {
+        "z_derived": "10.928571428571",
+        "z_registered": "10.928571428571",
+        "dev": "3.3612992e-41"
+      },
+      "j=6": {
+        "z_derived": "13.357142857143",
+        "z_registered": "13.357142857143",
+        "dev": "1.3750769e-41"
+      },
+      "j=7": {
+        "z_derived": "15.785714285714",
+        "z_registered": "15.785714285714",
+        "dev": "2.3270533e-41"
+      },
+      "j=8": {
+        "z_derived": "18.214285714286",
+        "z_registered": "18.214285714286",
+        "dev": "2.0167795e-41"
+      }
+    },
+    "verdict": "✅ 同 O169 docs/04:143 註冊一致"
+  },
+  "verdict": "O169 殘項 ① 🔴 → 🟡: 3 項閉合 (b N_eff/c πR/d K(ℓ) 律), 1 項形式化未閉 (a 組裝律)",
+  "remaining": [
+    "為何 K = L4 * N_eff (乘 L4)",
+    "為何組裝律係 ell + <sec> (呢個組合)"
+  ]
+}
