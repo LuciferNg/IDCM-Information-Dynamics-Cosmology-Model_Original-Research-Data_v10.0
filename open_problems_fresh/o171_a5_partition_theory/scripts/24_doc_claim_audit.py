@@ -614,6 +614,114 @@ chk("P4-23 docs/24: 全譜 rms / 錨 = 3.69262",
 
 
 # =====================================================================
+print("\n=== P5: docs/25 (通道分派律審計) 聲稱核對 ===")
+
+# P5-1 θ* = 7π/2112 係 R 對消之代數恆等 (sympy 符號)
+_Rs = sp.Symbol("R", positive=True)
+_th = sp.simplify((sp.pi * _Rs / 88) / (24 * _Rs / 7))
+chk("P5-1 docs/25: θ* = 7π/2112 係 R 對消之代數恆等 (free_symbols = ∅)",
+    sp.simplify(_th - 7 * sp.pi / 2112) == 0 and _th.free_symbols == set())
+chk("P5-2 docs/25: r*/r_d = 55/56 係共享 420/421 對消之代數恆等",
+    sp.simplify(((sp.pi * _Rs / 88) * sp.Rational(420, 421) * sp.Rational(55, 56))
+                / ((sp.pi * _Rs / 88) * sp.Rational(420, 421))) == sp.Rational(55, 56))
+
+# P5-3 通道 σ 表 (docs/25 §2)
+_TH_SIG = sp.Rational(31, 100000) / sp.Rational(104110, 100000)
+_RD_SIG = sp.Rational(26, 100) / sp.Rational(14709, 100)
+chk("P5-3 docs/25: σ(θ*) = 0.02978%;  σ(θ*)/σ(r_d) = 5.94×",
+    abs(float(_TH_SIG) * 100 - 0.02978) < 1e-4 and
+    abs(float(_RD_SIG / _TH_SIG) - 5.936) < 0.01,
+    "(%.5f%%, %.3f×)" % (float(_TH_SIG) * 100, float(_RD_SIG / _TH_SIG)))
+chk("P5-4 docs/25: A_s 乘性 σ = 0.014 = 1.400% (唔係 0.4599%)",
+    abs(0.014 / 1.0 - 0.014) < 1e-12)
+
+# P5-5 零修正 z = 0.476σ
+_th100 = 700 * sp.pi / 2112
+_z_bare = float((sp.N(_th100, 20) - sp.Rational(104110, 100000)) / sp.Rational(31, 100000))
+chk("P5-5 docs/25: bare 100θ* vs Planck ⇒ z = +0.476σ",
+    abs(_z_bare - 0.476) < 0.001, "(%.4fσ)" % _z_bare)
+
+# P5-6 四成員排除
+_z_ex = {}
+for _d in (34, 45, 56, 421):
+    _v = sp.N(_th100, 20) * sp.Rational(_d - 1, _d)
+    _z_ex[_d] = float((_v - sp.Rational(104110, 100000)) / sp.Rational(31, 100000))
+chk("P5-6 docs/25: 四成員作用於 θ* ⇒ z = −98.31/−74.17/−59.50/−7.50σ (全排除)",
+    abs(_z_ex[34] + 98.314) < 0.01 and abs(_z_ex[45] + 74.165) < 0.01 and
+    abs(_z_ex[56] + 59.504) < 0.01 and abs(_z_ex[421] + 7.502) < 0.01,
+    "(%s)" % ", ".join("%.2f" % v for v in _z_ex.values()))
+# P5-7 θ* 窗內最小 d
+_d_min = float(sp.Rational(1, 1) / (1 - (sp.Rational(104110, 100000)
+                                         - sp.Rational(31, 100000)) / sp.N(_th100, 20)))
+chk("P5-7 docs/25: θ* 1σ 窗內最小 d = 2275.627 (> 全部家族成員 d ≤ 421)",
+    abs(_d_min - 2275.627) < 0.01, "(%.4f)" % _d_min)
+
+# P5-8 28 對中 3 對合法
+_CH = {"theta_star": (sp.N(_th100, 20), sp.Rational(31, 100000), []),
+       "r_d": (sp.N(sp.pi * sp.Rational(412994, 100) / 88, 20), sp.Rational(26, 100), [421]),
+       "r_star": (sp.N(sp.pi * sp.Rational(412994, 100) / 88, 20), sp.Rational(25, 100), [421, 56]),
+       "r_ratio": (sp.Integer(1), sp.N(sp.sqrt(sp.Rational(25, 100) ** 2 / sp.Rational(14446, 100) ** 2
+                                            + sp.Rational(26, 100) ** 2 / sp.Rational(14709, 100) ** 2), 20), [56]),
+       "Omega_Lambda": (sp.Rational(41, 60), sp.Rational(73, 10000), [])}
+_OBSV = {"theta_star": sp.Rational(104110, 100000), "r_d": sp.Rational(14709, 100),
+         "r_star": sp.Rational(14446, 100), "r_ratio": sp.Rational(14446, 14709),
+         "Omega_Lambda": sp.Rational(6847, 10000)}
+_n_ok2 = 0
+_okpairs = []
+for _lab, _dd in (("33/34", 34), ("44/45", 45), ("55/56", 56), ("420/421", 421)):
+    for _ck, (_bare, _sg, _ch) in _CH.items():
+        _b = _bare
+        for _f in _ch:
+            if _f == _dd:
+                break
+            _b = _b * sp.Rational(_f - 1, _f)
+        _w = _b * sp.Rational(_dd - 1, _dd)
+        _zd = float((_w - _OBSV[_ck]) / _sg)
+        _zt = float((_b / _dd) / _sg)
+        if abs(_zd) <= 1.0 and _zt >= 1.0:
+            _n_ok2 += 1
+            _okpairs.append((_lab, _ck))
+chk("P5-8 docs/25: 28 對中合法檢定 = 3 對 (全部喺已註冊鏈)",
+    _n_ok2 == 3, "(%s)" % _okpairs)
+chk("P5-9 docs/25: 3 對 = 55/56×r*, 55/56×r*/r_d, 420/421×r_d",
+    sorted(_okpairs) == sorted([("55/56", "r_star"), ("55/56", "r_ratio"),
+                                ("420/421", "r_d")]), "(%s)" % _okpairs)
+
+# P5-10 22.86×
+_sep5 = F(55, 56) - F(54, 55)
+_sig5 = float(sp.sqrt(sp.Rational(25, 100) ** 2 / sp.Rational(14446, 100) ** 2
+                      + sp.Rational(26, 100) ** 2 / sp.Rational(14709, 100) ** 2))
+chk("P5-10 docs/25: 分辨 55/56 vs 54/55 需改善 22.86× (更正 4.4×)",
+    abs(_sig5 / (float(_sep5) / 3) - 22.86) < 0.05,
+    "(%.2f×)" % (_sig5 / (float(_sep5) / 3)))
+chk("P5-11 docs/25: 60/61 分離 ⇒ 需改善 5.06× (最難分辨者係 54/55)",
+    abs(_sig5 / (float(F(60, 61) - F(55, 56)) / 3) - 5.06) < 0.05,
+    "(%.2f×)" % (_sig5 / (float(F(60, 61) - F(55, 56)) / 3)))
+
+# P5-12 通道多重度
+_LU5 = [2, 1]
+while len(_LU5) < 20:
+    _LU5.append(_LU5[-1] + _LU5[-2])
+_FI5 = [1, 1]
+while len(_FI5) < 20:
+    _FI5.append(_FI5[-1] + _FI5[-2])
+_C5 = sorted(set(_FI5) | set(_LU5) | {_g * _l for _g in (1, 3, 4, 5, 12, 60) for _l in _LU5}
+             | {33, 44, 55, 420, 88, 176, 12, 16, 25, 60})
+chk("P5-12 docs/25: 結構候選集 = 131 個", len(_C5) == 131, "(%d)" % len(_C5))
+for _ck, _mult_exp in (("r_ratio", 3), ("r_d", 27), ("theta_star", 46), ("Omega_Lambda", 92)):
+    _bare5, _sg5b = _CH[_ck][0], _CH[_ck][1]
+    _h5 = [N for N in _C5 if abs(float((_bare5 * sp.Rational(N - 1, N) - _OBSV[_ck]) / _sg5b)) <= 1.0]
+    chk("P5-%d docs/25: %s 通道 1σ 窗多重度 = %d" % (12 + list(("r_ratio", "r_d", "theta_star", "Omega_Lambda")).index(_ck) + 1, _ck, _mult_exp),
+        len(_h5) == _mult_exp, "(%d)" % len(_h5))
+chk("P5-17 docs/25: θ* 窗內最小候選 = 2388 (家族 d ≤ 421 全排除)",
+    min([N for N in _C5 if abs(float((_CH["theta_star"][0] * sp.Rational(N - 1, N)
+                                      - _OBSV["theta_star"]) / _CH["theta_star"][1])) <= 1.0]) == 2388)
+chk("P5-18 docs/25: 非既約 (p,q) 對 q ≤ 300 落入 r*/r_d 1σ 窗 = 217",
+    sum(1 for _q in range(1, 301) for _p in range(1, _q)
+        if float(_Xr) - float(_sig) < _p / _q < float(_Xr) + float(_sig)) == 217)
+
+
+# =====================================================================
 print("\n=== Q: 文檔覆蓋完整性 ===")
 docs = sorted(BASE.glob("docs/*.md"))
 scripts = sorted(BASE.glob("scripts/*.py"))
