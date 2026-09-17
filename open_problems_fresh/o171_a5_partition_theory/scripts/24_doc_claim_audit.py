@@ -19,6 +19,7 @@ from math import comb, gcd, isqrt
 from pathlib import Path
 
 import mpmath as mpm
+import sympy as sp
 
 mp = mpm.mp
 mp.dps = 40
@@ -507,6 +508,112 @@ chk("P3-23 docs/23: 5ε_ring⁵/8·T = 134.446 μK",
     abs(float(5 * e_ring**5 / 8 * T * 1e6) - 134.4459) < 0.001)
 
 # =====================================================================
+print("\n=== P4: docs/24 (第八輪) ===")
+# P4-1..3 頻帶 rms (用真實全譜, 唔 import scripts/34)
+_SPEC = dict(_spec)
+_cum = mp.mpf(0)
+_rmsL = {}
+for _l in sorted(_SPEC):
+    _cum += (2 * _l + 1) * _SPEC[_l] / (2 * _l * (_l + 1))
+    _rmsL[_l] = mp.sqrt(_cum)
+_TGT = _anchor * T * 1e6
+chk("P4-1 docs/24: rms(ℓ=2..6) = 29.7448 μK (dev −0.8491%)",
+    abs(float(_rmsL[6]) - 29.7448) < 0.001 and
+    abs(float(_rmsL[6] / _TGT - 1) * 100 + 0.8491) < 0.001,
+    "(%.4f μK)" % float(_rmsL[6]))
+chk("P4-2 docs/24: rms(ℓ=2..10) = 35.5275 μK (+18.43%)",
+    abs(float(_rmsL[10]) - 35.5275) < 0.001)
+chk("P4-3 docs/24: rms(ℓ=2..88) = 61.0920 μK (+103.64%)",
+    abs(float(_rmsL[88]) - 61.0920) < 0.001)
+# P4-4 穿越點 = 7
+_c2 = mp.mpf(0)
+_cross = None
+for _l in sorted(_SPEC):
+    _c2 += (2 * _l + 1) * _SPEC[_l] / (2 * _l * (_l + 1))
+    if _c2 >= _TGT ** 2:
+        _cross = _l
+        break
+chk("P4-4 docs/24: 累積 rms 唯一穿越點 ℓ = 7", _cross == 7, "(ℓ=%s)" % _cross)
+# P4-5 CV(rms)
+_N = sum(2 * l + 1 for l in range(2, 7))
+_cv = mp.sqrt(mp.mpf(2) / _N) / 2
+chk("P4-5 docs/24: N = 45, CV(rms) = 10.5409%", _N == 45 and
+    abs(float(_cv) * 100 - 10.5409) < 0.001, "(%.4f%%)" % (float(_cv) * 100))
+# P4-6 SW 平台
+_plat = mp.fsum([_SPEC[l] for l in _SPEC if 2 <= l <= 20]) / len([l for l in _SPEC if 2 <= l <= 20])
+chk("P4-6 docs/24: SW 平台 D̄(2..20) = 799.47 μK², √ = 28.27 μK (dev −5.75%)",
+    abs(float(_plat) - 799.47) < 0.01 and
+    abs(float(mp.sqrt(_plat) / _TGT - 1) * 100 + 5.75) < 0.01,
+    "(%.2f μK²)" % float(_plat))
+# P4-7 CV 下限公式 (sympy 精確)
+_l0, _d0, _f0 = sp.symbols("l dl fsky", positive=True)
+chk("P4-7 docs/24: CV 下限 = sqrt(2/((2l+1) dl fsky))",
+    sp.simplify(sp.sqrt(sp.Rational(2) / ((2 * _l0 + 1) * _d0 * _f0)) ** 2
+                - 2 / ((2 * _l0 + 1) * _d0 * _f0)) == 0)
+_fi = sp.sqrt(sp.Rational(2) / ((2 * 2000 + 1) * 2000 * 1))
+chk("P4-8 docs/24: 理想全天空 ℓ=2000, Δℓ=2000 ⇒ 0.049994%",
+    abs(float(_fi) * 100 - 0.049994) < 1e-5, "(%.6f%%)" % (float(_fi) * 100))
+chk("P4-9 docs/24: d=34 識別門檻 = 1/2380 = 0.042017% < 0.049994% (差 1.19×)",
+    F(1, 2380) == F(1, 2 * 34 * 35) and
+    abs(float(F(1, 2380)) * 100 - 0.042017) < 1e-5 and
+    float(_fi) / float(F(1, 2380)) > 1.18)
+chk("P4-10 docs/24: d=421 識別門檻 = 1/355324, 差 177×",
+    F(1, 2 * 421 * 422) == F(1, 355324) and
+    abs(float(_fi) / float(F(1, 355324)) - 177.6) < 0.5,
+    "(%.1fx)" % (float(_fi) / float(F(1, 355324))))
+chk("P4-11 docs/24: d=34 可識別需 (2ℓ+1)Δℓ ≥ 1.13288e7 ⇒ ℓ ≥ 2380",
+    2 * (2 * 34 * 35) ** 2 == 11328800 and sp.sqrt(sp.Integer(11328800) / 2) == 2380)
+# P4-12 窗口唯一性
+_Xr = F(14446, 100) / F(14709, 100)
+_sig = mp.sqrt((mp.mpf("0.25") / 144.46) ** 2 + (mp.mpf("0.26") / 147.09) ** 2)
+_lo = F(int(mp.floor((mp.mpf(str(float(_Xr))) - _sig) * 10 ** 12)), 10 ** 12)
+_hi = F(int(mp.ceil((mp.mpf(str(float(_Xr))) + _sig) * 10 ** 12)), 10 ** 12)
+_FIB = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+_LUC = [2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322, 521, 843]
+_G = [1, 3, 4, 5, 12, 60]
+_CAND = sorted(set(_FIB) | set(_LUC) | {g * l for g in _G for l in _LUC}
+               | {33, 44, 55, 420, 88, 176, 12, 16, 25, 60})
+_win = [N for N in _CAND if _lo <= F(N, N + 1) <= _hi]
+chk("P4-12 docs/24: 識別窗內結構候選 = [54, 55, 60] (退化度 3)",
+    _win == [54, 55, 60], "(%s)" % _win)
+chk("P4-13 docs/24: r*/r_d 精確 = 14446/14709 = 0.982119791",
+    abs(float(_Xr) - 0.982119791) < 1e-9)
+chk("P4-14 docs/24: 55/56 dev = +0.00235% = +0.009σ",
+    abs(float(F(55, 56) / _Xr - 1) * 100 - 0.00235) < 1e-5)
+chk("P4-15 docs/24: 54/55 dev = −0.03071% (同在 1σ 窗)",
+    abs(float(F(54, 55) / _Xr - 1) * 100 + 0.03071) < 1e-5 and
+    abs(float(F(54, 55) / _Xr - 1)) < float(_sig))
+chk("P4-16 docs/24: 60/61 dev = +0.15138% (同在 1σ 窗)",
+    abs(float(F(60, 61) / _Xr - 1) * 100 - 0.15138) < 1e-5 and
+    abs(float(F(60, 61) / _Xr - 1)) < float(_sig))
+# P4-17 全域 Farey 密度
+_fc = 0
+for _q in range(1, 301):
+    for _p in range(1, _q):
+        if _lo <= F(_p, _q) <= _hi:
+            _fc += 1
+chk("P4-17 docs/24: 全域 q ≤ 300 落入同窗之既約分數 = 217",
+    _fc == 217, "(%d)" % _fc)
+# P4-18 連分數收斂子
+_cv2 = list(sp.continued_fraction_convergents(
+    sp.continued_fraction(sp.Rational(int(round(float(_Xr) * 10 ** 9)), 10 ** 9))))
+_pq = [(int(c.p), int(c.q)) for c in _cv2][:10]
+chk("P4-18 docs/24: 55/56 係連分數收斂子 (且 54/55 亦係)",
+    (55, 56) in _pq and (54, 55) in _pq, "(%s)" % _pq[:5])
+# P4-19 輸入剛性
+chk("P4-19 docs/24: (L₇²∓1)/2 = (420, 421); 29² mod 421 = 420",
+    (29 ** 2 - 1) // 2 == 420 and (29 ** 2 + 1) // 2 == 421 and pow(29, 2, 421) == 420)
+_n_ok = [n for n in range(1, 400) if n % 8 == 0 and (n // 8) in _LUC]
+chk("P4-20 docs/24: R = n/8 為 Lucas 整數之 n = [8,16,24,32,56,88,144,232,376]",
+    _n_ok == [8, 16, 24, 32, 56, 88, 144, 232, 376], "(%s)" % _n_ok)
+chk("P4-21 docs/24: 88 唔係唯一 ⇒ 需 R = L₅ 額外鎖定", len(_n_ok) > 1)
+chk("P4-22 docs/24: L₇ = 29 係 Lucas 表上唯一令 (L²+1)/2 = 421 者",
+    [L for L in range(1, 200) if (L * L + 1) % 2 == 0 and (L * L + 1) // 2 == 421] == [29])
+chk("P4-23 docs/24: 全譜 rms / 錨 = 3.69262",
+    abs(float(_rmsL[max(_rmsL)] / _TGT) - 3.69262) < 1e-4)
+
+
+# =====================================================================
 print("\n=== Q: 文檔覆蓋完整性 ===")
 docs = sorted(BASE.glob("docs/*.md"))
 scripts = sorted(BASE.glob("scripts/*.py"))
@@ -592,7 +699,7 @@ chk("R3 ★ 小計聲稱 (腳本數 + PASS 總) 同逐 script 明細一致", bad
 
 print("\n=== S: 時序完整性 ===")
 pr = (BASE / "01_problem_record.md").read_text(encoding="utf-8")
-for rnd in ("第一輪", "第二輪", "第三輪", "第四輪", "第五輪", "第六輪", "第六輪（下）"):
+for rnd in ("第一輪", "第二輪", "第三輪", "第四輪", "第五輪", "第六輪", "第六輪（下）", "第七輪", "第八輪"):
     chk(f"S1 §六 含「{rnd}」時序段", rnd in pr)
 chk("S2 §六 標明「禁回溯污染」", "禁回溯污染" in pr)
 idx = re.findall(r"^\|\s*(\d+)\s*\|", pr, re.M)
