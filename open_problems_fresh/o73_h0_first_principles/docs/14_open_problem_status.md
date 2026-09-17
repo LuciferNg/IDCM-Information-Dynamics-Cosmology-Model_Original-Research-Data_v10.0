@@ -116,5 +116,7 @@ O73 核心閉合 (BBN 鎖定 + CMB 投影) 而家有三重獨立強化:
 - o167_cmb_h0_tension/docs/02_theta_star_cross.md — θ* 誤差修正
 - o171_a5_partition_theory/docs/29_rworld_decomposition.md — R_world 鎖定
 - o98_lcdm_ionization_deviation/docs/02_verdict.md — I 分歧判決
-- o203_sync_rate_rworld/docs/07_verdict.md — 速率維度惰性
+- o203_sync_rate_rworld/docs/07_verdict.md — 速率維度惰性 (裁決)
+- o203_sync_rate_rworld/docs/01_s1_candidates.md — C_energy = 1/45 EXACT (精確身份)
+- o203_sync_rate_rworld/final_result.md — 速率維度正式排除 + C_energy 閉合
 ```
