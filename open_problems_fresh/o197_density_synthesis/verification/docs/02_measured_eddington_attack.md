@@ -97,8 +97,12 @@ etc.), 閉合需 0.77 dex — 唔夠, 剩餘 ~0.37 dex 結構缺口 🟡。
 - **`lambda_lo`/`lambda_hi` 欄名** *(審計 2026-09-16 補註, 見 `docs/04` F3)*: 呢兩個欄位
   係 Harikane+23 Table 3 嘅**非對稱誤差** (下/上誤差), **唔係區間 bounds** —
   例如 CEERS_00746 λ = 1.47 但 hi = 0.60 < λ ⟹ 語意上係 err_hi 唔係 upper bound。
-  **唔改 data 檔** (改名會令記錄過嘅數字位移 = 回溯污染; 且需與 `verification/scripts/90`
-  原子化同步)。語意以本註為準。
+  → **2026-09-16 已改名為 `lambda_err_lo` / `lambda_err_hi`**（原子化: data 檔 10 項 +
+  `scripts/90` B2c 讀取 + `docs/04` F3; **值全不變**; 獨立覆核 `scripts/90` H24）。
+  本節下文提及 `lambda_lo/hi` 之處，一律讀作 `lambda_err_lo/hi`（歷史行保留, 唔改）。
 - **`exp(E[ln M])` 標籤** *(審計 2026-09-16 補註, 見 `docs/04` F6)*: `scripts/03` T3b 用嘅
   係**幾何均值** (exp 平均對數), 唔係嚴格中位 — 本例兩者差 < 1% (對稱分佈), 無實質影響。
-  唔改腳本輸出 (避免記錄位移)。
+  **★路徑歧義更正（09-16）**: 呢個「`scripts/03`」係 **O197 自己嘅
+  `o197_density_synthesis/scripts/03_synthesis_structure.py:52`**，**唔係**本目錄嘅
+  `verification/scripts/03_eddington_forward.py`（後者冇 T3b）。修復需改本條目範圍外檔案
+  ⟹ 按紀律未動（`docs/12` §2）。

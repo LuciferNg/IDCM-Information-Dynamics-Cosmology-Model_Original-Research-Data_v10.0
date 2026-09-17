@@ -155,13 +155,11 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
     scripts/integrity_check.py:384  # --- 3e. B′ 回歸: v9.0 P_n 輸出 6.5030 殘留掃描 ---
     scripts/integrity_check.py:385  print("\n  [3e] B′ 回歸測試: v9.0 P_n 輸出 6.5030 殘留掃描 (O169 docs/05)")
     scripts/integrity_check.py:414  print(f"        → 唔屬本檢查器職權 (要該 O 自行清理); 本檢查器自身已零 6.5030 依賴")
-    o169_da_spectral_first_principles/final_result.md:48  「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` + v9.0 P_n `6.5030`」相乘。現行 v10.0 結構鏈給 **6.0636×10⁻¹⁰**
-    o169_da_spectral_first_principles/final_result.md:51  - **v9.0 `6.5030` 殘留**: 30 個檔案 (非 O169 活躍腳本 15 個) — 已交回各 O 自行清理, 檢查器唔代改。
     o169_da_spectral_first_principles/01_problem_record.md:73  | 10 | `scripts/10_bprime_pn_verdict.py` | B′ 判定 (三問) + `6.5030` 殘留普查 + η_B 各版本精算 | **P_n 屬 A 類 (受證偽)**; 6.503
-    o169_da_spectral_first_principles/01_problem_record.md:100  順帶: Ω_Λ 由已撤銷 O37 版 `4/(φ⁴−1)` 改為 O39 版 `41/60`; Ω_b 由 v9.0 `6.5030` 鏈
-    o169_da_spectral_first_principles/01_problem_record.md:110  3. **承載性**: 唯一輸出 `6.5030` 已由 v10.0 `F₇/L₀ = 13/2` 取代, 但**殘留 30 檔**
-    o169_da_spectral_first_principles/01_problem_record.md:117  「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` × v9.0 P_n `6.5030`」相乘。現行 v10.0 結構鏈給
-    o169_da_spectral_first_principles/01_problem_record.md:122  `bbn` (**新建** ⚠️ 第一輪漏掉 — 掃描關鍵詞族漏咗 `P_n`/`6.5030` 族)、
+    o169_da_spectral_first_principles/01_problem_record.md:164  順帶: Ω_Λ 由已撤銷 O37 版 `4/(φ⁴−1)` 改為 O39 版 `41/60`; Ω_b 由 v9.0 `6.5030` 鏈
+    o169_da_spectral_first_principles/01_problem_record.md:174  3. **承載性**: 唯一輸出 `6.5030` 已由 v10.0 `F₇/L₀ = 13/2` 取代, 但**殘留 30 檔**
+    o169_da_spectral_first_principles/01_problem_record.md:181  「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` × v9.0 P_n `6.5030`」相乘。現行 v10.0 結構鏈給
+    o169_da_spectral_first_principles/01_problem_record.md:186  `bbn` (**新建** ⚠️ 第一輪漏掉 — 掃描關鍵詞族漏咗 `P_n`/`6.5030` 族)、
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:60  `P_n` 唯一數值輸出 = **Ω_DM/Ω_b = 6.5030** (v9.0 CY₃ 二階, 偏差 0.05% vs 6.5)。
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:72  **但** `6.5030` 呢個 v9.0 值仍**殘留 67 處**, 包括活躍腳本 (`scripts/integrity_check.py`、
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:89  > 清理工作 = 移除 `P_n` 作為「推導來源」嘅**語言** + 清走 `6.5030` 殘留, **唔係改任何結構比率**。
@@ -169,17 +167,17 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:106  | **★ bbn 文檔實際用: `Ω_m(O37)/(1+6.5030)`** | **0.042212239** | **6.062198e-10** | **−0.0000%** | −0.6197% |
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:112  (ii) Ω_DM/Ω_b = 6.5030            ← v9.0 P_n 輸出 (非 v10.0 F₇/L₀ = 6.5)
     o169_da_spectral_first_principles/docs/05_bprime_pn_verdict.md:142  | B′-2 | `6.5030` 殘留 67 處待清理 (跨 7 個 O 目錄 + repo 檢查器) | 🔴 已交回 |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:157  > `bbn/scripts/02,07` 用 v9.0 `6.5030`、`bbn/06` 用已撤銷 O37 Ω_Λ。
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:199  ### E7. 第二輪交回 — B′ (P_n) + v9.0 6.5030 殘留 + bbn η_B 雙重 stale (2026-09-15)
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:210  | Q3 承載性 | 唯一輸出 `6.5030` 已由 v10.0 `F₇/L₀ = 13/2` 取代; 但**殘留 30 個檔案** |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:213  精算 (mpmath dps=40) 顯示該值**精確重現**於「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` × v9.0 P_n `6.5030`」
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:219  | ★ bbn 文檔實際用 `Ω_m(O37)/(1+6.5030)` | 0.042212239 | 6.062198e-10 | **−0.0000%** | −0.6197% |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:228  | 2 | `o116_dm_abundance` | 追加 | ★ B′ 結案; docs/02「跨尺度幾何不變量」宣稱更正; `scripts/02:115` 6.5030 → 13/2 |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:230  | 4 | `o77_occam_deep` | 追加 | 6.5030 → 13/2; 偏差檢查改零偏差 |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:231  | 5 | `o166_tcmb_absolute_value` | 追加 | `scripts/03,05` 6.5030 → 13/2; Ω_Λ 版本 |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:232  | 6 | `o168_g_last_input` | 追加 | 4 個腳本**雙重更正** (O37 Ω_Λ + 6.5030) |
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:236  `bbn` 確實零命中。但 B′ 路徑係經 **`P_n`** 同 **`6.5030`**, 屬另一個關鍵詞族, 第一輪未掃。
-    o169_da_spectral_first_principles/docs/04_open_ledger.md:248  **🔴 未閉合 (交回後仍屬各 O)**: v9.0 `6.5030` 殘留 30 個檔案 (非 O169 活躍 `.py` 15 個);
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:183  > `bbn/scripts/02,07` 用 v9.0 `6.5030`、`bbn/06` 用已撤銷 O37 Ω_Λ。
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:225  ### E7. 第二輪交回 — B′ (P_n) + v9.0 6.5030 殘留 + bbn η_B 雙重 stale (2026-09-15)
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:236  | Q3 承載性 | 唯一輸出 `6.5030` 已由 v10.0 `F₇/L₀ = 13/2` 取代; 但**殘留 30 個檔案** |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:239  精算 (mpmath dps=40) 顯示該值**精確重現**於「已撤銷 O37 Ω_Λ `4/(φ⁴−1)` × v9.0 P_n `6.5030`」
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:245  | ★ bbn 文檔實際用 `Ω_m(O37)/(1+6.5030)` | 0.042212239 | 6.062198e-10 | **−0.0000%** | −0.6197% |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:254  | 2 | `o116_dm_abundance` | 追加 | ★ B′ 結案; docs/02「跨尺度幾何不變量」宣稱更正; `scripts/02:115` 6.5030 → 13/2 |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:256  | 4 | `o77_occam_deep` | 追加 | 6.5030 → 13/2; 偏差檢查改零偏差 |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:257  | 5 | `o166_tcmb_absolute_value` | 追加 | `scripts/03,05` 6.5030 → 13/2; Ω_Λ 版本 |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:258  | 6 | `o168_g_last_input` | 追加 | 4 個腳本**雙重更正** (O37 Ω_Λ + 6.5030) |
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:262  `bbn` 確實零命中。但 B′ 路徑係經 **`P_n`** 同 **`6.5030`**, 屬另一個關鍵詞族, 第一輪未掃。
+    o169_da_spectral_first_principles/docs/04_open_ledger.md:274  **🔴 未閉合 (交回後仍屬各 O)**: v9.0 `6.5030` 殘留 30 個檔案 (非 O169 活躍 `.py` 15 個);
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:17  Q3 承載性:   P_n 嘅數值輸出 (Ω_DM/Ω_b = 6.5030) 喺現行 v10.0 鏈仲有冇承載?
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:35  RATIO_V9 = mp.mpf("6.5030")          # v9.0 CY₃ 二階輸出
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:96  # P_n 唯一數值輸出: Ω_DM/Ω_b = 6.5030 (v9.0 CY₃ 二階)
@@ -189,14 +187,18 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:167  「Ω_m(O37)/(1+6.5030)」行 (dev 0.0000%) — 即該數值係**雙重 stale**:
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:169  (ii) Ω_DM/Ω_b 用 v9.0 P_n 輸出 6.5030 (非 v10.0 F₇/L₀ = 6.5)
     o169_da_spectral_first_principles/scripts/10_bprime_pn_verdict.py:184  Q3 承載性   : P_n 唯一輸出 6.5030 已被 v10.0 的 F₇/L₀ = 6.5 取代
-    o169_da_spectral_first_principles/scripts/11_session_start_slim.py:35  "v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`")
+    o169_da_spectral_first_principles/scripts/12_doc_crosscheck.py:306  ob_v9  = (1 - mp.mpf(41) / 60) / (1 + mp.mpf('6.5030'))
+    o169_da_spectral_first_principles/scripts/12_doc_crosscheck.py:307  ob_bbn = (1 - 4 / (phi ** 4 - 1)) / (1 + mp.mpf('6.5030'))
+    o169_da_spectral_first_principles/scripts/12_doc_crosscheck.py:308  chk('docs/05 §3.1', 'Ω_b (v9.0 殘留 Ω_m(O39)/(1+6.5030))', ob_v9, '0.042205340', mp.mpf('1e-9'))
+    o169_da_spectral_first_principles/scripts/12_doc_crosscheck.py:309  chk('docs/05 §3.1', 'Ω_b (bbn 實際 Ω_m(O37)/(1+6.5030))', ob_bbn, '0.042212239', mp.mpf('1e-9'))
+    o169_da_spectral_first_principles/scripts/11_session_start_slim.py:36  "v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`")
     o14_omega_b_direct/SESSION_START.md:56  - `P_n = 1 + 2φ⁻¹n + K₂n²` **亦屬受證偽** (同一個「每層增益」語義, 真值 = 1); v9.0 輸出 `6.5030` → v10.0 `F₇/L₀ = 13/2`
     o14_omega_b_direct/SESSION_START.md:64  - `scripts/01_omegab_direct_derive.py:260,263,268,272` — 路徑 D: `Omega_DM_Ob_Pn = 6.5030`
     o14_omega_b_direct/SESSION_START.md:65  - `scripts/03_full_verify.py:122` — `abs(13/2 - 6.5030)/6.5030*100` 偏差檢查
     o14_omega_b_direct/scripts/01_omegab_direct_derive.py:268  # Ω_DM/Ω_b = 6.5030 已從 P_n 得出
     o14_omega_b_direct/scripts/01_omegab_direct_derive.py:272  Omega_DM_Ob_Pn = 6.5030
     o14_omega_b_direct/scripts/03_full_verify.py:122  add("Ω_DM/Ω_b 偏差 0.05%", abs(13/2 - 6.5030)/6.5030*100, 5, "01_problem_record.md")
-    → 共 147 處
+    → 共 149 處
 
 [Q3b] P_n 殘留嘅數值代價: η_B 各版本精算 (mpmath dps=40)
 ------------------------------------------------------------------------------
@@ -225,7 +227,7 @@ O169 交回 — B' 判定: P_n = 1 + 2φ⁻¹n + K₂n²
   Q1 結構角色 : 索引定義唔同, 但宣稱嘅「每層因子」係同一個 2φ⁻¹  → 同一對象
   Q2 導數身份 : 2φ⁻¹ = 「每層增益」被 O169 證偽 (真值 = 1)      → 🔴 受影響
   Q3 承載性   : P_n 唯一輸出 6.5030 已被 v10.0 的 F₇/L₀ = 6.5 取代
-                但 147 處殘留 (含活躍腳本)               → 🔴 需清理
+                但 149 處殘留 (含活躍腳本)               → 🔴 需清理
 
   ★ B' 判定: **P_n 屬 A 類 (受證偽), 唔係 B 類**
      理由: (i) 文檔明確自稱 "projection jacobian" + "跨尺度自相似"

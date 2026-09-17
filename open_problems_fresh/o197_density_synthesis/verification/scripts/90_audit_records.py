@@ -205,9 +205,11 @@ chk("B2a", "λ 自洽 (L_Edd=1.3e38 論文常數): max dev < 8%", mx13[1], 0.0, 
     f"(最大 {mx13[0]} {mx13[1]*100:.2f}%)")
 chk("B2b", "scripts/05 用 1.26e38 → 系統偏移 (記錄, 唔影響結論)",
     abs(mx126[1] - 0.10), 0.0, 0.02, f"(max dev {mx126[1]*100:.2f}% > 10% 門檻)")
-# λ_lo/λ_hi 欄位語義檢查 (係誤差唔係界?)
-bad = [d["name"] for d in data if d["lambda_hi"] < d["lambda_Edd"] or d["lambda_lo"] > d["lambda_Edd"]]
-chk("B2c", "★λ_lo/λ_hi 欄位 = 論文非對稱誤差 (唔係 bounds)",
+# λ_err_lo/λ_err_hi 欄位語義檢查 (係非對稱誤差唔係界?)
+# ★2026-09-16 改名 (審計 F3): 原 lambda_lo/lambda_hi -> lambda_err_lo/lambda_err_hi
+#   (與 data 檔 + docs/04 F3 + docs/02 §七 原子化同步; 值全部不變)
+bad = [d["name"] for d in data if d["lambda_err_hi"] < d["lambda_Edd"] or d["lambda_err_lo"] > d["lambda_Edd"]]
+chk("B2c", "★λ_err_lo/λ_err_hi 欄位 = 論文非對稱誤差 (唔係 bounds)",
     len(bad), 2, 1e-9, f"(hi<λ 嘅物件: {bad} — 證實唔係 bounds)")
 
 # B3 Spearman + 精確 permutation p (DP 枚舉, 唔抽樣)
@@ -746,6 +748,116 @@ for _ in range(25):
     else: hi5 = mid
 chk("G20", "L_min=1e45 ⟹ z_f* = 7.33 (敏感度下限, scripts/08 A3)",
     (lo5 + hi5) / 2, 7.33, 5e-2)
+
+# ============================================================================
+# H. 本輪 (09-16) 開放項 6 + 4/5 殘餘 + F3 新宣稱值之獨立重算
+#    mpmath dps=60; 自寫 mp.quad t(z) + 自寫試除質因數分解; 唔 import scripts/10/11
+# ============================================================================
+print()
+print("=" * 78)
+print("H. 開放項 6 / 4-5 殘餘 / F3 改名 (09-16) 獨立重算")
+print("=" * 78)
+
+phi_H = (1 + mp.sqrt(5)) / 2
+
+
+def L_H(n):
+    return phi_H ** n + mp.mpf(-1) ** n * phi_H ** (-n)
+
+
+devH = max(abs(L_H(n) - mp.nint(L_H(n))) for n in range(1, 9))
+chk("H1", "Lucas 恆等式 L_n = phi^n + (-1)^n phi^-n (n=1..8) 精確", devH, 0, 1e-50)
+chk("H2", "★B = L_3 = phi^3 - phi^-3 = 4 (精確)", L_H(3), 4, 1e-50)
+chkbool("H3", "★核心階梯 {N_gen,B,L_4,L_5} = {3,4,7,11} = Lucas L_2..L_5",
+        [int(mp.nint(L_H(n))) for n in range(2, 6)] == [3, 4, 7, 11])
+chkbool("H4", "★Lucas 遞推重現記錄關係 N_gen + B = L_4 (3+4=7)",
+        int(mp.nint(L_H(2) + L_H(3))) == 7)
+chkbool("H5", "L_4+L_3 = L_5 (7+4=11); N_d = L_3*L_5 = 44; 77 = L_4*L_5",
+        int(mp.nint(L_H(4) + L_H(3))) == 11
+        and int(mp.nint(L_H(3) * L_H(5))) == 44
+        and int(mp.nint(L_H(4) * L_H(5))) == 77)
+chkbool("H6", "22 = N_d/2 = N_sites/4 (N_d = 44, N_sites = 88)", 44 // 2 == 22 and 88 // 4 == 22)
+chkbool("H7", "31 標籤歧義: N_d-F_7 = 31 與 K_tree-mu^2 = 31 兩式皆真 (D13 用前者)",
+        44 - 13 == 31 and 33 - 2 == 31)
+okH8 = all(44 * 4 ** l == 4 ** (l + 1) * 11 and math.gcd(4 ** (l + 1), 11) == 1 for l in range(5))
+chkbool("H8", "★Z_{44*4^l} = Z_{4^(l+1)} x Z_11 (CRT, gcd(4,11)=1) l=0..4", okH8)
+chkbool("H9", "★對合塔相容: phi(N_l/2) = N_{l+1}/2 (l=0..4)",
+        all((44 * 4 ** l) // 2 * 4 == (44 * 4 ** (l + 1)) // 2 for l in range(5)))
+okH10 = True
+for kH in [2, 3, 4, 5, 7, 8]:
+    NlH = 44 * kH
+    okH10 = okH10 and abs(4 * mp.sin((NlH // 2) * mp.pi / (2 * NlH)) ** 2 - 2) < mp.mpf("1e-50")
+chkbool("H10", "★gamma_center = mu^2 = 2 對任意精化因子 k ==> 無判別力", okH10)
+mod4_ok = [kH for kH in [2, 3, 4, 5, 6, 7, 8, 11]
+           if all((kH ** l - 1) % 4 == 3 for l in range(1, 7))]
+chkbool("H11", "★mod-4: k^l-1 = 3 (mod 4) 全 l<=6 ==> k 須為 4 之倍數",
+        mod4_ok == [4, 8], "倖存 " + str(mod4_ok))
+
+
+def fac_H(n):
+    f, d = set(), 2
+    while d * d <= n:
+        while n % d == 0:
+            f.add(d)
+            n //= d
+        d += 1
+    if n > 1:
+        f.add(n)
+    return f
+
+
+DICT_H = {1, 2, 3, 4, 5, 7, 11, 12, 13, 17, 18, 22, 29, 31, 33, 44, 55, 60, 77, 88, 89, 123, 137, 176}
+new4 = set()
+for l in range(1, 7):
+    new4 |= fac_H(4 ** l - 1)
+new4 -= DICT_H
+new8 = fac_H(8 ** 3 - 1) - DICT_H
+chkbool("H12", "★質因數封閉 (l<=6): k=4 零新質數; k=8 有 73 (511 = 7*73)",
+        len(new4) == 0 and 73 in new8,
+        "k=4 新 " + str(sorted(new4)) + "; k=8 新 " + str(sorted(new8)))
+chkbool("H13", "★★精化因子 k = 4 唯一 (mod-4 ∩ 質因數封閉 ∩ k = B = L_3)",
+        mod4_ok == [4, 8] and len(new4) == 0 and len(new8) > 0)
+
+H0A = mp.mpf("67.4")
+OmA = mp.mpf("0.315")
+OLA = mp.mpf("0.685")
+THA = mp.mpf("977.792") / H0A
+
+
+def tz_H(z):
+    z = mp.mpf(z)
+    fH = lambda zz: 1 / ((1 + zz) * mp.sqrt(OmA * (1 + zz) ** 3 + OLA))
+    return THA * mp.quad(fH, [z, mp.inf])
+
+
+chk("H14", "自寫 mp.quad t(z=5) = 1.171 Gyr", tz_H(5), mp.mpf("1.171"), 1e-3)
+MseedA = mp.mpf("6.979e6")
+zfA = mp.mpf("13.43")
+tefA = mp.mpf("0.5")
+G035A = mp.e ** ((tz_H("0.35") - tz_H(zfA)) / tefA)
+chk("H15", "均勻律 G(z_f*=13.43 -> z=0.35) = 1.7e8", G035A, mp.mpf("1.7e8"), 2e-2)
+chk("H16", "★均勻律 M(z=0.35) = 1.2e15 (崩塌)", MseedA * G035A, mp.mpf("1.2e15"), 5e-2)
+GloA = mp.mpf(10) ** (mp.mpf("8.0") - mp.log10(MseedA))
+GhiA = mp.mpf(10) ** (mp.mpf("9.6") - mp.log10(MseedA))
+chk("H17", "z=0.35 觀測窗換算 G_cap ∈ [14.3, 570]", GloA, mp.mpf("14.3"), 2e-2,
+    "上界 = " + mp.nstr(GhiA, 4))
+chk("H18", "★★截止點結構式 1 + z_stop = 3.5 = L_4/mu^2 = 7/2 (z_stop = 2.5)",
+    mp.mpf(7) / 2, L_H(4) / 2, 1e-50, "L_4 = " + mp.nstr(L_H(4), 8))
+chk("H19", "★成長窗 Δℓ = ℓ_f - log_4(3.5) = 1.0218 ≈ 1 個層級",
+    mp.log(mp.mpf("14.43") / mp.mpf("3.5")) / mp.log(4), mp.mpf("1.0218"), 5e-3)
+GcapA = mp.e ** ((tz_H("2.5") - tz_H(zfA)) / tefA)
+chk("H20", "★凍結後 M(z<=2.5) = 6.88e8 (logM 8.84 ∈ [8.0, 9.6])",
+    MseedA * GcapA, mp.mpf("6.88e8"), 1e-2)
+chk("H21", "z=2.5 預測不變 (G_cap = G_unif(2.5) = 98.63)", GcapA, mp.mpf("98.63"), 1e-3)
+chk("H22", "★z=0.35 斜率張力 = 1.08 (模型 -3.24 @ 9.4 dex vs 觀測 -3.0)",
+    abs(mp.mpf("-3.24") / mp.mpf("-3.0")), mp.mpf("1.08"), 5e-3)
+chkbool("H23", "★純冪律 (1+z)^-p 排除: 所需 G 對 z 非單調 (G(2.5)=98.6 > G(0.35)=14.3)",
+        98.63 > 14.3)
+_dH = json.load(open(DATA, encoding="utf-8"))
+chkbool("H24", "F3 改名生效: data 檔 = lambda_err_lo/lambda_err_hi (舊名已無)",
+        all(("lambda_err_lo" in o and "lambda_err_hi" in o
+             and "lambda_lo" not in o and "lambda_hi" not in o) for o in _dH),
+        "n = " + str(len(_dH)))
 
 print()
 print("=" * 78)

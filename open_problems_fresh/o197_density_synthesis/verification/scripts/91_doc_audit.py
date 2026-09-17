@@ -44,6 +44,9 @@ DOCS = {
     "d6":  BASE / "docs/06_tail_shape_attack.md",
     "d7":  BASE / "docs/07_zf_structural_attack.md",
     "d8":  BASE / "docs/08_w_fraction_attack.md",
+    "d10": BASE / "docs/10_hierarchy_source.md",
+    "d11": BASE / "docs/11_growth_cutoff.md",
+    "d12": BASE / "docs/12_hygiene_f3_f6.md",
 }
 TXT = {k: rd(v) for k, v in DOCS.items()}
 
@@ -211,8 +214,20 @@ CHECKS = [
     ("7/7 候選全落 CI", ["7/7"], ["d8"], "W2b"),
     ("0.2 命中 237 條", ["237"], ["d8"], "W3"),
     ("需 n ≈ 97", ["97"], ["pr", "d8"], "W4"),
+    # scripts/10 開放項 6 攻堅 (層級第一原理)
+    ("B = L3 = phi^3 - phi^-3 = 4", ["L\u2083"], ["d10", "pr"], "Lucas 階梯"),
+    ("精化因子 k = 4 唯一 (mod-4 + 質因數封閉)", ["mod-4"], ["d10", "pr"], "E 段"),
+    ("質因數封閉排除 k=8 (73 @ l=3)", ["73"], ["d10"], "E2"),
+    ("群塔 Z_{44*4^l} = Z_{4^(l+1)} x Z_11", ["Z_11"], ["d10", "pr"], "C 段"),
+    ("Δℓ 容許窗 [0.798, 1.164]", ["0.798"], ["d10", "d11"], "R2"),
+    # scripts/11 開放項 4/5 殘餘 (成長層級截止)
+    ("截止點 1+z_stop = 3.5 = L4/mu^2", ["3.5"], ["d11", "pr"], "R3"),
+    ("凍結後 M(z<=2.5) = 6.88e8", ["6.88e8"], ["d11", "pr"], "S1"),
+    ("z_stop 容許窗 [1.87, 3.78]", ["3.78"], ["d11", "pr"], "R1"),
+    ("成長窗 Δℓ = 1.0218", ["1.0218"], ["d11"], "R5"),
+    ("z=0.35 斜率張力 1.08", ["1.08"], ["d11"], "T1"),
 ]
-ALLDOC = ("pr", "d1", "d2", "d3", "ss", "fr", "d4", "d5", "d6", "d7", "d8")
+ALLDOC = ("pr", "d1", "d2", "d3", "ss", "fr", "d4", "d5", "d6", "d7", "d8", "d10", "d11", "d12")
 bad = []
 cov = {}
 for name, needles, dkeys, why in CHECKS:
@@ -248,25 +263,39 @@ chk("b", "docs/02 同時記舊 5.73e43 + 新 1.02e45 (新舊對比清楚)",
 # T5b 撤銷必須有標記 (禁止靜默改寫)
 chk("b", "problem_record 有 T5b 撤銷標記 (⚠️ 撤銷)", "⚠️ 撤銷" in TXT["pr"] or "撤銷" in TXT["pr"])
 chk("b", "problem_record 有 N=434 更新標記 (⚠️ 更新)", "⚠️ 更新" in TXT["pr"])
-# 計數一致性 (09-16 攻堅後: 四層各自獨立; 舊值保留為「計數沿革」)
+# 計數一致性 (09-16 第二輪: 四層各自獨立; 舊值保留為「計數沿革」)
 for k in ["pr", "ss", "fr"]:
-    chk("b", f"{k} 記主腳本 83/83 PASS", "83/83" in NT[k])
+    chk("b", f"{k} 記主腳本 136/136 PASS (01-11)", "136/136" in NT[k])
 for k in ["pr", "ss", "fr"]:
-    chk("b", f"{k} 記層 1 125/126 PASS", "125/126" in NT[k])
+    chk("b", f"{k} 記層 1 149/150 PASS", "149/150" in NT[k])
 for k in ["ss", "fr"]:
-    chk("b", f"{k} 記層 2 62/62 PASS", "62/62" in NT[k])
+    chk("b", f"{k} 記層 2 90/90 PASS", "90/90" in NT[k])
 # 舊計數必須保留為歷史 (禁止刪除歷史 = 另一種回溯污染)
 chk("b", "計數沿革保留: 主腳本 48/48 仍見於時序索引 (歷史)", "48/48" in NT["pr"])
+chk("b", "計數沿革保留: 主腳本 83/83 仍見於時序索引 (歷史)", "83/83" in NT["pr"])
 chk("b", "計數沿革保留: 層 1 105/106 仍見於 §四-B/§四-E (歷史)", "105/106" in NT["pr"])
+chk("b", "計數沿革保留: 層 1 125/126 仍見於 §四-B/§四-E (歷史)", "125/126" in NT["pr"])
 chk("b", "計數沿革保留: 層 2 45/45 仍見於 §四-C (歷史)", "45/45" in NT["pr"])
+chk("b", "計數沿革保留: 層 2 62/62 仍見於 §四-C/§四-F (歷史)", "62/62" in NT["pr"])
+chk("b", "計數沿革保留: 層 2 67/67 中間值仍見於 §〇 #25 (歷史)", "67/67" in NT["pr"])
+chk("b", "計數沿革保留: 層 2 73/73 中間值仍見於 §〇 #25 (歷史)", "73/73" in NT["pr"])
 # 每層計數分母唯一 ⟹ 跨文檔一致 (唔會同其他層混淆)
+# ⚠️ 只接受「似樣」嘅分子 (den 或 den-1) — 否則「136 / 150 / 67」之類嘅
+# 分母列表會被誤抓成 136/150 (自查發現, 見 docs/12)
 def tally_den(den):
     vals = set()
-    for k, t in TXT.items():
+    d = int(den)
+    for t in [TXT["pr"], TXT["ss"], TXT["fr"]]:
         for m in re.finditer(r"(\d+)/" + den + r"\b", norm(t)):
-            vals.add(m.group(0))
+            if int(m.group(1)) in (d, d - 1):
+                vals.add(m.group(0))
     return vals
-for den, name in [("83", "主腳本"), ("126", "層 1"), ("62", "層 2")]:
+for den, name in [("136", "主腳本"), ("150", "層 1"), ("90", "層 2")]:
+    v = tally_den(den)
+    chk("b", f"{name} 計數 (/ {den}) 文檔間一致", len(v) <= 1, f"出現: {sorted(v)}")
+# 舊分母亦要一致 (沿革行會寫 "48/48 → 83/83" 之類, 唔應出現第三個值)
+for den, name in [("83", "主腳本(沿革)"), ("126", "層 1(沿革)"), ("67", "層 2(沿革)"),
+                  ("73", "層 2(沿革2)")]:
     v = tally_den(den)
     chk("b", f"{name} 計數 (/ {den}) 文檔間一致", len(v) <= 1, f"出現: {sorted(v)}")
 
@@ -285,6 +314,11 @@ TEST_IDS = {
            "D4c", "D5", "D6"],
     "08": ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "C1", "C2", "D1", "D2"],
     "09": ["W1", "W1b", "W2", "W2b", "W3", "W3b", "W4"],
+    "10": ["A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8",
+           "C1", "C2", "C3", "C4", "C5", "C6", "D1", "D2", "D3",
+           "E1", "E2", "E3", "E3b", "E4", "E5", "F1", "F2", "F3"],
+    "11": ["P1", "P2", "P3", "P4", "P5", "Q1", "Q2", "R1", "R2", "R3", "R4", "R5",
+           "S1", "S2", "S3", "T1", "U1", "U2", "U3", "U4", "V1", "V2", "V3"],
 }
 # 對每個 script 嘅「發現」層: 文檔必須覆蓋該 script 嘅主題 (用主題關鍵詞檢查, 唔要求逐 ID 出現)
 TOPIC = {
@@ -297,14 +331,16 @@ TOPIC = {
     "07": ("開放項 4 尾斜率攻堅", ["-2.6", "1.76", "1.2e15", "0.58", "2.26"]),
     "08": ("開放項 5 z_f* 可識別性", ["22.68", "22.67", "9.59", "10.36", "13.42"]),
     "09": ("開放項 1 w 份額", ["0.556", "2.9", "237", "97"]),
+    "10": ("開放項 6 層級第一原理", ["L\u2083", "mod-4", "Z_11", "73", "0.798"]),
+    "11": ("開放項 4/5 殘餘 成長截止", ["3.5", "6.88e8", "3.78", "1.08"]),
 }
-DOCKEYS = ("pr", "d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "ss", "fr")
+DOCKEYS = ("pr", "d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d10", "d11", "d12", "ss", "fr")
 for sid, (topic, keys) in TOPIC.items():
     missing = [k for k in keys if not any(norm(k) in NT[d] for d in DOCKEYS)]
     chk("c", f"scripts/{sid} 主題「{topic}」全部關鍵值有文檔記錄", not missing,
         f"缺: {missing}" if missing else f"{len(keys)} 個關鍵值全中")
 n_checks = sum(len(v) for v in TEST_IDS.values())
-chk("c", f"scripts/01-09 共 {n_checks} 個 check ID 已枚舉 (83 PASS)", n_checks == 83,
+chk("c", f"scripts/01-11 共 {n_checks} 個 check ID 已枚舉 (136 PASS)", n_checks == 136,
     f"實數 {n_checks}")
 
 print()
@@ -313,8 +349,12 @@ print("(d) 檔案時序 — 執行鏈 (data → scripts) + 每份 doc ≥ 佢所
 print("=" * 78)
 def mt(p): return Path(p).stat().st_mtime
 # 執行鏈: 數據先於用佢嘅 script
-chk("d", "data/json 早於 scripts/05 (先下載數據)",
-    mt(DATA) <= mt(BASE / "scripts/05_edd_ratio_data.py"))
+# ⚠️ 09-16: 此 mtime 判序因 F3 合法改名 patch (lambda_lo/hi -> lambda_err_lo/hi)
+# 令 data mtime 後移而失效 ⟹ 降為 INFO; 時序有效性改以「內容核對」為準
+# (見本段後方 _dj / _miss / _geo 三項)。
+print("  [INFO] d data/json vs scripts/05 之 mtime 判序: "
+      + ("ok" if mt(DATA) <= mt(BASE / "scripts/05_edd_ratio_data.py") else "inverted")
+      + "  (09-16 F3 改名 patch 令 data mtime 後移 — 合法, 見 docs/12 §1)")
 # doc ≥ 佢記錄嘅 script (晚補嘅 doc patch 係合法嘅 — 唔用 mtime 判先後,
 # 依 skill: 「Timestamps lie after legit patches」)
 PAIR = [
@@ -327,6 +367,10 @@ PAIR = [
      [BASE / "scripts/06_growth_closure.py"]),
     ("docs/04 ≥ 90 審計腳本", BASE / "docs/04_record_audit.md",
      [BASE / "scripts/90_audit_records.py"]),
+    ("docs/10 ≥ scripts/10", BASE / "docs/10_hierarchy_source.md",
+     [BASE / "scripts/10_hierarchy_source.py"]),
+    ("docs/11 ≥ scripts/11", BASE / "docs/11_growth_cutoff.md",
+     [BASE / "scripts/11_growth_cutoff.py"]),
 ]
 for nm, doc, scripts in PAIR:
     # ⚠️ mtime 只作 INFO: 後期合法 patch (F5 衞生修正 / 補註) 會令 script 或 doc 嘅
@@ -335,12 +379,30 @@ for nm, doc, scripts in PAIR:
     _dt = lambda t: f"{_dtm.datetime.fromtimestamp(t):%m-%d %H:%M}"
     print(f"  [INFO] {nm}: doc {_dt(mt(doc))} vs script max {_dt(max(mt(s) for s in scripts))}"
           + ("  (doc 較新 ✓)" if mt(doc) >= max(mt(s) for s in scripts) else "  (doc 較舊 — 後期 script patch)"))
-chk("d", "執行鏈: data/json ≤ 全部用佢嘅 script",
-    all(mt(DATA) <= mt(s) for s in [BASE / "scripts/05_edd_ratio_data.py",
-                                    BASE / "scripts/06_growth_closure.py"]))
-chk("d", "冇用 Table-3 json 嘅 script 早於 data/json (唔可能先算後取數)",
-    min(mt(s) for s in [BASE / "scripts/05_edd_ratio_data.py",
-                        BASE / "scripts/06_growth_closure.py"]) >= mt(DATA))
+# ⚠️ 09-16: data/json 因 F3 合法改名 patch (lambda_lo/hi -> lambda_err_lo/hi) 而 mtime
+# 後移, 令 mtime 判序失效 ⟹ 降為 INFO; 改以「內容核對」取代 (見下方)
+_mt_ok = mt(DATA) <= mt(BASE / "scripts/05_edd_ratio_data.py")
+print(f"  [INFO] d data/json vs scripts/05 之 mtime 判序: "
+      + ("ok" if _mt_ok else "inverted")
+      + "  (09-16 F3 改名 patch 令 data mtime 後移 — 合法, 見 docs/12 §1)")
+# 內容核對 (取代 mtime 判序, 免疫於合法 patch):
+_dj = json.load(open(DATA, encoding="utf-8"))
+_fmt = lambda m: ("%.1e" % m).replace("e+0", "e").replace("e-0", "e-").replace("e+", "e")
+chk("d", f"data/json {len(_dj)} 個物件齊全 + 6 必要欄 + F3 新欄名 (舊名已無)",
+    len(_dj) == 10 and all(
+        all(k in o for k in ("name", "M_BH", "L_bol", "lambda_Edd",
+                             "lambda_err_lo", "lambda_err_hi"))
+        and "lambda_lo" not in o and "lambda_hi" not in o for o in _dj),
+    "n = " + str(len(_dj)))
+_miss = [m for m in (o["M_BH"] for o in _dj)
+         if _fmt(m) not in NT["d1"] and _fmt(m).replace(".0e", "e") not in NT["d1"]]
+chk("d", "data/json 全部 M_BH 值出現於 docs/01 (改名唔改值之內容核對)",
+    not _miss, "缺: " + str(_miss))
+# 數值不變之獨立覆核: λ_Edd 幾何均值仍 = 0.702 (docs/02 記錄值)
+import functools as _ft
+_geo = _ft.reduce(lambda a, b: a * b, (o["lambda_Edd"] for o in _dj)) ** (1 / len(_dj))
+chk("d", "★F3 改名後 data 值不變: λ_Edd 幾何均值 = 0.702 (docs/02 記錄)",
+    abs(_geo - 0.702) < 5e-3, "得 " + f"{_geo:.4f}")
 print("  mtime 全表 (INFO — 晚補 patch 會令 mtime 後移, 唔代表時序錯):")
 for nm, p in [("scripts/01", BASE / "scripts/01_two_channel_spectrum.py"),
               ("data/json", DATA),
@@ -372,6 +434,9 @@ want = {
     "scripts/05_edd_ratio_data.py", "scripts/06_growth_closure.py",
     "scripts/07_tail_shape.py", "scripts/08_zf_structural.py",
     "scripts/09_w_fraction.py",
+    "docs/10_hierarchy_source.md", "docs/11_growth_cutoff.md",
+    "docs/12_hygiene_f3_f6.md",
+    "scripts/10_hierarchy_source.py", "scripts/11_growth_cutoff.py",
     "scripts/90_audit_records.py", "scripts/91_doc_audit.py",
     "scripts/92_chain_continuity.py",
 }
@@ -412,6 +477,11 @@ for k in ("d1", "d2", "d3"):
     bad_phrase = re.search(r"O197.{0,12}(已改|更正為|修正 O197 結論)", t)
     chk("f", f"{k} 冇改寫 O197 結論字句", bad_phrase is None,
         bad_phrase.group(0) if bad_phrase else "")
+# 編碼完整性: 冇 U+FFFD (replacement char) — 09-16 docs/12 曾中招 (5 對 ⛔ 變亂碼)
+for k, t in TXT.items():
+    _n = t.count("\ufffd")
+    chk("f", f"{k} 編碼完整 (冇 U+FFFD replacement char)", _n == 0,
+        f"{_n} 個 U+FFFD" if _n else "")
 
 print()
 print("=" * 78)
