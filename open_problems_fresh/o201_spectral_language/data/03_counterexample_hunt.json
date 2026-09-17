@@ -1,0 +1,241 @@
+{
+  "n_atoms": 2394,
+  "n_prim": 752,
+  "depth2_cells": 1696512,
+  "null_d2_1e3": 1.0,
+  "null_d2_1e5": 0.46,
+  "null_d2_1e9": 0.0,
+  "null_d2_int_1e9": 0.5075,
+  "cases": [
+    {
+      "name": "M_Pl",
+      "value": "12208900000000000000.0",
+      "dim": "GeV",
+      "prov": "O168: 最後絕對尺度輸入 (G = M_Pl^-2)",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "sum_G88_pow_8*sum_G88_pow_8",
+      "depth2_dev": 0.9999998887705406
+    },
+    {
+      "name": "G",
+      "value": "6.6743e-11",
+      "dim": "m^3 kg^-1 s^-2",
+      "prov": "O121/O168: 引力常數 = 唯一有量綱輸入",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": null,
+      "depth2_dev": null
+    },
+    {
+      "name": "T_CMB",
+      "value": "2.72548",
+      "dim": "K",
+      "prov": "O166 開題: CMB 溫度絕對值冇結構閉合",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "gamma_3*sum_Gamma88_1_55",
+      "depth2_dev": 3.869782195332666e-06
+    },
+    {
+      "name": "m_p",
+      "value": "938.27208816",
+      "dim": "MeV",
+      "prov": "O144: 質子質量 (QCD 預算攻堅中)",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "sum_Gamma88_1_43*sum_gamma_even_1_18",
+      "depth2_dev": 3.1058609353233785e-05
+    },
+    {
+      "name": "m_7",
+      "value": "13.95",
+      "dim": "MeV",
+      "prov": "O116/O119: DM 譜扇區質量 = M_0/2",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "F_8/Gamma_37",
+      "depth2_dev": 7.077785018176008e-06
+    },
+    {
+      "name": "a_0",
+      "value": "1.2e-10",
+      "dim": "m s^-2",
+      "prov": "O32: RAR 加速度標度",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": null,
+      "depth2_dev": null
+    },
+    {
+      "name": "r_d",
+      "value": "147.09",
+      "dim": "Mpc",
+      "prov": "O167: DESI 拖曳視界 (聲學視界)",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "gamma_41*sum_Gamma88_1_46",
+      "depth2_dev": 1.8013959447539973e-06
+    },
+    {
+      "name": "omega_ring",
+      "value": "72.59",
+      "dim": "(km/s)/Mpc",
+      "prov": "O73: 世界環角頻率",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "F_17/sum_gamma_mod4_2",
+      "depth2_dev": 1.2523638367407111e-05
+    },
+    {
+      "name": "H0_SHOES",
+      "value": "73.04",
+      "dim": "(km/s)/Mpc",
+      "prov": "O73/O167: 距離階梯族",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "sum_gamma_1_40-mean_sec_1_11",
+      "depth2_dev": 7.573400030116348e-06
+    },
+    {
+      "name": "eta_B",
+      "value": "6.0636e-10",
+      "dim": "-",
+      "prov": "O73: BBN 鎖定 omega_ring 嘅輸入 (無量綱)",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "Gamma_1/sum_G88_pow_8",
+      "depth2_dev": 0.8034726044414651
+    },
+    {
+      "name": "lambda_Edd",
+      "value": "0.1",
+      "dim": "-",
+      "prov": "O173/O197: Eddington 比 (需要外部假設?)",
+      "depth1": "inv_L5_minus_1",
+      "depth1_dev": 0.0,
+      "depth2": "B/Nd_minus_B",
+      "depth2_dev": 0.0
+    },
+    {
+      "name": "z_f_star",
+      "value": "13.43",
+      "dim": "-",
+      "prov": "O197: 成長閉合紅移",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "v_g_7+sum_Gamma88_1_31",
+      "depth2_dev": 9.68643098756559e-06
+    },
+    {
+      "name": "sigma8",
+      "value": "0.811",
+      "dim": "-",
+      "prov": "O100: 結構增長振幅",
+      "depth1": "inv_inv_mean_vg_1_30",
+      "depth1_dev": 0.0003322447508375563,
+      "depth2": "sum_Gamma88_1_17-sum_gamma_1_9",
+      "depth2_dev": 1.5110132334691278e-05
+    },
+    {
+      "name": "Delta_VLambda",
+      "value": "0.082129",
+      "dim": "-",
+      "prov": "O111: V_Lambda 殘留 (未閉合)",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "sec_6/sum_Gamma88_1_31",
+      "depth2_dev": 1.5946751464365017e-05
+    },
+    {
+      "name": "N_crit",
+      "value": "150.0",
+      "dim": "-",
+      "prov": "O153: 臨界通道數候選",
+      "depth1": "sum_Gamma88_1_81",
+      "depth1_dev": 0.0007711366103019878,
+      "depth2": "Sum_gamma+A5_order",
+      "depth2_dev": 0.0
+    },
+    {
+      "name": "mu_logN",
+      "value": "0.862478",
+      "dim": "-",
+      "prov": "O169: logN 中位斜率",
+      "depth1": "sqrt_Gamma_25",
+      "depth1_dev": 0.000802027900075449,
+      "depth2": "mean_sec_1_4-sin_4",
+      "depth2_dev": 1.9294575246871627e-05
+    },
+    {
+      "name": "s_logN",
+      "value": "1.1874",
+      "dim": "-",
+      "prov": "O169: logN 散射",
+      "depth1": "sqrt_inv_mean_vg_1_38",
+      "depth1_dev": 0.00041886761037875813,
+      "depth2": "gamma_15+phi_pow_-4",
+      "depth2_dev": 5.0791815684382974e-08
+    },
+    {
+      "name": "crack_0746",
+      "value": "0.00746",
+      "dim": "-",
+      "prov": "O168: 雙尺度裂縫 0.746%",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "mean_sec_1_17/F_12",
+      "depth2_dev": 2.5374015708677954e-05
+    },
+    {
+      "name": "baryon_1960",
+      "value": "0.31666666666666665",
+      "dim": "-",
+      "prov": "O163: 19/60 重子佔物質比",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "L_6_plus_1/A5_order",
+      "depth2_dev": 0.0
+    },
+    {
+      "name": "Omega_Lambda",
+      "value": "0.6833333333333333",
+      "dim": "-",
+      "prov": "O148: 41/60 (已知有譜表達, 正對照)",
+      "depth1": null,
+      "depth1_dev": null,
+      "depth2": "L10_half/Sum_gamma",
+      "depth2_dev": 0.0
+    },
+    {
+      "name": "N_gen",
+      "value": "3.0",
+      "dim": "-",
+      "prov": "O103 (已知有譜表達, 正對照)",
+      "depth1": "F_3_plus_1",
+      "depth1_dev": 0.0,
+      "depth2": "N_gen+v_g_44",
+      "depth2_dev": 0.0
+    }
+  ],
+  "counter_examples_dimensional": [
+    "M_Pl",
+    "G",
+    "T_CMB",
+    "m_p",
+    "m_7",
+    "a_0",
+    "r_d",
+    "omega_ring",
+    "H0_SHOES"
+  ],
+  "counter_examples_numeric": [
+    "eta_B",
+    "z_f_star",
+    "sigma8",
+    "Delta_VLambda",
+    "mu_logN",
+    "s_logN",
+    "crack_0746"
+  ]
+}

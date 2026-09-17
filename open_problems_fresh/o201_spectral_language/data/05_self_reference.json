@@ -1,0 +1,65 @@
+{
+  "object": "44-site open chain (path P_44, free ends)",
+  "v1a_trap": "88-環 + site 反射 R: R 有 2 不動點 => 45/43, 唔係 44/44",
+  "v1b_trap": "88-環 + half-shift S^44: 自由, 但 Σ_odd = 88 ≠ 44",
+  "S1": {
+    "J_squared_I": true,
+    "Tr_J": 0,
+    "commutes_L": true,
+    "dim_obs": 22,
+    "dim_rest": 22,
+    "idempotent": true,
+    "orthogonal": true,
+    "complete": true
+  },
+  "S2": {
+    "max_residual_L": 7.432943149865423e-14,
+    "max_J_eigdev": 2.811639809863209e-14,
+    "Pobs_image_is_odd_modes_resid": 1.4058199049316045e-14,
+    "statement": "J v_n = (-1)^n v_n"
+  },
+  "S3": {
+    "Tr_L_Pobs": 44,
+    "Tr_Pobs": 22,
+    "N_d": 44,
+    "mean_obs_over_sector_dim": 2.0,
+    "mean_obs_over_sites": 1.0,
+    "sum_odd": "44.0",
+    "sum_even_0_42": "42.0"
+  },
+  "S4": {
+    "pair_law_maxdev": 1.0691058840368783e-50,
+    "Tr_LJ": -2,
+    "gamma_22": "2.0",
+    "gamma_44_atom": "4.0",
+    "sum_even_with_atom": "46.0",
+    "asymmetry_source": "Z2 self-dual mode n=22: gamma_22 = mu^2 = 2"
+  },
+  "S5": {
+    "chain_odd_power_sums": {
+      "k=1": "44.0",
+      "k=2": "132.0",
+      "k=3": "440.0",
+      "k=4": "1540.0",
+      "k=5": "5544.0",
+      "k=6": "20328.0"
+    },
+    "ring_odd_power_sums": {
+      "k=1": "88.0",
+      "k=2": "264.0",
+      "k=3": "880.0",
+      "k=4": "3080.0",
+      "k=5": "11088.0",
+      "k=6": "40656.0"
+    },
+    "chain_closed_form": "Σ_{n odd,1..43} γ_n^k = 22·C(2k,k) = (N_d/2)·C(2k,k) (k=1..6 EXACT)",
+    "ring_closed_form": "Σ_{n odd,1..87} γ_n^k = 44·C(2k,k) = 2 × 鏈版本 (O192 家族)",
+    "note": "兩者同一 arcsine 測度嘅影子; 雙覆蓋因子 2 (88-環 = 44-鏈雙覆蓋)"
+  },
+  "S6": {
+    "ring_all": "176.0",
+    "ring_odd": "88.0",
+    "note": "憲章 Σγ_odd = N_d = 44 專指 44-鏈; 88-環 odd 和 = 2N_d"
+  },
+  "verdict_C4": "6 個算子級陳述成立 (投影/模指數識別/自指跡/配對律/不對稱源/自由對合); 剩 N_d 唯一性 (O95) + 觀察者動力學 (O169 殘項 ①)"
+}

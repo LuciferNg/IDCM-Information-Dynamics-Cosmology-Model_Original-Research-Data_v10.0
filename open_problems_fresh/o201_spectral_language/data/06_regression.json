@@ -1,0 +1,178 @@
+{
+  "n_tests": 13,
+  "n_exact": 8,
+  "n_approx": 5,
+  "n_fail": 0,
+  "rows": [
+    {
+      "name": "E(ℓ) 截距 b_spec = 1/⟨v_g⟩_{1..22}",
+      "registered": "1.119113982034844",
+      "recomputed": "1.119113982034843976845656",
+      "rel_dev": 2.068988861535173e-17,
+      "verdict": "✅ EXACT",
+      "source": "o169/data/06_structural_identities.json:17"
+    },
+    {
+      "name": "⟨sec⟩_{1..21}",
+      "registered": "1.11835681",
+      "recomputed": "1.11835681024624726169057",
+      "rel_dev": 2.2018666984338376e-10,
+      "verdict": "🟡 近似 (註冊值截斷)",
+      "source": "o169/docs/09_reading_degeneracy.md:61"
+    },
+    {
+      "name": "⟨sec⟩_{1..28} (πR 截距)",
+      "registered": "1.2414297",
+      "recomputed": "1.241418110336587293552544",
+      "rel_dev": 9.335738795927347e-06,
+      "verdict": "🟡 近似 (註冊值截斷)",
+      "source": "o169/final_result.md:48"
+    },
+    {
+      "name": "√5/2 (φ 讀法, 已排除)",
+      "registered": "1.11803399",
+      "recomputed": "1.118033988749894848204587",
+      "rel_dev": 1.1181280381246845e-09,
+      "verdict": "🟡 近似 (註冊值截斷)",
+      "source": "o169/final_result.md:25"
+    },
+    {
+      "name": "Σγ_odd (44-鏈)",
+      "registered": "44.0",
+      "recomputed": "44.0",
+      "rel_dev": 0.0,
+      "verdict": "✅ EXACT",
+      "source": "憲章 §二 / O169"
+    },
+    {
+      "name": "Σγ_even (44-鏈)",
+      "registered": "46.0",
+      "recomputed": "46.0",
+      "rel_dev": 0.0,
+      "verdict": "✅ EXACT",
+      "source": "憲章 §二 / O169"
+    },
+    {
+      "name": "Σγ (n=1..44)",
+      "registered": "90.0",
+      "recomputed": "90.0",
+      "rel_dev": 0.0,
+      "verdict": "✅ EXACT",
+      "source": "憲章 §二 / O169"
+    },
+    {
+      "name": "Σγ_even − Σγ_odd = γ_22 = μ²",
+      "registered": "2.0",
+      "recomputed": "2.0",
+      "rel_dev": 0.0,
+      "verdict": "✅ EXACT",
+      "source": "憲章 §二 / O159"
+    },
+    {
+      "name": "a = Tr(L_odd)/N_d",
+      "registered": "1.0",
+      "recomputed": "1.0",
+      "rel_dev": 0.0,
+      "verdict": "✅ EXACT",
+      "source": "O169 scripts/18 (11/11)"
+    },
+    {
+      "name": "Σγ^n = 88C(2n,n) + 2^{2n−1} (n=1, O192 物件)",
+      "registered": "178.0",
+      "recomputed": "178.0",
+      "rel_dev": 0.0,
+      "verdict": "✅ EXACT",
+      "source": "o192_lucas_dual_family/final_result.md:9 (γ_k = 4sin²(kπ/176), k=1..88)"
+    },
+    {
+      "name": "Σ_{n odd} γ_n^k (44-鏈) k=1",
+      "registered": "44.0",
+      "recomputed": "44.0",
+      "rel_dev": 0.0,
+      "verdict": "✅ EXACT",
+      "source": "本 O scripts/05 S5"
+    },
+    {
+      "name": "μ_logN = φ⁻¹ + L₅/(F₅N_gen²)",
+      "registered": "0.862478",
+      "recomputed": "0.8624784331943392926490313",
+      "rel_dev": 5.022671178773824e-07,
+      "verdict": "🟡 近似 (註冊值截斷)",
+      "source": "★logN (09-13) 註冊"
+    },
+    {
+      "name": "πR 截距超越形 18π/17 − log₄18 (對照譜讀法)",
+      "registered": "1.2414297207",
+      "recomputed": "1.241429720726860188683178",
+      "rel_dev": 2.1636495594798577e-11,
+      "verdict": "🟡 近似 (註冊值截斷)",
+      "source": "o169/docs/06_doc_crosscheck_report.md:57"
+    }
+  ],
+  "factor_check": [
+    {
+      "name": "b_spec",
+      "factors": [
+        "v_g 平均 (cos 譜)"
+      ],
+      "verdict": "✅ 譜原子 (v_g(n) = cos(πn/88))"
+    },
+    {
+      "name": "⟨sec⟩_{1..21}",
+      "factors": [
+        "sec 平均 (1/v_g 譜)"
+      ],
+      "verdict": "✅ 譜原子 (sec = 群延遲權重)"
+    },
+    {
+      "name": "⟨sec⟩_{1..28}",
+      "factors": [
+        "sec 平均 (1/v_g 譜)"
+      ],
+      "verdict": "✅ 譜原子"
+    },
+    {
+      "name": "√5/2",
+      "factors": [
+        "sqrt5, 2"
+      ],
+      "verdict": "❌ 唔係譜原子 (Q(√5) 同 Q(ζ₁₇₆) 域分離 — scripts/04 T2/T4)"
+    },
+    {
+      "name": "Σγ_odd / Σγ_even / Σγ",
+      "factors": [
+        "γ_n 譜和"
+      ],
+      "verdict": "✅ 譜原子 (Z₂ 扇區跡)"
+    },
+    {
+      "name": "a = Tr(L_odd)/N_d",
+      "factors": [
+        "γ_n, N_d"
+      ],
+      "verdict": "✅ 譜原子 + 結構數"
+    },
+    {
+      "name": "Σγ^n 閉式",
+      "factors": [
+        "C(2n,n), 2^{2n−1}"
+      ],
+      "verdict": "✅ 譜原子 (O192)"
+    },
+    {
+      "name": "μ_logN",
+      "factors": [
+        "φ⁻¹ (Q(√5)), L₅, F₅, N_gen²"
+      ],
+      "verdict": "🟡 混合: φ 屬 T̂ 譜扇區, 其餘結構數"
+    },
+    {
+      "name": "πR 截距 18π/17 − log₄18",
+      "factors": [
+        "π, log₄18 (超越)"
+      ],
+      "verdict": "❌ 超越形 — 唔係代數譜泛函 (但 ⟨sec⟩_{1..28} 譜讀法 dev 9.3e-6)"
+    }
+  ],
+  "verdict": "語言層可由譜基零參數重算全部 O169 已閉合結果 (非事後命名); 完備性反例見 scripts/03"
+}

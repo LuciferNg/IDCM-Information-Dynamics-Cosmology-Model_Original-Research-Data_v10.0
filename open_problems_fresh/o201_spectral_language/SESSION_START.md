@@ -152,3 +152,56 @@ skill:      idcm-o-series-management (判準 / 陷阱窗 / 審計 protocol)
 ✅ 每個新發現 → 新 numbered script + 新 dated docs (唔回寫舊文檔)
 ✅ 開題原文零回溯污染 (git 逐字核對)
 ```
+
+---
+
+## 七、Session 2 (2026-09-17) — 六條路線全部執行 🟡
+
+**本 session 做咗**: 憲章 §四 六條攻擊路線**全部**跑完, 7 個 script, 全部 exit 0。
+
+```
+scripts/o201_basis.py              共用譜基模組 (池 2382 原子 / depth2 引擎 / null control)
+scripts/01_spectral_dictionary.py  路線 1 譜字典掃描            24/24 PASS
+scripts/02_spectral_identity_criterion.py 路線 2 判準 (5 步)    16/16 PASS
+scripts/03_counterexample_hunt.py  路線 4 反例狩獵              13/13 PASS
+scripts/04_reduction_field_separation.py  路線 3 歸約 + 域分離  14/14 PASS
+scripts/05_self_reference.py       路線 5 自指層 (算子級)       28/28 PASS
+scripts/06_regression.py           路線 6 回歸測試              18/18 PASS
+scripts/07_rational_refinement.py  目標集審計 (C1 收尾)         14/14 PASS
+```
+
+**核心結果**:
+```
+C1 完備率 = 36/57 = 63.2% (單原子掃描**下界**); 真反例 0 個
+C2 代數層: Q(ζ₁₇₆)⁺ ∩ Q(√5) = Q ⇒ 冇第二個獨立完備語言 (唯一性由條件性 → 代數層定理)
+C3 判準 5 步 script 化; 3 個已知案例判決正確 + 4 個注入必然錯案例全部識 FAIL
+C4 6 個算子級陳述: P_obs = (I−J)/2, J v_n = (−1)ⁿ v_n, N_d = Tr(L P_obs) = 44,
+   γ_n + γ_{44−n} = 2μ², Tr(L J) = −μ², J 自由對合
+★新閉式: Σ_{n odd,1..43} γ_n^k = 22·C(2k,k) (44-鏈 odd 冪和, k=1..6 EXACT)
+★維度論證: 譜語言係無量綱語言 ⇒ C1 必須加維度限制 (C1')
+★回歸: 13 條 O169 已閉合結果全部可由譜基零參數重算 (7 EXACT + 5 位數截斷, 0 FAIL)
+```
+
+**文檔**: `docs/02`–`docs/08` (7 份) + `final_result.md`。開題原文 (`docs/01_problem_record.md`) 零改動。
+
+### 交接點 (下次 session 從呢度開始)
+
+```
+🔴 表達層判準 (最高優先) — 本 session 最大剩餘項:
+   單原子 / 深度 2 掃描只測單項表達; V_Λ = F(γ)+44−F₈−B 式**譜泛函組合**測唔到。
+   ⇒ C1 真完備率未知。需要: 譜泛函組合嘅語法 + 判準 (建議: 表達樹 + 出處綁定)
+🔴 為何偏偏係 K_chain 譜 + T̂ 譜 (需 O95/O96 級唯一性論證)
+🔴 超越層 (π, e) 未形式化 — π 係角度參數 (鏈譜定義本身), e 已由 O165 剔除
+🔴 觀察者動力學 (唔止投影) — O169 殘項 ① Lagrangian 級輸運
+```
+
+### ★ 方法論教訓 (新, 應入 skill)
+
+```
+1. 深度 2 算術掃描對**整數目標**零判別力 (null 0.54, 池對 +,−,× 封閉 ⇒ 必然命中)
+2. 陷阱窗律**只在目標精度優於窗寬時才綁定** (v1 錯把窗律套落 0.63% 精度擬合值)
+3. **唔可以對截斷值做有理重建** (limit_denominator 對任何十進制必然成功 ⇒ 假反例)
+4. 結構整數集 I 係**下界** (134 = 2(2K_tree+1) 有結構表達但唔落池) ⇒ 「p,q ∈ I」只係充分判準
+5. 「Z₂ 分裂」有三個候選算子 (site 反射 45/43 / half-shift 88 / 開鏈反射 44)
+   只有**開鏈反射**同時滿足自由作用 + Σγ_odd = N_d ⇒ 索引紀律必須寫明物件
+```

@@ -1,0 +1,23 @@
+{
+  "binet_maxdev_L": 0.0,
+  "binet_maxdev_F": 2.936599853148507e-51,
+  "e_vs_phi_m2_dev_pct": 10.660730760533138,
+  "gcd_5_176": 1,
+  "deg_Qzeta176": 80,
+  "deg_Qzeta176_plus": 40,
+  "deg_Qzeta88": 40,
+  "deg_Qzeta88_plus": 20,
+  "disc_sqrt2": 8,
+  "disc_sqrt5": 5,
+  "atom_field_counts": {
+    "Q (有理)": 529,
+    "Q(sqrt5)": 34,
+    "Q(zeta_176)^+ (鏈譜)": 1823,
+    "Q(pi) (超越)": 8
+  },
+  "verdict_C2": "代數層: 冇第二個獨立完備語言; 兩扇區域不相交 => 各自唔完備, 合併 = 譜分解",
+  "open_C2": [
+    "為何偏偏係呢兩個譜 (需 O95/O96 級唯一性)",
+    "超越層 (pi, e) 未形式化"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "int_atom_set_size": 131,
+  "charter_registered": [
+    44,
+    4,
+    7,
+    11,
+    13,
+    17,
+    18,
+    22,
+    28,
+    33,
+    36,
+    55,
+    77,
+    88,
+    90,
+    123,
+    137,
+    176,
+    528
+  ],
+  "reruled": [
+    {
+      "name": "V_Lambda",
+      "value": "283.0821",
+      "rational_recon": "2830821/10000",
+      "pq_in_I": "✗, ✗",
+      "verdict": "🔴 非結構有理 (p,q ∉ I)"
+    },
+    {
+      "name": "baryon_over_matter",
+      "value": "0.31666666666666665",
+      "rational_recon": "19/60",
+      "pq_in_I": "✓, ✓",
+      "verdict": "✅ 結構有理 (p,q ∈ I)"
+    },
+    {
+      "name": "Omega_Lambda_old",
+      "value": "0.6832815729997477",
+      "rational_recon": "(細分母重建失敗)",
+      "pq_in_I": "n/a",
+      "verdict": "➡️ 無理 — 走 scripts/01 深度 1/2 判決 (TRAP2 = 無譜表達)"
+    },
+    {
+      "name": "mu_logN",
+      "value": "0.862478",
+      "rational_recon": "431239/500000",
+      "pq_in_I": "✗, ✗",
+      "verdict": "🔴 非結構有理 (p,q ∉ I)"
+    },
+    {
+      "name": "s_logN",
+      "value": "1.1874",
+      "rational_recon": "5937/5000",
+      "pq_in_I": "✗, ✗",
+      "verdict": "🔴 非結構有理 (p,q ∉ I)"
+    },
+    {
+      "name": "sin2_theta23",
+      "value": "0.57298",
+      "rational_recon": "28649/50000",
+      "pq_in_I": "✗, ✗",
+      "verdict": "🔴 非結構有理 (p,q ∉ I)"
+    },
+    {
+      "name": "mW_over_mZ",
+      "value": "0.8813",
+      "rational_recon": "8813/10000",
+      "pq_in_I": "✗, ✗",
+      "verdict": "🔴 非結構有理 (p,q ∉ I)"
+    },
+    {
+      "name": "C_old",
+      "value": "-0.1697",
+      "rational_recon": "-1697/10000",
+      "pq_in_I": "✗, ✗",
+      "verdict": "🔴 非結構有理 (p,q ∉ I)"
+    },
+    {
+      "name": "one_over_137",
+      "value": "0.0072992700729927005",
+      "rational_recon": "1/137",
+      "pq_in_I": "✓, ✓",
+      "verdict": "✅ 結構有理 (p,q ∈ I)"
+    },
+    {
+      "name": "cosmological_crack",
+      "value": "0.00746",
+      "rational_recon": "373/50000",
+      "pq_in_I": "✗, ✗",
+      "verdict": "🔴 非結構有理 (p,q ∉ I)"
+    }
+  ],
+  "n_structural_rational": 2,
+  "n_half": 0,
+  "n_nonstructural_rational": 7,
+  "n_irrational": 1,
+  "completeness_corrected": 0.631578947368421,
+  "counterexample_set": [
+    "V_Lambda",
+    "Omega_Lambda_old",
+    "mu_logN",
+    "s_logN",
+    "sin2_theta23",
+    "mW_over_mZ",
+    "C_old",
+    "cosmological_crack"
+  ],
+  "note": "有理目標必須用精確有理判準 (p,q ∈ I); 浮點陷阱窗對有理數係錯判準"
+}

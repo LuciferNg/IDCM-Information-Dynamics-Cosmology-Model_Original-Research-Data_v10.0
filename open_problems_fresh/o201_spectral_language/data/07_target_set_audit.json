@@ -1,0 +1,154 @@
+{
+  "int_set_size": 131,
+  "registered_forms": {
+    "V_Lambda": {
+      "form": "F(γ) + 44 − F₈ − B = 264.0821 + 19 = 283.0821",
+      "source": "o62_lambda_first_principles/docs/01_lambda_first_principles_closure.md:15,56",
+      "kind": "expr"
+    },
+    "baryon_over_matter": {
+      "form": "Ω_m = 19/60",
+      "source": "o163_dm_identity/data/00_observational_constraints.md:90",
+      "kind": "rational"
+    },
+    "Omega_Lambda_old": {
+      "form": "4/(φ⁴−1) — 已撤銷 (O37)",
+      "source": "o168_g_last_input/SESSION_START.md:58",
+      "kind": "superseded"
+    },
+    "mu_logN": {
+      "form": "μ = φ⁻¹ + L₅/(F₅·N_gen²) = 0.862478 (0.10%)",
+      "source": "★logN 註冊 (memory 09-13)",
+      "kind": "expr"
+    },
+    "s_logN": {
+      "form": "s² = B·N_gen²·Var_pop(ln(1+δ̂₊)) → s = 1.1874 (1.05%)",
+      "source": "★logN 註冊 (memory 09-13)",
+      "kind": "expr"
+    },
+    "sin2_theta23": {
+      "form": "NuFIT 對照值 0.573007 (IDCM 結構值 = 0.572983)",
+      "source": "o156_rge_first_principles/final_result.md:21",
+      "kind": "observational"
+    },
+    "mW_over_mZ": {
+      "form": "PDG 0.88136 (IDCM 結構值 = ω₃₀/ω₄₁ = 0.8827)",
+      "source": "o156_rge_first_principles/docs/06_boson_fermion_scale.md:15",
+      "kind": "observational"
+    },
+    "C_old": {
+      "form": "−0.1697 — O51 scripts/82 已 FAIL",
+      "source": "O51 (已證偽)",
+      "kind": "falsified"
+    },
+    "one_over_137": {
+      "form": "α⁻¹(0) = 137 = 3·44 + F₅",
+      "source": "O142 / ★O142 註冊",
+      "kind": "rational"
+    },
+    "cosmological_crack": {
+      "form": "0.746% = 1/(2(2K_tree+1)) = 1/134 (dev 0.036%)",
+      "source": "o168_g_last_input/final_result.md:49",
+      "kind": "expr"
+    }
+  },
+  "reruled": [
+    {
+      "name": "V_Lambda",
+      "value": "283.0821",
+      "kind": "expr",
+      "form": "F(γ) + 44 − F₈ − B = 264.0821 + 19 = 283.0821",
+      "source": "o62_lambda_first_principles/docs/01_lambda_first_principles_closure.md:15,56",
+      "detail": "表達層: F(γ) + 44 − F₈ − B",
+      "verdict": "🟠 結構表達 (需表達層判準)"
+    },
+    {
+      "name": "baryon_over_matter",
+      "value": "0.31666666666666665",
+      "kind": "rational",
+      "form": "Ω_m = 19/60",
+      "source": "o163_dm_identity/data/00_observational_constraints.md:90",
+      "detail": "p=19 ∈ I, q=60 ∈ I",
+      "verdict": "✅ 結構有理 (C1 完備)"
+    },
+    {
+      "name": "Omega_Lambda_old",
+      "value": "0.6832815729997477",
+      "kind": "superseded",
+      "form": "4/(φ⁴−1) — 已撤銷 (O37)",
+      "source": "o168_g_last_input/SESSION_START.md:58",
+      "detail": "已撤銷/已證偽",
+      "verdict": "⬜ 唔屬 C1 範圍"
+    },
+    {
+      "name": "mu_logN",
+      "value": "0.862478",
+      "kind": "expr",
+      "form": "μ = φ⁻¹ + L₅/(F₅·N_gen²) = 0.862478 (0.10%)",
+      "source": "★logN 註冊 (memory 09-13)",
+      "detail": "表達層: μ",
+      "verdict": "🟠 結構表達 (需表達層判準)"
+    },
+    {
+      "name": "s_logN",
+      "value": "1.1874",
+      "kind": "expr",
+      "form": "s² = B·N_gen²·Var_pop(ln(1+δ̂₊)) → s = 1.1874 (1.05%)",
+      "source": "★logN 註冊 (memory 09-13)",
+      "detail": "表達層: s²",
+      "verdict": "🟠 結構表達 (需表達層判準)"
+    },
+    {
+      "name": "sin2_theta23",
+      "value": "0.57298",
+      "kind": "observational",
+      "form": "NuFIT 對照值 0.573007 (IDCM 結構值 = 0.572983)",
+      "source": "o156_rge_first_principles/final_result.md:21",
+      "detail": "觀測輸入 (唔係結構常數)",
+      "verdict": "⬜ 唔屬 C1 範圍"
+    },
+    {
+      "name": "mW_over_mZ",
+      "value": "0.8813",
+      "kind": "observational",
+      "form": "PDG 0.88136 (IDCM 結構值 = ω₃₀/ω₄₁ = 0.8827)",
+      "source": "o156_rge_first_principles/docs/06_boson_fermion_scale.md:15",
+      "detail": "觀測輸入 (唔係結構常數)",
+      "verdict": "⬜ 唔屬 C1 範圍"
+    },
+    {
+      "name": "C_old",
+      "value": "-0.1697",
+      "kind": "falsified",
+      "form": "−0.1697 — O51 scripts/82 已 FAIL",
+      "source": "O51 (已證偽)",
+      "detail": "已撤銷/已證偽",
+      "verdict": "⬜ 唔屬 C1 範圍"
+    },
+    {
+      "name": "one_over_137",
+      "value": "0.0072992700729927005",
+      "kind": "rational",
+      "form": "α⁻¹(0) = 137 = 3·44 + F₅",
+      "source": "O142 / ★O142 註冊",
+      "detail": "p=1 ∈ I, q=137 ∈ I",
+      "verdict": "✅ 結構有理 (C1 完備)"
+    },
+    {
+      "name": "cosmological_crack",
+      "value": "0.00746",
+      "kind": "expr",
+      "form": "0.746% = 1/(2(2K_tree+1)) = 1/134 (dev 0.036%)",
+      "source": "o168_g_last_input/final_result.md:49",
+      "detail": "表達層: 0.746%",
+      "verdict": "🟠 結構表達 (需表達層判準)"
+    }
+  ],
+  "n_structural_rational": 2,
+  "n_expression": 4,
+  "n_out_of_scope": 4,
+  "n_true_counterexample": 0,
+  "completeness_single_atom_lower_bound": 0.631578947368421,
+  "methodology_finding": "單原子/深度2 掃描只測單項表達 => 63.2% 係下界; 4 個目標有已註冊多項式閉式",
+  "v1_trap": "limit_denominator 對截斷值必然成功 => 唔可以對截斷值做有理重建"
+}

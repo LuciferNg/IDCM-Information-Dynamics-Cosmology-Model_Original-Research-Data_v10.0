@@ -1,0 +1,696 @@
+{
+  "n_atoms": 2382,
+  "n_targets": 67,
+  "n_derived": 57,
+  "A_EXACT": 19,
+  "A_HIT": 9,
+  "B_real": 6,
+  "B_int": 13,
+  "TRAP": 10,
+  "MISS": 0,
+  "completeness_A_exact": 0.3333333333333333,
+  "completeness_A": 0.49122807017543857,
+  "completeness_ABreal": 0.5964912280701754,
+  "null_A_1e3": 0.15,
+  "null_A_1e5": 0.0015,
+  "null_A_1e9": 0.0,
+  "null_A_int_1e9": 0.021,
+  "n_derived_real": 26,
+  "n_derived_int": 31,
+  "null_B_int": 0.54,
+  "null_B_real": 0.0,
+  "misses": [
+    "V_Lambda",
+    "baryon_over_matter",
+    "Omega_Lambda_old",
+    "mu_logN",
+    "s_logN",
+    "sin2_theta23",
+    "mW_over_mZ",
+    "C_old",
+    "one_over_137",
+    "cosmological_crack"
+  ],
+  "verdicts": {
+    "N_d": "A:EXACT",
+    "B": "A:EXACT",
+    "N_gen": "A:EXACT",
+    "L5": "A:EXACT",
+    "F_proj": "A:EXACT",
+    "K_tree": "A:EXACT",
+    "Sum_gamma": "A:EXACT",
+    "Sum_gamma_odd": "A:EXACT",
+    "Sum_gamma_even": "A:EXACT",
+    "mu2": "A:EXACT",
+    "h11": "B-int",
+    "h21": "B-int",
+    "h11_plus_h21": "B-int",
+    "beat_dim": "A:EXACT",
+    "sum_inv_gamma_odd": "B-int",
+    "B_Nd_176": "A:EXACT",
+    "Sum_Gamma88_178": "A:EXACT",
+    "L10_123": "A:EXACT",
+    "W_sq": "A:EXACT",
+    "f_unproj": "B-real",
+    "eps_exact": "B-real",
+    "E_min": "A:HIT",
+    "alpha_inv_0": "B-int",
+    "alpha_inv_MZ": "A:EXACT",
+    "V_capacity_264": "A:EXACT",
+    "V_capacity_528": "B-int",
+    "V_Lambda": "TRAP2",
+    "C_12_2_66": "B-int",
+    "L4L5_77": "A:EXACT",
+    "dim_SU12_143": "A:EXACT",
+    "L4L5_minus_mu2_75": "A:EXACT",
+    "F10_55": "A:EXACT",
+    "Tr_chi_30": "A:EXACT",
+    "B_L4_28": "A:EXACT",
+    "pool_turnover_364": "B-int",
+    "A5_order_60": "B-int",
+    "gamma_192": "A:EXACT",
+    "Sigma_Gamma_5940": "B-int",
+    "phase_space_1496": "B-int",
+    "r_d_num_420": "B-int",
+    "r_d_den_421": "B-int",
+    "mean_gamma_ratio": "A:HIT",
+    "even_over_odd": "A:HIT",
+    "omega_dm_over_b": "B-real",
+    "baryon_split": "B-real",
+    "baryon_over_matter": "TRAP2",
+    "b_spec": "A:HIT",
+    "sqrt5_over_2": "B-real",
+    "phi_const": "A:HIT",
+    "gamma_1_val": "A:HIT",
+    "gamma_11_val": "A:HIT",
+    "gamma_33_val": "A:HIT",
+    "Omega_Lambda_old": "TRAP2",
+    "mu_logN": "TRAP2",
+    "s_logN": "TRAP2",
+    "sin2_theta23": "TRAP2",
+    "mW_over_mZ": "TRAP2",
+    "piR_intercept": "A:HIT",
+    "C_old": "TRAP2",
+    "lambda_88_over_33": "B-real",
+    "L5_minus_1_10": "A:EXACT",
+    "N_gen_sq_9": "A:EXACT",
+    "B_sq_16": "A:EXACT",
+    "twoB_sq_32": "A:EXACT",
+    "Nd_minus_B_40": "A:EXACT",
+    "one_over_137": "TRAP2",
+    "cosmological_crack": "TRAP2"
+  },
+  "details": {
+    "N_d": "N_d(0.0e+00); Sum_gamma_odd(0.0e+00); sqrt_Nd_sq(0.0e+00)",
+    "B": "B(0.0e+00); F_4_plus_1(0.0e+00); F_5_minus_1(0.0e+00)",
+    "N_gen": "F_3_plus_1(0.0e+00); F_4(0.0e+00); L_2(0.0e+00)",
+    "L5": "L5(0.0e+00); L_5(0.0e+00); count_mod4_0(0.0e+00)",
+    "F_proj": "F_proj(0.0e+00); L_6_minus_1(0.0e+00)",
+    "K_tree": "F_9_minus_1(0.0e+00); K_tree(0.0e+00)",
+    "Sum_gamma": "F_11_plus_1(0.0e+00); Sum_Gamma88_even(0.0e+00); Sum_gamma(0.0e+00)",
+    "Sum_gamma_odd": "N_d(0.0e+00); Sum_gamma_odd(0.0e+00); sqrt_Nd_sq(0.0e+00)",
+    "Sum_gamma_even": "L_8_minus_1(0.0e+00); Sum_gamma_even(0.0e+00); sum_Gamma88_mod4_0(0.0e+00)",
+    "mu2": "C_2n_n_1(0.0e+00); F_1_plus_1(0.0e+00); F_2_plus_1(0.0e+00)",
+    "h11": "B + pow2_2n_1_3 = 36.0 (算術分解, 零判別力)",
+    "h21": "N_d + F_10_minus_1 = 98.0 (算術分解, 零判別力)",
+    "h11_plus_h21": "N_d + Sum_gamma = 134.0 (算術分解, 零判別力)",
+    "beat_dim": "C_Nd_2(0.0e+00)",
+    "sum_inv_gamma_odd": "N_d + C_2n_n_6 = 968.0 (算術分解, 零判別力)",
+    "B_Nd_176": "B_Nd(0.0e+00)",
+    "Sum_Gamma88_178": "2F11(0.0e+00); Sum_Gamma88(0.0e+00); sum_G88_pow_1(0.0e+00)",
+    "L10_123": "L_10(0.0e+00)",
+    "W_sq": "L10_half(0.0e+00)",
+    "f_unproj": "L10_half / Sum_gamma = 0.6833333333 (dev 0.0e+00)",
+    "eps_exact": "L_6_plus_1 / L_10 = 0.1544715447 (dev 0.0e+00)",
+    "E_min": "L10_over_4Nd(5.2e-17)",
+    "alpha_inv_0": "Sum_gamma + L_8 = 137.0 (算術分解, 零判別力)",
+    "alpha_inv_MZ": "pow2_2n_1_4(0.0e+00)",
+    "V_capacity_264": "sum_G88_pow_2_odd(0.0e+00)",
+    "V_capacity_528": "sum_G88_pow_2_odd + sum_G88_pow_2_odd = 528.0 (算術分解, 零判別力)",
+    "V_Lambda": "Gamma_83 * sum_Gamma88_1_59 (dev 2.9e-05) [陷阱窗]",
+    "C_12_2_66": "N_d + sum_gamma_mod4_2 = 66.0 (算術分解, 零判別力)",
+    "L4L5_77": "L_9_plus_1(0.0e+00)",
+    "dim_SU12_143": "F_12_minus_1(0.0e+00)",
+    "L4L5_minus_mu2_75": "L_9_minus_1(0.0e+00)",
+    "F10_55": "F_10(0.0e+00)",
+    "Tr_chi_30": "L_7_plus_1(0.0e+00)",
+    "B_L4_28": "L_7_minus_1(0.0e+00)",
+    "pool_turnover_364": "sum_gamma_even_1_21 + L_12 = 364.0 (算術分解, 零判別力)",
+    "A5_order_60": "N_d + B_sq = 60.0 (算術分解, 零判別力)",
+    "gamma_192": "4Nd_plus_B2(0.0e+00)",
+    "Sigma_Gamma_5940": "L_7_plus_1 * L_11_minus_1 = 5940.0 (算術分解, 零判別力)",
+    "phase_space_1496": "C_2n_n_7 - Nd_sq = 1496.0 (算術分解, 零判別力)",
+    "r_d_num_420": "N_d + F_14_minus_1 = 420.0 (算術分解, 零判別力)",
+    "r_d_den_421": "N_d + F_14 = 421.0 (算術分解, 零判別力)",
+    "mean_gamma_ratio": "mean_gamma(2.7e-17)",
+    "even_over_odd": "ratio_even_odd(5.2e-17)",
+    "omega_dm_over_b": "L10_half - F_10 = 6.5 (dev 0.0e+00)",
+    "baryon_split": "B / L_7_plus_1 = 0.1333333333 (dev 0.0e+00)",
+    "baryon_over_matter": "sum_gamma_even_1_15 / sum_gamma_1_37 (dev 1.6e-05) [陷阱窗]",
+    "b_spec": "inv_mean_vg_1_22(1.2e-11)",
+    "sqrt5_over_2": "sqrt5 / mu2 = 1.118033989 (dev 0.0e+00)",
+    "phi_const": "inv_inv_phi(9.4e-17); inv_phi_pow_-1(9.4e-17); phi(9.4e-17)",
+    "gamma_1_val": "Gamma_2(6.4e-26); gamma_1(6.4e-26); sum_gamma_1_1(6.4e-26)",
+    "gamma_11_val": "Gamma_22(8.7e-17); gamma_11(8.7e-17)",
+    "gamma_33_val": "Gamma_66(1.4e-17); gamma_33(1.4e-17)",
+    "Omega_Lambda_old": "v_g_5 * tan_17 (dev 1.4e-06) [陷阱窗]",
+    "mu_logN": "mean_sec_1_4 - sin_4 (dev 1.9e-05) [陷阱窗]",
+    "s_logN": "gamma_15 + phi_pow_-4 (dev 5.1e-08) [陷阱窗]",
+    "sin2_theta23": "C_2n_n_3 / sum_gamma_1_29 (dev 1.3e-05) [陷阱窗]",
+    "mW_over_mZ": "v_g_2 / mean_sec_1_22 (dev 7.5e-06) [陷阱窗]",
+    "piR_intercept": "mean_sec_1_28(9.3e-06)",
+    "C_old": "mean_sec_1_6 - mean_sec_1_25 (dev 1.4e-04) [陷阱窗]",
+    "lambda_88_over_33": "Sum_Gamma88_odd / K_tree = 2.666666667 (dev 0.0e+00)",
+    "L5_minus_1_10": "L5_minus_1(0.0e+00); L_5_minus_1(0.0e+00)",
+    "N_gen_sq_9": "F_6_plus_1(0.0e+00); N_gen_sq(0.0e+00)",
+    "B_sq_16": "B_sq(0.0e+00)",
+    "twoB_sq_32": "2B_sq(0.0e+00); pow2_2n_1_3(0.0e+00)",
+    "Nd_minus_B_40": "Nd_minus_B(0.0e+00)",
+    "one_over_137": "sin_16 / sum_gamma_1_40 (dev 4.5e-05) [陷阱窗]",
+    "cosmological_crack": "mean_sec_1_17 / F_12 (dev 2.5e-05) [陷阱窗]"
+  },
+  "values": {
+    "N_d": "44.0",
+    "B": "4.0",
+    "N_gen": "3.0",
+    "L5": "11.0",
+    "F_proj": "17.0",
+    "K_tree": "33.0",
+    "Sum_gamma": "90.0",
+    "Sum_gamma_odd": "44.0",
+    "Sum_gamma_even": "46.0",
+    "mu2": "2.0",
+    "h11": "36.0",
+    "h21": "98.0",
+    "h11_plus_h21": "134.0",
+    "beat_dim": "946.0",
+    "sum_inv_gamma_odd": "968.0",
+    "B_Nd_176": "176.0",
+    "Sum_Gamma88_178": "178.0",
+    "L10_123": "123.0",
+    "W_sq": "61.5",
+    "f_unproj": "0.6833333333333333",
+    "eps_exact": "0.15447154471544716",
+    "E_min": "0.6988636363636364",
+    "alpha_inv_0": "137.0",
+    "alpha_inv_MZ": "128.0",
+    "V_capacity_264": "264.0",
+    "V_capacity_528": "528.0",
+    "V_Lambda": "283.0821",
+    "C_12_2_66": "66.0",
+    "L4L5_77": "77.0",
+    "dim_SU12_143": "143.0",
+    "L4L5_minus_mu2_75": "75.0",
+    "F10_55": "55.0",
+    "Tr_chi_30": "30.0",
+    "B_L4_28": "28.0",
+    "pool_turnover_364": "364.0",
+    "A5_order_60": "60.0",
+    "gamma_192": "192.0",
+    "Sigma_Gamma_5940": "5940.0",
+    "phase_space_1496": "1496.0",
+    "r_d_num_420": "420.0",
+    "r_d_den_421": "421.0",
+    "mean_gamma_ratio": "2.0454545454545454",
+    "even_over_odd": "1.0454545454545454",
+    "omega_dm_over_b": "6.5",
+    "baryon_split": "0.13333333333333333",
+    "baryon_over_matter": "0.31666666666666665",
+    "b_spec": "1.1191139820215964",
+    "sqrt5_over_2": "1.118033988749895",
+    "phi_const": "1.618033988749895",
+    "gamma_1_val": "0.005095770779492917275388486",
+    "gamma_11_val": "0.5857864376269049",
+    "gamma_33_val": "3.414213562373095",
+    "Omega_Lambda_old": "0.6832815729997477",
+    "mu_logN": "0.862478",
+    "s_logN": "1.1874",
+    "sin2_theta23": "0.57298",
+    "mW_over_mZ": "0.8813",
+    "piR_intercept": "1.2414297",
+    "C_old": "-0.1697",
+    "lambda_88_over_33": "2.6666666666666665",
+    "L5_minus_1_10": "10.0",
+    "N_gen_sq_9": "9.0",
+    "B_sq_16": "16.0",
+    "twoB_sq_32": "32.0",
+    "Nd_minus_B_40": "40.0",
+    "one_over_137": "0.0072992700729927005",
+    "cosmological_crack": "0.00746"
+  },
+  "tierA_all": {
+    "N_d": [
+      [
+        0.0,
+        "N_d"
+      ],
+      [
+        0.0,
+        "Sum_gamma_odd"
+      ],
+      [
+        0.0,
+        "sqrt_Nd_sq"
+      ],
+      [
+        0.0,
+        "sum_Gamma88_mod4_2"
+      ],
+      [
+        0.0,
+        "sum_gamma_odd_1_22"
+      ]
+    ],
+    "B": [
+      [
+        0.0,
+        "B"
+      ],
+      [
+        0.0,
+        "F_4_plus_1"
+      ],
+      [
+        0.0,
+        "F_5_minus_1"
+      ],
+      [
+        0.0,
+        "Gamma_88"
+      ],
+      [
+        0.0,
+        "L_2_plus_1"
+      ]
+    ],
+    "N_gen": [
+      [
+        0.0,
+        "F_3_plus_1"
+      ],
+      [
+        0.0,
+        "F_4"
+      ],
+      [
+        0.0,
+        "L_2"
+      ],
+      [
+        0.0,
+        "L_3_minus_1"
+      ],
+      [
+        0.0,
+        "N_gen"
+      ]
+    ],
+    "L5": [
+      [
+        0.0,
+        "L5"
+      ],
+      [
+        0.0,
+        "L_5"
+      ],
+      [
+        0.0,
+        "count_mod4_0"
+      ],
+      [
+        0.0,
+        "count_mod4_1"
+      ],
+      [
+        0.0,
+        "count_mod4_2"
+      ]
+    ],
+    "F_proj": [
+      [
+        0.0,
+        "F_proj"
+      ],
+      [
+        0.0,
+        "L_6_minus_1"
+      ]
+    ],
+    "K_tree": [
+      [
+        0.0,
+        "F_9_minus_1"
+      ],
+      [
+        0.0,
+        "K_tree"
+      ]
+    ],
+    "Sum_gamma": [
+      [
+        0.0,
+        "F_11_plus_1"
+      ],
+      [
+        0.0,
+        "Sum_Gamma88_even"
+      ],
+      [
+        0.0,
+        "Sum_gamma"
+      ],
+      [
+        0.0,
+        "sum_G88_pow_1_even"
+      ],
+      [
+        0.0,
+        "sum_g44_pow_1"
+      ]
+    ],
+    "Sum_gamma_odd": [
+      [
+        0.0,
+        "N_d"
+      ],
+      [
+        0.0,
+        "Sum_gamma_odd"
+      ],
+      [
+        0.0,
+        "sqrt_Nd_sq"
+      ],
+      [
+        0.0,
+        "sum_Gamma88_mod4_2"
+      ],
+      [
+        0.0,
+        "sum_gamma_odd_1_22"
+      ]
+    ],
+    "Sum_gamma_even": [
+      [
+        0.0,
+        "L_8_minus_1"
+      ],
+      [
+        0.0,
+        "Sum_gamma_even"
+      ],
+      [
+        0.0,
+        "sum_Gamma88_mod4_0"
+      ],
+      [
+        0.0,
+        "sum_gamma_even_1_22"
+      ],
+      [
+        0.0,
+        "sum_gamma_even_1_23"
+      ]
+    ],
+    "mu2": [
+      [
+        0.0,
+        "C_2n_n_1"
+      ],
+      [
+        0.0,
+        "F_1_plus_1"
+      ],
+      [
+        0.0,
+        "F_2_plus_1"
+      ],
+      [
+        0.0,
+        "F_3"
+      ],
+      [
+        0.0,
+        "F_4_minus_1"
+      ]
+    ],
+    "h11": [],
+    "h21": [],
+    "h11_plus_h21": [],
+    "beat_dim": [
+      [
+        0.0,
+        "C_Nd_2"
+      ]
+    ],
+    "sum_inv_gamma_odd": [],
+    "B_Nd_176": [
+      [
+        0.0,
+        "B_Nd"
+      ]
+    ],
+    "Sum_Gamma88_178": [
+      [
+        0.0,
+        "2F11"
+      ],
+      [
+        0.0,
+        "Sum_Gamma88"
+      ],
+      [
+        0.0,
+        "sum_G88_pow_1"
+      ],
+      [
+        0.0,
+        "sum_Gamma88_1_88"
+      ]
+    ],
+    "L10_123": [
+      [
+        0.0,
+        "L_10"
+      ]
+    ],
+    "W_sq": [
+      [
+        0.0,
+        "L10_half"
+      ]
+    ],
+    "f_unproj": [],
+    "eps_exact": [],
+    "E_min": [
+      [
+        5.203252032520325e-17,
+        "L10_over_4Nd"
+      ]
+    ],
+    "alpha_inv_0": [],
+    "alpha_inv_MZ": [
+      [
+        0.0,
+        "pow2_2n_1_4"
+      ]
+    ],
+    "V_capacity_264": [
+      [
+        0.0,
+        "sum_G88_pow_2_odd"
+      ]
+    ],
+    "V_capacity_528": [],
+    "V_Lambda": [],
+    "C_12_2_66": [],
+    "L4L5_77": [
+      [
+        0.0,
+        "L_9_plus_1"
+      ]
+    ],
+    "dim_SU12_143": [
+      [
+        0.0,
+        "F_12_minus_1"
+      ]
+    ],
+    "L4L5_minus_mu2_75": [
+      [
+        0.0,
+        "L_9_minus_1"
+      ]
+    ],
+    "F10_55": [
+      [
+        0.0,
+        "F_10"
+      ]
+    ],
+    "Tr_chi_30": [
+      [
+        0.0,
+        "L_7_plus_1"
+      ]
+    ],
+    "B_L4_28": [
+      [
+        0.0,
+        "L_7_minus_1"
+      ]
+    ],
+    "pool_turnover_364": [],
+    "A5_order_60": [],
+    "gamma_192": [
+      [
+        0.0,
+        "4Nd_plus_B2"
+      ]
+    ],
+    "Sigma_Gamma_5940": [],
+    "phase_space_1496": [],
+    "r_d_num_420": [],
+    "r_d_den_421": [],
+    "mean_gamma_ratio": [
+      [
+        2.6666666666666667e-17,
+        "mean_gamma"
+      ]
+    ],
+    "even_over_odd": [
+      [
+        5.217391304347826e-17,
+        "ratio_even_odd"
+      ]
+    ],
+    "omega_dm_over_b": [],
+    "baryon_split": [],
+    "baryon_over_matter": [],
+    "b_spec": [
+      [
+        1.1837558156252859e-11,
+        "inv_mean_vg_1_22"
+      ]
+    ],
+    "sqrt5_over_2": [],
+    "phi_const": [
+      [
+        9.38147246726953e-17,
+        "inv_inv_phi"
+      ],
+      [
+        9.38147246726953e-17,
+        "inv_phi_pow_-1"
+      ],
+      [
+        9.38147246726953e-17,
+        "phi"
+      ],
+      [
+        9.38147246726953e-17,
+        "phi_pow_1"
+      ],
+      [
+        9.38147246726953e-17,
+        "sqrt_phi_pow_2"
+      ]
+    ],
+    "gamma_1_val": [
+      [
+        6.392489081356814e-26,
+        "Gamma_2"
+      ],
+      [
+        6.392489081356814e-26,
+        "gamma_1"
+      ],
+      [
+        6.392489081356814e-26,
+        "sum_gamma_1_1"
+      ],
+      [
+        6.392489081356814e-26,
+        "sum_gamma_odd_1_1"
+      ]
+    ],
+    "gamma_11_val": [
+      [
+        8.740098436420132e-17,
+        "Gamma_22"
+      ],
+      [
+        8.740098436420132e-17,
+        "gamma_11"
+      ]
+    ],
+    "gamma_33_val": [
+      [
+        1.429368369396595e-17,
+        "Gamma_66"
+      ],
+      [
+        1.429368369396595e-17,
+        "gamma_33"
+      ]
+    ],
+    "Omega_Lambda_old": [],
+    "mu_logN": [],
+    "s_logN": [],
+    "sin2_theta23": [],
+    "mW_over_mZ": [],
+    "piR_intercept": [
+      [
+        9.335738795927347e-06,
+        "mean_sec_1_28"
+      ]
+    ],
+    "C_old": [],
+    "lambda_88_over_33": [],
+    "L5_minus_1_10": [
+      [
+        0.0,
+        "L5_minus_1"
+      ],
+      [
+        0.0,
+        "L_5_minus_1"
+      ]
+    ],
+    "N_gen_sq_9": [
+      [
+        0.0,
+        "F_6_plus_1"
+      ],
+      [
+        0.0,
+        "N_gen_sq"
+      ]
+    ],
+    "B_sq_16": [
+      [
+        0.0,
+        "B_sq"
+      ]
+    ],
+    "twoB_sq_32": [
+      [
+        0.0,
+        "2B_sq"
+      ],
+      [
+        0.0,
+        "pow2_2n_1_3"
+      ]
+    ],
+    "Nd_minus_B_40": [
+      [
+        0.0,
+        "Nd_minus_B"
+      ]
+    ],
+    "one_over_137": [],
+    "cosmological_crack": []
+  }
+}
