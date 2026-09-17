@@ -94,6 +94,9 @@ O167 中 D_A(ℓ) = R(1−4^{−ℓ})(1+2φ⁻¹ℓ+**δ(ℓ)**) 嘅群延遲修
 | 16 | `16_b2_adjudication.py` | `docs/10` 全文 | ★ B2 裁決: sec 家族唯一命中 πR/Nyquist (K=28 dev 9.35e-6); φ 錨點係恆等式; 9/9 PASS |
 | 17 | `17_k_window_law.py` | `docs/11` 全文 | ★ K 窗律: 端點 L₄N_gen=21 → L₄B=28; ℓ-線性被排除 (Δχ² 12.5); 常數 τ 門檻律不可能; 9/9 PASS |
 | 18 | `18_z2_sector_operator.py` | `docs/12` 全文 | ★ 算子級 a = Tr(L_odd)/N_d = ⟨γ⟩_odd/μ² = 1; 奇扇區無不動點 ⇒ 整數保護; 11/11 PASS |
+| 19 | `19_lagrangian_transport.py` | `docs/13` 全文 | ★ Lagrangian 級: ω² = k² + m² (m² = γ_n) EXACT; sec = ω/k = 折射率; a = ⟨m²⟩_odd/m²_selfdual; 12/12 PASS |
+| 20 | `20_antipode_identity.py` | `docs/14` 全文 | ★ πR = r₂₂ = 2πR_w·cos²θ₂₂ EXACT (環對面 = 投影核半功率點 = Z₂ 自對偶模); DESI 窗 K=21 由門檻律 m² < μ² 導出; 11/11 PASS |
+| 21 | `21_window_interpolation.py` | `docs/15` 全文 | ★ 端點退化定理; ℓ-線性 Δχ² 12.46 排除; K = L₄·N_eff, N_eff ∈ [N_gen, B]; 窗階梯 8 值 z₁ = 17/14; 12/12 PASS |
 
 ### 索引 B: 依賴鏈
 
@@ -310,4 +313,55 @@ a = 1 現有 **9 個等價表達**。**🔴 殘項**: Lagrangian 級識別。
 | B2 截距裁決 | 🔴 三方簡併 | 🟡⁺ **sec 家族勝出** |
 | B3 K(ℓ) 律 | 🔴 未導出 | 🟡 **端點釘死 + 零參數窗律** |
 | B4 D_H | 🔴 跨 O117 | 🔴 維持 |
-| C 語言層 | 🟡⁺ | 🟡⁺⁺ |
+| C 語言層 | 🟡⁺ | 🟡⁺⁺ → **拆出 O201** |
+
+---
+
+## 第六輪: 殘項攻堅 + 譜分解拆出 (2026-09-17, 用戶指示「把譜分解開一個專屬新O系列在其他session繼續，餘下的在本session繼續推」)
+
+### 0. C 語言層 → 專屬 O201
+
+用戶明示批准開新 O。C 項 (語言層唯一性: 完備性 / 唯一性 / 判準 / 自指) **移交**
+`o201_spectral_language/` (2026-09-17 註冊, 憲章 `docs/01_problem_record.md` + `SESSION_START.md`)。
+O169 唔再負責語言層; 本輪只推餘下 🔴 (①②③)。
+
+### 19. ① Lagrangian 級輸運識別 🔴 → 🟡⁺ (12/12 PASS) → `docs/13`
+
+```
+omega_n = mu^2 = 2 (共同頻率);  k_n = mu^2 cos(theta_n);  m_n = mu^2 sin(theta_n)
+=>  omega^2 = k^2 + m^2 EXACT (max dev 9.18e-41);  m_n^2 = gamma_n EXACT
+L_n = (1/2)(d_t phi)^2 - (1/2)(d_x phi)^2 - (1/2) gamma_n phi^2
+★ v_g = k/omega = cos(theta_n) (標準相對論群速度) => sec = omega/k = 折射率
+★ a = <m^2>_odd / m^2_selfdual = 1
+```
+🔴 殘: 色散只識別 sec 呢個**權重**; `E = ℓ + ⟨sec⟩_{1..K}` 嘅組裝律仍開放。
+
+### 20. ② 環對面身份 🔴 → 🟡⁺ (11/11 PASS) → `docs/14`
+
+```
+★ pi*R_world = r_22 = 2*pi*R_world*cos^2(theta_22) EXACT
+  => 環對面 = O180 投影核半功率點 = Z2 自對偶模 n = N_d/2 = 22  (三合一)
+★ 累積相位 = D_A/R_world;  飽和 D_A = pi*R <=> 相位 = pi = 一次相位滑移 (O7)
+★★ DESI 窗 K = 21 第一原理導出: 門檻 m_n^2 < mu^2 (嚴格) => K = L4*N_gen
+```
+🔴 殘: 「視線喺 z_max = F_proj 啱好到對面」嘅**動力學**推導。
+
+### 21. ③ 窗律內插形式 🔴 → 🟡 (12/12 PASS) → `docs/15`
+
+```
+★ 端點退化定理: 6 個受約束形式全部中兩端點 => 內插導不出
+  l-線性 Delta_chi2 = 12.46 排除 | z-二次 Delta_chi2 = 0.17 未分辨
+★★ K(z) = L4 * N_eff(z), N_eff = N_gen + z/F_proj in [N_gen, B] = [3, 4]
+★★ 窗階梯: K 恰取 L4+1 = 8 個整數值 {21..28}; z_j = (2j-1)F_proj/(2L4); 首階梯 17/14
+```
+🔴 殘: 「點解活躍世代數線性於 z」(收窄後嘅精確問題)。
+
+### 第六輪總結
+
+| 項 | 第五輪後 | 第六輪後 |
+|:--|:--:|:--:|
+| B1 輸運 | 🟢 算子級 / 🔴 Lagrangian | 🟡⁺ **Lagrangian 級識別** (殘: 組裝律) |
+| B2 裁決 | 🟡⁺ sec 勝出 | 🟡⁺ **前提補結構身份** (πR = r₂₂; K=21 由門檻律) |
+| B3 窗律 | 🟡 端點 + 零參數 | 🟡 **內插收窄 + 窗階梯** (殘: N_eff 線性於 z) |
+| C 語言層 | 🟡⁺⁺ | ★ **拆出 O201** |
+| 新增 | — | `scripts/19–21` (**35/35 PASS**), `docs/13–15` |
