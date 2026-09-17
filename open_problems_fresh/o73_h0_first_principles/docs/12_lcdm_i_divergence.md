@@ -70,3 +70,6 @@ I* = 24(1-π/44)/7 = 3.18377
 
 - scripts/20_lcdm_i_divergence.py — I 分解 + I* 結構
 - docs/08 (修正), docs/01 (同步)
+- ★ O98 (2026-08-28): 獨立審計閉合 — 判定「模型幾何差異」非 IDCM 錯誤
+  → open_problems_fresh/o98_lcdm_ionization_deviation/docs/02_verdict.md
+  → π/144 候選 🟡 (穩健性 fail, 唔升級)
