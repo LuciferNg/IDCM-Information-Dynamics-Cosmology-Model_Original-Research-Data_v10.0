@@ -1,0 +1,12 @@
+{
+  "T1_identity": {
+    "lnyq": "2.08496250072",
+    "log4_18": "2.08496250072115618145373894395",
+    "dev": 5.545334524429282e-13,
+    "chain": "z_max = F_proj = L6-1 = 17 (O138); 1+z_max = L6 = 18 (O193); ell_max = log_4(18) (O193/O138/O170/O76); base 4 = B (O140)",
+    "zero_new_constants": true
+  },
+  "T2_old_candidates": "全部無結構身份 (L5^2/58, 25/12, 2+1/11.7699 等)",
+  "T3_null": 0.0,
+  "verdict": "🟢 ℓ_Nyq = log_4(18) = log_B(1+z_max) 閉合 — 身份一直都在全庫, docs/17 候選池漏咗 log_4 形式; 零新常數"
+}
