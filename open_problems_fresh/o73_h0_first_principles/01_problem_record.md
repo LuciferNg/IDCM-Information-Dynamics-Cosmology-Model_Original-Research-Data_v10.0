@@ -4,8 +4,9 @@
 > **狀態**: 🟢 **★★★ 全鏈閉合 — BBN 鎖定 + CMB 投影 + 開放問題清零 + O169 重驗 (09-18)**
 > **來源**: O72 A2 移交
 > **前置**: O72 (K_Chain⊗K_Tree) 🔴, bbn/ 🟢, cmb_cl/ 🟢
-> **文檔**: docs/ (14 份), SESSION_START.md, scripts/ (24 個), data/verify/ (24 .out)
-> **驗證**: verify_all.py — **99/99 PASS** (第 3 輪, 2026-09-18)
+> **文檔**: docs/ (15 份), SESSION_START.md, scripts/ (27 個), data/verify/ (27 .out)
+> **驗證**: verify_all.py — **125/125 PASS** (第 4 輪, 2026-09-18) +
+> `scripts/25_doc_independent_audit.py` — **99/99 PASS** (獨立文檔核對, 第三層)
 
 ## 關鍵結果
 
@@ -105,6 +106,35 @@
 | 51 | `scripts/24` §D–E | 七條光速身份獨立重算離散 0.0%; c_ℓ = c ∀ℓ∈[0,5] (細化不動點); τ_hop = 0.30555 Gyr; ★ 幾何陷阱: λ_sync/τ_hop = π·c ≠ c | 🟢 |
 | 52 | `scripts/24` §F + `docs/15` | ★ 閉合 O99 docs/04 之 🔴 (emergent ray 為何無色散): 相位扇區 (m=0, 無色散, v=c EXACT) vs 振幅扇區 (m_n≠0, v_g=c cos(πn/88)<c) — 唔需 projection operator; 建立 `docs/15_c_first_principles.md` | 🟢 新閉合 |
 
+### 第 4 輪 (2026-09-18) — c 第一性原理落檔 + 獨立文檔核對 + 上游交接
+
+| 序 | 產物 | 內容 | 結果 | commit |
+|:--:|:-----|:-----|:-----|:-------|
+| 53 | `docs/15_c_first_principles.md` | ★★ 落檔: c = a√J 完整推導 (W-field SSB → Goldstone → N_d 相消) | 🟢 239 行 | 033f105 |
+| 54 | `docs/14` §10 + row 11b + §0 指針 | c 由「一致性檢定」升級為「結構推導」記錄 (§1–§9 原文不動) | 🟢 | 033f105 |
+| 55 | `scripts/verify_all` v5 | 補 B57–B68 (docs/15 相關 12 項) | 🟢 **99/99 PASS** | 033f105 |
+| 56 | ★ `docs/15` §6.1 | **同輪誠實修正**: 首版「Goldstone ⇒ 色散 EXACT 為零」**過度聲稱** → Goldstone 只給 m_θ = 0 EXACT; 晶格仍有 ω = 2√J\|sin(ka/2)\|; 真正理由 = 光子 ka ≫ 1 (世界環半徑晶格 a = 93.86 Mpc 唔係光子之 UV 正則化) | 🟢 已修正 | 5b7b084 |
+| 57 | `docs/14` §10.3 (iv) | 同步 §6.1 修正 | 🟢 | 5b7b084 |
+| 58 | ★ O99 交接 | 上游問題交回上游 session: 問題 + 修正點 (6 檔 + scripts) 寫入 `o99_light_ontology/SESSION_START.md`; **O73 未改動 O99 任何結論檔** (mtime 核實) | 🟢 待 O99 執行 | 5b7b084 |
+| 59 | O99 交接 §二 診斷修正 | 由「內部矛盾需裁決」改正為「**P-C5 stale 未同步**」: docs/06 (08-27 18:29, 最晚) 已定「零 ripple (η≡0)」; docs/02 (17:59) + docs/03 (17:57) 未回填 | 🟢 診斷改正 | 9309cfa |
+| 60 | `scripts/25_doc_independent_audit.py` | ★ **第三層獨立文檔核對**: 由原始結構常數起算逐份 docs 重算關鍵公式 (零 import 其他腳本, dps = 40) | 🟢 **99/99 PASS** | 本輪 |
+| 61 | `scripts/25a_doc_audit_v1_superseded.py` | v1 存檔 (報 8 FAIL 全為腳本自身之誤) — 保留作追溯 | 🟢 | 本輪 |
+| 62 | ★ 反幻覺 (腳本層) | scripts/25 v1→v2 修正 **17 項核對腳本自身錯誤** (錨值混用 8 / float 除法 3 / 期望值誤植 3 / 分母參考量 3 / 容差 2) ⇒ **唔涉及文檔內容錯誤** | 🟢 已修正 | 本輪 |
+| 63 | ★ 反幻覺 (文檔層) | `docs/10` §2 標題 99/99 但分段表加總 = 79 (B 段表只列 32 項, 實際 **52** 項) ⇒ **20 項從未寫入文檔** → 已補 §5 完整 99 項清單 | 🟢 已補齊 | 本輪 |
+| 64 | ★ 計數沿革精確重建 | 由 git 逐 commit 核實: `35 (第1輪) → 45 (第2輪) → 79 (第3輪) → 87 (§9) → 99 (§10)`; 實際分段 A31 + B52 + C4 + D12 = 99 | 🟢 | 本輪 |
+| 65 | `docs/10` §5, `docs/13` 補註 | 沿革註 + 第 4 輪完整清單 + 獨立文檔核對記錄 (§1–§4 原文保留) | 🟢 | 本輪 |
+| 66 | (重跑) | 26/26 scripts 重跑 exit = 0; `data/verify/*.out` 同步 (1 項 stale 修正: script 22 MISS) | 🟢 | 本輪 |
+| 67 | `final_result.md` | 依 RESULT_TEMPLATE.md 更新 (加第 4 輪驗證 + 獨立核對) | 🟢 | 本輪 |
+| 68 | 本索引 | 第 4 輪時序補入 | 🟢 | 本輪 |
+| 69 | ★★ `docs/15` §1.1 + header | **上游 O204 修正吸收**: 收到三個 POINTER (mrho_correction / w0_normalization / tauhop_convention, 09-18 12:00/12:11) + O99 側 G8 光層裁決; **全部獨立驗算確認** | 🟢 原文保留 + 日期化註 | 本輪 |
+| 70 | `docs/15` §1.1 (a) **G6** | `m_ρ² = 2μ² = 4` **錯** → `V''(W₀) = 4μ² = 8` (數值二階差分確認 8.0; 反證 2μ² 需 W² = 41.0 ≠ 61.5) | 🟢 已更正 | 本輪 |
+| 71 | `docs/15` §1.1 (b) **G10** | `W₀ = 1.23607` **錯** → `7.84219357068 = √61.5`; 1.23607 = 2/φ (v6.0 ε/(2κ)); 不變量差 **49.75×** ⇒ 歸一化分裂 (非場重標度) | 🟢 已更正 | 本輪 |
+| 72 | `docs/15` §6.2 | **τ_hop 兩約定**: 自洽 (72.73) → 0.30554861 Gyr (本檔註冊值); 錨定 (72.59) → 0.3061379046; 差 0.194% = c 之 dev | 🟢 已明標約定 | 本輪 |
+| 73 | `docs/15` §6.3 | ★★ **O204 G8 光層裁決**: 光 = U(1)_EM 規範玻色子 (2 dof); W Goldstone θ = 環座標/時鐘模 (1 dof) — **設定 c, 非傳遞 EM**; 「光 = W Goldstone」係層混淆; 本檔 c 推導內容**唔需推翻**, 只改標籤 | 🟢 已記錄 | 本輪 |
+| 74 | `docs/15` §1.2 + §8.1 | 影響評估: **零** (推導鏈唯一用 W₀ 處 = S_θ 前因子, 唔進入 c 推導); §8 (iv)「零色散自動得出」過度聲稱同步修正 | 🟢 | 本輪 |
+| 75 | `docs/14` §11 | O204 四項修正吸收表 + 影響 = 零 + 跨 O 反幻覺教訓 (歸一化約定鐵律) | 🟢 | 本輪 |
+| 76 | `scripts/verify_all` v6 | 補 B69–B87 (O204 修正 11 項 + 真算 6 項 + docs/10/13/01 記錄 6 項) | 🟢 **125 項** | 本輪 |
+
 ### O169 修正點重驗結果 (第 3 輪核心)
 
 ```
@@ -141,6 +171,18 @@
 | 3 | verify_all 第 48 項含 `or True` = **恆真假檢查** (永遠 PASS) | `scripts/verify_all.py` | 已改真算; 揭示捨入殘餘 3.8e-7 |
 | 4 | docs/10 A 段聲稱 25 項但驗證器只有 22 項 (3 項從未實作) | `docs/10` | 已補實作 (現 A 段 31 項) |
 
+### 第 4 輪反幻覺新發現 (3 項)
+
+| # | 發現 | 位置 | 處置 |
+|:-:|:-----|:-----|:-----|
+| 1 | ★ **過度聲稱**: 首版寫「Goldstone 條件 ⇒ 色散 EXACT 為零」 | `docs/15` §6 | 已加 §6.1 誠實修正: Goldstone 只給 m_θ = 0 EXACT; 晶格仍有 ω = 2√J\|sin(ka/2)\|; 真正理由 = 光子 ka ≫ 1 |
+| 2 | ★ **文檔漏收**: §2 標題 99/99 但分段表加總 = 79 (B 段表只列 32 項, 實際 52 項) | `docs/10` §2 | 已補 §5 完整 99 項清單 + 沿革註 (§2 原文保留) |
+| 3 | **計數沿革未精確化**: 「第 3 輪 79」與 headline 99 並存, 無中間 87 | `docs/10`, `docs/13` | 已加日期化沿革註 (35→45→79→87→99, git 逐 commit 核實) |
+
+> **腳本層反幻覺**: `scripts/25` v1 報 8 FAIL + v2 另發現 9 項 = **17 項核對腳本自身錯誤**
+> (錨值混用 72.59/72.73 = 8 項; float 除法失去精度 = 3 項; 期望值誤植 = 3 項;
+> 分母/參考量錯 = 3 項; 容差過緊 = 2 項) ⇒ **全部唔涉及文檔內容錯誤**, v1 存為 25a 作追溯。
+
 ### 相關文件
 
 ```
@@ -153,10 +195,13 @@ docs/06_parameter_linkage_map.md  三層架構 + Ω→f 建議 (O169 更正)
 docs/07_theta_star_candidate.md   θ* = 7π/2112 (O167 誤差修正註)
 docs/08_final_closure_map.md      唯一性 + 閉合圖 (O167/O98 註)
 docs/09_h5_cross_lock.md          H5 雙重鎖定
-docs/10_verification_report.md    全鏈驗證 (第 3 輪 99/99)
+docs/10_verification_report.md    全鏈驗證 (第 3 輪 79 → 第 4 輪 125/125)
 docs/11_h7_predictions.md         H7 七預言 (P5 修正註)
 docs/12_lcdm_i_divergence.md      I 分歧 2.18% (O98/O105 註)
 docs/13_closure_record.md         閉合記錄 (原 03_closure_record, 已改名)
-docs/14_open_problem_status.md    開放問題最終狀態 (0 項)
+docs/14_open_problem_status.md    開放問題最終狀態 (0 項) + §9/§10 (c 推導)
+docs/15_c_first_principles.md     ★★ c 之第一性原理完整獨立推導 (第 4 輪新增)
 final_result.md                   結論摘要 (依 RESULT_TEMPLATE.md)
+scripts/25_doc_independent_audit.py  第三層獨立文檔核對 (99/99)
+scripts/25a_doc_audit_v1_superseded.py  v1 存檔 (追溯用)
 ```

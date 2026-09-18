@@ -59,9 +59,20 @@
 
 ### 〇. 一句話
 
-O73 §10 由 **W-field SSB 第一性原理**導出: **光 = W-field 相位 (Goldstone) 模**,
-`m_θ = 0 EXACT`; 並導出 `c = a·√J` 而 `a = R_world/N_d`, `√J = N_d·ω_ring`
+O73 §10 由 **W-field SSB 第一性原理**導出: W-field 相位 (Goldstone) 模 `m_θ = 0 EXACT`;
+並導出 `c = a·√J` 而 `a = R_world/N_d`, `√J = N_d·ω_ring`
 ⇒ **N_d 精確相消** ⇒ `c = R_world·ω_ring = 2πR_world/T_ring = L_ring/T_ring` EXACT (零自由參數)。
+
+> ⚠️⚠️ **必讀 (2026-09-18 第 4 輪補入 — 與本節同日之上游 O204 裁決)**:
+> 本節初版寫「**光 = W-field 相位 (Goldstone) 模**」—— **此標籤已被 O204 G8 裁決修正為層混淆**。
+> O204 已另向本 O 發出 `POINTER_o204_light_layer.md` (12:00), 裁決:
+> **光 (電磁) = 湧現 U(1)_EM 規範玻色子 (2 dof, O139 正確);
+> W Goldstone θ = 環座標／時鐘模 (1 dof) — 佢設定 c, 唔係傳遞 EM。**
+> 四判據: ① 若 U(1)_W ≡ U(1)_EM ⇒ m_γ = g⟨W⟩ ≠ 0 違反觀測 (SME 1e-18); ② dof 1 ≠ 2;
+> ③ Goldstone 只耦合振幅扇區, 光子耦合電荷 Q_f; ④ 單一實純量 Goldstone ⇒ 只 1 極化 ⇒ 即時證偽。
+> ⇒ **本節其餘內容 (c 之來源 / 零色散 / P-C5 診斷) 全部成立, 只係標籤要改**:
+> 正確陳述 = **c 由 W Goldstone 決定; 光子繼承該 c**。
+> **⇒ 執行時請一併參照 `POINTER_o204_light_layer.md` (O204 原文) + 本節 附錄 A。**
 
 ⇒ 本 O 之「載波 (carrier)」postulate 現有**推導來源**; 本 O 遺留之 🔴「emergent ray 為何無色散」
 需求**由強降為弱** (見 §三)。但同時暴露本 O **一處內部矛盾** (見 §二, ★ 需裁決)。
@@ -203,11 +214,27 @@ docs/06_pc5_tev_ripple.md (08-27 18:29): P-C5 = **「零 ripple (η ≡ 0)」+ �
 
 ---
 
+### 附錄 A. ★ 同日上游 O204 之補充 (2026-09-18 第 4 輪補入)
+
+除本節 (O73 交接) 外, 本 O root 同日已收到 **O204 `wfield_constitution`** 之 POINTER
+(非本輪寫入, 由 O204 自己放入):
+
+| 檔 | 內容 | 與本節關係 |
+|:---|:-----|:-----------|
+| `POINTER_o204_light_layer.md` | ★★ **G8 光層裁決**: 光 = U(1)_EM 光子 (2 dof); W Goldstone = 時鐘模 (1 dof), 設定 c 而非傳遞 EM; 「光 = W Goldstone」係層混淆 | **修正本節 §〇 之標籤**; 支撐 P-C5「ripple ≡ 0」(第二重理由: ka ≫ 1) |
+| `POINTER_o204_tauhop_convention.md` | τ_hop 兩約定 (錨定 0.306138 / 自洽 0.30554861 Gyr, 差 0.194%) | 引用 O73 τ_hop 時須明標約定 |
+| (O204 → O73 另兩個) | `m_ρ² = 4μ² = 8` (非 2μ²); `W₀ = 7.84219357068` (非 1.23607) | 已由 O73 第 4 輪吸收 (`docs/15` §1.1); **唔影響 c 推導** |
+
+**⇒ O99 執行建議**: 本節 §一 各檔之修正方向全部有效, 惟 `docs/02` §4/§5、`docs/04` §3
+之**框架描述**應採「**光子 = U(1)_EM 規範玻色子; c 由 Goldstone 時鐘模設定**」,
+而唔係「光 = Goldstone 模」—— 否則會引入 1 極化預言 (即時被極化實驗證偽)。
+
 ### 四. 建議執行順序 (供 O99 session 參考)
 
 ```
-1. ★ 依 §二 診斷: P-C5 唔需裁決 — 直接以 `docs/06` (零 ripple, 08-27 18:29 已定) 為基準回填 docs/02 §5 + docs/03
-2. docs/02 §4/§5 重寫 (emergent-ray → Goldstone 扇區; P-C5 依裁決)
+1. ★★ 先讀 `POINTER_o204_light_layer.md` (G8 裁決) — 決定「光」之框架標籤 (附錄 A)
+2. ★ 依 §二 診斷: P-C5 唔需裁決 — 直接以 `docs/06` (零 ripple, 08-27 18:29 已定) 為基準回填 docs/02 §5 + docs/03
+3. docs/02 §4/§5 重寫 (emergent-ray → 光子 = U(1)_EM + c 由 Goldstone 設定; P-C5 依裁決)
 3. docs/04 §3 定案 (a/b/c 三選一 → (c) 之精確版; 刪 (b) 之投影算子路線) + §6 金句修
 4. docs/05 §2/§3/§5 更新 (postulate → derivation; P̂ 必要性下降) + §5 標題重複修正
 5. docs/01 L56/L103 更新

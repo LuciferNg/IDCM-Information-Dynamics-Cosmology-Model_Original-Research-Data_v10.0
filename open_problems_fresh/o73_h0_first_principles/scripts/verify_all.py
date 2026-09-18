@@ -151,7 +151,7 @@ check("docs/06 載 O169 更正註", "O169 重驗更正" in d06)
 d01m = doc_contents.get("01_problem_record.md", "")
 check("docs/01 載 O169 重驗更正註", "O169 重驗更正" in d01m)
 d13 = doc_contents.get("13_closure_record.md", "")
-check("docs/13 檔名沿革 + 99/99 註", "檔名沿革" in d13 and "99/99" in d13)
+check("docs/13 檔名沿革 + 125/125 註", "檔名沿革" in d13 and "125/125" in d13)
 d02 = doc_contents.get("02_H1_verdict.md", "")
 check("docs/02 載「已被 docs/04 推翻」註", "docs/04" in d02 and "推翻" in d02)
 d05b = doc_contents.get("05_h3_cmb_projection.md", "")
@@ -206,6 +206,54 @@ try:
     check("SESSION_START O169 狀態 [x] 已重驗", "[x]" in ss and "已重驗" in ss)
 except Exception as e:
     check("SESSION_START O169 狀態", False, str(e))
+
+# B57+. 上游 O204 修正註 (2026-09-18 第 4 輪) — docs/15 §1.1 / §6.2 / §6.3 / §8.1
+d15 = doc_contents.get("15_c_first_principles.md", "")
+check("docs/15 載 O204 POINTER 修正註 (header)", "POINTER_o204" in d15)
+check("docs/15 §1.1 G6: m_rho^2 = 4mu^2 = 8 更正", "4μ² = 8" in d15 and "V''(W₀)" in d15)
+check("docs/15 §1.1 G6: 反證 2mu^2 需 W^2 = 41.0", "41.0" in d15)
+check("docs/15 §1.1 G6: 根因 v6.0 約定搬字", "約定搬字" in d15)
+check("docs/15 §1.1 G10: W0 = 7.84219357068 = sqrt(61.5)", "7.84219357068" in d15)
+check("docs/15 §1.1 G10: 1.23607 = 2/phi (v6.0)", "2/φ" in d15)
+check("docs/15 §1.1 G10: 不變量差 49.75x (非場重標度)", "49.75" in d15)
+check("docs/15 §1.2 影響: 零 (c 推導唔含 W0)", "影響: 零" in d15)
+check("docs/15 §6.2 tau_hop 兩約定 (錨定/自洽)", "自洽" in d15 and "0.3061379046" in d15)
+check("docs/15 §6.3 O204 G8 光層裁決 (U(1)_EM 2 dof)", "U(1)_EM" in d15 and "dof" in d15)
+check("docs/15 §8.1 (iv) 過度聲稱修正", "8.1" in d15 and "過度聲稱" in d15)
+
+# 真算: O204 三項裁決獨立驗算
+def _Vpp(w2, mu2=2.0, lam=2/123):
+    return -2*mu2 + 12*lam*w2
+check("真算 G6: V''(W0) = -2mu^2 + 12 lam W^2 = 8.0", abs(_Vpp(61.5) - 8.0) < 1e-12, f"{_Vpp(61.5)}")
+check("真算 G6: 2mu^2 = 4.0 (O73 原文錯值)", abs(2*2.0 - 4.0) < 1e-12)
+check("真算 G10: W0 = sqrt(2/(4/123)) = 7.84219357068",
+      abs((2/(4/123))**0.5 - 7.84219357068) < 1e-9, f"{(2/(4/123))**0.5}")
+check("真算 G10: mu^2/lam = 123 vs eps/kappa = 2.4721359",
+      abs(2/(2/123) - 123.0) < 1e-9 and abs((1/(4*((1+5**0.5)/2)))/(1/16) - 2.4721359) < 1e-6)
+check("真算 tau_hop 錨定 (72.59) = 0.3061379 Gyr",
+      abs(1/(44*(72.59/3.0856775814913673e19))/3.15576e16 - 0.3061379046) < 1e-8)
+check("真算 tau_hop 自洽 (72.73) = 0.3055486 Gyr",
+      abs(1/(44*(72.73/3.0856775814913673e19))/3.15576e16 - 0.3055486112) < 1e-8)
+
+# docs/10 §5 第 4 輪完整清單
+d10 = doc_contents.get("10_verification_report.md", "")
+check("docs/10 §5 第 4 輪完整清單存在", "## 5. 第 4 輪" in d10)
+check("docs/10 §5 分段 A31 + B78 + C4 + D12 = 125", "A = 31" in d10 and "B = 78" in d10)
+check("docs/10 §5.0 計數沿革 35->45->79->87->99->125", all(x in d10 for x in ("35","45","79","87","99","125")))
+check("docs/10 §5.5 獨立文檔核對 99/99", "25_doc_independent_audit" in d10)
+check("docs/10 §5.6 腳本 17 項自身錯誤記錄", "17" in d10)
+
+# docs/13 + 01_problem_record 沿革
+d13 = doc_contents.get("13_closure_record.md", "")
+check("docs/13 載計數沿革精確化註", "計數沿革" in d13 and "87" in d13)
+try:
+    pr = open(BASE + "/01_problem_record.md").read()
+    check("01_problem_record 載第 4 輪時序", "### 第 4 輪 (2026-09-18)" in pr)
+    check("01_problem_record 第 4 輪含 O204 交接", "O204" in pr)
+    check("01_problem_record 載 docs/15 入相關文件", "docs/15_c_first_principles.md" in pr)
+except Exception as e:
+    check("01_problem_record 第 4 輪", False, str(e))
+
 
 print()
 print("─" * 74)

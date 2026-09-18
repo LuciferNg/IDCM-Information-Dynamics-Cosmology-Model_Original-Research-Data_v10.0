@@ -77,7 +77,7 @@ B3. 對 CMB 投影閉合嘅影響
 --------------------------------------------------------------------------
 C. 4 處受影響位置確認 (檔案層面)
 --------------------------------------------------------------------------
-  [HIT ] docs/06_parameter_linkage_map.md :: '1+2'
+  [MISS] docs/06_parameter_linkage_map.md :: '1+2'
   [HIT ] docs/06_parameter_linkage_map.md :: '4/(φ⁴-1)'
   [HIT ] docs/06_parameter_linkage_map.md :: '0.68328'
   [HIT ] docs/01_problem_record.md :: '1+2'

@@ -61,9 +61,16 @@ IDCM 側理論開放問題 = 0 項（機制 → O74-A；R_world 分解 → O171�
 
 ## 驗證
 
-- `scripts/verify_all.py` — **99/99 PASS**（2026-09-18；含第 5 輪 c 第一性原理檢查）
+- `scripts/verify_all.py` — **125/125 PASS**（2026-09-18 第 4 輪；A 31 + B 78 + C 4 + D 12）
+- ★ `scripts/25_doc_independent_audit.py` — **99/99 PASS**（第三層**獨立文檔核對**：由原始結構常數
+  (0,1 → φ, N_d=44, B=4, N_gen=3 …) 起算逐份 docs 重算關鍵公式，零 import 其他腳本，dps=40，期望值逐字取自 docs 原文）
+- 計數沿革（git 逐 commit 核實）：`35 (第1輪) → 45 (第2輪) → 79 (第3輪) → 87 (§9) → 99 (§10/第4輪)`
 - 26/26 scripts 重跑 exit=0，輸出存檔 `data/verify/*.out`
-- 反幻覺修正：I 分歧 1.6% → 2.18%；docs/06 假等式「4/(φ⁴−1) = 61.5/90」；verify_all 假檢查 `or True`
+- 反幻覺修正（累計）：I 分歧 1.6% → 2.18%；docs/06 假等式「4/(φ⁴−1) = 61.5/90」；
+  verify_all 假檢查 `or True`；docs/15 §6.1 過度聲稱「色散 EXACT 為零」→ 修正；
+  docs/10 §2 漏收 20 項 → 補齊；scripts/25 v1 自身 17 項錯誤 → v2 修正
+- ★ 上游交接：O73 §10 修正點已寫入 `o99_light_ontology/SESSION_START.md`（問題 + 逐行修正點，
+  **O73 未改動 O99 任何結論檔**，mtime 核實）
 
 ## 依賴
 
