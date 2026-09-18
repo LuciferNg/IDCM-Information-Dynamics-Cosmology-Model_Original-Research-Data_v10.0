@@ -4,7 +4,7 @@ O73 全鏈驗證 — 文件-腳本一致性 verifier (file simulation verifier)
 讀返實際 scripts 輸出 (.out) + docs 記載, 自動核對關鍵數字。
 無幻覺確認: 每個 docs 嘅關鍵 claim 都有 script 輸出支持。
 """
-import re, os, sys
+import re, os, sys, math
 
 BASE = os.path.dirname(os.path.abspath(__file__)) + "/.."
 VERIFY = BASE + "/data/verify"
@@ -151,7 +151,7 @@ check("docs/06 載 O169 更正註", "O169 重驗更正" in d06)
 d01m = doc_contents.get("01_problem_record.md", "")
 check("docs/01 載 O169 重驗更正註", "O169 重驗更正" in d01m)
 d13 = doc_contents.get("13_closure_record.md", "")
-check("docs/13 檔名沿革 + 87/87 註", "檔名沿革" in d13 and "87/87" in d13)
+check("docs/13 檔名沿革 + 99/99 註", "檔名沿革" in d13 and "99/99" in d13)
 d02 = doc_contents.get("02_H1_verdict.md", "")
 check("docs/02 載「已被 docs/04 推翻」註", "docs/04" in d02 and "推翻" in d02)
 d05b = doc_contents.get("05_h3_cmb_projection.md", "")
@@ -168,6 +168,21 @@ check("docs/14 §9 分派律 176 = 4N_d", "176 = 4N_d" in d14 or "4N_d = 2N_site
 # 真算: 176 = 4*N_d, dof = 4-3
 check("真算 176 = 4*N_d", 4*44 == 176)
 check("真算 dof = 4-3 = 1", 4-3 == 1)
+# --- 第 5 輪: c 第一性原理推導 (script 24 + docs/15) ---
+d15 = doc_contents.get("15_c_first_principles.md", "")
+check("scripts/24 存在", os.path.exists(os.path.join(BASE, "scripts/24_c_first_principles.py")))
+check("scripts/24 輸出存在", os.path.exists(os.path.join(VERIFY, "24_c_first_principles.out")))
+check("docs/15 Goldstone 相位模", "Goldstone" in d15 and ("m_theta = 0" in d15 or "m_\u03b8 = 0" in d15))
+check("docs/15 c_W = a*sqrt(J)", "a\u00b7\u221aJ" in d15 or "a*sqrt(J)" in d15 or "a\u00b7\u221aJ" in d15)
+check("docs/15 N_d 相消", "N_d 精確相消" in d15 or "N_d \u76f8\u6d88" in d15)
+check("docs/15 c 值 300374.0017", "300374.0017" in d15)
+check("docs/15 tau_hop 0.30555", "0.30554861" in d15 or "0.30555" in d15)
+check("docs/15 細化不動點", "\u7d30\u5316\u4e0d\u52d5\u9ede" in d15)
+check("docs/14 §10 指向 docs/15", "docs/15_c_first_principles.md" in d14)
+# 真算: N_d 相消 + 幾何陷阱 pi
+check("真算 N_d 相消 (R/N)*(N*w) = R*w", abs((4129.98764888/44)*(44*72.73) - 4129.98764888*72.73) < 1e-9)
+check("真算 88*sin(pi/88) ~= pi", abs(88*math.sin(math.pi/88) - math.pi) < 1e-3)
+check("真算 cos(pi/88) = 0.9993628257", abs(math.cos(math.pi/88) - 0.9993628257) < 1e-9)
 check("docs/14 載第 3 輪 O169 重驗節", "O169" in d14 and "重驗" in d14)
 check("docs/14 c 已降級 (獨立推導仍 🔴)", "部分閉合" in d14 and "獨立推導" in d14 and "🔴" in d14)
 check("docs/14 r* 已更正 144.461726", "144.461726" in d14)

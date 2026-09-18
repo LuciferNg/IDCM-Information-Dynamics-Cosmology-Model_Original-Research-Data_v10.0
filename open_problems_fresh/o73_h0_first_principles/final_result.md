@@ -43,6 +43,17 @@ IDCM 側理論開放問題 = 0 項（機制 → O74-A；R_world 分解 → O171�
 - Ω_m = 19/60；Ω_b = 19/450；Ω_DM = 247/900
 - D_app(ℓ) = R_world(1−4^{−ℓ})·E(ℓ)，E(ℓ) = ℓ + 1.11911398（舊 1+2φ⁻¹ℓ 已證偽, DESI DR2 4.88σ）
 
+**★★★ c 之第一性原理推導（§10, 2026-09-18 用戶指令）**
+- 光 = **W-field 相位（Goldstone）模**: SSB ⟨W⟩ = W₀ ≠ 0 ⇒ m_θ = 0 EXACT; S_θ = ½W₀²∫(∂_μθ)² ⇒ □θ = 0 恰線性 ⇒ **零色散**
+- 晶格正則化: ω(k) = 2√J|sin(ka/2)| ⇒ **c_W = a·√J**（site spacing × hop frequency）
+- IDCM 識別: a = R_world/N_d, √J = N_d·ω_ring ⇒ **N_d 精確相消** ⇒ **c = R_world·ω_ring = 2πR_world/T_ring = L_ring/T_ring** EXACT
+- 數值: c = **300374.0017 km/s** vs SI 299792.458（dev **0.193982%**, 主導自 ω_ring 之 0.19% BBN 誤差）
+- 七條身份（R·ω / 環幾何 / L/T / O138 Γ / O164 f₄₄ / a/τ_hop / a√J）離散 **0.0%**；**c_ℓ = c ∀ℓ∈[0,5]**（細化不動點）
+- τ_hop = 1/(N_d ω_ring) = **0.30554861 Gyr**；★ 幾何陷阱: λ_sync/τ_hop = π·c ≠ c（a = λ_sync/π）
+- **閉合 O99 docs/04 之 🔴**（emergent ray 為何無色散）: 相位扇區（m=0, 無色散）vs 振幅扇區（m_n ≠ 0, v_g = c·cos(πn/88) < c）
+- 誠實邊界: 維度定理 ⇒ 仍需 **1 個有量綱錨**（R_world 或 ω_ring, 同一 dof）；世界環 sector dof = 4 − 3 = 1
+- 新增預言: P-c1 m_γ = 0 EXACT（Nagel 2015 ✅）; P-c2 v_g(n)/c = cos(πn/88); P-c3 c 細化不變; P-c4 τ_hop = 0.30555 Gyr
+
 **H7 七個可證偽預言**
 - P1 Maser 收斂 72.6（2026-28）；P2 NGC 4258 v_pec ≈ 130；P3 ngVLA σ<1%（2028+）
 - P4 CMB 全實驗 67.41（Planck 0.09σ / 加權平均 67.93 → −1.33σ）；P5 θ* 收窄測試
@@ -50,8 +61,8 @@ IDCM 側理論開放問題 = 0 項（機制 → O74-A；R_world 分解 → O171�
 
 ## 驗證
 
-- `scripts/verify_all.py` — **87/87 PASS**（第 3 輪 2026-09-18；分段 A31/B32/C4/D12）
-- 24/24 scripts 重跑 exit=0，輸出存檔 `data/verify/*.out`
+- `scripts/verify_all.py` — **99/99 PASS**（2026-09-18；含第 5 輪 c 第一性原理檢查）
+- 26/26 scripts 重跑 exit=0，輸出存檔 `data/verify/*.out`
 - 反幻覺修正：I 分歧 1.6% → 2.18%；docs/06 假等式「4/(φ⁴−1) = 61.5/90」；verify_all 假檢查 `or True`
 
 ## 依賴

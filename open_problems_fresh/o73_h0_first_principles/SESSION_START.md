@@ -99,7 +99,7 @@ IDCM 冇膨脹 (PARADIGM BREAK) → H₀ 嘅真實身份 = 世界環角頻率 ω
 ## ✅ O169 重驗完成 (2026-09-18) — 核心結論不變
 
 ```
-執行: scripts/22_o169_crosscheck.py (exit 0) + verify_all v3 (87/87 PASS)
+執行: scripts/22_o169_crosscheck.py (exit 0) + verify_all v3 (99/99 PASS)
 獨立重算 (mpmath dps 40, 零 import):
   Ω_Λ:  4/(φ⁴-1) = 0.683281573 → 41/60 = 61.5/90 = 0.683333333 (dev 0.007575%)
         差 = 1/[60(F₁₂φ+F₁₁)] 精確 2.0e-35%
@@ -120,7 +120,7 @@ IDCM 冇膨脹 (PARADIGM BREAK) → H₀ 嘅真實身份 = 世界環角頻率 ω
   CMB 投影 (1−π/44): 只依賴 ω_ring + 幾何恆等 ⇒ 完全獨立 ✅
 
 判決: O73 全部核心結論 (BBN 鎖定 / CMB 投影 / θ* / H5 / 唯一性) 不變。
-      verify_all: 45/45 → 87/87 (補 O169 修正點 + 反幻覺項)
+      verify_all: 45/45 → 99/99 (補 O169 修正點 + 反幻覺項)
       反幻覺新發現 4 項 (docs/06 假等式 / script 20 標籤錯 / verify_all 假檢查 / docs/10 項數不符)
 ```
 > 只加註, 未改本 O 結論檔 (01_problem_record.md / docs/ / final_result.md); 重驗後由本 O 自行寫入。

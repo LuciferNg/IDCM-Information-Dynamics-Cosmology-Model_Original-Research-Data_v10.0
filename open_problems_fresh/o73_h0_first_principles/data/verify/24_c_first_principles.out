@@ -1,0 +1,175 @@
+
+============================================================================
+A. W-field 本體論: 光 = 相位 (Goldstone) 模 (第一性原理起點)
+============================================================================
+
+A1. 唯一基本場: W-field (複純量序參量), 定義於世界環上之 88-site 對偶鏈
+    S_W = int dt dtheta [ (1/2)|d_mu W|^2 - V(|W|) ]
+    V(|W|) = -mu^2 |W|^2 + lambda |W|^4          (O39 SSB 勢)
+
+A2. 自發對稱破缺: <W> = W0 = mu/sqrt(2 lambda) != 0    (O39)
+    U(1) 相位對稱破缺  =>  徑向模有質量, 相位模為 Goldstone (無質量)
+
+A3. 漲落分解  W = (W0 + rho) e^{i theta}
+      徑向模 rho :  m_rho^2 = 2 mu^2 = 4        (有質量 -> 物質譜)
+      相位模 theta: m_theta = 0                  (Goldstone, 無質量)
+
+A4. 相位模作用量 (代入, 只保留 theta 之梯度項):
+      S_theta = (1/2) W0^2 int (d_mu theta)^2
+    => theta 之 EOM 恰為線性波動方程  box(theta) = 0
+    => 零色散 (無 sin 修正), 傳播速度 = W-field 之基本輸運速度 c_W
+    => 呢個就係「線性同步傳播激發」: 全 88 site 共享一個相位 (同步),
+       梯度以 c_W 傳播 (線性, 無色散)
+
+  W0^2 (O39) = 1.527869   W0 = 1.23607
+  m_rho^2 = 2 mu^2 = 4.0  (徑向, 有質量)
+  m_theta  = 0  (Goldstone, EXACT — 相位模無質量)
+
+============================================================================
+B. 晶格正則化: c_W = a * sqrt(J)  (輸運速度由跳躍結構決定)
+============================================================================
+
+B1. 離散 W-field 作用量 (最近鄰跳躍 J):
+      S = sum_j [ (1/2)(d_t W_j)^2 - (J/2)|W_{j+1} - W_j|^2 - V(|W_j|) ]
+
+B2. 線性化後之平面波 W_j = e^{i(k j a - omega t)}:
+      omega^2 = J (2 - 2 cos(k a)) = 4 J sin^2(k a / 2)
+      => omega(k) = 2 sqrt(J) |sin(k a / 2)|          [晶格色散]
+
+B3. 無質量 (相位/Goldstone) 模之低 k 斜率 = 傳播速度:
+      c_W = lim_{k->0} d omega/dk = a * sqrt(J)        [★ 核心]
+
+B4. 群速度階梯:  v_g(k) = a sqrt(J) cos(k a/2) = c_W cos(k a / 2) <= c_W
+      等號僅於 k = 0 (零模 / 同步模)
+
+
+============================================================================
+C. IDCM 識別: a = R_world/N_d 與 sqrt(J) = N_d*omega_ring  (N_d 相消)
+============================================================================
+
+C1. 44-site 鏈 = 世界環半徑之離散化 (skill idcm-world-ring-parameters):
+      a = R_world / N_d             (site spacing, 鏈長 = R_world)
+      k_n = pi n / R_world,  n = 1..N_d
+      => k_n a / 2 = pi n / (2 N_d) = pi n / 88
+
+C2. IDCM W-field 譜 (O164, 44/44 dev 0):
+      omega_n = N_d * omega_ring * sqrt(gamma_n),   gamma_n = 4 sin^2(pi n/88)
+      => omega_n = 2 N_d omega_ring sin(pi n/88)
+
+C3. 對比晶格色散 B2:  omega_n = 2 sqrt(J) sin(k_n a/2) = 2 sqrt(J) sin(pi n/88)
+      => 2 sqrt(J) = 2 N_d omega_ring
+      => sqrt(J) = N_d * omega_ring                 [★ hop frequency]
+
+C4. 代入 B3:
+      c_W = a sqrt(J) = (R_world / N_d) * (N_d omega_ring) = R_world * omega_ring
+      => N_d 相消 (!!)  => c 與離散化數目無關 = 連續極限 (refinement-invariant)
+
+  逐項數值驗證 (omega_ring = BBN 值):
+    omega_ring (BBN)  = 72.73 (km/s)/Mpc = 2.3570188e-18 s^-1
+    a = R_world/N_d   = 93.86335566 Mpc
+    sqrt(J) = N_d*om  = 1.0370883e-16 s^-1   (hop frequency)
+    c_W = a*sqrt(J)   = 300374.0017 km/s
+    SI c              = 299792.458 km/s
+    dev               = 0.193982 %
+    tau_hop = 1/sqrt(J) = 9.6423809e+15 s = 0.30554861 Gyr
+
+============================================================================
+D. 全部光速身份之獨立核對 (零 import, 逐條重算)
+============================================================================
+  (1) c = R_world*omega_ring      = 300374.0017 km/s
+  (2) c = 2 pi R_world/T_ring     = 300374.0017 km/s
+  (3) c = L_ring/T_ring           = 300374.0017 km/s
+  (4) c = 2*lam_sync*Gamma        = 300374.0017 km/s   (Gamma = N_d/T_ring = 1.6505772e-17 s^-1)
+  (5) c = lam_sync * f_44         = 300374.0017 km/s   (f_44 = 2N_d/T_ring)
+  (6) c = a/tau_hop               = 300374.0017 km/s   (a = R_world/N_d = site spacing)
+  (7) c = a*sqrt(J)  [B3/C4]      = 300374.0017 km/s
+  (6b) NOTE: lam_sync/tau_hop     = 943652.7571 km/s = pi*c
+           因 lam_sync = 2 pi R_world/88 = pi R_world/44 = pi*a  (半徑 vs 周長幾何比 pi)
+           => site spacing a = lam_sync/pi  (chain = 半徑離散化, 非周長分割)
+
+  七條身份之最大相對離散 = 0.0 %  (應為 0: 同一恆等之代數變形)
+
+============================================================================
+E. Refinement invariance: c 係 Z_(88*4^l) 自相似細化之不動點
+============================================================================
+
+E1. O197: 細化族 Z_(88 * 4^l) — 層 l 有 N_l = N_d * 4^l sites
+E2. 層 l 之 site spacing: a_l = R_world/N_l = R_world/(N_d 4^l)
+   層 l 之 hop freq:     sqrt(J_l) = N_l omega_ring = N_d 4^l omega_ring
+E3. c_l = a_l sqrt(J_l) = (R_world/(N_d 4^l)) (N_d 4^l omega_ring) = R_world omega_ring
+    => c_l = c  for all l  =>  c 係細化不動點 (RG fixed point)
+
+  l |  N_l  |  a_l (Mpc)  |  sqrt(J_l) (s^-1)  |  c_l (km/s)
+  --+-------+-------------+--------------------+-----------
+  0 |    44 |   93.863356 |        1.03709e-16 | 300374.001703
+  1 |   176 |   23.465839 |        4.14835e-16 | 300374.001703
+  2 |   704 |   5.8664597 |        1.65934e-15 | 300374.001703
+  3 |  2816 |   1.4666149 |        6.63736e-15 | 300374.001703
+  4 | 11264 |  0.36665373 |        2.65495e-14 | 300374.001703
+  5 | 45056 | 0.091663433 |        1.06198e-13 | 300374.001703
+
+  => c 對所有 l 完全相同 (dev = 0, 精確) — 呢個係「c 為普適常數」之結構原因
+     (有質量模 v_g(n) 隨 l 改變; 只有零模速度 c 不變)
+
+============================================================================
+F. 相位模無色散 = O99 docs/04 之 🔴 開放項之結構閉合
+============================================================================
+
+F1. O99 docs/04 null-test 遺留 🔴: 「emergent ray 為何無色散 — 未推導」
+F2. 現閉合: 光 = 相位 (Goldstone) 模, 其 EOM 恰線性 box(theta)=0 (A4)
+    => 無 sin(ka/2) 修正項 => 色散 EXACT 為零 (唔需要 projection operator)
+F3. 對照: K_chain n=1..44 模 = 徑向/振幅模, m_n = M0 sqrt(gamma_n) != 0
+    => 有晶格色散 => v_g(n) = c cos(pi n/88) < c   (符合 O99 scripts/02 null test)
+F4. 判決: 「lattice mode v_g < c」與「觀測光 = c」唔再需要 emergent-ray 論證 —
+    兩者屬唔同扇區: 振幅扇區 (有質量, 色散) vs 相位扇區 (Goldstone, 無色散)
+
+  群速度階梯 (相位模 = c; 振幅模 n = 1..44):
+    n  |  v_g/c = cos(pi n/88)  |  m_n/M0 = 2 sin(pi n/88)
+     0 |                   1.0  |                 0.0  <- 光 (Goldstone, m=0)
+     1 |          0.9993628257  |       0.07138466768
+     2 |          0.9974521146  |        0.1426783664
+    11 |          0.9238795325  |        0.7653668647
+    22 |          0.7071067812  |         1.414213562
+    33 |          0.3826834324  |         1.847759065
+    43 |         0.03569233384  |         1.998725651
+    44 |        2.06703211e-43  |                 2.0  <- Nyquist (駐波)
+
+============================================================================
+G. 剩餘維度錨: 定理界限 (誠實邊界)
+============================================================================
+
+G1. 維度定理: c 之量綱 D(c) = (0,1,-1,0,0,0,0) != 0
+    IDCM 結構常數 (phi, pi, N_d, B, L_n, F_n, gamma_k, mu^2, eta_B, Omega_b, ...) 全無量綱
+    => 任何 f(結構) 無量綱 => f(結構) != c  (定理, 普適)
+G2. 世界環 sector 未知量 {c, omega_ring, R_world, T_ring}: 4
+    恆等式:  c = R_world omega_ring,  omega_ring = 2 pi/T_ring,  L_ring = 2 pi R_world  => 3
+    => 自由度 = 1  (單一有量綱錨)
+G3. 結論: 由 W-field 第一性原理可得 c = R_world*omega_ring (零自由參數, N_d 相消);
+    但 c 之絕對值仍需 1 個有量綱錨 (R_world 或 omega_ring, 兩者同一 dof)。
+    呢個係定理界限, 唔係 IDCM 未推導。
+
+  自由度 = 4 - 3 = 1
+  錨 R_world (r_d 聲學尺) = 4129.98764888 Mpc  (dev 0.0011%)
+  錨 omega_ring (BBN 鏈)  = 72.73 (km/s)/Mpc  (dev 0.19%)
+  主導不確定度: omega_ring 之 0.19% (BBN), 非結構
+
+============================================================================
+H. 判決
+============================================================================
+
+  (A) 光之身份      : 光 = W-field 相位 (Goldstone) 模 = 線性同步傳播激發  [第一性原理]
+  (B) 傳播速度公式  : c_W = a * sqrt(J)   (site spacing x hop frequency)
+  (C) IDCM 識別     : a = R_world/N_d,  sqrt(J) = N_d*omega_ring  => N_d 相消
+  (D) 閉式          : c = R_world * omega_ring = 2 pi R_world/T_ring = L_ring/T_ring  EXACT
+  (E) 數值          : c = 300374.0017 km/s  vs SI 299792.458  (dev 0.19398%)
+  (F) 細化不變      : c_l = c for all l (Z_(88*4^l) 細化之不動點) — 普適性之結構原因
+  (G) 零色散        : 相位模 EOM 恰線性 => 色散 EXACT 0 (閉合 O99 docs/04 之 🔴)
+  (H) 剩餘錨        : 1 個有量綱錨 (維度定理, 不可約)
+
+  ★ 相對舊做法 (O171 scripts/50: c_pred = omega_ring(BBN) x R_world, dev 0.194%,
+    被指為循環/一致性檢定) 之結構增益:
+      (i)   c 有明確本體論身份: W-field Goldstone 模之輸運速度 (非「載波」postulate)
+      (ii)  N_d 相消 = 定理 (c 與離散化無關), 唔係數值巧合
+      (iii) c_l = c 對所有細化層成立 = 普適性有結構原因
+      (iv)  零色散由 Goldstone 條件自動得出 (閉合 O99 docs/04 🔴)
+
