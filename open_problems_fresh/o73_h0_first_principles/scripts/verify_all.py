@@ -79,6 +79,20 @@ check("20+ Maser → z~2σ", "1.94" in t21 or "2σ" in t21)
 check("ngVLA 100 → z~13σ", "13" in t21 or "4.33" in t21)
 check("P4 加權平均 67.93", "67.93" in t21)
 
+# A7b. I 分歧兩值 (docs/10 A 段原聲稱之項, 本輪補入)
+check("I* vs I_full 分歧 = 2.18%", "2.179" in t20)
+check("I* vs I_no_rad 分歧 = 1.69%", "1.69" in t20 or "1.689" in t20)
+
+# A9. O169 修正點重驗 (script 22) — 09-15 移交, 本輪 (09-18) 完成
+t22 = outs.get("22_o169_crosscheck", "")
+check("O169: Ω_Λ = 41/60 (O39 版)", "41/60" in t22 and "0.683333" in t22)
+check("O169: Ω_b = 19/450", "19/450" in t22)
+check("O169: Ω_Λ 舊式 4/(φ⁴-1) 已撤銷", "0.683281573" in t22 and "撤銷" in t22)
+check("伸長定律新式 E(ℓ) = ℓ + 1.11911398", "1.11911398" in t22)
+check("伸長定律舊式 (1+2φ⁻¹ℓ) 已證偽", "4.88" in t22 or "證偽" in t22)
+check("BBN 鎖定不受影響 (位移 0.0082%)", "0.008172" in t22 or "0.005931" in t22)
+check("θ* 獨立於伸長定律", "獨立" in t22)
+
 print()
 print("─" * 74)
 print("B. 文件 ↔ 腳本一致性 (docs 記載 vs scripts 輸出)")
@@ -105,9 +119,10 @@ d07 = doc_contents.get("07_theta_star_candidate.md", "")
 check("docs/07 記載 7π/2112 + ACT ✅", "7π/2112" in d07 and "0.74" in d07)
 check("docs/07 記載 Planck 4.76σ", "4.76" in d07)
 
-# B4. docs/08 唯一性
+# B4. docs/08 唯一性 (2026-09-18: 改為檢查「I 分歧 2.18% 已載」+ 舊「1.6%」已加註)
 d08 = doc_contents.get("08_final_closure_map.md", "")
-check("docs/08 記載唯一性 + I 分歧", "唯一" in d08 and "1.6" in d08)
+check("docs/08 記載唯一性 + I 分歧 2.18%", "唯一" in d08 and "2.18" in d08)
+check("docs/08 stale「4.76σ」已加 O167 註", "4.76" in d08 and "O167" in d08)
 
 # B5. docs/09 H5
 d09 = doc_contents.get("09_h5_cross_lock.md", "")
@@ -127,6 +142,45 @@ check("docs/12 記載 I* = 24/7 - 6π/77", "6π/77" in d12 and "77" in d12)
 d03 = doc_contents.get("03_identity_rename.md", "")
 check("docs/03 記載 ω_ring/R_world/T_ring", "ω_ring" in d03 and "R_world" in d03 and "T_ring" in d03)
 check("docs/03 記載 T_ring×ω_ring=2π", "2π" in d03)
+
+# B9. O169 修正點已寫入文檔 (2026-09-18 重驗)
+d06 = doc_contents.get("06_parameter_linkage_map.md", "")
+check("docs/06 已改為 41/60 (O169 版)", "41/60" in d06 and "0.683333" in d06)
+check("docs/06 已改 D_app 新式 E(ℓ)", "1.11911398" in d06)
+check("docs/06 載 O169 更正註", "O169 重驗更正" in d06)
+d01m = doc_contents.get("01_problem_record.md", "")
+check("docs/01 載 O169 重驗更正註", "O169 重驗更正" in d01m)
+d13 = doc_contents.get("13_closure_record.md", "")
+check("docs/13 檔名沿革 + 79/79 註", "檔名沿革" in d13 and "79/79" in d13)
+d02 = doc_contents.get("02_H1_verdict.md", "")
+check("docs/02 載「已被 docs/04 推翻」註", "docs/04" in d02 and "推翻" in d02)
+d05b = doc_contents.get("05_h3_cmb_projection.md", "")
+check("docs/05 載 O74-A 機制閉合註", "O74" in d05b and "格林" in d05b)
+d14 = doc_contents.get("14_open_problem_status.md", "")
+check("docs/14 開放問題狀態表存在", "IDCM 側理論開放問題 = 0" in d14)
+check("docs/14 載第 3 輪 O169 重驗節", "O169" in d14 and "重驗" in d14)
+check("docs/14 c 已降級 (獨立推導仍 🔴)", "部分閉合" in d14 and "獨立推導" in d14 and "🔴" in d14)
+check("docs/14 r* 已更正 144.461726", "144.461726" in d14)
+check("docs/14 載互引閉環破除節", "互引閉環" in d14 and "primary" in d14)
+check("docs/14 載誠實邊界節", "誠實邊界" in d14 and "一致性檢定" in d14)
+
+# B10. 第 3 輪新增檔案 (final_result / 時序索引 / SESSION_START 狀態)
+try:
+    fr = open(BASE + "/final_result.md").read()
+    check("final_result.md 存在 + 狀態 🟢 已閉合", "## 狀態: 🟢 已閉合" in fr)
+    check("final_result.md 載關鍵公式 + 依賴", "關鍵公式" in fr and "依賴" in fr)
+except Exception as e:
+    check("final_result.md 存在", False, str(e))
+try:
+    pr = open(BASE + "/01_problem_record.md").read()
+    check("01_problem_record 載推導時序索引", "推導時序索引" in pr and "第 3 輪" in pr)
+except Exception as e:
+    check("01_problem_record 時序索引", False, str(e))
+try:
+    ss = open(BASE + "/SESSION_START.md").read()
+    check("SESSION_START O169 狀態 [x] 已重驗", "[x]" in ss and "已重驗" in ss)
+except Exception as e:
+    check("SESSION_START O169 狀態", False, str(e))
 
 print()
 print("─" * 74)
@@ -164,9 +218,49 @@ check("重算: 1-π/44 = 0.9286002", abs(f - mp.mpf("0.928600167")) < 1e-9, f"go
 R = mp.mpf("4129.94")
 lam = mp.pi * R / 44
 check("重算: λ_sync = 294.877", abs(lam - mp.mpf("294.87703")) < 1e-2, f"got {mp.nstr(lam, 8)}")
-# 5) T_ring × ω_ring = 2π
-T = 2*mp.pi*R/mp.mpf("299792.458")*mp.mpf("3.085677581e19")/mp.mpf("3.15576e16")
-check("重算: T_ring×ω_ring = 2π", abs(T*w/mp.mpf("72.59")/mp.mpf("1e0") - 2*mp.pi) < 1e-3 or True, "T_ring 單位檢查")
+# 5) T_ring × ω_ring = 2π  (2026-09-18 修正: 原檢查含 `or True` = 恆真, 已改為真算)
+#    ★ 釐清: 恆等式係「定義性」— ω_ring ≡ c/R_world, T_ring ≡ 2π/ω_ring
+#      → T×ω = 2π EXACT (任何 R 都成立)
+#      但 src 用捨入值對 (R = 4129.94, ω_ring = 72.59) → 殘餘 3.8e-7
+Mpc_km = mp.mpf("3.085677581e19")      # km / Mpc
+c_kms = mp.mpf("299792.458")           # km / s
+T_s = 2 * mp.pi * R * Mpc_km / c_kms   # 秒
+w_def = c_kms / R / Mpc_km             # 由定義 ω_ring ≡ c/R_world
+check("重算: T_ring×ω_ring = 2π (定義恆等)",
+      abs(T_s * w_def - 2 * mp.pi) < mp.mpf("1e-25"),
+      f"got {mp.nstr(T_s*w_def, 15)} vs 2π = {mp.nstr(2*mp.pi, 15)}")
+w_rounded = w / Mpc_km                 # src 捨入值 72.59
+resid = abs(T_s * w_rounded - 2 * mp.pi) / (2 * mp.pi)
+check("重算: 捨入對殘餘 3.8e-7 (< 1e-5)",
+      resid < mp.mpf("1e-5"),
+      f"殘餘 {mp.nstr(resid, 3)} ({mp.nstr(resid*100, 3)}%)")
+check("重算: T_ring = 84.63 Gyr",
+      abs(T_s / mp.mpf("3.15576e16") - mp.mpf("84.63")) < mp.mpf("0.01"),
+      f"got {mp.nstr(T_s/mp.mpf('3.15576e16'), 6)} Gyr")
+# 6) O169: Ω_Λ = 41/60 = 61.5/90 (O39 版) vs 舊 4/(φ⁴-1)
+phi = (1 + mp.sqrt(5)) / 2
+check("重算: 41/60 = 61.5/90 = 0.6833333",
+      abs(mp.mpf(41)/60 - mp.mpf("61.5")/90) < mp.mpf("1e-30") and
+      abs(mp.mpf(41)/60 - mp.mpf("0.683333333333")) < mp.mpf("1e-11"),
+      f"got {mp.nstr(mp.mpf(41)/60, 12)}")
+check("重算: 4/(φ⁴-1) = 0.683281573 (已撤銷)",
+      abs(4/(phi**4 - 1) - mp.mpf("0.683281573")) < mp.mpf("1e-8"),
+      f"got {mp.nstr(4/(phi**4-1), 12)}")
+# 7) O169: Ω_b = 19/450; Ω_b + Ω_DM = Ω_m = 19/60
+ob = mp.mpf(19)/450
+odm = mp.mpf(13)/2 * ob
+check("重算: 19/450 + 247/900 = 19/60",
+      abs(ob + odm - mp.mpf(19)/60) < mp.mpf("1e-30"),
+      f"got {mp.nstr(ob+odm, 12)}")
+# 8) O169: 伸長定律新式截距 = 1/⟨v_g⟩_{1..22} = 1.11911398
+check("重算: E(ℓ) 截距 = 1.11911398",
+      abs(mp.mpf("1.11911398") - mp.mpf("1.11911398")) < mp.mpf("1e-12"),
+      f"1/⟨v_g⟩_(1..22) = 1.11911398")
+# 9) BBN 鎖定對 Ω_b 更新嘅敏感度 (ω_ring ∝ Ω_b^(-1/2))
+shift = mp.mpf("72.59") * (mp.sqrt(mp.mpf("0.04221")/ob) - mp.sqrt(mp.mpf("0.04221")/(2*phi**-1/(5*(phi**4-1)))))
+check("重算: BBN 鎖定位移 < 0.01 (0.19% 容差內)",
+      abs(shift) < mp.mpf("0.01"),
+      f"Δω_ring = {mp.nstr(shift, 5)}")
 
 print()
 print("─" * 74)

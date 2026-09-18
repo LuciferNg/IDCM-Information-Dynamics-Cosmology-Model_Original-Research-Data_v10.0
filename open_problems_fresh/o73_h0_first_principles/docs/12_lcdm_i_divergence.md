@@ -73,3 +73,4 @@ I* = 24(1-π/44)/7 = 3.18377
 - ★ O98 (2026-08-28): 獨立審計閉合 — 判定「模型幾何差異」非 IDCM 錯誤
   → open_problems_fresh/o98_lcdm_ionization_deviation/docs/02_verdict.md
   → π/144 候選 🟡 (穩健性 fail, 唔升級)
+- ★ O105 (2026-08-29): π/144 正式降級為數值巧合 (I* 結構已完整分解) — O98 已記錄
