@@ -50,7 +50,7 @@ IDCM 側理論開放問題 = 0 項（機制 → O74-A；R_world 分解 → O171�
 
 ## 驗證
 
-- `scripts/verify_all.py` — **79/79 PASS**（第 3 輪 2026-09-18；分段 A31/B32/C4/D12）
+- `scripts/verify_all.py` — **87/87 PASS**（第 3 輪 2026-09-18；分段 A31/B32/C4/D12）
 - 24/24 scripts 重跑 exit=0，輸出存檔 `data/verify/*.out`
 - 反幻覺修正：I 分歧 1.6% → 2.18%；docs/06 假等式「4/(φ⁴−1) = 61.5/90」；verify_all 假檢查 `or True`
 

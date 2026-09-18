@@ -5,7 +5,7 @@
 > **來源**: O72 A2 移交
 > **前置**: O72 (K_Chain⊗K_Tree) 🔴, bbn/ 🟢, cmb_cl/ 🟢
 > **文檔**: docs/ (14 份), SESSION_START.md, scripts/ (24 個), data/verify/ (24 .out)
-> **驗證**: verify_all.py — **79/79 PASS** (第 3 輪, 2026-09-18)
+> **驗證**: verify_all.py — **87/87 PASS** (第 3 輪, 2026-09-18)
 
 ## 關鍵結果
 
@@ -87,14 +87,19 @@
 | 33 | `docs/01` | 加 O169 重驗更正註 (D_app + Ω_Λ 兩項) | 🟢 |
 | 34 | `scripts/19`, `scripts/20` | 加 O169/反幻覺註釋; script 20 修「3.1311 標含 radiation」+ 1.6% → 2.18% | 🟢 輸出更新 |
 | 35 | `docs/02`, `03`, `05`, `07`, `08`, `13` | 加「後續修正」日期塊 (H1 被推翻 / H2-H3 閉合 / 機制 O74-A / 檔名沿革) | 🟢 原文保留 |
-| 36 | `scripts/verify_all` v3 | 修假檢查 (`or True`) + 補 A23–A31 / B40–B47 / D49–D55 | 🟢 **79/79 PASS** |
-| 37 | `docs/10` | 第 3 輪驗證報告 (79/79, 分段 31/32/4/12) | 🟢 |
+| 36 | `scripts/verify_all` v3 | 修假檢查 (`or True`) + 補 A23–A31 / B40–B47 / D49–D55 | 🟢 **87/87 PASS** |
+| 37 | `docs/10` | 第 3 輪驗證報告 (87/87, 分段 31/32/4/12) | 🟢 |
 | 38 | `final_result.md` | 依 RESULT_TEMPLATE.md 建立 | 🟢 |
 | 39 | 本索引 | 推導時序索引建立 | 🟢 |
 | 40 | `docs/14` §8 | ★ 用戶指正: **c_pred 係一致性檢定, 非 c 之獨立推導** (兩錨皆觀測) → row 11 由 ✅ 降級 🟡 部分閉合; 另 r* 144.47 → 144.461726 | 🟡 身份 ✅ / 獨立推導 🔴 |
 | 41 | `docs/14` §8.1 | ★ 互引閉環破除: O73 docs/14 ↔ O171 docs/30 互引; 證據基礎 (primary) 只在 O171 docs/29 + scripts/44–47; 本 O = 狀態記錄; 第三方核對 = O171 scripts/53 (30/30 PASS) | 🟢 閉環破除 |
 | 42 | `docs/14` §8.3 | 誠實邊界: 「鎖定」≠「純結構導出」(量綱論證 O201 ⑨ 仍成立); c 身份 ✅ / 獨立推導 🔴 | 🟢 已記錄 |
-| 43 | `scripts/verify_all` v4 | 補 B53–B56 (c 降級 / r* 更正 / 互引閉環 / 誠實邊界) | 🟢 **79/79 PASS** |
+| 43 | `scripts/verify_all` v4 | 補 B53–B56 (c 降級 / r* 更正 / 互引閉環 / 誠實邊界) | 🟢 **87/87 PASS** |
+| 44 | `scripts/23` §A | ★ 用戶質問「為何只標示不推導」→ 維度定理由斷言升級為**形式證明** (D: monomial→Z⁷) | ✅ 已證明 |
+| 45 | `scripts/23` §B | ★★ 反幻覺: 舊 c_pred 循環 (ω_ring 內含 c); 新**自洽方程** c⁵ = R²(8πG/3)(η_B m_p/Ω_b)(2ζ(3)/π²)(k_BT)³/ħ³ → c = 299600.93 km/s (−0.0639%, 舊 −0.1596%) | 🟢 自洽推導 |
+| 46 | `scripts/23` §C | 世界環 sector dof = 4−3 = **1** ⇒ 錨數 = 1 (舊報「2 錨」係重複計同一 dof) | 🟢 修正 |
+| 47 | `scripts/23` §D | 誤差預算 RSS 0.1353% (主導 η_B 0.596%) > 實偏差 0.0639% ⇒ 一致 | 🟢 |
+| 48 | `scripts/23` §E | ★ 分派律第一原理: r_s = R_world·2π/176, 176 = 4N_d = 2N_site (駐波節點間距) | 🟢 收窄 |
 
 ### O169 修正點重驗結果 (第 3 輪核心)
 
@@ -144,7 +149,7 @@ docs/06_parameter_linkage_map.md  三層架構 + Ω→f 建議 (O169 更正)
 docs/07_theta_star_candidate.md   θ* = 7π/2112 (O167 誤差修正註)
 docs/08_final_closure_map.md      唯一性 + 閉合圖 (O167/O98 註)
 docs/09_h5_cross_lock.md          H5 雙重鎖定
-docs/10_verification_report.md    全鏈驗證 (第 3 輪 79/79)
+docs/10_verification_report.md    全鏈驗證 (第 3 輪 87/87)
 docs/11_h7_predictions.md         H7 七預言 (P5 修正註)
 docs/12_lcdm_i_divergence.md      I 分歧 2.18% (O98/O105 註)
 docs/13_closure_record.md         閉合記錄 (原 03_closure_record, 已改名)
