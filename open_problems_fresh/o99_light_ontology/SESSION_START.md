@@ -99,6 +99,14 @@ O73 §10 由 **W-field SSB 第一性原理**導出: **光 = W-field 相位 (Gold
 | §5 Status | 「🔴 剩: **P-C5 ripple 之數量級未閉合 (需投影權重)**」 | ★ 需重審 — 見 §二 矛盾; O73 立場: 若光 = 無質量 Goldstone, 真空色散 = 0, **ripple 唔應該存在** |
 | §5 | ★ **標題重複** (`## 5. Status` 之後又一個 `## 5. 一致性`) | 格式 bug — 後者應為 `## 6.` |
 
+#### C2. `docs/06_pc5_tev_ripple.md` (★ 已有正確版本, 作為回填之基準)
+
+| 節 | 現狀 | 修正方向 |
+|:--|:-----|:---------|
+| §1 | 「光子 = 世界環**載波** (carrier), 相速度 v_ph = c (dev=0, **構造身份**)」 | ★ 「構造身份 (postulate)」現有推導來源: 由 O73 `docs/15` §1 導出為 W-field **Goldstone 相位模** ⇒ 引用更新 |
+| §5 | 「🔴 若 future 發現真空色散 >1e-18 → 唔一定殺 O99 (可以 carrier 有微 ripple)」 | 可收緊: 若光 = 無質量 Goldstone, 真空色散應為**結構性零** (非「可容微 ripple」) |
+| §2/§3/§6 | 零-ripple 預言 + 容忍窗口 1e-18 | ✅ **正確, 保留** — 此為 `docs/02` §5 / `docs/03` P-C5 應回填之目標形式 |
+
 #### D. `docs/01_core_chain.md`
 
 | 行 | 現狀 | 修正方向 |
@@ -111,7 +119,7 @@ O73 §10 由 **W-field SSB 第一性原理**導出: **光 = W-field 相位 (Gold
 
 | 項 | 現狀 | 修正方向 |
 |:--|:-----|:---------|
-| 狀態行 | 「🟢 ★★★ 全鏈閉合 — 6 項剩餘問題全部解決」 | ★ **與內文矛盾**: `docs/02` §4 (🟡+🔴)、`docs/04` §3 (「尚未定」)、`docs/05` §5 (🔴) 仍載開放標記 → 需裁決 |
+| 狀態行 | 「🟢 ★★★ 全鏈閉合 — 6 項剩餘問題全部解決」 | ★ **與內文不一致** (同 §二 之 stale 診斷): `docs/02` §4 (🟡+🔴)、`docs/04` §3 (「尚未定」)、`docs/05` §5 (🔴) 仍載**舊開放標記**未回填 ⇒ 應收斂為 🟢 並補推導引用 (O73 `docs/15`), 非裁決 |
 | 表 #5 | 「P-C5 (LHAASO 零色散) … d v_g/dE ≡ 0 … **100% 契合** 🟢」 | 結論方向正確, 但**機制陳述**為 postulate; 現可引 O73 `docs/15` |
 | 速查表 | 「✅ 光=c = 世界環載波相速度 (H=H_carrier⊕H_mod) 🟢」 | ★ 實為 **postulate**, 現由 O73 `docs/15` 提供 derivation ⇒ 引用更新 |
 | 速查表 | 「✅ 載波 ripple ≡ 0 (零色散, LHAASO 確認) 🟢」 | ★ **與 `docs/02` §5 P-C5「應有 1e-15~1e-17 ripple」直接矛盾** → 見 §二 |
@@ -126,17 +134,29 @@ O73 §10 由 **W-field SSB 第一性原理**導出: **光 = W-field 相位 (Gold
 
 ---
 
-### 二. ★★ 本 O 內部矛盾 (需裁決, O73 無立場)
+### 二. ★★ P-C5 陳述分歧 — 診斷為「stale 未同步」(唔係真矛盾)
+
+**三份文檔對 P-C5 之陳述**:
 
 ```
-docs/02_c_identity.md §5 (L63-68)   : P-C5 = IDCM「應有」離散 ripple ~1e-15~1e-17 (非零 freq-dep)
-docs/03_falsifiable_predictions.md L17: P-C5 = 「離散 dispersive ripple 1e-15~1e-17」 🔴 待測
-                                                                    ↕ 矛盾
-01_problem_record.md 表 #5          : P-C5 = 「d v_g/dE ≡ 0 … 100% 契合」🟢
-01_problem_record.md 速查表          : 「載波 ripple ≡ 0 (零色散, LHAASO 確認)」🟢
+docs/02_c_identity.md §5 (L63-68)     : P-C5 = IDCM「應有」離散 ripple ~1e-15~1e-17 (非零 freq-dep)
+docs/03_falsifiable_predictions.md L17 : P-C5 = 「離散 dispersive ripple 1e-15~1e-17」 🔴 待測
+docs/06_pc5_tev_ripple.md (08-27 18:29): P-C5 = **「零 ripple (η ≡ 0)」+ 容忍窗口 1e-18** 🟢
+01_problem_record.md 表 #5 + 速查表      : 「ripple ≡ 0 … LHAASO 100% 契合」🟢
 ```
 
-**O73 側之技術輸入 (供裁決參考, 非裁決本身)**:
+**★ 診斷 (O73 側觀察)**: 呢個唔係未裁決之矛盾, 而係 **stale 未同步**:
+
+- `docs/06` (時間戳 08-27 **18:29**, 最晚) 已**明確推翻** docs/02 §5 之「非零 ripple」假設, 原文:
+  > 「原本 P-C5 假設: 光喺 K_Chain lattice 上行有個 ~1e-3 數量級嘅 dispersive ripple … → 呢個係 naive lattice 色散聲稱, 已被 docs/04 null 拒 … **O99-A 閉合後, P-C5 嘅正確形式變咗: 光子 = 世界環載波, 相速度 v_ph = c (dev=0)。載波自身嘅 dispersive ripple ≡ 0。**」
+- 但 `docs/02` (08-27 **17:59**) 同 `docs/03` (08-27 **17:57**) **早於** docs/06 且**從未回填** ⇒ 兩份仍載舊「非零 ripple」陳述。
+- `01_problem_record.md` (08-29) 及 `docs/06` 之結論 (**ripple ≡ 0**) 一致。
+
+**⇒ 修正方向明確 (唔需裁決)**: 把 `docs/02` §5 + `docs/03` P-C5 **回填至 docs/06 之「零 ripple」形式**
+(加日期註記, 保留原文, 依禁回溯紀律)。O73 `docs/15` §1 現提供該形式之**推導來源**
+(`m_γ = 0` EXACT, Goldstone), 取代 docs/06 §1 之「構造身份 (postulate)」。
+
+**O73 側之技術輸入 (支持 ripple ≡ 0, 非裁決本身)**:
 
 ```
 (1) 若光 = 無質量 Goldstone 相位模 (O73 docs/15 §1):
@@ -186,7 +206,7 @@ docs/03_falsifiable_predictions.md L17: P-C5 = 「離散 dispersive ripple 1e-15
 ### 四. 建議執行順序 (供 O99 session 參考)
 
 ```
-1. 先裁決 §二 內部矛盾 (P-C5: 非零 ripple vs ≡ 0) — 呢個係根, 決定其餘修正方向
+1. ★ 依 §二 診斷: P-C5 唔需裁決 — 直接以 `docs/06` (零 ripple, 08-27 18:29 已定) 為基準回填 docs/02 §5 + docs/03
 2. docs/02 §4/§5 重寫 (emergent-ray → Goldstone 扇區; P-C5 依裁決)
 3. docs/04 §3 定案 (a/b/c 三選一 → (c) 之精確版; 刪 (b) 之投影算子路線) + §6 金句修
 4. docs/05 §2/§3/§5 更新 (postulate → derivation; P̂ 必要性下降) + §5 標題重複修正
