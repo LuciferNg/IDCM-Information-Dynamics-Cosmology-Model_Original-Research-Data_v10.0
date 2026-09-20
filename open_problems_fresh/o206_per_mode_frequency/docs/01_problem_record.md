@@ -167,6 +167,8 @@
 | 11 | `scripts/11_m0_relation.py` | 4/4 PASS ⟹ **F6 結案** (命名碰撞 + 獨立重現 docs/37) | docs/13 |
 | 12 | `scripts/12_boson_sector.py` | 10/10 PASS ⟹ 玻色子扇區 (傳播子/質量塔/Z₂ 分離) + 跨 O 不符 | docs/14 |
 | 13 | `scripts/13_cy3_lens_vs_alpha.py` | 7/7 PASS ⟹ ★★ 奇 detent 結構排除 (sector 分離之結構理由) + 鏡頭唔解釋殘餘 | docs/15 |
+| 14 | `scripts/14_noise_or_structure.py` | 8/8 PASS ⟹ ★ 殘餘 = 82× 中位 σ (唔係噪聲) + scheme 混用審計 + 24 量系統搜索 | docs/16 |
+| 15 | `scripts/15_qcd_zoom_test.py` | 6/6 PASS ⟹ ★ QCD running / 標度失配假說實測否定 | docs/16 |
 
 **★★★ 第六輪狀態更新（2026-09-21，只記新增）**：
 - ★★ **結構性結果**：奇 detent（33, 55）**結構上排除**（γ_n = γ_(N−n) 落喺反 parity
