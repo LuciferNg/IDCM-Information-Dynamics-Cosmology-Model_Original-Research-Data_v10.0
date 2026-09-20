@@ -1,0 +1,13 @@
+{
+  "baseline_rms": 0.5872281025209187,
+  "V_closed_form": "V_nm = (1/178)[csc^2(pi(n+m)/178) - csc^2(pi(n-m)/178)], n+m odd; else 0",
+  "maxdev_odd": 2.566106700797433e-13,
+  "maxdev_even": 5.658684616497095e-13,
+  "gamma_diff_closed": "gamma_n - gamma_m = 4 sin(pi(n+m)/88) sin(pi(n-m)/88)",
+  "ratio_closed_form": "r_n = [sin(pi(n+1)/89) sin^2(pi(2n-1)/178) / (sin(pi(n-1)/89) sin^2(pi(2n+1)/178))]^2",
+  "maxdev_ratio": 8.609577764811676e-40,
+  "two_term_rel_dev_max": 0.012467630266028703,
+  "two_term_rms": 0.5877670401891909,
+  "checks_pass": 7,
+  "checks_total": 7
+}

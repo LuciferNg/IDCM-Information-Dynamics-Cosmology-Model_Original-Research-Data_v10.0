@@ -226,3 +226,67 @@ scripts/07_spectral_weight_dominance.py + data/07_spectral_weight_dominance.json
 docs/09_spectral_weight_dominance.md
 累計: 7 腳本 / 59 checks (PASS 57 + 誠實 FAIL 2)
 ```
+
+---
+
+# 2026-09-21 第三輪：解析閉式 + 映射層（本段為新增，以上原文一字不刪）
+
+> **Scripts**: `scripts/08_vertex_closed_form.py`（**7/7**）+ `scripts/09_mapping_layer.py`（**6/6**）
+> **Docs**: `docs/10_vertex_closed_form.md` + `docs/11_mapping_layer.md`
+> **承接**: 第二輪 §C 之兩步提案
+
+## A. ★★ 零參數解析閉式（本輪主要成果）
+
+```
+V_nm = (1/178)[ csc²(π(n+m)/178) − csc²(π(n−m)/178) ]      n + m 奇
+V_nm = 0                                                    n + m 偶
+γ_n − γ_m = 4 sin(π(n+m)/88) sin(π(n−m)/88)
+r_n ≡ V²_(n,n+1)/V²_(n,n−1)
+    = [ sin(π(n+1)/89) sin²(π(2n−1)/178) / (sin(π(n−1)/89) sin²(π(2n+1)/178)) ]²
+⟹ |Δm_n| ≈ (1/4)csc(π/88)·| V²_(n,n−1)/sin(π(2n−1)/88) − V²_(n,n+1)/sin(π(2n+1)/88) |
+```
+- 全 7744 元驗證（mpmath dps=40），max dev 2.57e-13 = **float64 捨入地板**（非閉式誤差）
+- 推導路徑: `Σ_{i=1}^{M−1} i z^i = z(1 − Mz^{M−1} + (M−1)z^M)/(1−z)²` ⟹
+  k 偶 C_k = −M/2（**與 k 無關**）、k 奇 C_k = M/2 − 1/(1−cos(πk/M))
+- ⟹ 觀察者耦合算子由 88² 個數值降為**一條 csc² 恆等式**；|Δm| 降為**零參數兩項閉式**
+
+## B. ★ 映射層缺口確認
+
+```
+映射層 = m = M₀·|Δm|^α (2 自由參數, 9 點)
+  1-參數擬合: α = 2.633254, RMS = 0.5872 (= O136 逐位吻合)
+  |Δm| 係最佳單一預測量 (0.5872 < γ_n 0.8028 < n 0.9931)
+  2-參數結構擴展全部唔閉合 (最佳 + β·ln γ_n: 0.5210, 改善 1.1271×) 🔴
+  世代塊 {1,2,3}/{4,5,7}/{9,11,13}: P = 0.2170 ⟹ 唔顯著
+  α 弱約束: σ_α = 0.1425; 3/5 結構候選落喺 2σ 內 (44/17, μ²+φ⁻¹, e);
+            α = 3 (2.57σ) 同 L₄/L₅·F₅ (3.85σ) 邊緣排除
+```
+
+## C. ★ O206 最終問題陳述（三輪後）
+
+```
+原題「缺一個逐模式頻率層」需全面修正:
+  (i)   頻率層【已有】(f(n) = 1 ∓ cosθ/90, O203 docs/11; 但 k=0 質量盲)
+  (ii)  |Δm| 之計算【已完全結構化】(script 08 零參數閉式, 1.25%)
+  (iii) 排序【已完美】(Spearman = 1.000000)
+  (iv)  剩餘缺口 = 【映射層 m = M₀·|Δm|^α】之零參數結構推導
+⟹ O206 真正開放項 = α 與 M₀ 之結構推導 (唔係頻率; 亦唔係 |Δm| 形狀)
+```
+
+## D. 下一輪（需用戶裁決優先序）
+
+```
+方向 1: α 之結構推導 — 由 IDCM 第一性原理導出 α
+        ⚠️ α 弱約束 ⟹ 任何命中必須配 null test (O136 判準④)
+方向 2: M₀ 之結構化 — ⚠️ O136 docs/36/37 已證偽 (過度吻合 + H₀ 內部不一致)
+        ⟹ 除非有新輸入, 此路唔可行
+```
+
+## E. 交付（第三輪）
+
+```
+scripts/08_vertex_closed_form.py + data/08_*.json + data/logs_08.txt
+scripts/09_mapping_layer.py       + data/09_*.json + data/logs_09.txt
+docs/10_vertex_closed_form.md + docs/11_mapping_layer.md
+累計: 9 腳本 / 72 checks (PASS 70 + 誠實 FAIL 2)
+```
