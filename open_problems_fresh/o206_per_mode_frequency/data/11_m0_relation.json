@@ -1,0 +1,16 @@
+{
+  "m0_mapping_intercept_MeV": 1.3612676901293192e-06,
+  "M0_O38_MeV": 27.900915,
+  "ratio": 20496273.585505757,
+  "log10_ratio": 7.3116749094284454,
+  "E_kchain_with_IDCM_meV": 4.019987963030266e-09,
+  "E_kchain_claimed_meV": 4.060265e-06,
+  "H0_needed": 72.59001453429981,
+  "H0_IDCM_O170": 71.157,
+  "H0_discrepancy_pct": 2.0138771087873506,
+  "phi_power_best_k": "phi^+12",
+  "phi_power_dev_pct": 4.910426623090699,
+  "phi_null_p": 0.2055,
+  "checks_pass": 4,
+  "checks_total": 4
+}
