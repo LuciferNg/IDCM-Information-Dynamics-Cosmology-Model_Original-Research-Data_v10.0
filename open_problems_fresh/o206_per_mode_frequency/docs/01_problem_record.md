@@ -160,6 +160,13 @@
 | 4 | `scripts/04_frustration_defect_shift.py` | 5/5 PASS ⟹ F2c 🔴 | docs/05 |
 | 5 | `scripts/05_damping_and_bounds.py` | 10/10 PASS ⟹ F3 🔴 / F7 🟢 + ★ 秩診斷 | docs/06 |
 | 6 | `scripts/06_blind_test_and_null.py` | 1/1 PASS ⟹ F4 ✅ 盲測 / F5 ✅ null | docs/07 |
+| 7 | `scripts/07_spectral_weight_dominance.py` | 7/7 PASS ⟹ ★ 零參數兩項閉式 (1.25%) + 缺口定位 (映射層) | docs/09 |
+
+**★★ 第二輪狀態更新（2026-09-21，只記新增）**：
+- 下一輪提案（docs/08 §六 主導項分解）已執行：主導項 = 最近鄰（88/88 模），
+  但單項近似失敗（κ 低至 0.052）⟹ 改為【最近鄰對兩項閉式】成立（1.25%）。
+- ★ 缺口重新定位：兩項閉式極準但形狀 RMS 唔改善 ⟹ 1.80× 殘餘唔喺 |Δm| 計算層，
+  而喺 ln m ↔ ln|Δm| 映射層（α/M₀）⟹ O206 主題 = 映射層問題（見 docs/09）。
 
 **★ 狀態更新（只記新增，不改上文）**：
 - 原 §三 之 `🔴 F1 …` 已於 2026-09-21 完成 ⟹ **🟡 約定（非結構強制）**，見 docs/02。
