@@ -1,0 +1,97 @@
+{
+  "frozen_ledger": [
+    {
+      "id": "F_A",
+      "form": "omega_plus/minus(n) = mu^2 ∓ g*cos(pi*n/88), g = 1/45",
+      "source": "O203 docs/09+11 (2026-09-17) — 早於 O206 註冊 (09-20) ⟹ 合法盲測",
+      "zero_param": true,
+      "mass_effect": "on-shell k=0 ⟹ 精確盲 (O203 docs/11 表 + 本 O206 scripts/02 C6)",
+      "sha256": "f364f3b91a7a0829"
+    },
+    {
+      "id": "F_B",
+      "form": "delta_gamma(n) = ±4g*cos(pi*n/88)  (強加共同頻率 ω=μ² 讀法)",
+      "source": "O206 scripts/02 §D — 本 session 由 F_A + F1 裁決導出 (非後驗擬合)",
+      "zero_param": true,
+      "mass_effect": "|Δm| RMS 0.5867 vs 基準 0.5872 ⟹ 改善 0.09% ≪ bootstrap σ ⟹ 不可辨識",
+      "sha256": "21eb0123ad2d4ab5"
+    },
+    {
+      "id": "F_C",
+      "form": "delta(n) = Sigma_n(m)  (自洽 Dyson 固定點, 零新常數)",
+      "source": "O206 scripts/03 — 本 session 導出",
+      "zero_param": true,
+      "mass_effect": "固定點唔收斂 (非微擾); 若收斂分支 RMS = 3.14 ⟹ 更差",
+      "sha256": "52e68802f1b138a5"
+    },
+    {
+      "id": "F_D",
+      "form": "delta(n) = eps*O(n), O(n) = Σ_{32 OPAQUE} cos²(nβ/2)",
+      "source": "O182 幾何 (09-13, 早於 O206) + O206 scripts/04",
+      "zero_param": false,
+      "mass_effect": "最佳 RMS 0.4044 (ε = 3.93 非結構值); null P = 0.102 ⟹ 無結構優勢",
+      "sha256": "0e9c4a324ac61794"
+    }
+  ],
+  "results": [
+    {
+      "name": "基準 |Δm| (O136 權威慣例)",
+      "rms": 0.5872
+    },
+    {
+      "name": "F_A 分支分裂 (質量盲)",
+      "rms": 0.5872
+    },
+    {
+      "name": "F_B 讀法 (b) δγ = ±4g cosθ",
+      "rms": 0.5867
+    },
+    {
+      "name": "F_C 自洽 Dyson",
+      "rms": 3.1436
+    },
+    {
+      "name": "F_D 阻挫重疊 (ε 自由)",
+      "rms": 0.4044
+    },
+    {
+      "name": "F_E √γ_n 作能量 (F1 動態頻率)",
+      "rms": 1.9129
+    }
+  ],
+  "nulls": [
+    {
+      "null": "O136 docs/32 null 1: 隨機 9 模式集",
+      "target": "|Δm|",
+      "p": 0.0155
+    },
+    {
+      "null": "O136 docs/32 null 2: 隨機 Z₂-奇耦合",
+      "target": "|Δm|",
+      "p": 0.008
+    },
+    {
+      "null": "O136 docs/33: 六階自能",
+      "target": "|Δm|",
+      "p": 0.035
+    },
+    {
+      "null": "O206 scripts/02: 隨機符號 (分支分裂)",
+      "target": "F_B",
+      "p": 0.01
+    },
+    {
+      "null": "O206 scripts/04: 隨機 32 邊子集",
+      "target": "F_D",
+      "p": 0.102
+    },
+    {
+      "null": "O206 scripts/05: Spearman 秩診斷",
+      "target": "rank",
+      "p": 2.7557319223985893e-06
+    }
+  ],
+  "verdict": "f(n)-as-shape hypothesis falsified within zero-param structural class",
+  "checks_pass": 1,
+  "checks_total": 1
+}

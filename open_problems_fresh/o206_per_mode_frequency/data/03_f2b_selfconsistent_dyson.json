@@ -1,0 +1,21 @@
+{
+  "baseline_rms": 0.5872281025209187,
+  "R2": 0.9768418986480681,
+  "degeneracy_theorem": "common freq as resolvent energy -> all denominators 0",
+  "nonperturbative_ratios": {
+    "1": 3309112.4877941706,
+    "2": 245022.30352107593,
+    "3": 64770.90148721481,
+    "4": 22244.725285047556,
+    "5": 9413.099798595309,
+    "7": 2493.1756315367734,
+    "9": 903.0510985508945,
+    "11": 392.5365411890859,
+    "13": 190.32573120106673
+  },
+  "fixed_point_status": "max_iters",
+  "fixed_point_rms": 3.1435729815849647,
+  "omega_dyn_rms": 1.912889827827846,
+  "checks_pass": 8,
+  "checks_total": 9
+}
