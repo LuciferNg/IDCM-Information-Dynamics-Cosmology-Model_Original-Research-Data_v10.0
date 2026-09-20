@@ -1,0 +1,23 @@
+{
+  "omega_collision": {
+    "O83": "omega_n = sqrt(gamma_n) = 2sin(pi n/88) [pole]",
+    "O169": "omega_n = mu^2 = 2 [fiducial circle radius]"
+  },
+  "boson_tower_MeV": {
+    "min": 1.9916975451860348,
+    "max": 55.80183,
+    "M0": 27.900915
+  },
+  "m7_MeV": 13.80015530182124,
+  "sm_bosons_fit": "none (n required non-integer: W 4.59, Z 5.13, H 7.20)",
+  "X_diagonal_max": 5.658684616497095e-13,
+  "X_same_parity_max": 5.658684616497095e-13,
+  "sum_gamma_odd": 44.00000000000001,
+  "sum_gamma_even": 46.0,
+  "fermion_gamma_power_beta": -2.4028536640261633,
+  "fermion_absdm_alpha": 2.6332540743666626,
+  "rms_gamma": 0.8028400826926734,
+  "rms_absdm": 0.5872281025209178,
+  "checks_pass": 10,
+  "checks_total": 10
+}
