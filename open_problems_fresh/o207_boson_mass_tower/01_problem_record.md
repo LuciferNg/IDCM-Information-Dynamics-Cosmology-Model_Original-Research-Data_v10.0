@@ -108,12 +108,14 @@
 ## 六、狀態
 
 ```
-🟢 主體閉合 (2026-09-21 第一輪, 5 scripts / 53 checks: 53 PASS, 0 FAIL)
+🟢 主體閉合 (2026-09-21 第一輪, 4 scripts / 44 checks: 44 PASS, 0 FAIL;
+   審計 scripts/05: 獨立核對 41/41 PASS)
    B1 盲測協定 ✅ | B3 模式身份 ✅ | B4 交互算子 ✅ | B5 Goldstone 熱歷史 ✅ (引用 O204 U7)
    B6 焦距 ✅ | B7 場論陳述 ✅ | B2 標度 🔴 誠實負結果 (兩獨立錨)
 ⭐ 優先度: ★★（玻色扇區之唯一開放項; 費米側已於 O206 收尾）
 🔴 剩餘: B2 標度差無結構解釋 (屬 O85/O86 SM 電弱鏈範圍); 塔觀測執行 (等 NA64/XENONnT 數據)
 ⚠️ 2026-09-21 第一輪: 已建 scripts/ data/ docs/ (由本 session 建立, 遵 SESSION_START 交接)
+⚠️ 2026-09-21 審計: 修正 PASS 計數 (53→44: 14+12+9+9; docs/05 係引用無 script)
 ```
 
 ### 推導時序索引
@@ -125,6 +127,7 @@
 | 09-21 | `scripts/03_focal_pole.py` | 9/9 PASS | docs/03 B6+B7 |
 | 09-21 | `scripts/04_scale_interaction.py` | 9/9 PASS | docs/04 B2+B4 |
 | 09-21 | (引用 O204 U7) | — | docs/05 B5 |
+| 09-21 | `scripts/05_doc_crosscheck.py`（閉合審計） | 41/41 PASS | docs/01-05 全部核對 |
 
 依賴鏈: O37→O38→O39→O82→O83→O164→O204→O206→**O207**（B4 引用 O86 N5）
 
