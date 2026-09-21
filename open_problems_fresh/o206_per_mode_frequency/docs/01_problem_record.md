@@ -169,6 +169,9 @@
 | 13 | `scripts/13_cy3_lens_vs_alpha.py` | 7/7 PASS ⟹ ★★ 奇 detent 結構排除 (sector 分離之結構理由) + 鏡頭唔解釋殘餘 | docs/15 |
 | 14 | `scripts/14_noise_or_structure.py` | 8/8 PASS ⟹ ★ 殘餘 = 82× 中位 σ (唔係噪聲) + scheme 混用審計 + 24 量系統搜索 | docs/16 |
 | 15 | `scripts/15_qcd_zoom_test.py` | 6/6 PASS ⟹ ★ QCD running / 標度失配假說實測否定 | docs/16 |
+| 16 | `scripts/16_ladder_hypothesis.py` | 4/4 PASS ⟹ ★★ 三水平簇結構 (F=200.7, P=0.0007) — 階梯存在但生成規則未明 | docs/17 |
+| 17 | `scripts/17_cluster_generation.py` | 2/3 PASS ⟹ ★ 簇依賴 α (1σ 穩健/2σ 散) + 34 特徵 0 顯著 — 生成規則未明 | docs/18 |
+| 18 | `scripts/18_second_beat.py` | 3/3 PASS ⟹ ★ K_tree 譜作為第二拍頻實測否定 (改善=純 dof 紅利 P=0.236) | docs/19 |
 
 **★★★ 第六輪狀態更新（2026-09-21，只記新增）**：
 - ★★ **結構性結果**：奇 detent（33, 55）**結構上排除**（γ_n = γ_(N−n) 落喺反 parity
