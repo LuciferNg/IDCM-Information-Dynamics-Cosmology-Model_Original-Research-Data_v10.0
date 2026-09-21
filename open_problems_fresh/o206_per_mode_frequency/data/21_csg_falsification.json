@@ -1,0 +1,15 @@
+{
+  "random_null": {
+    "trials": 200000,
+    "pct_below_2pct": 0.0,
+    "pct_below_1pct": 0.0,
+    "best_random_rms": 0.8151817293689104,
+    "median_rms": 3.444744261644519
+  },
+  "pf_pool_density": {
+    "hit8_100k": 0
+  },
+  "t_grid_cap": 4352.54274,
+  "checks_pass": 4,
+  "checks_total": 4
+}
