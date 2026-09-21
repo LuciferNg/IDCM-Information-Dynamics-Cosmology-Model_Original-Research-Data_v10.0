@@ -1,6 +1,20 @@
 # O206 — 逐模式頻率 (Per-Mode Frequency)
 
-## 狀態: 🔴 開放（八輪攻堅 2026-09-21；22 腳本 / 135 checks，PASS 130 + 誠實 FAIL 5）
+## 狀態: 🔴 開放（八輪攻堅 2026-09-21；22 腳本 / 135 checks，PASS 130 + 誠實 FAIL 5；CSSG-v3 閉合承接 — docs/25）
+
+## 結論（第八輪收束 — CSSG-v3 承接）
+
+```
+★★ 質量譜主體收束 (docs/25):
+   m_f = M₀·γ_n·C_f  — O137 Decoupling, CSSG-v3 閉合
+   κ_ijk = 18·I₉ (φ=9 triple intersection 純對角) — Φ 層幾何定理
+   9/9 assignment (反週期裁決), max Δ 2.02%
+   t: m_t = M₀γ₄₄×37×42 = 173.43 GeV (Δ0.43%) — 雙扇區 (VEV + γ·C_f)
+   簇A ≈ 18/19 = κ_iii/19 — O206 簇結構幾何來源
+   form-blind 預言: Σm_ν = 0.0973 eV (DESI 生死測試)
+★ O206 八輪方法論收穫: 殘餘審計/dof 紅利/穩健性/框架正交性
+剩餘開放項: Σm_ν 驗證 / C_f label 機制 / 簇B,C / 玻色塔盲測 (O207)
+```
 
 ## 結論（第八輪續 6 — 形狀因素導入）
 
