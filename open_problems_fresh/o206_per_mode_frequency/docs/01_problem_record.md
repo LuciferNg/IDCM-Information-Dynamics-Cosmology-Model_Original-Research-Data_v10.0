@@ -175,6 +175,7 @@
 | 19 | `scripts/19_alt_validation.py` | 3/3 PASS ⟹ ★★ H_alt 驗證: 3-水平離散模型碾壓連續 (RMS 0.0585, ΔAIC+35.2, P=0.0007) | docs/20 |
 | 20 | `scripts/20_discrete_spectral_tools.py` | 3/3 PASS ⟹ ★ FSR 質量殼/譜窗/譜間隔全部唔解釋簇 | docs/21 |
 | 21 | `scripts/21_csg_falsification.py` | 4/4 PASS ⟹ ★★ CSG v2 公式證偽: 閉合稀有但後驗選擇 (311 網格/18.6bits) + t 唔被預言 | docs/23 |
+| 22 | `scripts/22_shape_factors.py` | 2/4 PASS ⟹ ★★ 形狀因素: |Δm|^α 正交 (P=0.127) 但 γ_n·C_f 閉合 (0.84%) + t 需大 C_f | docs/24 |
 
 **★★★ 第六輪狀態更新（2026-09-21，只記新增）**：
 - ★★ **結構性結果**：奇 detent（33, 55）**結構上排除**（γ_n = γ_(N−n) 落喺反 parity
