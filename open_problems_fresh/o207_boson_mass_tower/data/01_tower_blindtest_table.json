@@ -1,0 +1,695 @@
+{
+  "M0_MeV": 27.900915,
+  "N": 44,
+  "rows": [
+    {
+      "n": 1,
+      "sqrt_gamma": 0.07138466767796091,
+      "m_MeV": 1.9916975451860348,
+      "m_MeV_str": "1.991697545",
+      "channels": [
+        "NA64_invisible",
+        "XENON_SRDM",
+        "SENSEI",
+        "DAMIC_M",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 2,
+      "sqrt_gamma": 0.14267836639846468,
+      "m_MeV": 3.9808569732224193,
+      "m_MeV_str": "3.980856973",
+      "channels": [
+        "NA64_invisible",
+        "DAMIC_M",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 3,
+      "sqrt_gamma": 0.21379024313022557,
+      "m_MeV": 5.964943401405757,
+      "m_MeV_str": "5.964943401",
+      "channels": [
+        "NA64_invisible",
+        "XENONnT_DMe",
+        "DAMIC_M",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 4,
+      "sqrt_gamma": 0.2846296765465703,
+      "m_MeV": 7.941428411803351,
+      "m_MeV_str": "7.941428412",
+      "channels": [
+        "NA64_invisible",
+        "XENONnT_DMe",
+        "DAMIC_M",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 5,
+      "sqrt_gamma": 0.35510639250860654,
+      "m_MeV": 9.907793273339268,
+      "m_MeV_str": "9.907793273",
+      "channels": [
+        "NA64_invisible",
+        "XENONnT_DMe",
+        "DAMIC_M",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 6,
+      "sqrt_gamma": 0.42513057910595337,
+      "m_MeV": 11.86153215153598,
+      "m_MeV_str": "11.86153215",
+      "channels": [
+        "NA64_invisible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 7,
+      "sqrt_gamma": 0.494613001108431,
+      "m_MeV": 13.800155301821238,
+      "m_MeV_str": "13.8001553",
+      "channels": [
+        "NA64_invisible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\u2705 \u73fe\u884c\u53ef\u5224\u5b9a",
+      "verdict": "m7 \u9810\u8a3b\u518a\u76f2\u6e2c\u76ee\u6a19 (O204 docs/11): XENONnT S2-only + NA64 \u73fe\u884c\u7a97\u53e3"
+    },
+    {
+      "n": 8,
+      "sqrt_gamma": 0.5634651136828593,
+      "m_MeV": 15.721192242330797,
+      "m_MeV_str": "15.72119224",
+      "channels": [
+        "NA64_invisible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 9,
+      "sqrt_gamma": 0.6315991752300498,
+      "m_MeV": 17.622194902163727,
+      "m_MeV_str": "17.6221949",
+      "channels": [
+        "NA64_invisible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 10,
+      "sqrt_gamma": 0.6989283591981966,
+      "m_MeV": 19.500740741078353,
+      "m_MeV_str": "19.50074074",
+      "channels": [
+        "NA64_invisible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 11,
+      "sqrt_gamma": 0.7653668647301796,
+      "m_MeV": 21.354435836653238,
+      "m_MeV_str": "21.35443584",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 12,
+      "sqrt_gamma": 0.8308300260037729,
+      "m_MeV": 23.180917934979057,
+      "m_MeV_str": "23.18091793",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 13,
+      "sqrt_gamma": 0.8952344201254251,
+      "m_MeV": 24.977859460993773,
+      "m_MeV_str": "24.97785946",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 14,
+      "sqrt_gamma": 0.9584979734401137,
+      "m_MeV": 26.74297048462487,
+      "m_MeV_str": "26.74297048",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 15,
+      "sqrt_gamma": 1.0205400661217991,
+      "m_MeV": 28.4740016389587,
+      "m_MeV_str": "28.47400164",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 16,
+      "sqrt_gamma": 1.081281634911195,
+      "m_MeV": 30.16874698671829,
+      "m_MeV_str": "30.16874699",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 17,
+      "sqrt_gamma": 1.1406452738699282,
+      "m_MeV": 31.825046831396584,
+      "m_MeV_str": "31.82504683",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 18,
+      "sqrt_gamma": 1.198555333022694,
+      "m_MeV": 33.440790469462875,
+      "m_MeV_str": "33.44079047",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 19,
+      "sqrt_gamma": 1.254938014761704,
+      "m_MeV": 35.013918880135044,
+      "m_MeV_str": "35.01391888",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 20,
+      "sqrt_gamma": 1.3097214678905702,
+      "m_MeV": 36.54242734929003,
+      "m_MeV_str": "36.54242735",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 21,
+      "sqrt_gamma": 1.3628358791877822,
+      "m_MeV": 38.02436802416858,
+      "m_MeV_str": "38.02436802",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 22,
+      "sqrt_gamma": 1.4142135623730951,
+      "m_MeV": 39.45785239561892,
+      "m_MeV_str": "39.4578524",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 23,
+      "sqrt_gamma": 1.463789044363451,
+      "m_MeV": 40.84105370471587,
+      "m_MeV_str": "40.8410537",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 24,
+      "sqrt_gamma": 1.5114991487085165,
+      "m_MeV": 42.17220927068868,
+      "m_MeV_str": "42.17220927",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 25,
+      "sqrt_gamma": 1.5572830760995104,
+      "m_MeV": 43.44962273719097,
+      "m_MeV_str": "43.44962274",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 26,
+      "sqrt_gamma": 1.6010824818487208,
+      "m_MeV": 44.6716662340502,
+      "m_MeV_str": "44.67166623",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 27,
+      "sqrt_gamma": 1.6428415502409832,
+      "m_MeV": 45.8367824517419,
+      "m_MeV_str": "45.83678245",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 28,
+      "sqrt_gamma": 1.6825070656623624,
+      "m_MeV": 46.94348662594499,
+      "m_MeV_str": "46.94348663",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 29,
+      "sqrt_gamma": 1.7200284804154011,
+      "m_MeV": 47.99036842964927,
+      "m_MeV_str": "47.99036843",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 30,
+      "sqrt_gamma": 1.7553579791345113,
+      "m_MeV": 48.97609377040377,
+      "m_MeV_str": "48.97609377",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 31,
+      "sqrt_gamma": 1.7884505397194226,
+      "m_MeV": 49.899406490415736,
+      "m_MeV_str": "49.89940649",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 32,
+      "sqrt_gamma": 1.8192639907090367,
+      "m_MeV": 50.75912996733362,
+      "m_MeV_str": "50.75912997",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 33,
+      "sqrt_gamma": 1.8477590650225735,
+      "m_MeV": 51.5541686136743,
+      "m_MeV_str": "51.55416861",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 34,
+      "sqrt_gamma": 1.8738994499995234,
+      "m_MeV": 52.28350927298345,
+      "m_MeV_str": "52.28350927",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 35,
+      "sqrt_gamma": 1.8976518336746393,
+      "m_MeV": 52.94622251095025,
+      "m_MeV_str": "52.94622251",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 36,
+      "sqrt_gamma": 1.9189859472289947,
+      "m_MeV": 53.541463799830666,
+      "m_MeV_str": "53.5414638",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 37,
+      "sqrt_gamma": 1.9378746035630146,
+      "m_MeV": 54.06847459467037,
+      "m_MeV_str": "54.06847459",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 38,
+      "sqrt_gamma": 1.954293731942319,
+      "m_MeV": 54.526583299955426,
+      "m_MeV_str": "54.5265833",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 39,
+      "sqrt_gamma": 1.9682224086722322,
+      "m_MeV": 54.915206125459214,
+      "m_MeV_str": "54.91520613",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 40,
+      "sqrt_gamma": 1.9796428837618654,
+      "m_MeV": 55.23384783019469,
+      "m_MeV_str": "55.23384783",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 41,
+      "sqrt_gamma": 1.9885406035437947,
+      "m_MeV": 55.48210235352411,
+      "m_MeV_str": "55.48210235",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 42,
+      "sqrt_gamma": 1.994904229220507,
+      "m_MeV": 55.659653332621886,
+      "m_MeV_str": "55.65965333",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 43,
+      "sqrt_gamma": 1.9987256513139833,
+      "m_MeV": 55.76627450563109,
+      "m_MeV_str": "55.76627451",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    },
+    {
+      "n": 44,
+      "sqrt_gamma": 2.0,
+      "m_MeV": 55.80183,
+      "m_MeV_str": "55.80183",
+      "channels": [
+        "NA64_invisible",
+        "BaBar_visible",
+        "XENONnT_DMe",
+        "beam_dump"
+      ],
+      "decidable": "\ud83d\udfe1 \u689d\u4ef6\u53ef\u5224\u5b9a",
+      "verdict": "\u8cea\u91cf\u7a97\u53e3\u73fe\u884c\u5df2\u8986\u84cb; \u9700 B4 \u8026\u5408\u7b97\u5b50\u5b9a\u9748\u654f\u5ea6"
+    }
+  ],
+  "decidable_now": [
+    7
+  ],
+  "decidable_cond_count": 43,
+  "experiments": {
+    "NA64_invisible": {
+      "mass_range": [
+        1.0,
+        100.0
+      ],
+      "status": "\ud83d\udfe2 \u73fe\u884c\u6700\u5f37 (2016-2022, 9.37e11 EOT)",
+      "sens": "\u03b5 \u2272 1e-4..1e-5 (A\u2032\u2192invisible)",
+      "ref": "NA64 PRL 131.161801 (2023); NA64 Status 2024"
+    },
+    "NA64_positron": {
+      "mass_range": [
+        100.0,
+        250.0
+      ],
+      "status": "\ud83d\udfe1 2023-24 \u5206\u6790\u4e2d / POKER 2025",
+      "sens": "\u03b5 down to 2.5e-4 (A\u2032\u2192invisible, e+e\u2212 \u5171\u632f)",
+      "ref": "NA64 Status Report 2024; POKER"
+    },
+    "BaBar_visible": {
+      "mass_range": [
+        20.0,
+        10000.0
+      ],
+      "status": "\ud83d\udfe2 \u5df2\u6383\u63cf (\u53ef\u898b A\u2032\u2192\u2113+\u2113\u2212)",
+      "sens": "\u03b5\u00b2 ~ 1e-8..1e-6 (\u53ef\u898b\u8870\u8b8a)",
+      "ref": "BaBar PRL 119.131801 (2017)"
+    },
+    "XENONnT_DMe": {
+      "mass_range": [
+        5.0,
+        1000.0
+      ],
+      "status": "\ud83d\udfe2 \u73fe\u884c (S2-only / low-E ER)",
+      "sens": "\u03c3_e ~ 1e-40..1e-37 cm\u00b2 (DM-\u96fb\u5b50\u6563\u5c04)",
+      "ref": "XENONnT PRL 129.161805 (2022); S2-only 2024"
+    },
+    "XENON_SRDM": {
+      "mass_range": [
+        0.0046,
+        2.0
+      ],
+      "status": "\ud83d\udfe2 \u73fe\u884c (\u592a\u967d\u53cd\u5c04 DM, XENON1T+XENONnT)",
+      "sens": "\u03c3_e min 3.4e-39 cm\u00b2",
+      "ref": "arXiv 2512.19592 (2025)"
+    },
+    "SENSEI": {
+      "mass_range": [
+        0.05,
+        2.0
+      ],
+      "status": "\ud83d\udfe2 \u73fe\u884c (skipper-CCD, m<2 MeV \u6539\u5584)",
+      "sens": "\u55ae\u96fb\u5b50\u901a\u9053; m_\u03c7 < 2 MeV \u4e16\u754c\u6700\u4f73",
+      "ref": "SENSEI PRL 134.161002/011804 (2025)"
+    },
+    "DAMIC_M": {
+      "mass_range": [
+        0.5,
+        10.0
+      ],
+      "status": "\ud83d\udfe2 \u73fe\u884c (\u77fd CCD, sub-GeV)",
+      "sens": "\u03c3_e sub-GeV \u96fb\u5b50\u6563\u5c04",
+      "ref": "DAMIC-M PRL 130.171003 (2023)"
+    },
+    "beam_dump": {
+      "mass_range": [
+        1.0,
+        100.0
+      ],
+      "status": "\ud83d\udfe1 \u6b77\u53f2 (E137/LSND/MiniBooNE/CHARM)",
+      "sens": "\u03b5\u00b2 ~ 1e-7..1e-5 (\u675f\u50be\u5012)",
+      "ref": "E137 PRD 38, 3375 (1988); LSND; MiniBooNE-DM"
+    }
+  }
+}

@@ -108,10 +108,25 @@
 ## 六、狀態
 
 ```
-🔴 未開始推導 — bootstrap 層已建 (01_problem_record.md + SESSION_START.md)
+🟢 主體閉合 (2026-09-21 第一輪, 5 scripts / 53 checks: 53 PASS, 0 FAIL)
+   B1 盲測協定 ✅ | B3 模式身份 ✅ | B4 交互算子 ✅ | B5 Goldstone 熱歷史 ✅ (引用 O204 U7)
+   B6 焦距 ✅ | B7 場論陳述 ✅ | B2 標度 🔴 誠實負結果 (兩獨立錨)
 ⭐ 優先度: ★★（玻色扇區之唯一開放項; 費米側已於 O206 收尾）
-⚠️ 本 O 唔建 scripts/ data/ scaffold — 用戶指示「新 session 處理」
+🔴 剩餘: B2 標度差無結構解釋 (屬 O85/O86 SM 電弱鏈範圍); 塔觀測執行 (等 NA64/XENONnT 數據)
+⚠️ 2026-09-21 第一輪: 已建 scripts/ data/ docs/ (由本 session 建立, 遵 SESSION_START 交接)
 ```
+
+### 推導時序索引
+
+| 時間 | Script | 結果 | 記錄 doc |
+|:-----|:-------|:-----|:---------|
+| 09-21 | `scripts/01_tower_blindtest_protocol.py` | 14/14 PASS | docs/01 B1 |
+| 09-21 | `scripts/02_mode_identity.py` | 12/12 PASS | docs/02 B3 |
+| 09-21 | `scripts/03_focal_pole.py` | 9/9 PASS | docs/03 B6+B7 |
+| 09-21 | `scripts/04_scale_interaction.py` | 9/9 PASS | docs/04 B2+B4 |
+| 09-21 | (引用 O204 U7) | — | docs/05 B5 |
+
+依賴鏈: O37→O38→O39→O82→O83→O164→O204→O206→**O207**（B4 引用 O86 N5）
 
 ---
 

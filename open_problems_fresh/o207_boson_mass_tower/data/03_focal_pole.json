@@ -1,0 +1,14 @@
+{
+  "B6": {
+    "detent": 88,
+    "cy3_identity": "88 = 2(h11+F6) = 2*N_d = 2*(36+8)",
+    "ratios_946_ok": true,
+    "worst_dev_55_pct": 172.11805945417822,
+    "worst_dev_176_pct": 41.39882692784236
+  },
+  "B7": {
+    "pole_mass_identity": "m_n * G_n(0) = M0/2 = m_deltaW EXACT for all n=1..44",
+    "m_deltaW_MeV": 13.9504575,
+    "G_n0_from_mass": "G_n(0) = M0/(2*m_n)"
+  }
+}

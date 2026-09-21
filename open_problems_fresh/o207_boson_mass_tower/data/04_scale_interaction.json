@@ -1,0 +1,17 @@
+{
+  "B2": {
+    "v_EW_MeV": 246220.0,
+    "M0_MeV": 27.900915,
+    "ratio": 8824.800190244658,
+    "log_phi": 18.880087244505702,
+    "log_88": 2.029179759457507,
+    "pool_hits_lt_1pct": 2,
+    "verdict": "NO single structural formula closes MeV<->GeV gap; v_EW is SM-side anchor (O85), M0 is W-field anchor (O38) -- two independent sectors"
+  },
+  "B4": {
+    "interaction": "L_KS = sum_n sum_f M0*omega_n*Q_f*phi_n*psibar_f psi_f",
+    "dimension": "M^1 * 1 * M^3 = M^4 (O86 N5 CLOSED)",
+    "coupling": "M0*omega_n = m_n (tower mass itself)",
+    "z2_compat": "field operator phi_n, not position operator X (O206 theorem)"
+  }
+}
