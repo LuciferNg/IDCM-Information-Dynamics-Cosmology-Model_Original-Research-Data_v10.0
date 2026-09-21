@@ -172,6 +172,7 @@
 | 16 | `scripts/16_ladder_hypothesis.py` | 4/4 PASS ⟹ ★★ 三水平簇結構 (F=200.7, P=0.0007) — 階梯存在但生成規則未明 | docs/17 |
 | 17 | `scripts/17_cluster_generation.py` | 2/3 PASS ⟹ ★ 簇依賴 α (1σ 穩健/2σ 散) + 34 特徵 0 顯著 — 生成規則未明 | docs/18 |
 | 18 | `scripts/18_second_beat.py` | 3/3 PASS ⟹ ★ K_tree 譜作為第二拍頻實測否定 (改善=純 dof 紅利 P=0.236) | docs/19 |
+| 19 | `scripts/19_alt_validation.py` | 3/3 PASS ⟹ ★★ H_alt 驗證: 3-水平離散模型碾壓連續 (RMS 0.0585, ΔAIC+35.2, P=0.0007) | docs/20 |
 
 **★★★ 第六輪狀態更新（2026-09-21，只記新增）**：
 - ★★ **結構性結果**：奇 detent（33, 55）**結構上排除**（γ_n = γ_(N−n) 落喺反 parity
