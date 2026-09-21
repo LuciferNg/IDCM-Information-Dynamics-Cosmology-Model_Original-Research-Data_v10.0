@@ -1,0 +1,16 @@
+{
+  "test": "O57 開放 1: Z₂ mirror T-duality",
+  "z2_matrix": {
+    "trace": 64,
+    "fixed": 21,
+    "nyquist": 43,
+    "orbits": 441
+  },
+  "parity_swap": "嚴格交換 even↔odd",
+  "z2_freq_mirror": "ω → −ω (粒子/反粒子對偶)",
+  "mirror_not_direct": "(36,96) 唔存在 (O53 孤島)",
+  "66_structure": "3 × (21+1) = 3 × 22",
+  "conclusion": "Z₂ = 頻率對偶 (粒子/反粒子), 唔係 Hodge mirror",
+  "passed": 3,
+  "failed": 0
+}

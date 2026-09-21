@@ -1,0 +1,22 @@
+{
+  "test": "O57 探索 08: 最終機制鏈閉合",
+  "chain": {
+    "phi": "x²+x−1=0",
+    "structure": "B=4, L5=11, L6=18, F8=21",
+    "kchain": "44-site, Σγ=90",
+    "beat_space": "Λ²(R⁴⁴) = 946 (2-forms)",
+    "parity": "even 462 → Kähler, odd 484 → CPX",
+    "z2": "fixed 21=F8, orbits 441=F8², time reversal",
+    "projection": "P̂ 134×946, Kähler rank 36, CPX rank 73",
+    "cy3": "h11=2L6=36, h21=B×L5+3L6=98, χ=−124",
+    "polytope": "48pts=Nd+B, 144simps=B×h11, 484sr=odd beats",
+    "generations": "N_gen=3=B−1, 66=3×22=6×L5=C(12,2)"
+  },
+  "rank": 109,
+  "rank_kahler": 36,
+  "rank_cpx": 73,
+  "cpx_gap": 25,
+  "gap_identity": "F8+B = Nd/2+N_gen (B−1=N_gen)",
+  "passed": 42,
+  "failed": 0
+}

@@ -1,0 +1,10 @@
+{
+  "test": "O57 三期 26: Curve Volumes",
+  "kappa_nonzero": 1341,
+  "t1_positive_curves": 0,
+  "adj_positive": 0,
+  "adj_negative": 2,
+  "jstar_all_positive": true,
+  "passed": 3,
+  "failed": 0
+}

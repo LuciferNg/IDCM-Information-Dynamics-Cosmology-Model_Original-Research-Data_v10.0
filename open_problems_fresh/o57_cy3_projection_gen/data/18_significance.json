@@ -1,0 +1,13 @@
+{
+  "test": "O57 二期 18: 統計顯著性",
+  "real_q": 0.43526989010816236,
+  "random_mean": 0.46639716208325965,
+  "random_std": 0.022623851001974452,
+  "p_best6": 0.001,
+  "p_single": 0.221,
+  "p_4targets": 0.907,
+  "trials": 2000,
+  "conclusion": "唔顯著",
+  "passed": 1,
+  "failed": 0
+}

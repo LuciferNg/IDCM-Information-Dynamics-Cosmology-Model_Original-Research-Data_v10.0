@@ -1,0 +1,10 @@
+{
+  "test": "O57 四期 30: Curves ↔ K 態",
+  "curves_rank": 30,
+  "k_rank": 36,
+  "max_angle_deg": 1.9090959104164224e-06,
+  "extra_rank": 6,
+  "contained": true,
+  "passed": 5,
+  "failed": 0
+}

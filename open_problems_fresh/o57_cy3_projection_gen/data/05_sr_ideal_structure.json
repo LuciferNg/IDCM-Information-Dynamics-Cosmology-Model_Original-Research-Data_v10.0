@@ -1,0 +1,12 @@
+{
+  "test": "O57 探索 05: sr_ideal 深層結構",
+  "sr_ideal_count": 484,
+  "involved_points": 36,
+  "uninvolved_points": 12,
+  "complete_graph_minus_sr": 146,
+  "identity": "146 = 2×73 = 2×CPX_rank",
+  "simplices": 144,
+  "simplex_identity": "144 = 4×36 = B×h11",
+  "passed": 4,
+  "failed": 0
+}

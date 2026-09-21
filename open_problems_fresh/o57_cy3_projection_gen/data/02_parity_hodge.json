@@ -1,0 +1,25 @@
+{
+  "test": "O57 探索 02: Parity/Z₂ → Hodge 分解",
+  "beat_parity_split": {
+    "even": 462,
+    "odd": 484,
+    "formula": "2×Λ²(R²²) + R²²⊗R²²"
+  },
+  "S88_even": 90.0,
+  "S88_odd": 88.0,
+  "z2_fixed_beats": 21,
+  "z2_fixed_identity": "F8 = n+m=44",
+  "z2_orbits": 441,
+  "z2_orbits_identity": "21² = F8²",
+  "nyquist_beats": 43,
+  "nyquist_identity": "Nd−1",
+  "z2_time_reversal": true,
+  "rank_split": {
+    "total": 109,
+    "kahler": 36,
+    "cpx": 73
+  },
+  "cpx_missing": 25,
+  "passed": 11,
+  "failed": 0
+}

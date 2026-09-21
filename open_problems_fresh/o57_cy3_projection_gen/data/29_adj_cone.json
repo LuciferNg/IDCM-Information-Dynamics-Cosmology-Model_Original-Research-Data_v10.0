@@ -1,0 +1,11 @@
+{
+  "test": "O57 三期 29: 155 Curves ↔ Cone",
+  "adj": 155,
+  "nonzero_vecs": 52,
+  "rank": 30,
+  "rank_identity": "30 = 2L₅+2B",
+  "jstar_pos": 31,
+  "jstar_neg": 21,
+  "passed": 2,
+  "failed": 0
+}

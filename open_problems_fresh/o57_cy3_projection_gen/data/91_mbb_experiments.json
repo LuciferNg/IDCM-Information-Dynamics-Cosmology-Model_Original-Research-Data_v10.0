@@ -1,0 +1,39 @@
+{
+  "test": "O57 十七期 91: m_ββ vs 實驗",
+  "idcm_range": [
+    18.446666666666665,
+    32.41333333333333
+  ],
+  "exp_limits": {
+    "KamLAND-Zen (136Xe)": [
+      28,
+      122
+    ],
+    "LEGEND-200 (76Ge)": [
+      75,
+      200
+    ],
+    "GERDA (76Ge)": [
+      79,
+      180
+    ]
+  },
+  "next_gen": {
+    "KamLAND2-Zen": 20,
+    "LEGEND-1000": [
+      9,
+      24
+    ],
+    "nEXO": [
+      6,
+      15
+    ],
+    "CUPID": [
+      10,
+      20
+    ]
+  },
+  "falsifiable": true,
+  "passed": 3,
+  "failed": 0
+}

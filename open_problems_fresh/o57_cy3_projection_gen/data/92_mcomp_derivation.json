@@ -1,0 +1,9 @@
+{
+  "test": "O57 十八期 92: M_comp",
+  "seesaw": 36880330296146.84,
+  "log_ratio": 5.519653727575564,
+  "inv_gamma6": 5.532931726904074,
+  "best_candidate": "log10(M_pl/M_comp) ≈ 1/γ₆ (2.96%)",
+  "passed": 0,
+  "failed": 1
+}

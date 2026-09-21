@@ -1,0 +1,10 @@
+{
+  "test": "O57 二期 19: 譜結構來源",
+  "sector_split": "30 C = 2L₅+2B = 22+8, 36 K = 2L₆",
+  "cluster_sector_agree": true,
+  "66_identity": "2L₆ + 2L₅ + 2B = 36+22+8",
+  "sm_matching": "numerological (p=0.907)",
+  "spectrum_structure": "real (p=0.001)",
+  "passed": 3,
+  "failed": 0
+}

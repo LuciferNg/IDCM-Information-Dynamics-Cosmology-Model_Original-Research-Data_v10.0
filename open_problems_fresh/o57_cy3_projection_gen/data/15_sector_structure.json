@@ -1,0 +1,11 @@
+{
+  "test": "O57 二期 15: Sector 22C+36K+8C",
+  "sector_split": "22C + 36K + 8C",
+  "identity": "66 = Nd/2 + h11 + 2B = 22 + 36 + 8",
+  "22C": "half-chain CPX (費米幾何候選)",
+  "36K": "Kähler moduli = h11",
+  "8C": "2B = 分支邊界",
+  "honest": "sector ≠ 費米/玻色, 需更多物理輸入",
+  "passed": 1,
+  "failed": 0
+}

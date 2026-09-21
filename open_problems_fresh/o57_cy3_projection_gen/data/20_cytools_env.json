@@ -1,0 +1,13 @@
+{
+  "test": "O57 三期 20: CYTools 環境",
+  "polytope_loaded": true,
+  "n_points": 48,
+  "h11": 36,
+  "h21": 98,
+  "glsm_shape": [
+    32,
+    37
+  ],
+  "passed": 3,
+  "failed": 0
+}

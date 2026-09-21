@@ -1,0 +1,16 @@
+{
+  "test": "O57 三期 28: 誠實質量",
+  "jstar_range": 1.85,
+  "diag_nz": [
+    62,
+    24,
+    14
+  ],
+  "diag_identity": "62=Nd+L₆, 24=3×2B, 14=2L₄",
+  "adj_split": "31 pos + 21 neg + 103 zero",
+  "52_identity": "Nd+2B",
+  "search_best": 18642861.71212698,
+  "sm_needed": 170000000.0,
+  "passed": 2,
+  "failed": 0
+}

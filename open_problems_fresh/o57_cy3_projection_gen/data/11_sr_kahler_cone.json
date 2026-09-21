@@ -1,0 +1,14 @@
+{
+  "test": "O57 開放 3: sr_ideal ↔ Kähler cone",
+  "sr_generators": 484,
+  "sr_unique_edges": 475,
+  "sr_duplicates": 9,
+  "adj_edges": 155,
+  "adj_identity": "155 = 2×73 + 9 = 2×CPX_rank + duplicates",
+  "sum_deg": 310,
+  "sum_deg_identity": "310 = 2×155",
+  "simplices": 144,
+  "simplices_identity": "144 = B×h11 = 4×36",
+  "passed": 5,
+  "failed": 0
+}

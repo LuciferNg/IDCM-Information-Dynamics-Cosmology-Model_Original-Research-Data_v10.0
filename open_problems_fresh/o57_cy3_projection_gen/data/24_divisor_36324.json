@@ -1,0 +1,16 @@
+{
+  "test": "O57 三期 24: 36/32/4",
+  "n_prime_divisors": 36,
+  "n_basis": 32,
+  "missing": [
+    3,
+    4,
+    7,
+    8
+  ],
+  "missing_identity": "3=N_gen, 4=B, 7=L₄, 8=2B; sum=22=Nd/2",
+  "n_intersection": 1557,
+  "intersection_4tuple": true,
+  "passed": 6,
+  "failed": 0
+}

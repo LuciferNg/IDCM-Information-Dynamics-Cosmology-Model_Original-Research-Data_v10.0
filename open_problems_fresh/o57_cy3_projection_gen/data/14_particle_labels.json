@@ -1,0 +1,11 @@
+{
+  "test": "O57 二期 14: 66 → SM 標籤",
+  "66_split": "48 (費米) + 18 (L₆ 玻色+Higgs)",
+  "48": "16 Weyl/代 × 3",
+  "18": "12 gauge + 6 Higgs",
+  "clusters": "1, 19, 2, 36, 8",
+  "cluster_identity": "36 = h11, 8 = SU(3) gluons (候選)",
+  "sector_sequence": "CCCCCCCCCCCCCCCCCCCCCCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKCCCCCCCC",
+  "passed": 5,
+  "failed": 0
+}

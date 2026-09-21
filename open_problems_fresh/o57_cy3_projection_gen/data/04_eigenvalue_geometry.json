@@ -1,0 +1,14 @@
+{
+  "test": "O57 探索 04: 本徵值 → 幾何",
+  "rank": 109,
+  "n_pos_eigenvalues": 109,
+  "gen_means": [
+    81.77245405735825,
+    6.855051817724701,
+    1.728126842066815
+  ],
+  "kahler_cone_dim": 32,
+  "structure": "66 = 3×22 (3 gen × Nd/2)",
+  "passed": 3,
+  "failed": 0
+}

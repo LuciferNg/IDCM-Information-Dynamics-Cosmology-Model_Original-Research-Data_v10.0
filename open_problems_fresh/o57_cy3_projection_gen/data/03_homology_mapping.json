@@ -1,0 +1,26 @@
+{
+  "test": "O57 探索 03: Beat → Homology",
+  "cy3_data": {
+    "points": 48,
+    "vertices": 6,
+    "simplices": 144,
+    "sr_ideal": 484,
+    "interior": 1
+  },
+  "sr_ideal_vs_odd_beats": true,
+  "decomposition": {
+    "points": "Nd+B=44+4",
+    "simplices": "B×h11=4×36",
+    "sr_ideal": "22²=(Nd/2)²",
+    "remainder_270": "3×Σγ=3×90"
+  },
+  "h11_formula": "n_points − 12 (12=h11/3)",
+  "h21_formula": "(Nd−1) + F10 = 43 + 55",
+  "C44_split": {
+    "C(36,2)": 630,
+    "36×8": 288,
+    "C(8,2)": 28
+  },
+  "passed": 11,
+  "failed": 0
+}

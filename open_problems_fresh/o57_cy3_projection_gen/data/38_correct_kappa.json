@@ -1,0 +1,10 @@
+{
+  "test": "O57 五期 38: 正確 κ",
+  "K00": 4.0,
+  "K53_00": -360.0,
+  "inconsistent": true,
+  "Jstar_allpos": false,
+  "n_found": 0,
+  "passed": 1,
+  "failed": 1
+}

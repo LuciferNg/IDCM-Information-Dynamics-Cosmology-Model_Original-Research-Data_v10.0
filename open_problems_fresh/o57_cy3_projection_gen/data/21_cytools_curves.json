@@ -1,0 +1,9 @@
+{
+  "test": "O57 三期 21: CYTools curves",
+  "n_curves": 32,
+  "simplices": 144,
+  "h11": 36,
+  "h21": 98,
+  "passed": 3,
+  "failed": 0
+}

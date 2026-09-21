@@ -1,0 +1,11 @@
+{
+  "test": "O57 三期 25: 真 κ_ijk",
+  "n_3tuple": 303,
+  "kappa_nonzero": 1122,
+  "kappa_range": [
+    -85.0,
+    232.0
+  ],
+  "passed": 0,
+  "failed": 0
+}

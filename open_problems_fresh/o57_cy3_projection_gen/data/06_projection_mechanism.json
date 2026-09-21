@@ -1,0 +1,11 @@
+{
+  "test": "O57 探索 06: 投影機制幾何實現",
+  "sum_abs_freq": 1567.9293288847823,
+  "sum_abs_freq_identity": "Σ(2n−45)γ_n",
+  "66_identity": "6×L5 = 6×11 (2×N_gen × L5)",
+  "kahler_gram_rank": 36,
+  "cpx_zero_rows": 0,
+  "cpx_zero_identity": "25 = 98−73 (rank 缺口)",
+  "passed": 4,
+  "failed": 0
+}

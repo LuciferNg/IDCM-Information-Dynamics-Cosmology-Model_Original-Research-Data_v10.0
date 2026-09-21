@@ -1,0 +1,11 @@
+{
+  "test": "O57 探索 07: Kähler Support = 21",
+  "kahler_support": 21,
+  "identity": "F8 = Nd/2 − 1 = 22−1 (同 parity 排除自己)",
+  "support_total": 756,
+  "cpx_rank_gap": 25,
+  "gap_identity": "F8+B = Nd/2+N_gen (因為 B−1=N_gen)",
+  "B_minus_1_equals_N_gen": true,
+  "passed": 8,
+  "failed": 0
+}

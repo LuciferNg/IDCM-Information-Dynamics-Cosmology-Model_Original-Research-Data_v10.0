@@ -1,0 +1,14 @@
+{
+  "test": "O57 十九期 94: PMNS 湧現 (cluster)",
+  "clusters": [
+    81,
+    70,
+    34
+  ],
+  "F_proj_relation": "34 = 2×17 = 2×F_proj",
+  "t12_2_candidate": 0.41975308641975306,
+  "t23_2_candidate": 1.1571428571428573,
+  "s13_2_candidate": 0.1837837837837838,
+  "passed": 2,
+  "failed": 0
+}

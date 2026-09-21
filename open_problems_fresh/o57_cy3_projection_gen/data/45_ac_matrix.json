@@ -1,0 +1,9 @@
+{
+  "test": "O57 六期 45: A_C 矩陣",
+  "nC": 30,
+  "A_C_rank": 30,
+  "A_C_nz_frac": 0.9666666666666667,
+  "A_C_ev_pos": 30,
+  "passed": 1,
+  "failed": 0
+}

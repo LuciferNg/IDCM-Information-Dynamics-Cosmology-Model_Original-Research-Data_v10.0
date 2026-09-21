@@ -1,0 +1,9 @@
+{
+  "test": "O57 開放 5: 441 orbifold",
+  "441_identity": "21² = (3×7)² = (N_gen×L₄)² = F₈²",
+  "441_as": "odd beats − Nyquist = 484 − 43",
+  "orbits_actual": 441,
+  "quotient": "505 = 441 + 21 + 43",
+  "passed": 8,
+  "failed": 0
+}
