@@ -177,6 +177,7 @@
 | 21 | `scripts/21_csg_falsification.py` | 4/4 PASS ⟹ ★★ CSG v2 公式證偽: 閉合稀有但後驗選擇 (311 網格/18.6bits) + t 唔被預言 | docs/23 |
 | 22 | `scripts/22_shape_factors.py` | 2/4 PASS ⟹ ★★ 形狀因素: |Δm|^α 正交 (P=0.127) 但 γ_n·C_f 閉合 (0.84%) + t 需大 C_f | docs/24 |
 | 23 | (CSSG-v3 承接) | — 外置專案閉合: κ_ijk=18·I₉, 9/9 閉合, t Δ0.43% | docs/25 |
+| 24 | `scripts/23_cluster_identity.py` | 2/2 PASS ⟹ ★★ 簇 = A₅ 模式分配偽影 (物理 assignment 下水平回 1.000) — OPEN-4 關閉 | docs/26 |
 
 **★★★ 第六輪狀態更新（2026-09-21，只記新增）**：
 - ★★ **結構性結果**：奇 detent（33, 55）**結構上排除**（γ_n = γ_(N−n) 落喺反 parity
