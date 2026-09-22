@@ -1,0 +1,7 @@
+{
+  "checks_pass": 3,
+  "checks_total": 4,
+  "fiducial": {
+    "ombh2": 0.02237,
+    "peak_ells": [
+      
