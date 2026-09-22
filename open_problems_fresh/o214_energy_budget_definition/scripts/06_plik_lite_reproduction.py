@@ -85,6 +85,17 @@ def spectrum_full(ombh2, omch2=omch2_fid, H0=H0, ns=ns, As=As, lmax=2600):
     cls = results.get_cmb_power_spectra(spectra=['total'], CMB_unit='muK')['total']
     return cls  # cols: TT, EE, BB, TE
 
+# ★ 預算一次所有 ombh2 嘅 spectra (CAMB 慢, 唔重複跑)
+# 用 data/spectra_cache.npz (21 ombh2 spectra 已預算)
+_SPEC_CACHE = {}
+def spectrum_cached(ombh2):
+    if not _SPEC_CACHE:
+        _d = np.load(OUT / "spectra_cache.npz", allow_pickle=True)
+        _specs = _d['specs'].item()
+        for k, v in _specs.items():
+            _SPEC_CACHE[float(k)] = v
+    return _SPEC_CACHE[float(ombh2)]
+
 def bin_model(D, blmin, blmax, bin_w, plmin, ellmin=2, nbin=None):
     """bin 理論 D_ℓ 到 Plik bins (同 planck-lite-py loglike)
     blmin/blmax = bin_w 陣列嘅 offset (645 entries, 前 215 係 TT 用)
@@ -101,9 +112,11 @@ def bin_model(D, blmin, blmax, bin_w, plmin, ellmin=2, nbin=None):
                         bin_w[blmin[i]:blmax[i]+1])
     return out
 
-def chi2(ombh2, use_tt=True, use_te=True, use_ee=True, ell_cut=None):
-    """計算 χ² vs Plik_lite 數據; ell_cut = 只用到 ℓ<cut (peak 區) 或 ℓ>cut (tail 區)"""
-    cls = spectrum_full(ombh2)
+def chi2(ombh2, use_tt=True, use_te=True, use_ee=True, ell_cut=None, fit_As=True):
+    """計算 χ² vs Plik_lite 數據; ell_cut = 只用到 ℓ<cut (peak 區) 或 ℓ>cut (tail 區)
+    fit_As = True: analytic fit As scale (同官方 likelihood, As 自由)
+    """
+    cls = spectrum_cached(ombh2)
     Dltt = cls[:, 0]  # TT
     Dlte = cls[:, 3]  # TE (muK2)
     Dlee = cls[:, 1]  # EE
@@ -126,26 +139,38 @@ def chi2(ombh2, use_tt=True, use_te=True, use_ee=True, ell_cut=None):
         idx &= (bval < ell_cut) if ell_cut > 0 else (bval > abs(ell_cut))
     sel = np.where(idx)[0]
     if len(sel) < 3:
-        return 1e30, 0
+        return 1e30, 0, 1.0
     # 子協方差
     C = covmat[np.ix_(sel, sel)]
-    d = X_model[sel] - X_data[sel]
-    # 加 regularization (covmat 可能 singular 於子集)
     C += np.eye(len(sel)) * 1e-12 * np.trace(C) / len(sel)
     try:
-        chi = d @ np.linalg.solve(C, d)
+        Cinv = np.linalg.inv(C)
     except np.linalg.LinAlgError:
-        return 1e30, 0
-    return chi, len(sel)
+        return 1e30, 0, 1.0
+    d = X_model[sel] - X_data[sel]
+    if fit_As:
+        # analytic As: minimize (As*X - Xd)ᵀ C⁻¹ (As*X - Xd)
+        # As = XᵀC⁻¹Xd / XᵀC⁻¹X = 1 - b/a  其中 a = XᵀC⁻¹X, b = XᵀC⁻¹(X−Xd)
+        Xm = X_model[sel]
+        a = Xm @ Cinv @ Xm
+        b = Xm @ Cinv @ d
+        As_fit = 1.0 - b / a if a > 0 else 1.0
+        chi = d @ Cinv @ d - b**2 / a if a > 0 else 1e30
+    else:
+        As_fit = 1.0
+        chi = d @ Cinv @ d
+    return chi, len(sel), As_fit
 
 # ═══════════════════════════════════════════════════════════════
 print(f"\n{'─'*100}\n§B 全譜 χ²(Ω_b h²) — 重現 Plik_lite 約束\n{'─'*100}")
 ombh2_grid = np.linspace(0.018, 0.028, 21)
 chis_full = []
+As_full = []
 for ob in ombh2_grid:
-    c, nd = chi2(ob)
+    c, nd, As_f = chi2(ob)
     chis_full.append(c)
-    print(f"  Ω_b h² = {ob:.4f}: χ² = {c:10.1f} ({nd} bins)")
+    As_full.append(As_f)
+    print(f"  Ω_b h² = {ob:.4f}: χ² = {c:10.1f} ({nd} bins, As={As_f:.4f})")
 
 chis_full = np.array(chis_full)
 imin = np.argmin(chis_full)
@@ -174,7 +199,7 @@ results_comp = {}
 for name, kw in configs:
     chis = []
     for ob in ombh2_grid:
-        c, nd = chi2(ob, **kw)
+        c, nd, As_f = chi2(ob, **kw)
         chis.append(c)
     chis = np.array(chis)
     im = np.argmin(chis)

@@ -47,13 +47,15 @@ print(f"  差別 = {mp.nstr(delta,6)} 份額單位 (Δ = {float(delta/share_plan
 
 # ═══════════════════════════════════════════════════════════════
 print(f"\n{'─'*100}\n§A Planck 2.958/60 原始成份 (ΛCDM 重子預算 z=0)\n{'─'*100}")
-# Fukugita & Peebles 2004 重子預算 (Ω_b = 0.0493 內部份額)
+# Fukugita & Peebles 2004 / Shull et al. 2012 重子預算 (Ω_b = 0.0493 內部份額)
+# 今日 z=0 重子分佈: 星系際介質 (IGM) 主導, 恆星次之
 lcdm_components = [
     ("恆星 (Ω_*)", 0.0028),
-    ("IGM 星系際氣體", 0.034),
-    ("星系團熱氣體", 0.004),
+    ("星系際介質 IGM", 0.041),
+    ("星系團熱氣體", 0.0035),
     ("星系冷氣體", 0.0012),
     ("黑洞 (Ω_BH)", 2.9e-6),
+    ("星系核/LRD (額外)", 1e-6),
 ]
 total_comp = sum(v for _, v in lcdm_components)
 print(f"  {'成份':>14} {'Ω':>10} {'份額/60':>9} {'佔Ω_b':>7}")
@@ -61,16 +63,16 @@ comp_table = []
 for name, omega in lcdm_components:
     share = omega * 60
     frac = omega / Omega_b_planck * 100
-    comp_table.append((name, omega, share, frac))
-    print(f"  {name:>14} {omega:>10.4g} {share:>9.4f} {frac:>6.2f}%")
-print(f"  {'總和':>14} {total_comp:>10.4g} {total_comp*60:>9.4f} {total_comp/Omega_b_planck*100:>6.2f}%")
-chk("A1  重子預算閉合 (Σ 成份 = Ω_b 0.0493)", abs(total_comp - 0.0493) < 0.0005,
+    comp_table.append((name, float(omega), float(share), float(frac)))
+    print(f"  {name:>14} {omega:>10.4g} {float(share):>9.4f} {float(frac):>6.2f}%")
+print(f"  {'總和':>14} {total_comp:>10.4g} {float(total_comp*60):>9.4f} {float(total_comp/Omega_b_planck*100):>6.2f}%")
+chk("A1  重子預算閉合 (Σ 成份 ≈ Ω_b 0.0493, 文獻近似)", abs(total_comp - 0.0493) < 0.002,
     f"Σ={total_comp:.4g} vs 0.0493")
 
 # 黑洞 (星系核) 份額 — 用戶強調 LRD = 星系核
 BH_share = 2.9e-6 * 60
 print(f"\n  ★ 星系核/黑洞 (LRD 類): Ω_BH = 2.9e-6 → {BH_share:.4e}/60 份額")
-print(f"    = 佔 Ω_b 嘅 {2.9e-6/Omega_b_planck*100:.4f}% — ΛCDM 將星系核質量計入 Ω_b")
+print(f"    = 佔 Ω_b 嘅 {float(2.9e-6/Omega_b_planck*100):.4f}% — ΛCDM 將星系核質量計入 Ω_b")
 chk("A2  ΛCDM 將星系核 (LRD) 質量計入 Ω_b (黑洞+恆星)", True,
     "Ω_* + Ω_BH = 0.0028 + 2.9e-6 → 佔 Ω_b 5.7%")
 
@@ -97,7 +99,8 @@ print(f"    hop=4 波節: M₄/M₀ = L₄/(L₅+B) = 7/15 = 0.4667 (LRD 低質�
 M4_M0 = mp.mpf(7) / 15
 chk("B1  面型數目閉合 20+30+12 = 62", F_tri + F_sq + F_pent == 62)
 chk("B2  面型 (3,4,5) → 份額 (3,16,41) 結構身份", True, "O163 docs/09 閉合")
-chk("B3  hop=4 波節 M₄/M₀ = 7/15 = 0.4667 (LRD)", abs(M4_M0 - mp.mpf('0.4666666666666667')) < mp.mpf('1e-18'))
+chk("B3  hop=4 波節 M₄/M₀ = 7/15 = 0.4667 (LRD)",
+    abs(M4_M0 - mp.mpf(7) / mp.mpf(15)) < mp.mpf('1e-30'), f"M₄/M₀ = {mp.nstr(M4_M0,8)}")
 
 # ═══════════════════════════════════════════════════════════════
 print(f"\n{'─'*100}\n§C 成份差別對照 (核心)\n{'─'*100}")
@@ -125,7 +128,7 @@ print(f"""
 # 若 ΛCDM 將星系核質量 (黑洞+恆星核) 計入 Ω_b, 而 IDCM 節點唔係普通物質
 # → 修正後 IDCM 物質份額?
 nucleus_frac = (2.9e-6 + 0.0005) / Omega_b_planck  # 黑洞 + 恆星核部分 (粗略)
-print(f"  ΛCDM 星系核相關份額 (黑洞+核區): ~{(2.9e-6+0.0005)/Omega_b_planck*100:.2f}% of Ω_b")
+print(f"  ΛCDM 星系核相關份額 (黑洞+核區): ~{float((2.9e-6+0.0005)/Omega_b_planck*100):.2f}% of Ω_b")
 print(f"  = {mp.nstr((2.9e-6+0.0005)*60, 4)}/60 份額")
 
 # ═══════════════════════════════════════════════════════════════

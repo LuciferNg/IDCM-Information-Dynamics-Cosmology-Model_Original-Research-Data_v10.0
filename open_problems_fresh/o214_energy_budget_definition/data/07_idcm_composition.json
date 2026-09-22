@@ -1,0 +1,28 @@
+{
+  "checks_pass": 10,
+  "checks_total": 10,
+  "geometry": {
+    "V": 60,
+    "F3": 20,
+    "F4": 30,
+    "F5": 12,
+    "identity": "60 = a + 2b^2 + c^2 = 3+32+25",
+    "shares": [
+      3,
+      16,
+      41
+    ]
+  },
+  "node_LRD": {
+    "hop4_mass_ratio": 0.4666666666666667,
+    "M_pred_Msun": 1910000.0,
+    "M_obs_median_Msun": 6970000.0,
+    "n_lrd": 434
+  },
+  "mass_fraction": {
+    "rho_BH": 440000.0,
+    "rho_star": 350000000.0,
+    "frac_BH": 0.0012555644332838717
+  },
+  "conclusion": "IDCM 3/60 原始成份 = 面型邊數 a=3 (幾何) = N_gen (世代) + 60 節點 LRD/星系核凝聚位; 星系核質量佔物質 <0.2%, ΛCDM Ω_b 對星系核唔敏感"
+}
