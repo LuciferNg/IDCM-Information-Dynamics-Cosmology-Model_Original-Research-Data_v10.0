@@ -1,0 +1,8 @@
+{
+  "note": "P-C5 => carrier ripple=0; falsifiable by CTA/LHAASO eta>1e-18",
+  "carrier_vph_dev": 0.0,
+  "D_Gpc": 5.0,
+  "Dc_s": 5.1463936427646886e+17,
+  "eta_100s": 1.9431082606863922e-16,
+  "fix_2026-09-22": "5 Gpc \u5149\u884c\u6642\u55ae\u4f4d bug \u4fee\u6b63 (1e6): Dc_s = 5.1464e17 s"
+}

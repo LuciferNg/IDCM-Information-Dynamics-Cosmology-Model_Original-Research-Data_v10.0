@@ -1,0 +1,21 @@
+{
+  "claims": [
+    "C1_local_correlator"
+  ],
+  "results": [
+    {
+      "label": "\u672c\u5730 C_l \u5cf0\u4f4d\u516c\u5f0f\u5187 transport \u53c3\u6578 (\u7121 L / \u8ddd\u96e2 / v_g)",
+      "pass": true
+    },
+    {
+      "label": "\u672c\u5730\u6bcd\u8868 A7 \u986f\u8457\u4e0d\u540c\u65bc 1/r\u00b2 \u8870\u6e1b (\u8b49\u660e\u5e45\u5ea6\u975e\u53ea\u7531\u50b3\u64ad\u8ddd\u96e2\u6c7a\u5b9a)",
+      "pass": true
+    },
+    {
+      "label": "cross-mode phase dispersion = 0 (\u7d14 local, \u7121 transfer delay)",
+      "pass": true
+    }
+  ],
+  "n_pass": 3,
+  "n_total": 3
+}

@@ -1,0 +1,30 @@
+{
+  "DDR_ldDm_scan": [
+    {
+      "eta": 0.857,
+      "chi2": 7596.2
+    },
+    {
+      "eta": 1.0,
+      "chi2": 6223.4
+    },
+    {
+      "eta": 1.5,
+      "chi2": 2936.3
+    },
+    {
+      "eta": 2.0,
+      "chi2": 2002.1
+    },
+    {
+      "eta": 2.5,
+      "chi2": 3420.9
+    }
+  ],
+  "IDM_011_ch2": 7596.2,
+  "LCDM_DAR_chi2": 2002.1,
+  "dchi2_IndepDA": 5594.1,
+  "DDR_verdict": "O99_DDR_LIKELY_DEAD: D_A=\u039bCDM \u4e0b fit \u5462\u628a eta=2.0 \u66f4\u4f73",
+  "lensing_status": "RED_open_not_closed",
+  "GRB_status": "compatible_zero_disp"
+}

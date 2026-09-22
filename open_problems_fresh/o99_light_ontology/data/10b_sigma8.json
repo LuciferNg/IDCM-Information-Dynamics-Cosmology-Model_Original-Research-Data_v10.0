@@ -1,0 +1,9 @@
+{
+  "sigma8_idcm": 0.0859,
+  "sigma8_obs": 0.8,
+  "A_phiphi_omega_part": 0.9697,
+  "A_phiphi_with_sigma8": 0.01118,
+  "status": "RED_sigma8_gap_9x",
+  "n_pass": 0,
+  "n_tot": 2
+}

@@ -1,0 +1,10 @@
+{
+  "pk_los": 135.7267127156864,
+  "pk_layer": 148.71154628089536,
+  "std_log_los": 0.18129889709927366,
+  "std_log_layer": 0.19284739728365355,
+  "O99v": "2.0 local-in-layer",
+  "n_pass": 3,
+  "n_tot": 3,
+  "shape_equiv": true
+}

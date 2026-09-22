@@ -1,0 +1,7 @@
+{
+  "note": "O99-A projection operator: carrier=c via ring identity, mods<c",
+  "ring_c_km_s": 299792.458,
+  "max_mode_vgc": 0.9993628256569917,
+  "n_pass": 4,
+  "n_tot": 4
+}

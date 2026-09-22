@@ -1,0 +1,7 @@
+{
+  "note": "C1 lensing: local flat 4pt vs LOS shape \u2014 structural mismatch, need layer-projection bridge",
+  "A_phiphi_obs": 1.01,
+  "lensing_structural": "mismatch_requires_layer_bridge",
+  "n_pass": 3,
+  "n_tot": 3
+}

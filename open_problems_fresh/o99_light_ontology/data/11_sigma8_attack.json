@@ -1,0 +1,11 @@
+{
+  "sigma8_gap": "K_Chain sub-grid 40x; O91 script sigma=0.086 vs obs 0.8",
+  "k_max_chain": 0.010653907804956005,
+  "k_8_eff": 0.39,
+  "levels_needed": 2.597009758677399,
+  "routeC": "O86 closed #6 RED: W-field perturbation out of scope",
+  "needs": "BOSS D(z) calibration or perturbation theory",
+  "status": "RED_not_closed",
+  "n_pass": 0,
+  "n_tot": 2
+}
