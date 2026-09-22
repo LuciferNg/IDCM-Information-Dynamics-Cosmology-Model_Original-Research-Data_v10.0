@@ -153,6 +153,7 @@ m_n = M₀ · ω_n · C_b = M₀ · √γ_n · 1 = M₀ · 2sin(πn/88), n = 1..
 | 09-22 | `scripts/08_tower_observation.py`（塔觀察執行） | 10/10 PASS | docs/08 m₇ vs 現行實驗 |
 | 09-22 | `scripts/09_coincidence_90.py`（巧合線索 look-elsewhere） | 8/8 PASS | docs/09 巧合關閉 |
 | 09-22 | `scripts/10_gemini_check.py`（Gemini 修正核實 G1/G2/G3） | 11/11 PASS | docs/10 m₇ 生存狀態更新 |
+| 09-22 | `scripts/11_mapping_mechanism.py`（映射機制: m₇→NA64 scalar） | 5/5 PASS | docs/11 映射方案 |
 
 依賴鏈: O37→O38→O39→O82→O83→O164→O204→O206→**O207**（B4 引用 O86 N5）
 

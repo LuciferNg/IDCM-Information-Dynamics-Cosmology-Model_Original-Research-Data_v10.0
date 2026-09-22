@@ -296,7 +296,7 @@ chk('審計', 'F2 scripts/docs 全部喺 bootstrap 日 (09-21) 之後建立', al
 
 # F3: docs 編號順序 01→10
 doc_nums = sorted(int(f.split('_')[0]) for f in os.listdir(os.path.join(o207_dir, 'docs')))
-chk('審計', 'F3 docs 編號連續 01-10', doc_nums == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], f'(={doc_nums})')
+chk('審計', 'F3 docs 編號連續 01-11', doc_nums == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], f'(={doc_nums})')
 
 # ============================================================
 print('\n' + '=' * 78)
