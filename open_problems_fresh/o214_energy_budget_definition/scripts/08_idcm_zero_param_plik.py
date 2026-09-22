@@ -10,7 +10,7 @@ O214 — Script 08: IDCM 零參數套入 Planck 2018 Plik_lite RAW
      τ=0.0544, As=2.1e-9 (Planck 2018) — 參考 χ²
   ② IDCM 零參數: Ω_b=3/60, Ω_dm=16/60, Ω_Λ=41/60 (60 份閉合)
      → ombh2 = (3/60)·h², omch2 = (16/60)·h²
-     → h 係 IDCM 自由度? IDCM h 未閉合 (O38 🔴) — 掃描 h ∈ {0.674, 0.7116}
+     → h 係 IDCM 自由度? IDCM h 未閉合 (O170 vs O73) — 掃描 h ∈ {0.674, 0.7116}
      → ns/τ/As 用 Planck 側 (IDCM 冇結構值, 標明借用)
   ③ 比較 χ²(dof): IDCM 零參數 vs ΛCDM fit — +1.54%/+1.84% 能否填平?
 
@@ -105,7 +105,7 @@ print(f"    χ² = {chi_lcdm:.1f} / 612 dof = {chi_lcdm/612:.2f}/dof (As={As_lcd
 # h 未閉合 → 掃描 Planck h 同 IDCM h
 print("\n  IDCM 零參數 (Ω_b=3/60, Ω_dm=16/60, 60 份閉合):")
 idcm_results = {}
-for h_name, h in [("h=0.674 (Planck)", 0.674), ("h=0.7116 (IDCM O38)", 0.7116),
+for h_name, h in [("h=0.674 (Planck)", 0.674), ("h=0.7116 (O170 徑向律)", 0.7116),
                   ("h=0.7071 (=1/√2)", 0.7071)]:
     ombh2_idcm = (3/60) * h**2
     omch2_idcm = (16/60) * h**2
@@ -152,7 +152,7 @@ chk("C1  純 Ω_b 通道 +1.54% 對 χ² 影響顯著 (Δχ² ≈ +18, 612 dof �
     True, "IDCM Ω_b 0.02271 χ²=602.0 vs ΛCDM 583.7 → Δχ²=+18.4 (唔係填平, 係 tension)")
 chk("C2  IDCM 全零參數 (h=0.674) Δχ² = +14.7 — 冇填平 (Ω_dm 0.1211 略高抵消)", True,
     "χ²=598.4 vs 583.7")
-chk("C3  IDCM h 未閉合 → Ω_dm 份額直接跟 h² 縮放 (O38 🔴 影響)", True)
+chk("C3  IDCM h 未閉合 → Ω_dm 份額直接跟 h² 縮放 (O170 vs O73)", True)
 
 n_pass = sum(1 for _, ok in checks if ok)
 print(f"\n{'='*100}\nRESULT: {n_pass}/{len(checks)} PASS\n{'='*100}")
@@ -168,6 +168,6 @@ with open(OUT / "08_idcm_zero_param_plik.json", "w") as f:
                                 "chi2": float(v["chi2"]), "As": float(v["As"])}
                             for k, v in idcm_results.items()},
         "single_channel": "§B",
-        "verdict": "bug 修正後 ΛCDM fit 0.02246 (+0.40%); IDCM 零參數能否填平取決於 h: h=0.674 時 Ω_dm 啱 → Δχ² 細; h=0.7116 時 Ω_dm +12.7% → Δχ² 大 (H0 張力 O38 🔴)",
+        "verdict": "bug 修正後 ΛCDM fit 0.02246 (+0.40%); IDCM 零參數能否填平取決於 h: h=0.674 時 Ω_dm 啱 → Δχ² 細; h=0.7116 時 Ω_dm +12.7% → Δχ² 大 (O170 徑向律 H0 張力)",
     }, f, ensure_ascii=False, indent=2)
 print("✅ 寫入 data/08_idcm_zero_param_plik.json")

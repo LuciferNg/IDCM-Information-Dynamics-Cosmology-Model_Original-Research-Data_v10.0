@@ -63,7 +63,7 @@ print(f"\n{'─'*100}\n§B Connor 2025 FRB 晚期宇宙測量 vs IDCM\n{'─'*10
 # IDCM: Ω_b = 3/60 = 0.05
 # 對照: Ω_b h70(IDCM) = 0.05 × (H₀/70)²
 for H0_label, H0 in [("H₀=70 (Connor 定義)", 70), ("H₀=67.4 (Planck)", 67.4),
-                     ("H₀=71.2 (IDCM O38)", 71.2)]:
+                     ("H₀=71.2 (O170 徑向律)", 71.2)]:
     h70 = H0 / 70
     Omega_b_h70_idcm = 0.05 * h70**2
     dev = (Omega_b_h70_idcm - 0.051) / 0.006

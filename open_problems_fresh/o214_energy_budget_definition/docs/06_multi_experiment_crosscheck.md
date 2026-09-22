@@ -107,7 +107,7 @@ CAMB D_ℓ (μK²) → bin via windows → χ² = (model−data)ᵀ C⁻¹ (mode
 | DESI DR2 BAO | H₀, Ω_m (間接 Ω_b) | 🟡 o170 有數據 | D_M/r_d, D_H/r_d 6 bins |
 | SDSS/BOSS BAO | H₀ | 🟡 o170 有 | 系統地板 ~2% |
 | z=0 重子預算 | Ω_b (直接數) | 🔴 未下載 | GAMA/IGM/星系團 f_gas |
-| SH0ES/TRGB/Maser | H₀ | 🟡 O38 相關 | 影響 Ω_b = Ω_b h²/h² |
+| SH0ES/TRGB/Maser | H₀ | 🟡 O167/O170/O73 相關 | 影響 Ω_b = Ω_b h²/h² |
 
 ## §6 驗證
 - scripts/09_spt3g_fit.py: **1/1 PASS** (SPT-3G 獨立 fit)

@@ -118,7 +118,7 @@ chk("C3  兩通道 (份額 vs 新 BBN) 差異 < 2.5% (同框架內部一致性)"
 # ═══════════════════════════════════════════════════════════════
 print(f"\n{'─'*100}\n§D 通道 3: h 一致性 — Ω_b h² 比較嘅 h 依賴\n{'─'*100}")
 # Ω_b = 3/60 = 0.05 係份額 (無量綱). 要對 Ω_b h² = 0.02237 就要乘 h².
-# IDCM 自己嘅 h 係邊個? O38/O170: H₀ = 71.157 → h = 0.71157 (已標 🔴 M₀ 標度)
+# IDCM 自己嘅 h 係邊個? O170 徑向律: H₀ = 71.157 → h = 0.71157 (O170 預言, 非 O38)
 # 但 ΛCDM 嘅 Ω_b h² 係 h 無關嘅觀測量 (Planck 直接 fit).
 # 若用 IDCM h = 0.7116: Ω_b h² = 0.05 × 0.7116² = 0.02532 → +13% — 呢個係 H₀ 張力, 唔係 Ω_b 定義問題
 h_idcm = 0.71157
@@ -126,7 +126,7 @@ pred_bh2_idcm_h = (3/60) * h_idcm**2
 dev_hidcm = (pred_bh2_idcm_h - OBS["Omega_b_h2"][0]) / OBS["Omega_b_h2"][0] * 100
 sig_hidcm = (pred_bh2_idcm_h - OBS["Omega_b_h2"][0]) / OBS["Omega_b_h2"][1]
 print(f"  h = 0.674 (Planck):   Ω_b h² = {pred_bh2:.5f}  ({dev:+.2f}%, {sig:+.2f}σ)")
-print(f"  h = 0.7116 (IDCM O38): Ω_b h² = {pred_bh2_idcm_h:.5f}  ({dev_hidcm:+.2f}%, {sig_hidcm:+.2f}σ)")
+print(f"  h = 0.7116 (O170 徑向律): Ω_b h² = {pred_bh2_idcm_h:.5f}  ({dev_hidcm:+.2f}%, {sig_hidcm:+.2f}σ)")
 chk("D1  Ω_b h² 比較高度依賴 h (0.674 vs 0.7116 → 1.4% vs 13%)",
     abs(sig) < 3 and abs(sig_hidcm) > 3, f"{sig:+.2f}σ vs {sig_hidcm:+.2f}σ")
 # ΛCDM Ω_b 本質上係 BBN 量出嚟: Planck Ω_b h² = 0.02237 ⟺ η₁₀ = 6.104 (CMB damping + BBN D/H)
@@ -155,7 +155,7 @@ print("""
      - 舊 η_B = 6.0636e-10 (−0.60%) 係 stale, 唔可以攞嚟話「BBN 通道冇 tension」
   ② h 依賴:
      - 用 Planck h = 0.674:  +1.4% (2.3σ 🟡)
-     - 用 IDCM h = 0.7116:   +13% (19σ 🔴) ← 但呢個係 H₀ 張力 (O38 已標 🔴 M₀ 標度),
+     - 用 IDCM h = 0.7116:   +13% (19σ 🔴) ← O170 徑向律 H₀ 張力 (O170 vs O73 內部),
        唔係 Ω_b 定義問題 — IDCM H₀ 本身未閉合; BBN η_B 通道同樣受 h 依賴影響
   ③ ΛCDM 側定義:
      - Planck Ω_b h² 本質由 CMB 阻尼尾 + BBN 定出 (η_B 通道)
