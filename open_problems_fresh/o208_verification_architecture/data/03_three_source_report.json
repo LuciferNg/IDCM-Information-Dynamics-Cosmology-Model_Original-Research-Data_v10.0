@@ -1,0 +1,5221 @@
+{
+  "root": ".",
+  "dirs": 204,
+  "readme_rows": 135,
+  "with_refs": 155,
+  "conflicts": 39,
+  "rate": 74.83870967741936,
+  "rows": [
+    {
+      "O": 1,
+      "dir": "o1_edge_length",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 2,
+      "dir": "o2_hot_spot_levels",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 3,
+      "dir": "o3_node_temperatures",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 4,
+      "dir": "o4_renew",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 5,
+      "dir": "o5_catalog_compare",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 6,
+      "dir": "o6_antipode_check",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 7,
+      "dir": "o7_frustration_distribution",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 8,
+      "dir": "o8_scale_radius",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 9,
+      "dir": "o9_high_ell_peaks",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 10,
+      "dir": "o10_peak_amplitudes",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 0
+    },
+    {
+      "O": 11,
+      "dir": "o11_maser_h0",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 0
+    },
+    {
+      "O": 12,
+      "dir": "o12_he3_primordial",
+      "A_SESSION_START": null,
+      "B_README": "🟡",
+      "C_refs_count": 0
+    },
+    {
+      "O": 13,
+      "dir": "o13_np_ratio_mechanism",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 14,
+      "dir": "o14_omega_b_direct",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 15,
+      "dir": "o15_li7_linearity",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 16,
+      "dir": "o16_cepheid_pl",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 1
+    },
+    {
+      "O": 17,
+      "dir": "o17_trgb_miras",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 18,
+      "dir": "o18_heff_highz",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 19,
+      "dir": "o19_lowl_dodecahedron",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 20,
+      "dir": "o20_eb_polarization",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 21,
+      "dir": "o21_node9_anomaly",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 22,
+      "dir": "o22_antipodal_temp",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 23,
+      "dir": "o23_zeroE_sign_match",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 24,
+      "dir": "o24_extreme_side_asym",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 25,
+      "dir": "o25_scale_spectrum",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 26,
+      "dir": "o26_node57_region",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 27,
+      "dir": "o27_node47_foreground",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 28,
+      "dir": "o28_gp10_mask",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 29,
+      "dir": "o29_p072_decompose",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 30,
+      "dir": "o30_node_systematics",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 1
+    },
+    {
+      "O": 31,
+      "dir": "o31_xi_zeros_fixedpoints",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 32,
+      "dir": "o32_galaxy_rotation",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 33,
+      "dir": "o33_projection_mechanism",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 34,
+      "dir": "o34_observer_introspection",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 26
+    },
+    {
+      "O": 35,
+      "dir": "o35_beats_mass_linkup",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 62
+    },
+    {
+      "O": 36,
+      "dir": "o36_wfield_resonance_dynamics",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 9,
+      "C_conflicts": [
+        {
+          "target": 34,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/03_observer_readout.py",
+          "line": 164
+        }
+      ]
+    },
+    {
+      "O": 37,
+      "dir": "o37_wfield_lagrangian",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 23
+    },
+    {
+      "O": 38,
+      "dir": "o38_kappa_prediction",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 36
+    },
+    {
+      "O": 39,
+      "dir": "o39_wfield_condensate",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 25
+    },
+    {
+      "O": 40,
+      "dir": "o40_wfield_remaining",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 40
+    },
+    {
+      "O": 41,
+      "dir": "o41_observer_budget",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 16
+    },
+    {
+      "O": 42,
+      "dir": "o42_independent_measurement_A",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 43,
+      "dir": "o43_holographic_untested",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 44,
+      "dir": "o44_residual_decompose",
+      "A_SESSION_START": null,
+      "B_README": "✅",
+      "C_refs_count": 1
+    },
+    {
+      "O": 45,
+      "dir": "o45_smhw_verify",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 0
+    },
+    {
+      "O": 46,
+      "dir": "o46_multifreq_isw",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 2
+    },
+    {
+      "O": 47,
+      "dir": "o47_rh_omegalink",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 8
+    },
+    {
+      "O": 48,
+      "dir": "o48_prime_peak",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 3
+    },
+    {
+      "O": 49,
+      "dir": "o49_neutrino_mass",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 39,
+      "C_conflicts": [
+        {
+          "target": 57,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_structural_closure.py",
+          "line": 157
+        },
+        {
+          "target": 57,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_structural_closure.py",
+          "line": 194
+        }
+      ]
+    },
+    {
+      "O": 50,
+      "dir": "o50_cy3_intersection",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 0
+    },
+    {
+      "O": 51,
+      "dir": "o51_kchain_origin",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 7
+    },
+    {
+      "O": 52,
+      "dir": "o52_node_systematics",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 2
+    },
+    {
+      "O": 53,
+      "dir": "o53_cy3_reality",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 3
+    },
+    {
+      "O": 54,
+      "dir": "o54_antimatter_abundance",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 24,
+      "C_conflicts": [
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/03_cp_phase_relation.py",
+          "line": 138
+        },
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_annihilation_cosmic_rays.py",
+          "line": 120
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/08_wfield_second_quantization.py",
+          "line": 136
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_cy3_charge_spinor.py",
+          "line": 111
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/17_positron_pair_production.py",
+          "line": 137
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/19_charge_pairing_proof.py",
+          "line": 142
+        },
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/31_pf_phi9_intersection.py",
+          "line": 362
+        }
+      ]
+    },
+    {
+      "O": 55,
+      "dir": "o55_cf_sm_center_z3",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 56,
+      "dir": "o56_kchain_moduli_lock",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 0
+    },
+    {
+      "O": 57,
+      "dir": "o57_cy3_projection_gen",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 51,
+      "C_conflicts": [
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/38_correct_kappa.py",
+          "line": 5
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/38_correct_kappa.py",
+          "line": 72
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/38_correct_kappa.py",
+          "line": 121
+        }
+      ]
+    },
+    {
+      "O": 58,
+      "dir": "o58_cy3_toric_palp",
+      "A_SESSION_START": "🟢",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 6
+    },
+    {
+      "O": 59,
+      "dir": "o59_z3_12_subspace",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 20
+    },
+    {
+      "O": 60,
+      "dir": "o60_galaxy_mergers",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 7
+    },
+    {
+      "O": 61,
+      "dir": "o61_aij_moduli",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 0
+    },
+    {
+      "O": 62,
+      "dir": "o62_lambda_first_principles",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 6
+    },
+    {
+      "O": 63,
+      "dir": "o63_mbb_prediction",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 64,
+      "dir": "o64_sector_fermions",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 17
+    },
+    {
+      "O": 65,
+      "dir": "o65_mixing_first_principles",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 4,
+      "C_conflicts": [
+        {
+          "target": 57,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/03_unification.py",
+          "line": 390
+        },
+        {
+          "target": 57,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_final_verification.py",
+          "line": 185
+        }
+      ]
+    },
+    {
+      "O": 66,
+      "dir": "o66_mcomp_first_principles",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 9
+    },
+    {
+      "O": 67,
+      "dir": "o67_sm_labels",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 68,
+      "dir": "o68_gamma6_2power",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 3
+    },
+    {
+      "O": 69,
+      "dir": "o69_gamma_spectrum",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 70,
+      "dir": "o70_155_curves",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 6,
+      "C_conflicts": [
+        {
+          "target": 57,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/22_exact_extreme_rays_sage.py",
+          "line": 5
+        },
+        {
+          "target": 57,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/23_exact_kahler_extreme_sage.py",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "O": 71,
+      "dir": "o71_sum_mnu",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 0
+    },
+    {
+      "O": 72,
+      "dir": "o72_kchain_ktree_reality",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 131,
+      "C_conflicts": [
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_H3_33_44_same_origin.py",
+          "line": 115
+        },
+        {
+          "target": 59,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_H3_33_44_same_origin.py",
+          "line": 115
+        },
+        {
+          "target": 54,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_field_theorist_audit.py",
+          "line": 81
+        },
+        {
+          "target": 56,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_field_theorist_audit.py",
+          "line": 81
+        },
+        {
+          "target": 76,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 79
+        },
+        {
+          "target": 77,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 80
+        },
+        {
+          "target": 78,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 81
+        },
+        {
+          "target": 81,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 84
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 87
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 88
+        },
+        {
+          "target": 82,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 92
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 95
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "O": 73,
+      "dir": "o73_h0_first_principles",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 97,
+      "C_conflicts": [
+        {
+          "target": 99,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/24_c_first_principles.py",
+          "line": 178
+        },
+        {
+          "target": 99,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/24_c_first_principles.py",
+          "line": 181
+        },
+        {
+          "target": 99,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/24_c_first_principles.py",
+          "line": 227
+        },
+        {
+          "target": 99,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/24_c_first_principles.py",
+          "line": 235
+        }
+      ]
+    },
+    {
+      "O": 74,
+      "dir": "o74_projection_mechanism",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 27,
+      "C_conflicts": [
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/03_qft_decoupling.py",
+          "line": 364
+        }
+      ]
+    },
+    {
+      "O": 75,
+      "dir": "o75_naming_convention",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 3
+    },
+    {
+      "O": 76,
+      "dir": "o76_z_redshift_translation",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 5
+    },
+    {
+      "O": 77,
+      "dir": "o77_occam_deep",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 39
+    },
+    {
+      "O": 78,
+      "dir": "o78_observer_reframing",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 12
+    },
+    {
+      "O": 79,
+      "dir": "o79_postdiction_vs_prediction",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 45
+    },
+    {
+      "O": 80,
+      "dir": "o80_wfield_lagrangian",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 50,
+      "C_conflicts": [
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/05_path_integral_correlator.py",
+          "line": 217
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_gauge_boundary.py",
+          "line": 147
+        },
+        {
+          "target": 72,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_audit.py",
+          "line": 118
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/07_final_audit.py",
+          "line": 121
+        },
+        {
+          "target": 72,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_audit.py",
+          "line": 123
+        },
+        {
+          "target": 82,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_audit.py",
+          "line": 123
+        },
+        {
+          "target": 72,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_audit.py",
+          "line": 125
+        },
+        {
+          "target": 81,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/08_record_verify.py",
+          "line": 196
+        }
+      ]
+    },
+    {
+      "O": 81,
+      "dir": "o81_eom_unification",
+      "A_SESSION_START": "🟡",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 36,
+      "C_conflicts": [
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/11_doc_crosscheck.py",
+          "line": 342
+        }
+      ]
+    },
+    {
+      "O": 82,
+      "dir": "o82_mass_generation",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 96,
+      "C_conflicts": [
+        {
+          "target": 86,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/01_translation_framework.py",
+          "line": 157
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_lagrangian_integration.py",
+          "line": 58
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_lagrangian_integration.py",
+          "line": 85
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 48
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 63
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 87
+        },
+        {
+          "target": 76,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 87
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 87
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 271
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 274
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 278
+        },
+        {
+          "target": 76,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 278
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 278
+        },
+        {
+          "target": 72,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 297
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 300
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 301
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 106
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_closure.py",
+          "line": 109
+        },
+        {
+          "target": 87,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_closure.py",
+          "line": 111
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 129
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 129
+        },
+        {
+          "target": 76,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 129
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 187
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 202
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_closure.py",
+          "line": 205
+        },
+        {
+          "target": 87,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_closure.py",
+          "line": 207
+        }
+      ]
+    },
+    {
+      "O": 83,
+      "dir": "o83_correlator_cmb",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 7
+    },
+    {
+      "O": 84,
+      "dir": "o84_vacuum_energy_unified",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 30
+    },
+    {
+      "O": 85,
+      "dir": "o85_su12_breaking",
+      "A_SESSION_START": "🟢",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 47
+    },
+    {
+      "O": 86,
+      "dir": "o86_sm_gr_coupling",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 80
+    },
+    {
+      "O": 87,
+      "dir": "o87_mode_1496_physics",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 3
+    },
+    {
+      "O": 88,
+      "dir": "o88_anomaly_fermion_rep",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 1
+    },
+    {
+      "O": 89,
+      "dir": "o89_mass_hierarchy_coupling",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 12
+    },
+    {
+      "O": 90,
+      "dir": "o90_extra_u1_vacuum_energy",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 91,
+      "dir": "o91_s8_tension",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 10
+    },
+    {
+      "O": 92,
+      "dir": "o92_kids_s8",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 7
+    },
+    {
+      "O": 93,
+      "dir": "o93_cc_hz",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 4,
+      "C_conflicts": [
+        {
+          "target": 94,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_route_b_fwm_d14.py",
+          "line": 334
+        }
+      ]
+    },
+    {
+      "O": 94,
+      "dir": "o94_field_theorist_validation",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 6
+    },
+    {
+      "O": 95,
+      "dir": "o95_44_necessity",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 10
+    },
+    {
+      "O": 96,
+      "dir": "o96_su12_origin",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 26
+    },
+    {
+      "O": 97,
+      "dir": "o97_phi_cosmic_origin",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 7
+    },
+    {
+      "O": 98,
+      "dir": "o98_lcdm_ionization_deviation",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 25
+    },
+    {
+      "O": 99,
+      "dir": "o99_light_ontology",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 19
+    },
+    {
+      "O": 100,
+      "dir": "o100_cl_to_pk",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 23,
+      "C_conflicts": [
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_remaining_items.py",
+          "line": 67
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_remaining_items.py",
+          "line": 68
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_remaining_items.py",
+          "line": 99
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_remaining_items.py",
+          "line": 135
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_p3_p4.py",
+          "line": 114
+        }
+      ]
+    },
+    {
+      "O": 101,
+      "dir": "o101_1plus11_spectrum",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 22,
+      "C_conflicts": [
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/01_analyze_1plus11.py",
+          "line": 183
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/01_analyze_1plus11.py",
+          "line": 184
+        },
+        {
+          "target": 109,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/01_analyze_1plus11.py",
+          "line": 185
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 315
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 316
+        },
+        {
+          "target": 109,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 318
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 321
+        },
+        {
+          "target": 109,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 321
+        }
+      ]
+    },
+    {
+      "O": 102,
+      "dir": "o102_12_pentagons_su12",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 6
+    },
+    {
+      "O": 103,
+      "dir": "o103_ngen3_mechanism",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 8
+    },
+    {
+      "O": 104,
+      "dir": "o104_i_star_d_app_bridge",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 1
+    },
+    {
+      "O": 105,
+      "dir": "o105_pi144_structure",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 10
+    },
+    {
+      "O": 106,
+      "dir": "o106_i_star_decomposition",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 7
+    },
+    {
+      "O": 107,
+      "dir": "o107_extra_u1_physical",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 58,
+      "C_conflicts": [
+        {
+          "target": 114,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/01_extra_u1_physical_analysis.py",
+          "line": 558
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/03_causal_hierarchy.py",
+          "line": 122
+        }
+      ]
+    },
+    {
+      "O": 108,
+      "dir": "o108_vl_mass_spectrum",
+      "A_SESSION_START": "✅",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 4
+    },
+    {
+      "O": 109,
+      "dir": "o109_lambda2_fermion",
+      "A_SESSION_START": "🟢",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 5
+    },
+    {
+      "O": 110,
+      "dir": "o110_system_integration",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 119
+    },
+    {
+      "O": 111,
+      "dir": "o111_vlambda_residuals",
+      "A_SESSION_START": null,
+      "B_README": "🔴",
+      "C_refs_count": 2
+    },
+    {
+      "O": 112,
+      "dir": "o112_968_tcmb_cross_validation",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 6
+    },
+    {
+      "O": 113,
+      "dir": "o113_88_90_lagrangian_entry",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 9
+    },
+    {
+      "O": 114,
+      "dir": "o114_sm_phenomenology",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 1
+    },
+    {
+      "O": 115,
+      "dir": "o115_framework_completeness",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟡",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 100
+    },
+    {
+      "O": 116,
+      "dir": "o116_dm_abundance",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 10
+    },
+    {
+      "O": 117,
+      "dir": "o117_dh_line_of_sight",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 7,
+      "C_conflicts": [
+        {
+          "target": 118,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/09_first_principles_closure.py",
+          "line": 152
+        }
+      ]
+    },
+    {
+      "O": 118,
+      "dir": "o118_desi_highz_residuals",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 3
+    },
+    {
+      "O": 119,
+      "dir": "o119_positron_excess",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 7
+    },
+    {
+      "O": 120,
+      "dir": "o120_light_quark_masses",
+      "A_SESSION_START": "🟡",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 19
+    },
+    {
+      "O": 121,
+      "dir": "o121_black_hole_entropy",
+      "A_SESSION_START": "✅",
+      "B_README": "✅",
+      "C_refs_count": 9
+    },
+    {
+      "O": 122,
+      "dir": "o122_feynman_rules_wfield",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 35
+    },
+    {
+      "O": 123,
+      "dir": "o123_neutrino_delta_cp",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 124,
+      "dir": "o124_qcd_gluon_scattering",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 125,
+      "dir": "o125_scattering_amplitudes",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 126,
+      "dir": "o126_runtime_isa_verification",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 127,
+      "dir": "o127_anisotropic_xi_cosmic_web",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 128,
+      "dir": "o128_sigma8_normalization",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 129,
+      "dir": "o129_sigma_sync_transition",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 130,
+      "dir": "o130_wavelet_analysis_tools",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 2
+    },
+    {
+      "O": 131,
+      "dir": "o131_stacking_analysis",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 2
+    },
+    {
+      "O": 132,
+      "dir": "o132_redshift_evolution",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 2
+    },
+    {
+      "O": 133,
+      "dir": "o133_pk_chain_spectrum",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 36
+    },
+    {
+      "O": 134,
+      "dir": "o134_cy3_topological_operator",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 135,
+      "dir": "o135_structural_forcing_closure",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 136,
+      "dir": "o136_quark_mass_spectrum",
+      "A_SESSION_START": "🟡",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 186,
+      "C_conflicts": [
+        {
+          "target": 34,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/25_symmetric_density.py",
+          "line": 129
+        },
+        {
+          "target": 81,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/33_a5_projection_spectrum.py",
+          "line": 5
+        },
+        {
+          "target": 120,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/64_two_modesets_crosscheck.py",
+          "line": 143
+        },
+        {
+          "target": 120,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/64_two_modesets_crosscheck.py",
+          "line": 144
+        }
+      ]
+    },
+    {
+      "O": 137,
+      "dir": "o137_cy3_topological_resonance",
+      "A_SESSION_START": "🔴",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 25,
+      "C_conflicts": [
+        {
+          "target": 57,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 8
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 9
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 10
+        },
+        {
+          "target": 57,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 200
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 201
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 202
+        }
+      ]
+    },
+    {
+      "O": 138,
+      "dir": "o138_qm_measurement_structural",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 50,
+      "C_conflicts": [
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_comparison_predictions.py",
+          "line": 114
+        },
+        {
+          "target": 139,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_comparison_predictions.py",
+          "line": 260
+        }
+      ]
+    },
+    {
+      "O": 139,
+      "dir": "o139_finite_qft_to_qed",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 45,
+      "C_conflicts": [
+        {
+          "target": 110,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/03_verification_of_correction.py",
+          "line": 332
+        }
+      ]
+    },
+    {
+      "O": 140,
+      "dir": "o140_finite_spectral_relativity",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 2
+    },
+    {
+      "O": 141,
+      "dir": "o141_data_source_preference",
+      "A_SESSION_START": null,
+      "B_README": "🟡",
+      "C_refs_count": 0
+    },
+    {
+      "O": 142,
+      "dir": "o142_boson_mass_derivation",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 39,
+      "C_conflicts": [
+        {
+          "target": 59,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_closure_attack.py",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "O": 143,
+      "dir": "o143_phase_selection_mechanism",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 32
+    },
+    {
+      "O": 144,
+      "dir": "o144_boson_identity",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 15,
+      "C_conflicts": [
+        {
+          "target": 136,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/03_glueball_ebind.py",
+          "line": 170
+        }
+      ]
+    },
+    {
+      "O": 145,
+      "dir": "o145_22_11_locus",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 21,
+      "C_conflicts": [
+        {
+          "target": 142,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_electroweak_subring.py",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "O": 146,
+      "dir": "o146_beat_existence",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 3
+    },
+    {
+      "O": 147,
+      "dir": "o147_528_holographic_channel",
+      "A_SESSION_START": null,
+      "B_README": null,
+      "C_refs_count": 37
+    },
+    {
+      "O": 148,
+      "dir": "o148_dual_scale_vacuum_budget",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 25
+    },
+    {
+      "O": 149,
+      "dir": "o149_vg_locking",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 2
+    },
+    {
+      "O": 150,
+      "dir": "o150_sky_side_projection",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 21
+    },
+    {
+      "O": 151,
+      "dir": "o151_holographic_channel_capacity",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 51,
+      "C_conflicts": [
+        {
+          "target": 149,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/30_scope_boundaries.py",
+          "line": 121
+        },
+        {
+          "target": 154,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/30_scope_boundaries.py",
+          "line": 122
+        },
+        {
+          "target": 152,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/30_scope_boundaries.py",
+          "line": 122
+        },
+        {
+          "target": 107,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/30_scope_boundaries.py",
+          "line": 124
+        }
+      ]
+    },
+    {
+      "O": 152,
+      "dir": "o152_numbers_as_operators",
+      "A_SESSION_START": null,
+      "B_README": "🟡",
+      "C_refs_count": 20,
+      "C_conflicts": [
+        {
+          "target": 148,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/01_inventory.py",
+          "line": 262
+        }
+      ]
+    },
+    {
+      "O": 153,
+      "dir": "o153_legacy_numbers_redig",
+      "A_SESSION_START": null,
+      "B_README": "🟡",
+      "C_refs_count": 15
+    },
+    {
+      "O": 154,
+      "dir": "o154_rt_superconductor",
+      "A_SESSION_START": null,
+      "B_README": "🟡",
+      "C_refs_count": 9
+    },
+    {
+      "O": 155,
+      "dir": "o155_ktree_eigen_operator",
+      "A_SESSION_START": null,
+      "B_README": "🟡",
+      "C_refs_count": 23
+    },
+    {
+      "O": 156,
+      "dir": "o156_rge_first_principles",
+      "A_SESSION_START": null,
+      "B_README": "🟡",
+      "C_refs_count": 11
+    },
+    {
+      "O": 157,
+      "dir": "o157_bc_energy_functional",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 2
+    },
+    {
+      "O": 158,
+      "dir": "o158_nd_pm_ngen_cluster",
+      "A_SESSION_START": null,
+      "B_README": "🟡",
+      "C_refs_count": 9,
+      "C_conflicts": [
+        {
+          "target": 54,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/22_mu_e_o54_derivation.py",
+          "line": 112
+        }
+      ]
+    },
+    {
+      "O": 159,
+      "dir": "o159_dirichlet_fieldtheory",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 20
+    },
+    {
+      "O": 160,
+      "dir": "o160_spectral_number_scan",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 28,
+      "C_conflicts": [
+        {
+          "target": 158,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/02_constant_web.py",
+          "line": 108
+        },
+        {
+          "target": 158,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/19_mass_pair_mirror.py",
+          "line": 5
+        },
+        {
+          "target": 158,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/19_mass_pair_mirror.py",
+          "line": 93
+        }
+      ]
+    },
+    {
+      "O": 161,
+      "dir": "o161_discrete_action_noether",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 2
+    },
+    {
+      "O": 162,
+      "dir": "o162_projection_optical_defects",
+      "A_SESSION_START": null,
+      "B_README": "?",
+      "C_refs_count": 22
+    },
+    {
+      "O": 163,
+      "dir": "o163_dm_identity",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 8
+    },
+    {
+      "O": 164,
+      "dir": "o164_world_as_beat",
+      "A_SESSION_START": "✅",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 6,
+      "C_conflicts": [
+        {
+          "target": 165,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/02_observational_crosscheck.py",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "O": 165,
+      "dir": "o165_exponential_weight_origin",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 2
+    },
+    {
+      "O": 166,
+      "dir": "o166_tcmb_absolute_value",
+      "A_SESSION_START": "🟡",
+      "B_README": "?",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 5
+    },
+    {
+      "O": 167,
+      "dir": "o167_cmb_h0_tension",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 8
+    },
+    {
+      "O": 168,
+      "dir": "o168_g_last_input",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 69,
+      "C_conflicts": [
+        {
+          "target": 38,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_mp_internal_lock.py",
+          "line": 102
+        },
+        {
+          "target": 167,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/22_omega_ring_closure.py",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "O": 169,
+      "dir": "o169_da_spectral_first_principles",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 9
+    },
+    {
+      "O": 170,
+      "dir": "o170_phase_depth_distance",
+      "A_SESSION_START": null,
+      "B_README": "?",
+      "C_refs_count": 10
+    },
+    {
+      "O": 171,
+      "dir": "o171_a5_partition_theory",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 105,
+      "C_conflicts": [
+        {
+          "target": 10,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/14_r7_peak_discrimination.py",
+          "line": 204
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/43_residual_and_first_principle.py",
+          "line": 149
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/43_residual_and_first_principle.py",
+          "line": 179
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/43_residual_and_first_principle.py",
+          "line": 225
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/44_rworld_decomposition.py",
+          "line": 4
+        },
+        {
+          "target": 201,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/51_rworld_positive_audit.py",
+          "line": 78
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/53_o73_closure_crossref.py",
+          "line": 15
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/53_o73_closure_crossref.py",
+          "line": 224
+        }
+      ]
+    },
+    {
+      "O": 172,
+      "dir": "o172_vsm_mechanism",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 13
+    },
+    {
+      "O": 173,
+      "dir": "o173_strain_energy_cycle",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 3,
+      "C_conflicts": [
+        {
+          "target": 121,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "✅",
+          "README_group": "P",
+          "file": "scripts/07_smbh_permanent_lock.py",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "O": 174,
+      "dir": "o174_condensation_rate_lagrangian",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 41,
+      "C_conflicts": [
+        {
+          "target": 173,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_d6_bhmf.py",
+          "line": 136
+        },
+        {
+          "target": 175,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_d6_structural_close.py",
+          "line": 117
+        },
+        {
+          "target": 175,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/19_d6_three_fronts.py",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "O": 175,
+      "dir": "o175_entropy_theorem",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 15,
+      "C_conflicts": [
+        {
+          "target": 177,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_doc_crosscheck2.py",
+          "line": 198
+        }
+      ]
+    },
+    {
+      "O": 176,
+      "dir": "o176_adjudication_followup",
+      "A_SESSION_START": "🟢",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 7
+    },
+    {
+      "O": 177,
+      "dir": "o177_pool_turnover_364",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 4
+    },
+    {
+      "O": 179,
+      "dir": "o179_new_node_mechanism",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 4
+    },
+    {
+      "O": 180,
+      "dir": "o180_winding_fieldtheory_translation",
+      "A_SESSION_START": "🟢",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 20
+    },
+    {
+      "O": 181,
+      "dir": "o181_lrd_mass_window_resolution",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 2
+    },
+    {
+      "O": 182,
+      "dir": "o182_88grid_geometry",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 1
+    },
+    {
+      "O": 183,
+      "dir": "o183_a5_chain_projection",
+      "A_SESSION_START": "🟡",
+      "B_README": null,
+      "A_vs_B": "README 缺行",
+      "C_refs_count": 0
+    },
+    {
+      "O": 190,
+      "dir": "o190_rs1_lattice_transport",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 6
+    },
+    {
+      "O": 191,
+      "dir": "o191_number_field_law",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 29
+    },
+    {
+      "O": 192,
+      "dir": "o192_lucas_dual_family",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 11
+    },
+    {
+      "O": 193,
+      "dir": "o193_power_sum_domain",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 13
+    },
+    {
+      "O": 194,
+      "dir": "o194_cumulant_hierarchy",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 6
+    },
+    {
+      "O": 195,
+      "dir": "o195_cumulant_integrality",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 7
+    },
+    {
+      "O": 196,
+      "dir": "o196_odd_dominant_closure",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 7,
+      "C_conflicts": [
+        {
+          "target": 194,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_closure.py",
+          "line": 95
+        }
+      ]
+    },
+    {
+      "O": 197,
+      "dir": "o197_density_synthesis",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 9
+    },
+    {
+      "O": 199,
+      "dir": "o199_eddington_critical_rate_forcing",
+      "A_SESSION_START": "🟡",
+      "B_README": "🔴",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 12
+    },
+    {
+      "O": 200,
+      "dir": "o200_dimensional_collapse",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 0
+    },
+    {
+      "O": 201,
+      "dir": "o201_spectral_language",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 139,
+      "C_conflicts": [
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_reduction_field_separation.py",
+          "line": 212
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_reduction_field_separation.py",
+          "line": 212
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/05_self_reference.py",
+          "line": 223
+        },
+        {
+          "target": 197,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/08_expression_layer.py",
+          "line": 274
+        },
+        {
+          "target": 182,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_spectrum_uniqueness.py",
+          "line": 181
+        },
+        {
+          "target": 182,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_spectrum_uniqueness.py",
+          "line": 194
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_spectrum_uniqueness.py",
+          "line": 203
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_spectrum_uniqueness.py",
+          "line": 203
+        },
+        {
+          "target": 165,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 9
+        },
+        {
+          "target": 168,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 9
+        },
+        {
+          "target": 168,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 31
+        },
+        {
+          "target": 168,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 198
+        },
+        {
+          "target": 168,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 288
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_observer_dynamics.py",
+          "line": 6
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_observer_dynamics.py",
+          "line": 197
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_observer_dynamics.py",
+          "line": 242
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 24
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 24
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 78
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 78
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 137
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 137
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 145
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 145
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 154
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 154
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_observer_remaining.py",
+          "line": 13
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_observer_remaining.py",
+          "line": 59
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_observer_remaining.py",
+          "line": 127
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/16_observer_endpoints.py",
+          "line": 117
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_zn_carrier.py",
+          "line": 97
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_zn_carrier.py",
+          "line": 97
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_abelian_axiom.py",
+          "line": 8
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_abelian_axiom.py",
+          "line": 8
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_abelian_axiom.py",
+          "line": 25
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_abelian_axiom.py",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "O": 202,
+      "dir": "o202_spectral_representation",
+      "A_SESSION_START": "🟡",
+      "B_README": "🟡",
+      "C_refs_count": 16
+    },
+    {
+      "O": 203,
+      "dir": "o203_sync_rate_rworld",
+      "A_SESSION_START": null,
+      "B_README": "🟢",
+      "C_refs_count": 47
+    },
+    {
+      "O": 204,
+      "dir": "o204_wfield_constitution",
+      "A_SESSION_START": "🟢",
+      "B_README": "🟢",
+      "C_refs_count": 108,
+      "C_conflicts": [
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/03_behavior.py",
+          "line": 188
+        },
+        {
+          "target": 139,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 9
+        },
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 88
+        },
+        {
+          "target": 86,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 100
+        },
+        {
+          "target": 139,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 129
+        },
+        {
+          "target": 49,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 272
+        },
+        {
+          "target": 144,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 94
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 96
+        },
+        {
+          "target": 144,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 96
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 147
+        },
+        {
+          "target": 144,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 147
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/16_g10_g11_u7_closure.py",
+          "line": 106
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/18_c3_u8_g9_closure.py",
+          "line": 52
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/18_c3_u8_g9_closure.py",
+          "line": 61
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/20_mp_structural_search.py",
+          "line": 104
+        },
+        {
+          "target": 38,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/20_mp_structural_search.py",
+          "line": 104
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/23_u8_desi_idcm_bkg.py",
+          "line": 43
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/25_cmb_lensing_attack.py",
+          "line": 135
+        }
+      ]
+    },
+    {
+      "O": 206,
+      "dir": "o206_per_mode_frequency",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 83,
+      "C_conflicts": [
+        {
+          "target": 136,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_blind_test_and_null.py",
+          "line": 7
+        },
+        {
+          "target": 136,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_blind_test_and_null.py",
+          "line": 105
+        },
+        {
+          "target": 136,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_blind_test_and_null.py",
+          "line": 106
+        },
+        {
+          "target": 136,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_blind_test_and_null.py",
+          "line": 107
+        },
+        {
+          "target": 204,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/12_boson_sector.py",
+          "line": 163
+        }
+      ]
+    },
+    {
+      "O": 207,
+      "dir": "o207_boson_mass_tower",
+      "A_SESSION_START": "🔴",
+      "B_README": "🟢",
+      "A_vs_B": "DIFF (snapshot 過時 — 正常, 以 B 為準)",
+      "C_refs_count": 21,
+      "C_conflicts": [
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_scale_interaction.py",
+          "line": 145
+        },
+        {
+          "target": 206,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_handover_processing.py",
+          "line": 179
+        }
+      ]
+    },
+    {
+      "O": 208,
+      "dir": "o208_verification_architecture",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 8
+    },
+    {
+      "O": 209,
+      "dir": "o209_selection_algebra",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 0
+    },
+    {
+      "O": 210,
+      "dir": "o210_causal_tensor_algebra",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 0
+    },
+    {
+      "O": 211,
+      "dir": "o211_geometry_generation",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 0
+    },
+    {
+      "O": 212,
+      "dir": "o212_anchor_theorem",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 0
+    },
+    {
+      "O": 213,
+      "dir": "o213_world_dynamics",
+      "A_SESSION_START": "🔴",
+      "B_README": "🔴",
+      "C_refs_count": 0
+    }
+  ],
+  "conflict_details": [
+    {
+      "O": 36,
+      "dir": "o36_wfield_resonance_dynamics",
+      "conflicts": [
+        {
+          "target": 34,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/03_observer_readout.py",
+          "line": 164
+        }
+      ]
+    },
+    {
+      "O": 49,
+      "dir": "o49_neutrino_mass",
+      "conflicts": [
+        {
+          "target": 57,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_structural_closure.py",
+          "line": 157
+        },
+        {
+          "target": 57,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_structural_closure.py",
+          "line": 194
+        }
+      ]
+    },
+    {
+      "O": 54,
+      "dir": "o54_antimatter_abundance",
+      "conflicts": [
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/03_cp_phase_relation.py",
+          "line": 138
+        },
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_annihilation_cosmic_rays.py",
+          "line": 120
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/08_wfield_second_quantization.py",
+          "line": 136
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_cy3_charge_spinor.py",
+          "line": 111
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/17_positron_pair_production.py",
+          "line": 137
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/19_charge_pairing_proof.py",
+          "line": 142
+        },
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/31_pf_phi9_intersection.py",
+          "line": 362
+        }
+      ]
+    },
+    {
+      "O": 57,
+      "dir": "o57_cy3_projection_gen",
+      "conflicts": [
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/38_correct_kappa.py",
+          "line": 5
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/38_correct_kappa.py",
+          "line": 72
+        },
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/38_correct_kappa.py",
+          "line": 121
+        }
+      ]
+    },
+    {
+      "O": 65,
+      "dir": "o65_mixing_first_principles",
+      "conflicts": [
+        {
+          "target": 57,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/03_unification.py",
+          "line": 390
+        },
+        {
+          "target": 57,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_final_verification.py",
+          "line": 185
+        }
+      ]
+    },
+    {
+      "O": 70,
+      "dir": "o70_155_curves",
+      "conflicts": [
+        {
+          "target": 57,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/22_exact_extreme_rays_sage.py",
+          "line": 5
+        },
+        {
+          "target": 57,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/23_exact_kahler_extreme_sage.py",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "O": 72,
+      "dir": "o72_kchain_ktree_reality",
+      "conflicts": [
+        {
+          "target": 53,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_H3_33_44_same_origin.py",
+          "line": 115
+        },
+        {
+          "target": 59,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_H3_33_44_same_origin.py",
+          "line": 115
+        },
+        {
+          "target": 54,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_field_theorist_audit.py",
+          "line": 81
+        },
+        {
+          "target": 56,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_field_theorist_audit.py",
+          "line": 81
+        },
+        {
+          "target": 76,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 79
+        },
+        {
+          "target": 77,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 80
+        },
+        {
+          "target": 78,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 81
+        },
+        {
+          "target": 81,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 84
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 87
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 88
+        },
+        {
+          "target": 82,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 92
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 95
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_gap_analysis.py",
+          "line": 96
+        }
+      ]
+    },
+    {
+      "O": 73,
+      "dir": "o73_h0_first_principles",
+      "conflicts": [
+        {
+          "target": 99,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/24_c_first_principles.py",
+          "line": 178
+        },
+        {
+          "target": 99,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/24_c_first_principles.py",
+          "line": 181
+        },
+        {
+          "target": 99,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/24_c_first_principles.py",
+          "line": 227
+        },
+        {
+          "target": 99,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/24_c_first_principles.py",
+          "line": 235
+        }
+      ]
+    },
+    {
+      "O": 74,
+      "dir": "o74_projection_mechanism",
+      "conflicts": [
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/03_qft_decoupling.py",
+          "line": 364
+        }
+      ]
+    },
+    {
+      "O": 80,
+      "dir": "o80_wfield_lagrangian",
+      "conflicts": [
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/05_path_integral_correlator.py",
+          "line": 217
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_gauge_boundary.py",
+          "line": 147
+        },
+        {
+          "target": 72,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_audit.py",
+          "line": 118
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/07_final_audit.py",
+          "line": 121
+        },
+        {
+          "target": 72,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_audit.py",
+          "line": 123
+        },
+        {
+          "target": 82,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_audit.py",
+          "line": 123
+        },
+        {
+          "target": 72,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_audit.py",
+          "line": 125
+        },
+        {
+          "target": 81,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/08_record_verify.py",
+          "line": 196
+        }
+      ]
+    },
+    {
+      "O": 81,
+      "dir": "o81_eom_unification",
+      "conflicts": [
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/11_doc_crosscheck.py",
+          "line": 342
+        }
+      ]
+    },
+    {
+      "O": 82,
+      "dir": "o82_mass_generation",
+      "conflicts": [
+        {
+          "target": 86,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/01_translation_framework.py",
+          "line": 157
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_lagrangian_integration.py",
+          "line": 58
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_lagrangian_integration.py",
+          "line": 85
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 48
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 63
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 87
+        },
+        {
+          "target": 76,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 87
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 87
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 271
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 274
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 278
+        },
+        {
+          "target": 76,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 278
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 278
+        },
+        {
+          "target": 72,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 297
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 300
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_field_theorist_qa.py",
+          "line": 301
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 106
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_closure.py",
+          "line": 109
+        },
+        {
+          "target": 87,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_closure.py",
+          "line": 111
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 129
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 129
+        },
+        {
+          "target": 76,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 129
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 187
+        },
+        {
+          "target": 81,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_closure.py",
+          "line": 202
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_closure.py",
+          "line": 205
+        },
+        {
+          "target": 87,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_closure.py",
+          "line": 207
+        }
+      ]
+    },
+    {
+      "O": 93,
+      "dir": "o93_cc_hz",
+      "conflicts": [
+        {
+          "target": 94,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_route_b_fwm_d14.py",
+          "line": 334
+        }
+      ]
+    },
+    {
+      "O": 100,
+      "dir": "o100_cl_to_pk",
+      "conflicts": [
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_remaining_items.py",
+          "line": 67
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_remaining_items.py",
+          "line": 68
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_remaining_items.py",
+          "line": 99
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_remaining_items.py",
+          "line": 135
+        },
+        {
+          "target": 83,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_p3_p4.py",
+          "line": 114
+        }
+      ]
+    },
+    {
+      "O": 101,
+      "dir": "o101_1plus11_spectrum",
+      "conflicts": [
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/01_analyze_1plus11.py",
+          "line": 183
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/01_analyze_1plus11.py",
+          "line": 184
+        },
+        {
+          "target": 109,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/01_analyze_1plus11.py",
+          "line": 185
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 315
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 316
+        },
+        {
+          "target": 109,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 318
+        },
+        {
+          "target": 85,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 321
+        },
+        {
+          "target": 109,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/02_deep_derivation.py",
+          "line": 321
+        }
+      ]
+    },
+    {
+      "O": 107,
+      "dir": "o107_extra_u1_physical",
+      "conflicts": [
+        {
+          "target": 114,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/01_extra_u1_physical_analysis.py",
+          "line": 558
+        },
+        {
+          "target": 85,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/03_causal_hierarchy.py",
+          "line": 122
+        }
+      ]
+    },
+    {
+      "O": 117,
+      "dir": "o117_dh_line_of_sight",
+      "conflicts": [
+        {
+          "target": 118,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/09_first_principles_closure.py",
+          "line": 152
+        }
+      ]
+    },
+    {
+      "O": 136,
+      "dir": "o136_quark_mass_spectrum",
+      "conflicts": [
+        {
+          "target": 34,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/25_symmetric_density.py",
+          "line": 129
+        },
+        {
+          "target": 81,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/33_a5_projection_spectrum.py",
+          "line": 5
+        },
+        {
+          "target": 120,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/64_two_modesets_crosscheck.py",
+          "line": 143
+        },
+        {
+          "target": 120,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/64_two_modesets_crosscheck.py",
+          "line": 144
+        }
+      ]
+    },
+    {
+      "O": 137,
+      "dir": "o137_cy3_topological_resonance",
+      "conflicts": [
+        {
+          "target": 57,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 8
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 9
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 10
+        },
+        {
+          "target": 57,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 200
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 201
+        },
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/21_phase8_yukawa_from_phi.py",
+          "line": 202
+        }
+      ]
+    },
+    {
+      "O": 138,
+      "dir": "o138_qm_measurement_structural",
+      "conflicts": [
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_comparison_predictions.py",
+          "line": 114
+        },
+        {
+          "target": 139,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_comparison_predictions.py",
+          "line": 260
+        }
+      ]
+    },
+    {
+      "O": 139,
+      "dir": "o139_finite_qft_to_qed",
+      "conflicts": [
+        {
+          "target": 110,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/03_verification_of_correction.py",
+          "line": 332
+        }
+      ]
+    },
+    {
+      "O": 142,
+      "dir": "o142_boson_mass_derivation",
+      "conflicts": [
+        {
+          "target": 59,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_closure_attack.py",
+          "line": 68
+        }
+      ]
+    },
+    {
+      "O": 144,
+      "dir": "o144_boson_identity",
+      "conflicts": [
+        {
+          "target": 136,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/03_glueball_ebind.py",
+          "line": 170
+        }
+      ]
+    },
+    {
+      "O": 145,
+      "dir": "o145_22_11_locus",
+      "conflicts": [
+        {
+          "target": 142,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_electroweak_subring.py",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "O": 151,
+      "dir": "o151_holographic_channel_capacity",
+      "conflicts": [
+        {
+          "target": 149,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/30_scope_boundaries.py",
+          "line": 121
+        },
+        {
+          "target": 154,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/30_scope_boundaries.py",
+          "line": 122
+        },
+        {
+          "target": 152,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/30_scope_boundaries.py",
+          "line": 122
+        },
+        {
+          "target": 107,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/30_scope_boundaries.py",
+          "line": 124
+        }
+      ]
+    },
+    {
+      "O": 152,
+      "dir": "o152_numbers_as_operators",
+      "conflicts": [
+        {
+          "target": 148,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/01_inventory.py",
+          "line": 262
+        }
+      ]
+    },
+    {
+      "O": 158,
+      "dir": "o158_nd_pm_ngen_cluster",
+      "conflicts": [
+        {
+          "target": 54,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/22_mu_e_o54_derivation.py",
+          "line": 112
+        }
+      ]
+    },
+    {
+      "O": 160,
+      "dir": "o160_spectral_number_scan",
+      "conflicts": [
+        {
+          "target": 158,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/02_constant_web.py",
+          "line": 108
+        },
+        {
+          "target": 158,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/19_mass_pair_mirror.py",
+          "line": 5
+        },
+        {
+          "target": 158,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/19_mass_pair_mirror.py",
+          "line": 93
+        }
+      ]
+    },
+    {
+      "O": 164,
+      "dir": "o164_world_as_beat",
+      "conflicts": [
+        {
+          "target": 165,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/02_observational_crosscheck.py",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "O": 168,
+      "dir": "o168_g_last_input",
+      "conflicts": [
+        {
+          "target": 38,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_mp_internal_lock.py",
+          "line": 102
+        },
+        {
+          "target": 167,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/22_omega_ring_closure.py",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "O": 171,
+      "dir": "o171_a5_partition_theory",
+      "conflicts": [
+        {
+          "target": 10,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/14_r7_peak_discrimination.py",
+          "line": 204
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/43_residual_and_first_principle.py",
+          "line": 149
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/43_residual_and_first_principle.py",
+          "line": 179
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/43_residual_and_first_principle.py",
+          "line": 225
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/44_rworld_decomposition.py",
+          "line": 4
+        },
+        {
+          "target": 201,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/51_rworld_positive_audit.py",
+          "line": 78
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/53_o73_closure_crossref.py",
+          "line": 15
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/53_o73_closure_crossref.py",
+          "line": 224
+        }
+      ]
+    },
+    {
+      "O": 173,
+      "dir": "o173_strain_energy_cycle",
+      "conflicts": [
+        {
+          "target": 121,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "✅",
+          "README_group": "P",
+          "file": "scripts/07_smbh_permanent_lock.py",
+          "line": 107
+        }
+      ]
+    },
+    {
+      "O": 174,
+      "dir": "o174_condensation_rate_lagrangian",
+      "conflicts": [
+        {
+          "target": 173,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_d6_bhmf.py",
+          "line": 136
+        },
+        {
+          "target": 175,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_d6_structural_close.py",
+          "line": 117
+        },
+        {
+          "target": 175,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/19_d6_three_fronts.py",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "O": 175,
+      "dir": "o175_entropy_theorem",
+      "conflicts": [
+        {
+          "target": 177,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/06_doc_crosscheck2.py",
+          "line": 198
+        }
+      ]
+    },
+    {
+      "O": 196,
+      "dir": "o196_odd_dominant_closure",
+      "conflicts": [
+        {
+          "target": 194,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/07_final_closure.py",
+          "line": 95
+        }
+      ]
+    },
+    {
+      "O": 201,
+      "dir": "o201_spectral_language",
+      "conflicts": [
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_reduction_field_separation.py",
+          "line": 212
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/04_reduction_field_separation.py",
+          "line": 212
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/05_self_reference.py",
+          "line": 223
+        },
+        {
+          "target": 197,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/08_expression_layer.py",
+          "line": 274
+        },
+        {
+          "target": 182,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_spectrum_uniqueness.py",
+          "line": 181
+        },
+        {
+          "target": 182,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_spectrum_uniqueness.py",
+          "line": 194
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_spectrum_uniqueness.py",
+          "line": 203
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/09_spectrum_uniqueness.py",
+          "line": 203
+        },
+        {
+          "target": 165,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 9
+        },
+        {
+          "target": 168,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 9
+        },
+        {
+          "target": 168,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 31
+        },
+        {
+          "target": 168,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 198
+        },
+        {
+          "target": 168,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟡",
+          "README_group": "S",
+          "file": "scripts/10_transcendental_layer.py",
+          "line": 288
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_observer_dynamics.py",
+          "line": 6
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_observer_dynamics.py",
+          "line": 197
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/11_observer_dynamics.py",
+          "line": 242
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 24
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 24
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 78
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 78
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 137
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 137
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 145
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 145
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 154
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/13_upstream_uniqueness.py",
+          "line": 154
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_observer_remaining.py",
+          "line": 13
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_observer_remaining.py",
+          "line": 59
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/15_observer_remaining.py",
+          "line": 127
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/16_observer_endpoints.py",
+          "line": 117
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_zn_carrier.py",
+          "line": 97
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/18_zn_carrier.py",
+          "line": 97
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_abelian_axiom.py",
+          "line": 8
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_abelian_axiom.py",
+          "line": 8
+        },
+        {
+          "target": 95,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_abelian_axiom.py",
+          "line": 25
+        },
+        {
+          "target": 96,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/21_abelian_axiom.py",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "O": 204,
+      "dir": "o204_wfield_constitution",
+      "conflicts": [
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/03_behavior.py",
+          "line": 188
+        },
+        {
+          "target": 139,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 9
+        },
+        {
+          "target": 37,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 88
+        },
+        {
+          "target": 86,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 100
+        },
+        {
+          "target": 139,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 129
+        },
+        {
+          "target": 49,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/10_gravity_all_behaviors.py",
+          "line": 272
+        },
+        {
+          "target": 144,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 94
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 96
+        },
+        {
+          "target": 144,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 96
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 147
+        },
+        {
+          "target": 144,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/13_closure_criteria.py",
+          "line": 147
+        },
+        {
+          "target": 86,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/16_g10_g11_u7_closure.py",
+          "line": 106
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/18_c3_u8_g9_closure.py",
+          "line": 52
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/18_c3_u8_g9_closure.py",
+          "line": 61
+        },
+        {
+          "target": 73,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/20_mp_structural_search.py",
+          "line": 104
+        },
+        {
+          "target": 38,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/20_mp_structural_search.py",
+          "line": 104
+        },
+        {
+          "target": 49,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/23_u8_desi_idcm_bkg.py",
+          "line": 43
+        },
+        {
+          "target": 169,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/25_cmb_lensing_attack.py",
+          "line": 135
+        }
+      ]
+    },
+    {
+      "O": 206,
+      "dir": "o206_per_mode_frequency",
+      "conflicts": [
+        {
+          "target": 136,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_blind_test_and_null.py",
+          "line": 7
+        },
+        {
+          "target": 136,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_blind_test_and_null.py",
+          "line": 105
+        },
+        {
+          "target": 136,
+          "ref_status": "🟢",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_blind_test_and_null.py",
+          "line": 106
+        },
+        {
+          "target": 136,
+          "ref_status": "🟡",
+          "ref_group": "S",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_blind_test_and_null.py",
+          "line": 107
+        },
+        {
+          "target": 204,
+          "ref_status": "🔴",
+          "ref_group": "N",
+          "README_status": "🟢",
+          "README_group": "P",
+          "file": "scripts/12_boson_sector.py",
+          "line": 163
+        }
+      ]
+    },
+    {
+      "O": 207,
+      "dir": "o207_boson_mass_tower",
+      "conflicts": [
+        {
+          "target": 86,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/04_scale_interaction.py",
+          "line": 145
+        },
+        {
+          "target": 206,
+          "ref_status": "✅",
+          "ref_group": "P",
+          "README_status": "🔴",
+          "README_group": "N",
+          "file": "scripts/06_handover_processing.py",
+          "line": 179
+        }
+      ]
+    }
+  ]
+}

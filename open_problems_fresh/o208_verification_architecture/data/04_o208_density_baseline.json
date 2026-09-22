@@ -1,0 +1,11 @@
+{
+  "name": "O208 自身閉合測試 (10 target 審計)",
+  "N_search": 10.0,
+  "N_mc": 1000000.0,
+  "seed": null,
+  "d_obs": 0.0,
+  "d_med": 0.0,
+  "q_obs": 0.01,
+  "unit": "%",
+  "verdict": "🟢 統計顯著"
+}
