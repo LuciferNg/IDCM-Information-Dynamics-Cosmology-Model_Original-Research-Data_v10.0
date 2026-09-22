@@ -1,0 +1,25 @@
+{
+  "checks_pass": 27,
+  "checks_total": 27,
+  "budget": {
+    "B": 4,
+    "N_gen": 3,
+    "N_d": 44,
+    "parts": [
+      3,
+      16,
+      41
+    ],
+    "sum": 60
+  },
+  "kappa": 0.0625,
+  "f_unproj": 0.6833333333333333,
+  "W2": 61.5,
+  "E_min": 0.6988636363636364,
+  "m7_MeV": 13.800155301821238,
+  "structural_names": {
+    "物質": "觀察者費米子扇區 (Observer Fermion Sector)",
+    "暗物質": "隱藏譜扇區 (Hidden Spectral Sector, κ 閘極後)",
+    "真空能": "未被投影能量 (Unprojected Energy, W-field 凝聚)"
+  }
+}
