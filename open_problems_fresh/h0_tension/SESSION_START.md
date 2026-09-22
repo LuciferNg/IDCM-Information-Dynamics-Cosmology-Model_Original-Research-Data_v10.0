@@ -17,5 +17,10 @@
 - `01_problem_record.md:14,88`, `03_first_results.md:28`, `06_complete_record.md:62-69`, `08_calibration_mechanism.md:64`
 - dD/dz 導出 (line 201-202) 重推 (斜率 2φ⁻¹ → 1)
 
-**狀態**: [ ] 未重驗
-> 只加註, 未改本 O 結論檔 (01_problem_record.md / docs/ / final_result.md); 重驗後由本 O 自行寫入。
+**狀態**: [x] 已重驗 (2026-09-23, O170 N4 獨立驗證 — scripts/21 5/5 PASS)
+> ★ 重驗結果 = O170 N4 交收, 已處理: `H_eff(0.03) = 73.13 (舊伸長) → 新律 66.27`
+> (O169 律 E = ℓ+1.11911398), 「SH0ES 匹配 0.12%」撤回 → 🔴 **N4 開放** (SH0ES 73.04 需新解釋;
+> 候選: O167 低 z 斜率比 1−π/44 / 局部擾動)。`H₀_idcm = c/R_H = 72.59` 不變。
+> 日期化更正註已落: 03_first_results / 01_problem_record / 06_complete_record /
+> 08_calibration_mechanism / scripts/02 + 新檔 09_o170_n4_handoff.md。
+> 其他開放項 (Maser 機制) 未掂。
