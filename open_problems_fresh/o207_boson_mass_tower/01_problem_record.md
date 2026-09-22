@@ -126,7 +126,11 @@ m_n = M₀ · ω_n · C_b = M₀ · √γ_n · 1 = M₀ · 2sin(πn/88), n = 1..
    B1 盲測協定 ✅ | B3 模式身份 ✅ | B4 交互算子 ✅ | B5 Goldstone 熱歷史 ✅ (引用 O204 U7)
    B6 焦距 ✅ | B7 場論陳述 ✅ | B2 標度 🔴 誠實負結果 (兩獨立錨)
 ⭐ 優先度: ★★（玻色扇區之唯一開放項; 費米側已於 O206 收尾）
-🔴 剩餘: B2 標度差無結構解釋 (屬 O85/O86 SM 電弱鏈範圍); 塔觀測執行 (等 NA64/XENONnT 數據)
+🔴 剩餘: B2 標度差無結構解釋 (屬 O85/O86 SM 電弱鏈範圍)
+🟡 塔假說存活 (2026-09-22 塔觀察已執行: 質量窗掃描完成, 零訊號, 未排除;
+   等 NA64 2023-24 數據 / IDCM 耦合預言)
+🔴 巧合線索 4²+5²+7²=90 已關閉 (2026-09-22 look-elsewhere: 2 三元組含 {1,5,8},
+   結構池 2 命中 = 隨機期望 ~2.4/值 ⟹ 巧合級, 唔移交 O209)
 ✅ O206 交接已處理 (2026-09-21 第二輪): 模式重合 {4,5,7} 動機消失 (A₅ 偽影);
    OPEN-4 由 O206 docs/26 收束; 新 🟡 巧合線索 4²+5²+7²=90=Σγ (無機制)
 ⚠️ 2026-09-21 第一輪: 已建 scripts/ data/ docs/ (由本 session 建立, 遵 SESSION_START 交接)
@@ -146,6 +150,8 @@ m_n = M₀ · ω_n · C_b = M₀ · √γ_n · 1 = M₀ · 2sin(πn/88), n = 1..
 | 09-21 | `scripts/05_doc_crosscheck.py`（閉合審計） | 42/42 PASS | docs/01-05 全部核對 |
 | 09-21 | `scripts/06_handover_processing.py`（O206 交接處理） | 8/8 PASS | docs/06 模式重合+OPEN-4 |
 | 09-22 | `scripts/07_mass_spectrum_decomposition.py`（核心目標: 質量譜分解） | 15/15 PASS | docs/07 五層分解 |
+| 09-22 | `scripts/08_tower_observation.py`（塔觀察執行） | 10/10 PASS | docs/08 m₇ vs 現行實驗 |
+| 09-22 | `scripts/09_coincidence_90.py`（巧合線索 look-elsewhere） | 8/8 PASS | docs/09 巧合關閉 |
 
 依賴鏈: O37→O38→O39→O82→O83→O164→O204→O206→**O207**（B4 引用 O86 N5）
 

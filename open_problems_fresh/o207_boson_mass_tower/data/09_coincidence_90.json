@@ -1,0 +1,26 @@
+{
+  "triples_total": 13244,
+  "sq90_triples": [
+    [
+      1,
+      5,
+      8
+    ],
+    [
+      4,
+      5,
+      7
+    ]
+  ],
+  "sq90_count": 2,
+  "p_random_200k": 0.000185,
+  "targets": {
+    "90 (=\u03a3\u03b3)": 2,
+    "88 (=2N_d)": 0,
+    "46 (=\u03a3\u03b3_even)": 1,
+    "44 (=N_d)": 0,
+    "4 (=2\u03bc\u00b2)": 0,
+    "2 (=\u03bc\u00b2)": 0
+  },
+  "verdict": "COINCIDENCE (look-elsewhere: single value hit = random expectation ~2.4/value; no mechanism)"
+}
