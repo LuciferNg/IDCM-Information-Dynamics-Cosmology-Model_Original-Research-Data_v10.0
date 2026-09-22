@@ -36,7 +36,11 @@ for i in range(613):
     for j in range(i, 613):
         covmat[i, j] = covmat[j, i]
 
-def bin_model(D, blmin, blmax, bin_w, plmin, ellmin=2, nbin=None):
+def bin_model(D, blmin, blmax, bin_w, plmin, ellmin=0, nbin=None):
+    """bin 理論 D_ℓ 到 Plik bins
+    ★ ellmin=0: CAMB 輸出 row index = ℓ (由 ℓ=0 開始); ellmin=2 會偏移 2 ℓ
+      → 系統偏差 (~-2.3%). 驗證: ellmin=0 時 bin0 中心 = 32.0 = bval[0] ✓
+    """
     ls = np.arange(len(D)) + ellmin
     fac = ls * (ls + 1) / (2 * np.pi)
     Cl = D / fac

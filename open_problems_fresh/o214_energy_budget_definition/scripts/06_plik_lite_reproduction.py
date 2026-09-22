@@ -96,10 +96,13 @@ def spectrum_cached(ombh2):
             _SPEC_CACHE[float(k)] = v
     return _SPEC_CACHE[float(ombh2)]
 
-def bin_model(D, blmin, blmax, bin_w, plmin, ellmin=2, nbin=None):
+def bin_model(D, blmin, blmax, bin_w, plmin, ellmin=0, nbin=None):
     """bin 理論 D_ℓ 到 Plik bins (同 planck-lite-py loglike)
     blmin/blmax = bin_w 陣列嘅 offset (645 entries, 前 215 係 TT 用)
     bin_w = 全部 bin 權重串埋 (7437)
+    ★ ellmin=0: CAMB 輸出 row index = ℓ (由 ℓ=0 開始), 唔係 planck-lite-py
+      test() 用嘅數據檔 (由 ℓ=2 開始). ellmin=2 會令 slice 偏移 2 個 ℓ →
+      系統偏差 (~-2.3%). 驗證: ellmin=0 時 bin0 中心 = 32.0 = bval[0] ✓
     """
     ls = np.arange(len(D)) + ellmin
     fac = ls * (ls + 1) / (2 * np.pi)
