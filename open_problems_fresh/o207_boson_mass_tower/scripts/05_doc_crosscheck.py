@@ -280,21 +280,17 @@ chk('審計', 'F1 SESSION_START 早於 problem_record 更新',
 
 # F2: 所有 scripts/docs 喺 SESSION_START 之後
 all_after = True
-for f in sorted(os.listdir(os.path.join(o207_dir, 'scripts'))):
-    fp = os.path.join(o207_dir, 'scripts', f)
-    if os.path.getmtime(fp) < ss_mtime:
-        all_after = False
-        print(f'  ⚠️ {f} 早於 SESSION_START')
-for f in sorted(os.listdir(os.path.join(o207_dir, 'docs'))):
-    fp = os.path.join(o207_dir, 'docs', f)
-    if os.path.getmtime(fp) < ss_mtime:
-        all_after = False
-        print(f'  ⚠️ {f} 早於 SESSION_START')
+for sub in ('scripts', 'docs'):
+    for f in sorted(os.listdir(os.path.join(o207_dir, sub))):
+        fp = os.path.join(o207_dir, sub, f)
+        if os.path.getmtime(fp) < ss_mtime:
+            all_after = False
+            print(f'  ⚠️ {sub}/{f} 早於 SESSION_START')
 chk('審計', 'F2 scripts/docs 全部喺 SESSION_START 之後', all_after)
 
-# F3: docs 編號順序 01→05
+# F3: docs 編號順序 01→06
 doc_nums = sorted(int(f.split('_')[0]) for f in os.listdir(os.path.join(o207_dir, 'docs')))
-chk('審計', 'F3 docs 編號連續 01-05', doc_nums == [1, 2, 3, 4, 5], f'(={doc_nums})')
+chk('審計', 'F3 docs 編號連續 01-06', doc_nums == [1, 2, 3, 4, 5, 6], f'(={doc_nums})')
 
 # ============================================================
 print('\n' + '=' * 78)
