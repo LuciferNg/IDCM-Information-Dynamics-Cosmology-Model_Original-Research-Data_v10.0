@@ -1,0 +1,39 @@
+{
+  "checks_pass": 5,
+  "checks_total": 5,
+  "connor_2025": {
+    "Omega_b_h70": 0.051,
+    "sigma": 0.006,
+    "f_IGM": 0.76,
+    "arxiv": "2409.16952",
+    "journal": "Nature Astronomy 2025"
+  },
+  "idcm": {
+    "Omega_b": 0.05,
+    "share_60": 3
+  },
+  "dev_sigma": -0.16666666666666666,
+  "components_z0": {
+    "恆星 (Stars)": {
+      "frac": 0.07,
+      "err": 0.02
+    },
+    "冷氣體/ISM": {
+      "frac": 0.017,
+      "err": 0.004
+    },
+    "CGM (星系暈氣體)": {
+      "frac": 0.05,
+      "err": 0.03
+    },
+    "星系團 ICM": {
+      "frac": 0.04,
+      "err": 0.014
+    },
+    "IGM (Lyα + WHIM + FRB)": {
+      "frac": 0.83,
+      "err": 0.06
+    }
+  },
+  "conclusion": "IDCM 3/60 = 0.05 vs Connor 2025 FRB 直接計數 Ω_b h70 = 0.051±0.006 → 0.17σ 正中; z=0 直接數重子 (最少模型假設) 獨立支持 IDCM 幾何計數"
+}
