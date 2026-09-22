@@ -1,0 +1,177 @@
+{
+  "checks": [
+    {
+      "name": "φ = 1.6180339887",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Lucas L0-L8 = [2,1,3,4,7,11,18,29,47]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fibonacci F5-F10 = [5,8,13,21,34,55]",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "h11 = 36 = L2²×L3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "h21 = 98 = 2×L4²",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "CY3 = 134 = h11+h21",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Nd = 44",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "M = 33 = (CY3-2)/B",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "M0 = 27.900915 MeV",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "γ_1 = 0.005096",
+      "pass": true,
+      "detail": "(0.005095771)"
+    },
+    {
+      "name": "γ_7 = 0.244642",
+      "pass": true,
+      "detail": "(0.244642021)"
+    },
+    {
+      "name": "γ_14 = 0.918718",
+      "pass": true,
+      "detail": "(0.918718365)"
+    },
+    {
+      "name": "γ_20 = 1.715370",
+      "pass": true,
+      "detail": "(1.715370323)"
+    },
+    {
+      "name": "γ_33 = 3.414214",
+      "pass": true,
+      "detail": "(3.414213562)"
+    },
+    {
+      "name": "γ_34 = 3.511499",
+      "pass": true,
+      "detail": "(3.511499149)"
+    },
+    {
+      "name": "Σγ(k=1..44) = 90",
+      "pass": true,
+      "detail": "(90.000000000000)"
+    },
+    {
+      "name": "γ_1/γ₁ ≈ L1 (0.0000%)",
+      "pass": true,
+      "detail": "(實際 1.000000)"
+    },
+    {
+      "name": "γ_7/γ₁ ≈ Nd+L3=48 (0.0184%)",
+      "pass": true,
+      "detail": "(實際 48.008835)"
+    },
+    {
+      "name": "γ_20/γ₁ ≈ L4×(Nd+L3)=336 (0.1864%)",
+      "pass": true,
+      "detail": "(實際 336.626273)"
+    },
+    {
+      "name": "γ_14/γ₁ ≈ L3×(Nd+L1)=180 (0.1613%)",
+      "pass": true,
+      "detail": "(實際 180.290363)"
+    },
+    {
+      "name": "γ_34/γ₁ ≈ CY3×F5+L6=688 (0.1600%)",
+      "pass": true,
+      "detail": "(實際 689.100688)"
+    },
+    {
+      "name": "γ_33/γ₁ ≈ CY3×F5=670 (0.0014%)",
+      "pass": true,
+      "detail": "(實際 670.009251)"
+    },
+    {
+      "name": "閉合 8/9 粒子 < 1%",
+      "pass": true,
+      "detail": "(8/9)"
+    }
+  ],
+  "mass_results": {
+    "electron": {
+      "m_pred": 0.5118360025612163,
+      "dev": 0.16379729925426992,
+      "status": "✅"
+    },
+    "muon": {
+      "m_pred": 105.79891155874154,
+      "dev": 0.13147033763159227,
+      "status": "✅"
+    },
+    "tau": {
+      "m_pred": 1770.8348587632763,
+      "dev": -0.3390892493906996,
+      "status": "✅"
+    },
+    "up": {
+      "m_pred": 2.2037383443607923,
+      "dev": 2.024923350036674,
+      "status": "🟡"
+    },
+    "down": {
+      "m_pred": 4.691830023477816,
+      "dev": 0.4674523228654327,
+      "status": "✅"
+    },
+    "strange": {
+      "m_pred": 92.27909884781417,
+      "dev": -0.7751625292320768,
+      "status": "✅"
+    },
+    "charm": {
+      "m_pred": 1273.6625105189528,
+      "dev": 0.2883866550356524,
+      "status": "✅"
+    },
+    "bottom": {
+      "m_pred": 4191.426025407232,
+      "dev": 0.27334989012517635,
+      "status": "✅"
+    },
+    "top": {
+      "m_pred": 173936.7697405758,
+      "dev": 0.6811586828987081,
+      "status": "✅"
+    }
+  },
+  "fatal_flaws": [
+    "symbol_library_overfitting",
+    "moving_goalposts",
+    "inconsistent_formulas"
+  ],
+  "blind_test": "FAILED - tau/s/charm modes not derivable from fixed axioms",
+  "only_structural_claims": [
+    "n=1 fundamental mode",
+    "n=7 DM mass (O34)",
+    "t via Higgs VEV (mass cap)"
+  ]
+}

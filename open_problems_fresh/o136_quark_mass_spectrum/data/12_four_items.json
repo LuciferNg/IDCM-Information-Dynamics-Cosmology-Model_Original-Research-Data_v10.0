@@ -1,0 +1,33 @@
+{
+  "item1_L_formula": {
+    "formula": "L = N_d / gcd(n, N_d)",
+    "verified": true,
+    "L_values": [
+      44,
+      22,
+      11,
+      4,
+      2,
+      1
+    ],
+    "note": "反週期條件自動滿足 (恆等式); L 被 n 唯一決定"
+  },
+  "item2_n1_splitting": {
+    "status": "UNRESOLVED",
+    "reason": "色荷/超荷/T3 都無法唯一分化 e,u,d",
+    "X_values": {
+      "e": 40.4,
+      "u": 28.5,
+      "d": 11
+    }
+  },
+  "item3_charm_Pf": {
+    "candidates_within_1pct": 3,
+    "status": "DENSITY_EFFECT"
+  },
+  "item4_deviations": {
+    "s_e_dev_pct": -0.937,
+    "mu_u_dev_pct": -1.854,
+    "explanation": "MS-bar vs pole mass 方案混合 → 跑動修正"
+  }
+}

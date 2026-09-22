@@ -1,0 +1,55 @@
+{
+  "gamma_ratio_space": 1892,
+  "null_gamma_median_pct": 0.3495149730924463,
+  "null_gamma_mean_pct": 0.7003546944095435,
+  "pf_library_size": 27,
+  "pf_ratio_space": 702,
+  "combined_space": 1328184,
+  "null_combined_median_pct": 0.0003386343785605206,
+  "null_combined_mean_pct": 0.0005697165992227138,
+  "o136_claims": [
+    {
+      "pair": "m_b/m_c",
+      "target": 3.291339,
+      "calc": 3.290845,
+      "form": "γ₃₃×44/(γ₃₄×13)",
+      "dev_pct": 0.015006
+    },
+    {
+      "pair": "m_μ/m_e",
+      "target": 206.768311,
+      "calc": 206.704708,
+      "form": "γ₇×15.5/(γ₁×3.6)",
+      "dev_pct": 0.03076
+    },
+    {
+      "pair": "m_c/m_s",
+      "target": 13.59743,
+      "calc": 13.802286,
+      "form": "γ₃₄×13/(γ₁₄×3.6)",
+      "dev_pct": 1.506579
+    },
+    {
+      "pair": "m_τ/m_μ",
+      "target": 16.817031,
+      "calc": 16.737742,
+      "form": "γ₂₀×37/(γ₇×15.5)",
+      "dev_pct": 0.471482
+    },
+    {
+      "pair": "m_d/m_u",
+      "target": 2.162037,
+      "calc": 2.129032,
+      "form": "γ₁×33/(γ₁×15.5)",
+      "dev_pct": 1.526558
+    },
+    {
+      "pair": "m_s/m_d",
+      "target": 20.0,
+      "calc": 19.66804,
+      "form": "γ₁₄×3.6/(γ₁×33)",
+      "dev_pct": 1.659802
+    }
+  ],
+  "verdict": "兩框架都係密度效應; O136 組合空間更大 → 更嚴重"
+}

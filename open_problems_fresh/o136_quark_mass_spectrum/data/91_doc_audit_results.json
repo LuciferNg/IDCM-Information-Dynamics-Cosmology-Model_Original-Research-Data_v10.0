@@ -1,0 +1,467 @@
+{
+  "total": 92,
+  "pass": 92,
+  "fail": 0,
+  "checks": [
+    {
+      "name": "A1 docs 數量 = 37",
+      "ok": true,
+      "detail": "實際 37"
+    },
+    {
+      "name": "A2 scripts 01-45 齊全",
+      "ok": true,
+      "detail": "缺 []"
+    },
+    {
+      "name": "A3 審計腳本 90/91 存在",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A3b 攻堅腳本 46–49 + docs/27,28 存在",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A4 所有寫 json 嘅腳本都有對應 data 檔",
+      "ok": true,
+      "detail": "writer=['29', '30', '33', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67']; 缺=[]"
+    },
+    {
+      "name": "A5 三件套齊 (SESSION_START / docs/01 / final_result)",
+      "ok": true,
+      "detail": "final_result 長度=3484"
+    },
+    {
+      "name": "B1 冇任何文檔含 U+FFFD",
+      "ok": true,
+      "detail": "全部乾淨"
+    },
+    {
+      "name": "B2 markdown 圍欄平衡 (每檔 ``` 數為偶)",
+      "ok": true,
+      "detail": "全部平衡"
+    },
+    {
+      "name": "C1 三處狀態 emoji 一致",
+      "ok": true,
+      "detail": "SS=🟢🟡🔴 PR=🟢🟡🔴 FR=🟢🟡🔴"
+    },
+    {
+      "name": "C2 final_result 狀態行存在",
+      "ok": true,
+      "detail": "🟡 部分閉合 — 模式選擇律 (A₅ 動差準則) + 結構障礙定理 🟢 已閉合; 夸克質量標度 C / 粒子↔模式分配 "
+    },
+    {
+      "name": "D1 四段齊 (狀態/結論/關鍵公式/依賴)",
+      "ok": true,
+      "detail": "['狀態: 🟡 部分閉合 — 模式選擇律 (A₅ 動差準則) + 結構障礙定理 🟢 已閉合; 夸克質量標度 C / 粒子↔模式分配 🔴 未推導', '結論', '關鍵公式', '依賴', '剩餘開放問題 (見 docs/26 §六、docs/01 §時序索引)', '驗證'] → idx=[0, 1, 2, 3]"
+    },
+    {
+      "name": "D2 段序符合 template",
+      "ok": true,
+      "detail": "idx=[0, 1, 2, 3]"
+    },
+    {
+      "name": "D3 依賴用 → 箭頭",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E1 有時序索引章節",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E2 時序索引表有行 (≥10)",
+      "ok": true,
+      "detail": "81 行"
+    },
+    {
+      "name": "E3 時序編號唯一",
+      "ok": true,
+      "detail": "重複 [] (n=81)"
+    },
+    {
+      "name": "E4 時序編號遞增 (1..N 連續)",
+      "ok": true,
+      "detail": "[1, 2, 3, 4, 5]...[79, 80, 81]"
+    },
+    {
+      "name": "E5 每個時序行有日期",
+      "ok": true,
+      "detail": "缺日期行號 []"
+    },
+    {
+      "name": "E6 有時序完整性確認段落",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E7 ⚠️ 附註有日期 + 正確值格式",
+      "ok": true,
+      "detail": "19 處"
+    },
+    {
+      "name": "F-28.033 修正覆蓋 (sin 空間上限 1/sin(π/88)): 9 檔載有舊值, 全部有註記",
+      "ok": true,
+      "detail": "載有=9 檔, 全部已註記"
+    },
+    {
+      "name": "F-0.443084 修正覆蓋 (sin(13π/88)): 2 檔載有舊值, 全部有註記",
+      "ok": true,
+      "detail": "載有=2 檔, 全部已註記"
+    },
+    {
+      "name": "F-0.381566 修正覆蓋 (sin(11π/88)): 1 檔載有舊值, 全部有註記",
+      "ok": true,
+      "detail": "載有=1 檔, 全部已註記"
+    },
+    {
+      "name": "F-12.420 修正覆蓋 (9 模式上限 sin(13π/88)/sin(π/88)): 1 檔載有舊值, 全部有註記",
+      "ok": true,
+      "detail": "載有=1 檔, 全部已註記"
+    },
+    {
+      "name": "F-fw docs/26 範圍/比值分離 有框架修正註記",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F-fw2 docs/26 候選解釋 #1 有排除註記",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G1 目錄 root 冇預期外檔案",
+      "ok": true,
+      "detail": "stray=[]"
+    },
+    {
+      "name": "G2 docs/ 只含 .md",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "G3 data/ 只含數據檔",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "H1 08-29/08-30 文檔冇 09-20 專屬內容 (回溯污染)",
+      "ok": true,
+      "detail": "無污染"
+    },
+    {
+      "name": "H2 09-20 新內容存在於 docs/25,26 (新檔)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "H2b 08-30 舊 session 文檔冇 09-20 結論 (回溯污染)",
+      "ok": true,
+      "detail": "污染 []"
+    },
+    {
+      "name": "H4 tally 跨文檔一致 (每個分母單一值)",
+      "ok": true,
+      "detail": "92:[92] 93:[93]"
+    },
+    {
+      "name": "H3 時序索引保留 08 月歷史行",
+      "ok": true,
+      "detail": "8 行"
+    },
+    {
+      "name": "I-Σγ = 90",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-N_d = 44",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-E_proj = 28.5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-反週期 n·L≡44",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-q-參數化",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-A₅ 選擇律 9 模式",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-位置算子 Z₂-奇",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-二階自能 RMS 0.5873",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-結構障礙 α 跨度 42.6",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-負相關 −0.2901",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-Gap 範圍 2.175e5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-無解釋上限 3.8588",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-frame ICRS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-γ₂₀/γ₇ = 7",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-扇區 null test P=0.34",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-範圍唔係障礙 (框架修正)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-扇區標度 RMS 0.3549",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-代數次數真公式 v₂(44−n)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-代數次數合計 44",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-docs/16 錯誤註記",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-Node 0 退化定理",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-B=4 k=4 唔特別",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-觀察代價 Σc^{−2}",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-null 無判別力",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-k=3 四重否定",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-sec² 代數身份",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-方法論定理範圍唔係證據",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-多因子飽和",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-置換 null 退化定理",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-score 度量修正",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-二模式雙重顯著",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-A5 模式集 P=0.0155",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-位置算子 P=0.0080",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-1/dE 權重本質",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-奇數 V 因子消滅定理",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-存活階 2,6,10",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-六階無新信息",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-殘餘無結構",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-O120/O137 模式分配否定",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-A5 唯一統計支持",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-O120 第一代閉合",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-壓縮性判準",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-alpha 不可辨識",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-可辨識性判準",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-pi-1/2 更佳",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-9! = 重排配對",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-過度吻合判準",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-47 有 5 讀法",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-M0 指數事後重建",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-優 5.8 萬倍",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-H0 內部不一致",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-兩參數欠定",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-8:1 壓縮",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I-幾何平均非推導",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "J1 文檔引用嘅 scripts 全部存在",
+      "ok": true,
+      "detail": "缺 []"
+    },
+    {
+      "name": "J2 文檔引用嘅 docs 全部存在",
+      "ok": true,
+      "detail": "缺 []"
+    },
+    {
+      "name": "K1 scripts 檔數 ≥ 47 (45 + 90 + 91)",
+      "ok": true,
+      "detail": "69"
+    },
+    {
+      "name": "Z1 文檔引用嘅第 2 層 tally = 92/92",
+      "ok": true,
+      "detail": "92/92 PASS 93/93 PASS"
+    }
+  ]
+}

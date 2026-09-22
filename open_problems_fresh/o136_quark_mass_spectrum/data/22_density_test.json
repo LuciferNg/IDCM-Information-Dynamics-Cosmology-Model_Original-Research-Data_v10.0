@@ -1,0 +1,60 @@
+{
+  "tol": 0.005,
+  "results": {
+    "u/d": {
+      "actual": 5,
+      "mean_null": 4.075,
+      "ratio": 1.226994,
+      "p": 0.759
+    },
+    "mu/tau": {
+      "actual": 1,
+      "mean_null": 0.229,
+      "ratio": 4.366812,
+      "p": 1.0
+    },
+    "c/b": {
+      "actual": 1,
+      "mean_null": 2.551,
+      "ratio": 0.392003,
+      "p": 0.202
+    },
+    "W/Z": {
+      "actual": 11,
+      "mean_null": 11.514,
+      "ratio": 0.955359,
+      "p": 0.511
+    },
+    "H/W": {
+      "actual": 4,
+      "mean_null": 6.283,
+      "ratio": 0.636639,
+      "p": 0.199
+    },
+    "s/d": {
+      "actual": 0,
+      "mean_null": 0.286,
+      "ratio": 0.0,
+      "p": 0.714
+    },
+    "t/b": {
+      "actual": 0,
+      "mean_null": 0.0,
+      "ratio": Infinity,
+      "p": 1.0
+    }
+  },
+  "structural": [],
+  "marginal": [
+    "H/W"
+  ],
+  "coincidence": [
+    "u/d",
+    "mu/tau",
+    "c/b",
+    "W/Z",
+    "s/d",
+    "t/b"
+  ],
+  "verdict": "0/7 超越巧合"
+}

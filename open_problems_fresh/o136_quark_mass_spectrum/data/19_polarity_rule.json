@@ -1,0 +1,32 @@
+{
+  "polarity_rule": "δ_g = (−1)^g · L_{5(g−1)}",
+  "n0_derived": {
+    "1": 17,
+    "2": 15,
+    "3": 26
+  },
+  "n0_targets": {
+    "1": 17,
+    "2": 15,
+    "3": 26
+  },
+  "gen4_exclusion": {
+    "delta3": -123,
+    "n0_4": -97,
+    "valid": false
+  },
+  "triple_relation": {
+    "sum": "F₇=13",
+    "diff": "N_gen²=9",
+    "product": "N_d/2=22"
+  },
+  "lepton_delta_n": {
+    "value": 17,
+    "formula": "B²−2+dimC = 14+3",
+    "verified": true
+  },
+  "boson_structure": "dimC corrections",
+  "fermion_structure": "Lucas/Fibonacci/n₀",
+  "uniqueness": "form (c) wins: polarity + testable prediction",
+  "open": "為何 Lucas 步長 = 5 (多個表達未唯一)"
+}

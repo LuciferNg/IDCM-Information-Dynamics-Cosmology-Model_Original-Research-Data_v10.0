@@ -1,0 +1,25 @@
+{
+  "prefactor": 0.9338271604938272,
+  "prefactor_frac": "1891/2025",
+  "ekchain_meV": 4.060265,
+  "required_sqrt_MP_H0_meV": 4.347983408249603,
+  "computed_sqrt": {
+    "Planck 2018 (67.4)": 4.189665829678737,
+    "SH0ES (73.04)": 4.361439160959358,
+    "O170 IDCM (71.157)": 4.304852260780692,
+    "Planck TT+lowE (67.27)": 4.185623400579532
+  },
+  "deviations_pct": {
+    "Planck 2018 (67.4)": -3.6411725553157326,
+    "SH0ES (73.04)": 0.3094711144532976,
+    "O170 IDCM (71.157)": -0.9919804980643925,
+    "Planck TT+lowE (67.27)": -3.7341450604898623
+  },
+  "required_H0_kms": 72.59001453429984,
+  "over_agreement": {
+    "match_pct": 0.3094711144532976,
+    "input_precision": 0.01
+  },
+  "geometric_mean_note": "相容性論證: IDCM 係對數空間框架 ⟹ 幾何平均為自然平均; 但非推導",
+  "closure_threshold": 0.05
+}

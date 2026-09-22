@@ -178,6 +178,9 @@
 | 22 | `scripts/22_shape_factors.py` | 2/4 PASS ⟹ ★★ 形狀因素: |Δm|^α 正交 (P=0.127) 但 γ_n·C_f 閉合 (0.84%) + t 需大 C_f | docs/24 |
 | 23 | (CSSG-v3 承接) | — 外置專案閉合: κ_ijk=18·I₉, 9/9 閉合, t Δ0.43% | docs/25 |
 | 24 | `scripts/23_cluster_identity.py` | 2/2 PASS ⟹ ★★ 簇 = A₅ 模式分配偽影 (物理 assignment 下水平回 1.000) — OPEN-4 關閉 | docs/26 |
+| 25 | `scripts/24_cf_label_null.py` | 2/2 PASS ⟹ ★ C_f∩φ9labels={33,37,44} null P=0.036 (線索級) | docs/28 |
+| 26 | `scripts/25_cf_label_features.py` | 3/3 PASS ⟹ ★ G1 命中率 2/3 vs G2 1/6 + 41 缺位 (盲測預言註冊) | docs/29 |
+| 27 | `scripts/26_sumnu_reanalysis.py` | 3/3 PASS ⟹ ★ Σm_ν 分級: m₃ 硬預言過關 (0.0536), 全譜含反推 — 移交 O57/CSSG-v3 | docs/30 |
 
 **★★★ 第六輪狀態更新（2026-09-21，只記新增）**：
 - ★★ **結構性結果**：奇 detent（33, 55）**結構上排除**（γ_n = γ_(N−n) 落喺反 parity

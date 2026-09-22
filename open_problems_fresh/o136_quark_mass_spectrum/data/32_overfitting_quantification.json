@@ -1,0 +1,40 @@
+{
+  "n_predicates": 55,
+  "all_q": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    35,
+    37,
+    39,
+    41,
+    43
+  ],
+  "target_q": [
+    1,
+    3,
+    5,
+    7,
+    17
+  ],
+  "exact_matches": [],
+  "n_exact": 0,
+  "n_superset": 9,
+  "random_mean_hits": 0.002,
+  "random_max_hits": 1,
+  "random_hit_rate_pct": 0.2,
+  "expected_random_exact": 1.705,
+  "verdict": "謂詞搜索係過擬合; 需要動力學機制"
+}

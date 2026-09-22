@@ -1,0 +1,22 @@
+{
+  "A: M₀×γ_n×F_proj (無色荷)": {
+    "score": "8/9",
+    "passed": 8,
+    "total": 9
+  },
+  "B: M₀×γ_n×F_proj×D_q (統一色荷)": {
+    "score": "7/9",
+    "passed": 7,
+    "total": 9
+  },
+  "C: Up無D_q / Down有D_q (v9.0兼容)": {
+    "score": "7/9",
+    "passed": 7,
+    "total": 9
+  },
+  "E: Higgs VEV 頂 + M₀×γ_n×F_proj 其餘": {
+    "score": "8/9",
+    "passed": 8,
+    "total": 9
+  }
+}

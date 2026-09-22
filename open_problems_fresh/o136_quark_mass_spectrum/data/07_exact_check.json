@@ -1,0 +1,7 @@
+{
+  "gamma_33_ratio": 670.0092508307144,
+  "target_670": 670,
+  "deviation_pct": 0.0013807210021492297,
+  "is_exact": false,
+  "reason": "sin(pi/88) is transcendental, cannot equal algebraic (2+sqrt(2))/2680"
+}

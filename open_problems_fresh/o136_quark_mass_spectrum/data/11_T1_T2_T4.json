@@ -1,0 +1,72 @@
+{
+  "T1_E_proj": {
+    "Sigma_gamma": 90.0,
+    "W_sq": 61.49999999999999,
+    "E_proj": 28.500000000000007,
+    "exact": true,
+    "identity": "E_proj = Σγ − ⟨W⟩² = 90 − 61.5 = 28.5"
+  },
+  "T1_P_f_catalog": {
+    "e": {
+      "value": 3.6,
+      "form": "L₆/F₅",
+      "Nd_minus": 40.4
+    },
+    "mu": {
+      "value": 15.5,
+      "form": "(N_d−F₇)/2",
+      "Nd_minus": 28.5
+    },
+    "tau": {
+      "value": 37.0,
+      "form": "N_d−L₄",
+      "Nd_minus": 7.0
+    },
+    "u": {
+      "value": 15.5,
+      "form": "(N_d−F₇)/2",
+      "Nd_minus": 28.5
+    },
+    "d": {
+      "value": 33.0,
+      "form": "N_d−L₅",
+      "Nd_minus": 11.0
+    },
+    "s": {
+      "value": 3.6,
+      "form": "L₆/F₅",
+      "Nd_minus": 40.4
+    },
+    "c": {
+      "value": 13.0,
+      "form": "F₇",
+      "Nd_minus": 31.0
+    },
+    "b": {
+      "value": 44.0,
+      "form": "N_d",
+      "Nd_minus": 0.0
+    }
+  },
+  "T2_n1_splitting": {
+    "e": {
+      "Q": -1,
+      "T3": -0.5,
+      "color": "singlet",
+      "P_f": 3.6
+    },
+    "u": {
+      "Q": 0.6666666666666666,
+      "T3": 0.5,
+      "color": "triplet",
+      "P_f": 15.5
+    },
+    "d": {
+      "Q": -0.3333333333333333,
+      "T3": -0.5,
+      "color": "triplet",
+      "P_f": 33.0
+    }
+  },
+  "T4_closure": "8/8"
+}

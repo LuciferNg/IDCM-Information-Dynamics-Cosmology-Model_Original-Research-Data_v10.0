@@ -1,0 +1,97 @@
+{
+  "isospin_rule": {
+    "delta_n": 14,
+    "formula": "n = n₀ − 7·(2I₃)",
+    "verified": true
+  },
+  "n_decompositions": {
+    "Z": {
+      "n": 41,
+      "form": "N_d − dimC",
+      "calc": 41,
+      "ok": true
+    },
+    "H": {
+      "n": 38,
+      "form": "2×(N_d/2 − dimC) = 2×19",
+      "calc": 38,
+      "ok": true
+    },
+    "b": {
+      "n": 33,
+      "form": "M (K_Tree)",
+      "calc": 33,
+      "ok": true
+    },
+    "W": {
+      "n": 30,
+      "form": "M − dimC = 33−3",
+      "calc": 30,
+      "ok": true
+    },
+    "d": {
+      "n": 24,
+      "form": "L₅ + F₇ = 11+13",
+      "calc": 24,
+      "ok": true
+    },
+    "s": {
+      "n": 22,
+      "form": "N_d/2 = 44/2",
+      "calc": 22,
+      "ok": true
+    },
+    "W'": {
+      "n": 19,
+      "form": "F₇ + C(4,2) = 13+6",
+      "calc": 19,
+      "ok": true
+    },
+    "τ": {
+      "n": 18,
+      "form": "L₆",
+      "calc": 18,
+      "ok": true
+    },
+    "u": {
+      "n": 10,
+      "form": "n₀(1) − 7 = 17−7",
+      "calc": 10,
+      "ok": true
+    },
+    "c": {
+      "n": 8,
+      "form": "n₀(2) − 7 = 15−7",
+      "calc": 8,
+      "ok": true
+    },
+    "μ": {
+      "n": 1,
+      "form": "基礎種子 (fundamental)",
+      "calc": 1,
+      "ok": true
+    }
+  },
+  "generation_centers": {
+    "n0_1": 17,
+    "n0_2": 15,
+    "n0_3": 26
+  },
+  "generation_jumps": {
+    "k_emu": 11.079545454545455,
+    "k_mutau": 5.865530303030303,
+    "k_etau": 16.945075757575758,
+    "additive_consistency": true
+  },
+  "n_assignment": {
+    "u": 10,
+    "d": 24,
+    "c": 8,
+    "s": 22,
+    "t": 19,
+    "b": 33,
+    "mu": 1,
+    "tau": 18
+  },
+  "A_u_over_A_d": 1.0002581877857877
+}
