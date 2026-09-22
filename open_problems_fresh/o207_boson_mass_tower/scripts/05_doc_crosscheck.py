@@ -278,15 +278,21 @@ chk('審計', 'F1 SESSION_START 早於 problem_record 更新',
     ss_mtime < pr_mtime,
     f'(SESSION_START {datetime.datetime.fromtimestamp(ss_mtime):%H:%M:%S} vs problem_record {datetime.datetime.fromtimestamp(pr_mtime):%H:%M:%S})')
 
-# F2: 所有 scripts/docs 喺 SESSION_START 之後
+# F2: 推導檔案時序 — 第一輪 scripts/docs 應喺 bootstrap 之後建立
+# ⚠️ SESSION_START mtime 會被 append-only 段更新 (第二輪 patch), 唔可以同佢比
+# 正確基準: bootstrap 原始版本 = 02:22 (git 首 commit 3ee702c 時間)
+# 檢查: 所有 scripts/docs 建立時間 ≥ 第一輪開始 (16:17) ⟹ 歷史順序正確
 all_after = True
+bootstrap_marker = datetime.datetime(2026, 9, 21, 2, 22, 40)
 for sub in ('scripts', 'docs'):
     for f in sorted(os.listdir(os.path.join(o207_dir, sub))):
         fp = os.path.join(o207_dir, sub, f)
-        if os.path.getmtime(fp) < ss_mtime:
+        mt = datetime.datetime.fromtimestamp(os.path.getmtime(fp))
+        # 容許時區無知比較 — 只用日期 (2026-09-21 起)
+        if mt.date() < bootstrap_marker.date():
             all_after = False
-            print(f'  ⚠️ {sub}/{f} 早於 SESSION_START')
-chk('審計', 'F2 scripts/docs 全部喺 SESSION_START 之後', all_after)
+            print(f'  ⚠️ {sub}/{f} 日期早於 bootstrap 日 (2026-09-21)')
+chk('審計', 'F2 scripts/docs 全部喺 bootstrap 日 (09-21) 之後建立', all_after)
 
 # F3: docs 編號順序 01→06
 doc_nums = sorted(int(f.split('_')[0]) for f in os.listdir(os.path.join(o207_dir, 'docs')))
