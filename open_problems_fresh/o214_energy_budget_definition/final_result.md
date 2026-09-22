@@ -1,6 +1,6 @@
 # O214 — 物質/暗物質/真空能定義統一
 
-## 狀態: 🟢 已閉合 (2026-09-22, 11 scripts / 89 checks 全 PASS)
+## 狀態: 🟢 已閉合 (2026-09-22, 12 scripts / 93 checks 全 PASS)
 
 ## 結論
 IDCM 三類有清晰**結構定義**（非 ΛCDM 標籤）:
@@ -59,7 +59,8 @@ O39 → O41 → O148 → O155 → O163 → O165 → O169 → O204 → O207 → O
 - scripts/08: **3/3** (IDCM 零參數 vs Planck raw data)
 - scripts/09: **3/3** (SPT-3G D1 獨立 fit, 多實驗對照)
 - scripts/10: **5/5** (z=0 直接計數, Connor 2025 FRB)
-- 合計 **89/89 PASS**
+- scripts/11: **4/4** (全光譜擬合: IDCM 幾何約束 0.98/dof vs ΛCDM 0.95, 峰位+Silk 全過)
+- 合計 **93/93 PASS**
 
 ## 剩餘開放（誠實）
 - 🔴 η_B = 6.0636e-10 stale → bbn 用 3/60 重算（~6.21e-10）+ 全面重寫 scripts/02/07
