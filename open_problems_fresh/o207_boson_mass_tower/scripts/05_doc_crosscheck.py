@@ -294,9 +294,9 @@ for sub in ('scripts', 'docs'):
             print(f'  ⚠️ {sub}/{f} 日期早於 bootstrap 日 (2026-09-21)')
 chk('審計', 'F2 scripts/docs 全部喺 bootstrap 日 (09-21) 之後建立', all_after)
 
-# F3: docs 編號順序 01→06
+# F3: docs 編號順序 01→07
 doc_nums = sorted(int(f.split('_')[0]) for f in os.listdir(os.path.join(o207_dir, 'docs')))
-chk('審計', 'F3 docs 編號連續 01-06', doc_nums == [1, 2, 3, 4, 5, 6], f'(={doc_nums})')
+chk('審計', 'F3 docs 編號連續 01-07', doc_nums == [1, 2, 3, 4, 5, 6, 7], f'(={doc_nums})')
 
 # ============================================================
 print('\n' + '=' * 78)

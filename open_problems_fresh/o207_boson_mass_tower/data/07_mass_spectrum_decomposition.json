@@ -1,0 +1,18 @@
+{
+  "decomposition": "m_n = M0 * omega_n * C_b, C_b = 1",
+  "mass_squared": "m_n^2 = M0^2 * gamma_n",
+  "gamma_exponent": {
+    "boson": 0.5,
+    "fermion": 1.0
+  },
+  "shape_factor": {
+    "boson": 1,
+    "fermion": "C_f \u2208 {3.6,13,15.5,33,37,44}"
+  },
+  "structure": [
+    "pairs (n,44-n): m_n^2+m_(44-n)^2 = m_44^2",
+    "fixed point n=22: m_22 = M0*sqrt(2)",
+    "pole-mass: m_n*G_n(0) = M0/2"
+  ],
+  "generation": "m_n = M0*2*sin(pi*n/88), n=1..44, zero free params"
+}
