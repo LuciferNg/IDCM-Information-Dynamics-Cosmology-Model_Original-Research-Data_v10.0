@@ -181,6 +181,8 @@
 | 25 | `scripts/24_cf_label_null.py` | 2/2 PASS ⟹ ★ C_f∩φ9labels={33,37,44} null P=0.036 (線索級) | docs/28 |
 | 26 | `scripts/25_cf_label_features.py` | 3/3 PASS ⟹ ★ G1 命中率 2/3 vs G2 1/6 + 41 缺位 (盲測預言註冊) | docs/29 |
 | 27 | `scripts/26_sumnu_reanalysis.py` | 3/3 PASS ⟹ ★ Σm_ν 分級: m₃ 硬預言過關 (0.0536), 全譜含反推 — 移交 O57/CSSG-v3 | docs/30 |
+| 28 | `scripts/27_energy_budget.py` | 1/3 PASS ⟹ ★ 60 份預算比較 (Ω_dm 0.43σ/Ω_Λ 0.18σ/Ω_b 2.3σ) — **已移交 O215** | docs/31 |
+| 29 | `scripts/28_sqrt_sum_identity.py` | 探索 ⟹ ★ Σ√γ_n = N_d+F₇+1/60 身份 — **已移交 O215** | docs/32 |
 
 **★★★ 第六輪狀態更新（2026-09-21，只記新增）**：
 - ★★ **結構性結果**：奇 detent（33, 55）**結構上排除**（γ_n = γ_(N−n) 落喺反 parity
