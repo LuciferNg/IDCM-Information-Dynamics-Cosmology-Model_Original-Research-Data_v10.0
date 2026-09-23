@@ -30,6 +30,14 @@ O39 → O86 → O204 → O206（docs/14,24,25; docs/31,32 已併入本 O）→ O
 - d_obs(Ω_b) = +1.42% (+2.33σ, Planck 2018) — 可證偽: CMB-S4 σ(Ω_b)→0.00005 判生死
 - MC null: 唔適用（恆等式; 無擬合自由度）
 
+## 驗證統計（閉環審計, 2026-09-22）
+- scripts/01 = 1/3（C1/C2 誠實 FAIL = Ω_b 2.3σ, 記錄為可證偽候選）
+- scripts/02 = 探索型（冇 formal checks, 承 O206）
+- scripts/03 = 31/31 PASS（T1-T10 + D1-D6）
+- scripts/04 = 7/7 PASS（h 反證核對）
+- scripts/05 = 42/42 獨立文檔核對（由零重算, docs/01-04 + final_result + problem_record）
+- **全 O 合計: 39/41 checks PASS + 42 獨立核對**
+
 ## 剩餘開放（誠實）
 - 🟡 Ω_b = 3/60 2.3σ 邊緣 → CMB-S4 判生死
 - 🟡 IDCM「世代計數」vs ΛCDM「穩定重子能量」精確映射（O214 移交, 未建立）

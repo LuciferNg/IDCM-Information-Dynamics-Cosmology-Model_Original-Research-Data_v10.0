@@ -118,4 +118,7 @@ O163 docs/07「Σγ_even = F₁₁+1 = 90」喺慣例 B 下正確 — 與慣例 
 | T10 | Σ√γ = 60 − 3 + δ | ✅ 1/1 |
 | D1-D6 | 觀測對照 + η_B 第一性原理 | ✅ 6/6 |
 
-**本輪合計: 31/31 PASS**（累計: 03 個 scripts / 33 checks）
+**本輪合計: 31/31 PASS**（scripts/03 本身; scripts/01 另有 3 checks = 1/3 誠實 FAIL, scripts/02 探索型冇 formal checks）
+> ⚠️ 2026-09-22 審計修正 (scripts/05 C14): 原寫「累計: 03 個 scripts / 33 checks」計錯 —
+> scripts/01(3) + scripts/03(31) = **34**; 加 scripts/04(7/7) 後本 O 累計 **41 checks**。
+> 全 O 最終計數: scripts 01-05 = 1/3 + 31/31 + 7/7 + 核對 42/42 = **39/41 checks PASS (2 誠實 FAIL) + 42 獨立核對**
