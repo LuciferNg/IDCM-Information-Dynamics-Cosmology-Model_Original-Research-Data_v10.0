@@ -7,6 +7,14 @@
 
 ---
 
+# ✅ 2026-09-22 閉合附註（本 SESSION_START 為 bootstrap snapshot, 之後工作已完成）
+
+**O214 已閉合**: 13 scripts / 95 checks 全 PASS（詳見 01_problem_record.md + final_result.md）
+- 三類結構定義 + IDCM↔ΛCDM 字典 + 有定義比較 + ΛCDM 側拆解
+- 成份解拆（Planck Plik_lite RAW 613 bins 重現）+ 多實驗對照（SPT-3G/z=0 Connor）
+- 全光譜擬合（IDCM 幾何約束 0.98/dof vs ΛCDM 0.95）+ h 掃描（O167 h_cmb=0.67407 確認）
+- O38 誤標修正（71.157 = O170 徑向律, 非 O38）
+
 ## 交接摘要（O206 docs/31 → O214）
 
 ```
@@ -94,4 +102,5 @@ O214 判定「η_B = 6.0636e-10 stale（基於已放棄 Ω_b=19/450）」方向�
 ★ Σ√γ_n = 1 + cot(π/176) EXACT（玻色塔質量譜總和精確閉式）
 ★ Ω_b = (γ_max−1)/(Σγ_odd+γ_max²) = 3/60 譜形式（γ_max = γ₄₄ = 4 = B, 60 = Σγ_odd + γ_max²）
 ★ Ω_m = E_proj/Σγ = 28.5/90 = 19/60（新增）
+```
 

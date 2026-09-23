@@ -1,0 +1,48 @@
+{
+  "checks_pass": 71,
+  "checks_total": 71,
+  "scripts": {
+    "01_structural_definitions": {
+      "exit": 0,
+      "result": "RESULT: 27/27 PASS"
+    },
+    "02_redefined_comparison": {
+      "exit": 0,
+      "result": "RESULT: 11/11 PASS"
+    },
+    "03_lcdm_definition_decomposition": {
+      "exit": 0,
+      "result": "RESULT: 10/10 PASS"
+    },
+    "04_composition_decomposition": {
+      "exit": 0,
+      "result": "RESULT: 6/6 PASS"
+    },
+    "05_planck_spectral_decomposition": {
+      "exit": 0,
+      "result": "RESULT: 4/4 PASS"
+    },
+    "07_idcm_composition": {
+      "exit": 0,
+      "result": "RESULT: 10/10 PASS"
+    },
+    "06_plik_lite_reproduction": {
+      "json": "checks 8/8"
+    },
+    "06b_plik_2d_fit": {
+      "json": "checks 2/2"
+    },
+    "08_idcm_zero_param_plik": {
+      "json": "checks 3/3"
+    },
+    "09_spt3g_fit": {
+      "json": "checks 3/3"
+    },
+    "11_full_spectrum_idcm": {
+      "json": "checks 4/4"
+    },
+    "12_h_scan": {
+      "json": "checks 2/2"
+    }
+  }
+}
