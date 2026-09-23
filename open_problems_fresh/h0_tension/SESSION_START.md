@@ -24,3 +24,14 @@
 > 日期化更正註已落: 03_first_results / 01_problem_record / 06_complete_record /
 > 08_calibration_mechanism / scripts/02 + 新檔 09_o170_n4_handoff.md。
 > 其他開放項 (Maser 機制) 未掂。
+
+★★ **2026-09-23 更新: N4 已解 — E(ℓ) 低 ℓ 形式已由 O169 推導 (scripts/22 + docs/16, 14/14 PASS)**:
+```text
+E(ℓ) = 1 + ℓ + (⟨sec⟩_{1..K(z)} − 1)·(1 − 4^{−mℓ}),   m ∈ {5,6,7} = {2N_gen−1, 2N_gen, 2N_gen+1}
+  (1) E(0) = 1 EXACT ⟹ H_eff(0) = c/R = 72.59 EXACT (H₀_idcm 恢復, 舊線性律 64.88)
+  (2) DESI χ² = 3.2–4.5 (Δχ² ≤ 2);  (3) SH0ES z=0.03: 0.96–1.36σ (舊 7.99σ)
+  H_eff(0.03) = 70.96–71.67 (舊線性律 66.27, −9.3% → −1.3~2.9%)
+  舊 linear 律 E = ℓ + 1.119… 只係 ℓ ≥ 0.3 高 ℓ 漸近 (E(0) = 1.119 ≠ 1 已修正)
+狀態: [x] N4 已解 — 09_o170_n4_handoff.md §4 + 10_translation_layer_analysis.md §5/§6 嘅
+      「E(ℓ) 低 ℓ 形式未推導」→ 已推導; 本 O 日期化註已更新 (見 09 檔 §5b 後續)。
+```
