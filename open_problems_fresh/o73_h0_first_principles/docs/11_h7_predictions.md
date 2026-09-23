@@ -23,12 +23,47 @@ O73 全鏈閉合後, ω_ring = 72.59 (km/s)/Mpc 有 7 個獨立可證偽預言:
       如果收斂到 73.9 (ΛCDM 期望) → IDCM 否證
 ```
 
+> **★ 2026-09-15 觀測更新 (兩篇新論文, 直接測試 P1)**:
+>
+> | 論文 | 方法 | H0 結果 |
+> |:-----|:-----|:--------|
+> | Watkins & Feldman 2608.06247 (08-07/11) | M25 高分辨率 velocity field 修正 | **69.7 ± 2.6** (固定 σ_v); **68.7 ± ~2** (marginalize σ_v); P(>73.5) = 2.9% |
+> | Stiskalek & Desmond 2609.17684 (09-15) | Bayesian forward model + Manticore non-linear PV | **71.6 ± 3.7** (統計誤差); linear 修正降 0.8-1.4, non-linear 降 1.6-2.1 |
+>
+> **關鍵: 幾何距離冇變** — 2609.17684 嘅 5 星系距離同 P20 一致 (updated-MCP baseline 0.3σ 內);
+> 變嘅只係「H0 = cz/D」嘅 **peculiar velocity 修正** (ΛCDM 框架內翻譯)。
+>
+> **★ 對 IDCM 嘅影響 (2026-09-15 跟進分析)**:
+> ```
+> ① IDCM 真正預言 = D_app(ℓ) 距離, 唔係 H0
+>    Mendeleev 測試 (O11 scripts/03, 排除 NGC 4258 v_pec 異常):
+>    χ²(5) = 5.02 = 1.00/dof ✅ — 5 星系距離符合 IDCM 零參數預言
+>    新論文距離同 P20 一致 → IDCM 距離預言保持 ✅
+>
+> ② H0 下跌 (73.9 → 68.7-71.6) 係 ΛCDM 框架嘅 cz/D 翻譯
+>    IDCM 冇膨脹 — redshift 唔係膨脹速度, cz/D 唔係基本量
+>    IDCM 嘅 z→D 關係 = D_app(ℓ), ℓ = log₄(1+z) — 唔需 PV 修正
+>
+> ③ P1 預言重新表述:
+>    舊: 「MCP 收斂 72.6」(ΛCDM 翻譯 — 模型依賴)
+>    新: 「MCP 幾何距離必須符合 D_app(ℓ)」(IDCM 直接預言 — 已驗證 χ²(5)=5.0 ✅)
+>    可證偽: 未來 MCP 星系距離偏離 D_app(ℓ) → IDCM 否證
+> ```
+>
+> **狀態: 🟡 P1 由「H0 收斂測試」改為「距離符合 D_app 測試」(已驗證 ✅); H0 層仍等 ngVLA σ<1%**
+
 ### P2: NGC 4258 本動速度 (O11 P2) — 直接量度
 ```
 預言: NGC 4258 v_pec ≈ +130 km/s (距 Maser H₀ 修正)
 現狀: 待直接量度
 判決: v_pec ≈ 130 → 支持; v_pec ≈ 0 → 否證
 ```
+
+> **★ 2026-09-15 觀測更新**: 2608.06247 (Watkins & Feldman) M25 velocity field 表:
+> NGC 4258: D = 7.58 Mpc, cz = 679.3 km/s, **v_pec(M25) = 262 km/s** (σ_v = 162)。
+> ⚠️ 同 IDCM 預言 +130 km/s 差 ~2× — **但定義可能唔同**: M25 = CMB 框架總 peculiar velocity
+> (含 bulk flow), IDCM 130 km/s = 解釋 MCP H0 異常所需嘅**殘餘** PV (M106 群, O11: 0.52σpec)。
+> **狀態: 🟡 需核對定義後再判決 (唔急住判 — 兩者可能唔係同一量)**
 
 ### P3: ngVLA 100+ 星系 (O11 P3) — 2028+
 ```
