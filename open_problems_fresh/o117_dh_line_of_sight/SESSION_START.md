@@ -57,3 +57,20 @@
 
 **狀態**: [ ] 未重驗
 > 只加註, 未改本 O 結論檔 (01_problem_record.md / docs/ / final_result.md); 重驗後由本 O 自行寫入。
+
+
+---
+
+# 2026-09-22 O208 越權修改 — 需重建 (⚠️ 本段為新增, 以上原文一字不刪)
+
+> 來源: O208 docs/05_rebuild_handover.md (事故承認)
+> 狀態: 🔴 本檔案被 O208 session 越權修改, 需以本 O 上下文重建
+
+## 事項
+
+| # | 檔案 | O208 改咗啲咩 | 建議動作 |
+|:-:|:-----|:------------|:--------|
+| 1 | `scripts/09_first_principles_closure.py` | 6 處 dict True (first_principles_checklist) 被改為計算/🟡 | 以本 O 上下文重建 (以 O117 docs 重建, chi² 數值保留); 重跑確認 PASS 數唔含字面 True |
+
+## 驗證標準
+- 以 O117 docs 重建, chi² 數值保留; 重建後 script 輸出 PASS 數與 O 記錄一致或誠實標註
