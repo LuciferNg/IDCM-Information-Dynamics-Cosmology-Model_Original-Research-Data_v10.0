@@ -20,6 +20,9 @@
 | 4 | 2026-09-24 | 驗證輪 | `scripts/01_gauge_invariance.py` 19/19 PASS — gauge 分類表、N 降級、錨重定向 | `scripts/01`, `data/01` | 重跑 exit 0，stdout = data 逐 byte |
 | 5 | 2026-09-24 | 形式化 | `docs/00_gauge_invariant_sector_table.md`（③ 交付）+ data-first 約束檔 | `docs/00`, `data/00` | vs data/01 逐位核對 |
 | 6 | 2026-09-24 | 跨 O 交回 | 命題修正寫入 O212 / O200 `SESSION_START.md`（append-only 移交跟進段） | 目標 O 之 SESSION_START | 原文一字不改 |
+| 7 | 2026-09-24 | L7 流 | `scripts/02_world_flow.py` **20/20 PASS** — 細化流 + c 不動點、殼和距離律、徑向 arch 部分推導、Λ 樣 turnaround z=1、箭頭不可逆 | `scripts/02`, `data/02`, `docs/01` | 重跑 exit 0 |
+| 8 | 2026-09-24 | 環 + 錨 | `scripts/03_ring_anchor_decomposition.py` **21/21 PASS** — 環推導（primitive）+ 兩錨（ω_ring, r_d）內在自發分解（rank = 1） | `scripts/03`, `data/03`, `docs/02` | 重跑 exit 0 |
+| 9 | 2026-09-24 | 交付 + 記錄 | README row 更新（🔴→🟡）+ commit（pathspec 隔離，驗證無掃 sibling） | `README.md` | `git show --name-only` 核對 |
 
 ---
 
@@ -70,14 +73,16 @@ IDCM 係**靜態／譜**框架：全部結論係本徵值、跡、比值、靜�
 
 | # | 問題 | 狀態 | 去向 |
 |:-:|:-----|:----:|:-----|
-| R1 | 世界演化方程（L7）嘅**演化參數**係咩（ℓ？拍子？RG 標度？） | 🟡 提案：ℓ（相位深度 = 細化流） | 本 O |
-| R2 | 由演化方程**導出** z 之非膨脹定義（`1+z = B^ℓ`） | 🔴 | 本 O（O76 已有形式，缺推導） |
-| R3 | D_A／D_H 由方程生成（唔准重擬合 O76／O169 已閉合律） | 🔴 | 本 O（與 O76／O170 邊界） |
-| R4 | 「光唔傳播」之動力學表述（O99 local-in-layer 升級） | 🔴 shape-level（O99 docs/09 自認 A_φφ 🔴） | 本 O |
-| R5 | 時間箭頭來源（T_ring 係週期，本徵無箭頭） | 🔴 | 本 O |
-| R6 | **錨 = r_d 之形式化 + 「無量綱 → 標度」機制** | 🟡 本輪：gauge 表 ✅ / 機制 🔴 | 本 O ↔ O212 |
-| R7 | 幀 τ 可否**唔用 c** 由拓撲導出（令 c 變輸出） | 🔴 | 本 O ↔ O212 |
-| R8 | Λ 樣特徵（加速 turnaround）係 M(ℓ) 振盪之像（phenomenological degeneracy） | 🟡 形式已驗（H_img 極小 z=1 EXACT） | 本 O |
+| R1 | 世界演化方程（L7）嘅**演化參數**係咩 | 🟢 **ℓ（相位深度 = 細化層）** — 流 `Λ_ℓ→Λ_{ℓ−1}`，不動點 = c（`docs/01` §二） | 已閉合 |
+| R2 | 由演化方程**導出** z 之非膨脹定義（`1+z = B^ℓ`） | 🟡 級聯比已形式化；「為何 B = 4」引 K_tree 分支（未由第一原理重導） | 本 O |
+| R3 | D_A／D_H 由方程生成（唔准重擬合 O76／O169 已閉合律） | 🟡 距離 = 自相似殼和 `1−4^{−ℓ}=3Σ4^{−j}` 🟢；徑向 arch 三值仍 🟡（振幅 B / 鎖 ℓ_t 未完全導出） | 本 O ↔ O170 |
+| R4 | 「光唔傳播」之動力學表述（O99 local-in-layer 升級） | 🟡 動量沿 ℓ 層累積 + 徑向載波調制；`A_φφ` 歸一化 🔴 | 本 O ↔ O99 |
+| R5 | 時間箭頭來源（T_ring 係週期，本徵無箭頭） | 🟡 **不可逆 🟢**（decimation many-to-one）；**方向性 🔴**（邊界條件） | 本 O |
+| R6 | **錨 = r_d 之形式化 + 「無量綱 → 標度」機制** | 🟢 **環推導 + 兩錨自發分解**（`docs/02` 21/21）；錨 = 環尺度 R_world × 細化不變性 | 已閉合（準則裁決待定） |
+| R7 | 幀 τ 可否**唔用 c** 由拓撲導出（令 c 變輸出） | 🟡 已證 {R, ω, c, τ} rank = 1；R_world 絕對值不可約（維度定理）⟹ c 仍與 R_world 同 dof | 本 O ↔ O212 |
+| R8 | Λ 樣特徵（加速 turnaround）係 M(ℓ) 振盪之像 | 🟢 形式：turnaround **z = √B − 1 = 1 EXACT**（結構，非 Ω）；高 z H 線性；判別 = 位置 + 形狀 | 本 O |
+| R9 | **環尺度 R_world 之絕對值**（唯一不可約自由度） | 🔴 自發生成候選全循環 / 全 dev > 17% | O86（重力階層）↔ O212 |
+| R10 | 錨準則裁決（O212「G = 最小約定含量」vs 本 O「R_world = 純觀測 + 拓撲鎖定」） | 🔴 待調律者 | O212 SESSION_START 已記 |
 
 ---
 
