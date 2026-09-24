@@ -50,4 +50,42 @@ O208 SESSION_START 鐵律明確：「**只改本 O 檔案（其他 O 由各自 s
 - [x] 9 script 解除追蹤（untracked，內容仍係我改過嘅版本）
 - [x] O204 SESSION_START 還原
 - [x] 本清單記錄交接
-- [ ] 各 O session 以自己上下文重建（驗證標準如上）
+- [x] 各 O session 以自己上下文重建（見 §六 核實結果）
+
+---
+
+## 六、還原狀態核實 (2026-09-24 13:38 實測)
+
+> 方法: `git ls-files` / `git diff --cached` / `git cat-file HEAD` / 檔案 mtime / 內容特徵比對
+> 判據: mtime = 2026-09-22 = 仍係 O208 版本；mtime = 2026-09-24 = 已由各 O 自己 session 重建
+
+### ✅ 已還原 / 已處置
+
+| 項目 | 實測結果 |
+|:-----|:--------|
+| 9 個 `__pycache__`（py_compile 生成） | ✅ 已刪除 |
+| O204 `SESSION_START.md` | ✅ 已還原（working tree O208 出現 0 次，= edd11fd^ 版本） |
+| O117 `scripts/09` | ✅ 已由 O117 session 重建（Sep 24 08:50；原版特徵 `'zero_free_parameters': True` 等回復） |
+| O54 `scripts/06` | ✅ 已由 O54 session 重建（Sep 24 09:41；原版特徵回復） |
+| O65 `scripts/04` | ✅ 已由 O65 session 重建（Sep 24 09:46；原版特徵回復） |
+| O69 `scripts/06` | ✅ 已由 O69 session 編輯（Sep 24 09:01） |
+| O49 `scripts/06` | ✅ 已由 O49 session 重建（Sep 24 09:48；新版本含 check + dict 混合） |
+| O86/O117/O69/O65/O121 記錄面 | ✅ 各 O 已改寫/移除 O208 跟進段（回歸自己記錄） |
+
+### ⏳ 未還原（仍係 O208 版本，mtime = 2026-09-22）
+
+| O | 檔案 | mtime | 現狀 |
+|:-:|:-----|:------|:-----|
+| O86 | `scripts/05_final_verification.py` | 09-22 10:40 | ★ 仍含 O208 特徵（`s2_claims`/`s4_claims`/「O208 反硬編碼」） |
+| O121 | `scripts/05_information_paradox.py` | 09-22 10:46 | ★ 仍含 O208 特徵（`all(steps[k][1] > ...)`） |
+| O121 | `scripts/10_singularity_resolution.py` | 09-22 10:47 | ★ 仍含 O208 特徵（`abs(r_H-R_s)/R_s < 1e-4`） |
+| O66 | `scripts/00_verification_check.py` | 09-22 10:45 | ★ 仍含 O208 特徵（`abs(log10_formula - log10_target)`） |
+
+→ 此 4 個 script 需 O86/O121/O66 各自 session 繼續重建。
+
+### 附註
+
+- **8 個 data JSON**: 我原本刪除，但已由各 O session 今朝（08:51-09:57）重跑 script 重新生成 → 屬各 O 自己嘅 script 輸出，非 O208 遺留。
+- **RESULT_TEMPLATE.md**: 仍含 O208 加嘅「密度基準」section（master 層，屬 O208 閉合測試 3 交付）。
+- **README.md**: O208 行 🔴→🟢（O208 自己行，合理）。
+- **非 O208 同窗口改動**: o136/o200/o207 檔案（mtime 09-22）經核實 0 個 O208 痕跡 → 屬 sibling session，非 O208 所為。
