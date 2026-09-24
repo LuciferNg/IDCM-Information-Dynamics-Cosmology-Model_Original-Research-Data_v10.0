@@ -58,19 +58,38 @@
 **狀態**: [ ] 未重驗
 > 只加註, 未改本 O 結論檔 (01_problem_record.md / docs/ / final_result.md); 重驗後由本 O 自行寫入。
 
-
 ---
 
-# 2026-09-22 O208 越權修改 — 需重建 (⚠️ 本段為新增, 以上原文一字不刪)
+## ⚠️ O170 證偽交回 (2026-09-24) — 待本 O 重驗
 
-> 來源: O208 docs/05_rebuild_handover.md (事故承認)
-> 狀態: 🔴 本檔案被 O208 session 越權修改, 需以本 O 上下文重建
+**修正點** (上游 O170 `docs/04_falsifications_open_items.md` §1 F2/F3):
 
-## 事項
+- **F2 (❌ 作廢)**: 本 O 用錯 Lyα 誤差 — 用咗 **0.532**, 但該值實為 Lyα `D_M` 誤差;
+  DESI DR2 Table 6 正解 Lyα `D_H/r_d` 誤差 = **0.101** (8.632 ± 0.098stat ± 0.026sys)
+- **F3 (❌ 降級為巧合)**: 本 O Gaussian `δ_k0` (`σ_φ = ½·log₄φ = 0.17356`) 被判定無獨立結構依據
+  (σ_φ 恰好 = 半個 φ 週期); 且深極限 `M(∞) = ln4 = 1.386 ≠ √2`
+  (O170 由 `v_g(22) = 1/√2` 確立徑向深極限 `M = sec(π/4) = √2`)
 
-| # | 檔案 | O208 改咗啲咩 | 建議動作 |
-|:-:|:-----|:------------|:--------|
-| 1 | `scripts/09_first_principles_closure.py` | 6 處 dict True (first_principles_checklist) 被改為計算/🟡 | 以本 O 上下文重建 (以 O117 docs 重建, chi² 數值保留); 重跑確認 PASS 數唔含字面 True |
+**問題** (本 O 受影響點):
 
-## 驗證標準
-- 以 O117 docs 重建, chi² 數值保留; 重建後 script 輸出 PASS 數與 O 記錄一致或誠實標註
+- `scripts/01_dh_verification.py:90` — Lyα DH σ `0.532` → 應為 `0.101`
+- `scripts/02_dh_group_delay.py:33` — 同上
+- `scripts/08_T5_exact.py` / `scripts/09_first_principles_closure.py` — 同上 (共用 DESI 陣列)
+- **全部 DH/rd χ² 需重算**: σ_Lyα 修正後 χ² 由 **7.41/6 → 29.22/6** (Lyα 變 **4.76σ** 離群)
+- **C_DM / C_DH 重推** (O169 亦已要求, 見上段) — `C_DM = −C_delay × 2φ⁻¹ × √5` 身份已證偽
+- `docs/01_problem_record.md` / `docs/02_first_principles_closure.md` / `RESULT.md` 數值同步
+- 內部不一致: DM/rd χ² 於 `docs/01` 記 12.81 (用 C_DM), 於 `docs/02` 記 9.65 (用 C_DH) — 需統一
+
+**根因** (Lyα 誤差): v9.0 covariance 矩陣 rows `[11,12]` 排序為 `[D_H, D_M]`, 但 data list 排序為 `[D_M, D_H]`
+→ Lyα `D_H` 取錯 `D_M` 變異數:
+  `cov[11,11] = 1.02136194e-02` → σ = **0.101** (真 Lyα `D_H`)
+  `cov[12,12] = 2.82685779e-01` → σ = **0.532** (真 Lyα `D_M`)
+
+**不受影響** (保留):
+
+- ★核心結論 **`D_H ≠ dD_A/dz`** — DM 與 DH 係獨立投影 (O169 亦確認) → **保留**
+- 其餘 5 個 tracer 嘅 DM 誤差逐字正確 (0.167/0.177/0.152/0.318/0.531) ✓
+- 其餘 5 個 tracer 嘅 DH 誤差偏差 ≤ 4.15% (LRG3+ELG 最大) — 需以 Table 6 值替換
+
+**狀態**: [ ] 未重驗
+> 只加註, 未改本 O 結論檔; 重驗後由本 O 自行寫入。
