@@ -23,6 +23,7 @@
 | 7 | 2026-09-24 | L7 流 | `scripts/02_world_flow.py` **20/20 PASS** — 細化流 + c 不動點、殼和距離律、徑向 arch 部分推導、Λ 樣 turnaround z=1、箭頭不可逆 | `scripts/02`, `data/02`, `docs/01` | 重跑 exit 0 |
 | 8 | 2026-09-24 | 環 + 錨 | `scripts/03_ring_anchor_decomposition.py` **21/21 PASS** — 環推導（primitive）+ 兩錨（ω_ring, r_d）內在自發分解（rank = 1） | `scripts/03`, `data/03`, `docs/02` | 重跑 exit 0 |
 | 9 | 2026-09-24 | 交付 + 記錄 | README row 更新（🔴→🟡）+ commit（pathspec 隔離，驗證無掃 sibling） | `README.md` | `git show --name-only` 核對 |
+| 10 | 2026-09-24 | 局部 c 裁判 | 外部 AI（Gemini）數字逐點核實 + category check + 輸入誤差預算 ⟹ `scripts/04_local_c_constraint.py` **12/12 PASS**；裁決 `c_ℓ = c` 固定點 | `scripts/04`, `data/04`, `docs/03`；`data/00` F3/F4 新增 + D1 note | 重跑 exit 0；文獻經 web 核實 |
 
 ---
 
@@ -82,7 +83,7 @@ IDCM 係**靜態／譜**框架：全部結論係本徵值、跡、比值、靜�
 | R7 | 幀 τ 可否**唔用 c** 由拓撲導出（令 c 變輸出） | 🟡 已證 {R, ω, c, τ} rank = 1；R_world 絕對值不可約（維度定理）⟹ c 仍與 R_world 同 dof | 本 O ↔ O212 |
 | R8 | Λ 樣特徵（加速 turnaround）係 M(ℓ) 振盪之像 | 🟢 形式：turnaround **z = √B − 1 = 1 EXACT**（結構，非 Ω）；高 z H 線性；判別 = 位置 + 形狀 | 本 O |
 | R9 | **環尺度 R_world 之絕對值**（唯一不可約自由度） | 🔴 自發生成候選全循環 / 全 dev > 17% | O86（重力階層）↔ O212 |
-| R10 | 錨準則裁決（O212「G = 最小約定含量」vs 本 O「R_world = 純觀測 + 拓撲鎖定」） | 🔴 待調律者 | O212 SESSION_START 已記 |
+| R10 | 錨準則裁決（O212「G = 最小約定含量」vs 本 O「R_world = 純觀測 + 拓撲鎖定」） | 🟡 **c-gauge 部分已定案**：`c_ℓ = c`（SI）為固定點（`docs/03` 12/12）⟹ 約定取 c-anchored；坐標選擇（G vs R_world）仍 🔴 待調律者 | O212 SESSION_START 已記 |
 
 ---
 
