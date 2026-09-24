@@ -121,7 +121,9 @@ print()
 # 伸長定律本身對比
 print(f"  伸長定律本身 (O169):")
 print(f"    舊 (已證偽 4.88 sigma): E_old(l) = 1 + 2phi^-1 l")
-print(f"    新 (零參數):            E_new(l) = l + 1.11911398")
+print(f"    新 (零參數):            E_new(l) = l + 1.11911398   [高 l >= 0.3 漸近]")
+print(f"    ★ 低 l 修正 (O169 09-23): E(l) = 1 + l + (<sec>_{{1..K(z)}}-1)(1-4^-m l), m in {{5,6,7}}")
+print(f"      E(0) = 1 EXACT => H_eff(0) = 72.59 恢復 (本 O scripts/26 重驗 13/13 PASS)")
 sec_sum = mp.mpf("1.11911398")
 print(f"    新截距 = <sec>_(1..22) = 1/<v_g>_(1..22) = {mp.nstr(sec_sum, 10)}")
 for l in [mp.mpf("0.5"), mp.mpf(1), mp.mpf(2), mp.mpf(3)]:

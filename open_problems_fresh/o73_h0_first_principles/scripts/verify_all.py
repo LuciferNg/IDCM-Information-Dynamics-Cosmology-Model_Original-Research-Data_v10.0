@@ -151,7 +151,8 @@ check("docs/06 載 O169 更正註", "O169 重驗更正" in d06)
 d01m = doc_contents.get("01_problem_record.md", "")
 check("docs/01 載 O169 重驗更正註", "O169 重驗更正" in d01m)
 d13 = doc_contents.get("13_closure_record.md", "")
-check("docs/13 檔名沿革 + 125/125 註", "檔名沿革" in d13 and "125/125" in d13)
+check("docs/13 檔名沿革 + 141/141 註", "檔名沿革" in d13 and "141/141" in d13)
+check("docs/13 計數沿革含 125 → 141", "125" in d13 and "141" in d13)
 d02 = doc_contents.get("02_H1_verdict.md", "")
 check("docs/02 載「已被 docs/04 推翻」註", "docs/04" in d02 and "推翻" in d02)
 d05b = doc_contents.get("05_h3_cmb_projection.md", "")
@@ -250,9 +251,47 @@ try:
     pr = open(BASE + "/01_problem_record.md").read()
     check("01_problem_record 載第 4 輪時序", "### 第 4 輪 (2026-09-18)" in pr)
     check("01_problem_record 第 4 輪含 O204 交接", "O204" in pr)
+
     check("01_problem_record 載 docs/15 入相關文件", "docs/15_c_first_principles.md" in pr)
 except Exception as e:
     check("01_problem_record 第 4 輪", False, str(e))
+
+# B95+. O5-2 正式重驗: O169 E(0) 低 l 修正形式 (2026-09-23, scripts/26 13/13)
+d06 = doc_contents.get("06_parameter_linkage_map.md", "")
+check("docs/06 載 E(l) 低 l 修正形式", "1 + ℓ + (⟨sec⟩" in d06 or "1 + ℓ + (<sec>" in d06)
+check("docs/06 載 E(0) = 1 EXACT 註", "E(0) = 1 EXACT" in d06)
+check("docs/06 載 Ω_b 版本衝突註", "3/60" in d06 and "Ω_b 版本未統一" in d06)
+try:
+    s20 = open(BASE + "/scripts/20_lcdm_i_divergence.py").read()
+    check("scripts/20 載 E(l) 低 l 修正註", "低 ℓ 修正" in s20)
+except Exception as e:
+    check("scripts/20 E(l) 註", False, str(e))
+try:
+    s22 = open(BASE + "/scripts/22_o169_crosscheck.py").read()
+    check("scripts/22 載 E(l) 低 l 修正註", "低 l 修正" in s22)
+except Exception as e:
+    check("scripts/22 E(l) 註", False, str(e))
+try:
+    s26 = open(BASE + "/scripts/26_o169_e0_reverify.py").read()
+    check("scripts/26 存在 (O5-2 重驗)", "E(0) = 1 EXACT" in s26)
+except Exception as e:
+    check("scripts/26 存在", False, str(e))
+o26 = outs.get("26_o169_e0_reverify", "")
+check("scripts/26 輸出 PASS 13/13", "PASS = 13" in o26, o26[-60:].replace(chr(10), " ") if o26 else "")
+check("scripts/26 E(0) = 1 確認", "E_corr(0) = 1.0" in o26)
+check("scripts/26 DESI chi2 m=6 = 3.4955", "3.49552" in o26)
+check("scripts/26 h_lad m=6 = 0.7130", "0.71303659" in o26)
+try:
+    pr = open(BASE + "/01_problem_record.md").read()
+    check("01_problem_record 載 O5-2 註冊", "O5-2" in pr)
+    check("01_problem_record 載 O5-1 註冊", "O5-1" in pr)
+    check("01_problem_record 載第 5 輪時序", "### 第 5 輪 (2026-09-23)" in pr)
+except Exception as e:
+    check("01_problem_record 第 5 輪", False, str(e))
+d14 = doc_contents.get("14_open_problem_status.md", "")
+check("docs/14 載 §12 第 5 輪開放狀態", "## 12." in d14 or "### 12." in d14)
+fr = open(BASE + "/final_result.md").read()
+check("final_result 載開放項 section", "## 開放項" in fr)
 
 
 print()
