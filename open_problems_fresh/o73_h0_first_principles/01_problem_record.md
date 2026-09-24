@@ -5,7 +5,7 @@
 > **來源**: O72 A2 移交
 > **前置**: O72 (K_Chain⊗K_Tree) 🔴, bbn/ 🟢, cmb_cl/ 🟢
 > **文檔**: docs/ (15 份), SESSION_START.md, scripts/ (27 個), data/verify/ (27 .out)
-> **驗證**: verify_all.py — **190/190 PASS** (第 5 輪, 2026-09-23) +
+> **驗證**: verify_all.py — **200/200 PASS** (第 5 輪, 2026-09-23) +
 > `scripts/25_doc_independent_audit.py` — **99/99 PASS** (獨立文檔核對, 第三層)
 
 ## 關鍵結果
@@ -168,8 +168,8 @@
 | 84 | ★ `scripts/26_o169_e0_reverify.py` | **O5-2 正式重驗** (新增, 13/13 PASS): E(0)=1 EXACT / DESI χ² (m=5,6,7) / SH0ES σ / h_lad / 影響=0 於 θ*,I*,BBN | 🟢 重驗完成 | 本輪 |
 | 85 | `docs/06` 地圖 + 連結規則 | E(ℓ) 低 ℓ 修正形式註 + E(0)=1 註 + ★ Ω_b 版本衝突註 (連結規則 1 待裁定) | 🟢 原文保留 | 本輪 |
 | 86 | `scripts/20`, `scripts/22` | E(ℓ) 低 ℓ 修正註 (線性形式 = 高 ℓ 漸近) | 🟢 | 本輪 |
-| 87 | `scripts/verify_all` v7 | 補 B79–B143 (O5-2 重驗 65 項) | 🟢 **190/190 PASS** | 本輪 |
-| 88 | `docs/10` §6 + `docs/13` | 第 5 輪報告 (65 項清單 + O5-2 重驗表) + 計數沿革 125→190 | 🟢 | 本輪 |
+| 87 | `scripts/verify_all` v7 | 補 B79–B153 (O5-2 重驗 75 項) | 🟢 **200/200 PASS** | 本輪 |
+| 88 | `docs/10` §6 + `docs/13` | 第 5 輪報告 (75 項清單 + O5-2 重驗表) + 計數沿革 125→200 | 🟢 | 本輪 |
 | 89 | `final_result.md` | O5-2 狀態更新 (重驗完成) | 🟢 | 本輪 |
 | 90 | ★ `scripts/27_o215_omegab_version_ruling.py` | **O5-1 判定** (新增, 19/19 PASS): 三個同 h 無關之 Planck 比值 + 家族扁平性 + 1/45 恆等 + BBN 鎖重算 | 🟢 判定完成 | 本輪 |
 | 91 | ★ `docs/16_o215_omegab_version_ruling.md` (新) | O5-1 完整判定報告 (7 節: 版本對照 / 比值判定 / 1/45 恆等 / BBN 鎖影響 / 其他結論影響 / 判定與後續 / 檔案) | 🟢 | 本輪 |
@@ -190,6 +190,25 @@
 | 105 | ★ `docs/18_o53_h0_ruling.md` (新) | O5-3 判定報告 (6 節) | 🟢 | 本輪 |
 | 106 | `docs/17` §5 + `docs/14` §12.2 | O5-3 狀態 🟡 → ✅ 判定完成; 1/45 澄清; O5-2 m 狀態 | 🟢 | 本輪 |
 | 107 | `docs/10` §6.9 + `final_result.md` | 第 5 輪續 4 報告 + O5-3 判定登記 | 🟢 | 本輪 |
+| 108 | ★ `docs/19_remaining_open_items.md` (新) | **剩餘開放項總表** (8 項四類 + 上游清單 + 第 5 輪產物索引) | 🟢 | 本輪 |
+| 109 | `docs/06` §3.2 | 命名表數值同步 (f_baryon = 1/20, f_dm = 4/15) | 🟢 | 本輪 |
+| 110 | `docs/14` §12.3 + `final_result.md` | 剩餘開放項總表登記 | 🟢 | 本輪 |
+
+**第 5 輪續 5: 剩餘開放項總表 (2026-09-23)**
+
+```
+O73 剩餘開放項 = 8 項, 四類:
+  (a) 已完成判定 (3): O5-1 (Omega_b = 1/20) / O5-2 (E(0) 重驗) / O5-3 (H0 = h_cmb)
+  (b) 交回上游 (1):   O5-4 (BBN 鎖語義) + 5 條上游清單
+  (c) 待用戶 (1):     命名規範 (Omega -> f_*; 非阻塞)
+  (d) 等數據 (2):     H7 P1-P5 / m 簡併 (已有可證偽預言)
+  (e) 定理邊界 (1):   c 之錨 (維度定理, 已證明非缺口)
+
+⟹ 冇任何項需要本 O 再推導 ⇒ 維持「全鏈閉合 + 開放問題清零 (本 O 側)」
+
+第 5 輪統計: 3 項判定 + 1 項誤判修正 + 2 項新發現 (1/45 澄清, BBN 鎖語義)
+驗證: verify_all 200/200; scripts/25 99/99; 34 scripts 零失敗
+```
 
 **第 5 輪續 4: O5-3 判定 + O5-2 剩餘 (2026-09-23)**
 
@@ -356,7 +375,7 @@ docs/06_parameter_linkage_map.md  三層架構 + Ω→f 建議 (O169 更正)
 docs/07_theta_star_candidate.md   θ* = 7π/2112 (O167 誤差修正註)
 docs/08_final_closure_map.md      唯一性 + 閉合圖 (O167/O98 註)
 docs/09_h5_cross_lock.md          H5 雙重鎖定
-docs/10_verification_report.md    全鏈驗證 (第 3 輪 79 → 第 4 輪 125 → 第 5 輪 190/190)
+docs/10_verification_report.md    全鏈驗證 (第 3 輪 79 → 第 4 輪 125 → 第 5 輪 200/200)
 docs/11_h7_predictions.md         H7 七預言 (P5 修正註)
 docs/12_lcdm_i_divergence.md      I 分歧 2.18% (O98/O105 註)
 docs/13_closure_record.md         閉合記錄 (原 03_closure_record, 已改名)

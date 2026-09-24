@@ -151,8 +151,8 @@ check("docs/06 載 O169 更正註", "O169 重驗更正" in d06)
 d01m = doc_contents.get("01_problem_record.md", "")
 check("docs/01 載 O169 重驗更正註", "O169 重驗更正" in d01m)
 d13 = doc_contents.get("13_closure_record.md", "")
-check("docs/13 檔名沿革 + 190/190 註", "檔名沿革" in d13 and "190/190" in d13)
-check("docs/13 計數沿革含 125 → 190", "125" in d13 and "190" in d13)
+check("docs/13 檔名沿革 + 200/200 註", "檔名沿革" in d13 and "200/200" in d13)
+check("docs/13 計數沿革含 125 → 200", "125" in d13 and "200" in d13)
 d02 = doc_contents.get("02_H1_verdict.md", "")
 check("docs/02 載「已被 docs/04 推翻」註", "docs/04" in d02 and "推翻" in d02)
 d05b = doc_contents.get("05_h3_cmb_projection.md", "")
@@ -395,6 +395,25 @@ try:
     check("01_problem_record 載第 5 輪續 4", "O5-3 判定 + O5-2 剩餘" in pr4)
 except Exception as e:
     check("01_problem_record O5-3 判定", False, str(e))
+# B144+. 第 5 輪續 5: 剩餘開放項總表 (docs/19)
+try:
+    d19 = doc_contents.get("19_remaining_open_items.md", "")
+    check("docs/19 存在 (剩餘開放項總表)", "剩餘開放項總表" in d19)
+    check("docs/19 載 8 項四類", "8 項" in d19 or "8 項四類" in d19)
+    check("docs/19 載 O5-1/O5-2/O5-3 判定完成", all(k in d19 for k in ("O5-1", "O5-2", "O5-3")))
+    check("docs/19 載上游清單 5 條", "O215/O163" in d19 and "bbn" in d19)
+    check("docs/19 載維度定理", "維度定理" in d19)
+    check("docs/19 載第 5 輪產物索引", "abf63e1" in d19 and "dfb1531" in d19)
+    check("docs/19 載 1/45 澄清", "C_energy" in d19)
+except Exception as e:
+    check("docs/19 剩餘總表", False, str(e))
+d06c = doc_contents.get("06_parameter_linkage_map.md", "")
+check("docs/06 載命名數值同步", "f_baryon = Ω_b = 3/60 = 1/20" in d06c)
+d14d = doc_contents.get("14_open_problem_status.md", "")
+check("docs/14 載 §12.3 總表", "12.3" in d14d and "剩餘開放項總表" in d14d)
+fr2 = open(BASE + "/final_result.md").read()
+check("final_result 載 docs/19 指引", "docs/19" in fr2)
+
 
 
 print()
