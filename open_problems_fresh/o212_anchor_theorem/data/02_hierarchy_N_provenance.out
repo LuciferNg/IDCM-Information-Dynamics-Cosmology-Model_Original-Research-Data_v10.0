@@ -1,0 +1,77 @@
+==============================================================================================
+O212 ② 階層數 N 嘅來源
+==============================================================================================
+
+[C1] BBN 鎖定重現 (O73 docs/04 方向 B: 觀測 -> omega_ring)
+    Omega_b = 19/450 = 0.042222
+    n_gamma = 4.1071781e+8 m^-3  (實測 4.107e8)
+    omega_ring = 72.714343 (km/s)/Mpc   vs 72.59 -> dev 0.1713%
+    PASS (O73 註冊 72.73, dev 0.19%)
+
+[C2] Omega_b 版本敏感度 (O73 已註冊 O5-1, 未裁定)
+    Omega_b = 3/60 = 0.050000  -> omega_ring = 66.81987
+      vs 結構 72.59 : -7.95%
+      vs Planck 67.36: -0.80%
+      vs CMB 投影 67.407: -0.87%
+    PASS (O73 快照註冊 66.834, -8.11%)
+    ==> BBN 鎖定係【Omega_b 版本敏感】; 現行 Omega_b 未裁定 (O5-1)
+    ==> 現階段 omega_ring = 72.59 仍係【觀測錨】(O11 距離階梯), 唔係 BBN 預言
+
+[C3] N = tau/t_Pl 兩個約定
+    N(omega_ring = 72.59 錨)   = 7.884688925e+60
+    N(omega_ring = 72.73 BBN)  = 7.871205908e+60   (O200 註冊 7.869511471e60)
+    vs O200 註冊值 dev = 0.0215%  (< 0.05% = 同一量, 差異來自 omega_ring 0.02% 級捨入)
+    比值 N_anchor/N_bbn = 1.001712954  vs c_W/c = 1.001928261 -> dev 0.0215%
+    PASS — 兩個約定差 ≈ c_W/c (0.19% 級 🟡), 同一量兩個輸入
+    備註: c_W/c = R_world*omega_ring/c 用註冊 R_world = 4129.94 Mpc;
+          若用 R_world = c/omega_ring (72.59) 則比值恆等 1 (定義)
+
+[C4] ★ 精確無量綱恆等式
+    推導: N^2 = c^5/(hbar G) / omega_ring^2 ;  omega_ring^2 = (8piG/3) rho_c
+          rho_c = eta_B m_p n_gamma / Omega_b ;  n_gamma = 2z3/pi^2 (k_BT/(hbar c))^3
+       => N^2 = 3pi Omega_b hbar^2 c^8 / (16 z3 eta_B m_p G^2 (k_BT)^3)
+       代入 (m_Pl/m_p)^4 = hbar^2 c^2/(G^2 m_p^4):
+       => N^2 = [3pi/(16 z3)] (Omega_b/eta_B) (m_Pl/m_p)^4 (m_p c^2/(k_BT))^3
+    Omega_b=19/450 : N_closed = 7.871205908e+60  N_direct = 7.871205908e+60  dev = 0.0
+    Omega_b=3/60   : N_closed = 8.565559419e+60  N_direct = 8.565559419e+60  dev = 0.0
+    PASS — 恆等式 EXACT (dps=40, dev < 1e-35)
+    ==> N 係【純無量綱量嘅函數】: Omega_b, eta_B, m_Pl/m_p, k_BT/(m_p c^2)
+
+[C5] N <-> G 一一對應
+    G_implied(N = 7.8846889e+60, omega_ring = 72.59) = 6.6743e-11
+    CODATA G = 6.6743e-11  -> dev 0.00000%
+    PASS
+    m_Pl/m_p 由 N 反解 = 1.3012112e+19  vs 實測 1.3012112e+19  -> dev 0.00000%
+    PASS
+    ==> N 同 G (即 m_p/m_Pl) 攜帶完全相同嘅資訊
+
+[C6] null test: N = f(結構數)? (密度基準)
+    N = 7.871205908e+60
+    N_search = 56183  d_obs = 16.9457%  d_med = 7.8006%  q_obs = 0.8750
+    PASS (🔴 確認 ≈ 隨機) — N 唔係結構數 (O200 P=0.8735 重現)
+
+[C7] 剛性: 解析 log-導數 vs 數值擾動
+    d lnN / d lnOmega_b  =          0.5   解析      0.5   PASS
+    d lnN / d lneta_B    =         -0.5   解析     -0.5   PASS
+    d lnN / d lnk_BT     =         -1.5   解析     -1.5   PASS
+    d lnN / d lnG        =         -1.0   解析     -1.0   PASS
+    d lnN / d lnm_p      =         -0.5   解析     -0.5   PASS
+    PASS (5/5)
+    ==> N ∝ 1/G EXACT: 任何 G 嘅變動 1:1 反映喺 N (反向)
+
+[C8] 可證偽清單
+    F1  N 唔可以由結構數導出 (null q_obs > 0.05) — 若將來聲稱導出 N, 必須先過同池 null
+    F2  N ∝ 1/G: 用任何獨立 G 值重算 N, 必得同 CODATA 一致嘅階層數
+    F3  恆等式 N^2 = [3pi/(16z3)](Om_b/eta_B)(m_Pl/m_p)^4 (m_p c^2/k_BT)^3 — 任一輸入更新即全鏈更新
+    F4  若要「導出 N」, 等價於由 W-field 晶格導出 m_p/m_Pl (重力扇區 O86) — 目前 🔴
+
+==============================================================================================
+RESULT: 12/12 PASS  (C1 1 + C2 1 + C3 1 + C4 1 + C5 1+1 + C6 1 + C7 5)
+
+  ★ 核心結論:
+    N 唔係 IDCM 嘅自由參數 — 佢係【無量綱量嘅複合】:
+        N^2 = [3pi/(16 zeta(3))] (Omega_b/eta_B) (m_Pl/m_p)^4 (m_p c^2/(k_BT))^3
+    其中 Omega_b 係結構 (3/60), eta_B/T_CMB 係無量綱觀測, m_Pl/m_p 係【重力階層】。
+    ==> 「N 為何係 7.87e60」 等價於 「m_p/m_Pl 為何係 7.69e-20」(重力階層問題),
+        唔係錨定理嘅缺口 — 亦唔可以喺無量綱結構內導出 (維度定理)。
+
