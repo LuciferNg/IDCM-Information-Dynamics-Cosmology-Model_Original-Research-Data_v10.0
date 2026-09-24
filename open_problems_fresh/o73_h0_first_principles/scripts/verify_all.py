@@ -151,8 +151,8 @@ check("docs/06 載 O169 更正註", "O169 重驗更正" in d06)
 d01m = doc_contents.get("01_problem_record.md", "")
 check("docs/01 載 O169 重驗更正註", "O169 重驗更正" in d01m)
 d13 = doc_contents.get("13_closure_record.md", "")
-check("docs/13 檔名沿革 + 141/141 註", "檔名沿革" in d13 and "141/141" in d13)
-check("docs/13 計數沿革含 125 → 141", "125" in d13 and "141" in d13)
+check("docs/13 檔名沿革 + 155/155 註", "檔名沿革" in d13 and "155/155" in d13)
+check("docs/13 計數沿革含 125 → 155", "125" in d13 and "155" in d13)
 d02 = doc_contents.get("02_H1_verdict.md", "")
 check("docs/02 載「已被 docs/04 推翻」註", "docs/04" in d02 and "推翻" in d02)
 d05b = doc_contents.get("05_h3_cmb_projection.md", "")
@@ -292,6 +292,37 @@ d14 = doc_contents.get("14_open_problem_status.md", "")
 check("docs/14 載 §12 第 5 輪開放狀態", "## 12." in d14 or "### 12." in d14)
 fr = open(BASE + "/final_result.md").read()
 check("final_result 載開放項 section", "## 開放項" in fr)
+# B95+. O5-1 判定: Ω_b 版本統一 (2026-09-23, scripts/27 19/19)
+try:
+    d16 = doc_contents.get("16_o215_omegab_version_ruling.md", "")
+    check("docs/16 存在 (O5-1 判定)", "Ω_b 版本統一" in d16)
+    check("docs/16 載 17.6σ 排除", "17.58σ" in d16)
+    check("docs/16 載 1/45 恆等", "1/45" in d16)
+    check("docs/16 載 BBN 鎖 66.888", "66.888" in d16)
+    check("docs/16 載家族 (3:16:41)/60", "(3:16:41)/60" in d16)
+except Exception as e:
+    check("docs/16 O5-1", False, str(e))
+try:
+    s27 = open(BASE + "/scripts/27_o215_omegab_version_ruling.py").read()
+    check("scripts/27 存在 (O5-1 判定)", "Ω_b 版本統一" in s27)
+except Exception as e:
+    check("scripts/27 存在", False, str(e))
+o27 = outs.get("27_o215_omegab", "")
+check("scripts/27 輸出 PASS 19/19", "PASS = 19" in o27, o27[-60:].replace(chr(10), " ") if o27 else "")
+check("scripts/27 判定 16/3 家族", "5.333333" in o27)
+check("scripts/27 舊版 17.58σ 排除", "17.58" in o27)
+d04 = doc_contents.get("04_bbn_lock.md", "")
+check("docs/04 載 Ω_b 版本註", "Ω_b 版本註" in d04 and "66.888" in d04)
+d02 = doc_contents.get("02_H1_verdict.md", "")
+check("docs/02 載 Ω_b 版本註", "66.888" in d02)
+check("docs/06 載 Ω_b 判定註", "3/60 = 1/20" in d06)
+try:
+    pr2 = open(BASE + "/01_problem_record.md").read()
+    check("01_problem_record 載 O5-1 判定完成", "O5-1" in pr2 and "判定完成" in pr2)
+    check("01_problem_record 載第 5 輪續 2", "O5-1 判定結果" in pr2)
+except Exception as e:
+    check("01_problem_record O5-1", False, str(e))
+
 
 
 print()
