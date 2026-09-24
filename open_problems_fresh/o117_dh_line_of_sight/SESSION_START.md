@@ -75,7 +75,8 @@
 - `scripts/01_dh_verification.py:90` — Lyα DH σ `0.532` → 應為 `0.101`
 - `scripts/02_dh_group_delay.py:33` — 同上
 - `scripts/08_T5_exact.py` / `scripts/09_first_principles_closure.py` — 同上 (共用 DESI 陣列)
-- **全部 DH/rd χ² 需重算**: σ_Lyα 修正後 χ² 由 **7.41/6 → 29.22/6** (Lyα 變 **4.76σ** 離群)
+- **全部 DH/rd χ² 需重算**: σ_Lyα 修正後 χ² 由 **7.41/6 → 29.50/6** (Lyα 變 **−4.76σ** 離群)
+  > 註: 早前初算寫 29.22/6（只換 Lyα 一項）；以**全部 6 個 tracer** 嘅 Table 6 誤差重算 = **29.50/6**（見 `docs/03`、`scripts/10`）
 - **C_DM / C_DH 重推** (O169 亦已要求, 見上段) — `C_DM = −C_delay × 2φ⁻¹ × √5` 身份已證偽
 - `docs/01_problem_record.md` / `docs/02_first_principles_closure.md` / `RESULT.md` 數值同步
 - 內部不一致: DM/rd χ² 於 `docs/01` 記 12.81 (用 C_DM), 於 `docs/02` 記 9.65 (用 C_DH) — 需統一
@@ -91,5 +92,20 @@
 - 其餘 5 個 tracer 嘅 DM 誤差逐字正確 (0.167/0.177/0.152/0.318/0.531) ✓
 - 其餘 5 個 tracer 嘅 DH 誤差偏差 ≤ 4.15% (LRG3+ELG 最大) — 需以 Table 6 值替換
 
-**狀態**: [ ] 未重驗
+**狀態**: [~] 部分已執行 (2026-09-24)
 > 只加註, 未改本 O 結論檔; 重驗後由本 O 自行寫入。
+
+### 已執行 (2026-09-24)
+
+- [x] **Lyα σ 修正 + 全 DH/rd χ² 重算** — `scripts/10_desi_table6_recompute.py` (7/7 PASS) + `docs/03_desi_table6_error_correction.md`
+  - O117 誤差集複現 7.41/6 ✅ → Table 6 誤差重算 **29.50/6** (χ²/dof = 4.92)
+  - Lyα pull −0.90σ → **−4.76σ**; 其餘 5 tracer σ_DH 偏差 ≤4.15%
+  - 診斷: 自由掃描 C 最優仍係 9.76/6 → 正確誤差下公式無法擬合
+  - DM/rd 側複現 12.81 (C_DM) / 9.65 (C_DH) ✅ 誤差集無誤
+  - `README.md:54` 已同步 🟢 → 🟡
+
+### 未執行
+
+- [ ] **C_DM / C_DH 重推** — `C_DM = −C_delay × 2φ⁻¹ × √5 = −0.169733` 身份已由 O169 證偽 (新身份 `C = 1 − 2φ⁻¹ = −(√5−2) = −0.23606798` EXACT)；`C_DH = C_DM × 4/3` 連帶需重推 (4/3 比例不許假設)
+- [ ] **Lyα −4.76σ 離群性質裁決** — 公式失效 / 高階相位相干 (O118) / Lyα 觀測系統，三選一
+- [ ] `docs/01_problem_record.md`、`docs/02_first_principles_closure.md`、`RESULT.md` 內引用 7.41 之陳述 → 以 docs/03 為準
