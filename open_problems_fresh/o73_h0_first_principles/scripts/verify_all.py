@@ -151,8 +151,8 @@ check("docs/06 載 O169 更正註", "O169 重驗更正" in d06)
 d01m = doc_contents.get("01_problem_record.md", "")
 check("docs/01 載 O169 重驗更正註", "O169 重驗更正" in d01m)
 d13 = doc_contents.get("13_closure_record.md", "")
-check("docs/13 檔名沿革 + 174/174 註", "檔名沿革" in d13 and "174/174" in d13)
-check("docs/13 計數沿革含 125 → 174", "125" in d13 and "174" in d13)
+check("docs/13 檔名沿革 + 190/190 註", "檔名沿革" in d13 and "190/190" in d13)
+check("docs/13 計數沿革含 125 → 190", "125" in d13 and "190" in d13)
 d02 = doc_contents.get("02_H1_verdict.md", "")
 check("docs/02 載「已被 docs/04 推翻」註", "docs/04" in d02 and "推翻" in d02)
 d05b = doc_contents.get("05_h3_cmb_projection.md", "")
@@ -363,6 +363,39 @@ try:
     check("01_problem_record 載第 5 輪續 3", "連鎖審計結果" in pr3)
 except Exception as e:
     check("01_problem_record O5-3/4", False, str(e))
+# B128+. 第 5 輪續 4: O5-3 判定 + O5-2 剩餘 (2026-09-23, scripts/29 9/9)
+try:
+    d18 = doc_contents.get("18_o53_h0_ruling.md", "")
+    check("docs/18 存在 (O5-3 判定)", "O5-3 判定" in d18)
+    check("docs/18 載結構強制 H₀", "結構強制" in d18)
+    check("docs/18 載 H₀ = 67.407112", "67.407112" in d18)
+    check("docs/18 載候選 B 排除", "−1.098%" in d18 or "-1.098%" in d18)
+    check("docs/18 載 Ω_b h² 預言", "0.0227185935" in d18)
+    check("docs/18 載 1/45 澄清", "C_energy" in d18 and "巧合" in d18)
+    check("docs/18 載 m 簡併", "2N_gen" in d18 and "簡併未完全破除" in d18)
+except Exception as e:
+    check("docs/18 O5-3 判定", False, str(e))
+try:
+    s29 = open(BASE + "/scripts/29_o53_h0_ruling_m_degeneracy.py").read()
+    check("scripts/29 存在 (O5-3 判定)", "O5-3 判定" in s29)
+except Exception as e:
+    check("scripts/29 存在", False, str(e))
+o29 = outs.get("29_o53_m", "")
+check("scripts/29 輸出 PASS 9/9", "PASS = 9" in o29, o29[-60:].replace(chr(10), " ") if o29 else "")
+check("scripts/29 確認 H₀ = 67.407112", "67.407112" in o29)
+check("scripts/29 確認候選 B −1.098%", "-1.09847" in o29)
+check("scripts/29 確認 1/45 差 2.234%", "2.23367" in o29)
+d17b = doc_contents.get("17_omegab_chain_audit.md", "")
+check("docs/17 載 O5-3 ✅ 判定完成", "O5-3" in d17b and "判定完成" in d17b)
+d14c = doc_contents.get("14_open_problem_status.md", "")
+check("docs/14 載 §12.2", "12.2" in d14c and "67.407112" in d14c)
+try:
+    pr4 = open(BASE + "/01_problem_record.md").read()
+    check("01_problem_record 載 O5-3 判定完成", "O5-3" in pr4 and "判定完成" in pr4)
+    check("01_problem_record 載第 5 輪續 4", "O5-3 判定 + O5-2 剩餘" in pr4)
+except Exception as e:
+    check("01_problem_record O5-3 判定", False, str(e))
+
 
 print()
 print("─" * 74)
