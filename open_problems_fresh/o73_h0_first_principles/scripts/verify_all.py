@@ -151,8 +151,8 @@ check("docs/06 載 O169 更正註", "O169 重驗更正" in d06)
 d01m = doc_contents.get("01_problem_record.md", "")
 check("docs/01 載 O169 重驗更正註", "O169 重驗更正" in d01m)
 d13 = doc_contents.get("13_closure_record.md", "")
-check("docs/13 檔名沿革 + 155/155 註", "檔名沿革" in d13 and "155/155" in d13)
-check("docs/13 計數沿革含 125 → 155", "125" in d13 and "155" in d13)
+check("docs/13 檔名沿革 + 174/174 註", "檔名沿革" in d13 and "174/174" in d13)
+check("docs/13 計數沿革含 125 → 174", "125" in d13 and "174" in d13)
 d02 = doc_contents.get("02_H1_verdict.md", "")
 check("docs/02 載「已被 docs/04 推翻」註", "docs/04" in d02 and "推翻" in d02)
 d05b = doc_contents.get("05_h3_cmb_projection.md", "")
@@ -321,9 +321,48 @@ try:
     check("01_problem_record 載 O5-1 判定完成", "O5-1" in pr2 and "判定完成" in pr2)
     check("01_problem_record 載第 5 輪續 2", "O5-1 判定結果" in pr2)
 except Exception as e:
+    check("01_problem_record O5-3/4", False, str(e))
+
+except Exception as e:
     check("01_problem_record O5-1", False, str(e))
 
-
+# B109+. 第 5 輪續 3: 連鎖審計 (2026-09-23, scripts/28 13/13)
+try:
+    d17 = doc_contents.get("17_omegab_chain_audit.md", "")
+    check("docs/17 存在 (連鎖審計)", "連鎖審計" in d17)
+    check("docs/17 載誤判修正", "影響 = 0 於 c" in d17 and "為誤" in d17)
+    check("docs/17 載 BBN 鎖量 H₀ 判定", "BBN 鎖量嘅係 H₀" in d17)
+    check("docs/17 載 h 類別問題", "類別錯誤" in d17 or "h 類別" in d17)
+    check("docs/17 載 c dev +0.023%", "0.023" in d17)
+    check("docs/17 載 O5-3", "O5-3" in d17)
+    check("docs/17 載 O5-4", "O5-4" in d17)
+except Exception as e:
+    check("docs/17 連鎖審計", False, str(e))
+try:
+    s28 = open(BASE + "/scripts/28_omegab_chain_audit.py").read()
+    check("scripts/28 存在 (連鎖審計)", "連鎖審計" in s28)
+except Exception as e:
+    check("scripts/28 存在", False, str(e))
+o28 = outs.get("28_omegab_chain", "")
+check("scripts/28 輸出 PASS 13/13", "PASS = 13" in o28, o28[-60:].replace(chr(10), " ") if o28 else "")
+check("scripts/28 確認 c 爆開 −3.26%", "-3.258375" in o28 or "-3.258" in o28)
+check("scripts/28 確認新配置 ω_ring 0.023%", "0.0231871" in o28)
+check("scripts/28 確認 h_cmb 下舊版 −14.24%", "-14.2397" in o28)
+d16b = doc_contents.get("16_o215_omegab_version_ruling.md", "")
+check("docs/16 載 §5 誤判修正註", "影響 = 0 於 c" in d16b and "誤判" in d16b)
+d04b = doc_contents.get("04_bbn_lock.md", "")
+check("docs/04 載 BBN 鎖語義修正", "H₀ 由 BBN 鎖定" in d04b or "鎖定量 = H₀" in d04b)
+d11b = doc_contents.get("11_h7_predictions.md", "")
+check("docs/11 載 P7 重構註", "P7" in d11b and "重新詮釋" in d11b)
+check("docs/11 載 P3 加註", "D_app(ℓ) 距離" in d11b or "D_app" in d11b)
+d14b = doc_contents.get("14_open_problem_status.md", "")
+check("docs/14 載 §12.1 連鎖審計", "12.1" in d14b and "O5-3" in d14b)
+try:
+    pr3 = open(BASE + "/01_problem_record.md").read()
+    check("01_problem_record 載 O5-3/O5-4", "O5-3" in pr3 and "O5-4" in pr3)
+    check("01_problem_record 載第 5 輪續 3", "連鎖審計結果" in pr3)
+except Exception as e:
+    check("01_problem_record O5-3/4", False, str(e))
 
 print()
 print("─" * 74)
