@@ -192,7 +192,11 @@ O73 目錄自身: 無 README.md (open_problems_fresh 下 210 個 O 目錄中只�
 ## §8 本輪驗證
 
 ```text
-scripts 全數重跑: 32/32 exit=0 (25a 為已標 superseded 之 v1 存檔, exit=1 屬預期)
+scripts 全數重跑: 32 scripts 逐個直查 exit code — 31 個 exit=0
+  (25a_doc_audit_v1_superseded.py = 已標 superseded 之 v1 存檔, exit=1 = 預期, 41 PASS / 8 FAIL
+   —— 該 8 FAIL 已於第 3 輪查明全為腳本自身之誤, 非文檔錯誤)
+  ⚠️ 注意: 用 `for f in scripts/*.py; do ...; printf ... "$?"` 取值會被命令替換 `$(basename $f)`
+     重置 `$?` → 必須先存 `ec=$?` 或逐個直查
 verify_all.py:    206/206 PASS
 scripts/25 (獨立文檔核對): 99/99 PASS, 4 NOTE
 scripts/26: 13/13   scripts/27: 19/19   scripts/28: 13/13   scripts/29: 9/9

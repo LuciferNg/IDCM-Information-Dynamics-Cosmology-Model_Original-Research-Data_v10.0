@@ -416,6 +416,7 @@ docs/17_omegab_chain_audit.md     ★ Ω_b 連鎖審計 (c 自洽解敏感度 + 
 docs/18_o53_h0_ruling.md          ★ O5-3 H₀ 結構強制 + O5-2 剩餘 + 1/45 澄清 (第 5 輪)
 docs/19_remaining_open_items.md   剩餘開放項總表 (8 項四類, 第 5 輪)
 docs/20_db_reconciliation_round6.md  ★★ 第 6 輪 session-DB 對帳 (9 節, 2026-09-25)
+docs/21_compaction_handoff.md     ★ 上下文壓縮交接 (session id 沿革 + 復原指引, 第 6 輪)
 final_result.md                   結論摘要 (依 RESULT_TEMPLATE.md)
 scripts/25_doc_independent_audit.py  第三層獨立文檔核對 (99/99)
 scripts/25a_doc_audit_v1_superseded.py  v1 存檔 (追溯用)
