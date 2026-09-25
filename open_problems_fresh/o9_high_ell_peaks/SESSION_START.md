@@ -1,0 +1,102 @@
+# O9 新 Session 啟動文件 — 高 ℓ 峰偏差 ✅ 已閉合
+
+> **2026-08-19 已誠實閉合。** 見 `02_results.md` + `README.md`。開新 session 時: 載入下面 skills, 然後讀 `02_results.md` 了解結論。
+>
+> **最終狀態: O9-A ✅ / O9-B 🟡 (數據精度不足, 非理論錯誤) / O9-C ✅✅ / O9-D ✅✅**
+> - 峰位閉合 RMS 0.83% (m=1..7)
+> - m=5 修正 ℓ₅=1121 (四實驗支持: Planck/SPT-3G/ACT DR4/ACT DR6)
+> - 振幅母函數: 偶峰 ((k+1)/(4k−1))² + 奇峰 3/14, 1/7 (ACT DR4 驗證)
+> - m=4 (1013) 真峰: forward-model 閉合
+> - O9-B: ACT 最低 ℓ 598 覆蓋唔到 m=2 (537) — 理論預言維持, 待低ℓ數據
+
+---
+
+## 所需 Skills
+
+### 1. `camb-cmb-verification`（核心, 必須）
+- CAMB 2.0 API 坑 (raw_cl, unlensed_scalar, 單位)
+- 峰檢測 workflow (平滑 sigma, find_peaks)
+- 誠實規則: 高ℓ偏差係真, 記錄 🟡
+
+### 2. `web-access-protocol`（輔助）
+- 下載 ACT DR4 / SPT-3G binned 譜
+
+## 前置資料
+
+```
+IDCM m=5,6,7: 1199/1340/1412
+CAMB raw: 1129/1427
+偏差: 5.8-11.3%
+IDCM 公式: ℓ_m = 44×(M−C(9−m,2)) + ((m−1)×9 mod 25)
+M=33, 44=2N_d, C(9−m,2) 三角形數
+```
+
+## 啟動 Prompt
+
+```
+開 O9 高ℓ峰偏差專案: /home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o9_high_ell_peaks/
+
+任務: 解決 IDCM m=5,6,7 高ℓ峰預測 vs CAMB 嘅偏差 (5.8-11.3%)
+
+背景: IDCM 1199/1340/1412 vs CAMB raw 1129/1427
+m=1-4 已閉合 (0.00-0.49%), 高ℓ偏差可能係:
+a) CAMB damping tail 峰檢測不穩
+b) IDCM 公式高ℓ失效
+c) 觀測數據支持邊邊個?
+
+步驟:
+1. 下載 ACT DR4 / SPT-3G binned C_ℓ 數據 (web-access-protocol)
+2. 文獻峰位: 高ℓ實際觀測峰位
+3. CAMB 峰檢測穩定性: 唔同平滑 sigma 測試
+4. IDCM vs 觀測: 直接比較
+5. 結論: IDCM 定 CAMB 更接近? (誠實)
+
+載入 skills: camb-cmb-verification, web-access-protocol
+
+重點: 峰檢測喺 damping tail 好脆弱 — 用 binned 數據 + 唔同平滑交叉
+誠實: 如果觀測支持 CAMB → IDCM 公式高ℓ要修正 🟡
+      如果支持 IDCM → CAMB damping tail 峰位唔可靠 🟢
+最後: 雙重驗證 + 更新 01_problem_record + README
+```
+
+## 常見坑
+
+1. CAMB raw_cl=True + unlensed_scalar 先啱 (lensed 會偏移高ℓ)
+2. 高ℓ峰好弱 — find_peaks 可能漏/錯峰, 要人工檢查
+3. ACT/SPT binned 數據格式唔同 — 要小心單位 (D_ℓ vs C_ℓ)
+4. 唔好因為「IDCM 應該啱」而忽略觀測
+
+---
+
+## 附錄 — 下游回報（O213 第五輪，2026-09-25）：奇峰級聯統一 `F₄/(kL₄)` 與 A₃ 例外
+
+**來源**: `o213_world_dynamics/scripts/08_beat_background_gate.py`（31/31 PASS）、`docs/07_beat_background_gate.md`
+
+**★ 發現**：本 O `04_cascade_mother_function.md` **§3 自己寫出**
+
+```
+A₅ = F₄/(2L₄) = 3/14
+A₇ = F₄/(3L₄) = 3/21 = 1/7
+```
+
+呢兩式構成**單一統一模式**：`A_{2k+1} = F₄/(k·L₄) = 3/(7k)`。
+但本 O 對 **A₃ 例外取 `(2/3)² = 4/9`**（本 O §5 自承「A₅ = 3/14 同 A₇ = 1/7 係**事後揀最靚**」）。
+
+若採統一式，`A₃ = F₄/L₄ = 3/7 = 0.42857`（觀測 0.4389，dev **−2.35%**；原 4/9 dev +1.27%）。
+
+**★ 新後果（統一式之紅利）**：`A_{2k+1} = 3/(7k)` 跌穿可見度閘 κ = B^{−2} = 1/16 於
+
+```
+3/(7k) < 1/16  ⟺  k > 48/7 = 6.857  ⟺  k ≥ 7  ⟺  m ≥ 15
+```
+
+⟹ 可見奇峰 = `{1,3,5,7,9,11,13}` — **恰 7 個 = L₄**，且**精確命中 O137 之 9 模式集
+`{1,2,3,4,5,7,9,11,13}` 之奇數部分**。即 O137 原本之枚舉結果，可由 κ 閘獨立推出同一邊界。
+
+**★ 盲測預言**：A₉ = 3/28 = 0.10714、A₁₁ = 3/35 = 0.08571、A₁₃ = 1/14 = 0.07143；
+m = 15 → 3/49 = 0.06122 **< κ ⟹ 不可見**。ACT DR4 / SPT-3G 可測（偏離 > 3% ⟹ 本 O 級聯式 FAIL）。
+
+**★ 對本 O 之建議**：將 §3 之 `F₄/(kL₄)` 升為統一式，並在 §5 標明 A₃ 之 `(2/3)²` 係
+**例外（已自承事後揀最靚）**；或提供 A₃ 為何唔入族之結構理由。
+
+**原文保留不改**（本附錄為 append-only）。
