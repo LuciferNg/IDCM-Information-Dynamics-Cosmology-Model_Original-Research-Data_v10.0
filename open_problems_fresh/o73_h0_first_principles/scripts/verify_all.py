@@ -495,6 +495,31 @@ shift = mp.mpf("72.59") * (mp.sqrt(mp.mpf("0.04221")/ob) - mp.sqrt(mp.mpf("0.042
 check("重算: BBN 鎖定位移 < 0.01 (0.19% 容差內)",
       abs(shift) < mp.mpf("0.01"),
       f"Δω_ring = {mp.nstr(shift, 5)}")
+# 10) 第 6 輪 (2026-09-25) session-DB 對帳補記 1 — 45/ω_ring 冇身份 (負面結果)
+#     來源: DB session 20260825_162202_c2d7c3; 現記 docs/14 §13.2
+w_true = mp.mpf("72.59002746")          # 結構值 = c_SI/R_world
+check("重算: 45/ω_ring = 0.61991986 (冇身份)",
+      abs(45/w_true - mp.mpf("0.61991986")) < mp.mpf("1e-7"),
+      f"got {mp.nstr(45/w_true, 9)}")
+check("重算: R_world×C_energy = 4129.98764888/45 = 91.7775 (冇身份)",
+      abs(mp.mpf("4129.98764888")/45 - mp.mpf("91.7775")) < mp.mpf("1e-3"),
+      f"got {mp.nstr(mp.mpf('4129.98764888')/45, 7)}")
+# 11) 第 6 輪補記 2 — r*/r_d = 55/56 vs Planck 0.981916
+check("重算: 55/56 = 0.9821428571",
+      abs(mp.mpf(55)/56 - mp.mpf("0.9821428571")) < mp.mpf("1e-9"),
+      f"got {mp.nstr(mp.mpf(55)/56, 11)}")
+_pl_ratio = mp.mpf("0.981916")
+_dev = (mp.mpf(55)/56 - _pl_ratio)/_pl_ratio*100
+check("重算: 55/56 vs Planck 0.981916 dev = +0.0231035% (<0.05%)",
+      abs(_dev - mp.mpf("0.0231035")) < mp.mpf("1e-5"),
+      f"got {mp.nstr(_dev, 8)}%")
+# 12) O5-1: 家族 (3:16:41)/60 扁平 + 3/60×(2/3)² = 1/45
+check("重算: 3/60 + 16/60 + 41/60 = 1 EXACT (家族扁平)",
+      abs(mp.mpf(3)/60 + mp.mpf(16)/60 + mp.mpf(41)/60 - 1) < mp.mpf("1e-30"),
+      "3:16:41 之和 = 60")
+check("重算: 3/60 × (2/3)² = 1/45",
+      abs(mp.mpf(3)/60 * (mp.mpf(2)/3)**2 - mp.mpf(1)/45) < mp.mpf("1e-30"),
+      f"got {mp.nstr(mp.mpf(3)/60*(mp.mpf(2)/3)**2, 12)}")
 
 print()
 print("─" * 74)

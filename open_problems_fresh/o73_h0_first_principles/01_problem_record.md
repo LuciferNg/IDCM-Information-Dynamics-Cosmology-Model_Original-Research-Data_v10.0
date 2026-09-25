@@ -342,6 +342,36 @@ E(ℓ) = 1 + ℓ + (⟨sec⟩_{1..K(z)} − 1)(1 − 4^{−mℓ}),  m ∈ {5,6,7
       重驗完成 → SESSION_START 狀態 [ ] → [x]
 ```
 
+### 第 6 輪 (2026-09-25) — session-DB 對帳 (用戶第 2 點: 用 DB 非上下文記憶)
+
+| 序 | 產物 | 內容 | 結果 | commit |
+|:-:|:-----|:-----|:-----|:-------|
+| 111 | DB 全庫普查 | state.db 唯讀副本; 收窄至 O73 專屬 token (只用 '%O73%' = 621 session 污染) | 🟢 | 本輪 |
+| 112 | 寫入帳本 | write_file "wrote to" + patch "files_modified" → **248 事件 / 44 檔** | 🟢 | 本輪 |
+| 113 | 關鍵 session 清單 | **17 個** (08-25 開題 4 / 09-10-18 中間 8 / 09-23 O169 交入 1 / 09-24-25 本 lineage 2 + O215 1) | 🟢 | 本輪 |
+| 114 | claim diff | 1,327 assistant 訊息 → 431 唯一 token → 182 未命中 → 逐類判別 | 🟢 | 本輪 |
+| 115 | ★ 補記 1 | `45/ω_ring = 0.61991986` (冇身份) + `R_world×C_energy = 91.7775` (冇身份) | 🟢 已補 docs/14 §13.2 | 本輪 |
+| 116 | ★ 補記 2 | `55/56 = 0.9821428571` vs Planck `0.981916` → dev +0.0231035% (0.73σ) | 🟢 已補 docs/14 §13.2 | 本輪 |
+| 117 | docs/20 (新) | 第 6 輪對帳報告 (9 節) | 🟢 | 本輪 |
+| 118 | 範圍紀律核實 | O169/O215 對 O73 之寫入 = 100% SESSION_START.md (append-only); 結論檔零外部改動 | 🟢 git 逐 commit | 本輪 |
+| 119 | README 檢查 | 上層 README O73 行 **stale** (BBN 鎖 72.73 / Ω_b 19/450 / 剩餘清單) | 🔴 待用戶批准 (O73 目錄外) | 本輪 |
+| 120 | 時序完整性 | 248 事件有序; 無回溯重寫; 歷史值原文保留 | 🟢 | 本輪 |
+| 121 | verify_all | **206/206 PASS** (B 段新增 6 項: 45/ω_ring / R_world×C_energy / 55/56 / dev / 家族扁平 / 1/45) | 🟢 | 本輪 |
+| 122 | 本索引 | 第 6 輪時序 rows 111–122 | 🟢 | 本輪 |
+
+### 第 6 輪反幻覺 / 結構新發現 (3 項)
+
+1. ★ **session DB id rollover**: 本 session 之 DB id 由 `20260924_235439_90d5cb` 變為
+   `20260925_130605_9f896f` — 壓縮摘要攜帶之舊 id 已失效。**教訓**: 核對必須以 DB 現行 id 為準
+   (此即用戶第 2 點要求「用 session db 確認」之實證價值)。
+2. ★ **DB claim diff 方法學**: 只用 `'%O73%'` / `'%ω_ring%'` 會命中 621 個 session (通用詞污染);
+   必須用 O73 專屬 token (`o73_h0_first_principles` / `verify_all` / `O5-x` / `docs/16_o215` …)。
+   且「寫入」之權威判準 = tool result 內 `wrote to` / `files_modified`，**不可**用命令字串本身
+   (曾誤命中 `docs/05_oa_carrier_projection.md` — 實際只出現於一次失敗 grep 之命令字串)。
+3. ★ **docs/14 節號撞**: 本輪首次插入時誤用 `## 12.` (已存在 `### 12. 第 5 輪開放狀態更新` 於 L468)
+   → 已改為 `## 13.`。**教訓**: 追加節前必須 `grep -n '^#'` 確認現有節號 (該檔 §12 子節本已亂序:
+   12.1 續3 / 12.3 續5 / 12.2 續4 — 屬既有狀態, 本輪不動)。
+
 ### 第 3 輪反幻覺新發現 (4 項)
 
 | # | 發現 | 位置 | 處置 |
@@ -381,7 +411,16 @@ docs/12_lcdm_i_divergence.md      I 分歧 2.18% (O98/O105 註)
 docs/13_closure_record.md         閉合記錄 (原 03_closure_record, 已改名)
 docs/14_open_problem_status.md    開放問題最終狀態 (0 項) + §9/§10 (c 推導)
 docs/15_c_first_principles.md     ★★ c 之第一性原理完整獨立推導 (第 4 輪新增)
+docs/16_o215_omegab_version_ruling.md  ★ O5-1 Ω_b 版本判定 (Ω_b = 3/60, 第 5 輪)
+docs/17_omegab_chain_audit.md     ★ Ω_b 連鎖審計 (c 自洽解敏感度 + BBN 鎖語義, 第 5 輪)
+docs/18_o53_h0_ruling.md          ★ O5-3 H₀ 結構強制 + O5-2 剩餘 + 1/45 澄清 (第 5 輪)
+docs/19_remaining_open_items.md   剩餘開放項總表 (8 項四類, 第 5 輪)
+docs/20_db_reconciliation_round6.md  ★★ 第 6 輪 session-DB 對帳 (9 節, 2026-09-25)
 final_result.md                   結論摘要 (依 RESULT_TEMPLATE.md)
 scripts/25_doc_independent_audit.py  第三層獨立文檔核對 (99/99)
 scripts/25a_doc_audit_v1_superseded.py  v1 存檔 (追溯用)
+scripts/26_o169_e0_reverify.py    O5-2 重驗 (13/13)
+scripts/27_o215_omegab_version_ruling.py  O5-1 判定 (19/19)
+scripts/28_omegab_chain_audit.py  Ω_b 連鎖審計 (13/13)
+scripts/29_o53_h0_ruling_m_degeneracy.py  O5-3 判定 (9/9)
 ```

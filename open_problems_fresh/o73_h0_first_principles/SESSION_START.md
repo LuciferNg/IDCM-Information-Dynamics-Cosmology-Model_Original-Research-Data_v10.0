@@ -394,4 +394,73 @@ docs/04 §6 措辭「ω_ring 由 η_B + T_CMB + Ω_b 鎖定」→ 應改:
 | `final_result.md` | O5-3/O5-4 + 誤判修正 + scripts/28 |
 | `scripts/verify_all` | **174/174 PASS** (B 段 127 項) |
 
+---
+
+# 第 6 輪 (2026-09-25) — session-DB 對帳 + 讀者索引檢查
+
+> **指令**: 用戶 7 點 (第 2 點特別要求「由於 session 太長會被壓縮，所以**不使用上下文記憶判斷**，
+> 而是用 **session db 確認**」)。完整報告 → `docs/20_db_reconciliation_round6.md`。
+
+## 一、DB 核對方法與結果
+
+```text
+全庫 state.db 普查 → 收窄 (只用 '%O73%' 會命中 621 個 session = 通用詞污染)
+寫入帳本 (權威): write_file "wrote to" + patch "files_modified" → 248 事件 / 44 檔
+關鍵 session: 17 個 (08-25 開題 4 個 / 09-10/15/18 中間輪 / 09-23 O169 交入 / 09-24/25 本 lineage 2 個)
+claim diff: 1,327 條 assistant 訊息 → 431 唯一 token → 182 未命中 → 逐類判別
+真缺口: 2 項 (已補記 docs/14 §13.2)
+```
+
+★ **本 session DB id 沿革**: `20260924_235439_90d5cb` → rollover → `20260925_130605_9f896f`
+（壓縮摘要攜帶之舊 id 已失效 — 此即用戶第 2 點之實證：核對必須以 DB 現行 id 為準。）
+
+## 二、★ 兩項 DB 對帳補記 (docs/14 §13.2)
+
+| # | 內容 | 性質 | 來源 session |
+|:-:|:-----|:-----|:-------------|
+| 1 | `45/ω_ring = 0.61991986` (冇身份); `R_world×C_energy = 91.7775` (冇身份) | 負面結果 | `20260825_162202_c2d7c3` |
+| 2 | `55/56 = 0.9821428571` vs Planck `0.981916` → dev +0.0231035% (0.73σ) | 觀測核對 | `20260825_162202_c2d7c3` |
+
+兩項獨立重算 (mpmath dps=40) 通過; 已寫入 `verify_all` B 段新增檢查。
+
+## 三、外部交入 / 流出之範圍核實 (紀律)
+
+```text
+O169 session (`20260917_131120_3aacb8`): 8 次 patch → 全部 O73/SESSION_START.md ✓
+O215 session (`65e2ebd` 09-22):           O73/SESSION_START.md (+43) ✓
+O169 低 ℓ 修正 (`f816ca1` 09-24):         O73/SESSION_START.md (+20) ✓
+⇒ git show --stat 逐 commit: 外部對 O73 之寫入 100% 限 SESSION_START.md (append-only)
+⇒ O73 結論檔 (docs/*, final_result, scripts) 從未被他 O 改動
+```
+
+## 四、README.md 檢查 (用戶第 4 點) — 🔴 發現 stale
+
+```text
+O73 目錄自身: 無 README.md (210 個 O 目錄中僅 24 個有 ⇒ 非強制慣例; 索引職能由 01_problem_record §相關文件 承擔)
+上層 README: open_problems_fresh/README.md 第 12 行 = O73 行 — 內容仍為 09-17 版:
+  「BBN 鎖定 → ω_ring = 72.73 (0.19%)」 ← 已被 docs/17 取代 (H₀ 由 BBN 鎖定)
+  「Ω_b = 19/450」(隱含)              ← 已被 docs/16 取代 (Ω_b = 3/60 = 1/20)
+  「剩餘 = 等數據 + O75」             ← 缺第 5 輪 3 項判定 + 4 項交上游
+```
+
+⚠️ README.md 位於 **O73 目錄以外** → 依用戶第 3 點紀律，本輪**不寫入**，登記為待裁決項 (`docs/19` §(c))。
+
+## 五、時序完整性 (用戶第 3 點)
+
+```text
+✅ 248 寫入事件全部有序 (session + timestamp), 無回溯重寫
+✅ git log: 結論檔改動全部屬「當時輪次」commit, 無事後覆寫已閉合記錄
+✅ 歷史值保留: docs/15 §6.1 ka=1.47e40 / docs/02 H1 判決 / docs/11 P7 原式 — 全部原文保留 + 日期化註
+✅ mtime 抽樣: docs/01 (09-18 10:48) / docs/15 (09-22 23:20) 未被本輪觸碰
+```
+
+## 六、本輪驗證
+
+```text
+scripts 全數重跑: 32/32 exit=0 (25a = 已標 superseded 之 v1 存檔, exit=1 屬預期)
+verify_all.py: **206/206 PASS**  (B 段新增 6 項)
+scripts/25 (獨立文檔核對): 99/99 PASS, 4 NOTE
+scripts/26 13/13 | 27 19/19 | 28 13/13 | 29 9/9
+```
+
 
