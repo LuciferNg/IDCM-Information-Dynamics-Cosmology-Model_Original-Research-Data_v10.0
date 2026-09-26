@@ -1,0 +1,57 @@
+{
+  "audit": "O118/02 independent close-out audit (no imports from this folder)",
+  "date": "2026-09-26",
+  "data_source": "DESI DR2, arXiv:2503.14738, Table 6 (+ DR2 D_V rows for BGS/QSO)",
+  "data_provenance_checks": "10/10 raw values typed from the published paper",
+  "B_NEW": {
+    "sum_form": 1.119113982034844,
+    "closed_form": 1.1191139820348441,
+    "dev_pct": 1.9841107205299656e-14,
+    "closed_form_identity": "22 sin(pi/176)/(sin(pi/8) cos(23 pi/176)) (O213 R3)"
+  },
+  "chi2": {
+    "DM_6pt": 2.4528,
+    "DH_6pt": 3.4712,
+    "joint_12pt": 6.8591,
+    "premise_7pt": 18.092,
+    "premise_7pt_per_dof": 2.5846,
+    "current_7pt": 1.7154,
+    "current_7pt_per_dof": 0.2451
+  },
+  "LRG1": {
+    "dev_pct_old": -4.563,
+    "dev_pct_new": -1.148,
+    "pull_old": -3.713,
+    "pull_new": -0.934
+  },
+  "Lyalpha": {
+    "pull_DH": -0.301,
+    "pull_DM": 0.087
+  },
+  "sync_bump": {
+    "z_space_narrow_grid": {
+      "best_amp": 0.12,
+      "best_w": 0.06,
+      "delta_chi2": 0.6387,
+      "note": "grid as used by scripts/01 (w<=0.80)"
+    },
+    "z_space_wide_grid": {
+      "best_amp": 0.010000000000000009,
+      "best_w": 0.38,
+      "delta_chi2": 0.3353,
+      "note": "independent wider grid (w<=2.00) -- allows broad bumps"
+    },
+    "ell_space_wide_grid": {
+      "best_amp": 0.010000000000000009,
+      "best_w": 0.14,
+      "delta_chi2": 0.2975,
+      "note": "independent parametrisation (bump in ell, not z)"
+    },
+    "demanded": false,
+    "conclusion": "no SYNC local correction is required; all grids Delta chi2 << 4 (2 dof)"
+  },
+  "verdict": "independent audit confirms O118 closure -- premise VOID",
+  "pass": 36,
+  "fail": 0,
+  "failed": []
+}

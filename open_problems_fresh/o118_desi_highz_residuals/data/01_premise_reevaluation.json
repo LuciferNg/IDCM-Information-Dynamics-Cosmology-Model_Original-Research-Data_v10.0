@@ -1,0 +1,47 @@
+{
+  "trigger": "O118 premise re-evaluation under O169-corrected D_M + O170 arch kernel D_H",
+  "date": "2026-09-26",
+  "o118_premise": {
+    "chi2": 18.09,
+    "dof": 7,
+    "chi2_per_dof": 2.58,
+    "source": "o51_kchain_origin/scripts/86_cubic_correction.py (desi_7pt_chi2_lin)",
+    "recipe": "7 pt (5 D_M + 2 D_V), D_lin law (falsified E=1+2phi^-1*ell + C1=-0.16973), and D_V built from D_H = dD_app/dz (the WRONG relation O117 identified)"
+  },
+  "reproduced": {
+    "chi2_7pt_old": 18.092,
+    "chi2_per_dof_old": 2.5846,
+    "exact_match": true
+  },
+  "current_framework": {
+    "D_M_law": "R_world*(1-4^-ell)*(ell + B_NEW), B_NEW = 22/sum(cos(pi n/88), n=1..22)",
+    "D_H_law": "R_world*(4^-ell/ln4)*sec(pi*n_c/88), n_c = N_d/2 + B*sin(pi*ell) (ell<ell_t) | N_d/2",
+    "chi2_DM_6pt": 2.4528,
+    "chi2_DH_6pt": 3.4712,
+    "chi2_joint_12pt": 6.8591,
+    "chi2_joint_per_pt": 0.5716,
+    "chi2_7pt": 1.7154,
+    "chi2_7pt_per_dof": 0.2451
+  },
+  "LRG1": {
+    "dev_pct_old": -4.563,
+    "dev_pct_new": -1.148,
+    "pull_old": -3.713,
+    "pull_new": -0.934
+  },
+  "Lyalpha": {
+    "pull_old_radial": 300.083,
+    "pull_arch": -0.301
+  },
+  "sync_bump_test": {
+    "z_c": 0.6,
+    "best_amp": 0.12,
+    "best_w": 0.06,
+    "delta_chi2": 0.6387,
+    "dof_cost": 2,
+    "demanded": false
+  },
+  "verdict": "O118 residual is an ARTIFACT of the falsified laws; premise VOID",
+  "pass": 14,
+  "fail": 0
+}
