@@ -63,6 +63,7 @@
 | T3 | 2026-09-26 | **O125 前置驗證**: v9.0 裁決 🔴 失效 | `scripts/01_preverification.py` | **16/16 PASS** | `docs/02_preverification.md` |
 | T4 | 2026-09-26 | **O125 重建**: 1-loop 2→2 振幅 (有限離散框架) | `scripts/02_one_loop_scattering.py` | **20/20 PASS** | `docs/03_derivation.md` |
 | T5 | 2026-09-26 | **O125 審計**: 交叉驗證 + 獨立重推 + 硬編碼掃描 | `scripts/03_cross_validation.py` | **14/14 PASS** | `docs/04_audit.md` |
+| T6 | 2026-09-26 | **O125 §4 (O124 交接)**: gg→gg 完整極化求和 (16 組態 → 6 MHV; Σ = 1152 g⁴B) | `scripts/04_gg_gg_polarization.py` | **25/25 PASS** | `docs/05_gg_gg_polarization.md` |
 
 ### 6.2 依賴鏈
 
@@ -87,6 +88,7 @@ O211 (Σγ = B(N_d+1)/2 = 90) 🟢 ───────────────
 | `01_preverification.py` | v9.0 GeV 連續譜 vs v10.0 MeV 離散譜 (對照) | 88-site (2×N_d) |
 | `02_one_loop_scattering.py` | `ω_n = 2sin(nπ/88)`, n=1..44 | K_Chain 44 模式 (正頻率) |
 | `03_cross_validation.py` | 同上 + T̂ 特徵值 `φ,−1/φ` | mpmath 60 dps 獨立重推 |
+| `04_gg_gg_polarization.py` | 88-ring 膠子 `ω_n = 2sin(nπ/88)`; SU(N) 生成元 `Tr(T^aT^b)=δ^{ab}` | 標準 color-ordered (Dixon); 離散 `s=(ω_a+ω_b)²` |
 
 > ⚠️ **慣例陷阱**: O125 全部用 **88-site 鏈** (`ω_n = 2sin(nπ/88)`); 唔好同 176-Laplacian 或 K_Tree 33-節點譜混用 (O208 教訓)。
 
@@ -96,4 +98,5 @@ O211 (Σγ = B(N_d+1)/2 = 90) 🟢 ───────────────
 |:-----|:-----|
 | 2026-08-29 | 🔴 未開始 |
 | 2026-09-26 | 🟢 **已閉合** (v9.0 失效裁決 + 重建 50/50 PASS; 唯一 🟡 = h 衰變通道 = N_gen 候選) |
+| 2026-09-26 | 🟢 **O124 交接完成** (§4 gg→gg 完整極化求和, 25/25 PASS; Σ_{colors,spins}\|M\|² = 1152 g⁴B(s,t,u), 6/16 MHV 存活) |
 

@@ -1,0 +1,109 @@
+
+==========================================================================
+A. 16 helicity configurations  (gluon polarisations lambda = +/-1)
+==========================================================================
+  total configs           : 16
+  all-plus  (++++)        : 1   (tree-vanishing)
+  all-minus (----)        : 1   (tree-vanishing)
+  one-minus/one-plus      : 8   (tree-vanishing)
+  two-plus-two-minus (MHV): 6   (NONZERO)
+  [PASS] A1 exactly 16 helicity configurations
+  [PASS] A2 exactly 10 vanish (all+/all-/one)
+  [PASS] A3 exactly 6 survive (2+ 2-)    6 = C(4,2) = 2*N_gen
+  [PASS] A4 two polarisations per leg => 2^4
+
+==========================================================================
+B. Spinor-helicity + kinematic identities
+==========================================================================
+  s=4.000000  t=-0.375273  u=-3.624727   s+t+u=0.000e+00
+  [PASS] B1 |<ij>|^2 = 2 p_i.p_j  (all pairs)
+  [PASS] B2 s+t+u = 0 (massless, on-shell)
+  [PASS] B3 four-momentum conservation  p1+p2=p3+p4
+
+==========================================================================
+C. Color-ordered MHV amplitudes  A(sigma)  (Parke-Taylor)
+==========================================================================
+  config            neg-helicity    |A(1234)|^2
+  (1, 1, 1, 1)     []              0.000000
+  (1, 1, 1, -1)    [3]             0.000000
+  (1, 1, -1, 1)    [2]             0.000000
+  (1, 1, -1, -1)   [2, 3]          1.217781
+  (1, -1, 1, 1)    [1]             0.000000
+  (1, -1, 1, -1)   [1, 3]          0.000094
+  (1, -1, -1, 1)   [1, 2]          0.821165
+  (1, -1, -1, -1)  [1, 2, 3]       0.000000
+  (-1, 1, 1, 1)    [0]             0.000000
+  (-1, 1, 1, -1)   [0, 3]          0.821165
+  (-1, 1, -1, 1)   [0, 2]          0.000094
+  (-1, 1, -1, -1)  [0, 2, 3]       0.000000
+  (-1, -1, 1, 1)   [0, 1]          1.217781
+  (-1, -1, 1, -1)  [0, 1, 3]       0.000000
+  (-1, -1, -1, 1)  [0, 1, 2]       0.000000
+  (-1, -1, -1, -1) [0, 1, 2, 3]    0.000000
+  [PASS] C1 reflection  A(1,2,3,4)=A(4,3,2,1)
+  [PASS] C2 U(1) decoupling  Sum_sigma A(sigma)=0     max|sum|=7.77e-15
+  Sum_sigma Sum_lambda |A(sigma)|^2 = 1695.722382
+  2 (s^2+t^2+u^2)^3/(s^2 t^2 u^2)  = 1695.722382
+  [PASS] C3 Sum_sigma Sum_lambda |A|^2 = 2(s^2+t^2+u^2)^3/(s^2t^2u^2)
+  [PASS] C4 B(s,t,u) = (s^2+t^2+u^2)^3/(8 s^2 t^2 u^2)
+  [PASS] C5 Sum_sigma Sum_lambda |A|^2 = 16 B(s,t,u)
+
+==========================================================================
+D. Colour sum, trace basis Tr(T^aT^b)=delta^ab  -> Dixon eq.(10)
+==========================================================================
+  C matrix (SU(3)) diagonal = 50.666667  (N_c^2(N_c^2-1)=72)
+  [PASS] D1 Sum_{sig,tau} C_sig,tau A_sig A_tau* = N_c^2(N_c^2-1) Sum_sig|A_sig|^2     122092.0115 vs 122092.0115
+  N_c   Sum_colours|M|^2 / (Sum_sigma Sum_lam |A|^2)
+   2      12.000000   (N^2(N^2-1)=12)
+   3      72.000000   (N^2(N^2-1)=72)
+   4      240.000000   (N^2(N^2-1)=240)
+  [PASS] D2 colour factor = N_c^2(N_c^2-1) for N=2,3,4     12.0000, 72.0000, 240.0000
+
+==========================================================================
+E. Complete polarization sum -- final result
+==========================================================================
+  Sum_{colours,spins} |M(gg->gg)|^2 = g^4 * N_c^2(N_c^2-1) * Sum_sig Sum_lam |A|^2
+                                     = g^4 * 72 * 1695.722382 = g^4 * 122092.0115
+  = g^4 * N_c^2(N_c^2-1) * 2(s^2+t^2+u^2)^3/(s^2t^2u^2)
+  = g^4 * 1152 * B(s,t,u)   with B = 105.982649
+  [PASS] E1 Sum_{colours,spins}|M|^2 = 1152 g^4 B(s,t,u)
+  [PASS] E2 colour factor N_c^2(N_c^2-1) = 72 = C_A^2 (N_c^2-1)
+  average over initial colours ((N_c^2-1)^2=64) and spins (2^2=4):
+  <|M|^2> = Sum/(64*4) = 4.500000 * g^4 B  -> (9/2) g^4 B
+  [PASS] E3 <|M|^2> = (9/2) g^4 B(s,t,u)  [standard]
+
+==========================================================================
+F. IDCM discrete substitution + structural reading
+==========================================================================
+  omega_n = 2 sin(n pi/88)   (gluon = link phase on 88-ring; n=0 -> massless)
+  discrete Mandelstam:  s_ab=(omega_a+omega_b)^2 , t=(omega_a-omega_c)^2 , u=(omega_a-omega_d)^2
+  (modes chosen distinct -> t,u != 0, away from collinear poles)
+   modes (1,3)->(2,2)  chain-mom OK  s=0.08132 t=0.00508 u=0.00508  B_disc=-29.00393
+   modes (5,7)->(3,9)  chain-mom OK  s=0.72202 t=0.01997 u=0.07645  B_disc=-137.87500
+   modes (3,5)->(1,7)  chain-mom OK  s=0.32364 t=0.02028 u=0.07886  B_disc=-60.13226
+   modes (2,5)->(3,4)  chain-mom OK  s=0.24779 t=0.00506 u=0.02015  B_disc=-195.33884
+  NOTE: B_disc inherits the collinear (t,u->0) and t-channel poles of the continuum bracket;
+        it is the structural translation, exact only in the soft/massless limit n<<88.
+  [PASS] F1 gluon zero mode massless  omega_0=0
+  [PASS] F2 omega_n>0 for n=1..43
+  structural inventory (all from N_c=3, N_gen=3):
+    16  = 2^4                     (four gluons x 2 polarisations)
+    6   = C(4,2) = 2 N_gen        (surviving MHV configs)
+    72  = N_c^2(N_c^2-1) = C_A^2(N_c^2-1) = 8*9 = F6 * N_c^2
+    3   in B(s,t,u) = N_c = C_A
+    1152 = 72 * 16
+  [PASS] F3 6 = 2 N_gen
+  [PASS] F4 72 = F6 * N_c^2 = 8*9
+
+==========================================================================
+G. Cross-checks
+==========================================================================
+  [PASS] G1 O124 Gram G_ss = 72 = colour factor
+  [PASS] G2 Dixon eq.(10) reproduced
+  [PASS] G3 Dixon eq.(46) helicity sum reproduced
+  kinematic scan  Sum_colour/(N_c^2(N_c^2-1)*16*B) = ['1.00000000', '1.00000000', '1.00000000', '1.00000000']
+  [PASS] G4 colour factor independent of kinematics
+
+==========================================================================
+RESULT: 25 PASS / 0 FAIL
+==========================================================================

@@ -71,3 +71,28 @@ o125_scattering_amplitudes/
 - 🟡 h 衰變通道 = N_gen 嘅算子證明
 - 🔴 完整 SM 費曼規則 (fermion/gauge 圈) → O85/O144
 - 🔴 O124 (QCD 膠子散射) 未開始
+
+---
+
+## 交接閉合 (2026-09-26) — O124 → O125「gg→gg 完整極化求和」🟢
+
+> ⚠️ 本節 append-only; 以上原文一字不改。
+
+### 背景
+O124 (QCD 膠子散射, 🟡 部分閉合) 閉合色結構 (`G_ss = 72`) 後, 明確交接「**gg→gg 完整極化求和 → 移交 O125**」。
+
+### 成果 (25/25 PASS)
+- `scripts/04_gg_gg_polarization.py` — **25/25 PASS**
+- ★ **16 helicity 組態 → 10 樹層消失** (all-plus / all-minus / one-minus) **, 6 存活** (2+2−, MHV) = `C(4,2) = 2·N_gen`
+- ★ **完整極化求和**: `Σ_{colours,spins}|M(gg→gg)|² = g⁴·N_c²(N_c²−1)·2(s²+t²+u²)³/(s²t²u²) = 1152 g⁴ B(s,t,u)`
+- 初態平均: `⟨|M|²⟩ = (9/2) g⁴ B(s,t,u)` ✓ (標準文獻, Dixon eq.10/46)
+- 色因子 `N_c²(N_c²−1) = 72 = C_A²(N_c²−1)` ✓ 同 O124 `G_ss = 72` 獨立一致
+- 運動學括號: `B(s,t,u) = 3 − ut/s² − us/t² − st/u² = (s²+t²+u²)³/(8s²t²u²)`
+- 自捉 3 錯: `Tr=δ/2` vs `Tr=δ` 歸一化 (因子 16); B3 動量守恆慣例 (`p₁+p₂=p₃+p₄`); §F collinear pole 模式選擇
+
+### 檔案
+`docs/05_gg_gg_polarization.md`, `scripts/04_gg_gg_polarization.py`, `data/04_gg_gg_stdout.txt`
+
+### 剩餘開放
+- 🟡 膠子 helicity `λ=±1 ↔ Z₂` 算子化
+- 🔴 `B_disc` 有限譜正則化 (88-ring collinear pole)

@@ -32,5 +32,14 @@ O80 → O82 → O94 → O122 → O142 → O211 → **O125**
 - `scripts/01_preverification.py`: 16/16 PASS (v9.0 裁決)
 - `scripts/02_one_loop_scattering.py`: 20/20 PASS (1-loop 重建)
 - `scripts/03_cross_validation.py`: 14/14 PASS (交叉 + 獨立重推 + 硬編碼掃描)
+- `scripts/04_gg_gg_polarization.py`: 25/25 PASS (O124 交接: gg→gg 完整極化求和)
 - 硬編碼字面 True: **0** (AST 掃描)
 - 上游交叉: O122 / O82 / O94 / O142 / O211 全部核實
+
+## §O124 交接 — gg→gg 完整極化求和 (2026-09-26, 25/25 PASS)
+- 16 helicity 組態: 10 樹層消失 (all±/one±), **6 存活** (2+2−, MHV) = `C(4,2) = 2·N_gen`
+- ★**完整極化求和**: `Σ_{colours,spins}|M(gg→gg)|² = g⁴·N_c²(N_c²−1)·2(s²+t²+u²)³/(s²t²u²) = 1152 g⁴ B(s,t,u)`
+- 初態平均: `⟨|M|²⟩ = (9/2) g⁴ B(s,t,u)` (標準文獻 ✓, Dixon hep-ph/9601359 eq.10/46)
+- 色因子 `N_c²(N_c²−1) = 72 = C_A²(N_c²−1)` = O124 `G_ss` ✓
+- 運動學: `B(s,t,u) = 3 − ut/s² − us/t² − st/u² = (s²+t²+u²)³/(8s²t²u²)`
+- 詳見 `docs/05_gg_gg_polarization.md`
