@@ -1,0 +1,32 @@
+{
+ "script": "05_helicity_operator.py",
+ "PASS": 51,
+ "FAIL": 0,
+ "operator": {
+  "h_hat": "-I (A5 inversion) on the 88-grid gluon sector",
+  "h2": "= 1 (Z2 involution)",
+  "spectrum": {
+   "+1": 44,
+   "-1": 44
+  },
+  "trace": 0,
+  "det": 1
+ },
+ "structural_forcing": "h^2=1 => lambda^2=1 => lambda=+-1 (no fitting)",
+ "counts": {
+  "88": "2*44",
+  "44": "N_d",
+  "120": "88+32",
+  "Sigma_lambda_1_44": 90.0
+ },
+ "chirality": {
+  "canonical_88grid": "|Sym|=4 {+1:2,-1:2} achiral (contains -I)",
+  "coldspot_88grid": "|Sym|=2 {+1:2,-1:0} CHIRAL",
+  "consequence": "absolute orientation => helicity sign is physical (P-odd)"
+ },
+ "cross_check_docs05": {
+  "16": "2^4",
+  "6": "C(4,2)=2*N_gen",
+  "72": "C_A^2(N_c^2-1)"
+ }
+}

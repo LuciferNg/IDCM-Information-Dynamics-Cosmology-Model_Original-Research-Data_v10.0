@@ -96,3 +96,30 @@ O124 (QCD 膠子散射, 🟡 部分閉合) 閉合色結構 (`G_ss = 72`) 後, �
 ### 剩餘開放
 - 🟡 膠子 helicity `λ=±1 ↔ Z₂` 算子化
 - 🔴 `B_disc` 有限譜正則化 (88-ring collinear pole)
+
+---
+
+## 算子化閉合 (2026-09-26) — 膠子 helicity λ = ±1 🟢
+
+> ⚠️ 本節 append-only; 以上原文一字不改。
+
+### 靶
+上一節剩餘開放嘅 **🟡「膠子 helicity λ=±1 ↔ Z₂ 算子化」** — `docs/05 §6` 只做到**結構對應**, 冇算子。
+
+### 成果 (51/51 PASS)
+- `scripts/05_helicity_operator.py` — **51/51 PASS**, 0 字面 True, 兩條獨立路線
+- ★ **算子**: ĥ = **A₅ 反演 `−I`** 作用於 88-grid 膠子扇區 (O182 精確代數座標)
+- ★ **ĥ² = 1** (fixed-point-free 對合) ⟹ 譜 = **{+1 × 44, −1 × 44}**
+- ★ **結構強迫**: `ĥ² = 1 ⟹ λ² = 1 ⟹ λ = ±1` — helicity 值域由對合**強迫**, 零擬合
+- ★ **88 = 2 × 44 = 2 N_d**: 反演將 88 邊配成 **44 對 + 0 固定** ⟹ 冇 helicity-0 膠子
+- ★ **幾何 chirality ⟹ 絕對定向**: canonical 88-grid `|Sym|=4` (含 `−I`, 非手性) vs
+  冷斑軌道 88-grid `|Sym|=2` (全 proper, **手性**) ⟹ P 破缺 ⟹ helicity 符號係物理量
+- 交叉: `Σ_{k=1..44} 4sin²(πk/88) = 90` (O124/O211); 16 = 2⁴, 6 = 2N_gen (docs/05)
+
+### 檔案
+`docs/06_helicity_operatorization.md`, `scripts/05_helicity_operator.py`, `data/05_helicity_operator_*`
+
+### 剩餘開放
+- 🟡 「ĥ 嘅 ±1 扇區 = 物理 helicity」係標準字典**詮釋** (非結構); 半移位模型 `(−1)^n` 未由幾何獨立導出
+- 🔴 `B_disc` 有限譜正則化 (88-ring collinear pole)
+- 🔴 完整 SM 費曼規則 (fermion/gauge 圈) → O85/O144

@@ -33,6 +33,7 @@ O80 → O82 → O94 → O122 → O142 → O211 → **O125**
 - `scripts/02_one_loop_scattering.py`: 20/20 PASS (1-loop 重建)
 - `scripts/03_cross_validation.py`: 14/14 PASS (交叉 + 獨立重推 + 硬編碼掃描)
 - `scripts/04_gg_gg_polarization.py`: 25/25 PASS (O124 交接: gg→gg 完整極化求和)
+- `scripts/05_helicity_operator.py`: 51/51 PASS (helicity λ=±1 算子化; 組合 + 幾何雙路線)
 - 硬編碼字面 True: **0** (AST 掃描)
 - 上游交叉: O122 / O82 / O94 / O142 / O211 全部核實
 
@@ -43,3 +44,14 @@ O80 → O82 → O94 → O122 → O142 → O211 → **O125**
 - 色因子 `N_c²(N_c²−1) = 72 = C_A²(N_c²−1)` = O124 `G_ss` ✓
 - 運動學: `B(s,t,u) = 3 − ut/s² − us/t² − st/u² = (s²+t²+u²)³/(8s²t²u²)`
 - 詳見 `docs/05_gg_gg_polarization.md`
+
+## §helicity 算子化 (2026-09-26, 51/51 PASS)
+- ★ **算子**: ĥ = **A₅ 反演 `−I`** 作用於 88-grid 膠子扇區 (O182 精確代數座標 Q(√5)³)
+- ★ **ĥ² = 1** (fixed-point-free 對合) ⟹ 譜 = **{+1 × 44, −1 × 44}**; `Tr = 0`, `det = +1`
+- ★ **結構強迫**: `ĥ² = 1 ⟹ λ² = 1 ⟹ λ = ±1` — helicity 值域由對合**強迫** (零擬合)
+- ★ **88 = 2 × 44 = 2 N_d**: 反演配成 **44 對 + 0 固定** ⟹ **冇 helicity-0 膠子** (無質量 spin-1)
+- ★ **幾何 chirality ⟹ 絕對定向**: canonical 88-grid `|Sym|=4` (含 `−I`, 非手性) vs
+  冷斑軌道 88-grid `|Sym|=2` (全 proper, **手性**) ⟹ P 破缺 ⟹ helicity 符號係物理量
+- 交叉: `Σ_{k=1..44} 4sin²(πk/88) = 90` (O124/O211); 16 = 2⁴, 6 = 2N_gen (docs/05)
+- 誠實邊界: 「±1 扇區 = 物理 helicity」用標準字典 (P 反轉 helicity); 屬**詮釋**, 非結構
+- 詳見 `docs/06_helicity_operatorization.md`

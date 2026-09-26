@@ -64,6 +64,7 @@
 | T4 | 2026-09-26 | **O125 重建**: 1-loop 2→2 振幅 (有限離散框架) | `scripts/02_one_loop_scattering.py` | **20/20 PASS** | `docs/03_derivation.md` |
 | T5 | 2026-09-26 | **O125 審計**: 交叉驗證 + 獨立重推 + 硬編碼掃描 | `scripts/03_cross_validation.py` | **14/14 PASS** | `docs/04_audit.md` |
 | T6 | 2026-09-26 | **O125 §4 (O124 交接)**: gg→gg 完整極化求和 (16 組態 → 6 MHV; Σ = 1152 g⁴B) | `scripts/04_gg_gg_polarization.py` | **25/25 PASS** | `docs/05_gg_gg_polarization.md` |
+| T7 | 2026-09-26 | **O125 §5 (docs/05 §9 🟡)**: 膠子 helicity λ=±1 **算子化** (ĥ = A₅ 反演 −I; ĥ²=1 ⟹ 譜 {+1×44, −1×44}; 88 = 2×44 = 2N_d; 幾何 chirality ⟹ 絕對定向) | `scripts/05_helicity_operator.py` | **51/51 PASS** | `docs/06_helicity_operatorization.md` |
 
 ### 6.2 依賴鏈
 
@@ -89,6 +90,7 @@ O211 (Σγ = B(N_d+1)/2 = 90) 🟢 ───────────────
 | `02_one_loop_scattering.py` | `ω_n = 2sin(nπ/88)`, n=1..44 | K_Chain 44 模式 (正頻率) |
 | `03_cross_validation.py` | 同上 + T̂ 特徵值 `φ,−1/φ` | mpmath 60 dps 獨立重推 |
 | `04_gg_gg_polarization.py` | 88-ring 膠子 `ω_n = 2sin(nπ/88)`; SU(N) 生成元 `Tr(T^aT^b)=δ^{ab}` | 標準 color-ordered (Dixon); 離散 `s=(ω_a+ω_b)²` |
+| `05_helicity_operator.py` | O182 88-grid (A₅ 透明邊中點); A₅ 反演 `−I` | 精確代數座標 Q(√5)³; 組合 + 幾何**雙路線** |
 
 > ⚠️ **慣例陷阱**: O125 全部用 **88-site 鏈** (`ω_n = 2sin(nπ/88)`); 唔好同 176-Laplacian 或 K_Tree 33-節點譜混用 (O208 教訓)。
 
@@ -99,4 +101,5 @@ O211 (Σγ = B(N_d+1)/2 = 90) 🟢 ───────────────
 | 2026-08-29 | 🔴 未開始 |
 | 2026-09-26 | 🟢 **已閉合** (v9.0 失效裁決 + 重建 50/50 PASS; 唯一 🟡 = h 衰變通道 = N_gen 候選) |
 | 2026-09-26 | 🟢 **O124 交接完成** (§4 gg→gg 完整極化求和, 25/25 PASS; Σ_{colors,spins}\|M\|² = 1152 g⁴B(s,t,u), 6/16 MHV 存活) |
+| 2026-09-26 | 🟢 **§5 helicity 算子化完成** (`docs/05 §9 🟡` 解除): ĥ = A₅ 反演 `−I`; ĥ² = 1 ⟹ λ = ±1 **結構強迫**; 88 = 2×44 = 2N_d; 幾何 chirality ⟹ 絕對定向; 51/51 PASS |
 
