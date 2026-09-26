@@ -123,3 +123,32 @@ O124 (QCD 膠子散射, 🟡 部分閉合) 閉合色結構 (`G_ss = 72`) 後, �
 - 🟡 「ĥ 嘅 ±1 扇區 = 物理 helicity」係標準字典**詮釋** (非結構); 半移位模型 `(−1)^n` 未由幾何獨立導出
 - 🔴 `B_disc` 有限譜正則化 (88-ring collinear pole)
 - 🔴 完整 SM 費曼規則 (fermion/gauge 圈) → O85/O144
+
+---
+
+## B_disc 正則化閉合 (2026-09-26) — collinear pole 🔴 → 🟢
+
+> ⚠️ 本節 append-only; 以上原文一字不改。
+
+### 靶
+上一節剩餘開放嘅 **🔴「`B_disc` 有限譜正則化 (88-ring collinear pole)」** — `docs/05 §6` 留低嘅問題。
+按分流紀律**唔開新 O**, 就地喺 O125 解決。
+
+### 成果 (21/21 PASS)
+- `scripts/06_bdisc_regularization.py` — **21/21 PASS**, 0 字面 True (窮舉 56804 允許運動學)
+- ★ **collinear pole 係連續假象**: `1/t²` 發散需要連續動量譜 (動量可任意接近共線)
+- ★ **88-ring 動量量子化**: 最小動量轉移 **`Δω_min = 4sin²(π/176)` = 1.2743×10⁻³** (能帶頂 n=44 兩側)
+  ⟹ `|t| ≥ Δω_min² = 1.6240×10⁻⁶ > 0` ⟹ **冇 collinear 極限 ⟹ 冇發散**
+- ★ **但直接代入 `B(s,t,u)` 係 ill-posed**: 離散 `s+t+u ≠ 0` (min 2.04×10⁻², median 8.18)
+  — `B` 嘅閉式前提 (massless on-shell) 破壞
+- ★ **正確離散振幅 = O124 `docs/05 §5.2` 嘅 V₄ 張量** (有限閉式) ⟹ 冇 counterterm (承零重整化定理)
+- 形式延拓界: `max |B_disc^{reg}| = 6.46×10¹²` (有限; 對照連續 → ∞), 主導 = `1/u²` pole 但 `u ≥ t_min`
+- 結構: 正則化子 = **能階間距本身** (唔係 counterterm); 標度 ~ `1/N²` (有限尺寸)
+
+### 檔案
+`docs/07_bdisc_regularization.md`, `scripts/06_bdisc_regularization.py`, `data/06_bdisc_regularization_*`
+
+### 剩餘開放 (O125 自身)
+- 🟡 「ĥ 嘅 ±1 扇區 = 物理 helicity」係標準字典詮釋; 半移位模型 `(−1)^n` 未由幾何獨立導出
+- 🔴 完整 SM 費曼規則 (fermion/gauge 圈) → O85/O144 (跨 O, 非 O125 範圍)
+- ✅ `docs/05 §9` 兩項剩餘開放 (§5 🟡 + §6 🔴) **全部解除**

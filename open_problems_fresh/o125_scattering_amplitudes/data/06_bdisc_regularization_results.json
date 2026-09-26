@@ -1,0 +1,11 @@
+{
+ "script": "06_bdisc_regularization.py",
+ "PASS": 21,
+ "FAIL": 0,
+ "Delta_omega_min": 0.001274348686016502,
+ "Delta_omega_min_closed_form": "4*sin^2(pi/176)",
+ "t_min": 1.6239645735519855e-06,
+ "min_stu_violation": 0.020383083117971667,
+ "max_B_regulated": 6458939809202.725,
+ "verdict": "collinear pole is a continuum artifact; finite spectrum is its own regulator (Delta_omega_min); naive substitution ill-posed (s+t+u != 0); correct amplitude = V4 tensor (finite)"
+}

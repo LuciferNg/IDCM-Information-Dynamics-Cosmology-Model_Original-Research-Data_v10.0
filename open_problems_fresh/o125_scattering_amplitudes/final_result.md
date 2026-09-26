@@ -34,6 +34,7 @@ O80 → O82 → O94 → O122 → O142 → O211 → **O125**
 - `scripts/03_cross_validation.py`: 14/14 PASS (交叉 + 獨立重推 + 硬編碼掃描)
 - `scripts/04_gg_gg_polarization.py`: 25/25 PASS (O124 交接: gg→gg 完整極化求和)
 - `scripts/05_helicity_operator.py`: 51/51 PASS (helicity λ=±1 算子化; 組合 + 幾何雙路線)
+- `scripts/06_bdisc_regularization.py`: 21/21 PASS (B_disc 有限譜正則化; 窮舉 56804 運動學)
 - 硬編碼字面 True: **0** (AST 掃描)
 - 上游交叉: O122 / O82 / O94 / O142 / O211 全部核實
 
@@ -55,3 +56,12 @@ O80 → O82 → O94 → O122 → O142 → O211 → **O125**
 - 交叉: `Σ_{k=1..44} 4sin²(πk/88) = 90` (O124/O211); 16 = 2⁴, 6 = 2N_gen (docs/05)
 - 誠實邊界: 「±1 扇區 = 物理 helicity」用標準字典 (P 反轉 helicity); 屬**詮釋**, 非結構
 - 詳見 `docs/06_helicity_operatorization.md`
+
+## §B_disc 正則化 (2026-09-26, 21/21 PASS)
+- ★ **collinear pole 係連續假象**: `1/t²` 發散需要連續動量譜 (動量可任意接近共線)
+- ★ **88-ring 動量量子化**: 最小動量轉移 **`Δω_min = 4sin²(π/176)` = 1.2743×10⁻³** (能帶頂 n=44 兩側)
+  ⟹ `|t| ≥ Δω_min² = 1.6240×10⁻⁶ > 0` ⟹ **冇 collinear 極限 ⟹ 冇發散** (窮舉 56804 運動學)
+- ★ **但直接代入 `B(s,t,u)` 係 ill-posed**: 離散 `s+t+u ≠ 0` (min 2.04×10⁻², median 8.18)
+- ★ **正確離散振幅 = O124 `docs/05 §5.2` V₄ 張量** (有限) ⟹ 冇 counterterm (承零重整化定理)
+- 形式延拓界: `max |B_disc^{reg}| = 6.46×10¹²` (有限; 對照連續 → ∞); 正則化子 = **能階間距** (~`1/N²`)
+- 詳見 `docs/07_bdisc_regularization.md`

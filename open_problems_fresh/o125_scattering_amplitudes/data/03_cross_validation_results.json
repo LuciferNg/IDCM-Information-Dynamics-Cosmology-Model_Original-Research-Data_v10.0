@@ -88,7 +88,7 @@
     {
       "name": "X3 O125 scripts 零字面 True check (反硬編碼, AST 掃描)",
       "pass": true,
-      "detail": "0 個硬編碼布林 (要求 0); 掃描 5 個 script"
+      "detail": "0 個硬編碼布林 (要求 0); 掃描 6 個 script"
     },
     {
       "name": "X4 評級匯總: 🟢 10 + 🟡 1 (無 🔴 開放項)",
