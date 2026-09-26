@@ -1,0 +1,127 @@
+{
+  "script": "02_one_loop_scattering",
+  "pass": 20,
+  "fail": 0,
+  "total": 20,
+  "key_results": {
+    "diagram_classification": "only s-channel (mode-diagonal)",
+    "bubble_closed_form": "B_k(s) = (2θ_k/sin2θ_k)/(4π m_k²)",
+    "sum_omega_sq": 90.0,
+    "Pi_h_0": 0.12549440575772147,
+    "N_d_over_4piM0": 0.12549440575772147,
+    "n_thresholds": 44,
+    "h_decay_channels": [
+      1,
+      2,
+      3
+    ],
+    "Gamma_h_channel_sum": 0.9462597794880636,
+    "Im_Pi_h_mh2": 0.00847875221554619,
+    "tree_table_O122_match": 0.005745489621194144,
+    "beta_b0": 7,
+    "beta_b1": 26,
+    "max_a0": 0.00039001433773099405
+  },
+  "checks": [
+    {
+      "name": "R1a 3 種配對只有 1 種模式一致 (s-channel)",
+      "pass": true,
+      "detail": "只有 s-channel 存活; t/u 需頂點 h φ_n φ_m (n≠m) — 模式對角禁止"
+    },
+    {
+      "name": "R1b box 圖唔可能 (需 4 個 A 頂點 = 8 φ 腿 > 4 外線)",
+      "pass": true,
+      "detail": "φ 腿守恆 ⟹ #A 頂點 = 4/2 = 2 (固定); 2 個 h 腿 ⟹ 1 條 h 傳播子 = tree s-channel"
+    },
+    {
+      "name": "R2 泡閉式 vs Feynman 參數化數值積分一致",
+      "pass": true,
+      "detail": "max dev = 1.26e-16 (< 1e-10, mpmath 50 dps)"
+    },
+    {
+      "name": "R3a Σ_(k=1..44) ω_k² = 90 EXACT",
+      "pass": true,
+      "detail": "Σ = 90.0; 精確 = 4×(45/2) = 90 (Σ sin² 精確 = 22.5, 由 Σ_(k=1..87) sin² = 44)"
+    },
+    {
+      "name": "R3b 90 = B·(N_d+1)/2 = Σγ (O211 世界自洽數)",
+      "pass": true,
+      "detail": "B·(N_d+1)/2 = 4×45/2 = 90.0 → 同 O211 Σγ = 90 EXACT 一致"
+    },
+    {
+      "name": "R4a 每模式貢獻相等 = 1/(4πM₀) (g_k² ∝ ω_k² 抵消 B_k ∝ 1/m_k²)",
+      "pass": true,
+      "detail": "全部 = 0.002852145585 = 1/(4πM₀) = 0.002852145585"
+    },
+    {
+      "name": "R4b Π_h(0) = N_d/(4πM₀)",
+      "pass": true,
+      "detail": "Σ_k = 0.125494405758; N_d/(4πM₀) = 0.125494405758"
+    },
+    {
+      "name": "R5 v10.0 有 44 個離散閾值 (vs 連續 QFT 單一 4m² 分支割)",
+      "pass": true,
+      "detail": "44 個獨立閾值, 最小間距 15.8674 MeV² → 離散分支結構"
+    },
+    {
+      "name": "R6 光學定理形式 = 複閉式虛部 (on-shell 模式求和)",
+      "pass": true,
+      "detail": "max dev = 2.44e-16; Im Π_h = (1/(4M₀))Σ_on-shell 1/sinh(2χ_k), χ_k = arccosh(√s/2m_k)"
+    },
+    {
+      "name": "R7a h 衰變通道恰為 k=1,2,3 (ω_k < 1/4 ⟺ k < 3.511)",
+      "pass": true,
+      "detail": "k_crit = 88·arcsin(1/8)/π = 3.5106 → k ≤ 3 精確"
+    },
+    {
+      "name": "R7b 通道數 = 3 = N_gen (結構巧合候選)",
+      "pass": true,
+      "detail": "#channels = 3 = N_gen = 3  [🟡 標記為候選, 未證算子必然]"
+    },
+    {
+      "name": "R7c Γ_h 通道和 Σ csch(2χ_k) 有限正值",
+      "pass": true,
+      "detail": "Σ = 0.946260; Im Π_h(m_h²) = (1/(4M₀))·Σ = 0.008479"
+    },
+    {
+      "name": "R8 tree 振幅重現 O122 已發表表 (容差 1% 對 4 s.f. 捨入)",
+      "pass": true,
+      "detail": "max dev = 0.575% (< 1%, 對 O122 4 s.f. 表)"
+    },
+    {
+      "name": "R9 1-loop 修正 ≪ tree (所有測試 s 點)",
+      "pass": true,
+      "detail": "max |δ| = 0.023159 (< 5%) → 1-loop 微擾收斂"
+    },
+    {
+      "name": "R10a Σ_n = −κ²ω_n 動量無關 ⟹ δZ = ∂Σ/∂p² = 0",
+      "pass": true,
+      "detail": "Σ_n = −M₀ω_n 只依賴 n (無 p²) → 波函數重整化恆為零"
+    },
+    {
+      "name": "R10b 圈和有限 (Σ 1/m_k² 收斂) ⟹ 冇 mass/coupling/vertex counterterm",
+      "pass": true,
+      "detail": "Σ_k 1/m_k² = 0.414600 (ω_1 = 0.071385 > 0 → 有限) ⟹ 冇 1/ε 極點需吸收"
+    },
+    {
+      "name": "R11a b₀ = Tr(T̂⁴) = L₄ = 7 (O142 QCD β 係數)",
+      "pass": true,
+      "detail": "Tr(T̂⁴) = 7 = L₄ (Fibonacci-Lucas 轉移矩陣不變量)"
+    },
+    {
+      "name": "R11b b₁ = 2F₇ = 26 (O142)",
+      "pass": true,
+      "detail": "2F₇ = 26 = 26"
+    },
+    {
+      "name": "R11c v9.0 β = 3κ²/16π² = 7.42e-5 ≠ 譜不變量 b₀ = 7",
+      "pass": true,
+      "detail": "v9.0 7.42e-05 vs v10.0 b₀ = 7 → v9.0 β 係連續 QFT artifact"
+    },
+    {
+      "name": "R12 全部模式 a₀ ≪ 0.5 (unitarity 安全)",
+      "pass": true,
+      "detail": "max a₀ = 0.000390 @ n=4 (最接近 h pole)"
+    }
+  ]
+}

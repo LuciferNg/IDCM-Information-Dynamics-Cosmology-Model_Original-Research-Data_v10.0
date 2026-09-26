@@ -1,0 +1,103 @@
+{
+  "script": "01_preverification",
+  "pass": 16,
+  "fail": 0,
+  "total": 16,
+  "verdict": "v9.0 invalid in v10.0 — rebuild required",
+  "conflicts": [
+    "C1 κ 身份 (無量綱 φ⁴ vs MeV 三線性)",
+    "C2 質量標度 (GeV vs MeV)",
+    "C3 UV 標度 (M_GUT 零結構地位)",
+    "C4 場縮放 (1/M_GUT vs R_world/88)",
+    "C9 dim-reg 1/ε vacuous (有限譜)",
+    "C10 單一 scalar vs 44 模式",
+    "C11 冇 Wilsonian RG"
+  ],
+  "v9_internal_inconsistencies": [
+    "C6 running 宣稱 0.6% 實際 3.92%",
+    "C7 RG running 符號 doc(1−) vs script(1+)",
+    "C8 verify script import 路徑斷裂"
+  ],
+  "checks": [
+    {
+      "name": "C1a v9.0 κ=1/16 係無量綱四點頂點 (v10.0 對應量 = λ)",
+      "pass": true,
+      "detail": "|1/16 − λ| = 0.046240 → 兩個唔同頂點 (v9.0 混淆三線性/四點耦合)"
+    },
+    {
+      "name": "C1b v10.0 κ² = M₀ 帶 MeV 量綱 (唔可能係無量綱 1/16)",
+      "pass": true,
+      "detail": "κ² = 27.900915 MeV ≫ 1 → 量綱衝突確認"
+    },
+    {
+      "name": "C2a v10.0 質量譜全部 MeV 級 (冇 GeV 粒子)",
+      "pass": true,
+      "detail": "max m_n = 55.8018 MeV; m_H(v9)/m_44 = 2206.2× → 標度唔同"
+    },
+    {
+      "name": "C2b m_h = m_δW = M₀/2 (O37) 唔等於 123.11 GeV",
+      "pass": true,
+      "detail": "|m_h − m_H(v9)| = 109.16 (MeV vs GeV 單位本身就唔可比)"
+    },
+    {
+      "name": "C3a v10.0 cutoff 係物理晶格 (a = R_world/88), 唔係 M_GUT",
+      "pass": true,
+      "detail": "M_GUT × a = 1.438e+56 → M_GUT 唔可能係 v10.0 標度"
+    },
+    {
+      "name": "C3b M_GUT = 1.96e16 GeV 冇結構冪身份",
+      "pass": true,
+      "detail": "最佳 B^27 dev 8.09e+00% > 1% → 零結構地位確認"
+    },
+    {
+      "name": "C4 v9.0 場縮放 a=1/M_GUT 同 v10.0 晶格 a=R_world/88 唔同",
+      "pass": true,
+      "detail": "比值 = 6.954e-57 (相差 56.2 個數量級) → 縮放完全唔同"
+    },
+    {
+      "name": "C5 v9.0 β_κ = 3κ²/16π² 算術自洽",
+      "pass": true,
+      "detail": "重算 7.420985e-05 vs 宣稱 7.42e-5 (dev 0.013%)"
+    },
+    {
+      "name": "C6 v9.0 doc 自相矛盾 (0.6% vs 實際 3.92% vs 結論 3.9%)",
+      "pass": true,
+      "detail": "doc §2.4 用 0.0061 但真值 0.0392 (差 84.4%) → 算術錯"
+    },
+    {
+      "name": "C7 doc 同 verify script 用相反符號 (0.06505 vs 0.06014)",
+      "pass": true,
+      "detail": "|Δ|/κ = 7.54% → 同一 v9.0 項目內部矛盾"
+    },
+    {
+      "name": "C8a v9.0 verify script 存在 (可讀取原始推導)",
+      "pass": true,
+      "detail": "/home/wsl/Projects/IDCM-Original/IDCM-v9.0--W-Field-Lattice/open_problems_fresh/p_sa_scattering_amplitudes/02_verify.py"
+    },
+    {
+      "name": "C8b v9.0 verify script import 路徑 (/home/wsl/IDCM) 唔存在 → 驗證鏈斷",
+      "pass": true,
+      "detail": "ModuleNotFoundError: No module named '_core' (已實測) → 原驗證無法重跑"
+    },
+    {
+      "name": "C9a v10.0 圈自由度有限 (44 模式, 非 ∫d⁴k)",
+      "pass": true,
+      "detail": "Σ_k ω_k 收斂 = 57.016590 → 有限和, 冇 1/ε"
+    },
+    {
+      "name": "C9b O94 已閉合記錄確認 δm_n = 0 (有限 QFT)",
+      "pass": true,
+      "detail": "O94 docs/02: 「δm_n = 0 (IDCM finite QFT, 88-site lattice = physical cutoff)」"
+    },
+    {
+      "name": "C10 v10.0 有 44 個 K_Chain 模式 (v9.0 忽略模式結構)",
+      "pass": true,
+      "detail": "ω_44 = 2.0 (Nyquist) → 44 模式確認; v9.0 單一場 = 漏核心機制"
+    },
+    {
+      "name": "C11 v10.0 冇 continuum limit (a = R_world/88 係物理, 唔係 regulator)",
+      "pass": true,
+      "detail": "a = 46.916 Mpc 物理間距; 88 = 2×44 世界/觀察者對偶鏈長度 → 冇 a→0 極限"
+    }
+  ]
+}
