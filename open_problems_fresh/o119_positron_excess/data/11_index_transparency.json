@@ -1,0 +1,7 @@
+{
+ "theorem": "dN_e/dE_e ∝ E_e^(-p) EXACT, 對任何模式譜 {w_n,u_n} 成立",
+ "max_numerical_dev": 2.220446049250313e-15,
+ "analytic_sympy": true,
+ "consequence": "gamma_obs = p_sec - p_prim 係 CR 譜指數差; IDCM 模式譜零作用",
+ "verdict": "docs/01 §4 將 gamma 認做結構數 = 層次錯配"
+}

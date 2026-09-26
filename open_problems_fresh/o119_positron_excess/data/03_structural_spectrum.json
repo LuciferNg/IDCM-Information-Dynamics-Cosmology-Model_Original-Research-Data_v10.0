@@ -1,0 +1,15 @@
+{
+ "C_structure": "1/F5^2 = 1/25 = 0.04",
+ "gamma_structure": "F6/(Nd-F7) = 8/31 = 0.25806451612903225",
+ "gamma_free_fit": 0.25812150940979006,
+ "C_free_fit": 0.040032822093017055,
+ "chi2_struct_0par": 1.093773386286787,
+ "chi2_free_2par": 1.3762161176233119,
+ "Gamma_Wee_MeV": 9.264585013592188e-05,
+ "tau_Wee_s": 7.104602698710509e-18,
+ "positron_rest_energy_MeV": 6.975225,
+ "E_res_MeV": 47.5535,
+ "E_CR_for_10GeV_GeV": 197,
+ "E_CR_for_300GeV_GeV": 5917,
+ "conclusion": "結構化譜 f_W=(1/25)E^(8/31) 零參數 chi2 同 2 參數 fit 相當; Gamma(W->ee)~9e-5 MeV, 靜止衰變得 7 MeV 正電子; GeV 需 CR boost"
+}

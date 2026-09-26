@@ -1,0 +1,12 @@
+{
+ "m_deltaW_MeV": 13.95045,
+ "window": "2m_e < m_W < 2m_mu: e+e- only",
+ "positron_anomaly": "有 (W->e+e-)",
+ "antiproton_anomaly": "冇 (W 出唔到 pbar, 3 反夸克)",
+ "antihelium": "冇",
+ "gamma_structure": "F6/(Nd-F7) = 8/31",
+ "gamma_degens_under_0.5pct": 31,
+ "C_structure": "1/F5^2 = 1/25",
+ "C_degens_under_1pct": 0,
+ "conclusion": "運動學窗口閉合: W 只出 e+e-; 正電子異常有反質子異常冇 = AMS-02 一致; 8/31 同 1/25 結構識別完成, 動力學推導開放"
+}

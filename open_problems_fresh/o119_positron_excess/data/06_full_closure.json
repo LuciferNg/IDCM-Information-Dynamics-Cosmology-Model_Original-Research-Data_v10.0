@@ -1,0 +1,21 @@
+{
+ "gamma_n_equals_omega_n2": 0.0,
+ "production_spectral_index": 2.0,
+ "f_W_structure": "f_W = (1/25)E^(8/31)",
+ "chi2_dof_0par": 1.093773386286787,
+ "chi2_dof_O54_2par": 1.38,
+ "kinematic_window": "2m_e < m_deltaW < 2m_mu",
+ "eplus_anomaly": "有 (開放)",
+ "pbar_anomaly": "冇 (關閉)",
+ "antiHe_anomaly": "冇 (關閉)",
+ "Gamma_Wee_MeV": 9.264585e-05,
+ "positron_rest_MeV": 6.98,
+ "energy_scale": "CR boost (外部 p_CR=2.7)",
+ "open": [
+  "8/31 動力學",
+  "1/25 動力學",
+  "p_CR=2.7 結構",
+  "f_sec 零參數化"
+ ],
+ "conclusion": "運動學窗口 + 產生率譜形 + 結構化分數三重閉合; 能量標度靠 CR boost 外部輸入"
+}

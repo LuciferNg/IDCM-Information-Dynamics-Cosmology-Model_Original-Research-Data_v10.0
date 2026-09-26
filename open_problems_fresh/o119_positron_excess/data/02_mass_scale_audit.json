@@ -1,0 +1,20 @@
+{
+ "m_formula_A_MeV": [
+  1.9916964744160195,
+  13.800147882626222,
+  55.8018
+ ],
+ "m_formula_B_tachyon_n": [
+  1,
+  2
+ ],
+ "m_formula_B_stable_range_MeV": [
+  1.1974170424744168e-15,
+  199.2568560009306
+ ],
+ "v_SM_GeV": 246.2196,
+ "gamma_W_fit": 0.25812150940979006,
+ "gamma_W_structure": "本 script 搜尋 (a/b, a/(b+c), (a-b)/c) 未覆蓋 a/(b-c) 格式 → miss 8/31 = F6/(Nd-F7) dev 0.022% (見 script 04)",
+ "highest_W_field_mass_MeV": 55.8018,
+ "conclusion": "W-field 兩套質量公式都係 MeV 級; 唯一 GeV 標度 v_SM=246 GeV; O54 CR boost 嘅 gamma_p 係外部輸入"
+}

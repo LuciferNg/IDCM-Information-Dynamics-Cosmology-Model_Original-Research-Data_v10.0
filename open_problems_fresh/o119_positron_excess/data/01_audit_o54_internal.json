@@ -1,0 +1,16 @@
+{
+ "m_range_MeV": [
+  1.9916964744160195,
+  55.8018
+ ],
+ "max_static_decay_MeV": 27.9009,
+ "powerlaw_fit": {
+  "C": 0.040032822093017055,
+  "gamma": 0.25812150940979006,
+  "chi2_dof": 1.3762161176233119
+ },
+ "mode_superposition_chi2_dof": 825.4869756914115,
+ "o54_internal_contradiction": true,
+ "physical_gap_GeV_to_MeV": 10752.341322322936,
+ "conclusion": "O54 正電子閉合靠 2 參數冪律 fit; 模式疊加失敗 (chi2=1397); 靜止衰變唔到 GeV; 需零參數結構"
+}

@@ -1,0 +1,13 @@
+{
+ "E_res_MeV": 47.5535012488607,
+ "E_res_Fproj_MeV": 808.4095212306319,
+ "E_res_Fproj_GeV": 0.8084095212306319,
+ "Ep_needed_10GeV_no_proj_GeV": 197.30871026504687,
+ "Ep_needed_10GeV_Fproj_GeV": 11.606394721473345,
+ "gamma_p_10GeV_no_proj": 210.28945792376504,
+ "gamma_p_10GeV_Fproj": 12.369968113162649,
+ "p_CR_2.7_structure_candidates": 38,
+ "p_CR_best": "(88+90)/66 = 2.696970",
+ "p_CR_178_66": 2.696969696969697,
+ "conclusion": "能量標度需 CR boost (O54 機制); F_proj=17 降低所需質子能量 17x; p_CR=2.7 冇唯一結構"
+}
