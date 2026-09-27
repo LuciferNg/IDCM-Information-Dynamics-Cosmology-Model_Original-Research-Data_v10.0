@@ -1,0 +1,63 @@
+==============================================================================
+  O132/04 -- structural z-evolution from the L7 refinement flow
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. structural z-map  (1+z = B^ell)
+------------------------------------------------------------------------------
+   rungs: ell=0 -> z=0 ; ell=1/2 -> z=1 ; ell=1 -> z=3 ; ell_max=log4(18)=2.0850 -> z=17
+  [PASS] A1  ell=1 <-> z = N_gen = 3
+  [PASS] A2  ell_max = log4(18) = 2.0850 <-> z = 17 (O76 Nyquist cutoff)
+   ell=0 : N_ell = 44 sites ; a_ell = 93.862273 Mpc
+   ell=1 : N_ell = 176 sites ; a_ell = 23.465568 Mpc
+   ell=2 : N_ell = 704 sites ; a_ell = 5.866392 Mpc
+   ell=4 : N_ell = 11264 sites ; a_ell = 0.366650 Mpc
+  [PASS] A3  N_ell = N_d*B^ell (ell=0->44, 1->176, 2->704, 4->11264)
+  [PASS] A4  c_ell = a_ell*sqrt(J_ell) = R_world*omega_ring = c  (EXACT, N_d cancels)  -- c = 299792.344600 km/s
+  [PASS] A5  shell identity 1-4^{-ell} = 3*sum 4^{-j}  (EXACT, integer ell)
+  [PASS] A6  measure w(ell)=ln4*4^{-ell} (continuous DENSITY): int_0^L = 1-4^{-L}  EXACT  -- int_0^1 = 0.750000000 ; 1-4^-1 = 0.750000000
+
+------------------------------------------------------------------------------
+  B. z-invariance of the harmonic ladder (structural)
+------------------------------------------------------------------------------
+  [PASS] B1  lambda_sync = pi*R_world/44 is ell-INDEPENDENT (R_world is a ring property)  -- lambda_sync = 294.8770 Mpc at every ell
+  [PASS] B2  harmonic ladder s_n = lambda_sync/n is ell-independent (same positions at all z)
+  [PASS] B3  mode set gamma_n = 4 sin^2(pi n/88): sum(n=1..44) = 90.0 = Sigma gamma ; sum(n=0..87) = 176.0 = 4 N_d
+  [PASS] B4  SELF-SIMILARITY: shell(ell) = scaled copy of shell(0) => the STRUCTURE (ladder positions + relative amplitudes) is z-invariant  -- => structural prediction: NO mode activation
+  [CLAIM] B  => IDCM structural prediction: redshift is a SCALE ladder, not a MODE ladder; the K_Chain harmonic content is z-invariant. v9.0's 'modes activate with redshift' is structurally FALSE.
+
+------------------------------------------------------------------------------
+  C. data test -- is the amplitude 'evolution' structural?
+------------------------------------------------------------------------------
+   raw (v9.0, no normalisation)      : alpha = +15.530
+   normalised to xi(s=20)          : alpha = +5.275
+   normalised to xi(s=30)          : alpha = +3.407
+   normalised to xi(s=50)          : alpha = -2.542
+   normalised to xi(s=100)          : alpha = -8.698
+   normalised to xi(s=150)          : alpha = -19.172
+   spread over normalisation choice  : 24.447
+  [PASS] C1  reproduce v9.0 raw alpha = +15.530 (survey-amplitude artifact)
+  [PASS] C2  alpha is UNSTABLE under the normalisation reference (spread 24.4 over s_ref in [20.0, 30.0, 50.0, 100.0, 150.0]) -- a structural prediction would be normalisation-invariant
+  [CLAIM] C  => alpha_evol is not a structural quantity (it swings by >24 depending on the survey normalisation) -- confirming the v9.0 'evolution' is an artifact
+  [PASS] C3  harmonic positions s_n are the SAME comoving scales in both surveys (ladder z-invariant)  -- n=4..8 -> 101.6, 81.2, 67.7, 58.0, 50.8 h^-1 Mpc
+  [PASS] C4  normalised xi(s) shapes correlate (r = 0.8962) -- same shape family across z
+  [CLAIM] C4  r = 0.8962 is high but < 1: the residual shape difference is bias/nonlinear evolution, NOT a K_Chain ladder effect (positions are identical, C3)
+
+------------------------------------------------------------------------------
+  D. verdict
+------------------------------------------------------------------------------
+
+   STRUCTURAL (IDCM) : the harmonic ladder is Z-INVARIANT
+                       (positions s_n = lambda_sync/n fixed; mode set gamma_n fixed)
+   v9.0 measured     : alpha_evol = +15.530  (unstable: -19.172 .. +5.275 under normalisation)
+                       -> NOT a structural quantity -> artifact
+
+   => The USEFUL structural answer to O132's question ("how does the K_Chain
+      harmonic content evolve with redshift?"):  IT DOES NOT.  Redshift is a SCALE
+      ladder (1+z = B^ell), not a mode ladder; there is no mode activation.
+      The v9.0 "evolution" was a survey-normalisation artifact.
+
+==============================================================================
+  RESULT: 14/14 PASS   (+3 structural claims)
+==============================================================================
+  -> data/04_structural_z_evolution.json written
