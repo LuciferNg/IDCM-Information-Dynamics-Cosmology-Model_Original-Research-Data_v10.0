@@ -1,0 +1,60 @@
+{
+  "D_quark": "1.06552785127",
+  "hypotheses": {
+    "H_color": "修正 ⟺ 色三重態",
+    "H_sector": "修正 ⟺ 下型扇區"
+  },
+  "sector_table": [
+    {
+      "f": "b",
+      "color": "triplet",
+      "sector": "down",
+      "err_D1_pct": "-6.544",
+      "err_Dq_pct": "-0.42008",
+      "improved": true,
+      "native_v9": true
+    },
+    {
+      "f": "s",
+      "color": "triplet",
+      "sector": "down",
+      "err_D1_pct": "-6.1653",
+      "err_Dq_pct": "-0.016513",
+      "improved": true,
+      "native_v9": true
+    },
+    {
+      "f": "c",
+      "color": "triplet",
+      "sector": "up",
+      "err_D1_pct": "1.2566",
+      "err_Dq_pct": "7.8918",
+      "improved": false,
+      "native_v9": false
+    },
+    {
+      "f": "tau",
+      "color": "singlet",
+      "sector": "lepton",
+      "err_D1_pct": "-0.015332",
+      "err_Dq_pct": "6.5364",
+      "improved": false,
+      "native_v9": false
+    },
+    {
+      "f": "mu",
+      "color": "singlet",
+      "sector": "lepton",
+      "err_D1_pct": "-0.31029",
+      "err_Dq_pct": "6.2222",
+      "improved": false,
+      "native_v9": false
+    }
+  ],
+  "verdict": {
+    "H_color": "FALSIFIED (c 惡化)",
+    "H_sector": "SURVIVES (down improves, up/lepton worsen)"
+  },
+  "open": "下型選擇之結構機制 🔴 (O136 docs/02 §2.4 登記項, 本 O 未能閉合)",
+  "result": "14/14 PASS"
+}
