@@ -1,0 +1,94 @@
+==============================================================================
+  O130/01 -- wavelet_toolbox migration inventory + identity check
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. lambda_sync geometry: v9.0 vs v10.0
+------------------------------------------------------------------------------
+  [PASS] A1  2*pi*R/88 == pi*R/44 (algebraic identity, dev < 1e-30)  -- dev = 0.00e+00
+  [PASS] A2  R_world(v10 registered 4129.94) == c/H0 = 4129.9416 Mpc (6 s.f. rounding)  -- dev = 3.78e-07  (lambda_sync v9 294.877138 vs v10 294.877026 Mpc)
+  [PASS] A3  BAO = lambda_sync/2 = 147.4385 Mpc  -- lambda_sync/2 = 147.4385
+  [PASS] A4  sync harmonic m = 2*pi*R_world/lambda_sync = 88.0000000 (O133)  -- m = 88.0000000000
+  [CLAIM] A  => lambda_sync is the SAME geometric object in v9.0 and v10.0; migrates P
+
+------------------------------------------------------------------------------
+  B. K_Chain spectrum gamma_n = 4 sin^2(pi n/88)  (the toolbox core)
+------------------------------------------------------------------------------
+  [PASS] B1  eig(Lap_88ring) == 4 sin^2(pi n/88) for all 88 modes (sorted spectra)  -- max |dev| = 4.00e-15
+  [PASS] B2  sum_{n=0}^{87} gamma_n = 176 = 4*N_d  -- sum = 176.0000000000
+  [PASS] B3  gamma_44 = 4 = B (ring centre mode)  -- gamma_44 = 4.000000000000
+  [PASS] B4  88-site mirror identity gamma_n+gamma_{44-n} = 4 = B for all n=0..44  -- max dev = 8.88e-16
+  [PASS] B5  v_g = cos(pi n/88) matches v10.0 O99 dispersion (c=1 units)  -- v_g(0)=1.000  v_g(44)=2.833e-16  v_g(22)=0.707107
+  [PASS] B6  gamma_n bounded (0..4) while phi^n unbounded -> not identity  -- max gamma = 4.000000 ; phi^20 = 15127.000
+  [CLAIM] B  => gamma_n = 4 sin^2(pi n/88) is the EXACT 88-ring Laplacian spectrum; migrates P
+
+------------------------------------------------------------------------------
+  C. impedance / reflection ladder (v9.0 structural ingredients)
+------------------------------------------------------------------------------
+   n    gamma_n      v_g,n      Z_n=gamma/|vg|    R_n        s_ref=lam/(2n|R|)  [h^-1 Mpc]
+   2    0.020357    0.997452   0.020409         0.600204   169.20            
+   3    0.045706    0.994270   0.045970         0.385071   175.82            
+   4    0.081014    0.989821   0.081847         0.280695   180.90            
+   5    0.126101    0.984111   0.128136         0.220443   184.28            
+   6    0.180736    0.977147   0.184963         0.181497   186.52            
+   7    0.244642    0.968937   0.252485         0.154354   187.98            
+   8    0.317493    0.959493   0.330897         0.134409   188.89            
+   9    0.398918    0.948826   0.420433         0.119170   189.38            
+   10   0.488501    0.936950   0.521374         0.107178   189.51            
+   11   0.585786    0.923880   0.634051         0.097520   189.34            
+  [PASS] C1  reflection ladder well-defined (Z_n>0, |R_n|>0) for n=2..11  -- min|R| = 0.097520 at n=11
+  [PASS] C2  all reflection scales s_ref = lambda_sync/(2n|R|) finite  -- 10/10 inside [2,200] h^-1 Mpc
+  [CLAIM] C  => impedance Z=gamma/|v_g| and reflection R are built from migrated (P) quantities; the 'reflection detection' claim itself is a v9.0 data construct with no v10.0 counterpart -> A/verify-on-data
+
+------------------------------------------------------------------------------
+  D. H(z) model in 05_emd_hz.py  (v9.0 zeta(z) inflation-era model)
+------------------------------------------------------------------------------
+   z     alpha_v9(z)   H_v9=72.59(1+z)^a
+   0.51  0.733361     98.20     
+   0.71  0.785471     110.63    
+   0.93  0.858353     127.64    
+   1.32  0.929528     158.71    
+   2.33  0.987420     238.09    
+  [PASS] D1  z_c = 3/5 = 0.6 is NOT a 4^l rung (l = 0.339036, rungs z = 0,3,15,63)  -- l(0.6) = 0.339036
+  [PASS] D2  v10.0 Omega_Lambda = 41/60 = 0.683333 CONSTANT (no DE(z) carrier)  -- (N_d-B+1)/(N_d+B^2) = 61.5/90 = 41/60 EXACT
+  [CLAIM] D  => the (1+z)^alpha(z) H(z) of 05 rests on v9.0 zeta(z) (DEMOTED) + DE(z) discharge; z_c=0.6 already retracted (O126) -> X inflation-era, DOES NOT migrate
+
+------------------------------------------------------------------------------
+  E. z = 17 horizon (07_horizon_aliasing.py / 09 Test 5)
+------------------------------------------------------------------------------
+   z=17 -> l = log_4(18) = 2.084963 ; 4^l rungs: [0, 3, 15, 63, 255]
+   n_obs = N_d/4^l = 2.4444
+  [PASS] E1  z = 17 = F_proj (O138 quantum-classical boundary, 3 independent routes)  -- F_proj = L6-1 = 17
+  [PASS] E2  z = 17 is NOT a 4^l rung (nearest rungs z=15, 63)  -- l(17) = 2.084963
+  [CLAIM] E  => z=17 SURVIVES as F_proj (QC boundary, O138); but the v9.0 'sharp horizon cutoff / Nyquist aliasing at z=17' reading needs a v10.0 carrier (z is discrete 1+z=4^l, O76) -> partial
+
+------------------------------------------------------------------------------
+  F. phi-ratio (08_phi_ratio_test.py / 09_math_verify.py)
+------------------------------------------------------------------------------
+  [PASS] F1  gamma_n/phi^n is NOT constant (changes 27.8x over n=1..20)  -- gamma_1/phi = 0.003149 ; gamma_20/phi^20 = 1.134e-04 ; ratio = 27.77
+  [PASS] F2  Fibonacci recursion gamma_{n+1}=gamma_n+gamma_{n-1} is NOT an identity (fails 9/10; accidental near-hit at n=5)  -- rel residual n=2..11 = 0.750, 0.443, 0.185, 0.005, 0.146, 0.254, 0.340, 0.409, 0.467, 0.515
+  [CLAIM] F  => phi-ratio A_n ~ phi^n was ALREADY falsified inside v9.0 (09_math_verify): it is a finite-range monotonicity correlation, not identity -> R, does NOT migrate as a claim
+
+------------------------------------------------------------------------------
+  G. method layer: wavelet + EMD broadband removal
+------------------------------------------------------------------------------
+  [CLAIM] G  => DWT(sym6)+EMD sifting is a framework-independent DATA method (replaces polynomial broadband fits). Migrates as TOOLING regardless of inflation.
+
+------------------------------------------------------------------------------
+  H. P/R/A/X migration verdict
+------------------------------------------------------------------------------
+   [P] gamma_n = 4 sin^2(pi n/88) K_Chain spectrum    EXACT 88-ring Laplacian
+   [P] lambda_sync = 2 pi R/88 = pi R_world/44        same object, dev 0
+   [P] v_g = cos(pi n/88) group velocity              v10.0 O99 dispersion
+   [P] B = 4 MERA branching, K_Tree z = 4^l - 1       v10.0 O76 discrete z
+   [P] wavelet + EMD broadband-removal METHOD         framework-independent tooling
+   [A] impedance Z_n / reflection R_n / s_ref ladder  ingredients P; detection = data
+   [R] phi-ratio A_n ~ phi^n                          falsified inside v9.0 itself
+   [R] z=17 sharp horizon cutoff / Nyquist aliasing   z=17=F_proj survives; aliasing re-read
+   [X] H(z)=H0(1+z)^alpha with zeta(z) (05)           zeta demoted; Omega_L constant
+   [X] sync dip z_c=0.6 (via zeta)                    retracted by O126
+
+==============================================================================
+  RESULT: 18/18 PASS   (+7 structural claims)
+==============================================================================
+  -> data/01_migration_inventory.json written

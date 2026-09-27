@@ -1,0 +1,10 @@
+{
+  "n_imf": 1,
+  "A_phi_slope": 0.29369398906346367,
+  "A_phi_dev_pct": 38.9678362481873,
+  "A_gamma_rms": 0.31150415044285135,
+  "B_spearman_rho": 0.9979360165118679,
+  "C_bin_spacing": 5.0,
+  "C_n_max": 8.527432155736205,
+  "C_n_resolvable": 6
+}

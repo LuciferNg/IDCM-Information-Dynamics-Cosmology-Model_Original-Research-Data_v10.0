@@ -1,0 +1,89 @@
+# O130 — 小波工具箱宇宙學應用
+
+> **創建日期**: 2026-08-29
+> **狀態**: 🔴 未開始
+> **來源**: v9.0 項目審計 — `open_problems_fresh/wavelet_toolbox/`
+> **前置**: O9 (高 ℓ CMB 峰) 🟢, O42/O122 (冷斑分析) 🔴
+> **定位**: 從 v9.0 wavelet_toolbox/ 遷移 — EMD 小波分析在 IDCM 宇宙學中的應用驗證
+
+---
+
+## 一、問題
+
+從 v9.0 wavelet_toolbox/ 遷移 — EMD 小波分析在 IDCM 宇宙學中的應用驗證
+
+## 二、假設
+
+1. v9.0 推導在 v10.0 非膨脹框架中部分或全部有效
+2. 需要驗證的關鍵假設：
+   - 是否依賴膨脹宇宙假設？
+   - 是否使用 v9.0 已 demote 的參數（如 ζ(z)）？
+   - 是否與 v10.0 已閉合結果（O76, O100, O51 等）一致？
+
+## 三、驗證步驟
+
+### 步驟 1：讀取 v9.0 原始推導
+- 路徑: `open_problems_fresh/wavelet_toolbox/`
+- 目標: 提取所有公式和數值
+
+### 步驟 2：識別 v9.0 特有假設
+- 列出所有依賴膨脹宇宙的假設
+- 列出所有使用 v9.0 demote 參數的公式
+
+### 步驟 3：在 v10.0 框架中重新驗證
+- 用 v10.0 的 idcm_core.py 常數重新計算
+- 與 v10.0 已閉合結果交叉驗證
+
+### 步驟 4：遷移或重建
+- 如果 v9.0 推導有效 → 遷移到 v10.0
+- 如果 v9.0 推導失效 → 建立新推導
+
+## 四、已知 v9.0 參考文件
+
+- `open_problems_fresh/wavelet_toolbox/`
+
+## 五、開放問題
+
+1. v9.0 推導是否在 v10.0 中有效？
+2. 是否需要修正以適應非膨脹框架？
+3. 與 O1-O121 中已閉合結果的關係？
+
+---
+
+## 六、v9.0→v10.0 遷移驗證 (2026-09-27) — 前置步驟完成
+
+> **狀態**: 🔴 未開始 → 🟡 **遷移判決完成**
+> **腳本**: `scripts/01_migration_inventory.py` (18/18) · `02_wavelet_emd_rerun.py` (9/9) · `03_significance_null.py` (5/5) = **32/32 PASS + 14 結構聲稱**
+> **判決文檔**: `docs/02_migration_verdict.md` · **結論**: `final_result.md`
+
+### 6.1 判決摘要 (P/R/A/X)
+
+- **P 遷移 (5 項)**: `γ_n = 4 sin²(πn/88)` (88 環精確譜) / `λ_sync = πR_world/44` (dev=0) /
+  `v_g = cos(πn/88)` (O99) / `B=4, z=4^ℓ−1` (O76) / 小波+EMD broadband 移除**方法**。
+- **A 🟡 (1 項)**: 阻抗 `Z_n=γ_n/|v_g|`、反射 `R_n`、`s_ref=λ_sync/(2n|R_n|)` — 部件係 P 量，
+  但「反射偵測」係 v9.0 數據構造。
+- **R 🔴 (2 項)**: φ-ratio `A_n∝φ^n` (v9.0 自己已證偽) / z=17 尖銳視界 aliasing
+  (z=17=F_proj 存活但 ℓ=log₄18 非 rung)。
+- **X 🔴 (2 項)**: `H(z)=H₀(1+z)^α` with ζ(z) (05) / sync dip `z_c=0.6` (O126 已撤回)。
+
+### 6.2 新發現
+
+1. **「EMD 17/19 諧波」= 單調斜坡偽影**: 重跑複現 v9.0 數字 (BOSS EMD 17/18, wavelet 3/18,
+   eBOSS 0–10/18)，但 S/N 對 n 嚴格單調 (Spearman ρ=0.9979)，只抽 1 IMF ⟹ 斜坡越 3σ。
+2. **BOSS 解析度極限 n_max = 8.53**: 諧波間距 Δs_n=λ/[n(n+1)]，BOSS bin=5 h⁻¹Mpc ⟹
+   只有 n=3..8 解析得到；n=9..20 全係 sub-bin aliasing。
+3. **φ-ratio 不可辨識**: log A_n vs n 斜率 0.2937 vs log φ=0.4812 (39%)；γ_n 模型擬合更佳。
+
+### 6.3 推導時序索引
+
+| 時間 | Script | 結果 | 記錄 |
+|:-----|:-------|:-----|:-----|
+| 2026-08-29 | — | O130 建立 (v9.0 審計遷移) | SESSION_START.md |
+| 2026-09-27 | `01_migration_inventory.py` | 18/18 — 幾何/譜/阻抗/H(z)/z=17/φ-ratio 分類 | `data/01_*` |
+| 2026-09-27 | `02_wavelet_emd_rerun.py` | 9/9 — 實數據 DWT+EMD 重跑 + k-space 對照 | `data/02_*` |
+| 2026-09-27 | `03_significance_null.py` | 5/5 — φ-ratio / 斜坡 / 解析度 null | `data/03_*` |
+| 2026-09-27 | — | 判決 + final_result | `docs/02`, `final_result.md` |
+
+**依賴鏈**: v9.0 `wavelet_toolbox/` → O130; 交叉: O133 (k-space) / O129 (λ_sync) / O126 (ζ 撤回) /
+O138 (z=17) / O76 (離散 z) / O99 (色散) / O135 (P/R/A/X 分類法) / O131 (同批 stacking 遷移) /
+O118 (裁定唔做阻抗模型)。

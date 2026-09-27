@@ -1,0 +1,41 @@
+==============================================================================
+  O130/03 -- significance / null tests
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. phi-ratio vs gamma_n: which monotone model fits the EMD amplitudes?
+------------------------------------------------------------------------------
+   log A_n vs n        : slope = 0.2937 (log phi = 0.4812, dev 39.0%), RMS resid = 0.6064
+   log A_n vs log gamma: slope = 1.5441,                        RMS resid = 0.3115
+  [PASS] A1  phi-law FALSIFIED: log-slope 0.2937 deviates 39.0% from log(phi)=0.4812  -- a true A_n ~ phi^n would require slope exactly log(phi)
+  [PASS] A2  gamma_n model fits the amplitudes at least as well as phi^n  -- RMS gamma 0.3115 <= phi 0.6064
+  [CLAIM] A  => the EMD amplitudes are a MONOTONE sequence; both phi^n and gamma_n fit it, so the phi-ratio is not identifiable -> R (falsified), consistent with v9.0 09_math_verify
+
+------------------------------------------------------------------------------
+  B. ramp diagnostic: is the EMD residual S/N sequence monotone?
+------------------------------------------------------------------------------
+   n          :      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18     19     20
+   S/N        :    0.6    6.6    3.7    6.9    9.2   12.5   16.3   19.6   23.2   27.9   32.5   37.3   42.8   48.9   55.3   61.6   66.4   71.5
+   Spearman rho(n, S/N) = 0.9979  (p = 1.65e-20)
+  [PASS] B1  EMD harmonic S/N is monotone in n (|rho| > 0.95) -> ramp, not discrete harmonics  -- rho = 0.9979 ; n_imf = 1
+  [CLAIM] B  => the '17/19 harmonics' of the v9.0 EMD run is a MONOTONE RAMP crossing 3-sigma, not 17 resolved harmonic detections (1 IMF extracted -> residual = smooth trend)
+
+------------------------------------------------------------------------------
+  C. resolvability of the K_Chain ladder in BOSS DR12
+------------------------------------------------------------------------------
+   BOSS bin spacing = 5.0 h^-1 Mpc
+   harmonic spacing Delta_s_n = lambda_sync/[n(n+1)]; resolvable iff Delta_s_n >= bin
+   n_max = 8.527  -> only n <= 8 resolvable
+  [PASS] C1  resolution limit n_max = 8.53 < 9 (most claimed harmonics are sub-bin aliases)  -- n_max = 8.527
+  [PASS] C2  only 6 of the 18 scanned harmonics are actually resolvable by BOSS binning  -- resolvable n = [3, 4, 5, 6, 7, 8]
+  [CLAIM] C  => the K_Chain ladder is resolvable only for n <= 8 in BOSS DR12 (5 h^-1 Mpc bins); the toolbox's n=9..20 'detections' are sub-bin aliases of a smooth trend
+
+------------------------------------------------------------------------------
+  D. verdict
+------------------------------------------------------------------------------
+  [CLAIM] D  => the wavelet/EMD toolbox MIGRATES as TOOLING (P); its quantitative detection claims (phi-ratio, 17/19 harmonics, reflection detections) are R: method/broadband artefacts, already falsified or sub-bin aliases
+
+==============================================================================
+  RESULT: 5/5 PASS   (+4 structural claims)
+==============================================================================
+  -> data/03_significance_null.json written

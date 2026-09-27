@@ -1,0 +1,14 @@
+{
+  "lambda_sync_Mpc": 294.87702644924155,
+  "lambda_sync_hinv_Mpc": 406.2226566321002,
+  "harmonics": {
+    "BOSS_wavelet": 3,
+    "BOSS_EMD": 17,
+    "eBOSS_wavelet": 0,
+    "eBOSS_EMD": 10
+  },
+  "reflections_in_BOSS": 2,
+  "reflections_detected_BOSS": 0,
+  "dk_h_Mpc": 0.01546734335123513,
+  "sync_m": 88.0
+}

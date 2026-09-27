@@ -1,0 +1,147 @@
+{
+  "lambda_sync_v9_Mpc": 294.8771379899644,
+  "lambda_sync_v10_Mpc": 294.87702644924155,
+  "R_world_v10_Mpc": 4129.94,
+  "sync_harmonic_m": 88.0,
+  "gamma_sum_88": 176.0,
+  "gamma_44": 4.0,
+  "gamma_formula_max_dev": 3.9968028886505635e-15,
+  "reflection_ladder": [
+    {
+      "n": 2,
+      "gamma": 0.020357116238134534,
+      "vg": 0.9974521146102535,
+      "Z": 0.020409116327442862,
+      "R": 0.6002044422409077,
+      "s_ref_hinv": 169.20178694256154
+    },
+    {
+      "n": 3,
+      "gamma": 0.04570626805768095,
+      "vg": 0.9942703017718973,
+      "Z": 0.04596966033907222,
+      "R": 0.385071031664906,
+      "s_ref_hinv": 175.82152521996713
+    },
+    {
+      "n": 4,
+      "gamma": 0.08101405277100522,
+      "vg": 0.9898214418809327,
+      "Z": 0.08184713862841389,
+      "R": 0.2806945454679095,
+      "s_ref_hinv": 180.90067263105303
+    },
+    {
+      "n": 5,
+      "gamma": 0.12610055000047654,
+      "vg": 0.9841112043361161,
+      "Z": 0.12813648441849038,
+      "R": 0.22044264747130676,
+      "s_ref_hinv": 184.27589275118595
+    },
+    {
+      "n": 6,
+      "gamma": 0.18073600929096323,
+      "vg": 0.9771468659711595,
+      "Z": 0.18496299336879585,
+      "R": 0.18149665835250073,
+      "s_ref_hinv": 186.51521388855693
+    },
+    {
+      "n": 7,
+      "gamma": 0.24464202086548875,
+      "vg": 0.9689373017815074,
+      "Z": 0.2524848825777324,
+      "R": 0.1543541366221884,
+      "s_ref_hinv": 187.98267853470006
+    },
+    {
+      "n": 8,
+      "gamma": 0.3174929343376376,
+      "vg": 0.9594929736144974,
+      "Z": 0.33089657044763215,
+      "R": 0.13440894883315832,
+      "s_ref_hinv": 188.89304811855567
+    },
+    {
+      "n": 9,
+      "gamma": 0.3989175181512792,
+      "vg": 0.9488259168373196,
+      "Z": 0.420432780210066,
+      "R": 0.11917038737280226,
+      "s_ref_hinv": 189.37527909387825
+    },
+    {
+      "n": 10,
+      "gamma": 0.4885008512914835,
+      "vg": 0.9369497249997617,
+      "Z": 0.5213736001593978,
+      "R": 0.1071778892703333,
+      "s_ref_hinv": 189.50861012362842
+    },
+    {
+      "n": 11,
+      "gamma": 0.5857864376269049,
+      "vg": 0.9238795325112867,
+      "Z": 0.6340506711244288,
+      "R": 0.09752008311183573,
+      "s_ref_hinv": 189.34219107847548
+    }
+  ],
+  "z_c_3_5_ell": 0.3390359525563189,
+  "z17_ell": 2.084962500721156,
+  "z17_n_obs": 2.444444444444445,
+  "phi_ratio_change_1_20": 27.772639476838425,
+  "verdict": [
+    {
+      "tag": "P",
+      "item": "gamma_n = 4 sin^2(pi n/88) K_Chain spectrum",
+      "why": "EXACT 88-ring Laplacian"
+    },
+    {
+      "tag": "P",
+      "item": "lambda_sync = 2 pi R/88 = pi R_world/44",
+      "why": "same object, dev 0"
+    },
+    {
+      "tag": "P",
+      "item": "v_g = cos(pi n/88) group velocity",
+      "why": "v10.0 O99 dispersion"
+    },
+    {
+      "tag": "P",
+      "item": "B = 4 MERA branching, K_Tree z = 4^l - 1",
+      "why": "v10.0 O76 discrete z"
+    },
+    {
+      "tag": "P",
+      "item": "wavelet + EMD broadband-removal METHOD",
+      "why": "framework-independent tooling"
+    },
+    {
+      "tag": "A",
+      "item": "impedance Z_n / reflection R_n / s_ref ladder",
+      "why": "ingredients P; detection = data"
+    },
+    {
+      "tag": "R",
+      "item": "phi-ratio A_n ~ phi^n",
+      "why": "falsified inside v9.0 itself"
+    },
+    {
+      "tag": "R",
+      "item": "z=17 sharp horizon cutoff / Nyquist aliasing",
+      "why": "z=17=F_proj survives; aliasing re-read"
+    },
+    {
+      "tag": "X",
+      "item": "H(z)=H0(1+z)^alpha with zeta(z) (05)",
+      "why": "zeta demoted; Omega_L constant"
+    },
+    {
+      "tag": "X",
+      "item": "sync dip z_c=0.6 (via zeta)",
+      "why": "retracted by O126"
+    }
+  ]
+}
