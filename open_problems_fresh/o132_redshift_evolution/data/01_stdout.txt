@@ -1,0 +1,100 @@
+==============================================================================
+  O132/01 -- v9.0 redshift_evolution faithful re-run
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. v9.0 constants + data
+------------------------------------------------------------------------------
+   H0_IDCM = 72.59 km/s/Mpc
+   R_H     = 4129.9416 Mpc
+   LAMBDA_SYNC = 2*pi*R_H/88 = 294.877138 Mpc
+   H       = 0.7259  ->  lambda_sync = 406.2228 h^-1 Mpc
+  [PASS] A1  lambda_sync = 2*pi*R_H/88 = 294.8771 Mpc (v9.0 registered 294.88)
+  [PASS] A2  lambda_sync (h^-1 Mpc) = 406.2228 (v9.0 comment 406.1)
+  [PASS] A3  BOSS DR12 zbin1 loaded (36 bins, 2.5-177.5 h^-1 Mpc)  -- n=36 s=[2.5,177.5]
+  [PASS] A4  eBOSS DR16 LRG loaded (49 bins, 7.5-247.5 h^-1 Mpc)  -- n=49 s=[7.5,247.5]
+
+------------------------------------------------------------------------------
+  1. broadband fit  xi(s) = A s^-gamma + C   (10-60 h^-1 Mpc)
+------------------------------------------------------------------------------
+   BOSS  (z=0.2-0.5): xi(s) = 79.4 * s^(-1.927) + -0.024259
+   eBOSS (z=0.6-1.0): xi(s) = 187.2 * s^(-1.660) + +0.523208
+  [PASS] B1  BOSS broadband fit converges (gamma = 1.927)
+  [PASS] B2  eBOSS broadband fit converges (gamma = 1.660)
+
+------------------------------------------------------------------------------
+  2. harmonic residual + S/N at s_n = lambda_sync/n  (n=2..20)
+------------------------------------------------------------------------------
+
+   n    s(h^-1)    BOSS_res     BOSS_S/N   eBOSS_res    eBOSS_S/N  Ratio   
+   3    135.4      +0.018430    +28.93     +0.241417    +4.33      +13.10  
+   4    101.6      +0.018942    +22.90     +0.211026    +2.99      +11.14  
+   5    81.2       +0.011450    +11.26     +0.310767    +3.37      +27.14  
+   6    67.7       +0.009169    +7.52      +0.319254    +2.94      +34.82  
+   7    58.0       +0.005346    +3.84      +0.212335    +1.62      +39.72  
+   8    50.8       +0.002742    +1.76      +0.112756    +0.79      +41.12  
+   9    45.1       +0.000655    +0.38      -0.106759    -0.68      -162.99 
+   10   40.6       -0.002587    -1.40      -0.276656    -1.55      +106.96 
+   11   36.9       -0.005295    -2.65      -0.137236    -0.69      +25.92  
+   12   33.9       -0.005632    -2.61      -0.129099    -0.67      +22.92  
+   13   31.2       -0.004421    -1.92      -0.174386    -0.82      +39.45  
+   14   29.0       -0.003949    -1.63      -0.170666    -0.67      +43.22  
+   15   27.1       -0.006318    -2.50      -0.053546    -0.18      +8.48   
+   16   25.4       -0.009558    -3.64      +0.138969    +0.43      -14.54  
+   17   23.9       -0.008298    -3.05      +0.291492    +0.84      -35.13  
+   18   22.6       +0.000001    +0.00      +0.343678    +0.92      +336945.39
+   19   21.4       +0.014319    +4.90      +0.287989    +0.66      +20.11  
+   20   20.3       +0.027039    +8.90      +0.184062    +0.37      +6.81   
+  [PASS] C1  harmonic table populated for n=2..20 inside BOSS range (18 rows)
+   -> BOSS S/N>3 : 7/18 ; eBOSS S/N>3 : 2/18
+
+------------------------------------------------------------------------------
+  3. amplitude evolution  A(z) ~ (1+z)^alpha_evol
+------------------------------------------------------------------------------
+   mean harmonic amplitude at z=0.38 : A = 0.007984
+   mean harmonic amplitude at z=0.70 : A = 0.203569
+   ratio A(z2)/A(z1) = 25.499
+   alpha_evol = 15.530    (A(z) ~ (1+z)^15.530)
+   harmonics used: n = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  [PASS] D1  mean amplitude A(z=0.38) = 0.007984 finite
+  [PASS] D2  mean amplitude A(z=0.70) = 0.203569 finite
+  [PASS] D3  alpha_evol = 15.530 computed from a SINGLE pair of z points (1 dof)
+  [PASS] D4  v9.0 skips n=3 (edge) -> uses n=4..20 (17 harmonics)
+
+------------------------------------------------------------------------------
+  4. cross-correlation of BOSS vs eBOSS xi(s) shapes
+------------------------------------------------------------------------------
+   overlap range = [7.5, 177.5] h^-1 Mpc ; r = 0.6416
+  [PASS] E1  shape cross-correlation r = 0.6416 (|r|>0.4)
+
+------------------------------------------------------------------------------
+  5. NEW: harmonic ladder vs BOSS DR12 bin resolution (5 h^-1 Mpc)
+------------------------------------------------------------------------------
+   BOSS DR12 median bin width = 5.000 h^-1 Mpc
+   n   ds_n(h^-1Mpc)  resolved?
+   4    20.31         yes
+   5    13.54         yes
+   6    9.67          yes
+   7    7.25          yes
+   8    5.64          yes
+   9    4.51          no  (sub-bin)
+   10   3.69          no  (sub-bin)
+   11   3.08          no  (sub-bin)
+   12   2.60          no  (sub-bin)
+   13   2.23          no  (sub-bin)
+   14   1.93          no  (sub-bin)
+   15   1.69          no  (sub-bin)
+   16   1.49          no  (sub-bin)
+   17   1.33          no  (sub-bin)
+   18   1.19          no  (sub-bin)
+   19   1.07          no  (sub-bin)
+   20   0.97          no  (sub-bin)
+   -> resolvable harmonics n <= 8 ; used by v9.0 = n=4..20 (17)
+  [PASS] F1  only 5 of the 17 harmonics used by v9.0 are resolved by the 5 h^-1 Mpc bins
+  [PASS] F2  lambda_sync ladder spacing ds_n = lambda_sync/[n(n+1)] is bin-width limited
+  [CLAIM] F  => the 'mean harmonic amplitude' mixes 5 resolved (n<=8) with 12 sub-bin aliased harmonics (n>=9) -> A(z) is dominated by aliasing, not by a resolved signal
+
+==============================================================================
+  RESULT: 14/14 PASS   (+1 structural claims)
+==============================================================================
+  -> data/01_v9_rerun_inventory.json written

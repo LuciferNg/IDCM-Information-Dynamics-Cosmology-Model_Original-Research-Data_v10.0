@@ -1,0 +1,17 @@
+{
+  "lambda_sync_v9_Mpc": 294.8771379899644,
+  "lambda_sync_v10_Mpc": 294.87702644924155,
+  "h_conv": 0.7259,
+  "alpha_all": 15.529623445845287,
+  "alpha_resolved": 15.33285007375769,
+  "alpha_swap": -15.529623445845287,
+  "A_boss": 0.007983563202980904,
+  "A_eboss": 0.20356926122434296,
+  "amp_ratio_raw_xi": 5.050685388265163,
+  "scan": {
+    "v9_inflation_hits": 0,
+    "v9_1z_hits": 5,
+    "v9_zeta_hits": 0,
+    "core_has_hbase": true
+  }
+}

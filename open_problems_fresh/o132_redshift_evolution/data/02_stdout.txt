@@ -1,0 +1,50 @@
+==============================================================================
+  O132/02 -- v9.0 redshift_evolution vs v10.0
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. geometry layer -- lambda_sync ladder (P/A)
+------------------------------------------------------------------------------
+   v9 : lambda_sync = 2*pi*R_H/88  = 294.877138 Mpc
+   v10: lambda_sync = pi*R_world/44 = 294.877026 Mpc
+  [PASS] A1  lambda_sync v9-form == v10-form (same input) -- algebraically identical  -- dev = 0.00e+00
+  [PASS] A2  registered-value rounding: R_H(v9) = 4129.9416 vs R_world(v10) = 4129.94  -- registered diff = 1.56e-03 (rounding, NOT a structural difference)
+  [PASS] A3  h^-1 Mpc conversion uses h = 0.7259 = omega_ring/100 (convention, not a prediction)  -- lambda_sync = 406.2228 h^-1 Mpc
+  [PASS] A4  harmonic ladder s_n = lambda_sync/n already owned by O31 (closed)  -- O31 final_result present = True
+  [PASS] A5  v10.0 MERA branching B = L3 = 4 is CONSTANT (O135/O51) -- v9's claim that the effective branching factor CHANGES with redshift is contradicted  -- v9.0 summary text: 'effective branching factor changes with redshift'
+
+------------------------------------------------------------------------------
+  B. v9-specific content -- A(z) ~ (1+z)^alpha_evol
+------------------------------------------------------------------------------
+   v9.0 (n=4..20, 17 harmonics) : A_boss=0.007984 A_eboss=0.203569 -> alpha = 15.530
+   resolved only (n=4..8)       : A_boss=0.009530 A_eboss=0.233227 -> alpha = 15.333
+  [PASS] B1  v9.0 headline alpha_evol = 15.530  (A(z) ~ (1+z)^15.5)
+  [PASS] B2  alpha_evol is POSITIVE and huge (15.5) -- physically absurd for a growth-like quantity (LCDM linear growth gives amplitude DECREASING with z, exponent ~ -1 to -2)
+  [PASS] B3  alpha computed from a SINGLE pair of z points (z=0.38, 0.70) = 1 dof, no fit  -- z_eff are survey-bin averages, not measured
+  [PASS] B4  NULL: swapping which survey is 'low-z' flips the exponent to -15.530 (|alpha| unchanged) -> alpha is set by WHICH survey has the larger residual, not by a redshift measurement
+   raw xi(10) BOSS = 0.915 ; eBOSS = 4.620 ; amplitude ratio = 5.05
+   residual ratio A_eboss/A_boss = 25.50  (>> raw amplitude ratio)
+  [PASS] B5  the 'evolution' ratio 25.50 is far larger than the surveys' raw xi amplitude ratio 5.05 -> it is dominated by the different broadband-subtracted amplitudes (survey/tracer systematic), not by growth
+  [PASS] B6  broadband fit constants differ strongly between surveys (BOSS C=-0.0243 vs eBOSS C=0.5232)  -- the offset is a survey normalisation, not physics
+
+------------------------------------------------------------------------------
+  C. framework-dependency scan
+------------------------------------------------------------------------------
+   v9 file: inflation/e-fold hits = 0 ; (1+z) hits = 5 ; zeta hits = 0
+  [PASS] C1  v9 file has NO explicit inflation/e-fold assumption (hits=0)
+  [PASS] C2  v9 file DOES contain the expansion-era growth form A(z) ~ (1+z)^alpha (5 hits)  -- this is the X-layer item
+  [PASS] C3  zeta(z) NOT in the file but INHERITED via `import _core` (h_base = H0*(1+z)^alpha)
+  [PASS] C4  H0 = 72.59 inherited via _core is mislabelled -- v10.0 H0 = omega_ring (angular frequency), not a Hubble constant (O135)
+  [CLAIM] C  => the redshift_evolution file has no EXPLICIT inflation code, but its headline result is a (1+z)^alpha growth parametrisation + it inherits zeta(z)/H0=72.59 via _core
+
+------------------------------------------------------------------------------
+  D. v10.0-native counterpart for 'amplitude vs z'?
+------------------------------------------------------------------------------
+  [PASS] D1  O76 gives the discrete z law 1+z = 4^ell (the v10.0 redshift carrier)
+  [PASS] D2  O76's alpha is a DIFFERENT quantity (D_L = (1+z)^alpha D_A, alpha = 0) -- no v10.0 carrier for an amplitude-growth exponent
+  [PASS] D3  IDCM has no world-layer evolution equation (O213): the framework is static/spectral, so 'amplitude evolves with z' has no native mechanism
+
+==============================================================================
+  RESULT: 18/18 PASS   (+1 structural claims)
+==============================================================================
+  -> data/02_crosscheck_v9_v10.json written

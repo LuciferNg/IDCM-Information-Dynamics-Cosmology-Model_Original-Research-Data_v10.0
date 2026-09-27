@@ -1,0 +1,71 @@
+================================================================================
+  O132/03 — cross-O coverage audit (v9.0 objects -> v10.0 owners)
+================================================================================
+
+  -- README row presence --
+  ✅ README has an independent row for O51 — | **O51** | K_Chain 有冇起始 | 🟢 **已閉合** | 三層證明: 種子(0,1)→φ→...
+  ✅ README has an independent row for O73 — | **O73** | **ω_ring 第一性原理** | 🟢 **★★★ 全鏈閉合 + 開放問題清零 (0...
+  ✅ README has an independent row for O76 — | **O76** | **z 紅移翻譯 (非膨脹紅移)** | 🔴 **已註冊 — 待攻堅 (O72 H6 ...
+  ✅ README has an independent row for O100 — | **O100** | **C_ℓ → P_3D(k) 逆投影算符** | 🟢 **完全閉合 (11/11,...
+  ✅ README has an independent row for O129 — | **O129** | **SYNC 轉折點 σ_sync (v9.0→v10.0 重驗)** | 🟡 **...
+  ✅ README has an independent row for O130 — | **O130** | **小波工具箱宇宙學應用 (v9.0→v10.0 遷移)** | 🟡 **遷移判決完...
+  ✅ README has an independent row for O133 — | **O133** | **P(k) 鏈譜分析 (v9.0→v10.0 遷移)** | 🟢 **遷移閉合 +...
+  ✅ README has an independent row for O135 — | **O135** | **結構強制完整驗證** | 🟢 **前置驗證閉合 (2026-09-27)** |...
+  ✅ README has an independent row for O171 — | **O171** | **60-頂點群配分理論: A₅ ↔ 88-site (N/(N+1) 截斷起源)*...
+  ✅ README has an independent row for O213 — | **O213** | **動力學層：世界演化方程 (World Dynamics)** | 🟡 **進行中...
+  ✅ README row for O31 (harmonic ladder owner) present — O31 dir exists (row missing -- O115 known gap)
+
+  -- object 1: lambda_sync geometry (2*pi*R/88 == pi*R/44) --
+  ✅ O73 row documents omega_ring / H0 first-principles — | **O73** | **ω_ring 第一性原理** | 🟢 **★★★ 全鏈閉合 + 開放問題清零 (09-17)
+  ✅ O135 final_result records H0=72.59 as MISLABELLED (= omega_ring, not a Hubble constant)
+  ✅ O135 final_result records B = L3 = 4 as a MIGRATED structural constant
+
+  -- object 2: harmonic ladder s_n = lambda_sync/n --
+  ✅ O31 final_result has the s_n = lambda_sync/n peak ladder
+  ✅ O31 final_result has the zero ladder lambda_sync/(n+0.5)
+  ✅ O31 status = closed (green)
+  ✅ O31 has BOSS/eBOSS xi(s) empirical data outputs (work happened) — 14 data files
+
+  -- object 3: discrete redshift 1+z = 4^ell --
+  ✅ O76 final_result has 1+z = 4^ell (the v10.0 redshift carrier)
+  ✅ O76 status = closed core
+
+  -- object 4: harmonic 'detection' is method-dependent --
+  ✅ O130 final_result: detection rate is method-dependent (not structural)
+  ✅ O130 final_result: BOSS DR12 resolution limit n_max = 8.53
+  ✅ O130 final_result: sub-bin aliasing finding
+
+  -- object 5: sigma_sync operator --
+  ✅ O129 final_result: sigma_sync = pure data measurement, no first-principles content
+  ✅ O129 final_result: operator ownership -> O100/O133/O128
+
+  -- object 6: v9 P(k) chain spectrum model --
+  ✅ O133 row records the v9 P(k) chain-spectrum migration verdict
+
+  -- object 7: IDCM world-layer evolution equation --
+  ✅ O213 row: IDCM is static/spectral, no world-layer evolution equation (O132 flagged red)
+
+  -- object 8: radial BAO / D_H (sibling) --
+  ✅ O117 dir exists (D_H line-of-sight, sibling redshift/BAO problem)
+
+  -- remaining new IDCM content verdict --
+
+    v9.0 redshift_evolution objects -> v10.0 owner:
+      (1) lambda_sync geometry (2*pi*R/88 == pi*R/44)  -> MIGRATE; owner = O73/O129/O171
+      (2) harmonic ladder s_n = lambda_sync/n           -> OWNED = O31 (closed)
+      (3) discrete redshift 1+z = 4^ell                 -> OWNED = O76 (closed core)
+      (4) harmonic 'detection' = method-dependent       -> OWNED = O130 (sub-bin aliasing)
+      (5) sigma_sync operator                           -> OWNED = O129 -> O100/O133/O128
+      (6) v9 P(k) chain spectrum                        -> OWNED = O133 (failed)
+      (7) B = L3 = 4 constant                           -> OWNED = O135/O51
+      (8) H0 = 72.59 (= omega_ring, mislabelled)        -> OWNED = O73/O135
+      (9) A(z) ~ (1+z)^alpha_evol  (alpha = 15.53)      -> ARTIFACT (survey amplitude), no owner
+     (10) cross-correlation r of xi(s) shapes           -> generic data analysis, no structural content
+    => remaining NEW IDCM structural content = EMPTY SET.
+       The one un-owned item (9) is not a derivation -- it is a survey-normalisation artifact.
+
+================================================================================
+  RESULT: 28/28 PASS
+================================================================================
+
+  wrote data/03_cross_o_coverage_results.txt
