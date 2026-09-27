@@ -12,6 +12,12 @@ v9.0 `cy3_topological_operator.md` (304 行) 喺 v10.0 非膨脹框架下：**�
 「v10.0 無機制擁有」之問題 — ① **扇區選擇律**（色荷假說否證，真判準 = 下型扇區）；② **截斷階判定**
 （D 在 m_s/m_b 中精確消去 ⟹ 只由 m_b 單一數約束；χ² 傾向 D(∞) 但唔銳利）。詳見 `docs/04_useful_continuation.md`。
 
+★ **續推第三輪 (2026-09-28)**：③ **D_quark 純結構數閉式** `D = 1 + N_gen²(3√5−1)/(B²L₄²) = (775+27√5)/784`
+（dev = 0 EXACT；v9.0 之「Kähler/CS 干涉」與 R19 之 `h¹¹/h²¹` 中介**皆冗餘**）；
+④ **三扇區正規化結構** `up(1, k_u) / down(D, k_d) / lepton(δ, k_l)`；
+⑤ ★ **D 之物理角色 = 下型兩步間距退化之破缺量**（裸階梯預言 m_t/m_b = m_b/m_s，觀測差 8.17% 否證；
+`R_obs = 1.0816774 ± 0.0181729` vs `D = 1.0655279`，**pull = 0.889σ**）。詳見 `docs/05_d_quark_algebra.md`。
+
 ## 關鍵公式 / 判決
 - ✅ 遷移 (8): h¹¹=36 (N_d−2B)、h²¹=98 (Σγ+2B)、CY₃=134 (Tr G)、χ=−124、`ε = φ⁻¹/4 = 1/(Bφ)`、
   `h¹¹/h²¹ = 18/49 = L₆/L₄²`、**`D_quark = 1 + (h¹¹/h²¹)ε(1+ε) = 1 + 2N_gen²ε(1+ε)/L₄²`**、D⁽¹⁾/D⁽²⁾
@@ -35,11 +41,12 @@ O120/O136 (第一代/夸克質量), O54 (輕子質量), O50 (真實 κ_ijk), O16
 - scripts/01 (盤點) 46/46 + scripts/02 (交叉核對) 20/20 + scripts/03 (結構恆等式) 17/17
   + scripts/04 (跨 O 覆蓋) 17/17 = **100/100 PASS**
 - **續推**: scripts/05 (扇區選擇律) 14/14 + scripts/06 (截斷階 + 密度) 10/10
-  ⟹ 累計 **124/124 PASS** (scripts/01–06)
+  + scripts/07 (代數化 + 三扇區正規化) 11/11 ⟹ 累計 **135/135 PASS** (scripts/01–07)
 
 ## 檔案
-- `docs/01_problem_record.md`（+§六 時序索引、§七 狀態）
+- `docs/01_problem_record.md`（+§六 時序索引、§七 狀態、§八 續推輪、§九 狀態更新）
 - `docs/02_migration_verdict.md`（判決全文 + O115 P/R/A/X 分類貢獻）
 - `docs/03_cross_o_coverage.md`（17/17 覆蓋審計）
-- `docs/04_useful_continuation.md`（有用部分續推：扇區選擇律 + 截斷階）
-- `scripts/01–06`、`data/01–06`
+- `docs/04_useful_continuation.md`（扇區選擇律 + 截斷階）
+- `docs/05_d_quark_algebra.md`（代數閉式 + 三扇區正規化 + 間距退化破缺量）
+- `scripts/01–07`、`data/01–07`

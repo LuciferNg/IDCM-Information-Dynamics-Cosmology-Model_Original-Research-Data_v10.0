@@ -1,0 +1,27 @@
+{
+  "D_quark_forms": {
+    "D0_original": "1.065527851265937",
+    "D1": "1.065527851265937",
+    "D2": "1.065527851265937",
+    "D3_rationalized": "1.065527851265937",
+    "closed_form": "D = 1 + N_gen^2(3*sqrt5 - 1)/(B^2 L4^2) = (B^2 L4^2 - N_gen^2 + N_gen^3 sqrt5)/(B^2 L4^2)"
+  },
+  "sector_normalization": {
+    "up": "1 (tree level)",
+    "down": "1.06552785127",
+    "lepton": "0.0102139850691"
+  },
+  "sector_spacing": {
+    "k_u": "10.1975608144",
+    "k_d": "7.88854382",
+    "k_l": "5.87132289312"
+  },
+  "spacing_degeneracy_breaking": {
+    "model_D": "1.06552785127",
+    "R_obs": "1.08167740354",
+    "sigma_R": "0.018172902",
+    "pull_sigma": "0.88866117"
+  },
+  "open": "下型選擇之結構機制 🔴 (j 與 Z₂ grading 皆置下型於中間, 無端點判準)",
+  "result": "11/11 PASS"
+}
