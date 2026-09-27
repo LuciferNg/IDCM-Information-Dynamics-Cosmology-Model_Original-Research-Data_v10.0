@@ -265,6 +265,42 @@ json_out["resolution"] = {"bin_width": bin_width,
                           "table": resolved}
 
 # ----------------------------------------------------------------
+# 6. UNIT CORRECTION (2026-09-27)
+#    Sections 1-5 faithfully reproduce v9.0, INCLUDING its unit bug:
+#    v9.0 used  LAMBDA_SYNC / H = 406.22 h^-1 Mpc.  Converting Mpc -> h^-1 Mpc
+#    is a MULTIPLICATION by h, so the direction is wrong (off by 1/h^2 = 2.038).
+#    The same bug is already flagged in O31 SESSION_START (1) as an open item.
+#    Correct value (survey fiducial h = 0.676):  294.877 * 0.676 = 199.34 h^-1 Mpc
+# ----------------------------------------------------------------
+print("\n" + "-" * 78)
+print("  6. UNIT CORRECTION: lambda_sync[Mpc] * h  (not / h)")
+print("-" * 78)
+H_FID = 0.676
+lam_hinv_correct = LAMBDA_SYNC * H_FID
+print("   v9.0/O31 : %.4f / %.4f = %.3f h^-1 Mpc   [WRONG direction]" % (LAMBDA_SYNC, H, lam_sync_hinv))
+print("   correct  : %.4f * %.4f = %.3f h^-1 Mpc" % (LAMBDA_SYNC, H_FID, lam_hinv_correct))
+print("   ratio (wrong/correct) = 1/h^2 = %.4f" % (lam_sync_hinv / lam_hinv_correct))
+check("G1  unit direction: correct lambda_sync = %.2f h^-1 Mpc = lambda_sync[Mpc] * h_fid; "
+      "v9.0/O31 used /h (= %.2f), so the ladder was wrong by 1/h^2"
+      % (lam_hinv_correct, lam_sync_hinv),
+      abs(lam_hinv_correct - LAMBDA_SYNC * H_FID) < 1e-9)
+check("G2  BAO anchor with corrected lambda: s_2 = lambda_sync/2 = %.2f h^-1 Mpc = "
+      "r_s(O171) = 147.439 Mpc" % (lam_hinv_correct / 2),
+      abs(LAMBDA_SYNC / 2 - 147.439) < 0.01)
+res_correct = []
+for n in range(2, 21):
+    ds_n = lam_hinv_correct / (n * (n + 1))
+    res_correct.append((n, ds_n, ds_n >= bin_width))
+n_res_correct = sum(1 for _, _, ok in res_correct if ok)
+print("   corrected resolution: resolvable harmonics n <= %d (was n <= 8 with the wrong lambda)"
+      % max(n for n, _, ok in res_correct if ok))
+check("G3  corrected ladder resolution n <= %d (5 h^-1 Mpc bins)" % max(n for n, _, ok in res_correct if ok),
+      max(n for n, _, ok in res_correct if ok) < 8)
+json_out["unit_correction"] = {"H_FID": H_FID, "lambda_hinv_correct": lam_hinv_correct,
+                               "lambda_hinv_v9": lam_sync_hinv,
+                               "n_resolved_correct": n_res_correct}
+
+# ----------------------------------------------------------------
 print("\n" + "=" * 78)
 print("  RESULT: %d/%d PASS   (+%d structural claims)" % (PASS, PASS + FAIL, len(CLAIMS)))
 print("=" * 78)

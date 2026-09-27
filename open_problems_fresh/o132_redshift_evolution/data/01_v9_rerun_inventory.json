@@ -304,5 +304,11 @@
         false
       ]
     ]
+  },
+  "unit_correction": {
+    "H_FID": 0.676,
+    "lambda_hinv_correct": 199.33694528121595,
+    "lambda_hinv_v9": 406.22281029062464,
+    "n_resolved_correct": 4
   }
 }

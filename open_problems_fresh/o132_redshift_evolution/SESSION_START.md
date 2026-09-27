@@ -108,3 +108,23 @@ master README 缺 O132 獨立 row 已補。
 - **數據一致性**: 位置 z-不變（v9.0 表兩巡天 s_n 相同）；歸一化後 α → 0。
 
 詳見 `docs/04_structural_z_evolution.md` + `scripts/04_structural_z_evolution.py`。
+
+### ★ 續推 (2) — 單位方向修正 + 11-bin 紅移槓桿 (2026-09-27)
+
+**★★ 單位方向修正（數據判定）**: v9.0 `_core.py` 寫 `LAMBDA_SYNC / H` ⟹ **406.22 h⁻¹Mpc**
+（方向錯）；`Mpc → h⁻¹Mpc` 係**乘** h。**O31 `SESSION_START ①` 已自主記錄同一 bug**
+（O31 十個腳本硬編 406.1）。
+**數據獨立判定**: 11 個紅移 bin 搵 BAO 峰 ⟹ **平均 101.01 ± 0.62 h⁻¹Mpc**，
+對比修正值 `s₂ = λ_sync/2 = 99.668`（dev **+1.35%**）；用錯值 `s₂ = 203.1` ⟹ 差 **101%**
+⟹ **× h 正確**。修正值（h_fid = 0.676）: `λ_sync = 199.337 h⁻¹Mpc`；修正後解析度 **n ≤ 5**。
+
+**★ 11-bin 紅移槓桿**: DESI DR1 VAC **7 tracers** + BOSS DR12 **3 zbins** + eBOSS DR16 LRG
+（z 0.295 → 1.492，ℓ 0.187 → 0.659；DR2 VAC 未公開 HTTP 401 ⟹ DR1 VAC 係現時最新權威）。
+- 階梯**位置 z-不變** ✓ — BAO 峰喺 11 個 bin 都喺同一共動尺度（scatter **2.05 h⁻¹Mpc**，演化 < 2%）
+- 逐 bin 正規化殘餘圖案: ρ₂ **11/11 正**、ρ₃ **10/11 負** ⟹ 圖案跨 z 一致
+- **但** 跨 tracer 相關 +0.5642 vs 梳狀 null +0.4990±0.1422 ⟹ **p = 0.2503** ⟹
+  一致但**未能個別偵測 λ_sync**（梳狀 null 退化 + n ≤ 5）
+- α_evol 跨 52 bin 對: 中位 −1.11、|α| 最大 95.5 ⟹ **非結構量**
+
+統計: `scripts/01`(17/17) + `02`(18/18) + `03`(28/28) + `04`(16/16) + `05`(10/10) = **89/89 PASS**。
+詳見 `docs/05_unit_correction_multibin.md` + `scripts/05_multibin_z_invariance.py`。

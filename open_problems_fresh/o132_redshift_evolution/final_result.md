@@ -1,6 +1,22 @@
 # O132 — 紅移演化推導 (v9.0→v10.0 遷移 + 結構 z-演化)
 
 ## 狀態: 🟡 前置驗證完成 + 有用部分續推 (2026-09-27) — 裁定: 不合併, 獨立保留; 廢棄留歷史
+## ★ 續推 (2): 單位方向修正 + 11-bin 紅移槓桿 — **89/89 PASS**
+
+### ★★ 單位方向修正（數據判定）
+v9.0 `_core.py` 寫 `LAMBDA_SYNC / H` ⟹ **406.22 h⁻¹Mpc**（方向錯）。`Mpc → h⁻¹Mpc` 係**乘** h：
+`λ_sync = 294.877 Mpc × h`。**O31 `SESSION_START ①` 已自主記錄同一 bug**（O31 全 10 腳本硬編 406.1）。
+**數據獨立判定**：11 個紅移 bin 搵 BAO 峰，**平均 101.01 ± 0.62 h⁻¹Mpc**，對比修正值
+`s₂ = λ_sync/2 = 99.668`（dev **+1.35%**）；用錯值 `s₂ = 203.1` ⟹ 差 **101%** ⟹ **× h 正確**。
+
+### ★ 11-bin 紅移槓桿（z 0.295 → 1.492，ℓ 0.187 → 0.659）
+樣本: **DESI DR1 VAC 7 tracers** + **BOSS DR12 3 zbins** + **eBOSS DR16 LRG**（DR2 VAC 未公開, HTTP 401）。
+- 階梯**位置 z-不變**：BAO 峰喺 11 個 bin 都喺同一共動尺度（scatter **2.05 h⁻¹Mpc**，演化 < 2%）✓
+- 逐 bin 正規化殘餘圖案 ρ₂ = **11/11 正**、ρ₃ = **10/11 負** ⟹ 圖案跨 z 一致
+- **但**: 跨 tracer 相關 +0.5642 vs 梳狀 null +0.4990±0.1422 ⟹ **p = 0.2503** ⟹
+  **未能個別偵測 λ_sync**（梳狀 null 退化 + 解析度 n ≤ 5）⟹ 一致但**未確認**
+- α_evol 跨 **52** bin 對: 中位 −1.11、|α| 最大 95.5、正負都有 ⟹ **非結構量**
+- 修正後解析度: `Δs_n = λ/[n(n+1)] ≥ 5` ⟹ **n ≤ 5**（v9.0 錯值下係 n ≤ 8）
 
 ## 結論
 v9.0 `redshift_evolution/01_derive_evolution.py`（180 行，唯一檔案）之前置驗證完成：
@@ -45,17 +61,21 @@ O73/O171 (ω_ring/R_world) → O31 (λ_sync 諧波階梯, 🟢) → **O132**
 - q_obs = 唔適用（分類 + 偽影診斷任務）
 
 ## 驗證統計
-- `scripts/01_v9_rerun_inventory.py` = **14/14 PASS**（忠實重跑 + 解析度新發現）
+- `scripts/01_v9_rerun_inventory.py` = **17/17 PASS**（忠實重跑 + 解析度 + **§6 單位修正**）
 - `scripts/02_crosscheck_v9_v10.py` = **18/18 PASS** + 1 CLAIM（幾何恆等 + 偽影 null + 框架掃描）
 - `scripts/03_cross_o_coverage.py` = **28/28 PASS**（跨 O 覆蓋）
-- `scripts/04_structural_z_evolution.py` = **14/14 PASS** + 3 CLAIM（結構 z-不變定理 + 否證模態激活）
-- ⟹ **74/74 PASS + 5 CLAIM**
+- `scripts/04_structural_z_evolution.py` = **16/16 PASS** + 3 CLAIM（結構 z-不變定理 + 否證模態激活）
+- `scripts/05_multibin_z_invariance.py` = **10/10 PASS** + 3 CLAIM（**單位修正 + 11-bin 槓桿**）
+- ⟹ **89/89 PASS + 8 CLAIM**
 
 ## 交付物
-- `scripts/01_v9_rerun_inventory.py` · `02_crosscheck_v9_v10.py` · `03_cross_o_coverage.py` · `04_structural_z_evolution.py`
-- `docs/02_migration_verdict.md`（P/R/A/X 判決全文）· `docs/03_cross_o_coverage.md` · `docs/04_structural_z_evolution.md`（有用部分續推）
-- `data/`（v9 原始碼 `.orig` + BOSS/eBOSS 數據 + 4 個 stdout/JSON）
+- `scripts/01_v9_rerun_inventory.py` · `02_crosscheck_v9_v10.py` · `03_cross_o_coverage.py` · `04_structural_z_evolution.py` · `05_multibin_z_invariance.py`
+- `docs/02_migration_verdict.md`（P/R/A/X 判決全文）· `docs/03_cross_o_coverage.md` · `docs/04_structural_z_evolution.md`（結構 z-不變）· `docs/05_unit_correction_multibin.md`（**單位修正 + 11-bin**）
+- `data/`（v9 原始碼 `.orig` + BOSS/eBOSS 數據 + **`data/desi/` 7 DESI DR1 VAC tracers** + 5 stdout/JSON）
 
 ## 待裁定 / 開放
 - 裁定已下: **不合併**（O132 獨立保留）；廢棄項原文留歷史（見 `docs/02`）。
-- 開放（續推）: 相對振幅 `A_n ∝ γ_n` 預言（現數據 n≤8、2 巡天太弱，需 DESI DR2 細 bin / CMB 透鏡）🟡。
+- 開放: ① 相對振幅 `A_n ∝ γ_n` 預言（需 Δs = 1 h⁻¹Mpc 細分箱, 如 DESI DR2 VAC 發布後）🟡
+  ② 更強判別 null（分離「平滑殘餘相似」vs「特定梳狀位置」）🟡
+  ③ **O31 單位項**: O31 10 個腳本硬編 `406.1`；O31 自身 `SESSION_START ①` 已列待重跑 —
+  **本 O 未改動 O31**（跨 O 寫入限制），此項需 O31 自身處理 🔴

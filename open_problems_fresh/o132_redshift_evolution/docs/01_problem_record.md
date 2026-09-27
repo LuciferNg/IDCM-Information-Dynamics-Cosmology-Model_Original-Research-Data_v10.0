@@ -58,6 +58,8 @@
 | 2026-09-27 | `scripts/02_crosscheck_v9_v10.py` | **18/18 PASS** — λ_sync 幾何恆等 dev=0；α_evol 巡天偽影 null (交換 z → −15.53)；框架依賴掃描 | `data/02_crosscheck_v9_v10.json` + `data/02_stdout.txt` |
 | 2026-09-27 | `scripts/03_cross_o_coverage.py` | **28/28 PASS** — 10 個 v9 物件逐個查 v10 擁有者；剩餘新內容 = 空集 | `data/03_cross_o_coverage_results.txt` + `data/03_stdout.txt` |
 | 2026-09-27 | `scripts/04_structural_z_evolution.py` | **14/14 PASS + 3 CLAIM** — 結構 z-不變定理（L7 細化流）+ 否證「模態激活」+ α 歸一化不穩定 (spread 24.4) | `data/04_structural_z_evolution.json` + `data/04_stdout.txt` |
+| 2026-09-27 | `scripts/04` (修訂) | **16/16 PASS** — 單位修正後重算（λ = λ_sync[Mpc]×h_fid = 199.337 h⁻¹Mpc） | 同上 |
+| 2026-09-27 | `scripts/05_multibin_z_invariance.py` | **10/10 PASS + 3 CLAIM** — ★單位方向修正（數據判定）+ 11-bin 紅移槓桿（DESI DR1 ×7 + BOSS ×3 + eBOSS ×1） | `data/05_multibin_z_invariance.json` + `data/05_stdout.txt` + `data/desi/` |
 
 **依賴鏈**: O73/O171 (ω_ring/R_world) → O31 (λ_sync 諧波階梯 🟢) → **O132**
 旁證: O76 (離散 z `1+z=4^ℓ`) · O129 (σ_sync) · O130 (解析度 n_max=8.53) · O135 (B=L₃ 常數、H₀ 誤標) · O213 (無演化方程) · O118
@@ -119,4 +121,21 @@ v9.0 問「模態會否隨 z 激活」係**真問題**；IDCM 由 **O213 L7 細�
 
 詳見 `docs/04_structural_z_evolution.md`。
 
-**開放（續推候選）**: 相對振幅 `A_n ∝ γ_n` 預言（現數據太弱，需 DESI DR2 細 bin）🟡。
+### 8.4 ★★ 續推 (2): 單位方向修正 + 11-bin 紅移槓桿 (`docs/05`, 10/10 PASS)
+
+**單位方向**: v9.0 `_core.py` 寫 `LAMBDA_SYNC / H` ⟹ **406.22 h⁻¹Mpc**（方向錯）。
+`Mpc → h⁻¹Mpc` 係**乘** h。**O31 `SESSION_START ①` 已自主記錄同一 bug**（O31 十個腳本硬編 406.1）。
+**數據判定**: 11 個 bin 搵 BAO 峰，**平均 101.01 ± 0.62 h⁻¹Mpc** vs 修正值 `s₂ = λ_sync/2 = 99.668`
+（dev **+1.35%**）；錯值 `s₂ = 203.1` ⟹ 差 **101%** ⟹ **× h 正確**（唔係慣例偏好）。
+修正值（h_fid = 0.676）: **λ_sync = 199.337 h⁻¹Mpc**；修正後解析度 **n ≤ 5**（錯值下 n ≤ 8）。
+
+**11-bin 槓桿**: DESI DR1 VAC 7 tracers + BOSS DR12 3 zbins + eBOSS DR16 LRG
+（z 0.295→1.492；DR2 VAC 未公開 HTTP 401）。
+- 階梯**位置 z-不變** ✓（BAO 峰 scatter **2.05 h⁻¹Mpc**，演化 < 2%）
+- 逐 bin 正規化圖案 ρ₂ **11/11 正**、ρ₃ **10/11 負** ⟹ 跨 z 一致
+- **但** 跨 tracer 相關 +0.5642 vs 梳狀 null +0.4990±0.1422 ⟹ **p = 0.2503** ⟹
+  一致但**未能個別偵測 λ_sync**（梳狀 null 退化 + n ≤ 5）
+- α_evol 跨 52 對: 中位 −1.11、|α| 最大 95.5 ⟹ **非結構量**
+
+**開放（續推候選）**: 相對振幅 `A_n ∝ γ_n` 預言（需 Δs = 1 h⁻¹Mpc 細分箱）🟡；
+更強判別 null 🟡；**O31 單位項**（O31 自身待重跑；本 O 未改動 O31）🔴。

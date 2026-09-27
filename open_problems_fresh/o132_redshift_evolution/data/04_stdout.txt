@@ -14,6 +14,10 @@
    ell=4 : N_ell = 11264 sites ; a_ell = 0.366650 Mpc
   [PASS] A3  N_ell = N_d*B^ell (ell=0->44, 1->176, 2->704, 4->11264)
   [PASS] A4  c_ell = a_ell*sqrt(J_ell) = R_world*omega_ring = c  (EXACT, N_d cancels)  -- c = 299792.344600 km/s
+   lambda_sync = 294.8770 Mpc  ->  x h_fid(0.6760) = 199.337 h^-1 Mpc  [CORRECT]
+                                / h_idcm(0.7259) = 406.223 h^-1 Mpc  [v9.0/O31, WRONG]
+  [PASS] A0  unit fix: lambda_sync[h^-1 Mpc] = lambda_sync[Mpc] * h_fid (Mpc -> h^-1 Mpc is a multiplication by h); v9.0/O31 used /h, wrong direction by 1/h^2 = 2.038
+  [PASS] A0b BAO anchor: r_s = lambda_sync/2 = 147.439 Mpc = 99.668 h^-1 Mpc  (= ladder s_2)  -- matches O171 r_s = pi R/88 = 147.439 Mpc
   [PASS] A5  shell identity 1-4^{-ell} = 3*sum 4^{-j}  (EXACT, integer ell)
   [PASS] A6  measure w(ell)=ln4*4^{-ell} (continuous DENSITY): int_0^L = 1-4^{-L}  EXACT  -- int_0^1 = 0.750000000 ; 1-4^-1 = 0.750000000
 
@@ -29,17 +33,18 @@
 ------------------------------------------------------------------------------
   C. data test -- is the amplitude 'evolution' structural?
 ------------------------------------------------------------------------------
-   raw (v9.0, no normalisation)      : alpha = +15.530
-   normalised to xi(s=20)          : alpha = +5.275
-   normalised to xi(s=30)          : alpha = +3.407
-   normalised to xi(s=50)          : alpha = -2.542
-   normalised to xi(s=100)          : alpha = -8.698
-   normalised to xi(s=150)          : alpha = -19.172
+   raw, correct lambda (199.3 h^-1 Mpc) : alpha = +6.599
+   raw, v9.0/O31 lambda (406.2 h^-1 Mpc) : alpha = +15.530   (scripts/01 reproduces +15.53)
+   normalised to xi(s=20)          : alpha = -3.656
+   normalised to xi(s=30)          : alpha = -5.524
+   normalised to xi(s=50)          : alpha = -11.473
+   normalised to xi(s=100)          : alpha = -17.629
+   normalised to xi(s=150)          : alpha = -28.103
    spread over normalisation choice  : 24.447
-  [PASS] C1  reproduce v9.0 raw alpha = +15.530 (survey-amplitude artifact)
+  [PASS] C1  raw alpha is LADDER-dependent too: +6.599 (correct lambda=199.3) vs +15.530 (v9.0/O31 lambda=406.2, matches scripts/01 +15.53)
   [PASS] C2  alpha is UNSTABLE under the normalisation reference (spread 24.4 over s_ref in [20.0, 30.0, 50.0, 100.0, 150.0]) -- a structural prediction would be normalisation-invariant
   [CLAIM] C  => alpha_evol is not a structural quantity (it swings by >24 depending on the survey normalisation) -- confirming the v9.0 'evolution' is an artifact
-  [PASS] C3  harmonic positions s_n are the SAME comoving scales in both surveys (ladder z-invariant)  -- n=4..8 -> 101.6, 81.2, 67.7, 58.0, 50.8 h^-1 Mpc
+  [PASS] C3  harmonic positions s_n are the SAME comoving scales in both surveys (ladder z-invariant)  -- n=4..8 -> 49.8, 39.9, 33.2, 28.5, 24.9 h^-1 Mpc
   [PASS] C4  normalised xi(s) shapes correlate (r = 0.8962) -- same shape family across z
   [CLAIM] C4  r = 0.8962 is high but < 1: the residual shape difference is bias/nonlinear evolution, NOT a K_Chain ladder effect (positions are identical, C3)
 
@@ -49,7 +54,7 @@
 
    STRUCTURAL (IDCM) : the harmonic ladder is Z-INVARIANT
                        (positions s_n = lambda_sync/n fixed; mode set gamma_n fixed)
-   v9.0 measured     : alpha_evol = +15.530  (unstable: -19.172 .. +5.275 under normalisation)
+   v9.0 measured     : alpha_evol = +6.599  (unstable: -28.103 .. -3.656 under normalisation)
                        -> NOT a structural quantity -> artifact
 
    => The USEFUL structural answer to O132's question ("how does the K_Chain
@@ -58,6 +63,6 @@
       The v9.0 "evolution" was a survey-normalisation artifact.
 
 ==============================================================================
-  RESULT: 14/14 PASS   (+3 structural claims)
+  RESULT: 16/16 PASS   (+3 structural claims)
 ==============================================================================
   -> data/04_structural_z_evolution.json written

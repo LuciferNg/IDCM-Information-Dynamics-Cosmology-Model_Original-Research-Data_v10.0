@@ -76,9 +76,16 @@ B = 4.0
 N_d = 44.0
 R_WORLD = 4129.94
 OMEGA_RING = 72.59
-H = 0.7259
-LAM_SYNC = math.pi * R_WORLD / 44.0
-LAM_HINV = LAM_SYNC / H
+H_IDCM = 0.7259            # IDCM convention h = omega_ring/100
+H_FID = 0.676              # survey fiducial h (BOSS DR12 / eBOSS DR16 = 0.676; DESI DR1 = 0.6736)
+H = H_IDCM
+LAM_SYNC = math.pi * R_WORLD / 44.0       # Mpc (comoving)
+# UNIT CORRECTION (2026-09-27):  Mpc -> h^-1 Mpc is a MULTIPLICATION by h.
+#   v9.0 / O31 scripts used  LAMBDA_SYNC / H  = 406.22  (divide-by-h, WRONG direction);
+#   O31 SESSION_START ① already flags this as an open unit item.
+#   Correct:  lambda_sync [h^-1 Mpc] = lambda_sync [Mpc] * h_fid.
+LAM_HINV = LAM_SYNC * H_FID               # h^-1 Mpc  (correct)
+LAM_HINV_WRONG = LAM_SYNC / H_IDCM        # the v9.0/O31 value, kept for the discrepancy record
 
 # ================================================================
 # A. structural z-map (O213 L7 flow)
@@ -114,6 +121,19 @@ c_ell_vals = [ (R_WORLD / (N_d * B ** l)) * (N_d * B ** l * OMEGA_RING) for l in
 check("A4  c_ell = a_ell*sqrt(J_ell) = R_world*omega_ring = c  (EXACT, N_d cancels)",
       max(abs(v - c_ell_vals[0]) for v in c_ell_vals) < 1e-9,
       "c = %.6f km/s" % c_ell_vals[0])
+
+# --- UNIT CHECK (2026-09-27) + BAO anchor -------------------------------
+print("   lambda_sync = %.4f Mpc  ->  x h_fid(%.4f) = %.3f h^-1 Mpc  [CORRECT]"
+      % (LAM_SYNC, H_FID, LAM_HINV))
+print("                                / h_idcm(%.4f) = %.3f h^-1 Mpc  [v9.0/O31, WRONG]"
+      % (H_IDCM, LAM_HINV_WRONG))
+check("A0  unit fix: lambda_sync[h^-1 Mpc] = lambda_sync[Mpc] * h_fid (Mpc -> h^-1 Mpc is a "
+      "multiplication by h); v9.0/O31 used /h, wrong direction by 1/h^2 = %.3f"
+      % (LAM_HINV_WRONG / LAM_HINV),
+      abs(LAM_HINV / LAM_SYNC - H_FID) < 1e-12)
+check("A0b BAO anchor: r_s = lambda_sync/2 = %.3f Mpc = %.3f h^-1 Mpc  (= ladder s_2)"
+      % (LAM_SYNC / 2, LAM_HINV / 2),
+      abs(LAM_SYNC / 2 - 147.439) < 0.01, "matches O171 r_s = pi R/88 = 147.439 Mpc")
 
 ok_shell = all(abs((1 - 4.0 ** (-l)) - 3 * sum(4.0 ** (-j) for j in range(1, l + 1))) < 1e-14
                for l in [1, 2, 3, 5, 8])
@@ -197,7 +217,8 @@ def broadband(s, A, gamma, C):
     return A * s ** (-gamma) + C
 
 
-def alpha_of(norm):
+def alpha_of(norm, lam=None):
+    lam = LAM_HINV if lam is None else lam
     xb_u = xb if norm is None else xb / float(interp1d(sb, xb, kind="linear")(norm))
     xe_u = xe if norm is None else xe / float(interp1d(se, xe, kind="linear")(norm))
     pb, _ = curve_fit(broadband, sb[(sb > 10) & (sb < 60)], xb_u[(sb > 10) & (sb < 60)],
@@ -207,13 +228,16 @@ def alpha_of(norm):
     fb = interp1d(sb, xb_u - broadband(sb, *pb), kind="cubic", bounds_error=False, fill_value=0)
     fe = interp1d(se, xe_u - broadband(se, *pe), kind="cubic", bounds_error=False, fill_value=0)
     ns = list(range(4, 21))
-    ab = np.mean([abs(float(fb(LAM_HINV / n))) for n in ns])
-    ae = np.mean([abs(float(fe(LAM_HINV / n))) for n in ns])
+    ab = np.mean([abs(float(fb(lam / n))) for n in ns])
+    ae = np.mean([abs(float(fe(lam / n))) for n in ns])
     return math.log(ae / ab) / dlz
 
 
 a_raw = alpha_of(None)
-print("   raw (v9.0, no normalisation)      : alpha = %+.3f" % a_raw)
+a_raw_wrong = alpha_of(None, lam=LAM_HINV_WRONG)
+print("   raw, correct lambda (%.1f h^-1 Mpc) : alpha = %+.3f" % (LAM_HINV, a_raw))
+print("   raw, v9.0/O31 lambda (%.1f h^-1 Mpc) : alpha = %+.3f   (scripts/01 reproduces +15.53)"
+      % (LAM_HINV_WRONG, a_raw_wrong))
 refs = [20.0, 30.0, 50.0, 100.0, 150.0]
 a_vals = {}
 for r in refs:
@@ -222,8 +246,10 @@ for r in refs:
 spread = max(a_vals.values()) - min(a_vals.values())
 print("   spread over normalisation choice  : %.3f" % spread)
 
-check("C1  reproduce v9.0 raw alpha = %+.3f (survey-amplitude artifact)" % a_raw,
-      abs(a_raw - 15.53) < 0.05)
+check("C1  raw alpha is LADDER-dependent too: %+.3f (correct lambda=%.1f) vs %+.3f "
+      "(v9.0/O31 lambda=%.1f, matches scripts/01 +15.53)"
+      % (a_raw, LAM_HINV, a_raw_wrong, LAM_HINV_WRONG),
+      abs(a_raw_wrong - 15.53) < 0.05 and abs(a_raw - a_raw_wrong) > 1.0)
 check("C2  alpha is UNSTABLE under the normalisation reference (spread %.1f over s_ref in "
       "%s) -- a structural prediction would be normalisation-invariant" % (spread, refs),
       spread > 5.0)

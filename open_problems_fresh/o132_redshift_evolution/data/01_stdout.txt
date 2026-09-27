@@ -94,7 +94,18 @@
   [PASS] F2  lambda_sync ladder spacing ds_n = lambda_sync/[n(n+1)] is bin-width limited
   [CLAIM] F  => the 'mean harmonic amplitude' mixes 5 resolved (n<=8) with 12 sub-bin aliased harmonics (n>=9) -> A(z) is dominated by aliasing, not by a resolved signal
 
+------------------------------------------------------------------------------
+  6. UNIT CORRECTION: lambda_sync[Mpc] * h  (not / h)
+------------------------------------------------------------------------------
+   v9.0/O31 : 294.8771 / 0.7259 = 406.223 h^-1 Mpc   [WRONG direction]
+   correct  : 294.8771 * 0.6760 = 199.337 h^-1 Mpc
+   ratio (wrong/correct) = 1/h^2 = 2.0379
+  [PASS] G1  unit direction: correct lambda_sync = 199.34 h^-1 Mpc = lambda_sync[Mpc] * h_fid; v9.0/O31 used /h (= 406.22), so the ladder was wrong by 1/h^2
+  [PASS] G2  BAO anchor with corrected lambda: s_2 = lambda_sync/2 = 99.67 h^-1 Mpc = r_s(O171) = 147.439 Mpc
+   corrected resolution: resolvable harmonics n <= 5 (was n <= 8 with the wrong lambda)
+  [PASS] G3  corrected ladder resolution n <= 5 (5 h^-1 Mpc bins)
+
 ==============================================================================
-  RESULT: 14/14 PASS   (+1 structural claims)
+  RESULT: 17/17 PASS   (+1 structural claims)
 ==============================================================================
   -> data/01_v9_rerun_inventory.json written
