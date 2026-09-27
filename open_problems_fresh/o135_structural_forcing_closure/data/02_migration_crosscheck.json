@@ -1,0 +1,45 @@
+{
+  "source_v9": "IDCM-v9.0--W-Field-Lattice/wfield_lattice/structural_forcing.py",
+  "target_v10": "IDCM-v10.0--It-From-Beat",
+  "trap_window": [
+    "1.0e-5",
+    "0.001"
+  ],
+  "deviations": {
+    "eps": "0.000239219",
+    "V_EW": "0.00095793",
+    "omega_L": "7.57468e-5"
+  },
+  "verdict": {
+    "migrate_algebra": [
+      "φ",
+      "Lucas",
+      "Fibonacci",
+      "h11(=36)",
+      "h21(=98)",
+      "CY3(=134)",
+      "B=L₃",
+      "SYNC=L₀",
+      "M=K_tree",
+      "κ=B⁻²"
+    ],
+    "phi_approx": [
+      "ε (φ⁻¹/4 → 19/123)",
+      "VEV_nat (核歸一化待核)"
+    ],
+    "superseded_red": [
+      "V_EW (φ¹¹+φ⁸ → v_SM)",
+      "Ω_Λ (4/(φ⁴−1) → 41/60, O37撤銷)",
+      "質量 φ-ladder (→ γ_n 譜)",
+      "m_τ δ=φ⁸⁸/M_Pl−1",
+      "CKM φ-fit",
+      "α⁻¹ (15φ⁻¹/256 φ-fit)",
+      "H₀=72.59 (誤標 ω_ring)",
+      "z_c=3/5",
+      "bump=ε/e",
+      "T_CMB exp(−74) (O166降級+膨脹依賴)"
+    ]
+  },
+  "inflation_dependence": "唯一 = T_CMB exp(−74), 74=59(inflation)+15(radiation)",
+  "result": "22/22 PASS"
+}
