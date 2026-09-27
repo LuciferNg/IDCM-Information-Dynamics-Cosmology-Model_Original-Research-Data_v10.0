@@ -117,6 +117,15 @@ O118 (裁定唔做阻抗模型)。
    (`λ_sync` ℓ-無關 ⟹ `s_n` 每深度固定; 4:1 自相似) ⟹ v9.0「模態隨紅移激活」結構上 FALSE。
 4. **Out-of-sample 複現** (`06`): eBOSS DR16 LRG 同一統計量、唔調參 ⟹ 亦零顯著 (p=0.078)；
    ★ 振幅正負號不一致（+1.05e−02 vs −1.53e−01）⟹ 噪聲。滿足 Hard Test ③。
+5. **DESI DR1 官方數據** (`07`, 11/11): `data.desi.lbl.gov` DR1 clustering VAC — **7 tracer ξ(s)
+   (ξ₀/ξ₂/ξ₄) + 官方 RascalC covariance 135×135 + window matrix**, sha256 全通過
+   (`scripts/00_download_desi_dr1.sh`); 官方 4 h⁻¹Mpc binning (n_max=9.59)。
+   **首次用相關 χ²**：全局限 p = **0.813**; **結構 δ=0 檢定 p = 0.030 (≈2.2σ, LRG3)** 🟡
+   (未達 5σ ⟹ 唔算偵測; 唯一兩個邊緣 tracer LRG3 + LRG+ELG 係同一批星系 ⟹ 非獨立);
+   結構 δ=0 max Δχ² = +3.29, 振幅 **3 正 / 4 負**。
+   ⚠️ **自己嘅假設被否證**: 「DESI window 洗掉階梯」**錯** — W₀₀ 行和 = 1.000000,
+   階梯結構振幅**保留 97.8%** ⟹ window **唔係**障礙。
+   **三巡天 (BOSS / eBOSS / DESI)、10 tracer 樣本：structural λ_sync 全部無偵測。**
 
 ### 7.3 推導時序索引（續 §6.3）
 
@@ -125,4 +134,6 @@ O118 (裁定唔做阻抗模型)。
 | 2026-09-28 | `04_calibrated_detection.py` | 5/5 — matched filter + trial-corrected null ⟹ 零偵測 | `data/04_*` |
 | 2026-09-28 | `05_resolvability_forecast.py` | 9/9 — 解析度定律/Rayleigh/leakage/門檻/F_proj 中階 | `data/05_*` |
 | 2026-09-28 | `06_eboss_replication.py` | 5/5 — eBOSS DR16 out-of-sample 複現 | `data/06_*` |
+| 2026-09-28 | `00_download_desi_dr1.sh` | — DESI DR1 clustering VAC 下載 (14 檔, sha256 OK) | `data/desi/*.h5` |
+| 2026-09-28 | `07_desi_dr1_test.py` | 11/11 — DESI DR1 7 tracer 相關 χ²; δ=0 p=0.030 🟡; window 假設否證 | `data/desi/07_*` |
 | 2026-09-28 | — | 有用層推進完成 + 處置裁定 (不合併) | `docs/03`, `SESSION_START.md`, `final_result.md` |

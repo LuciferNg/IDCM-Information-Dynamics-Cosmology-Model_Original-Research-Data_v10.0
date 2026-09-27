@@ -161,17 +161,87 @@ F_proj = 17 = L₆ − 1  ⟹  ℓ = log₄18 = 2.08496   ← 非整數
 | 巡天預報 | — | ★ 零參數門檻表（n=N_d/2 → 0.803；n=N_d → 0.205 h⁻¹Mpc） |
 | aliasing 機制 | 標 🔴 未形式化 | ★ 形式化為**有限窗口洩漏**；F_proj 中階切斷 → 無整數 fold 點 |
 | 獨立性 | 單數據集（BOSS） | ★ **eBOSS DR16 複現**（振幅正負號不一致） |
+| DESI | — | ★ **DESI DR1 官方 7 tracer + RascalC 相關 χ²**（§6）：全局限 p=0.813；結構 δ=0 p=0.030 🟡；window 假設被否證 |
 
 ---
 
-## 6. 依賴 / 交叉
+## 6. DESI DR1 官方 clustering VAC — 第三個獨立數據集 (script 07)
+
+> **數據**: `data.desi.lbl.gov/public/dr1/vac/dr1/full-shape-bao-clustering/v1.0/data/recsym/`
+> `correlation-recsym-poles_<tracer>.h5`（ξ₀/ξ₂/ξ₄）+ `covariance_..._RascalC.h5`（135×135）+ `window_...h5`
+> — **7 個 tracer、官方 4 h⁻¹Mpc binning（n_max = 9.59）、全部 sha256 驗證通過**
+> （下載腳本 `scripts/00_download_desi_dr1.sh`）；輸出 `data/desi/07_desi_dr1_test.json`
+
+### 6.1 為何用 DESI DR1 而唔係 DR2
+
+DESI 官方文檔明示：**DR2 嘅 underlying spectra/redshifts 尚未公開發佈**，DR2 只放出 BAO
+cosmology chains 同 posterior maximisation 結果（`/public/dr2/` 需授權）。DR2 唯一公開嘅
+ξ(s) 補充包係 Zenodo `10.5281/zenodo.16644577`（`dr2-bao-zenodo.zip`, **1.3 GB**）——
+本輪已開始下載但速率僅 ~0.2 MB/s（預估 ~1.8 h），列為 🟡 未完成。
+**DESI DR1 官方 clustering VAC 提供完全相同形式嘅 ξ(s) 測量（4 h⁻¹Mpc、post-recon、附官方
+RascalC covariance 同 window matrix），係現時可即刻取得嘅最佳 DESI 數據。**
+
+### 6.2 結果（首次用**相關** χ² + 官方 covariance）
+
+窗口 s ∈ [42, 198]（40 bins），broadband = 三次樣條，模板只放振幅 A：
+
+| tracer | z_eff | χ²_bb | χ²/dof | Δχ²(δ=0, knots=5) | A(δ=0) |
+|:--|:--|:--|:--|:--|:--|
+| BGS | 0.295 | 45.6 | 1.42 | +0.00 | −6.9e−05 |
+| LRG1 | 0.510 | 95.8 | 2.99 | +0.66 | −1.3e−03 |
+| LRG2 | 0.706 | 107.2 | 3.35 | +3.29 | −2.3e−03 |
+| LRG3 | 0.919 | 122.5 | 3.83 | +2.82 | +1.9e−03 |
+| LRG+ELG | 0.930 | 125.6 | 3.92 | +1.82 | +8.2e−04 |
+| ELG | 1.317 | 96.7 | 3.02 | +0.00 | +1.3e−05 |
+| QSO | 1.492 | 55.5 | 1.73 | +0.02 | −1.8e−04 |
+
+**★ 結構假設（δ=0，λ_sync 固定，只放振幅）**：max Δχ² = **+3.29**（LRG2, 1 dof）；
+振幅 **3 正 / 4 負** ⟹ 冇一致符號。
+
+| 檢定 | 統計量 | p |
+|:--|:--|:--|
+| 局部（單 tracer，λ 可浮動，27 trials） | ELG D=+47.43 | **0.000** ⚠️ 但 argmax 喺 **δ=+0.10**（非結構 λ） |
+| **全局**（7 tracer × 3 knots × 9 shifts，joint null） | D_global=+50.26 (LRG+ELG) | **0.813** |
+| **★ 結構檢定**（δ=0，7 tracer × 3 knots，joint null） | D₀=+16.73 (LRG3) | **0.030** 🟡 |
+
+### 6.3 判決
+
+- **🔴 無顯著偵測**：全局 trial-corrected p = 0.813；λ 一旦允許浮動就完全無信號。
+- **🟡 邊緣提示**：δ=0 結構檢定 **p = 0.030（≈2.2σ）**，來自 **LRG3**（最深 LRG bin）。
+  **未達 5σ 門檻 ⟹ 唔算偵測**（嚴守 Hard Test ②/③）。且唯一兩個 p_delta0 ≤ 0.02 嘅
+  tracer（LRG3 = +0.013、LRG+ELG = +0.010）**係同一批星系**（LRG+ELG ⊃ LRG3），
+  唔係獨立確認。列為 🟡 待獨立數據檢驗。
+- **⚠️ 反面發現（推翻我自己嘅假設）**：原假設「DESI window 會洗掉階梯」**被否證** —
+  W₀₀ 行和 = 1.000000（守恆），broadband 移除後階梯**結構振幅保留 97.8%**。
+  ⟹ **window 唔係障礙**；障礙仍然係 ①bin Nyquist n_max=9.59 ②broadband 退化。
+  （「無效才是正確」：假設被自己嘅數據否證，如實記錄。）
+
+### 6.4 三巡天交叉表
+
+| 數據集 | Δs_bin | n_max | Δχ²(δ=0) | A(δ=0) | p |
+|:--|:--|:--|:--|:--|:--|
+| BOSS DR12 post-recon | 5.0 | 8.53 | +11.64 | +1.05e−02 | 0.500 |
+| eBOSS DR16 LRG | 5.0 | 8.53 | +1.35 | −1.53e−01 | 0.078 |
+| DESI DR1 LRG1/2/3 | 4.0 | 9.59 | +0.66 / +3.29 / +2.82 | ∓1e−03 | 0.173 / 0.790 / 0.520 |
+| DESI DR1 LRG+ELG / ELG / QSO / BGS | 4.0 | 9.59 | +1.82 / +0.00 / +0.02 / +0.00 | ~1e−04 | 0.453 / 0.000* / 0.960 / 0.570 |
+
+（\* ELG 嘅 p=0.000 喺 δ=+0.10，非結構 λ。）
+
+**⟹ 三個獨立巡天（BOSS / eBOSS / DESI）、10 個 tracer 樣本：structural λ_sync 無偵測。**
+
+---
+
+## 7. 依賴 / 交叉
 
 O133 (k-space 88n/R_world) · O129 (λ_sync) · O126 (ζ 撤回) · O138 (z=17=F_proj) ·
 O76 (離散 z) · O99 (色散) · O135 (P/R/A/X) · O131 (同批 stacking 遷移) · O118 (裁定唔做阻抗模型) ·
 **O132 (階梯 z-不變，獨立佐證 §3.1)** · O208 (4 Hard Tests 門檻)
 
-## 7. 未閉合（移交）
+## 8. 未閉合（移交）
 
-- 🟡 DESI DR2 4 h⁻¹Mpc 正式數據（DESI 2025 II）跑同一檢定 — 本輪只用文獻 binning 做預報，未下載 ξ(s) 原始檔。
-- 🟡 v10.0 native 阻抗算子（若日後有需要）— 現階段維持 O118 裁定：唔做。
-- 🔴 目錄處置：依 2026-09-28 指示**不合併**，O130 保留獨立。
+- 🟡 **DESI DR2 原始 ξ(s)**：官方未公開發佈（只有 chains）；Zenodo `16644577` 嘅
+  `dr2-bao-zenodo.zip`（1.3 GB）本輪已開始下載但速率 ~0.2 MB/s（預估 ~1.8 h）**未完成**。
+  已完成嘅係 **DESI DR1 官方 clustering VAC**（§6），形式完全相同。
+- 🟡 **LRG3 δ=0 p=0.030 邊緣提示**：需要獨立數據確認（DR2 / 更細 bin），**未達 5σ 唔算偵測**。
+- 🟡 v10.0 native 阻抗算子（維持 O118 裁定：唔做）。
+- 🔴 目錄處置：依 2026-09-28 指示**不合併**，O130 保留獨立（歷史記錄 = `docs/02`，繼續層 = `docs/03`）。

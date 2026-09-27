@@ -1,7 +1,7 @@
 # O130 — 小波工具箱宇宙學應用
 
 > **Session**: 2026-08-29 (新建立，從 v9.0 遷移)
-> **狀態**: 🔴 未開始 → 🟡 遷移判決完成 (2026-09-27) → 🟢 **有用層推進完成 (2026-09-28, 51/51 PASS)**
+> **狀態**: 🔴 未開始 → 🟡 遷移判決完成 (2026-09-27) → 🟢 **有用層推進完成 (2026-09-28, 62/62 PASS)**
 > **來源**: v9.0 項目審計後發現不屬於 v10.0 O1-O114 任何現有系列
 > **v10.0 位置**: `IDCM-v10.0--It-From-Beat/open_problems_fresh/o130_wavelet_analysis_tools/`
 > **v9.0 來源**: `open_problems_fresh/wavelet_toolbox/`
@@ -130,4 +130,22 @@ v9.0「尖銳視界 aliasing」在 v10.0 **無精確載體**；正確 native 描
 
 - **不合併**。O130 保留獨立目錄。
 - **X/R 層**（`docs/02_migration_verdict.md` 之 φ-ratio / H(z)ζ / sync dip / 阻抗模型）→ **歷史記錄，不改寫**。
-- **P 層 + 方法**→ 已推到底（本節 ②–⑤）；開放項見 `docs/03_useful_continuation.md` §7。
+- **P 層 + 方法**→ 已推到底（本節 ②–⑤）；開放項見 `docs/03_useful_continuation.md` §8。
+
+### ⑦ DESI DR1 官方數據 — 第三個獨立巡天 (script 07, 11/11)
+
+> **下載**: `data.desi.lbl.gov/public/dr1/vac/dr1/full-shape-bao-clustering/v1.0/data/recsym/`
+> （腳本 `scripts/00_download_desi_dr1.sh`）— **7 tracer ξ(s) + RascalC covariance 135×135 + window matrix**,
+> 全部 sha256 驗證通過; 輸出 `data/desi/07_desi_dr1_test.json`
+
+- **★ 首次用相關 χ² + 官方 covariance**：窗口 s∈[42,198] (40 bins), 官方 4 h⁻¹Mpc binning (n_max=9.59)。
+- **🔴 無顯著偵測**：全局 trial-corrected (7 tracer × 3 knots × 9 shifts, joint null) **p = 0.813**；
+  λ 允許浮動就完全無信號 (ELG 嘅 p=0.000 喺 **δ=+0.10 非結構 λ**)。
+- **🟡 邊緣提示**：δ=0 **結構檢定** p = **0.030 (≈2.2σ)**，來自 LRG3；唯一兩個 p_delta0 ≤ 0.02
+  嘅 tracer (LRG3 + LRG+ELG) 係**同一批星系** ⟹ 非獨立；**未達 5σ 唔算偵測**。
+- 結構 δ=0：max Δχ² = +3.29 (LRG2, 1 dof)；振幅 **3 正 / 4 負** ⟹ 冇一致符號。
+- **⚠️ 自己嘅假設被否證**：「DESI window 洗掉階梯」**錯** — W₀₀ 行和 = 1.000000，
+  階梯**結構振幅保留 97.8%** ⟹ window **唔係**障礙；障礙仍係 ①bin Nyquist ②broadband 退化。
+- **三巡天交叉 (BOSS / eBOSS / DESI, 10 tracer 樣本)**：structural λ_sync **全部無偵測**。
+- 🟡 DESI **DR2** 原始 ξ(s) 官方未公開發佈（只有 chains）；Zenodo `16644577` 1.3 GB 補充包
+  已開始下載但速率 ~0.2 MB/s（預估 ~1.8 h）**未完成**。

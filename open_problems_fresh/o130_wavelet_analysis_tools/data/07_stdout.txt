@@ -1,0 +1,91 @@
+==============================================================================
+  O130/07 -- DESI DR1 official clustering: calibrated ladder test
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. load + grid alignment
+------------------------------------------------------------------------------
+   BGS      zeff=0.2953  N=40  s=[42,198]  sigma0(40)=3.0e-03
+   LRG1     zeff=0.5097  N=40  s=[42,198]  sigma0(40)=2.2e-03
+   LRG2     zeff=0.7056  N=40  s=[42,198]  sigma0(40)=1.8e-03
+   LRG3     zeff=0.9190  N=40  s=[42,198]  sigma0(40)=1.5e-03
+   LRG+ELG  zeff=0.9299  N=40  s=[42,198]  sigma0(40)=8.4e-04
+   ELG      zeff=1.3174  N=40  s=[42,198]  sigma0(40)=7.0e-04
+   QSO      zeff=1.4917  N=40  s=[42,198]  sigma0(40)=1.4e-03
+  [PASS] A1  all 7 DESI DR1 tracers loaded with official RascalC covariance  -- 7 tracers
+  [PASS] A2  DESI binning is 4 h^-1 Mpc -> n_max = 9.59  -- ds = 4.00 h^-1 Mpc
+
+------------------------------------------------------------------------------
+  B. matched-filter test at the STRUCTURAL lambda_sync (delta = 0)
+------------------------------------------------------------------------------
+   tracer    N   chi2_bb  chi2/dof   dchi2(delta=0)   amplitude
+   BGS       40     45.6      1.42           +0.00   -6.882e-05
+   LRG1      40     95.8      2.99           +0.66   -1.262e-03
+   LRG2      40    107.2      3.35           +3.29   -2.305e-03
+   LRG3      40    122.5      3.83           +2.82   +1.882e-03
+   LRG+ELG   40    125.6      3.92           +1.82   +8.208e-04
+   ELG       40     96.7      3.02           +0.00   +1.328e-05
+   QSO       40     55.5      1.73           +0.02   -1.786e-04
+  [PASS] B1  spline broadband adequate for all 7 tracers (correlated chi2/dof in [0.3, 6])  -- chi2/dof range 1.42 - 3.92
+  [PASS] B2  NO tracer shows a large Delta-chi^2 at the structural lambda_sync (all < 10 for 1 dof)  -- max dchi2(delta=0) = +3.29
+  [CLAIM] B  => at the STRUCTURAL ladder (s_n = lambda_sync/n, delta = 0), DESI DR1 shows Delta-chi^2 <= 3.29 over all 7 tracers -- no detection
+
+------------------------------------------------------------------------------
+  C. trial-corrected statistic, argmax diagnostic, and local null
+------------------------------------------------------------------------------
+   tracer   D_obs   argmax(knots,delta)  p_local   p_delta0(knots only)
+   BGS       +11.89   knots=5 delta=+0.10    0.570     0.690
+   LRG1      +36.98   knots=5 delta=+0.10    0.173     0.367
+   LRG2      +40.00   knots=4 delta=-0.05    0.790     0.223
+   LRG3      +41.59   knots=6 delta=-0.10    0.520     0.013
+   LRG+ELG   +50.26   knots=5 delta=+0.10    0.453     0.010
+   ELG       +47.43   knots=5 delta=+0.10    0.000     0.403
+   QSO        +9.95   knots=5 delta=+0.10    0.960     0.683
+   -> smallest local p = 0.000 (ELG, argmax knots=5 delta=+0.10)
+  [PASS] C1  the tracer with the smallest local p peaks at a NON-structural lambda shift (|delta| > 0), i.e. the excess is not the K_Chain ladder  -- ELG: argmax delta = +0.10 (structural value is delta = 0)
+   -> tracers with p_delta0 <= 0.02: LRG3, LRG+ELG
+  [PASS] C2  the only tracers with a marginal p_delta0 are the OVERLAPPING LRG samples (LRG3 + LRG+ELG share the same galaxies, so they are not independent)  -- flagged: LRG3, LRG+ELG
+
+------------------------------------------------------------------------------
+  D. GLOBAL look-elsewhere over the 7 tracers (joint null)
+------------------------------------------------------------------------------
+   D_global(observed) = +50.26  (best tracer: LRG+ELG)
+   joint null: mean +60.09  max +108.83  ->  p_global = 0.813
+   (null treats tracers as independent; DESI tracers share footprint, so the true
+    null is broader -> this is the OPTIMISTIC case for a detection)
+  [PASS] D1  GLOBAL p-value (7 tracers x 3 knot counts x 9 shifts, joint null) > 0.01  -- p_global = 0.813
+  [CLAIM] D  => even the GLOBAL, most-favourable statistic (best tracer, best knot count, best lambda shift) is consistent with the no-ladder null (p_global = 0.813).  The apparent local excess in ELG sits at a NON-structural lambda shift.
+  [PASS] D2  DESI DR1 amplitudes at the structural lambda_sync have no consistent sign  -- 3 positive / 4 negative of 7 tracers
+
+   delta = 0 (STRUCTURAL lambda_sync) global test:
+   D0_global(best tracer: LRG3) = +16.73   joint null mean +8.30 max +24.15  ->  p = 0.030
+  [PASS] D3  GLOBAL delta=0 p-value over 7 tracers x 3 knot counts > 0.01  (the structural lambda_sync is NOT detected)  -- p = 0.030
+  [CLAIM] D3 => the decisive, look-elsewhere-corrected test of the STRUCTURAL hypothesis (lambda_sync fixed, only the amplitude free) gives p = 0.030 over all 7 DESI DR1 tracers -- no detection
+
+   cross-dataset summary
+   data set              ds_bin  n_max   dchi2(delta=0)  amplitude      p
+   BOSS DR12 post-rec      5.0    8.53        +11.64      +1.05e-02    0.500
+   eBOSS DR16 LRG          5.0    8.53         +1.35      -1.53e-01    0.078
+   DESI DR1 BGS           4.0    9.59           +0.00      -6.88e-05    0.570
+   DESI DR1 LRG1          4.0    9.59           +0.66      -1.26e-03    0.173
+   DESI DR1 LRG2          4.0    9.59           +3.29      -2.31e-03    0.790
+   DESI DR1 LRG3          4.0    9.59           +2.82      +1.88e-03    0.520
+   DESI DR1 LRG+ELG       4.0    9.59           +1.82      +8.21e-04    0.453
+   DESI DR1 ELG           4.0    9.59           +0.00      +1.33e-05    0.000
+   DESI DR1 QSO           4.0    9.59           +0.02      -1.79e-04    0.960
+
+------------------------------------------------------------------------------
+  E. DESI window smearing: is the survey window the obstruction?
+------------------------------------------------------------------------------
+   window: theory 200 bins s=[0.75,199.50] ds=1.00 -> observable 50 bins
+   row sums: min 1.0000 median 1.0000 max 1.0000
+  [PASS] E1  DESI window W_00 conserves the monopole (rows sum to 1)  -- median row sum = 1.000000
+   ladder structural RMS (broadband-removed): theory 0.1110 -> windowed 0.1086
+   retained structural amplitude = 97.8%
+  [PASS] E2  window smearing does NOT destroy the ladder (>=70% of structural amplitude retained)  -- 97.8% retained
+  [CLAIM] E  => HYPOTHESIS REJECTED: the DESI survey window is NOT the obstruction.  W_00 is a real tracer-specific mode-mixing operator (dense, rows sum to 1) but it retains 97.8% of the ladder's structural amplitude.  The obstructions are (1) bin Nyquist n_max = 9.59 and (2) broadband degeneracy, NOT the window.
+
+==============================================================================
+  RESULT: 11/11 PASS   (+4 structural claims)
+==============================================================================
+  -> data/desi/07_desi_dr1_test.json written
