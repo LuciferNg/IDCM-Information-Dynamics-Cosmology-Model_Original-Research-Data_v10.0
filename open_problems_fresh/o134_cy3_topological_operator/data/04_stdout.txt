@@ -1,0 +1,49 @@
+====================================================================================
+O134 scripts/04 — 跨 O 覆蓋審計 (v9.0 CY₃ 拓撲算子 → v10.0 擁有者)
+====================================================================================
+  [✔] h¹¹ = 36 (L₂²L₃) → O211
+       o211_geometry_generation/final_result.md 存在; 證據字串「h¹¹ = N_d − 2B = 36」命中
+  [✔] h²¹ = 98 (2L₄²) → O211
+       o211_geometry_generation/final_result.md 存在; 證據字串「h²¹ = Σγ + 2B = 98」命中
+  [✔] CY₃ = 134 → O211
+       o211_geometry_generation/final_result.md 存在; 證據字串「Tr G = N_d + Σγ = 134」命中
+  [✔] χ = 2(h¹¹−h²¹) = −124 → O211
+       o211_geometry_generation/final_result.md 存在; 證據字串「χ = −124」命中
+  [✔] Σγ = 90 (B(N_d+1)/2) → O211
+       o211_geometry_generation/final_result.md 存在; 證據字串「Σγ = B(N_d+1)/2 = 90」命中
+  [✔] γ_n = 4sin²(πn/88) 譜 → O211
+       o211_geometry_generation/final_result.md 存在; 證據字串「4sin²(πn/88)」命中
+  [✔] D_quark = 1+(h¹¹/h²¹)ε(1+ε) → O137
+       o137_cy3_topological_resonance/docs/36_gap_attack_round19.md 存在; 證據字串「1 + 2N_gen²·ε(1+ε)/L₄²」命中
+  [✔] h¹¹/h²¹ = L₆/L₄² 還原 → O137
+       o137_cy3_topological_resonance/docs/36_gap_attack_round19.md 存在; 證據字串「18/49」命中
+  [✔] ε = φ⁻¹/4 = 1/(B·φ) → O137
+       o137_cy3_topological_resonance/docs/36_gap_attack_round19.md 存在; 證據字串「ε = 1/(B·φ)」命中
+  [✔] ε = 19/123 (精確) → O148
+       o148_dual_scale_vacuum_budget/01_problem_record.md 存在; 證據字串「19/123」命中
+  [✔] §5 第一代 F_n/CY₃^s → O120
+       o120_light_quark_masses/final_result.md 存在; 證據字串「m_u = m_t·(F₉+ε³K₉)/CY₃³」命中
+  [✔] 輕子質量譜 (e,μ,τ) → O54
+       o54_antimatter_abundance/docs/05_lepton_mass_hierarchy.md 存在; 證據字串「M₀ × γ_n × F_proj_particle」命中
+  [✔] 夸克質量譜 (s,c,b,t) → O136
+       o136_quark_mass_spectrum/final_result.md 存在; 證據字串「γ_n」命中
+  [✔] 真實相交數 κ_ijk → O50
+       o50_cy3_intersection/final_result.md 存在; 證據字串「shape (36,36,36)」命中
+  [✔] §6 T_CMB 絕對值 → O166
+       o166_tcmb_absolute_value/final_result.md 存在; 證據字串「2.7284」命中
+  [✔] v_SM = 246.2196 GeV → O37
+       o37_wfield_lagrangian/docs/01_derivation_record.md 存在; 證據字串「246.2196」命中
+  [✔] V_EW 正規化 → O86
+       o86_sm_gr_coupling/docs/01_problem_record.md 存在; 證據字串「246.2196」命中
+
+  → 擁有者集合: O120, O136, O137, O148, O166, O211, O37, O50, O54, O86
+  → 覆蓋: 17/17 物件有 v10.0 現行擁有者
+
+====================================================================================
+RESULT: 17/17 PASS — 跨 O 覆蓋審計完成
+====================================================================================
+
+判決: v9.0 cy3_topological_operator 全部結構物件已有 v10.0 現行擁有者
+      (§2-§4 → O137 R19 零參數閉式; §5 → O120/O136; §6 → O166; 幾何 → O211/O50)
+      ⟹ 剩餘新 IDCM 內容 = 空集; O134 目的 (前置驗證) 達成, 唔構成新開放問題。
+→ data/04_cross_o_coverage.json

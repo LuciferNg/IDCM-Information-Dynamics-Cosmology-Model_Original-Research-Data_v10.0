@@ -1,0 +1,155 @@
+{
+  "items": [
+    {
+      "v9_object": "h¹¹ = 36 (L₂²L₃)",
+      "v10_owner": "O211",
+      "evidence_file": "o211_geometry_generation/final_result.md",
+      "evidence_string": "h¹¹ = N_d − 2B = 36",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "h²¹ = 98 (2L₄²)",
+      "v10_owner": "O211",
+      "evidence_file": "o211_geometry_generation/final_result.md",
+      "evidence_string": "h²¹ = Σγ + 2B = 98",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "CY₃ = 134",
+      "v10_owner": "O211",
+      "evidence_file": "o211_geometry_generation/final_result.md",
+      "evidence_string": "Tr G = N_d + Σγ = 134",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "χ = 2(h¹¹−h²¹) = −124",
+      "v10_owner": "O211",
+      "evidence_file": "o211_geometry_generation/final_result.md",
+      "evidence_string": "χ = −124",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "Σγ = 90 (B(N_d+1)/2)",
+      "v10_owner": "O211",
+      "evidence_file": "o211_geometry_generation/final_result.md",
+      "evidence_string": "Σγ = B(N_d+1)/2 = 90",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "γ_n = 4sin²(πn/88) 譜",
+      "v10_owner": "O211",
+      "evidence_file": "o211_geometry_generation/final_result.md",
+      "evidence_string": "4sin²(πn/88)",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "D_quark = 1+(h¹¹/h²¹)ε(1+ε)",
+      "v10_owner": "O137",
+      "evidence_file": "o137_cy3_topological_resonance/docs/36_gap_attack_round19.md",
+      "evidence_string": "1 + 2N_gen²·ε(1+ε)/L₄²",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "h¹¹/h²¹ = L₆/L₄² 還原",
+      "v10_owner": "O137",
+      "evidence_file": "o137_cy3_topological_resonance/docs/36_gap_attack_round19.md",
+      "evidence_string": "18/49",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "ε = φ⁻¹/4 = 1/(B·φ)",
+      "v10_owner": "O137",
+      "evidence_file": "o137_cy3_topological_resonance/docs/36_gap_attack_round19.md",
+      "evidence_string": "ε = 1/(B·φ)",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "ε = 19/123 (精確)",
+      "v10_owner": "O148",
+      "evidence_file": "o148_dual_scale_vacuum_budget/01_problem_record.md",
+      "evidence_string": "19/123",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "§5 第一代 F_n/CY₃^s",
+      "v10_owner": "O120",
+      "evidence_file": "o120_light_quark_masses/final_result.md",
+      "evidence_string": "m_u = m_t·(F₉+ε³K₉)/CY₃³",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "輕子質量譜 (e,μ,τ)",
+      "v10_owner": "O54",
+      "evidence_file": "o54_antimatter_abundance/docs/05_lepton_mass_hierarchy.md",
+      "evidence_string": "M₀ × γ_n × F_proj_particle",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "夸克質量譜 (s,c,b,t)",
+      "v10_owner": "O136",
+      "evidence_file": "o136_quark_mass_spectrum/final_result.md",
+      "evidence_string": "γ_n",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "真實相交數 κ_ijk",
+      "v10_owner": "O50",
+      "evidence_file": "o50_cy3_intersection/final_result.md",
+      "evidence_string": "shape (36,36,36)",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "§6 T_CMB 絕對值",
+      "v10_owner": "O166",
+      "evidence_file": "o166_tcmb_absolute_value/final_result.md",
+      "evidence_string": "2.7284",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "v_SM = 246.2196 GeV",
+      "v10_owner": "O37",
+      "evidence_file": "o37_wfield_lagrangian/docs/01_derivation_record.md",
+      "evidence_string": "246.2196",
+      "file_exists": true,
+      "string_found": true
+    },
+    {
+      "v9_object": "V_EW 正規化",
+      "v10_owner": "O86",
+      "evidence_file": "o86_sm_gr_coupling/docs/01_problem_record.md",
+      "evidence_string": "246.2196",
+      "file_exists": true,
+      "string_found": true
+    }
+  ],
+  "owners": [
+    "O120",
+    "O136",
+    "O137",
+    "O148",
+    "O166",
+    "O211",
+    "O37",
+    "O50",
+    "O54",
+    "O86"
+  ],
+  "coverage": "17/17",
+  "remaining_new_idcm_content": "空集 (empty set)",
+  "result": "17/17 PASS"
+}

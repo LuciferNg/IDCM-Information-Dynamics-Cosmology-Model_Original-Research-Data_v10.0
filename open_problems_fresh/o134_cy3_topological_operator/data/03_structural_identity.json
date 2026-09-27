@@ -1,0 +1,35 @@
+{
+  "N_sear": "純代數恆等式 (唯一候選), 免 MC",
+  "identities": {
+    "h11/h21 = 36/98 = 18/49": "EXACT",
+    "h11/h21 = L6/L4^2 = 2N_gen^2/L4^2": "EXACT",
+    "eps_phi = phi^-1/4 = 1/(B phi)": "EXACT",
+    "Lucas: L10 phi - L11 = sqrt5 phi^-10": "0.0181806162370663292",
+    "19/123 - phi^-1/4 = -sqrt5 phi^-10/492": "-3.69524720266e-5",
+    "19/123 - phi^-1/4 = (199-123 phi)/492": "EXACT",
+    "Delta_a_QED = L0^2 - phi^-2 = 2+phi = phi^2+1": "3.61803398875"
+  },
+  "deviations": {
+    "eps_phi_vs_exact": "0.000239219",
+    "D_quark_phi_vs_exact": "1.66761e-5"
+  },
+  "K_n_inconsistency": {
+    "sec5_3_formula": {
+      "e": "0.70157",
+      "d": "1.12251",
+      "u": "0.78047"
+    },
+    "sec5_4_stated": {
+      "e": "0.697",
+      "d": "1.115",
+      "u": "0.689"
+    },
+    "sec5_7_formula": {
+      "K5": "44.872",
+      "K8": "-253.738",
+      "K9": "-1075.53"
+    },
+    "normalization_u_ratio_5_2_over_script": "1.135"
+  },
+  "result": "17/17 PASS"
+}

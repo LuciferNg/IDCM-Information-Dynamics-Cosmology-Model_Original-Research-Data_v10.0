@@ -1,0 +1,39 @@
+{
+  "source_v9_md": "IDCM-v9.0--W-Field-Lattice/wfield_lattice/cy3_topological_operator.md",
+  "source_v9_py": "IDCM-v9.0--W-Field-Lattice/wfield_lattice/verify_cy3_operator.py",
+  "target_v10": "IDCM-v10.0--It-From-Beat",
+  "trap_window": [
+    "1.0e-5",
+    "0.001"
+  ],
+  "deviations": {
+    "eps_phi_vs_19over123": "0.000239219"
+  },
+  "verdict": {
+    "migrate_green": {
+      "h11=36": "O211 N_d−2B",
+      "h21=98": "O211 Σγ+2B",
+      "CY3=134": "O211 Tr G = N_d+Σγ",
+      "chi=-124": "O211/O53",
+      "eps=phi^-1/4=1/(B phi)": "O137 docs/36 EXACT",
+      "h11/h21=18/49=L6/L4^2": "O137 R19 (本輪新增還原)",
+      "D_quark=1+2N_gen^2 eps(1+eps)/L4^2": "O137 R19 零參數閉式",
+      "D1=1.0567582, D2=1.0655279": "O137 docs/14"
+    },
+    "phi_approx_yellow": [
+      "eps (phi^-1/4 vs 19/123, Lucas tail, O148)",
+      "D(inf) 幾何級數 vs 有限二階 (截斷層級未定)",
+      "§5 第一代 F_n/CY3^s (數值閉合但框架層三框架並存)"
+    ],
+    "superseded_red": [
+      "§2 色三重態投影 98/134 (無擁有者 + 與 §3 矛盾)",
+      "§3 I=h11-h21=-62 作為拓撲干涉 (實為 chi/2; 真相交數 O50 kappa_ijk)",
+      "§5 四套互不相容 K_n 正規化",
+      "§5.6/§5.7 K_n 由 PDG 反推 (phi-power 擬合)",
+      "Δa_QED = L0^2 - phi^-2 (ad hoc)",
+      "§6 T_CMB = 2 T_Pl e^-74 CY3/100 (1-phi^-9) (膨脹依賴 + e 底 + 被 O166 取代)"
+    ]
+  },
+  "inflation_dependence": "唯一 = §6 CMB exp(−74), 74 = 59(inflation)+15(radiation); verify_cy3_operator.py 零框架依賴",
+  "result": "20/20 PASS"
+}
