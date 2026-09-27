@@ -3,6 +3,10 @@
 > **日期**: 2026-09-27
 > **方法**: 逐項 P/R/A/X 分類 (O135 分類法) + 實數重算 (3 scripts, 32/32 PASS)
 > **v9.0 來源**: `IDCM-v9.0--W-Field-Lattice/open_problems_fresh/wavelet_toolbox/` (9 scripts + emd_engine)
+>
+> ⚠️ **後續 (2026-09-28)**: 依調律者指示「不合併，只把有用的繼續在這裏推，廢棄的留作歷史記錄」，
+> 本文檔嘅 **X/R 層 + 阻抗模型 (A→🔴) 已封存為歷史記錄，不再改寫**；有用層 (P 骨架 + 方法)
+> 之繼續推導見 **`docs/03_useful_continuation.md`**（scripts 04/05/06, 19/19 PASS）。
 
 ---
 

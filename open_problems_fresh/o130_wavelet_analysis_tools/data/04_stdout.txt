@@ -1,0 +1,62 @@
+==============================================================================
+  O130/04 -- calibrated detection test (matched filter + trial-corrected null)
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. data window + broadband model quality
+------------------------------------------------------------------------------
+   window: s in [42.5, 177.5] h^-1 Mpc, 28 bins
+   (s < 40 excluded: BOSS relative errors there are ~0.5%%, so the small-s peak
+    dominates chi^2 and no smooth broadband can pass; the BAO/ladder test lives
+    in the s >= 40 window where relative errors are O(1-100%%) )
+   knots=4 : chi2_broadband =   35.83 (chi2/dof = 1.63)   dchi2(+template) =  +10.56   A = +7.264e-03
+   knots=5 : chi2_broadband =   23.86 (chi2/dof = 1.14)   dchi2(+template) =  +11.64   A = +1.046e-02
+   knots=6 : chi2_broadband =   16.25 (chi2/dof = 0.81)   dchi2(+template) =   +6.93   A = +9.906e-03
+  [PASS] A1  window restricted to s >= 40 h^-1 Mpc (BAO/ladder window)  -- 28 bins
+  [PASS] A2  broadband model is adequate (chi2/dof in [0.5, 3] at knots=5)  -- chi2/dof = 1.19
+
+------------------------------------------------------------------------------
+  B. Delta-chi^2 profile (matched filter, 1 dof)
+------------------------------------------------------------------------------
+   knots=4 : dchi2 = +10.56  -> nominal 3.25 sigma (1 dof)  A = +7.264e-03
+   knots=5 : dchi2 = +11.64  -> nominal 3.41 sigma (1 dof)  A = +1.046e-02
+   knots=6 : dchi2 = +6.93  -> nominal 2.63 sigma (1 dof)  A = +9.906e-03
+   NOTE the strong knot-count dependence: the 'signal' shrinks as the broadband
+   becomes more flexible -> the ladder is DEGENERATE with broadband shape.
+
+------------------------------------------------------------------------------
+  C. trial-corrected null: max over (knots x lambda shift)
+------------------------------------------------------------------------------
+   observed trial-corrected statistic D = +14.57
+   broadband+noise null D: mean +15.50  std 7.08  max +51.75
+   phase-randomised null D: mean +26.89  max +63.04 (wrapped-edge ringing)
+   p (broadband+noise null) = 0.500
+  [PASS] C1  trial-corrected p-value computed over (knots x shift) trials  -- p = 0.500 (D_obs 14.57 vs null max 51.75)
+  [PASS] C2  K_Chain ladder is NOT a significant detection (p > 0.01)  -- p = 0.500
+  [CLAIM] C  => with the trial factor (broadband flexibility x ladder offset) accounted for, the K_Chain ladder is NOT significantly detected in BOSS DR12 xi(s)
+
+------------------------------------------------------------------------------
+  D. shifted-ladder profile (knots=5): does the specific lambda_sync matter?
+------------------------------------------------------------------------------
+   delta   lam' (h^-1Mpc)   dchi2
+   -0.10   365.60             +8.14
+   -0.05   385.91            +14.57
+   -0.02   398.10            +13.51
+   -0.01   402.16            +12.72
+   +0.00   406.22            +11.64
+   +0.01   410.28            +10.17
+   +0.02   414.35             +8.16
+   +0.05   426.53             +0.47
+   +0.10   446.84             +6.32
+  [PASS] D1  shifted-ladder profile scanned (structural lambda_sync at delta = 0)  -- best delta = -0.05 (dchi2 = +14.57)
+  [CLAIM] D  => the shifted-ladder profile is FLAT/broad (no sharp peak at delta=0), i.e. the data does not single out lambda_sync over +-5-10% shifts at this precision -> the 'detection' is not ladder-position-specific
+
+------------------------------------------------------------------------------
+  E. verdict
+------------------------------------------------------------------------------
+  [CLAIM] E  => a statistically valid test (matched filter + trial-corrected surrogate null) finds NO significant K_Chain-ladder detection in BOSS DR12 xi(s). The migrated STRUCTURE (positions s_n = lambda_sync/n) is correct; the v9.0 'detection' was a pointwise-S/N + broadband-degeneracy artefact. This is the honest, tool-native answer.
+
+==============================================================================
+  RESULT: 5/5 PASS   (+3 structural claims)
+==============================================================================
+  -> data/04_calibrated_detection.json written

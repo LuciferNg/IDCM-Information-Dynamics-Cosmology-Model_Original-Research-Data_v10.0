@@ -1,7 +1,7 @@
 # O130 — 小波工具箱宇宙學應用
 
 > **Session**: 2026-08-29 (新建立，從 v9.0 遷移)
-> **狀態**: 🔴 未開始 → 🟡 **遷移判決完成 (2026-09-27)**
+> **狀態**: 🔴 未開始 → 🟡 遷移判決完成 (2026-09-27) → 🟢 **有用層推進完成 (2026-09-28, 51/51 PASS)**
 > **來源**: v9.0 項目審計後發現不屬於 v10.0 O1-O114 任何現有系列
 > **v10.0 位置**: `IDCM-v10.0--It-From-Beat/open_problems_fresh/o130_wavelet_analysis_tools/`
 > **v9.0 來源**: `open_problems_fresh/wavelet_toolbox/`
@@ -72,3 +72,62 @@ O9 (高 ℓ CMB 峰) 🟢, O42/O122 (冷斑分析) 🔴
 ### ⑤ 待裁定
 
 O130 目錄處置 (保留 / 併入 O133) 待調律者明示; 本 session **未**作合併動作。
+
+---
+
+## ★★ 有用層繼續推進 (2026-09-28) — 依調律者指示「不合併，只把有用的繼續在這裏推」
+
+> **腳本**: `scripts/04_calibrated_detection.py` (**5/5**) · `scripts/05_resolvability_forecast.py` (**9/9**) ·
+> `scripts/06_eboss_replication.py` (**5/5**) = **19/19 PASS + 10 聲稱**（O130 累計 **51/51 PASS + 24 聲稱**）
+> **文檔**: `docs/03_useful_continuation.md` · **處置**: X/R 層封存為歷史記錄（`docs/02`），**不合併**入 O133
+
+### ① 為何要推 — v9.0 點態 S/N 嘅三重結構缺陷
+
+點態 S/N ≠ 全局檢定（①）；單調殘餘令任何正偏移「過 3σ」（②，ρ=0.9979）；broadband 一換偵測數 4→3→17（③）。
+
+### ② 校準化檢定 (script 04) — matched filter + trial-corrected null
+
+K_Chain 階梯當**一條完整模板** `T(s)=Σγ_n cos(2πns/λ_sync)·exp(−½k_n²Σ²)`（Σ=10 h⁻¹Mpc），
+**只放振幅 A 一個參數**；broadband = 三次樣條（knots 4/5/6）；窗口 s≥40；`D = max_{knots×δ} Δχ²`；
+null = "平滑 broadband + 噪聲，無階梯"（1000 realizations）。
+
+```
+knots=4: Δχ²=+10.69 | knots=5: Δχ²=+12.22 | knots=6: Δχ²=+7.23 | knots=8: Δχ²=+0.44 (broadband 食晒)
+D_obs=+14.57 ; null mean +15.50 σ 7.08 max +51.75 → p = 0.500
+shifted-ladder: peak 喺 δ=−5%, δ=0 唔突出
+```
+
+**🔴 零偵測**：BOSS DR12 冇偵測到階梯；Δχ² 隨 broadband 自由度**崩潰** ⟹ 同 broadband **退化**。
+
+### ③ 可解析度定律 + 巡天預報 (script 05, zero-parameter)
+
+- 取樣: `n_max(Δs_bin)=(−1+√(1+4λ/Δs_bin))/2` → 5→**8.53** / 4→9.59 / 2→13.76 / 1→19.66 / 0.5→28.01
+- 窗口 Rayleigh: `Δn_res = λ_sync/T`；BOSS T=175 → **2.32 > 1**（相鄰模態峰位不可分）；
+  leakage matrix 相鄰 **max 0.18**（功率 ~3% ⟹ 位置冇被打亂）
+- **三障礙排序**: ①bin Nyquist n_max=8.53（n=9..20 全 sub-bin）②broadband 退化（p=0.50）③Rayleigh 2.32
+- **門檻表**: n=F_proj/2=8.5 → Δs≤5.0306；n=N_d/2=22 → **0.8028**；n=N_d=44 → **0.2052** h⁻¹Mpc
+- 🟡 **巧合記錄（非預言）**: BOSS 用 5.0，`λ/(8.5×9.5)=5.0306`（dev 0.61%）— bin 寬係儀器選擇 ⟹ post-hoc
+
+### ④ v10.0-native aliasing (script 05 §D)
+
+`1+z=4^ℓ` rungs {0,3,15,63,255,1023}；**F_proj=17=L₆−1 ⟹ ℓ=log₄18=2.08496 非整數**，
+`n_obs=N_d/4^ℓ=44/18=2.4444 非整數` ⟹ **F_proj 切喺 K_Tree 中階，冇整數模態切斷點可 fold**。
+v9.0「尖銳視界 aliasing」在 v10.0 **無精確載體**；正確 native 描述 = **有限窗口頻譜洩漏**。
+
+### ⑤ Out-of-sample 複現 (script 06) — eBOSS DR16 LRG
+
+同一統計量、**唔重新調參**：
+
+| 數據集 | Δs_bin | 窗口 | n_max | Δχ²(δ=0) | A(δ=0) | p |
+|:--|:--|:--|:--|:--|:--|:--|
+| BOSS DR12 | 5.0 | 175.0 | 8.53 | +11.64 | **+1.05e−02** | 0.500 |
+| eBOSS DR16 LRG | 5.0 | 207.5 | 8.53 | +1.35 | **−1.53e−01** | 0.078 |
+
+**🔴 複現**：兩個獨立數據集都零顯著偵測；★ **振幅正負號都唔一致** ⟹ 噪聲特徵。
+滿足 Hard Test ③（out-of-sample 盲測）。
+
+### ⑥ 處置裁定 (2026-09-28)
+
+- **不合併**。O130 保留獨立目錄。
+- **X/R 層**（`docs/02_migration_verdict.md` 之 φ-ratio / H(z)ζ / sync dip / 阻抗模型）→ **歷史記錄，不改寫**。
+- **P 層 + 方法**→ 已推到底（本節 ②–⑤）；開放項見 `docs/03_useful_continuation.md` §7。

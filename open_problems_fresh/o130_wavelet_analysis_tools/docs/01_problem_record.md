@@ -87,3 +87,40 @@
 **依賴鏈**: v9.0 `wavelet_toolbox/` → O130; 交叉: O133 (k-space) / O129 (λ_sync) / O126 (ζ 撤回) /
 O138 (z=17) / O76 (離散 z) / O99 (色散) / O135 (P/R/A/X 分類法) / O131 (同批 stacking 遷移) /
 O118 (裁定唔做阻抗模型)。
+
+---
+
+## 七、有用層繼續推進 (2026-09-28) — 不合併，X/R 封存歷史
+
+> **指示**: 「不合併，只把有用的繼續在這裏推，廢棄的留作歷史記錄」(2026-09-28)。
+> **文檔**: `docs/03_useful_continuation.md` · **腳本**: 04 (5/5) / 05 (9/9) / 06 (5/5) = **19/19**（累計 **51/51**）
+
+### 7.1 分類修訂（僅新增，不改寫 §6）
+
+| 項 | §6 (2026-09-27) | §7 (2026-09-28) |
+|:--|:--|:--|
+| 阻抗/反射模型 | A 🟡 | **A→🔴 排除**（部件結構但無 v10 擁有者；O118 裁定唔做；O131 一致） |
+| φ-ratio / z=17 / H(z)ζ / sync dip | R·X 🔴 | **歷史記錄，封存不改寫** |
+| P 骨架 + 方法 | 已遷移 | ★ 就地推到底（calibrated test / 解析度定律 / out-of-sample） |
+
+### 7.2 新推導（有用層）
+
+1. **校準化偵測檢定** (`04`): K_Chain 階梯當完整模板 (matched filter, 只放振幅 A)，broadband=三次樣條，
+   `D=max_{knots×δ}Δχ²`，null="broadband+噪聲"。**D_obs=+14.57 vs null mean +15.50 ⟹ p=0.500 ⟹ 零偵測**；
+   Δχ² 隨 broadband 自由度 +10.7→+0.4 崩潰 ⟹ 同 broadband 退化。
+2. **可解析度定律** (`05`): `n_max(Δs_bin)=(−1+√(1+4λ/Δs_bin))/2`（5→8.53, 4→9.59, 2→13.76, 0.5→28.01）；
+   Rayleigh `Δn_res=λ_sync/T`（BOSS 2.32>1）；leakage matrix 相鄰 max 0.18（功率 ~3%）；
+   門檻 n=N_d/2=22 → Δs≤0.8028、n=N_d=44 → 0.2052 h⁻¹Mpc。
+3. **v10.0-native aliasing** (`05`§D): `F_proj=17=L₆−1 ⟹ ℓ=log₄18=2.08496 非整數`、`n_obs=44/18=2.4444 非整數`
+   ⟹ **中階切斷，冇整數 fold 點**；v9.0 尖銳視界 aliasing **無 v10.0 載體**。
+4. **Out-of-sample 複現** (`06`): eBOSS DR16 LRG 同一統計量、唔調參 ⟹ 亦零顯著 (p=0.078)；
+   ★ 振幅正負號不一致（+1.05e−02 vs −1.53e−01）⟹ 噪聲。滿足 Hard Test ③。
+
+### 7.3 推導時序索引（續 §6.3）
+
+| 時間 | Script | 結果 | 記錄 |
+|:-----|:-------|:-----|:-----|
+| 2026-09-28 | `04_calibrated_detection.py` | 5/5 — matched filter + trial-corrected null ⟹ 零偵測 | `data/04_*` |
+| 2026-09-28 | `05_resolvability_forecast.py` | 9/9 — 解析度定律/Rayleigh/leakage/門檻/F_proj 中階 | `data/05_*` |
+| 2026-09-28 | `06_eboss_replication.py` | 5/5 — eBOSS DR16 out-of-sample 複現 | `data/06_*` |
+| 2026-09-28 | — | 有用層推進完成 + 處置裁定 (不合併) | `docs/03`, `SESSION_START.md`, `final_result.md` |

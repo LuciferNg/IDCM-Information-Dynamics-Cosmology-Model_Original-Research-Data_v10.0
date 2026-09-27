@@ -1,0 +1,59 @@
+==============================================================================
+  O130/06 -- out-of-sample replication: eBOSS DR16 LRG
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. data + window
+------------------------------------------------------------------------------
+   eBOSS DR16 LRG: 49 bins total, window s in [42.5, 247.5] h^-1 Mpc (42 bins)
+   median relative error in window: 0.07
+   knots=4 : chi2_broadband =   38.12 (chi2/dof = 1.06)   dchi2 =   +2.59   A = -2.049e-01
+   knots=5 : chi2_broadband =   28.71 (chi2/dof = 0.82)   dchi2 =   +1.35   A = -1.530e-01
+   knots=6 : chi2_broadband =   29.32 (chi2/dof = 0.86)   dchi2 =   +1.03   A = -1.430e-01
+  [PASS] A1  eBOSS window s >= 40 h^-1 Mpc  -- 42 bins
+  [PASS] A2  broadband adequate at knots=5 (chi2/dof in [0.5, 5])  -- chi2/dof = 0.84
+
+------------------------------------------------------------------------------
+  B. Delta-chi^2 profile (matched filter, 1 dof)
+------------------------------------------------------------------------------
+   knots=4 : dchi2 = +2.59  -> nominal 1.61 sigma  A = -2.049e-01
+   knots=5 : dchi2 = +1.35  -> nominal 1.16 sigma  A = -1.530e-01
+   knots=6 : dchi2 = +1.03  -> nominal 1.02 sigma  A = -1.430e-01
+
+------------------------------------------------------------------------------
+  C. trial-corrected null (broadband + noise, no ladder)
+------------------------------------------------------------------------------
+   observed D = +7.57
+   null D: mean +3.68  std 2.56  max +19.87
+   p = 0.078
+  [PASS] C1  trial-corrected p-value computed on eBOSS  -- p = 0.078
+  [PASS] C2  eBOSS DR16 also shows NO significant ladder detection (p > 0.01)  -- p = 0.078 (D_obs 7.57 vs null max 19.87)
+  [CLAIM] C  => the BOSS DR12 null result REPLICATES on the independent eBOSS DR16 LRG data set: p = 0.078
+
+------------------------------------------------------------------------------
+  D. shifted-ladder profile (knots=5)
+------------------------------------------------------------------------------
+   delta -0.10   lam' 365.60    dchi2    +5.93
+   delta -0.05   lam' 385.91    dchi2    +1.31
+   delta -0.02   lam' 398.10    dchi2    +0.12
+   delta -0.01   lam' 402.16    dchi2    +0.63
+   delta +0.00   lam' 406.22    dchi2    +1.35
+   delta +0.01   lam' 410.28    dchi2    +2.07
+   delta +0.02   lam' 414.35    dchi2    +2.68
+   delta +0.05   lam' 426.53    dchi2    +3.41
+   delta +0.10   lam' 446.84    dchi2    +0.78
+  [PASS] D1  shifted-ladder profile scanned on eBOSS  -- best delta = -0.10 (dchi2 = +5.93)
+
+------------------------------------------------------------------------------
+  E. cross-dataset verdict
+------------------------------------------------------------------------------
+   data set            Ds_bin  range        n_max   dchi2(D=0)   A(D=0)      p(trial-corr)
+   BOSS DR12 post-rec     5.0   175.0        8.53      +11.64     +1.05e-02      0.500
+   eBOSS DR16 LRG         5.0   207.5        8.53        +1.35     -1.53e-01      0.078
+  [CLAIM] E1 => the fitted amplitude is POSITIVE on BOSS (+1.05e-02) and NEGATIVE on eBOSS (-1.53e-01): the two data sets do not even agree in sign, which is the signature of noise, not of a common ladder signal
+  [CLAIM] E  => the migrated K_Chain ladder is a well-defined structural prediction, but it is NOT detected in either BOSS DR12 or eBOSS DR16 at 5 h^-1 Mpc binning.  The v9.0 'detections' were artefacts (monotone ramp + pointwise S/N + broadband degeneracy).  Two independent data sets agree.
+
+==============================================================================
+  RESULT: 5/5 PASS   (+3 structural claims)
+==============================================================================
+  -> data/06_eboss_replication.json written
