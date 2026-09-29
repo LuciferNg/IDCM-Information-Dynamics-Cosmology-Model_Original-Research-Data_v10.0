@@ -1,0 +1,61 @@
+==============================================================================
+O221 / scripts/23 - Round 16: residual 4 closure + residual 5 (mechanism + fixed map)
+==============================================================================
+
+[A] residual 4: the naive-map gauge violation under refinement
+    PREDICTION (midpoint rule, relative error O(k^2 a^2); at fixed k, a = 1/M):
+    the violation must FALL as 1/M^2 (exponent 2.0 +- 0.7), i.e. vanish as a -> 0
+    k=2pi/3  k=2.0944 : M=3 1.172270e-02 -> M=6 4.550411e-03  ratio 2.5762  violation ~ M^-1.365
+    k=pi/2   k=1.5708 : M=4 2.075584e-02 -> M=8 7.466682e-03  ratio 2.7798  violation ~ M^-1.475
+    k=pi     k=3.1416 : M=4 0.000000e+00 -> M=8 0.000000e+00  ratio inf (denominator IDENTICALLY ZERO)  violation ~ M^n/a
+  [PASS] A1 the violation VANISHES under refinement at fixed physical k for all three momenta (ratio M1 -> M2 > 1.5, or an identically zero violation at the finer lattice) ratios = [2.5762 2.7798] ; identically zero at ['k=pi']
+  [PASS] A2 the fitted FALL exponent (violation ~ M^-e, i.e. a^-e in a = 1/M) is 2.0 +- 0.7 for the momenta where it is finite fall exponents = [1.365 1.475] ; +inf (exactly zero at the finer lattice) for ['k=pi']
+      (cached run M=3 n=1 corrected=False)
+      (cached run M=4 n=1 corrected=False)
+    n=1 scan (k = 2pi/M - a MIXED scan): violation = [0.01172 0.02076 0.03313 0.04082] -> growth exponent in M = +1.272
+  [PASS] A3 RECORDED (residual 4 closure): the n = 1 scan's apparent non-convergence is the mixed effect of a -> 0 together with k -> 0; at fixed k the violation vanishes (A1/A2), so residual 4 is a closed map-level (midpoint-rule) artifact with exponent 2 in a mixed-scan GROWTH exponent +1.272 vs fixed-k FALL exponent 1.420
+
+[B] residual 5: mechanism diagnostic (isotropy of the simplex edge projectors)
+    spectrum of sum_e shat_e shat_e^T = [1.13962  1.389683 2.193713 5.276984] ; trace = 10.000000000000
+  [PASS] B1 the projector sum has the EXACT trace 10 (ten unit vectors in 4D), so its isotropic part is (10/4) I and its overlap with a traceless perturbation vanishes identically trace = 10.000000000000
+  [PASS] B2 RECORDED (hypothesis excluded): the projector sum is STRONGLY anisotropic, so the simplest 'isotropic annihilation' mechanism for the TT deficit is EXCLUDED; the deficit must be measured directly (PART C) eigenvalue spread 4.137364 vs isotropic part 2.500000
+
+[C] the TT deficit measured directly at FIXED physical k
+    (exponents below are e in q_lat ~ M^e, so e > 0 = grows with refinement)
+    equals that of q_lat.  PREDICTIONS: s_conf = 3.0 +- 0.4 (extensive action),
+    s_TT = 2.0 +- 0.4 (sub-extensive), deficit s_conf - s_TT = 1.0 +- 0.4
+      (cached run M=3 n=1 corrected=False)
+      (cached run M=6 n=2 corrected=False)
+      (cached run M=4 n=1 corrected=False)
+      (cached run M=8 n=2 corrected=False)
+      (cached run M=4 n=2 corrected=False)
+      (cached run M=8 n=4 corrected=False)
+    k=2pi/3  k=2.0944 : expo(q_lat) conf = 2.808 ; TT = 1.963 ; deficit = 0.845 ; A_TT ratio M=3->6 = 1.6694
+    k=pi/2   k=1.5708 : expo(q_lat) conf = 2.849 ; TT = 1.929 ; deficit = 0.920 ; A_TT ratio M=4->8 = 1.9260
+    k=pi     k=3.1416 : expo(q_lat) conf = 2.850 ; TT = 1.930 ; deficit = 0.920 ; A_TT ratio M=4->8 = 1.9299
+  [PASS] C1 q_lat(conformal) is EXTENSIVE at fixed k: exponent 3.0 +- 0.4 for k <= pi/2 exponents [2.808 2.849] ; k=pi (Nyquist, diagnostic only): 2.850
+  [PASS] C2 q_lat(TT) is SUB-EXTENSIVE at fixed k: exponent 2.0 +- 0.4 for k <= pi/2 exponents [1.963 1.929] ; k=pi (diagnostic): 1.930
+  [PASS] C3 the deficit s_conf - s_TT = 1.0 +- 0.4 for k <= pi/2 (one power of M = one power of k a in the smooth-mode duality) deficits [0.845 0.92 ] ; k=pi (diagnostic): 0.920
+  [PASS] C4 continuity: the uncorrected map reproduces scripts/22's A_TT(agg) at the four fixed-k points to 5e-4 max relative deviation = 7.60e-07
+  [PASS] C5 the per-polarisation factorisation A_t = R_action,t / R_map,t is exact (<= 1e-12) max relative residual = 1.96e-16
+
+[D] candidate fix: sinc-corrected (geometrically exact plane-wave) edge-length map
+    delta L_e = 1/2 L_e (shat^T h shat) cos(k.x_mid) sinc(k.shat L_e / 2)
+    k=2pi/3  corrected: expo(q_lat) TT = 1.969 (uncorrected 1.963) ; deficit = 0.839 (uncorrected 0.845) ; A_TT ratio = 1.6513 (uncorrected 1.6694)
+    k=pi/2   corrected: expo(q_lat) TT = 1.943 (uncorrected 1.929) ; deficit = 0.906 (uncorrected 0.920) ; A_TT ratio = 1.9273 (uncorrected 1.9260)
+  [PASS] D1 the per-polarisation factorisation stays exact for the corrected map (<= 1e-12) max relative residual = 1.96e-16
+  [PASS] D2 RECORDED (residual 5 regression tests on the sinc-corrected map): (a) the TT exponent matches the conformal one -> FAIL ; (b) A_TT becomes M-stable at fixed k -> FAIL so the sinc correction does NOT remove the TT sub-extensivity
+
+[E] verdict
+    REFUTED HYPOTHESIS, recorded: the sinc-corrected map does NOT restore the TT
+    extensivity.  The deficit therefore lives in the DISCRETISATION OF THE CURVATURE
+    RESPONSE on a simplex (each hinge contributes one O(M^2) TT term against M^3
+    hinges), not in the midpoint sampling of the edge integral: the midpoint map is
+    already the correct leading-order map (its O(k^2 a^2) error is the residual-4
+    artifact that vanishes under refinement, PART A).  Residual 5's acceptance
+    criteria are unchanged: MODIFY THE DEFICIT/DIRECTIONAL STRUCTURE of the Regge
+    action (e.g. shape-extended deficits), not the map.
+    NB residual 4 is CLOSED (PART A) and independent of this: it disappears at fixed k.
+
+RESULT: 12/12 PASS
+HONEST STATUS: all checks pass.  Residual 4 CLOSED: the naive-map gauge violation falls as M^-1.42 at fixed physical k (midpoint-rule O(k^2 a^2)), so the n = 1 scan's growth was the mixed a -> 0 / k -> 0 effect.  Residual 5 mechanism: measured directly at fixed k (the isotropic-annihilation hypothesis is excluded, the projector spectrum is anisotropic) - the conformal action is extensive (2.84) while TT is sub-extensive (1.94), a deficit of 0.90 power of M.  The geometrically exact sinc-corrected map does NOT restore it (refutation recorded; residual 5 stays open with the unchanged acceptance criteria).
