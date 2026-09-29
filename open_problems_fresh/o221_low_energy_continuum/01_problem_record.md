@@ -5,10 +5,10 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   R1/R2 closed; R3 partial + no-go (4D / curvature / a4); U3,U5 residual
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response: TT ~M^1.93 sub-extensive vs conformal ~M^2.85 at fixed k); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 OPEN (shape-extended deficit; sinc-corrected map refuted); watermark 2026-09-29 16:38
 owner:   O221
 created: 2026-09-28
-updated: 2026-09-28
+updated: 2026-09-29
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
 -->
@@ -881,3 +881,50 @@ conformal 廣延（2.81–2.85；名義 3 之 −5% 如實報告）；TT 次廣�
 
 - **⑤ 缺陷結構**（shape-extended deficit；三迴歸測試不變）：下一輪主攻。
 - 其餘殘餘見 §十二、§二十四、§二十五。
+
+---
+
+## 二十七、register 註冊確認（全對話問題脈絡 × 最新狀態）— 2026-09-29 — 新增節，不改舊節
+
+**調律者指令**：「先確認已經把整個對話框的問題脈落和最新狀態在 problem register 有注冊，然後才繼續推」。本節 = 該確認之審計結果 + 三項補齊。
+
+### 27.1 註冊點（機制）
+
+O221 之 register 註冊點 = `01_problem_record.md` 與 `SESSION_START.md` 內之 `<!-- registry -->` 機器塊（`register.py blocks` 全庫僅 4 個合規塊，o221 佔 2 個；其餘 529 份 doc 無塊係全庫現行慣例，非本 O 缺失）；另加 `register.jsonl` 之 append-only 事件鏈（第 1–17 輪全有事件）。
+
+### 27.2 發現：機器塊停滯（已修）
+
+| 項 | 修前 | 修後 |
+|:---|:-----|:-----|
+| `updated` | **2026-09-28**（= 建立日；其後 17 輪全未反映） | **2026-09-29** |
+| `flags`（PRecord） | `R1/R2 closed; R3 partial + no-go (4D / curvature / a4); U3,U5 residual`（第 1–2 輪狀態） | 現行前沿：gap1+gap2 closed（規範固定 dim 6 / rank N−D=6 / 無 kernel / 慣性 (1+,5−)；conformal 異常 = 規範污染 40.82→1.4118）；residual3 attributed（TT 漂移 = 作用量響應，TT ~M^1.93 次廣延 vs conf ~M^2.85 固定 k）；residual4 closed（中點 O(k²a²)）；**residual5 OPEN（shape-extended deficit；sinc 修正映射已否證）**；水位 2026-09-29 16:38 |
+| `flags`（SESSION_START） | `-` | 同上摘要 + scripts 824/824、audit 123/123、crosscheck 119/119 |
+| `state` | partial | **不變**（partial）⟹ 保 BLOCK-DRIFT = 0（檢查器只比對 state；`flags`/`updated` 不參與比對） |
+
+### 27.3 發現：衍生 clue index 停滯（已修）
+
+`clues.sqlite` 建於 **2026-09-27 19:51**，即**本對話之前** ⟹ `register.py find` / `idcm_problem_find` 完全查唔到 docs 01–18，且會把 O221 解析去**已墓碑之前身**（併入 O206）之舊文本。
+
+**重建後**（`register.py clues`）：**2141 docs / 31980 個 O 編號 mention**；讀回核驗：`find --pid O221` = **132 mentions**，其中 **44 條**在 `o221_low_energy_continuum/` 內（docs 15–18 逐條可查，例：`docs/15_gap2_tt_amplitude.md:1`、`docs/17_residual3_tt_drift.md:57`）。`clues.sqlite` 屬 gitignored 衍生檔（不入庫，可隨時重建）。
+
+### 27.4 發現：跨 O 項掛空（已補）
+
+§十二 列兩項跨 O 待辦，並註「以上兩項 ⚠️ 已入 `problem_register`」。逐項核實：
+
+| 項 | 實況 | 處置 |
+|:---|:-----|:-----|
+| ① 觀測端逐項映射（sinc/dressing → C_ℓ / BAO，卡 O202 ℓ-軸測度） | ✅ **已在**：`cmb_cl/o221-sinc-cl-mapping`（registered，2026-09-29T03:07:34，ref = o221 docs/04） | 無需動作 |
+| ② reading B 用語裁決（「鏈 = 空間格點」propagation/internal 分類，涉 O180/O159 部分表述） | ❌ **唔在**（`register.jsonl` 搜 `reading B`／`用語` = 0 命中）⟹ §十二 之「已入」唔成立 | **本輪補登**：對 **O180** 與 **O159** 各下一條 `note`（append-only、**唔改他人 verdict**），載明 O221 只交判準（propagation 類陳述須經連續化映射 L 讀；mode index 唔係格點，O219），ref = 本 O 之 `01_problem_record.md` |
+
+**§十二 更正**：§十二 原文「已入 problem_register」對第 ② 項唔成立 —— 按 append-only 規則，**原文保留不動**，本節為其更正與補登之審計軌跡。
+
+### 27.5 機器驗證（本輪重跑）
+
+- `register.py check`：**STATUS-DRIFT 0**、**BLOCK-DRIFT 0**、`BLOCK-UNREGISTERED 0`、`PID-NO-FOLDER 0`、`ALIAS-DANGLING 0`、`REF-LINE-OOR 0`；**HARD DRIFT 6**（全部係既存非-O221 項：O1/O4/O17/O143 重複目錄、O198 README-only、O220 ref-missing 等，與本對話無關）。
+- `register.py mirror` → `REGISTER.md`（**221 rows**）已刷新。
+- `status --pid O221`：state = partial、verdict = partial（與機器塊一致 ✓）。
+- `log --pid O180`／`--pid O159`：新 note 已落（2026-09-29T18:24:53）✓。
+
+### 27.6 結論
+
+**整個對話框之問題脈絡（第 1–17 輪事件鏈）與最新狀態（機器塊 flags + note + clue index）現已完整註冊且可查。** 三項停滯（機器塊 updated/flags、clue index、跨 O 項 ②）全部補齊；`state` 未改動 ⟹ 零 drift。

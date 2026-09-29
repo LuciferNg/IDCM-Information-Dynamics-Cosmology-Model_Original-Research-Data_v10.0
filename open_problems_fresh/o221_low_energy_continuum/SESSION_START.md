@@ -5,10 +5,10 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   -
+flags:   gap1+gap2 closed; residual3 attributed; residual4 closed; residual5 open (shape-extended deficit); watermark 2026-09-29 16:38; scripts 824/824; audit 123/123; crosscheck 119/119
 owner:   O221
 created: 2026-09-28
-updated: 2026-09-28
+updated: 2026-09-29
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 + §四 Phase 5.3/5.4
 -->
@@ -321,3 +321,18 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 3. **session id 對應**：SESSION_START 之 `Session 2..17` ↔ PRecord §十一 之 `第 1..17 輪` **同一集合**（Session 1 = 第 1 輪，由「接手起點」節承載）✓；第 13–16 輪各有 register 事件（含 Session 字樣）✓。
 4. **其他完整性**：每個 `scripts/NN` 均在 `final_result.md` 有 PASS 數 ✓；每個 register 引用路徑在磁碟存在 ✓；§十 表內每個檔案存在 ✓；磁碟 doc 數 = crosscheck `DOCS_EXPECTED` = 18 ✓。
 5. **誠實限制（G12，記錄在案）**：scripts/22–23 之中間**失敗版**（8/12 版、4 假 FAIL 版）被最終 all-PASS 版覆蓋，磁碟只剩 canonical log ⟹ 中間失敗之證據僅存於 session 記錄，唔在磁碟（可審計性缺口，非判定為 PASS）。
+
+### Session 17b — 2026-09-29：register 註冊確認（全對話問題脈絡 × 最新狀態）
+
+**調律者指令**：「先確認已經把整個對話框的問題脈落和最新狀態在 problem register 有注冊，然後才繼續推」。
+
+**註冊點**：`01_problem_record.md` + `SESSION_START.md` 之 `<!-- registry -->` 機器塊（全庫 4 個合規塊中 o221 佔 2）+ `register.jsonl` 事件鏈（第 1–17 輪齊全）。
+
+**發現並已修之三項停滯**
+1. **機器塊停滯**：兩塊 `updated: 2026-09-28`、`flags` 仍係第 1–2 輪狀態 ⟹ 刷新為 `updated: 2026-09-29` + 現行前沿 flags（gap1+gap2 closed / residual3 attributed / residual4 closed / **residual5 OPEN: shape-extended deficit** / 水位 16:38）；**`state` 保持 partial**（保 BLOCK-DRIFT = 0）。
+2. **衍生 clue index 停滯**：`clues.sqlite` 建於 2026-09-27 19:51（本對話之前）⟹ 本對話全部 docs 查唔到、O221 被解析去已墓碑之前身 ⟹ **重建**（2141 docs / 31980 mentions）；讀回核驗 `find --pid O221` = 132 mentions（44 條在 o221 目錄內，docs 15–18 可查）。
+3. **跨 O 項 ② 掛空**：§十二 稱兩項已入 register；實核 ① 已在（`cmb_cl/o221-sinc-cl-mapping`，ref docs/04）、② **唔在** ⟹ 對 **O180 / O159** 各補一條 `note`（append-only、唔改他人 verdict）；§十二 原文保留，更正寫入 §二十七（append-only 審計軌跡）。
+
+**機器驗證**：`check` = STATUS-DRIFT 0 / BLOCK-DRIFT 0（HARD DRIFT 6 全屬既存非-O221）；`mirror` → 221 rows；`status O221` = partial/partial 一致 ✓。
+
+**狀態**：register 層零 drift；可繼續推（下一輪 = 殘餘 ⑤ shape-extended deficit）。
