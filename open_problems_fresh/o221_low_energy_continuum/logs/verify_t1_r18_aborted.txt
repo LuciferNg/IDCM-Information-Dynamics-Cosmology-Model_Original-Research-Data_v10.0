@@ -1,0 +1,42 @@
+  01_limit_program.py              RESULT: 58/58 PASS
+  02_gr_qm_side.py                 RESULT: 44/44 PASS
+  03_gr_dimension_source.py        RESULT: 15/15 PASS
+  04_sinc_observable_gate.py       RESULT: 4/4 PASS
+  05_audit_independent.py          RESULT: 89/89 PASS
+  06_doc_crosscheck.py             RESULT: 129/129 PASS
+  07_u3_three_chain.py             RESULT: 12/12 PASS
+  08_u5_exchange.py                RESULT: 22/22 PASS
+  09_u3_nonseparable.py            RESULT: 42/42 PASS
+  10_link_structure.py             RESULT: 22/22 PASS
+  11_three_origin.py               RESULT: 14/14 PASS
+  12_signature.py                  RESULT: 13/13 PASS
+  13_regge_calculus.py             RESULT: 17/17 PASS
+  14_regge_from_t.py               RESULT: 23/23 PASS
+  15_regge_4d.py                   RESULT: 25/25 PASS
+  16_mu_vs_graviton_dof.py         RESULT: 13/13 PASS
+  17_momentum_dof.py               [Q6] result: 11/11 PASS ; [Q6] result: 11/11 PASS ; [Q6] result: 11/11 PASS ; [Q6] result: 11/11 PASS
+  18_gap1_summary.py               RESULT: 9/9 PASS
+  19_audit_increment.py            RESULT: 123/123 PASS
+  20_tt_amplitude_diagnosis.py     RESULT: 14/14 PASS ; RESULT: 14/14 PASS ; RESULT: 14/14 PASS ; RESULT: 14/14 PASS
+  21_gauge_fixed_quotient.py       RESULT: 9/9 PASS ; RESULT: 9/9 PASS ; RESULT: 9/9 PASS ; RESULT: 9/9 PASS
+  22_tt_drift_attribution.py       RESULT: 12/12 PASS
+  23_residual45_closure.py         RESULT: 12/12 PASS
+  24_residual5_shape_extended.py   RESULT: 12/12 PASS
+Traceback (most recent call last):
+  File "/home/wsl/.hermes/cache/scratch/verify_o221_r18.py", line 61, in <module>
+    r = subprocess.run([PY, path], capture_output=True, text=True, cwd=O, timeout=1200)
+  File "/usr/lib/python3.13/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/subprocess.py", line 1222, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/subprocess.py", line 2129, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/subprocess.py", line 1269, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['/usr/bin/python3', '/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/25_residual5_confirmation.py']' timed out after 1200 seconds
+rc=1

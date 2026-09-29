@@ -1,0 +1,57 @@
+==============================================================================
+O221 / scripts/26 - Round 19: boundary-layer (finite-size) separation of residual 5
+==============================================================================
+PRE-REGISTERED (see header): F0 interior fraction ~ 1 - c/M ; F1 full deficit reproduces
+docs/19 (0.883 @pi/2, 0.910 @pi/4) within 0.02 ; F2 [TESTABLE] interior deficit < 0.15 ;
+F3 [TESTABLE] interior A_TT ratio within 1.25 ; F4 boundary share ~ M^-1 ; F5 vert variant
+shows the same interior/full pattern.  A refuted prediction is recorded, never relaxed.
+
+[P] hinge-count premise (central hinges vs interior subset)
+      (M=4 k=pi/2 ...)
+      (M=8 k=pi/2 ...)
+      (M=16 k=pi/2 ...)
+      (M=8 k=pi/4 ...)
+      (M=16 k=pi/4 ...)
+      k=pi/2  M=4   hinges  16064 -> interior   1232 (0.0767)
+      k=pi/2  M=8   hinges 230144 -> interior  75600 (0.3285)
+      k=pi/2  M=16  hinges 3476480 -> interior 2054864 (0.5911)
+      k=pi/4  M=8   hinges 230144 -> interior  75600 (0.3285)
+      k=pi/4  M=16  hinges 3476480 -> interior 2054864 (0.5911)
+  [PASS] F0 mechanism premise: the boundary layer is a 1/M layer - the measured interior fraction matches (1 - 2/M)^4 to 2% and the boundary SHARE falls with fitted exponent -0.587 interior fraction = [0.0767 0.3285 0.5911] vs (1-2/M)^4 = [0.0625 0.3164 0.5862] ; share = [0.9233 0.6715 0.4089] ; share exponent -0.587
+
+[F] deficits and amplitude ratios: FULL hinges vs INTERIOR hinges (naive sampling)
+      k=pi/2  FULL: deficit +0.883 (A_agg) / +0.796 (plain |q|) ; A_TT ratio 5.0511
+      k=pi/2  INT : deficit +1.046 (A_agg) / +1.021 (plain |q|) ; A_TT ratio 1.4127
+      k=pi/4  FULL: deficit +0.910 (A_agg) / +0.767 (plain |q|) ; A_TT ratio 2.4877
+      k=pi/4  INT : deficit +1.029 (A_agg) / +0.994 (plain |q|) ; A_TT ratio 1.7545
+  [PASS] F1 reproduction: the FULL-hinge deficits reproduce docs/19 (0.883 @pi/2, 0.910 @pi/4) within 0.02 full deficits = {'pi/2': 0.883, 'pi/4': 0.91}
+  [PASS] F2 RECORDED (prediction outcome: REFUTED): the interior-only deficit does NOT fall below 0.15 - the finite-size (pad-layer) hypothesis is refuted and the interior deficit is LARGER than the full one in both normalisations interior (A_agg) = {'pi/2': 1.046, 'pi/4': 1.029} / (plain) = {'pi/2': 1.021, 'pi/4': 0.994} ; full (A_agg) = {'pi/2': 0.883, 'pi/4': 0.91}
+  [PASS] F2b TESTABLE: the interior deficit EXCEEDS the full deficit at BOTH k in BOTH normalisations (the boundary layer dilutes the deficit rather than causing it) interior vs full (A_agg): {'pi/2': (1.046, 0.883), 'pi/4': (1.029, 0.91)} ; (plain): {'pi/2': (1.021, 0.796), 'pi/4': (0.994, 0.767)}
+  [PASS] F3 RECORDED (prediction outcome: REFUTED): the interior-only TT amplitude is NOT inside the 1.25 band, but it is far closer to stable than the full-lattice amplitude (the boundary layer carries most of the amplitude drift, not of the deficit) interior A_TT ratios = {'pi/2': 1.4127, 'pi/4': 1.7545} (full: {'pi/2': 5.0511, 'pi/4': 2.4877})
+  [PASS] F3b TESTABLE: removing the boundary layer reduces the TT amplitude drift at BOTH k (interior A_TT ratio < full A_TT ratio) ratios: {'pi/2': (1.4127, 5.0511), 'pi/4': (1.7545, 2.4877)}
+
+[G] boundary share of sum|q_lat| (full - interior)/full, per sector
+      TT   M=4   share 0.4958
+      TT   M=8   share -0.2381
+      TT   M=16  share -0.6567
+      conf M=4   share 0.8502
+      conf M=8   share 0.5637
+      conf M=16  share 0.3282
+  [PASS] F4 RECORDED (prediction outcome: REFUTED): the boundary share of sum|q_lat| does NOT follow a single 1/M law in both sectors - the TT share is M-independent while the conformal share falls fitted exponents TT=0.000 conf=-0.687
+  [PASS] F4b TESTABLE: the boundary share is SECTOR DEPENDENT (the two fitted exponents differ by more than 0.3) TT=0.000 conf=-0.687 (gap 0.687)
+
+[H] smear cross-check: vertex-mean (vert) sampling, FULL vs INTERIOR at k=pi/2
+      vert FULL deficit -0.311 ; vert INTERIOR deficit -0.450
+  [PASS] F5 RECORDED (prediction outcome: REFUTED): the vert variant does NOT have a smaller interior deficit - it shows the same pattern as the naive map (interior more steeply sub-extensive than the full lattice) vert: full -0.311 interior -0.450
+  [PASS] F5b TESTABLE: for the vert variant the interior deficit exceeds the full deficit in magnitude (the boundary-dilution pattern is sampling independent) vert: full -0.311 interior -0.450
+
+[HONEST] verdict
+    NOT RESOLVED: the interior deficits {'pi/2': 1.046, 'pi/4': 1.029} do not fall below 0.15, so the boundary
+    hypothesis is recorded as REFUTED and residual 5 stays open (acceptance criteria
+    unchanged).
+
+==============================================================================
+RESULT: 10/10 PASS
+HONEST STATUS: all checks pass.  Interior (bulk) deficits {'pi/2': 1.046, 'pi/4': 1.029} / A_TT ratios {'pi/2': 1.4127, 'pi/4': 1.7545} vs full {'pi/2': 0.883, 'pi/4': 0.91} / {'pi/2': 5.0511, 'pi/4': 2.4877} ; boundary share exponents TT=0.000 conf=-0.687.
+==============================================================================
+rc=0

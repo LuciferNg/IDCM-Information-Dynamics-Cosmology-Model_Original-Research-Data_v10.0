@@ -1,0 +1,35 @@
+  01_limit_program.py              RESULT: 58/58 PASS
+  02_gr_qm_side.py                 RESULT: 44/44 PASS
+  03_gr_dimension_source.py        RESULT: 15/15 PASS
+  04_sinc_observable_gate.py       RESULT: 4/4 PASS
+  05_audit_independent.py          RESULT: 89/89 PASS
+  06_doc_crosscheck.py             RESULT: 134/134 PASS
+  07_u3_three_chain.py             RESULT: 12/12 PASS
+  08_u5_exchange.py                RESULT: 22/22 PASS
+  09_u3_nonseparable.py            RESULT: 42/42 PASS
+  10_link_structure.py             RESULT: 22/22 PASS
+  11_three_origin.py               RESULT: 14/14 PASS
+  12_signature.py                  RESULT: 13/13 PASS
+  13_regge_calculus.py             RESULT: 17/17 PASS
+  14_regge_from_t.py               RESULT: 23/23 PASS
+  15_regge_4d.py                   RESULT: 25/25 PASS
+  16_mu_vs_graviton_dof.py         RESULT: 13/13 PASS
+  17_momentum_dof.py               [Q6] result: 11/11 PASS ; [Q6] result: 11/11 PASS ; [Q6] result: 11/11 PASS ; [Q6] result: 11/11 PASS
+  18_gap1_summary.py               RESULT: 9/9 PASS
+  19_audit_increment.py            RESULT: 123/123 PASS
+  20_tt_amplitude_diagnosis.py     RESULT: 14/14 PASS ; RESULT: 14/14 PASS ; RESULT: 14/14 PASS ; RESULT: 14/14 PASS
+  21_gauge_fixed_quotient.py       RESULT: 9/9 PASS ; RESULT: 9/9 PASS ; RESULT: 9/9 PASS ; RESULT: 9/9 PASS
+  22_tt_drift_attribution.py       RESULT: 12/12 PASS
+  23_residual45_closure.py         RESULT: 12/12 PASS
+  24_residual5_shape_extended.py   RESULT: 12/12 PASS
+  25_residual5_confirmation.py     RESULT: 9/9 PASS
+  26_boundary_layer_separation.py  RESULT: 10/10 PASS
+    logs/21_gauge_fixed_quotient_M3.txt byte-identical = True
+    logs/21_gauge_fixed_quotient_M4.txt byte-identical = True
+    logs/21_gauge_fixed_quotient_M6.txt byte-identical = True
+    logs/21_gauge_fixed_quotient_M8.txt byte-identical = True
+
+=== T1 TOTAL: 870/870 PASS (failures 0) ===
+data/log integrity: changed=['verify_t1_r19.txt'] new=[] gone=[]
+!! CANONICAL FILE CLOBBERED BY RERUN: ['verify_t1_r19.txt']
+rc=0

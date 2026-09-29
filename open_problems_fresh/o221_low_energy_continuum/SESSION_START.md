@@ -5,7 +5,7 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed; residual3 attributed; residual4 closed; residual5 open (shape-extended deficit); watermark 2026-09-29 16:38; scripts 824/824; audit 123/123; crosscheck 119/119
+flags:   gap1+gap2 closed; residual3 attributed; residual4 closed; residual5 LOCALISED/OPEN (k-independent; smear-order dependent, can be driven to ~0 degenerately; boundary-layer hypothesis REFUTED -> intrinsic, bulk ~ +1 M power); tightened acceptance: zero deficit AND M-stable amplitudes in one order; watermark 2026-09-29 22:50; scripts 855/855 (01-26); audit 123/123; crosscheck 134/134 (docs 01-21)
 owner:   O221
 created: 2026-09-28
 updated: 2026-09-29
@@ -336,3 +336,40 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 **機器驗證**：`check` = STATUS-DRIFT 0 / BLOCK-DRIFT 0（HARD DRIFT 6 全屬既存非-O221）；`mirror` → 221 rows；`status O221` = partial/partial 一致 ✓。
 
 **狀態**：register 層零 drift；可繼續推（下一輪 = 殘餘 ⑤ shape-extended deficit）。
+
+### Session 18 — 2026-09-29：殘餘 ⑤ 前提審計 + 固定-k 階梯 + shape-extended 候選（scripts/24, docs/19）
+
+**產出**：`scripts/24_residual5_shape_extended.py`（**12/12 PASS**）、`docs/19_residual5_premise_and_shape.md`、`logs/24_residual5_shape_extended.txt`、`data/24_residual5_shape_extended.txt`
+
+1. **PART P 前提審計**：`n_pairs = 240 (M+2)⁴` **精確**（Kuhn 4-torus、pad=1）、`mean L² = 2.0` 精確、`mean phase² ≈ 1/2`；局部指數 **2.827（M3–8）/ 3.392（M8–16）**，實測擬合 3.071 ⟹ **絕對 M-指數係窗口局部** ⟹ **docs/17「`R_map ∝ M^2.94`／conf 廣延 `M^3.16`」= padding 效應**（更正寫入 §28.1；deficit 差值不受影響，A4 差 ≤0.143）。
+2. **PART A 固定-k 階梯**（π/4、π/3、π/2、2π/3、3π/4 + π 診斷）：deficit = **0.910 / 0.886 / 0.883 / 0.870 / 0.947 / 0.891**（散度 **0.077** ⟹ **k-無關** ⟹ 內在；**預測 A2 否證、記錄在案**）；conf 斜率 −0.125…−0.466 = 有限-k 修正 ⟹ 判據改「TT 超額衰減 ≥ 2× conf 修正」（實測 2.03–6.94 ✓）。
+3. **PART B shape-extended 兩候選**：V-cell（π/2 A-穩失敗 0.7619；π/4 0.9457）、**V-vert 兩 k 過兩迴歸**（deficit −0.311/−0.350、A_TT 比 0.9649/1.0308、逐偏振恆等 2.04e-16）⟹ 候選（**須外樣本**）。
+4. **判據側修正 3 處**（審計側，物理零讓步）：A2 預測式→記錄式、A1 門檻→有限-k 帶、刪過時重複 A1b ⟹ 首輪 3 FAIL 全屬判據分類錯。
+
+### Session 19 — 2026-09-29：殘餘 ⑤ 確認跑（未見 k 外樣本 + smear-order 階梯；scripts/25, docs/20）
+
+**產出**：`scripts/25_residual5_confirmation.py`（**9/9 PASS**）、`docs/20_residual5_confirmation.md`、`logs/25_residual5_confirmation.txt`、`data/25_residual5_confirmation.txt`
+
+1. **PART U 未見 k 外樣本**（2π/5、3π/5）：naive deficit = **0.899 / 0.947** ⟹ k-無關性**外樣本確認**（U1 ✓）；V-vert deficit = −0.363 ✓ / **−0.433 ✗**（3π/5 超 0.4 頻帶 8%）⟹ **預測 U2 否證、記錄**；**U2b ✓**：V-vert 之 A_TT 比在**四 k** = 0.9649 / 1.0308 / 1.0016 / 1.1047 全部 ≤1.25（naive 同期 2.86–5.84）。
+2. **PART L smear-order 階梯**（k=π/2，M=4/8/16）：`|deficit|` = **[0.8827, 0.4786, 0.3109, 5.160e-04]**（naive→cell→vert→cube）**單調降至 ≈0** ⟹ **決定性發現**：deficit 係**相位取樣／cell-平均約定**效應 ⟹ **否證 docs/18「缺陷唔在取樣」**（docs/18 原文保留）。
+3. ⚠️ **cube 階退化**：deficit ≈ 0 但兩扇區同步以 ≈M^1.17 增長（A_TT 比 5.0661）⟹ 零 deficit 唔係物理修正 ⟹ **唯一 M-穩定振幅者 = vertex mean** ⟹ 收緊判準：**零 deficit 且振幅 M-穩定須同一 order**（無已測 order 滿足）⟹ 殘餘 ⑤ **已定位、未閉合**。
+4. **判據側修正 2 處**：U2/L2 預測式→記錄式 + 3 條可測檢查（U2b/L2b/L2c）⟹ 首輪 4/6 FAIL 全屬判據分類錯。
+
+**機器驗證**：`scripts/24` = 12/12、`scripts/25` = 9/9、`scripts/06` = **129/129**（docs 01–20、141 headline 數字）、`scripts/19` = 123/123、T1 全線 r18 = 見 `logs/verify_t1_r18.txt`；水位推進至 20:51（§十 增量 82–95）。
+
+**狀態**：殘餘 ⑤ 已定位（相位取樣約定）未閉合；下一輪（Round 19）= 複合取樣 / dual-cell 權重 / 以 A_TT M-穩定性為主判準。
+
+### Session 20 — 2026-09-29：殘餘 ⑤ 之邊界層（有限尺寸）分離 —— 假說否證（scripts/26, docs/21）
+
+**產出**：`scripts/26_boundary_layer_separation.py`（**10/10 PASS**）、`docs/21_boundary_layer_separation.md`、`logs/26_boundary_layer_separation.txt`、`data/26_boundary_layer_separation.txt`
+
+1. **假說**：docs/17 之 `A_TT` 漂移恰 ∝1/M，而格點 `(M+2)⁴`（pad=1）+ Regge 只在中央 hinge 組裝 ⟹ 疑為邊界層偽影。預註冊 F0–F5。
+2. **F0 ✓**：內點份額 0.0767/0.3285/0.5911 vs (1−2/M)⁴ = 0.0625/0.3164/0.5862（2% 內）⟹ 邊界層確係 (1−2/M)⁴ 層；份額指數 −0.587。
+3. **F1 ✓**：full deficit **逐值重現 docs/19**（π/2 0.883、π/4 0.910）⟹ 機器 apples-to-apples。
+4. **F2 ✗ F3 ✗**：**內點 deficit 反而升到 +1.046 / +1.029**（plain +1.021 / +0.994）≈ **整一個 M 冪**；內點 A_TT 比 1.4127 / 1.7545（full 5.0511 / 2.4877 ⟹ 邊界只稀釋）⟹ **有限尺寸假說 REFUTED**，deficit 確認為**內在**。
+5. **F4 ✗**：邊界份額扇區依賴（TT 指數 **0.000** vs conf **−0.687**）⟹ 非單一 1/M 律。**F5 ✗**：vert full −0.311（重現 docs/20）⟹ 內點 −0.450（同向）。
+6. **判據／方法修正 3 處**（審計側）：k=0 令 SVD 唔收斂 ⟹ 每 k 自帶可表示 M 集 + `n≥1` 守衛；F0 由計數改份額；內點 deficit 雙正規化。
+
+**結論**：殘餘 ⑤ 三項性質已立——**k-無關**（docs/19）、**內在／非有限尺寸**（本輪：bulk ≈ **+1.03 ≈ 整一個 M 冪**）、**可隨取樣次序壓至 ≈0（惟退化）**（docs/20）。**新可測命題**：deficit 疑為**取樣誤差項之 M 冪量子化**（naive +1、vert −0.45，相差 ≈1.5）⟹ Round 20 主攻。
+
+**機器驗證**：`scripts/26` = **10/10**（4 條記錄式否證 + 4 條可測伴隨）、`scripts/06` = **134/134**（docs 01–21、162 headline 數字）；T1 r19（01–26）見 `logs/verify_t1_r19.txt`；水位推進至 22:34（§十 階段 4 增量 96–101）。

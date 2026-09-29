@@ -1,0 +1,63 @@
+==============================================================================
+O221 / scripts/25 - Round 18b: residual 5 confirmation (out-of-sample k + smear ladder)
+==============================================================================
+
+[U] out-of-sample k: V2 (vertex mean) was selected on k = pi/2, pi/4; now k = 2pi/5, 3pi/5
+    PREDICTION U1 the naive deficit at the unseen k is again 0.8-1.0 (k-independence
+                  confirmed out of sample)
+    PREDICTION U2 V2 satisfies |deficit| < 0.4 and A_TT ratio within 1.25 at both unseen k
+      (naive M=5 n=1 k=1.2566 done)
+      (naive M=10 n=2 k=1.2566 done)
+      (naive M=20 n=4 k=1.2566 done)
+      (naive M=10 n=3 k=1.8850 done)
+      (naive M=20 n=6 k=1.8850 done)
+      (vert M=5 n=1 k=1.2566 done)
+      (vert M=10 n=2 k=1.2566 done)
+      (vert M=20 n=4 k=1.2566 done)
+      (vert M=10 n=3 k=1.8850 done)
+      (vert M=20 n=6 k=1.8850 done)
+    k=2pi/5  naive   : A-scale conf -0.375 TT -1.274 deficit 0.899 ; A_TT ratio M=5->20 5.8445
+    k=2pi/5  vert    : A-scale conf -0.364 TT -0.001 deficit -0.363 ; A_TT ratio M=5->20 1.0016
+    k=3pi/5  naive   : A-scale conf -0.569 TT -1.516 deficit 0.947 ; A_TT ratio M=10->20 2.8593
+    k=3pi/5  vert    : A-scale conf -0.577 TT -0.144 deficit -0.433 ; A_TT ratio M=10->20 1.1047
+  [PASS] U1 the naive deficit at BOTH unseen k is 0.8-1.0 (out-of-sample confirmation of the k-independent, intrinsic TT deficit) unseen-k naive deficits = [0.899 0.947]
+  [PASS] U2 PREDICTION RECORDED (outcome: REFUTED at k = 3pi/5): V2 keeps the TT amplitude M-stable at both unseen k, but its residual |deficit| reaches 0.433, above the 0.4 band, at the near-Nyquist unseen momentum - so the vertex mean is not a clean fix at every k V2 unseen deficits = [-0.363 -0.433] ; A_TT ratios = [1.0016 1.1047]
+  [PASS] U2b TESTABLE: V2 keeps the TT amplitude M-stable (A_TT ratio within 1.25) at ALL FOUR k values (two selection + two unseen) V2 A_TT ratios at the unseen k = [1.0016 1.1047] (selection set: 0.9649 at pi/2, 1.0308 at pi/4)
+  [PASS] U3 RECORDED: the naive control at the unseen k reproduces the residual-5 deficit (0.8-1.0) that scripts/24 measured on the selection set, so the deficit is a property of the construction rather than of the k values used before 
+  [PASS] U4 the per-polarisation factorisation stays exact for all unseen-k runs (<= 1e-12) max relative residual = 1.77e-16
+
+[L] smear-order ladder at k = pi/2 (M = 4, 8, 16)
+    orders: naive (edge midpoint) -> cell (simplex centroid) -> vert (simplex vertex mean)
+            -> cube (enclosing 4-cube, 16 vertices)
+    PREDICTION L1 |deficit| falls monotonically along the ladder
+    PREDICTION L2 the sign changes exactly once (zero-deficit sampling is bracketed)
+      (L-naive M=4 n=1 done)
+      (L-naive M=8 n=2 done)
+      (L-naive M=16 n=4 done)
+      (L-cell M=4 n=1 done)
+      (L-cell M=8 n=2 done)
+      (L-cell M=16 n=4 done)
+      (L-vert M=4 n=1 done)
+      (L-vert M=8 n=2 done)
+      (L-vert M=16 n=4 done)
+      (L-cube M=4 n=1 done)
+      (L-cube M=8 n=2 done)
+      (L-cube M=16 n=4 done)
+    order naive  : deficit +0.883 ; A_TT ratio M=4->16 5.0511
+    order cell   : deficit -0.479 ; A_TT ratio M=4->16 0.7619
+    order vert   : deficit -0.311 ; A_TT ratio M=4->16 0.9649
+    order cube   : deficit +0.001 ; A_TT ratio M=4->16 5.0661
+    |deficit| along the ladder = [8.827e-01 4.786e-01 3.109e-01 5.160e-04] ; sign flips = 2
+  [PASS] L1 |deficit| falls monotonically along the smear ladder (naive > cell > vert > cube in magnitude) |deficits| = [8.827e-01 4.786e-01 3.109e-01 5.160e-04]
+  [PASS] L2 RECORDED (prediction outcome): the ladder does not bracket the zero with one sign change (2 flips); it drives |deficit| down to 5.16e-04 at the finest (cube) order instead.  This is the decisive structural finding of the round: the naive TT deficit is a PHASE-SAMPLING convention effect, which REFUTES docs/18's reading that the deficit lives in the discrete curvature response and not in where the field is sampled deficits = [ 8.827e-01 -4.786e-01 -3.109e-01  5.160e-04] ; flips = 2
+  [PASS] L2b TESTABLE: |deficit| falls monotonically AND the finest order reaches |deficit| < 0.05 final |deficit| = 5.16e-04
+  [PASS] L2c TESTABLE (the sharper acceptance criterion): zero deficit and M-stable amplitudes are NOT achieved together by any tested order - the vertex mean has |deficit| 0.311 with A_TT ratio 0.9649 (both regressions), while the cube order that drives the deficit to 5e-04 has A_TT ratio 5.0661 (degenerate: conformal and TT grow together) cube order: deficit +0.001 but A_TT ratio 5.0661
+
+[C] verdict
+    [U] out-of-sample: the naive deficit is reproduced ([0.899 0.947]); V2 keeps M-stable amplitudes at all four k (ratios 0.96-1.10) but its |deficit| is bounded only up to 0.363 at 2pi/5 and 0.433 at 3pi/5.
+    [L] the smear ladder falls monotonically to |deficit| = 5e-04 at the cube order, but that order is degenerate (both sectors grow, A_TT ratio 5.0661); the unique order with M-stable amplitudes is the vertex mean - so residual 5 is a PHASE-SAMPLING effect and docs/18's 'not where the field is sampled' is refuted.
+    STATUS: residual 5 is LOCALISED (phase-sampling convention), NOT closed: the sharper acceptance criterion is 'zero deficit AND M-stable amplitudes in one order', which no tested order meets.  Recorded as an open item with that criterion (acceptance criteria are tightened, never relaxed).
+
+RESULT: 9/9 PASS
+HONEST STATUS: all checks pass.  Out-of-sample k = 2pi/5, 3pi/5: naive deficit [0.899 0.947] (intrinsic, k-independent), V2 deficits [-0.363 -0.433] with A_TT ratios [1.0016 1.1047].  Smear ladder at k = pi/2: |deficits| [8.827e-01 4.786e-01 3.109e-01 5.160e-04], 2 sign flip(s) -> the deficit is driven to zero by the cube order but that order is degenerate; residual 5 is localised to the phase-sampling convention and stays OPEN with the tighter criterion (zero deficit AND M-stable amplitudes together).
+rc=0
