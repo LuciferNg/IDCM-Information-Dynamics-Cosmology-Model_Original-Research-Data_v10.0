@@ -1,0 +1,96 @@
+==============================================================================
+O221 / scripts/09 - U3 final leg: non-separable 3D deformations
+==============================================================================
+IDENTITY: a2 = -sum(lambda) = -Tr(L) exactly  (graph Laplacian, any deformation)
+
+[Q1/Q2] zero-mean density deformation, M=16, small-eps extraction (eps = 1e-3, 2e-3)
+     shape            c1(1e-3)     A(measured)     18 dim^2 - G2/2  rel      refined diff
+     plane q=1        +0.00e+00  73415.844993    73416.210565     5.0e-06  3.4e-01
+     plane q=2        +0.00e+00  72527.952034    72528.309376     4.9e-06  3.4e-01
+     square (1,1)     +0.00e+00  73103.877373    73104.421130     7.4e-06  5.1e-01
+     cube (1,1,1)     +0.00e+00  72791.822945    72792.631695     1.1e-05  7.6e-01
+     diagonal q=1     +0.00e+00  72792.272267    72792.631695     4.9e-06  3.4e-01
+     random fixed     -4.06e-03  67606.323188    67606.934146     9.0e-06  5.7e-01
+  [PASS] Q1.plane q=1 plane q=1 : c1 -> 0 (no linear response ; residual = eps^3 term) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00 (eps^2 scaling => c1 = 0 in the limit)
+  [PASS] Q2.plane q=1 plane q=1 : closed form A = 18 sum(d^2) - G2/2 verified (<3e-5 rel) 73415.844993 vs 73416.210565 (5.0e-06 rel)
+  [PASS] Q2b.plane q=1 plane q=1 : extraction convergent (refined eps = 2.5e-4 agrees) coarse 73415.844993 vs refined 73416.187748 (diff 3.4e-01)
+  [PASS] Q1.plane q=2 plane q=2 : c1 -> 0 (no linear response ; residual = eps^3 term) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00 (eps^2 scaling => c1 = 0 in the limit)
+  [PASS] Q2.plane q=2 plane q=2 : closed form A = 18 sum(d^2) - G2/2 verified (<3e-5 rel) 72527.952034 vs 72528.309376 (4.9e-06 rel)
+  [PASS] Q2b.plane q=2 plane q=2 : extraction convergent (refined eps = 2.5e-4 agrees) coarse 72527.952034 vs refined 72528.287157 (diff 3.4e-01)
+  [PASS] Q1.square (1,1) square (1,1) : c1 -> 0 (no linear response ; residual = eps^3 term) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00 (eps^2 scaling => c1 = 0 in the limit)
+  [PASS] Q2.square (1,1) square (1,1) : closed form A = 18 sum(d^2) - G2/2 verified (<3e-5 rel) 73103.877373 vs 73104.421130 (7.4e-06 rel)
+  [PASS] Q2b.square (1,1) square (1,1) : extraction convergent (refined eps = 2.5e-4 agrees) coarse 73103.877373 vs refined 73104.387178 (diff 5.1e-01)
+  [PASS] Q1.cube (1,1,1) cube (1,1,1) : c1 -> 0 (no linear response ; residual = eps^3 term) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00 (eps^2 scaling => c1 = 0 in the limit)
+  [PASS] Q2.cube (1,1,1) cube (1,1,1) : closed form A = 18 sum(d^2) - G2/2 verified (<3e-5 rel) 72791.822945 vs 72792.631695 (1.1e-05 rel)
+  [PASS] Q2b.cube (1,1,1) cube (1,1,1) : extraction convergent (refined eps = 2.5e-4 agrees) coarse 72791.822945 vs refined 72792.581108 (diff 7.6e-01)
+  [PASS] Q1.diagonal q=1 diagonal q=1 : c1 -> 0 (no linear response ; residual = eps^3 term) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00 (eps^2 scaling => c1 = 0 in the limit)
+  [PASS] Q2.diagonal q=1 diagonal q=1 : closed form A = 18 sum(d^2) - G2/2 verified (<3e-5 rel) 72792.272267 vs 72792.631695 (4.9e-06 rel)
+  [PASS] Q2b.diagonal q=1 diagonal q=1 : extraction convergent (refined eps = 2.5e-4 agrees) coarse 72792.272267 vs refined 72792.609339 (diff 3.4e-01)
+  [PASS] Q1.random fixed random fixed : c1 -> 0 (no linear response ; residual = eps^3 term) c1(1e-3) = -4.06e-03 -> c1(5e-4) = -1.01e-03 (eps^2 scaling => c1 = 0 in the limit)
+  [PASS] Q2.random fixed random fixed : closed form A = 18 sum(d^2) - G2/2 verified (<3e-5 rel) 67606.323188 vs 67606.934146 (9.0e-06 rel)
+  [PASS] Q2b.random fixed random fixed : extraction convergent (refined eps = 2.5e-4 agrees) coarse 67606.323188 vs refined 67606.895900 (diff 5.7e-01)
+     trap: a least-squares fit over eps = 0.02..0.20 on the same data gives c1 ~ -900
+           and A 16%% off (the O(eps^3) term) -- extraction must use eps << 1.
+
+[Q3] curvature functional: int R sqrt(g) = (2/9) eps^2 G2 (100%% gradient)
+     plane q=1        c1 = +0.00e+00 ; c2(measured) = 138.572778   ; (2/9)G2 = 138.573082  
+  [PASS] Q3.plane q=1 plane q=1 : int R sqrt(g) = (2/9) eps^2 G2 (<3e-5 rel) 138.572778 vs 138.573082 (2.2e-06 rel)
+  [PASS] Q3L.plane q=1 plane q=1 : no linear-order curvature on the torus (total divergence) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00
+     plane q=2        c1 = +0.00e+00 ; c2(measured) = 533.194709   ; (2/9)G2 = 533.195833  
+  [PASS] Q3.plane q=2 plane q=2 : int R sqrt(g) = (2/9) eps^2 G2 (<3e-5 rel) 533.194709 vs 533.195833 (2.1e-06 rel)
+  [PASS] Q3L.plane q=2 plane q=2 : no linear-order curvature on the torus (total divergence) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00
+     square (1,1)     c1 = +0.00e+00 ; c2(measured) = 277.145253   ; (2/9)G2 = 277.146164  
+  [PASS] Q3.square (1,1) square (1,1) : int R sqrt(g) = (2/9) eps^2 G2 (<3e-5 rel) 277.145253 vs 277.146164 (3.3e-06 rel)
+  [PASS] Q3L.square (1,1) square (1,1) : no linear-order curvature on the torus (total divergence) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00
+     cube (1,1,1)     c1 = -2.71e-17 ; c2(measured) = 415.717195   ; (2/9)G2 = 415.719246  
+  [PASS] Q3.cube (1,1,1) cube (1,1,1) : int R sqrt(g) = (2/9) eps^2 G2 (<3e-5 rel) 415.717195 vs 415.719246 (4.9e-06 rel)
+  [PASS] Q3L.cube (1,1,1) cube (1,1,1) : no linear-order curvature on the torus (total divergence) c1(1e-3) = -2.71e-17 -> c1(5e-4) = -2.85e-16
+     diagonal q=1     c1 = +0.00e+00 ; c2(measured) = 415.718335   ; (2/9)G2 = 415.719246  
+  [PASS] Q3.diagonal q=1 diagonal q=1 : int R sqrt(g) = (2/9) eps^2 G2 (<3e-5 rel) 415.718335 vs 415.719246 (2.2e-06 rel)
+  [PASS] Q3L.diagonal q=1 diagonal q=1 : no linear-order curvature on the torus (total divergence) c1(1e-3) = +0.00e+00 -> c1(5e-4) = +0.00e+00
+     random fixed     c1 = +2.10e-05 ; c2(measured) = 2720.463004  ; (2/9)G2 = 2720.473713 
+  [PASS] Q3.random fixed random fixed : int R sqrt(g) = (2/9) eps^2 G2 (<3e-5 rel) 2720.463004 vs 2720.473713 (3.9e-06 rel)
+  [PASS] Q3L.random fixed random fixed : no linear-order curvature on the torus (total divergence) c1(1e-3) = +2.10e-05 -> c1(5e-4) = +5.26e-06
+
+[Q4] UNIVERSALITY at matched amplitude (sum d^2 = M^3), plane mode q:
+     q    A(a2)         c2(curv)      kappa = A/c2   kappa(q)/kappa(1)
+     1    73415.84499   138.57308     529.7987       1.0000
+     2    72527.95203   533.19583     136.0250       0.2567
+     3    71199.12485   1123.79052    63.3562        0.1196
+     4    69631.55763   1820.44444    38.2498        0.0722
+     6    66735.36804   3107.69306    21.4742        0.0405
+  [PASS] Q4.1 c2(curvature) is purely gradient: scales as q^2 kappa(1)/kappa(6) = 24.67 (analytic 24.7; pure q^2 = 36)
+  [PASS] Q4.2 A(a2) is ultralocal-dominated: only O(q^2/M^2) drift in q A(q=6)/A(q=1) = 0.9090 (matches 18 sum d^2 - G2/2 exactly)
+  [PASS] Q4.3 kappa is NOT universal => a2 is NOT the Einstein-Hilbert term kappa varies 24.7x at matched density amplitude (no single EH coefficient)
+
+[Q5] continuum limit: the gradient part of a2 is lattice-suppressed, curvature is not
+     q=1 matched amplitude: ratio [ultralocal 18 sum d^2] / [(1/2) G2]
+       M=8    ratio = 61.4558     
+       M=16   ratio = 236.4673    
+       M=32   ratio = 936.7818    
+  [PASS] Q5.1 ultralocal/gradient ratio grows ~M^2 (a2 -> purely ultralocal in the continuum) ratio 61.5 (M=8) -> 936.8 (M=32), growth 15.2x
+  [PASS] Q5.2 the curvature functional stays 100%% gradient at every M (no ultralocal part) (2/9)G2 contains no sum(d^2) term -- exact derivation of Q3
+
+[Q6] off-diagonal (shear) bond-weight deformation: exact blindness of a2 + control
+     (a) zero-mean shear g(y,z) = cos*cos ; x-bond weight 1 + eps*g, M=6 (216 sites)
+       eps=1e-03 : dev(-Tr L) = +0.000e+00 ; dev(a2 from eigh) = +0.000e+00
+  [PASS] Q6.a eps=1e-03 : a2 response IDENTICALLY ZERO for zero-mean bond weights dev(a2) = 0.0e+00 (all orders, not just linear)
+       eps=2e-03 : dev(-Tr L) = +0.000e+00 ; dev(a2 from eigh) = +0.000e+00
+  [PASS] Q6.a eps=2e-03 : a2 response IDENTICALLY ZERO for zero-mean bond weights dev(a2) = 0.0e+00 (all orders, not just linear)
+       eps=4e-03 : dev(-Tr L) = +0.000e+00 ; dev(a2 from eigh) = +0.000e+00
+  [PASS] Q6.a eps=4e-03 : a2 response IDENTICALLY ZERO for zero-mean bond weights dev(a2) = 0.0e+00 (all orders, not just linear)
+  [PASS] Q6.1 identity a2 = -Tr(L) exact for a non-separable off-diagonal deformation Tr L = 2 sum_bonds w  =>  a2 = -2 sum_bonds w exactly
+     (b) POSITIVE CONTROL: non-zero-mean (volume-changing) shear g = 1 + cos*cos
+       eps=1e-03 : dev(a2) = -4.320000e-01 ; predicted -2*eps*M^3 = -4.320000e-01
+  [PASS] Q6.b eps=1e-03 : volume term reproduced exactly (a2 tracks volume, not curvature) dev = -4.320000e-01 vs -4.320000e-01
+       eps=2e-03 : dev(a2) = -8.640000e-01 ; predicted -2*eps*M^3 = -8.640000e-01
+  [PASS] Q6.b eps=2e-03 : volume term reproduced exactly (a2 tracks volume, not curvature) dev = -8.640000e-01 vs -8.640000e-01
+       eps=4e-03 : dev(a2) = -1.728000e+00 ; predicted -2*eps*M^3 = -1.728000e+00
+  [PASS] Q6.b eps=4e-03 : volume term reproduced exactly (a2 tracks volume, not curvature) dev = -1.728000e+00 vs -1.728000e+00
+     structural: Tr L = 2 sum_bonds w is EXACTLY linear in the bond weights, so any
+     zero-mean bond deformation is invisible to a2 at ALL orders, while the curvature
+     functional responds at O(eps^2). a2 tracks the volume/density, never the curvature.
+
+==============================================================================
+RESULT: 42/42 PASS
+==============================================================================

@@ -1,0 +1,58 @@
+==============================================================================
+O221 / scripts/08 - U5: spectral measure <-> limit exchange
+==============================================================================
+
+[U1] compact support and normalisation
+  [PASS] U1.44 all gamma in [0,4] (M=44) range = [0, 4], gamma_max = 4.000000000000
+  [PASS] U1.88 all gamma in [0,4] (M=88) range = [0, 4], gamma_max = 4.000000000000
+  [PASS] U1.176 all gamma in [0,4] (M=176) range = [0, 4], gamma_max = 4.000000000000
+  [PASS] U1.352 all gamma in [0,4] (M=352) range = [0, 4], gamma_max = 4.000000000000
+  [PASS] U1.5 arcsine law is normalised to 1 integral = 1.0
+  [PASS] U1.6 first moment of the arcsine law = 2 (= sum gamma / M, an identity for every M) E[gamma] = 2.0
+
+[U2] the linear moment is exact at every M (no discretisation error)
+  [PASS] U2.44 T_M[gamma] = 2 exactly (M=44) T_M = 2.000000000000
+  [PASS] U2.88 T_M[gamma] = 2 exactly (M=88) T_M = 2.000000000000
+  [PASS] U2.176 T_M[gamma] = 2 exactly (M=176) T_M = 2.000000000000
+  [PASS] U2.352 T_M[gamma] = 2 exactly (M=352) T_M = 2.000000000000
+  [PASS] U2.704 T_M[gamma] = 2 exactly (M=704) T_M = 2.000000000000
+
+[U3] weak-* convergence for bounded continuous observables (rate per doubling of M)
+     gamma^2            T_inf = 6.0                    errors = ['0.00e+00', '0.00e+00', '0.00e+00', '0.00e+00', '0.00e+00']  rate = inf
+     sqrt(gamma)        T_inf = 1.2732395447351628     errors = ['5.41e-04', '1.35e-04', '3.38e-05', '8.45e-06', '2.11e-06']  rate = 2.00
+     exp(gamma)         T_inf = 16.843983681258987     errors = ['0.00e+00', '0.00e+00', '0.00e+00', '3.55e-15', '3.55e-15']  rate = inf
+     1/(1+gamma)        T_inf = 0.4472135954999579     errors = ['0.00e+00', '0.00e+00', '5.55e-17', '1.11e-16', '0.00e+00']  rate = inf
+     gamma*exp(-gamma)  T_inf = 0.18647806660946675    errors = ['5.55e-17', '2.78e-17', '2.78e-17', '2.78e-17', '2.78e-17']  rate = inf
+  [PASS] U3.gamma^2 gamma^2 : commutation verified (exact at float64, or rate >= 0.8) exact: last error = 0.0e+00 (trapezoid spectral accuracy for periodic analytic f)
+  [PASS] U3.sqrt(gamma) sqrt(gamma) : commutation verified (exact at float64, or rate >= 0.8) rate = 2.00, last error = 2.11e-06
+  [PASS] U3.exp(gamma) exp(gamma) : commutation verified (exact at float64, or rate >= 0.8) exact: last error = 3.6e-15 (trapezoid spectral accuracy for periodic analytic f)
+  [PASS] U3.1/(1+gamma) 1/(1+gamma) : commutation verified (exact at float64, or rate >= 0.8) exact: last error = 0.0e+00 (trapezoid spectral accuracy for periodic analytic f)
+  [PASS] U3.gamma*exp(-gamma) gamma*exp(-gamma) : commutation verified (exact at float64, or rate >= 0.8) exact: last error = 2.8e-17 (trapezoid spectral accuracy for periodic analytic f)
+  [PASS] U3.6 all five observables used by O221 are bounded continuous on [0,4] (C_b class) gamma, gamma^2, sqrt(gamma), exp(gamma), 1/(1+gamma), gamma*exp(-gamma*t)
+
+[U4] boundary: M-dependent (window) functionals do NOT commute
+     illustration: window [0, 1/M]  (this is the class used by the d_s plateau)
+       M=88   empirical = 0.034091 ; arcsine measure = 0.033948 ; rel error = +0.4%
+       M=176  empirical = 0.028409 ; arcsine measure = 0.023999 ; rel error = +18.4%
+       M=352  empirical = 0.014205 ; arcsine measure = 0.016968 ; rel error = -16.3%
+       M=704  empirical = 0.012784 ; arcsine measure = 0.011997 ; rel error = +6.6%
+     sharp counterexample: window [0, gamma_1(M)] (first excited mode; 3 modes: 0, 1, M-1)
+       M=44   modes in window = 3 (frac = 0.068182) ; arcsine measure = 0.045455 ; rel = +50.00%
+  [PASS] U4.44 window [0,gamma_1] does not commute: rel error ~ +50% (M=44) rel = +50.00% (structural: 3/M modes vs measure 2/M)
+       M=88   modes in window = 3 (frac = 0.034091) ; arcsine measure = 0.022727 ; rel = +50.00%
+  [PASS] U4.88 window [0,gamma_1] does not commute: rel error ~ +50% (M=88) rel = +50.00% (structural: 3/M modes vs measure 2/M)
+       M=176  modes in window = 3 (frac = 0.017045) ; arcsine measure = 0.011364 ; rel = +50.00%
+  [PASS] U4.176 window [0,gamma_1] does not commute: rel error ~ +50% (M=176) rel = +50.00% (structural: 3/M modes vs measure 2/M)
+       M=352  modes in window = 3 (frac = 0.008523) ; arcsine measure = 0.005682 ; rel = +50.00%
+  [PASS] U4.352 window [0,gamma_1] does not commute: rel error ~ +50% (M=352) rel = +50.00% (structural: 3/M modes vs measure 2/M)
+       M=704  modes in window = 3 (frac = 0.004261) ; arcsine measure = 0.002841 ; rel = +50.00%
+  [PASS] U4.704 window [0,gamma_1] does not commute: rel error ~ +50% (M=704) rel = +50.00% (structural: 3/M modes vs measure 2/M)
+     -> the 3/M vs 2/M mismatch is structural (M-independent), so no convergence:
+        exchange FAILS for window functionals. The d_s plateau / UV-IR window
+        statements are exactly of this class -- this is the located reason for the
+        grid sensitivity found in the close-out audit (docs/05 F2).
+        C_b observables (U2 exact / U3 convergent) do commute.
+
+==============================================================================
+RESULT: 22/22 PASS
+==============================================================================

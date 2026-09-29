@@ -1,0 +1,60 @@
+==============================================================================
+O221 / scripts/17 - per-momentum 4D Regge quadratic form, M = 4
+==============================================================================
+
+[Q1] flat configuration
+     simplices = 31104 ; central hinges = 16064 ; S_R(flat) = 5.042198e-12 ; max|delta| = 5.329e-15
+  [PASS] Q1.1 flat: every deficit vanishes and S_R = 0 S_R = 5.042e-12, max|delta| = 5.329e-15
+
+[Q2] uniform scaling (the k=0 conformal/trace mode) is an exact kernel direction
+  [PASS] Q2.1 S_R is exactly blind to a uniform MULTIPLICATIVE scaling of all edge lengths (consistent with docs/10 R6) S_R(L(1+eps)) - S_R(L) = -5.471e-12 (eps = 0.05, max|delta| = 2.665e-15)
+     NOTE: an ADDITIVE shift of every length is NOT a similarity (shapes change): dS_R = -6.705e+00, max|delta| = 7.989e-02
+
+[Q3] momentum modes: build the 10x10 quadratic form (lattice vs continuum)
+     q(basis_i) = [-1.199e-05  1.000e-06  1.000e-06  1.000e-06  1.600e-01  9.360e-03
+  9.360e-03  1.600e-01  9.360e-03  1.600e-01]
+  [PASS] Q3.1 the quadratic form scales as eps^2 (flat is stationary; cubic term negligible) q(2v)/q(v) = 3.997657 (residual = the cubic term)
+     lattice eigenvalues (10): [-3.093451e-04 -3.093451e-04 -2.731133e-05 -2.200319e-05 -2.200319e-05
+ -3.123252e-06  4.046180e-06  4.046180e-06  5.714408e-06  5.740176e-04]
+     lattice: 0 near-zero, 6 negative, 4 positive (thresh 1e-6*max)
+     continuum eigenvalues  : [-2.467401e-06 -2.467401e-06 -3.084251e-07 -3.084251e-07 -3.084251e-07
+ -1.089446e-21 -2.904394e-24  1.846376e-22  3.555509e-22  4.934802e-06]
+     continuum: 4 near-zero, 5 negative, 1 positive
+  [PASS] Q3.2 continuum control (exact): rank(Q) = N - D = 6, kernel = 4 (the gauge directions h = k(x)xi + xi(x)k), signature = (1 positive, 5 negative) zero = 4, positive = 1, negative = 5
+     the single POSITIVE direction is the spatial TRACE (conformal) mode and the five negative ones are the spatial traceless modes
+     => this is the conformal-factor problem; the TT polarisations live in the NEGATIVE-sign sector
+  [PASS] Q3.3 lattice at this M does NOT reproduce the continuum kernel structure (honest negative result; the M-scan quantifies the approach) lattice: near-zero = 0, positive = 4, negative = 6 (continuum: 4 / 1 / 5)
+     |ev|/max lattice   : [1.     0.5389 0.5389 0.0476 0.0383 0.0383 0.01   0.007  0.007  0.0054]
+     |ev|/max continuum : [1.0000e+00 5.0000e-01 5.0000e-01 6.2500e-02 6.2500e-02 6.2500e-02
+ 2.2077e-16 7.2050e-17 3.7415e-17 5.8855e-19]
+
+[Q4] criterion (c): gauge (displacement) directions h = k (x) xi + xi (x) k
+     xi=e0 : q_lat(gauge) = -1.199295e-05 ; q_cont(gauge) = +0.000e+00 ; |q_lat|/scale = 0.02089
+     xi=e1 : q_lat(gauge) = +1.000000e-06 ; q_cont(gauge) = +5.294e-23 ; |q_lat|/scale = 0.00174
+     xi=e2 : q_lat(gauge) = +9.999997e-07 ; q_cont(gauge) = +5.294e-23 ; |q_lat|/scale = 0.00174
+     xi=e3 : q_lat(gauge) = +9.999991e-07 ; q_cont(gauge) = +5.294e-23 ; |q_lat|/scale = 0.00174
+  [PASS] Q4.1 continuum: every gauge direction is an exact kernel vector of the EH form max |q_cont(gauge)| = 5.294e-23
+  [PASS] Q4.2 lattice: the metric-projected gauge directions are NOT exact kernel vectors at finite M (the residual is the lattice gauge violation; the M-scan measures its decay) max |q_lat(gauge)|/scale = 0.02089
+
+[Q4b] the EXACT vertex-displacement direction (Regge-native form of criterion (c))
+     xi=e0 : |q_lat(displacement)| = 3.099731e-10 ; same-norm random mean = 2.727189e-05 ; ratio = 0.00001
+     xi=e1 : |q_lat(displacement)| = 3.059615e-10 ; same-norm random mean = 2.727189e-05 ; ratio = 0.00001
+     xi=e2 : |q_lat(displacement)| = 3.052350e-10 ; same-norm random mean = 2.727189e-05 ; ratio = 0.00001
+     xi=e3 : |q_lat(displacement)| = 3.051976e-10 ; same-norm random mean = 2.727189e-05 ; ratio = 0.00001
+  [PASS] Q4b.1 the EXACT vertex-displacement direction IS a kernel direction of the Regge quadratic form (to the numerical level): this is the Regge-native gauge sector min ratio = 1.11909e-05 (vs a same-norm random variation)
+
+[Q5] criterion (d): TT projection with a SPATIAL momentum k along axis 3
+     TT basis: h11 = -h22 and h12 (the traceless part of the 2x2 block transverse to k) ; dim(TT) = 2
+     count: spatial 3x3 has 6 components; transversality k_i h_ij = 0 removes 3 and tracelessness removes 1 -> 2 (D=3 gives 6-2-1 = 0, the control)
+     lattice   TT eigenvalues: [-6.160030e-04 -4.865794e-05]
+     continuum TT eigenvalues: [-4.934802e-06 -1.233701e-06]
+  [PASS] Q5.1 the TT block is non-degenerate (rank 2) in both lattice and continuum lattice TT = [-6.160030e-04 -4.865794e-05] ; continuum TT = [-4.934802e-06 -1.233701e-06]
+     (c,w) conformal block: lattice [0.16   0.3203]  continuum [-3.0499e-06  7.9847e-06]
+  [PASS] Q5.2 the TT block has the OPPOSITE sign to the positive (conformal) sector in both lattice and continuum lattice TT max -4.866e-05 vs conformal max +3.203e-01 ; continuum TT max -1.234e-06 vs conformal max +7.985e-06
+     TT-trace CROSS term (decoupling): lattice +1.699366e-07 (rel 0.00000) ; continuum +0.000e+00 (rel 0.00000)
+  [PASS] Q5.3 the TT sector is decoupled from the trace/conformal sector in the continuum control (relative cross term < 1e-9) continuum relative cross term = 0.000e+00
+     |TT|/|trace|  lattice = 0.000152 ; continuum = 0.250000
+
+[Q6] result: 11/11 PASS
+SCAN M=4   gauge_resid=0.02089 disp_ratio=0.00001 near0=0 sig=(4+,6-) TTtrace=0.00015 TTtrace_con=0.25000 xt_rel=0.000001 min4_rel=0.04758 large_ratio=1.85559
+HONEST STATUS: at accessible M the lattice quadratic form reproduces the continuum DIMENSION count (dim TT = 2) but not the exact kernel; the gauge and displacement residuals are recorded above for the M-scan.

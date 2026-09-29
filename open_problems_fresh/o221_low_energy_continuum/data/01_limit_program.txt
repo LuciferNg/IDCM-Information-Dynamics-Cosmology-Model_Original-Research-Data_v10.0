@@ -1,0 +1,132 @@
+==============================================================================
+O221 / scripts/01 - Limit program L  (mp.dps = 50)
+==============================================================================
+
+[1] Convention audit - Laplacian sums (independent re-derivation)
+  [PASS] C1.1 sum_gamma(N=4) = 2N+2 = 10.0  (2N+2 = 10)
+  [PASS] C1.1 sum_gamma(N=8) = 2N+2 = 18.0  (2N+2 = 18)
+  [PASS] C1.1 sum_gamma(N=44) = 2N+2 = 90.0  (2N+2 = 90)
+  [PASS] C1.1 sum_gamma(N=88) = 2N+2 = 178.0  (2N+2 = 178)
+  [PASS] C1.2 176-L sum_{k=1..88} gamma_k = 178 = 178.0
+  [PASS] C1.3 176-L even sum = 90 = 90.0
+  [PASS] C1.4 176-L odd sum = 88 = 88.0
+  [PASS] C1.5 88-chain sum_{n=1..44} gamma_n = 90 = 90.0
+  [PASS] C1.6 lambda_max = gamma(M/2) = 4 exactly = 4.0
+  [PASS] C1.7 mu^2 = gamma(44) in 176-L = 2 exactly = 2.0
+     distinct gamma values, M=88 : 44  (= M/2 = 44)
+     distinct gamma values, M=176 : 88  (= M/2 = 88)
+     distinct gamma values, M=352 : 176  (= M/2 = 176)
+
+[2] L definition: refinement flow + co-moving index (exact identities)
+  [PASS] C2.1 c = a_l * sqrt(J_l) fixed point, l = 0..6 max rel dev = 0.0
+     l=0: M=88 a=294.8772 Mpc ; l=4: M=22528 a=1.1518641 Mpc
+     lambda_sync (l=0 spacing) = 294.8772 Mpc
+  [PASS] C2.2 k_n = n/R_world (l-independent), n=1 k = 0.000242134127585 Mpc^-1
+  [PASS] C2.2 k_n = n/R_world (l-independent), n=3 k = 0.000726402382755 Mpc^-1
+  [PASS] C2.2 k_n = n/R_world (l-independent), n=22 k = 0.00532695080687 Mpc^-1
+  [PASS] C2.2 k_n = n/R_world (l-independent), n=44 k = 0.0106539016137 Mpc^-1
+
+[3] Exact dispersion identity  omega = c k * sin(x)/x ,  x = k a / 2
+  [PASS] C3.1 omega_n^(l) = c k_n sin(x)/x EXACT (x = k a/2) worst rel dev = 4.713e-51
+  [PASS] C3.2 x = k_n a_l/2 identity dev = 0.0
+
+[4] Convergence: rate and exact expansion (the IR limit)
+     n=1   l=0  x=0.0356999165181  sin(x)/x - (1-x^2/6+x^4/120) = -4.10738e-13
+  [PASS] C4.1 series 1 - x^2/6 + x^4/120 (n=1,l=0) residual < x^6 term
+     n=1   l=4  x=0.000139452798899  sin(x)/x - (1-x^2/6+x^4/120) = -1.45926e-27
+  [PASS] C4.1 series 1 - x^2/6 + x^4/120 (n=1,l=4) residual < x^6 term
+     n=22  l=4  x=0.00306796157577  sin(x)/x - (1-x^2/6+x^4/120) = -1.65451e-19
+  [PASS] C4.1 series 1 - x^2/6 + x^4/120 (n=22,l=4) residual < x^6 term
+     n=11  l=8  x=5.99211245268e-6  sin(x)/x - (1-x^2/6+x^4/120) = -9.18437e-36
+  [PASS] C4.1 series 1 - x^2/6 + x^4/120 (n=11,l=8) residual < x^6 term
+     n=1  |sin(x)/x - 1| l=0..6: ['0.0002124', '1.328e-5', '8.297e-7', '5.186e-8']
+            x0=0.0356999 ; predicted slope defect ~ x0^2/20 = 6.37242e-5 ; bound = 0.00637242
+  [PASS] C4.2 deviation rate = B^(-2l) (n=1) fitted exponent = 1.9999569 (expect 2 - x0^2/20 + ...)
+     n=5  |sin(x)/x - 1| l=0..6: ['0.005302', '0.0003319', '2.074e-5', '1.296e-6']
+            x0=0.1785 ; predicted slope defect ~ x0^2/20 = 0.00159311 ; bound = 0.159311
+  [PASS] C4.2 deviation rate = B^(-2l) (n=5) fitted exponent = 1.9989226 (expect 2 - x0^2/20 + ...)
+  [PASS] C4.3 single control variable x (4 different (n,M) with same x=pi/88) spread = 0.0
+  [PASS] C4.4 stiffness ratio = (sin x/x)^2 (discrete Dirichlet form) x = 0.12494971 : (sin x/x)^2 - (1 - x^2/3) = 1.08212e-5   [O159 quotes 1 - (k pi/176)^2/3]
+  [PASS] C4.5 same x for freq (1/6) and stiffness (1/3): 2 x freq-coeff = stiff-coeff (sin x/x)^2 = (freq ratio)^2 -> 1/6 doubles to 1/3
+
+[5] Flow invariants (a) vs flow-variant quantities (b)
+  [PASS] C5.1 co-moving relabel (n -> 4^l n) leaves gamma invariant worst rel dev = 0.0
+  [PASS] C5.2 fixed-n gamma decays as B^(-2l) fitted exponent = 1.9997127
+     ratio(n=5,m=1,N=44) = 4.974547113   vs n/m = 5.0   rel dev = 0.005091
+     ratio(n=5,m=1,N=176) = 4.998407039   vs n/m = 5.0   rel dev = 0.0003186
+     ratio(n=5,m=1,N=704) = 4.999900431   vs n/m = 5.0   rel dev = 1.991e-5
+     ratio(n=44,m=22,N=44) = 1.414213562   vs n/m = 2.0   rel dev = 0.2929
+     ratio(n=44,m=22,N=176) = 1.961570561   vs n/m = 2.0   rel dev = 0.01921
+     ratio(n=44,m=22,N=704) = 1.997590912   vs n/m = 2.0   rel dev = 0.001205
+     ratio(n=13,m=7,N=44) = 1.809969447   vs n/m = 1.857142857   rel dev = 0.0254
+     ratio(n=13,m=7,N=176) = 1.854184878   vs n/m = 1.857142857   rel dev = 0.001593
+     ratio(n=13,m=7,N=704) = 1.856957946   vs n/m = 1.857142857   rel dev = 9.957e-5
+     NOTE: the sin-lattice ratio is flow-variant; the flow-invariant content is n/m.
+
+[6] Measure side: counting measure -> Lebesgue ; Gamma-pushforward -> arcsine
+     M=88    modes=44     KS distance = 0.0227273   (1/N_modes = 0.0227273)
+  [PASS] C6.1 KS = 1/N_modes EXACTLY (M=88) K = 0.0227273
+     M=176   modes=88     KS distance = 0.0113636   (1/N_modes = 0.0113636)
+  [PASS] C6.1 KS = 1/N_modes EXACTLY (M=176) K = 0.0113636
+     M=352   modes=176    KS distance = 0.00568182   (1/N_modes = 0.00568182)
+  [PASS] C6.1 KS = 1/N_modes EXACTLY (M=352) K = 0.00568182
+     M=704   modes=352    KS distance = 0.00284091   (1/N_modes = 0.00284091)
+  [PASS] C6.1 KS = 1/N_modes EXACTLY (M=704) K = 0.00284091
+     M=1408  modes=704    KS distance = 0.00142045   (1/N_modes = 0.00142045)
+  [PASS] C6.1 KS = 1/N_modes EXACTLY (M=1408) K = 0.00142045
+  [PASS] C6.2 KS rate = M^(-1) EXACT (2x refinement halves it) fitted exponents = ['1.0', '1.0', '1.0', '1.0']
+     N=22    E[gamma] = 2.0909090909091  (2+2/N = 2.0909090909091)   Var = 1.99173553719
+  [PASS] C6.3 E[gamma] = 2 + 2/N EXACT (N=22) = 2.0909090909091
+  [PASS] C6.4 Var[gamma] -> 2 (N=22) = 1.99173553719
+     N=44    E[gamma] = 2.0454545454545  (2+2/N = 2.0454545454545)   Var = 1.9979338843
+  [PASS] C6.3 E[gamma] = 2 + 2/N EXACT (N=44) = 2.0454545454545
+  [PASS] C6.4 Var[gamma] -> 2 (N=44) = 1.9979338843
+     N=88    E[gamma] = 2.0227272727273  (2+2/N = 2.0227272727273)   Var = 1.99948347107
+  [PASS] C6.3 E[gamma] = 2 + 2/N EXACT (N=88) = 2.0227272727273
+  [PASS] C6.4 Var[gamma] -> 2 (N=88) = 1.99948347107
+     N=176   E[gamma] = 2.0113636363636  (2+2/N = 2.0113636363636)   Var = 1.99987086777
+  [PASS] C6.3 E[gamma] = 2 + 2/N EXACT (N=176) = 2.0113636363636
+  [PASS] C6.4 Var[gamma] -> 2 (N=176) = 1.99987086777
+     N=352   E[gamma] = 2.0056818181818  (2+2/N = 2.0056818181818)   Var = 1.99996771694
+  [PASS] C6.3 E[gamma] = 2 + 2/N EXACT (N=352) = 2.0056818181818
+  [PASS] C6.4 Var[gamma] -> 2 (N=352) = 1.99996771694
+     N=704   E[gamma] = 2.0028409090909  (2+2/N = 2.0028409090909)   Var = 1.99999192924
+  [PASS] C6.3 E[gamma] = 2 + 2/N EXACT (N=704) = 2.0028409090909
+  [PASS] C6.4 Var[gamma] -> 2 (N=704) = 1.99999192924
+  [PASS] C6.5 sum 1/gamma = (2N^2+1)/12 EXACT (N=44) = 322.75   (asymptotic N^2/6 = 322.666666667)
+  [PASS] C6.5 sum 1/gamma = (2N^2+1)/12 EXACT (N=88) = 1290.75   (asymptotic N^2/6 = 1290.66666667)
+  [PASS] C6.5 sum 1/gamma = (2N^2+1)/12 EXACT (N=176) = 5162.75   (asymptotic N^2/6 = 5162.66666667)
+  [PASS] C6.5 sum 1/gamma = (2N^2+1)/12 EXACT (N=352) = 20650.75   (asymptotic N^2/6 = 20650.6666667)
+
+[7] Artifact inventory with numbers (what does NOT survive)
+  [PASS] C7.1 Nyquist deviation 1 - 2/pi = 0.3633802276 (36.3380%)
+  [PASS] C7.2 v_g(Nyquist) = c cos(pi/2) = 0 = 0 EXACT
+     v_g/c = cos(x) for the 88-site ring (l=0):
+       n=1   x=0.035699917  v_g/c = 0.9993628257   (1 - v_g/c = 0.000637174)
+       n=2   x=0.071399833  v_g/c = 0.9974521146   (1 - v_g/c = 0.00254789)
+       n=5   x=0.17849958  v_g/c = 0.9841112043   (1 - v_g/c = 0.0158888)
+       n=7   x=0.24989942  v_g/c = 0.9689373018   (1 - v_g/c = 0.0310627)
+       n=13  x=0.46409891  v_g/c = 0.8942252699   (1 - v_g/c = 0.105775)
+       n=22  x=0.78539816  v_g/c = 0.7071067812   (1 - v_g/c = 0.292893)
+       n=44  x=1.5707963   v_g/c = 2.167416841e-51   (1 - v_g/c = 1.0)
+     modes N=44    a_2/a_0 = -2.04545454545   (= -(2 + 2/N) = -2.04545454545)
+  [PASS] C7.3 a_2/a_0 = -(2+2/N) (N=44) 
+     modes N=88    a_2/a_0 = -2.02272727273   (= -(2 + 2/N) = -2.02272727273)
+  [PASS] C7.3 a_2/a_0 = -(2+2/N) (N=88) 
+     modes N=176   a_2/a_0 = -2.01136363636   (= -(2 + 2/N) = -2.01136363636)
+  [PASS] C7.3 a_2/a_0 = -(2+2/N) (N=176) 
+     modes N=352   a_2/a_0 = -2.00568181818   (= -(2 + 2/N) = -2.00568181818)
+  [PASS] C7.3 a_2/a_0 = -(2+2/N) (N=352) 
+     modes N=704   a_2/a_0 = -2.00284090909   (= -(2 + 2/N) = -2.00284090909)
+  [PASS] C7.3 a_2/a_0 = -(2+2/N) (N=704) 
+     a_4-type sum  sum_n 1/gamma_n :
+       N=44    sum 1/gamma = 322.75   (sum/N^2 = 0.1667097107)
+       N=88    sum 1/gamma = 1290.75   (sum/N^2 = 0.1666774277)
+       N=176   sum 1/gamma = 5162.75   (sum/N^2 = 0.1666693569)
+       N=352   sum 1/gamma = 20650.75   (sum/N^2 = 0.1666673392)
+       N=704   sum 1/gamma = 82602.75   (sum/N^2 = 0.1666668348)
+  [PASS] C7.4 sum 1/gamma grows like N^2 (divergent a_4): ratio ~4 per doubling 
+
+==============================================================================
+RESULT: 58/58 PASS
+==============================================================================

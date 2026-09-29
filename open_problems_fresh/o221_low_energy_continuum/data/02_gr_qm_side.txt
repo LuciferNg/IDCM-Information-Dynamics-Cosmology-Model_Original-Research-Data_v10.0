@@ -1,0 +1,100 @@
+==============================================================================
+O221 / scripts/02 - GR side + QM side
+==============================================================================
+
+[Q1] Mode basis: ring Fourier transform is orthogonal / unitary
+  [PASS] Q1.1 F^dag F = I (M=8) max dev = 7.06e-16
+  [PASS] Q1.2 |det F| = 1 (M=8) |det| = 0.999999999999999
+  [PASS] Q1.1 F^dag F = I (M=88) max dev = 8.37e-15
+  [PASS] Q1.2 |det F| = 1 (M=88) |det| = 0.999999999999985
+
+[Q2] Laplacian spectrum reproduced by explicit diagonalization
+  [PASS] Q2.1 eig(L) = 4 sin^2(pi n/M) (M=8) max dev = 1.33e-15
+  [PASS] Q2.2 eigenvector matrix orthogonal (M=8) max dev = 1.55e-15
+  [PASS] Q2.1 eig(L) = 4 sin^2(pi n/M) (M=88) max dev = 4.44e-15
+  [PASS] Q2.2 eigenvector matrix orthogonal (M=88) max dev = 2.22e-15
+  [PASS] Q2.1 eig(L) = 4 sin^2(pi n/M) (M=176) max dev = 3.77e-15
+  [PASS] Q2.2 eigenvector matrix orthogonal (M=176) max dev = 2.00e-15
+
+[Q3] Canonical structure is flow-invariant (bracket preserved by the mode map)
+  [PASS] Q3.1 U^T J U = J (M=8) max dev = 1.55e-15
+  [PASS] Q3.2 |det U| = 1 -> path-integral measure invariant (M=8) |det U| = 0.999999999999998
+  [PASS] Q3.1 U^T J U = J (M=88) max dev = 2.22e-15
+  [PASS] Q3.2 |det U| = 1 -> path-integral measure invariant (M=88) |det U| = 1.000000000000032
+
+[Q4] Discrete action = decoupled oscillators; continuum propagator recovered
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=1,l=0) 1 - ratio = 0.00042475583 (x^2/3 = 0.00042482801)
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=1,l=3) 1 - ratio = 1.0371777e-7 (x^2/3 = 1.0371778e-7)
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=1,l=6) 1 - ratio = 2.5321723e-11 (x^2/3 = 2.5321723e-11)
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=5,l=0) 1 - ratio = 0.010575683 (x^2/3 = 0.0106207)
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=5,l=3) 1 - ratio = 2.5929417e-6 (x^2/3 = 2.5929444e-6)
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=5,l=6) 1 - ratio = 6.3304307e-10 (x^2/3 = 6.3304307e-10)
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=22,l=0) 1 - ratio = 0.18943053 (x^2/3 = 0.20561676)
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=22,l=3) 1 - ratio = 5.0198396e-5 (x^2/3 = 5.0199404e-5)
+  [PASS] Q4.1 pole ratio = (sin x/x)^2 (n=22,l=6) 1 - ratio = 1.2255714e-8 (x^2/3 = 1.2255714e-8)
+     => free-field kinematics on the ring recovered; lattice correction
+        (sin x/x)^2 = 1 - x^2/3 + 2x^4/45 - ...
+     [CLAIM] hbar = SI anchor (O212/O213): quantization is a representation
+        choice; Q3.1 shows the canonical structure carries no l-dependence.
+
+[Q5] d_s of the chain: plateau at 1, window ~ M^2
+     M=88     |d_s-1|<0.01 window : 10^1.131 .. 10^2.353  (1.221 decades) ; d_s in window = 1.0018705
+  [PASS] Q5.1 chain plateau value = 1 (M=88) d_s = 1.0018705 over 1.221 decades
+     M=176    |d_s-1|<0.01 window : 10^1.133 .. 10^2.971  (1.839 decades) ; d_s in window = 1.0006198
+  [PASS] Q5.1 chain plateau value = 1 (M=176) d_s = 1.0006198 over 1.839 decades
+     M=352    |d_s-1|<0.01 window : 10^1.127 .. 10^3.555  (2.428 decades) ; d_s in window = 1.0017963
+  [PASS] Q5.1 chain plateau value = 1 (M=352) d_s = 1.0017963 over 2.428 decades
+     M=704    |d_s-1|<0.01 window : 10^1.122 .. 10^4.166  (3.043 decades) ; d_s in window = 1.001331
+  [PASS] Q5.1 chain plateau value = 1 (M=704) d_s = 1.001331 over 3.043 decades
+  [PASS] Q5.2 window t_hi/t_lo grows as M^2 (factor 4 = +0.602 decades per doubling) dwidth/dlog2(M) = [1.026, 0.979, 1.022] (1.0 = one 0.602-decade step = factor 4)
+  [PASS] Q5.3 gapped IR: d_s -> 0 (M=88) d_s(1e8) = 6.25478e-221301
+  [PASS] Q5.3 gapped IR: d_s -> 0 (M=704) d_s(1e8) = 1.38859e-3455
+  [PASS] Q5.4 UV: d_s = 2 t E[gamma] (M=88) d_s = 0.003996 vs 0.0040454545
+  [PASS] Q5.4 UV: d_s = 2 t E[gamma] (M=704) d_s = 0.003996 vs 0.0040056818
+     => the 1D continuum exists ONLY inside the window (1/lambda_max , 1/gamma_1);
+        a finite layer is gapped at both ends (d_s -> 0). No continuum at finite l.
+
+[Q6] K_tree = phi scale ladder: does it carry a dimension?
+     mu_0 = phi^291.5 = 8.31567e+60 ; range mu_0/mu_33 = phi^33 = 7.8812e+6
+     phi-ladder : longest flat window = 0.275 decades (10^1.1..10^1.375) ; d_s there ~ 0.157653 ; max d_s = 2537.69
+  [PASS] Q6.1 phi-ladder has NO scaling plateau (<0.3 decades flat) longest flat window = 0.275 decades (sawtooth: d_s = 2 t lambda_active)
+  [PASS] Q6.2 phi-ladder max d_s is the single-level tail 2 t lambda_min, not a plateau max d_s = 2537.69 vs 2 t lambda_min = 2537.69 (ratio 1.0) ; d_s spread over 8 decades = 13879.0
+  [PASS] Q6.2b phi-ladder d_s has O(1)+ relative spread (dimension undefined) max/min over 8 decades = 13879.0
+     random log-uniform (same range)    : flat window = 1.000 decades ; max d_s = 2659.07 ; spread over 8 decades = 19616.8
+  [PASS] Q6.3 NULL random log-uniform (same range) -> d_s spread O(1)+ : no dimension flat = 1.000 decades, max/min = 19616.8 : a discrete set of scales carries dimension 0
+     arithmetic ladder 1..34            : flat window = 0.150 decades ; max d_s = 5.88235e+8 ; spread over 8 decades = 9.47196e+7
+  [PASS] Q6.3 NULL arithmetic ladder 1..34 -> d_s spread O(1)+ : no dimension flat = 0.150 decades, max/min = 9.47196e+7 : a discrete set of scales carries dimension 0
+     dyadic ladder 2^-i                 : flat window = 0.425 decades ; max d_s = 3.03134 ; spread over 8 decades = 27.3396
+  [PASS] Q6.3 NULL dyadic ladder 2^-i -> d_s spread O(1)+ : no dimension flat = 0.425 decades, max/min = 27.3396 : a discrete set of scales carries dimension 0
+
+[Q7] Product spectrum T = K_chain (x) K_tree : lambda = gamma * mu
+     product T (2992 eigenvalues) : longest flat window = 0.486 decades (10^6.343..10^6.829) ; d_s ~ 0.970975 ; max d_s = 0.993785
+     chain alone flat window (M=88) = 1.221 decades
+  [PASS] Q7.1 product d_s stays below 2 (no dimension doubling) plateau-ish d_s = 0.970975 ; max = 0.993785
+  [PASS] Q7.2 ladder does NOT add a dimension: max d_s(T) ~ 1 max d_s(T) = 0.993785 ; flat window 0.486 decades vs chain 1.221 (ladder even degrades it)
+     => d_s(T) has no integer plateau above 1: the algebra's own kinematics
+        supply ONE continuum dimension; 3+1D is not generated here.
+
+[G1] a_2 coefficient on a deformed ring (is the uniform ring stationary?)
+     uniform ring : sum lambda = 176.0 , Tr_g = 176.0
+     eps=0.02 : sum lambda rel dev = 5.829e-04 (dev/eps = 2.915e-02, dev/eps^2 = 1.4573) ; Tr_g rel dev = 1.456e-04
+     eps=0.05 : sum lambda rel dev = 3.668e-03 (dev/eps = 7.336e-02, dev/eps^2 = 1.4673) ; Tr_g rel dev = 9.132e-04
+     eps=0.10 : sum lambda rel dev = 1.501e-02 (dev/eps = 1.501e-01, dev/eps^2 = 1.5006) ; Tr_g rel dev = 3.688e-03
+     eps=0.20 : sum lambda rel dev = 6.597e-02 (dev/eps = 3.298e-01, dev/eps^2 = 1.6492) ; Tr_g rel dev = 1.531e-02
+     naive  sum lambda : dev = -2.168e-02 eps + 1.7558 eps^2   (|c1|/c2 = 0.0123, resid 3.8e-04)
+     invariant Tr_g    : dev = -2.033e-03 eps + 0.3927 eps^2   (|c1|/c2 = 0.0052, resid 3.5e-05)
+  [PASS] G1.1 invariant-measure trace: NO linear (curvature) response, c1 = 0 |c1|/c2 = 0.00518 for Tr_g (vs 0.0123 for the naive trace)
+  [PASS] G1.2 response is quadratic-dominated for both traces dev/eps^2 = [1.4573, 1.4673, 1.5006, 1.6492] ; naive |c1|/c2 = 0.0123 (scheme term)
+
+[G2] a_4 sector: exact closed form and divergence (no R^2 control from the chain)
+     N=44    sum 1/gamma = 322.75  (= (2N^2+1)/12)  ;  a_4/a_0 = 7.3352273
+     N=88    sum 1/gamma = 1290.75  (= (2N^2+1)/12)  ;  a_4/a_0 = 14.667614
+     N=176   sum 1/gamma = 5162.75  (= (2N^2+1)/12)  ;  a_4/a_0 = 29.333807
+     N=352   sum 1/gamma = 20650.75  (= (2N^2+1)/12)  ;  a_4/a_0 = 58.666903
+     N=704   sum 1/gamma = 82602.75  (= (2N^2+1)/12)  ;  a_4/a_0 = 117.33345
+  [PASS] G2.1 sum 1/gamma = (2N^2+1)/12 EXACT rational closed form; diverges ~ N^2/6
+  [PASS] G2.2 a_4/a_0 grows linearly in N (no finite continuum a_4) N=704: a_4/a_0 = 117.33345 -> four-derivative sector uncontrolled
+
+==============================================================================
+RESULT: 44/44 PASS
+==============================================================================

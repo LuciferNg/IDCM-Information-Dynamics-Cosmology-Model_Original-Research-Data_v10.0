@@ -1,0 +1,67 @@
+==============================================================================
+O221 / scripts/13 - Regge route (derivative structure in the metric)
+==============================================================================
+
+[R0] machinery validation: regular tetrahedron
+     dihedral angles = ['1.2309594173', '1.2309594173', '1.2309594173', '1.2309594173', '1.2309594173', '1.2309594173'] rad ; arccos(1/3) = 1.2309594173
+  [PASS] R0.1 all six dihedral angles equal arccos(1/3) max dev = 2.22e-16
+  [PASS] R0.2 solid-angle/first variation sanity: 6*theta > 2*pi (tetrahedron is non-degenerate) sum = 7.385757
+
+[R1] flat lattice M=3 : V=27 T=162 E=189
+     sum of dihedral angles around each edge = 2*pi ?  max |delta_e| = 5.329e-15
+  [PASS] R1.3 flat lattice: every deficit angle vanishes and S_R = 0 max|delta| = 5.33e-15 ; S_R = 1.92e-13
+
+[R1] flat lattice M=4 : V=64 T=384 E=448
+     sum of dihedral angles around each edge = 2*pi ?  max |delta_e| = 5.329e-15
+  [PASS] R1.4 flat lattice: every deficit angle vanishes and S_R = 0 max|delta| = 5.33e-15 ; S_R = 4.75e-13
+
+[R2] 2D check: Gauss-Bonnet with RANDOM edge lengths (triangulated 2-torus)
+  [PASS] R2.3 sum_v delta_v = 2*pi*chi = 0 exactly (random lengths) M=3 : sum delta = -8.882e-16
+  [PASS] R2.5 sum_v delta_v = 2*pi*chi = 0 exactly (random lengths) M=5 : sum delta = 8.882e-16
+
+[R3] uniform scaling (conformal) blindness
+  [PASS] R3.c=1.3 S_R = 0 exactly (deficit angles are scale invariant) S_R = 3.50e-13
+  [PASS] R3.c=0.7 S_R = 0 exactly (deficit angles are scale invariant) S_R = 3.10e-14
+
+[R5] the 6-parameter family of FLAT metrics is in the kernel
+  [PASS] R5.1 all 6 symmetric flat directions give S_R = 0 and delta_e = 0 6/6 directions flat
+
+[R4] deformation scaling: S_R ~ eps^2 (flat is a stationary point)
+     S_R(eps=1e-3) = 7.680007e-04 ; S_R(eps=2e-3) = 3.072011e-03 ; ratio = 4.000011 (expect 4)
+  [PASS] R4.1 exponent 2: S_R is quadratic in the deformation (no linear term) ratio = 4.000011 (=> exponent 2.0000)
+
+[R6] structure: the Regge response is TRACE-BLIND and SHAPE-SENSITIVE
+     uniform (trace) modulation : S_R = +4.7531541466e-13  ;  U = 6.144000e-01
+     cos (shape) modulation     : S_R = -1.2729598464e-01  ;  U = 3.072000e-01
+  [PASS] R6.1 S_R is EXACTLY blind to the pure trace (uniform scaling) modulation S_R(trace) = 4.75e-13
+  [PASS] R6.2 S_R responds to a shape modulation (trace mode is an exact zero direction) |S_R(shape)| = 1.273e-01 while |S_R(trace)| = 0
+  [PASS] R6.3 the ultralocal functional sees the trace mode (exact structural contrast) U(trace) = 6.144e-01 > 0 vs S_R(trace) = 0 ; U(shape) = 3.072e-01
+
+[R7] refinement at a FIXED local deformation (fixed physical wavelength = 3 cells)
+     NOTE: with a := 1 the torus volume is M^3, so the intensive quantity is S_R / M^3
+     M= 3 (q=1) : S_R = -1.9493999442e-02   S_R/M^3 = -7.2199997935e-04
+     M= 6 (q=2) : S_R = -1.3385584968e-01   S_R/M^3 = -6.1970300779e-04
+     M= 9 (q=3) : S_R = -4.1600142372e-01   S_R/M^3 = -5.7064667178e-04
+     intensity gaps : |d(9) - d(6)| = 4.906e-05  vs  |d(6) - d(3)| = 1.023e-04
+  [PASS] R7.1 the action DENSITY converges (gap shrinks under refinement) gap ratio = 0.480  (density is the intensive quantity)
+
+[R8] Hessian at flat (M=3): kernel structure  (3D gravity has NO local dof)
+     E = 189 ; spectrum [-2.4000e+01 , 4.9373e+00] ; near-zero eigenvalues (<1e-5 max): 84
+     quadratic form along the 6 FLAT-MODULI directions (should vanish as the
+     perturbation shrinks: a finite value would mean a nonzero Rayleigh quotient)
+       dir (0,0) : quotient = -2.4011e-07 (delta=1e-2)  +2.0946e-06 (delta=1e-4)   scale = 2.400e+01
+       dir (0,1) : quotient = -6.3918e-06 (delta=1e-2)  +1.6040e-07 (delta=1e-4)   scale = 2.400e+01
+       dir (0,2) : quotient = -6.4039e-06 (delta=1e-2)  +1.4824e-07 (delta=1e-4)   scale = 2.400e+01
+       dir (1,1) : quotient = -2.0910e-07 (delta=1e-2)  +2.1257e-06 (delta=1e-4)   scale = 2.400e+01
+       dir (1,2) : quotient = -6.3682e-06 (delta=1e-2)  +1.8404e-07 (delta=1e-4)   scale = 2.400e+01
+       dir (2,2) : quotient = -2.3476e-07 (delta=1e-2)  +2.1000e-06 (delta=1e-4)   scale = 2.400e+01
+  [PASS] R8.1 the 6 flat-moduli directions are kernel directions (zero within FD precision; max|q| = 2.126e-06 = 8.9e-08 x scale (exact statement: R5/R3, S_R = 0 identically along these lines)
+     six largest |eigenvalues| = ['4.9373e+00', '4.9373e+00', '4.0119e+00', '4.0119e+00', '4.0119e+00', '4.0119e+00']
+     (Regge: a flat-moduli KERNEL of dim >= 6 exists -- the conformal/shape null directions
+      of 3D gravity; contrast docs/08: the trace moments are blind to SHEAR, not to the trace)
+  [PASS] R8.2 the Hessian is not diagonal (derivative couplings between distinct edges) max off-diagonal = 2.449e+00
+  [PASS] R8.3 the Regge Hessian is not positive definite: a flat-moduli kernel exists 84 near-zero eigenvalues
+
+==============================================================================
+RESULT: 17/17 PASS
+==============================================================================

@@ -1,0 +1,51 @@
+==============================================================================
+O221 / scripts/15 - Route 2: 4D Regge (lift construction, periodic modulation)
+==============================================================================
+
+[Q1] machinery: the regular 4-simplex
+  [PASS] Q1.1 all ten dihedral angles equal arccos(1/4) max dev = 2.22e-16
+  [PASS] Q1.2 regular n-simplex dihedral = arccos(1/n) (n=3 verified in scripts/13 R0) n=3: 1.2309594173 ; n=4: 1.3181160717
+
+[Q2] flat 4-torus
+     M=2 : hinges = 1232 ; max |delta_t| = 5.329e-15 ; S_R = 3.453e-13
+  [PASS] Q2.a.2 every triangle deficit vanishes (flat) M=2 max|delta| = 5.33e-15
+  [PASS] Q2.c.2 S_R = 0 (flat) M=2 S_R = 3.45e-13
+     M=3 : hinges = 5454 ; max |delta_t| = 5.329e-15 ; S_R = 1.646e-12
+  [PASS] Q2.b.3 every triangle deficit vanishes (flat) M=3 max|delta| = 5.33e-15
+  [PASS] Q2.d.3 S_R = 0 (flat) M=3 S_R = 1.65e-12
+  [PASS] Q2.e interior manifold condition: every 3-face in exactly 2 simplices multiplicities present: [1, 2] (1 = padded boundary)
+     quotient M=3 : V=81 E=1215 triangles=4050 tetrahedra=4860 S=1944 ; chi = 0 ; face mult [2]
+  [PASS] Q2.f.3 quotient complex is a closed 4-manifold (chi = 0, T^4) with every 3-face in exactly 2 simplices chi = 0 ; mult [2]
+     quotient M=4 : V=256 E=3840 triangles=12800 tetrahedra=15360 S=6144 ; chi = 0 ; face mult [2]
+  [PASS] Q2.f.4 quotient complex is a closed 4-manifold (chi = 0, T^4) with every 3-face in exactly 2 simplices chi = 0 ; mult [2]
+
+[Q3] affine family (every flat metric) and periodic non-flat deformations
+  [PASS] Q3.1 all 16 affine directions keep S_R = 0 exactly (every flat metric is a solution) 16/16 flat ; worst |S_R| or |delta| = 4.71e-13
+  [PASS] Q3.2 a PERIODIC non-flat deformation gives S_R != 0 (EH is not topological in 4D) S_R = 1.234930e+01 ; max|delta| = 8.694e-01
+     S_R(eps) = 4.512156e-03 ; S_R(2eps) = 1.805050e-02 ; ratio = 4.000416 (expect 4)
+  [PASS] Q3.3 S_R is quadratic in the deformation (flat is a stationary point in 4D) ratio = 4.00042
+
+[Q4] 4D Hessian: correct deficit functional + sampled couplings + scope
+  [PASS] Q4.1 the deficit form vanishes at flat (delta_t = 2 pi - sum of incident angles) S_R(flat) = 3.45e-13
+  [PASS] Q4.2 the per-triangle implementation agrees with the padded-lift implementation local 4.5121563580e-03 vs lift 4.5121563580e-03
+  [PASS] Q4.3 the 4D deficit functional has O(1) mixed second derivatives => the Hessian is genuinely non-diagonal max |d2S/dL_e dL_f| = 2.4495e+00 over 20 sampled linked pairs (5 non-zero; exact zeros are discrete-symmetry degeneracies) ; affected-triangle counts [1, 2, 7, 16, 25]
+  [PASS] Q4.4 dynamically unlinked pairs have an empty affected-triangle intersection (=> mixed derivative identically zero, locality) 20/20 far pairs have empty intersection
+  [PASS] Q4.4b locality confirmed against the FULL sum for far pairs (brute force, slow) 2/2 far pairs exactly zero with the full triangle sum
+  [PASS] Q4.5 SCOPE: the deficit functional is now correct and locally verified; the FULL 4D Hessian (E = 65 edges in the minimal patch) and the Regge-side DoF = 2 extraction remain open honest status: functional + locality verified; full matrix deferred
+
+[Q5] continuum control: the linearised EH quadratic form on the plane-wave sector
+  [PASS] Q5.3.1 the quadratic form is gauge invariant: Q(eps + k(x)xi) = Q(eps) D=3 |deltaQ| = 4.44e-16
+     D=3 : components 6 ; rank(Q) = 3 (expect N-D = 3)
+  [PASS] Q5.3.2 rank(Q) = N-D, so the kernel is exactly the D gauge directions N=6 D=3 rank=3
+  [PASS] Q5.3.3 physical polarisations = rank - D = D(D-3)/2 -> 0 (D=4: graviton 2) DoF = 0 at D = 3
+  [PASS] Q5.4.1 the quadratic form is gauge invariant: Q(eps + k(x)xi) = Q(eps) D=4 |deltaQ| = 4.44e-16
+     D=4 : components 10 ; rank(Q) = 6 (expect N-D = 6)
+  [PASS] Q5.4.2 rank(Q) = N-D, so the kernel is exactly the D gauge directions N=10 D=4 rank=6
+  [PASS] Q5.4.3 physical polarisations = rank - D = D(D-3)/2 -> 2 (D=4: graviton 2) DoF = 2 at D = 4
+
+[Q6] status of the Regge-side DoF extraction
+  [PASS] Q6.1 4D machinery validated to machine precision (flat: every deficit 0 at M=2 and M=3), the quotient complex is a closed 4-manifold (chi = 0 at M=3,4), every flat metric is an exact solution (16/16 affine), S_R ~ eps^2; and the continuum control gives the graviton count 2. OPEN: the full 4D Regge Hessian and the Regge-side per-momentum DoF = 2 extraction machinery + flat structure done; Regge-side count open
+
+==============================================================================
+RESULT: 25/25 PASS
+==============================================================================

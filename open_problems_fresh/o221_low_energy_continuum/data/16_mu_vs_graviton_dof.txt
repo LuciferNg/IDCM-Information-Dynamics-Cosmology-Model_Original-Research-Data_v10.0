@@ -1,0 +1,48 @@
+==============================================================================
+O221 / scripts/16 - mu^2 vs the graviton degrees of freedom
+==============================================================================
+
+[W1] the '2' in the spectral sector is a VALUE at a mode fraction
+     M=88   quarter mode n=22   (n/M = 1/4) : gamma = 2.000000000000
+     M=176  quarter mode n=44   (n/M = 1/4) : gamma = 2.000000000000
+     M=352  quarter mode n=88   (n/M = 1/4) : gamma = 2.000000000000
+     M=704  quarter mode n=176  (n/M = 1/4) : gamma = 2.000000000000
+  [PASS] W1.1 the quarter mode gives gamma = 2 exactly for every M (value at a fraction) max |gamma - 2| = 4.44e-16
+     fixed INDEX n=44 : gamma = 2.000000 (M=176), 0.585786 (M=352), 0.152241 (M=704)
+  [PASS] W1.2 a fixed mode index is NOT stable under refinement (only the fraction 1/4 is) gamma_44: 2.000000 -> 0.152241 (M=704) ; so 'mu^2 = 2' must specify the fraction
+
+[W2] DoF is a step function / integer count
+     D        :  2   3   4   5   6   7
+     massless : -1   0   2   5   9  14
+     massive  :  0   2   5   9  14  20
+  [PASS] W2.1 DoF(D) = D(D-3)/2 is integer-valued and steps by D-2 (cannot drift) steps = D-2 ; values 0, 2, 5, 9 for D = 3..6
+  [PASS] W2.2 FALSIFICATION 1: at D=3 the true DoF is 0, but mu^2 = 2 -> mu^2 is not the DoF 3D gravity has no local dof (verified numerically in scripts/15 Q5.3.3)
+  [PASS] W2.3 FALSIFICATION 2: a massive spin-2 at D=4 has DoF = 5, while mu^2 stays 2 the count is gauge-invariance dependent; mu^2 is not
+  [PASS] W2.4 IDCM internal: the spectral/chain sector gives d_space = N_gen = 3 -> DoF 0, the metric factor gives D = B = 4 -> DoF 2 docs/09 (d_space = L4-B = 3) vs O124 (B = 4 from gamma_{44+-j} = 4 + alpha^-1(0) = 137)
+
+[W3] the spectral value DRIFTS continuously under a coupling perturbation
+     unperturbed: eigenvalues nearest 2 : 2.000000000000, 2.071384667678
+     eps=0.001  : nearest eigenvalue to 2 = 1.999895408243 -> drift 1.046e-04
+     eps=0.01   : nearest eigenvalue to 2 = 1.997181893968 -> drift 2.818e-03
+     eps=0.1    : nearest eigenvalue to 2 = 1.972002533284 -> drift 2.800e-02
+  [PASS] W3.1 the spectral sector drifts continuously (no protected integer): drift grows with eps drifts = ['1.05e-04', '2.82e-03', '2.80e-02']
+  [PASS] W3.2 therefore mu^2 is a CONTINUOUS quantity, while a DoF count must be a discrete invariant drift at eps=0.1 is 2.80e-02 ; a count cannot move at all
+
+[W4] multiplicity structure differs: parity pair vs TT count
+     chain multiplicities: n=0 -> 1, quarter n=44 -> 2, n=M/2 -> 1, generic -> 2
+     D=4 TT count (rank - D) at several momenta:
+       k=[0.7, 1.3, 0.0, 0.0] : N=10 rank(Q)=6 -> DoF = 2
+       k=[1.0, -0.4, 0.9, 0.0] : N=10 rank(Q)=6 -> DoF = 2
+       k=[0.3, 0.3, 0.3, 1.7] : N=10 rank(Q)=6 -> DoF = 2
+       k=[2.0, 0.1, 0.0, 0.5] : N=10 rank(Q)=6 -> DoF = 2
+  [PASS] W4.1 the TT count is 2 for EVERY momentum (a representation count, momentum-independent) counts = [2, 2, 2, 2]
+  [PASS] W4.2 the chain multiplicity is a PARITY pair: 1 at n=0 and n=M/2, 2 generically (not a polarisation index) so the chain's '2' is a reflection degeneracy, not helicity
+  [PASS] W4.3 the chain sector has ONE component per mode (no polarisation index) => it cannot supply the 2 TT polarisations the 2 must come from the metric factor (D = B = 4), not from K_chain
+
+[W5] verdict
+  [PASS] W5.1 the graviton DoF is 2 = D(D-3)/2 with D = B = 4, verified via rank(Q) - D (scripts/15 Q5); it is NOT mu^2 three discriminators: D-dependence, mass-dependence, discrete vs continuous
+  [PASS] W5.2 version note: v6 AV2 ('graviton = massless spin-2 W-field mode') and v7 graviton dispersion (omega^2 = 4 sin^2(pi n/2N_d) from the chain Laplacian) supply the DISPERSION FORM but not the polarisation count; in v10 language the polarisations must come from the metric/TT sector this is O221's structural correction to v6/v7
+
+==============================================================================
+RESULT: 13/13 PASS
+==============================================================================

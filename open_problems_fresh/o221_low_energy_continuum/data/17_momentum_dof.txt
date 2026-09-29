@@ -1,0 +1,20 @@
+==============================================================================
+O221 scripts/17 - per-momentum 4D Regge quadratic form and the DoF = 2 extraction
+CANONICAL OUTPUT FILE.  The full per-M runs are the M-scan:
+  logs/17_momentum_dof_M{3,4,6,8}.txt   (each 11/11 PASS; raw stdout, kept outside data/ so the
+   data/*.txt naming convention stays 1:1 with scripts/)
+Run:  /usr/bin/python3 scripts/17_momentum_dof.py <M>     (M is an argv parameter; default 3)
+Aggregated SCAN lines (see data/18_gap1_summary.txt for the convergence checks):
+
+SCAN M=3   gauge_resid=0.01185 disp_ratio=0.00000 near0=0 sig=(4+,6-) TTtrace=0.00006 TTtrace_con=0.25000 xt_rel=0.000001 min4_rel=0.03194 large_ratio=1.83998
+HONEST STATUS: at accessible M the lattice quadratic form reproduces the continuum DIMENSION count (dim TT = 2) but not the exact kernel; the gauge and displacement residuals are recorded above for the M-scan.
+
+SCAN M=4   gauge_resid=0.02089 disp_ratio=0.00001 near0=0 sig=(4+,6-) TTtrace=0.00015 TTtrace_con=0.25000 xt_rel=0.000001 min4_rel=0.04758 large_ratio=1.85559
+HONEST STATUS: at accessible M the lattice quadratic form reproduces the continuum DIMENSION count (dim TT = 2) but not the exact kernel; the gauge and displacement residuals are recorded above for the M-scan.
+
+SCAN M=6   gauge_resid=0.03326 disp_ratio=0.00000 near0=0 sig=(3+,7-) TTtrace=0.00029 TTtrace_con=0.25000 xt_rel=0.000001 min4_rel=0.05684 large_ratio=1.83968
+HONEST STATUS: at accessible M the lattice quadratic form reproduces the continuum DIMENSION count (dim TT = 2) but not the exact kernel; the gauge and displacement residuals are recorded above for the M-scan.
+
+SCAN M=8   gauge_resid=0.04093 disp_ratio=0.00000 near0=0 sig=(4+,6-) TTtrace=0.00041 TTtrace_con=0.25000 xt_rel=0.000001 min4_rel=0.05973 large_ratio=1.81798
+HONEST STATUS: at accessible M the lattice quadratic form reproduces the continuum DIMENSION count (dim TT = 2) but not the exact kernel; the gauge and displacement residuals are recorded above for the M-scan.
+

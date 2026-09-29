@@ -1,0 +1,79 @@
+==============================================================================
+O221 / scripts/04 - observable side of the sinc law + U6 gate
+==============================================================================
+
+[O1] sinc catalogue (IDCM mode sets)
+     M = 88 sites, modes n = 1..44 :
+       n    x=pi n/M     1-sin(x)/x     (1-sin/x)/(x^2/6) v_g/c       
+       1    0.035699917  0.00021240047  0.999936     0.99936283  
+       2    0.071399833  0.00084943948  0.999745     0.99745211  
+       5    0.17849958   0.0053018966   0.998408     0.9841112   
+       7    0.24989942   0.010375835    0.996882     0.9689373   
+       11   0.39269908   0.025504642    0.992318     0.92387953  
+       13   0.46409891   0.035513345    0.989286     0.89422527  
+       22   0.78539816   0.099683684    0.969607     0.70710678  
+       33   1.1780972    0.2157867      0.932854     0.38268343  
+       44   1.5707963    0.36338023     0.883635     2.0670321e-43
+
+     M = 176 sites, modes n = 1..88 :
+       n    x=pi n/M     1-sin(x)/x     (1-sin/x)/(x^2/6) v_g/c       
+       1    0.017849958  5.3102656e-5   0.999984     0.99984069  
+       2    0.035699917  0.00021240047  0.999936     0.99936283  
+       5    0.089249791  0.0013270589   0.999602     0.99601988  
+       7    0.12494971   0.0026000411   0.99922      0.99220394  
+       11   0.19634954   0.0064131489   0.998074     0.98078528  
+       13   0.23204946   0.0089503603   0.997311     0.97319712  
+       22   0.39269908   0.025504642    0.992318     0.92387953  
+       33   0.58904862   0.056834679    0.982794     0.83146961  
+       44   0.78539816   0.099683684    0.969607     0.70710678  
+
+     reference points: x=pi/4 -> 1-sin(x)/x = 0.099683684 (v_g/c = 0.70710678) ; x=pi/2 (Nyquist) -> 0.36338023 (v_g/c = 0)
+
+[O2] U6 gate: what if the world ring IS a real-space lattice (reading A)?
+     l = 0 spacing  a_0 = 2 pi R_world/88 = 294.8771978 Mpc
+     omega^2 = c^2 k^2 (1 - k^2 a^2/12)  =>  Lambda_2 = sqrt(12)/a  (quadratic LIV scale)
+     reading A (real-space lattice):  Lambda_2 = sqrt(12)/a_0 = 0.011747608 Mpc^-1 = 7.51252e-41 GeV
+     observational bound (Vasileiou+ 2013, quadratic): Lambda_2 > 130000000000.0 GeV
+     ratio bound/Lambda_2 = 1.73045e+51  (= 51.2 orders of magnitude DEFICIT)
+  [PASS] O2.1 reading A is excluded by the vacuum-dispersion bound Lambda_2 = 7.513e-41 GeV << 1.3e+11 GeV : excluded
+     allowed spacing from the bound: a < sqrt(12)/Lambda_2^min = 2.66469e-11 GeV^-1 = 5.25816e-27 m
+     lambda_sync in metres = 9.09896e+24 m ;  ratio lambda_sync/a_max = 1.73045e+51
+  [PASS] O2.2 the deficit is ~50 orders of magnitude (decisive, not marginal) 51.2 orders
+     => reading A (chain = real-space lattice for propagating fields) is FALSIFIED by data;
+        the framework must be read as reading B (internal/compact factor) or not at all.
+
+[O3] Reading B: continuum limit has NO residual lattice effect for propagating fields
+     l=0   a=294.877 Mpc  k=0.001  Mpc^-1 : x=0.147439  1-sin(x)/x = 0.00362302
+     l=0   a=294.877 Mpc  k=0.01   Mpc^-1 : x=1.47439  1-sin(x)/x = 0.362302
+     l=4   a=1.15186 Mpc  k=0.01   Mpc^-1 : x=0.00575932  1-sin(x)/x = 5.52829e-6
+     l=8   a=0.00449947 Mpc  k=0.01   Mpc^-1 : x=2.24973e-5  1-sin(x)/x = 8.43551e-11
+     l=12  a=1.75761e-5 Mpc  k=0.01   Mpc^-1 : x=8.78803e-8  1-sin(x)/x = 1.28716e-15
+  [PASS] O3.1 defect vanishes as 4^(-2l) for any fixed physical k x = k a_l/2 ~ 4^(-l) -> defect ~ 4^(-2l) : exact continuum kinematics recovered
+     => in reading B the sinc law is NOT a propagation effect: it survives only in
+        internal (mode-label) quantities: ratios, counts, spectra.
+
+[O4] Falsifiable content of reading B: internal ratios carry the sinc dressing
+     ratio(n=5,m=1,N=44) = 4.974547113   vs integer n/m = 5.0   dev = 0.005091
+     ratio(n=5,m=1,N=88) = 4.993629881   vs integer n/m = 5.0   dev = 0.001274
+     ratio(n=5,m=1,N=176) = 4.998407039   vs integer n/m = 5.0   dev = 0.0003186
+     ratio(n=13,m=7,N=44) = 1.809969447   vs integer n/m = 1.857142857   dev = 0.0254
+     ratio(n=13,m=7,N=88) = 1.845318664   vs integer n/m = 1.857142857   dev = 0.006367
+     ratio(n=13,m=7,N=176) = 1.854184878   vs integer n/m = 1.857142857   dev = 0.001593
+     ratio(n=44,m=22,N=44) = 1.414213562   vs integer n/m = 2.0   dev = 0.2929
+     ratio(n=44,m=22,N=88) = 1.847759065   vs integer n/m = 2.0   dev = 0.07612
+     ratio(n=44,m=22,N=176) = 1.961570561   vs integer n/m = 2.0   dev = 0.01921
+     ratio(n=22,m=11,N=44) = 1.847759065   vs integer n/m = 2.0   dev = 0.07612
+     ratio(n=22,m=11,N=88) = 1.961570561   vs integer n/m = 2.0   dev = 0.01921
+     ratio(n=22,m=11,N=176) = 1.990369453   vs integer n/m = 2.0   dev = 0.004815
+     => testable: a measured ratio R must equal sin(n pi/2N)/sin(m pi/2N) for ONE N;
+        if data prefer the undressed integer ratio n/m, the lattice dressing is not physical.
+
+[O5] Mode counting / DOS prediction (internal, observable-adjacent)
+     M=88   : 44 modes ; arcsine DOS on gamma in [0,4] ; KS to arcsine = 1/44 = 0.0227273
+     M=176  : 88 modes ; arcsine DOS on gamma in [0,4] ; KS to arcsine = 1/88 = 0.0113636
+     M=352  : 176 modes ; arcsine DOS on gamma in [0,4] ; KS to arcsine = 1/176 = 0.00568182
+  [PASS] O5.1 finite mode count + arcsine DOS is the internal prediction (no continuum CMB dust) counts are integers (44/88/176), DOS is arcsine: both flow-invariant (docs/01 S1)
+
+==============================================================================
+RESULT: 4/4 PASS
+==============================================================================

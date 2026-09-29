@@ -1,0 +1,120 @@
+==============================================================================
+O221 / scripts/06 - doc crosscheck (read-only)
+==============================================================================
+
+[H] document hygiene
+  [PASS] H1 01_problem_record.md : no U+FFFD corruption count = 0
+  [PASS] H2 01_problem_record.md : fence count even fences = 18
+  [PASS] H3 01_problem_record.md : no broken table rows offending lines = []
+  [PASS] H4 01_problem_record.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 SESSION_START.md : no U+FFFD corruption count = 0
+  [PASS] H2 SESSION_START.md : fence count even fences = 6
+  [PASS] H3 SESSION_START.md : no broken table rows offending lines = []
+  [PASS] H4 SESSION_START.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 final_result.md : no U+FFFD corruption count = 0
+  [PASS] H2 final_result.md : fence count even fences = 0
+  [PASS] H3 final_result.md : no broken table rows offending lines = []
+  [PASS] H4 final_result.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/01_limit_program.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/01_limit_program.md : fence count even fences = 2
+  [PASS] H3 docs/01_limit_program.md : no broken table rows offending lines = []
+  [PASS] H4 docs/01_limit_program.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/02_gr_qm_reduction.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/02_gr_qm_reduction.md : fence count even fences = 0
+  [PASS] H3 docs/02_gr_qm_reduction.md : no broken table rows offending lines = []
+  [PASS] H4 docs/02_gr_qm_reduction.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/03_dimension_source.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/03_dimension_source.md : fence count even fences = 4
+  [PASS] H3 docs/03_dimension_source.md : no broken table rows offending lines = []
+  [PASS] H4 docs/03_dimension_source.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/04_observable_gate.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/04_observable_gate.md : fence count even fences = 4
+  [PASS] H3 docs/04_observable_gate.md : no broken table rows offending lines = []
+  [PASS] H4 docs/04_observable_gate.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/05_closeout_audit.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/05_closeout_audit.md : fence count even fences = 0
+  [PASS] H3 docs/05_closeout_audit.md : no broken table rows offending lines = []
+  [PASS] H4 docs/05_closeout_audit.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/06_u3_three_directions.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/06_u3_three_directions.md : fence count even fences = 0
+  [PASS] H3 docs/06_u3_three_directions.md : no broken table rows offending lines = []
+  [PASS] H4 docs/06_u3_three_directions.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/07_u5_exchange.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/07_u5_exchange.md : fence count even fences = 0
+  [PASS] H3 docs/07_u5_exchange.md : no broken table rows offending lines = []
+  [PASS] H4 docs/07_u5_exchange.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/08_u3_nonlocal_obstruction.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/08_u3_nonlocal_obstruction.md : fence count even fences = 0
+  [PASS] H3 docs/08_u3_nonlocal_obstruction.md : no broken table rows offending lines = []
+  [PASS] H4 docs/08_u3_nonlocal_obstruction.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/09_three_routes.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/09_three_routes.md : fence count even fences = 0
+  [PASS] H3 docs/09_three_routes.md : no broken table rows offending lines = []
+  [PASS] H4 docs/09_three_routes.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/10_regge_route.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/10_regge_route.md : fence count even fences = 0
+  [PASS] H3 docs/10_regge_route.md : no broken table rows offending lines = []
+  [PASS] H4 docs/10_regge_route.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/11_route1_regge_from_t.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/11_route1_regge_from_t.md : fence count even fences = 2
+  [PASS] H3 docs/11_route1_regge_from_t.md : no broken table rows offending lines = []
+  [PASS] H4 docs/11_route1_regge_from_t.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/12_route2_regge_4d.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/12_route2_regge_4d.md : fence count even fences = 2
+  [PASS] H3 docs/12_route2_regge_4d.md : no broken table rows offending lines = []
+  [PASS] H4 docs/12_route2_regge_4d.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/13_mu_vs_graviton_dof.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/13_mu_vs_graviton_dof.md : fence count even fences = 0
+  [PASS] H3 docs/13_mu_vs_graviton_dof.md : no broken table rows offending lines = []
+  [PASS] H4 docs/13_mu_vs_graviton_dof.md : no stray master-status row ('| **O...' at line start) offending lines = []
+  [PASS] H1 docs/14_gap1_momentum_dof.md : no U+FFFD corruption count = 0
+  [PASS] H2 docs/14_gap1_momentum_dof.md : fence count even fences = 0
+  [PASS] H3 docs/14_gap1_momentum_dof.md : no broken table rows offending lines = []
+  [PASS] H4 docs/14_gap1_momentum_dof.md : no stray master-status row ('| **O...' at line start) offending lines = []
+
+[I] inventory (declared outputs vs actual files)
+     scripts: ['01_limit_program.py', '02_gr_qm_side.py', '03_gr_dimension_source.py', '04_sinc_observable_gate.py', '05_audit_independent.py', '06_doc_crosscheck.py', '07_u3_three_chain.py', '08_u5_exchange.py', '09_u3_nonseparable.py', '10_link_structure.py', '11_three_origin.py', '12_signature.py', '13_regge_calculus.py', '14_regge_from_t.py', '15_regge_4d.py', '16_mu_vs_graviton_dof.py', '17_momentum_dof.py', '18_gap1_summary.py', '19_audit_increment.py']
+     data   : ['01_limit_program.txt', '02_gr_qm_side.txt', '03_gr_dimension_source.txt', '04_sinc_observable_gate.txt', '05_audit_independent.txt', '06_doc_crosscheck.txt', '07_u3_three_chain.txt', '08_u5_exchange.txt', '09_u3_nonseparable.txt', '10_link_structure.txt', '11_three_origin.txt', '12_signature.txt', '13_regge_calculus.txt', '14_regge_from_t.txt', '15_regge_4d.txt', '16_mu_vs_graviton_dof.txt', '17_momentum_dof.txt', '18_gap1_summary.txt', '19_audit_increment.txt']
+  [PASS] I1 01_limit_program.py <-> data/01_limit_program.txt (naming convention) present = True
+  [PASS] I1 02_gr_qm_side.py <-> data/02_gr_qm_side.txt (naming convention) present = True
+  [PASS] I1 03_gr_dimension_source.py <-> data/03_gr_dimension_source.txt (naming convention) present = True
+  [PASS] I1 04_sinc_observable_gate.py <-> data/04_sinc_observable_gate.txt (naming convention) present = True
+  [PASS] I1 05_audit_independent.py <-> data/05_audit_independent.txt (naming convention) present = True
+  [PASS] I1 06_doc_crosscheck.py <-> data/06_doc_crosscheck.txt (naming convention) present = True
+  [PASS] I1 07_u3_three_chain.py <-> data/07_u3_three_chain.txt (naming convention) present = True
+  [PASS] I1 08_u5_exchange.py <-> data/08_u5_exchange.txt (naming convention) present = True
+  [PASS] I1 09_u3_nonseparable.py <-> data/09_u3_nonseparable.txt (naming convention) present = True
+  [PASS] I1 10_link_structure.py <-> data/10_link_structure.txt (naming convention) present = True
+  [PASS] I1 11_three_origin.py <-> data/11_three_origin.txt (naming convention) present = True
+  [PASS] I1 12_signature.py <-> data/12_signature.txt (naming convention) present = True
+  [PASS] I1 13_regge_calculus.py <-> data/13_regge_calculus.txt (naming convention) present = True
+  [PASS] I1 14_regge_from_t.py <-> data/14_regge_from_t.txt (naming convention) present = True
+  [PASS] I1 15_regge_4d.py <-> data/15_regge_4d.txt (naming convention) present = True
+  [PASS] I1 16_mu_vs_graviton_dof.py <-> data/16_mu_vs_graviton_dof.txt (naming convention) present = True
+  [PASS] I1 17_momentum_dof.py <-> data/17_momentum_dof.txt (naming convention) present = True
+  [PASS] I1 18_gap1_summary.py <-> data/18_gap1_summary.txt (naming convention) present = True
+  [PASS] I1 19_audit_increment.py <-> data/19_audit_increment.txt (naming convention) present = True
+  [PASS] I3 no orphan data files (every data/*.txt has its script) orphans = []
+  [PASS] I4 no stray backup files in the folder 
+  [PASS] I5 doc inventory complete (all 14 docs present) found = 14
+  [PASS] I6 watermark section present in 01_problem_record.md 
+
+[C] coverage: every headline number appears in the docs
+     checked 49 headline numbers ; missing = []
+  [PASS] C1 headline-number coverage >= 90%% 49/49 present
+  [PASS] C2 doc set mentions 'O221' 
+  [PASS] C2 doc set mentions 'S1' 
+  [PASS] C2 doc set mentions 'L_world' 
+  [PASS] C2 doc set mentions 'x =' 
+  [PASS] C2 doc set mentions 'd_s' 
+
+[S] status-line consistency (live field, three files must agree)
+     01_problem_record.md     : 🟡 **部分閉合**（2026-09-28 首次推導：R1 ✅ / R2 ✅ / 
+     SESSION_START.md         : 🟡 **部分閉合**（live field，2026-09-29 更新）— Ses
+     final_result.md          : 🟡 部分閉合（階段性 close-out 2026-09-29：增量已驗 667/
+  [PASS] S1 all three status lines carry an emoji state 
+  [PASS] S2 no file claims full closure while others say partial {'01_problem_record.md': '🟡 **部分閉合**（2026-09-28 首次', 'SESSION_START.md': '🟡 **部分閉合**（live field，20', 'final_result.md': '🟡 部分閉合（階段性 close-out 202'}
+
+==============================================================================
+RESULT: 99/99 PASS
+==============================================================================

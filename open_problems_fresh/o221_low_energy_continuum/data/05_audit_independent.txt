@@ -1,0 +1,128 @@
+==============================================================================
+O221 / scripts/05 - AUDIT independent recheck (dps = 50)
+==============================================================================
+
+[A] raw inputs and derived lengths (first principles)
+     L_world = 25949.1934072 Mpc ; r_d = 147.4385989 ; a0 = 294.8771978
+     c = R_world*omega_ring = 299792.630324 km/s  vs  c_SI = 299792.458  (rel dev = 5.7481248e-5 %)
+  [PASS] A1 a0 = 2*pi*R_world/88 = 2 r_d = 294.8772 Mpc (doc 01 §二) a0 = 294.8771978
+  [PASS] A2 r_d = pi*R_world/88 = 147.4386 Mpc (O127 zero-param) r_d = 147.4385989
+  [PASS] A3 c fixed point within 0.5% of SI c rel dev = 5.74812e-5 %
+
+[B] spectral identities (closed forms, independent summation)
+  [PASS] B1.44 sum gamma = 2N+2 (N=44) sum = 90.0
+  [PASS] B1.88 sum gamma = 2N+2 (N=88) sum = 178.0
+  [PASS] B1.176 sum gamma = 2N+2 (N=176) sum = 354.0
+  [PASS] B1.352 sum gamma = 2N+2 (N=352) sum = 706.0
+  [PASS] B1.704 sum gamma = 2N+2 (N=704) sum = 1410.0
+  [PASS] B2 176-chain: total 178 / even 90 / odd 88 = 2 N_d even = 90.0 , odd = 88.0
+  [PASS] B3 gamma_max = 4 (n = M/2) = 4 exact
+  [PASS] B4 mu^2 = gamma_44 of 176-chain = 2 = 2 exact
+  [PASS] B5.44 sum 1/gamma = (2N^2+1)/12 (N=44) = 322.75
+  [PASS] B5.88 sum 1/gamma = (2N^2+1)/12 (N=88) = 1290.75
+  [PASS] B5.176 sum 1/gamma = (2N^2+1)/12 (N=176) = 5162.75
+  [PASS] B5.352 sum 1/gamma = (2N^2+1)/12 (N=352) = 20650.75
+  [PASS] B5.704 sum 1/gamma = (2N^2+1)/12 (N=704) = 82602.75
+  [PASS] B6.44 E[gamma] = 2+2/N (N=44) = 2.04545454545
+  [PASS] B6.88 E[gamma] = 2+2/N (N=88) = 2.02272727273
+  [PASS] B7.88 distinct spectral values = M/2 (M=88) count = 44
+  [PASS] B8.88 KS(arcsine) = 1/N_modes (M=88) KS = 0.02272727273 vs 1/44 = 0.02272727273
+  [PASS] B7.176 distinct spectral values = M/2 (M=176) count = 88
+  [PASS] B8.176 KS(arcsine) = 1/N_modes (M=176) KS = 0.01136363636 vs 1/88 = 0.01136363636
+  [PASS] B7.352 distinct spectral values = M/2 (M=352) count = 176
+  [PASS] B8.352 KS(arcsine) = 1/N_modes (M=352) KS = 0.005681818182 vs 1/176 = 0.005681818182
+  [PASS] B7.704 distinct spectral values = M/2 (M=704) count = 352
+  [PASS] B8.704 KS(arcsine) = 1/N_modes (M=704) KS = 0.002840909091 vs 1/352 = 0.002840909091
+  [PASS] B7.1408 distinct spectral values = M/2 (M=1408) count = 704
+  [PASS] B8.1408 KS(arcsine) = 1/N_modes (M=1408) KS = 0.001420454545 vs 1/704 = 0.001420454545
+  [PASS] B9 Var[gamma] -> 2 (arcsine, M=1760; matches docs/01 1.999995 to 1e-5) sample mean = 2.002272727 -> Var = 1.999994835 ; with mu=2: 2.0 (docs/01 records 1.999995)
+
+[C] the limit program L: exact identity + convergence rates (independent algebra)
+  [PASS] C1 2 sqrt(J) sin(ka/2) == c k sin(x)/x identically (x = ka/2) 2sqrt(J) sin x vs a sqrt(J) (2x/a) sin x /x = 2 sqrt(J) sin x
+  [PASS] C2 worst residual of C1 over l = 0..6 worst rel = 4.7139611e-51
+  [PASS] C3a four (n,M) pairs (refinement n -> 4n, M -> 4M) share x = pi/88 exactly x = 0.0356999165181
+  [PASS] C3b single control variable: sin(x)/x spread = 0 across those pairs spread = 0.0
+  [PASS] C4 sin(x)/x Taylor = 1 - x^2/6 + x^4/120 - ... c2 = -0.1666666667 , c4 = 0.008333333333
+  [PASS] C5 stiffness ratio (sin x/x)^2 = 1 - x^2/3 + 2x^4/45 (O159 cross-check) c2 = -0.3333333333 , c4 = 0.04444444444
+  [PASS] C6 fixed n: (omega/(ck) - 1) ~ 4^(-2l) (|fitted exponent| ~ 2) first-step fitted exponent = -1.9999569 (doc 1.9999)
+  [PASS] C7 ratio(5,1) at N=44 vs doc 4.974547 = 4.974547113
+  [PASS] C8 ratio(44,22): M=88 = sqrt2 ; M=352 = 1.961570561 (docs/04) ; M=1408 = 1.99759 (docs/01) sqrt2 = 1.414213562 ; 1.96157 = 1.961570561 ; 1.99759 = 1.997590912
+
+[D] GR side: spectral-action coefficients, d_s by TWO independent methods
+  [PASS] D1.44 a2/a0 = -(2+2/N) (N=44) = -2.0454545 (doc -2.04545 / -2.00284)
+  [PASS] D1.704 a2/a0 = -(2+2/N) (N=704) = -2.0028409 (doc -2.04545 / -2.00284)
+  [PASS] D2.44 a4/a0 = (2N^2+1)/(12N) (N=44) = 7.335227273 (doc 117.33 at N=704)
+  [PASS] D2.704 a4/a0 = (2N^2+1)/(12N) (N=704) = 117.3334517 (doc 117.33 at N=704)
+     M=88   (script-02 grid) window 10^1.131..10^2.353 : width = 1.22123 decades ; mid d_s = 1.00187046 (min 0.994141, max 1.0096)
+  [PASS] D3.88 window mid d_s reproduces docs/02 1.0018705 (tol 2e-4) computed 1.00187046
+  [PASS] D4.88 window width reproduces docs/02 1.221 decades (tol 0.01) computed 1.22123 decades
+  [PASS] D5.88 grid-robust: mid drift < 5e-3 and window > 1.1 decades on every grid mids on coarser/finer grids = ['1.003279', '1.0010638', '1.0004807']
+     M=176  (script-02 grid) window 10^1.133..10^2.971 : width = 1.83871 decades ; mid d_s = 1.00061983 (min 0.991668, max 1.00957)
+  [PASS] D3.176 window mid d_s reproduces docs/02 1.0006198 (tol 2e-4) computed 1.00061983
+  [PASS] D4.176 window width reproduces docs/02 1.839 decades (tol 0.01) computed 1.83871 decades
+  [PASS] D5.176 grid-robust: mid drift < 5e-3 and window > 1.1 decades on every grid mids on coarser/finer grids = ['1.0006198', '1.0008192', '1.0001784']
+     M=352  (script-02 grid) window 10^1.127..10^3.555 : width = 2.42793 decades ; mid d_s = 1.00179627 (min 0.993889, max 1.0097)
+  [PASS] D3.352 window mid d_s reproduces docs/02 1.0017963 (tol 2e-4) computed 1.00179627
+  [PASS] D4.352 window width reproduces docs/02 2.428 decades (tol 0.01) computed 2.42793 decades
+  [PASS] D5.352 grid-robust: mid drift < 5e-3 and window > 1.1 decades on every grid mids on coarser/finer grids = ['1.0029023', '1.0006559', '1.0000717']
+     M=704  (script-02 grid) window 10^1.122..10^4.166 : width = 3.0433 decades ; mid d_s = 1.00133098 (min 0.992852, max 1.00981)
+  [PASS] D3.704 window mid d_s reproduces docs/02 1.0013310 (tol 2e-4) computed 1.00133098
+  [PASS] D4.704 window width reproduces docs/02 3.043 decades (tol 0.01) computed 3.0433 decades
+  [PASS] D5.704 grid-robust: mid drift < 5e-3 and window > 1.1 decades on every grid mids on coarser/finer grids = ['1.0008884', '0.99992857', '0.99992857']
+  [PASS] D10 IR gap: d_s(1e8) = 2t(2 gamma_1)e^{-gamma_1 t} = 6.3e-221301 (docs/02 Q5.3) log10 d_s = -221300.2 ; direct/analytic = 1.0
+  [PASS] D11.88 UV: d_s(1e-3) = 2 t E[gamma], E[gamma] = 2 EXACTLY for the full spectrum d_s = 0.003996 (distinct-mode convention gives E = 2+2/N, see B6)
+  [PASS] D11.704 UV: d_s(1e-3) = 2 t E[gamma], E[gamma] = 2 EXACTLY for the full spectrum d_s = 0.003996 (distinct-mode convention gives E = 2+2/N, see B6)
+     MC return prob P(50) = 0.111103  P(200) = 0.056513  -> d_s = 0.9752
+  [PASS] D5 chain d_s by MC random walk (no spectrum) = 1 +/- 0.1 d_s_MC = 0.9752
+     phi^33 = 7881196.0 (doc 7.8812e6) ; ladder range = 7881196.0
+  [PASS] D6 mu_0/mu_33 = phi^33 = 7.8812e6 = 7881196.0
+     phi-ladder           flat window = 0.275 decades ; d_s there ~ 0.149495 ; max d_s = 2537.69 ; spread(u>=2) = 13879.0
+     random log-uniform   flat window = 1.000 decades ; d_s there ~ 0.156316 ; max d_s = 2659.07 ; spread(u>=2) = 19616.8
+     arithmetic 1..34     flat window = 0.150 decades ; d_s there ~ 2.27376 ; max d_s = 5.88235e+8 ; spread(u>=2) = 9.47196e+7
+     dyadic 2^-i          flat window = 0.425 decades ; d_s there ~ 0.0985208 ; max d_s = 3.03134 ; spread(u>=2) = 27.3396
+  [PASS] D7a phi-ladder flat window = 0.275 decades (docs/02 Q6.1) computed 0.275 decades
+  [PASS] D7b phi-ladder: O(1)+ spread and huge max d_s (single-level tail) -> no dimension spread = 13879.0 , max d_s = 2537.69
+  [PASS] D7c NULL 'random log-uniform' reproduces docs/02 (flat 1.000 dec, spread 19617) computed flat = 1.000 , spread = 19616.808
+  [PASS] D7c NULL 'arithmetic 1..34' reproduces docs/02 (flat 0.150 dec, max 5.88e8) computed flat = 0.150 , max = 5.8823529e+8
+  [PASS] D7c NULL 'dyadic 2^-i' reproduces docs/02 (flat 0.425 dec, spread 27.3) computed flat = 0.425 , spread = 27.33964
+  [PASS] D7d phi is NOT special: no genuine plateau, same ballpark as the nulls phi = 0.275 decades vs nulls [1.0, 0.15, 0.425]
+     product (88x34 = 2992 values): flat window = 0.486 decades (10^6.343..10^6.829) ; d_s there ~ 0.970975 ; max d_s = 0.993785
+  [PASS] D8 max d_s(T) = 0.993785 (docs/02 Q7) -> no dimension above 1 computed 0.99378453
+  [PASS] D9 product flat window = 0.486 decades < chain's 1.221 (ladder does not widen the window) computed 0.486 decades
+
+[E] dimension mechanism: conformal identity by periodic finite differences (no FFT)
+     D=2 (N=96, FD) : lhs = -2.60501295e-15 , integ = +3.15826955e+00 , K = -0.000000
+  [PASS] E1 D=2: int R sqrt(g) = 0 (topological) |lhs|/scale < 1e-6 rel = 8.25e-16
+     D=3 (N=64, FD) : lhs = +3.01025718e+01 , integ = +1.50511307e+01 , K = 2.000021
+  [PASS] E2.3 K(D) = (D-1)(D-2) = 2 by FD (tol 1e-2) K = 2.000021
+     D=4 (N=32, FD) : lhs = +3.86897120e+02 , integ = +6.44722563e+01 , K = 6.000986
+  [PASS] E2.4 K(D) = (D-1)(D-2) = 6 by FD (tol 1e-2) K = 6.000986
+  [PASS] E3 graviton DoF: D=3 -> 0, D=4 -> 2 (first propagating dimension = 4) D(D-3)/2 : 0 vs 2
+  [PASS] E4 Weyl components: D=3 -> 0, D=4 -> 10 D(D+1)(D+2)(D-3)/12
+     independent null hits: {2: 10, 3: 7, 4: 8, 5: 6, 6: 8, 7: 7, 8: 10, 9: 7, 10: 8, 11: 9, 12: 9, 13: 6}
+  [PASS] E5 '3' hit count is unremarkable (within [min/3, 3*max] of the distribution) n3 = 7 , min = 6 , max = 10 -> no discriminative power
+
+[F] U6 observable gate: units from first principles + reading B
+     hbar*c/Mpc = 6.3949319e-39 GeV per Mpc^-1 (doc 6.3948e-39)
+  [PASS] F1 Mpc^-1 -> GeV conversion factor = 6.394931913e-39
+     Lambda_2 = 0.01174760762 Mpc^-1 = 7.5125151e-41 GeV ; bound = 1.3e+11 GeV ; deficit = 51.238158 orders
+  [PASS] F2 reading A excluded: deficit > 50 orders of magnitude 51.238158 orders (doc 51.2)
+     a_max = 2.6646936e-11 GeV^-1 = 5.2581593e-27 m (doc 5.25816e-27 m)
+  [PASS] F3 a_max = sqrt(12)/Lambda2min in metres = 5.25816e-27 m = 5.2581593e-27
+  [PASS] F4.4 reading B defect 1-sin(x)/x at l=4 -> 5.53e-6 computed 5.52829e-6
+  [PASS] F4.8 reading B defect 1-sin(x)/x at l=8 -> 8.43e-11 computed 8.43551e-11
+  [PASS] F4.12 reading B defect 1-sin(x)/x at l=12 -> 1.29e-15 computed 1.28716e-15
+  [PASS] F5 ratio(5,1) N=44 matches docs/04 4.974547113 = 4.97454711298
+  [PASS] F5 ratio(13,7) N=44 matches docs/04 1.809969447 = 1.80996944706
+  [PASS] F5 ratio(22,11) N=44 matches docs/04 1.847759065 = 1.84775906502
+  [PASS] F5 ratio(44,22) N=88 matches docs/04 1.847759065 = 1.84775906502
+  [PASS] F6 v_g/c = cos(pi n/88) n=1 vs docs/01 0.999363 = 0.99936283
+  [PASS] F6 v_g/c = cos(pi n/88) n=5 vs docs/01 0.98411 = 0.9841112
+  [PASS] F6 v_g/c = cos(pi n/88) n=7 vs docs/01 0.96894 = 0.9689373
+  [PASS] F6 v_g/c = cos(pi n/88) n=13 vs docs/01 0.89423 = 0.89422527
+  [PASS] F6 v_g/c = cos(pi n/88) n=22 vs docs/01 0.70711 = 0.70710678
+  [PASS] F7 Nyquist deviation 1 - 2/pi = 36.338% = 36.338023 %
+
+==============================================================================
+RESULT: 89/89 PASS
+==============================================================================

@@ -1,0 +1,69 @@
+==============================================================================
+O221 / scripts/10 - Route 1: connection (link) structure
+==============================================================================
+
+[L1] hermiticity and the exact blindness of a2, a4 to link data (M=8, N=64)
+     no links                 herm err 0.0e+00 ; Tr L = 256.000000 ; Tr L^2 = 1280.000000  ; Tr L^3 = 7168.000000
+  [PASS] L1.no links hermitian max |L - L^dag| = 0.0e+00
+     uniform flux phi=0.25    herm err 0.0e+00 ; Tr L = 256.000000 ; Tr L^2 = 1280.000000  ; Tr L^3 = 7168.000000
+  [PASS] L1.uniform flux phi=0.25 hermitian max |L - L^dag| = 0.0e+00
+     uniform flux phi=0.5     herm err 0.0e+00 ; Tr L = 256.000000 ; Tr L^2 = 1280.000000  ; Tr L^3 = 7168.000000
+  [PASS] L1.uniform flux phi=0.5 hermitian max |L - L^dag| = 0.0e+00
+     localized tube phi=0.5   herm err 0.0e+00 ; Tr L = 256.000000 ; Tr L^2 = 1280.000000  ; Tr L^3 = 7168.000000
+  [PASS] L1.localized tube phi=0.5 hermitian max |L - L^dag| = 0.0e+00
+     localized tube phi=0.25  herm err 0.0e+00 ; Tr L = 256.000000 ; Tr L^2 = 1280.000000  ; Tr L^3 = 7168.000000
+  [PASS] L1.localized tube phi=0.25 hermitian max |L - L^dag| = 0.0e+00
+  [PASS] L1.a Tr L (= -a2) is EXACTLY link-independent spread = 0.00e+00 ; value = 4N = 256
+  [PASS] L1.b Tr L^2 (= +a4) is EXACTLY link-independent (|U| = 1) spread = 0.00e+00 (relative 0.0e+00)
+  [PASS] L1.c Tr L^3 (= -a6) is ALSO exactly link-blind on a BIPARTITE lattice (Tr W^3 = 0: no odd closed walks) spread = 0.00e+00 ; value = 7168.0
+     Tr L^4  no links                 = 43264.000000
+     Tr L^4  uniform flux phi=0.25    = 43203.877586
+     Tr L^4  uniform flux phi=0.5     = 43106.769740
+     Tr L^4  localized tube phi=0.5   = 43254.256580
+     Tr L^4  localized tube phi=0.25  = 43261.540516
+  [PASS] L1.d Tr L^4 (= +a8) IS connection-sensitive: the FIRST visible moment relative spread = 3.6342e-03
+
+[L2] ring: the uniform flux shifts every level but NONE of the moments k <= M-1
+     sum lambda^1  : ['16.000000', '16.000000', '16.000000', '16.000000']   (invariant)
+     sum lambda^2  : ['48.000000', '48.000000', '48.000000', '48.000000']   (invariant)
+     sum lambda^3  : ['160.000000', '160.000000', '160.000000', '160.000000']   (invariant)
+     sum lambda^4  : ['560.000000', '560.000000', '560.000000', '560.000000']   (invariant)
+     sum lambda^5  : ['2016.000000', '2016.000000', '2016.000000', '2016.000000']   (invariant)
+     sum lambda^6  : ['7392.000000', '7392.000000', '7392.000000', '7392.000000']   (invariant)
+     sum lambda^7  : ['27456.000000', '27456.000000', '27456.000000', '27456.000000']   (invariant)
+     sum lambda^8  : ['102976.000000', '102960.000000', '102944.000000', '102960.000000']   (CHANGES)
+  [PASS] L2.1 moment k=1 is flux-independent spread = 0.00e+00
+  [PASS] L2.2 moment k=2 is flux-independent spread = 1.42e-14
+  [PASS] L2.3 moment k=3 is flux-independent spread = 5.68e-14
+  [PASS] L2.4 moment k=4 is flux-independent spread = 3.41e-13
+  [PASS] L2.5 moment k=5 is flux-independent spread = 1.59e-12
+  [PASS] L2.6 moment k=6 is flux-independent spread = 7.28e-12
+  [PASS] L2.7 moment k=7 is flux-independent spread = 2.55e-11
+  [PASS] L2.M moment k=M IS flux-dependent (the first sensitive moment in 1D) spread = 32.000000
+
+[L3] localized tube: BLIND PREDICTION for the a8 (4th moment) response
+     Tr(W^4) contains, per plaquette, 8 walks (2 orientations x 4 corners) with
+     phase product e^{+-i Phi_p}  =>  delta a8 = -8 * sum_p (1 - cos Phi_p)
+     i.e. kappa = delta a8 / sum_p(1 - cos Phi_p) = -8 EXACTLY (predicted before running).
+     phi=0.05 : delta a8 = -9.86833612e-02  ; sum_p(1-cos Phi_p) = 1.23354201e-02 ; kappa = -8.0000000008
+     phi=0.10 : delta a8 = -3.94581282e-01  ; sum_p(1-cos Phi_p) = 4.93226603e-02 ; kappa = -8.0000000001
+     phi=0.20 : delta a8 = -1.57589240e+00  ; sum_p(1-cos Phi_p) = 1.96986550e-01 ; kappa = -8.0000000000
+     phi=0.30 : delta a8 = -3.53665019e+00  ; sum_p(1-cos Phi_p) = 4.42081274e-01 ; kappa = -8.0000000000
+     phi=0.40 : delta a8 = -6.26476591e+00  ; sum_p(1-cos Phi_p) = 7.83095739e-01 ; kappa = -8.0000000000
+  [PASS] L3.1 kappa = delta a8 / sum_p (1 - cos Phi_p) = -8 EXACTLY (blind prediction confirmed) max |kappa + 8| = 7.64e-10
+  [PASS] L3.2 the response is even in the flux (reflection symmetry) delta a8(+phi) = delta a8(-phi)
+     UNIFORMITY CHECK: kappa spread over phi = 0.05..0.40 : 0.00% -> universal
+     tube position (total flux fixed = 2*pi*0.3 for any y0) : delta a8 for y0 = 2,3,4 : ['-3.53665019e+00', '-3.53665019e+00', '-3.53665019e+00']
+     NOTE: moving the tube row is NOT a gauge transformation on a torus with
+           non-integer total flux, so the response may legitimately depend on y0.
+  [PASS] L3.3 the covariant spectrum is gauge invariant under a random site-dependent Lambda max eigenvalue shift = 7.99e-15 (N=64)
+
+[L4] contrast: an ADDITIVE (linearised) gauge field IS visible at a4 with kappa = 2 exactly
+     (this is the lattice Yang-Mills term; compare with the 24.7x non-universality of curvature)
+     delta Tr L^2 = 1.5791367042 ; sum_bonds theta^2 = 0.7895683521 ; kappa = delta/sum = 2.0000000000
+  [PASS] L4.1 additive gauge field gives delta a4 = 2 * sum_bonds theta^2 (universal kappa = 2) diff = 2.19e-13
+  [PASS] L4.2 => the gauge kinetic structure IS recovered with a UNIVERSAL coefficient, while curvature is NOT (docs/08: kappa spread 24.7x) this is why IDCM's gauge sector closes (O144) and gravity does not
+
+==============================================================================
+RESULT: 22/22 PASS
+==============================================================================

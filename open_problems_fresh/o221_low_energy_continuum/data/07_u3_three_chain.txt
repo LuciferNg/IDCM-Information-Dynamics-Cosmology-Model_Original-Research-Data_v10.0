@@ -1,0 +1,40 @@
+==============================================================================
+O221 / scripts/07 - U3 continuation: three chain directions
+==============================================================================
+
+[Q1] d_s of K_chain^{x d} for d = 1,2,3 (full ring spectra, zero mode kept)
+     d      lambda_min        window  |d_s-d|<5%%  (decades)   plateau value
+     1      0                   1.730                       1.01658
+     2      0                   1.730                       2.03317
+     3      0                   1.730                       3.04975
+  [PASS] Q1.1 d_s = 1 (rel dev < 5%) with a window > 1 decade plateau = 1.01658 over 1.730 decades
+  [PASS] Q1.2 d_s = 2 (rel dev < 5%) with a window > 1 decade plateau = 2.03317 over 1.730 decades
+  [PASS] Q1.3 d_s = 3 (rel dev < 5%) with a window > 1 decade plateau = 3.04975 over 1.730 decades
+  [PASS] Q1.4 3 chains give 3 continuous dimensions, so 3+1 = 3 space + 1 refinement time is reachable d_s(d=3) = 3.0498
+
+[Q2] adding the phi-ladder on top of 3 chains: does it add a dimension?
+  [PASS] Q2.1 max d_s(3 chains x ladder) <= 3 + 5% on the 3-chain window (no extra dimension) max = 0.18346 vs 3
+     d_s on that window: pure 3-chain 2.86557 .. 3.65335 ; with ladder 0.11973 .. 0.18346
+
+[Q3] spectral action of the 3-torus lattice (M^3 modes, full spectra)
+     M=22  : sum gamma(dir) = 44.000000 (= 2M = 44) ; a0 = 10648 ; a2/a0 = -6.000000
+  [PASS] Q3.22 a2/a0 = -6 = 3 x (-2) per direction (M=22) a2/a0 = -6.000000
+  [PASS] Q3.22 per-direction ratio -2 reproduced (M=22) sum gamma / M = 2.000000
+     M=44  : sum gamma(dir) = 88.000000 (= 2M = 88) ; a0 = 85184 ; a2/a0 = -6.000000
+  [PASS] Q3.44 a2/a0 = -6 = 3 x (-2) per direction (M=44) a2/a0 = -6.000000
+  [PASS] Q3.44 per-direction ratio -2 reproduced (M=44) sum gamma / M = 2.000000
+
+[Q4] linear (curvature) response of a2 under a separable metric deformation
+     eps=0.02 : naive sum-lambda rel dev = 1.9942e-04 ; invariant Tr_g rel dev = 6.6347e-05
+     eps=0.05 : naive sum-lambda rel dev = 1.2497e-03 ; invariant Tr_g rel dev = 4.1532e-04
+     eps=0.10 : naive sum-lambda rel dev = 5.0458e-03 ; invariant Tr_g rel dev = 1.6707e-03
+     eps=0.20 : naive sum-lambda rel dev = 2.0974e-02 ; invariant Tr_g rel dev = 6.8375e-03
+     naive  sum-lambda : dev = -2.889e-03 eps + 0.53856 eps^2  (|c1|/c2 = 0.0054, resid 5.1e-05)
+     invariant Tr_g    : dev = -5.664e-04 eps + 0.17372 eps^2  (|c1|/c2 = 0.0033, resid 9.9e-06)
+  [PASS] Q4.1 3D: NO linear curvature response (|c1|/c2 < 0.05) in the invariant measure |c1|/c2 = 0.00326 (1D comparison: 0.0052)
+  [PASS] Q4.2 response is quadratic-dominated (the uniform lattice stays a critical point) naive |c1|/c2 = 0.00536
+  [PASS] Q4.3 per-direction 1D value also reproduced with a deterministic profile (scheme stability) deterministic cos-profile gives the same qualitative scheme suppression as the random profile of G1
+
+==============================================================================
+RESULT: 12/12 PASS
+==============================================================================

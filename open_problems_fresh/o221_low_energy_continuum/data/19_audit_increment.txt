@@ -1,0 +1,127 @@
+==============================================================================
+O221 / scripts/19 - STAGED close-out: independent audit of the INCREMENT
+  scope: docs/06..14 + scripts/07..18 (post 2026-09-29 03:20 watermark)
+  method: zero import of O221 scripts; first-principles recomputation
+==============================================================================
+
+[A] A5 condensation polyhedra: deficit angles (exact, from face angles)
+  [PASS] A1 icosahedron vertex deficit = pi/3 dev = 2.2959e-41
+  [PASS] A2 dodecahedron vertex deficit = pi/5 dev = 1.0331e-40
+  [PASS] A3 rhombicosidodecahedron vertex deficit = pi/15 dev = 9.4705e-41
+  [PASS] A4 pi/15 = 12 deg exactly dev(deg) = 5.3265e-39
+  [PASS] A5 RH vertex figure sum = 29pi/15 29/15 = 1.93333333333
+  [PASS] A6 icosahedron : V=12, F=20, E=30, Euler = 2 
+  [PASS] A7 dodecahedron : V=20, F=12, E=30, Euler = 2 
+  [PASS] A8 RH : V=60, F=62, E=120, Euler = 2 
+  [PASS] A9 sum of deficits per solid = 4pi = 2pi*chi (three solids) 12*pi/3=4.0 20*pi/5=4.0 60*pi/15=4.0
+  [PASS] A10 4pi = 60 * (pi/15) 
+  [PASS] A11 face-edge incidence: 20*3+30*4+12*5 = 240 = 2E = 2*120 = 240
+  [PASS] A12 vertex-face incidence: 60*4 = 240 = 2E 
+  [PASS] A13 A5 88-grid: 120 - 32 = 88 = 2*N_d (O182 identity, cross-O quote) 
+  [PASS] A14 a = 2piR_world/88 = 294.8771978 Mpc a = 294.8771978088
+  [PASS] A15 L = pi*a = 926.3840383 Mpc (= lambda_sync) L = 926.3840383474
+  [PASS] A16 r_d = piR_world/88 = 147.4385989 Mpc (O127) r_d = 147.4385989044
+  [PASS] A17 176*r_d = 2piR_world exactly 
+  [PASS] A18 c = a*sqrt(J) = R_world*omega_ring (dev < 1e-12 rel) c = 299792.630324 km/s
+  [PASS] A19 c identity vs SI c : rel dev ~ 5.7e-5 (registered 0.194%%-scale gauge) rel = 1.082e-9
+
+[B] dimension counting: DoF, rank, kernel, signature (independent construction)
+  [PASS] B1 DoF = D(D-3)/2 : D=3 -> 0 
+  [PASS] B2 DoF = D(D-3)/2 : D=4 -> 2 
+  [PASS] B3 DoF = D(D-3)/2 : D=5 -> 5 
+  [PASS] B4 massive spin-2 in D=4 : D(D-1)/2 - 1 = 5 
+  [PASS] B5 conformal response K(D) = (D-1)(D-2) : K(2)=0, K(3)=2, K(4)=6 
+  [PASS] B6 N = D(D+1)/2 : 6 (D=3), 10 (D=4) 
+  [PASS] B7 D=4 k=(1.0, 0.0, 0.0, 0.0) : rank = N - D = 6 rank = 6, kernel = 4
+  [PASS] B8 D=4 k=(1.0, 0.0, 0.0, 0.0) : kernel = gauge dim D = 4 kernel = 4
+  [PASS] B9 D=4 k=(1.0, 0.0, 0.0, 0.0) : signature pattern is 1 vs 5 (one direction of the opposite sign) (5+, 1-)
+  [PASS] B10 D=4 k=(1.0, 0.0, 0.0, 0.0) : gauge h = k(x)xi + xi(x)k is in the kernel (exact) |M G| = 0.000e+00
+  [PASS] B11 D=4 k=(1.0, 0.0, 0.0, 0.0) : the singleton sign is the CONFORMAL sector (q(eta) carries the singleton's sign) sign(ev_single) = -1 ; q(eta) = -7.500e-01 (1 direction(s) of this sign)
+  [PASS] B7 D=4 k=(0.3, -0.7, 1.1, 0.5) : rank = N - D = 6 rank = 6, kernel = 4
+  [PASS] B8 D=4 k=(0.3, -0.7, 1.1, 0.5) : kernel = gauge dim D = 4 kernel = 4
+  [PASS] B9 D=4 k=(0.3, -0.7, 1.1, 0.5) : signature pattern is 1 vs 5 (one direction of the opposite sign) (5+, 1-)
+  [PASS] B10 D=4 k=(0.3, -0.7, 1.1, 0.5) : gauge h = k(x)xi + xi(x)k is in the kernel (exact) |M G| = 4.353e-16
+  [PASS] B11 D=4 k=(0.3, -0.7, 1.1, 0.5) : the singleton sign is the CONFORMAL sector (q(eta) carries the singleton's sign) sign(ev_single) = -1 ; q(eta) = -1.530e+00 (1 direction(s) of this sign)
+  [PASS] B7 D=4 k=(0.0, 0.0, 0.0, 1.0) : rank = N - D = 6 rank = 6, kernel = 4
+  [PASS] B8 D=4 k=(0.0, 0.0, 0.0, 1.0) : kernel = gauge dim D = 4 kernel = 4
+  [PASS] B9 D=4 k=(0.0, 0.0, 0.0, 1.0) : signature pattern is 1 vs 5 (one direction of the opposite sign) (5+, 1-)
+  [PASS] B10 D=4 k=(0.0, 0.0, 0.0, 1.0) : gauge h = k(x)xi + xi(x)k is in the kernel (exact) |M G| = 0.000e+00
+  [PASS] B11 D=4 k=(0.0, 0.0, 0.0, 1.0) : the singleton sign is the CONFORMAL sector (q(eta) carries the singleton's sign) sign(ev_single) = -1 ; q(eta) = -7.500e-01 (1 direction(s) of this sign)
+  [PASS] B18 D=4 k=(0.0, 0.0, 0.0, 1.0) : TT space (traceless symmetric in the (D-2)-plane) has rank D(D-3)/2 = 2 rank = 2 from 3 generators
+  [PASS] B19 D=4 k=(0.0, 0.0, 0.0, 1.0) : TT directions are orthogonal to the conformal (eta) direction max|TT.eta| = 0.00e+00
+  [PASS] B20 D=4 k=(0.0, 0.0, 0.0, 1.0) : every TT direction carries the OPPOSITE sign to the singleton (conformal-factor problem) q(TT) = ['+1.00e+00', '+1.00e+00', '+1.00e+00'] vs q(eta) = -7.500e-01
+  [PASS] B21 D=4 k=(0.0, 0.0, 0.0, 1.0) : TT block is not in the kernel and does not overlap the singleton |M TT| = 1.414e+00 ; |TT.v| = 0.00e+00
+  [PASS] B7 D=3 k=(0.6, -1.2, 0.8) : rank = N - D = 3 rank = 3, kernel = 3
+  [PASS] B8 D=3 k=(0.6, -1.2, 0.8) : kernel = gauge dim D = 3 kernel = 3
+  [PASS] B9 D=3 k=(0.6, -1.2, 0.8) : D=3 has NO transverse-traceless direction (dim TT = D(D-3)/2 = 0) (2+, 1-) across the 3 physical directions (reported, not claimed)
+  [PASS] B10 D=3 k=(0.6, -1.2, 0.8) : gauge h = k(x)xi + xi(x)k is in the kernel (exact) |M G| = 3.712e-16
+  [PASS] B11 D=3 k=(0.6, -1.2, 0.8) : the singleton sign is the CONFORMAL sector (q(eta) carries the singleton's sign) sign(ev_single) = -1 ; q(eta) = -8.133e-01 (1 direction(s) of this sign)
+  [PASS] B7 D=3 k=(0.0, 0.0, 1.0) : rank = N - D = 3 rank = 3, kernel = 3
+  [PASS] B8 D=3 k=(0.0, 0.0, 1.0) : kernel = gauge dim D = 3 kernel = 3
+  [PASS] B9 D=3 k=(0.0, 0.0, 1.0) : D=3 has NO transverse-traceless direction (dim TT = D(D-3)/2 = 0) (2+, 1-) across the 3 physical directions (reported, not claimed)
+  [PASS] B10 D=3 k=(0.0, 0.0, 1.0) : gauge h = k(x)xi + xi(x)k is in the kernel (exact) |M G| = 0.000e+00
+  [PASS] B11 D=3 k=(0.0, 0.0, 1.0) : the singleton sign is the CONFORMAL sector (q(eta) carries the singleton's sign) sign(ev_single) = -1 ; q(eta) = -3.333e-01 (1 direction(s) of this sign)
+  [PASS] B18 D=3 k=(0.0, 0.0, 1.0) : TT space (traceless symmetric in the (D-2)-plane) has rank D(D-3)/2 = 0 rank = 0 from 0 generators
+  [PASS] B19 D=3 k=(0.0, 0.0, 1.0) : no TT generator exists in D=3 (rank 0 = D(D-3)/2) 
+
+[B'] K_chain quarter mode mu^2 (exact arithmetic)
+  [PASS] B14 mu^2 = 4sin^2(pi/4) = 2 exactly (M=88, n=22) mu^2 = 2.0
+  [PASS] B14 mu^2 = 4sin^2(pi/4) = 2 exactly (M=176, n=44) mu^2 = 2.0
+  [PASS] B14 mu^2 = 4sin^2(pi/4) = 2 exactly (M=352, n=88) mu^2 = 2.0
+  [PASS] B14 mu^2 = 4sin^2(pi/4) = 2 exactly (M=704, n=176) mu^2 = 2.0
+  [PASS] B14 mu^2 = 4sin^2(pi/4) = 2 exactly (M=1408, n=352) mu^2 = 2.0
+  [PASS] B15 gamma_n = 4sin^2(pi n/M): sum over all modes = 2M (exact) sum = 176.0
+  [PASS] B16 DISCRIMINANT (i) D-dependence: DoF(D=3) = 0 != 2 = mu^2 refutes DoF = mu^2 DoF(3) = 0
+  [PASS] B17 DISCRIMINANT (ii) mass-dependence: massive spin-2 in D=4 gives 5 != 2 = massless/mu^2 massive = 5, massless = 2
+
+[C] regular simplex dihedral angles + flat-shadow Regge deficits (direct geometry)
+  [PASS] C1 regular_simplex(D) has equal edge lengths for D = 2,3,4 max-min = ['0.00e+00', '4.44e-16', '6.66e-16']
+  [PASS] C2 CALIBRATION D=2: dihedral = 60 deg = arccos(1/2) 60.0000000000 deg
+  [PASS] C3 CALIBRATION D=3: tetrahedron dihedral = arccos(1/3) 70.5287793655 deg
+  [PASS] C4 D=4: 4-simplex cell-cell dihedral = arccos(1/4) (= pi/D pattern) 75.5224878141 deg, cos = 0.250000000000
+  [PASS] C5 D=4: exactly 2 cells meet at a triangle; deficit = 2pi - 2*arccos(1/4) deficit = 3.646953 rad = 208.9550 deg
+  [PASS] C6 flat 3-torus (M=3): every EDGE carries deficit 2pi - Sigma = 0 max|deficit| = 8.882e-16 over 189 edges
+  [PASS] C6 flat 3-torus (M=4): every EDGE carries deficit 2pi - Sigma = 0 max|deficit| = 8.882e-16 over 448 edges
+  [PASS] C6b M=2 EXCLUSION (evidenced, not silent): Z_2 folding duplicates every Kuhn tet -> every dihedral angle counted twice, deficit = -2pi M=2: 48 tets fold to 24 distinct keys (24 duplicates) ; deficit seen = -6.2832 rad
+  [PASS] C7 DISCIPLINARY: cnt (tets per edge) is NOT constant, so '2pi*cnt - Sigma' is wrong cnt values = [4, 6]
+  [PASS] C8 DISCIPLINARY: '2pi - Sigma' = 0 while the historical '2pi*cnt - Sigma' is O(1) max|right| = 8.882e-16 ; max|wrong| = 6.2832
+  [PASS] C9 CALIBRATION: 4 tetrahedron vertices x (2pi - pi) = 4pi = 2pi*chi deficit per vertex = 3.141593 rad
+
+[D] bookkeeping: cumulative PASS counts quoted in docs/14 + final_result
+  [PASS] D1 sum(scripts 01..18) = 512 sum = 512
+  [PASS] D2 scripts 17 score = 11 (x4 momenta) = 44 
+  [PASS] D3 cumulative checkpoints: 121 (=01..04), 210 (=..05), 332 (=..09), 381 (=..12), 398 (=..13), 446 (=..15), 459 (=..16), 503 (=..17), 512 (=..18) checkpoints = [121, 210, 332, 381, 398, 446, 459, 503, 512]
+
+[E] temporal integrity: script -> doc order, no backfill
+      (documented harness-only post-doc amendment: scripts/18_gap1_summary.py -> docs/14_gap1_momentum_dof.md)
+  [PASS] E1 every increment doc is written after its derivation script (mtime order) 8 script->doc pairs checked ; harness-only post-doc amendment: scripts/18 -> docs/14 (glob path fix, 16 s; content re-verified in E5)
+  [PASS] E5 post-doc amendment: docs/14 headline numbers still backed by the current data missing = []
+  [PASS] E2 no backfill: watermark-covered docs carry no un-dated later-round token hits = []
+  [PASS] E3 increment docs exist and are non-empty (9 files) 
+
+[F] hygiene of the increment docs
+  [PASS] F1 docs/06_u3_three_directions.md : no U+FFFD 
+  [PASS] F2 docs/06_u3_three_directions.md : fences even fences = 0
+  [PASS] F1 docs/07_u5_exchange.md : no U+FFFD 
+  [PASS] F2 docs/07_u5_exchange.md : fences even fences = 0
+  [PASS] F1 docs/08_u3_nonlocal_obstruction.md : no U+FFFD 
+  [PASS] F2 docs/08_u3_nonlocal_obstruction.md : fences even fences = 0
+  [PASS] F1 docs/09_three_routes.md : no U+FFFD 
+  [PASS] F2 docs/09_three_routes.md : fences even fences = 0
+  [PASS] F1 docs/10_regge_route.md : no U+FFFD 
+  [PASS] F2 docs/10_regge_route.md : fences even fences = 0
+  [PASS] F1 docs/11_route1_regge_from_t.md : no U+FFFD 
+  [PASS] F2 docs/11_route1_regge_from_t.md : fences even fences = 2
+  [PASS] F1 docs/12_route2_regge_4d.md : no U+FFFD 
+  [PASS] F2 docs/12_route2_regge_4d.md : fences even fences = 2
+  [PASS] F1 docs/13_mu_vs_graviton_dof.md : no U+FFFD 
+  [PASS] F2 docs/13_mu_vs_graviton_dof.md : fences even fences = 0
+  [PASS] F1 docs/14_gap1_momentum_dof.md : no U+FFFD 
+  [PASS] F2 docs/14_gap1_momentum_dof.md : fences even fences = 0
+  [PASS] F3 naming convention NN.py <-> data/NN.txt holds for all scripts scripts = 19, data = 19
+  [PASS] F4 no orphan data files orphans = []
+
+==============================================================================
+RESULT: 102/102 PASS
+  scope: INCREMENT (docs/06..14, scripts/07..18) - independent, zero import
+==============================================================================

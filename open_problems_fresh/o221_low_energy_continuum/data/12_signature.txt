@@ -1,0 +1,41 @@
+==============================================================================
+O221 / scripts/12 - Route 3: signature / Wick rotation
+==============================================================================
+
+[G1] inertia of the lattice Laplacian (the available quadratic form)
+     M=4 d=3 : N=64     n+ = 63    n- = 0   n0 = 1   (lam_max = 12.000000)
+  [PASS] G1.4x3 quadratic form is positive semi-definite with a 1-dim kernel inertia (n+, n-, n0) = (63, 0, 1) => EUCLIDEAN by structure
+     M=6 d=3 : N=216    n+ = 215   n- = 0   n0 = 1   (lam_max = 12.000000)
+  [PASS] G1.6x3 quadratic form is positive semi-definite with a 1-dim kernel inertia (n+, n-, n0) = (215, 0, 1) => EUCLIDEAN by structure
+     M=8 d=2 : N=64     n+ = 63    n- = 0   n0 = 1   (lam_max = 8.000000)
+  [PASS] G1.8x2 quadratic form is positive semi-definite with a 1-dim kernel inertia (n+, n-, n0) = (63, 0, 1) => EUCLIDEAN by structure
+
+[G2] dispersion positivity and the continuum limit
+  [PASS] G2.1 omega^2(k) > 0 for every k in (0, pi] min = 9.999917e-05
+     omega^2/k^2 : 0.999992 (k=0.01) -> 0.405285 (k=pi) ; continuum value = 1
+  [PASS] G2.2 continuum limit omega^2 = k^2 (no sign flip, no exceptional mode) omega^2/k^2 at k=0.01 = 0.999992
+
+[G3] the lattice's own graded structure cannot give 1+3
+     bipartite chain with 88 sites : negative index of the natural graded
+       bilinear form = 44 (one sublattice), positive index = 44
+  [PASS] G3.88 graded structure gives (n+, n-) = (44, 44), not (3, 1) a Lorentzian 1+3 needs exactly 1 negative direction; the grading gives 44
+     bipartite chain with 178 sites : negative index of the natural graded
+       bilinear form = 89 (one sublattice), positive index = 89
+  [PASS] G3.178 graded structure gives (n+, n-) = (89, 89), not (3, 1) a Lorentzian 1+3 needs exactly 1 negative direction; the grading gives 89
+  [PASS] G3.3 no natural 176-L projection yields exactly one timelike direction 3+1 = 4 = B is a SPACETIME count (docs/11 route 2), not a graded-signature count
+
+[G4] what IS structural: the light-cone speed
+     c = R_world * omega_ring = 299792.630 km/s ; SI c = 299792.458 km/s ; dev = 5.75e-07
+  [PASS] G4.1 the causal speed is structural (O73 fixed point), not an input dev = 5.75e-07 (0.0001%)
+  [PASS] G4.2 no superluminal mode: v_g = c cos x <= c for every x (O221 docs/01) v_g = c cos(pi n/M) with cos <= 1; the Nyquist mode is a lattice artefact, not a mode
+
+[G5] the Wick continuation: admissible for every physical mode
+     k -> i k : omega^2_lor = -4 sinh^2(k/2) < 0 for all k > 0 (exactly one direction flips)
+     continuum: -k^2 ; ratio omega^2_lor/(-k^2) at k=1e-3 : 1.00000008
+  [PASS] G5.1 the continuation flips exactly one direction for every physical mode Euclidean branch positive, Lorentzian branch negative: no mixed-sign mode
+  [PASS] G5.2 continuum limit of the continuation is -k^2 (standard dispersion) ratio = 1.00000008
+  [PASS] G5.3 signature costs 0 continuous parameters (a discrete choice) but is NOT derived input remains; consistent with the dof = 1 anchor (O212) and with docs/03 D >= 3
+
+==============================================================================
+RESULT: 13/13 PASS
+==============================================================================
