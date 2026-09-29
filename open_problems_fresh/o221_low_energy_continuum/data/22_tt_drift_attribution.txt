@@ -1,0 +1,13 @@
+# O221 scripts/22 - canonical derived aggregate (regenerated from the raw run
+# logs/22_tt_drift_attribution.txt by concatenating the SCAN and HONEST STATUS lines).
+# Convention: docs/16 construction at lattice momentum k = 2 pi n / M; A(agg) = sum of
+# per-polarisation lattice stiffnesses / sum of continuum stiffnesses (= scripts/21's
+# mean_lat/mean_cont); R_action = |q_lat|/|q_cont| per polarisation; R_map = ||dl||^2/eps^2.
+
+SCAN n=1  k=[2.0944 1.5708 1.0472 0.7854]
+SCAN A_TT_rom=[0.784081 0.665845 0.447049 0.321662]  A_TT_mor=[1.955407 1.657388 1.107982 0.792974]
+SCAN A_conf_rom=[1.411841 1.771105 1.829326 1.736819]  A_conf_mor=[1.411841 1.771105 1.829326 1.736819]
+SCAN R_action_TT=[ 2352.90824  4389.57064 10352.84718 19014.54261]  R_action_conf=[ 34854.81354  91814.0858  325473.66389 774991.78264]
+SCAN R_map_TT=[  7890.625    16200.       55360.      139053.30086]  R_map_conf=[ 24687.5      51840.      177920.      446213.20344]
+
+HONEST STATUS: all checks pass. The residual TT drift A_TT ~ c/M is NOT a map/measure mismatch (R_map is the same for both sectors, slope ~3 in M) but lives entirely in the ACTION response: R_action ~ M^3 for the conformal sector (extensive) and ~ M^2 for TT (sub-extensive), i.e. the lattice TT action response carries one extra power of k relative to the continuum form.  At fixed physical k A_TT still falls as 1/M, so the effect is a volume-counting (lattice-size) property of the Regge action in the TT sector - recorded in docs/17.

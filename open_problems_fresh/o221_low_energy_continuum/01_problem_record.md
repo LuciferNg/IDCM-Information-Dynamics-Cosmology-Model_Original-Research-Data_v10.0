@@ -430,6 +430,15 @@ L = (細化流: M → 4M, a → a/4, √J → 4√J) ∘ (共動重標定: n →
 | 51 | 2026-09-29 | 派生聚合 + 原始跑（同 data/17、data/20 慣例） | `data/21_gauge_fixed_quotient.txt`、`logs/21_gauge_fixed_quotient_M{3,4,6,8}.txt` | 1:1 命名約定保持 |
 | 52 | 2026-09-29 | 文檔核對擴至 docs 01–16（headline 74 個數字）+ `final_result` + `SESSION_START` Session 14 + README + register | `scripts/06_doc_crosscheck.py`（**109/109**） | — |
 
+### 第 15 輪 — 2026-09-29（殘餘 ③ 歸因：TT 漂移住喺「作用量響應」）
+
+| # | 日期 | 步驟 | 產物 | 結果 |
+|:-:|:-----|:-----|:-----|:-----|
+| 53 | 2026-09-29 | 殘餘 ③：同時放開 (M, n)（k = 2πn/M）+ 逐偏振精確分解 A_t = R_action,t/R_map,t + **固定物理 k 配對** | `scripts/22_tt_drift_attribution.py` | **12/12**（四次真錯修正：聚合約定錯配、恆等符號、convention-robust 判據、`np.dot` 對 2-D 非法） |
+| 54 | 2026-09-29 | 文檔化：R_map 扇區無關（∝M³，斜率差 0.024）；R_action TT 次廣延（∝M^2.13）vs conformal 廣延（∝M^3.16）；固定 k 下 A_TT 仍 ∝ 1/M ⟹ H2 否證 | `docs/17_residual3_tt_drift.md` | 見 §二十四 |
+| 55 | 2026-09-29 | 派生聚合 + 原始跑 | `data/22_tt_drift_attribution.txt`、`logs/22_tt_drift_attribution.txt` | 1:1 命名約定保持 |
+| 56 | 2026-09-29 | 文檔核對擴至 docs 01–17（headline 85 個數字）+ `final_result` + `SESSION_START` Session 15 + README + register | `scripts/06_doc_crosscheck.py`（**114/114**） | — |
+
 ## 十二、未閉合項掃描與判定（§4.1，2026-09-29）
 
 掃描範圍：SESSION_START / 01_problem_record / final_result 全部 🔴/🟡，逐條書面判定：
@@ -739,3 +748,30 @@ ratio_lat / ratio_cont = (A_TT / A_conf) × (m_TT / m_vw) × (k_l / k_c)
 **驗證**：scripts 01–21 累計 **769/769**（= 58/44/15/4/89/**109**/12/22/42/22/14/13/17/23/25/13/44/9/102/56/36；T1 全線重跑實測，逐 M 腳本 17/20/21 = 44+56+36）；文檔核對 `scripts/06` = **109/109**（docs 01–16，headline 74 個數字全在）；增量獨立審計 `scripts/19` = 102/102（水位內）。
 ⚠️ **核數修正（本輪自查）**：先前把總數寫成 759 = 723 + 36，**漏加** crosscheck 因文檔庫存 14 → 16 份而增加嘅 **+10** 檢查（99 → 109）⟹ 正確為 **769/769**；T1 重跑同時做 data/log 完整性核（前後 sha256）：`changed=[] new=[] gone=[]` ⟹ 無 canonical 派生檔被覆蓋（scripts/17 argv 陷阱未再現）。
 **水位**：仍為 2026-09-29 12:50（§十）。docs/15–16、scripts/20–21、data/20–21、logs/20–21 屬**超水位增量**，將於下次 close-out 由審計器（需擴至 scripts/21）與 crosscheck 驗。
+
+---
+
+## 二十四、殘餘 ③ 歸因（2026-09-29，Session 15）— 新增節，不改舊節
+
+**產物**：`scripts/22_tt_drift_attribution.py`（**12/12**）、`docs/17_residual3_tt_drift.md`、`data/22_tt_drift_attribution.txt`、`logs/22_tt_drift_attribution.txt`。
+
+**問題**：docs/16 之 `A_TT ≈ 2.5/M`（conformal 側 M-穩定 ~1.8）——係映射測度（H1）抑或 k 效應（H2）？
+
+**構造**：docs/16 構造 + 放開模指數 n（`k = 2πn/M`）+ 逐偏振精確分解 `A_t = R_action,t / R_map,t`（`R_action = |q_lat|/|q_cont|`、`R_map = ‖dl‖²/ε²`，殘餘 1.57e-16）+ **固定物理 k 配對**（M=4↔8）。
+
+**結果**
+
+| 量（vs k，即 −M） | TT | conformal | 判定 |
+|:--|:--|:--|:--|
+| `R_map`（映射測度） | ∝ M^2.94 | ∝ M^2.96 | **扇區無關**（斜率差 **0.024**）⟹ 測度唔係漂移來源 |
+| `R_action`（作用量響應） | ∝ **M^2.13**（次廣延） | ∝ **M^3.16**（廣延） | 差 **1.028** ≈ 一個 M 冪 ⟹ 漂移全部住喺此 |
+| 固定 k 之 A_TT 比（M=4→8） | **1.9299**（k=π）／**1.9260**（k=π/2） | A_conf 比 1.0701／1.0709 | TT 仍 ∝ 1/M ⟹ **H2 否證**；conformal M-穩定 ✓ |
+| `A_TT·M` spread（agg / mor） | 14.0% / 13.3% | — | 定律 `A_TT ∝ c/M` **約定穩健** |
+
+**裁定**：殘餘 ③ **🟡 已歸因**（決定性）：漂移唔喺映射測度，而係 **naive 映射嘅 TT 方向在 Regge 格點上之作用量響應唔係體積廣延**（格點 ∝ k³ vs 連續 ∝ k²，且每單位體積隨細化衰 1/M）。配合 docs/16（naive 映射規範污染 ~96.5%）⟹ **定量 TT 陳述需要修正映射／參數化**（新殘餘 ⑤）。
+
+**可證偽回歸測試（留待未來）**：任何「正確」TT 參數化須同時滿足 (a) `R_action ∝ M³`；(b) 固定 k 下 `A_TT` M-穩定（比值 ≈1）；(c) 逐偏振分解恆等 ≤1e-12。
+
+**本輪真錯（全屬審計/約定側）**：① 聚合約定錯配（誤用「逐偏振比值平均」，得 A_TT 大 2.49× 假象；真約定 = `Σ|q_lat|/N ÷ Σ|q_cont|`）；② 恆等檢查帶號相除（TT 之 `q_lat` 可負 ⟹ 200% 假殘餘）；③ 固定 k 判據須兩約定同時成立；④ `np.dot(dl,dl)` 對 2-D 陣列非法。
+
+**驗證**：`scripts/22` = 12/12；scripts 01–22 累計 **786/786**；文檔核對 `scripts/06` = **114/114**（docs 01–17，headline 85 個數字全在）。
