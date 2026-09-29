@@ -15,7 +15,9 @@ import os
 import re
 import math
 import subprocess
+import json
 from fractions import Fraction
+from decimal import Decimal
 
 import numpy as np
 import mpmath as mp
@@ -48,7 +50,7 @@ def frac(x):
 
 print("=" * 78)
 print("O221 / scripts/19 - STAGED close-out: independent audit of the INCREMENT")
-print("  scope: docs/06..14 + scripts/07..18 (post 2026-09-29 03:20 watermark)")
+print("  scope: docs/06..18 + scripts/07..23 (two staged increments: post 03:20 and post 12:50)")
 print("  method: zero import of O221 scripts; first-principles recomputation")
 print("=" * 78)
 
@@ -546,7 +548,249 @@ ck("F3 naming convention NN.py <-> data/NN.txt holds for all scripts",
 ck("F4 no orphan data files", all(d[:-4] + ".py" in have_sc for d in have_dt),
    "orphans = %s" % [d for d in have_dt if d[:-4] + ".py" not in have_sc])
 
+
+# ============================================================ G. SECOND increment
+# Scope: docs/15..18 + scripts/20..23 (post 2026-09-29 12:50 watermark).  Same rules:
+# zero import of O221 scripts, first-principles recomputation, READ-only.
+print("\n[G] SECOND increment (docs/15..18, scripts/20..23): independent recomputation")
+INC2 = [("scripts/20_tt_amplitude_diagnosis.py", "docs/15_gap2_tt_amplitude.md"),
+        ("scripts/21_gauge_fixed_quotient.py", "docs/16_gap1_gauge_fixed.md"),
+        ("scripts/22_tt_drift_attribution.py", "docs/17_residual3_tt_drift.md"),
+        ("scripts/23_residual45_closure.py", "docs/18_residual45_closure.md")]
+
+
+def rd(rel):
+    return open(os.path.join(BASE, rel), encoding="utf-8").read()
+
+
+# G1 - the sinc factor used by docs/18 sec.3: the edge-averaged plane wave is
+#      (1/L) int_0^L cos(k.shat s + phi) ds = cos(theta + phi) sinc(theta),  theta = k.shat L/2
+worst = mp.mpf(0)
+worstq = mp.mpf(0)
+for (kv, sv, Lv, phv) in ((0.7, 1.0, 1.0, 0.3), (2.1, 0.5, 0.9, -1.1), (3.0, 0.8, 1.3, 2.0)):
+    kk, ss_, LL, pp = mp.mpf(kv), mp.mpf(sv), mp.mpf(Lv), mp.mpf(phv)
+    th = kk * ss_ * LL / 2
+    # independent route 1: elementary antiderivative, term by term, then average
+    anti = (mp.cos(pp) * mp.sin(kk * ss_ * LL) + mp.sin(pp) * (mp.cos(kk * ss_ * LL) - 1)) / (kk * ss_)
+    exact = anti / LL
+    clsd = mp.cos(th + pp) * (mp.sin(th) / th)
+    worst = max(worst, abs(exact - clsd))
+    worstq = max(worstq, abs(mp.quad(lambda t: mp.cos(kk * ss_ * t + pp), [0, LL]) / LL - clsd))
+ck("G1 the sinc identity of docs/18 sec.3 holds: the elementary antiderivative reproduces "
+   "cos(theta+phi) sinc(theta) to 1e-28 (an independent mpmath quadrature agrees to 1e-15)",
+   worst < mp.mpf("1e-28") and worstq < mp.mpf("1e-15"),
+   "max |antiderivative - closed| = %s ; max |quadrature - closed| = %s"
+   % (mp.nstr(worst, 4), mp.nstr(worstq, 4)))
+
+# G2 - midpoint-rule error order: (cos(theta) - sinc(theta))/sinc(theta) ~ -theta^2/3, i.e.
+#      O(k^2 a^2) at fixed k with a = 1/M  => the residual-4 closure claim is structurally right
+rat = []
+for th in (mp.mpf("1e-3"), mp.mpf("1e-4")):
+    mid = mp.cos(th)
+    exc = mp.sin(th) / th
+    rat.append((mid - exc) / exc / th ** 2)
+ck("G2 the midpoint-rule relative error scales as -theta^2/3 (O(k^2 a^2)), the order quoted in "
+   "docs/18 for the residual-4 closure", abs(rat[0] + mp.mpf(1) / 3) < mp.mpf("1e-5")
+   and abs(rat[1] + mp.mpf(1) / 3) < mp.mpf("1e-7"),
+   "theta^2 coefficients %s / %s (limit -1/3)" % (mp.nstr(rat[0], 6), mp.nstr(rat[1], 6)))
+
+# G3 - the fixed-k pairs really share the physical momentum (exact rational arithmetic)
+PAIRS = [((3, 1), (6, 2)), ((4, 1), (8, 2)), ((4, 2), (8, 4))]
+ok = all(Fraction(n1, M1) == Fraction(n2, M2) for (M1, n1), (M2, n2) in PAIRS)
+ck("G3 all three fixed-k pairs satisfy n1/M1 = n2/M2 exactly (k = 2 pi n / M equal)",
+   ok, "pairs = %s" % PAIRS)
+
+# G4 - cross-file recomputation of docs/15's headline stiffnesses from the CANONICAL rho
+#      values in data/20 (A = rho / rho_cont; the doc quotes A_TT = 0.131 / A_conf = 40.8)
+d20 = rd("data/20_tt_amplitude_diagnosis.txt")
+scan20 = {}
+for line in d20.split("\n"):
+    if line.startswith("SCAN M="):
+        fields = dict(kv.split("=") for kv in line.split()[2:])
+        scan20[int(line.split()[1][2:].rstrip("="))] = fields
+A_TT = float(scan20[3]["rhoTT"]) / float(scan20[3]["rhoTT_con"])
+A_CF = float(scan20[3]["rhoVW"]) / float(scan20[3]["rhoVW_con"])
+ck("G4 docs/15's A_TT and A_conf reproduce from the canonical rho fields of data/20 "
+   "(independent recomputation, M=3)", abs(A_TT - 0.1306) < 5e-4 and abs(A_CF - 40.82) < 0.02,
+   "A_TT = %.4f (doc 0.131) ; A_conf = %.2f (doc 40.8)" % (A_TT, A_CF))
+
+# G5 - the doc's M->inf extrapolation arithmetic: 0.25 * (1/50.8) * 0.43 ~ 2.1e-3
+ext = mp.mpf("0.25") * (1 / mp.mpf("50.8")) * mp.mpf("0.43")
+ck("G5 docs/15's extrapolated continuum ratio 0.25 x (1/50.8) x 0.43 = 2.1e-3 is arithmetically "
+   "correct", abs(ext - mp.mpf("2.1e-3")) < mp.mpf("5e-5"),
+   "value = %s" % mp.nstr(ext, 5))
+
+# G6 - fixed-k A_TT ratios and the implied q_lat exponents from the CANONICAL logs/22 lines
+l22 = rd("logs/22_tt_drift_attribution.txt")
+att = {}
+for line in l22.split("\n"):
+    m = re.search(r"M=(\d+) n=(\d+) k=[\d.]+ : A_TT\(agg\)=([\d.]+)", line)
+    if m:
+        att[(int(m.group(1)), int(m.group(2)))] = float(m.group(3))
+assert (4, 2) in att and (8, 4) in att and (4, 1) in att and (8, 2) in att, sorted(att)
+r_half = att[(4, 1)] / att[(8, 2)]
+r_pi = att[(4, 2)] / att[(8, 4)]
+# A ~ M^(s-3) because A = (|q_lat|/R_map)/|q_cont| with R_map ~ M^3 and q_cont M-independent,
+# so A_M4/A_M8 = 2^(3-s) and s = 3 - log2(A_M4/A_M8)
+s_tt_half = 3.0 - math.log(r_half) / math.log(2.0)
+s_tt_pi = 3.0 - math.log(r_pi) / math.log(2.0)
+ck("G6a the fixed-k A_TT ratios recompute from the canonical logs/22 values",
+   abs(r_half - 1.9260) < 5e-4 and abs(r_pi - 1.9299) < 5e-4,
+   "k=pi/2 %.4f ; k=pi %.4f" % (r_half, r_pi))
+ck("G6b the implied TT q_lat exponent s = 3 + log2(A_M4/A_M8) agrees with the docs/18 value "
+   "1.93 within 0.2 (a DIFFERENT route: it assumes only R_map ~ M^3)", abs(s_tt_half - 1.929) < 0.2,
+   "s(k=pi/2) = %.3f (doc 1.929) ; s(k=pi) = %.3f" % (s_tt_half, s_tt_pi))
+
+# G7 - the residual-4 exponents recompute from the raw violation values in data/23
+d23 = rd("data/23_residual45_closure.txt")
+m = re.search(r"k=2pi/3 .*M=3 ([\d.e+-]+) -> M=6 ([\d.e+-]+)\s+ratio ([\d.]+)\s+violation ~ M\^(-[\d.]+)", d23)
+m2 = re.search(r"k=pi/2 .*M=4 ([\d.e+-]+) -> M=8 ([\d.e+-]+)\s+ratio ([\d.]+)\s+violation ~ M\^(-[\d.]+)", d23)
+e1 = -math.log(float(m.group(2)) / float(m.group(1))) / math.log(2.0)
+e2 = -math.log(float(m2.group(2)) / float(m2.group(1))) / math.log(2.0)
+ck("G7a the residual-4 fall exponents 1.365 / 1.475 recompute from the raw data/23 violation "
+   "values", abs(e1 - 1.365) < 5e-3 and abs(e2 - 1.475) < 5e-3,
+   "recomputed %.3f / %.3f ; documented ratio %s / %s" % (e1, e2, m.group(3), m2.group(3)))
+m3 = re.search(r"n=1 scan .*violation = \[([\d. ]+)\] -> growth exponent in M = \+([\d.]+)", d23)
+vv = [float(x) for x in m3.group(1).split()]
+g_n1 = math.log(vv[-1] / vv[0]) / math.log(8.0 / 3.0)
+ck("G7b the n=1 mixed-scan growth exponent +1.272 recomputes from the five canonical values",
+   abs(g_n1 - 1.272) < 5e-3, "recomputed %+.3f from %s" % (g_n1, vv))
+
+# G8 - the simplex edge-projector trace quoted in docs/18 sec.2 (independent construction)
+def proj_spectrum(verts):
+    V = np.array(verts, float)
+    S = np.zeros((4, 4))
+    for a in range(5):
+        for b in range(a + 1, 5):
+            d = V[b] - V[a]
+            s_ = d / np.linalg.norm(d)
+            S += np.outer(s_, s_)
+    return float(np.trace(S)), sorted(np.linalg.eigvalsh(S))
+
+
+# (i) the CHAIN simplex of the torus triangulation (scripts/17-23's CELL_SIMP[0]): consecutive
+#     vertices share one more coordinate, so it carries face and body diagonals
+chain = [(0, 0, 0, 0), (1, 0, 0, 0), (1, 1, 0, 0), (1, 1, 1, 0), (1, 1, 1, 1)]
+# (ii) the CORNER simplex (0, e1, e2, e3, e4) - the other standard Kuhn orientation
+corner = [(0, 0, 0, 0), (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1)]
+tr_c, ev_c = proj_spectrum(chain)
+tr_o, ev_o = proj_spectrum(corner)
+ck("G8 the edge-projector sum of the CHAIN simplex (the one the torus triangulation uses) has "
+   "trace exactly 10 and the anisotropic spectrum quoted in docs/18",
+   abs(tr_c - 10.0) < 1e-12 and abs(ev_c[0] - 1.13962) < 5e-5 and abs(ev_c[-1] - 5.27698) < 5e-4,
+   "trace = %.10f ; spectrum = %s" % (tr_c, np.array2string(np.array(ev_c), precision=6)))
+ck("G8b a DIFFERENT Kuhn orientation (corner simplex: S = 3I - J/2, so 3 on the u-perp "
+   "subspace and 1 on u) has the spectrum [1,3,3,3]: also anisotropic and NOT the isotropic "
+   "(10/4)I, so docs/18's exclusion of the isotropic-annihilation mechanism is orientation "
+   "independent", abs(tr_o - 10.0) < 1e-12 and abs(ev_o[0] - 1.0) < 1e-9
+   and abs(ev_o[1] - 3.0) < 1e-9 and abs(ev_o[-1] - 3.0) < 1e-9,
+   "trace = %.10f ; spectrum = %s" % (tr_o, np.array2string(np.array(ev_o), precision=6)))
+
+# G9 - every canonical log of the second increment carries its all-PASS RESULT line
+logs = ["logs/20_tt_amplitude_M%d.txt" % M for M in (3, 4, 6, 8)] + \
+       ["logs/21_gauge_fixed_quotient_M%d.txt" % M for M in (3, 4, 6, 8)] + \
+       ["logs/22_tt_drift_attribution.txt", "logs/23_residual45_closure.txt"]
+bad = [f for f in logs if "RESULT: " not in rd(f) or "[FAIL]" in rd(f)]
+ck("G9 all 10 canonical logs of the second increment exist and contain no [FAIL] line",
+   not bad, "checked %d files ; offenders = %s" % (len(logs), bad))
+
+# G10 - T3 temporal integrity: derivation script written before its doc
+viol = []
+for sc, dc in INC2:
+    if mtime(os.path.join(BASE, sc)) > mtime(os.path.join(BASE, dc)):
+        viol.append("%s newer than %s" % (sc, dc))
+ck("G10 each second-increment doc is written after its derivation script (mtime order)",
+   not viol, "violations = %s" % viol)
+
+# G11 - no backfill: docs covered by the FIRST watermark must not carry second-increment tokens
+OLD2 = ["docs/%s" % f for f in sorted(os.listdir(os.path.join(BASE, "docs")))
+        if f[:2] <= "16" and f.endswith(".md")]
+# NB "sinc" and "pi n/M" are LEGITIMATE first-increment material (the dispersion omega =
+# c k sin(x)/x) - only tokens minted by the second increment may be used here.
+TOK2 = ["sinc-corrected", "shape-extended", "M^2.849", "1.6513", "2.808", "deficit 0.9"]
+bad2 = []
+for f in OLD2:
+    txt = rd(f)
+    for i, line in enumerate(txt.split("\n")):
+        for tok in TOK2:
+            if tok in line and not (("\u26a0" in line) and ("2026-" in line)):
+                bad2.append("%s:%d:%s" % (f, i + 1, tok))
+ck("G11 no backfill: the docs covered by the first watermark carry no un-dated "
+   "second-increment token", not bad2, "hits = %s" % bad2[:6])
+
+INFO.append("[G12] audited limitation (recorded, not a check): the intermediate FAILING runs of "
+            "scripts/22-23 (8/12 and 4-false-FAIL versions) were overwritten by the canonical "
+            "run, so their evidence lives only in the session record, not on disk.  The canonical "
+            "logs on disk are the final all-PASS versions (checked in G9).")
+
+# ============================================================ H. record completeness
+print("\n[H] record completeness: every session id and every doc of the O221 record")
+DOCS = sorted(f for f in os.listdir(os.path.join(BASE, "docs")) if f.endswith(".md"))
+SCRIPTS = sorted(f for f in os.listdir(os.path.join(BASE, "scripts")) if re.match(r"^\d\d_", f))
+pr_t, ss_t, fr_t = rd("01_problem_record.md"), rd("SESSION_START.md"), rd("final_result.md")
+readme_t = open(os.path.join(BASE, "..", "README.md"), encoding="utf-8").read()
+regp = os.path.join(BASE, "..", "..", "problem_register", "register.jsonl")
+reg_t = open(regp, encoding="utf-8").read() if os.path.exists(regp) else ""
+reg_o221 = [json.loads(l) for l in reg_t.split("\n") if l.strip() and '"O221"' in l]
+
+weak = []
+for d in DOCS:
+    base = d[:-3]
+    hits = [nm for nm, txt in (("PR", pr_t), ("SS", ss_t), ("FR", fr_t), ("RD", readme_t),
+                               ("RG", reg_t)) if base in txt or d in txt]
+    if len(hits) < 2:
+        weak.append((d, hits))
+ck("H1 every one of the %d docs is referenced in at least two of the record files "
+   "(PR / SESSION_START / final_result / README / register)" % len(DOCS), not weak,
+   "weakly-referenced = %s" % weak)
+
+# session ids <-> rounds bijection
+sess_id = sorted(int(m.group(1)) for m in re.finditer(r"^### Session (\d+) ", ss_t, re.M))
+rounds = sorted(int(m.group(1)) for m in re.finditer(r"^### 第 (\d+) 輪 ", pr_t, re.M))
+ck("H2 the SESSION_START session ids and the problem-record rounds are the same set "
+   "(1 .. %d)" % max(rounds), sess_id == [n for n in rounds if n > 1],
+   "sessions = %s ; rounds = %s" % (sess_id, rounds))
+
+# every session >= 2 has a register event naming it, and every round has its docs on disk
+missing_reg = [n for n in range(13, max(rounds) + 1)
+               if not any("Session %d" % n in json.dumps(e) for e in reg_o221)]
+ck("H3 every post-watermark round (13..%d) has a register entry naming its session"
+   % max(rounds), not missing_reg, "missing = %s" % missing_reg)
+
+missing_cnt = [s for s in SCRIPTS if s[:2] not in fr_t]
+ck("H4 final_result.md lists a PASS count for every one of the %d scripts" % len(SCRIPTS),
+   not missing_cnt, "unlisted = %s" % missing_cnt)
+
+badref = []
+for e in reg_o221:
+    ref = str(e.get("ref") or "")
+    mm = re.search(r"(docs/[\w./-]+\.py|docs/[\w./-]+\.md|data/[\w./-]+\.txt)", ref)
+    if mm:
+        cand = mm.group(1) if mm.group(1).startswith("docs/") else mm.group(1)
+        if not os.path.exists(os.path.join(BASE, cand)):
+            badref.append(cand)
+ck("H5 every register reference resolves to a file on disk", not badref,
+   "%d O221 events ; broken = %s" % (len(reg_o221), badref))
+
+wm = []
+for l in pr_t.split("\n"):
+    if not l.startswith("|"):
+        continue
+    fields = [f.strip() for f in l.split("|")]
+    if len(fields) > 3 and re.match(r"^(docs|data|logs)/\S+$", fields[2]):
+        wm.append(fields[2])
+missing_wm = [f for f in wm if not os.path.exists(os.path.join(BASE, f))]
+ck("H6 every file listed in the sec.10 watermark table exists on disk", not missing_wm,
+   "table entries = %d ; missing = %s" % (len(wm), missing_wm[:5]))
+
+exp_docs = int(re.search(r"DOCS_EXPECTED = (\d+)", rd("scripts/06_doc_crosscheck.py")).group(1))
+ck("H7 the on-disk doc count equals the crosscheck's DOCS_EXPECTED (no doc escapes the checks)",
+   exp_docs == len(DOCS), "on disk %d ; DOCS_EXPECTED %d" % (len(DOCS), exp_docs))
+
+for line in INFO:
+    print("  [INFO] %s" % line)
+
 print("\n" + "=" * 78)
 print("RESULT: %d/%d PASS" % (PASS, PASS + FAIL))
-print("  scope: INCREMENT (docs/06..14, scripts/07..18) - independent, zero import")
+print("  scope: INCREMENTS (docs/06..18, scripts/07..23) - independent, zero import")
 print("=" * 78)

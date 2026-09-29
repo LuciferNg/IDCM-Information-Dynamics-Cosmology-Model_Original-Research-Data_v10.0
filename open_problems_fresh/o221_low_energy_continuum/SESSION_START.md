@@ -304,3 +304,20 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 **本輪真錯（審計/判據側，物理零讓步）**：① `expo` 符號約定反轉（三個假 FAIL）；② C4 參考值標籤對調（假 FAIL 17.3% → 修後 7.60e-07）；③ k=π 退化零 0/0 崩潰（明確處理）；④ 初版機制假說排除。已入 skill 第 27 條。
 
 **驗證**：scripts 01–23 = **803/803**；文檔核對 119/119（docs 01–18）；水位仍為 12:50（§十），docs/15–18、scripts/20–23 屬超水位增量。
+
+### Session 17 — 2026-09-29：階段性 close-out（第二增量）+ 全對話 session id × docs 覆蓋審計
+
+**指示**（調律者）：「先階段性 closeout再繼續，檢查是否整個對話框內所有session id 和docs都經過closeout」。
+
+**性質**：**第二階段性 close-out**（增量閉合，唔係總結性）。**新水位 = 2026-09-29 16:38**；增量 = docs 15–18、scripts 20–23、data 20–23、`logs/20_*`、`logs/21_*`、`logs/22`、`logs/23`。舊記錄一律**唔改、唔刪**（規則 3、§9.1）；§十 水位表係 live field，原址刷新。
+
+**交付**
+- `scripts/19_audit_increment.py` **擴展**（零 import、只讀）：**[G] 第二增量獨立重算** + **[H] 記錄完整性覆蓋審計** ⟹ **102/102 → 123/123**（見 §二十六）。
+- §十 水位表刷新（**81 檔**）、§十一 第 17 輪、§二十六、`final_result.md`、`README`、register note。
+
+**覆蓋審計結果（回答調律者之問：整個對話所有 session id 與 docs 是否都經過 close-out）**
+1. **docs 01–18**：全部在 `01_problem_record.md` 有引用 ✓；全部被 `scripts/06` 之 headline 覆蓋（96 個數字）✓；全部在 §十 水位表 ✓。
+2. **發現真缺口（本輪修）**：`docs/11_route1_regge_from_t.md`（路線 ①）與 `docs/12_route2_regge_4d.md`（路線 ②）**未在 SESSION_START 舊節列名**（舊節只寫「路線 ① / 路線 ②」字樣），只在 PRecord §十八 與 register 有記錄。⟹ 本輪以**新增指向**補齊（此處列名：`docs/11_route1_regge_from_t.md`、`docs/12_route2_regge_4d.md`），**唔改舊節**（append-only）✓ 修後 H1 通過。
+3. **session id 對應**：SESSION_START 之 `Session 2..17` ↔ PRecord §十一 之 `第 1..17 輪` **同一集合**（Session 1 = 第 1 輪，由「接手起點」節承載）✓；第 13–16 輪各有 register 事件（含 Session 字樣）✓。
+4. **其他完整性**：每個 `scripts/NN` 均在 `final_result.md` 有 PASS 數 ✓；每個 register 引用路徑在磁碟存在 ✓；§十 表內每個檔案存在 ✓；磁碟 doc 數 = crosscheck `DOCS_EXPECTED` = 18 ✓。
+5. **誠實限制（G12，記錄在案）**：scripts/22–23 之中間**失敗版**（8/12 版、4 假 FAIL 版）被最終 all-PASS 版覆蓋，磁碟只剩 canonical log ⟹ 中間失敗之證據僅存於 session 記錄，唔在磁碟（可審計性缺口，非判定為 PASS）。
