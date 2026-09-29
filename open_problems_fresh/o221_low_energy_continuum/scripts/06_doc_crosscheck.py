@@ -28,7 +28,7 @@ def ck(name, cond, detail=""):
 # ALL docs are audited (was docs/01..04 only during the first close-out round);
 # the list is discovered from disk so a new doc cannot silently escape the audit.
 DOCS = sorted("docs/" + f for f in os.listdir(os.path.join(BASE, "docs")) if f.endswith(".md"))
-DOCS_EXPECTED = 15
+DOCS_EXPECTED = 16
 ROOT = ["01_problem_record.md", "SESSION_START.md", "final_result.md"]
 ALL = ROOT + DOCS
 
@@ -140,7 +140,17 @@ NUMBERS = ["294.8772",
            "56/56",
            "14/14",
            "723/723",
-           "7.15e-11"]
+           "7.15e-11",
+           "docs/16",
+           "1.4118",
+           "1.8293",
+           "0.7841",
+           "0.3217",
+           "28.9",
+           "2+, 4",
+           "Richardson",
+           "36/36",
+           "769/769"]
 missing = [n for n in NUMBERS if n not in CORPUS]
 print("     checked %d headline numbers ; missing = %s" % (len(NUMBERS), missing))
 ck("C1 headline-number coverage >= 90%%", len(NUMBERS) - len(missing) >= 0.9 * len(NUMBERS),

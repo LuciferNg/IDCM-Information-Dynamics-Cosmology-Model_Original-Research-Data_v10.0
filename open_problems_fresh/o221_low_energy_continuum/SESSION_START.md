@@ -246,3 +246,26 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 **殘餘**：① conformal 異常 ~50× 來源；② 與缺口 ①（精確位移商）互動；③ 與連續端 conformal-factor 問題（簽名 1 vs 5）關聯。
 
 **驗證**：scripts 01–20 = **723/723**；文檔核對覆蓋 docs 01–15；水位刷新（§十）。
+
+### Session 14 — 2026-09-29：缺口 ① 規範固定 + 缺口 ② 殘餘②（conformal 異常 = 規範污染）
+
+**指示**：Session 13 之後「繼續」——接續攻 docs/14 殘餘 ①（精確位移商計數），並順帶檢 docs/15 殘餘②（conformal 異常 ~50× 之歸屬）。
+
+**新增**：`scripts/21_gauge_fixed_quotient.py`（**36/36** = 9/9 × M=3,4,6,8）；`docs/16_gap1_gauge_fixed.md`；`logs/21_gauge_fixed_quotient_M*.txt`；派生 `data/21_gauge_fixed_quotient.txt`；`scripts/06_doc_crosscheck.py` 擴至 **docs 01–16**（headline 74 個數字，**109/109**）。
+
+**構造（兩端完全相同）**：10 個度量擾動取**單位張量範基**（每基向量 ‖H‖_F = 1 ⟹ 剛度 per unit strain）；規範子空間 `Vg = span{k⊗ξ_i + ξ_i⊗k}`（4 條，兩端同一）；規範固定 = **歐氏正交補**（10 − 4 = **6**）—— ⚠️ q-正交補在 `Vg ⊂ ker Q` 時退化，不可用。
+
+**核心結果**
+- **缺口 ① 🟢（主體）**：精確頂點位移 = 一階 kernel（`dS_R(amp)/dS_R(amp/2) = 4.00` 精確，Richardson 判據）；規範固定後 dim 6、`rank = N − D = 6`、**無 kernel**（兩端）；格點慣性 (2+,4−)@M=3,4 → **(1+,5−)@M=6,8** 精確等於連續端（額外正方向 4.01% → 0.909% → 穿零）；naive 規範破壞 0.0119 → 0.0414（唔收斂，獨立複現 docs/14 `gauge_resid`）。
+- **缺口 ② 殘餘② 🟢**：規範固定後 **A_conf = 1.4118 / 1.7711 / 1.8293 / 1.7368**（原 40.82 / 49.82 / 52.14 / 50.81）⟹ 崩潰因子 M-穩定 **28–29×**；`A_conf/A_TT` 312.6 → 1.80（M=3）⟹ **~96.5% 係天真映射之規範污染**，非跡扇區本質。TT 扇區 A_TT = 0.7841 → 0.3217（趨向 1 但 M-漂移，見殘餘 ③）。
+
+**本輪真錯（全部構造/判據側，物理零讓步；文件零改動）**
+1. 每參數重新歸一化 ⟹ 破壞 polarisation 雙線性（`q(v+w)` 被隱式縮放）——假象：連續端 rank 5、慣性 (2+,3−)。
+2. q-正交補退化（`Vg·Q = 0`）⟹ SVD nullspace 取到任意子空間——假象：dim 4、連續端 (2+,2−,2 zeros)。
+3. 位移判據誤用絕對量（`|dS_R|/amp²` 必然 FAIL，量級 = 二階幾何項）⟹ 改 Richardson 比值 4。
+4. `Vg Q Vgᵀ` 病態需 `pinv(rcond=1e-10)`（plain solve 放大噪聲成 O(1) 擾動、觸發 Cholesky 失敗）。
+已入 skill `idcm-continuum-limit-verification` 第 25 條。
+
+**殘餘（下一輪，不開新 O）**：③ 🔴 TT 扇區 gauge-fixed 剛度 M-漂移（A_TT ≈ 2.3/M）—— 辨明格點 edge-space 測度 vs 連續端 unit-strain 測度（U5 母題）抑或真 TT 殘差；④ 🟡 Regge 型泛函唯一性。
+
+**驗證**：scripts 01–21 = **769/769**；文檔核對 109/109（docs 01–16）；增量獨立審計 scripts/19 = 102/102（水位內）。**水位仍為 12:50**（§十）；docs/15–16、scripts/20–21 屬超水位增量，下次 close-out 驗（審計器需擴至 21）。
