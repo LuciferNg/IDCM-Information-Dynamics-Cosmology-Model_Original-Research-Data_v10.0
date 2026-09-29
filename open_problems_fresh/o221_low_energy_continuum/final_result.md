@@ -48,5 +48,5 @@ O210 → O140 → O139 → O138 → O86 → O213 → O221（並列 O202 / O212 /
 - 增量獨立審計 `scripts/19_audit_increment.py`（**零 import**、由第一原理：精確算術 / 顯式線性化 EH 二次型 / 直接單形幾何 / 平坦 torus 摺角）：**102/102**
 - 舊輪獨立審計 `scripts/05_audit_independent.py`（零 import、不同算法：MC 遊走 / 4 階差分 / 另寫 d_s 掃描器）：**89/89**
 - 文檔核對 `scripts/06_doc_crosscheck.py`（read-only，docs 01–21 全覆蓋）：**134/134**（headline **162** 個數字全在；docs 由 18 → 21 份後之計數）
-- 全線 T1（`verify_o221_r19.py`，per-script timeout 3600 s；01–26 全線重跑）：**=== T1 TOTAL: 870/870 PASS (failures 0) ===**
+- 全線 T1（`verify_o221_r19.py`，per-script timeout 3600 s；**01–26 全線重跑**）：**870/870 PASS（failures 0）**
 - 審計披露：① d_s 譜定義含零模 ② plateau mid 網格敏感 ③ E[γ] 兩 convention ④ §二十一列 5 項審計側判據修正（文檔數值錯誤 **0**）

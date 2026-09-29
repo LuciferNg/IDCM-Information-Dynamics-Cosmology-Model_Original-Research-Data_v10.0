@@ -352,7 +352,7 @@ L = (細化流: M → 4M, a → a/4, √J → 4√J) ∘ (共動重標定: n →
 | 97 | scripts/26_boundary_layer_separation.py | 2026-09-29 22:14 | 本輪 **10/10 PASS**（4 條記錄式否證 + 4 條可測伴隨；判據分類統一後重跑） | ✅ 本輪驗 |
 | 98 | data/26_boundary_layer_separation.txt | 2026-09-29 22:32 | 派生聚合（由 logs/26 重生成） | ✅ 本輪新增 |
 | 99 | logs/26_boundary_layer_separation.txt | 2026-09-29 22:28 | canonical 原始輸出（rc=0） | ✅ 本輪新增 |
-| 100 | logs/verify_t1_r19.txt | 2026-09-30 00:00 | T1 全線 01–26（per-script timeout 3600 s）：**=== T1 TOTAL: 870/870 PASS (failures 0) ===** | ✅ 本輪驗 |
+| 100 | logs/verify_t1_r19.txt | 2026-09-30 00:19 | T1 全線 01–26（per-script timeout 3600 s）：**870/870 PASS（failures 0）** | ✅ 本輪驗 |
 | 101 | logs/verify_t1_r18_aborted.txt | 2026-09-29 22:02 | 首次 T1 r18 之透明保留（per-script timeout 1200 s 中止） | ✅ 已保留（非 canonical） |
 | 102 | logs/verify_t1_r18b_partial.txt | 2026-09-29 22:31 | 第二次 T1 r18b 之透明保留（timeout 3600 s；跑到 scripts/23 後由 r19 取代） | ✅ 已保留（非 canonical） |
 
@@ -1089,3 +1089,4 @@ docs/17 量到 `A_TT` 漂移**恰 ∝ 1/M**，而格點係 `(M+2)⁴`（pad = 1�
 ### 30.4 判據／方法側修正（審計側，物理零讓步）
 ① `n = M//8 = 0` ⟹ gauge 基退化、SVD 唔收斂（首跑中止）⟹ 每 k 自帶可表示 M 集（π/2 {4,8,16}；π/4 {8,16}，與 docs/19 兩點階梯一致）＋ `n ≥ 1` 守衛；② F0 對象由「邊界**計數** ∝ M^−1」改為「邊界**份額** = 1 − (1−2/M)⁴ ∝ M^−1」（計數自然 ∝ M³）；③ 內點 deficit **同時**報 A_agg 與 plain \|q\|，閉合需兩者皆小；④ **判據分類統一**：F2–F5 由「預測式門檻」改為「記錄式否證 + 可測伴隨」（F2b 內點 > full、F3b 內點 A_TT 比 < full、F4b 扇區指數差 > 0.3、F5b vert 內點 > full）⟹ 2/6 → **10/10**。
 
+**§10.2 附註（2026-09-30 00:2x，新增）**：`logs/verify_t1_r19.txt` 內出現一行 `!! CANONICAL FILE CLOBBERED BY RERUN: ['verify_t1_r19.txt']` —— 此為**自指偽陽性**：T1 審計器之「canonical 檔完整性」清單包含**佢自己嘅輸出檔**，故必定報「changed」；同一行之 `new=[] gone=[]` 顯示**無**其他 canonical 檔案被改／增／刪，且 `=== T1 TOTAL: 870/870 PASS (failures 0) ===`（含逐位元一致比對，如 `logs/21_gauge_fixed_quotient_M8.txt byte-identical = True`）。結論：**零污染**；審計器清單應排除自身輸出檔（審計側待修，記錄在案）。
