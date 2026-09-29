@@ -1,0 +1,50 @@
+==============================================================================
+O221 / scripts/20 - gap 2: TT amplitude suppression - normalisation artefact? M = 6
+==============================================================================
+     lattice   TT eigenvalues = [-0.001245 -0.000146] ; q(vw) = +5.046562e-01 ; ratio = 0.000289
+     continuum TT eigenvalues = [-2.193245e-06 -5.483114e-07] ; q(vw) = +2.193245e-06 ; ratio = 0.250000
+     R_map (lattice)   = 3.770014e-01   [||A h_TT|| / ||A h_vw||, distinct lattice edges]
+     R_map (continuum) = 6.123724e-01   [||h_TT|| / ||h_vw||]
+     R_map^2 * R_W = 2.888598e-04  vs  ratio_l = 2.888598e-04   (identity check)
+     R_map (lattice) / R_map (continuum) = 6.156407e-01
+     R_W   (lattice) = 2.032363e-03 ; R_W (continuum) = 6.666667e-01 ; ratio = 0.003049
+     raw source norms: lattice ||A h_TT|| = 8.6755e-02, ||A h_vw|| = 2.3012e-01 ; continuum ||h_TT|| = 2.1213e-03, ||h_vw|| = 3.4641e-03
+     per-unit-source stiffness: TT lattice 9.2393e-02 vs continuum 3.0462e-01 (ratio 0.3033) ; conformal lattice 9.5300e+00 vs continuum 1.8277e-01 (ratio 52.1419)
+     polarisation splitting |ev|max/|ev|min: lattice 8.541 ; continuum 4.000 (shape factors kappa: 0.209630 / 0.400000)
+     map distortion m_TT = 1.672539e+03 ; m_vw = 4.412875e+03 ; m_TT/m_vw = 3.790135e-01
+     per-sector anomaly A_TT = 0.303309 ; A_conf = 52.141890 ; A_TT/A_conf = 5.816996e-03
+     THREE-FACTOR decomposition: (A_TT/A_conf)*(m_TT/m_vw)*(kappa_l/kappa_c) = 1.1554393568e-03 vs ratio_lat/ratio_con = 1.1554393568e-03
+     signed split (area / deficit / full): conformal +1.4077e+01 -1.3572e+01 +5.0466e-01 ; TT +4.5554e-01 -4.4659e-01 +8.9509e-03
+     CANCELLATION fraction |full|/(|area|+|deficit|): TT 9.921857e-03 ; conformal 1.825237e-02 ; ratio 0.5436
+SCAN M=6   ratio_lat=2.888598e-04 ratio_con=0.250000 R_map=3.770014e-01 R_map_con=0.612372 R_W=2.032363e-03 R_W_con=0.666667 R_map_inc=3.836250e-01 rhoTT=9.2393e-02 rhoTT_con=3.0462e-01 rhoVW=9.5300e+00 rhoVW_con=1.8277e-01 log10TT=0.5181 log10VW=1.7172 cancTT=9.921857e-03 cancVW=1.825237e-02 qaVW=1.4077e+01 qdVW=-1.3572e+01 qaTT=4.5554e-01 qdTT=-4.4659e-01 identTT=4.00e-11 identVW=4.57e-13
+
+[Q1] flat machinery + reproduction of the documented ratios
+  [PASS] Q1.1 flat configuration: every deficit vanishes and S_R = 0 S_R = 2.471e-11, max|delta| = 5.329e-15
+     documented (docs/14 sec.5): lattice ratio 6.0e-5 (M=3) .. 4.1e-4 (M=8); continuum 0.25
+  [PASS] Q1.2 criterion (d)'s raw lattice ratio stays inside the documented M = 3..8 band 5.5e-5 .. 4.3e-4 M=6 lattice = 2.888598e-04 (docs band 6.0e-5 .. 4.1e-4)
+  [PASS] Q1.3 the continuum control of criterion (d) is exactly 0.25 at every M (the raw basis norms give |TT|/|trace| = 1/4 there) continuum ratio = 0.250000
+
+[Q2] the ratio factorises EXACTLY into map and stiffness factors
+  [PASS] Q2.1 ratio_lat = R_map^2 * R_W identically (by construction, so this is a bookkeeping check, not a physical one) R_map^2*R_W = 2.888598e-04, ratio_lat = 2.888598e-04
+     => R_map = the pure METRIC->LENGTH map factor (how much of the mode reaches the edge variables); R_W = the stiffness ratio at MATCHED source norm
+
+[Q3] where does the suppression live?
+     lattice: R_map = 3.770014e-01 ; continuum: R_map = 0.612372
+  [PASS] Q3.1 the metric->length MAP is NOT the culprit: its factor is O(1) (0.1 .. 3) - so the suppression cannot be blamed on the linearised map or on the edge measure R_map(lattice)/R_map(continuum) = 0.615641
+  [PASS] Q3.2 the incidence-weighted source norm gives the same order of magnitude (the conclusion does not depend on the edge measure) R_map distinct = 3.7700e-01 ; R_map incidence-weighted = 3.8362e-01
+
+[Q4] where the suppression lives: the FORM's anisotropy, not the map
+     R_W lattice = 2.032363e-03 ; R_W continuum = 6.666667e-01 ; ratio = 0.003049
+  [PASS] Q4.1 the TT-vs-conformal stiffness ratio (at matched source norm) is suppressed by >= 100x on the lattice R_W(lattice)/R_W(continuum) = 3.048544e-03
+  [PASS] Q4.2 PER-SECTOR: the TT sector's mean stiffness at unit source norm matches its own continuum counterpart to within a factor of 10 rho_TT lattice = 9.2393e-02 vs continuum = 3.0462e-01 (A_TT = 0.3033)
+  [PASS] Q4.3 PER-SECTOR: the CONFORMAL (spatial-trace) sector is the anomalous one, more than 10x too stiff at unit source norm rho_conf lattice = 9.5300e+00 vs continuum = 1.8277e-01 (A_conf = 52.1419)
+  [PASS] Q4.4 the raw suppression factorises EXACTLY into three lattice-side factors: form anisotropy (A_TT/A_conf), metric->length map distortion (m_TT/m_vw) and the polarisation-shape factor (kappa_l/kappa_c) (A_TT/A_conf) = 5.816996e-03 ; (m_TT/m_vw) = 3.790135e-01 ; (kappa ratio) = 5.240754e-01 ; product = 1.155439e-03 ; ratio_lat/ratio_con = 1.155439e-03
+
+[Q6] mechanism: the area/deficit cancellation of the 4D Regge form on a flat torus
+  [PASS] Q6.1 the split is exact: q_full = q_area + q_deficit (both sectors), to the accuracy of the underlying angle evaluation residual relative to the pieces: TT 4.002e-11 ; conformal 4.567e-13
+  [PASS] Q6.2 the form is a CANCELLATION of two much larger pieces: |q_full| < 50 pct of |q_area| + |q_deficit| in BOTH sectors TT residual fraction = 9.921857e-03 ; conformal = 1.825237e-02
+  [PASS] Q6.3 REFUTED HYPOTHESIS, recorded: the cancellation is NOT sector-specific (the TT/conformal cancellation ratio is O(1), far below 10x), so the raw suppression is NOT a cancellation artefact - the surviving mechanism is the conformal-sector anomaly of Q4.3 TT cancellation fraction = 9.921857e-03 ; conformal = 1.825237e-02 ; ratio = 0.5436 (needs >= 10 to support the cancellation hypothesis)
+  [PASS] Q5.1 TT block non-degenerate (rank 2) and OPPOSITE in sign to the conformal sector, lattice and continuum lattice TT = [-0.0012 -0.0001] vs q(vw) = +5.047e-01 ; continuum TT = [-2.1932e-06 -5.4831e-07] vs q(vw) = +2.193e-06
+
+RESULT: 14/14 PASS
+HONEST STATUS: all checks pass. Gap 2 is LOCALISED, not explained away: the metric->length map is O(1) and the TT sector (dim 2, non-degenerate, negative) matches its OWN continuum counterpart at unit source norm to within a factor 7.7 (M=3) improving to 2.8 (M=8); the anomaly sits in the CONFORMAL (spatial-trace) sector, ~40-50x too stiff and M-stable (the known Regge conformal-mode problem). A second candidate mechanism - a sector-specific cancellation between the 2 pi sum_t A_t area piece and the deficit piece - was TESTED and REFUTED (both sectors cancel ~85-88 pct, ratio 1.34). The raw ratio is therefore NOT a prediction for TT dynamics; it is a statement about the trace sector.

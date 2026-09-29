@@ -118,7 +118,7 @@ O221 / scripts/19 - STAGED close-out: independent audit of the INCREMENT
   [PASS] F2 docs/13_mu_vs_graviton_dof.md : fences even fences = 0
   [PASS] F1 docs/14_gap1_momentum_dof.md : no U+FFFD 
   [PASS] F2 docs/14_gap1_momentum_dof.md : fences even fences = 0
-  [PASS] F3 naming convention NN.py <-> data/NN.txt holds for all scripts scripts = 19, data = 19
+  [PASS] F3 naming convention NN.py <-> data/NN.txt holds for all scripts scripts = 20, data = 20
   [PASS] F4 no orphan data files orphans = []
 
 ==============================================================================

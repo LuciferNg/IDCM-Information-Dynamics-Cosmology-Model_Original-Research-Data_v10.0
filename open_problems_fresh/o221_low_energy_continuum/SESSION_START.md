@@ -230,3 +230,19 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 **殘餘（下輪主攻，不開新 O）**：① 🔴 TT 幅度受壓 150–1000×；② 🔴 精確位移商計數；③ 🟡 Regge 泛函唯一性；④ ⚠️ 觀測端映射（cross-O，register 已記）。
 
 **水位**：全部檔案對齊至 2026-09-29 12:50（見 01_problem_record.md §十）。下一輪只驗超水位嘅檔。
+
+### Session 13 — 2026-09-29：缺口 ② 攻堅（close-out 後續推）
+
+**指示**：階段性 close-out 之後「繼續追」。目標 = docs/14 §五 之 🔴（TT 幅度受壓 150–1000×）。
+
+**新增**：`scripts/20_tt_amplitude_diagnosis.py`（**56/56** = 14/14 × M=3,4,6,8）；`docs/15_gap2_tt_amplitude.md`；`logs/20_tt_amplitude_M*.txt`；派生 `data/20_tt_amplitude_diagnosis.txt`。
+
+**核心 = 精確三因子分解**（殘餘 < 1e-9）：`ratio_lat/ratio_cont = (A_TT/A_conf)·(m_TT/m_vw)·(k_l/k_c)`
+- **主因 conformal 扇區異常**：A_conf = 40.82 / 49.82 / 52.14 / 50.81（M=3/4/6/8）→ M-穩定 **~50×**（Regge conformal-mode problem）
+- **TT 扇區自身收斂**：A_TT 0.1306 → 0.3624（趨向 1）；偏振劈裂 28.54 → 7.34（趨向 4.00）
+- 映射非主因：R_map ~ 0.38（M-穩定）vs 連續 0.6124
+- **已否證**替代假說（面積/虧角扇區特異相消；比 1.34 → 0.39 << 10）記錄在案
+
+**殘餘**：① conformal 異常 ~50× 來源；② 與缺口 ①（精確位移商）互動；③ 與連續端 conformal-factor 問題（簽名 1 vs 5）關聯。
+
+**驗證**：scripts 01–20 = **723/723**；文檔核對覆蓋 docs 01–15；水位刷新（§十）。
