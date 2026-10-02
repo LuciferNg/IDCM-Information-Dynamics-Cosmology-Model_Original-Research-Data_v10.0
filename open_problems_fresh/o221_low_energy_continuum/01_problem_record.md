@@ -5,10 +5,10 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 LOCALISED but OPEN (docs/19-21): k-independent deficit 0.870-0.947; premise correction n_pairs = 240(M+2)^4 => absolute M-exponents window-local (docs/17's R_map ~ M^2.94 / conf M^3.16 = padding); smear ladder |deficit| 0.8827->5.16e-04 (cube order degenerate, A_TT 5.0661); boundary-layer (finite-size) hypothesis REFUTED: interior deficit rises to +1.046/+1.029 ~ one full M power => intrinsic; unique 4-k M-stable amplitude = vertex mean (0.9649/1.0308/1.0016/1.1047); tightened acceptance: zero deficit AND M-stable amplitudes in ONE order; watermark 2026-09-29 22:50; scripts 01-26 = 855/855; audit 123/123; crosscheck 134/134 (docs 01-21)
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 LOCALISED but OPEN (docs/19-21): k-independent deficit 0.870-0.947; premise correction n_pairs = 240(M+2)^4 => absolute M-exponents window-local (docs/17's R_map ~ M^2.94 / conf M^3.16 = padding); smear ladder |deficit| 0.8827->5.16e-04 (cube order degenerate, A_TT 5.0661); boundary-layer (finite-size) hypothesis REFUTED: interior deficit rises to +1.046/+1.029 ~ one full M power => intrinsic; unique 4-k M-stable amplitude = vertex mean (0.9649/1.0308/1.0016/1.1047); tightened acceptance: zero deficit AND M-stable amplitudes in ONE order; watermark 2026-09-29 22:50; scripts 01-26 = 855/855; audit 123/123; crosscheck 134/134 (docs 01-21); sub-problem L-Lor registered 2026-10-02 (docs/22, sec.31, Session 21): emergent-Lorentz / demote O140's axiom A2 to a theorem via irrelevance of Lorentz-breaking operators (dim>=5); pre-registered F0-F4 (blind M set); cross-O notes to O140/O213/O73; signature stays an input; state partial
 owner:   O221
 created: 2026-09-28
-updated: 2026-09-29
+updated: 2026-10-02
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
 -->
@@ -312,6 +312,7 @@ L = (細化流: M → 4M, a → a/4, √J → 4√J) ∘ (共動重標定: n →
 | 68 | logs/17_momentum_dof_M3.txt | 2026-09-29 12:43 | 2026-09-29 16:38 | 水位內（12:50 已驗） | ✅ 水位內，不重驗 |
 | 69 | logs/17_momentum_dof_M4.txt | 2026-09-29 12:43 | 2026-09-29 16:38 | 水位內（12:50 已驗） | ✅ 水位內，不重驗 |
 | 70 | logs/17_momentum_dof_M6.txt | 2026-09-29 12:45 | 2026-09-29 16:38 | 水位內（12:50 已驗） | ✅ 水位內，不重驗 |
+| 71 | 2026-10-02 | **子問題註冊（L-Lor）**：低能洛倫茲不變性之湧現 —— 現況三層核對 + 見數前預註冊（F0–F4）+ 範圍防蔓延 | `docs/22_lorentz_emergence_subproblem.md`、`SESSION_START` Session 21 | **核對結論**：光錐/c 結構性 ✅（docs/09 G4）、自由扇區退化精確 ✅（docs/02 Q4：1 − x²/3 + 2x⁴/45）、**Lorentz 群唔在 O221**（洛倫茲/boost/龐加萊 0 hits）、**簽名 🔴 輸入**（U3-4）；**跨 O 發現**：O140 之 SR 由**公理 A2「相對論原理」**推出 ⟹ 洛倫茲不變性係**公理 + 運動學精確**，**唔係湧現** ⟹ 子問題 = 證**全部 Lorentz 破壞算符無關（dim ≥ 5）**⟹ **A2 由公理降為定理**；跨 O 只經 register note（O140/O213/O73），零檔案寫入 |
 | 71 | logs/17_momentum_dof_M8.txt | 2026-09-29 12:48 | 2026-09-29 16:38 | 水位內（12:50 已驗） | ✅ 水位內，不重驗 |
 | 72 | logs/20_tt_amplitude_M3.txt | 2026-09-29 13:04 | 2026-09-29 16:38 | 本輪（scripts/19 [G]/[H] + crosscheck + T1） | ✅ 本輪驗（§二十六） |
 | 73 | logs/20_tt_amplitude_M4.txt | 2026-09-29 13:05 | 2026-09-29 16:38 | 本輪（scripts/19 [G]/[H] + crosscheck + T1） | ✅ 本輪驗（§二十六） |
@@ -1090,3 +1091,41 @@ docs/17 量到 `A_TT` 漂移**恰 ∝ 1/M**，而格點係 `(M+2)⁴`（pad = 1�
 ① `n = M//8 = 0` ⟹ gauge 基退化、SVD 唔收斂（首跑中止）⟹ 每 k 自帶可表示 M 集（π/2 {4,8,16}；π/4 {8,16}，與 docs/19 兩點階梯一致）＋ `n ≥ 1` 守衛；② F0 對象由「邊界**計數** ∝ M^−1」改為「邊界**份額** = 1 − (1−2/M)⁴ ∝ M^−1」（計數自然 ∝ M³）；③ 內點 deficit **同時**報 A_agg 與 plain \|q\|，閉合需兩者皆小；④ **判據分類統一**：F2–F5 由「預測式門檻」改為「記錄式否證 + 可測伴隨」（F2b 內點 > full、F3b 內點 A_TT 比 < full、F4b 扇區指數差 > 0.3、F5b vert 內點 > full）⟹ 2/6 → **10/10**。
 
 **§10.2 附註（2026-09-30 00:2x，新增）**：`logs/verify_t1_r19.txt` 內出現一行 `!! CANONICAL FILE CLOBBERED BY RERUN: ['verify_t1_r19.txt']` —— 此為**自指偽陽性**：T1 審計器之「canonical 檔完整性」清單包含**佢自己嘅輸出檔**，故必定報「changed」；同一行之 `new=[] gone=[]` 顯示**無**其他 canonical 檔案被改／增／刪，且 `=== T1 TOTAL: 870/870 PASS (failures 0) ===`（含逐位元一致比對，如 `logs/21_gauge_fixed_quotient_M8.txt byte-identical = True`）。結論：**零污染**；審計器清單應排除自身輸出檔（審計側待修，記錄在案）。
+
+
+## 三十一、子問題註冊（2026-10-02，L-Lor：低能洛倫茲不變性之湧現）— 新增節，不改舊節
+
+### 第 21 輪 — 2026-10-02（子問題註冊 + 見數前設計；**本輪無新數值推導**）
+
+**檔**：`docs/22_lorentz_emergence_subproblem.md`｜ **註冊**：**子項 pid `O221/L-Lor`**（register）+ 本 O（本節 + Session 21 + 機器塊 flags + register `note`）＋ 跨 O（register `note` → O140 / O213 / O73，**零檔案寫入他人目錄**）
+
+#### 31.1 現況核對（引文出自實際檔案）
+| 層 | 狀態 | 證據 |
+|:--|:--|:--|
+| 因果結構（光錐、單一速度、無超光速） | **✅ 結構性（非輸入）** | `docs/09` G4：`c = R_world·ω_ring = 299 792.6 km/s`（dev 1.8e−05 vs SI）由 O73 不動點固定 |
+| 自由扇區低能退化 → d'Alembertian | **✅ 精確恆等式** | `ω_n = c·k_n·sin(x)/x`、`v_g = c·cos x`；`docs/02` Q4 極點比 = **1 − x²/3 + 2x⁴/45**；`docs/03`：`ω²/(c²k²) = 1 − x²/3` |
+| Lorentz 群（boost/rapidity/龐加萊） | **🔴 唔在 O221** | 全資料夾 `洛倫茲`/`boost`/`龐加萊` **0 hits**；5 處 `Lorentz` 全屬引用 O140 |
+| Lorentzian 簽名 | **🔴 輸入（U3-4）** | `docs/03 §五`／`docs/09 §三`：慣性 (N−1,0,1) ⟹ Euclidean；(90,88) ≠ (3,1)；Wick 對每模可行**但係輸入** |
+
+**跨 O 關鍵**：`o140/docs/04_sr_gr_derivation.md` 之 SR（η_n = ln cot(πn/4N)、γ_n = csc(πn/2N)、量化 β、質量殼精確）由**三公理**推出，其中 **A2 = 相對論原理（公理）** ⟹ 洛倫茲不變性在 IDCM 內係**公理輸入 + 運動學精確一致**，**非湧現**；O221 又只 import 其結果 ⟹ **emergent Lorentz 確實未做**。
+
+#### 31.2 子問題（L-Lor）與否證條件（見數前預註冊）
+> 在細化流 `L = (M→4M, a→a/4, √J→4√J) ∘ (n→4^ℓ n)` 下證 **4D 連續極限之洛倫茲破壞算符全部無關（dim ≥ 5）** ⟹ IR 自動洛倫茲不變 ⟹ **A2 降為定理**。
+- **F0（已有）**：`sin(x)/x`（x = ka/2）→ 1；前導修正 ∝ a²、係數 **1/3 精確**、subluminal（符號固定）。
+- **F1（新、主）**：破壞項標度指數在**未見 M**（三個新 M）上 = **2.000 ± 0.05**（M 集須跑前鎖定）。
+- **F2（新、主）**：O_h 各不可約表示（A1g/Eg/T2g…）破壞係數逐項量度 + M-階梯；預測全部 → 0（無微調）。
+- **F3（否證條件）**：若存在 **dim < 5** 之破壞算符 ⟹ **命題否證、記錄在案**（「無效才是正確」，唔放寬門檻）。
+- **F4（誠實分級）**：簽名/Wick **仍係輸入**，本子問題**不**宣稱閉合 ⟹ 報告分級「運動學 ✅、對稱群 🟡→（F1/F2 過）條件性 ✅、簽名 🔴」。
+
+#### 31.3 方法與依賴
+① 定理化（素材：`docs/02` Q4、`docs/03 §五`、`final_result` 色散行）；② 無關性清單（用 `docs/14–16` 之商空間投影子：rank = N−D = 6、kernel 4、慣性 (1+,5−)）判 dim ≥ 5；③ 盲測 M-scan + O_h irrep 分解（沿用 `systemd-run --user` 紀律、每 log 一 writer）。
+**依賴**：O140（A2 公理／SR 運動學）、O213（細化流箭頭 ℓ）、O73 §10（c = W-field Goldstone 相位模 ⟹ 零色散 ⟹ 光錐）。
+
+#### 31.4 邊界（防範圍蔓延）
+- **非目標 A**：PMNS／混合矩陣（flavor）＝ **O123 系** ✗ 不在本子問題。
+- **非目標 B**：波包／相干／散射（L-WP 子子題）——本框架現無此層（「波包」在 O221 僅 6 處提及、零推導），若做須先立定義。
+- **非目標 C**：簽名／時間方向——維持 🔴 輸入（U3-4），不作宣稱。
+
+#### 31.5 外部質疑核對（未驗證散文，只作假設來源）
+採納其「洛倫茲湧現係真缺口」（且實情更硬：O140 亦靠公理）；**否證其診斷**（「低能退化為標準 Dirac/KG」已係精確恆等式，非缺口）；其「共振/波包」用語不屬本框架；其漏提本 O 自標更大缺口（聯絡-入-度量 🔴、簽名 🔴、殘餘 ③④⑤ 🟡）。
+

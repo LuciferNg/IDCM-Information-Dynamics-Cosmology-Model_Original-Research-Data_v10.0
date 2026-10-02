@@ -5,10 +5,10 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed; residual3 attributed; residual4 closed; residual5 LOCALISED/OPEN (k-independent; smear-order dependent, can be driven to ~0 degenerately; boundary-layer hypothesis REFUTED -> intrinsic, bulk ~ +1 M power); tightened acceptance: zero deficit AND M-stable amplitudes in one order; watermark 2026-09-29 22:50; scripts 855/855 (01-26); audit 123/123; crosscheck 134/134 (docs 01-21)
+flags:   gap1+gap2 closed; residual3 attributed; residual4 closed; residual5 LOCALISED/OPEN (k-independent; smear-order dependent, can be driven to ~0 degenerately; boundary-layer hypothesis REFUTED -> intrinsic, bulk ~ +1 M power); tightened acceptance: zero deficit AND M-stable amplitudes in one order; watermark 2026-09-29 22:50; scripts 855/855 (01-26); audit 123/123; crosscheck 134/134 (docs 01-21); sub-problem L-Lor registered (docs/22): emergent Lorentz / A2->theorem via irrelevant breaking ops (dim>=5); F0-F4 pre-registered; cross-O notes O140/O213/O73
 owner:   O221
 created: 2026-09-28
-updated: 2026-09-29
+updated: 2026-10-02
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 + §四 Phase 5.3/5.4
 -->
@@ -373,3 +373,15 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 **結論**：殘餘 ⑤ 三項性質已立——**k-無關**（docs/19）、**內在／非有限尺寸**（本輪：bulk ≈ **+1.03 ≈ 整一個 M 冪**）、**可隨取樣次序壓至 ≈0（惟退化）**（docs/20）。**新可測命題**：deficit 疑為**取樣誤差項之 M 冪量子化**（naive +1、vert −0.45，相差 ≈1.5）⟹ Round 20 主攻。
 
 **機器驗證**：`scripts/26` = **10/10**（4 條記錄式否證 + 4 條可測伴隨）、`scripts/06` = **134/134**（docs 01–21、162 headline 數字）；T1 r19（01–26）見 `logs/verify_t1_r19.txt`；水位推進至 22:34（§十 階段 4 增量 96–101）。
+
+### Session 21 — 2026-10-02：子問題註冊（**L-Lor**：低能洛倫茲不變性之湧現）
+
+**性質**：註冊 + 見數前設計（**本 session 無新數值推導**）｜ **檔**：`docs/22_lorentz_emergence_subproblem.md`、`01_problem_record.md` §三十一 + §十一 row 71、兩處機器塊 flags
+
+1. **現況核對（三層）**：① 因果結構/光錐 **✅ 結構性**（`docs/09` G4：c = R_world·ω_ring，dev 1.8e−5 vs SI，由 O73 不動點固定）；② 自由扇區低能退化 **✅ 精確恆等式**（`ω = c k sin(x)/x`；`docs/02` Q4 極點比 = 1 − x²/3 + 2x⁴/45；`docs/03` `ω²/c²k² = 1 − x²/3`）；③ **Lorentz 群唔在 O221**（全資料夾 `洛倫茲`/`boost`/`龐加萊` 0 hits）；④ **簽名 🔴 輸入**（U3-4）。
+2. **跨 O 關鍵發現**：O140 `docs/04` 之 SR 由**公理 A2「相對論原理」**（＋A0/A1）推出 ⟹ 洛倫茲不變性係**公理 + 運動學精確一致**，**唔係湧現**；O221 只 import ⟹ **emergent Lorentz 確實未做**。
+3. **子問題（L-Lor）**：證細化流下**全部洛倫茲破壞算符無關（dim ≥ 5）** ⟹ IR 自動洛倫茲不變 ⟹ **A2 由公理降為定理**。
+4. **見數前預註冊**：**F0** 前導修正 ∝ a²、係數 1/3、subluminal；**F1** 破壞項標度指數 = 2.000 ± 0.05（未見 M 三個）；**F2** O_h 各 irrep 破壞係數 → 0；**F3** 若存在 dim < 5 破壞項 ⟹ **否證並記錄**（唔放寬門檻）；**F4** 簽名/Wick 仍係輸入（誠實分級）。
+5. **邊界**：PMNS/flavor = **O123 系**（非目標）；波包/相干/散射 = 子子題 **L-WP**（現零推導，須先立定義）；簽名不作宣稱。
+6. **註冊**：本 O（`docs/22` + 本 Session + §31 + flags）＋ **跨 O 只經 register `note`**（→ **O140**（A2 降級目標）、**O213**（細化流機器）、**O73 §10**（相位模/c）），**零檔案寫入他人目錄**。
+7. **外部質疑核對**（未驗證散文，只作假設來源）：採納「洛倫茲湧現係真缺口」；否證其「低能退化為 Dirac/KG 即無懈可擊」之診斷（該步已係精確恆等式）；其「共振/波包」語不屬本框架。
