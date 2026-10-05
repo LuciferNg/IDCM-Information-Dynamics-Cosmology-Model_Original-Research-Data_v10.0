@@ -1,0 +1,45 @@
+==============================================================================
+[1] solver 版本對照 — native vs wdvv_converged vs high_precision
+==============================================================================
+  γ₁=0.005096 γ₇=0.244642 γ₂₀=1.715370  1/γ₂₀=0.582964
+  預言: λ_max=36−1/γ₂₀=35.417036  tr=2B²(1−γ₁)=31.836935
+
+  d_tensor_native_12d.npy:
+    λ_max = 35.417768  (dev 0.0021%)
+    tr    = 31.846540  (dev 0.0302%)
+
+  d_tensor_wdvv_converged.npy:
+    λ_max = 51.560604  (dev 45.5814%)
+    tr    = 71.714786  (dev 125.2566%)
+
+  d_tensor_high_precision.npy:
+    λ_max = 47.106609  (dev 33.0055%)
+    tr    = 72.857331  (dev 128.8453%)
+
+  d_tensor_final.npy:
+    λ_max = 51.560611  (dev 45.5814%)
+    tr    = 71.717341  (dev 125.2646%)
+==============================================================================
+[2] λ₂ instanton formula — 各版本盲測
+==============================================================================
+  λ₂ formula = 2 + 2F₉γ₁ + γ₁γ₇L₄/(L₅−1) = 2.347385
+  d_tensor_native_12d.npy: λ₂ = 2.347370  dev = 0.0007%
+  d_tensor_wdvv_converged.npy: λ₂ = 10.000265  dev = 326.0172%
+  d_tensor_high_precision.npy: λ₂ = 10.741982  dev = 357.6148%
+  d_tensor_final.npy: λ₂ = 10.000208  dev = 326.0148%
+==============================================================================
+[3] associativity 同 eigenvalue closure 獨立性
+==============================================================================
+  g_ones eig: [-7.8975 -0.9893 -0.2211 -0.1336 -0.1087 -0.0775  0.0454  0.2117  0.4315
+  0.4678  2.7776 43.3847]
+  (min eig < 0 → g 唔正定 → Frobenius metric 唔存在 → associativity 無從成立)
+  → λ_max/tr/λ₂ 全部只係用 v12 contraction 嘅 eigenvalue 公式, 唔涉 associativity ✓
+==============================================================================
+[4] κ ring associativity 對照: 32×32 tip version 都爆?
+==============================================================================
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o59_z3_12_subspace/scripts/36_associativity_probe4.py", line 86, in <module>
+    lhs = np.einsum("abm,mcd->abcd", K32, K32)
+  File "/home/wsl/.local/lib/python3.13/site-packages/numpy/_core/einsumfunc.py", line 1610, in einsum
+    return c_einsum(*operands, **kwargs)
+ValueError: einstein sum subscripts string contains too many subscripts for operand 0

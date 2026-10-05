@@ -175,3 +175,12 @@ o59_z3_12_subspace/
 DATA repoint 至 `main_problems/p15_early_derivations/data`、inline 路徑（07/14/15）一併修復、
 21 過時 check 修正、28 診斷 eigvalsh bug 修正；全鏈 31 支重跑 rc=0（31_verify_all = 49/50）。
 審計節原文一字未動（保留作時序歷史）。詳見 `docs/16_closeout_20261005.md` §一/§二。
+
+---
+
+## 2026-10-05 重推 round 起點（12D/36D associativity）
+
+- 觸發：closeout 獨立審計（docs/16）發現 docs/14「associativity=0.00」係同義反覆（O197 trap）。
+- 拍板：**唔開新 O，原地重推**（O45 先例）。register O59 state 已 reopen（2026-10-05）。
+- Round doc：`docs/17_rederive_12d_36d_associativity.md`（判定：12D= K_Chain eigenvalue 閉合張量，非 Frobenius；36D κ 切片全 singular → O53 handoff note）。
+- 產物：scripts/33-36（associativity probe 系列）+ logs/33-36。

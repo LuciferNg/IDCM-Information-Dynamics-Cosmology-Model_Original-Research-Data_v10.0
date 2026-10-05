@@ -102,3 +102,10 @@
 - 段 A 結構恆等 15/15 ✅ | 段 B clean 譜閉合 9/9 ✅ | 段 C 12D/36D 9 項（7 ✅ + 2 finding）
 - 段 D 31_verify_all=49/50 ✅ + data JSON ✅ | 段 E ghost=0 ✅
 - **finding**：docs/14「associativity = 0.00」係同義反覆 → 12D err 0.759 / 36D 對照 6.5e7 → 🟡 收窄（詳見 docs/16 §四 + docs/14 附註）
+
+## §五 2026-10-05 重推 round（associativity 收窄後續）
+
+- O59 已 reopen（register）；唔開新 O 原地重推。
+- 判定（docs/17）：12D = K_Chain eigenvalue 閉合張量（λ_max 0.0021% / tr 0.030% / λ₂ 0.0007% / v_geom 0.0028% 全獨立成立）；
+  「Frobenius subalgebra associativity」撤回（g_ones 唔正定 → metric 唔存在；36D κ 切片全 singular）。
+- O53 handoff note 已登記（κ basis 維度問題，O53 內未動）。
