@@ -961,3 +961,40 @@ O221 狀態: 🔀 已併入本 O（O206）— 2026-09-25
 ### 文件動作
 - 新: scripts/37 + logs/37 + data/37 json + docs/41。
 - SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-13 · register O206 note。
+## ═══ 第十四輪（2026-10-06）— Lepton 槽 n ≡ 1 (mod 4) 盲測（3 PASS / 0 FAIL） ═══
+
+**承接**: 第十三輪 L4 exploratory（lepton modes {1,5,9} 等差4, nominal 1/56）。「繼續」⟹ pre-register 盲測, 性質目標取代指定三數。｜**對照**: docs/42, scripts/38。｜**驗證**: **3 PASS / 0 FAIL**。
+
+### B1 指定 subset 盲測 ✅
+- H0: 3 輕子隨機試 8 mode → {1,5,9}; P = 1/C(8,3) = **0.017857**; MC 10⁶ = 0.017803 ✅
+- 目標由 O13 exploratory 固定, 唔喺 H0 掃描——單一目標合法
+
+### B2 等差對照 ✅（唔稀有）
+- 長 3 等差 subset = 10 個; P(any) = 10/56 = **0.179**——稀有性掛喺具體 subset / mod 類
+
+### B3 性質目標盲測 ✅（p = 0.0476）
+- 「3 輕子全 n ≡ 1 (mod 4)」9-mode 含 t: ≡1 槽 {1,5,9,13} ⟹ P = C(4,3)/C(9,3) = 4/84 = 1/21
+- MC 0.0486 ✅; mod-4 判準係 O 系列既有家族（45族/47族）
+
+### B4 描述性 residue 表（唔設閘）
+- ≡0: s(4) · ≡1: e,μ,τ,t(1,5,9,13) · ≡2: u(2) · ≡3: d,c,b(3,7,11)
+- 輕子+t 全 ≡1（4/4）; d,c,b 全 ≡3（3/3, s 例外）; ⚠️ t-VEV+R19 指派後觀察, 唔當獨立預言
+
+### 詮釋
+- L4 升格為正結果: 兩個獨立盲測（指定 subset + 模類性質）過 5%
+- mod-4 ≡1 槽 = 「lepton 全 odd rank」嘅結構化定址（4 = B 分支數, mod-4 家族）
+- 誠實警戒: 單一目標 nominal, 未含 look-elsewhere（8 點 dataset 已多輪 look）——當樣本外單目標盲測, 唔當多重檢定後獨立證據
+- 三描述強度: L1 全 odd rank 0.0714（邊緣）→ B1 {1,5,9} 0.0179 → B3 ≡1 mod 4 0.0476（最 robust, 推薦主證據）
+
+### 戰局（C_f 正結果累計 #5）
+1. 鋸齒 split（O11b, 0.0138） 2. 階梯 T-rank（O120, 0.00117） 3. 兩者獨立+升序同時極端（O12）
+4. u/d 身份層穩健（O13） 5. **★ lepton ≡1 mod 4 槽（O14, 0.0476/0.0179）**
+
+### 剩餘
+- 🔴 輕子槽成因（點解 ≡1, 4=B, 待 O139/O137 手性橋）· 🔴 up-type 冇固定 residue（u≡2/c≡3/t≡1）
+- 🟡 down-type 3/4 ≡3（s 例外——又係 s anomaly, 呼應 u/d scheme 敏感點）
+- 🟢 已關: κ 非對角（載體失格）
+
+### 文件動作
+- 新: scripts/38 + logs/38 + data/38 json + docs/42。
+- SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-14 · register O206 note。
