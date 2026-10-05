@@ -45,3 +45,13 @@ Thumbs.db
 # Path-anchored on purpose: a *.parquet rule would also swallow small,
 # deliberately-tracked tables elsewhere.
 open_problems_fresh/o53_cy3_reality/data/polytopes-4d/
+
+# ---------------------------------------------------------------------------
+# Ignore-only work/archive dirs (2026-10-05, 調律者 decision) — keep on disk,
+# never upload. Files stay untouched; only index entries removed where tracked.
+# ---------------------------------------------------------------------------
+/notebooks/
+/memory_archive/
+/4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444/
+/path_hygiene_audit_20261002/
+/.handoff_backup_2026-10-02/
