@@ -881,3 +881,26 @@ O221 狀態: 🔀 已併入本 O（O206）— 2026-09-25
 - 新: docs/38。docs/37 原文零改動（更正喺 docs/38 §二）。
 - SESSION_START 本節 append-only（備份已做, 尾 byte 冇換行 → printf '\n' 模式）。
 - register: O206 note 一條（Z₂ 真身 + 本體論對應 + 一源假說）。
+## ═══ 第十一輪(d)（2026-10-06）— 鋸齒 Z₂ 三盲測（逐個做: 3 PASS / 1 FAIL） ═══
+
+**承接**: docs/38 鋸齒真身 = 奇偶 rank 分裂（Z₂）＋ 一源假說。調律者「逐個做」⟹ 三盲測一次過。｜**對照**: docs/39, scripts/35。｜**驗證**: **3 PASS / 1 FAIL**（誠實）。
+
+### T1 置換 null（8! 全枚舉）
+- 完全交替 assignment = 2956/40320（7.3%）; even/odd 完整分裂 = **1055/40320（2.6%）**。
+- 升序指派屬於分裂類 ✅（但唔唯一）——鋸齒唔係「升序指派」識別特徵; 升序嘅獨特性仍由階梯 T-stat（p=0.00117）支持（唔同 statistic）。
+
+### T2 Z₂ 歸因（✅ rank>mode 確證, ❌ 殘餘不二值）
+- rank-parity 修正 max|resid|=**0.844** < mode-parity **0.928** —— 每個 peak 都係 even rank（含 c: n=7 odd, b: n=11 odd）。
+- ❌ quad-base 殘餘唔二值（even={−0.25,+0.68,+0.60,−0.06}, odd={+0.55,−1.06,−0.25,−0.21}）⟹ **一源假說「±σ 二值 Z₂ 修正」形式被壓**——鋸齒真實但修正非常量。
+
+### T3 u/d scheme 壓力（✅ robust）
+- 閾值 u/d > γ₂/γ₃ = 0.44539; MC 10⁶: 交替保持 **77.4%**、完整分裂 **68.4%**。
+- ⟹ 結構唔靠 PDG u/d 中心值凑出; 崩潰區 = u/d 跌穿 0.445（約 23%, 唯一 scheme 敏感點）。
+
+### 總結
+- 鋸齒 = 質量譜奇偶雙流性質（even-rank 流 {u,s,c,b} vs odd-rank 流 {e,d,μ,τ}）, 唔係指派特有、唔靠中心值、但唔係常數 Z₂ 修正。
+- **剩餘更新**: 🔴 兩流各自嘅算子身份（even 流 4 夸克 / odd 流 3 輕子+1 夸克）; 🟡 階梯 T-stat 喺 1055 個分裂 assignment 上嘅分布; 🟡 u/d 崩潰區。
+
+### 文件動作
+- 新: scripts/35 + logs/35 + data/35 json + docs/39。
+- SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-11(d) · register O206 note。
