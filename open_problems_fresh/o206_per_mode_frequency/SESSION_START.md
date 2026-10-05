@@ -928,3 +928,36 @@ O221 狀態: 🔀 已併入本 O（O206）— 2026-09-25
 ### 文件動作
 - 新: scripts/36 + logs/36 + data/36 json + docs/40。
 - SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-12 · register O206 note。
+## ═══ 第十三輪（2026-10-06）— even/odd 兩流身份（2 PASS / 1 FAIL + exploratory） ═══
+
+**承接**: 第十二輪後剩餘 even/odd 兩流身份。「繼續」⟹ L1 quark/lepton 分層 null · L2 塊層 even/odd 比 · L3 u/d 二重結構 · L4 exploratory（+ κ 判決）。｜**對照**: docs/41, scripts/37。｜**驗證**: **2 PASS / 1 FAIL**（誠實邊緣）。
+
+### L1 quark/lepton 分層 null — 邊緣 FAIL（誠實）
+- P(3 輕子全落 odd rank) = 4/56 = **0.0714**（1/14）唔達 0.05 ❌
+- 附註: 8 rank 只有 4 even 位 + quark 5 個 ⟹ 「4/5 quark even」已係分層極限；**實測達極限**（犧牲者 = d）
+
+### L2 塊層 even/odd 幾何中位比（報告, 唔設閘）
+- gen1 **1.048**（u 優勢極脆弱 ⟷ u/d 閘）· gen2 **2.920**（s,c 同時大過 μ）· gen3 **1.602**
+
+### L3 u/d 二重結構 — 身份 vs 振幅 分離 ✅✅（2 PASS）
+- rank 身份（lepton 全 odd）對 u/d **保持率 1.0000** ✅（零變）
+- C_f 鋸齒交替保持率 **0.7740** ✅（= T3, ±1%）
+- ⟹ 「even/odd 身份」同「鋸齒振幅」係**兩個獨立層**——23% 崩潰區正確歸因於振幅層
+
+### L4 exploratory — 🎯 lepton modes {1,5,9} 等差 4（事件後, 唔當 PASS）
+- 正序指派 rank→mode: lepton = {1,5,9}, 公差 [4,4]; nominal P = 1/56 ≈ 0.018
+- ⚠️ 事件後選擇（{1,3,5} 公 2 亦等差）⟹ 唔入 PASS；下一輪 pre-register 盲測（8! 隨機 label, 命中「等差4」+「全奇位」聯合）
+
+### ★ κ 非對角方向失格（判決）
+- 撤回「κ 非對角 = 唯一未封死方向」：κ_ijk = 18·I₉ 載體 = CSSG-v3（第十輪已降級, 5/9 非法 + 後驗擬合）
+- 已否證／降級路線唔重推（禁區紀律）⟹ κ 非對角唔再係合法結構輸入
+
+### 總結（更新）
+- 🔬 L4 盲測（lepton modes 等差 + 全奇位聯合 null）——下一輪主攻
+- 🔴 even/odd 兩流成因仍開放（身份層穩健 × 振幅層脆弱, 兩層各自要生成器?）
+- 🟡 u/d 崩潰區 23% 已歸因為振幅層
+- 🟢 κ 非對角已關（載體失格）
+
+### 文件動作
+- 新: scripts/37 + logs/37 + data/37 json + docs/41。
+- SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-13 · register O206 note。
