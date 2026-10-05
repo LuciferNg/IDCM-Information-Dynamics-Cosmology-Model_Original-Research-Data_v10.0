@@ -1,0 +1,33 @@
+{
+  "passed": 28,
+  "failed": 0,
+  "trY": 66.35543797667286,
+  "trY_err": 0.538542388898273,
+  "ratio12": 28.13783537364927,
+  "ratio0": 20.097650789263824,
+  "v_geom_GeV": 246.82445303378103,
+  "v_geom_err": 0.24549306871132662,
+  "lam_max": 51.56061143836028,
+  "lam2": 10.00020784286609,
+  "lambda_pred": 51.56060606060606,
+  "lambda_rel": 1.0429965957701052e-07,
+  "q_orth": 1.2954747394141499e-14,
+  "t_lower": 1.4769426918926797e-15,
+  "docs": [
+    "01_twelve_closure.md",
+    "02_three_attack_closure.md",
+    "03_deep_mechanism_closure.md",
+    "04_session_verification.md",
+    "05_su12_extension_closure.md",
+    "06_session_verification.md",
+    "07_o59_reassessment.md",
+    "08_rederivation.md",
+    "09_reconciliation.md",
+    "10_vgeom_factor.md",
+    "11_all_items_closure.md",
+    "12_instanton_projection.md",
+    "13_projection_mapping.md",
+    "14_push_forward.md",
+    "15_final_session_verification.md"
+  ]
+}

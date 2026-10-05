@@ -1,0 +1,120 @@
+========================================================================
+ITEM 5: 12D d_tensor vs 36D kappa — PROJECTION MAPPING
+========================================================================
+
+[1] ALGEBRAIC STRUCTURE: d_tensor vs kappa
+--------------------------------------------------
+  d_tensor WDVV symmetry error: 0.00e+00
+  kappa symmetry error: 0.00e+00
+  kappa WDVV symmetry error: 0.00e+00
+
+[2] PROJECTION OPERATOR — SVD-based approach
+--------------------------------------------------
+  d_tensor SVD singular values: [12.95 11.9   1.77  0.99  0.76  0.73  0.55  0.44  0.1   0.08  0.06  0.05]
+  kappa SVD singular values (top 12): [608.57 419.37  59.02  39.93  35.64  27.11  18.48  16.41  15.82  15.42
+  14.76  14.22]
+\n  d_tensor SVD singular values: [12.95 11.9   1.77  0.99  0.76  0.73  0.55  0.44  0.1   0.08  0.06  0.05]
+  kappa SVD singular values (top 12): [608.57 419.37  59.02  39.93  35.64  27.11  18.48  16.41  15.82  15.42
+  14.76  14.22]
+  Ratio kappa/d (top): 47.00
+  → kappa is 47x larger in operator norm
+
+[3] YUKAWA MATRIX — Projection from 36D to 12D
+--------------------------------------------------
+  |Y_36_proj - Y_12|: 410.0770
+  |Y_12|: 35.9390
+  |Y_36_proj|: 3.9993
+
+  Y_36 top 12 eigenvalues: [ 3.697  -1.0099  0.7846  0.4186 -0.4066 -0.3003  0.2437 -0.2352  0.217
+ -0.1922  0.1864 -0.1636]
+  Y_12 eigenvalues:        [ 3.54178e+01 -5.49610e+00  2.34740e+00 -9.96100e-01  4.59700e-01
+  4.04300e-01 -2.21400e-01  1.73100e-01 -1.15700e-01 -8.59000e-02
+ -7.39000e-02  3.36000e-02]
+
+  Eigenvalue ratios (12D/36D top 12):
+    λ₂[0]/λ₃₆[35] = -5.4961/3.6970 = -1.4866
+    λ₂[1]/λ₃₆[0] = -0.9961/-1.0099 = 0.9864
+    λ₂[2]/λ₃₆[34] = -0.2214/0.7846 = -0.2822
+    λ₂[3]/λ₃₆[33] = -0.1157/0.4186 = -0.2764
+    λ₂[4]/λ₃₆[1] = -0.0859/-0.4066 = 0.2112
+    λ₂[5]/λ₃₆[2] = -0.0739/-0.3003 = 0.2463
+    λ₂[6]/λ₃₆[32] = 0.0336/0.2437 = 0.1377
+    λ₂[7]/λ₃₆[3] = 0.1731/-0.2352 = -0.7357
+    λ₂[8]/λ₃₆[31] = 0.4043/0.2170 = 1.8629
+    λ₂[9]/λ₃₆[4] = 0.4597/-0.1922 = -2.3916
+    λ₂[10]/λ₃₆[30] = 2.3474/0.1864 = 12.5923
+    λ₂[11]/λ₃₆[5] = 35.4178/-0.1636 = -216.4482
+
+[4] CONSTRUCTING EXPLICIT Π OPERATOR (12x36)
+--------------------------------------------------
+  d_flat shape: (12, 144) (12x144)
+  k_flat shape: (36, 1296) (36x1296)
+  Dimensions don't match: 144 ≠ 1296
+  → The projection is not a simple linear map on flattened tensors
+
+[5] BLOCK-STRUCTURE ANALYSIS
+--------------------------------------------------
+  Block-by-block comparison (|kappa_block - d_tensor|):
+  Block 0 [0:12]: diff=5592.4, scale=10.3155
+  Block 1 [12:24]: diff=701.0, scale=0.4099
+  Block 2 [24:36]: diff=681.8, scale=0.3881
+
+  Linear combination search:
+
+[6] KÄHLER POTENTIAL SCALING
+--------------------------------------------------
+  CY₃ volume V = 0.000067
+  Kähler potential K = 9.605402
+  e^(-K/2) = sqrt(V) = 0.008208
+  12D/36D ratio ≈ 10 = L₅-1
+  e^(-K/2) = 0.0082
+  Ratio/e^(-K/2) = 1218.3908
+
+[7] GKZ φ-BASED PROJECTION
+--------------------------------------------------
+  36D kappa: 36 indices (Kähler moduli)
+  44 GKZ φ≤12: 44 points (GKZ discriminant)
+  These are DIFFERENT mathematical objects
+  → 12D d_tensor is NOT a direct projection of 36D kappa
+
+[8] ★★★ THE TRUE RELATIONSHIP
+--------------------------------------------------
+  Summary of structural relationships:
+
+  12D d_tensor (WDVV solution, φ≤12 subspace)
+    ├── Algebraic: satisfies Frobenius associativity
+    ├── Spectrum: λ_max = 35.42, λ_2nd = 2.35, tr(Y) = 31.85
+    └── Origin: GKZ φ≤12 truncation of CY₃ prepotential
+
+  36D kappa (CY₃ intersection numbers, full moduli)
+    ├── Algebraic: fully symmetric 3-tensor
+    ├── Spectrum: λ_max = 3.70, tr(Y) = 3.16
+    └── Origin: CY₃(36,98) toric geometry
+
+  Relationship:
+  d_ijk = Π_i^a Π_j^b Π_k^c κ_abc · e^(-K/2)  (user's hypothesis)
+  But Π is NOT a simple index truncation → it's a HODGE-THEORETIC projection
+  The 12D subspace is the φ≤12 GKZ subspace of the full CY₃ moduli
+  The scaling factor ≈ 10 = L₅-1 = 2F₅ comes from the reduction in moduli dimension
+
+[9] CONSTRUCTING Π FROM GKZ DATA
+--------------------------------------------------
+  Π^T @ Π = I_12? True
+
+  Y_12 (target) eigenvalues: [-5.49610e+00 -9.96100e-01 -2.21400e-01 -1.15700e-01 -8.59000e-02
+ -7.39000e-02  3.36000e-02  1.73100e-01  4.04300e-01  4.59700e-01
+  2.34740e+00  3.54178e+01]
+  Y_12_proj eigenvalues:     [-1.0099 -0.4066 -0.3003 -0.2352 -0.1922 -0.1636  0.1864  0.217   0.2437
+  0.4186  0.7846  3.697 ]
+  Match: |ev_12 - ev_proj|/|ev_12| = 0.8927
+
+  ★ CONCLUSION: The 12D d_tensor is NOT a simple projection of the 36D kappa.
+  It's a WDVV solution on the φ≤12 GKZ subspace, related to κ through:
+  1. GKZ φ≤12 truncation (44→12 dimensional reduction)
+  2. Kähler potential normalization (e^(-K/2))
+  3. WDVV quantum corrections (beyond classical intersection numbers)
+  4. The scaling ≈ 10 = L₅-1 = 2F₅ is the moduli reduction factor
+========================================================================
+PROJECTION MAPPING ANALYSIS COMPLETE
+========================================================================
+RESULT: rc=0 | 

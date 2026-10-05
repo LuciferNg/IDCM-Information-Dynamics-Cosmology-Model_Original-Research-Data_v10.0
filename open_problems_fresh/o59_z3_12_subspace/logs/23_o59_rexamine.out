@@ -1,0 +1,80 @@
+========================================================================
+O59 CLOSURE RE-EXAMINATION: Clean vs Contaminated
+========================================================================
+
+[1] EIGENVALUE SPECTRUM COMPARISON
+
+  Clean Y (kappa*J*) 36x36 spectrum (non-zero):
+  Positive: [0.00917344 0.02289155 0.02528827 0.04248381 0.07353334 0.10367851
+ 0.10693031 0.12004173 0.14479453 0.18641298 0.21699965 0.24374933
+ 0.41855351 0.78461875 3.69699777]
+  Negative: [-1.00990495 -0.40663533 -0.3002546  -0.23524379 -0.19221083 -0.16363162
+ -0.15402472 -0.13215038 -0.11833559 -0.09288354 -0.07667443 -0.07000257
+ -0.04052817 -0.01877455 -0.01688212 -0.00654536 -0.00110176]
+  lambda_max = 3.696998
+  lambda_min = -1.009905
+  max/mean ratio = 20.7
+
+  Contaminated d_tensor 12x12 spectrum:
+  [-1.26474383e-11  1.36083514e-03  1.85076995e-03  6.81361305e-03
+  1.17201474e-02  2.27488532e-02  2.34719187e-01  1.86617103e+00
+  3.43285526e+00  4.57828158e+00  1.00002078e+01  5.15606114e+01]
+  lambda_max = 51.560611
+  1+11 ratio = 28.1
+
+[2] CHECK: Clean Y Block 0 (12x12) 1+11 structure
+  Block 0 lambda_max = 3.671678
+  Block 0 1+11 ratio = 20.1
+  Block 1 lambda_max = 0.158983
+  Block 1 1+11 ratio = 1.5
+  Block 2 lambda_max = 0.621630
+  Block 2 1+11 ratio = 7.4
+
+[3] TRACE COMPARISON
+  tr(Y_clean 36x36) = 3.160363
+  tr(Y_dirty 12x12) = 71.717341
+  tr(Y_dirty)/66 = 1.086626 (contaminated by penalty!)
+  tr(Y_clean)/66 = 0.047884 (clean)
+
+[4] 66 = Lambda^2(12) WITH CLEAN DATA
+  Clean Y is 36x36 with 3 generations of 12D blocks
+  The 12D Yukawa from d_tensor is NOT the same as kappa*J*
+  d_tensor is a derived quantity, contaminated by optimization
+
+[5] IMPACT ON O59 CLAIMS
+
+  Claim 1: 66 = Lambda^2(12) = (6,6)+(10,3bar) = 36+30
+    STATUS: NEEDS RE-EXAMINATION
+    - Used contaminated d_tensor_final
+    - Clean Y (kappa*J*) is 36x36, not 12x12
+    - The 12D d_tensor was optimized with tr(Y)->66 penalty
+
+  Claim 2: 1+11 = Cartan(1) + Rank(11)
+    STATUS: PARTIALLY VALID
+    - Clean Y Block 0 has ratio ~9.8 (similar to claimed)
+    - But Block 1 (1.2) and Block 2 (2.4) don't have 1+11
+    - The "1" might not be Higgs but just the largest eigenvalue
+
+  Claim 3: 33+3 = K_tree + N_gen = 3 generations
+    STATUS: NEEDS RECONCILIATION
+    - O137 found 44 = 28+9+5+2, not 44 = 33+3+8
+    - 33 = K_tree is not in O137's 44 decomposition
+    - 9 = N_gen^2 = 3^2 from phi=9 (generation mixing)
+    - 3 generations from phi=9, not from 33+3
+
+  Claim 4: 29/66 = L7/(2K_tree) correction
+    STATUS: NEEDS RE-EXAMINATION
+    - lambda_max = 52-29/66 was from contaminated d_tensor
+    - Clean Y Block 0 lambda_max = 3.697 (not 51.56!)
+    - The 12D Yukawa is different from the 36D Yukawa
+
+  Claim 5: lambda_max = 52-29/66 -> v_geom = 246.82 GeV
+    STATUS: CONTAMINATED
+    - The 12D Yukawa from d_tensor was pulled toward 66
+    - v_geom = 246.82 GeV came from contaminated lambda_max
+    - Need clean verification with un-contaminated data
+
+========================================================================
+O59 RE-EXAMINATION COMPLETE
+========================================================================
+RESULT: rc=0 | 

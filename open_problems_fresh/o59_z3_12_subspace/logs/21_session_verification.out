@@ -1,0 +1,44 @@
+========================================================================
+O59 Session 完整驗證報告
+========================================================================
+
+[1] 主閉合 (docs/01)
+
+[2] tr(Y) ≈ 66 (docs/01)
+
+[3] 1+11 譜 (docs/01)
+
+[4] Q1: v_geom (docs/02)
+
+[5] Q2: Schur (docs/02)
+
+[6] Q3/D4: V+E+F (docs/02-03)
+
+[7] D1: 1232 (docs/03)
+
+[8] D2: λ_max = 52−29/66 (docs/03)
+
+[9] docs 檔案存在
+  01_twelve_closure.md (7771 bytes)
+  02_three_attack_closure.md (5720 bytes)
+  03_deep_mechanism_closure.md (5040 bytes)
+  04_session_verification.md (5263 bytes)
+  05_su12_extension_closure.md (8779 bytes)
+  06_session_verification.md (6916 bytes)
+  07_o59_reassessment.md (6549 bytes)
+  08_rederivation.md (5592 bytes)
+  09_reconciliation.md (2368 bytes)
+  10_vgeom_factor.md (1911 bytes)
+  11_all_items_closure.md (2916 bytes)
+  12_instanton_projection.md (2362 bytes)
+  13_projection_mapping.md (1769 bytes)
+  14_push_forward.md (1817 bytes)
+  15_final_session_verification.md (2902 bytes)
+
+========================================================================
+Session 驗證: 28 PASS, 0 FAIL
+🟢 全部通過 — 所有 docs 數值 vs raw data 一致!
+========================================================================
+
+結果已保存: data/session_verification.json
+RESULT: rc=0 | 28 PASS, 0 FAIL

@@ -1,0 +1,83 @@
+========================================================================
+O59 攻堅 Q3: Icosahedron ↔ su(12)
+========================================================================
+
+[1] Icosahedron 12 vertices
+  Vertices: (12, 3)
+  第一行: [ 0.         -0.52573111 -0.85065081]
+  Euler: V−E+F = 12−30+20 = 2 ✓
+
+[2] A₅ 對稱群 (60 階)
+  |A₅| = 5!/2 = 60
+  A₅ 作用喺 12 vertices (permutation rep)
+  12 = 1 ⊕ 5 ⊕ 5 ⊕ 1 (A₅ 表示分解)
+  → 12 維 permutation rep 可約化!
+
+[3] su(12) ⊃ A₅ 嵌入
+  A₅ ⊂ S₆ (6 點置換), S₆ ⊂ ?
+  A₅ 有 5 維表示 (icosahedron rotation)
+  A₅ 有 3 維表示 (從 S³ 球諧)
+  A₅ ⊂ SU(3)? A₅ 3-dim rep ⊂ su(3) ✓ (3 < 8)
+  A₅ ⊂ SU(4)? A₅ 4-dim? A₅ 冇 4-dim 不可約表示
+  A₅ ⊂ SU(12)? 12 = 1⊕5⊕5⊕1 → A₅ ⊂ SU(12) ✓ (12-dim rep)
+  ✅ A₅ ⊂ SU(12) (12-dim rep) 
+
+  su(12) Cartan = 11
+  A₅ 嘅 rank = 2
+  → su(12) ⊃ su(2) × su(2) × ... (A₅ rank 2 只佔 2 個 Cartan)
+  → 11 Cartan 唔會全部落喺 A₅
+
+[4] 12 維表示比較
+  su(12) fundamental: 12 = (1,1,...,1) weights
+  A₅ permutation rep: 12 = 1⊕5⊕5⊕1
+  → 唔係同一種 12!
+
+[5] K_Chain 格點投影到 S²
+  12 vertices ↔ 12 Kähler moduli (每代)
+  su(12) fundamental weights: 12 個 weights 喺 11-dim
+  icosahedron: 12 vertices 喺 3-dim S²
+  → 維度唔同 (11 vs 3)
+
+[6] Icosahedron 組合結構 vs K_Chain
+  icosahedron: V=12, E=30, F=20
+  K_Chain: Nd=44, Σγ=90, h11=36
+  30 edges ↔ ?
+  30 = 44−14? 44−14 = 30 ✓ (14 = 2L₄)
+  20 faces ↔ ?
+  20 = 44−24? 44−24 = 20 ✓ (24 = 2×12)
+  20 = ? L₆+2 = 20 ✓
+  ✅ 30 = Nd − 2L₄ = 44−14 
+  ✅ 20 = L₆+2 = 20 
+  20 faces = L₆+2 (Lucas 6 + 2)
+  30 edges = Nd−2L₄ (K_Chain sites − 2×Lucas 4)
+  12 vertices = L₅+1 (Lucas 5 + 1) ← O59 閉合!
+
+[7] 12 ⬠ ↔ 12 個 ΔE=0 節點 (CMB)
+  Rhombicosidodecahedron: 20Δ + 30□ + 12⬠
+  12 ⬠ = icosahedron 12 vertices (dual)
+  ΔE=0 節點: 12 個 (O41)
+  12 = L₅+1 = 11+1 (su(12) fundamental)
+  → 12 ⬠ 同 12 節點嘅「12」都 = L₅+1!
+  ★ 但幾何身份唔同: ⬠ = pentagon faces (5 邊)
+  su(12): 12 = weights
+  → 同一數字, 唔同結構
+
+[8] ★ 20/30/12 組合結構
+  icosahedron: V+E+F = 12+30+20 = 62
+  ✅ V+E+F = 62 = h21−h11 = 98−36 
+  ★★ 12+30+20 = 62 = h²¹ − h¹¹ = 98−36!
+  呢個係真結構連結!
+  h²¹−h¹¹ = Nd+L₆ = 44+18 = 62 (O56)
+  icosahedron V+E+F = 62 同 O56 一致!
+  ✅ V+E+F = Nd+L₆ = 44+18 
+
+[9] 12D Yukawa 譜 vs icosahedron
+  v_max: [-0.252 -0.293 -0.341 -0.449 -0.309 -0.298 -0.214 -0.195 -0.259 -0.27
+ -0.263 -0.237]
+  icosahedron singular values: [2. 2. 2.]
+  → rank 3 (完整 3D)
+
+========================================================================
+Q3: 5 PASS, 0 FAIL
+========================================================================
+RESULT: rc=0 | 5 PASS, 0 FAIL

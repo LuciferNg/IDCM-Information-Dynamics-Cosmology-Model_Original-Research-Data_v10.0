@@ -1,0 +1,157 @@
+========================================================================
+PHASE 1: SCAN ALL d_tensor VERSIONS
+========================================================================
+  d_tensor_native_12d.npy             tr(Y)= 31.8465  lam_max= 35.4178  ratio=  37.4  tr/66=0.4825  WDVV_err=0.00e+00
+  d_tensor_z3_solved.npy              tr(Y)=  8.1273  lam_max= 20.9462  ratio=  10.6  tr/66=0.1231  WDVV_err=0.00e+00
+  d_tensor_hybrid.npy                 tr(Y)= 71.7128  lam_max= 51.5618  ratio=  28.1  tr/66=1.0866  WDVV_err=0.00e+00
+  d_tensor_float64.npy                tr(Y)= 72.8047  lam_max= 47.0527  ratio=  20.1  tr/66=1.1031  WDVV_err=0.00e+00
+  d_tensor_high_precision.npy         tr(Y)= 72.8573  lam_max= 47.1066  ratio=  20.1  tr/66=1.1039  WDVV_err=0.00e+00
+  d_tensor_ultra_precision.npy        tr(Y)= 77.0287  lam_max= 47.8107  ratio=  18.0  tr/66=1.1671  WDVV_err=0.00e+00
+  d_tensor_positive.npy               tr(Y)= 86.9866  lam_max= 52.3834  ratio=  16.7  tr/66=1.3180  WDVV_err=3.47e-14
+  d_tensor_final.npy                  tr(Y)= 71.7173  lam_max= 51.5606  ratio=  28.1  tr/66=1.0866  WDVV_err=0.00e+00
+  d_tensor_wdvv_converged.npy         tr(Y)= 71.7148  lam_max= 51.5606  ratio=  28.1  tr/66=1.0866  WDVV_err=1.60e-16
+
+========================================================================
+PHASE 2: CHECK d_tensor_solved (larger format)
+========================================================================
+  d_tensor_solved.npy: shape=(36, 36, 36), dtype=float64
+    tr(Y_36) = 0.5077
+    lam_max = 0.4535
+    non-zero: 36
+  d_tensor_solved_v2.npy: shape=(36, 36, 36), dtype=float64
+    tr(Y_36) = 0.5102
+    lam_max = 0.4437
+    non-zero: 36
+
+========================================================================
+PHASE 3: IDENTIFY CLEANEST d_tensor
+========================================================================
+  d_tensor_native_12d (likely the cleanest):
+    tr(Y) = 31.846540
+    tr(Y)/66 = 0.482523
+    lam_max = 35.417768
+    lam_2nd = 2.347370
+    Spectrum: [-5.4961320e+00 -9.9613100e-01 -2.2141000e-01 -1.1567400e-01
+ -8.5897000e-02 -7.3941000e-02  3.3572000e-02  1.7306200e-01
+  4.0425400e-01  4.5969900e-01  2.3473700e+00  3.5417768e+01]
+    1+11 ratio = 37.4
+
+  d_tensor_wdvv_converged (latest):
+    tr(Y) = 71.714786
+    tr(Y)/66 = 1.086588
+    1+11 ratio = 28.1
+
+========================================================================
+PHASE 4: RE-DERIVE 66 = Lambda^2(12) FROM CLEANEST DATA
+========================================================================
+  Y_66 (Lambda^2(12)) shape: (66, 66)
+  tr(Y_66) = 350.311937
+  Expected tr(Y_66) = (N-1)*tr(Y) = 11*31.846540 = 350.311937
+  Match: True
+
+========================================================================
+PHASE 5: RE-DERIVE 1+11 STRUCTURE FROM CLEANEST 12D
+========================================================================
+  native_12d: ratio=37.4, lam_max=35.417768, lam_2nd=2.347370
+  wdvv_converged: ratio=28.1, lam_max=51.560604, lam_2nd=10.000265
+  final (contaminated): ratio=28.1, lam_max=51.560611, lam_2nd=10.000208
+
+========================================================================
+PHASE 6: RE-DERIVE lambda_max IDENTITY FROM CLEANEST DATA
+========================================================================
+  Clean lambda_max = 35.4177682426
+  Clean lambda_2nd = 2.3473695645
+
+  Candidate identities for lambda_max = 35.417768:
+    Nd/12                = 3.666667  err=89.65%
+    B^2                  = 16.000000  err=54.82%
+    B*L5/12              = 3.666667  err=89.65%
+    K33/9                = 3.666667  err=89.65%
+    L5/3                 = 3.666667  err=89.65%
+    gamma_33             = 3.414214  err=90.36%
+    gamma_20             = 1.715370  err=95.16%
+    gamma_1*44           = 0.224214  err=99.37%
+    gamma_7*15           = 3.669630  err=89.64%
+    gamma_7*L5           = 2.691062  err=92.40%
+    gamma_7*B            = 0.978568  err=97.24%
+
+  Candidate identities for lambda_2nd = 2.347370:
+    Nd/12                = 3.666667  err=56.20%
+    B^2                  = 16.000000  err=581.61%
+    B*L5/12              = 3.666667  err=56.20%
+    K33/9                = 3.666667  err=56.20%
+    L5/3                 = 3.666667  err=56.20%
+    gamma_33             = 3.414214  err=45.45%
+    gamma_20             = 1.715370  err=26.92%
+    gamma_1*44           = 0.224214  err=90.45%
+    gamma_7*15           = 3.669630  err=56.33%
+    gamma_7*L5           = 2.691062  err=14.64%
+    gamma_7*B            = 0.978568  err=58.31%
+
+========================================================================
+PHASE 7: RE-DERIVE v_geom FROM CLEAN DATA
+========================================================================
+  Clean lambda_max = 35.417768
+  sqrt(lambda_max) * M0 = 166.0462 MeV
+  Required factor for v_geom = 246.22 GeV: 1482.8400
+  88*14 = 1232
+  factor/1232 = 1.2036
+
+  Using 36D Y lambda_max = 3.696998:
+  sqrt(lambda_max_36) * M0 = 53.6467 MeV
+  Required factor: 4589.6576
+  factor_36/1232 = 3.7254
+
+  Factor = 1482.8400
+  Check: factor vs IDCM numbers:
+    factor/1 = 1482.8400  (1/0.00)
+    factor/2 = 741.4200  (1/0.00)
+    factor/3 = 494.2800  (1/0.00)
+    factor/4 = 370.7100  (1/0.00)
+    factor/5 = 296.5680  (1/0.00)
+    factor/7 = 211.8343  (1/0.00)
+    factor/8 = 185.3550  (1/0.01)
+    factor/11 = 134.8036  (1/0.01)
+    factor/13 = 114.0646  (1/0.01)
+    factor/14 = 105.9171  (1/0.01)
+    factor/18 = 82.3800  (1/0.01)
+    factor/21 = 70.6114  (1/0.01)
+    factor/29 = 51.1324  (1/0.02)
+    factor/33 = 44.9345  (1/0.02)
+    factor/34 = 43.6129  (1/0.02)
+    factor/44 = 33.7009  (1/0.03)
+    factor/88 = 16.8505  (1/0.06)
+    factor/1232 = 1.2036  (1/0.83)
+
+========================================================================
+PHASE 8: SUMMARY — CORRECTED RESULTS
+========================================================================
+
+  d_tensor status:
+    native_12d:  tr(Y)=31.8465,  lam_max=35.4178  ← CLEANEST
+    final:       tr(Y)=71.7173,  lam_max=51.5606  ← CONTAMINATED
+    wdvv:        tr(Y)=71.7148,  lam_max=51.5606  ← PARTIAL
+
+  66 = Lambda^2(12):
+    dim_66 = 66  (代数恒等式, 不变)
+    tr(Y_66) = (N-1)*tr(Y_clean) = 350.3119
+    Clean Y does NOT have tr(Y) ≈ 66
+
+  1+11 structure:
+    native_12d ratio: 37.4
+    Block 0 (36D) ratio: 20.1
+    → 1+11 structure is REAL, but lambda_max depends on which d_tensor
+
+  lambda_max:
+    Contaminated: 51.56 = 52 - 29/66  (0.00001%)
+    Clean native: 35.4178
+    → Needs new structural identity
+
+  v_geom:
+    Original: sqrt(51.56) * M0 * 1232 = 246.82 GeV  (contaminated)
+    Clean: needs re-derivation from clean lambda_max
+
+========================================================================
+RE-DERIVATION COMPLETE
+========================================================================
+RESULT: rc=0 | 

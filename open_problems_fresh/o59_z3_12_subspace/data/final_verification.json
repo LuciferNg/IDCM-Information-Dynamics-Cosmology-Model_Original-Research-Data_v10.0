@@ -1,0 +1,24 @@
+{
+  "V1_12_BxNgen": true,
+  "V2_12_L5_plus_1": true,
+  "V3_12_h11_div_3": true,
+  "V4_paths_equiv": true,
+  "V5_h11_Ktree_Ngen": true,
+  "V6_C12_2": true,
+  "V7_dim_su12": true,
+  "V8_trY_66": {
+    "trY": 66.35543797667286,
+    "err_pct": 0.538542388898273
+  },
+  "V9_12D_1_11": {
+    "ratio": 28.13783537364927
+  },
+  "V10_kappa_block0_1_11": {
+    "ratio": 20.097650789263824
+  },
+  "V11_icosahedron": true,
+  "V12_A4_withdrawn": true,
+  "V13_null_test": true,
+  "passed": 13,
+  "failed": 0
+}

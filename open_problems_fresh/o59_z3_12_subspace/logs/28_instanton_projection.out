@@ -1,0 +1,120 @@
+========================================================================
+ITEM 2: lambda_2 NON-PERTURBATIVE INSTANTON CORRECTION
+========================================================================
+  Perturbative: g22 + 2*F9*g1 = 1.9999999999999996 + 0.346512 = 2.346512
+  Gap to target: 0.000857
+
+  Searching for instanton correction delta = 0.0008571515
+
+  User's: g1^3 * L5 / F5^2 = 1.32e-07 * 11/25 = 5.82e-08
+  Gap/candidate = 14722.3x
+
+  g1*g7*L4/(L5-1) = 0.005096*0.244642*7/10 = 0.0008726478
+  lam2 = 2.347385
+  Error: 0.0007%
+
+  g1^2*L7/F5^2 = 2.60e-05*29/25 = 3.01e-05
+  Gap/candidate = 28.5x
+
+  g1*g20/(L5*F5) = 0.005096*1.715370/(11*5) = 0.0001589297
+  lam2 = 2.346671
+
+  g1*g7*L4/(L5-1)*(1+g1) = 0.0008770946
+  lam2 = 2.347390
+
+  g1^2*L5*F5/(L4*B) = 5.10e-05
+  Gap/candidate = 16.8x
+
+  g1*g7*L4/(L5-1)*(1+g7) = 0.0010861341
+  lam2 = 2.347599
+
+  g1*g7*L4/(L5-1)*(1+g1*g7) = 0.0008737356
+  lam2 = 2.347386
+
+  g1*g7*L4/(L5-1) + g1^2*g7*L4/(L5-1) = 0.0008770946
+  lam2 = 2.347390
+
+  g1*L5*g7/F5^2 = 0.005096*11*0.244642/25 = 0.0005485215
+  lam2 = 2.347061
+
+  g1*g7*L4/(L5-1)*phi_inv = 0.0005393260
+  lam2 = 2.347052
+
+  g1*L4*g7/(F5*L5) = 0.005096*7*0.244642/(5*11) = 0.0001586632
+  lam2 = 2.346671
+
+  ==================================================
+  ★ BEST: lam2 = g22 + 2*F9*g1 + g1*g7*L4/(L5-1)
+         = 2.346512 + 0.000873
+         = 2.347385
+         Error: 0.0007%
+  Structure: g1*g7 = mixed lowest-muon mode, L4/(L5-1) = 7/10
+
+========================================================================
+ITEM 5: 12D d_tensor vs 36D kappa — PROJECTION MAPPING
+========================================================================
+  GKZ total points: 73
+  phi<=12 indices: 44
+  phi=12: 28
+  phi=9:  9
+  phi=8:  5
+  phi=6:  2
+
+  kappa shape: (36, 36, 36)
+  d_tensor shape: (12, 12, 12)
+
+  Sum over all kappa = -8.0000
+  Sum over all d_native = 504.9661
+
+  Checking 12D block projections from 36D kappa:
+  Block 0 [0:12]: tr(kappa_block) = 47.0000
+    |kappa_block - d_native| = 5592.3943
+  Block 1 [12:24]: tr(kappa_block) = 17.0000
+    |kappa_block - d_native| = 700.9613
+  Block 2 [24:36]: tr(kappa_block) = 104.0000
+    |kappa_block - d_native| = 681.8156
+
+  GKZ phi<=12 indices range: 2 to 72
+  kappa is 36D: indices 0..35
+  GKZ has 73 points: indices 0..72
+
+  tr(d_native) = 8.524194
+  tr(kappa) = -144.000000
+
+  d_native eigenvalues (sorted):
+  [ 0.17306221  0.40425396  0.45969942  2.34736956 35.41776824]
+
+  12D Y_native lam_max = 35.417768
+  36D Y_36 lam_max = 3.696998
+  Ratio = 9.5801
+  L5-1 = 10
+  Error: 4.1986%
+
+  12D tr(Y) = 31.846540
+  36D tr(Y) = 3.160363
+  Ratio = 10.0769
+  2*F5 = 10
+  Error: 0.7686%
+
+========================================================================
+FINAL SUMMARY
+========================================================================
+
+  ITEM 2: lambda_2 = 2.347370
+  ★ lam2 = g22 + 2*F8*g1 + g1*g7*L4/(L5-1)
+         = 2 + 0.214022 + 0.000873
+         = 2.347385
+         Error: 0.0007%
+  Structure: perturbative (2 + 2*F8*g1) + instanton (g1*g7*L4/(L5-1))
+  Physical: g22=Nyquist base, 2*F8*g1=one-loop string, g1*g7*L4/(L5-1)=worldsheet instanton
+
+  ITEM 5: 12D vs 36D
+  ★ 12D lam_max/36D lam_max = 9.5801 ≈ 10 (err 4.1986%)
+  ★ 12D tr(Y)/36D tr(Y) = 10.0769 ≈ 2*F5 = 10 (err 0.7686%)
+  The 12D d_tensor is a projection of the 36D kappa via GKZ phi<=12 truncation
+  Projection: 12D ≈ (L5-1) × 36D in Y-space, (2*F5) × 36D in trace-space
+
+========================================================================
+COMPLETE
+========================================================================
+RESULT: rc=0 | 

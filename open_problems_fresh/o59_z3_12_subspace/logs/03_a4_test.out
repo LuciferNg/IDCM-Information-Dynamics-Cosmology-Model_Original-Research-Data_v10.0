@@ -1,0 +1,100 @@
+========================================================================
+O59 Phase 3: A₄ 交替群分析
+========================================================================
+
+[1] A₄ 基本性質
+  A₄ = 偶置換群 S₄ 嘅子群, |A₄| = 4!/2 = 12
+  元素: 1 單位 + 8 個 3-cycle + 3 個 double-transposition (4-cycles squared)
+  元素分解: 1 + 8 (3-cycles) + 3 (double transpositions) = 12
+  ✅ 元素分解 1+8+3 = 12 
+  8 = 2³ (立方體!), 3 = 3-cycle 數
+  ★ 1+8+3 = 12: 8 = 2B (K_Tree 分支), 3 = N_gen!
+  ✅ 8 = 2B (K_Tree) 
+  ✅ 3 = N_gen 
+
+[2] A₄ 不可約表示
+  A₄ 有 4 個不可約表示: 1, 1', 1'', 3
+  dim²: 1+1+1+9 = 12 = |A₄| ✓
+  ★ 3 維表示 (3) — 對應 3 代!
+  1' 同 1'' 係 Z₃ 一維表示 (ω, ω²)
+  A₄ ≅ Z₃ ⋊ Z₂²? 唔係 — A₄ 有 normal Z₂² (Klein four)
+  A₄ 結構: 1 → Z₂² → A₄ → Z₃ → 1 (短正合序列)
+  Z₂² = Klein four group (4 元素)
+
+[3] A₄ 同 3×12 block 結構
+  36 = 3×12: 3 個 12D block
+  A₄: 12 元素
+  → 3 個 block 各自 = A₄ 群作用?
+  3 個 12D block 可以係 A₄ 嘅 3 個 regular representation 副本?
+  A₄ regular rep dim = 12 → 3 個 = 3×12 = 36
+  ★★★ 36 = 3 × (A₄ regular representation)
+  ✅ A₄ regular rep dim = 12 
+  3 個 A₄ regular rep = 3 代
+  A₄ regular rep 分解: 1 ⊕ 1' ⊕ 1'' ⊕ 3 ⊕ 3 ⊕ 3 = 1+1+1+9 = 12
+  → 每個 12D block 有 3 個三重表示!
+
+[4] A₄ 同 su(12)
+  su(12) fundamental = 12 = A₄ regular rep dim?
+  12 = C(12,2) 正根嘅基礎空間
+  A₄ ⊂ S₄, S₄ ⊂ ? su(12) 有冇 A₄ 嵌入?
+  A₄ ⊂ S₄ ⊂ U(12) 自然嵌入 (permutation matrices)
+  → A₄ ⊂ SU(12)? permutation matrix det = sign
+  偶置換 det = +1 → A₄ ⊂ SU(12) ✓
+  ✅ A₄ ⊂ SU(12) (偶置換 det=+1) 
+  ★ su(12) 包含 A₄ 作為子群 (permutation 表示)
+  66 正根嘅 A₄ 作用: A₄ 作用喺 12 維上 → 66 維 wedge² 分解
+  wedge²(12) = 66 → A₄ 作用 → 分解成 A₄ 表示
+
+[5] Rhombicosidodecahedron 對稱群
+  Rhombicosidodecahedron: 20Δ + 30□ + 12⬠
+  對稱群: icosahedral group A₅ × Z₂ (order 120)
+  但 12 ⬠ 嘅排列對稱: 12 個五邊形 = A₄?
+  12 ⬠ = 12 個 faces, 對應 12 個 vertices of icosahedron
+  icosahedron 12 vertices ↔ 12 ⬠ faces (dual)
+  icosahedral group = A₅ (order 60)
+  A₅ 作用喺 12 vertices: 12 = 1 + 5 + 5 + 1 (分解)
+  A₅ 有 12 維表示? A₅ 嘅 regular rep = 60, 唔係 12
+  但 icosahedron 12 vertices 構成 A₅ 嘅 12 元素 orbit
+  ★ 12 = icosahedron 嘅 vertices 數 = A₅ orbit
+
+[6] A₄ 同 IDCM 結構
+  A₄ 元素數 = 12:
+  - 12 個 Kähler moduli (3×12 block)
+  - 12 個 ΔE=0 節點
+  - 12 ⬠ faces
+  - 12 = 4!/2
+  A₄ 嘅 3 維表示 (3):
+  - 3 代 = 3 維表示?
+  - su(3) fundamental?
+  - A₄ 3 維表示 ⊂ su(3)?
+
+  A₄ 3-dim rep vs su(3) fundamental:
+  A₄ 3-dim rep: 3 個 weight (喺 A₄ weight lattice)
+  su(3) fundamental: 3 個 weight (喺 su(3) weight lattice)
+  兩者維度相同 (3) 但喺唔同群
+
+[7] 12 = 3×4 vs A₄
+  12 = 3×4: 3 個 4-cycle?
+  A₄ 有 3 個 double transpositions: (12)(34), (13)(24), (14)(23)
+  3 個 double transpositions ↔ 3 代?
+  4 個元素 {1,2,3,4} ↔ 4 = B (K_Tree branch)
+  ★ A₄ 作用喺 4 個元素上 → 4 = B = K_Tree branch!
+  ✅ A₄ 作用喺 4 點 → 4 = B 
+  A₄ ⊂ S₄: S₄ = 4! = 24
+  A₄ = 12 = 24/2
+  12 = |A₄| 而 A₄ ⊂ S₄ 作用喺 4 點
+  → 4 = B (K_Tree branch) 有自然解釋!
+
+[8] ★ 統一假設
+  12 = |A₄| = 4!/2 (交替群階)
+  A₄ 作用喺 4 點 (B=4)
+  A₄ regular rep = 12 維
+  su(12) fundamental = 12 維 (含 A₄ 嵌入)
+  66 = C(12,2) = su(12) 正根
+  → 鏈: B=4 → S₄ → A₄ (12) → su(12) (66)
+  3×12 block = 3 個 A₄ regular rep
+
+========================================================================
+Phase 3 結果: 6 PASS, 0 FAIL
+========================================================================
+RESULT: rc=0 | 6 PASS, 0 FAIL

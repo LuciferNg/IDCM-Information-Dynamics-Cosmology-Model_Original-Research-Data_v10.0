@@ -1,0 +1,11 @@
+{
+  "1232_2Nd_2L4": 1232,
+  "lambda_rel_err": 1.0429965957701052e-07,
+  "Q_orthogonal": 1.2954747394141499e-14,
+  "A5_irrep_dimsq": 60,
+  "12_perm_rep": "1\u22955\u22953\u22953",
+  "VEF_sum": 62,
+  "A5_order": 60,
+  "passed": 9,
+  "failed": 0
+}

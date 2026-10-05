@@ -1,0 +1,207 @@
+掃描 2397 個 .md 檔案
+
+================================================================================
+
+### 12 維/12D/12-dim (314 hits)
+  /open_problems_fresh/README.md: | **O88** | **Anomaly + Fermion Representations** | 🟢 **已閉合 + 質子衰變已計算 (2026-10-02)** | **★主結論: 3×(12⊕12̄) = 72, A = 0 —— 於 12217 個
+  /open_problems_fresh/README.md: | **O53** | CY₃(36,98) 真實性 + 開放性問題 | 🟢 大部分閉合 | KS 確認存在 (χ=-124); 投影機制修正 (rank-2→109); 12 維結構 (C(12,2)=66, tr(Y)≈66); **問題 3 解決: 真實
+  /open_problems_fresh/README.md: | **O59** | Z₃ 12 維不變子空間 | 🟢 **完整閉合 (41/41 PASS)** | 12 = L₅+1 = B×N_gen = su(12) fundamental; rank(su(12))=L₅=11; h11=36=K_tree+N
+  /open_problems_fresh/README.md: | **O170** | **本徵徑向距離: Phase-Depth Distance (IDCM D_H 定義)** | 📄 **開題 (09-11, O167 O-B)** | **IDCM 冇膨脹 → D_H = c/H(z) 概念唔存在 (O1 核心框
+  /open_problems_fresh/README.md: | **O220** | **自旋之結構起源 (Spin Origin)** | 🔴 **已註冊 — 推導中 (23 scripts 660/660 PASS (=35+31+27+22+15+29+24+32+34+28+28+31+37+26+30+35+
+  /open_problems_fresh/README.md: | **O222** | **求值語義層：Lazy Load → 量子態 (Evaluation Semantics: Lazy Load → Quantum State)** | 🟡 **部分推進 — R0 21/21；R1 凍結 A 8/8 + B 18/
+  /open_problems_fresh/o88_anomaly_fermion_rep/final_result.md: - **副定理**：48-生成元和結構性分解為 `(6-和)×(8-和)`（12-dim 實測 maxdev 3.469e-18）；
+  /open_problems_fresh/o88_anomaly_fermion_rep/01_problem_record.md: `(sum_6 T T) × (sum_8 t t)`（12-dim 空間實測 maxdev = 3.469e-18）；
+  /open_problems_fresh/o225_mechanism_born_forcing/01_problem_record.md: 執行：2026-10-01 17:50｜合約 `docs/45_r22_contract.md`（sha `a3ab551d5783ed70f6e439c86512deff2b4a96c38f994f8a9db8161cccb87528`，**見數前凍結**）
+  ... (+302 more)
+
+### = 12 (409 hits)
+  /open_problems_fresh/README.md: | **O88** | **Anomaly + Fermion Representations** | 🟢 **已閉合 + 質子衰變已計算 (2026-10-02)** | **★主結論: 3×(12⊕12̄) = 72, A = 0 —— 於 12217 個
+  /open_problems_fresh/README.md: || **O96** | **SU(12) 根源 (點解係 SU(12)?)** | 🟢 **已閉合 (6 層因果鏈證明, L1-L6)** ✅ | **O72 可疑點 #2 填坑。L1: 12=4×3=B×N_gen 因果鏈; L2: 群排除 SU(5)/S
+  /open_problems_fresh/README.md: | **O130** | **小波工具箱宇宙學應用 (v9.0→v10.0 遷移)** | 🟢 **有用層推進完成 + ⚠️ 單位修正 (2026-09-28, 85/85 PASS)** | **不合併 (調律者 2026-09-28)**：X/R 層封存歷
+  /open_problems_fresh/README.md: | **O169** | **D_A(ℓ) 譜第一原理: δ 群延遲修正起源 (Spectral Origin of δ)** | 🟢 **主體閉合 (09-23 低ℓ修正: 觀測 🟢 / 斜率算子 🟢 / Lagrangian 輸運 🟡⁺ / 截距裁決 🟡⁺
+  /open_problems_fresh/README.md: | **O226** | **回滾與退相干時間結構** | 🟡 **R1–R5 已判決 ＋ closeout 審計完成 (partial, 2026-10-02)** | **回滾/τ_deco 之身份與預算守恆。承 R27/D、R29/D：回滾 = 深度 1
+  /open_problems_fresh/o206_per_mode_frequency/docs/03_f2a_branch_split.md: 得假 FAIL（dev = 12.0）。修正為 `k² + γ_n` 後全 PASS。**FAIL 唔一定係框架錯**——
+  /open_problems_fresh/o88_anomaly_fermion_rep/final_result.md: - `A(Λ^k) = C(N,k)·k(N−k)(N−2k) / [N(N−1)(N−2)]`（權重法；N=12 ⟹ 1, 8, 27, **48**, **42**, 0, …）
+  /open_problems_fresh/o88_anomaly_fermion_rep/final_result.md: - **唯一性**：dim = 72 ∧ A = 0 之組合 **恰 1 個** = 3×(12⊕12̄)（N_search = 12 217）
+  /open_problems_fresh/o88_anomaly_fermion_rep/final_result.md: - 結構剛性：`2(K_tree+N_gen) = 72` **只在 N = 12 成立**（N = 8,10,11,13,14 皆否）
+  ... (+397 more)
+
+### 12 = (692 hits)
+  /open_problems_fresh/RESULT_TEMPLATE.md: 為甚麼是 SU(12) 而不是其他 Lie 群？12 = B×N_gen = 4×3，但 N_gen 的根源在 O103。
+  /open_problems_fresh/README.md: | **O88** | **Anomaly + Fermion Representations** | 🟢 **已閉合 + 質子衰變已計算 (2026-10-02)** | **★主結論: 3×(12⊕12̄) = 72, A = 0 —— 於 12217 個
+  /open_problems_fresh/README.md: || **O96** | **SU(12) 根源 (點解係 SU(12)?)** | 🟢 **已閉合 (6 層因果鏈證明, L1-L6)** ✅ | **O72 可疑點 #2 填坑。L1: 12=4×3=B×N_gen 因果鏈; L2: 群排除 SU(5)/S
+  /open_problems_fresh/README.md: | **O101** | **1+11 譜物理意義 (Cartan 分解)** | 🟢 **已閉合 (scripts/01 ✅)** | **SU(12) fundamental 12 = 1⊕11 = Cartan 分解: 1=零權重方向 (potentia
+  /open_problems_fresh/README.md: | **O144** | **基本玻色子身份 (Fundamental Boson Identity)** | 🟡 **partial — 真開放問題 0/2 (2026-10-05)** | **玻色子 = 世界弦結構 (規範=連結連絡, Higgs=凝聚徑
+  /open_problems_fresh/README.md: | **O151** | **全息信道容量 (Holographic Channel Capacity)** | 🟢 **已閉合 (651/651 PASS) 09-06** | **★★★C_obs = N_d·log₂(B) = 44×2 = 88 bit
+  /open_problems_fresh/README.md: | **O59** | Z₃ 12 維不變子空間 | 🟢 **完整閉合 (41/41 PASS)** | 12 = L₅+1 = B×N_gen = su(12) fundamental; rank(su(12))=L₅=11; h11=36=K_tree+N
+  /open_problems_fresh/README.md: | **O154** | **常溫超導體預言 (RT Superconductor)** | 🟡 **部分閉合 — 結構規則 ✅ 16/16, 定量 🟡, 盲測 🔮 (09-06)** | **用 IDCM 拓撲預測 RTSC 物質+結構。★★結構規則 (S0
+  /open_problems_fresh/README.md: | **O156** | **θ₂₃ 殘差與尺度流 (RGE 第一性原理)** | 🟡 **部分閉合 — RGE 死, 尺度家修正 (N=55), 調焦定律 + CY₃ 鏡頭 + 全殘差測試 + Audit 81/81+13/13 完成, 算子機制開放 (09
+  ... (+680 more)
+
+### ×12/*12 (488 hits)
+  /open_problems_fresh/README.md: | **O102** | **12 ⬠ 幾何同 su(12) 的更深連結** | 🔴 **已註冊 — 待攻堅** | **O59 延伸 #1。冷斑 60 節點 = Rhombicosidodecahedron: 20Δ+30□+12⬠。12⬠ = icosah
+  /open_problems_fresh/README.md: | **O151** | **全息信道容量 (Holographic Channel Capacity)** | 🟢 **已閉合 (651/651 PASS) 09-06** | **★★★C_obs = N_d·log₂(B) = 44×2 = 88 bit
+  /open_problems_fresh/README.md: || **O56** | CY₃ moduli 鎖定機制 | 🟢 **完整閉合 (128/128 PASS)** | h¹¹+h²¹=Nd+Σγ=134, h²¹−h¹¹=Nd+L₆=62 — 係機制唔係巧合。三層推導: ①分支耦合 h¹¹=Nd−2B=2L₆
+  /open_problems_fresh/README.md: | **O61** | **A_ij(z) + Moduli stabilization** | 🟢 **閉合 (18 checks)** | **A_ij(z) = Yukawa 矩陣 Σ_k κ_ijk t_k — 內稟 3×12 block (diag/
+  /open_problems_fresh/README.md: | **O159** | **Dirichlet 場論第一原理 (BC Field Theory)** | 🟢 **已閉合 — T1-T5, 92/92 + 47/47 (09-08) + 併入原 O205「176-Laplacian 直接投影」64/64 (
+  /open_problems_fresh/README.md: - **G8c 🔴** 多重性候選**全部不可觀測**：**12 個相異 K 行 / 120 態**（重數 **10**，直方圖 `{10: 12}`）、2I orbit `{12, 20, 30}`、ledger fragment = **1** ⟹ **`
+  /open_problems_fresh/o88_anomaly_fermion_rep/final_result.md: - N_search = **12 217**（SU(12) 不可約表示之多重集，總維度 ≤ 400；14 項含共軛）
+  /open_problems_fresh/o88_anomaly_fermion_rep/SESSION_START.md: - 36 = 3×12 = h11 = K_tree + N_gen = 33+3 ✅ (IDCM 直接對應)
+  /open_problems_fresh/o88_anomaly_fermion_rep/SESSION_START.md: **12 = (4,3) → (3,3)_{1/3} ⊕ (1,3)_{-1} = 9 左旋夸克 + 3 左旋輕子**
+  /open_problems_fresh/o88_anomaly_fermion_rep/01_problem_record.md: - IDCM 對應: 36 = 3×12 = h11 = K_tree + N_gen = 33+3
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/02_closure_report.md: - 36 = 3×12 = h11 = K_tree + N_gen = 33+3 ✅ (IDCM 直接對應)
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/02_closure_report.md: **12 = (4, 3) under SU(4)_PS × SU(3)_gen:**
+  ... (+476 more)
+
+### /12 (1042 hits)
+  /open_problems_fresh/README.md: | **O139** | **有限 QFT → 連續 QED 極限 (原 O137)** | 🟢 **已閉合 (240/240 PASS: 24+11+22+12+21+15+32+26+22+27+28; 獨立驗證 114/114 + 文檔審計 44/44 
+  /open_problems_fresh/README.md: | **O118** | **高 z DESI 殘差** | 🟢 **已閉合 — 前提作廢 (2026-09-26)** | **★ 原前提 χ²=18.09/7 (χ²/dof=2.58)、LRG1 最大離群 (−4.8%) 全部作廢 — 精確複現原值後確認
+  /open_problems_fresh/README.md: | **O130** | **小波工具箱宇宙學應用 (v9.0→v10.0 遷移)** | 🟢 **有用層推進完成 + ⚠️ 單位修正 (2026-09-28, 85/85 PASS)** | **不合併 (調律者 2026-09-28)**：X/R 層封存歷
+  /open_problems_fresh/README.md: | **O144** | **基本玻色子身份 (Fundamental Boson Identity)** | 🟡 **partial — 真開放問題 0/2 (2026-10-05)** | **玻色子 = 世界弦結構 (規範=連結連絡, Higgs=凝聚徑
+  /open_problems_fresh/README.md: | **O150** | **Sky-side 投影算子 (Sky-side Projection Operator)** | 🟡 **部分閉合 (09-21 首輪)** | **來源**: O143 頂點傳遞定理導出 — \|Aut(G)\| = 120 (
+  /open_problems_fresh/README.md: | **O51** | K_Chain 有冇起始 | 🟢 **已閉合** | 三層證明: 種子(0,1)→φ→44譜→946拍頻, 全部 sympy 精確代數; ★精確龐加萊復歸=0; ⚠️ 撤回 44/43 校準偽影; ★★ 08-22 突破: **N=13
+  /open_problems_fresh/README.md: | **O159** | **Dirichlet 場論第一原理 (BC Field Theory)** | 🟢 **已閉合 — T1-T5, 92/92 + 47/47 (09-08) + 併入原 O205「176-Laplacian 直接投影」64/64 (
+  /open_problems_fresh/README.md: | **O160** | **全數字譜掃描 (Full-Spectrum Number Scan)** | 🟢 **閉合 + 中心模定理 (09-08)** | **工具註冊: 4 套譜幾何工具 (CSG K_Chain 版 / KTreeSpectralGe
+  /open_problems_fresh/README.md: | **O169** | **D_A(ℓ) 譜第一原理: δ 群延遲修正起源 (Spectral Origin of δ)** | 🟢 **主體閉合 (09-23 低ℓ修正: 觀測 🟢 / 斜率算子 🟢 / Lagrangian 輸運 🟡⁺ / 截距裁決 🟡⁺
+  ... (+1030 more)
+
+### 12 個 (216 hits)
+  /open_problems_fresh/README.md: | **O226** | **回滾與退相干時間結構** | 🟡 **R1–R5 已判決 ＋ closeout 審計完成 (partial, 2026-10-02)** | **回滾/τ_deco 之身份與預算守恆。承 R27/D、R29/D：回滾 = 深度 1
+  /open_problems_fresh/README.md: - **G8c 🔴** 多重性候選**全部不可觀測**：**12 個相異 K 行 / 120 態**（重數 **10**，直方圖 `{10: 12}`）、2I orbit `{12, 20, 30}`、ledger fragment = **1** ⟹ **`
+  /open_problems_fresh/o99_light_ontology/docs/12_boss_pk_calib.md: ## 2. 正確 σ_8 積分（scripts/13，唔係 script/12 個 crude）
+  /open_problems_fresh/o88_anomaly_fermion_rep/01_problem_record.md: * 分支結構鏈（獨立重算 12 個關係）：`12 = B(B−1)`、`N_gen = N_c = B−1`、`N_d = B·L₅ = 44`、
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/10_branch_pair_proposition.md: ### 2.1 分支結構鏈（獨立重算，12 個關係，零 import）
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/10_branch_pair_proposition.md: | 分支結構鏈（12 個關係） | ✅ derived（獨立重算） |
+  /open_problems_fresh/o225_mechanism_born_forcing/01_problem_record.md: 合約：`docs/20_r10_contract.md`（sha256 `4aee979b786a5d8a…`，見數前凍結）｜閘：`scripts/38`（GATE OPEN） ｜ 機器：`scripts/39_r10_universal.py` → **19
+  /open_problems_fresh/o225_mechanism_born_forcing/docs/00_recon_inventory.md: N3  ★ K 恰有 12 個相異 row，且每款重數恰為 10（120 = 12 x 10）
+  /open_problems_fresh/o225_mechanism_born_forcing/docs/00_recon_inventory.md: N4  ★ 12 個 row 類 = Stab(theta) 之左陪集，其中 theta(s) := sign(R(s))，|Stab(theta)| = 10
+  /open_problems_fresh/o225_mechanism_born_forcing/docs/27_r13_contract.md: - **C5**：非承載 8 欄之 `U` 與 12 個 KV 值之 dot（sgn／tie）簽名（報共同特徵）。
+  /open_problems_fresh/o225_mechanism_born_forcing/docs/27_r13_contract.md: - **D2 ★**：以**完整 tie 簽名**（`a` 對 12 個 KV 值之 tie 布爾向量）細分 31 軸對 ⟹ 報類數與大小（預註冊猜測：**精化**為 ≥6 類）。
+  /open_problems_fresh/o225_mechanism_born_forcing/docs/67_r31_results.md: - 12 個非零鍵**全部為 edge 欄、`ord(g) = 4`、`S_TT = ±8`**（`Q1` ✓）：
+  ... (+204 more)
+
+### 12 元素 (1 hits)
+  /open_problems_fresh/o224_amplitude_complex_phase_layer/docs/04_residuals.md: - 判別力：12 個**隨機** 12 元素型 → 可容弧序者 **0/12** ⟹ 判準確有判別力（唔係恆真）。
+
+### C(12,2) (88 hits)
+  /open_problems_fresh/README.md: | **O53** | CY₃(36,98) 真實性 + 開放性問題 | 🟢 大部分閉合 | KS 確認存在 (χ=-124); 投影機制修正 (rank-2→109); 12 維結構 (C(12,2)=66, tr(Y)≈66); **問題 3 解決: 真實
+  /open_problems_fresh/README.md: | **O59** | Z₃ 12 維不變子空間 | 🟢 **完整閉合 (41/41 PASS)** | 12 = L₅+1 = B×N_gen = su(12) fundamental; rank(su(12))=L₅=11; h11=36=K_tree+N
+  /open_problems_fresh/README.md: | **O160** | **全數字譜掃描 (Full-Spectrum Number Scan)** | 🟢 **閉合 + 中心模定理 (09-08)** | **工具註冊: 4 套譜幾何工具 (CSG K_Chain 版 / KTreeSpectralGe
+  /open_problems_fresh/o55_cf_sm_center_z3/final_result.md: - su(12) 連結: `12 = (Nd−2B)/3 = 36/3`; `66 = C(12,2)` = su(12) 正根
+  /open_problems_fresh/o55_cf_sm_center_z3/01_problem_record.md: | 1.3 | 16:11 | su(12) ⊃ SU(3)×SU(4) 嵌入 | 12 → (3,4); adj(12)=143 分支; 66=C(12,2)=su(12) 正根; Y (36×36) 3×12 block: 跡 −1.07/0.44/1.7
+  /open_problems_fresh/o55_cf_sm_center_z3/README.md: | 66 = C(12,2) = su(12) 正根 | ✅ | V12 |
+  /open_problems_fresh/o55_cf_sm_center_z3/docs/02_hard_tests_results.md: - 65 = C(12,2) − 1 = su(12) 正根 − 1
+  /open_problems_fresh/o55_cf_sm_center_z3/docs/02_hard_tests_results.md: >    `357.5 = 360 − F₅/2` 及 `65 = C(12,2) − 1` 都係**事後合理化** → **後驗數值吻合，非結構推導**。
+  /open_problems_fresh/o55_cf_sm_center_z3/docs/01_su3_z3_center.md: - 66 = C(12,2) = su(12) 正根數
+  /open_problems_fresh/o55_cf_sm_center_z3/docs/01_su3_z3_center.md: | V12 | 66 = C(12,2) | ✅ |
+  /open_problems_fresh/o55_cf_sm_center_z3/docs/03_independent_verification.md: `357.5 = 360 − F₅/2` 係**事後合理化**，`65 = C(12,2) − 1` 亦係事後湊。→ **屬後驗數值吻合，非結構推導**。
+  ... (+76 more)
+
+### su(12) (306 hits)
+  /open_problems_fresh/README.md: | **O88** | **Anomaly + Fermion Representations** | 🟢 **已閉合 + 質子衰變已計算 (2026-10-02)** | **★主結論: 3×(12⊕12̄) = 72, A = 0 —— 於 12217 個
+  /open_problems_fresh/README.md: || **O95** | **44 必然性 (指數 3,5 唯一性證明)** | 🟢 **已閉合 (L7 歷史驗證 9/9, 7 層全部 PASS)** ✅ | **O72 可疑點 #1 填坑完成。11 約束窮舉 N=1..200: 只有 44 存活。L1-L
+  /open_problems_fresh/README.md: || **O96** | **SU(12) 根源 (點解係 SU(12)?)** | 🟢 **已閉合 (6 層因果鏈證明, L1-L6)** ✅ | **O72 可疑點 #2 填坑。L1: 12=4×3=B×N_gen 因果鏈; L2: 群排除 SU(5)/S
+  /open_problems_fresh/README.md: | **O102** | **12 ⬠ 幾何同 su(12) 的更深連結** | 🔴 **已註冊 — 待攻堅** | **O59 延伸 #1。冷斑 60 節點 = Rhombicosidodecahedron: 20Δ+30□+12⬠。12⬠ = icosah
+  /open_problems_fresh/README.md: | **O151** | **全息信道容量 (Holographic Channel Capacity)** | 🟢 **已閉合 (651/651 PASS) 09-06** | **★★★C_obs = N_d·log₂(B) = 44×2 = 88 bit
+  /open_problems_fresh/README.md: | **O51** | K_Chain 有冇起始 | 🟢 **已閉合** | 三層證明: 種子(0,1)→φ→44譜→946拍頻, 全部 sympy 精確代數; ★精確龐加萊復歸=0; ⚠️ 撤回 44/43 校準偽影; ★★ 08-22 突破: **N=13
+  /open_problems_fresh/README.md: | **O53** | CY₃(36,98) 真實性 + 開放性問題 | 🟢 大部分閉合 | KS 確認存在 (χ=-124); 投影機制修正 (rank-2→109); 12 維結構 (C(12,2)=66, tr(Y)≈66); **問題 3 解決: 真實
+  /open_problems_fresh/README.md: | **O59** | Z₃ 12 維不變子空間 | 🟢 **完整閉合 (41/41 PASS)** | 12 = L₅+1 = B×N_gen = su(12) fundamental; rank(su(12))=L₅=11; h11=36=K_tree+N
+  ... (+294 more)
+
+### SU(12) (715 hits)
+  /open_problems_fresh/RESULT_TEMPLATE.md: # O96 — SU(12) 根源
+  /open_problems_fresh/RESULT_TEMPLATE.md: 為甚麼是 SU(12) 而不是其他 Lie 群？12 = B×N_gen = 4×3，但 N_gen 的根源在 O103。
+  /open_problems_fresh/README.md: | **O74** | **投影幾何與相位相移機制** | 🟢 **O74-A 已閉合 — 2π 因子難題 + 7/48 SU(12) 推導** | **O73 閉合後機制空缺。script 01: 候選 C/D/E 等價 (0.07%)。script 02:
+  /open_problems_fresh/README.md: | **O80** | **W-field Lagrangian (L_W ↔ QFT)** | 🟢 **已閉合 (85/85 PASS)** | **由 O39 SSB 勢 V(W)=−μ²|W|²+λ|W|⁴ 出發, 建立完整 QFT 語言 (kineti
+  /open_problems_fresh/README.md: | **O85** | **SU(12) → SM breaking chain** | 🟢 **已閉合 (2026-10-05 由零重建; scripts 01–17 = 269/269 PASS)** | **O72 Q6 判決: SU(12) = glo
+  /open_problems_fresh/README.md: | **O88** | **Anomaly + Fermion Representations** | 🟢 **已閉合 + 質子衰變已計算 (2026-10-02)** | **★主結論: 3×(12⊕12̄) = 72, A = 0 —— 於 12217 個
+  /open_problems_fresh/README.md: || **O96** | **SU(12) 根源 (點解係 SU(12)?)** | 🟢 **已閉合 (6 層因果鏈證明, L1-L6)** ✅ | **O72 可疑點 #2 填坑。L1: 12=4×3=B×N_gen 因果鏈; L2: 群排除 SU(5)/S
+  /open_problems_fresh/README.md: | **O101** | **1+11 譜物理意義 (Cartan 分解)** | 🟢 **已閉合 (scripts/01 ✅)** | **SU(12) fundamental 12 = 1⊕11 = Cartan 分解: 1=零權重方向 (potentia
+  ... (+703 more)
+
+### 12 組 (12 hits)
+  /open_problems_fresh/o210_causal_tensor_algebra/docs/02_operations_closure.md: - 驗證範圍: G1 T̂ 譜/Lucas/Fib → G12 憲章數字，共 12 組。
+  /open_problems_fresh/o159_dirichlet_fieldtheory/01_problem_record.md: | G | 數據檢定 12 組合 (0/12 顯著) + 陽性對照 10/10 | scripts/04 G, docs/08 | 🟢 |
+  /open_problems_fresh/o159_dirichlet_fieldtheory/01_problem_record.md: (r_max 12 組合 max Δ 4.9e-5; corr(k,\|T\|) 範圍/中位; 30 個著色; 面結構; 88 格對稱)
+  /open_problems_fresh/o159_dirichlet_fieldtheory/01_problem_record.md: | 09-19 | 數據檢定 G-H | 同上 | 12 組合 permutation null (0/12 顯著) + 陽性對照 10/10 + A₅ 31 對稱軸 | 34/34 PASS |
+  /open_problems_fresh/o159_dirichlet_fieldtheory/docs/10_o205_problem_record_merged.md: 7. **G**: 數據檢定 — 12 組合 permutation null + 陽性對照
+  /open_problems_fresh/o159_dirichlet_fieldtheory/docs/10_o205_problem_record_merged.md: | 09-19 | 數據檢定 G (12 組合 + permutation null 1500 + 陽性對照 10/10): 0/12 顯著 (誠實 null) |
+  /open_problems_fresh/o159_dirichlet_fieldtheory/docs/08_data_test.md: ## 2. 結果 (12 組合)
+  /open_problems_fresh/o159_dirichlet_fieldtheory/docs/08_data_test.md: ### 3.3 最佳軸 (12 組合中最大 r_max)
+  /open_problems_fresh/o159_dirichlet_fieldtheory/docs/08_data_test.md: | 擬合四極振幅 (12 組合中位) | **12.6 μK** = 0.094 × A (A = 134.2 μK) |
+  /open_problems_fresh/o176_adjudication_followup/docs/08_derivative_problems.md: ### D12 組裝相位 α: 3/2 vs 5/3 vs 1.74 🔴 (data-gated)
+  /open_problems_fresh/o143_phase_selection_mechanism/docs/02_o182_verdict_and_k_selection.md: | ΔE=0 組 mean\|cos\| = 0.142 < 0.244 | 置換 (隨機 12 組) | **0.0387** ✅ |
+  /open_problems_fresh/o50_cy3_intersection/docs/02_derivative_closure.md: Z₃ ⊂ SU(3)_c center → 36 個 Kähler moduli 分成 12 組 Z₃ orbit
+
+### 12 個 Kähler (0 hits)
+
+### 1+2+3+4+2 (1 hits)
+  /open_problems_fresh/o59_z3_12_subspace/docs/01_twelve_closure.md: | D | docs/sqrt_phi_algebraic_origin | 12 = 1+2+3+4+2 = 4!/2 = \|A₄\| | 🔴 **撤回** |
+
+### 3×12 (261 hits)
+  /open_problems_fresh/README.md: | **O53** | CY₃(36,98) 真實性 + 開放性問題 | 🟢 大部分閉合 | KS 確認存在 (χ=-124); 投影機制修正 (rank-2→109); 12 維結構 (C(12,2)=66, tr(Y)≈66); **問題 3 解決: 真實
+  /open_problems_fresh/README.md: || **O56** | CY₃ moduli 鎖定機制 | 🟢 **完整閉合 (128/128 PASS)** | h¹¹+h²¹=Nd+Σγ=134, h²¹−h¹¹=Nd+L₆=62 — 係機制唔係巧合。三層推導: ①分支耦合 h¹¹=Nd−2B=2L₆
+  /open_problems_fresh/README.md: | **O61** | **A_ij(z) + Moduli stabilization** | 🟢 **閉合 (18 checks)** | **A_ij(z) = Yukawa 矩陣 Σ_k κ_ijk t_k — 內稟 3×12 block (diag/
+  /open_problems_fresh/o88_anomaly_fermion_rep/SESSION_START.md: - 36 = 3×12 = h11 = K_tree + N_gen = 33+3 ✅ (IDCM 直接對應)
+  /open_problems_fresh/o88_anomaly_fermion_rep/SESSION_START.md: - 36̄ = 3×12̄ = h11 嘅共軛
+  /open_problems_fresh/o88_anomaly_fermion_rep/01_problem_record.md: - IDCM 對應: 36 = 3×12 = h11 = K_tree + N_gen = 33+3
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/02_closure_report.md: - 36 = 3×12 = h11 = K_tree + N_gen = 33+3 ✅ (IDCM 直接對應)
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/02_closure_report.md: - 36̄ = 3×12̄ = h11 嘅共軛
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/02_closure_report.md: | 3×12 = 36 | 27 夸克 + 9 輕子 | — | 36 |
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/02_closure_report.md: | 3×12̄ = 36 | — | 27 反夸克 + 9 反輕子 | 36 |
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/02_closure_report.md: | h11 = 3×12 | 36 | 3×fundamental = 3 代 |
+  /open_problems_fresh/o137_cy3_topological_resonance/docs/06_phase4_derivation.md: **Z₃ 不變性: False** (671/3456 差異) — κ 唔尊重 3×12 block 嘅 Z₃ 對稱,
+  ... (+249 more)
+
+### 12=3×4 (6 hits)
+  /open_problems_fresh/o137_cy3_topological_resonance/docs/22_open_problems_attack4.md: 12 = 3×4 = N_gen×B
+  /open_problems_fresh/o55_cf_sm_center_z3/docs/01_su3_z3_center.md: - 12 = 3×4 = SU(3)_c × SU(4)_flavor 雙表示
+  /open_problems_fresh/o59_z3_12_subspace/docs/01_twelve_closure.md: | C | SESSION_START 候選 | 12 = 3×4 = B×N_gen | ✅ 結構 |
+  /open_problems_fresh/o16_cepheid_pl/02_derivation.md: - 12 = 3×4 = 三代物質 × MERA 分支
+  /open_problems_fresh/o16_cepheid_pl/02_derivation.md: - 12 = 3×4 = 世代 × MERA 分支 (物質維度)
+  /open_problems_fresh/o155_ktree_eigen_operator/docs/26_necessity_proof.md: δ mode 差 = 12 = N_gen·B  (世代格: 12 = 3×4)
+
+### Nd/4+1 (4 hits)
+  /open_problems_fresh/o101_1plus11_spectrum/docs/00_merged_from_physical_meaning.md: - 1+11 = 12 同 Nd/B+1 = 44/4+1 = 12 有冇更深連結?
+  /open_problems_fresh/o101_1plus11_spectrum/docs/00_merged_from_physical_meaning.md: 3. 1+11 同 88-site 雙鏈的連結 → 12 = 44/4+1 = Nd/B+1
+  /open_problems_fresh/o59_z3_12_subspace/docs/01_twelve_closure.md: 路徑 2 (候選 B): 12 = Nd/B+1 = 44/4+1 = 11+1
+  /open_problems_fresh/o102_12_pentagons_su12/docs/01_problem_record.md: | 4 | 幾何起源差異 | Pentagon 12 = 62−20−30 (Euler) vs SU(12) 12 = L₅+1 = 44/4+1 (K_Chain) — **推導根本不同** |
+
+### L5+1 (171 hits)
+  /open_problems_fresh/README.md: | **O88** | **Anomaly + Fermion Representations** | 🟢 **已閉合 + 質子衰變已計算 (2026-10-02)** | **★主結論: 3×(12⊕12̄) = 72, A = 0 —— 於 12217 個
+  /open_problems_fresh/README.md: || **O96** | **SU(12) 根源 (點解係 SU(12)?)** | 🟢 **已閉合 (6 層因果鏈證明, L1-L6)** ✅ | **O72 可疑點 #2 填坑。L1: 12=4×3=B×N_gen 因果鏈; L2: 群排除 SU(5)/S
+  /open_problems_fresh/README.md: | **O103** | **N_gen=3 的來源 (世代數強制機制)** | 🟢 **已閉合 (scripts/01 ✅, 三路交叉驗證)** | **N_gen=3 係由 B=4 唯一性 (O95) 強制推導: N_gen = (L₅+1)/B = 12
+  /open_problems_fresh/README.md: | **O151** | **全息信道容量 (Holographic Channel Capacity)** | 🟢 **已閉合 (651/651 PASS) 09-06** | **★★★C_obs = N_d·log₂(B) = 44×2 = 88 bit
+  /open_problems_fresh/README.md: | **O59** | Z₃ 12 維不變子空間 | 🟢 **完整閉合 (41/41 PASS)** | 12 = L₅+1 = B×N_gen = su(12) fundamental; rank(su(12))=L₅=11; h11=36=K_tree+N
+  /open_problems_fresh/README.md: | **O155** | **K_Tree 本徵算子化 (Eigen-Operatorization)** | 🟡 **部分閉合 — 算子層 180/180 PASS, 機制層部分推進, 用戶身份 T13 閉合 (09-07)** | **R1-R7 全落地 
+  /open_problems_fresh/README.md: | **O160** | **全數字譜掃描 (Full-Spectrum Number Scan)** | 🟢 **閉合 + 中心模定理 (09-08)** | **工具註冊: 4 套譜幾何工具 (CSG K_Chain 版 / KTreeSpectralGe
+  /open_problems_fresh/README.md: | **O179** | **新節點出現機制: 凝聚空間選擇規則 (New-Node Position Mechanism)** | 🟢 **已閉合 (5 scripts 23/23, 09-13)** | **「凝聚點樣揀新位置?」= 位置由晶格幾何 + 譜
+  /open_problems_fresh/README.md: | **O191** | **數場定律形式化 (F_m − 1 家族與二模量定理)** | 🟢 **已閉合 (09-13): 二模量 + F−1 家族 9/9 + 截斷統一 + m-鎖定鏈 O95 級 + tree 推廣** | **O190 攻堅 1 穩定方
+  /open_problems_fresh/o88_anomaly_fermion_rep/final_result.md: - IDCM 身份：`12 = B·N_gen = 4×3`、`12 = L₅+1 = 11+1`、`h¹¹ = 3N = K_tree+N_gen = 36`、`66 = 2·K_tree`、`143 = B·K_tree + L₅`
+  /open_problems_fresh/o88_anomaly_fermion_rep/docs/02_closure_report.md: | L₅+1 | 11+1=12 | SU(12) rank+1 |
+  ... (+159 more)
+
+### 13−1 (40 hits)
+  /open_problems_fresh/README.md: | **O168** | **G 最後輸入 + 半整數機制 (Last Input & Half-Integer Mechanism)** | 🟡 **已裁決 (25 scripts 310/310 PASS, 09-11)** | **最後絕對尺度輸入審計:
+  /open_problems_fresh/README.md: | **O169** | **D_A(ℓ) 譜第一原理: δ 群延遲修正起源 (Spectral Origin of δ)** | 🟢 **主體閉合 (09-23 低ℓ修正: 觀測 🟢 / 斜率算子 🟢 / Lagrangian 輸運 🟡⁺ / 截距裁決 🟡⁺
+  /open_problems_fresh/o77_occam_deep/docs/03_h1h5_integration.md: > **來源**: O72 docs/12 (H 框架), O73 (H1 閉合), O72 docs/13-16 (H2-H5)
+  /open_problems_fresh/o53_cy3_reality/docs/28_directions_2_3_final.md: > **腳本**: scripts/113-115
+  /open_problems_fresh/o73_h0_first_principles/01_problem_record.md: | 2 | 兩個上游 handback (O215 09-22, O169 09-23) 已寫入 SESSION_START 但**未註冊入 problem_record/final_result** | `SESSION_START` L113-116 + 
+  /open_problems_fresh/o73_h0_first_principles/docs/10_verification_report.md: 13-16 (θ* 攻堅 + ACT 交叉 + 1/96 排除)
+  /open_problems_fresh/o5_catalog_compare/01_problem_record.md: | 2026-08-17 12:13-12:17 | cache 檔名統一修正 (5.0 vs 5) + CACHE_DIR/import 修正 | scripts/02/05/06/08/09/10 |
+  /open_problems_fresh/o228_evaluation_resource_geometry/docs/25_r14_results.md: 1. **`P13-1` ✅**：`S` 自身**就係 cover**（`∪_{a∈S} cme[a] = ALLP`，435/435）。
+  /open_problems_fresh/o228_evaluation_resource_geometry/docs/24_r14_contract.md: - `P13-1`【非盲】`S ∈ 𝒞`（`∪_{a∈S} cme[a] = ALLP`）。
+  /open_problems_fresh/o168_g_last_input/final_result.md: ## 後續 3 (同日, 移交項攻堅 — scripts/13-16, docs/12-15, 64/64 PASS)
+  /open_problems_fresh/o168_g_last_input/final_result.md: - **獨立審計 (scripts/16, 24/24)**: 全部 13-15 宣稱由零複算成立 (含 137^{E_proj} 獨立確認, 唔係自我確認)
+  /open_problems_fresh/o168_g_last_input/docs/15_independent_audit.md: # docs/15 — 獨立審計 (scripts/13-15 + 07-12 關鍵宣稱)
+  ... (+28 more)
+
+### 12 = 36/3 (7 hits)
+  /open_problems_fresh/o53_cy3_reality/SESSION_START.md: | 5 | **12 = 36/3 Z₃ 不變子空間** | 🟡 | 同 IDCM 其他 12 有冇對應？ |
+  /open_problems_fresh/o53_cy3_reality/docs/12_delta_closure.md: → 3 出現喺兩個地方: 12 = 36/3, c_f = n/3
+  /open_problems_fresh/o53_cy3_reality/docs/02_mechanism_audit.md: | Q5: 12 = 36/3 Z₃? | 🟡 | ✅ 確認 (12 維不變子空間 + tr(Y)≈66) |
+  /open_problems_fresh/o59_z3_12_subspace/SESSION_START.md: > **來源**: O53 開放問題 5 — 12 = 36/3 Z₃ 不變子空間同 IDCM 其他 12 嘅對應？
+  /open_problems_fresh/o59_z3_12_subspace/01_problem_record.md: > **來源**: O53 開放問題 5 — 12 = 36/3 Z₃ 不變子空間同 IDCM 其他 12 嘅對應？
+  /open_problems_fresh/o59_z3_12_subspace/docs/04_session_verification.md: | 2 | Z₃ orbifold 12 = 36/3 | O50/O53 已否證 (冇 Z₃ 對稱) | docs/01 |
+  /open_problems_fresh/o59_z3_12_subspace/docs/01_twelve_closure.md: O50/O53 已經否證 Z₃ orbifold（真 κ 冇 Z₃ 對稱），所以「12 = 36/3」嘅機制重新開放。
+RESULT: rc=0 | 64/64 PASS
