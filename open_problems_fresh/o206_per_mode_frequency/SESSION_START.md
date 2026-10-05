@@ -904,3 +904,27 @@ O221 狀態: 🔀 已併入本 O（O206）— 2026-09-25
 ### 文件動作
 - 新: scripts/35 + logs/35 + data/35 json + docs/39。
 - SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-11(d) · register O206 note。
+## ═══ 第十二輪（2026-10-06）— Joint T×Split + 冪律 + 塊相位防偽（4 PASS / 1 FAIL） ═══
+
+**承接**: 第十一輪(d) 剩餘三項（階梯 T 喺 split 組內分布 / even-odd 流算子身份 / 塊相位）。「繼續」⟹ 一次過。｜**對照**: docs/40, scripts/36。｜**驗證**: **4 PASS / 1 FAIL**（誠實）。
+
+### Q1 joint T×split（⚠️ 兩半）
+- P(split)=0.0262 · P(T≤T_obs)=0.0357 · P(both)=0.00094；獨立乘積 0.00093 → **協同 1.01× ≈ 1**（❌ 無額外協同——split 同 T 係獨立統計）
+- **但** 升序指派喺 1055 個 split assignment 內 T-rank = **1/1055（p=0.00095）** ✅
+- ⟹ 兩個無關 criterion 都極端指住「質量↔模式正序」：鋸齒序 + 階梯序同時成立。
+
+### Q2 ln m vs ln γ 冪律
+- α = **2.0634** ≈ 2（m ∝ γ² = ω⁴ 平均標度）· rms(ln)=0.70 · max|resid|=1.40（span 9.01）
+- ⟹ 冪律只係 envelope，**唔係生成器**；鋸齒修正仍然佔主導；（α≈2 待塊層解釋, 唔貼標籤）
+
+### Q3 塊相位防偽
+- 塊起始 parity o,e,o —— 任何 alternation + 塊大小 (3,3,2) 滑窗都必然如此 ⟹ **無獨立信息量**（防偽確認, 唔好當結構）
+
+### 總結
+- C_f 結構身份三層確認：鋸齒 split（O11b）· T-rank（O120, p=0.00117）· 本輪「兩者獨立 + 升序同時極端」
+- 🔴 仍開放: even/odd 兩流算子身份（{u,s,c,b} vs {e,d,μ,τ}）· κ 非對角 · u/d 崩潰區 23%
+- 🟡 新: m ∝ γ²（ω⁴）envelope —— 完整 C_f = γ^(α−1) × 鋸齒 嘅「envelope × 波動」分解
+
+### 文件動作
+- 新: scripts/36 + logs/36 + data/36 json + docs/40。
+- SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-12 · register O206 note。
