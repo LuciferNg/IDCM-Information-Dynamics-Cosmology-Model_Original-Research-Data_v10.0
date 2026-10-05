@@ -998,3 +998,33 @@ O221 狀態: 🔀 已併入本 O（O206）— 2026-09-25
 ### 文件動作
 - 新: scripts/38 + logs/38 + data/38 json + docs/42。
 - SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-14 · register O206 note。
+## ═══ 第十五輪（2026-10-06）— Charge-Residue 更正 + 輕子槽成因語境（3 PASS / 0 FAIL） ═══
+
+**承接**: docs/42 B4 表有誤（≡3 中 c 誤標 down-type）。「一次過」⟹ 更正 + 成因語境 + up/down 分析。｜**對照**: docs/43（更正層）, scripts/39。｜**驗證**: **3 PASS / 0 FAIL**。
+
+### C1 ★ 更正（docs/42 原文零改動, docs/43 為更正層）
+- ≡3 = {d(3, down), **c(7, UP)**, b(11, down)} —— c 係 up-type（+2/3）!
+- 正確: down-type {d,s,b} = residues {3,0,3}（2/3 ≡3, s≡0 例外）
+- up-type {u,c,t} = {2,3,1}（3 個全唔同）· 輕子 {e,μ,τ} = {1,1,1} 全 ≡1（O14 維持）
+- ❌ docs/42 寫「d,c,b 全 ≡3」誤導——實際只有 {d,b} 兩個 down 喺 ≡3
+
+### C2 輕子槽成因——語境（唔係證明）
+- ★ γ_{n+44} = 4−γ_n（exact）; 44 ≡ 0 (mod 4) ⟹ 半週期平移保持 residue
+- 4 = B 分支數（O210-T1: k ≡ ±|B−L| (mod B)）—— 槽數 = 分支數
+- O158 先例（45族 a奇/47族 a偶, 19/19+18/18）· O148 mod-4 扇區閉式
+- 「點解輕子佔 ≡1 唔係 ≡3」嘅機制仍然未解（候選: O137 手性橋/O139 銜接）
+
+### C3 up/down H0 分析
+- up-type 3 distinct: p=**0.3690**（唔稀有——唔係 anomaly）
+- down-type 含 ≡0（s 落唯一 ≡0 槽）: p=**0.3333**（唔稀有）
+- ⟹ 唯一 charge-residue 顯著結構 = **輕子全 ≡1 mod 4**（O14: 0.0476/0.0179）
+
+### 總結（更新）
+- 戰局: C_f 正結果維持 5 項
+- 🔴 未解: 輕子槽成因（點解 ≡1 唔係 ≡3）——候選銜接 O158/O210/O137 手性橋
+- 🟢 已關: up-type 3 distinct（H0 正常）、s≡0（H0 正常）、κ 非對角（載體失格）
+- 🟡 已更正: docs/42 B4（c 標錯 type, 更正喺 docs/43）
+
+### 文件動作
+- 新: scripts/39 + logs/39 + data/39 json + docs/43（更正層）。
+- docs/42 原文零改動（append-only）· SESSION_START 本節 append-only（printf '\n' 模式）· README O206 行 round-15 · register O206 note。
