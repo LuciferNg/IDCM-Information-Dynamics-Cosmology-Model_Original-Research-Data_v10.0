@@ -58,13 +58,13 @@ ckm_reconstruction/
 
 | # | 日期 | 事件 | 文檔/腳本 |
 |:-:|:-----|:-----|:----------|
-| 1 | 08-14 | CKM 初始推導：GST + 8 種方法 (A-I) | docs/ckm_derivation.md §一-四 |
-| 2 | 08-14 | Z₃×Z₅ 離散對稱性分析 (SU(2)_L Δ=1) | docs/ckm_derivation.md §三 |
+| 1 | 08-14 | CKM 初始推導：GST + 8 種方法 (A-I) | main_problems/p15_early_derivations/docs/ckm_derivation.md §一-四 |
+| 2 | 08-14 | Z₃×Z₅ 離散對稱性分析 (SU(2)_L Δ=1) | main_problems/p15_early_derivations/docs/ckm_derivation.md §三 |
 | 3 | 08-14 | 方法 A: θ₁₂=13.58° (3×3 submatrix) | scripts/ckm_derivation.py |
 | 4 | 08-14 | 方法 I: θ₂₃=3.97° (6×6+VEV+Z₅) | scripts/multi_scale_ckm.py |
 | 5 | 08-14 | Twisted sector 相位 δ=144°, J_CP=3.25e-5 | docs/jcp_derivation.md |
 | 6 | 08-14 | φ-power CKM 模型 (Wolfenstein λ=0.492 ❌) | scripts/phi_power_ckm.py |
-| 7 | 08-15 | **拍頻算符突破：7/7 beat 公式匹配 PDG (err~1e-7)** | docs/ckm_derivation.md §4.2 |
+| 7 | 08-15 | **拍頻算符突破：7/7 beat 公式匹配 PDG (err~1e-7)** | main_problems/p15_early_derivations/docs/ckm_derivation.md §4.2 |
 | 8 | 08-15 | δ_CP 微調至 66.40°，CKM 9/9 元素 <1% | scripts/delta_optimize.py |
 | 9 | 08-15 | PMNS beat 公式 (4/4 ✅) | docs/pmns_derivation.md |
 | 10 | 08-15 | 中微子質量譜閉合 (φ^(1/8), Δm² 0.03%/0.58%) | docs/neutrino_mass_spectrum.md |

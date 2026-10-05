@@ -220,7 +220,7 @@ K_Chain 44 (已證明)
 ## 參考
 
 - `src/cy3_overlap.py` — CY₃ 重疊積分
-- `docs/research_record.md` — 投影算子原始記錄
+- `main_problems/p15_early_derivations/docs/research_record.md` — 投影算子原始記錄
 - `idcm-cy3-verification` skill — CYTools 驗證工作流
 - `05_structural_proof_FORCE_44.md` — K_Chain 44 證明
 - `06_structural_proof_FORCE_33.md` — K_Tree 33 證明

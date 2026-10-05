@@ -350,7 +350,7 @@ K_Chain 總能量 Σγ = 90：
 | `bbn/06_complete_record.md` | BBN 元素豐度完整記錄 |
 | `bbn/08_omegab_direct.md` | Ω_b 直接推導 |
 | `o31_xi_zeros_fixedpoints/NN_results.md` | 真空能量 + Ω_Λ 本質註釋 |
-| `docs/research_record.md` | PARADIGM BREAK 記錄 |
+| `main_problems/p15_early_derivations/docs/research_record.md` | PARADIGM BREAK 記錄 |
 
 ---
 

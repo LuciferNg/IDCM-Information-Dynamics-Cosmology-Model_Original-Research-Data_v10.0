@@ -43,10 +43,10 @@ K_Chain + K_Tree 數學驗證 68/68 全部通過後，全面 audit 原文描述�
 
 | 文件 | 原文 | 修正 |
 |:-----|:-----|:-----|
-| `docs/research_record.md` (line 614) | 「精確比例, 誤差 < 10⁻⁶」 | 「**高精度數值比例** (~10⁻⁷)」+ 完整警告 block |
-| `docs/session_20260815_summary.md` (line 7) | 「精確比例, 誤差 < 10⁻⁶」 | 「**高精度數值比例**」+ 警告 |
-| `docs/ckm_derivation.md` (line 243-244) | 「7/7 beat 公式精確匹配 PDG」 | 「7/7 **高精度匹配**」+ 警告 |
-| `docs/pmns_derivation.md` (line 146) | 「接近 arctan(φ⁻¹)」 | +「⚠️ 數值近似 — φ ∉ Q(ζ₁₇₆)⁺」(2026-08-18: ζ₈₈ → ζ₁₇₆) |
+| `main_problems/p15_early_derivations/docs/research_record.md` (line 614) | 「精確比例, 誤差 < 10⁻⁶」 | 「**高精度數值比例** (~10⁻⁷)」+ 完整警告 block |
+| `main_problems/p15_early_derivations/docs/session_20260815_summary.md` (line 7) | 「精確比例, 誤差 < 10⁻⁶」 | 「**高精度數值比例**」+ 警告 |
+| `main_problems/p15_early_derivations/docs/ckm_derivation.md` (line 243-244) | 「7/7 beat 公式精確匹配 PDG」 | 「7/7 **高精度匹配**」+ 警告 |
+| `main_problems/p15_early_derivations/docs/pmns_derivation.md` (line 146) | 「接近 arctan(φ⁻¹)」 | +「⚠️ 數值近似 — φ ∉ Q(ζ₁₇₆)⁺」(2026-08-18: ζ₈₈ → ζ₁₇₆) |
 
 ## 3. SKILL.md 更新
 

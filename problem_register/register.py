@@ -44,7 +44,8 @@ EMOJI = {"\U0001F7E2": "closed", "\U0001F7E1": "partial", "\U0001F534": "open",
 THEME_DIRS = ("bbn", "cmb_cl", "cmb_cold_spot", "h0_tension", "kchain_number_field",
               "ktree_structure", "little_red_dots", "neutrino_p6_mode", "p7_reionization",
               "ckm_reconstruction", "crystal_stress", "data_gated_unlock",
-              "uhecrs", "beat_periodic_table", "global_routing_table")
+              "uhecrs", "beat_periodic_table", "global_routing_table",
+              "early_derivations")
 
 # 2026-10-05: non-O problem folders moved from open_problems_fresh/ to main_problems/
 # with p-index prefixes (P1-P5 numbers reused from the retired P universe; P6/P7 kept).
@@ -58,6 +59,7 @@ THEME_MOVE = {
     "kchain_number_field": "p9_kchain_number_field", "ktree_structure": "p10_ktree_structure",
     "little_red_dots": "p11_little_red_dots", "uhecrs": "p12_uhecrs",
     "beat_periodic_table": "p13_beat_periodic_table", "global_routing_table": "p14_global_routing_table",
+    "early_derivations": "p15_early_derivations",
 }
 MOVED_SRC = {os.path.join(OPF, k): os.path.join(MAIN, v) for k, v in THEME_MOVE.items()}
 

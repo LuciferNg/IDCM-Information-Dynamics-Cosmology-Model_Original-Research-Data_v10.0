@@ -17,8 +17,8 @@
 
 | 候選 | 值 | 出處 | 本輪裁決 |
 |:--|:--:|:--|:--:|
-| 360°/φ | 222.492° | v9.0 `p_nu_delta_cp`; v10 `docs/pmns_derivation.md` 混用 | 🔴 φ-trap |
-| 2π/5 | 72.0° | O65; `docs/pmns_derivation.md`; CSG-v2/docs/06 | 🔴 Z₅ no-go |
+| 360°/φ | 222.492° | v9.0 `p_nu_delta_cp`; v10 `main_problems/p15_early_derivations/docs/pmns_derivation.md` 混用 | 🔴 φ-trap |
+| 2π/5 | 72.0° | O65; `main_problems/p15_early_derivations/docs/pmns_derivation.md`; CSG-v2/docs/06 | 🔴 Z₅ no-go |
 | 4π/5 | 144.0° | O65 twisted; `jcp_derivation.md` | 🔴 Z₅ no-go |
 | 72.6° | 72.6° | O137 `docs/15` | 🔴 無來源 |
 | (K_tree+F₇)(L₅−2N_gen) | 230.00° | ckm `docs/09` §14.4; Master Theorem T9 | 🔴 numerology |

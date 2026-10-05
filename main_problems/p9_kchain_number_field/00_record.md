@@ -567,9 +567,9 @@ beat 值隨 s 遞減而單調遞增
 
 受影響 8 個檔案已全部更新 (ℚ(ζ₈₈)→ℚ(ζ₁₇₆)):
 - `04_beat_irrational_formulas.py` + `.md` — 全文重寫
-- `docs/research_record.md` — 14.1 數域修正註記 + 14.1b 拍頻數字列表
-- `docs/session_20260815_summary.md` — 數域修正
-- `docs/pmns_derivation.md` — 數域修正
+- `main_problems/p15_early_derivations/docs/research_record.md` — 14.1 數域修正註記 + 14.1b 拍頻數字列表
+- `main_problems/p15_early_derivations/docs/session_20260815_summary.md` — 數域修正
+- `main_problems/p15_early_derivations/docs/pmns_derivation.md` — 數域修正
 - `ktree_structure/06_beat_ratio_number_field.py` — 5 處 ζ₈₈→ζ₁₇₆
 - `ktree_structure/07_doc_audit_record.md` — 數域證明更新
 - `ktree_structure/09_foundational_article_NOEXPANSION.md` — 拍頻數域修正

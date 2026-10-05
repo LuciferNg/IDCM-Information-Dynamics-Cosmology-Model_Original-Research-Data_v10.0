@@ -25,7 +25,7 @@
 - Null-control: tan 區間 [0.1,1.2] 同 sin 區間 [0.14,0.76] 隨機 target **100/100** 都搵到 err<1e-5 對 ⇒ 呢啲命中零信息量。
 - PMNS 對嘅 (d,s) 成員資格: **D6 2/16, S6 1/16** — 完全喺 CKM beat web 之外。
 - δ_PMNS = 232° 冇任何 beat 公式 (2π/φ = 222.5° 係 φ-trap, 離 9.5°; 唔當結構)。
-- 「PMNS 4/4 ✅」嘅引用 docs/pmns_derivation.md **唔存在** (timeline T9 引用嘅檔案從未被建立/已改名)。
+- 「PMNS 4/4 ✅」嘅引用 main_problems/p15_early_derivations/docs/pmns_derivation.md **唔存在** (timeline T9 引用嘅檔案從未被建立/已改名)。
 
 ## 4. CKM 9/9 ✅ → 部分降級
 
