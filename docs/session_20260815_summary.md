@@ -117,7 +117,7 @@ $$\Delta m^2_{21} = \frac{(m_0')^2 (\phi^{-2} - \phi^{-4})}{9} = 7.486 \times 10
 
 ## 七、檔案
 
-所有腳本位於 `open_problems_fresh/ckm_reconstruction/`：
+所有腳本位於 `main_problems/p2_ckm_reconstruction/`：
 
 | 檔案 | 說明 |
 |:----|:------|

@@ -11,7 +11,7 @@ i.e. the observed mean absolute node temperature deviation / A must equal 11/15.
 import numpy as np
 from pathlib import Path
 
-BASE = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data")
+BASE = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/data")
 
 A = 134.2          # uK — cold spot amplitude (O41: A = 88x61/40)
 B = 4

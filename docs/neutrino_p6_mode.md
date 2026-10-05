@@ -144,7 +144,7 @@ $$\Delta m^2_{21}(\text{corrected}) = \frac{\Delta m^2_{21}(\text{raw})}{Z_3^2} 
 
 ## 六、檔案
 
-所有推導腳本位於 `open_problems_fresh/neutrino_p6_mode/`：
+所有推導腳本位於 `main_problems/p6_neutrino/`：
 
 | 檔案 | 說明 |
 |:----|:------|

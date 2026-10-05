@@ -18,7 +18,7 @@ import numpy as np, re, os
 from collections import Counter
 from itertools import combinations
 
-DATA = "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data"
+DATA = "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/data"
 B, N_d, F11, L5, N_gen = 4, 44, 89, 11, 3
 
 ok = 0; tot = 0

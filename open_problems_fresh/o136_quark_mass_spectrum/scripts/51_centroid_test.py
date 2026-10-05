@@ -31,7 +31,7 @@ SP = sorted(MASS, key=lambda p: MASS[p])
 LM = np.array([math.log(MASS[p]) for p in SP])
 
 A5 = [tuple(map(float, l.split()[:2])) for l in
-      open("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data/a5_nodes.txt").read().strip().splitlines()
+      open("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/data/a5_nodes.txt").read().strip().splitlines()
       if len(l.split()) >= 2]
 v = np.array([[math.cos(math.radians(d))*math.cos(math.radians(r)),
                math.cos(math.radians(d))*math.sin(math.radians(r)),

@@ -219,7 +219,7 @@ print("=" * 76)
 print("K. R12 12 節點嵌入 (docs/08): 阻挫子圖重建 + 嵌入假說拒絕")
 print("=" * 76)
 # 用 cmb_cold_spot 真實數據獨立重建 (唔用 O7 scripts)
-DATA = "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data"
+DATA = "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/data"
 import numpy as np, re, os
 from collections import Counter as _C
 from itertools import combinations as _comb

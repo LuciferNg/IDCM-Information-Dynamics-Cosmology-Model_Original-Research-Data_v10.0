@@ -190,7 +190,7 @@ check("E4b ⚠️ 舊文檔合計 39 ≠ 真值 44 (漏列 deg=10 層)",
 print(f"\n{'─'*96}\n[F] A₅ 選擇律 (動差準則)\n{'─'*96}")
 
 # 讀 a5_nodes (ICRS RA/Dec)
-A5F = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data/a5_nodes.txt")
+A5F = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/data/a5_nodes.txt")
 try:
     A5 = []
     for ln in A5F.read_text().strip().splitlines():

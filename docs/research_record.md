@@ -598,11 +598,11 @@ $$m_\nu \approx \lambda_\nu \times M_{Pl} \times \exp(-V_{cycle})$$
 
 | 文件 | 說明 |
 |:----|:-----|
-| `open_problems_fresh/ckm_reconstruction/ckm_derivation.py` | 主推導腳本（6 種方法） |
-| `open_problems_fresh/ckm_reconstruction/z3xz5_projection.py` | Z₃ × Z₅ 對稱性分析 |
-| `open_problems_fresh/ckm_reconstruction/phi_power_ckm.py` | φ-power CKM 模型 |
-|| `open_problems_fresh/ckm_reconstruction/ckm_results.txt` | 結果摘要 |
-|| `open_problems_fresh/ckm_reconstruction/z3xz5_analysis.txt` | Z₃ × Z₅ 分析 |
+| `main_problems/p2_ckm_reconstruction/ckm_derivation.py` | 主推導腳本（6 種方法） |
+| `main_problems/p2_ckm_reconstruction/z3xz5_projection.py` | Z₃ × Z₅ 對稱性分析 |
+| `main_problems/p2_ckm_reconstruction/phi_power_ckm.py` | φ-power CKM 模型 |
+|| `main_problems/p2_ckm_reconstruction/ckm_results.txt` | 結果摘要 |
+|| `main_problems/p2_ckm_reconstruction/z3xz5_analysis.txt` | Z₃ × Z₅ 分析 |
 
 ---
 
@@ -613,7 +613,7 @@ $$m_\nu \approx \lambda_\nu \times M_{Pl} \times \exp(-V_{cycle})$$
 從 44 個 K_Chain mode 嘅 beat frequency 直接導出 CKM 同 PMNS 混合矩陣。
 每個 CKM/PMNS 量 = 兩個 beat frequency 嘅**高精度數值比例**（誤差 ~10⁻⁷，6 個獨立量同時命中指向結構閉合）。
 
-> **⚠️ 2026-08-16 修正（68/68 驗證後）：** 原文寫「精確比例」係誤導。beat/beat 比例係 Q(ζ₁₇₆)⁺ 嘅代數數（degree ≤ 40），PDG 值係有理數擬合 — 兩者**代數上唔相等**（φ ∉ Q(ζ₁₇₆)⁺，見 `open_problems_fresh/kchain_number_field/`）。10⁻⁷ 精度係強結構信號（隨機巧合概率 ~10⁻⁴²），但係**數值匹配**而非**代數相等**。真正嘅代數閉合係 Level 1 結構（Σγ=90, γ_n+γ_{44-n}=4, γ_11·γ_33=2）。
+> **⚠️ 2026-08-16 修正（68/68 驗證後）：** 原文寫「精確比例」係誤導。beat/beat 比例係 Q(ζ₁₇₆)⁺ 嘅代數數（degree ≤ 40），PDG 值係有理數擬合 — 兩者**代數上唔相等**（φ ∉ Q(ζ₁₇₆)⁺，見 `main_problems/p9_kchain_number_field/`）。10⁻⁷ 精度係強結構信號（隨機巧合概率 ~10⁻⁴²），但係**數值匹配**而非**代數相等**。真正嘅代數閉合係 Level 1 結構（Σγ=90, γ_n+γ_{44-n}=4, γ_11·γ_33=2）。
 >
 > **⚠️ 2026-08-18 數域修正：** ω_n = 2sin(πn/88) = 2cos(π(44−n)/88) 屬於 **ℚ(ζ₁₇₆)⁺**（degree ≤ 40），唔係之前寫嘅 ℚ(ζ₈₈)⁺（degree ≤ 20）。γ_n = 4sin²(πn/88) = 2−2cos(πn/44) 先係 ℚ(ζ₈₈)⁺。兩個唔同分圓域！degree 公式：deg(ω_n) = φ(176/gcd(|44−n|,176))/2。見 `05_beat_algebraic_list.py`。
 
@@ -685,7 +685,7 @@ $$m_\nu \approx \lambda_\nu \times M_{Pl} \times \exp(-V_{cycle})$$
 | beat(22,44) | 2 − √2 | 0.5857864376 | 2 |
 | beat(33,44) | 2 − √(2+√2) | 0.1522409350 | 4 |
 
-**完整 946 個 beat 列表：** `open_problems_fresh/kchain_number_field/data/beat_algebraic_table.txt`
+**完整 946 個 beat 列表：** `main_problems/p9_kchain_number_field/data/beat_algebraic_table.txt`
 格式：`i, j, ω_i, ω_j, beat(i,j), beat/ω_1, 閉合形式` — 全部 ∈ ℚ(ζ₁₇₆)⁺，Galois 無理性 946/946 驗證 ✅
 
 **CKM/PMNS 關鍵拍頻（代數符號 + 數值）：**
@@ -832,7 +832,7 @@ $$\Delta m^2_{21} = \frac{(m_0')^2 (\phi^{-2} - \phi^{-4})}{9} = 7.486 \times 10
 | `verify_session_20260815.py` | 全面驗證腳本 |
 | `V_ckm_beat.npy` | CKM 矩陣（beat 公式） |
 | `PMNS_beat.npy` | PMNS 矩陣（beat 公式） |
-| `open_problems_fresh/kchain_number_field/04_beat_irrational_formulas.py` | 拍頻 → 無理數公式轉換（2026-08-18） |
-| `open_problems_fresh/kchain_number_field/05_beat_algebraic_list.py` | 拍頻數字列表生成器（2026-08-18） |
-| `open_problems_fresh/kchain_number_field/data/beat_algebraic_table.txt` | 完整 946 個 beat 列表（代數符號 + 數值） |
+| `main_problems/p9_kchain_number_field/04_beat_irrational_formulas.py` | 拍頻 → 無理數公式轉換（2026-08-18） |
+| `main_problems/p9_kchain_number_field/05_beat_algebraic_list.py` | 拍頻數字列表生成器（2026-08-18） |
+| `main_problems/p9_kchain_number_field/data/beat_algebraic_table.txt` | 完整 946 個 beat 列表（代數符號 + 數值） |
 | `docs/pmns_derivation.md` | PMNS 文檔 |

@@ -28,7 +28,7 @@ def angdist(ra1, dec1, ra2, dec2):
 # 88 格節點幾何 — A5 60 節點 (cmb_cold_spot 分析產物, 只讀)
 nodes = []
 for cand in [BASE / "data" / "a5_nodes.txt",
-             Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data/a5_nodes.txt")]:
+             Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/data/a5_nodes.txt")]:
     if cand.exists():
         for line in cand.read_text().splitlines():
             p = line.split()

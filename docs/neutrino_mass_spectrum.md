@@ -44,5 +44,5 @@ $$\Delta m^2_{21} = \frac{m_2^2 - m_1^2}{Z_3^2} = \frac{(m_0')^2 (\phi^{-2} - \p
 - 0 自由參數，純幾何推導
 
 ### 7. 檔案
-- `open_problems_fresh/neutrino_p6_mode/neutrino_mass_gap_prompt.md` — Gap 分析 prompt
+- `main_problems/p6_neutrino/neutrino_mass_gap_prompt.md` — Gap 分析 prompt
 - 驗證腳本：見上方 Python 代碼

@@ -35,7 +35,7 @@ from fractions import Fraction
 from pathlib import Path
 
 O182 = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o182_88grid_geometry/data")
-COLD = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data")
+COLD = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/data")
 
 PASS, FAIL = [], []
 def ck(name, got, exp=None, tol=1e-9):

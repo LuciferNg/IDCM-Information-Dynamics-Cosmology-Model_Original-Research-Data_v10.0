@@ -27,7 +27,7 @@ MASS = {"e":0.510999,"mu":105.6584,"tau":1776.86,
 SP = sorted(MASS, key=lambda p: MASS[p])
 LM = np.array([math.log(MASS[p]) for p in SP])
 
-A5F = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/cmb_cold_spot/data/a5_nodes.txt")
+A5F = Path("/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/data/a5_nodes.txt")
 A5 = []
 for ln in A5F.read_text().strip().splitlines():
     a = ln.split()

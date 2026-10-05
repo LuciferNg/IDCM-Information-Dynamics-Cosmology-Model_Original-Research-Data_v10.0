@@ -251,7 +251,7 @@ $$V_{CKM}^{IDCM} = \begin{pmatrix}
 
 ## 七、檔案
 
-所有推導腳本位於 `open_problems_fresh/ckm_reconstruction/`：
+所有推導腳本位於 `main_problems/p2_ckm_reconstruction/`：
 
 | 檔案 | 說明 |
 |:----|:-----|
