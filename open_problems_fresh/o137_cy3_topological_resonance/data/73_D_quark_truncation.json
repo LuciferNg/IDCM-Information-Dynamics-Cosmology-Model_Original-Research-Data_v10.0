@@ -1,0 +1,17 @@
+{
+  "eps_minimal_poly": "B^2 x^2 + B x - 1 = 0 (deg 2)",
+  "canonical_form": "eps(1+eps) = 1/B^2 + (B-1)/B * eps",
+  "alpha_identity": "alpha = 3√5−1, alpha(alpha+2) = 44 = N_d",
+  "bridge": "32 eps(1+eps) = alpha",
+  "norm_eff": "-L5/B^4 = -11/256",
+  "uniqueness_N2": "only N=2 in 1..6 gives 32 x_N = alpha with |N|=44 (N1 gives |N|=64=B^3)",
+  "statistics": {
+    "N1_chi2": 3.946,
+    "N2_chi2": 0.343,
+    "Ninf_chi2": 0.166,
+    "verdict": "N1 excluded, N2 vs Ninf not sharp -> structural"
+  },
+  "D_forms_equal": true,
+  "verdict": "二階 = 唯一結構裁定 (代數階 2 + N_d 因式 + 唯一性 + 統計排除一階)",
+  "result": "12/12 PASS"
+}
