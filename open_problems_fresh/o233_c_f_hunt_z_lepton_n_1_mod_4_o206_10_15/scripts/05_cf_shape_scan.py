@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-O206 — 第十一輪 scripts/33: C_f 作為「波幅形狀」測試（Shape Scan）
+O206 — 第十一輪 scripts/05_: C_f 作為「波幅形狀」測試（Shape Scan）
 =========================================================================
 調律者 reframe（2026-10-06）: C_f 唔係 8 個獨立數字，而係一個「波幅」——
 例如形狀係「中間凹陷嘅二次方程」嘅連續函數喺合法模式上嘅採樣。
 
-第十一輪 scripts/32 嘅盲點（承認）: U1..U10 全部係「單調 f(n)」族（γ_n 嚴格單調 ⟹
+第十一輪 scripts/04_ 嘅盲點（承認）: U1..U10 全部係「單調 f(n)」族（γ_n 嚴格單調 ⟹
 γ_n 嘅任意單調組合單調，連 2-參數 U11/U12 都係 log-log 直線/彎曲但整體單調）。
 「凹陷二次」（非單調、有極值）從未測過。本 script 補測。
 
@@ -164,6 +164,6 @@ out = {"models": {"M1": m1, "M2": m2, "M3": m3, "M4": m4, "M5": m5, "M6": m6},
        "M5": {"c": c5, "block_amp": [math.exp(A5[0]), math.exp(A5[1]), math.exp(A5[2])]},
        "peak_positions": peaks, "valley_positions": vals}
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "33_shape_scan.json"), "w") as f:
+                       "05_shape_scan.json"), "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print("\n結果: %d PASS / %d FAIL" % (PASS, FAIL))

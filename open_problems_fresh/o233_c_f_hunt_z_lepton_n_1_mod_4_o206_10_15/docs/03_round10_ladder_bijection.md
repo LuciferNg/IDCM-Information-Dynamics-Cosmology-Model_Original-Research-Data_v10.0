@@ -1,6 +1,6 @@
-# O206 — 第十輪 docs/35: γ-階梯雙射 null（Ladder Bijection, Exact 8!）
+# O206 — 第十輪 docs/03_: γ-階梯雙射 null（Ladder Bijection, Exact 8!）
 
-> **日期**: 2026-10-06 · **Script**: `scripts/31_ladder_bijection_null.py`（**2/2 PASS**）· **Log**: `logs/31_ladder_null.out`
+> **日期**: 2026-10-06 · **Script**: `scripts/03_ladder_bijection_null.py`（**2/2 PASS**）· **Log**: `logs/03_ladder_null.out`
 > **承接**: O120 closeout 之「第一代 γ-階梯」（gen1 C_f 跨度 1.058 = C(9,3)=84 子集唯一最小,
 > p=0.0119）——本輪擴展為**完整雙射檢定**（唔再限制塊內升序）。
 > **verdict**: **升序雙射（質量升序 → 模式升序）顯著（p = 0.00117, 47/40320）**；

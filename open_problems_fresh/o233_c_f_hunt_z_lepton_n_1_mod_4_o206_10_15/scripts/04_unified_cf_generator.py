@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-O206 — 第十一輪 scripts/32: C_f 統一生成式掃描（Unified Generator Scan）
+O206 — 第十一輪 scripts/04_: C_f 統一生成式掃描（Unified Generator Scan）
 =========================================================================
-承接: 第十輪（docs/34）判死「逐點池命中」（p=0.9955/0.8214）；第十輪 docs/34 指出
+承接: 第十輪（docs/02_）判死「逐點池命中」（p=0.9955/0.8214）；第十輪 docs/02_ 指出
 生成器需「新結構輸入（detent/κ/非 F2 形式）」。本輪轉攻三類新測試：
   A. 統一生成式（global shape）：C_f(n) = A·f(n)，8 點一次過，A = 幾何中位 scale。
      ⚠️ 形狀 fit 同「逐點撞池」本質唔同：逐點 hit 會被池密度殺，shape fit 係
@@ -150,7 +150,7 @@ check("detent 令 γ-階梯顯著改善（Σ跨度 < 88 之 50%）", bval[0] < 0
 print("\n" + "=" * 78)
 print("C. 7 個相鄰 C 比值 vs F1' 池（控制項, 預期負）")
 print("=" * 78)
-# S 集合（同 scripts/30 定義）
+# S 集合（同 scripts/02_ 定義）
 L = [2, 1]
 for k in range(2, 15): L.append(L[-1] + L[-2])
 F = [0, 1]
@@ -195,7 +195,7 @@ out = {"frozen_hash": frozen, "unified": {k: {kk: str(vv) for kk, vv in v.items(
        "detent_spans": {str(Nv): block_span_sum(Nv)[0] for Nv in (22,44,60,88,176)},
        "ratio_joint": {"obs": obs, "p": pval}}
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "32_unified_generator.json"), "w") as f:
+                       "04_unified_generator.json"), "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print("\n" + "=" * 78)
 print("結果: %d PASS / %d FAIL   frozen_hash = %s" % (PASS, FAIL, frozen))

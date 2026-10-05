@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-O206 — 第十一輪 scripts/34: C_f 鋸齒交替盲測（Alternation Null, MC）
+O206 — 第十一輪 scripts/06_: C_f 鋸齒交替盲測（Alternation Null, MC）
 =========================================================================
-scripts/33 觀察: C_f 對合法模式 n∈{1,2,3,4,5,7,9,11} 呈完全鋸齒交替
+scripts/05_ 觀察: C_f 對合法模式 n∈{1,2,3,4,5,7,9,11} 呈完全鋸齒交替
 （相鄰方向 ↑↓↑↓↑↓↑, 7/7 步）; 峰值位置 {2,4,7,11} = {1,3,6,10}+1 = 三角數+1,
 谷位 {3,5,9} = {2,4,8}+1 = 2^k+1。
 
@@ -74,6 +74,6 @@ check("極值位置命中 (p<0.05)", cnt_both / N < 0.05, "p=%.5f" % (cnt_both /
 
 out = {"obs_seq": obs, "p_alternate": p_alt, "p_extrema": cnt_both / N}
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "34_alternation_null.json"), "w") as f:
+                       "06_alternation_null.json"), "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print("\n結果: %d PASS / %d FAIL" % (PASS, FAIL))

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-O206 — 第十一輪(d) scripts/35: 鋸齒 Z₂ 三盲測（逐個做）
+O206 — 第十一輪(d) scripts/07_: 鋸齒 Z₂ 三盲測（逐個做）
 =========================================================================
-承接: docs/38 確認鋸齒真身 = 奇偶 rank 分裂（even/odd rank Z₂）。本輪逐個測試:
+承接: docs/06_ 確認鋸齒真身 = 奇偶 rank 分裂（even/odd rank Z₂）。本輪逐個測試:
   T1 置換 null —— even/odd 分裂喺 8! 質量→模式雙射入面 rank 幾多?
       (只有「升序指派」先有? 定係好多 assignment 都有?)
   T2 Z₂ 歸因 —— 鋸齒跟「質量 rank parity」定「模式 n parity」?
@@ -185,6 +185,6 @@ out = {"T1": {"alt_count": cnt_alt, "split_count": cnt_split, "rank_split": rank
               "mode_resid": m_mode, "quad_resid": resid_q},
        "T3": {"threshold_ud": thr, "p_alt": p_alt, "p_pair": p_pair, "p_split": p_split}}
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "35_z2_three_tests.json"), "w") as f:
+                       "07_z2_three_tests.json"), "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print("\n結果: %d PASS / %d FAIL" % (PASS, FAIL))

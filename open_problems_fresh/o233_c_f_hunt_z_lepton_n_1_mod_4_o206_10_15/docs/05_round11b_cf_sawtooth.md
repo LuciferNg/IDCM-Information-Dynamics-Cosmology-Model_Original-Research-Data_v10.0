@@ -1,9 +1,9 @@
-# O206 — 第十一輪(b) docs/37: C_f = 完美鋸齒波幅（Shape Scan + Alternation Null）
+# O206 — 第十一輪(b) docs/05_: C_f = 完美鋸齒波幅（Shape Scan + Alternation Null）
 
-> **日期**: 2026-10-06 · **Scripts**: `scripts/33_cf_shape_scan.py`（0/2）＋ `scripts/34_alternation_null.py`（**2/2 ✅**）
-> **Logs**: `logs/33_shape_scan.out` · `logs/34_alternation_null.out`
+> **日期**: 2026-10-06 · **Scripts**: `scripts/05_cf_shape_scan.py`（0/2）＋ `scripts/06_alternation_null.py`（**2/2 ✅**）
+> **Logs**: `logs/05_shape_scan.out` · `logs/06_alternation_null.out`
 > **承接**: 調律者 reframe——「C_f 唔係一個數字, 最起碼係一個波幅（例如中間凹陷嘅二次方程）」。
-> 第十一輪(a) scripts/32 只測咗單調族（γ_n 單調 ⟹ U 族全單調）——**凹陷二次呢類非單調形狀從未測過**，
+> 第十一輪(a) scripts/04_ 只測咗單調族（γ_n 單調 ⟹ U 族全單調）——**凹陷二次呢類非單調形狀從未測過**，
 > 本輪補測。
 > **verdict**: 全局平滑形狀（凹陷二次/高斯）喺任何軸都 **fit 唔到 8 點**；但發現 **C_f 喺合法模式上
 > 呈「完美鋸齒交替」（7/7 步, p=0.0138）**，而且 **峰值位置 = 三角數+1 {2,4,7,11}、谷值位置 =
@@ -11,7 +11,7 @@
 
 ---
 
-## 一、Shape Scan（scripts/33）—— 全局平滑形狀全滅
+## 一、Shape Scan（scripts/05_）—— 全局平滑形狀全滅
 
 | 模型 | 參數 | max\|ln dev\| | 判定 |
 |:--|:--|:--|:--|
@@ -29,7 +29,7 @@
 - ⚠️ M5 嘅又一矛盾：共享 U 形（中間凹陷）同 gen1 實測（中間**凸起**: e 3.59 < u 3.80 > d 3.66）方向相反
   ⟹ 塊內形狀**唔共享**——真正結構唔係「一塊一形狀」咁簡單。
 
-## 二、★ 鋸齒發現（scripts/34, 2/2 PASS）
+## 二、★ 鋸齒發現（scripts/06_, 2/2 PASS）
 
 **C_f 方向序列（n = 1,2,3,4,5,7,9,11）**：
 ```
@@ -66,5 +66,5 @@ C:  3.594 → 3.803 → 3.662 → 41.321 → 30.031 → 186.061 → 159.644 → 
 
 ## 四、文件動作
 
-- scripts/33・34 + logs/33・34 + data/33・34 json + docs/37（本文）。
+- scripts/05・06 + logs/05・06 + data/05・06 json + docs/05（本文）。
 - SESSION_START append（第十一輪(b) 節）· register O206 note。

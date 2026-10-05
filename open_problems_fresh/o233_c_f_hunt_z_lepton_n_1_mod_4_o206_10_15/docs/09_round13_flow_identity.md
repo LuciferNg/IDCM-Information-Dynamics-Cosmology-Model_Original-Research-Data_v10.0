@@ -1,6 +1,6 @@
-# O206 — 第十三輪 docs/41: even/odd 兩流身份（2 PASS / 1 FAIL + exploratory）
+# O206 — 第十三輪 docs/09_: even/odd 兩流身份（2 PASS / 1 FAIL + exploratory）
 
-> **日期**: 2026-10-06 · **Script**: `scripts/37_flow_identity.py`（**2 PASS / 1 FAIL**）· **Log**: `logs/37_flow_identity.out` · **Data**: `data/37_flow_identity.json`
+> **日期**: 2026-10-06 · **Script**: `scripts/09_flow_identity.py`（**2 PASS / 1 FAIL**）· **Log**: `logs/09_flow_identity.out` · **Data**: `data/09_flow_identity.json`
 > **承接**: 第十二輪後剩餘——even/odd 兩流身份（{u,s,c,b} vs {e,d,μ,τ}）。「繼續」⟹ L1 quark/lepton 分層 null · L2 塊層 even/odd 比 · L3 u/d 二重結構 · L4 exploratory。
 > **verdict**: **①light lepton 全落 odd rank 概率 p=0.0714——邊緣 FAIL（誠實）**，但附註「5 quark 只 4 even 位，4/5 quark even 已達分層極限」；②**u/d 二重結構確立：rank 身份對 u/d 零變（保持率 1.0000）＋ C_f 鋸齒敏感（0.7740）**——「身份 vs 振幅」兩層分離；③**κ 非對角方向失格**（載體 CSSG-v3 第十輪已降級）——唔列為開放方向；④L4 exploratory：lepton modes = {1,5,9} 等差 4（事件後觀察，1/56 nominal，**唔當 PASS**，需下一輪 pre-register 盲測）。
 
@@ -45,7 +45,7 @@
 ## ★ κ 非對角方向失格（判決）
 
 - 第十一輪/十二輪列「κ 張量非對角組合」為唯一未封死方向——**撤回**。
-- 理由：`κ_ijk = 18·I₉` 出自 **CSSG-v3**（O64 後驗 assignment），而 CSSG-v3 喺第十輪 docs/33
+- 理由：`κ_ijk = 18·I₉` 出自 **CSSG-v3**（O64 後驗 assignment），而 CSSG-v3 喺第十輪 docs/01_
   已裁定：**5/9 非法模式 + 後驗池擬合 ⟹ 9/9 閉合降級**。載體本身已失格 ⟹ 「κ 非對角」唔係合法結構輸入。
 - 已否證／降級路線唔重推（register 禁區紀律）。
 
@@ -67,5 +67,5 @@
 
 ## 文件動作
 
-- scripts/37 + logs/37 + data/37 json + docs/41（本文件）。
+- scripts/09_ + logs/09_ + data/09_ json + docs/09（本文件）。
 - SESSION_START append（第十三輪節）· README O206 行 round-13 更新 · register O206 note。

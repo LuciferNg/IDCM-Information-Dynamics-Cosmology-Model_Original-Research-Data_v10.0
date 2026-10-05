@@ -1,6 +1,6 @@
-# O206 — 第十四輪 docs/42: Lepton 槽 n ≡ 1 (mod 4) 盲測（3 PASS / 0 FAIL）
+# O206 — 第十四輪 docs/10_: Lepton 槽 n ≡ 1 (mod 4) 盲測（3 PASS / 0 FAIL）
 
-> **日期**: 2026-10-06 · **Script**: `scripts/38_lepton_slot_blind.py`（**3 PASS / 0 FAIL**）· **Log**: `logs/38_lepton_slot_blind.out` · **Data**: `data/38_lepton_slot_blind.json`
+> **日期**: 2026-10-06 · **Script**: `scripts/10_lepton_slot_blind.py`（**3 PASS / 0 FAIL**）· **Log**: `logs/10_lepton_slot_blind.out` · **Data**: `data/10_lepton_slot_blind.json`
 > **承接**: 第十三輪 L4 exploratory（lepton modes {1,5,9} 等差 4, nominal 1/56）——「繼續」⟹ pre-register 盲測，用「性質目標」取代「指定三數」降低事後選擇 bias。
 > **verdict**: **lepton 槽結構雙重過閘**——①指定 subset {1,5,9}：P = 1/56 = **0.0179** ✅（MC 10⁶ 對照 0.0178）；②性質目標「3 輕子全 n ≡ 1 (mod 4)」喺 9-mode（含 t）空間：P = C(4,3)/C(9,3) = 4/84 = **0.0476** ✅；③對照：任何長 3 等差 subset 共 10 個、P = 0.179——「等差」本身唔稀有，稀有性掛喺 mod-4 ≡1 槽。**L4 由 exploratory 升格為正結果。**
 
@@ -62,5 +62,5 @@ n ≡ 3: [d(3), c(7), b(11)]         ← down-type 3/4（s 例外）
 
 ## 文件動作
 
-- scripts/38 + logs/38 + data/38 json + docs/42（本文件）。
+- scripts/10_ + logs/10_ + data/10_ json + docs/10（本文件）。
 - SESSION_START append（第十四輪節）· README O206 行 round-14 更新 · register O206 note。

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-O206 — 第十輪 scripts/30: C_f 生成器 Hunt（pre-registered pool + 密度 null）
+O206 — 第十輪 scripts/02_: C_f 生成器 Hunt（pre-registered pool + 密度 null）
 =============================================================================
-承接: scripts/29 裁決後，C_f 生成器問題精確化:
+承接: scripts/01_ 裁決後，C_f 生成器問題精確化:
   m_f = M₀·γ_n·C_f, n ∈ A₅ 合法集 {1,2,3,4,5,7,9,11}, t 歸 VEV 機制
   目標 = 8 個 C_f 值 (重框跨度 71.2×, Φ 目錄 0/8 命中)
 
@@ -116,7 +116,7 @@ POOL = sorted((mp.mpf(k) for k in pool_vals), key=lambda x: float(mp.log(x)))
 POOL_HASH = hashlib.sha256((",".join(sorted(pool_vals))).encode()).hexdigest()[:16]
 print(f"\nPOOL = {len(POOL)} 值 (0.1–1e4)，pool_hash = {POOL_HASH}")
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "30_pool_frozen.json"), "w") as f:
+                       "02_pool_frozen.json"), "w") as f:
     json.dump({"pool_size": len(POOL), "pool_hash": POOL_HASH,
                "pool_excerpt": [mp.nstr(v, 8) for v in POOL[:20]]}, f)
 
@@ -177,7 +177,7 @@ for f in ["e","mu","s","c","tau","b","u","d"]:
 print("\n" + "=" * 78)
 print(f"結果: {PASS} PASS / {FAIL} FAIL" + "（聯合 null 決定證據）")
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "30_cf_hunt.json"), "w") as f:
+                       "02_cf_hunt.json"), "w") as f:
     json.dump({k: (str(v) if isinstance(v, mp.mpf) else v) for k, v in summary.items()}, f,
               ensure_ascii=False, indent=1, default=str)
 sys.exit(1 if FAIL else 0)

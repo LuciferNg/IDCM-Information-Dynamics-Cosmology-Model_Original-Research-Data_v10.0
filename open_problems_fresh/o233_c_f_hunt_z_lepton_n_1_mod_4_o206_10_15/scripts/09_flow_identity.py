@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-O206 — 第十三輪 scripts/37: even/odd 兩流身份（quark/lepton 分層 + 塊層 + u/d 二重結構）
+O206 — 第十三輪 scripts/09_: even/odd 兩流身份（quark/lepton 分層 + 塊層 + u/d 二重結構）
 =========================================================================
-承接: 第十二輪 (docs/40) 後剩餘——even/odd 兩流算子身份 {u,s,c,b} vs {e,d,μ,τ}。
+承接: 第十二輪 (docs/08) 後剩餘——even/odd 兩流算子身份 {u,s,c,b} vs {e,d,μ,τ}。
 「繼續」⟹ 本輪三問題 + 一 exploratory:
 
   L1 quark/lepton 分層 null: 8 質量升序 rank, 3 輕子 (e,μ,τ) 全落 odd rank?
@@ -124,6 +124,6 @@ for g in range(3):
     g_od = math.exp(sum(math.log(o) for o in od)/len(od))
     out["L2"]["block_ratios"]["gen%d" % (g+1)] = g_ev/g_od
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "37_flow_identity.json"), "w") as f:
+                       "09_flow_identity.json"), "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print("\n結果: %d PASS / %d FAIL (L4 exploratory 唔計)" % (PASS, FAIL))

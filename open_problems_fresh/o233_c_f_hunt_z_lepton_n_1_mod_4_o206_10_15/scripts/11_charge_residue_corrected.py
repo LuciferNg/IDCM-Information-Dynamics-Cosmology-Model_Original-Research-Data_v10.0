@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-O206 — 第十五輪 scripts/39: charge-residue 正確表 + 輕子槽成因 + up/down 分析
+O206 — 第十五輪 scripts/11_: charge-residue 正確表 + 輕子槽成因 + up/down 分析
 =========================================================================
-承接: 第十四輪 docs/42 B4 residue 表——⚠️ 發現表有錯誤: ≡3 = {d(3), c(7), b(11)}
-中 c 係 up-type（唔係 down-type）——docs/42 寫「d,c,b 全 ≡3（3/3, s 例外）」誤導。
+承接: 第十四輪 docs/10_ B4 residue 表——⚠️ 發現表有錯誤: ≡3 = {d(3), c(7), b(11)}
+中 c 係 up-type（唔係 down-type）——docs/10_ 寫「d,c,b 全 ≡3（3/3, s 例外）」誤導。
 本輪一次過（調律者「一次過」）:
   C1 更正 + 正確 charge-residue 完整表（附 q_eff=-1/3/+2/3 標記）
   C2 輕子槽成因: 88-chain mod-4 槽幾何（γ_n 分佈、半週期平移 n+44↔4−γ_n、residue 不變性）
@@ -33,7 +33,7 @@ ASSIGN = [("e",1,"lepton","-1"),("u",2,"quark-up","+2/3"),("d",3,"quark-down","-
 
 # ══════════════════ C1. 正確 residue 表 ══════════════════
 print("=" * 74)
-print("C1. 更正: charge-residue 完整表（docs/42 B4 有誤）")
+print("C1. 更正: charge-residue 完整表（docs/10_ B4 有誤）")
 print("=" * 74)
 rows = {}
 for f, n, typ, ch in ASSIGN:
@@ -101,6 +101,6 @@ out = {"C1": {"residue_table": {str(r): [[f, n, t, c] for f, n, t, c in v] for r
        "C3": {"up_residues": up_m, "down_residues": dn_m, "p_distinct": p_dist, "p_same": p_same,
               "p_down_has0": p_down_has0}}
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "39_charge_residue_corrected.json"), "w") as f:
+                       "11_charge_residue_corrected.json"), "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print("\n結果: %d PASS / %d FAIL" % (PASS, FAIL))

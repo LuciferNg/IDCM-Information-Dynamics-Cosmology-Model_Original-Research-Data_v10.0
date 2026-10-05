@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O206 — 第十二輪 scripts/36: 鋸齒 × 階梯 Joint + 冪律 + 塊相位防偽
+O206 — 第十二輪 scripts/08_: 鋸齒 × 階梯 Joint + 冪律 + 塊相位防偽
 =========================================================================
 承接: 第十一輪(d) 完結後剩餘——①階梯 T-stat 喺 1055 個分裂 assignment 上嘅分布
 （兩個「升序相關」statistic 嘅關係）②even/odd 兩流算子身份 ③塊相位。
@@ -40,7 +40,7 @@ def lnCf_at(modes):
     return [math.log(m / (M0 * gam(n))) for m, n in zip(ms, modes)]
 
 def T_span(ys):
-    """塊幾何中位 span: Σ ln(block_geo_mean) (同 scripts/31 之 T)"""
+    """塊幾何中位 span: Σ ln(block_geo_mean) (同 scripts/03_ 之 T)"""
     i = 0; tot = 0.0
     for blk in BLOCKS:
         k = len(blk)
@@ -141,6 +141,6 @@ out = {"Q1": {"n_split": n_split, "n_Tle": n_Tle, "n_both": n_both,
        "Q2": {"alpha": alpha, "a": a, "rms": rms, "max_resid": mxr, "resid": resid},
        "Q3": {"block_start_parity": [("g%d" % (g+1), (1+sum(len(b) for b in BLOCKS[:g])) % 2 == 1) for g in range(3)]}}
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "36_joint_power_parity.json"), "w") as f:
+                       "08_joint_power_parity.json"), "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print("\n結果: %d PASS / %d FAIL" % (PASS, FAIL))

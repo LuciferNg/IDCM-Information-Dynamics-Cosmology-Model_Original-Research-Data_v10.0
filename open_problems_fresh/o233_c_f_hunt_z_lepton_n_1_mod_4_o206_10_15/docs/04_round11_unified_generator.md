@@ -1,8 +1,8 @@
-# O206 — 第十一輪 docs/36: C_f 統一生成式掃描（Unified Generator Scan）
+# O206 — 第十一輪 docs/04_: C_f 統一生成式掃描（Unified Generator Scan）
 
-> **日期**: 2026-10-06 · **Script**: `scripts/32_unified_cf_generator.py`（2 PASS / 2 FAIL = 誠實負結果）
-> · **Log**: `logs/32_unified_generator.out` · **凍結 hash**: `abb08f1d3496221c`
-> **承接**: 第十輪（docs/34）判死「逐點池命中」（p=0.9955/0.8214）後，用戶指令「推C_f」
+> **日期**: 2026-10-06 · **Script**: `scripts/04_unified_cf_generator.py`（2 PASS / 2 FAIL = 誠實負結果）
+> · **Log**: `logs/04_unified_generator.out` · **凍結 hash**: `abb08f1d3496221c`
+> **承接**: 第十輪（docs/02_）判死「逐點池命中」（p=0.9955/0.8214）後，用戶指令「推C_f」
 > ⟹ 第十一輪轉攻三類**新**測試：統一生成式（global shape）· detent 重標度 · 比值家族 null。
 > **verdict**: **統一生成式喺 12 個 pre-registered 族內不存在（best max_dev = 1.378 = 137.8%）**
 > ⟹ C_f 唔係「模式 n 嘅單調算子函數」——新增結構結論：**C_f(n) 有結構性 dip**（n=4→5:
@@ -97,11 +97,11 @@ C_s (n=4) = 41.32 > C_μ (n=5) = 30.03 ⟹ **C_f(n) 唔係單調**。而 γ_n �
 3. **塊層 reframe（C_f 嘅剩餘結構層）**：
    - 塊幾何中位：gen1 {e,u,d} = 3.685 · gen2 {s,μ,c} = 61.35 · gen3 {τ,b} = 202.07
    - 塊間比：61.35/3.685 = 16.65（≈ 16 = B², dev 4.1% — **線索級, 非證據**）· 202.07/61.35 = 3.29
-   - 塊內 spread：1.058 · 6.196 · 1.602（O120 closeout + docs/35 已知）
+   - 塊內 spread：1.058 · 6.196 · 1.602（O120 closeout + docs/03_ 已知）
 4. **剩餘問題（重框）**：
    - 🔴 **塊參數生成**（3 個塊幾何中位嘅結構身份）
    - 🟡 塊內 spread 嘅來源（γ-階梯 8! p=0.00117 已證升序；spread 本身係 C_f 嘅「唔整」殘餘）
-   - 🟡 u/d scheme 化重算（5.34%/1.69% 殘餘, docs/35 §四）
+   - 🟡 u/d scheme 化重算（5.34%/1.69% 殘餘, docs/03_ §四）
 5. **路線建議**（給下一輪）：
    - 塊中位 16.65 ≈ B² 係唯一存活嘅「數字接近」——需要**獨立盲測**（唔可以依賴 4.1% dev）
    - 或接受「C_f = 獨立錨 × A₅ 塊結構」（與 O137 模式選擇層結合, 唔另設生成器）

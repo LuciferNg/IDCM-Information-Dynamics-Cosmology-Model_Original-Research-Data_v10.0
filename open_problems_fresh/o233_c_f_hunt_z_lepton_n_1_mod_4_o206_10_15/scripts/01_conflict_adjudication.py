@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O206 — 第十輪 scripts/29: C_f 衝突裁決（Conflict Adjudication）
+O206 — 第十輪 scripts/01_: C_f 衝突裁決（Conflict Adjudication）
 ================================================================
 承接: O221 併入 O206（2026-09-25）+ O120 closeout handoff（2026-10-06）
 
@@ -100,7 +100,7 @@ verdict = {
     "verdict": "O137 R19 勝出；CSSG-v3/O64 9/9 閉合降級為後驗池擬合（非法模式）",
 }
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "29_conflict_adjudication.json"), "w") as f:
+                       "01_conflict_adjudication.json"), "w") as f:
     json.dump({k: (v if isinstance(v, (int, float, str, list, dict, bool)) else str(v))
                for k, v in verdict.items()}, f, ensure_ascii=False, indent=1)
 print("\n" + "=" * 78)

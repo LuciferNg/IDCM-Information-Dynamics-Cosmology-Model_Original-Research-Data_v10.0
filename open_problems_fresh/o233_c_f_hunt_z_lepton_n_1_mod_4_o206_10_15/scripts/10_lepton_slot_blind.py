@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O206 — 第十四輪 scripts/38: lepton 槽盲測（L4 升級版, pre-registered）
+O206 — 第十四輪 scripts/10_: lepton 槽盲測（L4 升級版, pre-registered）
 =========================================================================
 承接: 第十三輪 L4 exploratory 發現 lepton modes = {1,5,9}（等差 4, nominal 1/56）。
 本輪 pre-register 盲測——用「性質目標」降低事後選擇 bias:
@@ -104,6 +104,6 @@ out = {"B1": {"p_theory": exact, "p_mc": cnt/N},
        "B3": {"p_theory": exact3, "p_mc": cnt3/N},
        "B4": {"residue_table": {str(r): [[f, n, k] for f, n, k in v] for r, v in rows.items()}}}
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "38_lepton_slot_blind.json"), "w") as f:
+                       "10_lepton_slot_blind.json"), "w") as f:
     json.dump(out, f, ensure_ascii=False, indent=1)
 print("\n結果: %d PASS / %d FAIL" % (PASS, FAIL))

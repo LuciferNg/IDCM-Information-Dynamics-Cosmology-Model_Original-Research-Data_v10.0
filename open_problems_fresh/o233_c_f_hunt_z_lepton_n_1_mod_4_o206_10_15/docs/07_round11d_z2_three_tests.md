@@ -1,7 +1,7 @@
-# O206 — 第十一輪(d) docs/39: 鋸齒 Z₂ 三盲測（表現：3 PASS / 1 FAIL）
+# O206 — 第十一輪(d) docs/07_: 鋸齒 Z₂ 三盲測（表現：3 PASS / 1 FAIL）
 
-> **日期**: 2026-10-06 · **Script**: `scripts/35_z2_three_tests.py`（**3 PASS / 1 FAIL**）· **Log**: `logs/35_z2_three_tests.out` · **Data**: `data/35_z2_three_tests.json`
-> **承接**: docs/38 確認鋸齒真身 = 奇偶 rank 分裂（Z₂），並提出「一源假說」（Z₂ = 位置算子 X 嘅同一結構）。「逐個做」——三個盲測一次過：T1 置換 null · T2 Z₂ 歸因 · T3 u/d scheme 壓力。
+> **日期**: 2026-10-06 · **Script**: `scripts/07_z2_three_tests.py`（**3 PASS / 1 FAIL**）· **Log**: `logs/07_z2_three_tests.out` · **Data**: `data/07_z2_three_tests.json`
+> **承接**: docs/06_ 確認鋸齒真身 = 奇偶 rank 分裂（Z₂），並提出「一源假說」（Z₂ = 位置算子 X 嘅同一結構）。「逐個做」——三個盲測一次過：T1 置換 null · T2 Z₂ 歸因 · T3 u/d scheme 壓力。
 > **verdict**: ①鋸齒唔係「質量→模式升序指派」特有（1055/40320 = 2.6% assignment 都做到分裂）——但升序係其中一個；②**鋸齒跟 rank parity 唔跟 mode parity**（max resid 0.844 vs 0.928）——即每個 peak 都係 even rank，包括 c(n=7 odd)、b(n=11 odd)——但殘餘**唔係二值 ±σ** ⟹ 一源假說嘅「Z₂ 修正」形式被壓；③**u/d scheme 壓力 robust**（77.4% 保持交替 / 68.4% 保持完整分裂, MC 10⁶）。
 
 ---
@@ -49,5 +49,5 @@
 
 ## 文件動作
 
-- scripts/35 + logs/35 + data/35 json + docs/39（本文件）。
+- scripts/07_ + logs/07_ + data/07_ json + docs/07（本文件）。
 - SESSION_START append（第十一輪(d) 節）· README O206 行 round-11(d) 更新 · register O206 note。

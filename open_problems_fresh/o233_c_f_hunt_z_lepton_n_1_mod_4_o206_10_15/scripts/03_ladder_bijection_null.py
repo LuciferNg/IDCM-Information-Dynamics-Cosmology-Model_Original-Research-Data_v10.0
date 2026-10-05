@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-O206 — 第十輪 scripts/31: γ-階梯雙射 null（ladder bijection, exact enumeration）
+O206 — 第十輪 scripts/03_: γ-階梯雙射 null（ladder bijection, exact enumeration）
 ==============================================================================
 問題（O120 closeout 成立後之最強結構主張）:
   A₅ 質量升序指派 e,u,d→n=1,2,3 / s,μ,c→n=4,5,7 / τ,b→n=9,11（t→VEV）
@@ -100,7 +100,7 @@ check("gen1 rank = 1/84 (第一代 γ-階梯唯一最小)", rank1 == 1)
 print("\n" + "=" * 78)
 print(f"結果: {PASS} PASS / {FAIL} FAIL")
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
-                       "31_ladder_null.json"), "w") as f:
+                       "03_ladder_null.json"), "w") as f:
     json.dump({"S1": S1, "S2": S2, "S3": S3, "T_obs": T_obs,
                "p_set": p_set, "count": count, "tot": tot,
                "rank1_84": rank1}, f, indent=1)

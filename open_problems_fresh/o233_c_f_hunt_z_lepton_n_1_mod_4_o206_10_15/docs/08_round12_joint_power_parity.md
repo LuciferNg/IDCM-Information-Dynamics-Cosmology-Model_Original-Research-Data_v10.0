@@ -1,6 +1,6 @@
-# O206 — 第十二輪 docs/40: Joint T×Split + 冪律 + 塊相位防偽（4 PASS / 1 FAIL）
+# O206 — 第十二輪 docs/08_: Joint T×Split + 冪律 + 塊相位防偽（4 PASS / 1 FAIL）
 
-> **日期**: 2026-10-06 · **Script**: `scripts/36_joint_power_parity.py`（**4 PASS / 1 FAIL**）· **Log**: `logs/36_joint_power_parity.out` · **Data**: `data/36_joint_power_parity.json`
+> **日期**: 2026-10-06 · **Script**: `scripts/08_joint_power_parity.py`（**4 PASS / 1 FAIL**）· **Log**: `logs/08_joint_power_parity.out` · **Data**: `data/08_joint_power_parity.json`
 > **承接**: 第十一輪(d) 剩餘三項——①階梯 T 喺 split 組內分布 ②even/odd 流算子身份 ③塊相位。「繼續」⟹ 一次過（Q1/Q2/Q3）。
 > **verdict**: **①鋸齒（split）同階梯（T）係相互獨立嘅統計**（joint 協同 1.01×≈1），但升序指派同時係 split 成員**且** split 組內 T-rank 1/1055（p=0.00095）——**兩個獨立 criterion 分別指住升序**；②**ln m vs ln γ 平均冪律 α=2.063 ≡ γ²**（m ∝ ω⁴）但殘餘 rms 0.70 大 ⟹ 冪律只係 envelope，唔係生成器；③塊相位 flip 係 alternation + 塊大小 (3,3,2) 嘅**必然**，無獨立信息量（防偽確認）。
 
@@ -43,5 +43,5 @@
 
 ## 文件動作
 
-- scripts/36 + logs/36 + data/36 json + docs/40（本文件）。
+- scripts/08_ + logs/08_ + data/08_ json + docs/08（本文件）。
 - SESSION_START append（第十二輪節）· README O206 行 round-12 更新 · register O206 note。

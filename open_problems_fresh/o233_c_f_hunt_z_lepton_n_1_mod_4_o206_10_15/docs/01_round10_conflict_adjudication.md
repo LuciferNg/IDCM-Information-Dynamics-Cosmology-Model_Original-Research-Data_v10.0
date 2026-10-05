@@ -1,6 +1,6 @@
-# O206 — 第十輪 docs/33: C_f 三方衝突裁決（Conflict Adjudication）
+# O206 — 第十輪 docs/01_: C_f 三方衝突裁決（Conflict Adjudication）
 
-> **日期**: 2026-10-06 · **Script**: `scripts/29_conflict_adjudication.py`（**13/13 PASS**）· **Log**: `logs/29_conflict_adjudication.out`
+> **日期**: 2026-10-06 · **Script**: `scripts/01_conflict_adjudication.py`（**13/13 PASS**）· **Log**: `logs/01_conflict_adjudication.out`
 > **承接**: O221 併入 O206（2026-09-25，調律者裁決「221 併入 206」）之**首要任務** = 裁決
 > O64 / O206-CSSG-v3 / O137 R19 三方 C_f 衝突；O120 closeout（2026-10-06）handoff 之
 > C_f 生成器殘餘亦歸本 O。
@@ -41,7 +41,7 @@
 ### E. 附帶裁決
 - **7722.8/1554 = 4.969 ≈ F₅ 爭議 → moot**：1554 對應 t n=44，而 n=44 非法；該比值係兩個非法 assignment 之間嘅巧合，無結構意義。
 - **「41 缺位」現身**：C_s(A₅) = 41.3207 ≈ 41 = N_d − L₂（dev 0.78%，弱，N_d−Lucas 家族 {33,37,41,44} 補 41）。標記：線索級，唔作證據（0.78% 超出嚴窗）。
-- **C_e 錨**：C_e = 3.5941 vs L₆/F₅ = 18/5（dev 0.164%，O120 closeout 盲測，見 docs/35）。
+- **C_e 錨**：C_e = 3.5941 vs L₆/F₅ = 18/5（dev 0.164%，O120 closeout 盲測，見 docs/03_）。
 
 ## 二、重框後嘅 C_f 生成器問題
 
@@ -58,7 +58,7 @@
   **維持**，並收緊為「0/8 精確成員 + 3/8 超 64」。
 - R19 之 scripts/70 §6「t 由 Higgs VEV 供給」：**確認**。
 - O221 問題記錄 §二「4.969 ≈ F₅ 之意義」：**裁決 = 無意義**（非法模式基礎）。
-- C_f 生成器（φ9 κ 導出 / N_d 偏移家族 / 其他）：**仍然開放**（docs/34 hunt 結果為負）。
+- C_f 生成器（φ9 κ 導出 / N_d 偏移家族 / 其他）：**仍然開放**（docs/02_ hunt 結果為負）。
 
 ## 四、歸屬註記（O221 合併收斂）
 
