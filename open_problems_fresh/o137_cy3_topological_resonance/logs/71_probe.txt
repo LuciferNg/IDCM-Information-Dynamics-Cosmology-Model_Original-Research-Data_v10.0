@@ -1,0 +1,17 @@
+/home/wsl/.local/lib/python3.13/site-packages/cytools/config.py:151: UserWarning: 
+**************************************************************
+Warning: You have enabled experimental features of CYTools.
+Some of these features may be broken or not fully tested,
+and they may undergo significant changes in future versions.
+**************************************************************
+
+  warnings.warn(
+triangulate 0.03s
+is_star True is_fine True is_regular True
+gkz_phi 0.00s type <class 'numpy.ndarray'>
+repr array([200,  27,  23,  48,  14,   6,  25,  40,   8,   6,  18,  10,  36,
+        18,  37,  20,  16,  56,  20,  20,  28,  24,  36,  12,  10,  12,
+        25,  14,  14,  20,  28,  25,  55,  18,  13,  10,   8])
+secondary_cone 0.00s
+sc repr A rational polyhedral cone in RR^37 defined by 185 hyperplanes
+exit=143

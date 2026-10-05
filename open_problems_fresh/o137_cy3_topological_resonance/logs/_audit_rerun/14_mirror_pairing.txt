@@ -1,0 +1,84 @@
+============================================================================
+O137 Phase 5a: 鏡像 dual pairing
+============================================================================
+Δ: 48 pts (h11=36), Δ*: 85 pts
+Batyrev: Σl*(facets_Δ*) = 85 - 5 - 36 = 44 = Nd ★
+
+[1] pairing 矩陣 (48, 85):
+    min = -1, max = 63
+    ⟨p,q⟩ = -1 嘅 pairs: 357
+    ⟨p,q⟩ = 0 嘅 pairs: 447
+    ⟨p,q⟩ ≥ 1 嘅 pairs: 3276
+
+[2] 每個 mode n 嘅 tight partner 數 (#{q ∈ Δ*: ⟨pt_n, q⟩ = -1}):
+    n= 1★: tight partners = 77 e⁻
+    n= 2 : tight partners = 5 
+    n= 3 : tight partners = 34 
+    n= 4 : tight partners = 58 
+    n= 5 : tight partners = 8 
+    n= 6 : tight partners = 4 
+    n= 7★: tight partners = 13 μ⁻
+    n= 8B: tight partners = 57 
+    n= 9 : tight partners = 3 
+    n=10 : tight partners = 7 
+    n=11 : tight partners = 3 
+    n=12 : tight partners = 7 
+    n=13 : tight partners = 3 
+    n=14★: tight partners = 7 s
+    n=15 : tight partners = 3 
+    n=16B: tight partners = 3 
+    n=17 : tight partners = 7 
+    n=18 : tight partners = 3 
+    n=19 : tight partners = 3 
+    n=20★: tight partners = 3 τ⁻
+    n=21 : tight partners = 3 
+    n=22 : tight partners = 3 
+    n=23 : tight partners = 2 
+    n=24B: tight partners = 2 
+    n=25 : tight partners = 2 
+    n=26 : tight partners = 2 
+    n=27 : tight partners = 2 
+    n=28 : tight partners = 2 
+    n=29 : tight partners = 2 
+    n=30 : tight partners = 2 
+    n=31 : tight partners = 2 
+    n=32B: tight partners = 2 
+    n=33★: tight partners = 6 b
+    n=34★: tight partners = 2 c
+    n=35 : tight partners = 2 
+    n=36 : tight partners = 2 
+    n=37 : tight partners = 1 
+    n=38 : tight partners = 1 
+    n=39 : tight partners = 1 
+    n=40B: tight partners = 1 
+    n=41 : tight partners = 1 
+    n=42 : tight partners = 1 
+    n=43 : tight partners = 1 
+    n=44 : tight partners = 1 
+
+[3] 統計:
+    候選 tight: [77, 13, 7, 3, 6, 2]
+    非候選 tight: mean=6.47, std=13.14, min=1, max=58
+    純玻色子 tight: [57, 3, 2, 2, 1]
+
+[4] 其他條件掃描:
+    ⟨p,q⟩ = -1: 候選 [77, 13, 7, 3, 6, 2] | 非候選 mean 6.5 | 玻色子 [57, 3, 2, 2, 1]
+      分離: False
+    ⟨p,q⟩ = 0: 候選 [7, 12, 2, 2, 13, 8] | 非候選 mean 6.3 | 玻色子 [26, 4, 2, 3, 13]
+      分離: False
+    ⟨p,q⟩ ≤ -1: 候選 [77, 13, 7, 3, 6, 2] | 非候選 mean 6.5 | 玻色子 [57, 3, 2, 2, 1]
+      分離: False
+    ⟨p,q⟩ ≥ 2: 候選 [0, 51, 66, 72, 55, 59] | 非候選 mean 63.7 | 玻色子 [0, 75, 77, 75, 60]
+      分離: False
+
+已保存 data/mirror_pairing.json
+
+--- STDERR ---
+/home/wsl/.local/lib/python3.13/site-packages/cytools/config.py:151: UserWarning: 
+**************************************************************
+Warning: You have enabled experimental features of CYTools.
+Some of these features may be broken or not fully tested,
+and they may undergo significant changes in future versions.
+**************************************************************
+
+  warnings.warn(

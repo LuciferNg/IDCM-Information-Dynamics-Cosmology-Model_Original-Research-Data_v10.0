@@ -1,0 +1,54 @@
+Δ  : 48 pts (CY3 h11=36, h21=98)
+Δ* : 85 pts (CY3 h11=98, h21=36)
+Triangulation: fine=True, regular=True, star=True, 283 simplices, 73 points
+
+GKZ φ (73 entries, sum=1800):
+  φ=   6: 2
+  φ=   8: 5
+  φ=   9: 9
+  φ=  12: 28
+  φ=  14: 4
+  φ=  16: 3
+  φ=  18: 4
+  φ=  20: 4
+  φ=  22: 4
+  φ=  26: 3
+  φ=  29: 3
+  φ= 113: 1
+  φ= 173: 1
+  φ= 176: 1
+  φ= 360: 1
+
+charges q_i = φ_origin − φ_i (72 values, sum=24480):
+  q= 184: 1
+  q= 187: 1
+  q= 247: 1
+  q= 331: 3
+  q= 334: 3
+  q= 338: 4
+  q= 340: 4
+  q= 342: 4
+  q= 344: 3
+  q= 346: 4
+  q= 348: 28
+  q= 351: 9
+  q= 352: 5
+  q= 354: 2
+
+K_Chain 結構連結:
+  ✅ φ_origin = 4·Σγ (=360)
+  ✅ Σφ = 20·Σγ (=1800)
+  ✅ φ[1] = 2·88 (=176)
+
+GKZ 週期係數 log c_k:
+  log c_1 = -116830.527
+  log c_2 = -266851.095
+  log c_3 = -429482.202
+  log c_4 = -600305.058
+  log c_5 = -777220.061
+
+漸近: coef of k·log(k) = -24120 (<0 全函數)
+
+Saved: data/dual_triangulation_data.json + data/gkz_period_data.json
+
+--- STDERR ---

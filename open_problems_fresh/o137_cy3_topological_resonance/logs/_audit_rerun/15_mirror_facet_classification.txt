@@ -1,0 +1,37 @@
+============================================================================
+O137 Phase 5b: Δ* 點分類
+============================================================================
+Δ* vertices: 7 個
+  [[ 1 -1 -1 -1]
+ [-1  0 -1 -1]
+ [-1  0 -1 15]
+ [-1  0  4 -1]
+ [-1  0  4  0]
+ [-1  2 -1 -1]
+ [-1  2 -1  0]]
+
+origin: 1, boundary: 84
+
+boundary points 喺 ≥1 facet 上: 84
+facet membership 數分佈: {37: 1, 5: 1, 10: 2, 22: 1, 11: 1, 23: 1, 4: 19, 9: 4, 3: 31, 2: 11, 1: 12}
+
+strictly-interior-to-facet points (membership=1): 12
+  → 預期 44 = Nd: False
+
+實際 12 ≠ 44, 需要其他分類
+
+membership=2 (edge-interior?): 11
+membership=3 (vertex?): 31
+membership≥4: 30
+
+已保存 data/mirror_facets.json
+
+--- STDERR ---
+/home/wsl/.local/lib/python3.13/site-packages/cytools/config.py:151: UserWarning: 
+**************************************************************
+Warning: You have enabled experimental features of CYTools.
+Some of these features may be broken or not fully tested,
+and they may undergo significant changes in future versions.
+**************************************************************
+
+  warnings.warn(

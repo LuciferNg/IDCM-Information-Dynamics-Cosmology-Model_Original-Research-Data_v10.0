@@ -1,0 +1,109 @@
+========================================================================
+O137 Phase 2a: Polytope Triangulation 結構分析
+========================================================================
+
+[1] 點結構: 48 點, 1 interior, 6 vertices
+    interior 點: [0]
+    vertices indices: [1, 2, 3, 4, 5, 7]
+
+[2] 點喺 simplices 嘅出現頻率:
+    pt  0 : 144  ★
+    pt 12 :  32  
+    pt 17 :  30  
+    pt 32 :  30  
+    pt  3V:  28  
+    pt  7V:  28  
+    pt  6 :  24  
+    pt 30 :  24  
+    pt 14 :  24  
+    pt  1V:  22  
+    pt  2V:  20  
+    pt 33 :  18  
+    pt 26 :  18  
+    pt 22 :  16  
+    pt 13 :  16  
+    pt 31 :  16  
+    pt 10 :  16  
+    pt 15 :  14  
+    pt 16 :  14  
+    pt 29 :  14  
+    pt 20 :  14  
+    pt 34 :  12  
+    pt 27 :  12  
+    pt 28 :  12  
+    pt 23 :  12  
+    pt 21 :  12  
+    pt 18 :  12  
+    pt 19 :  12  
+    pt 35 :  10  
+    pt 11 :  10  
+    pt 25 :  10  
+    pt 24 :  10  
+    pt  8 :   8  
+    pt 36 :   8  
+    pt  4V:   6  
+    pt  5V:   6  
+    pt  9 :   6  
+
+[3] 出現頻率 = 36 嘅點 (apex 候選): []
+[4] 非 apex 點: 48
+    非 apex indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+
+[5] adjacency (共同 simplex 數):
+    總邊數 (adj>0): 216
+    pt  0 : degree 36
+    pt  1 : degree 14
+    pt  2 : degree 13
+    pt  3 : degree 17
+    pt  4 : degree  6
+    pt  5 : degree  6
+    pt  6 : degree 15
+    pt  7 : degree 17
+    pt  8 : degree  7
+    pt  9 : degree  6
+    pt 10 : degree 11
+    pt 11 : degree  8
+    pt 12 : degree 19
+    pt 13 : degree 11
+    pt 14 : degree 15
+    pt 15 : degree 10
+    pt 16 : degree 10
+    pt 17 : degree 18
+    pt 18 : degree  9
+    pt 19 : degree  9
+    pt 20 : degree 10
+    pt 21 : degree  9
+    pt 22 : degree 11
+    pt 23 : degree  9
+    pt 24 : degree  8
+    pt 25 : degree  8
+    pt 26 : degree 12
+    pt 27 : degree  9
+    pt 28 : degree  9
+    pt 29 : degree 10
+    pt 30 : degree 15
+    pt 31 : degree 11
+    pt 32 : degree 18
+    pt 33 : degree 12
+    pt 34 : degree  9
+    pt 35 : degree  8
+    pt 36 : degree  7
+    pt 37 : degree  0
+    pt 38 : degree  0
+    pt 39 : degree  0
+    pt 40 : degree  0
+    pt 41 : degree  0
+    pt 42 : degree  0
+    pt 43 : degree  0
+    pt 44 : degree  0
+    pt 45 : degree  0
+    pt 46 : degree  0
+    pt 47 : degree  0
+
+[6] sr_ideal: 484 pairs = 22² = 484 ✓
+    sr_ideal 涉及嘅點數: 36
+    sr 涉及 apex: []
+
+結果已保存 data/adjacency.npy + data/polytope_structure.json
+
+--- STDERR ---

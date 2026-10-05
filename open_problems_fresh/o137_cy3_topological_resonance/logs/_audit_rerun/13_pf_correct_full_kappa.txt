@@ -1,0 +1,78 @@
+============================================================================
+O137 Phase 4d: 完整 κ (37³) + 正確 1-based 對應
+============================================================================
+
+[1] κ 完整結構 (37³):
+    index 36 嘅 |κ| 總和: 34.0
+    K[0,0,0]=-360.0, K[8,8,8]=-232.0, K[33,33,33]=40.0
+    JSON 36³ K[0,0,0]=-360.0, 同完整版一致: True
+    JSON 36³ vs 完整 37³ (0-35) 差別: 0 entries
+
+[2] 正確 P_f 譜 (prime divisors 1-36):
+    n= 1★: P_sin=    +12.8305  P_cos=    +94.5530  P_chain= +35271.7567 e⁻
+    n= 2 : P_sin=    -29.9643  P_cos=    +38.6968  P_chain= -10316.4535 
+    n= 3 : P_sin=   -140.2247  P_cos=    +72.5946  P_chain= -14350.2953 
+    n= 4 : P_sin=   -382.3105  P_cos=     -3.6351  P_chain= -16579.6626 
+    n= 5 : P_sin=   -234.7962  P_cos=   +108.9555  P_chain=  -5243.4312 
+    n= 6 : P_sin=   -158.2788  P_cos=   +112.4649  P_chain=  -2059.9457 
+    n= 7★: P_sin=    -15.1141  P_cos=    -68.7823  P_chain=   -124.9069 μ⁻
+    n= 8B: P_sin=    +21.8694  P_cos=    -61.3922  P_chain=   +122.2463 
+    n= 9 : P_sin=     +6.6454  P_cos=    -52.6490  P_chain=    +26.3753 
+    n=10 : P_sin=    +70.8691  P_cos=   -203.2672  P_chain=   +207.5672 
+    n=11 : P_sin=    +72.5285  P_cos=   -444.1307  P_chain=   +161.7708 
+    n=12 : P_sin=    +80.5843  P_cos=   -224.7413  P_chain=   +140.5121 
+    n=13 : P_sin=    +24.2133  P_cos=    -98.0585  P_chain=    +33.7476 
+    n=14★: P_sin=    +14.6974  P_cos=   -100.2981  P_chain=    +16.6904 s
+    n=15 : P_sin=    +65.5032  P_cos=    +26.6128  P_chain=    +61.6272 
+    n=16B: P_sin=   +249.1260  P_cos=   +228.8885  P_chain=   +197.0618 
+    n=17 : P_sin=   +247.0510  P_cos=   +476.3728  P_chain=   +166.4695 
+    n=18 : P_sin=   +166.8189  P_cos=   +445.7377  P_chain=    +96.8882 
+    n=19 : P_sin=    +75.8195  P_cos=    +85.7036  P_chain=    +38.3631 
+    n=20★: P_sin=     -8.0253  P_cos=    -28.8419  P_chain=     -3.5721 τ⁻
+    n=21 : P_sin=    +44.4377  P_cos=    -13.4107  P_chain=    +17.5558 
+    n=22 : P_sin=    +23.1551  P_cos=     -9.0000  P_chain=     +8.1866 
+    n=23 : P_sin=    -29.6760  P_cos=    +53.9490  P_chain=     -9.4617 
+    n=24B: P_sin=    -38.4454  P_cos=    +84.0232  P_chain=    -11.1332 
+    n=25 : P_sin=   -175.7710  P_cos=     +2.5617  P_chain=    -46.5419 
+    n=26 : P_sin=   -202.6277  P_cos=     +8.4621  P_chain=    -49.3694 
+    n=27 : P_sin=   -325.9000  P_cos=    +87.4522  P_chain=    -73.5017 
+    n=28 : P_sin=   -432.0481  P_cos=    +43.6619  P_chain=    -90.7113 
+    n=29 : P_sin=   -398.3507  P_cos=    +98.0424  P_chain=    -78.2814 
+    n=30 : P_sin=   -356.5922  P_cos=    -23.8844  P_chain=    -65.9287 
+    n=31 : P_sin=   -329.8333  P_cos=   -242.0897  P_chain=    -57.6586 
+    n=32B: P_sin=    -82.1821  P_cos=   -436.1064  P_chain=    -13.6487 
+    n=33★: P_sin=   -202.0342  P_cos=   -666.8693  P_chain=    -32.0250 b
+    n=34★: P_sin=   -271.4054  P_cos=   -339.7435  P_chain=    -41.2458 c
+    n=35 : P_sin=   -191.3496  P_cos=    -29.1500  P_chain=    -28.0013 
+    n=36 : P_sin=    -60.8052  P_cos=    -25.4436  P_chain=     -8.6045 
+    n=37 : P_sin=   +131.1264  P_cos=    -45.5797  P_chain=    +18.0183 
+    n=38 : P_sin=   +253.0579  P_cos=    -24.0736  P_chain=    +33.9040 
+    n=39 : P_sin=   +282.1127  P_cos=   +156.0877  P_chain=    +36.9999 
+    n=40B: P_sin=   +261.2550  P_cos=   +265.8368  P_chain=    +33.6747 
+    n=41 : P_sin=   +173.1115  P_cos=    -60.8902  P_chain=    +22.0152 
+    n=42 : P_sin=    +55.4154  P_cos=    +37.1552  P_chain=     +6.9801 
+    n=43 : P_sin=    +18.7785  P_cos=    +79.2249  P_chain=     +2.3518 
+    n=44 : P_sin=    -23.0000  P_cos=    +38.0000  P_chain=     -2.8750 
+
+[3] 選擇律統計:
+    sin: 候選排名 [('e⁻', 27), ('μ⁻', 38), ('s', 25), ('τ⁻', 5), ('b', 1), ('c', 22)]
+         候選 |P| = [np.float64(12.8), np.float64(15.1), np.float64(14.7), np.float64(8.0), np.float64(202.0), np.float64(271.4)]
+         純玻色子 |P| max = 261.3 vs 候選 min = 8.0 → 分離 False
+    cos: 候選排名 [('e⁻', 32), ('μ⁻', 39), ('s', 4), ('τ⁻', 18), ('b', 41), ('c', 34)]
+         候選 |P| = [np.float64(94.6), np.float64(68.8), np.float64(100.3), np.float64(28.8), np.float64(666.9), np.float64(339.7)]
+         純玻色子 |P| max = 436.1 vs 候選 min = 28.8 → 分離 False
+    chain: 候選排名 [('e⁻', 0), ('μ⁻', 9), ('s', 17), ('τ⁻', 30), ('b', 36), ('c', 20)]
+         候選 |P| = [np.float64(35271.8), np.float64(124.9), np.float64(16.7), np.float64(3.6), np.float64(32.0), np.float64(41.2)]
+         純玻色子 |P| max = 197.1 vs 候選 min = 3.6 → 分離 False
+
+已保存 data/pf_correct.json
+
+--- STDERR ---
+/home/wsl/.local/lib/python3.13/site-packages/cytools/config.py:151: UserWarning: 
+**************************************************************
+Warning: You have enabled experimental features of CYTools.
+Some of these features may be broken or not fully tested,
+and they may undergo significant changes in future versions.
+**************************************************************
+
+  warnings.warn(

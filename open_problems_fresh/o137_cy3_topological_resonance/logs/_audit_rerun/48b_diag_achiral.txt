@@ -1,0 +1,26 @@
+=== Halton 首 5 個 ===
+  i=1 |orbit|=60 |δ|=1.853e-25 min|−v−p|=1.351e-15 achiral=True
+  i=2 |orbit|=60 |δ|=9.061e-07 min|−v−p|=8.752e-02 achiral=False
+  i=3 |orbit|=60 |δ|=5.337e-08 min|−v−p|=9.301e-03 achiral=False
+  i=4 |orbit|=60 |δ|=2.188e-09 min|−v−p|=1.778e-04 achiral=False
+  i=5 |orbit|=60 |δ|=1.914e-07 min|−v−p|=1.668e-02 achiral=False
+
+=== 掃描 Halton 1..1500 之 achiral ===
+  achiral 數 = 1
+    i=1 v=[-0.5        0.8660254  0.       ] min=1.351e-15 |δ|=1.853e-25 |v·A2|max=0.866025403784439
+
+=== rng(987654321) 之 achiral ===
+
+=== 用 1e-6 門檻重掃 (更嚴) ===
+  門檻 1e-09: achiral 數 = 1
+  門檻 1e-08: achiral 數 = 1
+  門檻 1e-07: achiral 數 = 1
+  門檻 1e-06: achiral 數 = 1
+  門檻 1e-05: achiral 數 = 1
+  門檻 1e-04: achiral 數 = 2
+  門檻 1e-03: achiral 數 = 12
+
+=== 最近距離分佈 (Halton 1500) ===
+  min=1.351e-15  1%=1.152e-03  中位=7.894e-02
+
+--- STDERR ---

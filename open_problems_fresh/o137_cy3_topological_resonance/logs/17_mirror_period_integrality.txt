@@ -1,0 +1,18 @@
+/home/wsl/.local/lib/python3.13/site-packages/cytools/config.py:151: UserWarning: 
+**************************************************************
+Warning: You have enabled experimental features of CYTools.
+Some of these features may be broken or not fully tested,
+and they may undergo significant changes in future versions.
+**************************************************************
+
+  warnings.warn(
+GLSM charge matrix: (68, 73)
+Row sums (should be 0, CY condition): [0 0 0 0 0]
+
+=== ROW-WISE GKZ ANALYSIS ===
+Rows with positive charges: 68
+Degrees (sum positive charges): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+
+=== COMPUTE_CY ===
+CY: <class 'cytools.calabiyau.CalabiYau'>
+CY attrs: ['ambient_dim', 'ambient_dimension', 'ambient_variety', 'chi', 'clear_cache', 'compute_AA', 'compute_curve_volumes', 'compute_cy_volume', 'compute_divisor_volumes', 'compute_gv', 'compute_gvs', 'compute_gw', 'compute_gws', 'compute_inverse_kahler_metric', 'compute_kahler_metric', 'compute_kappa_matrix', 'compute_kappa_vector', 'curve_basis', 'dim', 'dimension', 'divisor_basis', 'glsm_charge_matrix', 'glsm_linear_relations', 'h11', 'h12', 'h13', 'h21', 'h22', 'h31', 'hpq']

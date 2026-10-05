@@ -1,0 +1,554 @@
+[
+ {
+  "script": "01_resonance_equation.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "結果已保存 data/01_resonance_spectrum.json"
+ },
+ {
+  "script": "02_projection_resonance.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "結果已保存 data/01_resonance_spectrum.json"
+ },
+ {
+  "script": "03_true_kappa_resonance.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "結果已保存 data/01_resonance_spectrum.json"
+ },
+ {
+  "script": "04_homology_eigenvalues.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "結果已保存 data/02_homology_eigenvalues.json"
+ },
+ {
+  "script": "05_fermion_quantization.py",
+  "rc": 0,
+  "secs": 0.0,
+  "pf": "",
+  "tb": false,
+  "tail": "結果已保存 data/03_fermion_quantization.json"
+ },
+ {
+  "script": "06_polytope_structure.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "結果已保存 data/adjacency.npy + data/polytope_structure.json"
+ },
+ {
+  "script": "07_cycle_lengths.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "已保存 data/cycle_lengths_v2.json"
+ },
+ {
+  "script": "08_v2_subring_rule.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "    44 模式中 v₂ ≤ 2 嘅比例: 39/44"
+ },
+ {
+  "script": "09_true_yukawa_match.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "    n=16 : ω=1.08128 vs λ=-1.00990 (rel 7.1%) "
+ },
+ {
+  "script": "10_pf_overlap_operator.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "已保存 data/pf_operator.json"
+ },
+ {
+  "script": "11_pf_variants_sr.py",
+  "rc": 0,
+  "secs": 0.2,
+  "pf": "",
+  "tb": false,
+  "tail": "已保存 data/pf_variants.json"
+ },
+ {
+  "script": "12_hypothesis_scan.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "已保存 data/pf_hypothesis_scan.json"
+ },
+ {
+  "script": "13_pf_correct_full_kappa.py",
+  "rc": 0,
+  "secs": 3.2,
+  "pf": "",
+  "tb": false,
+  "tail": "已保存 data/pf_correct.json"
+ },
+ {
+  "script": "14_mirror_pairing.py",
+  "rc": 0,
+  "secs": 1.5,
+  "pf": "",
+  "tb": false,
+  "tail": "已保存 data/mirror_pairing.json"
+ },
+ {
+  "script": "15_mirror_facet_classification.py",
+  "rc": 0,
+  "secs": 1.5,
+  "pf": "",
+  "tb": false,
+  "tail": "已保存 data/mirror_facets.json"
+ },
+ {
+  "script": "16_gkz_mirror_period.py",
+  "rc": 0,
+  "secs": 1.5,
+  "pf": "",
+  "tb": false,
+  "tail": "Saved: data/dual_triangulation_data.json + data/gkz_period_data.json"
+ },
+ {
+  "script": "17_mirror_period_integrality.py",
+  "rc": 1,
+  "secs": 1.3,
+  "pf": "",
+  "tb": true,
+  "tail": ""
+ },
+ {
+  "script": "18_gfan_discriminant_blind_test.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "The 44=N_d φ structure is a genuine structural discovery."
+ },
+ {
+  "script": "19_subglsm_discriminant.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "  - The structural origin of the scaling is still open"
+ },
+ {
+  "script": "20_phase7_2adic_resonance.py",
+  "rc": 0,
+  "secs": 0.0,
+  "pf": "",
+  "tb": false,
+  "tail": "complex phase-weighted impedance."
+ },
+ {
+  "script": "21_phase8_yukawa_from_phi.py",
+  "rc": 0,
+  "secs": 0.0,
+  "pf": "34/34",
+  "tb": false,
+  "tail": "     origin of the PMNS/CKM matrix, not the mass hierarchy."
+ },
+ {
+  "script": "22_final_push_4tasks.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "  Saved: data/final_push_results.json"
+ },
+ {
+  "script": "23_verify_all_docs.py",
+  "rc": 0,
+  "secs": 0.0,
+  "pf": "",
+  "tb": false,
+  "tail": "============================================================"
+ },
+ {
+  "script": "24_verify_round2.py",
+  "rc": 0,
+  "secs": 0.0,
+  "pf": "",
+  "tb": false,
+  "tail": "============================================================"
+ },
+ {
+  "script": "25_problem1_sufficiency_null.py",
+  "rc": 0,
+  "secs": 1.9,
+  "pf": "",
+  "tb": false,
+  "tail": "   ⟹ docs/23 '唯一性' 宣稱【零信息量】(trivially true)"
+ },
+ {
+  "script": "26_cross_framework_density.py",
+  "rc": 0,
+  "secs": 0.2,
+  "pf": "",
+  "tb": false,
+  "tail": "（O136 docs/34 記錄: A₅ 0.5872, O137 嚴格 [1,7,20,14,33,34,1,1,1] 1.5030）"
+ },
+ {
+  "script": "27_sdr_distinct_modes.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "   t: 0 個模式可用 → []"
+ },
+ {
+  "script": "28_a5_mass_ordered.py",
+  "rc": 0,
+  "secs": 0.2,
+  "pf": "",
+  "tb": false,
+  "tail": "IDCM 結構常數候選: 44=N_d, 123=L₁₀, 88, 36=h11, 61.5=E_proj, 90"
+ },
+ {
+  "script": "29_a5_blocks_powerlaw.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "       √(44/3.4) = 3.5974  → 偏差 [np.float64(0.09), np.float64(-5.41), "
+ },
+ {
+  "script": "30_two_factor_synthesis.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "C = 1946087.9711  vs 結構候選: L₆/F₅=3.6, 44/12=3.6667, mean=3.6864"
+ },
+ {
+  "script": "31_verify_round3.py",
+  "rc": 0,
+  "secs": 1.3,
+  "pf": "",
+  "tb": false,
+  "tail": "============================================================"
+ },
+ {
+  "script": "32_scaling_law_value.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "  A₅: μ↔5, τ↔9 (皆 ∈ A₅)   O54: μ↔7 (∈A₅), τ↔20 (∉A₅)"
+ },
+ {
+  "script": "33_scaling_law_value_v2.py",
+  "rc": 0,
+  "secs": 0.7,
+  "pf": "",
+  "tb": false,
+  "tail": "★ 但 n=20 ∉ A₅ ⟹ A₅ 與 O54 輕子模式分配不可共存"
+ },
+ {
+  "script": "34_a5_pairing_search.py",
+  "rc": 0,
+  "secs": 1.3,
+  "pf": "",
+  "tb": false,
+  "tail": "  ⟹ 🔴 配對無結構信號 — 密度效應主導"
+ },
+ {
+  "script": "35_verify_docs26.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "========================================================"
+ },
+ {
+  "script": "36_a5_verification_geometry.py",
+  "rc": 0,
+  "secs": 0.2,
+  "pf": "",
+  "tb": false,
+  "tail": "★ 一致: False  (共 1 個)"
+ },
+ {
+  "script": "37_a5_verification_selection.py",
+  "rc": 0,
+  "secs": 7.1,
+  "pf": "",
+  "tb": false,
+  "tail": "      5.0       0  []"
+ },
+ {
+  "script": "38_a5_frame_correction.py",
+  "rc": 0,
+  "secs": 0.5,
+  "pf": "",
+  "tb": false,
+  "tail": " 17                  {15: np.float64(-1.78296987)}"
+ },
+ {
+  "script": "39_verify_docs27.py",
+  "rc": 0,
+  "secs": 3.9,
+  "pf": "",
+  "tb": false,
+  "tail": "========================================================"
+ },
+ {
+  "script": "40_a5_polytope_identity.py",
+  "rc": 0,
+  "secs": 0.2,
+  "pf": "",
+  "tb": false,
+  "tail": "  ⟹ 用 小斜方截半二十面體 會得 24 模式, 唔係 9。"
+ },
+ {
+  "script": "40b_diag_rh_coords.py",
+  "rc": 0,
+  "secs": 28.6,
+  "pf": "",
+  "tb": false,
+  "tail": "   dev=17.48438° (點 7)"
+ },
+ {
+  "script": "40c_diag_pentagon.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "",
+  "tb": false,
+  "tail": "   點 22: |角| = 36.2740°"
+ },
+ {
+  "script": "41_rhombicosidodecahedron_construct.py",
+  "rc": 0,
+  "secs": 0.2,
+  "pf": "",
+  "tb": false,
+  "tail": "已存 data/rhombicosidodecahedron_unit.npy"
+ },
+ {
+  "script": "42_rh_vs_chiral_verify.py",
+  "rc": 0,
+  "secs": 0.2,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "43_chirality_structure.py",
+  "rc": 0,
+  "secs": 6.9,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "43b_diag_modecount.py",
+  "rc": 0,
+  "secs": 0.6,
+  "pf": "",
+  "tb": false,
+  "tail": "  若 m_j 非零但 D_n 細 ⟹ 容差偽影"
+ },
+ {
+  "script": "43c_diag_m15_mechanism.py",
+  "rc": 0,
+  "secs": 10.7,
+  "pf": "",
+  "tb": false,
+  "tail": "  相對容差 (eps=1e-6) 模式數分佈: {9: 758, 10: 12, 11: 6, 12: 6, 13: 2, 15: 4, "
+ },
+ {
+  "script": "44_delta_invariant_identity.py",
+  "rc": 0,
+  "secs": 3.6,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "45_why_icosahedral.py",
+  "rc": 0,
+  "secs": 0.6,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "46_verify_docs29.py",
+  "rc": 0,
+  "secs": 0.9,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "47_mode_set_structure.py",
+  "rc": 0,
+  "secs": 58.5,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "48_verify_docs30.py",
+  "rc": 0,
+  "secs": 39.5,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "48b_diag_achiral.py",
+  "rc": 0,
+  "secs": 3.7,
+  "pf": "",
+  "tb": false,
+  "tail": "  min=1.351e-15  1%=1.152e-03  中位=7.894e-02"
+ },
+ {
+  "script": "49_closed_form_law.py",
+  "rc": 0,
+  "secs": 0.8,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "50_verify_docs31.py",
+  "rc": 0,
+  "secs": 31.6,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "51_frustration_invariance.py",
+  "rc": 0,
+  "secs": 3.1,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "52_exact_maxcut_milp.py",
+  "rc": 0,
+  "secs": 12.4,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "53_maxcut_null_test.py",
+  "rc": 0,
+  "secs": 48.2,
+  "pf": "",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "54_rh_chamber_measure.py",
+  "rc": 0,
+  "secs": 2.0,
+  "pf": "7/8",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "55_rh_chamber_window.py",
+  "rc": 0,
+  "secs": 2.4,
+  "pf": "17/17",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "57_mass_map_and_chirality_bridge.py",
+  "rc": 0,
+  "secs": 0.2,
+  "pf": "14/14",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "58_reverse_88_forces_a5.py",
+  "rc": 0,
+  "secs": 25.2,
+  "pf": "18/18",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "59_cayley_a5_maxcut.py",
+  "rc": 0,
+  "secs": 1.0,
+  "pf": "5/7",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "60_characterize_two_88_graphs.py",
+  "rc": 0,
+  "secs": 46.7,
+  "pf": "4/4",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "61_spherical_equilateral_edgelength.py",
+  "rc": 0,
+  "secs": 0.4,
+  "pf": "12/12",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "62_vertex_figure_forcing.py",
+  "rc": 0,
+  "secs": 0.4,
+  "pf": "9/9",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "63_mass_barrier_diagnosis.py",
+  "rc": 0,
+  "secs": 1.0,
+  "pf": "5/6",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "64_mode_protection_adjudication.py",
+  "rc": 0,
+  "secs": 0.1,
+  "pf": "6/6",
+  "tb": false,
+  "tail": "======================================================================"
+ },
+ {
+  "script": "65_phi_layer_closure_test.py",
+  "rc": 0,
+  "secs": 12.9,
+  "pf": "5/5",
+  "tb": false,
+  "tail": "======================================================================"
+ }
+]

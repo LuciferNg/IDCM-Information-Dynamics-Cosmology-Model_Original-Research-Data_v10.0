@@ -1,0 +1,9 @@
+  hyperplanes : HYPER 185
+    (exit=0)
+  rays        :     (exit=0)
+  extremal    :     (exit=0)
+  ntfe        :     (exit=0)
+  nef         : NEF 0
+    (exit=0)
+  neighbor    : NEIGHBOR 46
+    (exit=0)

@@ -1,0 +1,85 @@
+======================================================================
+O137 Phase 6b — gfan Discriminant Blind Test
+======================================================================
+
+Δ* points: 85
+
+======================================================================
+Test 1: gfan _secondaryfan (85 points, 4D)
+======================================================================
+  Input file written: 85 points
+  File size: 1155 bytes
+  ❌ gfan FAILED (exit code -6)
+  stderr: INTEGER OVERFLOW
+Converting (18563017/395655,401501377/4352205,-14382734/4352205,55252546/4352205,-30452779/4352205,-26100574/4352205,7866648/1450735,9317383/1450735,-10030529/4352205,-5678324/4352205,-1326119/4352205,3026086/4352205,7378291/4352205,11730496/4352205,16082701/4352205,20434906/4352205,24787111/4352205,29139316/4352205,33491521/4352205,37843726/4352205,42195931/4352205,46548136/4352205,50900341/4352205,-5865581/1450735,12993974/1450735,-20810752/4352205,22711298/4352205,-24024761/4
+
+======================================================================
+Test 2: Discriminant test z_a(n) = exp(2πi·n·a/88)
+======================================================================
+
+Mode | Expected   | z=1 divisors | Verdict
+-------------------------------------------------------
+   1 | ALLOWED    | []               | PASS ◀ 
+   3 | EXCLUDED   | []               | PASS 
+   5 | EXCLUDED   | []               | PASS 
+   7 | ALLOWED    | []               | PASS ◀ 
+   9 | EXCLUDED   | []               | PASS 
+  11 | EXCLUDED   | [8, 16, 24, 32]  | CORRECT 
+  13 | EXCLUDED   | []               | PASS 
+  15 | EXCLUDED   | []               | FAIL 
+  17 | EXCLUDED   | []               | PASS 
+  19 | EXCLUDED   | []               | PASS 
+  21 | EXCLUDED   | []               | FAIL 
+  23 | EXCLUDED   | []               | PASS 
+  25 | EXCLUDED   | []               | FAIL 
+  27 | EXCLUDED   | []               | PASS 
+  29 | EXCLUDED   | []               | PASS 
+  31 | EXCLUDED   | []               | PASS 
+  33 | ALLOWED    | [8, 16, 24, 32]  | FAIL ◀ 
+  35 | EXCLUDED   | []               | FAIL 
+  37 | EXCLUDED   | []               | PASS 
+  39 | EXCLUDED   | []               | PASS 
+  41 | EXCLUDED   | []               | PASS 
+  43 | EXCLUDED   | []               | PASS 
+
+======================================================================
+Test 3: Discriminant at z = -1 (conifold alternative)
+z_a(n) = exp(2πi·ω_n) where ω_n = 2sin(nπ/88)
+======================================================================
+
+Mode | Expected   | |z - (-1)|  | Rank
+-------------------------------------------------------
+   7 | ALLOWED    | 0.033846     | #1 ◀
+  23 | EXCLUDED   | 0.227030     | #2
+  25 | EXCLUDED   | 0.357981     | #3
+   9 | EXCLUDED   | 0.803507     | #4
+  21 | EXCLUDED   | 0.835402     | #5
+  27 | EXCLUDED   | 0.867679     | #6
+   5 | EXCLUDED   | 0.879278     | #7
+  29 | EXCLUDED   | 1.274986     | #8
+  19 | EXCLUDED   | 1.392105     | #9
+  11 | EXCLUDED   | 1.480813     | #10
+
+======================================================================
+SUMMARY
+======================================================================
+
+1.  gfan _secondaryfan:  INTEGER OVERFLOW (85 points in 4D too large)
+2.  z_a(n) = exp(2πi·n·a/88) test:  n=33 ❌ fails (wrongly excluded)
+3.  Proximity to z=-1:    n=7 is closest (#1), n=33 is #18 (not selective)
+4.  Dwork integrality:    68/68 pass — NOT a discriminator
+5.  Convergence radius:   all R > 1 — NOT a discriminator
+
+★ Positive finding:  44 φ≤12 points = N_d = 44
+   φ=12: 28 = L₄·L₅ = 4×7
+   φ=9:   9 = 3² = N_gen²
+   φ=8:   5 = F₅
+   φ=6:   2
+   28+9+5+2 = 44 = N_d
+
+The mirror period integrality test, as currently implemented,
+does NOT discriminate {1,7,33} from {15,21,25,35}.
+The 44=N_d φ structure is a genuine structural discovery.
+
+
+--- STDERR ---
