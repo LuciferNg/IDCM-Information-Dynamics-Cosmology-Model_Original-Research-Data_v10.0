@@ -1,0 +1,12 @@
+{
+  "pass": 13,
+  "fail": 0,
+  "points": 48,
+  "simplices": 144,
+  "h11": 36,
+  "h21": 98,
+  "chi": -124,
+  "kappa_nonzero": 303,
+  "reflexive": true,
+  "glsm_rank": 32
+}

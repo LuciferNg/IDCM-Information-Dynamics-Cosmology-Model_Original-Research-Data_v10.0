@@ -1,0 +1,13 @@
+{
+  "n_cicy": 7890,
+  "h11_range": [
+    0,
+    19
+  ],
+  "h21_range": [
+    0,
+    101
+  ],
+  "contains_36_98": false,
+  "conclusion": "(36,98) 唔係 CICY — 一般 toric CY₃"
+}
