@@ -50,7 +50,7 @@ Lucas 高階能階: V_n = Lₙφ+Lₙ₋₁
 ```
 八期 55 用 M₀·e^{-V1} 估 ν = 10 keV（錯框架！）
 
-修正: 中微子 = W-field p6 模式 (docs/neutrino_p6_mode.md)
+修正: 中微子 = W-field p6 模式 (main_problems/p15_early_derivations/docs/neutrino_p6_mode.md)
   m_ν = (γ₆×v)²/M_comp
   γ₆ = 4sin²(6π/88) = 0.1807
   v = 246 GeV, M_comp = 3.69e13 GeV (Z₅ orbifold)

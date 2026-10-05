@@ -3,7 +3,7 @@
 O57 八期 59: 中微子 p6 機制 — 修正 (非 seesaw!)
 =================================================
 🔴 修正: 八期 55 用 M₀·e^{-V} 估 ν 係錯框架!
-正確: 中微子 = W-field p6 模式 (docs/neutrino_p6_mode.md)
+正確: 中微子 = W-field p6 模式 (main_problems/p15_early_derivations/docs/neutrino_p6_mode.md)
 
 m_ν = (γ₆ × v)² / M_comp
   γ₆ = 4sin²(6π/88) = 0.1807 (K_Chain n=6)
