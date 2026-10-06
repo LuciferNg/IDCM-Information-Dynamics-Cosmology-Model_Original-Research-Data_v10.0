@@ -108,3 +108,15 @@ p=0.00117、兩者獨立同時極端、u/d 身份層穩健、lepton 槽 n≡1 mo
 - **合成**：🟡⁺——輕子槽 ≡1 嘅成因 = B−L 整數性 × 群層 iso；統計層（1/56）只是強制機制嘅投影。look-elsewhere 過唔到已由「槽=結構強制」解釋。
 - **唯一 blocker**：common measure（O210 docs/10 §5(3) no-go，本 O 無權推翻）。
 - 交付：docs/13 + scripts/15 + data/15（舊檔零改動，docs/12 append-only）。
+
+## 九、append 2026-10-06（第十八輪攻堅：even/odd 兩流身份 = 輕子/夸克分離）
+
+- **問題**：docs/07 剩餘 🔴「even/odd 兩流各自嘅算子身份」——用 docs/13 嘅 T3 語言攻。
+- **★ 發現**：質量升序 rank 1..8 = e,u,d,s,μ,c,τ,b 下，**even 流 {u,s,c,b} = 4/4 純夸克；odd 流 {e,d,μ,τ} = 3 輕子＋1 夸克（d）**——鋸齒 Z₂ 真身 = 輕子/夸克分離，唔係空泛 rank parity。
+- **盲測**（scripts/16，全部 Fraction 精確）：
+  - T1 even 4/4 純夸克 P = 1/14；T2 odd 3/4 輕子 = 同一事件對偶（唔乘，docs/08 防偽）
+  - T4 ★ 夸克 5/5 全避 ≡1 P = **1/56**（= docs/10 B1 對偶——同一 partition 兩面）
+  - T5 後驗（hit 集 scripts/15 先知）不作證據
+- **統一結論**：鋸齒 Z₂ × 輕子槽 ℤ₄ = 同一「輕子/夸克分離」結構兩個投影（T3 整數性 × 群層 iso × assignment）。docs/06 一源假說 🟡⁺；但 **O233 正結果 5 → 4**（鋸齒/槽合併，避免雙重計數）。
+- 🔴 剩：d 點解落 odd 流（唯一夸克）；t=13 ≡1 槽但走 VEV；even 流 C_f 高（≈B² 線索）。
+- 交付：docs/14 + scripts/16 + data/16（零舊檔改動）。
