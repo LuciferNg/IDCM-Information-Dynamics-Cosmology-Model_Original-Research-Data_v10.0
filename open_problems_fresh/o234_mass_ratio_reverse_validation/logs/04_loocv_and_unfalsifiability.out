@@ -1,0 +1,35 @@
+[A] 模型類層定理: 純 C 可調 ⟹ C-dominated 比不可證偽
+    模型類 M = { m_f = M0 * gamma_n * C_f : C_f ∈ R+ }
+    對任何 ratio R, 存在 C 調整令 m_i/m_j = R (C_i/C_j = R/(gamma_i/gamma_j))
+    ⟹ P(ratio mismatch) = 0 ⟹ 只有 C_f ≡ const (純γ) 或 C_f 來自凍結公式先可證偽
+    實況: 純γ 通道只有 u/d 一個 (scripts/03 [C])
+
+[B] LOOCV 機械: 逐 ratio 留出, 睇 shape DOF 變化 + 有冇獨立預言
+   留出 d/u            -> shape DOF = 1 (0 redundancy: 每個約束都必要);  純γ預言: 純γ: 有 (γ3/γ2)
+   留出 s/u(derived)   -> shape DOF = 1 (0 redundancy: 每個約束都必要);  純γ預言: 純γ: 無 (C 層佔領)
+   留出 c/s            -> shape DOF = 1 (0 redundancy: 每個約束都必要);  純γ預言: 純γ: 無 (C 層佔領)
+   留出 b/c            -> shape DOF = 1 (0 redundancy: 每個約束都必要);  純γ預言: 純γ: 無 (C 層佔領)
+   留出 mu/e           -> shape DOF = 1 (0 redundancy: 每個約束都必要);  純γ預言: 純γ: 無 (C 層佔領)
+   留出 tau/mu         -> shape DOF = 1 (0 redundancy: 每個約束都必要);  純γ預言: 純γ: 無 (C 層佔領)
+   ⟹ 凍結層 redundancy = 0: 冇任何 ratio 可由其餘 '預言' (除 d/u 係 assignment 內含)
+   ⟹ 真正 out-of-sample 測試 = 凍結層 v2+ 嘅新量度 (未用過喺 assignment 構建嘅), 例如 1% 精度 ms/mu
+
+[C] s/mud 模式閘 (負面): m̂ = (m_u+m_d)/2 有冇純 γ 通道?
+   算術中點 (g2+g3)/2           = 0.03303   γ4/mid =   2.453   遠離 27.2 (需 C 放大 ~11.1x)
+   幾何中點 sqrt(g2*g3)         = 0.03050   γ4/mid =   2.656   遠離 27.2 (需 C 放大 ~10.3x)
+   半整數模 g(2.5)              = 0.03178   γ4/mid =   2.549   遠離 27.2 (需 C 放大 ~10.7x)
+   調和中點 2/(1/g2+1/g3)       = 0.02817   γ4/mid =   2.876   遠離 27.2 (需 C 放大 ~9.5x)
+   ⟹ s/mud 喺所有幾何中點選擇下都係 C 放大比 (~7-10x), 冇純 γ 閘
+   ⟹ mode-gap 係真缺口, 唔係「搵唔到中點公式」
+
+[D] C 層反轉 (u>d) 嘅地位: 觀測層特徵, 非 IDCM 推導
+   FLAG d/u = 2.1505(111) -> 所需 C_u/C_d = γ3/γ2 / 2.1505 = 1.0440470221549694
+   PDG 4.67/2.16  -> 所需 C_u/C_d = 2.2452/2.1620 = 1.0384758082975738
+   ⟹ C_u > C_d 喺兩種觀測下都成立 (O233 docs/15 方向一致), 但係 5% 級效應, FLAG 精度下
+     純γ (0.85σ) 已足夠 -> C 反轉今日不可測量
+  PASS [A1 模型類不可證偽性確立] M = {m = M0*gamma*C, C ∈ R+} 對 C-dominated 比 P(mismatch)=0
+  PASS [B1 LOOCV redundancy = 0] 6 約束全部必要; 冇跨 ratio 冗餘路徑 -> 新測試必須嚟自凍結層 v2+ 新量度
+  PASS [C1 s/mud 冇純 γ 閘 (所有中點候選皆敗)] γ4/mid ∈ [2.5, 2.9] vs obs 27.23 -> C 放大 7-10x 必須
+  PASS [D1 C_u>C_d 為観測層特徵 (兩觀測一致)] 1.0436 vs 1.0385 -> 方向一致, 但 sub-threshold, 無測量力
+
+=== 4 PASS / 0 FAIL ===

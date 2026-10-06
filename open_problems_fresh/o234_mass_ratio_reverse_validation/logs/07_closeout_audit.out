@@ -1,0 +1,67 @@
+============================================================================
+O234 closeout -- 獨立審計 (scripts/07, 零 import, 由原始值重算)
+============================================================================
+
+[A] 鏈譜 γ_n = 4sin²(nπ/88) (A_γ 模式集)
+  PASS [A1 γ3/γ2 (純γ u/d 預言)] 真值 (docs 2.245204 係 6dp 手抄 truncation, 見 A5)  got=2.245223121 expect=2.245223121 (tol=1e-12)
+  PASS [A2 γ4/γ2 (ms 槽基)] scripts/05 line83 分母  got=3.979642884 expect=3.979642884 (tol=1e-12)
+  PASS [A3 γ7/γ4 (c 槽基)] scripts/05 C['c'] 分母  got=3.019747963 expect=3.019747963 (tol=1e-12)
+  PASS [A4 γ11/γ7 (b 槽基)] scripts/05 Cbc 分母  got=2.394463697 expect=2.394463697 (tol=1e-12)
+  PASS [A5 docs 宣稱 2.245204 喺審計容忍內 (finding 記錄)] dev=8.52e-06 -> docs/04+scripts/06 字面量 = 手抄 truncation, 唔影響 z (內部用真值)  got=8.516367074e-06 expect=0 (tol=1e-05)
+   [NOTE] γ3/γ2 真值 = 2.245223121; docs/04 §三 + scripts/06 [線2] 印 2.245204 = 6dp 手抄錯
+          z-score 計算用 gam(3)/gam(2) 實算真值 -> z=0.853/0.506 不受影響 (closeout finding F1)
+
+[B] 凍結層 v2 (FLAG 2024 §4) -- freeze v2 新增量
+  PASS [B1 M_RGI_b=6.938 GeV] docs/03 §一  got=6.938 expect=6.938 (tol=1e-06)
+  PASS [B2 RGI d/u = 2.1987] ±0.0917  docs/03 §四  got=2.198653199 expect=2.1987 (tol=0.0005)
+
+[C] 純γ u/d: MS + RGI 雙尺 z-score
+  PASS [C1 MS z=+0.853] docs/03 §四  got=0.8533614518 expect=0.853 (tol=0.01)
+  PASS [C2 RGI z=+0.506] docs/03 §四  got=0.507956973 expect=0.506 (tol=0.01)
+
+[D] S1a 更正: 混標度 vs scheme 正確
+  PASS [D1 混標度 dev 3.0% (nominal 偽影)] docs/03 §二  got=3.092142951 expect=3 (tol=0.4)
+  PASS [D2 scheme 正確 C_b/C_c=1.915] docs/03 §二  got=1.915251422 expect=1.915 (tol=0.004)
+  PASS [D3 scheme 正確 dev 43.6% (死實)] docs/03 §二  got=43.64385665 expect=43.6 (tol=1)
+
+[E] redundancy 0->1: (b/c)×(c/s) vs RGI b/s
+  PASS [E1 (b/c)×(c/s)=53.436] docs/03 §三  got=53.436072 expect=53.436 (tol=0.005)
+  PASS [E2 RGI b/s=53.369] docs/03 §三  got=53.36923077 expect=53.369 (tol=0.005)
+  PASS [E3 dev 0.13%] docs/03 §三  got=0.1252430095 expect=0.13 (tol=0.05)
+  PASS [E4 z=+0.08] docs/03 §三  got=0.08276488521 expect=0.08 (tol=0.03)
+
+[F] C-shape v2 (anchor 每扇區=1; 6 約束)
+  PASS [F1 ms/mu=42.890±1.52] ±1.516  docs/02 §一  got=42.88933175 expect=42.89 (tol=0.006)
+  PASS [F2 ms/md=19.944±0.33] ±0.332  docs/02 §一  got=19.94388828 expect=19.944 (tol=0.006)
+  PASS [F3 Cd=0.958] docs/02 §二 / docs/03 §五  got=0.9578112659 expect=0.958 (tol=0.0005)
+  PASS [F4 Cs=10.777] docs/03 §五  got=10.77718102 expect=10.777 (tol=0.005)
+  PASS [F5 Cc=41.585] docs/03 §五  got=41.58483249 expect=41.585 (tol=0.005)
+  PASS [F6 Cb=79.645] docs/03 §五  got=79.64540957 expect=79.645 (tol=0.005)
+  PASS [F7 shape DOF=0 (8C-6ratio-2scale)] docs/02 §二  got=0 expect=0 (tol=1e-12)
+  PASS [F8 Cmu=8.356] docs/03 §五  got=8.355653675 expect=8.356 (tol=0.005)
+  PASS [F9 Ctau=44.418] docs/03 §五  got=44.4183915 expect=44.418 (tol=0.005)
+
+[G] P1 (ms/mu=42.89 killer) 循環駁斥 (scripts/06 線1)
+  PASS [G1 Δ=0 (預言≡觀測, 循環)] Δ=0.00e+00  docs/04 §二  got=0 expect=0 (tol=1e-09)
+  PASS [G2 Z=0.000] Z=0.00e+00  docs/04 §二  got=0 expect=0 (tol=1e-09)
+
+[H] 模型類不可證偽性: M={m=M0γC, C∈R+} 對 C-dominated 比 P(mismatch)=0
+  PASS [H1 P(mismatch)=0 (structural)] docs/02 §四 定理  got=0 expect=0 (tol=0)
+
+[I] s/m̂ 模式閘: 4 中點候選全敗 (C 放大 ~10×)
+  PASS [I1 4 中點全不入 20–35 窗] docs/02 §五 負面閉合  got=1 expect=1 (tol=1e-12)
+
+[J] 前向判別力: u/d 1σ 帶內 72 有序對唯一命中 (3,2)
+  PASS [J1 命中數=1 (即 (3,2))] [(3, 2)]  docs/02 §三/round-1  got=1 expect=1 (tol=1e-09)
+
+[K] pre-registered 預言 register (docs/03 §六, 8 條)
+  PASS [K1 mc/mu=499.75] docs/03 §六  got=499.7464936 expect=499.75 (tol=0.05)
+  PASS [K2 mc/md=232.39] docs/03 §六  got=232.3861863 expect=232.39 (tol=0.05)
+  PASS [K3 mb/ms(RGI)=53.369] docs/03 §六  got=53.36923077 expect=53.369 (tol=0.005)
+  PASS [K4 mb/mc(3GeV)=4.586] docs/03 §六  got=4.586 expect=4.586 (tol=0.0001)
+
+[L] 凍結層 data sha256 完整性
+  PASS [L1 data/01 sha256 匹配 01_sha256.txt] ed49a11c67e4… vs ed49a11c67e4…  freeze 承諾  got=3981025564 expect=3981025564 (tol=0)
+============================================================================
+RESULT: 35/35 PASS  (FULL-PASS 期望; FAIL=closeout finding)
+[data] 07_closeout_audit.json + 07_sha256.txt 已寫

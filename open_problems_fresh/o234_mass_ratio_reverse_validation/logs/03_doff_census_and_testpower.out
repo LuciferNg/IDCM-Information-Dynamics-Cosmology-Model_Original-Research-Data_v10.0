@@ -1,0 +1,42 @@
+[A] 凍結層導出比 (含誤差傳播)
+   ms/mu (derived)              =    42.8898 ±   1.5164  (3.54%)  [derived]
+   ms/md (derived)              =    19.9438 ±   0.3321  (1.67%)  [derived]
+   mc/mu (derived, Nf=4 mc/ms)  =   499.7525 ±  17.8878  (3.58%)  [derived]
+   md/mu FLAG                   =     2.1505 ±   0.1110  (5.16%)  [direct]
+   ms/mud FLAG                  =    27.2270 ±   0.0810  (0.30%)  [direct]
+   mc/ms Nf=4                   =    11.6520 ±   0.0650  (0.56%)  [direct]
+   mc/ms HPQCD                  =    11.8500 ±   0.1600  (1.35%)  [direct]
+   mb/mc PDG (scheme近似)         =     3.2913 ±   0.0570  (1.73%)  [direct-crude]
+   mt/mb PDG (pole/MS 不可通約)     =    41.2847 ±   0.3043  (0.74%)  [direct-crude]
+   mu/e (pole)                  =   206.7675 ±   0.0020  (0.00%)  [direct]
+   tau/mu (pole)                =    16.8171 ±   0.0011  (0.01%)  [direct]
+   tau/e (pole)                 =  3477.2279 ±   0.2395  (0.01%)  [derived]
+
+[B] C-sector DOF 審計
+   未知 C: 8 (e,mu,tau,u,d,s,c,b; t=VEV 除外)
+   觀測獨立 ratio 約束: 6 (輕子 2 + 夸克 4, 含 derived s/u)
+   扇區標度: 2 (冇輕子<->夸克比)  ->  shape DOF = 0
+   純γ層: 0 參數 -> u/d 唯一可檢驗
+   反解 C-shape (anchor 每扇區 = 1): u=1.000  d=0.958  s=10.777  c=41.585  b=57.162  e=1.000  mu=8.356  tau=44.418
+   d/u -> C_d/C_u = 0.9578 (O233 P2 用 0.9629-0.9578 帶內; 方向 u>d 一致)
+
+[C] 檢驗能力清單 (每 ratio: 精度 / γ 可檢驗 / 判別力)
+   d/u                       2.1505 ±  0.1110  rel  5.16%  z(純γ)=  +0.9  gamma-testable  
+   s/mud                    27.2270 ±  0.0810  rel  0.30%  z(純γ)=None  mode-gap  sharpest(0.3%) 但平均量 mode-gap
+   ms/mu (derived)          42.8898 ±  1.5164  rel  3.54%  z(純γ)= -25.7  C-dominated  
+   c/s Nf=4                 11.6520 ±  0.0650  rel  0.56%  z(純γ)=-132.8  C-dominated  
+   b/c                       3.2913 ±  0.0570  rel  1.73%  z(純γ)= -15.7  C-dominated  scheme近似
+   t/b                      41.2847 ±  0.3043  rel  0.74%  z(純γ)=-131.2  C-dominated  VEV 扇區
+   μ/e                     206.7675 ±  0.0020  rel  0.00%  z(純γ)=-91078.7  C-dominated  
+   τ/μ                      16.8171 ±  0.0011  rel  0.01%  z(純γ)=-11905.4  C-dominated  
+   τ/e                    3477.2279 ±  0.2395  rel  0.01%  z(純γ)=-14191.9  C-dominated  
+   -> gamma-testable 1 / C-dominated 7 / mode-gap 1 / 共 9
+
+[D] 凍結層內部一致: mc/ms 兩值 (11.85 vs 11.652): z = +1.15 (watch item, freeze v2 決策點)
+  PASS [B1 C-shape 完全由凍結層釘死 (shape DOF = 0)] N_C=8 - N_CON=6 - N_SCALE=2 = 0 (但有 2 個扇區標度仍自由)
+  PASS [C1 檢驗能力: 9 個比只有 1 個 γ 可檢驗] gamma-testable=1 (d/u), C-dominated=7, mode-gap=1
+  PASS [D1 mc/ms 兩值一致 (|z|<=2)] z=+1.15 -> 凍結層可接受, 但 1.15σ 係內部張力 watch item
+
+[data] 03_derived_ratios.json 已寫
+
+=== 3 PASS / 0 FAIL ===

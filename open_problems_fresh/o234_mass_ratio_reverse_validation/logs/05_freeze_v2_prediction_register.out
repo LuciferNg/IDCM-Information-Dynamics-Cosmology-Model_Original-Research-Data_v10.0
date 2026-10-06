@@ -1,0 +1,48 @@
+==========================================================================
+O234 freeze v2 -- scheme 更正 + RGI_b 入層 + 預言 register
+==========================================================================
+
+[A] freeze v2 新增/更正量
+   M_RGI_u      =     2.970 ±  0.110 ±  0.030  (3.84%)
+   M_RGI_d      =     6.530 ±  0.070 ±  0.080  (1.63%)
+   M_RGI_b      =  6938.000 ± 23.000 ± 45.000  (0.73%)
+   mb_mc_3GeV   =     4.586 ±   0.012  (0.26%)
+   mb_mc_FM     =     4.578 ±   0.007  (0.15%)
+   mc_ms_Nf4    =    11.652 ±   0.065  (0.56%)
+   mc_ms_HP     =    11.850 ±   0.160  (1.35%)
+
+[B] ★ S1a 更正: b/c 混標度假命中已死
+   混標度 mb/mc = 3.2913 -> C_b/C_c = 1.3746  (vs 44/33=1.3333, dev 3.1%)
+   scheme 正確 mb/mc@3GeV = 4.586 -> C_b/C_c = 1.9153  (vs 44/33, dev 43.6%)
+   ⟹ round-1 'b/c 近命中 dev 3.0% (nominal)' 係混標度偽影; 更正後 43.5% 死實
+
+[C] ★ redundancy 0 -> 1: RGI b/s 第二通道
+   (b/c)*(c/s) 推 b/s =  53.4361 ± 0.3293
+   RGI     直量 b/s =  53.3692 ± 0.7374
+   dev = 0.13%  z = +0.08  -> 喉道閉環 PASS
+
+[D] RGI u/d 第二通道 (純 γ 對沖)
+   RGI d/u = 2.1987 ± 0.0917  vs 純γ γ3/γ2 = 2.2452  z = +0.51
+   MS  d/u = 2.1505 ± 0.1110  vs 純γ              z = +0.85
+
+[E] C-shape v2 (anchor 每扇區 = 1; b 用 scheme 正確 mb/mc@3GeV)
+   u=1.000  d=0.958  s=10.777  c=41.585  b=79.645  e=1.000  mu=8.356  tau=44.418
+   C_b/C_s 經 RGI = 7.3809 vs 經 b/c×c/s = 7.3902 (dev 0.13%)
+
+[F] ★★ pre-registered 預言 register (freeze v2; 每行=可證偽預言)
+   md/mu (MS)                 2.1505 ±   0.1110 ( 5.16%)  [觸發: lattice 1-2% mu/md]  純γ 2.2452 vs shape 2.1505 相隔 4.4% -- 1% 精度即判
+   ms/mu (derived)           42.8893 ±   1.5165 ( 3.54%)  [觸發: future lattice 直量 1%]  唯一非 assignment 內含 killer test
+   ms/md (derived)           19.9439 ±   0.3321 ( 1.67%)  [觸發: future lattice 直量]  
+   mc/mu (derived)          499.7465 ±  17.8885 ( 3.58%)  [觸發: future lattice mc/mu 直量]  
+   mc/md (derived)          232.3862 ±  14.5969 ( 6.28%)  [觸發: future lattice mc/md 直量]  
+   mb/ms (RGI)               53.3692 ±   0.7374 ( 1.38%)  [觸發: RGI 直量第二通道]  已與 b/c×c/s 閉環 z=+0.08
+   mb/mc (3GeV)               4.5860 ±   0.0120 ( 0.26%)  [觸發: HPQCD21 已凍結]  scheme 正確版本; C_b/C_c=1.916 池無命中
+   RGI d/u                    2.1987 ±   0.0917 ( 4.17%)  [觸發: RGI 框架]  純γ z=+0.51
+  PASS [B1 混標度假命中判定: 更正後池無命中] round-1 nominal 3.0% 偽影 -> 43.6% 死實
+  PASS [C1 b/s 閉環 (|z|<=2)] z=+0.08; redundancy 0->1 成立
+  PASS [D1 純γ u/d 雙通道 (MS+RGI)] MS z=+0.85; RGI z=+0.51
+  PASS [E1 C-shape v2 自洽 (RGI vs 乘積路徑 dev<2%)] dev = 0.13%
+
+[data] 05_freeze_v2_prediction_register.json 已寫
+
+=== 4 PASS / 0 FAIL ===

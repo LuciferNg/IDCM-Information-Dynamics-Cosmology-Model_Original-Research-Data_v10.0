@@ -13,7 +13,7 @@ prereq:  O120, O233, O136, O137
 source:  O233 C_f 無檢驗能力 → 驗證方法反推 (2026-10-06 調律者指示)
 -->
 
-> **狀態**: 🟠 **方案設計中 — 第一輪（凍結層 + 前向 z-score + 反推引擎）已交付 (2026-10-06)**
+> **狀態**: 🟢 **已閉合 (2026-10-07 closeout, verdict=closed — 方法論閉合)** — 檢驗方法建立完成: 凍結層 v1→v2、DOF 審計（shape DOF=0）、判別力定界（1/9 γ-testable、8/9 C-dominated 結構上不可證偽）、不可證偽性定理、redundancy 0→1 閉環、8 條 pre-registered 預言、P1 killer 循環駁斥（scripts/06）、獨立審計 35/35（scripts/07）。剩餘 = 外部 gated（lattice 1-2% 量度／新粒子）＋ C 生成器（O233 負閉合）。
 > **建立**: 2026-10-06
 > **前置**: O120（C_f 商定義）、O233（C_f 身份 hunt 負閉合）、O136（純冪律障礙定理）、O137（模式集 + 參數屏障）
 > **位置**: `open_problems_fresh/o234_mass_ratio_reverse_validation/`
@@ -158,6 +158,8 @@ FLAG 2024 + PDG 2024），由觀測比值反解「任何公式必須滿足嘅 (n
 | 5 | 2026-10-06 | Round2: 凍結層導出比 + DOF 審計（shape DOF=0）+ 檢驗能力清單（1/9 γ-testable） | scripts/03, data/03, docs/02 |
 | 6 | 2026-10-06 | Round2: 不可證偽性定理 + LOOCV redundancy=0 + s/m̂ 閘負面 + 混標度通知 | scripts/04, docs/02 |
 | 7 | 2026-10-07 | Round3/freeze v2: RGI_b 入層 + b/c scheme 更正（偽影死實）+ redundancy 閉環 + 預言 register | scripts/05, data/05, docs/03 |
+| 8 | 2026-10-07 | P1/P2 檢驗（調律者「檢驗時間」方案, 自行判斷）: P1 42.89 = 循環駁斥（L83 C_s 校準自 FLAG ⟹ Δ=0 Z=0, killer 冇效）; P2 純γ u/d 雙尺過 (0.853σ/0.506σ); P3/P4 開放 | scripts/06, logs/06, docs/04 |
+| 9 | 2026-10-07 | **CLOSEOUT**: 全鏈重跑（01-06 PASS 同前）＋ 獨立審計 scripts/07（35/35, 零 import）＋ 逐數字重算 vs docs 一致; closeout finding F1: γ3/γ2 手抄 truncation（docs/04+scripts/06 印 2.245204, 真值 2.245223121, z 唔受影響） | scripts/07, logs/07, data/07, docs/05, final_result.md |
 
 ## 七、相關文件
 
