@@ -527,6 +527,38 @@ chk("docs/13", "u/d C_f 比 = 1.0385 (遠離 1.0)", _ud13, 1.0385, 1e-3)
 chk("docs/13", "7−4 = 3 = N_gen", 7 - 4, 3, 0.01)
 chk("docs/13", "4+7 = 11 ∈ 合法模式集", 4 + 7, 11, 0.01)
 
+# ── N. docs/14 (Id(f) 交接項攻堅, O233→O209) ─────────────────
+print("\nN. docs/14 Id(f) 交接項 (獨立重算)")
+# C_f 8 值由零重現 (O233 γ升序: e,u,d,s,mu,c,tau,b → n: 1,2,3,4,5,7,9,11)
+_M14 = {"e": 0.51099895, "mu": 105.6583755, "tau": 1776.86,
+        "u": 2.16, "d": 4.67, "s": 93.4, "c": 1270.0, "b": 4180.0}
+_O233_14 = {1: "e", 2: "u", 3: "d", 4: "s", 5: "mu", 7: "c", 9: "tau", 11: "b"}
+_CF14 = {}
+for _n, _f in _O233_14.items():
+    _CF14[_f] = _M14[_f] / (27.900915 * 4 * math.sin(_n * math.pi / 88) ** 2)
+chk("docs/14", "C_f_e = 3.5941", _CF14["e"], 3.5941, 1e-3)
+chk("docs/14", "C_f_c = 186.061", _CF14["c"], 186.061, 5e-2)
+chk("docs/14", "C_f_b = 255.752", _CF14["b"], 255.752, 5e-2)
+# OLS: log C_f = A − β·log|dm| (O233 frame |dm|)
+_ld14 = np.log(np.abs(_dm_[[0, 1, 2, 3, 4, 6, 8, 10]]))  # n=1,2,3,4,5,7,9,11
+_lc14 = np.log([_CF14[_O233_14[n]] for n in [1, 2, 3, 4, 5, 7, 9, 11]])
+_A14 = np.vstack([np.ones(8), _ld14]).T
+_c14, *_ = np.linalg.lstsq(_A14, _lc14, rcond=None)
+_beta14 = -_c14[1]
+chk("docs/14", "OLS β = 1.1985 (≈6/5=μ²N_gen/F₅, dev 0.125%)", abs(_beta14 - 1.2) / 1.2, 0.0013, 1e-3)
+chk("docs/14", "corr |Δm| vs log C_f = −0.922", float(np.corrcoef(_ld14, _lc14)[0, 1]), -0.922, 1e-2)
+# m/M₀ 塊心 (幾何中位)
+_gg = lambda _xs: math.exp(sum(math.log(_xs_i) for _xs_i in _xs) / len(_xs))
+_gmm_low = _gg([_M14[_O233_14[n]] / 27.900915 for n in [1, 2, 3]])
+_gmm_mid = _gg([_M14[_O233_14[n]] / 27.900915 for n in [4, 5, 7]])
+_gmm_high = _gg([_M14[_O233_14[n]] / 27.900915 for n in [9, 11]])
+chk("docs/14", "m/M₀ 塊心 low ≈ 1/16 (dev<1%)", abs(_gmm_low - 1 / 16) / (1 / 16), 0.0094, 3e-3)
+chk("docs/14", "m/M₀ 塊心 mid ≈ 25/3 (dev<0.2%)", abs(_gmm_mid - 25 / 3) / (25 / 3), 0.00096, 2e-3)
+chk("docs/14", "m/M₀ 塊心 high ≈ 98=2L₄² (dev<0.5%)", abs(_gmm_high - 98) / 98, 0.0033, 3e-3)
+# G2 內 c 對塊心 ≈ 3
+_gcf_mid = _gg([_CF14["s"], _CF14["mu"], _CF14["c"]])
+chk("docs/14", "G2 內 c 對塊心 = 3.033 ≈ 3 (dev<2%)", abs(_CF14["c"] / _gcf_mid - 3) / 3, 0.011, 1e-2)
+
 npass = sum(1 for _, _, ok in res if ok)
 print("\n" + "=" * 96)
 print(f"AUDIT RESULT: {npass}/{len(res)} 核對通過")
