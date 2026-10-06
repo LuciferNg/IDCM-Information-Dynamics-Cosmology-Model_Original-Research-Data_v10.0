@@ -385,7 +385,6 @@ chk("docs/09", "S = <6,10> U (15+<6,10>)  (l<=24)", _smod, [6, 10, 12, 15, 16, 1
 chk("docs/09", "primary degrees {2,6,10} (2*6*10 = 120 = 2|A5|)", 2 * 6 * 10, 120)
 
 # ── K. docs/11 (質量譜形狀殘餘攻堅, closeout 後延伸) ─────────────────
-# 對 scripts/11 嘅核心數值做獨立重算（唔 import scripts/11）
 print("\nK. docs/11 質量譜形狀殘餘 (獨立重算)")
 _N, _NC = 88, 88
 _idxx = np.arange(1, _N + 1)
@@ -455,6 +454,56 @@ _lcv_base = _loocv_g(np.zeros(9))
 chk("docs/11", "(n-1)%4 LOOCV = 41.0% (基線 42.6%)", _lcv_mod4, 0.410, 5e-3)
 chk("docs/11", "基線 LOOCV = 42.6%", _lcv_base, 0.426, 5e-3)
 chk("docs/11", "修正項冇實質改善 (Δ<3pp)", _lcv_base - _lcv_mod4, 0.016, 0.05)
+
+# ── L. docs/12 (O233×O209 跨 O 譜比橋, closeout 後延伸) ─────────────────
+print("\nL. docs/12 跨 O 譜比橋 (獨立重算)")
+# O209 mode: e→13,u→11,d→9,s→7,μ→5,c→4,τ→3,b→2 (O209_8)
+_f812 = ["e", "u", "d", "s", "mu", "c", "tau", "b"]
+_mod812 = [13, 11, 9, 7, 5, 4, 3, 2]
+_ldm12 = np.log(np.abs(_dm_[[m - 1 for m in _mod812]]))
+_M12 = np.array([_M11[f] for f in _f812])
+_lm12 = np.log(_M12)
+_A12 = np.vstack([np.ones(8), _ldm12]).T
+_c12, *_ = np.linalg.lstsq(_A12, _lm12, rcond=None)
+_r12 = _lm12 - _A12 @ _c12
+_rms12 = float(np.sqrt((_r12 ** 2).mean()))
+chk("docs/12", "8pt 冪律 α = 2.65057", float(_c12[1]), 2.65057, 1e-3)
+chk("docs/12", "8pt RMS = 0.6221", _rms12, 0.6221, 1e-3)
+# 9pt α 穩定性 (含 t)
+_ldm9 = np.log(np.abs(_dm_[[0, 1, 2, 3, 4, 6, 8, 10, 12]]))
+_lm9 = np.log([_M11["t"], _M11["b"], _M11["tau"], _M11["c"], _M11["mu"],
+               _M11["s"], _M11["d"], _M11["u"], _M11["e"]])
+_A9x = np.vstack([np.ones(9), _ldm9]).T
+_c9x, *_ = np.linalg.lstsq(_A9x, _lm9, rcond=None)
+chk("docs/12", "9pt α = 2.633254 (dev 79/30 0.003%)", float(_c9x[1]), 2.633254, 1e-5)
+# rank-parity 修正 (even-rank = {u,s,c,b} 對應 rank 2,4,6,8)
+_even12 = np.array([1.0 if (i % 2 == 1) else 0.0 for i in range(8)])  # f8 次序: e(0),u(1),d(2),s(3),mu(4),c(5),tau(6),b(7)
+# 質量降序 rank: u=8? 用質量排序確定 even-rank set
+# 質量排序: t>b>τ>c>μ>s>d>u>e → rank 1..9; even rank (2,4,6,8) = {b,c,s,u}
+_even_set = {"u", "s", "c", "b"}
+_even12 = np.array([1.0 if _f812[i] in _even_set else 0.0 for i in range(8)])
+_A5x = np.vstack([np.ones(8), _ldm12, _even12]).T
+_c5x, *_ = np.linalg.lstsq(_A5x, _lm12, rcond=None)
+_r5x = _lm12 - _A5x @ _c5x
+_rms5x = float(np.sqrt((_r5x ** 2).mean()))
+chk("docs/12", "rank-parity 修正 RMS = 0.5087 (收益 1.22×)", _rms5x, 0.5087, 1e-3)
+# C_f 譜比橋 RMS（α=OLS 代入; C_f = C·|dm|^α/γ）
+_gam12 = np.array([4 * math.sin(n * math.pi / 88) ** 2 for n in [1, 2, 3, 4, 5, 7, 9, 11]])  # γ升序 e,u,d,s,μ,c,τ,b
+_CF12 = {"e": 3.5941, "u": 3.8029, "d": 3.6620, "s": 41.3207, "mu": 30.0309,
+         "c": 186.061, "tau": 159.64, "b": 255.752}
+_lcf12 = np.log([_CF12[f] for f in _f812])
+_aols = 2.6332540847
+_pp = _ldm12 * _aols - np.log(_gam12)
+_Cs2 = float(np.exp((_lcf12 - _pp).mean()))
+_rms_cf = float(np.sqrt(((_lcf12 - (_pp + math.log(_Cs2))) ** 2).mean()))
+chk("docs/12", "C_f 譜比橋 RMS = 0.6224 (≫0.20 ⟹ 負)", _rms_cf, 0.6224, 5e-3)
+# |dm| 鋸齒比候選 (O209 mode: u=11/e=13, s=7/d=9, c=4/μ=5, b=2/τ=3)
+_p_ue = np.abs(_dm_[10]) / np.abs(_dm_[12])
+_p_sd = np.abs(_dm_[6]) / np.abs(_dm_[8])
+_p_cm = np.abs(_dm_[3]) / np.abs(_dm_[4])
+_p_bt = np.abs(_dm_[1]) / np.abs(_dm_[2])
+chk("docs/12", "u/e |dm| 比 ≈ 44/29 (1.5172, dev 0.64%)", _p_ue, 44 / 29, 0.02)
+chk("docs/12", "s/d |dm| 比 ≈ 22/13 (1.6923, dev 0.05%)", _p_sd, 22 / 13, 0.01)
 
 npass = sum(1 for _, _, ok in res if ok)
 print("\n" + "=" * 96)
