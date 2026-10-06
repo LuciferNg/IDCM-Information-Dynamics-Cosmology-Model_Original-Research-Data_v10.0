@@ -123,3 +123,42 @@ P(∃ class 全落 且 p ≤ 1/21) = 0.1204
 - `scripts/14_sawtooth_assignment_sensitivity.py` + `data/14_sawtooth_assignment_sensitivity.json`（新建）
 - `docs/12`（本文件）· SESSION_START append · register note（O233 + 跨 O handoff 候選）
 - 舊檔零改動（docs/01–11、scripts/01–11 append-only）。
+
+---
+
+## 七、★ 裁決收錄（2026-10-06 17:20，O137 R22 + O209 closeout 回覆）
+
+> **裁決鏈**：O233 handoff（17:02, 兩條）→ O137 R22 回應（17:13, `SESSION_START` §R22）+ O209 closeout 回覆（17:13, `01_problem_record` §七/§八）→ **本節收錄**。
+
+### 7.1 O137 裁決（授權 A₅ γ 升序）
+
+```text
+1. O137 授權框架 = A₅ 質量升序（γ 升序）指派:
+   e→1, u→2, d→3, s→4, μ→5, c→7, τ→9, b→11, t→13
+   輕子集 = {1,5,9}（≡1 mod 4）, 夸克 = {2,3,4,7,11,13}
+   —— 依 docs/35 §六、docs/36 §8.4、O120 closeout §5（商定義 C_f = m/(M₀γ_n) 鎖定 γ 升序）
+2. O209 之 |Δm| 排序（1=t … 13=e, 輕子 {3,5,13}）:
+   喺 O137 層 = 【未獲授權】；docs/36 §1.3 之 0/14 檢定 + §十 三框架皆未閉合
+3. Assignment 分歧（γ 升序 vs |Δm| 排序）一元裁決權 = O209 層 + O120 closeout §5
+```
+
+### 7.2 O209 回覆（移交 O137 裁定）
+
+```text
+|Δm| 唯一最小 RMS 分配喺自身 ansatz 下成立 (docs/03, 9! 窮舉);
+γ升序 vs |Δm| 排序之典範性屬跨 O 問題 → 移交 O137 裁定
+（O209 take: assignment 分歧不影響本 O 核心閉合 — 選擇代數 + 唯一分配定理）
+```
+
+### 7.3 ★ 綜合裁決（O233 立場）
+
+| 項目 | 裁決 | 影響 |
+|:--|:--|:--|
+| A₅ γ 升序 assignment | ✅ **正式授權**（O137 層確認；O209 無異議裁決權移交） | O233 五項正結果嘅 assignment 基礎**合法** |
+| O209 \|Δm\| 排序 | ❌ 喺 O137/O233/O120 質量框架層未獲授權（自身 ansatz 內成立，但非質量譜映射） | O233 唔需改用 \|Δm\| |
+| docs/10 B1/B3 lepton 槽 | 🔴 **look-elsewhere 校正後 P = 0.1204 > 0.05 維持**（R2 結論不變） | 只可當「樣本外單目標 blind」nominal |
+| docs/05 鋸齒 | ✅ A_γ 下維持（4/4 交替, p=0.0138）；assignment 敏感度已記錄但裁決後 A_γ 為正 | 正結果成立但強度 = nominal |
+| docs/06 even/odd Z₂ | ✅ 兩流各自單調喺 A_γ 下成立 | 維持 |
+| 輕子槽成因 | 🔴 仍開放：O210-T3 讀法1（Q≡1 mod 4）係結構候選，n↔\|λ\| 映射未證 | 下一步攻堅 |
+
+> ⚠️ **裁決後仍有效嘅警報**：assignment 分歧已解（γ 升序勝出），但 **look-elsewhere 校正獨立於 assignment**——lepton 槽/鋸齒嘅統計強度仍係 nominal 級，唔因裁決自動升格。升格需新樣本/非 mod-k 性質。
