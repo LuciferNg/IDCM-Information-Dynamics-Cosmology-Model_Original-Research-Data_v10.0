@@ -1,0 +1,22 @@
+A_γ assignment rank 表:
+  rank1 e    n= 1 n%4=1 [輕子] 流=odd
+  rank2 u    n= 2 n%4=2 [夸克] 流=even
+  rank3 d    n= 3 n%4=3 [夸克] 流=odd
+  rank4 s    n= 4 n%4=0 [夸克] 流=even
+  rank5 mu   n= 5 n%4=1 [輕子] 流=odd
+  rank6 c    n= 7 n%4=3 [夸克] 流=even
+  rank7 tau  n= 9 n%4=1 [輕子] 流=odd
+  rank8 b    n=11 n%4=3 [夸克] 流=even
+
+even 流 = ['u', 's', 'c', 'b']
+odd  流 = ['e', 'd', 'mu', 'tau']
+
+T1: even 流純夸克 4/4  P = C(5,4)/C(8,4) = 1/14 = 0.071429
+T2: odd 流輕子 3/4  P = C(4,3)/C(8,3) = 1/14 = 0.071429
+T3: joint = 同一事件 E（even 全夸克 ⇔ odd 全輕子+1）, 唔係獨立乘積 = 0.071429
+T4: even residues [2, 0, 3, 3] (0/4 ≡1) | odd residues [1, 3, 1, 1] (≡1×3) | 夸克 residues [2, 3, 0, 3, 3] (0/5 ≡1: True)
+     P = C(5,5)/C(8,5) = 1/56 = 0.017857
+T5: odd 流 T3 命中 4/4, even 流 1/4
+     P(odd 4/4 | hit 5/8) = C(5,4)/C(8,4) = 1/14 = 0.071429
+
+✅ data/16_two_flow_identity.json 寫入

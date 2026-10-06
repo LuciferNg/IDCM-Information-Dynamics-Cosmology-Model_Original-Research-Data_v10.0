@@ -1,0 +1,35 @@
+
+[A_γ (O137-R19/O233)] C_f 沿質量升序:
+  rank1 e   n= 1 C_f=   3.5941
+  rank2 u   n= 2 C_f=   3.8029
+  rank3 d   n= 3 C_f=   3.6620
+  rank4 s   n= 4 C_f=  41.3207
+  rank5 mu  n= 5 C_f=  30.0308
+  rank6 c   n= 7 C_f= 186.0605
+  rank7 tau n= 9 C_f= 159.6437
+  rank8 b   n=11 C_f= 255.7517
+  相鄰交替: True (4/4 = 0 反向?)
+  even-rank 單調增: True  odd-rank 單調增: True
+
+[A_|Δm| (O209)] C_f 沿質量升序:
+  rank1 e   n=13 C_f=   0.0229
+  rank2 u   n=11 C_f=   0.1322
+  rank3 d   n= 9 C_f=   0.4196
+  rank4 s   n= 7 C_f=  13.6835
+  rank5 mu  n= 5 C_f=  30.0308
+  rank6 c   n= 4 C_f= 561.8559
+  rank7 tau n= 3 C_f=1393.3461
+  rank8 b   n= 2 C_f=7359.3859
+  相鄰交替: False (4/4 = 3 反向?)
+  even-rank 單調增: True  odd-rank 單調增: True
+
+[X 算子 Z₂ 對照]
+  X 耦合: V_nm ≠ 0 ⇔ n+m 奇
+  A_γ 鋸齒: even-rank 粒子 mode = u(2),s(4),c(7),b(11) — parity {E,E,O,O} 非純
+             odd-rank 粒子 mode = e(1),d(3),mu(5),tau(9) — parity {O,O,O,O} 純奇
+  ⟹ 鋸齒 rank-parity 唔直接等於 mode-parity; '同一 Z₂' 假說需橋
+
+[對照] docs/05 鋸齒盲測 (A_γ) p = 0.0138 (MC 1e6, log-uniform H0)
+[對照] docs/06: even/odd 子序列各自單調 (4/4 相鄰 even>odd)
+
+✅ data/14_sawtooth_assignment_sensitivity.json 寫入

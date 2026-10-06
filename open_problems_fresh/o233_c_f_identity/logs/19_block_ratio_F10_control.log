@@ -1,0 +1,11 @@
+=== C1: G3/G1 = 54.8358 vs 最近結構常數 ===
+  最近: 55 (dev 0.299%); F₁₀=55 dev 0.299%
+  dev_best = 0.0030
+  C1: P(隨機值對結構常數 min-dev ≤ 0.299%) = 0.047140
+
+=== C2: 凍結池命中 + look-elsewhere over 5 targets ===
+  G3/G1: hits(1e-3)=28 hits(1e-4)=1
+  5 target max hits: 1e-3=16 1e-4=1
+  C2: P(max hits ≥ 16 @1e-3) = 0.798850  P(max hits ≥ 1 @1e-4) = 0.996000
+
+✅ data/19_block_ratio_F10_control.json 寫入
