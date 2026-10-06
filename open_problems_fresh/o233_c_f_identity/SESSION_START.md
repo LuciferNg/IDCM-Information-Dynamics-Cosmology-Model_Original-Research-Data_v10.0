@@ -81,3 +81,14 @@ p=0.00117、兩者獨立同時極端、u/d 身份層穩健、lepton 槽 n≡1 mo
 
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
+
+---
+
+## 六、append 2026-10-06（第十六輪攻堅 R1a–R3）
+
+- **R1a 全新診斷**：Assignment 分歧——O209 唯一分配（|Δm| 排序, 1=t…13=e, 輕子 {3,5,13}）vs 本 O/O137-R19 用嘅 γ 升序（1=e…13=t, 輕子 {1,5,9}）**方向相反**；O137 docs/36 §1.3 已以 O209 集判 lepton 槽 ❌（0/14）。
+- **R1b**（scripts/12）：輕子 ≡1 只喺 A_γ 成立（8-mode P=1/56=0.0179, =docs/10 B1）；「6 夸克空缺」無鑑別力（max residue class 4<6）；O210-T3 讀法1（Q≡1）只喺 A_γ 成立，讀法2 兩可。
+- **R2**（scripts/13）：look-elsewhere family 校正（5 個 mod-k 類, MC 10⁶）⟹ **P=0.1204 > 0.05**——lepton 槽 B1/B3 過唔到 family-wise 校正，降為「樣本外單目標 nominal」。
+- **R3**（scripts/14）：鋸齒 7/7 交替（p=0.0138）**只喺 A_γ**；A_|Δm| 下 3/4 反向（消失）；X 算子 Z₂ 同 rank-parity 非直接同源（未證）。
+- ⟹ **O233 五項正結果全部建基於 γ 升序 assignment 選擇**；該選擇與 O209 權威（345/345）衝突，需跨 O 裁決。
+- 交付：docs/12 + scripts/12–14 + data/12–14（舊檔零改動）。
