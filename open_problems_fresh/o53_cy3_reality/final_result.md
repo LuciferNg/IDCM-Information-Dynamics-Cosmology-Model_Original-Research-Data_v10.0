@@ -15,7 +15,7 @@ A1 (c_f = n/3) → O55 承接（SU(3)_c 中心 Z₃ 投影）並已閉合。
 - h12 = Σγ + 2B = 90 + 8 = 98（γ_n = 4sin²(nπ/88), Σγ = 90 EXACT）
 - χ = 2(h11−h12) = −124
 - 3×12 block: Schur block-triangular max|lower| = 0, ratio > 3 (15/15 實例)
-- A2: 🔴 已撤回 — φ⁻⁵ 量子化係 quantized 檔案 tautology（unit-search z=3.24σ < 5σ）
+- A2: 🔴 **負面閉合（2026-10-05 docs/40）** — J* 係 fit artifact 唔係幾何物件：生成 code 硬編初始值 T_UNIFORM=0.0901406≈1/φ⁵（input 唔係發現）；「81% 量子化」=73% 初始值殘留+被郁動維度 3/10=30%（隨機）；舊 session 自認「J* optimization not numerically completed」→ J* 幾何來源問題前提失效。正確 Kähler 幾何 = CYTools tip（O57/O58）
 - 3c_f 矩陣 det = 18 = 2×3², Σ² = 36（隨機期望值，非結構）
 
 ## 依賴

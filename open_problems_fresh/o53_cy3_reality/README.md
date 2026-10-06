@@ -14,7 +14,7 @@
 
 ### 🔴 開放（2 項）
 1. A1 (c_f n/3 機制) — 12 個方向全部排除
-2. A2 (J* 來源) — φ⁻⁵ 宣稱已撤回（docs/38；quantized 檔案循環論證 + unit-search z=3.24σ）→ 仍開放
+2. A2 (J* 來源) — 🔴 **負面閉合（docs/40）**：J* 係 fit artifact（生成 code 硬編 φ⁻⁵ 初始值）；真 Kähler 幾何 → CYTools tip（O57/O58）
 
 ### 記錄文檔
 - docs/01-16: 前期（第二 session）
