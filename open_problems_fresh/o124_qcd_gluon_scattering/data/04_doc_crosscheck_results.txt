@@ -1,0 +1,94 @@
+==============================================================================
+  O124 Script 04: 文檔核對 (獨立重算 docs/02 + docs/03)
+==============================================================================
+
+── A. docs/02 前置驗證數值 ──
+  [✔] docs/02   A1 純 SU(3) b₀ = 11                                   got=11 want=11
+  [✔] docs/02   A2 Λ_MERA = 0.08772 GeV                              got=0.087721225 want=0.0877212
+  [✔] docs/02   A2 σ_v9script = 7.6544e−5 GeV²                       got=7.6543713e-05 want=7.6544e-05
+  [✔] docs/02   A2 比值 0.1745/σ = 2280                                got=2279.7431 want=2280
+  [✔] docs/02   A3 σ(gg→gg) = 1.415e−4 nb                            got=0.00014146871 want=0.0001415
+  [✔] docs/02   A3 比值 100/σ = 7.07e5                                 got=706870.11 want=707000
+  [✔] docs/02   A3b 1 GeV⁻² = 3.894e8 pb                             got=3.89379e+08 want=3.894e+08
+  [✔] docs/02   A4 Λ_QCD = 0.0450 GeV                                got=0.04503612 want=0.045
+  [✔] docs/02   A6 123110/27.9009 = 4412                             got=4412.4001 want=4412
+  [✔] docs/02   C4 f^{abc} 獨立三元組 = 9                                 got=9 want=9
+  [✔] docs/02   C4 非零分量 = 54 = 9×3!                                  got=54 want=54
+  [✔] docs/02   C4 C(8,3) = 56                                       got=56 want=56
+  [✔] docs/02   判決 13 = 4+1+8                                        got=13 want=13
+  [✔] docs/02   存活率 5/13 = 38%                                       got=38.461538 want=38.46
+  [✔] docs/02   D4 α_s⁻¹ dev vs SM = 0.130%                          got=0.12997556 want=0.13
+
+── B. docs/03 §A 色扇區 ──
+  [✔] docs/03   A.2 Σ_f N_c Q_f² = 8                                 got=8 want=8
+  [✔] docs/03   A.2 N_c²−1 = 8 = F₆                                  got=8 want=8
+  [✔] docs/03   A.3 C_F = 4/3 = B/3                                  got=1.3333333 want=1.3333333
+  [✔] docs/03   A.3 (N_c²−1)/(2N_c) = 4/3                            got=1.3333333 want=1.3333333
+  [✔] docs/03   A.3 B=4 ⟺ 3(B−2)=2(B−1)                              got=0 want=0
+  [✔] docs/03   A.4 φ³−φ⁻³ = 4 = B                                   got=4 want=4
+  [✔] docs/03   A.4 3²(φ³−φ⁻³) = 36                                  got=36 want=36
+  [✔] docs/03   A.4 K_tree+N_gen = 36                                got=36 want=36
+  [✔] docs/03   A.4 N_d−2B = 36                                      got=36 want=36
+  [✔] docs/03   A.4 24 = 2(L₅+1) = h¹¹−12                            got=24 want=24
+
+── C. docs/03 §B 連結膠子譜 ──
+  [✔] docs/03   B.2 λ₀ = 0                                           got=0 want=0
+  [✔] docs/03   B.2 Σλ(0..87) = 176 = 4N_d                           got=176 want=176
+  [✔] docs/03   B.2 Σλ(1..44) = 90 = Σγ                              got=90 want=90
+  [✔] docs/03   B.2 88 = 2×43 + 2                                    got=88 want=88
+  [✔] docs/03   B.2 λ_n = λ_{88−n}                                   got=1.6036588e-50 want=0
+  [✔] docs/03   B.3 holonomy 88×(π/88) = π                           got=3.1415927 want=3.1415927
+  [✔] docs/03   B.3 88 = B × 2L₅                                     got=88 want=88
+
+── D. docs/03 §C 頂點 ──
+  [✔] docs/03   C.1 稀疏度 9/56 = 0.1607                                got=0.16071429 want=0.160714
+  [✔] docs/03   C.2 88² = 7744                                       got=7744 want=7744
+  [✔] docs/03   C.2 N³ = 681472                                      got=681472 want=681472
+
+── E. docs/03 §D β 函數 ──
+  [✔] docs/03   D T̂⁴ = [[5,3],[3,2]]                                got=5 want=5
+  [✔] docs/03   D Tr(T̂⁴) = 7                                        got=7 want=7
+  [✔] docs/03   D Tr(T̂⁵) = 11 = L₅                                  got=11 want=11
+  [✔] docs/03   D Tr(T̂³) = 4 = L₃                                   got=4 want=4
+  [✔] docs/03   D b₀ = 11 − 2N_f/3 = 7                               got=7 want=7
+  [✔] docs/03   D L₅−L₃ = L₄ = 7                                     got=7 want=7
+  [✔] docs/03   D 唯一解 N_f = 6                                        got=6 want=6
+  [✔] docs/03   D b₁ = 102 − 38N_f/3 = 26 = 2F₇                      got=26 want=26
+  [✔] docs/03   D 3B−1 = 11 = 8+3                                    got=11 want=11
+
+── F. docs/03 §E α_s ──
+  [✔] docs/03   E α_s⁻¹ = 8.4707757                                  got=8.4707757 want=8.4707757
+  [✔] docs/03   E α_s = 0.118053                                     got=0.11805294 want=0.118053
+  [✔] docs/03   E dev vs SM = 0.130%                                 got=0.12997556 want=0.13
+  [✔] docs/03   E α₂⁻¹ = N_d − 2L₄ = 30                              got=30 want=30
+  [✔] docs/03   E α₂⁻¹ dev vs 29.57 = 1.45%                          got=1.4541765 want=1.45
+  [✔] docs/03   E F₆ = b₀+1 = 8                                      got=8 want=8
+  [✔] docs/03   E sin²θ_W 閉式 = 模式比                                   got=0 want=0
+
+── G. docs/03 §F gg→gg ──
+  [✔] docs/03   F.1 G_ss = C_A²(N_c²−1) = 72                         got=72 want=72
+  [✔] docs/03   F.1 |G_off| = 36 = G_diag/2                          got=36 want=36
+  [✔] docs/03   F.1 等角 cos = 1/2                                     got=0.5 want=0.5
+  [✔] docs/03   F.1 9/2 = C_A²/2                                     got=4.5 want=4.5
+  [✔] docs/03   F.1 (N_c²−1)² = 64                                   got=64 want=64
+  [✔] docs/03   F.2 B 交叉對稱 B(s,t,u) = B(t,s,u)                       got=7.6211111 want=7.6211111
+  [✔] docs/03   F.2 |M|/g⁴ = 34.30 < 16π                             got=34.295 want=34.295
+  [✔] docs/03   F.2 16π = 50.265                                     got=50.265482 want=50.265
+
+── H. docs/03 §G 禁閉 ──
+  [✔] docs/03   G 2M₀ = 55.8018 MeV                                  got=55.80183 want=55.8018
+
+── I. 計數對帳 (docs vs scripts 輸出) ──
+  [✔] scripts   01_preverification.py        RESULT = ('27', '27') want=(27, 27)
+  [✔] scripts   02_discrete_qcd.py           RESULT = ('53', '53') want=(53, 53)
+  [✔] scripts   03_cross_validation.py       RESULT = ('30', '30') want=(30, 30)
+  [✔] docs/03   總 PASS = 27+53+30 = 110                              got=110 want=110
+  [✔] docs/03   誠實標記表 16 行                                           got=16 want=16
+  [✔] docs/03   誠實標記表 🟢 13                                           got=13 want=13
+  [✔] docs/03   誠實標記表 🟡 2                                            got=2 want=2
+  [✔] docs/03   誠實標記表 🔴 1                                            got=1 want=1
+      (實測: 16 行, 🟢13 🟡2 🔴1)
+
+==============================================================================
+  AUDIT RESULT: 68/68 核對通過
+==============================================================================

@@ -1,0 +1,56 @@
+==============================================================================
+  O124 Script 15: Closeout 獨立審計
+==============================================================================
+
+─── [A] 14 scripts 重跑 (絶對解譯器) ───
+  ✅ A1 scripts 數 = 14 (01–14, 排除自身) (14)
+  ✅ A2 01_preverification.py exit=0 (rc=0)
+  ✅ A2 02_discrete_qcd.py exit=0 (rc=0)
+  ✅ A2 03_cross_validation.py exit=0 (rc=0)
+  ✅ A2 04_doc_crosscheck.py exit=0 (rc=0)
+  ✅ A2 05_gluon_vertices.py exit=0 (rc=0)
+  ✅ A2 06_doc_crosscheck_05.py exit=0 (rc=0)
+  ✅ A2 07_beta_consistency.py exit=0 (rc=0)
+  ✅ A2 08_doc_crosscheck_06.py exit=0 (rc=0)
+  ✅ A2 09_beta_mechanism.py exit=0 (rc=0)
+  ✅ A2 10_doc_crosscheck_07.py exit=0 (rc=0)
+  ✅ A2 11_running_module_geometry.py exit=0 (rc=0)
+  ✅ A2 12_doc_crosscheck_08.py exit=0 (rc=0)
+  ✅ A2 13_irreducible_inputs.py exit=0 (rc=0)
+  ✅ A2 14_doc_crosscheck_09.py exit=0 (rc=0)
+      (逐支時間消耗, 唔逐行印出)
+
+─── [B] session 鏈 (state.db read-only) ───
+  ✅ B1 對話框 session_key 鏈含已知 5 個 09-26 session (6 sessions, 最後: 20261006_145057_2a74f7)
+  ✅ B2 全鏈訊息數 ≥ 450 (含壓縮保留內容) (926)
+  ✅ B2b closeout session (2026-10-06) 喺鏈上 (['20261006_145057_2a74f7'])
+  ✅ B3 本鏈寫入 o124 檔案 ≥ 20 (26)
+  ✅ B4 本鏈寫入範圍: 只有 o124 + README (唔含其他 O) 
+
+─── [C] 文檔完整性 ───
+  ✅ C1 docs 9 份存在 (01–09) (9)
+  ✅ C2 SESSION_START.md 存在 
+  ✅ C2 final_result.md 存在 
+  ✅ C3 docs/09 已修正 φ³−φ⁻³ (ψ 註記) 
+  ✅ C4 docs/09 §7 closeout 修正存在 
+  ✅ C5 docs/09 無壓縮標記 
+  ✅ C6 SESSION_START.md 無 φ³+φ^{−3} (已修正) 
+  ✅ C6 docs/01_problem_record.md 無 φ³+φ^{−3} (已修正) 
+  ✅ C7 final_result 無 φ³+φ^{−3} 錯式 
+
+─── [D] Δα⁻¹ = 9 排除 (12/10-03 note 重算) ───
+  ✅ D1 Δα⁻¹ 實測 = 9.1060 ± 0.008 (9.1060)
+  ✅ D2 偏差 = 13.2σ (13.25 重算) (13.25σ)
+  ✅ D3 結構整數端點僅 137−128 = 9 (純代數) 
+  ✅ D4 整數端點 137 亦偏 −0.78% (0.778%)
+
+─── [E] register 覆蓋 (read-only) ───
+  ✅ E1 O124 註冊事件存在 (registered @09-26) 
+  ✅ E2 O229→O124 handoff 存在 (pid=O229, target=O124, 10-02) 
+  ✅ E3 10-03 note (Δα⁻¹=9 排除) 存在 
+  ✅ E4 O85 note (10-05, 不引 Δα⁻¹=9) 存在 
+
+==============================================================================
+  結果: 37/37 PASS, 0/37 FAIL
+  結論: ✅ closeout 前置審計通過
+==============================================================================

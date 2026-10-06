@@ -1,0 +1,136 @@
+{
+  "script": "03_cross_validation",
+  "pass": 30,
+  "total": 30,
+  "fail": 0,
+  "upstream_checks": 10,
+  "verdict_v9": [
+    {
+      "claim": "h¹¹ = 8+3+1+24 = 36 分解",
+      "status": "🟢 存活",
+      "reason": "ktree_structure/07 四路徑強迫 (本 O 補 24 = 2(L₅+1))"
+    },
+    {
+      "claim": "膠子數 8 = SU(3) adjoint",
+      "status": "🟢 存活",
+      "reason": "= F₆ = N_c²−1 = Σ_f N_c Q_f² (雙重身份)"
+    },
+    {
+      "claim": "N_c = 3",
+      "status": "🟢 存活",
+      "reason": "= B−1 (Pati-Salam, O85)"
+    },
+    {
+      "claim": "b₀ = 7",
+      "status": "🟢 存活*",
+      "reason": "數值對, 來源要換: L₅−L₃ = L₄ = Tr(T̂⁴) (O142)"
+    },
+    {
+      "claim": "3g/4g 頂點 ∝ f^{abc}, f^{abe}f^{cde}",
+      "status": "🟡 存活",
+      "reason": "群論結構對, 但需離散化 (鏈動量 mod 88)"
+    },
+    {
+      "claim": "b₀ = −7「純 SU(3)」",
+      "status": "🔴 失效",
+      "reason": "純 SU(3) 真值 = 11; doc/script 自相矛盾 (scripts/01 A1)"
+    },
+    {
+      "claim": "連續膠子傳播子 (ξ=1)",
+      "status": "🔴 失效",
+      "reason": "v10 有限譜 → 離散 G_n(ω) (O122)"
+    },
+    {
+      "claim": "連續動量守恆 (2π)⁴δ⁴",
+      "status": "🔴 失效",
+      "reason": "→ 鏈動量守恆 mod 88 (本 O §C)"
+    },
+    {
+      "claim": "α_s(GUT) = (3/8)α⁻¹(GUT), α⁻¹ ≈ 24",
+      "status": "🔴 失效",
+      "reason": "v10 α_GUT⁻¹ = 47 (O89); α_s⁻¹(M_Z) = 8.4708 (O142)"
+    },
+    {
+      "claim": "m_H = 123.11 GeV / V_EW = 246",
+      "status": "🔴 失效",
+      "reason": "v10 W-field 譜 MeV 級 (M₀ = 27.9 MeV); 246 GeV 係 SM 翻譯標度"
+    },
+    {
+      "claim": "σ = κ/(2π)Λ², κ = 1/16, σ = 0.1745 GeV²",
+      "status": "🔴 失效",
+      "reason": "κ 混淆 (O122 §二); doc 0.1745 vs script 7.6e−5 (2280×); 無連結能量泛函 (O144)"
+    },
+    {
+      "claim": "f^{abc} 數目 = 40",
+      "status": "🔴 無源",
+      "reason": "真值 9 獨立 / 54 分量 / 25 對 (scripts/01 C4)"
+    },
+    {
+      "claim": "gg→gg σ ≈ 100 nb @14 TeV",
+      "status": "🔴 失效",
+      "reason": "計算 1.4e−4 nb (差 7.1e5×); 量綱錯"
+    }
+  ],
+  "verdict_counts": {
+    "🟢 存活": 3,
+    "🟢 存活*": 1,
+    "🟡 存活": 1,
+    "🔴 失效": 7,
+    "🔴 無源": 1
+  },
+  "new_v10": [
+    {
+      "item": "A 色扇區結構 (N_c/8/12/C_A/C_F/h¹¹)",
+      "status": "🟢 本 O",
+      "evidence": "scripts/02 §A 9/9"
+    },
+    {
+      "item": "B 膠子 = 連結相位 (譜 = K_Chain 譜)",
+      "status": "🟢 本 O",
+      "evidence": "scripts/02 §B 8/8; λ₀ = 0 無質量"
+    },
+    {
+      "item": "C 離散頂點 + 鏈動量守恆 mod 88",
+      "status": "🟢 本 O",
+      "evidence": "scripts/02 §C 8/8; Jacobi EXACT"
+    },
+    {
+      "item": "D β 函數 = T̂ 不變量",
+      "status": "🟢 O142",
+      "evidence": "b₀ = L₄, b₁ = 2F₇; 本 O 補唯一性 D3"
+    },
+    {
+      "item": "E α_s 譜跡形式",
+      "status": "🟢 O142",
+      "evidence": "α_s⁻¹ = F₆+sin²θ_W+1/B"
+    },
+    {
+      "item": "F gg→gg 色代數 + 交叉對稱",
+      "status": "🟢 本 O",
+      "evidence": "scripts/02 §F 9/9; 等角 1/2"
+    },
+    {
+      "item": "G 禁閉 σ / 強子譜",
+      "status": "🔴 未閉合",
+      "evidence": "連結能量泛函不存在 (O144 §4.3)"
+    }
+  ],
+  "key_numbers": {
+    "N_c": 3,
+    "gluons": 8,
+    "bosons": 12,
+    "C_A": 3,
+    "C_F": "4/3",
+    "b0": 7,
+    "b1": 26,
+    "alpha_s_inv_MZ": 8.470776,
+    "sin2theta_W": 0.220776,
+    "sum_gamma_1_44": 90,
+    "sum_lambda_0_87": 176,
+    "colour_gram": {
+      "G_ss": 72,
+      "G_off": 36,
+      "cos": 0.5
+    }
+  }
+}
