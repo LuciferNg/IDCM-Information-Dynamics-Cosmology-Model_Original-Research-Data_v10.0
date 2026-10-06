@@ -93,6 +93,32 @@ O85_RENAME = {
         os.path.join(OPF, "o85_su12_breaking/docs/05_fermion_reps.md"),
 }
 
+# 2026-10-07 修正第 ③ 類 REF-MISSING（O206 round10-15 遷移 O233）:
+# O206 第十至十五輪 (docs/33-43, scripts/29-39) 於 2026-10-06 經調律者裁決 git mv 轉移去
+# O233 (o233_c_f_identity)，docs 編號重排 (33→01, 36→04, ..., 43→11)。
+# register 舊 event 的 ref 仍指向 o206 舊路徑；JSONL 歷史事件唔改（append-only），
+# 呢度提供舊路徑 → O233 現存路徑翻譯層。逐檔按 round 主題 1:1 對應。
+O206_TO_O233 = {
+    os.path.join(OPF, "o206_per_mode_frequency/docs/33_round10_conflict_adjudication.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/01_round10_conflict_adjudication.md"),
+    os.path.join(OPF, "o206_per_mode_frequency/docs/36_round11_unified_generator.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/04_round11_unified_generator.md"),
+    os.path.join(OPF, "o206_per_mode_frequency/docs/37_round11b_cf_sawtooth.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/05_round11b_cf_sawtooth.md"),
+    os.path.join(OPF, "o206_per_mode_frequency/docs/38_round11c_sawtooth_z2.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/06_round11c_sawtooth_z2.md"),
+    os.path.join(OPF, "o206_per_mode_frequency/docs/39_round11d_z2_three_tests.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/07_round11d_z2_three_tests.md"),
+    os.path.join(OPF, "o206_per_mode_frequency/docs/40_round12_joint_power_parity.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/08_round12_joint_power_parity.md"),
+    os.path.join(OPF, "o206_per_mode_frequency/docs/41_round13_flow_identity.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/09_round13_flow_identity.md"),
+    os.path.join(OPF, "o206_per_mode_frequency/docs/42_round14_lepton_slot.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/10_round14_lepton_slot.md"),
+    os.path.join(OPF, "o206_per_mode_frequency/docs/43_round15_charge_residue_corrected.md"):
+        os.path.join(OPF, "o233_c_f_identity/docs/11_round15_charge_residue_corrected.md"),
+}
+
 
 def theme_dir(name):
     """Resolve a theme folder by its legacy pid first-segment (name).
@@ -107,12 +133,16 @@ def theme_dir(name):
 def resolve_ref(fp):
     """Follow the 2026-10-05 theme migration for ref checks: a ref that pointed at
     open_problems_fresh/<theme>/... is translated to main_problems/pNN_<theme>/...
-    Also translate O85 pre-rebuild doc names (O85_RENAME, 2026-10-06).
+    Also translate O85 pre-rebuild doc names (O85_RENAME, 2026-10-06) and
+    O206 round10-15 docs migrated to O233 (O206_TO_O233, 2026-10-07).
     Historical jsonl events are never rewritten (append-only); this translation is
     applied only when materialising the check target."""
     if os.path.exists(fp):
         return fp
     new = O85_RENAME.get(fp)
+    if new and os.path.exists(new):
+        return new
+    new = O206_TO_O233.get(fp)
     if new and os.path.exists(new):
         return new
     for src, dst in MOVED_SRC.items():
@@ -121,6 +151,29 @@ def resolve_ref(fp):
             if os.path.exists(cand):
                 return cand
     return fp
+
+
+def check_ref_path(pid, seg, ddirs):
+    """Resolve one ref segment to a real path, or None if genuinely missing.
+    Order: absolute/REPO-join -> resolve_ref (theme migration / O85 rename) ->
+    2026-10-07 類① fallback (bare O-dir-relative ref written without its oNNN
+    prefix): try this pid's own O dir + seg, then a repo-wide unique */seg hit.
+    A repo-wide match is accepted ONLY when unique (otherwise the intent is
+    ambiguous and the ref stays MISSING - never guess)."""
+    fp = seg if os.path.isabs(seg) else os.path.join(REPO, seg)
+    fp = resolve_ref(fp)
+    if os.path.exists(fp):
+        return fp
+    n0 = num_of(pid)
+    if n0 is not None:
+        for d in ddirs.get(n0, []):
+            cand = os.path.join(d, seg)
+            if os.path.exists(cand):
+                return cand
+    hits = glob.glob(os.path.join(OPF, "*", seg)) + glob.glob(os.path.join(MAIN, "*", seg))
+    if len(hits) == 1:
+        return hits[0]
+    return None
 
 
 # ---------------------------------------------------------------- utilities
@@ -860,22 +913,37 @@ def cmd_check(a):
 
     # refs are the ONLY content pointer: a broken ref means the register lost
     # its link to the original.  Check path (and #Lnn) against the filesystem.
+    # 2026-10-07 修正第 ⑥ 類 REF-MISSING（O220/O221 雙路徑 ref）:
+    #   some events chain several files in one ref ("a.md + b.md" or "a.md ; b.md").
+    #   Split on ' + ' / ' ; ' and existence-check EVERY segment independently
+    #   instead of treating the chained string as a single path (which can never
+    #   exist).  Each segment still goes through resolve_ref (theme migration).
+    #   O220: docs/13 + docs/14 (progress 2026-09-28).  O221: docs/19 ; docs/20.
+    # 2026-10-07 修正第 ① 類 REF-MISSING（O 目錄相對 ref）:
+    #   bare segments like "docs/14_..." written without the oNNN dir prefix are
+    #   resolved via check_ref_path: pid's own O dir first, then repo-wide unique
+    #   hit (never guess on ambiguous names).  Clears O220 residual + O225/O88.
     for pid, r in sorted(db.items()):
         for ref in con.execute("SELECT ref FROM event WHERE pid=? AND ref IS NOT NULL", (pid,)):
             rf = ref["ref"].split("#")[0].strip()
             if not rf or rf.startswith(("http", "-")):
                 continue
-            fp = rf if os.path.isabs(rf) else os.path.join(REPO, rf)
-            fp = resolve_ref(fp)
-            if not os.path.exists(fp):
-                problems.append(("REF-MISSING", "%s ref -> %s does not exist" % (pid, rf)))
+            segs = [s.strip() for s in re.split(r"\s+[+;]\s+", rf)]
+            miss = [seg for seg in segs if seg and check_ref_path(pid, seg, ddirs) is None]
+            if miss:
+                problems.append(("REF-MISSING", "%s ref -> %s does not exist"
+                                 % (pid, " | ".join(miss))))
                 continue
             m = re.search(r"#L(\d+)", ref["ref"])
-            if m and os.path.isfile(fp):
-                n = sum(1 for _ in open(fp, encoding="utf-8", errors="replace"))
-                if int(m.group(1)) > n:
-                    problems.append(("REF-LINE-OOR", "%s ref %s#L%s but file has %d lines"
-                                     % (pid, rf, m.group(1), n)))
+            if m:
+                for seg in segs:
+                    fp = check_ref_path(pid, seg, ddirs)
+                    if fp and os.path.isfile(fp):
+                        n = sum(1 for _ in open(fp, encoding="utf-8", errors="replace"))
+                        if int(m.group(1)) > n:
+                            problems.append(("REF-LINE-OOR", "%s ref %s#L%s but file has %d lines"
+                                             % (pid, seg, m.group(1), n)))
+                        break
 
     # machine blocks: absence is informational (not migrated yet), but a block
     # that contradicts the register row is a hard drift - two sources of truth.

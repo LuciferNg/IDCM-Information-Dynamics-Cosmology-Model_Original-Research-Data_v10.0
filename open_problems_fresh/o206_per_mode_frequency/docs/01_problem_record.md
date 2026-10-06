@@ -184,6 +184,43 @@
 | 28 | `scripts/27_energy_budget.py` | 1/3 PASS ⟹ ★ 60 份預算比較 (Ω_dm 0.43σ/Ω_Λ 0.18σ/Ω_b 2.3σ) — **已移交 O215** | docs/31 |
 | 29 | `scripts/28_sqrt_sum_identity.py` | 探索 ⟹ ★ Σ√γ_n = N_d+F₇+1/60 身份 — **已移交 O215** | docs/32 |
 
+## 十、O206 Closeout（2026-10-07，全 Session 鏈整理）
+
+**本段為新增，以上原文一字不刪。**
+
+### 10.1 ⚠️ 第十至十五輪已 git mv 轉移至 O233
+
+- **事實**：O206 第十至十五輪（docs/33–43 + scripts/29–39 + logs/data）喺 2026-10-06 由調律者裁決（「本 session 唔係 O206 session」Option 1）git mv 轉移至 **O233**（`o233_c_f_identity/`），docs 編號重排（33→01, 36→04, ..., 43→11）。
+- **本 O 範圍**：O206 正式閉合範圍 = scripts 01–26 + docs 01–32（26 腳本 / 145 checks，PASS 140 + 誠實 FAIL 5）。
+- **register ref 修正**：O206 舊 events 指 `docs/33–43` 嘅 ref 由 problem_register 翻譯層 `O206_TO_O233`（2026-10-07）映射至 O233 現存檔，REF-MISSING 清零。
+
+### 10.2 Closeout 狀態
+
+```
+✅ O206 主體收束 (verdict=partial, 2026-10-07):
+   - f(n) 假說證偽; 正確框架 m = M₀·γ_n·C_f（CSSG-v3 承接閉合）
+   - |Δm|^α（RMS 0.5872）正交降級; 簇 = A₅ 分配偽影
+   - 宇宙預算（3/60,16/60,41/60）完全移交 O215
+   - 中微子 Σm_ν 分級移交 O57/CSSG-v3; 玻色塔盲測移交 O207
+   - C_f 生成器後續（十至十五輪）移交 O233（已閉合 verdict=partial）
+```
+
+### 10.3 REF-MISSING HARD-DRIFT 修正（O206 自身引起）
+
+- 分類：register-drift ③ ref 超前（git mv 後 ref 未翻譯）— **10 條**（O206×9 + O137×1）
+- 修正：`register.py` 加 `O206_TO_O233` 翻譯表（2026-10-07）——JSONL 歷史事件唔改（append-only），check 時 materialise 至 O233 現存檔
+- 驗證：HARD DRIFT 99 → 25（REF-MISSING 85 → 11）；O206/O137 該 10 條全部清零；剩餘 11 條屬他 O 已知問題（O225/O229/theme root），記錄為移交
+
+### 10.4 剩餘開放項（全部已分流）
+
+| 開放項 | 屬主 | 狀態 |
+|:--|:--|:--|
+| Σm_ν 完整裁決（IDCM 宇宙學） | O57/CSSG-v3 | 🟡 分級已判 |
+| 玻色塔盲測（44 模式） | O207 | 🔴 用戶指示 O207 session |
+| C_f 生成器/輕子槽/γ-階梯 | O233 | 🟢 已閉合（verdict=partial） |
+| Ω_b = 3/60 唯一解（殘餘 ε 閉式） | O215 | 🟢 已閉合 |
+| 物質/暗物質/真空能定義 | O214 | 🟢 已閉合 |
+
 **★★★ 第六輪狀態更新（2026-09-21，只記新增）**：
 - ★★ **結構性結果**：奇 detent（33, 55）**結構上排除**（γ_n = γ_(N−n) 落喺反 parity
   ⟹ resolvent 分母 = 0 ⟹ |Δm| 發散）⟹ 質量梯**必須**住偶 detent ⟹ 55（θ₂₃ 之家）
