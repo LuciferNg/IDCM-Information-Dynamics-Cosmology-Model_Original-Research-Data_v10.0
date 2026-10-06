@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O233
 title:   C_f 結構身份：生成器 hunt → 鋸齒/Z₂ → lepton 槽 n≡1 (mod 4)（由 O206 第10-15輪轉移）
-state:   partial
-verdict: partial
+state:   closed
+verdict: negative
 flags:   -
 owner:   O233
 created: 2026-10-06
@@ -171,3 +171,16 @@ p=0.00117、兩者獨立同時極端、u/d 身份層穩健、lepton 槽 n≡1 mo
 - 開放問題 4 項判定：輕子槽 ✅ 已解／up-type 🟢 負面／兩流 ✅ 已解／L4 ✅ 已覆蓋（01_problem_record §三）。
 - T0–T6 全鏈收尾：scripts 21/21 重跑一致（負結果 script = 預期 FAIL）、data 22 檔零孤兒、
   關鍵數值 vs docs 全對、final_result + README + 水位表更新；commit 執行。
+
+## 十五、append 2026-10-06（★★ 用戶裁決更正：verdict partial → negative）
+
+- **用戶裁決（2026-10-06 19:00）：「O233 C_f 結果負閉合」** — 主問題「C_f 結構身份」= **確定嘅負結果**
+  （docs/19 §三：5 線全負——結構池 0.9955／統一式 dip／塊參數 0.38／κ 1.0／O152 擴池 0.285），
+  ⟹ register verdict 應為 **negative** 而非 partial。
+- **register 更正（append-only）**：原 close(partial, 18:50 c37533) 事件**保留唔改**；
+  加 `reopen`（原因=用戶裁決 verdict 應為 negative）→ `close --verdict negative`。
+  最終 **state=closed verdict=negative**（status 讀回確認，log 三事件完整）。
+- **✨ 唔影響**：4 項結構正結果（鋸齒/γ階梯/u-d/輕子槽）同先前 partial closeout 內容全部保留；
+  handoff O233→O209（C_f 絕對值生成）不變；01_problem_record §三 開放判定不變。
+- 本次修正範圍：register + 01_problem_record（frontmatter/狀態行/§六 row 20/水位 row 9）+
+  SESSION_START（本 § + frontmatter）+ final_result 狀態行 + README 狀態行。

@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O233
 title:   C_f 結構身份：生成器 hunt → 鋸齒/Z₂ → lepton 槽 n≡1 (mod 4)（由 O206 第10-15輪轉移）
-state:   partial
-verdict: partial
+state:   closed
+verdict: negative
 flags:   -
 owner:   O233
 created: 2026-10-06
@@ -13,7 +13,7 @@ prereq:  O120, O137, O206
 source:  O206 第10-15輪（O120 session 內越界完成, 2026-10-06, 調律者裁決轉移）
 -->
 
-> **狀態**: 🟡 **部分閉合 (2026-10-06 closeout)**：4 項結構正結果閉合 ＋ C_f 絕對值生成器移交 O209（5 線全負, 誠實負結果）
+> **狀態**: 🟢 **負閉合 (2026-10-06 用戶裁決 verdict=negative)**：C_f 生成器 5 線全負 = 結構性負結果（無算子身份, docs/19 §三）；4 項結構正結果（鋸齒/槽/升序/d 槽）已記錄不受影響
 > **建立**: 2026-10-06（轉移日）
 > **前置**: O120（C_f = m_f/(M₀γ_n) 之商定義）、O137（合法模式集 + R19 A₅ 指派）、O206（γ-階梯/塊層 v8-v10 推導）
 > **位置**: `open_problems_fresh/o233_c_f_identity/`
@@ -115,6 +115,9 @@ source:  O206 第10-15輪（O120 session 內越界完成, 2026-10-06, 調律者�
 | 17 | 2026-10-06 | ★ 用戶裁決：錨不是參數、C_f 無量綱 ⟹ 獨立錨撤回（docs/16 §八）| docs/16§八 |
 | 18 | 2026-10-06 | 第二十二輪：κ 非對角盲測 🔴 負（0 hits, P=1.0）| docs/18, scripts/20 |
 | 19 | 2026-10-06 | 第二十三輪：O152 註冊常數全集擴池 🔴 負（P=0.285）| docs/19, scripts/21 |
+| 20 | 2026-10-06 | ★ **用戶裁決：C_f 結果負閉合** — verdict partial → negative；主問題「C_f 結構身份」= 確定嘅負結果（5 線全負 ⟹ 無算子身份, docs/19 §三）；關係結構正結果不受影響 | register reopen + close(negative) + 本檔 + SESSION_START + final_result + README |
+
+> ⚠️ **2026-10-06 19:00 更正註記**：register 原 close verdict=partial（18:50, 並行 session c37533）；用戶裁決「C_f 結果負閉合」⟹ **reopen + close verdict=negative**（append-only，原 partial 事件保留）——主問題「C_f 結構身份」5 線全負 = 結構性負結果，最終 state=closed verdict=negative。
 
 ## 六之二、檔案閉合水位（close-out watermark, 2026-10-06 closeout）
 
@@ -124,10 +127,11 @@ source:  O206 第10-15輪（O120 session 內越界完成, 2026-10-06, 調律者�
 | 2 | docs/12–19（本 O 攻堅） | 2026-10-06 18:35 | — | 全檔（關鍵數值 vs data JSON 核對一致） | ✅ 已驗 |
 | 3 | scripts/01–21 | 2026-10-06 18:34 | — | 全鏈重跑 21/21：exit 0（負結果 script 02/04/05 係預期 FAIL） | ✅ 已驗 |
 | 4 | data/01–21 | 2026-10-06 18:34 | — | 22 檔全存在，零孤兒，關鍵統計值 vs docs 一致 | ✅ 已驗 |
-| 5 | final_result.md | 2026-10-06 18:55 | — | 全新（RESULT_TEMPLATE 格式） | ✅ 已驗 |
-| 6 | SESSION_START.md | 2026-10-06 18:35 | — | 全文（§一–十三 appends；S1 不可變快照檢查） | ✅ 已驗 |
-| 7 | 01_problem_record.md（本檔） | 2026-10-06 18:55 | — | 全檔 + 狀態行更新 + §六索引 append | ✅ 已驗 |
-| 8 | README.md | 2026-10-06 18:55 | — | 狀態 emoji + 檔案表擴展 | ✅ 已驗 |
+| 5 | final_result.md | 2026-10-06 19:00 | — | 全新（RESULT_TEMPLATE 格式）+ 狀態行負閉合 sync | ✅ 已驗 |
+| 6 | SESSION_START.md | 2026-10-06 19:00 | — | 全文（§一–十四 appends；S1 不可變快照檢查）| ✅ 已驗 |
+| 7 | 01_problem_record.md（本檔） | 2026-10-06 19:00 | — | 全檔 + 狀態行 + frontmatter + §六索引 append（row 20）| ✅ 已驗 |
+| 8 | README.md | 2026-10-06 19:00 | — | 狀態 emoji 負閉合 + 檔案表擴展 | ✅ 已驗 |
+| 9 | register.jsonl（O233 事件） | 2026-10-06 19:00 | — | close(partial 18:50) + reopen + close(negative) 三事件完整 | ✅ 已驗 |
 
 時序完整性確認：scripts mtime（05:18→18:34）全部先於對應 docs；docs 檔頭日期塊全部 2026-10-06；O233 無跨 O 寫入（本目錄以外零寫入——docs/12-19 引用 O137/O209/O210 只讀）。
 
