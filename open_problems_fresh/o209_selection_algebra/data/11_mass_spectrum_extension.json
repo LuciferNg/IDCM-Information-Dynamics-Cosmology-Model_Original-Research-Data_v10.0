@@ -1,0 +1,76 @@
+{
+  "alpha_ols": 2.6332540847469583,
+  "rms_ols": 0.5872281307723043,
+  "alpha_rational_cand": 2.6333333333333333,
+  "alpha_cand_struct": "(88-9)/(2*3*5)",
+  "rms_fixed_alpha": 0.5872281419897929,
+  "delta_rms_fixed": 1.1217488604664538e-08,
+  "look_elsewhere_hits_120": [
+    "79/30"
+  ],
+  "tail_ratio_last": 1.507468873779769,
+  "tail_avg": 1.5370667359910302,
+  "rms_A_gamma": 0.9302843119005041,
+  "rms_cs_swap": 1.3972597239659397,
+  "resid_c": 0.9130780258275975,
+  "resid_s": 1.1559969677535298,
+  "rms_without_cs": 0.21115393779273747,
+  "checks": [
+    {
+      "name": "P1.1 α_OLS = 2.63325408 (docs/03 C2)",
+      "pass": true
+    },
+    {
+      "name": "P1.2 RMS = 0.58722813 (docs/03)",
+      "pass": true
+    },
+    {
+      "name": "P2.1 79/30 固定 α 零損失 (ΔRMS < 1e-6)",
+      "pass": true
+    },
+    {
+      "name": "P2.2 結構身份: 分子 88−9 (鏈長 − N_gen²), 分母 2·N_gen·F₅",
+      "pass": true
+    },
+    {
+      "name": "P3.1 全空間唯一命中 (家族大小 = 1)",
+      "pass": true
+    },
+    {
+      "name": "P4.1 尾部收斂趨勢 (|dm_11|/|dm_13| = 1.5075 → 3/2 0.5%)",
+      "pass": true
+    },
+    {
+      "name": "P5.1 A_γ 差過 A_|Δm| (0.587)",
+      "pass": true
+    },
+    {
+      "name": "P5.2 A_γ 唔係 O209 9! 窮舉最小 (0.93)",
+      "pass": true
+    },
+    {
+      "name": "P6.1 c/s 對調令 RMS 惡化 ≫ 0.587",
+      "pass": true
+    },
+    {
+      "name": "P7.1 c,s 係最大兩離群 (|resid|>0.9)",
+      "pass": true
+    },
+    {
+      "name": "P7.2 扣除後 RMS 仍 > 0.05 (R6 未閉合, 定位剩餘)",
+      "pass": true
+    },
+    {
+      "name": "P8.1 塊2 RMS 最大 (冪律喺 c,μ,s 塊 fail)",
+      "pass": true
+    },
+    {
+      "name": "P9.1 修正項冇實質改善 (LOOCV 最小改進 < 3pp)",
+      "pass": true
+    },
+    {
+      "name": "P10.1 LOOCV 固定 α 唔顯著優於 OLS (Δ<5pp)",
+      "pass": true
+    }
+  ]
+}

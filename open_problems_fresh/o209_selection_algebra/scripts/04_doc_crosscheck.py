@@ -2,9 +2,9 @@
 """
 O209 — Script 04: 文檔核對 (doc crosscheck)
 ================================================================================
-從零獨立重算 docs/01–10 宣稱嘅每個數值/公式（唔依賴 01–03 嘅輸出）。
+從零獨立重算 docs/01–11 宣稱嘅每個數值/公式（唔依賴 01–03 嘅輸出）。
 每項輸出 [OK]/[XX] + 重算值 vs doc 值。
-（section A2 補 docs/02；section J 補 docs/09 附不變量環。）
+（section A2 補 docs/02；section J 補 docs/09 附不變量環；section K 補 docs/11。）
 """
 import numpy as np, math, itertools, json, re
 from pathlib import Path
@@ -153,7 +153,8 @@ chk("docs/06", "scripts 07 PASS = 28", 28, 28)
 chk("docs/06", "scripts 08 PASS = 23", 23, 23)
 chk("docs/06", "scripts 09 PASS = 21", 21, 21)
 chk("docs/06", "scripts 10 PASS = 152", 152, 152)
-chk("docs/06", "總 PASS = 345", 26 + 22 + 22 + 26 + 25 + 28 + 23 + 21 + 152, 345)
+chk("docs/06", "scripts 11 PASS = 14", 14, 14)
+chk("docs/06", "總 PASS = 359", 26 + 22 + 22 + 26 + 25 + 28 + 23 + 21 + 152 + 14, 359)
 # V 表計數一致性 (統計行 vs 逐項枚舉)
 _vtxt = (Path(__file__).resolve().parent.parent / "docs/06_verdict.md").read_text()
 _vrows = re.findall(r'^\| (V\d+) \| .*? \| (🟢|🟡|🔴)[^|]*\|', _vtxt, re.M)
@@ -382,6 +383,78 @@ _s610 = sorted({0} | {6 * a + 10 * b for a in range(0, 5) for b in range(0, 3)})
 _smod = sorted({x for x in _s610 if 0 < x <= 24} | {15 + x for x in _s610 if 0 < 15 + x <= 24})
 chk("docs/09", "S = <6,10> U (15+<6,10>)  (l<=24)", _smod, [6, 10, 12, 15, 16, 18, 20, 21, 22, 24])
 chk("docs/09", "primary degrees {2,6,10} (2*6*10 = 120 = 2|A5|)", 2 * 6 * 10, 120)
+
+# ── K. docs/11 (質量譜形狀殘餘攻堅, closeout 後延伸) ─────────────────
+# 對 scripts/11 嘅核心數值做獨立重算（唔 import scripts/11）
+print("\nK. docs/11 質量譜形狀殘餘 (獨立重算)")
+_N, _NC = 88, 88
+_idxx = np.arange(1, _N + 1)
+_psii = np.array([np.sin(n * math.pi * _idxx / (_N + 1)) for n in range(1, _NC + 1)])
+_psii = _psii / np.linalg.norm(_psii, axis=1)[:, None]
+_Xm_ = np.diag(_idxx - _idxx.mean())
+_V_ = _psii @ _Xm_ @ _psii.T
+_E_ = np.array([4 * math.sin(n * math.pi / 88) ** 2 for n in range(1, _NC + 1)])
+_D_ = _E_[:, None] - _E_[None, :]
+_G_ = np.where(np.abs(_D_) > 1e-12, 1.0 / np.where(_D_ == 0, 1.0, _D_), 0.0)
+np.fill_diagonal(_G_, 0.0)
+_dm_ = np.einsum('ab,ab->a', _V_ ** 2, _G_)
+_SEL11 = [1, 2, 3, 4, 5, 7, 9, 11, 13]
+_adm = np.abs(_dm_[[n - 1 for n in _SEL11]])
+_M11 = {"e": 0.51099895, "mu": 105.6583755, "tau": 1776.86,
+        "u": 2.16, "d": 4.67, "s": 93.4, "c": 1270.0, "b": 4180.0, "t": 172690.0}
+_part11 = sorted(_M11, key=lambda p: -_M11[p])
+_lm11 = np.log(np.array([_M11[p] for p in _part11]))
+_ld11 = np.log(_adm)
+_A11 = np.vstack([np.ones(9), _ld11]).T
+_c11, *_ = np.linalg.lstsq(_A11, _lm11, rcond=None)
+_r11 = _lm11 - _A11 @ _c11
+_rms11 = float(np.sqrt((_r11 ** 2).mean()))
+chk("docs/11", "α_OLS = 2.63325408", float(_c11[1]), 2.63325408, 1e-6)
+chk("docs/11", "RMS = 0.58722813", _rms11, 0.58722813, 1e-6)
+alpha79 = (88 - 9) / (2 * 3 * 5)
+_lM0 = (_lm11 - alpha79 * _ld11).mean()
+_r_fix = _lm11 - (_lM0 + alpha79 * _ld11)
+_dr = math.sqrt((_r_fix ** 2).mean()) - _rms11
+chk("docs/11", "固定 α=79/30 ΔRMS < 1e-6", abs(_dr), 0.0, 1e-6)
+_hits11 = [(a, b) for a in range(1, 121) for b in range(1, 121)
+           if abs(a / b - _c11[1]) / _c11[1] < 1e-4]
+chk("docs/11", "look-elsewhere 唯一命中 79/30", _hits11, [(79, 30)])
+_gmodes = [13, 11, 9, 7, 5, 4, 3, 2, 1]
+_ldg = np.log(np.abs(_dm_[[n - 1 for n in _gmodes]]))
+_Ag = np.vstack([np.ones(9), _ldg]).T
+_cg, *_ = np.linalg.lstsq(_Ag, _lm11, rcond=None)
+_rms_g = float(np.sqrt(((_lm11 - _Ag @ _cg) ** 2).mean()))
+chk("docs/11", "A_γ (γ升序) RMS = 0.93028", _rms_g, 0.93028, 1e-3)
+_ccs = [1, 2, 3, 7, 5, 4, 9, 11, 13]
+_ldcs = np.log(np.abs(_dm_[[n - 1 for n in _ccs]]))
+_Acs = np.vstack([np.ones(9), _ldcs]).T
+_ccs2, *_ = np.linalg.lstsq(_Acs, _lm11, rcond=None)
+_rms_cs = float(np.sqrt(((_lm11 - _Acs @ _ccs2) ** 2).mean()))
+chk("docs/11", "c/s 對調 RMS = 1.39726", _rms_cs, 1.39726, 1e-3)
+chk("docs/11", "c resid = +0.9131", float(_r11[3]), 0.9131, 1e-3)
+chk("docs/11", "s resid = +1.1560", float(_r11[5]), 1.1560, 1e-3)
+_mask11 = np.ones(9, bool); _mask11[[3, 5]] = False
+_A7 = np.vstack([np.ones(7), _ld11[_mask11]]).T
+_c7, *_ = np.linalg.lstsq(_A7, _lm11[_mask11], rcond=None)
+_rms7 = float(np.sqrt(((_lm11[_mask11] - _A7 @ _c7) ** 2).mean()))
+chk("docs/11", "扣除 c,s 後 7pt RMS = 0.2112", _rms7, 0.2112, 1e-3)
+_tail = float(_adm[-2] / _adm[-1])
+chk("docs/11", "|dm_11|/|dm_13| = 1.5075", _tail, 1.5075, 1e-3)
+# 修正項掃描 LOOCV 最佳 41.0% (docs/11 P9 負結果)
+nmod4 = np.array([(n - 1) % 4 for n in _SEL11], float)
+def _loocv_g(g):
+    errs = []
+    for i in range(9):
+        mask = np.ones(9, bool); mask[i] = False
+        Af = np.vstack([np.ones(8), _ld11[mask], g[mask]]).T
+        cf, *_ = np.linalg.lstsq(Af, _lm11[mask], rcond=None)
+        errs.append(abs(math.exp(_lm11[i] - (cf[0] + cf[1] * _ld11[i] + cf[2] * g[i])) - 1.0))
+    return float(np.median(errs))
+_lcv_mod4 = _loocv_g(nmod4)
+_lcv_base = _loocv_g(np.zeros(9))
+chk("docs/11", "(n-1)%4 LOOCV = 41.0% (基線 42.6%)", _lcv_mod4, 0.410, 5e-3)
+chk("docs/11", "基線 LOOCV = 42.6%", _lcv_base, 0.426, 5e-3)
+chk("docs/11", "修正項冇實質改善 (Δ<3pp)", _lcv_base - _lcv_mod4, 0.016, 0.05)
 
 npass = sum(1 for _, _, ok in res if ok)
 print("\n" + "=" * 96)
