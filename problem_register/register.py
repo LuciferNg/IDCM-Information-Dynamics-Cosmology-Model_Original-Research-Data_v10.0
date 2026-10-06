@@ -63,6 +63,36 @@ THEME_MOVE = {
 }
 MOVED_SRC = {os.path.join(OPF, k): os.path.join(MAIN, v) for k, v in THEME_MOVE.items()}
 
+# 2026-10-06 修正第 ② 類 REF-MISSING（O85 rename）:
+# O85 於 2026-10-05「由零重建」（用戶裁定全刪舊 docs 由零推導），舊檔名已不存在；
+# register 舊 event 的 ref 仍指向舊名。JSONL 歷史 event 唔改（append-only），
+# 呢度提供舊名 → 新名翻譯層，令 check 可以 materialise 到現存的檔。
+# 逐檔核對內容對應：每個舊檔按 register note 主題 map 到新 O85 docs 中最相關一份
+# （唔係 1:1 rename，係內容重排後嘅最貼近檔）。
+O85_RENAME = {
+    # 舊 O85 docs（2026-10-05 已刪）→ 新 O85 docs（內容最相關）
+    os.path.join(OPF, "o85_su12_breaking/docs/04_inbound_handoff_processing.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/01_breaking_path_classification.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/05_chain_reconstruction.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/03_breaking_chain.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/06_chain_contamination_ledger.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/04_mass_spectrum.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/08_remaining_gaps.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/02_q6_global_vs_gauge.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/09_eigenvalue_assignment.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/09_u1_scale_ladder.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/10_nine_modes_origin.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/09_u1_scale_ladder.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/12_ring_label_equivariance.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/17_singlet_mode_interpretation.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/13_residuals_sweep.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/06_scale.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/03_sm_feynman_rules.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/05_fermion_reps.md"),
+    os.path.join(OPF, "o85_su12_breaking/docs/17_o88_framework_audit.md"):
+        os.path.join(OPF, "o85_su12_breaking/docs/05_fermion_reps.md"),
+}
+
 
 def theme_dir(name):
     """Resolve a theme folder by its legacy pid first-segment (name).
@@ -77,10 +107,14 @@ def theme_dir(name):
 def resolve_ref(fp):
     """Follow the 2026-10-05 theme migration for ref checks: a ref that pointed at
     open_problems_fresh/<theme>/... is translated to main_problems/pNN_<theme>/...
+    Also translate O85 pre-rebuild doc names (O85_RENAME, 2026-10-06).
     Historical jsonl events are never rewritten (append-only); this translation is
     applied only when materialising the check target."""
     if os.path.exists(fp):
         return fp
+    new = O85_RENAME.get(fp)
+    if new and os.path.exists(new):
+        return new
     for src, dst in MOVED_SRC.items():
         if fp.startswith(src + os.sep):
             cand = dst + fp[len(src):]
