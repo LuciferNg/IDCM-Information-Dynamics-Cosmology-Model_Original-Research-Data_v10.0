@@ -88,6 +88,14 @@ FLAG 2024 + PDG 2024），由觀測比值反解「任何公式必須滿足嘅 (n
 🟢 混標度更正通知（docs/02 §六）: C_c/C_s 同 scheme 3.86 vs O233 池隱含 4.50（15%, m_c(m_c) vs
     m_s(2GeV)）; O233 正結果（質量 rank 次序）不受影响; O209 Id(f) watch（register handoff 已發）
 🟡 凍結層 v1.1 內部張力: m_c/m_s 11.85(16) vs 11.652(65) z=+1.15（freeze v2 決策點）
+🟢 b/c「near-hit」係混標度偽影（round 3, scripts/05 B1）: PDG mb(mb)/mc(mc)=3.291 → C_b/C_c=1.375
+    dev 3.0% nominal; 更正（HPQCD 21 m_b/m_c@3GeV = 4.586(12)）→ C_b/C_c=1.915 dev 43.6% 死實
+🟢 freeze v2 生效（scripts/05）; RGI_b=6.938(23)(45)GeV, M_RGI_d/u=6.53(7)(8)/2.97(11)(3)MeV 入層
+🟢 redundancy 0→1 閉環: (b/c@3GeV)×(c/s)=53.436(33) vs M_RGI_b/M_RGI_s=53.369(74) dev 0.13% z=+0.08
+🟢 純γ u/d 雙通道: MS z=+0.85 + RGI z=+0.51 都過
+🟢 C-shape v2: b=79.65（scheme 更正 39%, round-2 57.16→79.65）; 其餘不变
+🟢 pre-registered 預言 register（docs/03 §六）: 8 條可證偽預言, 觸發條件明確; ms/mu=42.89±1.52
+    係 killer test（lattice 1% 即決）
 🔴 s/m̂ 池掃描（scripts/02 §3, 診斷性）: F₁₀/2 = 27.5 vs 27.227(81) = +1.0% = 3.3σ 未命中; 其他池值亦無
     1σ 內命中 ⟹ 0.3% 精度下有牙
 ```
@@ -106,6 +114,13 @@ FLAG 2024 + PDG 2024），由觀測比值反解「任何公式必須滿足嘅 (n
 🟡 凍結層 v1.1 內部張力: m_c/m_s 兩值 z = +1.15（freeze v2 決策點）
 🔴 RGI_b 入凍結層: FLAG §4.3 完整讀 + m_b(RGI)/m_s(RGI) 做第四條夸克約束（redundancy 0 → 1）
 🔴 1% 精度 m_s/m_u 未來量度: 唯一非 assignment 內含嘅 out-of-sample 測試
+```
+🔴 → ✅ (round 3, scripts/05 A) freeze v2: RGI_b=6.938(23)(45) GeV + M_RGI_u/d 入層
+🔴 → ✅ (round 3, scripts/05 B1) b/c scheme 更正: near-hit 偽影判定（43.6% 死實）
+🔴 → ✅ (round 3, scripts/05 C1) redundancy 0→1: b/s 兩通道閉環 z=+0.08
+🔴 → ✅ (round 3, scripts/05 F) 1% ms/mu 預研→ pre-registered 預言 register（8 條, killer=ms/mu）
+🟡 凍結層 v2 生效; 預言 register 常駐, 任何新量度對表先
+🔴（外部）O233 C 池匹配（若重啟）必須用 freeze v2 同 scheme 比; b/c 43.6% 反例坐實
 ```
 
 ## 四、攻擊路線
@@ -142,6 +157,7 @@ FLAG 2024 + PDG 2024），由觀測比值反解「任何公式必須滿足嘅 (n
 | 4 | 2026-10-06 | 反推引擎: C 約束解集 + 枚舉密度 null + s/m̂ 池掃描 + P2 循環證明 | scripts/02, data/02 |
 | 5 | 2026-10-06 | Round2: 凍結層導出比 + DOF 審計（shape DOF=0）+ 檢驗能力清單（1/9 γ-testable） | scripts/03, data/03, docs/02 |
 | 6 | 2026-10-06 | Round2: 不可證偽性定理 + LOOCV redundancy=0 + s/m̂ 閘負面 + 混標度通知 | scripts/04, docs/02 |
+| 7 | 2026-10-07 | Round3/freeze v2: RGI_b 入層 + b/c scheme 更正（偽影死實）+ redundancy 閉環 + 預言 register | scripts/05, data/05, docs/03 |
 
 ## 七、相關文件
 

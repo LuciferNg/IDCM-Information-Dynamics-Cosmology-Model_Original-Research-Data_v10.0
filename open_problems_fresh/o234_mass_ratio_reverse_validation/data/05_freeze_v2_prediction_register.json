@@ -1,0 +1,115 @@
+{
+  "freeze_v2": {
+    "M_RGI_u": {
+      "value": 2.97,
+      "errs": [
+        0.11,
+        0.03
+      ]
+    },
+    "M_RGI_d": {
+      "value": 6.53,
+      "errs": [
+        0.07,
+        0.08
+      ]
+    },
+    "M_RGI_b": {
+      "value": 6938.0,
+      "errs": [
+        23.0,
+        45.0
+      ]
+    },
+    "mb_mc_3GeV": {
+      "value": 4.586,
+      "errs": [
+        0.012
+      ]
+    },
+    "mb_mc_FM": {
+      "value": 4.578,
+      "errs": [
+        0.007
+      ]
+    },
+    "mc_ms_Nf4": {
+      "value": 11.652,
+      "errs": [
+        0.065
+      ]
+    },
+    "mc_ms_HP": {
+      "value": 11.85,
+      "errs": [
+        0.16
+      ]
+    }
+  },
+  "prediction_register": [
+    {
+      "ratio": "md/mu (MS)",
+      "pred": 2.1505,
+      "err": 0.111,
+      "rel_pct": 5.16,
+      "trigger": "lattice 1-2% mu/md",
+      "note": "純γ 2.2452 vs shape 2.1505 相隔 4.4% -- 1% 精度即判"
+    },
+    {
+      "ratio": "ms/mu (derived)",
+      "pred": 42.8893,
+      "err": 1.5165,
+      "rel_pct": 3.54,
+      "trigger": "future lattice 直量 1%",
+      "note": "唯一非 assignment 內含 killer test"
+    },
+    {
+      "ratio": "ms/md (derived)",
+      "pred": 19.9439,
+      "err": 0.3321,
+      "rel_pct": 1.67,
+      "trigger": "future lattice 直量",
+      "note": ""
+    },
+    {
+      "ratio": "mc/mu (derived)",
+      "pred": 499.7465,
+      "err": 17.8885,
+      "rel_pct": 3.58,
+      "trigger": "future lattice mc/mu 直量",
+      "note": ""
+    },
+    {
+      "ratio": "mc/md (derived)",
+      "pred": 232.3862,
+      "err": 14.5969,
+      "rel_pct": 6.28,
+      "trigger": "future lattice mc/md 直量",
+      "note": ""
+    },
+    {
+      "ratio": "mb/ms (RGI)",
+      "pred": 53.3692,
+      "err": 0.7374,
+      "rel_pct": 1.38,
+      "trigger": "RGI 直量第二通道",
+      "note": "已與 b/c×c/s 閉環 z=+0.08"
+    },
+    {
+      "ratio": "mb/mc (3GeV)",
+      "pred": 4.586,
+      "err": 0.012,
+      "rel_pct": 0.26,
+      "trigger": "HPQCD21 已凍結",
+      "note": "scheme 正確版本; C_b/C_c=1.916 池無命中"
+    },
+    {
+      "ratio": "RGI d/u",
+      "pred": 2.1987,
+      "err": 0.0917,
+      "rel_pct": 4.17,
+      "trigger": "RGI 框架",
+      "note": "純γ z=+0.51"
+    }
+  ]
+}

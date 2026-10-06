@@ -110,3 +110,13 @@ source:  O233 C_f 無檢驗能力 → 驗證方法反推 (2026-10-06 調律者�
 - ★ s/m̂ 模式閘: 4 個幾何中點候選全敗（C 放大 9.5-11×）⟹ mode-gap 真
 - ★ 混標度通知: 凍結層 C_c/C_s = 3.86 vs O233 池 4.50（15%）——m_c(m_c) vs m_s(2GeV); rank 結構不受影响; O209 handoff 已發
 - 🟡 freeze v2 待辦: RGI_b 入層; m_c/m_s 兩值決策; +1% m_s/m_u 未來量度 = killer out-of-sample
+
+## 七、append 2026-10-07（第三輪：freeze v2 完成）
+
+- **scripts/05（4 PASS / 0 FAIL）**; docs/03 全記錄; 凍結層 v1.1 → v2（v1 data 保留唔改）
+- ★ **b/c「near-hit」死亡**: 混標度 mb(mb)/mc(mc)=3.291 → C_b/C_c=1.375 dev 3.0%（round-1 nominal）;
+  scheme 正確 HPQCD 21 mb/mc@3GeV=4.586(12) → C_b/C_c=1.915 **dev 43.6%** —— 44/33 近命中係偽影
+- ★ **redundancy 0→1**: (b/c@3GeV)×(c/s)=53.436(33) vs M_RGI_b/M_RGI_s=53.369(74) → dev 0.13% z=+0.08 閉環
+- ★ 純γ u/d 雙通道: MS z=+0.85 / RGI z=+0.51 都過
+- ★ C-shape v2: b=79.65（scheme 更正 39%）; u/d/s/c/e/μ/τ 不变
+- ★★ **pre-registered 預言 register**: 8 條可證偽預言（docs/03 §六）; killer = lattice 1% ms/mu vs 42.89±1.52
