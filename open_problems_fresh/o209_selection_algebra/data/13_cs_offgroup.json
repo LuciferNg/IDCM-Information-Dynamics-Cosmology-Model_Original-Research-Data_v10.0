@@ -1,0 +1,13 @@
+{
+ "r_cs_Cf_ratio": 4.5028520814023,
+ "nearest_structural": 4.5,
+ "nearest_dev_pct": 0.0633795867177748,
+ "n_hits_real": 8,
+ "mc_null_mean": 23.096,
+ "p_le_real": 0.0006,
+ "n_hits_01_real": 6,
+ "p_le_01": 0.7838,
+ "m_c_over_m_s": 13.597430406852247,
+ "decomp_9o2_gamma": 13.5888658354925,
+ "decomp_dev_pct": 0.06298669015750845
+}
