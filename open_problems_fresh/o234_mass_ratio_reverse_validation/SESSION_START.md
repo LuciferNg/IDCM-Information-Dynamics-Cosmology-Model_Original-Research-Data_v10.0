@@ -97,3 +97,16 @@ source:  O233 C_f 無檢驗能力 → 驗證方法反推 (2026-10-06 調律者�
 
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
+
+---
+
+## 六、append 2026-10-06（第二輪：DOF 審計 + 檢驗能力 + 不可證偽性）
+
+- **scripts/03（3 PASS / 0 FAIL）+ scripts/04（4 PASS / 0 FAIL）**; docs/02 全記錄
+- ★ shape DOF = 0: 8 個 C − 6 個獨立 ratio 約束 − 2 個扇區標度 ⟹ C-shape 完全釘死
+  （u=1, d=0.958, s=10.78, c=41.59, b=57.16; e=1, μ=8.36, τ=44.42）
+- ★ 檢驗能力清單: 9 比中只有 d/u 係 γ-testable（0.85σ）; 7 C-dominated; 1 mode-gap（s/m̂）
+- ★ 不可證偽性定理: M={m=M₀γC, C∈ℝ⁺} 對 C 主導比 P(mismatch)=0（形式閉合 round-2 四大 🔴）
+- ★ s/m̂ 模式閘: 4 個幾何中點候選全敗（C 放大 9.5-11×）⟹ mode-gap 真
+- ★ 混標度通知: 凍結層 C_c/C_s = 3.86 vs O233 池 4.50（15%）——m_c(m_c) vs m_s(2GeV); rank 結構不受影响; O209 handoff 已發
+- 🟡 freeze v2 待辦: RGI_b 入層; m_c/m_s 兩值決策; +1% m_s/m_u 未來量度 = killer out-of-sample

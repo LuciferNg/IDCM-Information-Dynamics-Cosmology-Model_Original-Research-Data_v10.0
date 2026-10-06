@@ -78,6 +78,16 @@ FLAG 2024 + PDG 2024），由觀測比值反解「任何公式必須滿足嘅 (n
     用 FLAG 真誤差 z=0.10 —— 喺 1σ 內但係 by-construction 恆等值, 無獨立信息
 🟢 b/c 所需 C 比近命中（scripts/02 S1a, nominal）: C_b/C_c = 1.3746 vs 44/33 = 1.3333 dev 3.0%,
     池成員涉 look-elsewhere（O233 R20 先例）⟹ 維持 nominal, 唔入 PASS 計數
+🟢 C-shape 完全釘死（round 2, scripts/03 B1）: shape DOF = 0（8 C − 6 約束 − 2 扇區標度）;
+    反解 u=1 d=0.958 s=10.78 c=41.59 b=57.16（夸克 anchor=1）; e=1 μ=8.36 τ=44.42（輕子 anchor=1）
+🟢 檢驗能力清單（scripts/03 C1）: 9 比 = 1 γ-testable（d/u 0.85σ）+ 7 C-dominated + 1 mode-gap（s/m̂）
+🟢 不可證偽性定理（scripts/04 A1）: M={m=M₀γC, C∈ℝ⁺} 對 C-dominated 比 P(mismatch)=0
+🟢 LOOCV（scripts/04 B1）: redundancy = 0（6 約束全部必要）; out-of-sample = 凍結層 v2+ 新量度
+    （1% 精度 ms/mu = 唯一非 assignment 內含測試）
+🟢 s/m̂ 模式閘負面（scripts/04 C1）: 算術/幾何/半整數/調和中點全敗（C 放大 9.5-11× ⟹ mode-gap 真）
+🟢 混標度更正通知（docs/02 §六）: C_c/C_s 同 scheme 3.86 vs O233 池隱含 4.50（15%, m_c(m_c) vs
+    m_s(2GeV)）; O233 正結果（質量 rank 次序）不受影响; O209 Id(f) watch（register handoff 已發）
+🟡 凍結層 v1.1 內部張力: m_c/m_s 11.85(16) vs 11.652(65) z=+1.15（freeze v2 決策點）
 🔴 s/m̂ 池掃描（scripts/02 §3, 診斷性）: F₁₀/2 = 27.5 vs 27.227(81) = +1.0% = 3.3σ 未命中; 其他池值亦無
     1σ 內命中 ⟹ 0.3% 精度下有牙
 ```
@@ -85,15 +95,17 @@ FLAG 2024 + PDG 2024），由觀測比值反解「任何公式必須滿足嘅 (n
 ## 三、未確立（🔴 開放問題）
 
 ```
-🔴 反推約束完整解集: 由凍結 FLAG ratio 同時反解 (n, C) 嘅約束系統（scripts/02 §1 已開始）——解集
-   大小 / 唯一性 / 密度 null 未完成
-🔴 C_f 主導比嘅檢驗能力: c/s, b/c 純 γ 全滅; 若 C_f 生成器唔閉合（O233 負結果已知）→ 呢啲比
-   結構上不可檢驗?（需形式證明: C_f 主導 ⟹ 無 C_f 來源 ⟹ 不可證偽）
-🔴 s/m̂ 模式對應: FLAG ms/m̂ 0.3% 精度係最強觀測量, 但 IDCM 冇「輕夸克平均質量」模式
-   —— 有冇結構閘?（m̂ = (m_u+m_d)/2 對應 γ 幾何中點?）
-🔴 LOOCV 盲測: 留一 ratio 出嚟, 由剩餘 4 個反推預言——out-of-sample 命中率未跑
-🔴 重夸克 scheme 轉換: m_c(m_c)/m_s(2GeV) = 13.6 vs m_c/m_s (同 scheme) = 11.85 —— 跑動效應
-   本身要 4-loop RGE 實作先可以入凍結層（今日用 FLAG 提供嘅同 scheme 值避開）
+🔴 → ✅ (round 2, scripts/03 B1) 反推約束完整解集: shape DOF = 0; 解集 = 唯一 C-shape
+    （up to 2 扇區標度）
+🔴 → ✅ (round 2, scripts/04 A1) C_f 主導比檢驗能力: 模型類 {m=M₀γC, C∈ℝ⁺} 不可證偽;
+    9 比中 8 個 C-dominated/mode-gap
+🔴 → ✅ (round 2, scripts/04 C1) s/m̂ 模式對應: 4 個幾何中點候選全敗 ⟹ mode-gap 真缺口
+🔴 → ✅ (round 2, scripts/04 B1) LOOCV: redundancy=0; 真 out-of-sample = 凍結層 v2+ 新量度
+🔴 → 🟡 重夸克 scheme 轉換: 主用 FLAG Nf=4 m_c/m_s = 11.652(65) 繞過混標度; 4-loop RGE 實作
+    係 freeze v2 可選項
+🟡 凍結層 v1.1 內部張力: m_c/m_s 兩值 z = +1.15（freeze v2 決策點）
+🔴 RGI_b 入凍結層: FLAG §4.3 完整讀 + m_b(RGI)/m_s(RGI) 做第四條夸克約束（redundancy 0 → 1）
+🔴 1% 精度 m_s/m_u 未來量度: 唯一非 assignment 內含嘅 out-of-sample 測試
 ```
 
 ## 四、攻擊路線
@@ -128,6 +140,8 @@ FLAG 2024 + PDG 2024），由觀測比值反解「任何公式必須滿足嘅 (n
 | 2 | 2026-10-06 | 歸屬審計 6 項（全部已有主, 合成型保留, fence 建立） | 本檔 §〇 |
 | 3 | 2026-10-06 | 凍結觀測層 + RGI 自洽 + Gemini claim 審計 + 前向 z-score | scripts/01, data/01 |
 | 4 | 2026-10-06 | 反推引擎: C 約束解集 + 枚舉密度 null + s/m̂ 池掃描 + P2 循環證明 | scripts/02, data/02 |
+| 5 | 2026-10-06 | Round2: 凍結層導出比 + DOF 審計（shape DOF=0）+ 檢驗能力清單（1/9 γ-testable） | scripts/03, data/03, docs/02 |
+| 6 | 2026-10-06 | Round2: 不可證偽性定理 + LOOCV redundancy=0 + s/m̂ 閘負面 + 混標度通知 | scripts/04, docs/02 |
 
 ## 七、相關文件
 
