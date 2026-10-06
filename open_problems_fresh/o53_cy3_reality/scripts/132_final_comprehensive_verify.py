@@ -213,9 +213,12 @@ except Exception as e:
     warnings.append(f"[6] 孤島: {str(e)[:50]}")
 
 # ═══════════════════════════════════════════════════════
-# 7. A2: φ⁻⁵ 量子化
+# 7. A2: φ⁻⁵ 量子化 ⚠️ 2026-10-05 已撤回!
+#         jstar_quantized.json 檔案名=人為量化 (tautology);
+#         單位掃描 unit-search z=3.24σ < 5σ (見 docs/38).
+#         本檢查只記錄 "quantized 檔案內嘅命中率", 唔係獨立結構證明.
 # ═══════════════════════════════════════════════════════
-print("\n[7] A2 φ⁻⁵ 量子化:")
+print("\n[7] A2 φ⁻⁵ 量子化 (⚠️ 已撤回: quantized 檔案 tautology, unit-search z=3.24σ):")
 try:
     with open(os.path.join(orig_base, "jstar_quantized.json")) as f:
         qt = json.load(f)

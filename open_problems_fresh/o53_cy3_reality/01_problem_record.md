@@ -1,8 +1,8 @@
 # O53 — CY₃(36,98) 真實性 + 開放性問題
 
 > **創建日期**: 2026-08-21
-> **狀態**: 🟢 **強閉合: 3×12 block 結構 (z=9.69σ) + (36,98) 唯一性 (15/15 vs 0/4) + Hodge K_Chain 閉合 (36=Nd−2B, 98=Σγ+2B)；A2 部分閉合 (φ⁻⁵ 量子化 z=7.84σ)；A1 → O55 (SM 群中心 Z_3 投影) 已承接閉合**
-> **狀態附註 (2026-10-05 closeout)**: ①「孤島 (2 個)」陳述已被 O58 docs/04+06 修正 — HF metadata h11/h12 swap，真實 (36,98) = 5,021 個（0.041% 罕有相，非孤島）；3×12 block + Hodge K_Chain 閉合（用 all_36_98.poly + CYTools）不受影響 ✅；② A1 承接者係 **O55**（O54 係 antimatter_abundance 屬命名錯誤）— O55 已閉合 (15/15 + H1/H2 + 324 Co-Closure)
+> **狀態**: 🟢 **強閉合: 3×12 block 結構 (z=9.69σ) + (36,98) 唯一性 (15/15 vs 0/4) + Hodge K_Chain 閉合 (36=Nd−2B, 98=Σγ+2B)；A1 → O55 (SM 群中心 Z_3 投影) 已承接閉合；A2 🔴 開放 (φ⁻⁵ 宣稱已撤回)**
+> **狀態附註 (2026-10-05 closeout)**: ①「孤島 (2 個)」陳述已被 O58 docs/04+06 修正 — HF metadata h11/h12 swap，真實 (36,98) = 5,021 個（0.041% 罕有相，非孤島）；3×12 block + Hodge K_Chain 閉合（用 all_36_98.poly + CYTools）不受影響 ✅；② A1 承接者係 **O55**（O54 係 antimatter_abundance 屬命名錯誤）— O55 已閉合 (15/15 + H1/H2 + 324 Co-Closure)；③ **A2 φ⁻⁵ 量子化宣稱已撤回**（docs/38）— jstar_quantized.json 檔案名=人為量化（循環論證），單位掃描 unit-search z=3.24σ < 5σ，幾何合法對照 jstar_kahler 19% = 隨機 → A2 保持開放
 > **來源**: O50 前置問題「CY₃(36,98) 存唔存在？」+ 調律者「景觀問題逆向工程」（後撤回）
 > **驗證**: 官方 KS 數據庫 (alltoric.spec 30,108 pairs + toric.spec 10,238 pairs)
 > **交接**: 見 SESSION_START.md（撤回記錄 + 開放性問題）
