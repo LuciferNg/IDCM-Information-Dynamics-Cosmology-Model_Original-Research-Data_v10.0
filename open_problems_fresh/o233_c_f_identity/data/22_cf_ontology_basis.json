@@ -1,0 +1,106 @@
+{
+  "M0_MeV": 27.900915,
+  "N_D": 88,
+  "constitution": {
+    "formula": "C_f = m_f / (M0 * gamma_n)",
+    "elements": [
+      "m_f (observable mass, PDG)",
+      "M0 (world mass quantum, O120)",
+      "gamma_n = 4sin^2(n*pi/88) (K_chain spectrum)"
+    ],
+    "ontological_status": "relation (quotient coordinate), not entity; dimensionless => cannot anchor (docs/16 s8)"
+  },
+  "location": {
+    "quotient_space": "M/Gamma: mass spectrum projected onto chain-lattice scale basis",
+    "layer": "identity layer of chirality without VEV mass",
+    "t_anomaly": {
+      "C_f_t": 7722.80733,
+      "other_8_range": [
+        3.5941,
+        255.7517
+      ],
+      "reason": "t-slot = T3 non-forcing + VEV removal (R19) => t mass taken over by VEV, outside C_f family"
+    }
+  },
+  "principle": {
+    "factorization": "m_f = M0 * Gamma(n) * Id(f)",
+    "structure_factor": "gamma_n order = m order EXACT zero inversions; m_d/m_u = 2.1620 EXACT (docs/15)",
+    "identity_factor": "C_f = quotient coordinate; sawtooth Z2 docs/14; slot T3xO210 docs/13+17; blocks docs/16"
+  },
+  "fermions": [
+    {
+      "name": "e",
+      "m_MeV": 0.51099895,
+      "n": 1,
+      "gamma": 0.0050957708,
+      "M0_gamma": 0.1421766674,
+      "C_f": 3.594113
+    },
+    {
+      "name": "u",
+      "m_MeV": 2.16,
+      "n": 2,
+      "gamma": 0.0203571162,
+      "M0_gamma": 0.5679821698,
+      "C_f": 3.802936
+    },
+    {
+      "name": "d",
+      "m_MeV": 4.67,
+      "n": 3,
+      "gamma": 0.0457062681,
+      "M0_gamma": 1.2752467,
+      "C_f": 3.662037
+    },
+    {
+      "name": "s",
+      "m_MeV": 93.4,
+      "n": 4,
+      "gamma": 0.0810140528,
+      "M0_gamma": 2.2603662002,
+      "C_f": 41.320738
+    },
+    {
+      "name": "mu",
+      "m_MeV": 105.6583755,
+      "n": 5,
+      "gamma": 0.12610055,
+      "M0_gamma": 3.518320727,
+      "C_f": 30.030911
+    },
+    {
+      "name": "c",
+      "m_MeV": 1270.0,
+      "n": 7,
+      "gamma": 0.2446420209,
+      "M0_gamma": 6.8257362296,
+      "C_f": 186.060515
+    },
+    {
+      "name": "tau",
+      "m_MeV": 1776.86,
+      "n": 9,
+      "gamma": 0.3989175182,
+      "M0_gamma": 11.1301637659,
+      "C_f": 159.643653
+    },
+    {
+      "name": "b",
+      "m_MeV": 4180.0,
+      "n": 11,
+      "gamma": 0.5857864376,
+      "M0_gamma": 16.3439776044,
+      "C_f": 255.751697
+    },
+    {
+      "name": "t",
+      "m_MeV": 172690.0,
+      "n": 13,
+      "gamma": 0.801444667,
+      "M0_gamma": 22.3610395305,
+      "C_f": 7722.80733
+    }
+  ],
+  "inversions_in_Cf_along_gamma": 3,
+  "verdict": "ontology statement constructed; C_f = identity coordinate (relation, not entity); mass mechanism = structure x identity factorization; absolute value generation -> O209"
+}

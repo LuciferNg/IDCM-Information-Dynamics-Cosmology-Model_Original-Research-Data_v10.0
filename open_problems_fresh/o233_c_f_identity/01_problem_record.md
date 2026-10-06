@@ -116,6 +116,7 @@ source:  O206 第10-15輪（O120 session 內越界完成, 2026-10-06, 調律者�
 | 18 | 2026-10-06 | 第二十二輪：κ 非對角盲測 🔴 負（0 hits, P=1.0）| docs/18, scripts/20 |
 | 19 | 2026-10-06 | 第二十三輪：O152 註冊常數全集擴池 🔴 負（P=0.285）| docs/19, scripts/21 |
 | 20 | 2026-10-06 | ★ **用戶裁決：C_f 結果負閉合** — verdict partial → negative；主問題「C_f 結構身份」= 確定嘅負結果（5 線全負 ⟹ 無算子身份, docs/19 §三）；關係結構正結果不受影響 | register reopen + close(negative) + 本檔 + SESSION_START + final_result + README |
+| 21 | 2026-10-06 | ★ **調律者三問：C_f 本體論論述** — ①構成=三元商 m/(M₀γ_n)（關係非實體）②住處=M/Γ 商空間身份層（t=7722.8 證實 VEV 分離）③原理=質量雙因子 m=M₀·γ_n·Id(f) ⟹ docs/20 + scripts/22 | docs/20, scripts/22 |
 
 > ⚠️ **2026-10-06 19:00 更正註記**：register 原 close verdict=partial（18:50, 並行 session c37533）；用戶裁決「C_f 結果負閉合」⟹ **reopen + close verdict=negative**（append-only，原 partial 事件保留）——主問題「C_f 結構身份」5 線全負 = 結構性負結果，最終 state=closed verdict=negative。
 >
