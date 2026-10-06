@@ -87,6 +87,14 @@
 | 2026-08-24 | **O58 修正孤島統計 (HF swap)** | O58 docs/04+06 |
 | 2026-10-05 | 第二輪驗證 (scripts/132, 10/10) | docs/36 |
 | 2026-10-05 | **正式 closeout + 交接處理** | 本文件 |
+| 2026-10-05 | **A2 φ⁻⁵ 撤回**（quantized 檔案 tautology + unit-search z=3.24σ） | docs/38 |
+| 2026-10-05 | **O59 handoff 處理**（κ 切片 0/36 full-rank；block 閉合唔受影響） | docs/39 |
+| 2026-10-05 | **A2 最終裁決：J* 係 fit artifact**（生成 code 硬編 φ⁻⁵ 初始值）→ A2 負面閉合 | docs/40 |
+
+> **⚠️ 2026-10-05 A2 狀態最終修正**：本文件上文「A2 部分閉合」字樣全部過時。A2 最終狀態 = 🔴 **負面閉合**（docs/40）：
+> J* 從未成功構造（J_STAR_OPTIMIZATION.md 自認 "not yet reached"）；所有 jstar_*.json 均為未完成優化殘骸
+> 或人為初始值殘留（T_UNIFORM=0.0901406≈1/φ⁵ 為硬編 input）；「81% φ⁻⁵ 量子化」=73% 初始值殘留＋被郁動維度 3/10=30%。
+> 『J*』名稱已列 register ⛔ 禁區，永久退役。K_Chain↔CY₃ 幾何正路 = CYTools cone tip（O57/O58 承接）。
 
 ---
 
