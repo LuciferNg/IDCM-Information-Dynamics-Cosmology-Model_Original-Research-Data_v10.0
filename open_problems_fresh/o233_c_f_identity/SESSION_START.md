@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O233
 title:   C_f 結構身份：生成器 hunt → 鋸齒/Z₂ → lepton 槽 n≡1 (mod 4)（由 O206 第10-15輪轉移）
-state:   closed
-verdict: negative
+state:   partial
+verdict: partial
 flags:   -
 owner:   O233
 created: 2026-10-06
@@ -14,7 +14,7 @@ source:  O206 第10-15輪（O120 session 內越界完成, 2026-10-06, 調律者�
 -->
 
 > **Session**: 2026-10-06（由 O206 承接轉移）
-> **狀態**: 🟡 **已承接 O206 第10-15輪推導**（git mv 自 O206）
+> **狀態**: 🟡 **部分閉合 (2026-10-06 closeout, verdict=partial)**：5 項結構正結果閉合（鋸齒=輕子/夸克分離、γ階梯升序、u/d 身份穩健、輕子槽=T3×O210 群層 iso 🟡⁺、d/t 槽機制）；C_f 生成器 5 線全負 = 結構性負結果（無算子身份, docs/19 §三）——**生成器子問題負閉合，O233 整體 partial**
 > **來源**: O206 第十至十五輪（C_f 推導；原於 O120 session 內越界完成, 調律者裁決開新 O 轉移）
 > **前置**: O120, O137, O206
 > **位置**: `open_problems_fresh/o233_c_f_identity/`
@@ -184,3 +184,13 @@ p=0.00117、兩者獨立同時極端、u/d 身份層穩健、lepton 槽 n≡1 mo
   handoff O233→O209（C_f 絕對值生成）不變；01_problem_record §三 開放判定不變。
 - 本次修正範圍：register + 01_problem_record（frontmatter/狀態行/§六 row 20/水位 row 9）+
   SESSION_START（本 § + frontmatter）+ final_result 狀態行 + README 狀態行。
+
+## 十六、append 2026-10-06（★★ 審計還原：verdict negative → partial，c37533 主 session）
+
+- **背景**：O209 session（19:03 commit 85c9943）代 O233 執行「負結果閉合」——register reopen→close(negative) 四檔狀態行 + root README 改 🟢。
+- **審計發現（c37533, 19:36）**：
+  ① **框定錯誤**：O233 主問題「C_f 結構身份」有 **5 項正結果閉合**（鋸齒=輕子/夸克分離、γ階梯升序、u/d 身份、輕子槽=T3×O210 iso 🟡⁺、d/t 槽機制）——docs/19 §四 原文「O233 保留 C_f 嘅關係結構結論（鋸齒/槽/升序, **已閉合**）＋ 生成器喺常數組合框架內**不存在**嘅確定負結果」= **partial**；O209 只引 §三（生成器子問題）斷章成「主問題 = 確定負結果」。
+  ② **執行錯誤**：SESSION_START 狀態行漏同步（frontmatter 已改但狀態行仍 🟡 舊值）；final_result emoji 🔴（RESULT_TEMPLATE 🔴 = 開放, 負閉合應 🟢）；root README typo「由 O206 係 git mv 轉移」（「係」字多餘）。
+  ③ **用戶裁決無 verdict 指示**：用戶裁決原文 =「錨不是參數、C_f 並非有量綱」（docs/16 §八）⟹ 撤回「獨立錨」、要求 C_f 有結構身份先收檔——**冇**「C_f 整體負閉合」內容；O209 將「唔可以錨收檔」推論成「verdict=negative」係過度。
+- **還原動作（append-only，O209 事件原樣保留）**：register reopen(審計更正)→close(verdict=partial)；四檔狀態行 🟡 partial（5 正 + 1 負）；frontmatter partial/partial；root README 🟡 partial + typo 修正；docs/19 §四 堅持 = 權威結論。
+- **最終狀態**：**state=partial verdict=partial**（生成器子問題 = 確定負結果，O233 整體 = partial）。

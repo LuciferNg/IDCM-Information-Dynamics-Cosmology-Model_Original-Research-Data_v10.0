@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O233
 title:   C_f 結構身份：生成器 hunt → 鋸齒/Z₂ → lepton 槽 n≡1 (mod 4)（由 O206 第10-15輪轉移）
-state:   closed
-verdict: negative
+state:   partial
+verdict: partial
 flags:   -
 owner:   O233
 created: 2026-10-06
@@ -13,7 +13,7 @@ prereq:  O120, O137, O206
 source:  O206 第10-15輪（O120 session 內越界完成, 2026-10-06, 調律者裁決轉移）
 -->
 
-> **狀態**: 🟢 **負閉合 (2026-10-06 用戶裁決 verdict=negative)**：C_f 生成器 5 線全負 = 結構性負結果（無算子身份, docs/19 §三）；4 項結構正結果（鋸齒/槽/升序/d 槽）已記錄不受影響
+> **狀態**: 🟡 **部分閉合 (2026-10-06 closeout, verdict=partial)**：5 項結構正結果閉合（鋸齒=輕子/夸克分離、γ階梯升序、u/d 身份穩健、輕子槽=T3×O210 群層 iso 🟡⁺、d/t 槽機制）；C_f 生成器 5 線全負 = 結構性負結果（無算子身份, docs/19 §三）——**生成器子問題負閉合，O233 整體 partial**
 > **建立**: 2026-10-06（轉移日）
 > **前置**: O120（C_f = m_f/(M₀γ_n) 之商定義）、O137（合法模式集 + R19 A₅ 指派）、O206（γ-階梯/塊層 v8-v10 推導）
 > **位置**: `open_problems_fresh/o233_c_f_identity/`
@@ -118,6 +118,8 @@ source:  O206 第10-15輪（O120 session 內越界完成, 2026-10-06, 調律者�
 | 20 | 2026-10-06 | ★ **用戶裁決：C_f 結果負閉合** — verdict partial → negative；主問題「C_f 結構身份」= 確定嘅負結果（5 線全負 ⟹ 無算子身份, docs/19 §三）；關係結構正結果不受影響 | register reopen + close(negative) + 本檔 + SESSION_START + final_result + README |
 
 > ⚠️ **2026-10-06 19:00 更正註記**：register 原 close verdict=partial（18:50, 並行 session c37533）；用戶裁決「C_f 結果負閉合」⟹ **reopen + close verdict=negative**（append-only，原 partial 事件保留）——主問題「C_f 結構身份」5 線全負 = 結構性負結果，最終 state=closed verdict=negative。
+>
+> ⚠️ **2026-10-06 19:36 審計還原註記**：O209 代執行之 verdict=negative 係**框定錯誤**——docs/19 §四 權威結論係「O233 保留 C_f 關係結構結論（鋸齒/槽/升序, **已閉合**）＋ 生成器**喺常數組合框架內不存在**嘅確定負結果」= **5 正 + 1 負 = partial**；O209 引 §三（僅生成器子問題）斷章；用戶裁決（docs/16 §八「錨不是參數、C_f 無量綱」）**冇** verdict=negative 指示。register 還原：reopen→close(verdict=partial)，最終 **state=partial verdict=partial**（O209 事件 append-only 原樣保留）。
 
 ## 六之二、檔案閉合水位（close-out watermark, 2026-10-06 closeout）
 
