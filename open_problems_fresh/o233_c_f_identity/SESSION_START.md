@@ -17,7 +17,7 @@ source:  O206 第10-15輪（O120 session 內越界完成, 2026-10-06, 調律者�
 > **狀態**: 🟡 **已承接 O206 第10-15輪推導**（git mv 自 O206）
 > **來源**: O206 第十至十五輪（C_f 推導；原於 O120 session 內越界完成, 調律者裁決開新 O 轉移）
 > **前置**: O120, O137, O206
-> **位置**: `open_problems_fresh/o233_c_f_hunt_z_lepton_n_1_mod_4_o206_10_15/`
+> **位置**: `open_problems_fresh/o233_c_f_identity/`
 
 ---
 
