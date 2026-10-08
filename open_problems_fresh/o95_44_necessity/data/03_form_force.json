@@ -1,0 +1,142 @@
+{
+  "theorem_1": "K_Chain has dual structure: geometric (B) x algebraic (R)",
+  "theorem_2": "88-site dual chain requires Nd = B x R",
+  "theorem_3": "Non-product form breaks dual-chain structure",
+  "theorem_4": "Nd = B x R = 4 x 11 = 44 is structurally forced",
+  "extended_search": {
+    "range": "1..300",
+    "survivors": [
+      [
+        44,
+        4,
+        11
+      ]
+    ],
+    "unique_solution": true
+  },
+  "test_Ns": {
+    "40": {
+      "factors": [
+        [
+          2,
+          20
+        ]
+      ],
+      "survives_all": false
+    },
+    "42": {
+      "factors": [
+        [
+          2,
+          21
+        ],
+        [
+          3,
+          14
+        ]
+      ],
+      "survives_all": false
+    },
+    "43": {
+      "factors": [],
+      "survives_all": false
+    },
+    "44": {
+      "factors": [
+        [
+          2,
+          22
+        ],
+        [
+          4,
+          11
+        ]
+      ],
+      "survives_all": true
+    },
+    "45": {
+      "factors": [
+        [
+          3,
+          15
+        ]
+      ],
+      "survives_all": false
+    },
+    "46": {
+      "factors": [
+        [
+          2,
+          23
+        ]
+      ],
+      "survives_all": false
+    },
+    "48": {
+      "factors": [
+        [
+          2,
+          24
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          4,
+          12
+        ]
+      ],
+      "survives_all": false
+    },
+    "50": {
+      "factors": [
+        [
+          2,
+          25
+        ]
+      ],
+      "survives_all": false
+    },
+    "55": {
+      "factors": [
+        [
+          5,
+          11
+        ]
+      ],
+      "survives_all": false
+    },
+    "87": {
+      "factors": [
+        [
+          3,
+          29
+        ]
+      ],
+      "survives_all": false
+    },
+    "116": {
+      "factors": [
+        [
+          2,
+          58
+        ],
+        [
+          4,
+          29
+        ]
+      ],
+      "survives_all": false
+    },
+    "121": {
+      "factors": [
+        [
+          11,
+          11
+        ]
+      ],
+      "survives_all": false
+    }
+  }
+}

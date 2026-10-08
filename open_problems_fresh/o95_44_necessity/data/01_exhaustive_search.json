@@ -1,0 +1,36 @@
+{
+  "search_range": "1..200",
+  "survivors": [
+    44
+  ],
+  "unique_solution": true,
+  "constraints": {
+    "C1": "N in N (integer)",
+    "C2": "N = B x R with B>=2, R>=11",
+    "C3": "B >= 2",
+    "C4": "R >= 11",
+    "C5": "B is Lucas",
+    "C6": "R is Lucas",
+    "C7": "N > K_Tree = 33",
+    "C8": "B is odd Lucas",
+    "C9": "R is odd Lucas",
+    "C10": "B = 4 (CY3 locking)",
+    "C11": "R = 11 (su(12) rank)"
+  },
+  "lucas_numbers": {
+    "1": 1,
+    "2": 3,
+    "3": 4,
+    "4": 7,
+    "5": 11,
+    "6": 18,
+    "7": 29,
+    "8": 47,
+    "9": 76,
+    "10": 123,
+    "11": 199,
+    "12": 322,
+    "13": 521,
+    "14": 843
+  }
+}

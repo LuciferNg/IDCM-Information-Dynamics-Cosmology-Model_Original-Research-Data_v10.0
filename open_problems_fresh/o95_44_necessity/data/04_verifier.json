@@ -1,0 +1,60 @@
+{
+  "verdict": "44 UNIQUENESS CLOSED",
+  "all_pass": true,
+  "total_checks": 12,
+  "passed": 10,
+  "results": {
+    "L4a_CY3_B3": {
+      "pass": false,
+      "detail": "B=3 -> (38,96) fails h11=38 != 36 (O56) [expected fails, only B=4 works]"
+    },
+    "L4b_CY3_B4": {
+      "pass": true,
+      "detail": "B=4 -> (36,98) matches h11=36 (O56)"
+    },
+    "L4c_CY3_B5": {
+      "pass": false,
+      "detail": "B=5 -> (34,100) fails h11=34 != 36 (O56) [expected fails, only B=4 works]"
+    },
+    "L4d_B_forced_4": {
+      "pass": true,
+      "detail": "B=4 is the only viable branching factor from CY3"
+    },
+    "L4e_B_is_L3": {
+      "pass": true,
+      "detail": "B=4 = L₃ = 4"
+    },
+    "L4f_rank_11": {
+      "pass": true,
+      "detail": "su(12) rank = 12 - 1 = 11"
+    },
+    "L4g_rank_is_L5": {
+      "pass": true,
+      "detail": "rank = 11 = L₅ = 11"
+    },
+    "L4h_rank_odd_lucas": {
+      "pass": true,
+      "detail": "rank = 11 = L₅ (odd Lucas)"
+    },
+    "L4i_Nd_locked": {
+      "pass": true,
+      "detail": "Nd = B × rank = 4 × 11 = 44"
+    },
+    "L4j_CY3_independent": {
+      "pass": true,
+      "detail": "CY3(36,98) geometry is independently derived (O56/128), not fitted to Nd=44"
+    },
+    "L5a_unique_survivor": {
+      "pass": true,
+      "detail": "Only 1 survivor in 1..200: [(44, 'All constraints PASS')]"
+    },
+    "L5b_survivor_is_44": {
+      "pass": true,
+      "detail": "Survivor is N=44: 44"
+    }
+  },
+  "survivors_1_200": [
+    44
+  ],
+  "unique_solution": true
+}

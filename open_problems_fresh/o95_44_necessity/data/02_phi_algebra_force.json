@@ -1,0 +1,78 @@
+{
+  "theorem_1": "B must be odd Lucas number",
+  "B_forced": {
+    "L3": 4,
+    "reason": "pure phi algebraic integer + difference formula + B>=2"
+  },
+  "theorem_2": "Rank must be odd Lucas number",
+  "rank_forced": {
+    "L5": 11,
+    "reason": "pure phi algebraic integer + difference formula + rank>=11"
+  },
+  "theorem_3": "Nd = B x rank = L3 x L5 = 4 x 11 = 44",
+  "verification": {
+    "odd_diff_formula": {
+      "1": {
+        "phi_diff": 1.0,
+        "L_n": 1,
+        "match": true
+      },
+      "3": {
+        "phi_diff": 4.0,
+        "L_n": 4,
+        "match": true
+      },
+      "5": {
+        "phi_diff": 11.000000000000002,
+        "L_n": 11,
+        "match": true
+      },
+      "7": {
+        "phi_diff": 29.000000000000007,
+        "L_n": 29,
+        "match": true
+      },
+      "9": {
+        "phi_diff": 76.00000000000003,
+        "L_n": 76,
+        "match": true
+      },
+      "11": {
+        "phi_diff": 199.00000000000006,
+        "L_n": 199,
+        "match": true
+      }
+    },
+    "even_sum_formula": {
+      "2": {
+        "phi_sum": 3.0,
+        "L_n": 3,
+        "match": true
+      },
+      "4": {
+        "phi_sum": 7.000000000000001,
+        "L_n": 7,
+        "match": true
+      },
+      "6": {
+        "phi_sum": 18.000000000000004,
+        "L_n": 18,
+        "match": true
+      },
+      "8": {
+        "phi_sum": 47.000000000000014,
+        "L_n": 47,
+        "match": true
+      },
+      "10": {
+        "phi_sum": 123.00000000000004,
+        "L_n": 123,
+        "match": true
+      }
+    },
+    "L1_degenerate": {
+      "value": 1,
+      "reason": "B>=2, rank>=11 hard constraint"
+    }
+  }
+}
