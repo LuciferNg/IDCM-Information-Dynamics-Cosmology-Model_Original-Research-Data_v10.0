@@ -111,3 +111,42 @@ O137 Round 19 遺留 2 證得：**「4-正則 + 等邊」兩條件合取唯一�
 > - 🔴 腔室測度 3.07% vs 3.74% −1.38σ → **✅ 已解決**：本 O 3.70% (N=25000) 與 docs/33 3.74% 一致；docs/36 3.07% 係 1500 樣本小樣本漲落
 >
 > **完整推導**: docs/02_derivation.md；logs/01_output.txt + logs/02_output.txt；data/01_scan.json + data/02_strengthen.json
+
+---
+
+## 九、推導時序索引 + 檔案閉合水位（close-out watermark, 2026-10-08）
+
+### 第 1 輪 (2026-10-08) — 攻堅閉合
+
+| # | 日期 | 步驟 | 產物 | 結果 |
+|:-:|:-----|:-----|:-----|:-----|
+| 1 | 10-08 | 讀上游權威（O137 docs/32/33/34/36、O143 docs/08、O182、O213） | — | 確認 O217 範圍、88=2N_d 輸入、腔室表 |
+| 2 | 10-08 | scripts/01（I 群四元數構造 → 25000 樣本腔室掃描 → 逐類 MILP） | scripts/01_four_regular_necessity.py, logs/01_output.txt, data/01_scan.json | **8/8 PASS**；唯一 E−mono=88 = (120,20,32) |
+| 3 | 10-08 | scripts/02（20000 樣本完備性 + 每類 3 樣本 MILP 類內穩定 + 正則性 + docs/32 上界核對） | scripts/02_strengthen.py, logs/02_output.txt, data/02_strengthen.json | **25/25 PASS**；MaxCut 類內恆定；4-正則度數 {4:60} |
+| 4 | 10-08 | docs/02 推導記錄 | docs/02_derivation.md | 完整鏈、計算證據、驗證標準對照 |
+| 5 | 10-08 | RESULT.md + SESSION_START 狀態 + register close | RESULT.md, SESSION_START.md, register | 🟢 已閉合 |
+| 6 | 10-08 | 全 Session 鏈 closeout：session DB provenance（thread 104121 兩 session） | — | 26 寫入全部指向本 O；無 /tmp 寫入 |
+| 7 | 10-08 | scripts/03 獨立 verifier（二十面體頂點對構造 I 群、面結構上界、greedy、triangle-cover；無 MILP、無 quaternion） | scripts/03_audit_independent.py, logs/03_audit_output.txt | **18/18 PASS**；唯一 88 鏈獨立重建 |
+
+### 檔案閉合水位
+
+| # | 檔案 | 上次檔案更新 (mtime) | 上次 closed-out | 已驗範圍 | 狀態 |
+|:-:|:-----|:---------------------|:----------------|:---------|:-----|
+| 1 | docs/01_problem_record.md | 2026-10-08 | 2026-10-08 | 全文 + 本輪 append | ✅ 已驗 |
+| 2 | docs/02_derivation.md | 2026-10-08 | 2026-10-08 | 全文 | ✅ 已驗 |
+| 3 | scripts/01_four_regular_necessity.py | 2026-10-08 17:50 | 2026-10-08 | 全文（重跑 8/8） | ✅ 已驗 |
+| 4 | scripts/02_strengthen.py | 2026-10-08 18:27 | 2026-10-08 | 全文（重跑 25/25） | ✅ 已驗 |
+| 5 | scripts/03_audit_independent.py | 2026-10-08 | 2026-10-08 | 全文（18/18） | ✅ 已驗 |
+| 6 | logs/01_output.txt | 2026-10-08 17:52 | 2026-10-08 | PASS 8/8 尾行 | ✅ 已驗 |
+| 7 | logs/02_output.txt | 2026-10-08 18:29 | 2026-10-08 | PASS 25/25 尾行 | ✅ 已驗 |
+| 8 | logs/03_audit_output.txt | 2026-10-08 | 2026-10-08 | PASS 18/18 尾行 | ✅ 已驗 |
+| 9 | data/01_scan.json | 2026-10-08 17:52 | 2026-10-08 | 8 類 + MILP 表 | ✅ 已驗 |
+| 10 | data/02_strengthen.json | 2026-10-08 18:29 | 2026-10-08 | 類內恆定 + 唯一 88 | ✅ 已驗 |
+| 11 | RESULT.md | 2026-10-08 | 2026-10-08 | 全文 | ✅ 已驗 |
+| 12 | SESSION_START.md | 2026-10-08 | 2026-10-08 | 檔頭 + 驗證標準 | ✅ 已驗 |
+
+### 時序完整性確認
+
+- 推導次序：scripts/01 (17:50) → logs/01 (17:52) → data/01 (17:52) → scripts/02 (18:27) → logs/02 + data/02 (18:29) → docs/02 (18:33) → RESULT/SESSION/register (18:33) → scripts/03 (closeout 輪, 18:44+) — docs 全部喺 scripts 之後，無回溯污染。
+- SESSION_START 係 2026-09-25 快照，正文未改；只更新檔頭狀態行（live field）＋驗證標準打勾（同 §9.1 三處同步規則）。
+- append-only：01_problem_record.md 前 113 行 md5 = 13e5e02e 保持不變（於 2026-10-08 記錄），本節純 append。

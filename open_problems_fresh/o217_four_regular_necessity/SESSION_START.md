@@ -57,3 +57,17 @@ MaxCut(RH) = 88 = 2N_d（MILP 精確）
 - 零參數；禁看到目標湊算子；禁循環論證
 - 出唔到就誠實標 🔴
 - 只改本 O 檔案
+
+---
+
+## 跨O drift 登記 — O240 → O217 (2026-10-08, append-only)
+
+> 來源 O: `o240_vacuum_energy_full_closure`（register check 發現）
+> 性質: STATUS-DRIFT = register=closed vs README=open（純登記，唔就地修）
+> 本 O session 有權刪去或改寫本節。
+
+**發現**: register.jsonl 2026-10-08 18:34:12 已將 O217 改為 closed（「4-正則由 88=2N_d 透明通道+唯一腔室(120,20,32)+頂點傳遞導出; scripts/01 8/8」），但 `open_problems_fresh/README.md:159` 仍顯示「🔴 已註冊 — 未開始 (2026-09-25)」。
+
+**建議**: O217 自行收尾時同步 README 狀態行（開新 commit，append-only）。O240 只登記唔代改（大 O 紀律）。
+
+**驗證**: `/usr/bin/python3 problem_register/register.py check` → [STATUS-DRIFT] 1 (O217 register=closed README=open)。

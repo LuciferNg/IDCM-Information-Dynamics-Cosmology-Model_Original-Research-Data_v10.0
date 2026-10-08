@@ -2,8 +2,8 @@
 
 > **日期**: 2026-10-08（攻堅輪）
 > **狀態**: 🟢 已閉合 — 4-正則由「88 透明通道」第一性原理導出（零參數、零循環）
-> **腳本**: `scripts/01_four_regular_necessity.py`（8/8 PASS）、`scripts/02_strengthen.py`（25/25 PASS）
-> **logs**: `logs/01_output.txt`、`logs/02_output.txt`；**data**: `data/01_scan.json`、`data/02_strengthen.json`
+> **腳本**: `scripts/01_four_regular_necessity.py`（8/8 PASS）、`scripts/02_strengthen.py`（25/25 PASS）、`scripts/03_audit_independent.py`（18/18 PASS，獨立 verifier）
+> **logs**: `logs/01_output.txt`、`logs/02_output.txt`、`logs/03_audit_output.txt`；**data**: `data/01_scan.json`、`data/02_strengthen.json`
 
 ---
 
@@ -101,3 +101,21 @@ RH 型 20 個邊不相交三角形 + 12 個 5-環 ⟹ 不割邊 ≥ 32 ⟹ MaxCu
 
 **O217 升 🟢 已閉合**。4-正則係「88 = 2N_d 透明通道」＋「I-軌道 60 節點」＋「頂點傳遞」之必然後果——
 RH 型四條件（4-正則、等邊、面型 3.4.5.4、MaxCut 88）中，4-正則而家由通道數唯一鎖定，不再是獨立假設。
+
+---
+
+## ⚠️ 後續附註 (2026-10-08, 全 Session 鏈 closeout)
+
+**scripts/03 獨立 verifier（18/18 PASS）** — 完全唔用 MILP、唔用四元數枚舉：
+- §A 由正二十面體 12 頂點集·頂點對映射構造 60 個旋轉（candidate=60, dedupe=60，非交換群 ⟹ A₅）
+- §B 唔同 seed (777) 3000 樣本 → 8 類 (E,tri) 收斂一致，含 (120,20) 及 (150,80)
+- §C (120,20) MaxCut = 88 EXACT：面結構上界（greedy 20 個 edge-disjoint △ → 剩餘 12 個 5-循環 ⟹ mono≥32 ⟹ MaxCut≤88）＋ greedy 到達 88 ⟹ 上界可取。零 MILP。
+- §D 其他 7 類排除（不需精確值）：
+  - E<88 類 3 個（30,0),(60,0),(60,20)：MaxCut ≤ E < 88 自動排除
+  - (90,20)：≥3 edge-disjoint △ ⟹ mono≥3 ⟹ MaxCut≤87
+  - (90,0)：≥3 edge-disjoint odd cycles ⟹ mono≥3 ⟹ MaxCut≤87
+  - (120,120)：**triangle-cover 下界**（tri=120, 每邊至多屬 3 個△ ⟹ mono ≥ ⌈120/3⌉ = 40 ≥ 33 ⟹ MaxCut≤87）——確定性組合論證，非 greedy
+  - (150,80)：greedy MaxCut 下界 104 ≥ 89 ⟹ ≠ 88（對 MILP 原值 104 嘅獨立 lower-bound 交叉參考）
+- §E (120,20) 每點度數 4；§F 完整鏈 PASS
+
+**session 鏈 provenance**：全部推導喺 thread `agent:main:telegram:dm:7500748185:104121`（session 20261008_173047_adea1901 → 20261008_183212_8887b6 壓縮鏈）；26 次 O217 寫入全部指向本目錄；冇 /tmp 寫入（路徑衛生）；terminal 全部 cd 入本 O。
