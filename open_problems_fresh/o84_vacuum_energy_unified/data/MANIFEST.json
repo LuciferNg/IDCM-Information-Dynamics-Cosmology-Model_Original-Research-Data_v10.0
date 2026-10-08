@@ -1,0 +1,137 @@
+{
+  "o": "O84",
+  "title": "真空能統一 (90/88/283.0821) + renormalization",
+  "status": "closed",
+  "generated_utc": "2026-10-08T13:01:50+00:00",
+  "generator": "closeout T6 inline (excludes data/MANIFEST.json itself by design)",
+  "verified": "scripts 01-05 = 99/99 PASS (18+7+40+21+13)",
+  "file_count": 21,
+  "files": [
+    {
+      "path": "01_problem_record.md",
+      "sha256": "3cbb319870e2964feae0fff34ed3881ea9024600f89d6abdfd91db02827c8815",
+      "bytes": 10578,
+      "role": "problem_record (root 正本; §一-§八)"
+    },
+    {
+      "path": "SESSION_START.md",
+      "sha256": "5012e69ff523def017d2996d67729aed717cbda702d134d06d2203b584b8a018",
+      "bytes": 8091,
+      "role": "session_start (不可變快照 + O240 5 節通知 + 承接 R1/R2 + closeout 節)"
+    },
+    {
+      "path": "final_result.md",
+      "sha256": "ca075ef2d574bfd1f8439f0299c49068170535436353dbaf82e83a4491525bb6",
+      "bytes": 1699,
+      "role": "最終結論摘要 (RESULT_TEMPLATE)"
+    },
+    {
+      "path": "docs/01_problem_record.md",
+      "sha256": "3fe2b7929a9effb53f036cf694f9127b18893e4448c21c658abe917b9293f0dc",
+      "bytes": 5334,
+      "role": "凍結歷史快照 (2026-10-08 前 docs/ 版)"
+    },
+    {
+      "path": "docs/01_renormalization_scheme.md",
+      "sha256": "f1c0378d9720db1c800d30d04f06ee75aeef25b5fe5a4fd8056a2ac378caa219",
+      "bytes": 15035,
+      "role": "四層次推導主記錄 + §9.1 判決承接"
+    },
+    {
+      "path": "docs/02_verification_log.md",
+      "sha256": "98ebee75f20faac16a046e796e3f8b7a0e80b2f6a94d5105d46a0554da68c199",
+      "bytes": 3770,
+      "role": "驗證核對記錄"
+    },
+    {
+      "path": "scripts/01_vacuum_layer_unity.py",
+      "sha256": "ed22f0db6d53e1ccad28e071767126b26485d4d51e74a218f3edad1d7dfff3d1",
+      "bytes": 9661,
+      "role": "四層次數值驗證 (18/18)"
+    },
+    {
+      "path": "scripts/02_renormalization_rg_flow.py",
+      "sha256": "ef1b66899476e9b0ebfafdcb4975449aecd0264b961e45ef77c7f7475202ca1f",
+      "bytes": 8984,
+      "role": "RG flow 連接 (7/7)"
+    },
+    {
+      "path": "scripts/03_final_verify.py",
+      "sha256": "65041071e16bec5c9af1c8f9eee6f27be94a69bc87502200c50e899e74e4758b",
+      "bytes": 11022,
+      "role": "最終統合驗證 (40/40)"
+    },
+    {
+      "path": "scripts/04_handover_ruling.py",
+      "sha256": "77479a7dd8e6fef2127c4baa03f7bf3c60ffdcf5ef1fdc72a33cec24c57ebdf2",
+      "bytes": 8860,
+      "role": "判決承接 R1 獨立重驗 (21/21)"
+    },
+    {
+      "path": "scripts/05_handover_ruling_r2.py",
+      "sha256": "7a4f87cabfbb96a7aa8b55b639a09a7100f5817541bfad48f10642cd61add14c",
+      "bytes": 9040,
+      "role": "判決承接 R2 獨立重驗 (13/13)"
+    },
+    {
+      "path": "data/01_vacuum_layer_unity.json",
+      "sha256": "ad88248aa54a32f614f7965599ae2ceb237ce96a78eb8da0c8b486e6ddadcbda",
+      "bytes": 4020,
+      "role": "scripts/01 產物 (18/18)"
+    },
+    {
+      "path": "data/02_renormalization_rg_flow.json",
+      "sha256": "6e084ee537912501b4abb6ca7780405142a8be0d722630c1577f50f23bfc76f7",
+      "bytes": 2223,
+      "role": "scripts/02 產物 (7/7)"
+    },
+    {
+      "path": "data/03_final_verify.json",
+      "sha256": "be0b7a8fb4e8d47067a5a5b355551545f850d28c6a620a1825a9acc8060e4eb8",
+      "bytes": 9568,
+      "role": "scripts/03 產物 (40/40)"
+    },
+    {
+      "path": "data/05_handover_ruling_r2.json",
+      "sha256": "f1c10d86836bd05ad27333c78959c10fcb6d7606411567652e67b9b1496b20ef",
+      "bytes": 373,
+      "role": "scripts/05 產物 (13/13)"
+    },
+    {
+      "path": "logs/01_vacuum_layer_unity_closeout.out",
+      "sha256": "dab490b336ab0ead320a373834c7d8aaaba4c6c99e4fb62831e4c18cafabe650",
+      "bytes": 2549,
+      "role": "scripts/01 closeout 重跑 log"
+    },
+    {
+      "path": "logs/02_renormalization_rg_flow_closeout.out",
+      "sha256": "aba96d700899f85933807a78837fb271639b53efac5aec5f5d6f386e646957b7",
+      "bytes": 1754,
+      "role": "scripts/02 closeout 重跑 log"
+    },
+    {
+      "path": "logs/03_final_verify_closeout.out",
+      "sha256": "1b50d7a6987e6792dc92a0f6fa7e8c6c57bd517f35c0823a247d2bdcbee7607b",
+      "bytes": 2771,
+      "role": "scripts/03 closeout 重跑 log"
+    },
+    {
+      "path": "logs/04_handover_ruling.out",
+      "sha256": "f07d03a3a4fbcfc331f253fe888048ef9b45609009dfb823f554132ff177e835",
+      "bytes": 3283,
+      "role": "scripts/04 首跑 log (21/21)"
+    },
+    {
+      "path": "logs/04_handover_ruling_closeout.out",
+      "sha256": "f07d03a3a4fbcfc331f253fe888048ef9b45609009dfb823f554132ff177e835",
+      "bytes": 3283,
+      "role": "scripts/04 closeout 重跑 log"
+    },
+    {
+      "path": "logs/05_handover_ruling_r2.out",
+      "sha256": "e8a770bdeae1078c6db46fa1ca007a21b097301ba0fabba0540a6d1522658a4c",
+      "bytes": 2560,
+      "role": "scripts/05 log (13/13)"
+    }
+  ]
+}
