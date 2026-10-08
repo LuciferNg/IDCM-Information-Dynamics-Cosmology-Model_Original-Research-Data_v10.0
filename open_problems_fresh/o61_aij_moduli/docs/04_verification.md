@@ -122,3 +122,38 @@ O61 嘅核心推導同結果**全部正確**，記錄文檔已更新至無幻覺
 - docs/02: Moduli stabilization ✅ (kernel claim 已誠實修正)
 - docs/03: 最終閉合 ✅ (scale 已修正)
 - README: 狀態表 ✅ (已同步修正)
+
+---
+
+## 六、closeout 輪附加記錄 (2026-10-08)
+
+### 修正 5 (scripts 路徑斷裂): 5 支 O61 scripts 嘅 P_fixed_v2 載入路徑修正
+
+**問題**: scripts/01, 02, 03, 05, 11 硬編碼載入路徑 `BASE/data/P_fixed_v2.npy`，
+但 `BASE/data/` 喺項目遷移後係**空目錄** — 真實檔案單一位置係
+`main_problems/p15_early_derivations/data/P_fixed_v2.npy`。
+
+**影響**: closeout 全鏈重跑 (2026-10-08) 時上述 5 支 scripts 全部 `FileNotFoundError`（包括 audit script 11）。
+
+**修正** (逐支 script 改一行路徑定義, 推導內容零改動):
+- scripts/01_aij_prefactor.py: `DATA = BASE/main_problems/p15_early_derivations/data`
+- scripts/02_aij_deep.py: 同上
+- scripts/03_yukawa.py: `P = np.load(os.path.join(BASE, "main_problems", ...))`
+- scripts/05_kappa_quant.py: `DATA` 同上
+- scripts/11_audit.py: `DATA` 同上
+
+**修正後重跑結果**:
+```
+Script 01: rc=0, 12 ✅ / 0 ❌   ← 原 FileNotFoundError → PASS
+Script 03: rc=0,  7 ✅ / 0 ❌   ← 原 FileNotFoundError → PASS
+Script 11: rc=0, 30/30 ✅       ← 原 FileNotFoundError → PASS
+Script 06/08/09/10: rc=0 (不變, 本已不載 P_fixed_v2)
+Script 02/04/05/07: 探索性 ❌ 不變 (見修正 4)
+```
+有效 PASS 數目: **11/11 scripts runnable, 7/11 exit=0, 其餘探索性 ❌ 已記錄**。
+
+### 範圍外註記 (2026-10-08 closeout)
+
+> 用戶指示: **只針對 O61**。掃描發現其他 O（o53/o57/o62 等, 共 47 支 scripts）有同款
+> `BASE/data/P_fixed_v2.npy` 斷裂路徑 — **範圍外**, 交各 O 自己 closeout 時修正,
+> O61 closeout 唔修改任何其他 O 嘅檔案。
