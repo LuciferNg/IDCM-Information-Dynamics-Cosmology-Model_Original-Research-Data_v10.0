@@ -1,0 +1,40 @@
+O33 — AUDIT_independent_recheck Results
+===================================================================
+mpmath dps=40, 零 import
+PASS: A1 Σγ = 90
+PASS: A2 Σγ_even = 90, Σγ_odd = 88
+PASS: A3 Σγ_k^odd = 88 = 2N_d (88-site 奇)
+PASS: A4 Σγ_k^even = 90 = 2(N_d+1)
+PASS: A5 奇偶比 = 44/45
+PASS: A6 Σγ_n^44 = 90
+PASS: A7 E_sync = N_d·L₁₀/88 = 61.5
+PASS: A8 L₁₀ = 123
+PASS: A9 E_proj = 90−61.5 = 28.5
+PASS: A10 Ω_Λ = 4/(φ⁴−1) = 0.683282
+PASS: A11 E_sync/Σγ = 0.683333 ≠ Ω_Λ (φ 近似差=觀察者稅 δ)
+PASS: B1 n* = N_d−L₆+1 = 27
+PASS: B2 Σγ₁..₂₆ = 26.4165
+PASS: B3 γ₂₇ = 2.6989
+PASS: B4 Σγ₂₈..₄₄ = 60.8845
+PASS: B5 f_sync = 0.2280
+PASS: B6 f_proj = 0.7720
+PASS: B7 E_proj 重建 = 28.5
+PASS: B8 E_sync 重建 = 61.5
+PASS: B9 回收率 = 28.5/61.5 = 0.4634 = 3ε
+PASS: B10 γ_cutoff = 61.5/22 = 2.795
+PASS: B11 反投影能量守恆 Σγ = E_proj+E_sync = 90
+PASS: C1 f_proj = (E_proj−Σγ₁..₂₆)/γ₂₇ = 0.771960
+PASS: C2 Δn = 1/ln φ = 2.078087
+PASS: C3 δ = Δn·ln(1/f−1) = −2.534046
+PASS: C4 ℓ_max = (Ω_m/Ω_Λ)·N_d/ln B = 14.7085
+PASS: C5 D_app = 6.3183 → 6 維
+PASS: C6 S_BH/k_B (1M_⊙) = 1.05e77 [文檔 1.90e131 錯, 已修正附註]
+PASS: D1 觀察者稅 δ = 5.176e-5
+PASS: D2 δ = 41/60−Ω_Λ = √5φ⁻¹⁰/[60(3φ+1)] (代數恆等)
+PASS: D3 L₁₀φ−L₁₁ = √5φ⁻¹⁰
+PASS: D4 ε = 19/123, δ₃ = −√5φ⁻¹⁰/492 = 0.023%
+PASS: D5 3ε = 19/41, δ₂ = −√5φ⁻⁹/(164φ)
+PASS: E1 n/p = γ₇/γ₂₀ = 0.14262 ≈ 1/7
+PASS: E2 7+20 = 27 = N_gen³
+
+Total: 35 PASS, 0 FAIL
