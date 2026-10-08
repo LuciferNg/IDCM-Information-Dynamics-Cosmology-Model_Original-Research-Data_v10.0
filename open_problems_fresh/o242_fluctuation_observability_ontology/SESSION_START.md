@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O242
 title:   量子漲落可觀測性判定: 差分譜量 vs 絕對真空能密度 (可測/不可測分層)
-state:   partial
-verdict: partial
+state:   closed
+verdict: closed
 flags:   -
 owner:   O242
 created: 2026-10-07

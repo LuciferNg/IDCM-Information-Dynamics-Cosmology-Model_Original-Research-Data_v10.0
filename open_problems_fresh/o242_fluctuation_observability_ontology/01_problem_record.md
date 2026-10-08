@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O242
 title:   量子漲落可觀測性判定: 差分譜量 vs 絕對真空能密度 (可測/不可測分層)
-state:   partial
-verdict: partial
+state:   closed
+verdict: closed
 flags:   -
 owner:   O242
 created: 2026-10-07
@@ -13,7 +13,7 @@ prereq:  O36, O41, O84, O86, O138, O212, O240, O241
 source:  2026-10-07 調律者提問概念層; Jaffe 2005 分層: 量到嘅係模譜邊界敏感度, 非零點能實體
 -->
 
-> **狀態**: 🟡 **部分閉合 (2026-10-08 closeout, verdict=partial)** — Q1–Q4 全閉合 (scripts 01-04, 51/51; docs/01-04); 剩餘: O240 殘餘/O241 Casimir 數字 (A′→A 升格)
+> **狀態**: 🟢 **已閉合 (2026-10-08 closeout, verdict=closed)** — Q1–Q4 + R5 殘餘收口全閉合 (scripts 01–05, 66/66; docs/01–05 + final_result); 剩餘全指 O241/O240/O138
 > **建立**: 2026-10-07
 > **前置**: O36, O41, O84, O86, O138, O212, O240, O241
 > **位置**: `open_problems_fresh/o242_fluctuation_observability_ontology/`
@@ -99,6 +99,8 @@ source:  2026-10-07 調律者提問概念層; Jaffe 2005 分層: 量到嘅係模
 | 4 | 2026-10-08 | R4 接 O138 Born 對偶 (譜比歸一化, 邊界敏感譜差) 15/15 | scripts/03, docs/03 |
 | 5 | 2026-10-08 | R3-結構側 無差別定理 NDT-1/2 (10/10) + 讀法判別通道定位 | scripts/04, docs/04 |
 | 6 | 2026-10-08 | Q1–Q4 子 pid closed; 父 O242 partial (O240/O241 依賴未開始) | register + README sync |
+| 7 | 2026-10-08 | R5 殘餘收口: A′→A (Casimir, O241 Q2 dev<1e-12) / Γ 閉合引用 (O138) / NDT-zeta 接口一致 / O240 Δ 旁證 — 15/15 | scripts/05, docs/05 |
+| 8 | 2026-10-08 | 父 O242 close verdict=closed (剩餘全指 O241/O240/O138) | final_result.md + register + md blocks + README |
 
 ## 七、相關文件
 
