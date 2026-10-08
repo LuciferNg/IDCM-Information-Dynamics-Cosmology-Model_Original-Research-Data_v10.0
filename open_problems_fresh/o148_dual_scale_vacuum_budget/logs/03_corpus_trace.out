@@ -1,0 +1,137 @@
+========================================================================
+O148 03: corpus 追溯 (規範身份 -> docs)
+========================================================================
+
+[A] 譜和身份 (第一性原理底層)
+  ✅ Σγ_even = 90 (世界)
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o62_lambda_first_principles__SESSION_START.md:121
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o72_kchain_ktree_reality__SESSION_START.md:56
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o51_kchain_origin__SESSION_START.md:37
+  ✅ Σγ_odd = 88 (觀察者)
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o62_lambda_first_principles__SESSION_START.md:121
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o72_kchain_ktree_reality__SESSION_START.md:56
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o51_kchain_origin__SESSION_START.md:37
+  ✅ Σγ_all = 178 = 2F11
+        IDCM-v10.0--It-From-Beat/main_problems/p5_crystal_stress/docs/04_master_summary.md:196
+        IDCM-v10.0--It-From-Beat/main_problems/p5_crystal_stress/docs/04_master_summary.md:266
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/00_Master_Theorem.md:11
+  ✅ 閉式 2(Nd+1) / 2Nd
+        IDCM-v10.0--It-From-Beat/main_problems/p10_ktree_structure/final_result.md:9
+        IDCM-v10.0--It-From-Beat/main_problems/p10_ktree_structure/06_structural_proof_FORCE_33.md:29
+        IDCM-v10.0--It-From-Beat/main_problems/p10_ktree_structure/06_structural_proof_FORCE_33.md:184
+
+[B] 真空能身份
+  ✅ ⟨W⟩² = 61.5 = (90+33)/2 (O39)
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o82_mass_generation__SESSION_START.md:96
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o82_mass_generation__SESSION_START.md:98
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/amend/o82_mass_generation.SESSION_START.md:96
+  ✅ 61.5 = 44×123/88 (O41)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:197
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:242
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:253
+  ✅ 61.5 = 88×123/176 (O41)
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/00_Master_Theorem.md:131
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/01_problem_record.md:108
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/10_h_higgs_identity_20260909.md:46
+  ✅ E_min = L10/(4Nd) = 123/176 (O41 Landauer)
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/00_Master_Theorem.md:131
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/01_problem_record.md:108
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/10_h_higgs_identity_20260909.md:46
+  ✅ 61.5/90 = 41/60 = f_unproj (Q1/o33/o143)
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o72_kchain_ktree_reality__SESSION_START.md:84
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/amend/o72_kchain_ktree_reality.SESSION_START.md:84
+        IDCM-v10.0--It-From-Beat/main_problems/p1_bbn/SESSION_START.md:13
+  ✅ 19/60 = f_proj
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o72_kchain_ktree_reality__SESSION_START.md:84
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/amend/o72_kchain_ktree_reality.SESSION_START.md:84
+        IDCM-v10.0--It-From-Beat/main_problems/p1_bbn/SESSION_START.md:13
+  ✅ n_unproj=41, n_proj=19 (o143 60 節點)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o143_phase_selection_mechanism/01_problem_record.md:124
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o143_phase_selection_mechanism/docs/01_verification_notes.md:52
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o143_phase_selection_mechanism/docs/01_verification_notes.md:54
+
+[C] 觀察者/邊界身份
+  ✅ 176 = B×Nd = 4×44 (O41)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:197
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/docs/09_three_routes.md:66
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o156_rge_first_principles/docs/08_focus_law_verification.md:25
+  ✅ 176 = 2×88 (o137 φ[1])
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/final_result.md:174
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/SESSION_START.md:345
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/SESSION_START.md:348
+  ✅ μ² = 2 = Σ_even−Σ_odd (O41)
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o82_mass_generation__SESSION_START.md:96
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o170_phase_depth_distance__SESSION_START.md:10
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o51_kchain_origin__SESSION_START.md:48
+  ✅ 90 = F11+1, 88 = F11−1
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/01_problem_record.md:97
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/09_pmns_wfield_flavor_20260907.md:568
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/09_pmns_wfield_flavor_20260907.md:572
+
+[D] 360/180 閉合身份
+  ✅ 360 = 4×Σγ (o137 GKZ φ_origin)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:76
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/final_result.md:174
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/docs/00_closure_report.md:19
+  ✅ Σφ = 1800 = 20×Σγ (o137)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/final_result.md:174
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/docs/00_closure_report.md:19
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/docs/00_closure_report.md:66
+  ✅ 360 = 4×90
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/docs/08_phase5c_gkz_infrastructure.md:45
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/docs/08_phase5c_gkz_infrastructure.md:73
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o148_dual_scale_vacuum_budget/docs/01_gemini_claim_audit.md:91
+  ✅ 180 = 2×90 (O148 新註冊)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o148_dual_scale_vacuum_budget/docs/03_canonical_360_180_2.md:29
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o160_spectral_number_scan/docs/14_symmetric_families.md:38
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o160_spectral_number_scan/docs/15_band_third_level.md:13
+  ✅ 冷斑經度 209° = 180°+29 (o32, 180 基底先例)
+        IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/22_complete_summary.md:92
+        IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/03_first_results.md:42
+        IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot/15_complete_record.md:40
+
+[E] δ 族 (O148 新結果)
+  ✅ δ₁ = 5.176e-5 (o33 觀察者稅命名)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:76
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o39_wfield_condensate/final_result.md:12
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o39_wfield_condensate/SESSION_START.md:48
+  ✅ δ₁ = (L10φ−L11)/(60(3φ+1)) (o34 恆等式)
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o62_lambda_first_principles__SESSION_START.md:16
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/amend/o62_lambda_first_principles.SESSION_START.md:16
+        IDCM-v10.0--It-From-Beat/main_problems/p10_ktree_structure/08_structural_proof_FORCE_DENSITY.md:71
+  ✅ M* = 32.990683 ≠ 33 (Q1 拆穿)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:76
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:106
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o152_numbers_as_operators/final_result.md:21
+  ✅ 4/(φ⁴−1) = 1/(1+3ε) (o33/Q1)
+        IDCM-v10.0--It-From-Beat/memory_archive/MEMORY_full_export.md:129
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o10_peak_amplitudes__SESSION_START.md:19
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o10_peak_amplitudes__SESSION_START.md:33
+  ✅ Ω_m/Ω_Λ = 3ε (o33/o39)
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/__home__wsl__Projects__IDCM-Original__IDCM-v10.0--It-From-Beat__open_problems_fresh__o10_peak_amplitudes__SESSION_START.md:19
+        IDCM-v10.0--It-From-Beat/.handoff_backup_2026-10-02/amend/o10_peak_amplitudes.SESSION_START.md:19
+        IDCM-v10.0--It-From-Beat/main_problems/p10_ktree_structure/final_result.md:13
+
+[F] 角度身份
+  ✅ θ_site = π/44 (O74)
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:10
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o73_h0_first_principles/docs/14_open_problem_status.md:35
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o73_h0_first_principles/docs/01_problem_record.md:217
+  ✅ 360/44 = 90/11 (O148 新註冊)
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/09_pmns_wfield_flavor_20260907.md:835
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:76
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o148_dual_scale_vacuum_budget/final_result.md:23
+  ✅ π/22 = 4π/88 (O148 新註冊)
+        IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction/docs/09_pmns_wfield_flavor_20260907.md:375
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/README.md:76
+        IDCM-v10.0--It-From-Beat/open_problems_fresh/o137_cy3_topological_resonance/docs/22_open_problems_attack4.md:41
+
+[G] 骨架身份
+  ✅ 60 節點 Rhombicosidodecahedron χ=2
+        IDCM-v10.0--It-From-Beat/memory_archive/MEMORY_full_export.md:155
+        IDCM-v10.0--It-From-Beat/main_problems/p15_early_derivations/docs/independent_verification_20260904.md:96
+        IDCM-v10.0--It-From-Beat/main_problems/p15_early_derivations/docs/research_record.md:49
+
+========================================================================
+RESULT: 追溯完成 — ❌ NO-CORPUS 項目 = O148 新註冊/新結果, 見 docs/
+========================================================================
