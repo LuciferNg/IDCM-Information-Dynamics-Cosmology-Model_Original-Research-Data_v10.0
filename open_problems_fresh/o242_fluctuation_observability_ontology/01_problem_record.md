@@ -102,6 +102,7 @@ source:  2026-10-07 調律者提問概念層; Jaffe 2005 分層: 量到嘅係模
 | 7 | 2026-10-08 | R5 殘餘收口: A′→A (Casimir, O241 Q2 dev<1e-12) / Γ 閉合引用 (O138) / NDT-zeta 接口一致 / O240 Δ 旁證 — 15/15 | scripts/05, docs/05 |
 | 8 | 2026-10-08 | 父 O242 close verdict=closed (剩餘全指 O241/O240/O138) | final_result.md + register + md blocks + README |
 | 9 | 2026-10-08 | O242↔O241 交叉驗證 (O241 零殘餘確認後): 19/19 — ring 閉式/DCE 半頻模數論定理/NDT↔Q1 裁決互證/ζ 雙重身份澄清 | scripts/06, docs/06 |
+| 10 | 2026-10-08 | O240↔O242↔O241 交叉驗證 (O240 零殘餘確認後): 17/17 — Δ 非代數整數強化 R2 零自由度/float64 更正零影響/V_Λ 雙分解等價 | scripts/07, docs/07 |
 
 ## 七、相關文件
 
