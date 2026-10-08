@@ -1,0 +1,14 @@
+[PASS] P1a1: w0 = 7.8421935706790609671 == sqrt(61.5)
+[PASS] P1a2: w0^2 = 123/2 EXACT (123/2)
+[PASS] P1a3: w0^2 = 61.5 EXACT
+[PASS] P1b1: V''(w0) = 4 mu^2 = 8 EXACT (8)
+[PASS] P1b2: V''(w0) == 4*mu2 (O204 交叉)
+[PASS] P1c1: V''(0) = -2 mu^2 = -4 < 0: 原點係極大值, 唔係真空
+[PASS] P1c2: V''(0) == -4 EXACT
+[PASS] P1d1: V'' 轉號點 w^2=mu2/(6lam)=20.5 EXACT (41/2)
+[PASS] P1d2: 全域掃描 w in [0,20] 局部極小數 = 1 (期望 1, 位於 w0=7.84219357068)
+[PASS] P1e1: 掃描 2000 點: V(w_f) < V(w0) 嘅點數 = 0 (冇更低終態)
+[PASS] P1f1: 唯一最小 (P1d) ⟹ 冇 V_false > V_true 配對 ⟹ 冇一階穿隧/bounce 前提 (承接 O241 Q5)
+[PASS] P1f2: V_min = -61.5 = -L10/2 EXACT (-61.5000000000000000)
+[PASS] P1x1: 潛在逃逸終態 w=0 係不穩定極大: 非真空, bounce 無物理終態
+RESULT: 13/13 PASS

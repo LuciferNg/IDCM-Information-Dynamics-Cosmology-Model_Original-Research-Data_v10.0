@@ -1,0 +1,14 @@
+[PASS] P2a1: mu2 = 90-88 = 2 EXACT (2) = Σγ_even - Σγ_odd
+[PASS] P2a2: lambda = 2/L10 = 2/123 EXACT (2/123)
+[PASS] P2a3: w0^2 = 123/2 唯一解 (冇 g 依賴)
+[PASS] P2a4: V(w) 形狀參數數 = 0 (mu2, lambda 全結構鎖死)
+[PASS] P2b1: O212 dof=1: 唯一有量綱錨 G≡ω_ring≡M_Pl; 冇連續控制參數槽位
+[PASS] P2b2: 連續形變族 V(w;g) 需要 g 做新輸入 ⟹ dof>1 ⟹ 結構排除 (二階相變機制驅動器不存在)
+[PASS] P2c1: 原點 V''(0) = -4 < 0: local MAXIMUM 唔係極小 ⟹ 「φ0 從原點滑動」係錯誤圖像
+[PASS] P2c2: SSB 已實現: Goldstone 相位模 m_θ=0 (O73) — 冇對稱相可回, 冇 restoration
+[PASS] P2d1: V(w;T) 無 T 依賴 (勢函數簽名冇溫標; T_ring 係輸出 84.637 Gyr 非 dial)
+[PASS] P2d2: IDCM 冇環境熱浴: 例證 O242 — 可觀測層 A/B 全由譜差分同結構數, 冇 T
+[PASS] P2e1: R_world=4129.94 Mpc 係結構輸出 (O171), 唔係環境 dial; 曲率驅動形變無輸入通道
+[PASS] P2f1: mu2,lambda ±50% 微擾: 極小保持唯一且二次凸 (V''=4μ²'>0) — 冇相變
+[PASS] P2f2: mu2<=0 先至單井(對稱相) — 結構排除 (mu2=2>0 永遠唔會翻號)
+RESULT: 13/13 PASS

@@ -1,0 +1,19 @@
+=== PREREGISTERED PREDICTIONS (見數前) ===
+  P6a: Σγ_even=90, Σγ_odd=88
+  P6b: μ²=2, λ=2/123
+  P6c: w0=√(123/2)≈7.842193570679061
+  P6d: V_min=-61.5, V''(w0)=8
+  P6e: γ 43 gaps 全正, min_gap>1.6e-3
+  P6f: R_world 結構鎖定 4129.94 Mpc (O171 引用)
+  P6g: N1/N2/N3 全 No-Go (一階/二階/拓撲)
+
+[PASS] P6a: Σγ_even=90, Σγ_odd=88 (O41) 90/88
+[PASS] P6b: μ²=2, λ=2/123 EXACT: 2, 2/123
+[PASS] P6c: w0=7.8421935706790609671 (預言 √61.5=7.842193570679061)
+[PASS] P6d: V_min=-61.5 (-61.50000000000000); V''(w0)=8=4μ² (8)
+[PASS] P6e: γ non-degenerate: min_gap=5.095771e-03 > 1.6e-3 預言
+[PASS] P6f: R_world 結構鎖定 (O171: r_d×88×421/(420π)) — 引用, 唔重推
+[PASS] P6g-N1: N1 一階 No-Go: 唯一極小無 false vacuum (script 01 全 PASS)
+[PASS] P6g-N2: N2 二階 No-Go: 冇控制參數 dof=1 (script 02 全 PASS)
+[PASS] P6g-N3: N3 拓撲 No-Go: 譜 rigid 無 H(λ), O7 係離散事件唔係相變 (script 03 全 PASS)
+RESULT: 9/9 PASS

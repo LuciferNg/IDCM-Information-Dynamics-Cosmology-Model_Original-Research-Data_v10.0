@@ -1,0 +1,10 @@
+{
+  "N_MC": 10000000,
+  "struct_pool_size": 206,
+  "struct_pairs_scanned": 41200,
+  "hit_struct_second_min": 0,
+  "hit_rand_second_min": 0,
+  "hit_rand_degen_spectrum": 0,
+  "min_gap_chain": 0.005095770779493414,
+  "RESULT": "4/4 PASS"
+}

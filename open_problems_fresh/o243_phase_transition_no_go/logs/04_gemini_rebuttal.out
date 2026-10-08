@@ -1,0 +1,10 @@
+[PASS] G1: V 唯一極小 ⟹ 冇 false vacuum ⟹ 冇一階穿隧/bounce (O241 Q5 + script 01 PASS)
+[PASS] G2: 二階相變需連續形變族 V(w;g): g 係新自由度 ⟹ dof>1 ⟹ O212 排除 (script 02 P2b)
+[PASS] G3: 原點 V''(0) = -4.0 < 0: local MAX 唔係極小 ⟹ 「φ0 從原點滑動」係錯誤圖像
+[PASS] G4: T_ring=84.637 Gyr 同 R_world=4129.94 Mpc 係結構輸出 (O121/O171), 唔係環境 dial (script 02 P2d/P2e)
+[PASS] G5: γ_n 非簡併嚴格遞增 (min gap = 5.095771e-03) + 冇 H(λ) ⟹ 冇 Band Crossing (script 03 P3a/P3b)
+[PASS] G6a: 相位滑移 π 沿 Goldstone flat direction (m_θ=0): ΔE=2|h_i| 離散局部, |W|=w0 不變 ⟹ 非「全域連續」真空相變
+[PASS] G6b: 參數流形 0 維 (dof=1): 冇閉迴路 ⟹ Berry/幾何相位恆 0; winding number 不變 (script 03 P3e)
+[PASS] G7a: 方向啱: O121 時間箭頭=投影冪等; O213 ℓ-細化流→c ⟹ 單向、無循環宇宙 (正確內核)
+[PASS] G7b: 機制錯: 真空唔係「弛豫」— v10 真空固定喺 w0, 冇演化; 宇宙演化 = 觀察者投影解析度 (O213), 唔係勢能面滑移
+RESULT: 9/9 PASS

@@ -1,0 +1,9 @@
+[PASS] A1: μ² = 90-88 = 2 EXACT (2)
+[PASS] A2: λ = 2/123 EXACT (2/123)
+[PASS] A3: w0² = 61.5 EXACT (123/2)
+[PASS] A4: V_min = -61.5 EXACT (-123/2)
+[PASS] A5: V''(w0) = 8 EXACT (8)
+[PASS] A6: V''(0) = -4 EXACT (-4)
+[PASS] A7: γ 43 gaps 全正 (min=5.095771e-03) — 非簡併
+[PASS] A8: V 形狀參數數 = 0 (μ², λ 全結構鎖死); O212 dof=1 引用
+RESULT: 8/8 PASS
