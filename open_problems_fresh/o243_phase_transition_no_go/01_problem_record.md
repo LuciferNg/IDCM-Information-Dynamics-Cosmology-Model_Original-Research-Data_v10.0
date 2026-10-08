@@ -95,6 +95,7 @@ Gemini (2026-10-08, 外部模型) 主張: O240/241/242 閉合只排除**一階**
 | 2 | 2026-10-08 | R1-R6 盲測閉合: 一階(13/13)/二階(13/13)/拓撲(13/13)/Gemini反駁(9/9)/MC null 10⁷(4/4)/盲測預言(9/9); 全 61/61 | scripts/01-06 + docs/01-07 |
 | 3 | 2026-10-08 | R7 獨立審計零 import 8/8; 全 69/69 PASS | scripts/07 + logs |
 | 4 | 2026-10-08 | Closeout: final_result (template) + register close + git commit | final_result.md |
+| 5 | 2026-10-08 | R8 (reopen): QFT/統計力學實測現象審計 12/12 — SSB/Goldstone/穿隧壁壘/疇壁/QED繼承 全導出；電弱相變事件/QCD相變/CDL nucleation = no-go 本體論後果非缺口 | scripts/08 + docs/08 |
 
 ## 七、相關文件
 

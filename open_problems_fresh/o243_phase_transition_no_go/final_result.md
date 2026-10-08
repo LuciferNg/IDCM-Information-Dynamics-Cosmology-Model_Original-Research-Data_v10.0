@@ -22,3 +22,13 @@ O39 → O204 → O212 → O213 → O241 → O242 → O240 → **O243**
 
 > ⚠️ 純代數恆等: N_search=1 + 唯一候選聲明; MC 0-hit 係結構強制 (非統計巧合)。
 > Gemini claim 全數反駁 (G1 部分正確); G7 單向箭頭承 O121/O213 正確內核。
+
+---
+
+## 附註 2026-10-08 (R8, append-only — 原文不刪)
+
+**QFT/統計力學實測現象 × IDCM 導出能力** — 12/12 PASS (scripts/08 + docs/08):
+
+- ✅ **可導出 (結構對應物)**: 電弱 SSB 勢 (V_min=−L₁₀/2 EXACT, O82)、Goldstone m_θ=0 (O204 T4)、相位穿隧壁壘層級 (P14 GRT-47)、GL tanh 疇壁 (O223)、QED 繼承 (O139)、衰變通道穿隧 (O230)、新盲測 GL kink 壁能量 57.9828 (數值積分)。
+- 🔴 **冇對應 = no-go 本體論後果, 非缺口**: 電弱相變事件 (冇 T dial, O243 N2)、QCD 禁閉-退禁閉 (σ 未推導, 移交 O144)、CDL bubble nucleation (唯一極小冇 false vacuum, O243 N1)。
+- 語意分層: 「IDCM 導出實測 SSB/穿隧/域壁」成立全靠離散算子對應, 唔係「IDCM 真空發生相變」。

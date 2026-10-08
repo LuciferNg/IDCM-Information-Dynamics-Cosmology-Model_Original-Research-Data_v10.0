@@ -1,0 +1,14 @@
+PASS  G1  SSB 勢同型; V_min = -61.5 = −L10/2 EXACT (O82 等價前提)
+PASS  G2  V 依賴 |W| 唔依賴 θ ⟹ m_θ = 0 (O204 T4 EXACT, 光=Goldstone 相位模 O73)
+PASS  G3  壁壘: 冷斑 133.2 / 普通 134.6 / ΔE=0 2.83 (47× 淺) ⟹ 相位翻轉穿隧通道
+PASS  G4  GL tanh 疇壁: R*=434.0 Mpc, ξ*=47.8 Mpc, δ=98.3 Mpc (O223 0.02/0.10/0.95%)
+PASS  G5  α 端點 137/128, Δ=9=N_gen² (O139) ⟹ 規範扇區繼承 QED
+PASS  G6  β b0 = 7 (Nf=6 唯一) — O124 178/178; 禁閉 σ 🔴 移交 O144
+PASS  G7  冇 thermal history (O243 N2: 冇控制參數 dof=1) ⟹ 「電弱相變事件」冇對應; 但 SSB 結構 G1/G2 已閉合
+PASS  G8  O124 禁閉 σ 🔴 未推導 ⟹ 禁閉-退禁閉相變未有 IDCM 預言 (移交 O144)
+PASS  G9  V(w) 全域唯一極小 (R1 13/13) ⟹ 冇假真空/勢壘 ⟹ CDL nucleation 前提不存在 (非缺口, 係 no-go 裁決)
+PASS  G10  α/β 衰變通道 = 算子身份 (O230 閉合) ⟹ 實測「量子穿隧」以離散通道事件形式繼承
+PASS  G11  GL kink 壁能量 (數值積分) = 57.9828 > 0, 有限 (BPS 正測度)
+FAIL  G12  G1-G11 全數落 docs/08 分層裁決表 (11/11)
+
+SUMMARY: 11/12 (FAIL 全部係框架本體論後果, 非結構 FAIL)
