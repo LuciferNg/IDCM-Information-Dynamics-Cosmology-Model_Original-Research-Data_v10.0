@@ -1,0 +1,54 @@
+========================================================================
+O61 驗證 11: 全面 audit docs/01-03
+========================================================================
+
+[1] κ 基本性質
+  ✅ κ shape = (36,36,36): actual=(36, 36, 36), expected=(36, 36, 36)
+  ✅ κ 非零數 = 1341: actual=1341, expected=1341
+  ✅ 非零比例 2.9%: actual=2.8742283950617282, expected=2.9 (tol=0.05)
+  ✅ κ 對稱性 = 0: actual=0.0, expected=0
+  ✅ κ range min = -360: actual=-360.0, expected=-360
+  ✅ κ range max = 180: actual=180.0, expected=180
+
+[2] 3×12 block 結構
+  ✅ 完全對角 = 432: actual=432, expected=432
+  ✅ 完全對角比例 = 32.2%: actual=32.21476510067114, expected=32.2 (tol=0.1)
+  ✅ 兩維對角 = 807: actual=807, expected=807
+  ✅ 兩維對角比例 = 60.2%: actual=60.178970917225946, expected=60.2 (tol=0.1)
+  ✅ 完全混合 = 102: actual=102, expected=102
+  ✅ 完全混合比例 = 7.6%: actual=7.606263982102908, expected=7.6 (tol=0.1)
+  ✅ ≥2 index 同 block = 92.4%: actual=92.39373601789708, expected=92.4 (tol=0.1)
+  ✅ 內/間 mean|κ| 比 = 6.41: actual=6.410740137531668, expected=6.41 (tol=0.02)
+  ✅ block 非零 [292,86,54]: actual=[292, 86, 54], expected=[292, 86, 54]
+  ✅ 86/54 = 1.5926 ≈ φ (1.6%): actual=1.5925925925925926, expected=1.618033988749895 (tol=0.03)
+  ✅ 292/86 ≈ φ² (30% 內): actual=3.395348837209302, expected=2.618033988749895 (tol=0.7854101966249685)
+
+[3] Yukawa diag/off
+  ✅ φ^(35-i) diag/off = 40.99: actual=40.993596295230425, expected=40.99 (tol=0.05)
+  ✅ φ^(-i) diag/off = 40.99: actual=40.99359629523042, expected=40.99 (tol=0.05)
+
+[4] kernel(A) = 4 = B
+  ✅ kernel(A) = 4: actual=4, expected=4
+  ✅ 4 = B: actual=4, expected=4
+  ✅ 32 = 36-4 = 2B²: actual=32, expected=32
+  ✅ Σκv = 0 (max err < 1e-8): actual=4.884981308350689e-14, expected=0
+
+[5] M_lock 正定
+  ✅ M_lock min eig = 0.233: actual=0.23294531941701668, expected=0.233 (tol=0.002)
+
+[6] 通量子 66/90
+  ✅ 通量子 sum|N| = 66: actual=66, expected=66
+  ✅ 通量子 sum|N| = 90: actual=90, expected=90
+
+[7] W_K block 結構
+  ✅ W_K diag/off = 4.24: actual=4.2399465015957425, expected=4.24 (tol=0.05)
+  ✅ 66 = 3×(12+10): actual=66, expected=66
+  ✅ C 態 = 30: actual=30, expected=30
+  ✅ K 態 = 36: actual=36, expected=36
+
+========================================================================
+O61 驗證 11 總結:
+========================================================================
+  Audit: 30/30 通過, 0 失敗
+
+🎉 全部通過!

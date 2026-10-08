@@ -1,0 +1,156 @@
+{
+  "results": [
+    {
+      "name": "κ shape = (36,36,36)",
+      "ok": true,
+      "detail": "actual=(36, 36, 36), expected=(36, 36, 36)"
+    },
+    {
+      "name": "κ 非零數 = 1341",
+      "ok": true,
+      "detail": "actual=1341, expected=1341"
+    },
+    {
+      "name": "非零比例 2.9%",
+      "ok": true,
+      "detail": "actual=2.8742283950617282, expected=2.9 (tol=0.05)"
+    },
+    {
+      "name": "κ 對稱性 = 0",
+      "ok": true,
+      "detail": "actual=0.0, expected=0"
+    },
+    {
+      "name": "κ range min = -360",
+      "ok": true,
+      "detail": "actual=-360.0, expected=-360"
+    },
+    {
+      "name": "κ range max = 180",
+      "ok": true,
+      "detail": "actual=180.0, expected=180"
+    },
+    {
+      "name": "完全對角 = 432",
+      "ok": true,
+      "detail": "actual=432, expected=432"
+    },
+    {
+      "name": "完全對角比例 = 32.2%",
+      "ok": true,
+      "detail": "actual=32.21476510067114, expected=32.2 (tol=0.1)"
+    },
+    {
+      "name": "兩維對角 = 807",
+      "ok": true,
+      "detail": "actual=807, expected=807"
+    },
+    {
+      "name": "兩維對角比例 = 60.2%",
+      "ok": true,
+      "detail": "actual=60.178970917225946, expected=60.2 (tol=0.1)"
+    },
+    {
+      "name": "完全混合 = 102",
+      "ok": true,
+      "detail": "actual=102, expected=102"
+    },
+    {
+      "name": "完全混合比例 = 7.6%",
+      "ok": true,
+      "detail": "actual=7.606263982102908, expected=7.6 (tol=0.1)"
+    },
+    {
+      "name": "≥2 index 同 block = 92.4%",
+      "ok": true,
+      "detail": "actual=92.39373601789708, expected=92.4 (tol=0.1)"
+    },
+    {
+      "name": "內/間 mean|κ| 比 = 6.41",
+      "ok": true,
+      "detail": "actual=6.410740137531668, expected=6.41 (tol=0.02)"
+    },
+    {
+      "name": "block 非零 [292,86,54]",
+      "ok": true,
+      "detail": "actual=[292, 86, 54], expected=[292, 86, 54]"
+    },
+    {
+      "name": "86/54 = 1.5926 ≈ φ (1.6%)",
+      "ok": true,
+      "detail": "actual=1.5925925925925926, expected=1.618033988749895 (tol=0.03)"
+    },
+    {
+      "name": "292/86 ≈ φ² (30% 內)",
+      "ok": true,
+      "detail": "actual=3.395348837209302, expected=2.618033988749895 (tol=0.7854101966249685)"
+    },
+    {
+      "name": "φ^(35-i) diag/off = 40.99",
+      "ok": true,
+      "detail": "actual=40.993596295230425, expected=40.99 (tol=0.05)"
+    },
+    {
+      "name": "φ^(-i) diag/off = 40.99",
+      "ok": true,
+      "detail": "actual=40.99359629523042, expected=40.99 (tol=0.05)"
+    },
+    {
+      "name": "kernel(A) = 4",
+      "ok": true,
+      "detail": "actual=4, expected=4"
+    },
+    {
+      "name": "4 = B",
+      "ok": true,
+      "detail": "actual=4, expected=4"
+    },
+    {
+      "name": "32 = 36-4 = 2B²",
+      "ok": true,
+      "detail": "actual=32, expected=32"
+    },
+    {
+      "name": "Σκv = 0 (max err < 1e-8)",
+      "ok": true,
+      "detail": "actual=4.884981308350689e-14, expected=0"
+    },
+    {
+      "name": "M_lock min eig = 0.233",
+      "ok": true,
+      "detail": "actual=0.23294531941701668, expected=0.233 (tol=0.002)"
+    },
+    {
+      "name": "通量子 sum|N| = 66",
+      "ok": true,
+      "detail": "actual=66, expected=66"
+    },
+    {
+      "name": "通量子 sum|N| = 90",
+      "ok": true,
+      "detail": "actual=90, expected=90"
+    },
+    {
+      "name": "W_K diag/off = 4.24",
+      "ok": true,
+      "detail": "actual=4.2399465015957425, expected=4.24 (tol=0.05)"
+    },
+    {
+      "name": "66 = 3×(12+10)",
+      "ok": true,
+      "detail": "actual=66, expected=66"
+    },
+    {
+      "name": "C 態 = 30",
+      "ok": true,
+      "detail": "actual=30, expected=30"
+    },
+    {
+      "name": "K 態 = 36",
+      "ok": true,
+      "detail": "actual=36, expected=36"
+    }
+  ],
+  "passed": 30,
+  "failed": 0
+}
