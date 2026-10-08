@@ -2,15 +2,15 @@
   "o": "O84",
   "title": "真空能統一 (90/88/283.0821) + renormalization",
   "status": "closed",
-  "generated_utc": "2026-10-08T13:01:50+00:00",
+  "generated_utc": "2026-10-08T13:07:07+00:00",
   "generator": "closeout T6 inline (excludes data/MANIFEST.json itself by design)",
   "verified": "scripts 01-05 = 99/99 PASS (18+7+40+21+13)",
   "file_count": 21,
   "files": [
     {
       "path": "01_problem_record.md",
-      "sha256": "3cbb319870e2964feae0fff34ed3881ea9024600f89d6abdfd91db02827c8815",
-      "bytes": 10578,
+      "sha256": "7f19005f041e8a7b492de407400662e51d59a80b5e3852ddb6967a3537ef56c6",
+      "bytes": 11820,
       "role": "problem_record (root 正本; §一-§八)"
     },
     {

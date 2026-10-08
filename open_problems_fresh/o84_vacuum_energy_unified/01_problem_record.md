@@ -166,3 +166,17 @@ L3 (Physical):        Λ_eff = V_Λ/M_Pl², Ω_Λ = ⟨W⟩²/Σγ = 61.5/90 = 0
 **時序完整性確認**：① 每支 script 之 mtime 早於引用它嘅 doc 之對應修正時間；② 舊 doc 全保留（append-only，零真刪行，backup subsequence 已驗）；
 ③ 無跨文檔污染：新推導 keyword（`handover_ruling_r2`/`null(A)=null(G)`/`13/13`）只出現喺本輪新節，舊節（§一–§五、時序第 1 輪列）零命中；
 ④ 註記日期全部取實際系統日期（`date` 實測 2026-10-08）。
+## 九、全 Session 鏈身份 (closeout, 2026-10-08)
+
+> 「O84 全 session 鏈」= **本對話框（Telegram thread 55903）之 session 鏈** —— O84 原始推導及其後所有交接／承接皆在同一 thread。
+
+| # | session_id | 日期 | 角色 | 寫入證據 |
+|:-:|:-----------|:-----|:-----|:---------|
+| 1 | `20260825_223445_28ebfe55` | 2026-08-25 | **O84 原始攻堅**（docs×3, scripts×3, SESSION_START, data×3） | 22 次 |
+| 2 | `20260828_132708_e0991f8b` | 2026-08-28 | O84 記錄閉合狀態檢查（O72 backfill） | 1 write_file (310B) |
+| 3 | `20261008_182225_90d1f37d` | 2026-10-08 | **判決承接 R1**（O240 4 通知 → scripts/04 21/21） | 18 patch |
+| 4 | `20261008_185446_f75044` | 2026-10-08 | **鏈審計 + closeout T0–T6**（本 session） | 見 git 06eb083/b6f76b4 |
+
+> **跨 thread 來源**：O240 鏈（thread 103676: `20261008_143117_abc8416c` → `20261008_152726_b7812c` → `20261008_193353_32e67a`）
+> 以 append-only 寫入 SESSION_START 共 5 節通知；本 O 於 §六 逐項獨立重驗（R1 21/21 + R2 13/13）。
+> **寫入者全集** = 上述 4 session + O240 鏈（僅 patch SESSION_START）；其餘 136 session 只係歷史長 session 提及（噪音），無任何 O84 寫入。
