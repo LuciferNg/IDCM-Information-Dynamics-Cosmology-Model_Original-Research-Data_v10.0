@@ -1,0 +1,14 @@
+{
+  "sum_kappa_diag": -380,
+  "phi88_over2": 20.0,
+  "selfproof_19": 19.0,
+  "odd_le35": 28.421544609703137,
+  "odd_gt35": 59.57845539029687,
+  "even_le36": 30.2821071783001,
+  "even_gt36": 59.7178928216999,
+  "resid_early": 178.81749540347084,
+  "F_over_sum": 4.498563908532662,
+  "delta_times_struct_near_int": [],
+  "passed": 7,
+  "failed": 0
+}

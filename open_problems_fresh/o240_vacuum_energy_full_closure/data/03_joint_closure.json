@@ -1,0 +1,21 @@
+{
+  "test": "O240 攻堅 03: Q2-Q5 聯合",
+  "gap25": 25,
+  "G_pos_gt0": 17,
+  "G_neg_strict": 17,
+  "G_pos_strict": 15,
+  "G_zero": 4,
+  "V_lambda_ssb_decomp": {
+    "B_W2": 246.0,
+    "L6": 18,
+    "corr19": 19,
+    "delta": 0.0821292325802574,
+    "total": 283.08212923258026
+  },
+  "37_identity": {
+    "L6_plus_19": 37,
+    "L6_L5_F6": 37
+  },
+  "passed": 17,
+  "failed": 0
+}

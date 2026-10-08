@@ -1,0 +1,10 @@
+{
+  "rankA": 32,
+  "nullA_dim": 4,
+  "G_pos": 15,
+  "G_neg": 17,
+  "G_zero": 4,
+  "min_canonical_cos": 0.9999999999999994,
+  "passed": 9,
+  "failed": 0
+}

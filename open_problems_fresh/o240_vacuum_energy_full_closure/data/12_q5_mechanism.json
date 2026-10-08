@@ -1,0 +1,11 @@
+{
+  "V_lambda_414": 283.08212923258026,
+  "V_lambda_perm": 283.08212923258026,
+  "comb_414": 37,
+  "comb_Lucas": 37,
+  "omega_4142": 41,
+  "omega_denominator": 60,
+  "dev_phi_window": 5.1760333585781915e-05,
+  "passed": 7,
+  "failed": 0
+}

@@ -1,0 +1,12 @@
+{
+  "V_lambda_pure_kappa": 283.08212923258026,
+  "V_lambda_o84": 283.08212923258026,
+  "sum_kappa_diag_over_20": 19.0,
+  "S_even": 90.0,
+  "S_odd": 88.0,
+  "G_neg": 17,
+  "rank_CPX_reconstructed": 73.0,
+  "gap_from_spectra": 25.0,
+  "passed": 7,
+  "failed": 0
+}

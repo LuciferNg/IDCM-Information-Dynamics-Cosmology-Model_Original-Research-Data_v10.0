@@ -1,0 +1,420 @@
+{
+  "delta": 0.0821292325802574,
+  "cf_1over": [
+    12,
+    5,
+    1,
+    2,
+    6,
+    12,
+    1,
+    2,
+    3,
+    3,
+    1,
+    1,
+    1,
+    25,
+    258,
+    1,
+    23,
+    1,
+    5,
+    1,
+    1,
+    1,
+    2,
+    1491909986245507224164990122982170846,
+    6
+  ],
+  "pslq_dim": 50,
+  "identify_deg6": "None",
+  "identify_deg12": "None",
+  "hits_264_count": 12,
+  "hits_264": [
+    [
+      2,
+      6,
+      10
+    ],
+    [
+      2,
+      6,
+      "L10"
+    ],
+    [
+      2,
+      10,
+      6
+    ],
+    [
+      2,
+      "L10",
+      6
+    ],
+    [
+      4,
+      1,
+      "F_proj"
+    ],
+    [
+      4,
+      4,
+      5
+    ],
+    [
+      4,
+      5,
+      4
+    ],
+    [
+      4,
+      2,
+      "F_proj"
+    ]
+  ],
+  "hits_V_count": 10,
+  "hits_V": [
+    [
+      2,
+      [
+        "L",
+        2
+      ],
+      [
+        "F",
+        9
+      ],
+      "L10"
+    ],
+    [
+      2,
+      [
+        "L",
+        7
+      ],
+      [
+        "F",
+        6
+      ],
+      "L10"
+    ],
+    [
+      4,
+      [
+        "L",
+        1
+      ],
+      [
+        "F",
+        4
+      ],
+      "M"
+    ],
+    [
+      4,
+      [
+        "L",
+        1
+      ],
+      [
+        "F",
+        9
+      ],
+      "μ²"
+    ],
+    [
+      4,
+      [
+        "L",
+        2
+      ],
+      [
+        "F",
+        2
+      ],
+      "M"
+    ],
+    [
+      4,
+      [
+        "L",
+        3
+      ],
+      [
+        "F",
+        6
+      ],
+      "gap"
+    ],
+    [
+      4,
+      [
+        "L",
+        4
+      ],
+      [
+        "F",
+        5
+      ],
+      "gap"
+    ],
+    [
+      4,
+      [
+        "L",
+        4
+      ],
+      [
+        "F",
+        7
+      ],
+      "F_proj"
+    ]
+  ],
+  "audit_rows_count": 78,
+  "audit_rows": [
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 68,
+      "has_41_60": false,
+      "text": "精確 Ω_Λ = 4/(φ⁴-1) = 0.683282，而 E_sync/Σγ = 0.683333："
+    },
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 68,
+      "has_41_60": false,
+      "text": "精確 Ω_Λ = 4/(φ⁴-1) = 0.683282，而 E_sync/Σγ = 0.683333："
+    },
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 69,
+      "has_41_60": true,
+      "text": "> (2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5)"
+    },
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 167,
+      "has_41_60": false,
+      "text": "| Ω_Λ = 4/(φ⁴-1) = 未被投影能量比例 | 🟢 已證明 |"
+    },
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 168,
+      "has_41_60": true,
+      "text": "> (2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5)"
+    },
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 193,
+      "has_41_60": true,
+      "text": "而係 **Lucas 遞迴有限尾**: δ = 41/60 − 4/(φ⁴−1) = √5φ⁻¹⁰/[60(3φ+1)] (L_nφ−L_{n+1} = (−1)ⁿ√5φ⁻ⁿ)。"
+    },
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 195,
+      "has_41_60": true,
+      "text": "- 精確結構量 = **41/60** (有理, (Σγ±M)/2 對稱面分拆); 「精確 Ω_Λ = 4/(φ⁴−1)」字眼修正為「φ-代數近似」。"
+    },
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 195,
+      "has_41_60": true,
+      "text": "- 精確結構量 = **41/60** (有理, (Σγ±M)/2 對稱面分拆); 「精確 Ω_Λ = 4/(φ⁴−1)」字眼修正為「φ-代數近似」。"
+    },
+    {
+      "file": "o33_projection_mechanism/projection_derivation.md",
+      "line": 196,
+      "has_41_60": false,
+      "text": "- Ω_m/Ω_Λ = 3ε 嘅精確有理形式 = **19/41**; 3ε = 3/(4φ) 偏差 δ₂ = −√5φ⁻⁹/(164φ) = 0.024% (同型 Lucas 尾)。"
+    },
+    {
+      "file": "o33_projection_mechanism/01_problem_record.md",
+      "line": 20,
+      "has_41_60": false,
+      "text": "**已證明：** Ω_Λ = 4/(φ⁴−1) = 0.68328 係能量配分比例 —— K_Chain 總能量 (Σγ = 90) 中"
+    },
+    {
+      "file": "o33_projection_mechanism/01_problem_record.md",
+      "line": 21,
+      "has_41_60": true,
+      "text": "> (2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5)"
+    },
+    {
+      "file": "o33_projection_mechanism/01_problem_record.md",
+      "line": 25,
+      "has_41_60": false,
+      "text": "我哋證明咗「比例係幾何強迫」（4/(φ⁴-1)），但**未證明「投影唔到」嘅具體機制**。"
+    },
+    {
+      "file": "o33_projection_mechanism/01_problem_record.md",
+      "line": 26,
+      "has_41_60": true,
+      "text": "> (2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5)"
+    },
+    {
+      "file": "o33_projection_mechanism/01_problem_record.md",
+      "line": 32,
+      "has_41_60": false,
+      "text": "（χ² = 11.3/7dof）。Ω_Λ = 4/(φ⁴−1) 係結構常數。"
+    },
+    {
+      "file": "o33_projection_mechanism/01_problem_record.md",
+      "line": 33,
+      "has_41_60": true,
+      "text": "> (2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5)"
+    },
+    {
+      "file": "o33_projection_mechanism/closure_derivation.md",
+      "line": 108,
+      "has_41_60": false,
+      "text": "Ω_Λ = 4/(φ⁴-1) = E_sync/Σγ = 61.5/90 = 0.6833"
+    },
+    {
+      "file": "o33_projection_mechanism/closure_derivation.md",
+      "line": 110,
+      "has_41_60": true,
+      "text": "> (2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5; 61.5/90 = 41/60 有理)"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 19,
+      "has_41_60": false,
+      "text": "- Ω_Λ = 4/(φ⁴−1) = 0.68328 係能量配分比，非暗能量實體"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 20,
+      "has_41_60": true,
+      "text": "> (2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5)"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 68,
+      "has_41_60": true,
+      "text": "- `Ω_Λ` 舊 O37 版 `4/(φ⁴−1)` **已撤銷** → O39 版 `41/60`; `Ω_m = 19/60`, `Ω_b = Ω_m × 2/(3F₅) = 19/450`"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 88,
+      "has_41_60": false,
+      "text": "**事項表 — 「精確 Ω_Λ = 4/(φ⁴−1)」等標籤** (7 行, 原文保留, 加 dated 附註):"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 88,
+      "has_41_60": false,
+      "text": "**事項表 — 「精確 Ω_Λ = 4/(φ⁴−1)」等標籤** (7 行, 原文保留, 加 dated 附註):"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 89,
+      "has_41_60": true,
+      "text": "- `projection_derivation.md:68` — 「精確 Ω_Λ = 4/(φ⁴-1)」→ 改「φ-代數近似; 有理精確 41/60」"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 89,
+      "has_41_60": true,
+      "text": "- `projection_derivation.md:68` — 「精確 Ω_Λ = 4/(φ⁴-1)」→ 改「φ-代數近似; 有理精確 41/60」"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 90,
+      "has_41_60": true,
+      "text": "- `projection_derivation.md:166` — 「Ω_Λ = 4/(φ⁴-1) 已證明」→ 加註「41/60 有理, 4/(φ⁴−1) φ-近似 (dev 5.176e-5)」"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 90,
+      "has_41_60": true,
+      "text": "- `projection_derivation.md:166` — 「Ω_Λ = 4/(φ⁴-1) 已證明」→ 加註「41/60 有理, 4/(φ⁴−1) φ-近似 (dev 5.176e-5)」"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 91,
+      "has_41_60": true,
+      "text": "- `01_problem_record.md:20,24,30` — 「4/(φ⁴−1) 結構常數/已證明」→ 統一 41/60"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 92,
+      "has_41_60": true,
+      "text": "- `closure_derivation.md:108` — 「4/(φ⁴-1) = E_sync/Σγ = 61.5/90」→ 61.5/90 = 41/60 有理, 改引用 41/60"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 95,
+      "has_41_60": true,
+      "text": "**驗證標準**: 原文一字不改, 每行加卷標 `(2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5)`; 或按 O148 docs/"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 96,
+      "has_41_60": true,
+      "text": "**O148 判決引用**: `o148_dual_scale_vacuum_budget/docs/02_lucas_tail_delta.md` — δ₁: 41/60 vs 4/(φ⁴−1) dev 5.176e-"
+    },
+    {
+      "file": "o33_projection_mechanism/SESSION_START.md",
+      "line": 110,
+      "has_41_60": true,
+      "text": "> 附註卷標: `(2026-10-08 O148 判決承接: 4/(φ⁴−1) 係 φ-代數近似, 有理精確 = 41/60, dev 5.176e-5)`"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 16,
+      "has_41_60": true,
+      "text": "O36 質量生成需要 ⟨W⟩ ≠ 0 (線性驅動)，O33 已閉合能量配分 (Ω_Λ = 4/(φ⁴−1) = 未被投影比例)，但**凝聚嘅動力學**未推導： (2026-10-08 O148 判決承接: 41/60 有"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 20,
+      "has_41_60": true,
+      "text": "= 4/(φ⁴−1) = 0.68328  (Lucas 閉合 🟢 0.000000%) (2026-10-08 O148 判決承接: 41/60 有理精確; 「0.000000%」錯標籤, 41/60 vs 4/(φ⁴"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 40,
+      "has_41_60": false,
+      "text": "### 1.2 ★ 新恆等式：Ω_Λ/Ω_m = 4φ/3 (精確, dev 3e-59) (2026-10-08 O148 判決承接: 有理精確 = 41/19; 4φ/3 係 Lucas 尾 δ₄ 近似, dev 5"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 43,
+      "has_41_60": true,
+      "text": "Ω_Λ = 4/(φ⁴−1), φ⁴−1 = 3φ+1 (2026-10-08 O148 判決承接: 有理精確 = 41/60; 4φ/3 有理精確 = 41/19 見 45 行)"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 43,
+      "has_41_60": true,
+      "text": "Ω_Λ = 4/(φ⁴−1), φ⁴−1 = 3φ+1 (2026-10-08 O148 判決承接: 有理精確 = 41/60; 4φ/3 有理精確 = 41/19 見 45 行)"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 45,
+      "has_41_60": false,
+      "text": "Ω_Λ/Ω_m = [4/(3φ+1)]·[(3φ+1)/(3/φ)] = 4φ/3 ✓ (2026-10-08 O148 判決承接: 有理精確 = 41/19; 4φ/3 係 δ₄ 近似)"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 52,
+      "has_41_60": true,
+      "text": "→ ε⁰ 級結構 41/60 已識別, 精確 Ω_Λ 由 φ⁴−1 直接閉合 (O34 🟢)"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 299,
+      "has_41_60": true,
+      "text": "4. **同 Ω_Λ 關係？** Ω_Λ = ⟨W⟩²/⟨W⟩²_max (ε⁰ 級) = 4/(φ⁴−1) (精確) (2026-10-08 O148 判決承接: 有理精確 = 41/60)"
+    },
+    {
+      "file": "o39_wfield_condensate/docs/01_derivation_record.md",
+      "line": 308,
+      "has_41_60": false,
+      "text": "| Ω_Λ/Ω_m = 4φ/3 (精確恆等式 ★) (2026-10-08 O148 判決承接: 有理精確 = 41/19; 4φ/3 係 δ₄ 近似) | 🟢 scripts/01 |"
+    }
+  ],
+  "passed": 9,
+  "failed": 0
+}

@@ -1,0 +1,32 @@
+{
+  "triple_37": [
+    "L5+L6+F6"
+  ],
+  "triple_unique": [
+    [
+      "F6",
+      "L5",
+      "L6"
+    ]
+  ],
+  "density_dist": {
+    "0": 155,
+    "2": 9,
+    "1": 35,
+    "3": 1
+  },
+  "density_p_ge1": 0.225,
+  "F_diag_off": {
+    "F": 264.08212923258026,
+    "diag": 728.4777498897209,
+    "off": -464.3956206571408,
+    "sum": 264.08212923258014
+  },
+  "pslq_delta_basis": null,
+  "wterm": {
+    "c0_neg4Vmin": 246.0,
+    "conclusion": "264 唔係 −4V_min(c); 係 B⟨W⟩²+L₆ 獨立恆等"
+  },
+  "passed": 9,
+  "failed": 0
+}
