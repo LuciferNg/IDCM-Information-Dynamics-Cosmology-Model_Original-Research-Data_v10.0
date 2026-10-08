@@ -120,6 +120,14 @@ O206_TO_O233 = {
 }
 
 
+# 2026-10-07 修正 O237 簡寫 ref（Session 20261007 用咗 "o237/docs/..." 短路徑）:
+# register 舊 event 的 ref 仍指向簡寫；JSONL 歷史事件唔改（append-only），
+# 呢度提供簡寫 → 現存路徑翻譯層（prefix map；"o237/docs/02-04" 係 range 注，指 01_problem_record）。
+O237_SHORTHAND_PREFIX = os.path.join(REPO, "o237")
+O237_SHORTHAND_DIR = os.path.join(OPF, "o237_mass_roadmap_kchain_to_perception")
+O237_SHORTHAND_RANGE = os.path.join(REPO, "o237/docs/02-04")
+
+
 def theme_dir(name):
     """Resolve a theme folder by its legacy pid first-segment (name).
     Returns the post-migration main_problems/ path when moved, else open_problems_fresh/."""
@@ -145,6 +153,12 @@ def resolve_ref(fp):
     new = O206_TO_O233.get(fp)
     if new and os.path.exists(new):
         return new
+    if O237_SHORTHAND_RANGE and fp == O237_SHORTHAND_RANGE:
+        return os.path.join(O237_SHORTHAND_DIR, "01_problem_record.md")
+    if O237_SHORTHAND_PREFIX and fp.startswith(O237_SHORTHAND_PREFIX + os.sep):
+        cand = O237_SHORTHAND_DIR + fp[len(O237_SHORTHAND_PREFIX):]
+        if os.path.exists(cand):
+            return cand
     for src, dst in MOVED_SRC.items():
         if fp.startswith(src + os.sep):
             cand = dst + fp[len(src):]
@@ -165,11 +179,24 @@ def check_ref_path(pid, seg, ddirs):
     if os.path.exists(fp):
         return fp
     n0 = num_of(pid)
+    if n0 is None and pid and "/" in pid:
+        # sub-item (e.g. O216/delta-n-color): resolve against the parent O dir
+        head = pid.split("/")[0]
+        if re.fullmatch(r"O\d+", head):
+            n0 = num_of(head)
     if n0 is not None:
         for d in ddirs.get(n0, []):
             cand = os.path.join(d, seg)
             if os.path.exists(cand):
                 return cand
+            # 2026-10-08 類① 延伸: ref 帶 oNNN 目錄前綴但缺 open_problems_fresh/（
+            # e.g. "o216_delta_n_color/docs/02…"）→ 剝走本 pid 自己 O dir slug 前綴再試。
+            # 只接受本 pid 自己目錄（唔做全庫猜測）；同類 O144/O225 等留待其 owner 處理。
+            slug = os.path.basename(d.rstrip(os.sep))
+            if seg.startswith(slug + os.sep):
+                cand2 = os.path.join(d, seg[len(slug) + 1:])
+                if os.path.exists(cand2):
+                    return cand2
     hits = glob.glob(os.path.join(OPF, "*", seg)) + glob.glob(os.path.join(MAIN, "*", seg))
     if len(hits) == 1:
         return hits[0]
@@ -928,7 +955,7 @@ def cmd_check(a):
             rf = ref["ref"].split("#")[0].strip()
             if not rf or rf.startswith(("http", "-")):
                 continue
-            segs = [s.strip() for s in re.split(r"\s+[+;]\s+", rf)]
+            segs = [s.strip() for s in re.split(r"\s*[+;]\s+", rf)]
             miss = [seg for seg in segs if seg and check_ref_path(pid, seg, ddirs) is None]
             if miss:
                 problems.append(("REF-MISSING", "%s ref -> %s does not exist"
