@@ -1,0 +1,359 @@
+{
+  "layer0": {
+    "Sigma_44": 90.0,
+    "Sigma_even": 90.0,
+    "Sigma_odd": 88.0,
+    "E_vac": 45.0
+  },
+  "layer1": {
+    "mu2": 2.0,
+    "lam": 0.016260162601626018,
+    "W2": 61.49999999999999,
+    "V_min": -61.49999999999999,
+    "Vpp": 8.0,
+    "Omega_L": 0.6833333333333332,
+    "Omega_L_exact": 0.6832815729997476
+  },
+  "layer2": {
+    "F_gamma": 264.0821292326,
+    "three_odd": 264.0,
+    "delta": 0.08212923259998206,
+    "correction_19": 19,
+    "V_Lambda": 283.0821292326,
+    "V_obs": 283.0752,
+    "error_pct": 0.002447841633596581
+  },
+  "layer3": {
+    "Lambda_eff": 1.8988083184766183e-36,
+    "ratio_V_W2": 4.6029614509365855,
+    "ratio_V_90": 3.1453569914733333
+  },
+  "verification": {
+    "results": [
+      {
+        "test": "\u03a3\u03b3 (44-site) = 90",
+        "status": "PASS",
+        "value": 90.0,
+        "expected": 90,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03a3\u03b3_even (88-site) = 90",
+        "status": "PASS",
+        "value": 90.0,
+        "expected": 90,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03a3\u03b3_odd (88-site) = 88",
+        "status": "PASS",
+        "value": 88.0,
+        "expected": 88,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "E_vac = \u03a3\u03b3/2 = 45",
+        "status": "PASS",
+        "value": 45.0,
+        "expected": 45,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03c9_max = 2 (Nyquist)",
+        "status": "PASS",
+        "value": 2.0,
+        "expected": 2,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03b3_min = 4sin\u00b2(\u03c0/88)",
+        "status": "PASS",
+        "value": 0.005095770779492917,
+        "expected": 0.005095770779492917,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03bc\u00b2 = 90-88 = 2",
+        "status": "PASS",
+        "value": 2.0,
+        "expected": 2,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03bb = 2/123",
+        "status": "PASS",
+        "value": 0.016260162601626018,
+        "expected": 0.016260162601626018,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u27e8W\u27e9\u00b2 = \u03bc\u00b2/(2\u03bb) = 61.5",
+        "status": "PASS",
+        "value": 61.49999999999999,
+        "expected": 61.5,
+        "diff": -7.105427357601002e-15,
+        "rel_error_pct": 1.1553540418863419e-14
+      },
+      {
+        "test": "V_min = -61.5",
+        "status": "PASS",
+        "value": -61.49999999999999,
+        "expected": -61.5,
+        "diff": 7.105427357601002e-15,
+        "rel_error_pct": 1.1553540418863419e-14
+      },
+      {
+        "test": "V''(\u27e8W\u27e9) = 4\u03bc\u00b2 = 8 > 0",
+        "status": "PASS",
+        "value": 8.0,
+        "expected": 8,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03a9_\u039b = 61.5/90 = 0.6833",
+        "status": "PASS",
+        "value": 0.6833333333333332,
+        "expected": 0.6833333333333333,
+        "diff": -1.1102230246251565e-16,
+        "rel_error_pct": 1.624716621402668e-14
+      },
+      {
+        "test": "\u03a9_\u039b 61.5/90 \u2248 4/(\u03c6\u2074-1)",
+        "status": "PASS",
+        "value": 0.6833333333333332,
+        "expected": 0.6832815729997476,
+        "diff": 5.176033358567089e-05,
+        "rel_error_pct": 0.00757525676544039
+      },
+      {
+        "test": "E_matter = 90-61.5 = 28.5",
+        "status": "PASS",
+        "value": 28.500000000000007,
+        "expected": 28.5,
+        "diff": 7.105427357601002e-15,
+        "rel_error_pct": 2.49313240617579e-14
+      },
+      {
+        "test": "F(\u03b3) = 264.082129",
+        "status": "PASS",
+        "value": 264.0821292326,
+        "expected": 264.0821292326,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "3\u00d7\u03a3\u03b3_odd = 264",
+        "status": "PASS",
+        "value": 264.0,
+        "expected": 264,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u0394 = 0.082129",
+        "status": "PASS",
+        "value": 0.08212923259998206,
+        "expected": 0.0821292326,
+        "diff": -1.7943979635504093e-14,
+        "rel_error_pct": 2.1848468648061e-11
+      },
+      {
+        "test": "19 = 44-8-17",
+        "status": "PASS",
+        "value": 19,
+        "expected": 19,
+        "diff": 0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "19 = 44-21-4 (\u7b49\u50f9)",
+        "status": "PASS",
+        "value": 19,
+        "expected": 19,
+        "diff": 0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "V_\u039b = 283.082129",
+        "status": "PASS",
+        "value": 283.0821292326,
+        "expected": 283.0821292326,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "V_\u039b error < 0.01%",
+        "status": "PASS",
+        "value": 0.002447841633596581,
+        "expected": 0,
+        "diff": 0.002447841633596581,
+        "rel_error_pct": Infinity
+      },
+      {
+        "test": "283.0821 = 270-4+17.0821",
+        "status": "PASS",
+        "value": 283.0821292326,
+        "expected": 283.0821292326,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "283.0821 = 4\u00d761.5 + 37.0821",
+        "status": "PASS",
+        "value": 283.0821292326,
+        "expected": 283.0821292326,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u039b_eff = V_\u039b/M_Pl\u00b2",
+        "status": "PASS",
+        "value": 1.8988083184766183e-36,
+        "expected": 1.8988083184766183e-36,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "V_\u039b/61.5 \u2248 4.603",
+        "status": "PASS",
+        "value": 4.6029614509365855,
+        "expected": 4.603,
+        "diff": -3.8549063414272666e-05,
+        "rel_error_pct": 0.0008374769370904339
+      },
+      {
+        "test": "V_\u039b/90 \u2248 3.145 (\u2248\u03c0)",
+        "status": "PASS",
+        "value": 3.1453569914733333,
+        "expected": 3.141592653589793,
+        "diff": 0.0037643378835401364,
+        "rel_error_pct": 0.11982259632669923
+      },
+      {
+        "test": "\u03bc\u00b2 = world \u2212 observer = 90 \u2212 88 = 2",
+        "status": "PASS",
+        "value": 2.0,
+        "expected": 2,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u27e8W\u27e9\u00b2 = \u03bc\u00b2/(2\u03bb) = 61.5",
+        "status": "PASS",
+        "value": 61.49999999999999,
+        "expected": 61.49999999999999,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "V_\u039b = F(\u03b3) + N_d \u2212 F\u2088 \u2212 B",
+        "status": "PASS",
+        "value": 283.0821292326,
+        "expected": 283.0821292326,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03a9_\u039b = \u27e8W\u27e9\u00b2/\u03a3\u03b3",
+        "status": "PASS",
+        "value": 0.6833333333333332,
+        "expected": 0.6833333333333333,
+        "diff": -1.1102230246251565e-16,
+        "rel_error_pct": 1.624716621402668e-14
+      },
+      {
+        "test": "\u27e8W\u27e9\u00b2 \u00d7 \u03a3\u03b3 = 61.5\u00d790 = 5535",
+        "status": "PASS",
+        "value": 5534.999999999999,
+        "expected": 5535,
+        "diff": -9.094947017729282e-13,
+        "rel_error_pct": 1.6431701929050196e-14
+      },
+      {
+        "test": "V_\u039b \u2212 3\u00d7\u03a3\u03b3_odd = 19.0821",
+        "status": "PASS",
+        "value": 19.082129232599982,
+        "expected": 19.0821292326,
+        "diff": -1.7763568394002505e-14,
+        "rel_error_pct": 9.309007489402776e-14
+      },
+      {
+        "test": "V_\u039b \u2212 F(\u03b3) = 19",
+        "status": "PASS",
+        "value": 19.0,
+        "expected": 19,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "88 modes (finite)",
+        "status": "PASS",
+        "value": 88,
+        "expected": 88,
+        "diff": 0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03c9_max = 2 < \u221e",
+        "status": "PASS",
+        "value": 2.0,
+        "expected": 2,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03a3\u03b3 = 90 < \u221e",
+        "status": "PASS",
+        "value": 90.0,
+        "expected": 90,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03bc\u00b2 structural (\u03a3\u03b3_even\u2212\u03a3\u03b3_odd)",
+        "status": "PASS",
+        "value": 2.0,
+        "expected": 2,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u03bb structural (2/[3(N_d\u22123)])",
+        "status": "PASS",
+        "value": 0.016260162601626018,
+        "expected": 0.016260162601626018,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      },
+      {
+        "test": "\u27e8W\u27e9\u00b2 structural (\u03bc\u00b2/(2\u03bb))",
+        "status": "PASS",
+        "value": 61.49999999999999,
+        "expected": 61.5,
+        "diff": -7.105427357601002e-15,
+        "rel_error_pct": 1.1553540418863419e-14
+      },
+      {
+        "test": "V_\u039b structural (F(\u03b3)+19)",
+        "status": "PASS",
+        "value": 283.0821292326,
+        "expected": 283.0821292326,
+        "diff": 0.0,
+        "rel_error_pct": 0.0
+      }
+    ],
+    "all_pass": true,
+    "pass_count": 40,
+    "fail_count": 0,
+    "total": 40
+  }
+}

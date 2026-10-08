@@ -1,3 +1,9 @@
+> ⚠️ **歷史快照 (2026-10-08)**: 本檔為 `docs/01_problem_record.md` 凍結快照（沿用 2026-08-25 ~ 2026-10-08）。
+> **正本已移至 O 根目錄** `01_problem_record.md`（零字節改動，sha256 前後一致 `93b3e621…`），
+> 依 IDCM O-series 慣例（`01_problem_record.md` 一律放 O 根目錄）。本快照保留供歷史引用解析
+> （`docs/02_verification_log.md:74`、`SESSION_START.md:29,126`），後續更新一律寫入 root 正本。
+> 前身 sha256（搬遷前 `docs/01_problem_record.md`）= `93b3e6217b31dd50fbaceabfb70f4832742e879d06b928324d1682e87f8f58c0`
+
 # O84 — 真空能統一 (90/88/283.0821) + renormalization
 
 > **★ 後續修正 (2026-10-08, O240 判決回交 + O148 判決承接)**:

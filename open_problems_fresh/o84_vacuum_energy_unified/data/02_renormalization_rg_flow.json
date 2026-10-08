@@ -1,0 +1,75 @@
+{
+  "scales": {
+    "L0_lattice": {
+      "name": "Lattice UV regulator",
+      "energy_eV": 0.004060265,
+      "energy_GeV": 4.060265e-12,
+      "length_Mpc": 46.93113636363636,
+      "omega_max": 2,
+      "description": "88-site chain, a = R_world/88"
+    },
+    "L1_SSB": {
+      "name": "SSB condensate formation",
+      "energy_eV": 0.0057420818298287955,
+      "energy_GeV": 5.742081829828796e-12,
+      "mu2": 2,
+      "W2": 61.5,
+      "description": "\u03bc\u00b2 = 2 drives SSB, \u27e8W\u27e9\u00b2 = 61.5"
+    },
+    "L1_L2_bridge": {
+      "name": "SSB \u2192 CY\u2083 bridge",
+      "energy_GeV": 0.0279009,
+      "scale_factor_GeV": 0.003557792822701779,
+      "description": "\u03ba\u00b2 = M\u2080 = 27.9 MeV, a = M\u2080/\u221a61.5"
+    },
+    "L2_CY3": {
+      "name": "CY\u2083 geometric completion",
+      "energy_GeV": 1.221e+19,
+      "F_gamma": 264.0821292326,
+      "V_Lambda": 283.0821292326,
+      "description": "F(\u03b3) = 264.0821, V_\u039b = F(\u03b3) + 19 = 283.0821"
+    },
+    "L3_physical": {
+      "name": "Physical cosmology",
+      "Lambda_eff": 1.8988083184766183e-36,
+      "rho_Lambda_4th_eV": 1.4332961864682134e+19,
+      "Omega_Lambda": 0.6832815729997476,
+      "description": "\u039b_eff = V_\u039b/M_Pl\u00b2, \u03a9_\u039b = 4/(\u03c6\u2074\u22121)"
+    }
+  },
+  "verification": {
+    "results": [
+      {
+        "test": "L0\u2192L1: \u03bc\u00b2 = 2 drives SSB",
+        "status": "PASS"
+      },
+      {
+        "test": "L1\u2192L2: a = M\u2080/\u221a61.5 = 3.558 MeV \u2248 3.56 MeV",
+        "status": "PASS"
+      },
+      {
+        "test": "L1\u2192L2: a_scale = 3.5578 MeV \u2248 3.5578 MeV",
+        "status": "PASS"
+      },
+      {
+        "test": "L2\u2192L3: \u039b_eff = V_\u039b/M_Pl\u00b2 = 1.898808e-36",
+        "status": "PASS"
+      },
+      {
+        "test": "RG: E_lattice = 4.060265e-12 GeV < E_SSB = 5.742082e-12 GeV < M_Pl",
+        "status": "PASS"
+      },
+      {
+        "test": "RG: Finite spectrum \u2192 no divergence",
+        "status": "PASS"
+      },
+      {
+        "test": "\u03a9_\u039b = 61.5/90 = 0.6833333333 \u2248 0.6832815730",
+        "status": "PASS"
+      }
+    ],
+    "all_pass": true,
+    "pass_count": 7,
+    "total": 7
+  }
+}

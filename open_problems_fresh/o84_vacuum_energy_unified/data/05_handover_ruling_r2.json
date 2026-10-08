@@ -1,0 +1,15 @@
+{
+  "rank_A_exact": 32,
+  "rank_A_svd": 32,
+  "nullA_dim": 4,
+  "G_pos": 15,
+  "G_neg": 17,
+  "G_zero": 4,
+  "zero_max_abs": 6.568973831470301e-17,
+  "gap_nonzero_min_abs": 0.001827811409529845,
+  "min_canonical_cos": 0.9999999999999989,
+  "max_canonical_dev": 1.1102230246251565e-15,
+  "G_float64_maxdev_vs_mpmath50": 8.326672684688674e-17,
+  "passed": 13,
+  "failed": 0
+}

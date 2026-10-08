@@ -6,6 +6,7 @@
 >   01_vacuum_layer_unity.py: 18/18 PASS ✅
 >   02_renormalization_rg_flow.py: 7/7 PASS ✅
 >   03_final_verify.py: 40/40 PASS ✅
+> **Closeout (2026-10-08)**: scripts/01-05, **99/99 PASS** ✅（T0–T6；詳見 root `01_problem_record.md` §六–§八）
 
 ---
 
@@ -98,6 +99,21 @@
 
 ---
 
+## 判決回交通知 #4 — O240 → O84 (2026-10-08, append-only)
+
+> 來源 O: `o240_vacuum_energy_full_closure` (docs/10)
+> 性質: Q3 條件穩定閉合（跨 O 咬合）
+> 本 O session 有權刪去或改寫本節。
+
+**★ Q3 升格 🟢 條件穩定閉合**：
+- G(γ) 15正/17負/4零（1e-8）；**null(A) = null(G) 完全同一子空間**（canonical angles 全 1.0）——O61 kernel(A)=4=B ↔ O240 4 零模係同一個實數子空間
+- O62 更正（kernel→W≡0 flat）同 O240 零模咬合：4 個 flat 方向＝B 自由度＝冇 F-term
+- 17 負方向 = 32−15（rank(A) − 正方向數）——不穩定性係結構必然，vacuum 本身係 saddle+flat
+
+**驗證**: O240 scripts/11 C1-C5 (9/9)。
+
+---
+
 ## ✅ O84 判決承接處理完成 — 回覆 O240 (2026-10-08, append-only)
 
 > **狀態**: 4 項交接全部處理。獨立重驗 `scripts/04_handover_ruling.py` — **21/21 PASS**
@@ -114,3 +130,24 @@
 - `problem_register` — 判決 note (O240→O84)
 
 **原本 4 節 (O240 通知) 原文保留** — 按 O169 協議 append-only。
+---
+
+## ✅ O84 判決承接 R2 + Closeout 完成 (2026-10-08, append-only)
+
+> **本節 append** — 上述 5 節 O240 通知 + 前「判決承接處理完成」節**原文保留**。
+> **新增處理**: O240 判決回交通知（Q3 升格 🟢, 2026-10-08 19:36, O240 docs/10）——
+> 本 O 獨立重驗 `scripts/05_handover_ruling_r2.py` **13/13 PASS**。
+
+**R2 重驗結果**（§7.2 上游 handback 逐項重驗, 零 import O240/O61/O62）:
+- `rank(A) = 32 EXACT`（4 質數 F_p 下界一致 ∧ float64 SVD 上界 = 32 夾實；A = κ.reshape(1296×36)）
+- `null(A) dim = 4 = B`；★ `null(A) = null(G)` 同一子空間（canonical cos = [1,1,1,1], max dev 1.11e-15）
+- G(γ) 15 正 / 17 負 / 4 零（零模 6.6e-17 vs 非零最近 1.83e-3 ⟹ **gap 14 個數量級**, 非 threshold artifact）
+- ⇒ **Q3 升格 🟢 條件穩定閉合 成立**（vacuum = saddle 15 穩定 + 17 不穩 + 4 flat/ker, B 自由度）
+
+**Closeout T0–T6**:
+- **T1 全鏈重跑**: scripts 01–05 共 **99/99 PASS**（18+7+40+21+13）；`data/01-03` sha256 零漂移
+- **形態對齊**（§1 慣例）: `01_problem_record.md` 由 `docs/` 搬去 O 根目錄
+  （零字節改動, sha256 `93b3e621…`）；`docs/` 版保留為凍結歷史快照
+- **T0 水位表 + T4 時序索引** → root `01_problem_record.md` §六–§八
+- **T5** `final_result.md` 新建；**T6** git commit 落庫
+- 全程 append-only（舊 94 行逐字一致已驗）；範圍只限 O84 目錄 + problem_register

@@ -1,0 +1,48 @@
+=================================================================
+O84 — Renormalization Group Flow
+=================================================================
+
+📊 RG Flow: UV → IR
+-----------------------------------------------------------------
+  UV: Lattice UV regulator
+      E = 0.004060 eV  |  a = 46.93 Mpc
+      ω_max = 2 (Nyquist cutoff)
+      ↓ μ² = 2 (world−observer gap)
+  L1: SSB condensate formation
+      E = 0.005742 eV  |  ⟨W⟩² = 61.5
+      ↓ κ² = M₀ = 27.9009 MeV
+  Bridge: SSB → CY₃ bridge
+      a = 3.5578 MeV
+      ↓ F(γ) = 264.082129
+  L2: CY₃ geometric completion
+      E = 1.22e+19 GeV  |  V_Λ = 283.082129
+      ↓ Λ_eff = V_Λ/M_Pl²
+  IR: Physical cosmology
+      Λ_eff = 1.898808e-36
+      ρ_Λ^1/4 = 14332961864682133504.000000 eV
+      Ω_Λ = 0.6832815730
+
+=================================================================
+RG Flow 方向: UV (lattice, a=46.93 Mpc)
+                     ↓
+                SSB (μ²=2, ⟨W⟩²=61.5)
+                     ↓
+                CY₃ (F=264.0821, V_Λ=283.0821)
+                     ↓
+                IR (Λ_eff=283.0821/M_Pl², Ω_Λ=0.6833)
+=================================================================
+
+
+🔗 RG 連接驗證:
+  ✅ L0→L1: μ² = 2 drives SSB
+  ✅ L1→L2: a = M₀/√61.5 = 3.558 MeV ≈ 3.56 MeV
+  ✅ L1→L2: a_scale = 3.5578 MeV ≈ 3.5578 MeV
+  ✅ L2→L3: Λ_eff = V_Λ/M_Pl² = 1.898808e-36
+  ✅ RG: E_lattice = 4.060265e-12 GeV < E_SSB = 5.742082e-12 GeV < M_Pl
+  ✅ RG: Finite spectrum → no divergence
+  ✅ Ω_Λ = 61.5/90 = 0.6833333333 ≈ 0.6832815730
+
+  總計: 7/7 PASS
+  ✅ 全部 PASS — RG flow 連接驗證完成!
+
+📁 結果已保存到 data/02_renormalization_rg_flow.json
