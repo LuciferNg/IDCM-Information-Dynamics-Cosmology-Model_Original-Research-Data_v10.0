@@ -136,5 +136,17 @@ D_app(ℓ_max) / R_H ≈ (1 + 2φ⁻¹ℓ_max) × (1 - 1/B^ℓ_max)
 | 黑洞熵 = Bekenstein-Hawking | 🟢 一致 (全息原理) |
 | 黑洞 = 反投影能量守恆 | 🟡 方向正確，框架層次 |
 | D_app ↔ Ω_Λ 接駁公式 | 🟡 部分推導，ℓ_max 公式未精確 |
+
+> **★ closeout 判定 (2026-10-08)**: 上表 🟡 已全部判定 —
+> · 「投影效率 (1−1/B^ℓ) → 1 / Ω_m/Ω_Λ = 3ε 🟡」→ **已閉合**: Ω_m/Ω_Λ = 3ε = 19/41 (O148 有理精確; verify_all D5)
+> · 「sync 限制 ℓ_max 🟡」→ **已閉合**: ℓ_max = (Ω_m/Ω_Λ)·N_d/ln B = 14.7085 (operator_derivation.md)
+> · 「黑洞 = 反投影 🟡」→ **已閉合**: operator_derivation.md T_pipe† + 熵一致 (1.05e77) + 能量守恆
+> · 「D_app ↔ Ω_Λ 接駁公式 🟡」→ **已閉合**: D_app = B·ln(1+ℓ_max/φ)/(1+Ω_m/Ω_Λ) = 6.3183 → 6 維
+> 原文保留 (時序歷史), 判定以 operator_derivation.md 為準。
 | 霍金蒸發量化 | 🟡 框架解釋 |
 | 投影管道具體機制 | 🔴 開放 |
+
+> **★ closeout 判定 (2026-10-08, 續上)**: 最後兩行 —
+> · 「霍金蒸發量化 🟡」→ **已移交 O121/return-rate**: 蒸發/返池量化 (τ_rec, G8) 屬黑洞返池系列, O121 已閉合 (2026-10-02) + return-rate 子項 register 追蹤
+> · 「投影管道具體機制 🔴」→ **已閉合**: T_pipe = diag(σ_n) 算子 (operator_derivation.md); n* 閾值 (closure_derivation.md) 即具體機制
+> 原文保留 (時序歷史)。

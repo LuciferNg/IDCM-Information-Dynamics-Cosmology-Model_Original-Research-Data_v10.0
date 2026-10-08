@@ -172,6 +172,13 @@ sync → SM → 黑洞 → sync → SM → ...
 | 黑洞蒸發 = sync→SM 循環 | 🟡 框架層次解釋，未量化 |
 | 投影截止嘅 γ_n 閾值 | 🔴 未推導 — 具體閾值公式開放 |
 
+> **★ closeout 判定 (2026-10-08)**: 上表兩行 🟡/🔴 已全部判定 —
+> · 「水喉模型 🟡」→ **已閉合**: operator_derivation.md T_pipe = diag(σ_n), σ_n ∈ {1, 0.7720, 0} 提供算子化
+> · 「黑洞 = 反投影 🟡」→ **已閉合**: operator_derivation.md T_pipe† = I−T_pipe + 熵一致 + 雙向流動方程 + d/dt(Σγ)=0
+> · 「黑洞蒸發 = sync→SM 循環 🟡」→ **已移交**: 量化屬 O121/return-rate 系列 (G8 τ_rec, register 2026-10-02), 本 O 已閉合
+> · 「投影截止 γ_n 閾值 🔴」→ **已閉合**: closure_derivation.md n* = N_d − L₆ + 1 = 27 (22.8% sync) 即具體閾值
+> 原文保留 (時序歷史), 判定以 operator_derivation.md + O121 register 為準。
+
 ---
 
 ## 6. 結論
