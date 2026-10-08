@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O242
 title:   量子漲落可觀測性判定: 差分譜量 vs 絕對真空能密度 (可測/不可測分層)
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O242
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-08
 prereq:  O36, O41, O84, O86, O138, O212, O240, O241
 source:  2026-10-07 調律者提問概念層; Jaffe 2005 分層: 量到嘅係模譜邊界敏感度, 非零點能實體
 -->
