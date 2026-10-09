@@ -63,6 +63,16 @@ THEME_MOVE = {
 }
 MOVED_SRC = {os.path.join(OPF, k): os.path.join(MAIN, v) for k, v in THEME_MOVE.items()}
 
+# 2026-10-08 O144 收據 note 之 ref 筆誤: 目錄 slug 寫成 o243_triple_vacuum_phase_transition，
+# 實際係 o243_phase_transition_no_go。JSONL 唔改（append-only），喺翻譯層補回。
+O243_SLUG_FIX = os.path.join(OPF, "o243_triple_vacuum_phase_transition")
+O243_SLUG_FIX_TO = os.path.join(OPF, "o243_phase_transition_no_go")
+
+# 2026-10-08 O144/P3 預註冊事件 ref 之檔名筆誤: 猜名 docs/10_link_energy_flux_tube.md，
+# 實際 docs/10_su3_connection_functional_sigma.md。同樣翻譯層補回。
+P3_PRE_REG_REF = os.path.join(OPF, "o144_boson_identity/docs/10_link_energy_flux_tube.md")
+P3_PRE_REG_REF_TO = os.path.join(OPF, "o144_boson_identity/docs/10_su3_connection_functional_sigma.md")
+
 # 2026-10-06 修正第 ② 類 REF-MISSING（O85 rename）:
 # O85 於 2026-10-05「由零重建」（用戶裁定全刪舊 docs 由零推導），舊檔名已不存在；
 # register 舊 event 的 ref 仍指向舊名。JSONL 歷史 event 唔改（append-only），
@@ -127,6 +137,32 @@ O237_SHORTHAND_PREFIX = os.path.join(REPO, "o237")
 O237_SHORTHAND_DIR = os.path.join(OPF, "o237_mass_roadmap_kchain_to_perception")
 O237_SHORTHAND_RANGE = os.path.join(REPO, "o237/docs/02-04")
 
+# 2026-10-09 修正第 ④ 類 REF-MISSING（P1 BBN session 重驗時發現，8 個）:
+# ① O225/R2 三個 handed_off 事件 ref 寫漏 `open_problems_fresh/` 前綴
+#    （"o222_qm_evaluation_semantics/..." 喺 repo-root 相對解析下報 MISSING，
+#    檔案真實存在於 OPF/o222_qm_evaluation_semantics/）；
+# ② O229 兩個 progress 事件 ref 寫成目錄名（"o229_mu2_b4_particle_accounting"
+#    冇檔名）— 指向目錄嘅 01_problem_record.md；
+# ③ crystal_stress / little_red_dots / uhecrs 三個 registered 事件 ref 指
+#    main_problems/pNN/01_problem_record.md，但 migration 後指名檔移入
+#    docs/（p5）、records/（p11），p12 用 records/03_uhecrs_record.md。
+# JSONL 歷史事件唔改（append-only），呢度提供舊 ref → 現存路徑翻譯層。
+# 逐條核對真實存在先加入；同 O85_RENAME/O206_TO_O233 先例一致。
+REF_PATH_FIX = {
+    os.path.join(REPO, "o222_qm_evaluation_semantics/docs/40_r26_g1g8.md"):
+        os.path.join(OPF, "o222_qm_evaluation_semantics/docs/40_r26_g1g8.md"),
+    os.path.join(REPO, "o222_qm_evaluation_semantics/scripts/70_r27d_nogo.py"):
+        os.path.join(OPF, "o222_qm_evaluation_semantics/scripts/70_r27d_nogo.py"),
+    os.path.join(REPO, "o229_mu2_b4_particle_accounting"):
+        os.path.join(OPF, "o229_mu2_b4_particle_accounting/01_problem_record.md"),
+    os.path.join(MAIN, "p5_crystal_stress/01_problem_record.md"):
+        os.path.join(MAIN, "p5_crystal_stress/docs/01_problem_record.md"),
+    os.path.join(MAIN, "p11_little_red_dots/01_problem_record.md"):
+        os.path.join(MAIN, "p11_little_red_dots/records/01_problem_record.md"),
+    os.path.join(MAIN, "p12_uhecrs/01_problem_record.md"):
+        os.path.join(MAIN, "p12_uhecrs/records/03_uhecrs_record.md"),
+}
+
 
 def theme_dir(name):
     """Resolve a theme folder by its legacy pid first-segment (name).
@@ -159,6 +195,15 @@ def resolve_ref(fp):
         cand = O237_SHORTHAND_DIR + fp[len(O237_SHORTHAND_PREFIX):]
         if os.path.exists(cand):
             return cand
+    if fp.startswith(O243_SLUG_FIX + os.sep):
+        cand = O243_SLUG_FIX_TO + fp[len(O243_SLUG_FIX):]
+        if os.path.exists(cand):
+            return cand
+    if fp == P3_PRE_REG_REF and os.path.exists(P3_PRE_REG_REF_TO):
+        return P3_PRE_REG_REF_TO
+    new = REF_PATH_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
     for src, dst in MOVED_SRC.items():
         if fp.startswith(src + os.sep):
             cand = dst + fp[len(src):]
@@ -167,17 +212,37 @@ def resolve_ref(fp):
     return fp
 
 
+def _complete_num_ref(base_dir, seg):
+    """2026-10-08 類⑥延伸: ref 寫成 'docs/NN' 或 'scripts/NN'（數字無後綴）——
+    若 base_dir 下該目錄存在**唯一** 'NN_*' 檔則補齊；0 或 >1 命中 → None（唔猜）。
+    e.g. O144 note ref 'o144_boson_identity/docs/23' → docs/23_su12_breaking_mechanism.md"""
+    parts = seg.replace(os.sep, "/").split("/")
+    if len(parts) < 2 or parts[-2] not in ("docs", "scripts", "data"):
+        return None
+    if not re.fullmatch(r"\d{1,3}", parts[-1]):
+        return None
+    sub = os.path.join(base_dir, *parts[:-1])
+    n = int(parts[-1])
+    cands = [p for p in glob.glob(os.path.join(sub, "*"))
+             if os.path.isfile(p) and os.path.basename(p).startswith(f"{n:02d}_")]
+    return cands[0] if len(cands) == 1 else None
+
+
 def check_ref_path(pid, seg, ddirs):
     """Resolve one ref segment to a real path, or None if genuinely missing.
     Order: absolute/REPO-join -> resolve_ref (theme migration / O85 rename) ->
     2026-10-07 類① fallback (bare O-dir-relative ref written without its oNNN
     prefix): try this pid's own O dir + seg, then a repo-wide unique */seg hit.
+    2026-10-08 類⑥ fallback: 'docs/NN' 數字無後綴 → 該目錄唯一 NN_* 檔補齊。
     A repo-wide match is accepted ONLY when unique (otherwise the intent is
     ambiguous and the ref stays MISSING - never guess)."""
     fp = seg if os.path.isabs(seg) else os.path.join(REPO, seg)
     fp = resolve_ref(fp)
     if os.path.exists(fp):
         return fp
+    fp2 = _complete_num_ref(REPO, seg)
+    if fp2:
+        return fp2
     n0 = num_of(pid)
     if n0 is None and pid and "/" in pid:
         # sub-item (e.g. O216/delta-n-color): resolve against the parent O dir
@@ -194,9 +259,28 @@ def check_ref_path(pid, seg, ddirs):
             # 只接受本 pid 自己目錄（唔做全庫猜測）；同類 O144/O225 等留待其 owner 處理。
             slug = os.path.basename(d.rstrip(os.sep))
             if seg.startswith(slug + os.sep):
-                cand2 = os.path.join(d, seg[len(slug) + 1:])
+                stripped = seg[len(slug) + 1:]
+                cand2 = os.path.join(d, stripped)
                 if os.path.exists(cand2):
                     return cand2
+                cand3 = _complete_num_ref(d, stripped)   # 2026-10-08 類⑥ (O144 docs/23)
+                if cand3:
+                    return cand3
+            # 2026-10-09 類① 延伸 (O148): ref 帶 oNNN 短前綴（'o148/docs/17'）而唔係完整
+            # slug（'o148_dual_scale_vacuum_budget/docs/17'）—— 剝走 'oNNN' 再對本 pid
+            # 目錄試，同類 c/oN 短名寫法（'O148/...'）一併處理。只做本 pid 自己（唔猜）。
+            short = f"o{n0}"
+            if seg.startswith(short + os.sep):
+                stripped = seg[len(short) + 1:]
+                cand2 = os.path.join(d, stripped)
+                if os.path.exists(cand2):
+                    return cand2
+                cand3 = _complete_num_ref(d, stripped)
+                if cand3:
+                    return cand3
+            cand4 = _complete_num_ref(d, seg)            # 2026-10-08 類⑥ (無 slug 前綴)
+            if cand4:
+                return cand4
     hits = glob.glob(os.path.join(OPF, "*", seg)) + glob.glob(os.path.join(MAIN, "*", seg))
     if len(hits) == 1:
         return hits[0]
@@ -956,6 +1040,11 @@ def cmd_check(a):
             if not rf or rf.startswith(("http", "-")):
                 continue
             segs = [s.strip() for s in re.split(r"\s*[+;]\s+", rf)]
+            # 2026-10-09 類⑥ 延伸 (O148 自引入): 該 event 把備註文字混入 ref
+            # （'o148/docs/12 + S11 反事實'——'+' 之後係註釋唔係路徑）。repo 檔名全
+            # ASCII（docs/scripts/data 層一級檔名無中文），含 CJK 字元嘅段唔可能係
+            # 檔案路徑 → 當註釋跳過。ASCII 段維持原判（MISSING 照報，唔放寬）。
+            segs = [s for s in segs if not re.search(r"[\u4e00-\u9fff]", s)]
             miss = [seg for seg in segs if seg and check_ref_path(pid, seg, ddirs) is None]
             if miss:
                 problems.append(("REF-MISSING", "%s ref -> %s does not exist"
@@ -1192,16 +1281,28 @@ def cmd_clues(a):
 
     Derived only.  Content stays in the markdown; this is a regenerable index
     that points back at it, so it never becomes a second system of record.
+
+    2026-10-09: scope extended from OPF to OPF + MAIN (main_problems/ moved
+    themes).  Mention pattern extended beyond O-numbers to main-theme pids
+    (bbn, cmb_cl, ... pN-aliased themes) so p-series problems are findable.
     """
+    # match O-numbers and any main-theme slug (case-insensitive, word-bounded)
+    theme_pid_re = re.compile(
+        r"(?<!\w)(%s)(?!\w)" % "|".join(sorted(THEME_MOVE, key=len, reverse=True)),
+        re.IGNORECASE)
+    o_re = re.compile(r"\bO(\d{1,3})\b")
     if os.path.exists(CLUES):
         os.remove(CLUES)
     con = sqlite3.connect(CLUES)
     con.execute("CREATE TABLE mention (pid TEXT, doc TEXT, line INTEGER, snippet TEXT)")
     con.execute("CREATE VIRTUAL TABLE doc_fts USING fts5(doc, text)")
     files = []
-    for root, dirs, names in os.walk(OPF):
-        dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "data", "_templates")]
-        files += [os.path.join(root, nm) for nm in names if nm.endswith(".md")]
+    for base, base_name in ((OPF, "open_problems_fresh"), (MAIN, "main_problems")):
+        if not os.path.isdir(base):
+            continue
+        for root, dirs, names in os.walk(base):
+            dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "data", "_templates")]
+            files += [os.path.join(root, nm) for nm in names if nm.endswith(".md")]
     nf = nm = 0
     for fp in sorted(files):
         rel = os.path.relpath(fp, REPO)
@@ -1212,14 +1313,21 @@ def cmd_clues(a):
         nf += 1
         con.execute("INSERT INTO doc_fts (doc,text) VALUES (?,?)", (rel, txt))
         for i, line in enumerate(txt.splitlines(), 1):
-            for m in re.finditer(r"\bO(\d{1,3})\b", line):
+            for m in o_re.finditer(line):
                 con.execute("INSERT INTO mention VALUES (?,?,?,?)",
                             ("O%d" % int(m.group(1)), rel, i, clip(line, 200)))
+                nm += 1
+            for m in theme_pid_re.finditer(line):
+                pid = m.group(1).lower()
+                if o_re.search(m.group(1)):
+                    continue
+                con.execute("INSERT INTO mention VALUES (?,?,?,?)",
+                            (pid, rel, i, clip(line, 200)))
                 nm += 1
     con.execute("CREATE INDEX idx_mention_pid ON mention(pid)")
     con.commit()
     con.close()
-    print("clue index: %d docs, %d O-number mentions -> %s" % (nf, nm, os.path.basename(CLUES)))
+    print("clue index: %d docs, %d pid mentions (O + main themes) -> %s" % (nf, nm, os.path.basename(CLUES)))
 
 
 def cmd_find(a):
@@ -1228,13 +1336,17 @@ def cmd_find(a):
     con = sqlite3.connect(CLUES)
     pid = a.pid or ("O%d" % a.num if a.num else None)
     # resolve stale labels through the alias table before searching
+    # (2026-10-09: also try global scope so pN_* theme aliases resolve
+    # without requiring --scope; e.g. `find --pid p1_bbn` -> bbn)
     scope = getattr(a, "scope", None)
-    if pid and scope:
+    if pid and (scope or True):
         lc = connect(create=False)
-        r = lc.execute("SELECT pid,note FROM alias WHERE scope=? AND label=?",
-                       (scope, pid)).fetchone()
+        r = lc.execute(
+            "SELECT scope,pid,note FROM alias WHERE label=? AND (scope=? OR scope='global') "
+            "ORDER BY (scope=?) DESC LIMIT 1",
+            (pid, scope or "global", scope or "global")).fetchone()
         if r:
-            print("resolved %s:%s -> %s   [%s]" % (scope, pid, r["pid"], r["note"] or ""))
+            print("resolved %s:%s -> %s   [%s]" % (r["scope"], pid, r["pid"], r["note"] or ""))
             pid = r["pid"]
         lc.close()
     if pid and num_of(pid) is not None:
@@ -1248,11 +1360,15 @@ def cmd_find(a):
     elif pid:
         seg = pid.split("/")[0]
         tail = pid.split("/")[-1]
+        # 2026-10-09: theme_dir() is migration-aware (open_problems_fresh or
+        # main_problems/pNN_<theme>) — fallback must cover both.
+        td = theme_dir(seg)
+        tpat = os.path.relpath(td, REPO).replace("\\", "/")
         rows = con.execute(
             "SELECT doc, snippet(doc_fts,1,'[',']','...',10) FROM doc_fts"
             " WHERE doc_fts MATCH ? AND doc LIKE ? LIMIT ?",
-            ('"%s"' % tail.replace('"', ""), "open_problems_fresh/%s/%%" % seg, a.limit)).fetchall()
-        print("%s -> %d docs in %s/ matching %r:" % (pid, len(rows), seg, tail))
+            ('"%s"' % tail.replace('"', ""), tpat + "/%", a.limit)).fetchall()
+        print("%s -> %d docs in %s/ matching %r:" % (pid, len(rows), tpat, tail))
         for d, s in rows:
             print("  %s  %s" % (d, " ".join((s or "").split())[:150]))
     elif a.term:
