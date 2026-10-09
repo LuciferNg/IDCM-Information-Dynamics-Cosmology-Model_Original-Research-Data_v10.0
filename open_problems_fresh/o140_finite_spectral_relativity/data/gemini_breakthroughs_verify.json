@@ -1,0 +1,14 @@
+{
+  "E0_eV": 1.0843310115473455e-41,
+  "E0_identity": "22hc/(pi R) = hc/(2pi a)",
+  "f0_Hz": 1.6485291088609454e-17,
+  "T0_yr": 1922057542.278041,
+  "f0_over_omega_ring": 7.002817496043397,
+  "nyquist_critique": "2pi*a is NOT sampling-theorem critical value; true Nyquist is lambda>=2a; 2pi choice is a new axiom (one phase wrap per lattice step)",
+  "g2_span": 28.0172208550811,
+  "g2_B4_factor_count": 3,
+  "g2_factors_needed": 3.8203188408385977,
+  "g2e_hits_1pct": 0,
+  "g2e_hits_5pct": 0,
+  "g2e_min_dev": 0.923275156657675
+}
