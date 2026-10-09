@@ -396,3 +396,10 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 3. **判據側修正 5 處**（審計側，物理零讓步）：ck 次序、負號、F1b 目標符號、**F3 構造重定義**（σ→0 偽影 ⟹ 主導性測試，門檻不變）、C0 週期 BC。
 4. **層次鐵律**全程標層：所有「接近速度」陳述屬**連續層**；離散層精確性（γ_n = csc、逐 mode 質量殼）唔等於連續層 Lorentz 群已建立。
 5. **註冊**：本 O（docs/23+24、Session 22、§32/33、flags）＋ 跨 O（register note 交 O140/FSR-to-SR，ref = docs/24；零檔案寫入 O140）。
+
+
+### Session 23 — 2026-10-02：調律者定案「全部繼續在O221做」＋ 兩臂續推
+
+1. **決策**（調律者指令）：臂 2 執行留在 O221（docs/26、scripts/29…）；`O140/FSR-to-SR` 維持 register 擁有者；跨 O 只經 register。生效：docs/24 §5、PRecord §34、flags、register note 修正。
+2. **臂 1（Round 23）**：scripts/28 = O_h-irrep 收斂律（新盲窗 M={28,36,44}；二階窗 {56,72,88}）——見數前註冊見 scripts/28 頭。
+3. **臂 2（Round 23）**：A1（register note 交 O190 重新標層）；A2 錨點（scripts/29 = ℓ-tower gaplessness 精確律 + 慣性簽名穩定；見數前註冊）。

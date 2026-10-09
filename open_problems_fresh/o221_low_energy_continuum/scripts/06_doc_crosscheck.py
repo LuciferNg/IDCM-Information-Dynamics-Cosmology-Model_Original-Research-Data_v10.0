@@ -28,7 +28,7 @@ def ck(name, cond, detail=""):
 # ALL docs are audited (was docs/01..04 only during the first close-out round);
 # the list is discovered from disk so a new doc cannot silently escape the audit.
 DOCS = sorted("docs/" + f for f in os.listdir(os.path.join(BASE, "docs")) if f.endswith(".md"))
-DOCS_EXPECTED = 24
+DOCS_EXPECTED = 26
 ROOT = ["01_problem_record.md", "SESSION_START.md", "final_result.md"]
 ALL = ROOT + DOCS
 
@@ -239,6 +239,17 @@ NUMBERS = ["294.8772",
            "docs/22",
            "docs/23",
            "docs/24",
+           "O190",
+           "{12, 16, 24}",
+           "(1+, 5−)",
+
+           "16 zero",
+           "1 - 2pi^2/(15N^2)",
+           "0.999999959",
+           "1.174e-4",
+           "1.996658",
+           "docs/26",
+           "docs/25",
            "1.993708",
            "6.567064",
            "12.984899",

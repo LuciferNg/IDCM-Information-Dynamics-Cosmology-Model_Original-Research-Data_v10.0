@@ -1,0 +1,28 @@
+# O221 scripts/29 - canonical derived aggregate (Round 23 Arm 2, FSR-to-SR A2 anchor).
+# Discrete-layer exact anchors for the continuum inertia reading (design docs/24; work in O221):
+# C1 three-term gaplessness (4pi^2 - eps1*N^2)*3N^2/4pi^4 = 1 - 2pi^2/(15N^2) + O(N^-4),
+#    N = 88*4^ell, ell in {3,4,5} (coeffs 0.999999959/0.999999997/1.000000000 - next-term
+#    preds identical digit-for-digit); C2 ratio = (1/16)(1 + 5pi^2/16N^2); C3 free sector =
+#    exactly 2^4 = 16 Brillouin-corner zero vertices (M in {28,36,44}); C4 IR dispersion
+#    (1 - om/ck)6N^2/pi^2 = 1 + pi^2/20N^2 at N=90112; C5 inertia signature of Q_phys
+#    (docs/16) = (1+,5-), min|TT|/|conf| = 0.25 exact. Checks 6/6 (C1,C2,C3,C4,C5,C5b;
+#    C6 = grading print). mpmath dps 40 (float64 catastrophic cancellation in the residuals
+#    was an audit-side construction error, fixed).
+# NOT claimed: continuous Lorentz dynamics; deferred blind quotient run M in {12,16,24}
+# pre-registered for the actual continuum inertia reading (scripts/21 machinery).
+
+O221 scripts/29 — FSR-to-SR A2 anchors: inertia/gaplessness (discrete-layer exact)
+[PASS] C1  three-term gaplessness: (4pi^2 - eps1*N^2)*3N^2/4pi^4 = 1 - 2pi^2/(15N^2) + O(N^-4) coeff 0.999999959, 0.999999997, 1.000000000 (next-term pred 0.999999959, 0.999999997, 1.000000000)
+[PASS] C2  two-term refinement ratio r = (1/16)(1 + 5 pi^2/(16N^2)) [-> 1/16] ratios 0.062500006077, 0.062500000380
+   zero-vertex count @M=28 = 16 (2^4 = 16 expected)
+   zero-vertex count @M=36 = 16 (2^4 = 16 expected)
+   zero-vertex count @M=44 = 16 (2^4 = 16 expected)
+[PASS] C3  4D dispersion has exactly 2^4 = 16 zero vertices (free sector) on M in {28,36,44} 
+[PASS] C4  IR dispersion exactness: (1 - omega/c k)*6N^2/pi^2 = 1 + pi^2/(20N^2) at N=90112 c4 = 0.999999999939 (pred 1.000000000061)
+[PASS] C5  inertia signature of Q_phys (docs/16 spectrum) = (1+, 5-) per unit tensor norm sig = 1+, 5-
+[PASS] C5b  min|TT|/|conformal| = 1.0966/4.3865 = 0.25 exact (re-verified) ratio = 0.249994
+[C6] HONEST GRADING: these are DISCRETE-LAYER anchors (exact identities).
+  * free sector survives the continuum limit at every refinement step (gapless);
+  * free sector = 16-corner acoustic structure; inertia signature (1+,5-) exact.
+  * NOT claimed: continuous Lorentz kinematics/dynamics, signature, boost charges.
+RESULT: ALL CHECKS PASS

@@ -1,0 +1,42 @@
+# O221 scripts/28 - canonical derived aggregate (Round 23 Arm 1, L-Lor): O_h-irrep-resolved
+# convergence law. NEW blind M set {28,36,44} (all unseen; prior sets <=16 and {20,24,32});
+# secondary {56,72,88}. Two-term law: A_dir = (-D)M^2 6/((pi|n|)^2 S4) = 1 + K2/(S4 M^2),
+# K2 = (pi|n|)^2 (S4^2/12 - 2 S6/15); ladder axis:face:body:hyper = -pi^2/5:-pi^2/10:-pi^2/15:-pi^2/20.
+# Checks 6/6 (C0, F0, F1 two-term (max resid 1.174e-4), F1b, F2, F3 (no dim-4); F4 = grading print).
+# CONSTRUCTION NOTE: F1's original 1% -band was wrong (small-M deviations are PREDICTED by
+# the free-lattice next-order term, e.g. axis n=5 @M=28 gives A_dir=0.9844 exactly K2/S4M^2);
+# the correct null is the two-term law with residual < 2e-3. Layer rule: continuum approach
+# speed only; FSR stays the discrete layer; signature stays an input.
+
+O221 scripts/28 — O_h-irrep-resolved convergence law | NEW blind M {28,36,44}
+[PASS] C0  axis exactness anchor at M=28 (D == sin(x)/x - 1) dev=0.000e+00
+   |exponent|(blind {28,36,44}) [axis(2,0,0,0)] = 1.996658  -> True
+   |exponent|(blind {28,36,44}) [face(2,2,0,0)] = 1.996658  -> True
+   |exponent|(blind {28,36,44}) [body(2,2,2,0)] = 1.996658  -> True
+   |exponent|(blind {28,36,44}) [hyper(2,2,2,2)] = 1.996658  -> True
+   |exponent|(blind {28,36,44}) [axis n=3] = 1.992481  -> True
+   |exponent|(blind {28,36,44}) [axis n=5] = 1.979106  -> True
+[PASS] F0  leading |exponent| in [1.95,2.05] on the NEW blind window (all 6 rays) 
+[PASS] F1  two-term law A_dir = 1 + K2/(S4*M^2) holds on every ray and every blind M (residual < 2e-3) max|resid| = 1.174e-04 over 18 points
+[PASS] F1b  A_dir within 2e-3 of 1 at M=44 (4 ladder rays) A44=0.998981, 0.998981, 0.998981, 0.998981
+   F2 [axis(2,0,0,0)] M= 72  K2=-1.9739209  meas=-1.9735630  rel=1.813e-04
+   F2 [axis(2,0,0,0)] M= 88  K2=-1.9739209  meas=-1.9736813  rel=1.214e-04
+   F2 [face(2,2,0,0)] M= 72  K2=-0.9869604  meas=-0.9867815  rel=1.813e-04
+   F2 [face(2,2,0,0)] M= 88  K2=-0.9869604  meas=-0.9868407  rel=1.214e-04
+   F2 [body(2,2,2,0)] M= 72  K2=-0.6579736  meas=-0.6578543  rel=1.813e-04
+   F2 [body(2,2,2,0)] M= 88  K2=-0.6579736  meas=-0.6578938  rel=1.214e-04
+   F2 [hyper(2,2,2,2)] M= 72  K2=-0.4934802  meas=-0.4933908  rel=1.813e-04
+   F2 [hyper(2,2,2,2)] M= 88  K2=-0.4934802  meas=-0.4934203  rel=1.214e-04
+   F2 [axis n=3] M= 72  K2=-4.4413220  meas=-4.4395105  rel=4.079e-04
+   F2 [axis n=3] M= 88  K2=-4.4413220  meas=-4.4401092  rel=2.731e-04
+   F2 [axis n=5] M= 72  K2=-12.3370055  meas=-12.3230338  rel=1.133e-03
+   F2 [axis n=5] M= 88  K2=-12.3370055  meas=-12.3276505  rel=7.583e-04
+[PASS] F2  next-order law (C-S4)*M^2 -> K2(n) within 2% at M=72/88 (all rays) ladder axis:face:body:hyper = -pi^2/5:-pi^2/10:-pi^2/15:-pi^2/20
+[PASS] F3  no dim-4 (1/M) breaking operator (dominance tests, window {28..88}) (i) max rel residual 6.446e-08 < 1e-4 | (ii) displacement 0.0013 < 0.05
+[F4] HONEST GRADING: spectrum-side approach speed measured; the breaking irrep content
+     tracks the free-lattice Laplace law (S4/S6) at every order tested; signature and
+     the Lorentz GROUP construction remain outside this round's claim.
+RESULT: ALL CHECKS PASS
+Summary: NEW blind M {28,36,44} independently reproduces |exponent| ~ 1.99x, the S4
+leading law and the S6/S4^2 next-order law for all six rays; no dim-4 term; the O_h
+irrep content of the breaking is exactly the free-lattice Laplace one (no arrangement).
