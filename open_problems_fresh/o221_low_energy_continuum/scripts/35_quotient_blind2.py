@@ -50,6 +50,8 @@ BLIND = [10, 14]  # unseen interpolating window; frozen before execution
 PRIOR_M = [3, 4, 6, 8]
 PRIOR_ATT = {3: 0.7841, 4: 0.6658, 6: 0.4470, 8: 0.3217}
 R24_CONF = {12: 1.5162, 16: 1.3223}   # R24 blind-1 A_conf values (anchor for nQ2/nQ3)
+R24_ATT = {12: 0.1917, 16: 0.1278}    # R24 blind-1 A_TT values (anchor for nQ6 - audit fix:
+                                       # the first version wrongly reused R24_CONF in the A_TT fit)
 R24_GQREL = {12: 0.0500, 16: 0.0548}  # R24 blind-1 gq_rel values
 
 def ck(cond, msg, extra=""):
@@ -165,7 +167,7 @@ ok &= ck(nq7, "nQ7  machinery checks by content at each blind-2 M (flatness exac
 ext = [3, 4, 6, 8, 10, 12, 14, 16]
 lb = np.log(ext)
 abb = np.log([PRIOR_ATT[m] if m in PRIOR_ATT else
-              (rows[m]["A_TT"] if m in rows else R24_CONF.get(m, float("nan"))) for m in ext])
+              (rows[m]["A_TT"] if m in rows else R24_ATT.get(m, float("nan"))) for m in ext])
 A2 = np.vstack([lb, np.ones_like(lb)]).T
 (p2f, c2f), *_ = np.linalg.lstsq(A2, abb, rcond=None)
 print("\n[nQ6] SYNTHESIS (declarative)")

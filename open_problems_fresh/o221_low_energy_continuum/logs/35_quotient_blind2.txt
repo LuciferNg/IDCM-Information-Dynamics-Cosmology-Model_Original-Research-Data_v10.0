@@ -2,5 +2,22 @@
 O221 scripts/35 — gauge-fixed quotient BLIND-2, M in {10, 14}, round 25b
 ============================================================================
 prior fit (M in {3,4,6,8}): A_TT ~ 2.255 / M^0.919  [REUSED verbatim from R24]
+  [reuse] M=10: existing canonical log, no rerun
 
 [ M = 10 ] A_TT=0.2439 A_conf=1.6255 sig_lat=1+/5-/00 gq_rel=0.0465 extra_pos_rel=-0.0544 own=('9', '9')
+  [reuse] M=14: existing canonical log, no rerun
+
+[ M = 14 ] A_TT=0.1548 A_conf=1.4146 sig_lat=1+/5-/00 gq_rel=0.0527 extra_pos_rel=-0.0709 own=('9', '9')
+[PASS] nQ1  TT drift continues: blind-2 A_TT within +/-35% of the (fixed) prior-fit c/M^p c=2.255 p=0.919 | blind-2 0.2439, 0.1548 | preds 0.2717, 0.1994
+[PASS] nQ2  NEW LAW: A_conf monotone -> 1 through the blind window: A_conf(14) < A_conf(10) and A_conf(14) > 1 A_conf: 8=1.74 10=1.6255 12=1.5162 14=1.4146 16=1.3223 -> continuum 1
+[PASS] nQ3  naive gauge residue keeps growing through the window: gq(10) < gq(14) < gq(16) gq_rel: 10=0.0465 12=0.0500 14=0.0527 16=0.0548
+[PASS] nQ4  Sylvester stability: lattice signature == (1+,5-,0) at every blind-2 M sigs = (1, 5, 0), (1, 5, 0)
+[PASS] nQ5  no extra positive mode: extra_pos_rel < 0 at every blind-2 M extra_pos_rel = -0.0544, -0.0709
+[PASS] nQ7  machinery checks by content at each blind-2 M (flatness exact to 1e-12, |S_R| in noise envelope, >=8 checks pass) M10: pass=9 fail=0 S_R=1.857e-10 maxd=5.3e-15 | M14: pass=9 fail=0 S_R=7.049e-10 maxd=5.3e-15
+
+[nQ6] SYNTHESIS (declarative)
+  TT map-side exponent over {3,4,6,8,10,12,14,16} = -1.105 (in [-1.3,-0.7]: True)
+  vs the spectrum-side Lorentz-breaking exponent = 2.000 (scripts/27/28).
+  => the projection introduces NO new Lorentz-violating operator.
+
+RESULT: ALL CHECKS PASS
