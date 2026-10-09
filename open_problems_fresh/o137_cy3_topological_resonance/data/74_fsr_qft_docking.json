@@ -1,0 +1,33 @@
+{
+  "duality": {
+    "csc_times_omega": 2.0,
+    "identity": "csc(pi n/2N) * 2 sin(pi n/2N) = 2 EXACT",
+    "fsr_spectrum": "gamma_FSR = csc = 2/omega_n (reciprocal dual, zero new constant)"
+  },
+  "sigma_hits": {
+    "n_set": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      11,
+      13
+    ],
+    "hits": [],
+    "honest_null": true
+  },
+  "mass_shell": {
+    "E_fsr_ratio": "E_fsr/E_chain = 2/sqrt(eps_n)"
+  },
+  "spectral_sum": {
+    "sum_csc_88": 297.201675854,
+    "sum_omega_88": 113.042104928,
+    "closed_form_omega": "sqrt(2)*sin((N+1)pi/4N)/sin(pi/4N)",
+    "ratio": 2.629123688
+  },
+  "verdict": "FSR 譜 = O137 ω 譜之倒數對偶 (csc*2sin=2); 全套 QFT 翻譯續推入口 docs/39 §六",
+  "result": "6/7 PASS"
+}

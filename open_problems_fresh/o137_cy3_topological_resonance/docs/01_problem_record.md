@@ -735,3 +735,44 @@ D = 1 + r·ε·Σ_{k<N}ε^k,  r = 2N_gen²/L₄² = 18/49,  ε = 1/(Bφ)
 | SESSION_START.md | 433→474 | +R21 判決段 |
 
 O137 **自身剩餘 🔴 = 0**。入向交接 8 組全處理（docs/01 水位 §三）；截斷階為唯一自身開放項，現已閉合。
+
+---
+
+# R23: 重啟收口 — O140 FSR-QFT 對接 + O209×3 + p9（2026-10-09）— append-only
+
+> **本節為新增，以上原文一字不刪。**
+
+## 事件
+
+```
+2026-10-06  O137 完整 closeout（docs/01 水位 + R21 截斷階閉合 + R22 O233 處理）
+2026-10-09  register reopened O137（O140 handoff: FSR-QFT 對接屬 O137 範圍）
+2026-10-09  R23 收口: O140 承接 + O209×3 裁定 + p9 登記（docs/39）; scripts/74 6/7
+```
+
+## 受處理之入向交接（詳見 docs/39 §四）
+
+| 來源 | 交接 | 狀態 |
+|:-----|:-----|:----:|
+| O140 | FSR-QFT 對接（完整場論屬 O137）| 🟡 承接 + 光譜對偶初探（csc·2sin≡2 EXACT）；推導續推待專屬 session |
+| O209 (a) | σ_g 殘餘 → gap 5 手徵橋 | ✅ 去向已定（O67/merged_o222 承接物理映射）|
+| O209 (b) | γ升序 vs \|Δm\| → O137 裁定 | ✅ R22 延續：授權 γ 升序 |
+| O209 (c) | docs/11 A_γ 0.930 / c/s 1.397 | 📌 確認（frame 典範差異，不矛盾）|
+| p9 kchain | −ω_n ↔ 反粒子扇區 → gap 5 | 🟡 已登記（負頻率鏡像 = 手性 flip 線索）|
+
+## 水位更新
+
+| 檔 | 行數 | 變更 |
+|:---|:-----|:-----|
+| docs/39_restart_handoff_processing.md | 新檔 | +交接收口表 + FSR-QFT 翻譯地圖 |
+| scripts/74_fsr_qft_docking.py | 新檔 | 6/7 PASS（核心對偶 EXACT；②-1 honest null）|
+| data/74_fsr_qft_docking.json | 新檔 | 對偶結果 |
+| SESSION_START.md | 532→584 | +R23 段 |
+
+## 狀態
+
+```
+state: open（重啟）— 接受 O140 FSR-QFT 對接任務（尚待全套推導 session）
+自身剩餘 🔴: 0（R21 後無新增）
+入向交接 backlog: 0（R20 8 組 + R22 + R23 全收口）
+```
