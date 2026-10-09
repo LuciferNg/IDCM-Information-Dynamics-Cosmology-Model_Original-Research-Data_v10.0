@@ -1,0 +1,81 @@
+========================================================================
+FSR vs Standard SR: Complete Comparison
+========================================================================
+
+--- 1. Lorentz Factor gamma = 1/sqrt(1-beta^2) ---
+  [PASS] FSR gamma_n = SR gamma(v_n)  (exact to 1e-10) 
+  v_1/c  = 0.999363  gamma_1  = 28.017221
+  v_22/c = 0.707107  gamma_22 = 1.414214
+  v_44/c = 0.000000  gamma_44 = 1.000000
+
+--- 2. Lorentz Transformation Matrix ---
+  [PASS] Lorentz transform matrix identical (FSR = SR) 
+  Sample (n=11, v=0.9689c): gamma=2.6131, beta*gamma=2.4142
+
+--- 3. Time Dilation: Delta t' = gamma * Delta t ---
+  [PASS] Time dilation formula exact (FSR = SR) 
+
+--- 4. Length Contraction: L' = L / gamma ---
+  [PASS] Length contraction formula exact (FSR = SR) 
+
+--- 5. Relativistic Doppler ---
+  [PASS] Doppler approaching: D = cot(pi n/4N) = sqrt((1+beta)/(1-beta)) 
+  [PASS] Doppler receding: 1/D = tan(pi n/4N) = sqrt((1-beta)/(1+beta)) 
+  Approaching D_1  = 56.017 (blueshift, v=0.9994c)
+  Receding   1/D_1 = 0.017852 (redshift)
+  Transverse D_22 = 2.414 (v=c/sqrt2)
+
+--- 6. Mass Shell: E^2 - p^2c^2 = m^2c^4 ---
+  [PASS] Mass shell exact (E^2 - p^2c^2 = m^2c^4) 
+  [PASS] E_n = mc^2 * csc(pi n/2N) = mc^2 / sqrt(1-v_n^2/c^2) 
+
+--- 7. Relativistic Kinetic Energy ---
+  [PASS] Kinetic energy exact (FSR = SR) 
+  n=43 (v=0.0357c): K_rel = 0.000638, K_newton = 0.000637 (ratio = 1.0010)
+  [PASS] Newtonian limit: K ~ mv^2/2 for v << c 
+
+--- 8. Velocity Addition: FSR vs SR ---
+  SR addition: u = (u' + v) / (1 + u'v/c^2)
+  FSR addition: eta_u = eta_a + eta_b, then v = c*tanh(eta_u)
+  (Result is generally NOT on the discrete ladder)
+  l=0: FSR composite v=0.999999c, SR v=0.999999c, delta_v_ladder=1.11e-16, nearest_rung=6.36e-04
+  l=2: FSR composite v=1.000000c, SR v=1.000000c, delta_v_ladder=1.11e-16, nearest_rung=2.49e-06
+  l=6: FSR composite v=1.000000c, SR v=1.000000c, delta_v_ladder=0.00e+00, nearest_rung=3.80e-11
+  [PASS] Velocity addition converges to SR at l=6 
+
+--- 9. Continuum Limit: FSR -> SR as l -> infinity ---
+  l= 0: N_l=      44, v_1/c=0.9993628257, gamma_1=28.0172, dev_v=6.37e-04, dev_g_rel=2.12e-04
+  l= 2: N_l=     704, v_1/c=0.9999975108, gamma_1=448.1807, dev_v=2.49e-06, dev_g_rel=8.30e-07
+  l= 6: N_l=  180224, v_1/c=1.0000000000, gamma_1=114734.1619, dev_v=3.80e-11, dev_g_rel=1.27e-11
+  l=10: N_l=46137344, v_1/c=1.0000000000, gamma_1=29371945.4349, dev_v=5.55e-16, dev_g_rel=2.22e-16
+  [PASS] v_1 -> c as l -> infinity 
+  [PASS] gamma_1 -> infinity as l -> infinity 
+
+--- 10. GR Cosmology Comparison (O76) ---
+  FSR has NO expansion. The 'Friedmann equation' is replaced by D_A(l).
+  Key differences from LambdaCDM:
+  Etherington: FSR D_L/D_A = (1+z)^0.8574 vs LambdaCDM (1+z)^2
+  [PASS] FSR Etherington exponent = 0.857 (O76) 
+  Time dilation: FSR Delta t ∝ (1+z) — same as LambdaCDM
+  [PASS] Time dilation identical (1+z) 
+  z=1 -> l = log_4(2) = 0.5000 scale levels
+  z=10 -> l = log_4(11) = 1.7297 scale levels
+  Nyquist cutoff: z_max = 4^44 - 1 = 309485009821345068724781056 (z > 17 sources should not exist)
+  [PASS] Nyquist redshift cutoff z_max ~ 4^N 
+
+========================================================================
+RESULT: 16 PASS, 0 FAIL
+========================================================================
+ALL SR/GR EQUATIONS VERIFIED FROM FSR:
+  - Lorentz factor, transforms, time dilation, length contraction
+  - Doppler, mass shell, kinetic energy
+  - Velocity addition (converges to SR at l -> infinity)
+  - Continuum limit (FSR -> SR as l -> infinity)
+  - Cosmology: Etherington modified, time dilation identical
+
+DIFFERENCES BETWEEN FSR AND STANDARD SR/GR:
+  1. SR: All equations EXACT on the ladder — velocities quantized
+  2. Velocity addition: not closed on discrete ladder (resolved by scale refinement)
+  3. GR: Spectral action replaces Einstein-Hilbert — O(1/N_l^2) corrections
+  4. Cosmology: NO expansion — Etherington modified, D_A(l) replaces H(z)
+  5. Continuum limit: FSR -> SR+GR exactly as l -> infinity

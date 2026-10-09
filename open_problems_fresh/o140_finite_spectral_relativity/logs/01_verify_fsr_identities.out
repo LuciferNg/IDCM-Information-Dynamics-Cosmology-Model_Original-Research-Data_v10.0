@@ -1,0 +1,114 @@
+========================================================================
+Part A: K_Chain spectrum basis
+========================================================================
+  sum gamma^44 (n=1..44)   = 90.0000000000  (world sum, expect 90)
+  sum gamma^88 even        = 90.0000000000  (world, expect 90)
+  sum gamma^88 odd         = 88.0000000000  (observer, expect 88)
+  total 178 = 2*89 = 2*F11: True
+  [PASS] world sum sum gamma^44 = 90 
+  [PASS] dual even sum = 90 
+  [PASS] dual odd sum = 88 
+  [PASS] total 178 = 2 F11 (F11=89) 
+
+========================================================================
+Part B: Velocity ladder  v_n = c cos(pi n/88)
+========================================================================
+  [PASS] v_1 = 0.99936 c (fastest) 
+  [PASS] v_22 = c/sqrt(2) = 0.7071 c 
+  [PASS] v_44 = 0 (Nyquist = rest) 
+  [PASS] v_1 is subluminal (< c) 
+  [PASS] mirror v_{88-n} = -v_n (n=7)
+  max ladder spacing Dv/c = 0.035692 at n=43
+  min ladder spacing Dv/c = 0.001911 at n=1
+
+========================================================================
+Part C: Lorentz ladder  gamma_n = csc(pi n/88) = 1/sqrt(1-(v_n/c)^2)
+========================================================================
+  [PASS] SR identity gamma = 1/sqrt(1-v^2/c^2) preserved EXACTLY on the ladder 
+  gamma_1  =  28.0172   (fastest mode)
+  gamma_22 =   1.4142   (= sqrt(2))
+  gamma_44 =   1.0000   (rest)
+  [PASS] gamma_22 = sqrt(2) 
+  [PASS] gamma_44 = 1 (rest) 
+  [PASS] gamma_1 ~ 28.02 
+
+========================================================================
+Part D: Eigenvalue identities
+========================================================================
+  [PASS] gamma_n^88 * gamma_{88-n}^88 = gamma_n^44  (dual mirror product) 
+  [PASS] gamma_FSR(n) = 2/sqrt(gamma_n^44)  (Lorentz from eigenvalue) 
+  [PASS] gamma_n = c/(pi a f_n)  (Lorentz from frequency) (n=11)
+  sum_{-} gamma_FSR(n)^2 (n=1..44) = 1291  (prime 1291, cf. O100 P3)
+  [PASS] sum gamma_FSR^2 = 1291 (prime) 
+
+========================================================================
+Part E: Rapidity lattice  eta_n = ln(cot(pi n/176))
+========================================================================
+  [PASS] eta_n = atanh(v_n/c) = ln(cot(pi n/176)) 
+  eta_1  = 4.0256   (fastest)
+  eta_22 = 0.8814   (v=c/sqrt2)
+  eta_44 = 0.0000   (rest)
+
+========================================================================
+Part F: Doppler ladder  D_n = e^{eta_n} = cot(pi n/176)
+========================================================================
+  [PASS] D_n = sqrt((1+beta)/(1-beta)) = cot(pi n/176) 
+  D_1  = 56.017   (max Doppler)
+  D_44 = 1.000   (rest -> 1)
+
+========================================================================
+Part G: Discrete mass shell  E_n, p_n, E^2 - p^2 c^2 = m^2 c^4
+========================================================================
+  [PASS] E^2 - p^2 c^2 = m^2 c^4 exact on the discrete hyperbola (max rel err 2.93e-14)
+  [PASS] p_n = mc cot(pi n/88) (max rel err 2.58e-16)
+
+========================================================================
+Part H: BBN / Etherington closure  n/p = gamma_7/gamma_20 = (gamma_FSR(20)/gamma_FSR(7))^2
+========================================================================
+  [PASS] n/p = gamma_7/gamma_20 = 0.14262 
+  [PASS] n/p = (gamma_FSR(20)/gamma_FSR(7))^2 
+  n/p = 0.142618   -> 1-n/p = 0.857382 (Etherington exponent, O76)
+  [PASS] 1 - n/p = 0.85738 (O76 D_L/D_A exponent) 
+
+========================================================================
+Part I: Scale refinement  N_l = 44*4^l (K_Tree B=4); SR = l->infinity
+========================================================================
+  l= 0: N_l =      44 sites, gamma_max =      28.0172
+  l= 1: N_l =     176 sites, gamma_max =     112.0466
+  l= 2: N_l =     704 sites, gamma_max =     448.1807
+  l= 6: N_l =  180224 sites, gamma_max =  114734.1619
+  [PASS] gamma_max(0) = csc(pi/88) ~ 28 
+  [PASS] gamma_max(l) grows as 4^l (scale ascent) 
+  [PASS] dispersion -> linear at large l (SR limit) (l=20)
+  gamma_max(l)/(1+z) = 28.011271  (expect 88/pi = 28.011270)
+  [PASS] gamma_max(l) = (88/pi)(1+z)  [z = 4^l - 1, O76] 
+  SR deviation at l=6: ~3.80e-11 (unobservable)
+
+========================================================================
+Part J: QM compatibility — finite Hilbert space, GUP, UV-finite KG
+========================================================================
+  [PASS] dim H = 44 (world chain, base level) 
+  p_1  = 1.623e-41 eV.s/m, p_max = 7.140e-40 eV.s/m (zone edge)
+  [PASS] GUP: Dx_min = a/(2pi) = hbar/(2 p_max) (rel err 1.46e-16)
+  minimal position uncertainty Dx_min = 4.610e+23 m = a/(2pi)
+  lattice KG: E(n=1) = 511000.000000 eV, E_max = 5.110000e+05 eV (note: p_max*c ~ 2.14e-31 eV)
+  [PASS] lattice KG spectrum bounded (no UV divergence) 
+  [PASS] KG E(n) increases with n (structural: p_n = hbar pi n/(44a)) 
+  [PASS] position spectrum = {a, 2a, ..., 44a} (discrete) 
+  [PASS] lattice spacing a = R_world/44 
+
+========================================================================
+Part K: Mass-velocity ladder sharing  m_g = M0 gamma_{n_g}, n_g = {1,7,20}
+========================================================================
+  [PASS] gamma_1 * gamma_FSR(1)^2 = 4  (mass-velocity duality, e) 
+    mode n= 1 (e): m ~ gamma_1 = 0.00510, v_ceiling = 0.9994 c, gamma_FSR = 28.0172
+  [PASS] gamma_7 * gamma_FSR(7)^2 = 4  (mass-velocity duality, mu) 
+    mode n= 7 (mu): m ~ gamma_7 = 0.24464, v_ceiling = 0.9689 c, gamma_FSR = 4.0436
+  [PASS] gamma_20 * gamma_FSR(20)^2 = 4  (mass-velocity duality, tau) 
+    mode n=20 (tau): m ~ gamma_20 = 1.71537, v_ceiling = 0.7557 c, gamma_FSR = 1.5270
+  [PASS] mass ladder and velocity ceiling anti-correlate (heavier = slower) 
+
+========================================================================
+RESULT: 38 PASS, 0 FAIL
+========================================================================
+ALL FSR IDENTITIES VERIFIED

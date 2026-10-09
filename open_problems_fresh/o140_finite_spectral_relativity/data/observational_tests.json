@@ -1,0 +1,14 @@
+{
+  "chi2_fsr": 2006.8,
+  "chi2_lcdm": 2002.1,
+  "delta_chi2": 4.7,
+  "aic_fsr": 2008.8,
+  "aic_lcdm": 2006.1,
+  "chi2_desi": 12.82,
+  "chi2_fsr_highz": 35.6,
+  "chi2_lcdm_highz": 26.7,
+  "z_discrete_rms": 0.2418,
+  "z_discrete_random_rms": 0.5492,
+  "pass": 10,
+  "fail": 1
+}

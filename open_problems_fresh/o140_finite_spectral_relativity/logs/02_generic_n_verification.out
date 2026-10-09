@@ -1,0 +1,84 @@
+========================================================================
+FSR: Generic-N Verification (v2)
+========================================================================
+Testing N = [4, 8, 16, 44, 100]
+
+--- N = 4 ---
+  [PASS] sum eps_n = 2N+2 (sum=10.0000, 2N+2=10)
+  [PASS] dual-chain mirror: eps_n(2N) * eps_{2N-n}(2N) = eps_n(N) 
+  [PASS] v_g(0) = c (uniform mode) 
+  [PASS] v_g(N) = 0 (Nyquist = rest) 
+  [PASS] v_g monotonic decreasing on ladder 
+  [PASS] gamma_n = 2/sqrt(eps_n) 
+  [PASS] gamma = 1/sqrt(1-v^2/c^2) preserved 
+  [PASS] eta_n = atanh(v_n/c) = ln(cot(pi n/4N)) 
+  [PASS] D_n = sqrt((1+beta)/(1-beta)) = cot(pi n/4N) 
+  [PASS] E^2 - p^2 c^2 = m^2 c^4 exact (mass shell) 
+  [PASS] sum gamma_n^2 self-consistent (N=4) (g2_sum=11.00, half_full=11.00)
+  [PASS] gamma_n = c/(pi a f_n) (n=1) 
+
+--- N = 8 ---
+  [PASS] sum eps_n = 2N+2 (sum=18.0000, 2N+2=18)
+  [PASS] dual-chain mirror: eps_n(2N) * eps_{2N-n}(2N) = eps_n(N) 
+  [PASS] v_g(0) = c (uniform mode) 
+  [PASS] v_g(N) = 0 (Nyquist = rest) 
+  [PASS] v_g monotonic decreasing on ladder 
+  [PASS] gamma_n = 2/sqrt(eps_n) 
+  [PASS] gamma = 1/sqrt(1-v^2/c^2) preserved 
+  [PASS] eta_n = atanh(v_n/c) = ln(cot(pi n/4N)) 
+  [PASS] D_n = sqrt((1+beta)/(1-beta)) = cot(pi n/4N) 
+  [PASS] E^2 - p^2 c^2 = m^2 c^4 exact (mass shell) 
+  [PASS] sum gamma_n^2 self-consistent (N=8) (g2_sum=43.00, half_full=43.00)
+  [PASS] gamma_n = c/(pi a f_n) (n=2) 
+
+--- N = 16 ---
+  [PASS] sum eps_n = 2N+2 (sum=34.0000, 2N+2=34)
+  [PASS] dual-chain mirror: eps_n(2N) * eps_{2N-n}(2N) = eps_n(N) 
+  [PASS] v_g(0) = c (uniform mode) 
+  [PASS] v_g(N) = 0 (Nyquist = rest) 
+  [PASS] v_g monotonic decreasing on ladder 
+  [PASS] gamma_n = 2/sqrt(eps_n) 
+  [PASS] gamma = 1/sqrt(1-v^2/c^2) preserved 
+  [PASS] eta_n = atanh(v_n/c) = ln(cot(pi n/4N)) 
+  [PASS] D_n = sqrt((1+beta)/(1-beta)) = cot(pi n/4N) 
+  [PASS] E^2 - p^2 c^2 = m^2 c^4 exact (mass shell) 
+  [PASS] sum gamma_n^2 self-consistent (N=16) (g2_sum=171.00, half_full=171.00)
+  [PASS] gamma_n = c/(pi a f_n) (n=4) 
+
+--- N = 44 ---
+  [PASS] sum eps_n = 2N+2 (sum=90.0000, 2N+2=90)
+  [PASS] dual-chain mirror: eps_n(2N) * eps_{2N-n}(2N) = eps_n(N) 
+  [PASS] v_g(0) = c (uniform mode) 
+  [PASS] v_g(N) = 0 (Nyquist = rest) 
+  [PASS] v_g monotonic decreasing on ladder 
+  [PASS] gamma_n = 2/sqrt(eps_n) 
+  [PASS] gamma = 1/sqrt(1-v^2/c^2) preserved 
+  [PASS] eta_n = atanh(v_n/c) = ln(cot(pi n/4N)) 
+  [PASS] D_n = sqrt((1+beta)/(1-beta)) = cot(pi n/4N) 
+  [PASS] E^2 - p^2 c^2 = m^2 c^4 exact (mass shell) 
+  [PASS] sum gamma_n^2 self-consistent (N=44) (g2_sum=1291.00, half_full=1291.00)
+  [PASS] v_g(1) -> 1 as N grows 
+  [PASS] gamma(1) ~ 2N/pi as N grows 
+  [PASS] gamma_n = c/(pi a f_n) (n=11) 
+
+--- N = 100 ---
+  [PASS] sum eps_n = 2N+2 (sum=202.0000, 2N+2=202)
+  [PASS] dual-chain mirror: eps_n(2N) * eps_{2N-n}(2N) = eps_n(N) 
+  [PASS] v_g(0) = c (uniform mode) 
+  [PASS] v_g(N) = 0 (Nyquist = rest) 
+  [PASS] v_g monotonic decreasing on ladder 
+  [PASS] gamma_n = 2/sqrt(eps_n) 
+  [PASS] gamma = 1/sqrt(1-v^2/c^2) preserved 
+  [PASS] eta_n = atanh(v_n/c) = ln(cot(pi n/4N)) 
+  [PASS] D_n = sqrt((1+beta)/(1-beta)) = cot(pi n/4N) 
+  [PASS] E^2 - p^2 c^2 = m^2 c^4 exact (mass shell) 
+  [PASS] sum gamma_n^2 self-consistent (N=100) (g2_sum=6667.00, half_full=6667.00)
+  [PASS] v_g(1) -> 1 as N grows 
+  [PASS] gamma(1) ~ 2N/pi as N grows 
+  [PASS] gamma_n = c/(pi a f_n) (n=25) 
+
+========================================================================
+RESULT: 64 PASS, 0 FAIL across 5 N values
+========================================================================
+ALL FSR IDENTITIES VERIFIED FOR GENERIC N
+FSR is a self-contained framework independent of IDCM.

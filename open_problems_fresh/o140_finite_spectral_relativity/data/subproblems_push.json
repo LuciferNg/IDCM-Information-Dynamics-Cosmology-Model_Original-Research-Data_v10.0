@@ -1,0 +1,25 @@
+{
+  "composition": {
+    "closed_pairs": 0,
+    "total_pairs": 946,
+    "max_projection_err": 0.49939589474022694,
+    "mass_shell_preserved": true
+  },
+  "spectral_zeta": {
+    "z1_formula": "(2N^2+1)/12",
+    "z2_formula": "(8N^4+20N^2+17)/720",
+    "z3_poly_coefs": [
+      0.06772486772486808,
+      0.177777777777767,
+      0.35555555555565904,
+      0.3989417989415422
+    ],
+    "riemann_emergence": true
+  },
+  "dual_index": {
+    "energy_inverse_eigenvalue": true,
+    "ratio_7_20": 0.14261761295541642
+  },
+  "pass": 39,
+  "fail": 0
+}

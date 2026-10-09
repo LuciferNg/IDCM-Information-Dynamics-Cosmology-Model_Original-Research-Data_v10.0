@@ -1,0 +1,18 @@
+{
+  "w1_contraction": "PASS",
+  "w1_soccer": "PASS",
+  "w2_photon_zero_dispersion": "PASS",
+  "w2_massive_shell": "PASS",
+  "w3_energy_conservation": 2.990188493399415e-15,
+  "w3_momentum_conservation": 1.431146867680866e-17,
+  "w4_decision_zone": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+  ],
+  "pass": 9,
+  "fail": 0
+}
