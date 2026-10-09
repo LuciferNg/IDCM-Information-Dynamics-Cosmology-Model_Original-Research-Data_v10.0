@@ -5,7 +5,7 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed; residual3 attributed; residual4 closed; residual5 LOCALISED/OPEN (k-independent; smear-order dependent, can be driven to ~0 degenerately; boundary-layer hypothesis REFUTED -> intrinsic, bulk ~ +1 M power); tightened acceptance: zero deficit AND M-stable amplitudes in one order; watermark 2026-09-29 22:50; scripts 855/855 (01-26); audit 123/123; crosscheck 134/134 (docs 01-21); sub-problem L-Lor registered (docs/22): emergent Lorentz / A2->theorem via irrelevant breaking ops (dim>=5); F0-F4 pre-registered; cross-O notes O140/O213/O73
+flags:   gap1+gap2 closed; residual3 attributed; residual4 closed; residual5 LOCALISED/OPEN (k-independent; smear-order dependent, can be driven to ~0 degenerately; boundary-layer hypothesis REFUTED -> intrinsic, bulk ~ +1 M power); tightened acceptance: zero deficit AND M-stable amplitudes in one order; watermark 2026-09-29 22:50; scripts 855/855 (01-26); audit 123/123; crosscheck 134/134 (docs 01-21); sub-problem L-Lor registered (docs/22): emergent Lorentz / A2->theorem via irrelevant breaking ops (dim>=5); F0-F4 pre-registered; cross-O notes O140/O213/O73; Round22 2026-10-02: arm1 scripts/27 7/7 (blind M{20,24,32}, |exponent| 1.9937, S4 ladder 1:1/2:1/3:1/4, no dim-4 => spectrum-side A2 demotion step 1; signature input); arm2 design docs/24 for O140/FSR-to-SR (SR dynamics)
 owner:   O221
 created: 2026-09-28
 updated: 2026-10-02
@@ -386,3 +386,13 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 6. **註冊**：本 O（`docs/22` + 本 Session + §31 + flags）＋ **跨 O 只經 register `note`**（→ **O140**（A2 降級目標）、**O213**（細化流機器）、**O73 §10**（相位模/c）），**零檔案寫入他人目錄**。
 7. **歸屬分流（2026-10-02，選項 A）**：執行臂 `O221/L-Lor`；缺口擁有者 **O140** → 子項 **`O140/FSR-to-SR`**（連續層 Lorentz 湧現 + **SR 動力學**）。★層次鐵律：**FSR = 離散層、SR = 連續層**；離散層精確性（γ_n = csc、逐 mode 質量殼）**唔等於**連續層 Lorentz 群已建立。
 8. **外部質疑核對**（未驗證散文，只作假設來源）：採納「洛倫茲湧現係真缺口」；否證其「低能退化為 Dirac/KG 即無懈可擊」之診斷（該步已係精確恆等式）；其「共振/波包」語不屬本框架。
+
+### Session 22 — 2026-10-02：並行執行兩臂（臂 1 = L-Lor 首輪數值；臂 2 = FSR-to-SR 設計）
+
+**產出**：臂 1 → `scripts/27_lorentz_breaking_spectrum.py`（**7/7 PASS**）、`docs/23_lorentz_breaking_spectrum.md`、`logs/27`、`data/27`；臂 2 → `docs/24_fsr_to_sr_design.md`（見數前設計、屬性 `O140/FSR-to-SR`）；PRecord §32/§33 + rows 72–73；兩處機器塊 flags。
+
+1. **臂 1（L-Lor spectrum 側，盲測）**：4D 週期格點**精確本徵值**（避開殘餘⑤之場映射污染）；盲窗 **M={20,24,32}**（全部未見）。結果：前導 **|指數| = 1.9937**（全 ray）、係數 (π|n|)²S4/6（rel 1.93e-3）、二階 −(2π)⁴/120（rel 2.3e-4）、**S4 方向階梯 1:½:⅓:¼**（A_dir = 0.99952@M=64、盲窗 [0.9951,0.9981]）、**無 dim-4**（純律殘差 3.3e-7、1/M 位移 0.004）⟹ 自由格點破壞算符 **dim ≥ 5 無關** ⟹ **A2 降級之第一步（spectrum 側）**；簽名 🔴 輸入（唔宣稱閉合）。
+2. **臂 2（FSR-to-SR 設計）**：三缺口 = 慣性（O140 0 次）、boost 生成元守恆荷、F = dp/dτ 譜定義；候選入口 = 慣性 (N−1,0,1)／rapidity 加法群 + Noether 稀釋／相位繞數（O180）；判準 (i) 離散層精確 (ii) ℓ→∞ 回復標準式 (iii) 零新參數；首輪 A1–A5；作業地點暫寄 O221（受寫入範圍約束），**跨 O 只經 register**。
+3. **判據側修正 5 處**（審計側，物理零讓步）：ck 次序、負號、F1b 目標符號、**F3 構造重定義**（σ→0 偽影 ⟹ 主導性測試，門檻不變）、C0 週期 BC。
+4. **層次鐵律**全程標層：所有「接近速度」陳述屬**連續層**；離散層精確性（γ_n = csc、逐 mode 質量殼）唔等於連續層 Lorentz 群已建立。
+5. **註冊**：本 O（docs/23+24、Session 22、§32/33、flags）＋ 跨 O（register note 交 O140/FSR-to-SR，ref = docs/24；零檔案寫入 O140）。

@@ -5,7 +5,7 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 LOCALISED but OPEN (docs/19-21): k-independent deficit 0.870-0.947; premise correction n_pairs = 240(M+2)^4 => absolute M-exponents window-local (docs/17's R_map ~ M^2.94 / conf M^3.16 = padding); smear ladder |deficit| 0.8827->5.16e-04 (cube order degenerate, A_TT 5.0661); boundary-layer (finite-size) hypothesis REFUTED: interior deficit rises to +1.046/+1.029 ~ one full M power => intrinsic; unique 4-k M-stable amplitude = vertex mean (0.9649/1.0308/1.0016/1.1047); tightened acceptance: zero deficit AND M-stable amplitudes in ONE order; watermark 2026-09-29 22:50; scripts 01-26 = 855/855; audit 123/123; crosscheck 134/134 (docs 01-21); sub-problem L-Lor registered 2026-10-02 (docs/22, sec.31, Session 21): emergent-Lorentz / demote O140's axiom A2 to a theorem via irrelevance of Lorentz-breaking operators (dim>=5); pre-registered F0-F4 (blind M set); cross-O notes to O140/O213/O73; signature stays an input; state partial; A-split 2026-10-02: exec arm O221/L-Lor, gap owner O140 -> sub-item O140/FSR-to-SR (SR=continuous layer, FSR=discrete layer; do not conflate)
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 LOCALISED but OPEN (docs/19-21): k-independent deficit 0.870-0.947; premise correction n_pairs = 240(M+2)^4 => absolute M-exponents window-local (docs/17's R_map ~ M^2.94 / conf M^3.16 = padding); smear ladder |deficit| 0.8827->5.16e-04 (cube order degenerate, A_TT 5.0661); boundary-layer (finite-size) hypothesis REFUTED: interior deficit rises to +1.046/+1.029 ~ one full M power => intrinsic; unique 4-k M-stable amplitude = vertex mean (0.9649/1.0308/1.0016/1.1047); tightened acceptance: zero deficit AND M-stable amplitudes in ONE order; watermark 2026-09-29 22:50; scripts 01-26 = 855/855; audit 123/123; crosscheck 134/134 (docs 01-21); sub-problem L-Lor registered 2026-10-02 (docs/22, sec.31, Session 21): emergent-Lorentz / demote O140's axiom A2 to a theorem via irrelevance of Lorentz-breaking operators (dim>=5); pre-registered F0-F4 (blind M set); cross-O notes to O140/O213/O73; signature stays an input; state partial; A-split 2026-10-02: exec arm O221/L-Lor, gap owner O140 -> sub-item O140/FSR-to-SR (SR=continuous layer, FSR=discrete layer; do not conflate); Round22 2026-10-02: arm1 scripts/27 7/7 (blind M{20,24,32}, |exponent| 1.9937, S4 ladder 1:1/2:1/3:1/4, no dim-4 => spectrum-side A2 demotion step 1; signature input); arm2 design docs/24 for O140/FSR-to-SR (SR dynamics: inertia/boost charge/F=dp/dtau; layer rule honored)
 owner:   O221
 created: 2026-09-28
 updated: 2026-10-02
@@ -313,6 +313,8 @@ L = (細化流: M → 4M, a → a/4, √J → 4√J) ∘ (共動重標定: n →
 | 69 | logs/17_momentum_dof_M4.txt | 2026-09-29 12:43 | 2026-09-29 16:38 | 水位內（12:50 已驗） | ✅ 水位內，不重驗 |
 | 70 | logs/17_momentum_dof_M6.txt | 2026-09-29 12:45 | 2026-09-29 16:38 | 水位內（12:50 已驗） | ✅ 水位內，不重驗 |
 | 71 | 2026-10-02 | **子問題註冊（L-Lor）**：低能洛倫茲不變性之湧現 —— 現況三層核對 + 見數前預註冊（F0–F4）+ 範圍防蔓延 | `docs/22_lorentz_emergence_subproblem.md`、`SESSION_START` Session 21 | **核對結論**：光錐/c 結構性 ✅（docs/09 G4）、自由扇區退化精確 ✅（docs/02 Q4：1 − x²/3 + 2x⁴/45）、**Lorentz 群唔在 O221**（洛倫茲/boost/龐加萊 0 hits）、**簽名 🔴 輸入**（U3-4）；**跨 O 發現**：O140 之 SR 由**公理 A2「相對論原理」**推出 ⟹ 洛倫茲不變性係**公理 + 運動學精確**，**唔係湧現** ⟹ 子問題 = 證**全部 Lorentz 破壞算符無關（dim ≥ 5）**⟹ **A2 由公理降為定理**；跨 O 只經 register note（O140/O213/O73），零檔案寫入 |
+| 72 | 2026-10-02 | Round 22 臂 1: operator-spectrum 上之洛倫茲破壞標度 (L-Lor) + 盲 M 窗 + 方向階梯 | `scripts/27_lorentz_breaking_spectrum.py` ( **7/7 PASS** )、`docs/23_lorentz_breaking_spectrum.md`、logs/27、data/27 | 前導指數 = 1.9937 (盲窗 M={20,24,32}, 全 ray)；係數 (pi|n|)^2 S4/6 (axis 6.5671 vs 6.5797, rel 1.93e-3)；二階 - (2pi)^4/120 (rel 2.3e-4)；方向階梯 axis:face:body:hyper = 1:1/2:1/3:1/4 (A_dir=0.99952@M=64, 盲窗 [0.9951,0.9981])；無 dim-4 (純律殘差 3.3e-7, 1/M 位移 0.004) = 自由格點破壞算符 dim>=5 無關 = A2 降級之 spectrum 第一步；簽名仍係輸入；判據修正 5 處 (F3 構造改主導性測試、C0 週期 BC、ck 次序等) - 門檻零放寬 |
+| 73 | 2026-10-02 | Round 22 臂 2: FSR-to-SR 設計稿 (見數前, 屬性 O140/FSR-to-SR) - 連續層 SR 動力學三缺口 + 候選譜定義 | `docs/24_fsr_to_sr_design.md`、register note 交 O140/FSR-to-SR | 三缺口 = 慣性 (O140 全目錄 0 次), boost 生成元作為守恆荷, F = dp/dtau 之譜定義；候選入口 = 慣性 (N-1,0,1) (O221 docs/16), rapidity 加法群 (O140/O190) + Noether 稀釋 (O174), 相位繞數 theta_k = k pi/176 (O180)；判準 = (i) 離散層精確 (ii) l->inf 回復標準式 (iii) 零新參數；首輪動作 A1-A5 (A1 = 以 register note 交 O190 重新標層)；作業地點暫寄 O221, 跨 O 只經 register (零檔案寫入 O140) |
 | 71 | logs/17_momentum_dof_M8.txt | 2026-09-29 12:48 | 2026-09-29 16:38 | 水位內（12:50 已驗） | ✅ 水位內，不重驗 |
 | 72 | logs/20_tt_amplitude_M3.txt | 2026-09-29 13:04 | 2026-09-29 16:38 | 本輪（scripts/19 [G]/[H] + crosscheck + T1） | ✅ 本輪驗（§二十六） |
 | 73 | logs/20_tt_amplitude_M4.txt | 2026-09-29 13:05 | 2026-09-29 16:38 | 本輪（scripts/19 [G]/[H] + crosscheck + T1） | ✅ 本輪驗（§二十六） |
@@ -1132,3 +1134,24 @@ docs/17 量到 `A_TT` 漂移**恰 ∝ 1/M**，而格點係 `(M+2)⁴`（pad = 1�
 #### 31.6 歸屬分流（2026-10-02，**選項 A**）＋ ★層次鐵律
 - **執行臂** = `O221/L-Lor`（連續化極限之機器/判準：細化流 L、量綱清單、投影子無關性、M-scan 盲測）；**缺口擁有者** = **O140**，已註冊子項 **`O140/FSR-to-SR`**（`open`）：① 連續層 Lorentz 群湧現（A2 降級）② **連續層 SR 動力學**（慣性起源、boost 守恆荷、`F = dp/dτ` 譜定義）——O140 現時三項皆無（「慣性」0 次；「動力學」僅 2 次且指公理 A1／比較表）。一主一從，跨 O 只經 register（零檔案寫入）。
 - ★**層次鐵律（調律者明示）**：**FSR = 離散層**（N_ℓ = 44·4^ℓ、量化 β、逐 mode 質量殼 csc²−cot²=1、O190 rapidity 身份 🟢）；**SR = 連續層**（ℓ→∞）。**離散層精確性唔等於連續層 Lorentz 群已建立**；本子問題之靶 = **連續層**，報告混層即無效。
+
+
+## 三十二、推導結果 續（2026-10-02，Round 22 臂 1：洛倫茲破壞標度 — operator-spectrum）— 新增節，不改舊節
+
+### 第 22 輪 — 2026-10-02（L-Lor 臂 1：scripts/27 7/7；臂 2：設計 docs/24）
+**層次鐵律**：本輪量測 = 連續層接近速度（FSR 離散／SR 連續）；離散層精確性唔等於連續層已建立。
+
+| 量 | 值 |
+|:--|:--|
+| 前導指數（盲窗 {20,24,32}） | **1.993708**（axis/face/body/hyper）；1.985839（n=3）；1.960640（n=5）——全部 ∈ [1.95, 2.05] ✓ |
+| 前導係數 (−D)M² | axis n=2：6.567064 vs (2π)²/6 = 6.579736（rel 1.926e-3）✓ |
+| 二階（M⁻⁴） | R = −**12.984899** vs −(2π)⁴/120 = −12.987879（rel 2.295e-4）✓ |
+| 方向階梯 A_dir | M=64 全 ray = **0.999518**；盲窗全 ray [0.995077, 0.998074] ✓（S4 = 1:½:⅓:¼ 精確、無額外各向異性） |
+| 無 dim-4 | 純律殘差 **3.311e-7** < 1e-4；\|b1\|·M_max²/\|b2\| = **0.0040** < 0.05 ✓ |
+
+**判讀**：自由 4D 週期格點之洛倫茲破壞 = 自身有限間距運動學（(ak)²、(ak)⁴、S4 階梯、無 M⁻¹）⟹ **dim ≥ 5 無關 ⟹ IR 自動回復** ⟹ **O140 公理 A2 降級之 spectrum 側第一步**。**未做**：Lorentz 群構造、波包/散射（L-WP）、簽名（🔴 輸入、唔宣稱閉合）、商空間/投影子之無關性（下一步候選）。
+**判據／構造側修正（審計側，物理零讓步）**：① ck 參數次序（`ck(msg,cond)`→`ck(cond,msg)`）；② 負號（D<0 ⟹ 前導用 −D）；③ F1b 目標 −(2π)⁴/120；④ **F3 構造錯誤→重定義**：`|c1|/σ` 於近精確數據 σ→0 偽影（初版假 FAIL |c1|/σ=108）⟹ 改**主導性測試**（純律殘差 <1e-4 + 1/M 位移 <5%），門檻本質不變、零放寬；⑤ C0 週期 BC（加 wrap，dev=2.487e-14）。
+
+## 三十三、臂 2 設計（2026-10-02，FSR-to-SR：連續層 SR 動力學 — 見數前，屬性 O140/FSR-to-SR）— 新增節，不改舊節
+設計全文 = `docs/24_fsr_to_sr_design.md`；要點：**三缺口**（慣性 0 次／boost 守恆荷／F = dp/dτ 之譜定義）；**候選入口**：慣性 (N−1,0,1)（O221 docs/16）、rapidity 加法群（O140/O190）+ Noether 稀釋（O174）、相位繞數（O180）；**判準** (i) 離散層精確 (ii) ℓ→∞ 回復標準式 (iii) 零新參數；**首輪 A1–A5**（A1 = 以 register note 交 O190 重新標層「N→∞ 回復連續 SR」；唔改 O190 檔案）；作業地點暫寄 O221、**跨 O 只經 register**（零檔案寫入 O140）。
+
