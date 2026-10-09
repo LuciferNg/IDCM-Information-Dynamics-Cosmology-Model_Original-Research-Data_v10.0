@@ -1,0 +1,28 @@
+# O221 scripts/30 - canonical derived aggregate (Round 24 quotient blind, final).
+# Blind M set {12,16} (amended from {12,16,24}->{12,16,20}->{12,16,18}; 18/20 budget-aborted,
+# pre-run frozen; both blind points >= 1.5x prior max 8, unseen).
+# VERDICTS: Q1 TT-drift continuation PASS (rel -16.6% / -27.5% vs prior-fit 2.255/M^0.919, band +/-35%);
+#    Q2 conformal-plateau REFUTED (A_conf M=16 = 1.3223 < 1.4 lower edge; trend 1.74@8 -> 1.52@12 -> 1.32@16
+#    decreasing toward the continuum control 1; new law NOT post-hoc fitted);
+#    Q3 naive-gauge-residue growth PASS (0.0500 -> 0.0548 monotone, > 0.045);
+#    Q4 Sylvester stability PASS ((1+,5-,0) both M) [A2-continuation];
+#    Q5 no extra positive mode PASS (extra_pos_rel < 0) [A2-continuation];
+#    Q7 machinery content PASS (M12 9/9 S_R 3.8e-10; M16 8/9 Q1.1=float-accumulation noise S_R 1.2e-9 < 1e-7,
+#    max|deficit| 5.33e-15 = exact flatness at both M);
+#    Q6 synthesis (declarative): combined TT exponent -1.100 in [-1.3,-0.7] vs spectrum-side 2.000 =>
+#    projection introduces NO Lorentz-violating operator; residual-5 +1-power & 0.07 bias = map-measure.
+# canonical sha256 (logs/30_quotient_blind.txt) = e56e6b1ba248fc0b0a32505d246704031bb88277e99df5502d0b77ad6acefcbc
+
+[ M = 12 ] A_TT=0.1917 A_conf=1.5162 sig_lat=1+/5-/00 gq_rel=0.0500 extra_pos_rel=-0.0637 own=('9', '9')
+[ M = 16 ] A_TT=0.1278 A_conf=1.3223 sig_lat=1+/5-/00 gq_rel=0.0548 extra_pos_rel=-0.0766 own=('8', '9')
+[PASS] Q1  TT drift continues: blind A_TT within +/-35% of the prior-fit c/M^p c=2.255 p=0.919 | blind 0.1917, 0.1278 | preds 0.2297, 0.1764
+[FAIL] Q2  conformal plateau: A_conf in [1.4, 2.0] at all blind M A_conf = 1.5162, 1.3223
+[PASS] Q3  naive gauge residue keeps growing: gq_rel(12) > 0.045, monotone across blind M gq_rel = 0.0500, 0.0548
+[PASS] Q4  Sylvester stability: lattice signature == (1+,5-,0) at every blind M sigs = (1, 5, 0), (1, 5, 0)
+[PASS] Q5  no extra positive mode: extra_pos_rel < 0 at every blind M extra_pos_rel = -0.0637, -0.0766
+[PASS] Q7  machinery checks by content at each blind M (flatness exact to 1e-12, |S_R| in noise envelope, >=8 checks pass) M12: pass=9 fail=0 S_R=3.824e-10 maxd=5.3e-15 | M16: pass=8 fail=1 S_R=1.198e-09 maxd=5.3e-15
+[Q6] SYNTHESIS (declarative)
+  TT map-side exponent over prior+blind = -1.100 (in [-1.3,-0.7]: True)
+RESULT: SOME CHECKS FAILED
+SCAN M=12  dimZ=6 sig_lat=1+/5-/00 sig_con=1+/5-/00 gq_lat=1.8578e-04 gq_con=0.00e+00 A_TT=0.1917 A_conf=1.5162 ratio_lat=0.0081 ratio_con=0.6250 richardson_min=4.00 extra_pos_rel=-0.0637 Aconf_over_ATT=7.9095
+SCAN M=16  dimZ=6 sig_lat=1+/5-/00 sig_con=1+/5-/00 gq_lat=3.3952e-04 gq_con=0.00e+00 A_TT=0.1278 A_conf=1.3223 ratio_lat=0.0052 ratio_con=0.6250 richardson_min=4.00 extra_pos_rel=-0.0766 Aconf_over_ATT=10.3504

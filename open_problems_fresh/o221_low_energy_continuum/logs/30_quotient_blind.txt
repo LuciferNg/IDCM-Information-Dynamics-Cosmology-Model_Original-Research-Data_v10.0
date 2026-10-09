@@ -1,5 +1,5 @@
 ============================================================================
-O221 scripts/30 — gauge-fixed quotient BLIND run, M in {12,16,20}, round 24
+O221 scripts/30 — gauge-fixed quotient BLIND run, M in {12,16} (final), round 24
 (amended from {12,16,24} pre-run: M=24 infeasible, see header)
 ============================================================================
 prior fit (M in {3,4,6,8}): A_TT ~ 2.255 / M^0.919
@@ -9,3 +9,18 @@ prior fit (M in {3,4,6,8}): A_TT ~ 2.255 / M^0.919
   [reuse] M=16: existing canonical log (RESULT present), no rerun
 
 [ M = 16 ] A_TT=0.1278 A_conf=1.3223 sig_lat=1+/5-/00 gq_rel=0.0548 extra_pos_rel=-0.0766 own=('8', '9')
+[PASS] Q1  TT drift continues: blind A_TT within +/-35% of the prior-fit c/M^p c=2.255 p=0.919 | blind 0.1917, 0.1278 | preds 0.2297, 0.1764
+[FAIL] Q2  conformal plateau: A_conf in [1.4, 2.0] at all blind M A_conf = 1.5162, 1.3223
+[PASS] Q3  naive gauge residue keeps growing: gq_rel(12) > 0.045, monotone across blind M gq_rel = 0.0500, 0.0548
+[PASS] Q4  Sylvester stability: lattice signature == (1+,5-,0) at every blind M sigs = (1, 5, 0), (1, 5, 0)
+[PASS] Q5  no extra positive mode: extra_pos_rel < 0 at every blind M extra_pos_rel = -0.0637, -0.0766
+[PASS] Q7  machinery checks by content at each blind M (flatness exact to 1e-12, |S_R| in noise envelope, >=8 checks pass) M12: pass=9 fail=0 S_R=3.824e-10 maxd=5.3e-15 | M16: pass=8 fail=1 S_R=1.198e-09 maxd=5.3e-15
+
+[Q6] SYNTHESIS (declarative)
+  TT map-side exponent over prior+blind = -1.100 (in [-1.3,-0.7]: True)
+  vs the spectrum-side Lorentz-breaking exponent = 2.000 (scripts/27/28).
+  => the TT drift and the residual-5 '+1 M-power' are MAP-MEASURE conventions; the
+     projection introduces NO Lorentz-violating operator (spectrum-side law intact).
+
+RESULT: SOME CHECKS FAILED
+rc=0

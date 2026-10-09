@@ -408,5 +408,5 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 
 1. **決策：三個一起來**——商空間盲測（臂 1 + A2-續 共享機器）＋ A3（η 位移算子）全部喺 O221。
 2. **A3 完成**：`scripts/31_eta_displacement_charge.py` 6/6 + docs/28_eta_displacement_charge.md——η 精確群律/生成元/光錐階梯；無偶然閉合（生成集非閉合群）。
-3. **商空間盲測運行中**：`scripts/30_quotient_blind.py` + docs/27_quotient_blind_pre.md（預註冊 Q1–Q6；盲窗 M={12,16,20} 修正記錄）；~90 min 通知；完成後補 docs/27 尾段 + 結果節。
+3. **商空間盲測完成**（canonical scripts/30 rc=0；doc `docs/27_quotient_blind_pre.md`）：最終盲集 **{12,16}**（A1–A4 跑前修正：24/20/18 皆預算捨棄，詳見 docs/27；兩完成點未見過、≥1.5× 上限 8）。判決：**Q1 PASS**（TT 漂移延續 −16.6%/−27.5%）、**Q2 REFUTED**（A_conf 1.3223 < 1.4，趨勢向連續端 1 收斂）、**Q3 PASS**、**Q4 PASS**（(1+,5-,0) A2-續）、**Q5 PASS**（無額外正模 A2-續）、**Q7 PASS**（內容判據；Q1.1 = 噪聲）、**Q6 綜合 ✓**（TT −1.100 vs 譜側 2.000 ⟹ 投影無新破壞算符）。A2-續 核心（Sylvester 穩定 + 無額外正模）兩盲點成立。
 4. **層次鐵律**：A3/商空間全屬離散層精確；連續層 boost/慣性讀法未宣稱；簽名輸入。

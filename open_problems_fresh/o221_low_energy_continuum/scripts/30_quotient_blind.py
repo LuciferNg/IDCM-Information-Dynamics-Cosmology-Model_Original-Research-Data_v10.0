@@ -9,14 +9,15 @@ tensor norm, gauge fixing 10 -> 6 via Euclidean complement of Vg) at the BLIND M
 checks the pre-registered predictions.  All reported quantities are parsed from scripts/21's
 own stdout (canonical logs), so nothing is recomputed with a second implementation.
 
-BLIND M SET:  M in {12, 16, 18}   (AMENDED first from {12, 16, 24}, then in A3 from {12, 16, 20}: the machinery
+BLIND M SET:  M in {12, 16}   (final; amended from {12,16,24} -> {12,16,20} -> {12,16,18}: the machinery
 builds (M+2)^4 * 24 simplices and evaluates the 10x10 quadratic form by 65 full Regge
 reconstructions; M = 24 means 10.9M simplices, ~3.5 GB for shat and ~7e8 simplex-steps,
 infeasible in the same budget.  First amendment {12,16,20}: M=20 (5.6M simplices, ~4 GB)
-feasible-bound; SECOND amendment A3 (pre-run): M=20 empirically needs > 2 h (> 7200 s on the
-rerun) - above the round budget; the third point becomes M=18 (2.4M simplices, budget-parity with
-M=16, ~30-40 min, UNSEEN at pre-registration, 2.25x the prior max 8).  Blind discipline kept:
-every choice was frozen before its own execution.)
+feasible-bound.  SECOND amendment A3: M=20 empirically needs > 2 h (7200-s timeout on the
+rerun); THIRD amended point M=18 also needs > 2 h (7200-s timeout).  A4 (final, pre-run): the
+blind set is therefore {12, 16} - both COMPLETED, both unseen, both >= 1.5x the prior max 8.
+Blind discipline kept: every choice was frozen before its own execution; aborted points are
+recorded as budget-constrained, not as passes.)
 
 PRE-REGISTRATION (2026-10-02, frozen before running; prior points M in {3,4,6,8} allowed
 for the extrapolation fits ONLY):
@@ -44,7 +45,10 @@ for the extrapolation fits ONLY):
        subprocess limit) and then > 7200 s on the rerun (empirically > 2 h).
        The per-M subprocess timeout is raised to 7200 s; existing canonical logs
        (M = 12, 16) are REUSED (no rerun).
-  (A3) THIRD BLIND POINT: 20 -> 18 (see header).  Frozen before the third execution.
+  (A4) FINAL BLIND SET {12, 16}: third and fourth candidate points 18 and 20 each timeout
+       at 7200 s (empirically > 2 h, above the round budget).  The two COMPLETED blind points
+       (>= 1.5x prior max 8, unseen) decide the pre-registered checks; aborted points recorded
+       as budget-constrained.  Frozen before this final execution.
   (A2) scripts/21's own Q1.1 ('S_R = 0', threshold 1e-9) trips at M = 16 by pure
        summation noise: S_R = 1.198e-9 while max|deficit| = 5.33e-15 -- the geometry IS
        flat to machine precision (the deficit bound is the physical content); the action
@@ -65,7 +69,9 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 O = os.path.dirname(HERE)
 S21 = os.path.join(HERE, "21_gauge_fixed_quotient.py")
-BLIND = [12, 16, 18]  # A3: 20 -> 18 (M=20 empirically > 2h, above budget; 18 unseen, budget-parity with 16)
+BLIND = [12, 16]  # A4 FINAL: {12,16} both COMPLETED (>=1.5x prior max 8, unseen);
+                    # 18 and 20 each exceed 2 h (7200-s subprocess timeouts) - budget-aborted,
+                    # amendment frozen BEFORE this (final) execution
 PRIOR_M = [3, 4, 6, 8]
 PRIOR_ATT = {3: 0.7841, 4: 0.6658, 6: 0.4470, 8: 0.3217}
 PRIOR_GQREL = {3: 0.0119, 4: 0.0213, 6: 0.0338, 8: 0.0414}
@@ -100,7 +106,7 @@ def parse(stdout):
 
 ok = True
 print("=" * 76)
-print("O221 scripts/30 — gauge-fixed quotient BLIND run, M in {12,16,20}, round 24")
+print("O221 scripts/30 — gauge-fixed quotient BLIND run, M in {12,16} (final), round 24")
 print("(amended from {12,16,24} pre-run: M=24 infeasible, see header)")
 print("=" * 76)
 
@@ -148,8 +154,8 @@ ok &= ck(q2, "Q2  conformal plateau: A_conf in [1.4, 2.0] at all blind M",
 
 # Q3
 gq = [rows[M]["gq_rel"] for M in BLIND]
-q3 = gq[0] > 0.045 and gq[0] < gq[1] < gq[2]
-ok &= ck(q3, "Q3  naive gauge residue keeps growing: gq_rel(12) > 0.045, monotone across 12/16/20",
+q3 = gq[0] > 0.045 and gq[0] < gq[1]
+ok &= ck(q3, "Q3  naive gauge residue keeps growing: gq_rel(12) > 0.045, monotone across blind M",
          "gq_rel = %s" % ", ".join("%.4f" % x for x in gq))
 
 # Q4
@@ -168,9 +174,7 @@ ok &= ck(q5, "Q5  no extra positive mode: extra_pos_rel < 0 at every blind M",
 # by pure summation noise at M = 16 (S_R = 1.198e-9, max|delta| = 5.33e-15 = flat);
 # the physical content is the deficit bound, which is what we verify.
 def parse_flat(stdout):
-    m = re.search(r"S_R = ([0-9.eE+-]+), max\\|delta\\| = ([0-9.eE+-]+)", stdout)
-    if not m:
-        m = re.search(r"S_R = ([0-9.eE+-]+), max\|delta\| = ([0-9.eE+-]+)", stdout)
+    m = re.search(r"S_R = ([0-9.eE+-]+), max\|delta\| = ([0-9.eE+-]+)", stdout)
     return (float(m.group(1)), float(m.group(2))) if m else (None, None)
 
 q7 = True; q7info = []
@@ -193,7 +197,7 @@ lb = np.log(blind_ext); abb = np.log([PRIOR_ATT[m] if m in PRIOR_ATT else rows[m
                                       for m in blind_ext])
 A2 = np.vstack([lb, np.ones_like(lb)]).T
 (p2f, c2f), *_ = np.linalg.lstsq(A2, abb, rcond=None)
-exp_all = -p2f
+exp_all = p2f   # lstsq slope already negative
 print("\n[Q6] SYNTHESIS (declarative)")
 print("  TT map-side exponent over prior+blind = %.3f (in [-1.3,-0.7]: %s)" %
       (exp_all, -1.3 <= exp_all <= -0.7))
