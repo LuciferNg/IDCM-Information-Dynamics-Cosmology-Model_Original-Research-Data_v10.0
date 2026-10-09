@@ -284,6 +284,12 @@ def check_ref_path(pid, seg, ddirs):
     hits = glob.glob(os.path.join(OPF, "*", seg)) + glob.glob(os.path.join(MAIN, "*", seg))
     if len(hits) == 1:
         return hits[0]
+    # 2026-10-10: ref already carries the O-dir slug but not the open_problems_fresh/
+    # prefix (e.g. "o221_low_energy_continuum/docs/31_.." from a note on another pid):
+    # the slug-relative path is OPF/<seg> verbatim (additive; unique by construction).
+    cand_op = os.path.join(OPF, seg)
+    if os.path.exists(cand_op):
+        return cand_op
     return None
 
 
