@@ -82,3 +82,8 @@ O210 → O140 → O139 → O138 → O86 → O213 → O221（並列 O202 / O212 /
 - scripts 01–36 累計 **906/906**（36:6 新增）。
 - A3-續（docs/32）：**η-階梯連續體 6/6**——ℓ=0 = O140 精確；內部稠密化（逐層 ×1/4 單調）；**光錐 GAP ≥ ln 2 ∀ℓ**（真格點邊界；連續 rapidity = 內部窗）；Casimir 逐層精確；**生成元 = 雙曲 boost**（修正 docs/29「歐氏」誤標——+Id 即 cosh/sinh = Lorentz boost）；Noether 份額 4^{−ℓ}；完整 Poincaré 未宣稱。
 - 尚未閉合：完整 Poincaré 對易（A4）、GR/EH 湧現（shape-extended deficit）、QM 導出（O222）、殘餘⑤ 10⁷ MC null、L-QFT 散射。
+
+## 現時水位（2026-10-02，Round 27 A4）
+- scripts 01–37 累計 **913/913**（37:7 新增）。
+- A4（docs/33）：**1+1D Poincaré 代數於 η-階梯 7/7**——[H,P]=0、[K,H]=P、[K,P]=H（全 44 modes 精確）、K²=+Id、Casimir E²−p²=1、代數閉合（完整 1+1D Poincaré）；**離散生成元收斂新律**：ℓ-階梯有限差分 D_ℓ→K 誤差 ∝ h²=4^{−2ℓ}（逐層比單調→1/16）。**完整 Lorentz 區第一塊已證磚**；3+1D 空間扇區未宣稱。
+- 尚未閉合：3+1D Poincaré（空間旋轉）、GR/EH 湧現（shape-extended deficit）、QM 導出（O222）、殘餘⑤ 10⁷ MC null、L-QFT 散射。

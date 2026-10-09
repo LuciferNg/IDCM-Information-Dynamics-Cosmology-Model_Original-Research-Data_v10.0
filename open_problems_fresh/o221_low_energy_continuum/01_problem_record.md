@@ -5,12 +5,13 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone 1.74@8 ->1.6255@10->1.5162@12->1.4146@14->1.3223@16 -> continuum 1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4 + grading: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, band ratio c_G=0.2250613); A3-续 step1 (scripts/36 6/6: eta-ladder continuum over {88*4^ell} - interior densification x1/4 per level, LIGHT-CONE GAP >= ln 2 for all ell, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-36 = 906/906
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone ->1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, c_G=0.2250613); A3-续 (scripts/36 6/6: eta-ladder continuum - interior densification x1/4/level, LIGHT-CONE GAP >= ln 2, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); A4 done (scripts/37 7/7: 1+1D Poincare algebra on the ladder - [H,P]=0, [K,H]=P, [K,P]=H exact all 44 modes, K^2=+Id, Casimir=1, algebra closure; finite-diff generator D_ell->K error ~ h^2 = 4^{-2ell} (ratios monotone -> 1/16); 3+1D NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-37 = 913/913
 owner:   O221
 created: 2026-09-28
 updated: 2026-10-02
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
+-->
 -->
 -->
 -->
@@ -231,3 +232,6 @@ R24 Q2（conformal 高原）REFUTED 後之**新律驗證**：A_conf(14) < A_conf
 
 ## 四十一、Round 26 A3-續：η-階梯連續體（2026-10-02，scripts/36 6/6）— 新增節，不改舊節
 docs/24 A3-續 執行：按「連續統 = 族 {M_ℓ} 嘅性質」（docs/02）+ O174 模態預算 N_ℓ=44·4^ℓ 構建 ℓ-階梯 η^{(ℓ)}_k = arccosh(csc(πk/M_ℓ))（M_ℓ=88·4^ℓ）。**C1** ℓ=0 == O140 精確（dev 1.32e-50）；**C2** 內部稠密化（θ=π/4 逐層比 → 1/4 單調 0.253→0.250）；**C3** **光錐 GAP：Δη₁ ≥ ln 2 ∀ℓ**（0.693466→0.693147；ℓ=0 超額 3.19e-4）——階梯喺 θ→0 永不稠密，連續 rapidity 係**內部窗**陳述；**C4** Casimir 逐層精確；**C5** **生成元 = 雙曲 boost**（d²/dη²=+Id；修正 docs/29 誤標「歐氏」——歐氏係 −Id）；**C6** 誠實：完整 Poincaré 未宣稱；Noether 份額 q_ℓ=4^{−ℓ}（O174）。審計側修正 ×1（C2 閾值算術錯→逐層比收斂檢查）。推導累計 **906/906**。
+
+## 四十二、Round 27 A4：1+1D Poincaré 代數於 η-階梯（2026-10-02，scripts/37 7/7）— 新增節，不改舊節
+docs/24 A4 執行（接 R26 C5）：88-mode 階梯殼上函數 H=csc θ_n、p=cot θ_n 組裝 Poincaré 扇區。**P1** [H,P]=0；**P2** [K,H]=P、[K,P]=H（K=d/dη，全 44 modes 精確）；**P3** K²=+Id；**P4** Casimir E²−p²=1（全 modes）；**P5** 三括號 + Casimir = 完整 1+1D Poincaré 代數（Jacobi ≡ 0 於 derivation 表示）；**P6（新律）** ℓ-階梯有限差分生成元 D_ℓ→K 誤差 ∝ h²=4^{−2ℓ}（err 0.00197→2.6e-8；比單調→1/16）；**P7** 誠實：只 1+1D worldline 扇區，3+1D（空間旋轉）未宣稱。零審計側修正。推導累計 **913/913**。

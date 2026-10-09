@@ -5,12 +5,13 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone 1.74@8 ->1.6255@10->1.5162@12->1.4146@14->1.3223@16 -> continuum 1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4 + grading: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, band ratio c_G=0.2250613); A3-续 step1 (scripts/36 6/6: eta-ladder continuum over {88*4^ell} - interior densification x1/4 per level, LIGHT-CONE GAP >= ln 2 for all ell, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-36 = 906/906
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone ->1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, c_G=0.2250613); A3-续 (scripts/36 6/6: eta-ladder continuum - interior densification x1/4/level, LIGHT-CONE GAP >= ln 2, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); A4 done (scripts/37 7/7: 1+1D Poincare algebra on the ladder - [H,P]=0, [K,H]=P, [K,P]=H exact all 44 modes, K^2=+Id, Casimir=1, algebra closure; finite-diff generator D_ell->K error ~ h^2 = 4^{-2ell} (ratios monotone -> 1/16); 3+1D NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-37 = 913/913
 owner:   O221
 created: 2026-09-28
 updated: 2026-10-02
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
+-->
 -->
 -->
 ` 機器塊（全庫 4 個合規塊中 o221 佔 2）+ `register.jsonl` 事件鏈（第 1–17 輪齊全）。
@@ -102,3 +103,8 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 - **R25a A3-續** `scripts/33_eta_generator_refinement.py` **5/5**：G1 cosh 級數下一階（η²/30）、G2 Galilean 帶 k*=19（η≤0.7746）、G3 生成元旋轉 d²/dη²=+Id、G4 帶比 c_G=0.2250613、G5 層次判分。審計側修正 ×2（G1 級數閾、G4 整數粒度）——threshold 零放寬。
 - **R25c L-WP** `scripts/34_wave_packet_continuum.py` **5/5**：臂 1 最後缺口（docs/24 誠實註記）閉合。設計修正鏈 A1–A4：A1 繞環、A2 三次譜相位主導、A3 由三凍結約束（無繞環/三次相位界 P3=M/(96σ₀³)≤6e-4/可測性 t_max/t_d=0.22）推導參數 σ₀=263.1、n₀=76186、A4 W2=譜方差律 σ²(t)=σ²(0)+Var(v_g)t²。W1 centroid=⟨dω/dk⟩·t 7+ 位、W2 四點命中 1e-4 格點、W3 擴散 1.0925、W4 x²/2 律。
 - **R25b 商空間盲測-2** `scripts/35_quotient_blind2.py`：插值盲窗 {10,14}（兩點從未執行），nQ1–nQ7 預註冊（docs/31），nQ2=A_conf 單調收斂→1 新律；launched proc_f29e5c9730f4（pid 746632，背景+notify）→ **完成（rc=0，sha `5d5b417b…` 三跑 byte-identical）**：7 判決全成（6 binary + nQ6 宣告），**nQ2 新律 CONFIRMED**（A_conf 單調→1），TT 指數 −1.105；審計側修正 nQ6（R24_CONF→R24_ATT）＋判數更正（33=4/34=5/35=6 ⟹ **900/900**）。**R25 三線全收**（R25a A3-續、R25b 盲測-2、R25c L-WP）。
+
+## Session 27 記錄（2026-10-02，R27 A4 1+1D Poincaré 代數）
+- **R27** `scripts/37_poincare_algebra_ladder.py` **7/7**：P1 [H,P]=0；P2 [K,H]=P、[K,P]=H（全 44 modes 精確）；P3 K²=+Id；P4 Casimir E²−p²=1；P5 代數閉合（完整 1+1D Poincaré；Jacobi ≡ 0）；P6 離散生成元收斂（誤差 ∝ h²=4^{−2ℓ}，err 0.00197→2.6e-8、比單調→1/16）；P7 誠實（3+1D 未宣稱）。
+- 零審計側修正（P1–P7 全按預註冊 PASS）。
+- 水位 **913/913**（37:7）。docs/33 新。
