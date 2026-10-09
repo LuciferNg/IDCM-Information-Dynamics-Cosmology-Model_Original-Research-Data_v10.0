@@ -1,0 +1,17 @@
+============================================================================
+O221 scripts/31 — A3: eta-displacement operator (rapidity group law, discrete layer)
+============================================================================
+[PASS] 31-1  P1: gamma_n = csc = cosh(eta_n); v/c = cos = tanh(eta_n); csc^2-cot^2 = 1 (n=1..44) 
+[PASS] 31-2  P2: eta_{88-n} = eta_n; rest mode gamma_44 = 1, eta_44 = 0 
+[PASS] 31-3  P3: cosh(eta_n+eta_m) = gamma_n gamma_m + sqrt((g^2-1)(g'^2-1)) for all n,m 
+[PASS] 31-4  P4: d gamma/d eta = sinh(eta) = cot(pi n/88) (generator on the shell) 
+[PASS] 31-5  P5: e^{eta_n} = cot(pi n/176) (lightlike ladder, n = 1..44) 
+[PASS] 31-6  P6: no accidental double-boost closure (e^eta_n e^eta_m != cot(pi k/176), non-trivial) exact hits = [] | near hits (1e-15..1e-30) = []
+
+[C7] HONEST GRADING: eta's group structure on the 88-chain is EXACT (composition law, generator, reflections, rest mode); the ladder admits NO accidental double-boost closure => {e^{eta_n}} is a generating set whose CONTINUOUS closure (the boost generator d/d eta in the l -> inf layer) is the A3 continuum reading - NOT claimed here.  Signature stays an input.
+
+RESULT: ALL CHECKS PASS
+Summary: rapidity eta is an exact additive group parameter on the discrete ladder with
+exact generator identity; the discrete boost set does not close under composition on
+non-trivial pairs (no new discrete subgroup found in the probe).
+rc=0

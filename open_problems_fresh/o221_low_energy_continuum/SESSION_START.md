@@ -403,3 +403,10 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 1. **決策**（調律者指令）：臂 2 執行留在 O221（docs/26、scripts/29…）；`O140/FSR-to-SR` 維持 register 擁有者；跨 O 只經 register。生效：docs/24 §5、PRecord §34、flags、register note 修正。
 2. **臂 1（Round 23）**：scripts/28 = O_h-irrep 收斂律（新盲窗 M={28,36,44}；二階窗 {56,72,88}）——見數前註冊見 scripts/28 頭。
 3. **臂 2（Round 23）**：A1（register note 交 O190 重新標層）；A2 錨點（scripts/29 = ℓ-tower gaplessness 精確律 + 慣性簽名穩定；見數前註冊）。
+
+### Session 24 — 2026-10-02：三項齊推（臂1 商空間盲測 + 臂2 A2-續 + A3）
+
+1. **決策：三個一起來**——商空間盲測（臂 1 + A2-續 共享機器）＋ A3（η 位移算子）全部喺 O221。
+2. **A3 完成**：`scripts/31_eta_displacement_charge.py` 6/6 + docs/28_eta_displacement_charge.md——η 精確群律/生成元/光錐階梯；無偶然閉合（生成集非閉合群）。
+3. **商空間盲測運行中**：`scripts/30_quotient_blind.py` + docs/27_quotient_blind_pre.md（預註冊 Q1–Q6；盲窗 M={12,16,20} 修正記錄）；~90 min 通知；完成後補 docs/27 尾段 + 結果節。
+4. **層次鐵律**：A3/商空間全屬離散層精確；連續層 boost/慣性讀法未宣稱；簽名輸入。
