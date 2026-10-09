@@ -5,49 +5,16 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone 1.74@8 ->1.6255@10->1.5162@12->1.4146@14->1.3223@16 -> continuum 1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4 + grading: Galilean band k*=19, generator d2/deta2=+Id, band ratio c_G=0.2250613); L-WP done (scripts/34 5/5: spectral-variance law sigma^2=sigma0^2+Var(v_g)t^2 exact); A3-cont (continuous-layer d/deta Noether charge) NOT claimed - layer rule; scripts 01-35 = 900/900
-` 機器塊（`register.py blocks` 全庫僅 4 個合規塊，o221 佔 2 個；其餘 529 份 doc 無塊係全庫現行慣例，非本 O 缺失）；另加 `register.jsonl` 之 append-only 事件鏈（第 1–17 輪全有事件）。
-
-### 27.2 發現：機器塊停滯（已修）
-
-| 項 | 修前 | 修後 |
-|:---|:-----|:-----|
-| `updated` | **2026-09-28**（= 建立日；其後 17 輪全未反映） | **2026-09-29** |
-| `flags`（PRecord） | `R1/R2 closed; R3 partial + no-go (4D / curvature / a4); U3,U5 residual`（第 1–2 輪狀態） | 現行前沿：gap1+gap2 closed（規範固定 dim 6 / rank N−D=6 / 無 kernel / 慣性 (1+,5−)；conformal 異常 = 規範污染 40.82→1.4118）；residual3 attributed（TT 漂移 = 作用量響應，TT ~M^1.93 次廣延 vs conf ~M^2.85 固定 k）；residual4 closed（中點 O(k²a²)）；**residual5 OPEN（shape-extended deficit；sinc 修正映射已否證）**；水位 2026-09-29 16:38 |
-| `flags`（SESSION_START） | `-` | 同上摘要 + scripts 824/824、audit 123/123、crosscheck 119/119 |
-| `state` | partial | **不變**（partial）⟹ 保 BLOCK-DRIFT = 0（檢查器只比對 state；`flags`/`updated` 不參與比對） |
-
-### 27.3 發現：衍生 clue index 停滯（已修）
-
-`clues.sqlite` 建於 **2026-09-27 19:51**，即**本對話之前** ⟹ `register.py find` / `idcm_problem_find` 完全查唔到 docs 01–18，且會把 O221 解析去**已墓碑之前身**（併入 O206）之舊文本。
-
-**重建後**（`register.py clues`）：**2141 docs / 31980 個 O 編號 mention**；讀回核驗：`find --pid O221` = **132 mentions**，其中 **44 條**在 `o221_low_energy_continuum/` 內（docs 15–18 逐條可查，例：`docs/15_gap2_tt_amplitude.md:1`、`docs/17_residual3_tt_drift.md:57`）。`clues.sqlite` 屬 gitignored 衍生檔（不入庫，可隨時重建）。
-
-### 27.4 發現：跨 O 項掛空（已補）
-
-§十二 列兩項跨 O 待辦，並註「以上兩項 ⚠️ 已入 `problem_register`」。逐項核實：
-
-| 項 | 實況 | 處置 |
-|:---|:-----|:-----|
-| ① 觀測端逐項映射（sinc/dressing → C_ℓ / BAO，卡 O202 ℓ-軸測度） | ✅ **已在**：`cmb_cl/o221-sinc-cl-mapping`（registered，2026-09-29T03:07:34，ref = o221 docs/04） | 無需動作 |
-| ② reading B 用語裁決（「鏈 = 空間格點」propagation/internal 分類，涉 O180/O159 部分表述） | ❌ **唔在**（`register.jsonl` 搜 `reading B`／`用語` = 0 命中）⟹ §十二 之「已入」唔成立 | **本輪補登**：對 **O180** 與 **O159** 各下一條 `note`（append-only、**唔改他人 verdict**），載明 O221 只交判準（propagation 類陳述須經連續化映射 L 讀；mode index 唔係格點，O219），ref = 本 O 之 `01_problem_record.md` |
-
-**§十二 更正**：§十二 原文「已入 problem_register」對第 ② 項唔成立 —— 按 append-only 規則，**原文保留不動**，本節為其更正與補登之審計軌跡。
-
-### 27.5 機器驗證（本輪重跑）
-
-- `register.py check`：**STATUS-DRIFT 0**、**BLOCK-DRIFT 0**、`BLOCK-UNREGISTERED 0`、`PID-NO-FOLDER 0`、`ALIAS-DANGLING 0`、`REF-LINE-OOR 0`；**HARD DRIFT 6**（全部係既存非-O221 項：O1/O4/O17/O143 重複目錄、O198 README-only、O220 ref-missing 等，與本對話無關）。
-- `register.py mirror` → `REGISTER.md`（**221 rows**）已刷新。
-- `status --pid O221`：state = partial、verdict = partial（與機器塊一致 ✓）。
-- `log --pid O180`／`--pid O159`：新 note 已落（2026-09-29T18:24:53）✓。
-
-### 27.6 結論
-
-**整個對話框之問題脈絡（第 1–17 輪事件鏈）與最新狀態（機器塊 flags + note + clue index）現已完整註冊且可查。** 三項停滯（機器塊 updated/flags、clue index、跨 O 項 ②）全部補齊；`state` 未改動 ⟹ 零 drift。
-
-### 27.7 事件層修正記錄（2026-09-29T20:52，register 工具誤用）— 新增子節，不改舊節
-
-- **事件**：本輪以 `register.py retract --pid O221 --ref "<docs/19> ; <docs/20>"` 意圖撤回一條**編寫錯誤之事件**。**後果**：`retract` 之語義係**撤問題**（`state -> retracted`），非撤事件 ⟹ O221 之 `state` 被改為 `retracted`，令 `STATUS-DRIFT 1`（README=closed vs register=retracted）與 `BLOCK-DRIFT 2`（兩 `<!-- registry -->` 塊=partial vs register=retracted）。
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone 1.74@8 ->1.6255@10->1.5162@12->1.4146@14->1.3223@16 -> continuum 1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4 + grading: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, band ratio c_G=0.2250613); A3-续 step1 (scripts/36 6/6: eta-ladder continuum over {88*4^ell} - interior densification x1/4 per level, LIGHT-CONE GAP >= ln 2 for all ell, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-36 = 906/906
+owner:   O221
+created: 2026-09-28
+updated: 2026-10-02
+prereq:  O210, O140, O139, O138, O86, O213, O202, O212
+source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
+-->
+-->
+-->
+` 塊=partial vs register=retracted）。
 - **修復**：以 `close --pid O221 --verdict partial --ref <docs/19>` 復原（`close` 之 verdict→state 映射：`partial -> partial`）⟹ `state = partial`、`verdict = partial`、**STATUS-DRIFT 0 / BLOCK-DRIFT 0** ✓；README/markdown/機器塊三者一致 ✓。**無任何結果、判定、時序被改動**（Round 17 之 partial close-out 仍有效）。
 - **殘留（透明記錄，唔會隱藏）**：`REF-MISSING` 由 1（O220 既存）增至 **3**——新增 2 條**全屬本對話**：① T20:52:11 之 `progress` 事件、② 該 `retract` 事件。**根因**：`ref` 欄位**只收單一路徑**（我用 `" ; "` 串兩條路徑 ⟹ 整個字串被當一條檢查）⟹ `HARD DRIFT` 由 6 增至 **8**（+2，內容中立）。
 - **為何不就地改 `register.jsonl`**：該檔為**系統記錄**（`register.jsonl` header 自述 append-only、行內 `hash`/`prev_hash` 哈希鏈）；就地改 ref 會破壞哈希鏈完整性。依工具設計哲學（`check` **報告** drift、永不靜默解決）⟹ 以**新事件 + 本節**透明記錄，其餘無補。
@@ -261,3 +228,6 @@ near-rest 拋物線精確性到 cosh 級數下一階（[γ−(1+η²/2)]/(η⁴/
 
 ## 四十、Round 25b 商空間盲測-2（2026-10-02：插值盲窗 {10,14}，scripts/35）— 運行中
 R24 Q2（conformal 高原）REFUTED 後之**新律驗證**：A_conf(14) < A_conf(10) **且** A_conf(14) > 1（單調收斂向連續端 1；禁後見擬合——見 docs/31 nQ1–nQ7 預註冊）。盲窗 {10,14} **兩者從未執行**（插值於錨點 8/12/16 之間；成本 M⁴：M=14 ~0.6×、M=10 ~0.15× M=16）。**完成（2026-10-02，canonical rc=0；sha `5d5b417b…` 三跑 byte-identical）**：**7 判決全成**（6 binary + nQ6 宣告式）——**nQ2 新律 CONFIRMED**：A_conf 1.74@8 → 1.6255@10 → 1.5162@12 → 1.4146@14 → 1.3223@16 單調收斂向連續端 1（R24 REFUTED 之高原被單調收斂律取代，於未見插值窗驗證）；nQ1 TT −10.2%/−22.4% ✓；nQ3 gq 0.0465<0.0527<0.0548 ✓；nQ4 (1+,5-,0) ✓；nQ5 extra<0 ✓；nQ7 9/9+9/9（max|delta|=5.3e-15）✓；nQ6 TT 指數 **−1.105** ∈ [−1.3,−0.7] ✓。審計側修正：nQ6 初版誤用 R24_CONF（A_conf）於 A_TT 擬合 ⟹ −0.117 錯值；修正 R24_ATT ⟹ −1.105；threshold 零放寬。判數更正：scripts/33=4 binary（33-5 宣告）+34=5+35=6 ⟹ **900/900**（見 docs/29 §5 附註）。
+
+## 四十一、Round 26 A3-續：η-階梯連續體（2026-10-02，scripts/36 6/6）— 新增節，不改舊節
+docs/24 A3-續 執行：按「連續統 = 族 {M_ℓ} 嘅性質」（docs/02）+ O174 模態預算 N_ℓ=44·4^ℓ 構建 ℓ-階梯 η^{(ℓ)}_k = arccosh(csc(πk/M_ℓ))（M_ℓ=88·4^ℓ）。**C1** ℓ=0 == O140 精確（dev 1.32e-50）；**C2** 內部稠密化（θ=π/4 逐層比 → 1/4 單調 0.253→0.250）；**C3** **光錐 GAP：Δη₁ ≥ ln 2 ∀ℓ**（0.693466→0.693147；ℓ=0 超額 3.19e-4）——階梯喺 θ→0 永不稠密，連續 rapidity 係**內部窗**陳述；**C4** Casimir 逐層精確；**C5** **生成元 = 雙曲 boost**（d²/dη²=+Id；修正 docs/29 誤標「歐氏」——歐氏係 −Id）；**C6** 誠實：完整 Poincaré 未宣稱；Noether 份額 q_ℓ=4^{−ℓ}（O174）。審計側修正 ×1（C2 閾值算術錯→逐層比收斂檢查）。推導累計 **906/906**。

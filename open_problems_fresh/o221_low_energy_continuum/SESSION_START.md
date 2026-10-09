@@ -5,7 +5,14 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone 1.74@8 ->1.6255@10->1.5162@12->1.4146@14->1.3223@16 -> continuum 1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4 + grading: Galilean band k*=19, generator d2/deta2=+Id, band ratio c_G=0.2250613); L-WP done (scripts/34 5/5: spectral-variance law sigma^2=sigma0^2+Var(v_g)t^2 exact); A3-cont (continuous-layer d/deta Noether charge) NOT claimed - layer rule; scripts 01-35 = 900/900
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone 1.74@8 ->1.6255@10->1.5162@12->1.4146@14->1.3223@16 -> continuum 1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4 + grading: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, band ratio c_G=0.2250613); A3-续 step1 (scripts/36 6/6: eta-ladder continuum over {88*4^ell} - interior densification x1/4 per level, LIGHT-CONE GAP >= ln 2 for all ell, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-36 = 906/906
+owner:   O221
+created: 2026-09-28
+updated: 2026-10-02
+prereq:  O210, O140, O139, O138, O86, O213, O202, O212
+source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
+-->
+-->
 ` 機器塊（全庫 4 個合規塊中 o221 佔 2）+ `register.jsonl` 事件鏈（第 1–17 輪齊全）。
 
 **發現並已修之三項停滯**
