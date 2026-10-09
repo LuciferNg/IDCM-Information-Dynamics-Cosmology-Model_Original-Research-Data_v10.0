@@ -776,3 +776,44 @@ state: open（重啟）— 接受 O140 FSR-QFT 對接任務（尚待全套推導
 自身剩餘 🔴: 0（R21 後無新增）
 入向交接 backlog: 0（R20 8 組 + R22 + R23 全收口）
 ```
+
+---
+
+# R23 推導段: FSR-QFT 正式對接 — 56/56 PASS（2026-10-09）— append-only
+
+> **本節為新增，以上原文一字不刪。**
+
+## 成果（詳見 docs/40 + scripts/75 + scripts/76）
+
+```
+[A] 對偶定理   γ_FSR·ω_CHAIN = 2 EXACT ⟹ FSR γ 階梯 = O137 ω 譜倒數對偶
+[B] 費曼規則   3g=0（跡循環性）; 4g δ_{Σn≡0 mod 2N}; 傳播子 G=i/(ω²−ε_n)
+[C] Gauge      光子 = 零模 Goldstone + 零色散全 n; c_W ↔ (a/2)·ω_N
+[D] 譜恆等     N=44: ε_n^FSR = γ_n^CHAIN EXACT（IDCM = FSR 特例）
+[E] RG          b₀=7 與 N 無關; ζ(1) 每層 ×16 = B²
+[F] 質量        O140 m=M₀√ε（頻率階梯）vs O137 m=M₀γ（質量階梯）= 平方關係
+```
+
+## ★ 對 O140 嘅回覆（register note）
+
+1. **ζ_N(1) 公式更正**: O140 docs/03 §4.2 `((2N)²−1)/12` 錯 2 倍；正確 `(2N²+1)/12`
+   （N=44: 322.75 = 1291/4 — O140 自己 Σγ²=1291 恰好證明）
+2. **質量公式語義**: m_k^FSR = M₀√ε_k 與 O137 m = M₀γ_n 平方關係 — 待 O140 澄清
+   （若意圖 m_k = M₀ε_k 則完全一致）
+
+## 水位更新
+
+| 檔 | 行數 | 變更 |
+|:---|:-----|:-----|
+| docs/40_fsr_qft_docking_formal.md | 新檔 | FSR-QFT 正式對接記錄（§二–§八） |
+| scripts/75_fsr_qft_docking_formal.py | 新檔 | 40/40 PASS |
+| scripts/76_fsr_qft_docking_layer2.py | 新檔 | 16/16 PASS |
+| SESSION_START.md | 584→613 | +R23 推導段 |
+
+## 狀態
+
+```
+FSR-QFT 對接: 🟡 已完成正式場論層（56/56）; 剩餘 = 費曼圖求值（→O125）+ 質量語義澄清
+自身剩餘 🔴: 0
+入向交接 backlog: 0
+```
