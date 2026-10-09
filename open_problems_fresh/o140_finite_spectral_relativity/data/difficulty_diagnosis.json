@@ -1,0 +1,13 @@
+{
+  "ell_layer_factor": "hidden parameter risk",
+  "mass_span": 28.0172208550811,
+  "sm_ratios": {
+    "top/electron": 338551.8590998043,
+    "tau/electron": 3477.227939780704,
+    "top/tau": 97.36276352667065,
+    "mu/electron": 206.7675279207983
+  },
+  "seq_projection_err": 0,
+  "odd_s_no_closed_form": true,
+  "jwst_n_needed": 8.999999999999998
+}
