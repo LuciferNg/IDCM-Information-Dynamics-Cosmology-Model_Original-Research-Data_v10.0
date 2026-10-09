@@ -1,0 +1,7 @@
+{
+  "product_law": "eps_a·eps_{44-a}=eps_{2a} verified 22/22",
+  "mass_law": "m_{2a}=m_a·m_{44-a}/M0",
+  "mc_null_rate": 0.2608333333333333,
+  "sm_hits": 13,
+  "expected_by_null": 9.389999999999999
+}
