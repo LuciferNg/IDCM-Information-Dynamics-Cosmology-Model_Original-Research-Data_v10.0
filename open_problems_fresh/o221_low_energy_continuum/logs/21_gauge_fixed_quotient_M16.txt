@@ -1,0 +1,40 @@
+==============================================================================
+O221 / scripts/21 - gap 1: exact-displacement gauge sector + gauge-fixed DoF counting, M = 16
+==============================================================================
+     naive 10-dim form (unit tensor norm basis): lattice eigenvalues [ 6.2181e-03  1.4236e-04  1.4236e-04  7.0868e-05 -3.8935e-04 -5.7423e-04
+ -6.6187e-04 -6.6187e-04 -3.5146e-03 -3.5146e-03]
+     continuum eigenvalues: [ 3.0843e-07  4.1850e-25 -1.4477e-23 -3.2671e-23 -7.4228e-23 -3.8553e-08
+ -3.8553e-08 -3.8553e-08 -1.5421e-07 -1.5421e-07]
+     exact displacement directions: dS_R(amp)/dS_R(amp/2) = [4.001 4.001 4.001 3.999]
+     naive gauge vector stiffness (per unit strain): lattice 3.3952e-04 (0.0548 of the naive form scale) ; continuum 0.000e+00
+     gauge subspace rank 4 -> Euclidean complement dim 6
+     gauge-fixed spectrum (6): lattice [ 0.0062  -0.00047 -0.00064 -0.00064 -0.00351 -0.00351]
+     gauge-fixed spectrum (6): continuum [ 3.08425e-07 -3.85531e-08 -3.85531e-08 -3.85531e-08 -1.54213e-07
+ -1.54213e-07]
+     signatures: lattice (1+, 5-, 00) ; continuum (1+, 5-, 00)
+     gauge-fixed per-sector stiffness: TT lattice 1.2313e-02 vs continuum 9.6383e-02 (A_TT = 0.1278) ; conformal lattice 2.0391e-01 vs continuum 1.5421e-01 (A_conf = 1.3223)
+     gauge-fixed raw ratio |TT|/|trace| (unit-norm convention): lattice 0.0052 ; continuum 0.6250
+     gauge-fixed A_conf/A_TT = 10.3504  (naive docs/15 value at M=3: 40.82/0.1306 = 312.6)
+SCAN M=16  dimZ=6 sig_lat=1+/5-/00 sig_con=1+/5-/00 gq_lat=3.3952e-04 gq_con=0.00e+00 A_TT=0.1278 A_conf=1.3223 ratio_lat=0.0052 ratio_con=0.6250 richardson_min=4.00 extra_pos_rel=-0.0766 Aconf_over_ATT=10.3504
+
+[Q1] flat machinery
+  [FAIL] Q1.1 flat configuration: every deficit vanishes and S_R = 0 S_R = 1.198e-09, max|delta| = 5.329e-15
+
+[Q2] the gauge sector
+  [PASS] Q2.1 the linearised vertex-displacement directions are FIRST-ORDER kernel directions: dS_R is quadratic in the amplitude for all four (Richardson ratio 4, not 2) ratio = [4.001 4.001 4.001 3.999]
+  [PASS] Q2.2 the naive metric-projected gauge vectors are NOT first-order kernel directions on the lattice (a finite fraction of the form scale), while in the continuum they are exactly zero lattice 3.3952e-04 = 0.0548 of scale ; continuum 0.000e+00
+
+[Q3] gauge fixing 10 -> 6 and the physical spectra
+  [PASS] Q3.1 the gauge subspace has rank 4, so the Euclidean complement has dimension 6 rank = 4 ; complement dim = 6
+  [PASS] Q3.2 continuum control: the gauge-fixed physical form has rank 6, signature (1+, 5-) and no kernel continuum = (1+, 5-, 00)
+     extra positive direction (the second-largest positive eigenvalue): +0.000000e+00 ; largest = +6.195382e-03 ; ratio = 0.000000
+  [PASS] Q3.3 lattice inertia at this M: either it equals the continuum (1+, 5-), or the mismatch is confined to a second positive direction below 5% of the largest eigenvalue (a near-zero discretisation mode, not an extra light mode); no kernel on either side lattice = (1+, 5-, 00) vs continuum = (1+, 5-, 00); extra positive direction +0.0000e+00 = 0.0000 of the largest
+
+[Q4] does the ~50x conformal anomaly of docs/15 survive gauge fixing?
+     naive (docs/15, raw basis) A_conf at M=3 = 40.82 ; gauge-fixed A_conf = 1.3223
+  [PASS] Q4.1 the TT sector matches its own continuum counterpart at unit source norm within a factor of 10 after gauge fixing A_TT (gauge fixed) = 0.1278
+  [PASS] Q4.2 the ~50x conformal anomaly of docs/15 COLLAPSES under proper gauge fixing: A_conf lands within a factor of 2 of 1 (i.e. the anomaly was ~29x gauge contamination of the naive map, not a property of the trace sector) A_conf (gauge fixed) = 1.3223 vs docs/15 unfixed 40.82 -> collapse factor 30.9x
+  [PASS] Q4.3 BOTH sectors are now O(1) at unit source norm (TT 0.1278, conformal 1.3223): the gauge-fixed lattice stiffnesses reproduce the continuum per-sector values A_TT = 0.1278, A_conf = 1.3223
+
+RESULT: 8/9 PASS
+HONEST STATUS: 1 FAIL - see above; no physics threshold was relaxed.

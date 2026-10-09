@@ -3,3 +3,9 @@ O221 scripts/30 — gauge-fixed quotient BLIND run, M in {12,16,20}, round 24
 (amended from {12,16,24} pre-run: M=24 infeasible, see header)
 ============================================================================
 prior fit (M in {3,4,6,8}): A_TT ~ 2.255 / M^0.919
+  [reuse] M=12: existing canonical log (RESULT present), no rerun
+
+[ M = 12 ] A_TT=0.1917 A_conf=1.5162 sig_lat=1+/5-/00 gq_rel=0.0500 extra_pos_rel=-0.0637 own=('9', '9')
+  [reuse] M=16: existing canonical log (RESULT present), no rerun
+
+[ M = 16 ] A_TT=0.1278 A_conf=1.3223 sig_lat=1+/5-/00 gq_rel=0.0548 extra_pos_rel=-0.0766 own=('8', '9')
