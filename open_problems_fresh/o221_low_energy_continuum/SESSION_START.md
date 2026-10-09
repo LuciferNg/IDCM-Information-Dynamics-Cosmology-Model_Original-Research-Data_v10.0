@@ -5,13 +5,8 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed; residual3 attributed; residual4 closed; residual5 LOCALISED/OPEN (k-independent; smear-order dependent, can be driven to ~0 degenerately; boundary-layer hypothesis REFUTED -> intrinsic, bulk ~ +1 M power); tightened acceptance: zero deficit AND M-stable amplitudes in one order; watermark 2026-09-29 22:50; scripts 855/855 (01-26); audit 123/123; crosscheck 134/134 (docs 01-21); sub-problem L-Lor registered (docs/22): emergent Lorentz / A2->theorem via irrelevant breaking ops (dim>=5); F0-F4 pre-registered; cross-O notes O140/O213/O73; Round22 2026-10-02: arm1 scripts/27 7/7 (blind M{20,24,32}, |exponent| 1.9937, S4 ladder 1:1/2:1/3:1/4, no dim-4 => spectrum-side A2 demotion step 1; signature input); arm2 design docs/24 for O140/FSR-to-SR (SR dynamics)
-owner:   O221
-created: 2026-09-28
-updated: 2026-10-02
-prereq:  O210, O140, O139, O138, O86, O213, O202, O212
-source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 + §四 Phase 5.3/5.4
--->
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6: TT exponent -1.100 vs spectrum 2.000); Q2 plateau REFUTED (R24, A_conf 1.3223<1.4) -> new law monotone->1 under test (R25b blind2 {10,14}); A3 done (scripts/31 6/6: eta generator set non-closed group; scripts/33 5/5: Galilean band k*=19, generator d2/deta2=+Id, band ratio c_G=0.2250613); L-WP done (scripts/34 5/5: spectral-variance law sigma^2=sigma0^2+Var(v_g)t^2 exact; centroid=<dwdk>t); A3-cont (continuous-layer d/deta Noether charge) NOT claimed - layer rule
+
 
 > **Session**: 2026-09-28（新建立 — 墓碑編號重用，調律者明示）
 > **狀態**: 🟡 **部分閉合**（live field，2026-09-29 更新）— Session 1 = 框架 + 審計；Session 2（2026-09-28）= R1–R5 首次推導 102/102 + U3/U6 續推 121/121；Session 3（2026-09-29）= close-out 審計 89/89 獨立重驗 + 文檔核對 44/44，文檔數值錯誤 0。殘餘：U3 動力學本體、U5、簽名輸入；跨 O 兩項見 §十二。
@@ -410,3 +405,8 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 2. **A3 完成**：`scripts/31_eta_displacement_charge.py` 6/6 + docs/28_eta_displacement_charge.md——η 精確群律/生成元/光錐階梯；無偶然閉合（生成集非閉合群）。
 3. **商空間盲測完成**（canonical scripts/30 rc=0；doc `docs/27_quotient_blind_pre.md`）：最終盲集 **{12,16}**（A1–A4 跑前修正：24/20/18 皆預算捨棄，詳見 docs/27；兩完成點未見過、≥1.5× 上限 8）。判決：**Q1 PASS**（TT 漂移延續 −16.6%/−27.5%）、**Q2 REFUTED**（A_conf 1.3223 < 1.4，趨勢向連續端 1 收斂）、**Q3 PASS**、**Q4 PASS**（(1+,5-,0) A2-續）、**Q5 PASS**（無額外正模 A2-續）、**Q7 PASS**（內容判據；Q1.1 = 噪聲）、**Q6 綜合 ✓**（TT −1.100 vs 譜側 2.000 ⟹ 投影無新破壞算符）。A2-續 核心（Sylvester 穩定 + 無額外正模）兩盲點成立。
 4. **層次鐵律**：A3/商空間全屬離散層精確；連續層 boost/慣性讀法未宣稱；簽名輸入。
+
+## Session 25 記錄（2026-10-02，R25a/R25b/R25c）
+- **R25a A3-續** `scripts/33_eta_generator_refinement.py` **5/5**：G1 cosh 級數下一階（η²/30）、G2 Galilean 帶 k*=19（η≤0.7746）、G3 生成元旋轉 d²/dη²=+Id、G4 帶比 c_G=0.2250613、G5 層次判分。審計側修正 ×2（G1 級數閾、G4 整數粒度）——threshold 零放寬。
+- **R25c L-WP** `scripts/34_wave_packet_continuum.py` **5/5**：臂 1 最後缺口（docs/24 誠實註記）閉合。設計修正鏈 A1–A4：A1 繞環、A2 三次譜相位主導、A3 由三凍結約束（無繞環/三次相位界 P3=M/(96σ₀³)≤6e-4/可測性 t_max/t_d=0.22）推導參數 σ₀=263.1、n₀=76186、A4 W2=譜方差律 σ²(t)=σ²(0)+Var(v_g)t²。W1 centroid=⟨dω/dk⟩·t 7+ 位、W2 四點命中 1e-4 格點、W3 擴散 1.0925、W4 x²/2 律。
+- **R25b 商空間盲測-2** `scripts/35_quotient_blind2.py`：插值盲窗 {10,14}（兩點從未執行），nQ1–nQ7 預註冊（docs/31），nQ2=A_conf 單調收斂→1 新律；launched proc_f29e5c9730f4（pid 746632，背景+notify）；結果 pending。
