@@ -236,3 +236,37 @@ FSR 是零參數宇宙學模型（Ωb, Ωm, Ω_Λ, h, ns, τ 全部不存在）�
 - **相對論原理 FSR 版**：物理可觀測（v,γ,Doppler,z）用 n_p/n_o 表達，唔依賴 floor(ℓ_obs) ⟹ O221 L-Lor 連接
 - ℓ 唔再係隱藏參數：觀察者 ℓ 由自身 E_o 鎖定，F 唔入預言（docs/10 已證）
 - 引用: docs/12_local_l_level.md, scripts/14_local_l_level.py (6/6 PASS)
+
+## 十六、困難 2 續：乘法律鏈零訊號 (2026-10-09)
+
+- scripts/13_mass_product_chain.py（4 PASS/3 FAIL）
+- **乘法律修正確認**：ε_a·ε_{44−a}=ε_{2a} 22/22（用 eps() 函數；⚠️ scripts/13 v1 曾用 list index 攞錯，已修正）+ 質量版 m_{2a}=m_a·m_{44−a}/M₀ 22/22
+- 三期 null 全無訊號：1 因子 SM 36% vs MC 46%；2 因子 SM 72% vs MC 58%；**乘法律生成元鏈 SM 25.0% vs MC 24.0%（零訊號）**
+- **最終判決**：質量譜選取規則唔存在於「ε-譜乘積方向」——乘法律係鏈內結構（解釋 44 模之間），唔係 SM 質量譜嘅選取規則；O140 停止此方向
+- 候選：O85 adjoint/SM 結構、O124 群論、或 O137 FSR-QFT
+- 引用: docs/11_mass_selection_rules.md 附 2, scripts/13 (4P/3F)
+
+## 十七、spectral-zeta 奇 s 攻破（2026-10-09）
+
+- **🟢 奇 s 一樣有閉式**（scripts/15, s=1..7 全 PASS）
+- ζ_N(s) = Σcsc^{2s}(πk/2N)/4^s 對所有正整數 s 係 **deg-2s 有理多項式**——csc 冪 2s 恆偶 ⟹ Bernoulli 有理結構
+- ⚠️ **docs/08「奇數 s 冇閉式」判斷錯誤**——已 append-only 更正（docs/08 §spectral-zeta 狀態行）
+- 前導係數 = ζ_R(2s)/π^{2s} 精確（s=1..6 全 1.000000）；樣本外 N=30/36/44 rel 1e-12~1e-16
+- 對比：連續 ζ(s) 喺負整數先有理（解析延拓），離散 ζ_N(s) 喺所有正整數都有理——「有限譜比連續譜更有結構」
+- 引用: docs/13_spectral_zeta_odd_s.md, scripts/15 (7/7 PASS)
+
+## 十八、velocity-composition collective sector 攻破（2026-10-09）
+
+- **🟢 collective sector 封閉**（scripts/16, 7/7 PASS）：boost = 張量積（U_i 不同粒子空間 commute）⟹ 群性質繼承
+- 同速度 pair 不變質量 M²=(2m)² 精確；4-動量線性相加（足球問題確認，無階梯封閉要求）
+- **物理空間 = 快度 ℝ**（rung 只係 measurement display）——同 Zeno (09)、no-go+⊕_FSR (07) 一致閉合
+- 三粒子 associativity 一次過 vs 連續 dev 2e-12~2e-15
+- 引用: docs/14_collective_boost.md, scripts/16 (7/7 PASS)
+
+## 十九、FSR-to-SR 連續極限攻破（2026-10-09）
+
+- **🟢 SR = FSR 嘅 ℓ→∞ 極限**（scripts/17, 17/17 PASS）
+- 回復鏈五步：N_ℓ=88·4^ℓ → ∞；Δv~4^{-2ℓ}→0 階梯密化（ℓ=5 已 1.8e-9）；物理合成=快度ℝ加法精確；Lorentz det=1（mpmath 80 位 |det−1|<1e-55）；γ=coshη=1/√(1−v²) 任何 ℓ 保持；tanh/atanh 合成 dev 1e-16
+- O221 L-Lor 連接形式化：細化∘共動重標定 = N_ℓ 增大 + 物理量喺新鏈重標
+- ⚠️ 過程錯誤：v1 投影誤差測試問錯問題（物理合成永遠精確，rung 只係顯示——docs/14）；Lorentz det float 喺 η≳9 崩潰 → mpmath 80 位
+- 引用: docs/15_fsr_to_sr.md, scripts/17 (17/17 PASS)
