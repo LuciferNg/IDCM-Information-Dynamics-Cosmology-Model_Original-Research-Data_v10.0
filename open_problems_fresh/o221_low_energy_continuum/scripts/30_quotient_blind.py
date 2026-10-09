@@ -2,18 +2,21 @@
 # -*- coding: utf-8 -*-
 """
 O221 / scripts/30 — Round 24: gauge-fixed quotient BLIND run (Arm 1 sector-irrelevance +
-                         Arm 2 A2-continuation) at M in {12, 16, 20}
+                         Arm 2 A2-continuation) at M in {12, 16, 18}  (A3 amended)
 =========================================================================================
 Uses the EXISTING quotient machinery scripts/21 (Regge simplicial second variation, unit
 tensor norm, gauge fixing 10 -> 6 via Euclidean complement of Vg) at the BLIND M set, and
 checks the pre-registered predictions.  All reported quantities are parsed from scripts/21's
 own stdout (canonical logs), so nothing is recomputed with a second implementation.
 
-BLIND M SET:  M in {12, 16, 20}   (AMENDED from {12, 16, 24}, pre-run reason: the machinery
+BLIND M SET:  M in {12, 16, 18}   (AMENDED first from {12, 16, 24}, then in A3 from {12, 16, 20}: the machinery
 builds (M+2)^4 * 24 simplices and evaluates the 10x10 quadratic form by 65 full Regge
 reconstructions; M = 24 means 10.9M simplices, ~3.5 GB for shat and ~7e8 simplex-steps,
-infeasible in the same budget as M <= 20 (5.6M simplices, ~4 GB, ~30-60 min).  All three
-blind values are >= 2.5x the prior max M = 8 and were unseen at pre-registration.)
+infeasible in the same budget.  First amendment {12,16,20}: M=20 (5.6M simplices, ~4 GB)
+feasible-bound; SECOND amendment A3 (pre-run): M=20 empirically needs > 2 h (> 7200 s on the
+rerun) - above the round budget; the third point becomes M=18 (2.4M simplices, budget-parity with
+M=16, ~30-40 min, UNSEEN at pre-registration, 2.25x the prior max 8).  Blind discipline kept:
+every choice was frozen before its own execution.)
 
 PRE-REGISTRATION (2026-10-02, frozen before running; prior points M in {3,4,6,8} allowed
 for the extrapolation fits ONLY):
@@ -38,8 +41,10 @@ for the extrapolation fits ONLY):
 
   AMENDMENTS (audit-side, applied 2026-10-02 AFTER the first launch, BEFORE the rerun):
   (A1) scripts/21 at M = 20 needs > 3600 s (first launch timed out at exactly the 3600-s
-       subprocess limit).  The per-M subprocess timeout is raised to 7200 s; existing
-       canonical logs (M = 12, 16) are REUSED (no rerun).
+       subprocess limit) and then > 7200 s on the rerun (empirically > 2 h).
+       The per-M subprocess timeout is raised to 7200 s; existing canonical logs
+       (M = 12, 16) are REUSED (no rerun).
+  (A3) THIRD BLIND POINT: 20 -> 18 (see header).  Frozen before the third execution.
   (A2) scripts/21's own Q1.1 ('S_R = 0', threshold 1e-9) trips at M = 16 by pure
        summation noise: S_R = 1.198e-9 while max|deficit| = 5.33e-15 -- the geometry IS
        flat to machine precision (the deficit bound is the physical content); the action
@@ -60,7 +65,7 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 O = os.path.dirname(HERE)
 S21 = os.path.join(HERE, "21_gauge_fixed_quotient.py")
-BLIND = [12, 16, 20]
+BLIND = [12, 16, 18]  # A3: 20 -> 18 (M=20 empirically > 2h, above budget; 18 unseen, budget-parity with 16)
 PRIOR_M = [3, 4, 6, 8]
 PRIOR_ATT = {3: 0.7841, 4: 0.6658, 6: 0.4470, 8: 0.3217}
 PRIOR_GQREL = {3: 0.0119, 4: 0.0213, 6: 0.0338, 8: 0.0414}
