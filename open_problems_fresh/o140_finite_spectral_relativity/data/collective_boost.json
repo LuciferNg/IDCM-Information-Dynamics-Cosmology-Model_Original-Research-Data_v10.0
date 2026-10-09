@@ -1,0 +1,7 @@
+{
+  "K_additivity": "tensor product, U commutes across particles",
+  "4mom_additive": "linear (same as SR), invariant mass from CM",
+  "football": "p_total = N*p_max, no ladder closure needed",
+  "physical_space": "rapidity R (rung = measurement display)",
+  "max_dev": 2.2950530365051236e-12
+}
