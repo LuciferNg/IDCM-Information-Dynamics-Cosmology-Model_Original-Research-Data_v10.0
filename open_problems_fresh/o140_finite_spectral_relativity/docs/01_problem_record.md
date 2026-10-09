@@ -226,3 +226,13 @@ FSR 是零參數宇宙學模型（Ωb, Ωm, Ω_Λ, h, ns, τ 全部不存在）�
 - t/e = 3.39e5 要 4 因子（B=5），3 因子跨度 2.2e4 摸唔到（dev 95%）——同 Gemini B 矛盾一致
 - 剩餘：要真正嘅質量預言，SM 質量關係必須係**乘法律可達**（2a 型 index 鏈）而非自由乘積——未完成
 - 引用: docs/11_mass_selection_rules.md, scripts/12/12b/12c (3+5+2 判決)
+
+## 十五、O140/local-l-level 攻破：本地參考系 ℓ 層機制 (2026-10-09)
+
+- **🟢 已攻破**（scripts/14, 6/6 PASS）：層級機制 = 紅移統一
+- 核心：Δℓ = log₄(n_p/n_o) = log₄(E_p/E_o) = log₄(1+z) ——觀察者-探針層級差 = O76 ℓ(z) 完全一致
+- z = 4^Δℓ − 1（紅移 = 層級差嘅 4-冪）；宇宙學紅移係層級差嘅特例
+- 觀察者自洽：floor(ℓ_obs) 層格距 a_obs ≤ λ_C/2，三觀察者（原子/電子/top）全部 resolve 自己
+- **相對論原理 FSR 版**：物理可觀測（v,γ,Doppler,z）用 n_p/n_o 表達，唔依賴 floor(ℓ_obs) ⟹ O221 L-Lor 連接
+- ℓ 唔再係隱藏參數：觀察者 ℓ 由自身 E_o 鎖定，F 唔入預言（docs/10 已證）
+- 引用: docs/12_local_l_level.md, scripts/14_local_l_level.py (6/6 PASS)
