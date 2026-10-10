@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O244
 title:   O244 — FSR-QFT 費曼圖求值與通用張量 (承接 O137 R23 尾巴)
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O244
 created: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-10
 prereq:  -
 source:  -
 -->
