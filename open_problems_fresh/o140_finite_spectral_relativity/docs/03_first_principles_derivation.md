@@ -172,6 +172,12 @@ This is the **discrete Riemann zeta** — a finite sum replacing the infinite su
 **Key properties**:
 - $\zeta_N(0) = N$ (trivial, counting modes)
 - $\zeta_N(1) = \sum \csc^2(\pi n/2N)/4 = ((2N)^2-1)/12$
+  > **[2026-10-10 更正附註 — O137 docs/40 §六 發現#1]** 上式錯 2 倍：正確閉式係
+  > $\zeta_N(1) = (2N^2+1)/12$。標準恆等式：$\sum_{n=1}^{N}\csc^2(\pi n/2N) = (2N^2+1)/3$。
+  > 錯因：$(4N^2-1)/3$ 係 $\sum_{n=1}^{2N-1}\csc^2(\pi n/2N)$（全譜），唔係半譜
+  > $\sum_{n=1}^{N}$。驗算 N=44：$(2\cdot1936+1)/12 = 3873/12 = 322.75 = 1291/4$ ✓
+  > （O140 自己 Σγ²=1291 正正證明），而 $(4\cdot1936-1)/12 = 645.25$ ✗。
+  > 全文其他 ζ_N(1) 引用（docs/08、docs/13）已用正確式；本行原文保留。
 - $\zeta_N(-1) = \sum \varepsilon_n = 2N$ (total spectral weight)
 - $\zeta_N(s)$ has a pole at $s=1$ in the $N\to\infty$ limit, recovering the Riemann zeta pole
 
