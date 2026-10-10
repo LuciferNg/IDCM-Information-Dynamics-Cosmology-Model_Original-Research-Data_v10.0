@@ -83,6 +83,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 9 | 2026-10-10 | R8：嵌入代數（L4b quaternion units ⊂ 2I） | scripts/22（8 PASS）＋ docs/22 |
 | 10 | 2026-10-10 | R9：operator 身份（L1d J_odd²=−I 定理化 + ⟨J⟩≅⟨i⟩） | scripts/23（6 PASS）＋ docs/23 |
 | 11 | 2026-10-10 | R10：edge 10/10/10 定理 + √3 frame 出處（L2f/L3e） | scripts/24（8 PASS）＋ docs/24 |
+| 12 | 2026-10-10 | R11：γ₀ 全因子地址審計（L3f；「LQG 借入」移除） | scripts/25（8 PASS）＋ docs/25 |
 
 ## 七、相關文件
 
@@ -368,3 +369,24 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - scripts 01–24 累計 **126 PASS + 1 記錄 REFUTED（G2）= 127 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8）
 - docs/24；register：O188 notes ×1（R10）
 - **誠實聲明**：R10 令 L2 完全自洽（K 表每種 block 嘅 sign 統計都係 frame 幾何精確函數）；L3 嘅 √3 有 frame 地址但維持「幾何長度 vs 代數生成」嘅誠實分界
+
+---
+
+## 十八、R11 γ₀ 全因子地址審計（2026-10-10）
+
+> append-only 新節；scripts/25（8 PASS + 0 FAIL，判準零放寬）＋ docs/25
+
+### L3f（docs/25，scripts/25 — 8/8 PASS）— 「LQG 借入」標籤移除 ★
+- ✅ **γ₀ = ln2/(π√3) 四因子全部有 IDCM / IDCM-frame 地址**：
+  - ln2 → O121 sync-mode entropy（IDCM 代數：state counting）
+  - B=4 → O151 area law 1/B（IDCM 代數：K_Tree 分支）
+  - π → O127 r_d = πR_world/88 + 4π = S² 總立體角（IDCM/frame 使用）
+  - √3 → 20 face axes 全 norm²=3（R10：frame 面法線長度）
+- ✅ **B5 完整表徵 62 axes**：31 antipodal lines（vertex 6 + face 10 + edge 15、0 cross-type）；per-type norm² vertex 5/2、face 3、edge 1（direction frame）
+- ✅ 判決：γ₀ = IDCM 代數 × **IDCM-frame 幾何** ＝ 單一理論內部轉換率，**唔再需要跨理論橋樑**（R3「LQG 借入」標籤喺地址層面移除）
+- 🔴 誠實 caveat：frame-geometry 因子係任何 ℝ³/S² embedding frame 嘅標準量 ——「喺 IDCM 內」= native to O222 evaluation frame，**唔係** IDCM 代數生成（R4 77 常數盲掃零命中維持）；elementwise 唔 claim
+
+### R11 水位
+- scripts 01–25 累計 **134 PASS + 1 記錄 REFUTED（G2）= 135 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8）
+- docs/25；register：O188 notes ×1（R11）
+- **誠實聲明**：R11 令 L3 升級 —— γ₀ 由「IDCM 計數 × LQG 幾何」變「IDCM 代數 × IDCM frame 幾何」；四缺口而家全部有明確且強嘅結構狀態（L1 定理、L2 frame 定理、L3 內部組合、L4 嵌入代數）—— **O188 已充分具備「結構性終述」收斂條件**

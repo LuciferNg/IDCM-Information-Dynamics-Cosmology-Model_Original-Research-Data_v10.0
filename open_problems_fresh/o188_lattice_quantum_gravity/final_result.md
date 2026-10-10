@@ -122,3 +122,10 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
 - register：`O188` partial，R10 notes ×1
 - **R10 結果（L2f/L3e ★）**：edge block 10/10/10 **定理化**（zero lemma + line-antisymmetry + level structure 1+5+5+1）；20 個 face axes 全部 norm²=3 ⟹ √3 有 frame 地址（face-normal 長度）
 - 狀態：🟡 partial（L2 完全自洽；L3 √3 位置由「外部借入」→「frame 內生幾何長度」，代數生成維持零）
+
+## 現時水位（2026-10-10，R11）
+- scripts 01–25 累計 **134 PASS + 1 記錄 REFUTED（G2）= 135 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8；判準零放寬）
+- docs/25；01_problem_record §十八（append-only）；SESSION_START Session 11
+- register：`O188` partial，R11 notes ×1
+- **R11 結果（L3f ★）**：γ₀ = ln2/(π√3) **四因子全部有 IDCM/frame 地址**（ln2@O121、B=4@O151、π@O127/S²、√3@face-normal）⟹ 「LQG 借入」移除；γ₀ = IDCM 代數 × IDCM-frame 幾何（單一理論內部轉換率）
+- 狀態：🟡 partial —— **O188 已具備結構性終述條件**（四缺口全有強結構狀態：L1 定理 / L2 frame 定理 / L3 內部組合 / L4 嵌入代數）

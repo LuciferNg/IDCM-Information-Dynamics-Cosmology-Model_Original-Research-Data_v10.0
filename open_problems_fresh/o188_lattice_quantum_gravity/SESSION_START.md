@@ -183,4 +183,16 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第十一輪，R11 γ₀ 全因子地址審計）
+
+- **交付**：scripts/25（8 PASS + 0 FAIL）＋ docs/25
+- **結果**：
+  - **L3f ★**：γ₀ = ln2/(π√3) **四個因子全部有地址** —— ln2 (O121)、B=4 (O151)、π (O127 + S²)、√3 (face-normal, R10) ⟹ 「LQG 借入」標籤喺地址層面移除；γ₀ = IDCM 代數 × IDCM-frame 幾何（單一理論內部轉換率）
+  - B5 順帶：62 axes = 31 antipodal lines（6+10+15）；per-type norm²（vertex 5/2、face 3、edge 1）
+  - 誠實邊界：frame-geometry 因子係任何 ℝ³/S² embedding 嘅標準量，唔係 IDCM 代數生成（77 常數盲掃維持）
+- **狀態**：🟡 partial（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8 = **134 PASS + 1 REFUTED = 135 checks**；判準零放寬）
+- 累計水位：L1 定理級；L2 frame 定理；**L3 內部組合（γ₀ 全因子有地址）**；L4 嵌入代數 —— **O188 已具備結構性終述條件**
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
