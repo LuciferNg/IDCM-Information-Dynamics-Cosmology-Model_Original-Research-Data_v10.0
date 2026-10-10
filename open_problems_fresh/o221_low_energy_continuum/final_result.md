@@ -92,3 +92,8 @@ O210 → O140 → O139 → O138 → O86 → O213 → O221（並列 O202 / O212 /
 - scripts 01–38 累計檢查 **923：PASS 920 + 記錄 FAIL 3**（37=913→+38 十檢查：7 PASS、3 記錄 REFUTED——W4/W5/W6c；判準收緊、零放寬）。
 - R28（docs/34）：**dual-cell 權重取樣器（零新參數）**——消 deficit 保留（unseen-k 2π/7、3π/10、4π/5：deficit [1.3e-3, 2.3e-3, 4.7e-5] ≈ 0；naive TT deficit 喺 7 個 k 屬純相位取樣約定效應）**但振幅退化結構性**：**dual ≡ cube（半空間恆等式 Σ_{off_i=0}w=60=120/2 ⟹ 加權平均=均勻平均）**，A_TT 5.0661 原位 ⇒ docs/20 候選②已坍縮。**殘餘⑤未閉合**——剩候選：①複合取樣（cell→精確頂點位移映射）、③A_TT 為主判準。
 - 尚未閉合：GR/EH 湧現（shape-extended deficit——本輪顯示 Regge 型 hinge×dual-area 唔足以收斂 conf/TT 振幅）、QM 導出（O222）、10⁷ MC null 5σ 統計盲測、L-QFT 散射。
+
+## 現時水位（2026-10-02，Round 29 求積階梯）
+- scripts 01–39 累計檢查 **929：PASS 925 + 記錄 FAIL 4**（+scripts/39 六檢查：5 PASS + 1 記錄 REFUTED——Q2 半整數階梯猜想；判準收緊、零放寬）。
+- R29（docs/35）：**deficit 軸 = cell-形狀平均次序；邊沿 Gauss 求積完全慣性**（5 家族 deficit 0.8827→0.8834，q4≡sinc 至 3.3e-11）⟹ **docs/21③ 投影子階梯定理 REFUTED**、候選① 位移映射部分判死。殘餘⑤ 兩軸解耦（deficit 軸：形狀平均 0.88→0；振幅軸：vert 穩定 vs cube/dual/邊沿退化 5.06–5.07）——**完全定位、未閉合**；剩官方 10⁷-MC-null-5σ 盲測＋候選③（A_TT 主判準，需批准）。
+- 尚未閉合：GR/EH 湧現、QM 導出（O222）、10⁷ MC null 5σ（判準④）、L-QFT 散射。
