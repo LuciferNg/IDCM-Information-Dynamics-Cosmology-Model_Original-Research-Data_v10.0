@@ -118,3 +118,17 @@ S3 — AdS/CFT dictionary vs IDCM 投影/信道 (全息 bulk reconstruction)
 - **累計**: 63/63 PASS (scripts/01-05)
 - **剩餘隊列**（留 O185 下輪, register 記錄）: A5 升級（需 twist vector 對應物）、
   完整 twisted 質量公式逐項比對、R2 entanglement 直接計算
+
+### ★ 2026-10-10 IF3 Round 3（建議攻堅路線 A: R2 entanglement 直接計算）
+
+- scripts/06_entanglement.py (**12/12 PASS**) — Peschel correlation matrix 法, numpy eigvalsh
+- **R2 升級 🟡→🟢**: wedge 分辨極限 = 直接計算
+  - sync sector (k=56..88 even, 17 模式 = O121 n≥28 黑洞自由度): 半邊空間 rank = **17 = F_proj**,
+    entanglement spectrum = 17×λ=1/2 ⟹ **S_vN = 17.0000 bits EXACT**
+  - world sector (偶 k 44 模式): rank=44, S_vN = 44.0000 bits (= N_d bits)
+  - half-fill 對照: rank=29, S_vN = 2.65 bits — 唔係 IDCM 結構, 冇硬配
+  - Rényi 不變量: S₂ = S_vN (λ∈{0,1/2} 平坦半佔據 — 每模式恰 1 bit)
+- **誠實標記**: λ=1/2 係 free-fermion 一般特徵; IDCM 內容 = occ_set 由 O121 截斷區段指定;
+  禁宣稱 IDCM 量子糾纏 (工具對接, O222 QM-tool 先例); 17 bits 唔直接硬配 1/B (O151 已自閉)
+- **累計**: 75/75 PASS (scripts/01-06)
+- **剩餘隊列**（留 O185 下輪, register 記錄）: A5 升級、完整 twisted 質量公式逐項比對

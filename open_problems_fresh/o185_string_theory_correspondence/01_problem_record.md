@@ -81,6 +81,7 @@ IDCM 與弦論家族（全弦論/M理論/AdS-CFT）嘅結構對應。調律者�
 | 6 | 2026-10-10 | **★ 定位更正 (調律者)**: 本 O 目標 = 對接層 (像 O221/O222), 唔係替代 M-theory / 三態比較 | SESSION_START 附註 + docs/04 |
 | 7 | 2026-10-10 | **對接層完成 (docs/04 + scripts/04, 14/14)**: 6 條對接規則 R1-R6 操作化 (IF-S3/S1/S2) | docs/04_interface_layer.md |
 | 8 | 2026-10-10 | **IF2 Round 2 (docs/05 + scripts/05, 10/10)**: R4 升級 🟢 (Z₄ twisted sector 選擇規則雙向對接) + 雙向驗證 R7ᵇ/R9ᵇ + A5 ε=9/32=N_gen²/2B² 候選 | docs/05_interface_round2.md |
+| 9 | 2026-10-10 | **IF3 Round 3 (docs/06 + scripts/06, 12/12)**: R2 升級 🟢 — entanglement 直接計算 (88-site correlation matrix); sync sector rank=17=F_proj, S_vN=17.0000 bits EXACT | docs/06_entanglement_wedge.md |
 
 ## 七、相關文件
 

@@ -1,0 +1,46 @@
+==========================================================================
+O185 IF3: R2 entanglement 直接計算 (88-site correlation matrix, numpy)
+==========================================================================
+
+[0] 88-site 對偶鏈基線
+  [PASS] Σγ_even (世界) = 90 -- Σ=90.0000000000
+  [PASS] Σγ_odd (觀察者) = 88 -- Σ=88.0000000000
+  [PASS] E−O = 2 = log₂B = μ²
+
+[1] 世界側 occ_even (偶 k, 44 modes) — C_AA eigen
+    λ 分佈: unique = [0.5]
+  [PASS] world sector: 44 個 λ = 1/2 (period-44 子空間半佔據) -- 每世界模式喺半邊空間半佔據
+  [PASS] world S_vN = N_d·ln2 -- S_vN = 30.498476 = 44·ln2 = 30.498476 nats
+  [PASS] world S₂ = S_vN (λ∈{1/2} 均勻 — Rényi 不變量) -- S₂ = 30.498476
+
+[2] sync sector occ_sync (17 modes) — wedge 候選
+    λ 非零數 = 17; 全部 ≈ [0.  0.5]
+  [PASS] sync sector: entanglement spectrum 非零數 = 17 = F_proj (wedge 分辨極限) -- rank=17
+  [PASS] sync sector: 17 個 λ = 1/2 (每 sync 模式半佔據)
+  [PASS] sync S_vN = 17·ln2 = F_proj·ln2 (wedge entropy) -- S_vN = 11.783502 = 17·ln2 = 11.783502 nats = 17.0000 bits
+  [PASS] sync S₂ = S_vN (Rényi 不變, λ∈{0,1/2}) -- S₂ = 11.783502
+    → wedge 對接: 投影截斷後嘅 sync 17 模式喺半邊空間完全分辨 (rank=17, λ=1/2)
+
+[3] 對照 occ_low (k=1..44 half-fill) — mixed parity
+    λ 非零數 = 29; S_vN = 1.836986 nats = 2.6502 bits
+  [PASS] half-fill S_vN > 0 (混合奇偶 → 有 entanglement)
+  [PASS] half-fill S_vN < S_vN(world) (對照: 有 λ=1 完全佔據, 熵更細) -- S_vN(low)=1.8370 < S_vN(world)=30.4985
+
+[4] 探索性對照表 (純記錄, 唔係閉合)
+    S_vN(world) nats       = 30.4984759446
+    S_vN(world) bits       = 44.0000000000
+    S_vN(sync) nats        = 11.7835020695
+    S_vN(sync) bits        = 17.0000000000
+    S_vN(half-fill) nats   = 1.8369855136
+    C_obs=88bits           = 88.0000000000
+    N_d=44                 = 44.0000000000
+    1/B=0.25               = 0.2500000000
+    E−O=2                  = 2.0000000000
+    F_proj=17              = 17.0000000000
+    ln2                    = 0.6931471806
+    ratio sync/world       = 0.3863636364
+    (half-fill 係 free-fermion 對照, 冇 IDCM 專屬身份 — 誠實記錄)
+
+--- 結果 ---
+  PASS: 12 / FAIL: 0  (total 12)
+[O185-IF3] FINAL: R2 升級 🟡→🟢: wedge 分辨極限 = sync rank 17 = F_proj (直接計算)
