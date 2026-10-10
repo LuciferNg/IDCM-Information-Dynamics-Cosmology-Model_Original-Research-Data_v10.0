@@ -17,7 +17,7 @@ source:  -
 > **狀態**: 📄 **已註冊 — 未開始**
 > **來源**: O137 — FSR-QFT 對接尾巴（調律者指示「直接開新O244交接」）
 > **前置**: O137 scripts/74+75+76 全 PASS（56/56）；docs/40 FSR-QFT 對接記錄；O124 費曼規則機制
-> **位置**: `open_problems_fresh/O244/`
+> **位置**: `open_problems_fresh/o244_fsr_qft_feynman_generic_tensor/`
 
 ---
 

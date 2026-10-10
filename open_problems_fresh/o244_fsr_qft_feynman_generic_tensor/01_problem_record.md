@@ -1,4 +1,4 @@
-# O244 — O244 — FSR-QFT 費曼圖求值與通用張量 (承接 O137 R23 尾巴)
+# O244 — FSR-QFT 費曼圖求值與通用張量 (承接 O137 R23 尾巴)
 
 <!-- registry
 pid:     O244
@@ -16,7 +16,7 @@ source:  -
 > **狀態**: 📄 **已註冊 — 未開始**
 > **建立**: 2026-10-09
 > **前置**: -
-> **位置**: `open_problems_fresh/O244/`
+> **位置**: `open_problems_fresh/o244_fsr_qft_feynman_generic_tensor/`
 
 ---
 
