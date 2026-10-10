@@ -149,3 +149,9 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
 - **驗證**：scripts/01–26 重跑 26/26 IDENTICAL；scripts/27 獨立重算 13/13 PASS；data/02_closeout_ledger.json（最終對應 ledger）
 - **跨 O 引用**：O222（基礎群/frame）、O121、O151（γ₀ 因子）、O127（π）、O223（2I→I 一致）、O221（limit 先例）—— 全部只經 register handoff
 - **記憶承載**：O188 結果由 01_problem_record/README/register 承載（memory 唔重複）
+
+## 現時水位更新（2026-10-10，R13）
+- scripts 01–28 累計 **147 PASS + 1 記錄 REFUTED（G2）= 148 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8、R12 6、R13 7；判準零放寬）
+- docs/28；01_problem_record §二十一（append-only）；SESSION_START Session 13
+- **R13 結果（L2h ★）**：**Frame closure theorem** —— 62-axis frame 係 2I-stable subset of spin-1 irrep V₁（0 violations）；3 orbits = G/C₁₀、G/C₆、G/C₄；per-axis spin-label 最終否定收斂（R12 refute + R13 正確層級指明）
+- 狀態：🟡 partial —— frame 級對應完整（rep-theoretic equivariance）；elementwise 否定鏈完整

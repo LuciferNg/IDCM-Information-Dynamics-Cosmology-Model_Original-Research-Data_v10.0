@@ -222,4 +222,17 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第十三輪，R13 frame rep-theoretic decomposition）
+
+- **交付**：scripts/28（7 PASS + 0 FAIL）＋ docs/28
+- **結果**：
+  - **P3 ★ Frame closure theorem**：62-axis frame 係 2I-stable subset of spin-1 irrep V₁ = ℝ³（0 violations）—— rep-theoretic 級別嘅對應
+  - P1：3 orbits V/F/E = homogeneous spaces G/C₁₀、G/C₆、G/C₄；P2 pointwise stabiliser 10/6/4 精確
+  - P4：Burnside ⟨χ,χ⟩ = {4, 8, 16}（記錄，冇 claim）；P6：weight space {−1,0,+1} = K alphabet（coincidence candidate）
+  - **Elementwise spin-label 最終否定收斂**：R12 per-axis refute + R13 正確層級（frame/equivariant）指明
+- **狀態**：🟡 partial —— 累計 **147 PASS + 1 REFUTED = 148 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8、R12 6、R13 7；判準零放寬）
+- 水位：L1 定理級；L2 frame 定理級 + rep-theoretic equivariance；L3 內部組合；L4 嵌入代數 —— per-axis spin-label 有完整否定鏈
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**

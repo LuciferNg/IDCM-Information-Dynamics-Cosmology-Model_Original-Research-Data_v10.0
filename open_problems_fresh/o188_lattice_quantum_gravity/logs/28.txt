@@ -1,0 +1,9 @@
+[PASS] P1: 2I orbits of 62 axes: sizes/distribution {12: 12, 20: 20, 30: 30} (expect V=12, F=20, E=30 -- homogeneous spaces 120/10, 120/6, 120/4)
+[PASS] P2: pointwise stabiliser orders by orbit size: {12: [10], 20: [6], 30: [4]} (expect 12->{10}, 20->{6}, 30->{4} = 2I lifts of C5/C3/C2)
+[PASS] P3: frame closure: every g in 2I maps every axis to a member of the 62-axis set (|violations| = 0) -- the frame is a 2I-STABLE SUBSET of the spin-1 irrep V_1 = R^3
+[PASS] P4: Burnside <chi,chi> per orbit: {12: 4.0, 20: 8.0, 30: 16.0} (exact rationals shown as float; transitivity <chi,chi>>=2 verified; =2 iff doubly transitive -- recorded as honest character data)
+[PASS] P5: 2I irreps dims [1, 2, 2, 3, 3, 4, 4, 5, 6]: sum of squares = 120 = |2I| = 120 (rep warehouse identity)
+[PASS] P6: Cartan weight space of V_1: {m} = {-1,0,+1} as an ordered set equals the K-table alphabet {-1,0,+1} -- STRUCTURAL COINCIDENCE CANDIDATE (zero-frequency semantics differ: K zeros are exact-orthogonality accidents, weights are generic eigenvalues; NOT claimed)
+[PASS] P7: verdict: elementwise spin-label NOT established (R12 negative stands); FRAME-level correspondence upgraded to rep-theoretic + equivariant (P3): 62-axis frame = union of three homogeneous spaces G/C10, G/C6, G/C4 of 2I inside the spin-1 irrep V_1; cell types = the three coset spaces -- the correct structural map, no per-axis spin labels
+
+SYNTHESIS O188/R13/L2h: 7 checks PASS, 0 checks FAIL (rep-theoretic decomposition of the 62-axis frame; doc 28)

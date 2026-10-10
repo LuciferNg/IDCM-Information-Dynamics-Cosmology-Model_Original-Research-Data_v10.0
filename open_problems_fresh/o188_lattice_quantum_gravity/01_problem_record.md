@@ -86,6 +86,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 12 | 2026-10-10 | R11：γ₀ 全因子地址審計（L3f；「LQG 借入」移除） | scripts/25（8 PASS）＋ docs/25 |
 | 13 | 2026-10-10 | R12：unoriented 60×31 表 + spin-label 候選測試（L2g） | scripts/26（6 PASS）＋ docs/26 |
 | 14 | 2026-10-10 | CLOSEOUT：audit（26/26 IDENTICAL + 27 獨立 13/13）＋ register ＋ cross-O handoff | scripts/27 ＋ data/02 ＋ §二十 |
+| 15 | 2026-10-10 | R13：62-axis frame rep-theoretic decomposition（L2h；frame closure theorem） | scripts/28（7 PASS）＋ docs/28 |
 
 ## 七、相關文件
 
@@ -449,3 +450,22 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - **結構對應已建立**（四缺口終態：L1 定理 / L2 frame 定理 / L3 內部組合 / L4 嵌入代數）
 - **誠實殘留**：elementwise spin-label map 未閉合（R12 已證自然候選唔 work，rep-theoretic map 需要新輸入）；2I→SU(2) 連續升格未 claim；dim-sum=90、22 對共軛只係 coincidence candidates
 - 141 checks 全驗證；判準零放寬
+
+---
+
+## 二十一、R13 rep-theoretic decomposition（2026-10-10）
+
+> append-only 新節（CLOSEOUT 後續推）；scripts/28（7 PASS + 0 FAIL，判準零放寬）＋ docs/28
+
+### L2h（docs/28，scripts/28 — 7/7 PASS）— frame 級 rep-theoretic 對應 ★
+- ✅ **P3 ★ Frame closure theorem**：62-axis frame 係 2I-stable subset of **spin-1 irrep V₁ = ℝ³**（每個 g∈2I 將每個 axis 送到 62-set 成員，|violations| = 0）—— rep-theoretic 級別嘅對應，唔再係 per-axis 嘗試
+- ✅ P1：2I G-action 喺 62 axes 上 3 orbits（V=12、F=20、E=30）= homogeneous spaces G/C₁₀、G/C₆、G/C₄
+- ✅ P2：pointwise stabiliser 精確 12→{10}、20→{6}、30→{4}
+- ✅ P4：Burnside ⟨χ,χ⟩ = {12: 4, 20: 8, 30: 16}（**4/8/16 = 2²/2³/2⁴ 記錄，冇結構 claim**）
+- ✅ P6：V₁ weight space {−1,0,+1} = K-table alphabet —— **structural coincidence candidate**（zero 頻率語義唔同，唔 claim）
+- ✅ 判決：**elementwise spin-label 最終否定**（R12 per-axis 被面積譜 refute；R13 證明正確層級係 frame/equivariant）；「唔 claim」完整收斂（結構性否定 + 指明正確層級）
+
+### R13 水位
+- scripts 01–28 累計 **147 PASS + 1 記錄 REFUTED（G2）= 148 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8、R12 6、R13 7）
+- docs/28；register：O188 notes ×1（R13）
+- **誠實聲明**：R13 兌現 R12 verdict 指明嘅「rep-theoretic construction」—— 喺 frame 級成立（frame closure theorem + 三 homogeneous spaces）；per-axis spin-label 由「未嘗試」→「結構性否定 + 正確層級已指明」完整收斂；P4 嘅 4/8/16 只記錄唔 claim
