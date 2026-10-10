@@ -1,0 +1,9 @@
+INFO gamma_22 = 2.0
+INFO gamma_66 = 2.0
+[PASS] F1: gamma_22 = gamma_66 = 2 EXACT = SU(2) Casimir C2(j=1) = 1*2
+[PASS] F2: omega_22 = 2 sin(pi/4) = sqrt(2) = sqrt(j(j+1)) at j=1 EXACT (dev 1.56e-61)
+[PASS] F3: full-scan exact intersections: gamma hits=[(22, 2)] (only j=1 at n=22), omega hits=[(22, 2)] (only j=1 at n=22); no other (n,j) within 1e-45
+[PASS] F4: K_tree mu_m^2 = phi^(583-2m), m=0..33: Lucas dist to Z = phi^(-|k|) in (1.45e-122, 1) NEVER zero --> no integer j(j+1) hit (exact proof, no float overflow)
+[PASS] F5: closure: intersection (n=22 <-> j=1, sqrt(2)) is a PAIRING CANDIDATE only; no map between 44 modes and unbounded half-integer spins; dimensions differ
+
+SYNTHESIS O188/R2/L1*: 5 checks PASS, 0 checks FAIL (spectral-intersection candidate; doc 05)

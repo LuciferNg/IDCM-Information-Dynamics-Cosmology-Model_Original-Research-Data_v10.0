@@ -74,6 +74,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 |:-:|:-----|:-----|:-----|
 | 1 | 2026-10-04 | 註冊 O188（墓碑重用） | 01_problem_record.md + SESSION_START.md |
 | 2 | 2026-10-04 | Route L1–L4 全線落地：4 scripts + 4 docs + 對應/非對應表 | scripts/01–04（21/21 PASS）＋ docs/01–04 |
+| 3 | 2026-10-04 | R2 深推：四大缺口逐一攻堅 | scripts/05–08（13 PASS + 1 記錄 REFUTED）＋ docs/05–08 |
 
 ## 七、相關文件
 
@@ -126,3 +127,38 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - ② MC null：本 O 係**結構對應研究**（非數值閉合），全部檢查係精確恆等式/組合計數/譜驗證 —— N_search = 1，依 O208 規則跳過 MC（同 O221/O222 方法論先例）
 - ③ 可證偽：每條路線有明確對應/非對應表 —— PASS（S1）
 - ④ 結構剛性：本輪只做計算側（組合計數/spectral verification），未有微擾 —— 下輪可加
+
+---
+
+## 九、R2 深推：四大 🔴 缺口逐一攻堅（2026-10-04）
+
+> append-only 新節；scripts/05–08（13 PASS + 1 記錄 REFUTED，判準零放寬）＋ docs/05–08
+
+### L1*（docs/05，scripts/05 — 5/5 PASS）
+- ✅ **唯一譜交點候選**：全譜掃描 n=1..44 × j=½..40 得**唯一精確交點 (n=22, j=1)**：
+  - γ₂₂ = 4sin²(π·22/88) = **2 EXACT** = C₂(j=1)
+  - ω₂₂ = 2sin(π/4) = **√2 EXACT** = √(j(j+1))|ⱼ₌₁（dev 1.6e-61）
+- ✅ K_tree μ_m² = φ^(583−2m) 對整數 j(j+1)：**Lucas 閉式證明永不命中**（dist = φ^(−|k|) ∈ (1.5e-122, 1)）⟹ 對應若存在只可由 K_chain 承載
+- 🔴 **未閉合**：單點配對 n=22 ↔ j=1 唔構成映射（44 模 vs 半整數無界）；需可擴展配對 j(n) 先算閉合 —— L1 由「冇已證同構」收窄為「唯一精確交集」
+
+### L2*（docs/06，scripts/06 — 3 PASS + 1 記錄 REFUTED）
+- ✅ IDCM chain（全序）comparability sign_rank = 2 ⟹ fit「rank ≤ 3」類（G1）
+- 🔴 **4-simplex 因果 split 被證偽**：2 past + 3 future 五 tetra 之 comparability **sign_rank = 4 > 3**（窮舉 256 completion 精確）⟹ 3+2 分解唔屬於 2+1 類
+- ✅ 隨機 poset 91% raw rank > 3（rank≤3 唔係 generic）
+- 🔴 **候選定理被否證**：rank-3 ⟺ 2+1 可分解；spin-foam 4-simplex 最低因果 split = 3+2 → rank 4。**L2 由「冇形式定理」收窄為「具體障礙：IDCM 秩 3 唔承載 4-simplex vertex」**
+
+### L3*（docs/07，scripts/07 — 4/4 PASS）
+- ✅ 文獻 γ₀ 值確認：ln2/(π√3) = 0.1273840231、ln3/(π√8) = 0.1236373211
+- ✅ **40 個 IDCM 結構數全掃零命中**（最近 1/8 = 0.125，rel 1.10%，threshold 1e-4 唔放寬）⟹ **γ 唔係 IDCM 內生**
+- ✅ H4：IDCM 面積型因子無 Immirzi 倍數 —— 與「conformal gauge 無首選值」一致（理論候選，未閉合）
+
+### L4*（docs/08，scripts/08 — 4/4 PASS）
+- ✅ ladder 對合掃描：冇 3 點以上常數和 ⟹ **LQG 面積 ladder 冇 J²=−1 型複結構**
+- ✅ C₄(j=½) intertwiner 維數比 8：61.5/8 = 7.6875 非整數 ⟹ **冇預算命中**
+- ✅ 扇區成本量化：加 IDCM 式觀察者 = Z₂ grading = **態空間 ×2（factor 成本 > 0）**
+- 🔴 L4 維持最弱：觀察者三獨有特徵（複結構/61.5 預算/固定扇區）至今冇對應
+
+### R2 水位
+- scripts 01–08 累計 **34 PASS + 1 記錄 REFUTED（G2）= 35 checks**（05:5、06:3+1R、07:4、08:4；判準零放寬）
+- docs/05–08；register：O188 notes ×4（R2 每路線一條）
+- **誠實聲明**：R2 冇「閉合」任何缺口 —— 三個收窄（L1/L2/L3）、一個維持否定（L4）；L2 多咗一個真負結果（4-simplex 3+2 需 rank 4）

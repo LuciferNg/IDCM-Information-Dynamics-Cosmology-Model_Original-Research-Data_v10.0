@@ -1,0 +1,6 @@
+[PASS] H1: literature gamma_0: ln2/(pi sqrt3) = 0.127384023140948, ln3/(pi sqrt8) = 0.123637321077325
+[PASS] H2: structural scan: closest to ln2-value = 0.125 (rel 0.01872), closest to ln3-value = 0.125 (rel 0.01102); ZERO hits within 1e-4
+[PASS] H3: negative result: no IDCM structural number reproduces gamma_0 at 1e-4 --> gamma is NOT IDCM-internal (honest disqualifier); L3 divergence is structural
+[PASS] H4: IDCM area-type spectrum factor √j(j+1) enters WITHOUT Immirzi factor; the 8*pi*gamma*l_P^2 multiplier is external to the spectral identity; consistent with scale-invariant conformal-gauge reading (no preferred value) or with IDCM not fixing l_P^2 internally
+
+SYNTHESIS O188/R2/L3*: 4 checks PASS, 0 checks FAIL (Immirzi not IDCM-internal -- honest negative; doc 07)

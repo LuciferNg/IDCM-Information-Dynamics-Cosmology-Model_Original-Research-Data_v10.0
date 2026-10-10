@@ -1,0 +1,6 @@
+[PASS] G1: total-order (3-layer) comparability matrix n=44: structural sign_rank = 2 (staircase of ones: M[i][j]=1 above diagonal, -1 below); rank<=3 class holds constitutively -- IDCM chain causality is 2+1-decomposable
+[FAIL] G2: REFUTED: 4-simplex causal split (2 past + 3 future, 5 tetra) comparability sign_rank = 4 > 3 over all 256 completions -- spin-foam 4-simplex causality is NOT 2+1-decomposable; rank-3 bridge fails at this level
+[PASS] G3: random posets n=8 (Erdos-Renyi p=0.18, transitive closure): raw completion rank>3 in 182/200 = 91.0% >= 50% -- generic posets are NOT automatically 2+1-decomposable; rank<=3 requires the layered structure (IDCM chain + 4-simplex split)
+[PASS] G4: bridge STATUS (post-refutation): IDCM chain causality (total order, sign_rank=2) fits the rank-3 class (G1); the spin-foam 4-SIMPLEX causal split does NOT (sign_rank=4, G2 REFUTED) --> the causal-set bridge holds only for the IDCM chain/list part of the correspondence, NOT for the spin-foam vertex; L2 gap narrowed to a concrete obstruction: rank-3 <=> 2+1-decomposable posets, and the 4-simplex is 3+2, which needs rank 4
+
+SYNTHESIS O188/R2/L2*: 3 checks PASS, 1 checks FAIL (causal-set bridge theorem candidate; doc 06)

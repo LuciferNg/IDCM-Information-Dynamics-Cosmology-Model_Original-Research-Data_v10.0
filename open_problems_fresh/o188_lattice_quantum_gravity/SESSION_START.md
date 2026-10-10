@@ -78,4 +78,16 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-04（第二輪，R2 深推）
+
+- **交付**：scripts/05–08（13 PASS + 1 記錄 REFUTED = 35 checks 累計）＋ docs/05–08
+- **四大缺口攻堅結果**：
+  - **L1***（docs/05）：唯一譜交點 (n=22 ↔ j=1, √2) 精確命中；K_tree 對整數 j(j+1) 零交集（Lucas 閉式）—— 收窄未閉合
+  - **L2***（docs/06）：**4-simplex 因果 split sign_rank = 4 > 3 被證偽（窮舉 256 completion）**；IDCM chain 全序 fit rank-3 類 —— 候選定理否證、缺口收窄為具體障礙
+  - **L3***（docs/07）：Immirzi γ₀ 文獻值 vs 40 個 IDCM 結構數 **零命中（threshold 1e-4）** ⟹ γ 唔係 IDCM 內生（誠實負結果）
+  - **L4***（docs/08）：ladder 冇 J²=−1 對合、C₄ 維數比冇 61.5 命中、扇區成本 = ×2 —— L4 維持最弱
+- **狀態**：🟡 partial（無缺口閉合；L1/L2/L3 收窄、L4 維持否定；L2 新增真負結果）
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**

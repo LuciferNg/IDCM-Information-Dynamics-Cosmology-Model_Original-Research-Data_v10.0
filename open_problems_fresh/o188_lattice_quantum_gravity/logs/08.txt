@@ -1,0 +1,6 @@
+[PASS] I1: ladder pairing: max number of distinct spins sharing a constant area-sum C = 2 (< 3) --> no involutive J^2=-1-type structure in the area ladder (area ratios are algebraically independent pairs; 2 distinct is trivial reflection)
+[PASS] I2: intertwiner-dim bridge probe: C4(j=1/2) inv=2, raw=16.0, ratio=8.0000; 61.5/8=7.6875 NOT integer --> no exact budget hit from gauge-invariant state counting (honest no-bridge)
+[PASS] I3: sector cost: 88-site chain = even(44) + odd(44) -- a Z2 grading doubles the kinematical space by factor 2; LQG has no such grading by default (cost > 0 to add IDCM-style observer)
+[PASS] I4: honest close: no bridge found (no J^2 analog in area ladder, no budget hit in cycle-intertwiner count, sector cost = factor 2); L4 remains the weakest route; IDCM observer sector stays IDCM-only
+
+SYNTHESIS O188/R2/L4*: 4 checks PASS, 0 checks FAIL (observer remains IDCM-only -- honest negative; doc 08)

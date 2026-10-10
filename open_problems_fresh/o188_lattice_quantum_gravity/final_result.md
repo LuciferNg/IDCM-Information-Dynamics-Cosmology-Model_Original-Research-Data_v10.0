@@ -47,3 +47,10 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
 - docs/01–04 全備；01_problem_record §八（append-only）＋時序索引 +1
 - register：`O188` registered → partial + 3 notes；O188 零 drift
 - 狀態：🟡 partial（對應表建立；4 項形式化定理缺口列於 §八/開放項目）
+
+## 現時水位（2026-10-04，R2 深推）
+- scripts 01–08 累計 **34 PASS + 1 記錄 REFUTED（G2）= 35 checks**（05:5、06:3+1R、07:4、08:4；判準零放寬）
+- docs/05–08；01_problem_record §九（append-only）；SESSION_START Session 2
+- register：`O188` partial，R2 notes ×4
+- **四大缺口狀態（R2 後）**：L1 收窄（唯一交點 n=22↔j=1）、L2 收窄+真負結果（4-simplex 3+2 需 rank 4）、L3 負結果（γ 唔係 IDCM 內生）、L4 維持最弱（三探針全負）
+- 狀態：🟡 partial（無缺口閉合；誠實聲明 R2 冇閉合任何一項）
