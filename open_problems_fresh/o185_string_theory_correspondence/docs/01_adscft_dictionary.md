@@ -3,6 +3,10 @@
 > **日期**: 2026-10-10 ｜ **Script**: `scripts/01_adscft_dictionary.py`（14 PASS / 0 FAIL） ｜ **Log**: `logs/01_adscft_dictionary.out`
 > **狀態**: ✅ S3 完成 — 「IDCM 投影 = bulk reconstruction」判定：**部分 (partial)**
 > **承接**: O147 (528 信道), O151 (信道容量), O121 (黑洞=投影截斷), O180 (譜→空間投影)
+>
+> ⚠️ **2026-10-10 定位附註（調律者更正）**: 本檔三態對照係**對接字典嘅預備盤點**；本 O 正式目標 =
+> **對接層**（像 O221/O222），正式框架見 `docs/04_interface_layer.md`（對接規則 R1/R2 +
+> scripts/04 操作驗證）。三態標籤理解為「對接狀態」（可接/部分接/無接點），唔係理論比較評級。
 
 ---
 

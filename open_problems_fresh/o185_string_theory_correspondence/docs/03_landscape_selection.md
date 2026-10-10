@@ -3,6 +3,11 @@
 > **日期**: 2026-10-10 ｜ **Script**: `scripts/03_landscape_selection.py`（11 PASS / 0 FAIL） ｜ **Log**: `logs/03_landscape_selection.out`
 > **狀態**: ✅ S2 完成 — 「點解 IDCM 冇 landscape」結構原因確立（K_chain 譜層論證）
 > **承接**: O56 (moduli 鎖定), O134 (CY₃ 零輸入), O137 (模式集唯一), O243 (三重相變 No-Go), O121 (⟨W⟩²=61.5)
+>
+> ⚠️ **2026-10-10 定位附註（調律者更正）**: 本檔「IDCM 冇 landscape」結構論證係**對接字典嘅
+> 預備盤點**；本 O 正式目標 = **對接層**（像 O221/O222），正式框架見 `docs/04_interface_layer.md`
+> （對接規則 R5/R6 + scripts/04 操作驗證）。對接層表述：**IDCM 嘅緊化選擇步驟係恆等 operator
+> （唯一解），弦論係 10⁵⁰⁰ 分支——共享操作圖、分歧點已定位**；唔係「IDCM 贏/輸」比較。
 
 ---
 

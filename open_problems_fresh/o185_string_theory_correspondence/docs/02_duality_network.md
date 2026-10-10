@@ -3,6 +3,11 @@
 > **日期**: 2026-10-10 ｜ **Script**: `scripts/02_duality_network.py`（14 PASS / 0 FAIL） ｜ **Log**: `logs/02_duality_network.out`
 > **狀態**: ✅ S1 完成 — IDCM 對偶 8 條全部三態標定
 > **承接**: O151 (Z₂ 對偶/row 退化), O210 (ℤ₄ 橋), O158 (mod-4 家族), O31 (譜半移), O206 (lepton 槽)
+>
+> ⚠️ **2026-10-10 定位附註（調律者更正）**: 本檔三態對照係**對接字典嘅預備盤點**；本 O 正式目標 =
+> **對接層**（像 O221/O222），正式框架見 `docs/04_interface_layer.md`（對接規則 R3/R4 +
+> scripts/04 操作驗證）。「唯一同構 = D5 站-模對偶」喺對接層重新表述為 R3（Z₂ fixed sector 對接
+> orbifold）/ R4（ℤ₄ 零缺陷扇區 對接 twisted sector 候選）。
 
 ---
 

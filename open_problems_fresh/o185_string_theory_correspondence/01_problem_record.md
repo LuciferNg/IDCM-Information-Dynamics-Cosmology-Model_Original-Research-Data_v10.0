@@ -51,6 +51,7 @@ IDCM 與弦論家族（全弦論/M理論/AdS-CFT）嘅結構對應。調律者�
 1. S3 路線（優先）— 讀 O147/O151 → 形式化「IDCM 投影 = bulk reconstruction？」→ docs/01 + scripts/01
 2. S1 路線 — 列 IDCM 對偶清單 vs 弦論對偶網 → 找共享結構 → docs/02 + scripts/02
 3. S2 路線 — landscape vs 零參數：IDCM 唯一真空嘅結構來源 → docs/03 + scripts/03
+4. ★ 對接層路線（調律者更正 2026-10-10）— 三軸盤點轉化為對接規則 R1-R6 → docs/04 + scripts/04
 ```
 
 ## 五、驗證標準
@@ -77,6 +78,8 @@ IDCM 與弦論家族（全弦論/M理論/AdS-CFT）嘅結構對應。調律者�
 | 3 | 2026-10-10 | **S3 完成 (docs/01 + scripts/01, 14/14)**: IDCM 投影 = bulk reconstruction 判定 = 部分 | docs/01_adscft_dictionary.md |
 | 4 | 2026-10-10 | **S1 完成 (docs/02 + scripts/02, 14/14)**: 8 條 IDCM 對偶三態標定; 唯一同構 = D5 站-模對偶 | docs/02_duality_network.md |
 | 5 | 2026-10-10 | **S2 完成 (docs/03 + scripts/03, 11/11)**: IDCM 冇 landscape 結構原因 (譜係輸出非輸入) | docs/03_landscape_selection.md |
+| 6 | 2026-10-10 | **★ 定位更正 (調律者)**: 本 O 目標 = 對接層 (像 O221/O222), 唔係替代 M-theory / 三態比較 | SESSION_START 附註 + docs/04 |
+| 7 | 2026-10-10 | **對接層完成 (docs/04 + scripts/04, 14/14)**: 6 條對接規則 R1-R6 操作化 (IF-S3/S1/S2) | docs/04_interface_layer.md |
 
 ## 七、相關文件
 

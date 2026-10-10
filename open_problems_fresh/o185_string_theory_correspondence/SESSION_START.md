@@ -92,3 +92,15 @@ S3 — AdS/CFT dictionary vs IDCM 投影/信道 (全息 bulk reconstruction)
 - 每軸 doc: 問題 → 結論 → 三態/判定表 → 四道硬測試 → 誠實缺口 → 移交建議
 - Register: O185/S1, /S2, /S3 close; O185 progress
 - Commit: 見 git log
+
+### ★ 2026-10-10 定位更正（調律者仲裁）— 對接層
+
+- **調律者指正**: 「本 o 目標唔係替代 M-theory，而是像 o221 或 o222 作為對接層」
+- **更正內容**: 三軸三態對照 = 對接字典嘅**預備盤點**（保留, 唔刪）；本 O 正式目標 = **對接層**：
+  IDCM 側物件與弦論概念之間嘅**可操作對映通道**（每條規則有 IDCM 側執行檢查）
+- **執行**: docs/04_interface_layer.md + scripts/04_interface_layer.py (**14/14 PASS**)
+  — 6 條對接規則 R1-R6（IF-S3 全息 / IF-S1 對偶 / IF-S2 緊化）+ 14 項操作驗證
+- **對接層結論**: IDCM 同弦論共享「邊界決定內在」「對稱扇區載手徵」「緊化產生低能數據」
+  三個操作框架 (R1/R3/R5 🟢)；分歧點 = 選擇機制（弦論 10⁵⁰⁰ 分支 vs IDCM 恆等唯一解, R5/R6）
+- **累計**: 53/53 PASS (scripts/01-04)
+- **下一步缺口**: R4 需弦論 twisted sector 質量公式比對；雙向驗證 (弦論→IDCM) 未做
