@@ -105,4 +105,16 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第四輪，R4 三條候選）
+
+- **交付**：scripts/15–17（14 PASS + 0 FAIL）＋ docs/15–17
+- **三條候選結果**：
+  - **L1b**（docs/15，Niven 定理）：唯一交點由掃描 → **閉式定理**（Niven ⟹ 半整數唯一解 j=1、n=N/4）；**j(n) 擴展映射被排除** —— L1 最多單點對應
+  - **L2b**（docs/16，incidence 機制，誠實修正）：第一版「all-±1 下界」對稀疏 incidence 失效（子矩陣 min sign-rank = 1）；**incidence 中性/open door**——唔強制 rank≥4，但未建立 rank-3 對應
+  - **L3c**（docs/17，√3/4π 盲掃）：77 數池 vs {√3,4π,√8}@1e-8 —— **√3/4π 零命中**；√8 = 2√2 一半 IDCM（ω₂₂=√2）
+- **狀態**：🟡 partial（R1 21、R2 16+1R、R3 29、R4 14 = **80 PASS + 1 REFUTED = 81 checks**；判準零放寬）
+- 累計水位：L1 定理化限制；L2 comparability 否證維持 + incidence 開放；L3 計數側同構確認 + 幾何側借入；L4 構造存在
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**

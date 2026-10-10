@@ -76,6 +76,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 2 | 2026-10-04 | Route L1–L4 全線落地：4 scripts + 4 docs + 對應/非對應表 | scripts/01–04（21/21 PASS）＋ docs/01–04 |
 | 3 | 2026-10-04 | R2 深推：四大缺口逐一攻堅 | scripts/05–08（13 PASS + 1 記錄 REFUTED）＋ docs/05–08 |
 | 4 | 2026-10-04 | R3 全開：5 條殘留路線 + 硬測試④ | scripts/09–14（29 PASS）＋ docs/09–14 |
+| 5 | 2026-10-10 | R4：3 條候選路線（L1b/L2b/L3c） | scripts/15–17（14 PASS）＋ docs/15–17 |
 
 ## 七、相關文件
 
@@ -213,3 +214,30 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 > 權威值（由 `logs/05.txt`–`logs/08.txt` 逐個 grep `^\[PASS\]`/`^\[FAIL\]` 點算）= R2 **16 PASS + 1 FAIL = 17 checks**；
 > 累計 R1+R2 = **37 PASS + 1 REFUTED = 38 checks**。R3 加入後總計 **66 PASS + 1 REFUTED = 67 checks**。
 > 更正理由：data 與 stdout 不一致（用戶紀律）；原文保留以存實錄。
+
+---
+
+## 十一、R4 三條候選路線（2026-10-10）
+
+> append-only 新節；scripts/15–17（14 PASS + 0 FAIL，判準零放寬）＋ docs/15–17
+
+### L1b（docs/15，scripts/15 — 4/4 PASS）— Niven 定理
+- ✅ **唯一性由掃描升級為閉式定理**（Niven）：γ_n = 2(1−cos(2πn/N)) 與 j(j+1) 精確相等 ⟹ cos(u) ∈ {0,±½,±1}（Niven）⟹ j(j+1) ∈ {0,1,2,3} ⟹ 半整數唯一解 j=1、n=N/4（4|N）
+- ✅ **j(n) 擴展映射被定理排除**：44 模 ↔ 半整數自旋之間唔可能存在完整映射 —— L1 最多只可係單點 (22,1) 對應
+- 🔴 未閉合：單點對應嘅結構語義（j=1 dim 3 vs N_gen？）未建
+
+### L2b（docs/16，scripts/16 — 5/5 PASS）— incidence 機制（誠實修正）
+- ✅ d_3（5×10）、d_2（10×10）boundary operator 構建；rank over R：d_3=4（組合秩）、d_2=6
+- ✅ **修正第一版錯誤假設**：all-±1 方形子矩陣下界對稀疏 incidence 失效（max=1）；d_3 代表性子矩陣精確 min sign-rank = **1**（5×4、4×4）
+- ✅ **incidence 機制係中性**：唔強制 sign_rank≥4（同 comparability {2,2,4,{4,5}} 本質唔同）—— OPEN DOOR 畀 rank-3，但未建立對應
+- 🔴 「類型不匹配」只對 causal-comparability 成立；incidence 側未封門
+
+### L3c（docs/17，scripts/17 — 5/5 PASS）— √3/4π 來源盲掃
+- ✅ 盲池 77 個 IDCM 已確立量 vs {√3, 4π, √8}@1e-8：**√3 同 4π 零命中** ⟹ 唔係 IDCM 內生
+- ✅ **partial hit**：√8 = 2√2 —— ω₂₂ = √2 喺池內 ⟹ γ₀(ln3) 嘅 √8 有一半 IDCM 來源
+- 🔴 L3b 殘留確認：IDCM 供 {ln2, 1/B=1/4, ½√8}；LQG 幾何供 {√3, 4π} —— γ 推導係「計數側同構、幾何側借入」
+
+### R4 水位
+- scripts 01–17 累計 **80 PASS + 1 記錄 REFUTED（G2）= 81 checks**（R1 21、R2 16+1R、R3 29、R4 14）
+- docs/15–17；register：O188 notes ×3（R4）
+- **誠實聲明**：R4 定理化咗 L1（Niven 必然性 + 排除映射）、修正咗 L2b 錯誤假設（incidence 中性/開放）、盲測確認咗 L3c（√3/4π 非 IDCM）；冇一項完備閉合，但 L1 嘅限制而家係定理性嘅

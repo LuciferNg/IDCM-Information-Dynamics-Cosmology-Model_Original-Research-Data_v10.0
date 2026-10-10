@@ -68,3 +68,13 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
   - 硬測試④：N-critical vs robust 分類；冇 knife-edge
 - 狀態：🟡 partial（仍未完備閉合；L1/L2 更清晰、L3 反轉、L4 升級）
 - **📌 計數勘誤**：R2 記錄曾誤載「34 PASS / 13 PASS」；權威值 = R2 16 PASS + 1 REFUTED（見 01_problem_record §十附註）
+
+## 現時水位（2026-10-10，R4）
+- scripts 01–17 累計 **80 PASS + 1 記錄 REFUTED（G2）= 81 checks**（R1 21、R2 16+1R、R3 29、R4 14；判準零放寬）
+- docs/15–17；01_problem_record §十一（append-only）；SESSION_START Session 4
+- register：`O188` partial，R4 notes ×3
+- **三線結果（R4 後）**：
+  - **L1b**：唯一交點 = **Niven 定理**（半整數唯一解 j=1、n=N/4（4|N））；**j(n) 擴展映射被排除** —— L1 最多單點 (22,1)
+  - **L2b**：incidence 機制**誠實修正** —— all-±1 下界對稀疏 matrix 失效（子矩陣 min sign-rank=1）；incidence **中性/OPEN DOOR**（唔強制 rank≥4），但未建立 rank-3 對應；「類型不匹配」只對 comparability 成立
+  - **L3c**：盲掃 77 數池 vs {√3,4π,√8}@1e-8：√3/4π **零命中**（LQG 幾何輸入確認）；√8=2√2 有 ½ IDCM 來源（ω₂₂=√2）
+- 狀態：🟡 partial（冇一項完備閉合；L1 嘅限制現為**定理性**）

@@ -1,0 +1,7 @@
+[PASS] T1: blind pool: 77 established IDCM quantities (rational structure numbers, gamma_n values, spectral sums, R_world, r_d, omega_22=sqrt2, W_0) -- scanned against {sqrt3, 4pi, sqrt8} at 1e-8 relative
+[PASS] T2: sqrt(3) hits in IDCM pool: NONE -- sqrt3 is NOT an IDCM established constant
+[PASS] T3: 4*pi hits in IDCM pool: NONE -- pi enters IDCM only via trig args and r_d = pi R_world/88, never as the standalone factor 4pi
+[PASS] T4: sqrt(8) = 2*sqrt(2): omega_22 = sqrt(2) IS in the pool -> 1/2 of the sqrt8 factor of gamma_0(ln3) = ln3/(pi sqrt8) has an IDCM origin (sqrt2@mode22), ln3 has none; honest partial hit, recorded
+[PASS] T5: verdict: sqrt3 and 4pi are NOT IDCM-derived (blind 1e-8 zero-hit); the gamma_0 partial isomorphism stays: IDCM supplies {ln2, 1/B=1/4 (B=4) and 1/2 of sqrt8 via sqrt2}, LQG geometry supplies {sqrt3, 4pi} -- L3b residual confirmed
+
+SYNTHESIS O188/R4/L3c: 5 checks PASS, 0 checks FAIL (sqrt3/4pi origin scan; doc 17)

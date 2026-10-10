@@ -1,0 +1,7 @@
+[PASS] R1: d_3 = 5x10 (20 nnz), d_2 = 10x10 (30 nnz), entries in {0,+/-1}; rank over R: d_3=4 (combinatorial, rows sum 0), d_2=6 (NOT sign rank)
+[PASS] R2: all-+/-1 rectangular submatrix bound on d_3: max1 (rows<=3, cols<=4) -- sparse incidence offers NO k>=3 all-+/-1 block, so the square-submatrix lower bound technique CANNOT force sign_rank >= 4 (previous approach void)
+[PASS] R3: exact min sign-rank of d_3 submatrices: 5x4 (tetra0 cols) = 1, 4x4 (rows 1..4) = 1 -- low-rank completions exist; incidence does NOT force rank-4 at submatrix level
+[PASS] R4: control: full-+/-1 3x3 has rank 3 -> rank-3 is reachable in sign matrices; incidence sparsity does not preclude it
+[PASS] R5: verdict (corrected): the INCIDENCE mechanism is NEUTRAL for L2 -- it neither forces sign_rank>=4 (unlike the comparability mechanism, whose ranks live in {2,2,4,{4,5}}) nor establishes a rank-3 correspondence with IDCM.  'Type mismatch' remains valid ONLY for causal-comparability; incidence is an OPEN DOOR for a rank-3 structure, but no IDCM map is demonstrated (honest)
+
+SYNTHESIS O188/R4/L2b: 5 checks PASS, 0 checks FAIL (incidence mechanism -- corrected neutral verdict; doc 16)
