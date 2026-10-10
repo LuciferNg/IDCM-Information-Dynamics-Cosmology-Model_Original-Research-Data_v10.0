@@ -117,4 +117,15 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第五輪，R5 關鍵轉折）
+
+- **交付**：scripts/18–19（11 PASS + 0 FAIL）＋ docs/18–19
+- **兩條路線結果**：
+  - **L2c**（docs/18 ★）：**K 表係 ℝ³ threshold 矩陣** —— K[i][a] = sign(⟨rot_ref(q_i,U₀), u_a⟩)（rows=120 群旋轉向量、cols=62 axes）⟹ **sign_rank≤3 by construction**（O222 600/600 係數值見證，唔係原因）。LQG 側對應 = 𝕊² area-normal 互閾值表（同一家族）。**解釋 R2/R3 懸案**：comparability/incidence 唔係固定 ℝ³ 內積符號 ⟹ 佢哋永遠冇奇數 3；L2 嘅「3」喺幾何閾值家族
+  - **L1c**（docs/19）：**單點三重身份** γ₂₂ = 2 = C₂(j=1) = dim Inv((V_1/2)⁴)（三獨立推導）；dim-3↔N_gen 弱巧合（candidate only）；L3c follow-up：O220 嘅 √3 只係軸歸一化，維持「√3/4π 非 IDCM 內生」
+- **狀態**：🟡 partial（R1 21、R2 16+1R、R3 29、R4 14、R5 11 = **91 PASS + 1 REFUTED = 92 checks**；判準零放寬）
+- 累計水位：L1 唯一交點 + 三重身份；**L2 定位正確家族（ℝ³ threshold）**；L3 計數側同構/幾何側借入；L4 構造存在
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**

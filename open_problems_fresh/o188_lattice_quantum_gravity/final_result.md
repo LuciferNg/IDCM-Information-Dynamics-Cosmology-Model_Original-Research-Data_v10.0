@@ -78,3 +78,12 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
   - **L2b**：incidence 機制**誠實修正** —— all-±1 下界對稀疏 matrix 失效（子矩陣 min sign-rank=1）；incidence **中性/OPEN DOOR**（唔強制 rank≥4），但未建立 rank-3 對應；「類型不匹配」只對 comparability 成立
   - **L3c**：盲掃 77 數池 vs {√3,4π,√8}@1e-8：√3/4π **零命中**（LQG 幾何輸入確認）；√8=2√2 有 ½ IDCM 來源（ω₂₂=√2）
 - 狀態：🟡 partial（冇一項完備閉合；L1 嘅限制現為**定理性**）
+
+## 現時水位（2026-10-10，R5 關鍵轉折）
+- scripts 01–19 累計 **91 PASS + 1 記錄 REFUTED（G2）= 92 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11；判準零放寬）
+- docs/18–19；01_problem_record §十二（append-only）；SESSION_START Session 5
+- register：`O188` partial，R5 notes ×2
+- **兩線結果（R5 後）**：
+  - **L2c ★**：K 表 = sign(⟨rot_ref, axis⟩) 係 **ℝ³ threshold 矩陣**（sign_rank≤3 by construction）；LQG 𝕊² normal 互閾值表同一家族 ⟹ **L2 嘅 3 喺幾何閾值家族**（comparability/incidence 唔係呢個型所以永遠冇 3）；機制級對應，非 elementwise
+  - **L1c**：單點 (22,1) 三重身份 γ₂₂ = 2 = C₂(1) = dim Inv((V_1/2)⁴)；dim-3↔N_gen 弱巧合；L3c follow-up 確認 O220 √3 非結構數
+- 狀態：🟡 partial（冇一項完備閉合；L2 由「搵唔到」→「定位正確家族」係關鍵轉折）

@@ -205,7 +205,7 @@ IDCM v10.0 開放問題系統。每個問題獨立資料夾，含 01_problem_rec
 | **O184** | **冷斑 15.11° 座標系假象（原 O1 duplicate, 2026-10-04 搬移）** | 🟢 已閉合（負結果） | **冷斑 15.11° 幾何夾角 = 座標系投影假象，非物理結構。🔴 已否證 — 保留作歷史記錄（原 o1_15deg_mechanism）。** |
 | **O186** | **TRGB/Miras 校準差異機制（原 O17 duplicate, 2026-10-04 搬移）** | 🟢 已閉合 (19/19 PASS) | **原 O17 距離階梯第二路線：TRGB/Miras 校準差異機制 + 兩層校準家族，19/19 PASS；🟡 RR Lyrae 0.5σ 待 JWST/Gaia DR5。搬移至 O186 釋放 O17 編號衝突。** |
 | **O187** | **Deterministic Selection Rule & LOOCV（原 O143 duplicate, 2026-10-04 搬移）** | 🔴 未開始 | **原 O143 分支：Deterministic (n, P_f) Selection Rule & LOOCV 協議。搬移至 O187 釋放 O143 編號衝突。** |
-| **O188** | **IDCM ↔ LQG 結構對應（離散晶格 vs 圈量子重力）** | 🟡 **R4 partial** | **墓碑重用 (2026-10-04)。累計 80 PASS + 1 REFUTED = 81 checks。R4：L1b Niven 定理（唯一交點 j=1/n=N/4 係必然；j(n) 映射排除）；L2b incidence 機制修正（稀疏 matrix 容許 rank≤3，open door）；L3c 盲掃 √3/4π 非 IDCM 內生。** |
+| **O188** | **IDCM ↔ LQG 結構對應（離散晶格 vs 圈量子重力）** | 🟡 **R5 partial** | **墓碑重用 (2026-10-04)。累計 91 PASS + 1 REFUTED = 92 checks。R5 關鍵轉折：L2c — K 表=sign(⟨rot,axis⟩) 係 ℝ³ threshold 矩陣（sign_rank≤3 by construction）；LQG 𝕊² normal 表同一家族 ⟹ L2 嘅 3 喺幾何閾值家族。L1c 單點三重身份 γ₂₂=2=Casimir=4-valent intertwiner dim。** |
 | **O189** | **IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）** | 🟡 **部分閉合（R1+R2，2026-10-10，79/79）** | **墓碑重用 (2026-10-04)。R1：C1 狀態空間（CA=1-bit 粗粒化容量恆等）、C2 盲測 256 ECA 零命中（生成元=radius-1 線性局部規則；τ-map global）、C3 O222「通用計算」聲稱 REFUTED（class II⁺ 非 class IV）、C4 Bessel 傳播子冇嚴格光錐（ε-水平閉合 t=12）。R2：mod-q 商群投影 = 線性 CA——q=2 ⟹ Rule 90 精確 intertwinement（R-C answered）。scripts/01–05 + docs/01–05。前置: O222, O231。** |
 ## 已閉合問題（摘要）
 

@@ -77,6 +77,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 3 | 2026-10-04 | R2 深推：四大缺口逐一攻堅 | scripts/05–08（13 PASS + 1 記錄 REFUTED）＋ docs/05–08 |
 | 4 | 2026-10-04 | R3 全開：5 條殘留路線 + 硬測試④ | scripts/09–14（29 PASS）＋ docs/09–14 |
 | 5 | 2026-10-10 | R4：3 條候選路線（L1b/L2b/L3c） | scripts/15–17（14 PASS）＋ docs/15–17 |
+| 6 | 2026-10-10 | R5：threshold 家族 + 單點語義（L2c/L1c） | scripts/18–19（11 PASS）＋ docs/18–19 |
 
 ## 七、相關文件
 
@@ -241,3 +242,27 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - scripts 01–17 累計 **80 PASS + 1 記錄 REFUTED（G2）= 81 checks**（R1 21、R2 16+1R、R3 29、R4 14）
 - docs/15–17；register：O188 notes ×3（R4）
 - **誠實聲明**：R4 定理化咗 L1（Niven 必然性 + 排除映射）、修正咗 L2b 錯誤假設（incidence 中性/開放）、盲測確認咗 L3c（√3/4π 非 IDCM）；冇一項完備閉合，但 L1 嘅限制而家係定理性嘅
+
+---
+
+## 十二、R5 兩條路線（2026-10-10）
+
+> append-only 新節；scripts/18–19（11 PASS + 0 FAIL，判準零放寬）＋ docs/18–19
+
+### L2c（docs/18，scripts/18 — 6/6 PASS）— ℝ³ 閾值家族定位 ★
+- ✅ **K 表 = sign(⟨rot_ref(q_i, U₀), u_a⟩)**（O222 12_b5_budget 真實構造）：rows = 120 群元素旋轉 reference axis 嘅 ℝ³ 向量、cols = 62 axes；entries ∈ {−1,0,+1}（**0 = 精確正交**）
+- ✅ **sign_rank(K) ≤ 3 by construction**：K = sign(A·Bᵀ)，A,B ∈ ℝ³ ⟹ rank(ABᵀ)≤3（O222 600/600 certification 係數值見證，**唔係原因**）
+- ✅ **LQG 側對應物**：spin network boundary area-normal 向量 n_i ∈ 𝕊² ⟹ 互閾值表 T = sign(⟨n_i,n_j⟩) 同一家族
+- ✅ **解釋 R2/R3 懸案**：comparability（reachability）同 incidence（cell membership）都唔係固定 ℝ³ 內積符號 ⟹ 佢哋嘅 sign_rank 家族永遠冇奇數 3；L2 嘅「3」喺**幾何閾值**入面，唔喺組合序入面
+- 🔴 機制層對應確立（共享 ℝ³ threshold 家族），elementwise 對應唔存在（冇 claim bijection）
+
+### L1c（docs/19，scripts/19 — 5/5 PASS）— 單點三重身份
+- ✅ **γ₂₂ = 2 = C₂(j=1) = dim Inv((V_1/2)⁴) = 2**（三條獨立推導：IDCM 譜 / SU(2) Casimir / recoupling 計數）
+- ✅ Niven 唯一交點 (22,1) 係全掃描空間**唯一三重身份位點**
+- 🔴 第二候選 dim d_j = 2j+1 = 3 ↔ N_gen = 3：**弱巧合**（30 池「3」出現次數少但 3 係常見整數；冇 operator 身份）—— candidacy only
+- 🟡 L3c follow-up（嵌喺 R5 調查）：O220 嘅 √3 只係 3-fold axis 歸一化 (1,1,1)/√3，**非結構數** ⟹ L3c 維持「√3/4π 唔係 IDCM 內生」
+
+### R5 水位
+- scripts 01–19 累計 **91 PASS + 1 記錄 REFUTED（G2）= 92 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11）
+- docs/18–19；register：O188 notes ×2（R5）
+- **誠實聲明**：R5 係 O188 嘅**關鍵轉折** —— L2 由「喺序/incidence 家族搵唔到 3」進步到「**3 嘅正確家族 = ℝ³ threshold**（IDCM K ∧ LQG normal frame 都係成員）」，L1 單點獲得三重身份語義；仍然冇任何一條完整閉合（L2 係機制級對應、L1 係單點候選），但兩者而家都指向「幾何閾值結構」呢個共同根

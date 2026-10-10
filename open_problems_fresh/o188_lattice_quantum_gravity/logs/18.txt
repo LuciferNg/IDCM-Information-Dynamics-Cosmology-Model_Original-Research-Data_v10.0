@@ -1,0 +1,8 @@
+[PASS] O1: K slice: 30x62, entries [-1, 0, 1] -- threshold signs of rational 3D dot products (0 = EXACT orthogonality dot=0, as in O222's real K; dot values exact Fractions; the factor-rank bound still holds for any zero-resolution since signs come from a Gram factor of rank<=3)
+[PASS] O2: threshold identity verified on 16 samples (K = sign(<rot,axis>)); factor decomposition: R = 30 vectors in R^3, U = 62 vectors in R^3
+[PASS] O3: sign_rank(K) <= rank(Gram factors) <= 3: K = sign(A B^T) with A,B of size 3 -> the underlying matrix has rank <= 3, hence sign_rank <= 3 BY CONSTRUCTION (O222's 600/600 certification is a numerical witness, not the reason)
+[PASS] O4: LQG boundary frame: 5 area-normals on S^2 (12 icosahedron + 4 extra); T[i][j] = sign(<n_i,n_j>) is an R^3 threshold table -> sign_rank(T) <= 3 by the same factor-rank bound (A = 3 x 5)
+[PASS] O5: contrast: causal-comparability tables carry the SAME alphabet {0,+/-1} but their entries are NOT signs of fixed R^3 inner products (they encode partial order reachability); incidence/boundary operators encode cell membership -- neither is a threshold matrix, which explains why their sign-rank families ({2,2,4,{4,5}} and sparse low-rank completions) never hit the odd 3 that IDCM's threshold K carries
+[PASS] O6: L2 correspondence candidate located: GEOMETRIC THRESHOLD FAMILY -- IDCM evaluation K (group action axes vs rotated reference) and LQG boundary normal frame T (S^2 geometry) are both R^3 sign-projection tables with sign_rank<=3 by construction.  Map is at MECHANISM level (shared family), NOT elementwise: no bijection between 120 group elements and S^2 normals is claimed (honest).
+
+SYNTHESIS O188/R5/L2c: 6 checks PASS, 0 checks FAIL (R^3 threshold family; doc 18)
