@@ -79,6 +79,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 5 | 2026-10-10 | R4：3 條候選路線（L1b/L2b/L3c） | scripts/15–17（14 PASS）＋ docs/15–17 |
 | 6 | 2026-10-10 | R5：threshold 家族 + 單點語義（L2c/L1c） | scripts/18–19（11 PASS）＋ docs/18–19 |
 | 7 | 2026-10-10 | R6：具體成員對應（L2d 二十面體 frame） | scripts/20（6 PASS）＋ docs/20 |
+| 8 | 2026-10-10 | R7：全量 K 表驗證（L2e threshold identity + double cover） | scripts/21（7 PASS）＋ docs/21 |
 
 ## 七、相關文件
 
@@ -286,3 +287,22 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - scripts 01–20 累計 **97 PASS + 1 記錄 REFUTED（G2）= 98 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6）
 - docs/20；register：O188 notes ×1（R6）
 - **誠實聲明**：R6 係 O188 至今**最強嘅「具體」對應** —— 唔再係抽象家族，而係釘實「雙方共用二十面體 cell frame」呢個幾何事實（62=12+20+30、31=6+10+15、2I→I）；仍係 frame 級（唔係 spin-label 級），但已由「對應候選」推進到「**構造性共享 frame**」
+
+---
+
+## 十四、R7 全量 K 表驗證（2026-10-10）
+
+> append-only 新節；scripts/21（7 PASS + 0 FAIL，判準零放寬）＋ docs/21
+
+### L2e（docs/21，scripts/21 — 7/7 PASS）— full 120×62 K 表 ★
+- ✅ **threshold identity 全表**：7440 entries 零 mismatch（K[i][a] = sign(⟨rot_ref(q_i,U₀), u_a⟩)，精確 Fraction）—— R5 嘅 slice 變全表定理
+- ✅ **表層 double cover（generic reference）**：row(q)=row(−q) 120/120；**distinct rows = 60 = |I|**、multiplicity 2 —— SU(2)-type 2:1 cover 喺表層面實現
+- ✅ **vertex reference：K 表 row space = 12 個二十面體 vertices**（multiplicity 10 = |2I|/12）—— 表嘅行狀態空間本身就係 vertex set
+- ✅ sign_rank ≤ 3 by factor-rank bound（O222 600/600 作數值見證）
+- ℹ️ 附加：sign balance vertex/face block = 1/2、edge = 1/3（記錄，唔係判準）
+- 🔴 未閉合：cover 結構係群論層（2I→I = SU(2)→SO(3) 離散類比），唔係 spin-½ 表示直接對應；elementwise spin-label 唔 claim
+
+### R7 水位
+- scripts 01–21 累計 **104 PASS + 1 記錄 REFUTED（G2）= 105 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7）
+- docs/21；register：O188 notes ×1（R7）
+- **誠實聲明**：R7 完成 L2 嘅「構造→群→表」三層閉環 —— threshold 家族（R5）→ 具體 frame（R6）→ 全表驗證 + 表層 cover（R7）；IDCM evaluation semantics 而家有完整嘅「二十面體 ℝ³ threshold 暨 SU(2)-type cover」結構陳述

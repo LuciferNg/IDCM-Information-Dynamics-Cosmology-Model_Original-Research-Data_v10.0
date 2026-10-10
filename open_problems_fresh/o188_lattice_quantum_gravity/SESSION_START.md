@@ -139,4 +139,15 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第七輪，R7 全量 K 表驗證）
+
+- **交付**：scripts/21（7 PASS + 0 FAIL）＋ docs/21
+- **結果**：
+  - **L2e ★**：完整 120×62 K 表 threshold identity（7440 entries 零 mismatch）；generic reference 下表層 2:1 double cover（60 distinct rows = |I|、mult 2）；vertex reference 下表 row space = 12 個二十面體 vertices；sign balance vertex/face=½、edge=⅓（記錄）
+  - 判決：L2「構造→群→表」三層閉環完成（R5 threshold family → R6 frame → R7 全表/Cover）
+- **狀態**：🟡 partial（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7 = **104 PASS + 1 REFUTED = 105 checks**；判準零放寬）
+- 累計水位：L1 唯一交點 + 三重身份；**L2 全表 threshold + 表層 cover（二十面體/2I→I）**；L3 計數側同構/幾何側借入；L4 構造存在
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**

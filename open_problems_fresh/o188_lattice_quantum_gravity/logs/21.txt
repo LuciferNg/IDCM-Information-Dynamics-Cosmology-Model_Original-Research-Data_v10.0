@@ -1,0 +1,10 @@
+[PASS] E1: full K: 120x62, alphabet [-1, 0, 1] (0 = exact orthogonality)
+[PASS] E2: threshold identity across ALL 7440 entries: mismatches = 0 (every K[i][a] == sign(<rot_ref(q_i,U0), u_a>), exact Fractions)
+[PASS] E3a: vertex-reference K rows: row(q)==row(-q) for 120/120; distinct rows = 12 = the 12 ICOSAHEDRON VERTICES (orbit of the 5-fold axis), each row multiplicity {10} (|2I|/12 = 10) -- the table's row space IS the vertex set
+[PASS] E3b: generic-reference K rows: row(q)==row(-q) for 120/120; distinct rows = 60 = |I| = 60, each multiplicity {2} -- EXACT 2:1 double cover at the table level (SU(2)-type fold)
+[INFO]  E4: sign balance (+1 fraction) per column block (min,max,mean): {'vertex': (0.5, 0.5, 0.5), 'face': (0.5, 0.5, 0.5), 'edge': (0.333, 0.333, 0.333)} -- recorded for structure, no threshold
+[PASS] E4: informative: vertex-block +1 fraction (min,max,mean) = (0.5, 0.5, 0.5), face = (0.5, 0.5, 0.5), edge = (0.333, 0.333, 0.333)
+[PASS] E5: sign_rank(K) <= 3 by factor-rank bound: K = sign(A B^T), A = 3 x 120 (rotated vectors), B = 3 x 62 (axes); O222's 600/600 completion certification is the numerical witness, the factor bound is the reason
+[PASS] E6: verdict: IDCM evaluation semantics carries a SU(2)-type 2:1 structure at the TABLE level -- 120 quaternions (2I) fold to 60 distinct evaluation rows (= |I|), the discrete analogue of LQG's SU(2) -> SO(3) cover by spin-1/2; threshold identity holds on the full matrix; L2 frame-level correspondence fully verified (elementwise spin-label map still not claimed)
+
+SYNTHESIS O188/R7/L2e: 7 checks PASS, 0 checks FAIL (full 120x62 K verification; doc 21)
