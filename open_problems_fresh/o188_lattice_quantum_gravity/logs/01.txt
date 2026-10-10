@@ -1,0 +1,8 @@
+[PASS] A1: gamma_n closed form vs explicit Laplacian spectrum (M=88): 44 modes, max|dev|=4.93e-13
+[PASS] A2: 176-L parity sums: even k=90.000000000 (90), odd k=88.000000000 (88), total=178.000000000 (178)
+[PASS] A3: SU(2) dim d_j=2j+1 for j=0..5: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+[PASS] A4: 4-valent intertwiner space (four 1/2 legs): trivial SU(2) multiplicity = 2 (2), CLEBSCH-GORDAN exact iteration (LQG: 4-valent node state space dim)
+[PASS] A5: both discrete spectra: LQG area sqrt(j(j+1)) j=0..4 -> [0.0, 1.4142, 2.4495, 3.4641, 4.4721]; IDCM gamma n=1..8 -> [0.0051, 0.0204, 0.0457, 0.081, 0.1261, 0.1807, 0.2446, 0.3175]; origins differ (Casimir vs Laplacian)
+[PASS] A6: dimensional honest-mark: IDCM chain = 1D path (88 sites), LQG spin network = embedded 3D graph (arbitrary topology) -- non-correspondence flagged
+
+SYNTHESIS O188/L1: 6 checks PASS, 0 checks FAIL (lattice-structure comparison: correspondence ledger in docs/01)

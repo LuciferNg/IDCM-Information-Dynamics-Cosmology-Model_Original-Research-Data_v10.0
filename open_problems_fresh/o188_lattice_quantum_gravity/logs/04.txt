@@ -1,0 +1,6 @@
+[PASS] E1: J^2 on sectors: odd (anti-periodic) J^2 = -I (max|J^2+I|=2.09e-14), even (periodic) J^2 = +I (max|J^2-I|=2.36e-14), odd eigenphases +/-i (max dev 4.15e-14) -- J is a complex structure on the observer sector
+[PASS] E2: mode counts: odd sector 88 double-cover modes -> 44 physical modes = N_d; even sector 44 physical modes (O202: odd k gives 44 modes = N_d)
+[PASS] E3: observer budget (O222 B5 I1): E_sync = 44 * 123/88 = 61.5 = 61.5 = <W>^2 (citation)
+[PASS] E4: relational ledger: IDCM observer = fixed intrinsic sector (J^2=-1 complex structure, E_budget=61.5, 44 modes); LQG QRF = relational frames, no intrinsic observer sector in the kinematical Hilbert space -- non-correspondence flagged (both background-independent, different role of observer)
+
+SYNTHESIS O188/L4: 4 checks PASS, 0 checks FAIL (observer/relational-comparison ledger in docs/04)

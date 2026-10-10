@@ -1,0 +1,86 @@
+{
+  "o": "O188",
+  "round": "R1",
+  "date": "2026-10-04",
+  "goal": "IDCM <-> LQG structural correspondence (NOT deriving LQG from IDCM)",
+  "routes": {
+    "L1_lattice_structure": {
+      "doc": "docs/01_lattice_comparison.md",
+      "script": "scripts/01_lattice_comparison.py",
+      "checks": "6/6 PASS",
+      "correspond": [
+        "graph*algebraic-label dyad: T=(chain graph, gamma_n spectrum) <-> (Gamma, j_e, i_v)",
+        "discrete spectra: gamma_n (Laplacian) <-> sqrt(j(j+1)) (SU(2) Casimir)",
+        "tensor-product structure: K_chain (x) K_tree <-> edge (x) vertex label spaces"
+      ],
+      "non_correspond": [
+        "dimension: 1D path chain vs 3D embedded graph",
+        "label origin: fixed spectral values vs SU(2) representations (variable)",
+        "no built-in SU(2) / Gauss constraint in IDCM"
+      ],
+      "strength": "medium"
+    },
+    "L2_causal_structure": {
+      "doc": "docs/02_causal_structure.md",
+      "script": "scripts/02_causal_structure.py",
+      "checks": "5/5 PASS",
+      "correspond": [
+        "narrative 'layer count <=3': IDCM sign_rank(K)=3 (O222 M3) vs spin-foam past/present/future",
+        "refinement as evolution: IDCM L7 flow vs spin-foam refinement (Pachner/coarse-graining)"
+      ],
+      "coincidence_candidates": [
+        "integer 4: IDCM 4:1 refinement vs Pachner 1-5 (+4 simplices) -- NOT claimed structural"
+      ],
+      "non_correspond": [
+        "rank theorem (matrix factorization) vs Pachner move (complex retriangulation) -- no known map",
+        "LQG Hamiltonian constraint absent in IDCM",
+        "causal direction: foam orientation vs evaluation chaining (thunk/force)"
+      ],
+      "strength": "intuition-only"
+    },
+    "L3_continuum_limit": {
+      "doc": "docs/03_continuum_limit.md",
+      "script": "scripts/03_continuum_limit.py",
+      "checks": "6/6 PASS",
+      "correspond": [
+        "REGGE ACTION common object: IDCM S_R=sum A_h delta_h <-> LQG large-j semiclassical vertex -> e^{iS_Regge}",
+        "graviton DoF = D(D-3)/2 = 2 (both routes)",
+        "discrete spectra both"
+      ],
+      "non_correspond": [
+        "limit procedure: exact refinement flow (IDCM) vs semiclassical stationary point (LQG)",
+        "parameter freedom: IDCM zero-parameter vs LQG Immirzi gamma (structure cost 0 vs 1)",
+        "fixed lattice (88-site) + comoving rescaling vs background-independent arbitrary graph"
+      ],
+      "strength": "strongest"
+    },
+    "L4_observer_frame": {
+      "doc": "docs/04_observer_frame.md",
+      "script": "scripts/04_observer_frame.py",
+      "checks": "4/4 PASS",
+      "correspond": [
+        "background independence (both)",
+        "relational reading: Object-Frame relation (O206) <-> LQG QRF"
+      ],
+      "non_correspond": [
+        "intrinsic complex structure J^2=-1 (IDCM) vs none (LQG QRF)",
+        "energy budget 61.5=<W>^2 (IDCM) vs no resource bound (LQG)",
+        "fixed sector (IDCM) vs movable relational frame (LQG)"
+      ],
+      "strength": "weakest"
+    }
+  },
+  "citations_confirmed": {
+    "sign_rank(K)": "O222 R20 M3 = 3 exact",
+    "J^2=-1 odd sector": "O159 (verified this round dev 2e-14)",
+    "L7 refinement / c invariant": "O221 (verified)",
+    "E_sync=61.5": "O222 B5 I1 / O126"
+  },
+  "honest_gaps": [
+    "L1: no proven isomorphism between tensor-product spectrum and spin-network representation space",
+    "L2: no formal theorem between IDCM rank-3 and spin-foam causality",
+    "L3: zero-parameter flow vs Immirzi freedom is intrinsic divergence",
+    "L4: embedding IDCM observer in LQG requires adding complex structure + resource budget (cost>0)"
+  ],
+  "total_checks": "21 PASS + 0 FAIL"
+}

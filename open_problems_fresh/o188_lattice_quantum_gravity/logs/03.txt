@@ -1,0 +1,8 @@
+[PASS] D1: c = a_l sqrt(J_l) invariant under L: ['1.0', '1.0', '1.0', '1.0', '1.0', '1.0', '1.0'] all equal (structure: a_l = a_0/4^l, J_l = 16^l J_0, product = a_0 sqrt(J_0)), c = R_world omega_ring = 299792.4561 (unit-entry product)
+[PASS] D2: omega_n/(c k) = sin(x)/x at n=1, M=88 (dev 5.57e-55)
+[PASS] D3: graviton dof = D(D-3)/2: D=4 -> 2 (2), D=3 -> 0 (0; 3D topological)
+[PASS] D4: regular 4-simplex dihedral angle arccos(1/4) = 1.318116071652818 (dev 2e-16); flat 4-torus: all deficits ~0 (O221 docs/12)
+[PASS] D5: discrete spectra both: IDCM gamma_1 (M=88) = 0.005096, LQG area sqrt(j(j+1)) j=1..5 = [1.4142, 2.4495, 3.4641, 4.4721, 5.4772] (units 8pi gamma l_P^2); ★ IDCM zero-parameter flow vs LQG Immirzi gamma free -- ambiguity flagged (non-correspondence)
+[PASS] D6: semiclassical comparison: spin-foam vertex -> e^(i S_Regge) at large-j stationary point (Ponzano-Regge/EPRL-type) vs IDCM S_R = sum A_h delta_h from deficit angles, zero new params (O221 R2); common object = Regge action, different status (LQG semiclassical limit vs IDCM exact flow) -- flagged, not identified
+
+SYNTHESIS O188/L3: 6 checks PASS, 0 checks FAIL (continuum-limit comparison ledger in docs/03)
