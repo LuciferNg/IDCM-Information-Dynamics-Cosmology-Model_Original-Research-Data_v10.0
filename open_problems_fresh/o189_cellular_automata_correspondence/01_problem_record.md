@@ -5,7 +5,7 @@ pid:     O189
 title:   IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）
 state:   partial
 verdict: partial
-flags:   r1+r2+r3-97ck
+flags:   r1+r2+r3+r4-107ck
 owner:   O189
 created: 2026-10-04
 updated: 2026-10-10
@@ -75,6 +75,7 @@ IDCM 的離散晶格（88-site 鏈 + 離散時間步 τ = 1/ω_ring）在概念�
 | 2 | 2026-10-10 | R1 四路線執行：狀態空間／規則等價／計算能力／局部性 | scripts/01–04（59/59 PASS）+ docs/01–04 + final_result.md |
 | 3 | 2026-10-10 | R2 mod-q 商群投影（R-C 攻堅） | scripts/05（20/20 PASS）+ docs/05 —— mod-2 ⇔ Rule 90 精確 intertwinement |
 | 4 | 2026-10-10 | R3 三殘餘：連續流 2-adic／period 248／ε-CHL 律 | scripts/06（8/8）+ 07（7/7）+ 08b（3/3）+ docs/06–08（08 v1 4 FAIL 記錄） |
+| 5 | 2026-10-10 | R4 R-A：O222 求值語義層計算類判定 | scripts/09（10/10 PASS）+ docs/09 —— 限界=FS 非 TC；D7 遞歸 thunk 條款先升 TC；cap=TC-blocker |
 
 ## 七、相關文件
 
@@ -130,3 +131,13 @@ IDCM 的離散晶格（88-site 鏈 + 離散時間步 τ = 1/ω_ring）在概念�
 - 🟢 **殘餘②閉合**（docs/07）：**period 248 = 8×31 = 2³(2⁵−1)**——8 = Frobenius 重數（(x^11−1)^8 = x^88−1 over F₂），31 = max ord(λ^j+λ^{−j})（GF(2¹⁰) 內 λ 本原 11 次根；31 = 2⁵−1 唔除 3·11）；300 seeds lcm = 248、max preperiod ≤ 4。
 - 🟢 **R-D 閉合**（docs/08）：**ε-CHL 律** r_ε(t) = 2t + C_eff(ln 1/ε)^{2/3} t^{1/3}，C_eff = 1.3106[1−(ln t)/(2 ln 1/ε)]^{2/3}（Debye 尾）；v1 預註冊 C=1.432 **0/4 FAIL（原樣保留，唔拆）**，v2 修正律 3/3（WA 9 格 0.91–0.97、WB 0.972、WC 0.653）；coarse-ε（1e-2）係 peaks-limited regime，不屬本律。
 - **R-A（理論整體計算類）為 O189 唯一剩低殘餘**。
+
+## 十二、R4 執行結果（2026-10-10，append-only）
+
+> 推導詳見 docs/09；scripts/09（10/10 PASS）。
+
+- 🟢 **R-A 閉合**：O222 求值語義層計算類判定——
+  ① **限界版（as stated：force 單值 ＋ 200 步上限（A6）＋ memo≤3844（B5 預算）＋ 有限晶格 gen 集）＝ 有限態機，唔係 Turing-complete**（E1：可達配置有限｜測 1；E4：基數上界 (|U|+1)^8·CAP，有界＋全總 ⟹ 對角線論證非萬能）；
+  ② **TC 門檻 = O222 冇寫嘅 D7 條款**（遞歸 thunk 圖／自引用生成器）——加咗即 μ-遞歸 ⟹ TC；E3 盲測：fac(10)=3628800、fib(20)=6765、gcd(21,14)=7、**ack(3,3)=61** 全由 memoized thunk 強制引擎計出（引擎自引用 rec，非外部遞歸）；
+  ③ **stated cap = TC-blocker**（E2：countdown 1000→0 喺 200 步禁／1000 步過）⟹ 「O222 已證通用計算」喺條款下係錯（唔止冇證明）；真正身份 = 資源界限確定性語義（對接 O228 k_min ≥ ⌈log₂m⌉）。
+- **O189 所有歸屬殘餘已答完**（R-A/B/C/D ＋ R2 殘餘①②）；狀態保持 `partial`（三層分離 L1/L2/L3，唔聲稱「IDCM 世界 = 通用電腦」）。

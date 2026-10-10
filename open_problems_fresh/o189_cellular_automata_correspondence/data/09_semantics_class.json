@@ -1,0 +1,17 @@
+{
+  "model": "T=(gen,sigma,ctx); force=memo[key]; cap=200; memo<=3844; no cycles in O222",
+  "R1": {
+    "verdict": "finite-state, NOT Turing-complete under stated bounds",
+    "reachable": 1
+  },
+  "R2": {
+    "verdict": "TC iff D7 (recursive thunk graph) added; D7 not in O222",
+    "ackermann(3,3)": 61,
+    "fac(10)": 3628800,
+    "fib(20)": 6765
+  },
+  "R3": {
+    "verdict": "bounded + total => not universal; 1"
+  },
+  "gap": "countdown(1000) blocked at cap 200, free at cap 1000"
+}

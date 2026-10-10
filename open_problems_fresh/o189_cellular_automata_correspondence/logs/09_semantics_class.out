@@ -1,0 +1,17 @@
+==============================================================================
+O189 / scripts/09 - R-A: computational class of O222 semantics layer
+==============================================================================
+  [PASS] E1a reachable (memo,tick) configs finite; |reach|=1 < 10^6 
+  [PASS] E1b ALL bounded runs terminate within CAP=200 (max tick=12) 
+  [PASS] E2a countdown 1000->0 BLOCKED under cap 200 (x=800 after 200 steps) the O222-stated 200-step cap provably blocks this computation
+  [PASS] E2b same computation PASSES at cap 1000 (x=0, steps=1000) => the stated cap is the TC-blocker
+  [PASS] E3a factorial(10) via D7 lazy fixpoint = 3628800 
+  [PASS] E3b fib(20) via D7 = 6765 
+  [PASS] E3c gcd(21,14) via D7 = 7 
+  [PASS] E3d ackermann(3,3) via D7 = 61 (mu-recursion => TC) self-referential thunk graph = the missing clause
+  [PASS] E4a explicit cardinality bound |reachable| <= (12+1)^8*200 = 163146144200 
+  [PASS] E4b O222-spec (no D7) machine is TOTAL (all 4000 start orders terminate) bounded + total => not universal by cardinality (diagonalization)
+
+JSON written: data/09_semantics_class.json
+==============================================================================
+RESULT: 10 PASS / 0 FAIL

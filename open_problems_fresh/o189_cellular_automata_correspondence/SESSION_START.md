@@ -5,7 +5,7 @@ pid:     O189
 title:   IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）
 state:   partial
 verdict: partial
-flags:   r1+r2+r3-97ck
+flags:   r1+r2+r3+r4-107ck
 owner:   O189
 created: 2026-10-04
 updated: 2026-10-10
@@ -104,6 +104,12 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 **R3 合計**：18 PASS ＋ 4 記錄 FAIL；累計 79+18=97 PASS（R1 59 + R2 20 + R3 18）、記錄 4 FAIL。
 **殘餘狀態**：殘餘①（連續流 2-adic）✅ 閉合；殘餘②（period 248）✅ 閉合；R-D（ε-CHL 律）✅ 閉合；R-A（理論整體計算類）唯一剩低。
+
+### Session 4 — 2026-10-10（R4：R-A 攻堅，最後殘餘）
+
+**執行**：`scripts/09_semantics_class.py` **10/10 PASS** → `docs/09_semantics_class.md`
+- **R-A 已回答（三層聲稱）**：① **限界版（O222 as stated：force 單值＋200 步上限＋memo≤3844＋有限 gen 集）＝有限態機唔係 TC**（E1 可達配置有限、E4 基數論證 1.63e11 上限實測 1、4000 orders 全終止）；② **TC 門檻 = O222 冇寫嘅一條 D7 條款**（遞歸 thunk 圖／自引用生成器）——加咗就上 μ-遞歸 ⟹ TC，E3 構造盲測：fac(10)=3628800、fib(20)=6765、gcd(21,14)=7、**ack(3,3)=61** 全部經 memoized thunk 強制引擎計出；③ **stated cap 係 TC-blocker**（E2：countdown 1000→0 喺 200 步禁、1000 步過——量化「資源界限即唔通用」，對接 O228 k_min）
+- **R-A 正式閉合 → O189 所有歸屬殘餘全答完**。O189 保持 partial（唔聲稱「IDCM 世界 = 通用電腦」；三層分離 L1/L2/L3 唔踰越）
 
 ---
 
