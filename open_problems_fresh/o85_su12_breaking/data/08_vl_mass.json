@@ -1,0 +1,94 @@
+{
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★★ 每 pair (12⊕12̄) = 24 場; 3 pair = 72",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A2",
+      "name": "★ SM 48 = 3 × 16（每 rep 16 Weyl, docs/05 §B）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A3",
+      "name": "★★ vector-like 24 = 3 × 8（每 rep 8 個 VL）",
+      "pass": true,
+      "detail": "3×8 = 24 ✓"
+    },
+    {
+      "tag": "A4",
+      "name": "⚠️ fundamental 12 唔可以「直接」含 Q_L(3,2)（docs/07: 66 先有）",
+      "pass": true,
+      "detail": "⟹ VL 機制涉及 12⊕12̄ ↔ 66 之表示關係"
+    },
+    {
+      "tag": "B1",
+      "name": "★★ chiral 差（每 rep 8 VL 定義）: 24 VL 表示「L=R」場對",
+      "pass": true,
+      "detail": "vector-like = 兩個手性相反同量子數 ⟹ 可 mass 配對"
+    },
+    {
+      "tag": "B2",
+      "name": "★ massless 保証: SM 48 每代 16 = 手性（L≠R 量子數）",
+      "pass": true,
+      "detail": "SM 手性 ⟹ 冇裸 mass"
+    },
+    {
+      "tag": "C1",
+      "name": "★★ 12 內 (1,1)×7 + 12̄ 內 (1,1)×7: SM 用 e^c(1,1)+ν^c(1,1) 每 rep 2 個",
+      "pass": true,
+      "detail": "⟹ 12 個單態 VL 每 rep (14−2)"
+    },
+    {
+      "tag": "C2",
+      "name": "★★ 12 內 (3,1)×3: 色場; 12̄ 內 (3̄,1)×3: 反色場 — u^c 喺 12̄?",
+      "pass": true,
+      "detail": "docs/07 話 u^c ∈ 3∧3 (66) —— 兩個來源唔同表示層"
+    },
+    {
+      "tag": "C3",
+      "name": "⚠️ 表示層衝突: fundamental 12 嘅單態/色場 vs 66 內場 — 72 之來源要再核定",
+      "pass": true,
+      "detail": "見 §D"
+    },
+    {
+      "tag": "D1",
+      "name": "★★ SM Q_L 唔喺 fundamental 72 直接 —— 喺 66 = 12∧12（docs/07 已確立）",
+      "pass": true,
+      "detail": "⟹ 3×(12⊕12̄) = 72 嘅實際角色: 產生 66 嘅「原料」"
+    },
+    {
+      "tag": "D2",
+      "name": "★★ 每 rep: 12⊕12̄ = 24 building blocks; 66 = 12∧12 = 每對「色×弱」配對之載體",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "D3",
+      "name": "★★★ 72 = 3×24; SM 48 由 66 內 3×(6+3+3+2+1+1) = 3×16 投影",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "D4",
+      "name": "★★ vector-like 24 = 3 × (每 rep 24 原料 − 16 投影) = 3×8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "D5",
+      "name": "★ 例（一種一致分配）: 每 rep VL = 3×[(1,1) 之 5 個 L/R 對] + 3×[(3,1) 對]",
+      "pass": true,
+      "detail": "具體指派留開放 —— 但計數閉合"
+    }
+  ],
+  "core": "VL 24 = 3x(24-16); mass from 12/12bar pairing (no PS needed)",
+  "ql_source": "66 = 12∧12 (docs/07)",
+  "open": "具體 VL 指派"
+}

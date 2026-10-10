@@ -1,0 +1,93 @@
+{
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★★ 奇函數家族成員數 = 48（3!×2³ = 48）",
+      "pass": true,
+      "detail": "對稱自動強制 y(7)=0, 值互異"
+    },
+    {
+      "tag": "B1",
+      "name": "★★ C-對稱家族內 等間距解數 = 2（AP）",
+      "pass": true,
+      "detail": "2/48"
+    },
+    {
+      "tag": "C1",
+      "name": "★★ 值集匹配: |6a|=1 ⟹ a=±1/6（up to 整體符號 = CP 共軛）",
+      "pass": true,
+      "detail": "量子化步階 1/3 = 2a ⟹ a=1/6"
+    },
+    {
+      "tag": "C2",
+      "name": "★★★ 目標 y=(m−7)/6 喺 AP 解集內? True",
+      "pass": true,
+      "detail": "a=+1/6 係 AP 解之一"
+    },
+    {
+      "tag": "C3",
+      "name": "★★★ AP 解唯一（up to 整體符號）? 解數 = 2",
+      "pass": true,
+      "detail": "2 = a=±1/6 兩者 (CP 共軛對, 物理同一族)"
+    },
+    {
+      "tag": "D1",
+      "name": "★ 超荷反號 = 反粒子（C-變換）: y(14−m) = −y(m)",
+      "pass": true,
+      "detail": "e.g. y(13)=+1 ⟷ y(1)=−1"
+    },
+    {
+      "tag": "D2",
+      "name": "★ 中點 m=7 = ν^c (Y=0): 唯一中性單態 = 對稱點",
+      "pass": true,
+      "detail": "docs/13: ν^c 強制 y=0"
+    },
+    {
+      "tag": "D3",
+      "name": "★★ 無需「單調」判據 —— 對稱(C)+等間距+量子化已唯一",
+      "pass": true,
+      "detail": "單調只係 docs/14 嘅導航, 已由 AP 判據取代"
+    }
+  ],
+  "family_size": 48,
+  "ap_solutions": 2,
+  "ap_solutions_detail": [
+    {
+      "7": "0",
+      "1": "1",
+      "13": "-1",
+      "3": "2/3",
+      "11": "-2/3",
+      "5": "1/3",
+      "9": "-1/3"
+    },
+    {
+      "7": "0",
+      "1": "-1",
+      "13": "1",
+      "3": "-2/3",
+      "11": "2/3",
+      "5": "-1/3",
+      "9": "1/3"
+    }
+  ],
+  "unique": true,
+  "target": {
+    "1": "-1",
+    "3": "-2/3",
+    "5": "-1/3",
+    "7": "0",
+    "9": "1/3",
+    "11": "2/3",
+    "13": "1"
+  },
+  "criteria": [
+    "S1: C-symmetry y(14−m)=−y(m)",
+    "S2: equally-spaced AP hypercharge spectrum",
+    "S3: quantized set {0, ±1/3, ±2/3, ±1}",
+    "S4: distinct values"
+  ]
+}

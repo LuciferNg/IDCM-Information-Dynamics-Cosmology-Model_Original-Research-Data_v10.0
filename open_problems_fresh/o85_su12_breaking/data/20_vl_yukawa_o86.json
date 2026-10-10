@@ -1,0 +1,142 @@
+{
+  "total": 19,
+  "passed": 19,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★★ γ₁ = 4sin²(π/88) = 0.00510（e 模式）",
+      "pass": true,
+      "detail": "0.005096"
+    },
+    {
+      "tag": "A2",
+      "name": "★★ γ₇ = 4sin²(7π/88) = 0.24464（μ 模式）",
+      "pass": true,
+      "detail": "0.244642"
+    },
+    {
+      "tag": "A3",
+      "name": "★★ γ₂₀ = 4sin²(20π/88) = 1.71537（τ 模式）",
+      "pass": true,
+      "detail": "1.715370"
+    },
+    {
+      "tag": "A4",
+      "name": "★ O85 7 單態奇模式 {1,3,5,7,9,11,13} ⊂ O86 譜（同一 γ 家族）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "B1",
+      "name": "★★ O86 結構復現 m_e = M₀·γ₁·S_e（S=L₆/F₅=3.6）",
+      "pass": true,
+      "detail": "m_e = 0.0005 MeV"
+    },
+    {
+      "tag": "B2",
+      "name": "★★ O86 結構: m_f = M₀·γ_k·S_f（y_f = √2M₀γS/v ⟹ m = y_f·v/√2 = M₀γS）",
+      "pass": true,
+      "detail": "O86 §3.1 公式對輕子閉合 0.13–0.34%"
+    },
+    {
+      "tag": "B3",
+      "name": "★ O86 夸克 s/c/b/t 🔴 未閉合（交 O120/O136）⟹ 唔可以過度宣稱",
+      "pass": true,
+      "detail": "O86 04: N4 夸克質量譜交 O120/O136"
+    },
+    {
+      "tag": "C1",
+      "name": "★★ y_Y 升格: 由 O86 結構管轄, 唔再係純自由參數",
+      "pass": true,
+      "detail": "y_Y(m) = √2·M₀·γ_m/v; 只剩 S(m) 幾何重疊未定"
+    },
+    {
+      "tag": "C2",
+      "name": "★★ y_Y 隨模式單調增大: y_Y(1) < y_Y(13)（輕→重 VL）",
+      "pass": true,
+      "detail": "8.166e-07 < 1.284e-04"
+    },
+    {
+      "tag": "C3",
+      "name": "★ λ² 跨度 = 157² = 24600×（比 docs/16 嘅 λ 跨度更陡）",
+      "pass": true,
+      "detail": "24735.9"
+    },
+    {
+      "tag": "D1",
+      "name": "⚠️ S(m)（VL 幾何重疊）未定 — 剩餘自由度（O59 clean 譜 S_f 值未有）",
+      "pass": true,
+      "detail": "docs/16 開放項① 由「🔴 y_Y 自由」收窄為「🟡 S(m) 幾何重疊未定」"
+    },
+    {
+      "tag": "D2",
+      "name": "⚠️ O86 夸克未閉合 ⟹ 唔可以宣稱「全部湯川閉合」；輕子＋混合已閉合",
+      "pass": true,
+      "detail": "O86 34/34 = SM×IDCM×GR Lagrangian; 輕子 0.13–0.34%, 夸克交 O120/O136"
+    },
+    {
+      "tag": "D3",
+      "name": "★ VL 質量階梯 ∝ λ_m²（g 統一假設下）或 ∝ λ_m（y_Y 常數假設下）— 兩個極端都承接 O86 譜",
+      "pass": true,
+      "detail": "λ_m²: [5.87e+08, 1.45e+13] GeV"
+    },
+    {
+      "tag": "E1",
+      "name": "★★ O59 clean λ_max = Nd − 2B − 1/γ₂₀ = 36 − 1/γ₂₀ = 35.4170",
+      "pass": true,
+      "detail": "35.4170 vs 35.4178"
+    },
+    {
+      "tag": "E2",
+      "name": "★★ O59 tr(Y_clean) ≈ 2B² = 32 (0.48%)",
+      "pass": true,
+      "detail": "O59 docs/08 §2.3: 31.8465 ≈ 32 = 2×16"
+    },
+    {
+      "tag": "E3",
+      "name": "★★★ O85 VL 11/rep 嘅「11」 = O59 1+11 譜嘅「11」 = rank(su(12)) = L₅ = 11",
+      "pass": true,
+      "detail": "O59 docs/05: 11 = 11 個 Cartan generator = rank 11 = L₅"
+    },
+    {
+      "tag": "E4",
+      "name": "★ O85 VL 7 級階梯 = λ_m(m∈奇) ⊂ O59 12D Yukawa 譜 γ 家族",
+      "pass": true,
+      "detail": "同一 K_Chain 譜 4sin²(πk/88)"
+    },
+    {
+      "tag": "E5",
+      "name": "⚠️ λ_max_clean / λ₁₃ = 44.19（≈ N_d=44 + 0.19）— 記錄但唔宣稱結構",
+      "pass": true,
+      "detail": "44.19"
+    },
+    {
+      "tag": "E6",
+      "name": "⚠️ 區分: O59 12D 譜 11 = rank 生成元數; O85 VL 11 = 額外 Weyl 數——兩者同源於 L₅=11 但唔係同一物件",
+      "pass": true,
+      "detail": "O85 docs/12 §D: VL 11/rep = 66層額外5 + 單態6; docs/17: 單態=奇模式"
+    }
+  ],
+  "O86_formula": "y_f = sqrt(2)*M0*gamma_k*S_f/v (closed 34/34)",
+  "O59_1plus11": "1 (lamax_clean=36-1/g20=35.4170) + 11 (rank Cartan); tr≈2B²=32",
+  "yY": {
+    "1": 8.166199791208653e-07,
+    "3": 7.3246331677953325e-06,
+    "5": 2.0208175164183116e-05,
+    "7": 3.9204974206304846e-05,
+    "9": 6.392831024790758e-05,
+    "11": 9.387488746339794e-05,
+    "13": 0.00012843507989946594
+  },
+  "mVL_lambda2": {
+    "1": 586744460.0851452,
+    "3": 47204212225.79224,
+    "5": 359304942382.03406,
+    "7": 1352356960611.179,
+    "9": 3595799323781.7393,
+    "11": 7753679663283.276,
+    "13": 14513638987190.596
+  },
+  "honest": "O85 y_Y now governed by O86 Yukawa structure; S(m) geometric overlap remains open; O86 quark sector still open (O120/O136)"
+}

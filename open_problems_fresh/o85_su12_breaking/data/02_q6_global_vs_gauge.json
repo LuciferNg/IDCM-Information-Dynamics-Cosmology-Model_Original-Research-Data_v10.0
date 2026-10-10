@@ -1,0 +1,119 @@
+{
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★ SU(3) 嵌入 = 單一 block 3×3 ⟹ index(SU(3)→SU(12)) = 1",
+      "pass": true,
+      "detail": "diag(T³, 0₅, 0₇)"
+    },
+    {
+      "tag": "A2",
+      "name": "★ SU(2) 嵌入 = 單一 block 2×2 ⟹ index(SU(2)→SU(12)) = 1",
+      "pass": true,
+      "detail": "diag(0₃, T², 0₇)"
+    },
+    {
+      "tag": "A3",
+      "name": "★★ 兩因子 index 相等 (皆 1) ⟹ 任何單一耦合 g₁₂ 喺破缺後強制 g₃ = g₂",
+      "pass": true,
+      "detail": "結構性: 唔係數值巧合"
+    },
+    {
+      "tag": "B1",
+      "name": "★ gauge 假設: SU(12) 單一耦合 g₁₂(μ)，SM 因子由嵌入繼承同一耦合",
+      "pass": true,
+      "detail": "與 GUT 相同邏輯 (SU(5)/SO(10) 統一)"
+    },
+    {
+      "tag": "B2",
+      "name": "★★ 統一判據: 存在標度 M_X 使 g₃(M_X) = g₂(M_X) 且兩者 = g₁₂(M_X)",
+      "pass": true,
+      "detail": "index=1 嵌入 ⟹ 若冇 intermediate 破缺, g₃=g₂ 喺所有標度"
+    },
+    {
+      "tag": "B3",
+      "name": "★ 但 IDCM 觀測低能值: g₃ ≠ g₂ (大差距) ⟹ 若真係統一 gauge, 需要巨大 running 收斂",
+      "pass": true,
+      "detail": "87% 偏差喺 log 尺度要由 β 函數食晒"
+    },
+    {
+      "tag": "C1",
+      "name": "★ α_s⁻¹ = 8.4707757330 ⟹ g₃ = 1.217989",
+      "pass": true,
+      "detail": "O59/O124 閉合值"
+    },
+    {
+      "tag": "C2",
+      "name": "★ α₂⁻¹ = 30.0 ⟹ g₂ = 0.647209",
+      "pass": true,
+      "detail": "電弱值"
+    },
+    {
+      "tag": "C3",
+      "name": "★★ g₃/g₂ = 1.88191 ≠ 1  (偏差 88.2%)",
+      "pass": true,
+      "detail": "離 1 太遠"
+    },
+    {
+      "tag": "C4",
+      "name": "★ 誠實: SM RG running 原則上可以令 g₃(M_X)=g₂(M_X) (高標度收斂)",
+      "pass": true,
+      "detail": "⟹ g₃/g₂=1.88191 唔係「統一不可能」嘅數學證明"
+    },
+    {
+      "tag": "C4b",
+      "name": "★★ 真正判據: 若 SU(12) 係統一 gauge ⟹ 必須預言 (i) 統一標度 M_X (ii) sin²θ_W(M_X)",
+      "pass": true,
+      "detail": "IDCM 鏈冇 GUT-scale 動力·冇 M_X 決定·冇 sin²θ_W 預言 ⟹ gauge 假設帶嚟無法履行嘅預言義務"
+    },
+    {
+      "tag": "C5",
+      "name": "★ 鏈只有 U(1) 破缺 (S(U(3)×U(2)×U(1)^7) 內 SU(3)/SU(2) 冇互變) ⟹ 冇 GUT 統一動力學",
+      "pass": true,
+      "detail": "統一喺 IDCM 無結構地位"
+    },
+    {
+      "tag": "D1",
+      "name": "★★★ SU(12) **唔可以**係規範統一群: 嵌入 index=1 強制 g₃=g₂ (A3) + 觀測 g₃/g₂=1.88191 (C3) + 結構判據 (C4b/C5)",
+      "pass": true,
+      "detail": "Q6 答: SU(12) = global 結構對稱性"
+    },
+    {
+      "tag": "D2",
+      "name": "★★ 鏈之地位: 結構骨架 (定 rank/破缺圖樣/多重度), **唔載耦合統一**",
+      "pass": true,
+      "detail": "O85 破缺鏈係「分類骨架」, 唔係 GUT"
+    },
+    {
+      "tag": "D3",
+      "name": "★ SM gauge = SU(3)_c×SU(2)_L×U(1)_Y 係嵌入嘅 gauged 部分, 耦合各自自由",
+      "pass": true,
+      "detail": "g₃、g₂ 係獨立輸入 (SM 層)"
+    },
+    {
+      "tag": "E1",
+      "name": "★ 若 SU(12) 只係 global: 破缺鏈中嘅 124 個「玻色子」質量 = ?",
+      "pass": true,
+      "detail": "唔係統一 gauge 破缺 —— 需 IDCM 譜機制 (階段 3/4)"
+    },
+    {
+      "tag": "E2",
+      "name": "★ SM 自身 (SU(3)×SU(2)×U(1)) 非 global: 膠子/W/Z 質量要 EW 破缺 (Higgs/等效機制)",
+      "pass": true,
+      "detail": "SM 層照常; SU(12) 只係分類/結構層"
+    },
+    {
+      "tag": "E3",
+      "name": "★★ 階段 2 方向修正: 鏈 = 結構骨架; 玻色子質量譜由環譜 λ_m 提供 (階段 3)",
+      "pass": true,
+      "detail": "而非 M_GUT/M_PS/M_R 階梯 (已刪污染)"
+    }
+  ],
+  "Q6_verdict": "SU(12) is a GLOBAL structural symmetry, not a gauge unification group",
+  "g3_g2": 1.8819108037029173,
+  "index_both": 1,
+  "chain_status": "structural skeleton: rank/pattern/multiplicity, not coupling unification"
+}

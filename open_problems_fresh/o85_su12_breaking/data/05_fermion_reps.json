@@ -1,0 +1,156 @@
+{
+  "total": 22,
+  "passed": 22,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★ A(12) = +1, A(12̄) = −1（SU(12)³ 係數）",
+      "pass": true,
+      "detail": "d³ 對稱結構常數標準值"
+    },
+    {
+      "tag": "A2",
+      "name": "★★ 3×(12⊕12̄): 3·(+1) + 3·(−1) = 0（anomaly-free）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A3",
+      "name": "★ 維度 72 = 3×12 + 3×12 = 2×h11 = 2×36",
+      "pass": true,
+      "detail": "72 = 72 ✓"
+    },
+    {
+      "tag": "B1",
+      "name": "★ SM 48 = 3 代 × 16 (含右旋 ν^c)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "B2",
+      "name": "★ vector-like 24 = 72 − 48（配對, 質量可唔依賴 VEV? —— 用 chiral 差計）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "B3",
+      "name": "★★ L/R 手性: 3×12 左手 + 3×12̄ 右手（新鏈手性輸入, 鏈無關）",
+      "pass": true,
+      "detail": "12 ≇ 12̄ ⟹ SU(12) 層 chiral ✓"
+    },
+    {
+      "tag": "C1",
+      "name": "★ 12 → (3,1) + (1,2) + 7×(1,1): 3+2+7 = 12 ✓",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "C2",
+      "name": "★ 12̄ → (3̄,1) + (1,2̄) + 7×(1,1): 3+2+7 = 12 ✓（SU(2) 反基本 = 基本）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "C3",
+      "name": "★★ 3×(12⊕12̄) 新鏈內容: 3 色 (3,1) + 3 弱 (1,2) + 21 單態 (左手)＋ 3 反色 + 3 弱 + 21 單態 (右手)",
+      "pass": true,
+      "detail": "唔再有 (4,3) 標籤"
+    },
+    {
+      "tag": "D1",
+      "name": "★ Y 由 SM 觀測 (Q = T₃L + Y 檢驗)",
+      "pass": true,
+      "detail": "標準超荷"
+    },
+    {
+      "tag": "D2",
+      "name": "★ Q = T₃L + Y 核對: Q_L T₃=±1/2 ⟹ Q = 2/3, −1/3 ✓; L_L T₃=±1/2 ⟹ Q = 0, −1 ✓",
+      "pass": true,
+      "detail": "電荷量化 ⊂ {1/3 階}"
+    },
+    {
+      "tag": "D3",
+      "name": "★★ 唔用 T₃R: Y 喺新鏈 = U(1)⁸ 之線性組合（docs/03 §B）—— 精確組合由 SM 電荷嵌入定（見 docs/05 §F 開放項）",
+      "pass": true,
+      "detail": "手性輸入鏈無關; 電荷值係觀測"
+    },
+    {
+      "tag": "E-Y-SU3",
+      "name": "[Y] [SU(3)²×U(1)] = 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "E-Y-SU2",
+      "name": "[Y] [SU(2)²×U(1)] = 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "E-Y-U13",
+      "name": "[Y] [U(1)³] = 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "E-Y-GRAV",
+      "name": "[Y] [grav²×U(1)] = 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "E-B-L-SU3",
+      "name": "[B-L] [SU(3)²×U(1)] = 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "E-B-L-SU2",
+      "name": "[B-L] [SU(2)²×U(1)] = 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "E-B-L-U13",
+      "name": "[B-L] [U(1)³] = 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "E-B-L-GRAV",
+      "name": "[B-L] [grav²×U(1)] = 0",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "tag": "E9",
+      "name": "★★ 8/8 異常 = 0 精確（SM 超荷 + B−L 兩組）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "E10",
+      "name": "⚠️ 誠實: 異常消去係 SM 超荷指派之**必然**（一致性）, 唔係新鏈預言",
+      "pass": true,
+      "detail": "但係 SM Feynman rules 之必要條件 ✓"
+    }
+  ],
+  "content": "3x(12+12bar) = 72 = 2*h11; SM 48 + vector-like 24",
+  "branch": "12 -> (3,1)+(1,2)+7*(1,1); 12bar -> (3bar,1)+(1,2bar)+7*(1,1)",
+  "y_source": "SM observed (Q=T3L+Y), not T3R formula",
+  "anomaly": {
+    "Y": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "B-L": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  }
+}

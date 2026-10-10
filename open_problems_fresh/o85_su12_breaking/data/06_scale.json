@@ -1,0 +1,99 @@
+{
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★ X/Y 質量係數 = λ₄ − λ₂ = λ₂(N_gen−λ₂)（docs/04 恆等）",
+      "pass": true,
+      "detail": "= 0.060656936533"
+    },
+    {
+      "tag": "A2",
+      "name": "★ X/Y 數目 = 3×2×2 = 12（色×弱×正反）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A3",
+      "name": "★ X/Y 耦合強度 ~ g_X（g 級, 唔係 g² 級）—— 質子衰變係交換圖",
+      "pass": true,
+      "detail": "d=6 有效算子"
+    },
+    {
+      "tag": "B1",
+      "name": "★ d=6: Γ_p = c·α_X²·m_p⁵/M_XY⁴, c ~ O(1)（量綱檢查: [M]）",
+      "pass": true,
+      "detail": "m_p⁵/M⁴ 有質量次元 1 ✓"
+    },
+    {
+      "tag": "B2",
+      "name": "★ M_XY = g_X · xy_coeff · Λ（Λ = 整體標度, docs/04）",
+      "pass": true,
+      "detail": "Λ 係唯一自由標度（零硬編碼）"
+    },
+    {
+      "tag": "C1",
+      "name": "★ 用 α₂: M_XY > 5.5219e+15 GeV",
+      "pass": true,
+      "detail": "量綱式下限 (含 ħ)"
+    },
+    {
+      "tag": "C2",
+      "name": "★ 用 α_s: M_XY > 1.0392e+16 GeV",
+      "pass": true,
+      "detail": "量綱式下限 (含 ħ)"
+    },
+    {
+      "tag": "C3",
+      "name": "★★ τ_p 觀測下限來自 Super-K (τ_p > 2.4e34 yr, PDG)",
+      "pass": true,
+      "detail": "= 7.57e+41 s"
+    },
+    {
+      "tag": "D-₂",
+      "name": "★ Λ(g₂) = M_XY/(g₂·xy_coeff) > 1.407e+17 GeV",
+      "pass": true,
+      "detail": "M_Pl/86.8"
+    },
+    {
+      "tag": "D-₃",
+      "name": "★ Λ(g₃) = M_XY/(g₃·xy_coeff) > 1.407e+17 GeV",
+      "pass": true,
+      "detail": "M_Pl/86.8"
+    },
+    {
+      "tag": "D3",
+      "name": "★ Λ 係唯一自由標度（8→1 收斂: 模式數/賦值/恆等全結構出）",
+      "pass": true,
+      "detail": "冇 M_GUT/M_PS/M_R 階梯 ✓"
+    },
+    {
+      "tag": "E1",
+      "name": "⚠️ 量綱式: 冇強子矩陣元 (f_p), 冇 renormalization, 冇 phase space 因子",
+      "pass": true,
+      "detail": "⟹ 下限數量級級, 非精密"
+    },
+    {
+      "tag": "E2",
+      "name": "⚠️ 冇算 X/Y 是否真正耦合到 B−L（需費米子嵌入, docs/05 §F 開放項）",
+      "pass": true,
+      "detail": "若 X/Y 唔載 B−L, 質子唔衰變 (更安全)"
+    },
+    {
+      "tag": "E3",
+      "name": "★★ 結論: 標度 Λ ≳ 10¹⁶–10¹⁷ GeV (M_Pl 量級), 由 τ_p 觀測下限推",
+      "pass": true,
+      "detail": "與舊污染值 10¹⁶ 差 ~0–1 數量級, 但**推導途徑完全不同** (量綱式 vs 硬編碼)"
+    }
+  ],
+  "tau_p_min_s": 7.573824e+41,
+  "M_xy_min_a2": 5521892767752105.0,
+  "M_xy_min_as": 1.0391703836485318e+16,
+  "lambda_min": {
+    "g2": 1.4065751749622843e+17,
+    "g3": 1.4065751749622846e+17
+  },
+  "caveats": "no hadronic matrix element; no B-L coupling check"
+}

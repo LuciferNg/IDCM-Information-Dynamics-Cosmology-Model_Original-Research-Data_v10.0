@@ -1,0 +1,95 @@
+{
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★★ 12⊕12̄ 構件數 = 24/rep",
+      "pass": true,
+      "detail": "24"
+    },
+    {
+      "tag": "A2",
+      "name": "★ chiral 平衡: 12 (L) + 12̄ (R) = 12+12",
+      "pass": true,
+      "detail": "L=12 R=12"
+    },
+    {
+      "tag": "A3",
+      "name": "★★ fundamental 層冇 (3,2)!（Q_L 必須複合）",
+      "pass": true,
+      "detail": "現 docs/10 張力之根源"
+    },
+    {
+      "tag": "B1",
+      "name": "★★ 66 分支總維度 = 66 = C(12,2)",
+      "pass": true,
+      "detail": "✓"
+    },
+    {
+      "tag": "B2",
+      "name": "★★ 固定 Y 場: u^c(3∧3), e^c(2∧2), Q_L(3⊗2) 共 10",
+      "pass": true,
+      "detail": "e^c=2∧2 新發現 (docs/10)"
+    },
+    {
+      "tag": "C1",
+      "name": "★★ SM 場之構件來源（docs/10 §C 重現）: 66→Q_L/u^c/e^c (10); 12̄→d^c/L/ν^c (6)",
+      "pass": true,
+      "detail": "16 = 10+6 ✓"
+    },
+    {
+      "tag": "C2",
+      "name": "★★ SM 整體 anomaly-free 係 input（docs/05 §E 已驗證 8 條=0）",
+      "pass": true,
+      "detail": "唔需要 66 補償 —— 66 係描述層, 唔係另加表示"
+    },
+    {
+      "tag": "D1",
+      "name": "★★ SM 場全部 chiral（量子數冇 L+R 雙份）",
+      "pass": true,
+      "detail": "每場量子數只出現一次（喺 SM 指紋內）"
+    },
+    {
+      "tag": "D2",
+      "name": "★ 但 66 剩餘 56 場（3⊗7 21 + 2⊗7 14 + 7∧7 21）多數係 y_i 依賴",
+      "pass": true,
+      "detail": "未知超荷 ⟹ 冇得判定 molecule/vector-like"
+    },
+    {
+      "tag": "D3",
+      "name": "★ 誠實: 66 + 12̄ 系統中, SM 16 場之外嘅場數 = 66−10 + 12̄單6 + 12̄? —— 唔係 8, 因為 66 唔係 per-rep 24 嘅子集",
+      "pass": true,
+      "detail": "「VL 8」喺複合層冇直接意義"
+    },
+    {
+      "tag": "E1",
+      "name": "★★★ 判定: docs/05「SM 48+VL 24=72」係維度巧合, 唔係表示論包含",
+      "pass": true,
+      "detail": "72 = 12+12̄ 每 rep 24 x3; SM 48 由複合 66 提供 30 + 12̄ 18"
+    },
+    {
+      "tag": "E2",
+      "name": "★★★ 正確表述: SM 場 = 3 × (66 組合 10 + 12̄ 直接 6)",
+      "pass": true,
+      "detail": "66 係「第二個表示層」, 唔係 72 之子集"
+    },
+    {
+      "tag": "E3",
+      "name": "★★★ 關鍵: 若將 SM 48 視為「(66 之 SM 場)+(12̄ 之 SM 場)」表示直和, anomaly = 3×(8−3)=15≠0 ⟹ **唔可以當表示直和**; 66 係量子數來源描述層",
+      "pass": true,
+      "detail": "15≠0 正正證明: SM 場係量子數組合 (docs/05 §E 8 條=0 先係 anomaly 保證)"
+    },
+    {
+      "tag": "E4",
+      "name": "★★ SM anomaly 由 docs/05 §E 已驗證 0 ✓（唔靠 66/12̄ 表示 anomaly）",
+      "pass": true,
+      "detail": "docs/05 §E 22/22: 8 條 anomaly Fraction EXACT = 0"
+    }
+  ],
+  "verdict": "docs/05 72=48+24 is dimension coincidence, not rep containment",
+  "sm_source": "3x(66-composite 10 + 12bar-direct 6) = 48",
+  "vl_definition": "VL 8/rep has no direct meaning at composite level; needs full y_i assignment",
+  "A66": 8
+}

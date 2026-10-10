@@ -1,0 +1,128 @@
+{
+  "total": 17,
+  "passed": 17,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★ (i) Σy_i=0 ✓（docs/07）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A2",
+      "name": "★ (ii) 量子化 1/3 階 ✓（SM 電荷結構）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A3",
+      "name": "★ (v) 對稱解: {0, +a, +b, +c, −a, −b, −c}, Σ=0 自動",
+      "pass": true,
+      "detail": "3 對相反 + 0"
+    },
+    {
+      "tag": "B1",
+      "name": "★★ 候選 y_i = {0, 1/3, -1/3, 2/3, -2/3, 1, -1}",
+      "pass": true,
+      "detail": "7 個單態"
+    },
+    {
+      "tag": "B2",
+      "name": "★★ Σ = 0 ✓（0 + 1/3−1/3 + 2/3−2/3 + 1−1）",
+      "pass": true,
+      "detail": "= 0"
+    },
+    {
+      "tag": "B3",
+      "name": "★ 量子化: 全部 ∈ (1/3)ℤ ✓",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "B4",
+      "name": "⚠️ 呢個指派唔係唯一（+a 有幾多個解）—— 但係「最小對稱」解",
+      "pass": true,
+      "detail": "1/3 階之 3 對 + 0 係最細唔重複集合"
+    },
+    {
+      "tag": "C1",
+      "name": "★★ Q_L (3,2,1/6): 唯一來源 3⊗2（chiral）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "C2",
+      "name": "⚠️ u^c: 有第 2 來源 3⊗7(y_i=−1/3) ⟹ 「唯一」假設錯, 誠實記錄",
+      "pass": true,
+      "detail": "3∧3 主要 + 3⊗7 第二 ⟹ VL pair 候選"
+    },
+    {
+      "tag": "C3",
+      "name": "★★ d^c (3̄,1,+1/3): 來源數 = 2",
+      "pass": true,
+      "detail": "12̄ 反色 + 可能 3⊗7 y_i=2/3"
+    },
+    {
+      "tag": "D1",
+      "name": "★★ 66 層內 VL 場（SM 量子數重複）存在",
+      "pass": true,
+      "detail": "{'u^c': 2, 'e^c': 3, 'ν^c': 3}"
+    },
+    {
+      "tag": "D2",
+      "name": "★★ 66 層內額外 VL 場數 = 5/rep（Σ(n−1)）",
+      "pass": true,
+      "detail": "VL pairs in 66 layer = 5"
+    },
+    {
+      "tag": "D3",
+      "name": "★ fundamental 單態多餘: 12̄ 7 − 1(ν^c) = 6 個 VL 候選/rep",
+      "pass": true,
+      "detail": "12 單態係 66 原料, 唔另計 VL"
+    },
+    {
+      "tag": "D4",
+      "name": "★★ 總 VL Weyl/rep = 66層額外 + fundamental 多餘單態",
+      "pass": true,
+      "detail": "5 + 6 = 11 VL Weyl/rep ⟹ 3 代 ×11 = 33"
+    },
+    {
+      "tag": "E1",
+      "name": "★★ VL Weyl/rep = 11 = 66層額外 5 + 單態 6",
+      "pass": true,
+      "detail": "66 內額外 + fundamental 剩餘單態"
+    },
+    {
+      "tag": "E2",
+      "name": "★★ 3 代總 VL = 3×11 = 33 Weyl",
+      "pass": true,
+      "detail": "docs/05「24」係維度巧合 (docs/11), 唔係呢個數"
+    },
+    {
+      "tag": "E3",
+      "name": "★ 手性保留: Q_L 唯一來源 ⟹ SM 手性 qaurk 雙重態完整",
+      "pass": true,
+      "detail": "Q_L 冇 66 內第二來源 ✓"
+    }
+  ],
+  "yi": [
+    "0",
+    "1/3",
+    "-1/3",
+    "2/3",
+    "-2/3",
+    "1",
+    "-1"
+  ],
+  "vl66": {
+    "u^c": 2,
+    "e^c": 3,
+    "ν^c": 3
+  },
+  "tot66_extra": 5,
+  "fund_singlet_extra": 6,
+  "tot_vl_weyl_rep": 11,
+  "tot_vl_weyl_3gen": 33,
+  "note": "VL count depends on 66-layer duplication definition; not docs/05 24 dimension coincidence"
+}

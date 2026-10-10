@@ -1,0 +1,131 @@
+{
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★ U(1) 方向數 = rank 11 − 2(su3) − 1(su2) = 8",
+      "pass": true,
+      "detail": "docs/01 §C"
+    },
+    {
+      "tag": "A2",
+      "name": "★ 典型基: E_i (i=1..7) ＋ H = (2, −3, 0...0)",
+      "pass": true,
+      "detail": "H 滿足 traceless: 3·2 + 2·(−3) = 0 ✓"
+    },
+    {
+      "tag": "A3",
+      "name": "★ 任意方向 = Σ α_i E_i + β H（8 個參數）",
+      "pass": true,
+      "detail": "⟹ 目標 U(1)_Y 係呢 8 維空間嘅一條線"
+    },
+    {
+      "tag": "B1",
+      "name": "★ 12 之結構: (3,1) = 弱-單態色場; (1,2) = 色-單態弱場（SM 觀測）",
+      "pass": true,
+      "detail": "Q_L(3,2) 唔係 fundamental 12 嘅單一分量"
+    },
+    {
+      "tag": "B2",
+      "name": "★ quantum 數要求: 色塊內 SU(3)-不變 ⟹ 3 個 q_a 相等; 弱塊 SU(2)-不變 ⟹ 2 個 q_b 相等",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "B3",
+      "name": "★ Y 必須含 H 分量 (色≠弱) — 否則 SU(3) 同 SU(2) 混合",
+      "pass": true,
+      "detail": "SM 量子數要求 Q_L ≠ L_L 超荷"
+    },
+    {
+      "tag": "B4",
+      "name": "★ Y 可以含 E_i 分量 (單態荷) — 7 個自由度",
+      "pass": true,
+      "detail": "SM 7 個單態 (ν^c 等) 可有各自超荷"
+    },
+    {
+      "tag": "C1",
+      "name": "★★ 目標: rank 11 → 4 ⟹ 破 7 個 U(1)（7 = L₄ = 單態數）",
+      "pass": true,
+      "detail": "IDCM: 降 7 維"
+    },
+    {
+      "tag": "C2",
+      "name": "★ 7 個破缺方向 = 商空間 (U(1)⁸)/Y = 7 維（必然，線性代數）",
+      "pass": true,
+      "detail": "Y 係一條線; 正交/獨立補集 7 維"
+    },
+    {
+      "tag": "C3",
+      "name": "★ 每個破缺由一個帶電單態 VEV 完成（SM Higgs 機制）",
+      "pass": true,
+      "detail": "VEV 帶 U(1) 電荷 ≠ 0 ⟹ 破嗰個 U(1)"
+    },
+    {
+      "tag": "C4",
+      "name": "★★ 破缺 U(1)_i 必須**唔含** Y — 否則會連 Y 一齊破（保 U(1)_Y）",
+      "pass": true,
+      "detail": "結構約束: 剩返嘅 U(1) 必須係 Y"
+    },
+    {
+      "tag": "D1",
+      "name": "★ 7 個 (1,1) 分量（12 內）可以各取 VEV — 每個破一個 U(1)",
+      "pass": true,
+      "detail": "每個 (1,1) 帶電荷向量; 7 個 = 7 個 U(1) 破缺"
+    },
+    {
+      "tag": "D2",
+      "name": "★ 或者用更高等表示嘅 (1,1) 實現（O122 標量扇區, 外部）",
+      "pass": true,
+      "detail": "唔限 fundamental; 但數目由 U(1) 電荷正交性定"
+    },
+    {
+      "tag": "D3",
+      "name": "★★ 破缺順序: 任意（全 commutative）— U(1) 破缺次序無物理意義",
+      "pass": true,
+      "detail": "但標度階梯可唔同（階段 6: 禁硬編碼）"
+    },
+    {
+      "tag": "E1",
+      "name": "★★ 全鏈破缺數 = 124 + 7 = 131 = 143 − 12",
+      "pass": true,
+      "detail": "✓ 不變量閉合"
+    },
+    {
+      "tag": "E2",
+      "name": "★ 破缺數核對: 143−19=124 (首步), 19−12=7 (二步), 143−12=131",
+      "pass": true,
+      "detail": "第二階段破 7 = 剩餘 7 個 U(1)"
+    },
+    {
+      "tag": "E3",
+      "name": "★ 交叉核: 124 = 2·C(12,2) − 8; 7 = 8−1 (U(1) 數−1)",
+      "pass": true,
+      "detail": "✓"
+    },
+    {
+      "tag": "E4",
+      "name": "★★ SM 內容: SU(3)_c×SU(2)_L×U(1)_Y 完整保留 — 唔破任何 SM 生成元",
+      "pass": true,
+      "detail": "U(1)_Y 係 8 個 U(1) 之組合 (含 H 分量)"
+    }
+  ],
+  "chain": [
+    {
+      "from": "SU(12) [rank 11, dim 143]",
+      "trigger": "adjoint 143 VEV: diag(aI₃, bI₂, c₁..c₇)",
+      "to": "S(U(3)×U(2)×U(1)^7) [rank 11, dim 19]",
+      "broken": 124
+    },
+    {
+      "from": "S(U(3)×U(2)×U(1)^7)",
+      "trigger": "7 × 帶電單態 VEV (破 7 個 U(1) 方向, 留 Y)",
+      "to": "SU(3)_c × SU(2)_L × U(1)_Y [rank 4, dim 12]",
+      "broken": 7
+    }
+  ],
+  "u1_y": "Y = Σα E_i + βH, 含 H (色≠弱) — 精確超荷值由 SM 電荷/費米子嵌入定",
+  "broken_u1": "7 = dim(span(E_i,H)/Y) — 每個由帶電單態 VEV 破"
+}

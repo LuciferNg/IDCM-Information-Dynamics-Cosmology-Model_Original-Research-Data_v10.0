@@ -1,0 +1,116 @@
+{
+  "total": 17,
+  "passed": 17,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★ 保秩定理: S(U(3)×U(2)×U(1)^7) rank = 11 = SU(12) rank 11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A2",
+      "name": "★ dim = 19 = 19 (traceless block-diagonal)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A3",
+      "name": "首步破缺數 (adjoint) = 143 − 19 = 124",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A4",
+      "name": "★ 一般性: 任何全對角 12 組破缺 S(U(1)^12) 即 U(1)^11 (maximal torus)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "B1",
+      "name": "★ 144 = (1,1)+(15,1)+(1,8)+(15,8) 維度閉合",
+      "pass": true,
+      "detail": "1+15+8+120 = 144 ✓"
+    },
+    {
+      "tag": "B2",
+      "name": "★★ 143 (adjoint) = (15,1)+(1,8)+(15,8)：**冇 (1,1)**（trace singlet 係 144 內嘅 (1,1)）",
+      "pass": true,
+      "detail": "143 = 120+15+8 = 143 ✓；adjoint 內 (1,1) 數 = 0"
+    },
+    {
+      "tag": "B3",
+      "name": "★ commutant: 12=(4,3) 作為 SU(4)×SU(3) 表示不可約 ⟹ Schur: End(12)=ℂ ⟹ commutant=ℂ·1",
+      "pass": true,
+      "detail": "故 143 無 (1,1) 係必然（Schur 引理）"
+    },
+    {
+      "tag": "B4",
+      "name": "★ rank(SU(4)×SU(3)) = 3+2 = 5 ≠ 11 —— adjoint VEV 唔可以保佢",
+      "pass": true,
+      "detail": "保秩定理（§A）要求 11"
+    },
+    {
+      "tag": "B5",
+      "name": "★★ PD#2 三命題全數重推成立: ①143 無 (1,1) ②commutant=ℂ·1 ③rank 11≠5",
+      "pass": true,
+      "detail": "tensor 首步不可能 ⟹ Chain A' 否證獨立確認（未引用 O88）"
+    },
+    {
+      "tag": "C1",
+      "name": "★ 12 = (3,1) ⊕ (1,2) ⊕ 7×(1,1), 維度 3+2+7 = 12 ✓",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "C2",
+      "name": "★★ 143 之 (1,1) 對角方向數 = 8 (rank 11 − su3 rank 2 − su2 rank 1)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "C3",
+      "name": "★ 頂點可行性: adjoint VEV = diag(aI₃, bI₂, c₁…c₇), traceless 3a+2b+Σc=0",
+      "pass": true,
+      "detail": "⟹ 8 個獨立 VEV 方向 = 8 個 (1,1) ✓"
+    },
+    {
+      "tag": "C4",
+      "name": "★★ 124 = 143 − 19 = 2·C(12,2) − 8 = 132 − 8 ✓ (交叉核)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "D1",
+      "name": "★ 唯一滿足 ①保秩 ②143 有 singlet ③SM 內容 之嵌入 = S(U(3)×U(2)×U(1)^7)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "E1",
+      "name": "★★ 首步 (adjoint 143 VEV)：S(U(3)×U(2)×U(1)^7)，保秩 11，破 124",
+      "pass": true,
+      "detail": "= SU(3)×SU(2)×U(1)^8 (rank 4+8=12? 唔 —— rank 2+1+8=11 ✓)"
+    },
+    {
+      "tag": "E2",
+      "name": "★ 分組 12 = 3+2+7 之 IDCM 對應: 3=(B−1)=N_c, 2=μ², 7=L₄",
+      "pass": true,
+      "detail": "O229 N_c=B−1 獨立吻合 ✓"
+    },
+    {
+      "tag": "E3",
+      "name": "★ 後續破缺（階段 2）: 需 7 個 U(1) 破缺到 U(1)_Y (rank 11→4)",
+      "pass": true,
+      "detail": "降 7 = L₄ 個帶電單態 VEV"
+    }
+  ],
+  "levi_parabolic": {
+    "rank": 11,
+    "dim": 19,
+    "broken": 124
+  },
+  "pd2_reconfirmed": "143 has no (1,1); commutant = C·1; rank 11 != 5",
+  "first_step": "S(U(3)xU(2)xU(1)^7), rank 11, broken 124"
+}

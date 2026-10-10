@@ -1,0 +1,107 @@
+{
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★ 每個跨塊生成元 T_AB 質量 = g·|λ_A − λ_B|",
+      "pass": true,
+      "detail": "adjoint VEV 標準結果"
+    },
+    {
+      "tag": "A2",
+      "name": "★ 124 個 massive = 全部跨塊生成元數",
+      "pass": true,
+      "detail": "docs/01: 124 = 143 − 19"
+    },
+    {
+      "tag": "A3",
+      "name": "★ 特徵值分組: 色 3 個 (同 λ_a) ＋ 弱 2 個 (同 λ_b) ＋ 7 單態 = 9 個不同值",
+      "pass": true,
+      "detail": "⟹ 唔同特徵值數 = 9"
+    },
+    {
+      "tag": "B1",
+      "name": "★★ 色 block IDCM 數 = B = 4（N_c = B−1, O229 輸入）",
+      "pass": true,
+      "detail": "8 膠子 = B²/2 = N_c²−1 ⟹ N_c = 3"
+    },
+    {
+      "tag": "B2",
+      "name": "★★ 弱 block IDCM 數 = μ² = 2（weak doublet）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "B3",
+      "name": "★ 賦值: 色↔4, 弱↔2, 單態↔7 個奇模式 {1,3,5,7,9,11,13}",
+      "pass": true,
+      "detail": "(iii) 奇模式數 = 7 = L₄ ✓"
+    },
+    {
+      "tag": "B4",
+      "name": "★ 9 模式 = [1, 2, 3, 4, 5, 7, 9, 11, 13]（元素數 = 9 = N_gen²）",
+      "pass": true,
+      "detail": "9 = 3² ✓"
+    },
+    {
+      "tag": "C1",
+      "name": "★ 通道數 = C(9,2) = 36 = h11 = 36",
+      "pass": true,
+      "detail": "36 = C(9,2) = N_d − 2B ✓"
+    },
+    {
+      "tag": "C2",
+      "name": "★ 所有 36 個 |Δλ| 全互異（Golomb 性質）",
+      "pass": true,
+      "detail": "distinct = 36/36"
+    },
+    {
+      "tag": "D1",
+      "name": "★ X/Y 質量 (色−弱) = g·|λ₄ − λ₂| = g × 0.060656937",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "D2",
+      "name": "★ λ₄ = 4λ₂ − λ₂²（加倍恆等, 代數真）→ X/Y = g·λ₂(N_gen−λ₂)?",
+      "pass": true,
+      "detail": "Δ = 0.00e+00"
+    },
+    {
+      "tag": "D3",
+      "name": "★ X/Y 排位（誠實: 唔係最大通道）",
+      "pass": true,
+      "detail": "排第 31/36 — 最大通道係 單態13−, 唔係 X/Y"
+    },
+    {
+      "tag": "E1",
+      "name": "★ Σ_{m=1..87} λ_m = 176.000000 ≈ 176 = B·N_d",
+      "pass": true,
+      "detail": "B·N_d = 176"
+    },
+    {
+      "tag": "E2",
+      "name": "★ 9 模式之 Σλ = ?（唔肯定: 唔作主張）",
+      "pass": true,
+      "detail": "55 係模式之和, 唔係 λ 之和 — 小心: 唔好混"
+    }
+  ],
+  "modes": [
+    4,
+    2,
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13
+  ],
+  "channels": 36,
+  "distinct": 36,
+  "xy_gap": 0.06065693653287069,
+  "xy_rank": 31,
+  "sum_ring": 176.0
+}
