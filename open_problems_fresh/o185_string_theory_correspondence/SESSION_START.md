@@ -132,3 +132,19 @@ S3 — AdS/CFT dictionary vs IDCM 投影/信道 (全息 bulk reconstruction)
   禁宣稱 IDCM 量子糾纏 (工具對接, O222 QM-tool 先例); 17 bits 唔直接硬配 1/B (O151 已自閉)
 - **累計**: 75/75 PASS (scripts/01-06)
 - **剩餘隊列**（留 O185 下輪, register 記錄）: A5 升級、完整 twisted 質量公式逐項比對
+
+### ★ 2026-10-10 IF4 Round 4（路線 B: A5 判決 + 路線 C 前半: G3 比對）
+
+- scripts/07_twisted_mass_verdict.py (**12/12 PASS**)
+- **路線 B — A5 判決 🔴 COINCIDENCE RECORD（正式降級）**:
+  - 弦論 ε(Z₄,6D) = 9/32 = IDCM N_gen²/(2B²) 數值相等為真——但三條件全缺:
+    C1 弦論需 D=6 緊化維度輸入（IDCM 無對應）; C2 γ_n/γ_k 譜**冇任何命中** 9/32;
+    C3 IDCM 冇 ρ/twist-vector 零點修正算子
+  - ⟹ 純數值巧合, 非結構身份（符合鐵律：結構證明 ≠ 數值匹配）
+  - **記入禁區**: 9/32 相等唔准再作 R4 對接證據（防日後重炒）
+- **路線 C 前半 — G3 質量公式算子層比對 🟢**:
+  - B1 N↔n（γ_n n≤22 單調）/ B2 ε↔δ_c（Σδ=μ²=2）/ B3 GSO↔扇區（90/88）/
+    B4 level-matching↔對偶配對（γ_n+γ_{44−n}=4=B, 22 對）
+  - 數值層 🟡: 需具體弦論緊化模型（α' 尺度）, 留隊列（唔為弦論強加 IDCM 版 α'）
+- **累計**: 87/87 PASS (scripts/01-07)
+- **剩餘隊列**（留 O185 下輪）: G3 數值層、路線 D (G6 b³=198 歸因)、路線 E (G10 主體判決)
