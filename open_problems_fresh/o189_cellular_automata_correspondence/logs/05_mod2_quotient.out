@@ -1,0 +1,27 @@
+==============================================================================
+O189 / scripts/05 - mod-q quotient of the IDCM ring generator (R2)
+==============================================================================
+  [PASS] A1 F integer matrix; F mod 2 == S+S^-1 (Rule 90) EXACT 2I == 0 (mod 2) eliminates the identity term
+  [PASS] A2a F . 1 = 0 (zero mode gamma_0 = 0, exact int) 
+  [PASS] A2b F . (-1)^j = 4 . (-1)^j (Nyquist gamma_44 = 4, exact int) 4*(-1)^j = Nyquist eigenvector
+  [PASS] A3 2-adic merge: gamma_0=0 and gamma_44=4 both == 0 (mod 2) => mod-2 cannot tell zero mode from Nyquist mode -> kernel dim 2
+  [PASS] B1 pi_2 intertines: pi(F psi) == M pi(psi), 200 seeds 
+  [PASS] B2 powers: pi(F^k psi) == M^k pi(psi) for k=2..8, 50 seeds 
+  [PASS] B3 q=3: pi_q(F psi) == (F mod q) pi_q(psi) => mod-q reduction = linear CA (2-x-x^-1) over Z/3
+  [PASS] B3 q=5: pi_q(F psi) == (F mod q) pi_q(psi) => mod-q reduction = linear CA (2-x-x^-1) over Z/5
+  [PASS] B3 q=7: pi_q(F psi) == (F mod q) pi_q(psi) => mod-q reduction = linear CA (2-x-x^-1) over Z/7
+  [PASS] B3 q=13: pi_q(F psi) == (F mod q) pi_q(psi) => mod-q reduction = linear CA (2-x-x^-1) over Z/13
+  [PASS] B4 negative control: random real matrix does NOT intertine (mismatches 50) - integer generators are special 50/50 mismatch
+  [PASS] C1 nullity(F mod 2) = 2 (rank 86) nullity = 2
+  [PASS] C1b kernel contains const AND alternating (both reduced to 0 mod 2) 
+  [PASS] C2 nullity(F mod 3) = 1 (constants only) nullity = 1
+  [PASS] C3 nullity(F mod 5) = 1 (constants only) nullity = 1
+  [PASS] C4 nullity(F mod 7) = 1 (constants only) nullity = 1
+  [PASS] C2b alt NOT in kernel mod 3 (4 == 1 mod 3 != 0) F.alt mod 3 = alt != 0
+  [PASS] C5 theory: nullities 2 (p=2) / 1 (odd p) match gcd multiplicity of -(x-1)^2 against x^88-1 p=2: (x+1)^2 vs (x+1)^8 -> mult 2; odd p (88 not divisible by p): (x-1)^1 -> mult 1
+  [PASS] D1 rule-90 orbit invariant: period = 248, preperiod = 3-4 (both seeds, as R1) seeds -> [(3, 248), (4, 248)]
+  [PASS] D2 orbit identity: pi_2(F^t psi) == M^t pi_2(psi), 20 seeds x 64 steps 
+
+JSON written: data/05_mod2_quotient.json
+==============================================================================
+RESULT: 20 PASS / 0 FAIL

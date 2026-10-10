@@ -1,0 +1,31 @@
+{
+  "F_int": true,
+  "F_mod2_is_rule90": true,
+  "nullity": {
+    "2": 2,
+    "3": 1,
+    "5": 1,
+    "7": 1
+  },
+  "rule90_orbit": {
+    "periods": [
+      [
+        3,
+        248
+      ],
+      [
+        4,
+        248
+      ]
+    ]
+  },
+  "intertwiner": true,
+  "powers_ok": true,
+  "mod_q_ok": {
+    "3": true,
+    "5": true,
+    "7": true,
+    "13": true
+  },
+  "real_control_mismatch": 50
+}

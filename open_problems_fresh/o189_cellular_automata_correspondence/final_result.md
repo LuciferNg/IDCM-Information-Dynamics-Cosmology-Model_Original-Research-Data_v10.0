@@ -18,3 +18,12 @@ O222 → O231 → O189；τ = 1/ω_ring (O121)；譜 (O221)
 - N_search = 256（ECA 窮舉）, 盲測 min err 911/2112 > 0 ⟹ 零命中
 - 正對照：唯一命中 [110]（finder 有效）
 - 純代數恆等式（容量/譜/Bessel）: N_search = 1
+
+---
+
+## R2（2026-10-10，append 水位）
+
+- **mod-q 商群投影 = 線性 CA**（scripts/05, 20/20）：π_q∘F = F_q∘π_q（q ∈ {2,3,5,7,13}）；q=2 ⟹ **F mod 2 = Rule 90**（2I≡0，零擬合）；負對照實矩陣 50/50 失敗
+- **2-adic 合併**：γ₀=0 ↔ γ₄₄=4 (mod 2) ⟹ kernel(F mod 2) = span{1, (−1)^j}（nullity 2）；奇 p nullity 1
+- **R-C 已回答**（coarse-grain 動力學兼容）；新殘餘：連續流 2-adic、period-248 閉式
+- 累計 79 檢查（59+20），零放寬

@@ -5,7 +5,7 @@ pid:     O189
 title:   IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）
 state:   partial
 verdict: partial
-flags:   r1-59ck
+flags:   r1+r2-79ck
 owner:   O189
 created: 2026-10-04
 updated: 2026-10-10
@@ -73,6 +73,7 @@ IDCM 的離散晶格（88-site 鏈 + 離散時間步 τ = 1/ω_ring）在概念�
 |:-:|:-----|:-----|:-----|
 | 1 | 2026-10-04 | 註冊 O189（墓碑重用） | 01_problem_record.md + SESSION_START.md |
 | 2 | 2026-10-10 | R1 四路線執行：狀態空間／規則等價／計算能力／局部性 | scripts/01–04（59/59 PASS）+ docs/01–04 + final_result.md |
+| 3 | 2026-10-10 | R2 mod-q 商群投影（R-C 攻堅） | scripts/05（20/20 PASS）+ docs/05 —— mod-2 ⇔ Rule 90 精確 intertwinement |
 
 ## 七、相關文件
 
@@ -104,3 +105,18 @@ IDCM 的離散晶格（88-site 鏈 + 離散時間步 τ = 1/ω_ring）在概念�
 2. sign_rank ≤ 3 對計算類嘅約束力（→ O224/O228）；
 3. coarse-grain 嘅動力學兼容性（quantize 後演化身份）——本輪只有容量對齊；
 4. ℤ 線上 Bessel 尾嘅可模擬性（IDCM 無限格版本嘅 CHL 局部規則 radius 與 t 關係之一般律）。
+
+---
+
+## 九、治管裁決（2026-10-10，append-only）
+
+調律者裁定：**唔開新 O**。R-B 非歸屬 O189，經 register `handoff` O189→O228（ref: docs/03 §六②）；R-A／R-C／R-D 留 O189 續推（直接寫入 SESSION_START＋docs 新檔）。register 對應事件：handoff（2026-10-10）＋ note（治管裁決）＋ mirror（REGISTER.md 475 rows）。
+
+## 十、R2 執行結果（2026-10-10，append-only）
+
+> 推導詳見 `docs/05_mod2_quotient.md`；`scripts/05_mod2_quotient.py` **20/20 PASS**（可重跑）。
+
+- 🟢 **R-C 已回答**：mod-q 商群投影 = 動力學兼容嘅精確粗粒化。`π_q∘F = F_q∘π_q`（q ∈ {2,3,5,7,13}，驗證零例外）；q=2 由 2I≡0 (mod 2) 推導出 **F mod 2 = Rule 90**（零擬合）。負對照（隨機實矩陣 50/50 不匹配）證明「整數生成元」係必要條件。
+- 🟢 **2-adic 合併結構**：γ₀=0 ↔ γ₄₄=4 都 ≡0 (mod 2) ⟹ kernel(F mod 2) = span{1, (−1)^j}（nullity 2）；奇 p（p∤88）nullity 1。R1 嘅 Rule-90 nullity 2 / period 248 由此獲得結構解釋。
+- 🔴 **新殘餘**（R2 後）：① unitary 連續流嘅 2-adic 行為（e^{−iFt} 非整數）未答；② Rule-90 period 248 閉式（ord(2 mod 88) 系）未閉。
+- **R-C 狀態**：已回答（商群意義）；R-A、R-D 照舊留 O189。

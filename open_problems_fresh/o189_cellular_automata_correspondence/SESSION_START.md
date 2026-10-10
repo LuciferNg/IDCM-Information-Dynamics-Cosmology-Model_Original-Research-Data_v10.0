@@ -5,7 +5,7 @@ pid:     O189
 title:   IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）
 state:   partial
 verdict: partial
-flags:   r1-59ck
+flags:   r1+r2-79ck
 owner:   O189
 created: 2026-10-04
 updated: 2026-10-10
@@ -83,6 +83,17 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 **files**: docs/01–04、scripts/01–04、data/01–04（json）、logs/01–04、final_result.md、README 行、register notes ×2
 
 **git 附註（append-only, 2026-10-10）**: 本 session 有並行外部 session 活動。`README.md`＋`register.jsonl` 之 O189 改動被 commit `076af96`（O188 subject, 12:58:33）掃入；o189 目錄全部 19 檔案＋register 尾行被 commit `b17e60e`（O185/IF2 subject）掃入（該 commit 亦含 O185 自身 Round 2 檔案）。**內容零損失**，惟 git 歷史屬性非 O189 自己 commit；本 O 檔案工作樹已全部 clean。
+
+**治管裁決（2026-10-10）**: 唔開新 O；R-B（sign_rank≤3 計算類約束）非歸屬 O189 → register `handoff` O189→O228；R-A／R-C／R-D 留 O189 續推。下一輪建議次序：R1（mod-2 → Rule 90）→ R3（radius-R no-go）→ R4（L2 語義層計算類）。
+
+### Session 2 — 2026-10-10（R2：mod-q 商群投影，R-C 攻堅）
+
+**執行**：`scripts/05_mod2_quotient.py` **20/20 PASS** → `docs/05_mod2_quotient.md`
+- **R-C 已回答**：mod-2 商群投影係**動力學兼容嘅精確粗粒化**——π(Fψ) = Mπ(ψ)（200 seeds 零例外），**M = S+S⁻¹ = Rule 90**（零擬合，由 2I≡0 mod 2 推導）；普遍化到 q ∈ {3,5,7,13}（ℤ/q 線性 CA，P_q = 2−x−x⁻¹）；負對照（隨機實矩陣 50/50 不匹配）
+- **2-adic 合併**：γ₀=0 ↔ γ₄₄=4 都 ≡0 (mod 2) ⟹ kernel dim 2（span{const, (−1)^j}）；奇 p nullity 1 —— R1 嘅 Rule-90 nullity 2 同 period 248 而家有結構解釋
+- **誠實邊界**：unitary 連續流 e^{−iFt} 非整數矩陣 ⟹ intertwinement 唔延伸連續時間
+
+**判據修正**：無（預註冊全數命中；B1/B2/C1b 初版漏 `%2` 係執行 bug，修正後即過——非 threshold 變動）。
 
 ---
 
