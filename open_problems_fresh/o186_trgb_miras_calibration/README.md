@@ -24,6 +24,8 @@ TRGB (69.79) 同 Miras (73.29) 嘅校準差異機制已從第一原理推導：
 | `scripts/01_mechanism_verify.py` | TRGB/Miras 驗證 | ✅ 5/5 |
 | `scripts/02_rr_lyrae_verify.py` | n=6 同構驗證 | ✅ 6/6 |
 | `scripts/03_layer_unification_verify.py` | 層級統一驗證 | ✅ 8/8 |
+| `scripts/04_m_family_verify.py` | M-家族統一驗證 (攻堅 2026-10-10 新增) | ✅ 6/6 |
+| `docs/07_attack_session_20261010.md` | 攻堅記錄 (2026-10-10, 三輪) | 🟢 |
 | `SESSION_START.md` | Session 啟動文件 | — |
 
 ## 預測
