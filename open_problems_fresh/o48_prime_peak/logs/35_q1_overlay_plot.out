@@ -1,0 +1,11 @@
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/35_q1_overlay_plot.py:143: UserWarning: Glyph 23792 (\N{CJK UNIFIED IDEOGRAPH-5CF0}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/35_q1_overlay_plot.py:143: UserWarning: Glyph 35895 (\N{CJK UNIFIED IDEOGRAPH-8C37}) missing from font(s) DejaVu Sans.
+  plt.tight_layout()
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/35_q1_overlay_plot.py:144: UserWarning: Glyph 23792 (\N{CJK UNIFIED IDEOGRAPH-5CF0}) missing from font(s) DejaVu Sans.
+  plt.savefig(OUT, dpi=150, bbox_inches="tight")
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/35_q1_overlay_plot.py:144: UserWarning: Glyph 35895 (\N{CJK UNIFIED IDEOGRAPH-8C37}) missing from font(s) DejaVu Sans.
+  plt.savefig(OUT, dpi=150, bbox_inches="tight")
+PNG saved: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/docs/fig_q1_peak_valley_overlay.png
+Peaks: [221, 527, 815, 1013, 1121, 1337, 1409]
+Valleys V¾: [450.5, 743.0, 1044.5, 1337.0]

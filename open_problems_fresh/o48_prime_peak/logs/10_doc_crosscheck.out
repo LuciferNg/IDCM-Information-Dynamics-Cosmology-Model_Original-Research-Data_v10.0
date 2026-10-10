@@ -1,0 +1,83 @@
+======================================================================
+O48: Document Cross-Check — doc claims vs independent computation
+======================================================================
+
+--- 1. problem_record.md claims ---
+  ✅ record: m=1 ell=221 
+  ✅ record: m=2 ell=527 
+  ✅ record: m=3 ell=815 
+  ✅ record: m=5 ell=1121 
+  ✅ record: m=7 ell=1409 
+  ✅ record: m=4 ell=1013 (false) 
+  ✅ record: m=6 ell=1337 (false) 
+  ✅ record: phase residue 1 
+  ✅ record: phase residue 43 
+  ✅ record: phase residue 21 
+  ✅ record: phase residue 23 
+  ✅ record: m=1 N=5 classified true 
+  ✅ record: m=2 N=11 classified true 
+  ✅ record: m=3 N=18 classified true 
+  ✅ record: m=4 N=23 classified false 
+  ✅ record: m=5 N=25 classified true 
+  ✅ record: m=6 N=30 classified false 
+  ✅ record: m=7 N=32 classified true 
+  ✅ record: ell_D = 9055 
+  ✅ record: 88*(44+33+2*13) = 88*103 = 9064 
+  ✅ record: ell_D computed = 9055 
+  ✅ record: Gal(Q(zeta_88)/Q) = C2 x C2 x C10 
+  ✅ record: 7 Galois orbits 
+  ✅ record: orbit sizes 20,10,5,5,2,1,1 (listed) 
+  ✅ record: timeline index section 
+  ✅ record: 12 timeline steps 
+
+--- 2. docs/01_derivation_record.md claims ---
+  ✅ derivation: involutions {1,21,23,43} 
+  ✅ derivation: involutions match 
+  ✅ derivation: N=5=F5 
+  ✅ derivation: N=11=L5 
+  ✅ derivation: N=18=L6 
+  ✅ derivation: N=25=F5^2 
+  ✅ derivation: N=32=F2^5 
+  ✅ derivation: m=4 suppressed (N=23) 
+  ✅ derivation: m=6 suppressed (s=17) 
+  ✅ derivation: phase correction Fibonacci 
+  ✅ derivation: ell_D structural 
+  ✅ derivation: zeta formalization 
+  ✅ derivation: 51/51 verifier 
+  ✅ derivation: 71/71 verifier 
+
+--- 3. final_result.md template compliance ---
+  ✅ result: title format '# O48 — ...' 
+  ✅ result: status line 
+  ✅ result: conclusion section 
+  ✅ result: key formulas section 
+  ✅ result: dependency section 
+  ✅ result: verification section 
+  ✅ result: 9055 present 
+  ✅ result: dual selection present 
+
+--- 4. File structure ---
+  ✅ file exists: 01_problem_record.md 
+  ✅ file exists: final_result.md 
+  ✅ file exists: scripts/01_explore_prime_mechanism.py 
+  ✅ file exists: scripts/02_deep_derivation.py 
+  ✅ file exists: scripts/03_structural_verify.py 
+  ✅ file exists: scripts/04_zeta_analogy.py 
+  ✅ file exists: scripts/05_final_verifier.py 
+  ✅ file exists: scripts/06_ell_D_derivation.py 
+  ✅ file exists: scripts/07_phase_correction.py 
+  ✅ file exists: scripts/08_zeta_formalization.py 
+  ✅ file exists: scripts/09_independent_verification.py 
+  ✅ file exists: scripts/10_doc_crosscheck.py 
+  ✅ file exists: docs/01_derivation_record.md 
+
+--- 5. Scope check (no files outside o48 touched this session) ---
+  ✅ in o48 scope: scripts/06_ell_D_derivation.py 
+  ✅ in o48 scope: scripts/07_phase_correction.py 
+  ✅ in o48 scope: scripts/08_zeta_formalization.py 
+  ✅ in o48 scope: scripts/09_independent_verification.py 
+
+======================================================================
+SUMMARY: 65/65 PASS, 0/65 FAIL
+======================================================================
+🎉 ALL DOC CROSS-CHECKS PASS

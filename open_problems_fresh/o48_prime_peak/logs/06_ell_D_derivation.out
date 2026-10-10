@@ -1,0 +1,48 @@
+============================================================
+O48: ℓ_D Structural Derivation
+============================================================
+
+ℓ_D (O10 fit) = 9055
+
+Structural formula:
+  ℓ_D = 88 × (Nd + M + 2F₇) - F₄²
+      = 88 × (44 + 33 + 2×13) - 3²
+      = 88 × 103 - 9
+      = 9064 - 9
+      = 9055
+
+Match: ℓ_D_struct = 9055, ℓ_D_fit = 9055
+Difference: 0
+Exact match: YES ✅
+
+
+Verification of each term:
+  88 = 2×Nd = 2×44 = 88 ✅ (dual chain length)
+  Nd = 44 ✅ (K_Chain length)
+  M = 33 ✅ (K_Tree depth)
+  F₇ = 13 ✅ (Fibonacci 7)
+  F₄ = 3 ✅ (Fibonacci 4)
+  All zero free parameters ✅
+
+
+Silk damping D(ℓ) = exp[-(ℓ/9055)^(3/2)]:
+  ℓ=  221: D=0.9962
+  ℓ=  527: D=0.9861
+  ℓ=  815: D=0.9734
+  ℓ= 1013: D=0.9633
+  ℓ= 1121: D=0.9574
+  ℓ= 1337: D=0.9448
+  ℓ= 1409: D=0.9405
+  ℓ= 2000: D=0.9014
+  ℓ= 3000: D=0.8264
+  ℓ= 5000: D=0.6634
+
+
+Structural interpretation:
+  ℓ_D = 2Nd × (Nd + M + 2F₇) - F₄²
+  The 2Nd factor is the dual chain length
+  The (Nd + M + 2F₇) factor is the total K_Chain depth
+  The F₄² correction accounts for the minimal Fibonacci step
+  ℓ_D = 9055 is the ℓ where Silk damping = 1/e
+
+  Zero free parameters ✅

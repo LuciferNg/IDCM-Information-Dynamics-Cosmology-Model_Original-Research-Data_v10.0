@@ -1,0 +1,34 @@
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:153: UserWarning: Glyph 23792 (\N{CJK UNIFIED IDEOGRAPH-5CF0}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:153: UserWarning: Glyph 35895 (\N{CJK UNIFIED IDEOGRAPH-8C37}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:153: UserWarning: Glyph 19977 (\N{CJK UNIFIED IDEOGRAPH-4E09}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:153: UserWarning: Glyph 23526 (\N{CJK UNIFIED IDEOGRAPH-5BE6}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:153: UserWarning: Glyph 39511 (\N{CJK UNIFIED IDEOGRAPH-9A57}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:153: UserWarning: Glyph 32020 (\N{CJK UNIFIED IDEOGRAPH-7D14}) missing from font(s) DejaVu Sans.
+  fig.tight_layout()
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:155: UserWarning: Glyph 23792 (\N{CJK UNIFIED IDEOGRAPH-5CF0}) missing from font(s) DejaVu Sans.
+  fig.savefig(OUT, dpi=150, bbox_inches="tight")
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:155: UserWarning: Glyph 35895 (\N{CJK UNIFIED IDEOGRAPH-8C37}) missing from font(s) DejaVu Sans.
+  fig.savefig(OUT, dpi=150, bbox_inches="tight")
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:155: UserWarning: Glyph 19977 (\N{CJK UNIFIED IDEOGRAPH-4E09}) missing from font(s) DejaVu Sans.
+  fig.savefig(OUT, dpi=150, bbox_inches="tight")
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:155: UserWarning: Glyph 23526 (\N{CJK UNIFIED IDEOGRAPH-5BE6}) missing from font(s) DejaVu Sans.
+  fig.savefig(OUT, dpi=150, bbox_inches="tight")
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:155: UserWarning: Glyph 39511 (\N{CJK UNIFIED IDEOGRAPH-9A57}) missing from font(s) DejaVu Sans.
+  fig.savefig(OUT, dpi=150, bbox_inches="tight")
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/66_q1_overlay_purett.py:155: UserWarning: Glyph 32020 (\N{CJK UNIFIED IDEOGRAPH-7D14}) missing from font(s) DejaVu Sans.
+  fig.savefig(OUT, dpi=150, bbox_inches="tight")
+SPT: 52 bins, ℓ 437..2962
+PR3: 201 bins, residual range [0.557, 1.587]
+SPT: 42 bins, residual range [0.752, 1.392]
+ACT: 34 bins, residual range [0.761, 1.343]
+模型: 峰 [221, 527, 815, 1121, 1409]
+模型: 谷 [437, 716, 1040, 1346] (V¾)
+[V¾ 純 TT] 模型-殘差 corr = +0.611
+[峰only  ] corr = +0.513
+[OK] saved /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/docs/fig_q1_peak_valley_overlay_pureTT.png
+RESULT: pureTT overlay corr=+0.611

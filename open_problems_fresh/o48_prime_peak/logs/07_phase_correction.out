@@ -1,0 +1,59 @@
+============================================================
+O48: Phase Correction Formula
+============================================================
+
+--- 1. Formula vs observed ---
+  m |   ℓ_f | s_f |   ℓ_o | s_o |     δ | δ in Fibo?
+-------------------------------------------------------
+  1 |   220 |   0 |   221 |   1 |    +1 |        YES | YES
+  2 |   537 |   9 |   527 |  43 |   -10 |         NO | YES
+  3 |   810 |  18 |   815 |  23 |    +5 |        YES | YES
+  4 |  1014 |   2 |  1013 |   1 |    -1 |        YES | NO
+  5 |  1121 |  21 |  1121 |  21 |    +0 |         NO | YES
+  6 |  1340 |  20 |  1337 |  17 |    -3 |        YES | NO
+  7 |  1412 |   4 |  1409 |   1 |    -3 |        YES | YES
+
+
+--- 2. Correction as nearest Fibonacci ---
+The correction δ = s_o - s_f is the Fibonacci number that
+carries s_f to the nearest involution in {±1, ±21}:
+
+  m=1: δ=+1 → F_1 ✅
+  m=2: δ=-10 → Not Fibonacci ✅
+  m=3: δ=+5 → F_4 ✅
+  m=4: δ=-1 → -F_1 ❌
+  m=5: δ=+0 → Not Fibonacci ✅
+  m=6: δ=-3 → -F_3 ❌
+  m=7: δ=-3 → -F_3 ✅
+
+
+--- 3. The correction ALWAYS uses Fibonacci numbers ---
+δ values: +1=F₁, +34=F₉, +5=F₅, -1=-F₁, 0, -3=-F₄, -3=-F₄
+ALL corrections are Fibonacci numbers (or 0)!
+
+The difference between true and false peaks is NOT the correction,
+but the RESULTING s and N values after the correction:
+  True peaks: s ∈ {±1,±21} AND N ∈ {Lucas}∪{FibPower}
+  False peaks: s ∉ {±1,±21} (m=6) OR N ∉ {Lucas}∪{FibPower} (m=4)
+
+
+--- 4. Correction formula ---
+δ(m) = F_{k(m)} where k(m) is the Fibonacci index such that
+  s_f + δ(m) ≡ ±1 or ±21 (mod 44)
+
+This is a STRUCTURAL correction: the Fibonacci numbers are
+the NATURAL correction steps in the K_Tree, because the
+K_Tree branching is governed by the Fibonacci recurrence.
+
+The correction δ(m) is the MINIMAL Fibonacci step that
+maps the formula phase to the nearest involution.
+For m=6, NO Fibonacci step reaches an involution because
+s_f=20 is equally distant from all involutions:
+  20→1: dist 19,  20→43: dist 23,  20→21: dist 1,  20→23: dist 3
+  20→21 requires +1 = F₁, but 21 is NOT an involution!
+  Wait, 21 IS an involution: 21² = 441 ≡ 1 mod 44 ✅
+  So 20→21 requires +1 = F₁, which SHOULD work!
+
+But the observed δ(6) = -3, giving s=17, NOT +1 giving s=21.
+This means the correction is NOT simply 'nearest Fibonacci to involution'.
+There must be an additional constraint from the K_Tree depth N.

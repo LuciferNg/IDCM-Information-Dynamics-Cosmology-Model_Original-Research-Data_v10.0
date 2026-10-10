@@ -1,0 +1,59 @@
+Cross files: 36
+Used: 36 cross with ERR
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/65_q1_pr4_coadd.py:44: RuntimeWarning: divide by zero encountered in divide
+  W = 1/ERR**2
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/65_q1_pr4_coadd.py:47: RuntimeWarning: invalid value encountered in divide
+  co = np.where(Wsum>0, (CL*W).sum(axis=0)/Wsum, np.nan)
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/65_q1_pr4_coadd.py:48: RuntimeWarning: divide by zero encountered in divide
+  eo = np.where(Wsum>0, 1/np.sqrt(Wsum), np.nan)
+  ℓ=221: co-add D= 6096.8±  85.1 (SNR  71.6) | solo 143Ax143B D= 6126.9± 507.3 (SNR 12.1)
+  ℓ=527: co-add D= 2603.8±  23.6 (SNR 110.3) | solo 143Ax143B D= 2584.3± 138.9 (SNR 18.6)
+  ℓ=815: co-add D= 2628.4±  19.3 (SNR 135.9) | solo 143Ax143B D= 2655.4± 115.2 (SNR 23.0)
+  ℓ=1121: co-add D= 1276.4±   8.7 (SNR 146.5) | solo 143Ax143B D= 1245.1±  47.6 (SNR 26.2)
+  ℓ=1409: co-add D=  924.4±   7.3 (SNR 126.6) | solo 143Ax143B D=  850.4±  32.4 (SNR 26.3)
+
+========================================================================
+co-add 譜直接 FWHM 量度 (真數據, 已含 sample variance)
+========================================================================
+  峰   221: 中心  189.0 FWHM=   3.6 amp= 2374.6
+  峰   527: 中心  554.0 FWHM=   5.6 amp=  761.8
+  峰   815: 中心  812.0 FWHM=   8.3 amp=  649.2
+  峰  1121: 中心 1148.0 FWHM=   4.4 amp=  248.2
+  峰  1409: 中心 1399.0 FWHM=   6.1 amp=  157.7
+  平均 FWHM = 5.6   γ= 2.8
+  對照理論: CAMB FWHM=96.0 (γ=48.0), 297/6=49.5
+  [FAIL] B2: co-add γ ∈ [40,60] γ=2.8
+  [FAIL] B3: co-add γ ≈ 49.5 ±8 γ=2.8
+  solo 143Ax143B: FWHM [np.float64(3.5), np.float64(2.4), np.float64(5.5), np.float64(2.7), np.float64(5.1)]
+  solo 平均 = 3.8 γ=1.9
+  [PASS] B4: co-add 比 solo 更近 49.5 co=46.7 vs solo=47.6
+
+========================================================================
+Sample variance limit (物理上限)
+========================================================================
+  ℓ=221: D=6096.8 sample σ=473.0 (7.8%) — co-add 無法低過呢個
+  ℓ=527: D=2603.8 sample σ=130.9 (5.0%) — co-add 無法低過呢個
+  ℓ=815: D=2628.4 sample σ=106.3 (4.0%) — co-add 無法低過呢個
+  ℓ=1121: D=1276.4 sample σ= 44.0 (3.4%) — co-add 無法低過呢個
+  ℓ=1409: D= 924.4 sample σ= 28.4 (3.1%) — co-add 無法低過呢個
+→ 峰形測量嘅真正瓶頸 = sample variance（co-add 唔消）+ binning 疏
+  Plik 215 bins 每峰 ~10 bins; PR4 ℓ-by-ℓ 每峰 ~99 pts 但每點 SNR 有限
+
+========================================================================
+平滑窗口掃描: ℓ-by-ℓ wiggles 消除後 FWHM
+========================================================================
+  window  9: FWHM [np.float64(78.4), np.float64(98.0), np.float64(83.9), np.float64(85.6), np.float64(66.8)] | 平均  82.5  γ= 41.3
+  window 15: FWHM [np.float64(82.9), np.float64(95.9), np.float64(93.3), np.float64(86.0), np.float64(71.9)] | 平均  86.0  γ= 43.0
+  window 25: FWHM [np.float64(91.7), np.float64(101.3), np.float64(96.4), np.float64(93.2), np.float64(80.9)] | 平均  92.7  γ= 46.4
+  window 35: FWHM [np.float64(95.1), np.float64(99.1), np.float64(94.8), np.float64(99.5), np.float64(86.8)] | 平均  95.1  γ= 47.5
+
+  [window 35] 平均 FWHM = 95.1  γ = 47.5
+  對照: CAMB 理論 γ=48.0 | 297/6=49.5 | 55=F₁₀
+  [PASS] B2: co-add γ (win35) ∈ [40,60] γ=47.5
+  [PASS] B3: co-add γ ≈ 49.5 ±5 γ=47.5
+  [PASS] B5: co-add γ ≈ CAMB 48.0 ±5 γ=47.5
+  [PASS] B6: 55=F₁₀ 排除 γ=47.5
+
+========================================================================
+SUMMARY: 5/7 PASS, 2/7 FAIL
+========================================================================

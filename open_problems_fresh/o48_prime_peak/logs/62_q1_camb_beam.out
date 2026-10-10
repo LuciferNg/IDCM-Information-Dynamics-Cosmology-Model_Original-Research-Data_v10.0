@@ -1,0 +1,44 @@
+CAMB keys: ['total', 'unlensed_scalar', 'unlensed_total', 'lensed_scalar', 'tensor', 'lens_potential']
+========================================================================
+A. CAMB 理論譜（無 lensing）聲學峰自然寬度
+========================================================================
+  峰   221: 中心 240.0  FWHM=None
+  峰   527: 中心 548.0  FWHM=None
+  峰   815: 中心 829.0  FWHM=None
+  峰  1121: 中心 1152.0  FWHM=None
+  峰  1409: 中心 1455.0  FWHM=None
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/62_q1_camb_beam.py:102: RuntimeWarning: Mean of empty slice
+  print(f"  平均 FWHM (聲學峰固有) = {fwhm_arr.mean():.1f} ℓ")
+/home/wsl/.local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+  平均 FWHM (聲學峰固有) = nan ℓ
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/62_q1_camb_beam.py:103: RuntimeWarning: Mean of empty slice
+  print(f"  → 高斯等效 σ_g = FWHM/2.355 = {fwhm_arr.mean()/2.355:.1f}")
+  → 高斯等效 σ_g = FWHM/2.355 = nan
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/62_q1_camb_beam.py:104: RuntimeWarning: Mean of empty slice
+  print(f"  → 洛侖茲等效 γ = FWHM/2 = {fwhm_arr.mean()/2:.1f}")
+  → 洛侖茲等效 γ = FWHM/2 = nan
+  對照: σ≈50 (IDCM fit)  vs  49.5 = 297/6  vs  55 = F₁₀
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/62_q1_camb_beam.py:106: RuntimeWarning: Mean of empty slice
+  sig_g = fwhm_arr.mean()/2.355
+  [FAIL] A1: σ 身份 → 49.5 (297/6) ±2 σ_g=nan
+  [FAIL] A2: σ 身份 → 50 ±2 σ_g=nan
+  [FAIL] A3: σ 身份 → 55 (F₁₀) 排除 σ_g=nan
+
+========================================================================
+B. PR4 143GHz beam window (FWHM=7.3′) 效應
+========================================================================
+  143GHz: FWHM=7.3′ σ_b=9.02e-04 rad
+  b²(ℓ): ℓ221=0.962 ℓ527=0.799 ℓ815=0.584 ℓ1121=0.361 ℓ1409=0.200
+  [FAIL] B1 冇數據
+
+========================================================================
+C. lensing 對峰形嘅影響 (lensed vs unlensed)
+========================================================================
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o48_prime_peak/scripts/62_q1_camb_beam.py:149: RuntimeWarning: Mean of empty slice
+  print(f"  lensed FWHM: {[round(x,1) for x in fl]}, 平均 {fl.mean():.1f}")
+  lensed FWHM: [], 平均 nan
+
+========================================================================
+SUMMARY: 0/4 PASS, 4/4 FAIL
+========================================================================
