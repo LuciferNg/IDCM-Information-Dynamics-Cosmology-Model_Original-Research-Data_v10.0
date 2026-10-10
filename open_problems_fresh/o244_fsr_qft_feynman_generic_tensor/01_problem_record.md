@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O244
 title:   O244 — FSR-QFT 費曼圖求值與通用張量 (承接 O137 R23 尾巴)
-state:   partial
-verdict: partial
+state:   closed
+verdict: closed
 flags:   -
 owner:   O244
 created: 2026-10-09
@@ -94,6 +94,8 @@ source:  -
 |:-:|:-----|:-----|:-----|
 | 1 | 2026-10-09 | 註冊（O137 docs/40 §七 T1–T4 交接） | O137 docs/40 |
 | 2 | 2026-10-10 | 填 problem record（本檔），開始推導 | 本檔 |
+| 3 | 2026-10-10 | T4 解封（O140 docs/16 裁定: m=M₀ε=4sin² 正典一致） | docs/07 + scripts/06 (11/11) |
+| 4 | 2026-10-10 | T4 closeout — register note + final_result 附註 | 本檔 §八 + final_result |
 
 ## 七、相關文件
 
@@ -104,3 +106,9 @@ source:  -
 - O140 docs/03 — FSR 第一性原理（ζ_N(1) 已更正 / 質量公式 √ε 待澄清）
 - O121 docs/15 + O210 — dβ/dℓ = 88/21 註冊來源（T3 引用）
 ```
+
+## 八、T4 解封 (2026-10-10, append-only — 原文不動)
+
+**O140 docs/16 已裁定**（register 21:45 note）: 正式質量階梯 `m_k = M₀·ε_k = M₀·4sin²(πk/2N)` = O137 正典 γ_n 譜完全一致；√ε 只係頻率階梯 ω；n/p = ε₇/ε₂₀ = 0.142618 只喺 ε 定義閉合。⟹ **T4 解封**。
+
+本 O 獨立重現（scripts/06, 11/11 PASS, docs/07）：ε≡γ 恆等、鏈乘法律兩定義均成立（無鑑別力）、n/p 鑑別 ε 勝、C_f≡1、ω²=ε 零色散、Σε=ζ_N(−1)、全環譜和 176。**T1–T4 全閉合（146/146 PASS）**。
