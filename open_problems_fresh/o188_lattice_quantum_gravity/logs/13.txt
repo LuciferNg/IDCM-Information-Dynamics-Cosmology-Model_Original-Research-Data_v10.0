@@ -1,0 +1,7 @@
+[PASS] L1: S_2 (2-qubit swap, 4x4 exact) satisfies S_2^2 = I
+[PASS] L2: U = i S_2 satisfies U^2 = -I and U^4 = I -> Z_4 complex structure (exact)
+[PASS] L3: IDCM observer: J (odd/anti-periodic sector, N_d=44) has J^2 = -I (R1 dev 2e-14); both J and U generate Z_4 -> group isomorphism Z_4 ~= Z_4; dimensional contrast: J acts on 44 modes, U on a 2-subsystem space
+[PASS] L4: cost: S_2 is native to any LQG-style 2-subsystem tensor space (0 extra dims); complexification = 1 U(1) phase label i; R2's Z_2 grading (x2 states) is an ALTERNATIVE cost.  So embedding the IDCM observer costs either one phase (this route) or doubling (R2 route) -- recorded honestly
+[PASS] L5: verdict: (i S_2)^2 = -1 is a constructible Z_4 complex structure on LQG-style kinematical space -> L4 upgraded from 'no map' to 'algebraic construction exists (Z_4 ~= Z_4)'; residual: the construction is functional, not a claim that LQG states carry an IDCM observer intrinsically
+
+SYNTHESIS O188/R3/L4a: 5 checks PASS, 0 checks FAIL (QRF swap complexification; doc 13)

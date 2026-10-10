@@ -90,4 +90,19 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-04（第三輪，R3 全開）
+
+- **交付**：scripts/09–14（29 PASS + 0 FAIL）＋ docs/09–14
+- **五條殘留路線結果**：
+  - **L1a**（docs/09）：全張量積譜 raw 0 命中（尺度階梯不可比）；歸一化唯一命中 (22,2)；**crossing 係 lattice-scaling 家族（所有 4|N），唔係 N=88 特殊**（honest 修正）
+  - **L2a**（docs/10）：k=1→2、k=2→2、k=3→4、k=4→{4,5}；**冇維數規則**；IDCM rank-3 **類型不匹配**（causal-layering 家族冇奇數 3）
+  - **L3a**（docs/11）：7 個物理量全 area-gauge invariant ⟹ γ 冇值係**必然**
+  - **L3b**（docs/12）★：**γ₀ = ln2/(π√3) 由 IDCM {ln2@O121, B=4@O151} + LQG 幾何精確推導**（rel 3.21e-10；FP 0.04%）—— L3 方向反轉
+  - **L4a**（docs/13）：**(i·S₂)² = −1** 構造；Z₄ ≅ Z₄；成本 = 1 相位 —— L4 升級
+  - **硬測試④**（docs/14）：N-critical vs robust 分類；冇 knife-edge
+- **狀態**：🟡 partial（仍未完備閉合；L1/L2 更清晰、L3 反轉、L4 升級）
+- **📌 計數勘誤**：本 session R2 記錄嘅「34 PASS / 13 PASS」係筆誤；權威值 = R2 16 PASS + 1 REFUTED；累計 01–14 = **66 PASS + 1 REFUTED = 67 checks**（見 §十附註）
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**

@@ -1,0 +1,6 @@
+[PASS] M1: classification: 7 ratio-type (dimensionless) quantities vs 3 absolute-area-type (absolute area A_h, R_world (Mpc), cell size a_l)
+[PASS] M2: ratio gamma_22/gamma_11 = 3.84775906502 invariant under area-rescale s=3.7 (dev 0.0); dispersion x=pi n/M also scale-free (no area enters)
+[PASS] M3: absolute area scales exactly like gamma (factor s=3.7); IDCM's cell area a_l^2 and LQG's 8*pi*gamma*l_P^2 occupy the SAME slot -> one overall area unit, not an extra physical parameter
+[PASS] M4: verdict: all 7 physical IDCM observables are s-invariant => IDCM has a GAUGE area-scale; gamma has no internal value BY NECESSITY (not by absence). Divergence L3 upgraded from 'missing parameter' to 'structural gauge'
+
+SYNTHESIS O188/R3/L3a: 4 checks PASS, 0 checks FAIL (gamma as area gauge; doc 11)

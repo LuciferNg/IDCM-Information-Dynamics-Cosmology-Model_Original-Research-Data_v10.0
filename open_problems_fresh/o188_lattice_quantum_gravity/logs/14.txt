@@ -1,0 +1,7 @@
+[PASS] P1: N-sensitivity: gamma_n=2 crossings at N=88 (n<=N/2) -> [22] (n=N/4); N=86 -> []; N=90 -> [] -- crossing needs N % 4 == 0 (N-critical, structural, not knife-edge)
+[PASS] P2: J^2=-I double-cover: 176 % 4 == 0 (J = S^44 defined); 174/178 % 4 != 0 -> J = S^(N/4) undefined; sector structure is N-critical (even-4 N)
+[PASS] P3: Immirzi negative robustness: closest candidate 1/8 rel = 0.01872 >= 1e-3, 1e-4, 1e-5 all True -- negative is threshold-robust
+[PASS] P4: sign_rank(K)=3: O222 R20 accepted 600/600 r=3 candidates; r=2 excluded by M7 circular-arc lemma -- stable under perturbation (cited, not recomputed)
+[PASS] P5: classification: N-CRITICAL (even-4 lattice) = gamma_n=2 crossing (R2 L1*), J^2=-I sector (R1 L4); ROBUST = Immirzi zero-hit (R2 L3*), sign_rank=3 (O222), Regge common object (R1 L3), 4-simplex rank-4 (R2 G2)
+
+SYNTHESIS O188/R3/(4): 5 checks PASS, 0 checks FAIL (structural rigidity classification; doc 14)

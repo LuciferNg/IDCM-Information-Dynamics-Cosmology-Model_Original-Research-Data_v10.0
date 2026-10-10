@@ -49,8 +49,22 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
 - 狀態：🟡 partial（對應表建立；4 項形式化定理缺口列於 §八/開放項目）
 
 ## 現時水位（2026-10-04，R2 深推）
-- scripts 01–08 累計 **34 PASS + 1 記錄 REFUTED（G2）= 35 checks**（05:5、06:3+1R、07:4、08:4；判準零放寬）
+- scripts 01–08 累計 **37 PASS + 1 記錄 REFUTED（G2）= 38 checks**（R1 21、R2 16+1R；判準零放寬）
 - docs/05–08；01_problem_record §九（append-only）；SESSION_START Session 2
 - register：`O188` partial，R2 notes ×4
 - **四大缺口狀態（R2 後）**：L1 收窄（唯一交點 n=22↔j=1）、L2 收窄+真負結果（4-simplex 3+2 需 rank 4）、L3 負結果（γ 唔係 IDCM 內生）、L4 維持最弱（三探針全負）
 - 狀態：🟡 partial（無缺口閉合；誠實聲明 R2 冇閉合任何一項）
+
+## 現時水位（2026-10-04，R3 全開）
+- scripts 01–14 累計 **66 PASS + 1 記錄 REFUTED（G2）= 67 checks**（R1 21、R2 16+1R、R3 29；判準零放寬）
+- docs/09–14；01_problem_record §十（append-only，含計數勘誤附註）；SESSION_START Session 3
+- register：`O188` partial，R3 notes ×6
+- **五路線結果（R3 後）**：
+  - L1a：全張量積譜 raw 0 命中；歸一化唯一 (22,2)；**crossing = lattice-scaling 家族（所有 4\|N），非 88 特殊**
+  - L2a：**冇維數規則**（k=1→2、2→2、3→4、4→{4,5}）；IDCM rank-3 **類型不匹配**（家族冇奇數 3）
+  - L3a：γ = area-gauge（7 物理量全 invariant）⟹ 冇值係必然
+  - **L3b ★**：**γ₀ = ln2/(π√3) 由 IDCM {ln2@O121, B=4@O151} 推導**（rel 3.21e-10；FP 0.04%）—— 方向反轉
+  - L4a：**(i·S₂)² = −1**（Z₄ ≅ Z₄）構造存在；成本 = 1 相位 —— L4 升級
+  - 硬測試④：N-critical vs robust 分類；冇 knife-edge
+- 狀態：🟡 partial（仍未完備閉合；L1/L2 更清晰、L3 反轉、L4 升級）
+- **📌 計數勘誤**：R2 記錄曾誤載「34 PASS / 13 PASS」；權威值 = R2 16 PASS + 1 REFUTED（見 01_problem_record §十附註）

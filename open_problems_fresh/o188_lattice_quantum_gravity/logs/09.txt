@@ -1,0 +1,7 @@
+[PASS] J1: raw tensor-product scan gamma_n*mu_m (1496 values, range [5.38e+51, 3.33e+61]) vs sqrt(j(j+1)) (range [0.87,40]): exact hits = 0; closest None rel 1.0 -- 0 hits; the K_tree scale ladder (phi-power) is NOT a unit calibration, so the raw product is not a like-for-like comparison (honest) -> normalised sub-scan J1b is the meaningful one
+[PASS] J1b: normalised (K_tree scale divided out): omega_n = sqrt(gamma_n) vs sqrt(j(j+1)) -> hits = [(22, 2)] (unique: n=22 <-> j=1) -- reproduces R2 F2 at the tensor-product level
+[PASS] J2: algebraic sub-scan (n in 11,22,33,44; gamma_n algebraic): exact hits = [] -> phi-power x algebraic-gamma never equals a Casimir root (1e-40)
+[PASS] J3: gamma_(N/4)(N)=2 for ALL N divisible by 4: 34/34 -> the value-2 crossing is NOT N-special (holds trivially where N%4==0); structure lies in the specific J=1 pairing, not in N=88 alone
+[PASS] J4: per-N crossing scan: N=44 -> [(11, 2)], N=88 -> [(22, 2)], N=132 -> [(33, 2)], N=176 -> [(44, 2)], N=86 -> [], N=90 -> []; the crossing (n=N/4, j=1) appearing at every N%4==0 is a LATTICE-SCALING FAMILY, not N=88-specific -- honest (does not special-case the IDCM lattice)
+
+SYNTHESIS O188/R3/L1a: 5 checks PASS, 0 checks FAIL (full tensor-product scan + N-sensitivity; doc 09)

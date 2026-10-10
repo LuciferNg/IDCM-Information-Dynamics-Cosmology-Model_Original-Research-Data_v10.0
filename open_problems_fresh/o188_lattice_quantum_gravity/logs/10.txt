@@ -1,0 +1,6 @@
+[PASS] K1: per-k sign_rank over ALL ordered layerings: k=1: min=2 max=2 vals=[2] (#3,exact=True) | k=2: min=2 max=2 vals=[2] (#13,exact=True) | k=3: min=4 max=4 vals=[4] (#75,exact=True) | k=4: min=4 max=5 vals=[4, 5] (#541,exact=False)
+[PASS] K2: candidate rules: max_rank = k+1 -> False; max_rank = k -> False (k=1..4)
+[PASS] K3: anchor check: k=4 layering 2|3 (2 past + 3 future, R2 G2) sign_rank = 4 (must equal R2's 4; exact=True)
+[PASS] K4: ledger: IDCM sign_rank(K)=3; if a dimensional rule 'max_rank=k+1' holds then rank-3 corresponds to k=2 (3-vertex causal structure); if 'max_rank=k' then rank-3 -> k=3 (4-vertex).  Recorded for structural vs accident classification
+
+SYNTHESIS O188/R3/L2a: 4 checks PASS, 0 checks FAIL (dimensional sign_rank rule test; doc 10)
