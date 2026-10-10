@@ -5,7 +5,7 @@ pid:     O185
 title:   IDCM ↔ 弦論家族結構對應（全弦論/M理論/AdS-CFT）
 state:   open
 verdict: -
-flags:   S1-done S2-done S3-done IF2-done IF3-done IF4-done IF5-done IF6-done
+flags:   S1-done S2-done S3-done IF2-done IF3-done IF4-done IF5-done IF6-done IF7-done
 owner:   O185
 created: 2026-10-04
 updated: 2026-10-10
@@ -85,6 +85,7 @@ IDCM 與弦論家族（全弦論/M理論/AdS-CFT）嘅結構對應。調律者�
 | 10 | 2026-10-10 | **IF4 Round 4 (docs/07 + scripts/07, 12/12)**: A5 判決 🔴 coincidence record (ε=9/32 非結構身份) + G3 質量公式算子層比對 🟢 | docs/07_a5_verdict_mass_formula.md |
 | 11 | 2026-10-10 | **IF5 Round 5 (docs/08 + scripts/08, 10/10)**: G6 歸因 🔴 (b³=198 恆等重述, 99 有 39 分解) + 對接層收尾審計 (11 條規則: 9🟢+2🔴) | docs/08_g6_closeout.md |
 | 12 | 2026-10-10 | **IF6 Round 6 (docs/09 + scripts/09, 11/11)**: G4 injectivity 硬化 (R1: 碰撞存在 P非全域一對一, ker=17=F_proj=R2 wedge ⟹ 71/88 唯一 + 17 視界) + G5 核實 (面積律 1/B 已喺 O151 docs/24 閉合) | docs/09_injectivity_hardening.md |
+| 13 | 2026-10-10 | **IF7 Round 7 (docs/10 + scripts/10, 11/11)**: G8/E6 深度判定 (88↔44 = 2 冪縮尺平凡數學, 3 層同型; E6 維持 🟡 特例, D6 計數 🟢) | docs/10_uvir_mirror_depth.md |
 
 ## 七、相關文件
 
