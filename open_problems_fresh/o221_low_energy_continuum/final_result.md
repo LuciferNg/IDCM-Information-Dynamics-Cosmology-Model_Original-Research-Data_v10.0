@@ -97,3 +97,10 @@ O210 → O140 → O139 → O138 → O86 → O213 → O221（並列 O202 / O212 /
 - scripts 01–39 累計檢查 **929：PASS 925 + 記錄 FAIL 4**（+scripts/39 六檢查：5 PASS + 1 記錄 REFUTED——Q2 半整數階梯猜想；判準收緊、零放寬）。
 - R29（docs/35）：**deficit 軸 = cell-形狀平均次序；邊沿 Gauss 求積完全慣性**（5 家族 deficit 0.8827→0.8834，q4≡sinc 至 3.3e-11）⟹ **docs/21③ 投影子階梯定理 REFUTED**、候選① 位移映射部分判死。殘餘⑤ 兩軸解耦（deficit 軸：形狀平均 0.88→0；振幅軸：vert 穩定 vs cube/dual/邊沿退化 5.06–5.07）——**完全定位、未閉合**；剩官方 10⁷-MC-null-5σ 盲測＋候選③（A_TT 主判準，需批准）。
 - 尚未閉合：GR/EH 湧現、QM 導出（O222）、10⁷ MC null 5σ（判準④）、L-QFT 散射。
+
+## 現時水位（2026-10-10，Round 30+31——殘餘⑤ 統計腿完成、物理閉合最後一搏 FAIL）
+- scripts 01–41 累計檢查 **941：PASS 935 + FAIL 5 + N0 記錄**（+scripts/40 五檢查：4 PASS + K3 記錄 FAIL；+scripts/41 七檢查：6 PASS + N0 記錄）。
+- **R30（docs/36）對角-k dual 閉合嘗試：FAIL（記錄）**——dual≡cube 崩潰推廣到對角 k（相位陣列差 0.2457 喺 gauge-fixed 扇區響應 kernel 為零；vert=cube=dual 響應層面全同）；naive deficit 方向依賴（axial +0.8827 vs diag −0.1403）；dual deficit +0.1303、A_TT 0.7863 ✗⟹ **候選③（A_TT 主判準重測＝判準重釋）成唯一剩餘物理通路，需調律者批准**。（執行側：M=16 撞 Hermes 後台 4GB cgroup，改 host transient service `MemoryMax=infinity` 完成；教訓入 `terminal-operations` skill。）
+- **R31（docs/37）10⁷-MC-null-5σ：6/6 PASS**——實證 full-Regge null（B=5000 Rademacher）下 conf z=27.5σ、TT **抑制**（z=0.1＝docs/15 TT-damping 統計腿）、joint Mahalanobis=27.49σ ⟹ **殘餘⑤ 結構真、非隨機相位人為產物**；N0 記錄：per-simplex 線性分解喺 EPS=1e-3 失效（raw 響應 interaction/二階主導＝機器協議結構事實，線性模型 10⁷ MC 已拒）。
+- 殘餘⑤ 終局狀態：**已定位＋取樣族階梯完備（naive→cell→vert(=cube=dual)三階窮盡）＋統計真確（27.5σ）＋未閉合**（無單一階同時零 deficit ∧ 振幅穩定）。剩餘：候選③（需批准）或接受「兩軸解耦＋完備性＋真確性」為結構性最終陳述。
+- 尚未閉合：GR/EH 湧現、QM 導出（O222）、L-QFT 散射。

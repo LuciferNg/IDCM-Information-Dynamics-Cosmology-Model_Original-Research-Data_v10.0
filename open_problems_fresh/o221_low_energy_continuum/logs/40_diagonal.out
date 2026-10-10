@@ -1,0 +1,31 @@
+==============================================================================
+O221 / scripts/40 - Round 30: dual sampler at DIAGONAL k (residual-5 closure attempt)
+==============================================================================
+  [PASS] K1 the axial collapse is broken at diagonal k: max|dual-cube| > 1e-6 at diagonal k, while the axial comparison stays ~0 (the R28 half-space identity) diag max|d| = 2.457e-01 ; axial max|d| = 2.220e-16
+      (naive M=8 n=2 done)
+==============================================================================
+O221 / scripts/40 - Round 30: dual sampler at DIAGONAL k (residual-5 closure attempt)
+==============================================================================
+  [PASS] K1 the axial collapse is broken at diagonal k: max|dual-cube| > 1e-6 at diagonal k, while the axial comparison stays ~0 (the R28 half-space identity) diag max|d| = 2.457e-01 ; axial max|d| = 2.220e-16
+      (naive M=8 n=2 done)
+      (naive M=16 n=4 done)
+      (cell M=8 n=2 done)
+      (cell M=16 n=4 done)
+      (vert M=8 n=2 done)
+      (vert M=16 n=4 done)
+      (cube M=8 n=2 done)
+      (cube M=16 n=4 done)
+      (dual M=8 n=2 done)
+      (dual M=16 n=4 done)
+    fam naive : conf +3.657 TT +3.797 deficit -0.1403 ; A_TT ratio M=8->16 0.7493
+    fam cell  : conf +1.816 TT +4.021 deficit -2.2047 ; A_TT ratio M=8->16 1.7197
+    fam vert  : conf +3.870 TT +3.740 deficit +0.1303 ; A_TT ratio M=8->16 0.7863
+    fam cube  : conf +3.870 TT +3.740 deficit +0.1303 ; A_TT ratio M=8->16 0.7863
+    fam dual  : conf +3.870 TT +3.740 deficit +0.1303 ; A_TT ratio M=8->16 0.7863
+  [PASS] K2 family table at diagonal |k| = pi/2 measured (naive/cell/vert/cube/dual) deficits = [-0.1403 -2.2047  0.1303  0.1303  0.1303] ; A_TT = [0.7493 1.7197 0.7863 0.7863 0.7863]
+  [FAIL] K3 CLOSURE attempt (PRIMARY): the DUAL order at diagonal k meets BOTH |deficit| < 0.05 AND A_TT within [0.8, 1.25] -> residual 5 NOT closed; RECORDED dual deficit +0.1303 ; A_TT ratio 0.7863
+  [PASS] K4 vert reference at diagonal k: deficit +0.1303 ; A_TT 0.7863 ; vert does NOT meet both criteria here direction-dependence fold: axial-k vert had deficit -0.31..-0.43 with A_TT 0.96-1.10
+  [PASS] K5 honesty: two-point ladder caveat (docs/19 precedent); no threshold relaxed; if K3 fails, candidate 3 (A_TT-primary rescoring, calibrator-approved) is the fallback naive axial reference: deficit +0.8827 ; this round's diagonal naive deficit -0.1403
+
+RESULT: 4/5 PASS
+HONEST STATUS: 1 FAIL - see above; no physics threshold was relaxed.

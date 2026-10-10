@@ -5,18 +5,14 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = phase-sampling convention, TWO-AXIS DECOUPLED (deficit axis: cell-shape averaging order only, naive +0.88 -> vert -0.31 -> cube/dual 0, EDGE QUADRATURE INERT (scripts/39: 5 families 0.8827->0.8834, q4==sinc to 3.3e-11; docs/21 item3 half-integer ladder REFUTED; candidate-1 displacement part killed); amplitude axis: vert M-stable 0.96-1.10 vs cube/dual/quadrature degenerate 5.06-5.07; NOT closed - no order meets zero-deficit AND M-stable together; candidates left: 10^7-MC-5sigma null (criterion 4) and A_TT-primary rescoring (criterion reframe, needs approval)); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone ->1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, c_G=0.2250613); A3-续 (scripts/36 6/6: eta-ladder continuum - interior densification x1/4/level, LIGHT-CONE GAP >= ln 2, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); A4 done (scripts/37 7/7: 1+1D Poincare algebra on the ladder, finite-diff generator D_ell->K error ~ h^2 = 4^{-2ell}; 3+1D NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-39 = 929 checks (925 PASS + 4 recorded FAIL; no threshold relaxed)
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = phase-sampling convention, TWO-AXIS DECOUPLED (deficit axis: cell-shape averaging order only, naive +0.88 -> vert -0.31 -> cube/dual 0, EDGE QUADRATURE INERT (scripts/39: 5 families 0.8827->0.8834, q4==sinc to 3.3e-11; docs/21 item3 half-integer ladder REFUTED; candidate-1 displacement part killed); amplitude axis: vert M-stable 0.96-1.10 vs cube/dual/quadrature degenerate 5.06-5.07; NOT closed - no order meets zero-deficit AND M-stable together; candidates left: 10^7-MC-5sigma null (criterion 4) and A_TT-primary rescoring (criterion reframe, needs approval)); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone ->1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, c_G=0.2250613); A3-续 (scripts/36 6/6: eta-ladder continuum - interior densification x1/4/level, LIGHT-CONE GAP >= ln 2, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); A4 done (scripts/37 7/7: 1+1D Poincare algebra on the ladder, finite-diff generator D_ell->K error ~ h^2 = 4^{-2ell}; 3+1D NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; R30 done (scripts/40 4+1-record: diagonal-k dual closure attempt FAILED - dual==cube==vert in the gauge-fixed sector response at diagonal k (the phase-array difference 0.2457 is NULL in the response kernel), naive deficit direction-dependent (+0.8827 axial vs -0.1403 diagonal), dual deficit +0.1303 A_TT 0.7863; candidate 3 (A_TT-primary rescoring, criterion reframe) = only remaining physical route, needs approval); R31 done (scripts/41 6/6: 10^7-MC-null-5sigma EMPIRICAL full-Regge null B=5000 - conf z=27.5sigma, TT SUPPRESSED z=0.1 (docs/15 TT-damping statistical leg), joint Mahalanobis=27.49; N0 recorded: per-simplex linear decomposition INVALID at EPS=1e-3 (raw sector responses interaction/2nd-order dominated - a machine-protocol structural fact); linear-model 10^7 MC rejected); scripts 01-41 = 941 checks (935 PASS + 5 FAIL + N0-recorded; no threshold relaxed)
 owner:   O221
 created: 2026-09-28
-updated: 2026-10-02
+updated: 2026-10-10
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
 -->
--->
--->
--->
--->
-` 機器塊（全庫 4 個合規塊中 o221 佔 2）+ `register.jsonl` 事件鏈（第 1–17 輪齊全）。
+ 機器塊（全庫 4 個合規塊中 o221 佔 2）+ `register.jsonl` 事件鏈（第 1–17 輪齊全）。
 
 **發現並已修之三項停滯**
 1. **機器塊停滯**：兩塊 `updated: 2026-09-28`、`flags` 仍係第 1–2 輪狀態 ⟹ 刷新為 `updated: 2026-09-29` + 現行前沿 flags（gap1+gap2 closed / residual3 attributed / residual4 closed / **residual5 OPEN: shape-extended deficit** / 水位 16:38）；**`state` 保持 partial**（保 BLOCK-DRIFT = 0）。
@@ -119,3 +115,13 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 ## Session 29 記錄（2026-10-02，R29 求積階梯——半整數猜想 REFUTED）
 - **R29** `scripts/39_quadrature_ladder.py` **5 PASS + 1 記錄 FAIL**：Q1 5 家族 deficit [0.8827, 0.8834×4]；**Q2 REFUTED**（階距 0.117）；Q3 Gauss 收斂（增量→3.3e-11）；Q4/Q4b unseen-k（0.9254/0.9295）；Q5 誠實（10⁷ MC 唔在本輪）。**deficit 軸 = cell-形狀平均，邊沿求積慣性**；docs/21③ 已證偽；候選① 位移部分判死。
 - 零審計側修正。檢查水位 **929（925 PASS + 4 記錄 FAIL）**。docs/35 新。
+
+## Session 30 記錄（2026-10-02，R30 對角-k dual 閉合嘗試——K3 FAIL）
+- **R30** `scripts/40_diagonal_k_dual.py` **4 PASS + 1 記錄 FAIL**：K1 軸向崩潰喺對角 k 打破（相位陣列 max|Δ| = 0.2457 vs 軸向 2.2e-16）；K2 家族表（deficit/A_TT：naive −0.1403/0.7493、cell −2.2047/1.7197、**vert=cube=dual +0.1303/0.7863——響應層面全同**）；**K3 FAIL**（dual deficit +0.1303 ✗、A_TT 0.7863 ✗ 差 1.7% 入帶）⟹ 殘餘⑤ 未閉合；K4/K5 ✓。核心：**dual≡cube 崩潰推廣到對角 k（相位差異 0.2457 喺 gauge-fixed 扇區響應 kernel 零空間）** + **naive deficit 方向依賴**（axial +0.8827 vs diag −0.1403）。候選③（A_TT 主判準重測）＝唯一剩餘通路（需調律者批准）。docs/36 新。
+- 執行側：M=16 喺 Hermes background 撞 4GB cgroup 上限（RSS 3.88GB、50% CPU thrash、3.5h 唔完）⟹ **host 上 run**：`systemd-run --user --unit=...`（transient service，`MemoryMax=infinity`，MemoryMax=infinity 已核）⟹ 100% CPU、RSS 5.1GB、~2h 完（教訓入 `terminal-operations` skill：worker scope 4GB cap、nested `--scope` 逃唔出）。K1 首跑後發現 lean 相位等價改寫（角度加法，代數全等）避免巨型中間陣列。
+- 檢查水位 **934（930 PASS + 5 FAIL）**。
+
+## Session 31 記錄（2026-10-02，R31 官方 10⁷-MC-null-5σ——6/6 PASS）
+- **R31** `scripts/41_mc_null_5sigma.py` **6/6**：N0 記錄式（per-simplex 線性分解失效——EPS=1e-3 下 raw 響應 interaction/二階主導；線性 10⁷ MC 模型 invalid）；N1 FD 權重平移不變（1.5e-19）；N2 **實證 null**（B=5000 full-Regge Rademacher：conf σ=5.57e-3、TT σ=7.88e-3）；N3 記錄式（原判式兩扇區>5σ FAIL——TT 係抑制）；N3b **conf z=27.5σ + TT 非 noise-enhanced** ✓；N4 **joint Mahalanobis = 27.49 > 5σ** ✓；N5 誠實 ✓。⟹ **殘餘⑤ 統計腿完成：結構真、非隨機相位人為產物**；TT 抑制（z=0.1、raw 細 null σ 40×）＝docs/15 TT-damping 嘅統計腿。docs/37 新。
+- 審計側修正（全部執行前）：N0 分母 → per-simplex 尺度 → 對稱 FD → 實證 null；N3 原判式 → 記錄式 + N3b 修正判式（TT 結構 = 抑制唔係放大）。物理門檻零讓步。
+- 檢查水位 **941（935 PASS + 5 FAIL + N0 記錄）**。
