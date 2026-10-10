@@ -103,3 +103,13 @@ O188 closeout 留下唯一開放點：**「2I→SU(2) 連續升格未 claim」**
 - **register 補做（22:06）**：note「O245 R1 完成」→ `handoff --pid O245 --target-pid O188` → `close --verdict closed` → mirror；`register.py check`：**O245 唔喺任何 drift / BLOCK-DRIFT 列**；O188 status 現有 `incoming (1 addressed to O188)`：O245 handed_off
 - **判決保持不變**（§八/§九嘅計算結論正確）：2I ⊂ SU(2) finite-subgroup 身份 ESTABLISHED；連續升格 claim 明確唔做（O188 範圍鐵律）
 - **commit**：2026-10-10 scoped pathspec（僅 o245 目錄 + README O245 行 + register.jsonl O245 事件行）
+---
+
+## 十一、register 事件行歸屬勘誤（2026-10-10 23:15，append-only）
+
+> **最終 commit `5f79aece`（2026-10-10 23:11）嘅 register.jsonl 除咗 O245 嘅 4 事件行，仲帶咗 4 條先前未入庫嘅外國事件行**（O140 note @21:45:35、O140 note @21:45:49、O244 note @21:46:04、O246 registered @22:51:31）。三次外科手術 staging（f6528e1 → reset → da4036c → reset → 5f79aece）全部喺 apply→commit 之間被並行 register 檔案活動（periodic git add 覆寫 index 為 worktree 全檔版）干擾；reflog 證實期間無並行 commit（642af26@22:56 之後全係本 O 自身 commit/reset）。
+
+- **唔再修復**：呢 4 條外國行係真實事件（hash 與原 append 完全一致），而家喺 HEAD 恰好存在一次，冇重複
+- **對 O140 / O244 / O246 嘅影響**：事件行已由本 commit 帶入 HEAD —— 該等 session 應按 hash 檢查 HEAD，唔好再 append 同一事件（防 double-commit），亦無需為此開新 commit
+- **dangling commits 保留為證據**：f6528e1、da4036c（8 行版本）原樣保留喺 reflog，冇 rewrite
+- **O245 本身零影響**：HEAD 內 O245 4 事件行（registered→note→handed_off→closed）順序正確、hash 等於 register.py 原創；`register.py check`：O245 零 drift；O188 incoming=1

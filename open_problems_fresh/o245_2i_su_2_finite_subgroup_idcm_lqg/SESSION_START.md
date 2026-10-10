@@ -65,4 +65,11 @@ O188 closeout 後唯一開放點：**「2I→SU(2) 連續升格未 claim」**。
 > 5. commit（scoped pathspec；register.jsonl 外科手術式 stage 淨 O245 事件行）
 >
 > **完成條件核對**：✅ 120 elements 全 norm²=1（ℚ(√5) 精確）；群封閉重驗（6/6 PASS）· ✅ honest verdict（連續升格唔 claim）· ✅ register handoff 回 O188 · ✅ commit（限定 pathspec）
+
+---
+
+> **Session**: 2026-10-10（最終收尾 session）
+> **狀態**: 🟢 已閉合（verdict=closed）
+>
+> 最終 commit `5f79aece`（23:11）。並行 register 檔案活動令 register.jsonl 事件行三度被整檔覆寫入 index ⟹ 沿 01_problem_record §十一 勘誤：O245 4 事件行正確入庫，附帶 O140×2/O244/O246 4 條真實未入庫行（各存在一次）。O245 判決、檔案、README、register DB（closed/closed、零 drift、O188 incoming）全部核實。
 ```
