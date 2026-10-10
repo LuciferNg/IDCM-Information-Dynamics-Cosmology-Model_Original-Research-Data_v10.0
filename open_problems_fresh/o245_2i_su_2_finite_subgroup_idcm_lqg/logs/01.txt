@@ -1,0 +1,8 @@
+[PASS] A1: unit-quaternion condition: norm^2 = 1 in Q(sqrt5) for all 120 elements (real part sum(a_c^2+5b_c^2)=1, sqrt5 part sum(2a_c b_c)=0, exact Fractions); violations 0 (none)
+[PASS] A2: conjugate self-product: q * conj(q) = identity for all 120 elements (O222 qmul exact; violations 0 none)
+[PASS] A3: multiplicative closure: qi*qj in G for all 120x120 pairs (violations 0 none)
+[PASS] A4: inverse closure: conjugate of every element in G (violations 0 none)
+[PASS] A5: order pattern: |2I| = 120 = 2 x 60 = 2|I| (matches SU(2)->SO(3) double-cover count)
+[PASS] A6: verdict: finite-subgroup identity ESTABLISHED by direct computation -- 2I < SU(2) as exact unit quaternions (120 elements, norm^2 = 1 in Q(sqrt5), closed under * and inverse); continuum-lift claim explicitly NOT made (O188 scope rule; no limit argument needed); handoff back to O188 via register
+
+SYNTHESIS O245/R1: 6 checks PASS, 0 checks FAIL; exit 0 (identity established, all exact)
