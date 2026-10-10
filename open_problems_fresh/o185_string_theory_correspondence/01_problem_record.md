@@ -5,7 +5,7 @@ pid:     O185
 title:   IDCM ↔ 弦論家族結構對應（全弦論/M理論/AdS-CFT）
 state:   open
 verdict: -
-flags:   S1-done S2-done S3-done
+flags:   S1-done S2-done S3-done IF2-done IF3-done IF4-done IF5-done
 owner:   O185
 created: 2026-10-04
 updated: 2026-10-10
@@ -13,7 +13,7 @@ prereq:  O147, O151, O222, O121, O134, O137
 source:  調律者批准 O185 三軸方案（墓碑重用）
 -->
 
-> **狀態**: 🟢 三軸完成（39/39 PASS）— S1/S2/S3 子問題已閉合（O185 主體 open, S3 移交 O147 待定）
+> **狀態**: 🟢 三軸 + 對接層 R1-R6 + IF2/IF3/IF4/IF5 完成（97/97 PASS）— 主體 open（S3 移交 O147 待定）
 > **建立**: 2026-10-04 ｜ **完成**: 2026-10-10
 > **前置**: O147, O151, O222, O121, O134, O137
 > **位置**: `open_problems_fresh/o185_string_theory_correspondence/`
@@ -83,6 +83,7 @@ IDCM 與弦論家族（全弦論/M理論/AdS-CFT）嘅結構對應。調律者�
 | 8 | 2026-10-10 | **IF2 Round 2 (docs/05 + scripts/05, 10/10)**: R4 升級 🟢 (Z₄ twisted sector 選擇規則雙向對接) + 雙向驗證 R7ᵇ/R9ᵇ + A5 ε=9/32=N_gen²/2B² 候選 | docs/05_interface_round2.md |
 | 9 | 2026-10-10 | **IF3 Round 3 (docs/06 + scripts/06, 12/12)**: R2 升級 🟢 — entanglement 直接計算 (88-site correlation matrix); sync sector rank=17=F_proj, S_vN=17.0000 bits EXACT | docs/06_entanglement_wedge.md |
 | 10 | 2026-10-10 | **IF4 Round 4 (docs/07 + scripts/07, 12/12)**: A5 判決 🔴 coincidence record (ε=9/32 非結構身份) + G3 質量公式算子層比對 🟢 | docs/07_a5_verdict_mass_formula.md |
+| 11 | 2026-10-10 | **IF5 Round 5 (docs/08 + scripts/08, 10/10)**: G6 歸因 🔴 (b³=198 恆等重述, 99 有 39 分解) + 對接層收尾審計 (11 條規則: 9🟢+2🔴) | docs/08_g6_closeout.md |
 
 ## 七、相關文件
 
