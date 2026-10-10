@@ -85,6 +85,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 11 | 2026-10-10 | R10：edge 10/10/10 定理 + √3 frame 出處（L2f/L3e） | scripts/24（8 PASS）＋ docs/24 |
 | 12 | 2026-10-10 | R11：γ₀ 全因子地址審計（L3f；「LQG 借入」移除） | scripts/25（8 PASS）＋ docs/25 |
 | 13 | 2026-10-10 | R12：unoriented 60×31 表 + spin-label 候選測試（L2g） | scripts/26（6 PASS）＋ docs/26 |
+| 14 | 2026-10-10 | CLOSEOUT：audit（26/26 IDENTICAL + 27 獨立 13/13）＋ register ＋ cross-O handoff | scripts/27 ＋ data/02 ＋ §二十 |
 
 ## 七、相關文件
 
@@ -410,3 +411,41 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - scripts 01–26 累計 **140 PASS + 1 記錄 REFUTED（G2）= 141 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8、R12 6）
 - docs/26；register：O188 notes ×1（R12）
 - **誠實聲明**：R12 正面試咗最後殘留（elementwise spin-label）—— 自然候選被否定，但否定本身有結構價值（指明 rep-theoretic map 先係正確方向）；O188 12 輪後**所有缺口都有明確終態**
+
+---
+
+## 二十、CLOSEOUT audit + register + cross-O handoff（2026-10-10）
+
+> append-only 新節；scripts/27（audit 13/13 PASS）＋ data/02_closeout_ledger.json（最終 ledger，data/01 R1 快照唔動）
+
+### T0 閉合水位掃描
+- O188 從未 closed-out → 全檔驗；scripts/01–26 + docs/01–26 + logs/01–26 + data/01 全存在連續
+
+### T1 驗證（三層）
+- ✅ 第一層：scripts/01–26 重跑 vs committed logs —— **26/26 IDENTICAL**；計數重算 **140 PASS + 1 FAIL（G2 刻意 REFUTED）= 141 checks**（grep logs 逐個點算，判準零放寬）
+- ✅ 第二層：scripts/27_audit_independent.py 獨立重驗（唔 import 任何原 script，由第一原理重算全部 headline 數字）—— **13/13 PASS**（gamma_n 閉式 / 176-L parity 90+88=178 / 唯一交點 (22,1) / γ₀ rel 2.15e-10 / frame 62=12+20+30 + 31 lines + norms 5/2,3,1 / |2I|=120 / S₂²=I / J_odd²=−I 代數 / K 7440 / quaternion i²=−I / E_sync 61.5 / docs 關鍵值存在 / artifacts 完整）
+- ✅ 第三層：文檔完整性 —— §一–§十九、timeline rows 1–13、SESSION_START Session 1–12、docs/01–26、data/01+02 齊
+
+### T2 register 更新
+- `O188` partial → **verdict 保留 partial（結構對應已建立；elementwise spin-label 開放）**；closeout progress 記錄；notes 補齊 R11/R12
+
+### T3 跨 O 交接（只限 register，冇寫任何其他 O 檔案）
+- **O222**（QM evaluation）：O188 嘅 K-table threshold、62-axes 二十面體 frame、quaternion units ⊂ 2I 全建基於 O222 群 + frame —— R14 handoff note
+- **O121**（ln2 sync-mode entropy）：γ₀ 因子地址 —— handoff note
+- **O151**（B=4 area law）：γ₀ 因子地址 —— handoff note
+- **O127**（r_d = πR_world/88）：π 因子地址 —— handoff note
+- **O223**（|GeoAut|=60 / |Aut|=120）：2I→I 2:1 cover 一致 —— handoff note
+- **O221**（continuum limit）：2I→SU(2) 升格未 apply（先例）—— handoff note
+
+### T4 全 session 鏈 closeout
+- 01_problem_record：§一–§二十 + timeline rows 1–13（append-only）
+- SESSION_START：Session 1–12 + closeout 段
+- final_result.md：R1–R12 水位 + 終結段
+- README：O188 row → R12 partial（closeout 2026-10-10）
+- data/01_correspondence_ledger.json（R1 快照）原樣保留；新增 data/02_closeout_ledger.json
+- Git：closeout commit（限定 pathspec）
+
+### O188 最終判定
+- **結構對應已建立**（四缺口終態：L1 定理 / L2 frame 定理 / L3 內部組合 / L4 嵌入代數）
+- **誠實殘留**：elementwise spin-label map 未閉合（R12 已證自然候選唔 work，rep-theoretic map 需要新輸入）；2I→SU(2) 連續升格未 claim；dim-sum=90、22 對共軛只係 coincidence candidates
+- 141 checks 全驗證；判準零放寬

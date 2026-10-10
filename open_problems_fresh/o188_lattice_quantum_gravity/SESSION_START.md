@@ -207,4 +207,19 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（CLOSEOUT，audit → register → cross-O handoff → 全 session 鏈 closeout）
+
+- **交付**：scripts/27（獨立 audit **13/13 PASS**）＋ data/02_closeout_ledger.json ＋ §二十 ＋ final_result 終結段
+- **T1 三層驗證（全部通過）**：
+  - 第一層：scripts/01–26 重跑 vs committed logs —— **26/26 IDENTICAL**；計數重算 **140 PASS + 1 FAIL（G2 刻意 REFUTED）= 141 checks**（grep logs 逐個點算）
+  - 第二層：scripts/27 獨立重驗 —— 13/13 PASS（唔共享任何原 script 函數；gamma_n 閉式、176-L parity 90+88=178、唯一交點 (22,1)、γ₀ rel 2.15e-10、frame 62/31/norms、|2I|=120、S₂²=I、J_odd²=−I、7440、quaternion、61.5、docs 關鍵值、artifacts 完整）
+  - 第三層：01_problem_record §一–§二十 + timeline 1–14 + SESSION_START 1–12 + docs/01–26 + data/01+02 齊
+- **T2 register**：O188 partial 保留（結構對應已建立；elementwise spin-label 開放）；closeout progress + notes
+- **T3 跨 O 交接（只限 register，冇寫其他 O 檔案）**：O222（K-table/frame/quaternion 基礎）、O121（ln2）、O151（B=4）、O127（π）、O223（2I→I cover）、O221（2I→SU(2) 未 apply）
+- **T4 closeout**：01_problem_record §二十 + timeline 14；SESSION_START closeout 段；final_result 終結段；README R12 partial（closeout）；data/02（data/01 快照唔動）
+- **最終判定**：四缺口全有明確終態（L1 定理 / L2 frame 定理 / L3 內部組合 / L4 嵌入代數）；誠實殘留 = elementwise spin-label 未閉合（結構性否定）、2I→SU(2) 未 claim、coincidence candidates 唔 claim
+- **Git**：closeout commit（限定 pathspec）
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
