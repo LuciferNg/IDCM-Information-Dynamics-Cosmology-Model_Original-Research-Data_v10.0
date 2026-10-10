@@ -197,3 +197,18 @@ S3 — AdS/CFT dictionary vs IDCM 投影/信道 (全息 bulk reconstruction)
 - **累計**: 119/119 PASS (scripts/01-10)
 - **剩餘隊列**: 僅 G3 數值層（外部依賴）+ S3 移交 O147——對接層缺口全部評估完畢
 - flags: S1/S2/S3/IF2-IF7 done; 主體 open（S3 移交 O147 待定）
+
+## ★ closeout（2026-10-10）：主體判決 + 全檔案 audit
+
+- **主體判決**: 🟢 **CLOSED** — 對接層完成（目標符合調律者裁定：對接層，唔係替代 M-theory）
+- **全檔案 audit**（本輪）:
+  - 檔案對應: 工作樹 32 真實檔案 vs HEAD 32（git status clean；42−32 = 10 個 __pycache__ .pyc 係 gitignore，非缺失）
+  - py_compile 10/10 OK；重跑 scripts/01-10 對比 logs **10/10 MATCH**
+  - register: O185 主體 open（唯一）→ 本輪 close；S1/S2/S3 + IF2-IF7 全部 closed
+  - HARD DRIFT 19 全係既有（O100/O109/O111 等），O185 零新增 drift
+- **S3 移交確認**: docs/01 §6 移交建議 — 「IDCM 投影 = bulk reconstruction 形式化深化」可移交 O147 後續，但 **O147 已 closed（2026-09-05）**；S3 本體判定「部分」已閉合 ⟹ 移交事項冇承接方需要，記錄留待未來（唔開新 O）
+- **剩餘（誠實記錄，非 open 理由）**:
+  - G3 數值層（外部依賴：需具體弦論緊化模型 α'，單位維度唔對 + target-fit 陷阱——對接層內建邊界）
+  - S3 形式化深化（「邊界→空間場」正式對映未形式化，docs/01 §6 已記）
+- **禁區重申**: A5 ε=9/32（coincidence）、R8ᵇ ℤ₄ 平均 44.5、G6 b³=198（恆等重述）——不准重推
+- **終態**: O185 主體 closed；全部子問題 closed；docs/01-10 + scripts/01-10 + logs/01-10 完整

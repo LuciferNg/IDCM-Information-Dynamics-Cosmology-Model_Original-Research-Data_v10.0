@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O185
 title:   IDCM ↔ 弦論家族結構對應（全弦論/M理論/AdS-CFT）
-state:   open
-verdict: -
+state:   closed
+verdict: closed
 flags:   S1-done S2-done S3-done IF2-done IF3-done IF4-done IF5-done IF6-done IF7-done
 owner:   O185
 created: 2026-10-04
@@ -13,7 +13,8 @@ prereq:  O147, O151, O222, O121, O134, O137
 source:  調律者批准 O185 三軸方案（墓碑重用）
 -->
 
-> **狀態**: 🟢 三軸 + 對接層 R1-R6 + IF2/IF3/IF4/IF5 完成（97/97 PASS）— 主體 open（S3 移交 O147 待定）
+> **狀態**: 🟢 **CLOSED（2026-10-10 closeout）** — 三軸 + 對接層 R1-R6 + IF2-IF7（119/119 PASS, 0 FAIL）；docs/01-10 + scripts/01-10 + logs/01-10
+> **主體判決**: 對接層完成；S3「IDCM 投影 = bulk reconstruction」判定 = 部分（docs/01）；剩餘 = G3 數值層（外部依賴，需弦論側 α'）+ S3 形式化深化（移交建議已記 docs/01 §6，唔開新 O）
 > **建立**: 2026-10-04 ｜ **完成**: 2026-10-10
 > **前置**: O147, O151, O222, O121, O134, O137
 > **位置**: `open_problems_fresh/o185_string_theory_correspondence/`
@@ -86,6 +87,7 @@ IDCM 與弦論家族（全弦論/M理論/AdS-CFT）嘅結構對應。調律者�
 | 11 | 2026-10-10 | **IF5 Round 5 (docs/08 + scripts/08, 10/10)**: G6 歸因 🔴 (b³=198 恆等重述, 99 有 39 分解) + 對接層收尾審計 (11 條規則: 9🟢+2🔴) | docs/08_g6_closeout.md |
 | 12 | 2026-10-10 | **IF6 Round 6 (docs/09 + scripts/09, 11/11)**: G4 injectivity 硬化 (R1: 碰撞存在 P非全域一對一, ker=17=F_proj=R2 wedge ⟹ 71/88 唯一 + 17 視界) + G5 核實 (面積律 1/B 已喺 O151 docs/24 閉合) | docs/09_injectivity_hardening.md |
 | 13 | 2026-10-10 | **IF7 Round 7 (docs/10 + scripts/10, 11/11)**: G8/E6 深度判定 (88↔44 = 2 冪縮尺平凡數學, 3 層同型; E6 維持 🟡 特例, D6 計數 🟢) | docs/10_uvir_mirror_depth.md |
+| 14 | 2026-10-10 | **主體 closeout**: 全檔案 audit (32/32 對應 + py_compile 10/10 + logs 重跑 10/10 MATCH); S3 移交確認 (docs/01 §6, O147 已 closed); 主體 state open → closed (119/119, G3 外部依賴明確) | 01_problem_record + SESSION_START |
 
 ## 七、相關文件
 
