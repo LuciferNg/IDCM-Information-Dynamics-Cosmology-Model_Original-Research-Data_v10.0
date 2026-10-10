@@ -84,6 +84,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 10 | 2026-10-10 | R9：operator 身份（L1d J_odd²=−I 定理化 + ⟨J⟩≅⟨i⟩） | scripts/23（6 PASS）＋ docs/23 |
 | 11 | 2026-10-10 | R10：edge 10/10/10 定理 + √3 frame 出處（L2f/L3e） | scripts/24（8 PASS）＋ docs/24 |
 | 12 | 2026-10-10 | R11：γ₀ 全因子地址審計（L3f；「LQG 借入」移除） | scripts/25（8 PASS）＋ docs/25 |
+| 13 | 2026-10-10 | R12：unoriented 60×31 表 + spin-label 候選測試（L2g） | scripts/26（6 PASS）＋ docs/26 |
 
 ## 七、相關文件
 
@@ -390,3 +391,22 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - scripts 01–25 累計 **134 PASS + 1 記錄 REFUTED（G2）= 135 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8）
 - docs/25；register：O188 notes ×1（R11）
 - **誠實聲明**：R11 令 L3 升級 —— γ₀ 由「IDCM 計數 × LQG 幾何」變「IDCM 代數 × IDCM frame 幾何」；四缺口而家全部有明確且強嘅結構狀態（L1 定理、L2 frame 定理、L3 內部組合、L4 嵌入代數）—— **O188 已充分具備「結構性終述」收斂條件**
+
+---
+
+## 十九、R12 unoriented 表 + spin-label 候選測試（2026-10-10）
+
+> append-only 新節；scripts/26（6 PASS + 0 FAIL，判準零放寬）＋ docs/26
+
+### L2g（docs/26，scripts/26 — 6/6 PASS）— 「elementwise 唔 claim」正面攻擊 ★
+- ✅ **Unoriented evaluation table U[60][31]**：120 rows → 60（q/−q cover）+ 62 cols → 31（± axes merge）；60 rows 全 unique、entries {−1,0,+1}、zeros=60（記錄）
+- ✅ C2：120 elements → 60 row-classes、mult 2（unoriented 下 cover 完整）
+- ✅ C3：pointwise stabiliser（2I 精確）vertex 10 / face 6 / edge 4 ⟹ I 度 C₅/C₃/C₂
+- ✅ C4：spin-label 自然候選 j=(order−1)/2 = {2×6, 1×10, ½×15}；**dim sum = 90 = Σγ_even（R1）**—— coincidence candidate，冇 operator identity，**唔 claim**
+- ✅ **C5：面積譜對照 FAIL**（√(j(j+1)) = {√6,√2,√3/2} vs frame norms {√(5/2),√3,1} 無共同比例）⟹ 自然候選被結構性否定
+- ✅ 判決：elementwise spin-label **唔成立**，但「唔 claim」由「未嘗試」→「**有結構根據嘅否定**」（表示論 vs 幾何對稱尺度唔同）；U[60][31] 係乾淨 shared object
+
+### R12 水位
+- scripts 01–26 累計 **140 PASS + 1 記錄 REFUTED（G2）= 141 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8、R12 6）
+- docs/26；register：O188 notes ×1（R12）
+- **誠實聲明**：R12 正面試咗最後殘留（elementwise spin-label）—— 自然候選被否定，但否定本身有結構價值（指明 rep-theoretic map 先係正確方向）；O188 12 輪後**所有缺口都有明確終態**

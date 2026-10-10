@@ -129,3 +129,10 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
 - register：`O188` partial，R11 notes ×1
 - **R11 結果（L3f ★）**：γ₀ = ln2/(π√3) **四因子全部有 IDCM/frame 地址**（ln2@O121、B=4@O151、π@O127/S²、√3@face-normal）⟹ 「LQG 借入」移除；γ₀ = IDCM 代數 × IDCM-frame 幾何（單一理論內部轉換率）
 - 狀態：🟡 partial —— **O188 已具備結構性終述條件**（四缺口全有強結構狀態：L1 定理 / L2 frame 定理 / L3 內部組合 / L4 嵌入代數）
+
+## 現時水位（2026-10-10，R12）
+- scripts 01–26 累計 **140 PASS + 1 記錄 REFUTED（G2）= 141 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8、R12 6；判準零放寬）
+- docs/26；01_problem_record §十九（append-only）；SESSION_START Session 12
+- register：`O188` partial，R12 notes ×1
+- **R12 結果（L2g ★）**：unoriented U[60][31] 表（120→60 cover + 62→31 merge）；pointwise stabiliser 10/6/4 ⟹ C₅/C₃/C₂；**spin-label 自然候選（j=(order−1)/2）被面積譜對照否定** ⟹ elementwise 唔 claim 由「未嘗試」→「有結構根據嘅冇」
+- 狀態：🟡 partial —— 所有缺口皆有明確終態；elementwise spin-label 開放但指明需要 rep-theoretic map

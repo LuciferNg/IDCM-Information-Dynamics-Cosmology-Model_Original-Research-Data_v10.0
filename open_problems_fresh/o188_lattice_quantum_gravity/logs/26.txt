@@ -1,0 +1,8 @@
+[PASS] C1: unoriented table U[60][31]: 60 distinct rows = 60 (q/-q collapsed), 31 lines = 31 (antipodal axes collapsed), entries {-1,0,+1}: rows unique 60/60, zeros 60 (records: zeros persist where a line is orthogonal to a row direction)
+[PASS] C2: row classes over 120 group elements: 60 distinct with multiplicities [2] (pure 2:1 in the unoriented picture)
+[PASS] C3: 2I pointwise stabiliser orders per line type: {'vertex': {10}, 'face': {6}, 'edge': {4}} (vertex {10}, face {6}, edge {4}); in I these are {5,3,2} (2I lift {10,6,4}) -- C5/C3/C2 rotation axes
+[PASS] C4: spin-label candidate j=(order-1)/2: {C5->j2 x 6, C3->j1 x 10, C2->j1/2 x 15}; dim sum over 31 lines = 90 (= Sigma gamma_even = 90 of the 176-L parity, R1: recorded COINCIDENCE CANDIDATE, no operator identity -- not claimed)
+[PASS] C5: area-spectrum cross-check: A_j ~ sqrt(j(j+1)) = {sqrt6, sqrt2, sqrt3/2} vs frame norms {sqrt(5/2), sqrt3, 1}: ratios [(1.5492, 'j2/vertex'), (0.8165, 'j1/face'), (0.866, 'j1/2/edge')] -- NOT scale-consistent (mismatch) -- honest structural reason the naive stabiliser->spin map does NOT hold
+[PASS] C6: verdict: elementwise spin-label map NOT established; the 'not claimed' now has a structural basis (the natural candidate tried and fails the area spectrum); the UNORIENTED TABLE itself (60x31, pure 2:1 cover, deterministic) is a clean shared object worth keeping; elementwise spin-label remains open, requiring a rep-theoretic (not geometric-symmetry) map
+
+SYNTHESIS O188/R12/L2g: 6 checks PASS, 0 checks FAIL (unoriented table + spin-label candidate test; doc 26)

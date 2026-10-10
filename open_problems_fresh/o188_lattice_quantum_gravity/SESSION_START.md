@@ -195,4 +195,16 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第十二輪，R12 unoriented 表 + spin-label 候選測試）
+
+- **交付**：scripts/26（6 PASS + 0 FAIL）＋ docs/26
+- **結果**：
+  - **L2g ★**：unoriented U[60][31] 表建構（120→60 cover + 62→31 merge，rows 全 unique）；pointwise stabiliser 10/6/4（2I）⟹ C₅/C₃/C₂（I）
+  - **spin-label 自然候選被否定**：j=(order−1)/2 嘅面積譜對照 FAIL（√(j(j+1)) vs frame norms 無共同比例）—— elementwise「唔 claim」由「未嘗試」→「有結構根據嘅否定」
+  - C4：dim sum = 90 = Σγ_even（coincidence candidate，唔 claim）
+- **狀態**：🟡 partial —— **最終狀態：所有缺口皆有明確終態**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8、R11 8、R12 6 = **140 PASS + 1 REFUTED = 141 checks**；判準零放寬）
+- 累計水位：L1 定理級；L2 frame 級（+unoriented 表）；L3 內部組合；L4 嵌入代數 —— elementwise spin-label 有結構根據嘅冇
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
