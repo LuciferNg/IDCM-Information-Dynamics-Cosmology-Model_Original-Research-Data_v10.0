@@ -82,6 +82,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 8 | 2026-10-10 | R7：全量 K 表驗證（L2e threshold identity + double cover） | scripts/21（7 PASS）＋ docs/21 |
 | 9 | 2026-10-10 | R8：嵌入代數（L4b quaternion units ⊂ 2I） | scripts/22（8 PASS）＋ docs/22 |
 | 10 | 2026-10-10 | R9：operator 身份（L1d J_odd²=−I 定理化 + ⟨J⟩≅⟨i⟩） | scripts/23（6 PASS）＋ docs/23 |
+| 11 | 2026-10-10 | R10：edge 10/10/10 定理 + √3 frame 出處（L2f/L3e） | scripts/24（8 PASS）＋ docs/24 |
 
 ## 七、相關文件
 
@@ -345,3 +346,25 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - scripts 01–23 累計 **118 PASS + 1 記錄 REFUTED（G2）= 119 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6）
 - docs/23；register：O188 notes ×1（R9）
 - **誠實聲明**：R9 將「數值見證」升級為「代數定理」（J²=−I）並建立 ⟨J⟩→⟨i⟩ explicit iso；四缺口各有明確狀態 —— L1 定理級、L2 frame 級、L3 部分同構、L4 嵌入代數 —— 已具備「結構性終述」收斂條件
+
+---
+
+## 十七、R10 edge theorem + √3 frame 出處（2026-10-10）
+
+> append-only 新節；scripts/24（8 PASS + 0 FAIL，判準零放寬）＋ docs/24
+
+### L2f（docs/24，scripts/24 — 8/8 PASS）— edge 10/10/10 定理 ★
+- ✅ **Zero lemma**：edge sign = 0 ⟺ ⟨v,w1⟩==⟨v,w2⟩（endpoints 同等投影高度；120 rows × 30 edges 零 mismatch）
+- ✅ **Line-antisymmetry 定理**：30 edge cols = 15 條 antipodal lines；per row 啱好 5 zero lines（near-ring ≡ far-ring under −）⟹ pos = neg = (30−10)/2 = **10**
+- ✅ Level structure 1+5+5+1（self/near/far/antipode）解釋「點解啱好 5 條 zero lines」
+- ✅ R7 嘅「edge = 1/3」由觀察升級為**定理**（R7 informative → R10 structural）
+
+### L3e（同 script）— √3 frame 出處 ★
+- ✅ **20 個 face axes 全部 norm² = 3**（8 個 ±(1,1,1) 型 + 12 個 φ 型，同一幾何長度）⟹ **√3 = face-normal（3-fold axis）長度**
+- ✅ L3 位置更新：√3 由「外部借入」→「**frame 內生幾何長度**」（R4 77 常數盲掃零命中維持 —— 唔係 IDCM 代數生成，但唔再係完全外來）
+- 🔴 未閉合：同 LQG spin-½ root √3 嘅同一性只到「同為 ℝ³ 3-fold 幾何」層面，唔 claim 更深；elementwise 唔 claim
+
+### R10 水位
+- scripts 01–24 累計 **126 PASS + 1 記錄 REFUTED（G2）= 127 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8）
+- docs/24；register：O188 notes ×1（R10）
+- **誠實聲明**：R10 令 L2 完全自洽（K 表每種 block 嘅 sign 統計都係 frame 幾何精確函數）；L3 嘅 √3 有 frame 地址但維持「幾何長度 vs 代數生成」嘅誠實分界

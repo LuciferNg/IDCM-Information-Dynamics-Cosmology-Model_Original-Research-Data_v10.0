@@ -172,4 +172,15 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第十輪，R10 edge theorem + √3 frame 出處）
+
+- **交付**：scripts/24（8 PASS + 0 FAIL）＋ docs/24
+- **結果**：
+  - **L2f ★**：edge block 10/10/10（vertex reference）由 R7 嘅「觀察」升級為**定理** —— zero lemma（sign 0 ⟺ endpoints 同等投影高度）＋ line-antisymmetry（15 antipodal lines、每 non-zero line 一正一負、per row 5 zero lines）＋ level structure 1+5+5+1
+  - **L3e ★**：20 個 face axes 全部 norm² = 3（8 個 ±(1,1,1) 型 + 12 個 φ 型）⟹ √3 喺 frame 度有精確出處（face-normal / 3-fold axis 長度）；維持「frame 幾何長度 vs IDCM 代數生成」分界（77 常數盲掃零命中）
+- **狀態**：🟡 partial（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6、R10 8 = **126 PASS + 1 REFUTED = 127 checks**；判準零放寬）
+- 累計水位：L1 定理級；**L2 frame 自洽（sign 統計全由幾何決定）**；L3 √3 有 frame 地址；L4 嵌入代數
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**

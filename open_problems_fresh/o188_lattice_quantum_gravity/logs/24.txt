@@ -1,0 +1,10 @@
+[PASS] A1: per-row counts exact and uniform on all 120 rows (vertex reference): vertex 6+/6-, face 10+/10-, edge 10+/10-/10zero
+[PASS] A2: edge-zero pattern: 6 distinct zero-column sets, each on [20] rows (12 vertex directions / 2 under +/- -- antipodal rows share one zero pattern)
+[PASS] A3: zero lemma verified on all rows x edge axes: edge sign 0  <=>  <v,w1> == <v,w2> (endpoints at equal projected height; mismatches 0)
+[PASS] A4: line-antisymmetry theorem: 30 edge cols = 15 antipodal lines; per row exactly 5 zero lines (near-near ring = far-far ring under antipodal pairing, 10 cols = 5 lines) and every non-zero line contributes (+1,-1) => pos = neg = (30-10)/2 = 10 -- 10/10/10 follows from level structure 1+5+5+1 + sign flip, no orientation assumption
+[PASS] A5: face normals: ALL 20 face axes have exact R^3 norm^2 = {Fraction(3, 1)} (= 3); two algebraic types (8 of +/- (1,1,1) form, 12 of phi-type) but one geometric length sqrt(3) -- every face-normal is a 3-fold axis length in the frame
+[PASS] A6: sqrt(3) origin address: sqrt3 = Euclidean norm of the (1,1,1) face-normal = the standard R^3 length of a 3-fold axis native to the icosahedral evaluation frame -- it is a GEOMETRIC LENGTH of the frame, not an IDCM algebraic constant (77-constant blind scan of R4 zero-hit)
+[PASS] A7: anti-fit note: this locates sqrt(3) as |(1,1,1)| without fitting -- candidate address for gamma_0's sqrt3 (L3 residual) but NOT a claim that LQG's spin-1/2 root 2*sqrt(j(j+1))|j=1/2 and the frame length are the same object beyond both being R^3 3-fold geometry
+[PASS] A8: verdict: L2 edge-block 10/10/10 is a THEOREM (icosahedral adjacency level-comparison); L3e gives sqrt(3) a precise frame-side address (face-normal norm); the R^3 threshold family is now internally characterized (vertex 6/6, face 10/10, edge 10/10/10 -- 62 = 12+20+30 with exact per-row statistics)
+
+SYNTHESIS O188/R10: 8 checks PASS, 0 checks FAIL (edge 10/10/10 theorem + sqrt3 frame address; doc 24)
