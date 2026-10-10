@@ -1,0 +1,8 @@
+[PASS] R1: 62 axes from O222 settings: vertex=12, face=20, edge=30 -- EXACTLY icosahedron V+F+E = 62 (V+F+E=12+20+30=62)
+[PASS] R2: antipodal lines: vertex 6 (12 dirs -> 6), face 10 (20 -> 10), edge 15 (30 -> 15); total 31 = 31 = 6+10+15 rotation axes of I (exact Q(sqrt5) proportionality)
+[PASS] R3: stabiliser sizes in 2I (line, pointwise) = vertex={(20, 10)} (expect {(20,10)} line-D5 / pointwise-C5), face={(12, 6)} (expect {(12,6)} line-D3 / pointwise-C3), edge={(8, 4)} (expect {(8,4)} line-D2 / pointwise-C2) -- exact icosahedral fold structure: 5-fold vertex / 3-fold face / 2-fold edge
+[PASS] R4: 2:1 double cover (generic direction, |Stab|=1): rot_ref(q,n)==rot_ref(-q,n) for all 120 q (True); 120 quaternions -> 60 distinct rotations = |I| = 60 (consistent: O223 |GeoAut| = 60 chiral I, |Aut| = 120 = I_h); vertex-axis orbit = 12 = 12 icosahedron vertices
+[PASS] R5: axes type counts read from the O222 frozen source 04_b2_settings.json (the evaluation semantics' own input): 62 = 12V + 20F + 30E, i.e. the icosahedron cell frame is the actual evaluation frame of IDCM's QM layer
+[PASS] R6: L2 concrete-member correspondence: IDCM evaluation frame (62 axes = icosahedron cell system, 31 rotation axes, 2I->I) and LQG spin-network S^2 area-normal frame (which carries the same icosahedral symmetry axes: 6 fivefold vertex / 10 threefold face / 15 twofold edge) are the SAME geometric frame inside the R^3 threshold family.  Specific-member level, not just abstract family; elementwise spin-label map NOT claimed (honest).
+
+SYNTHESIS O188/R6/L2d: 6 checks PASS, 0 checks FAIL (icosahedral cell frame; doc 20)

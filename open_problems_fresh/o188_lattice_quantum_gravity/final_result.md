@@ -87,3 +87,10 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
   - **L2c ★**：K 表 = sign(⟨rot_ref, axis⟩) 係 **ℝ³ threshold 矩陣**（sign_rank≤3 by construction）；LQG 𝕊² normal 互閾值表同一家族 ⟹ **L2 嘅 3 喺幾何閾值家族**（comparability/incidence 唔係呢個型所以永遠冇 3）；機制級對應，非 elementwise
   - **L1c**：單點 (22,1) 三重身份 γ₂₂ = 2 = C₂(1) = dim Inv((V_1/2)⁴)；dim-3↔N_gen 弱巧合；L3c follow-up 確認 O220 √3 非結構數
 - 狀態：🟡 partial（冇一項完備閉合；L2 由「搵唔到」→「定位正確家族」係關鍵轉折）
+
+## 現時水位（2026-10-10，R6）
+- scripts 01–20 累計 **97 PASS + 1 記錄 REFUTED（G2）= 98 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6；判準零放寬）
+- docs/20；01_problem_record §十三（append-only）；SESSION_START Session 6
+- register：`O188` partial，R6 notes ×1
+- **R6 結果（L2d ★★）**：O222 嘅 62 axes = **二十面體 cell frame**（12V + 20F + 30E = 62）；31 條 antipodal lines = 6+10+15 = I 嘅 rotation axes；fold C5/C3/C2（stabiliser 精確）；**2I(120) → I(60) 2:1 double cover**（O223 一致）⟹ L2 具體成員對應：IDCM evaluation frame = LQG boundary normal frame = 二十面體 cell frame
+- 狀態：🟡 partial（frame 級對應已確立，elementwise spin-label 未 claim；O188 至今最強「具體」對應）

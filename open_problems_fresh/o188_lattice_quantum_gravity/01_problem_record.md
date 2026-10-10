@@ -78,6 +78,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 4 | 2026-10-04 | R3 全開：5 條殘留路線 + 硬測試④ | scripts/09–14（29 PASS）＋ docs/09–14 |
 | 5 | 2026-10-10 | R4：3 條候選路線（L1b/L2b/L3c） | scripts/15–17（14 PASS）＋ docs/15–17 |
 | 6 | 2026-10-10 | R5：threshold 家族 + 單點語義（L2c/L1c） | scripts/18–19（11 PASS）＋ docs/18–19 |
+| 7 | 2026-10-10 | R6：具體成員對應（L2d 二十面體 frame） | scripts/20（6 PASS）＋ docs/20 |
 
 ## 七、相關文件
 
@@ -266,3 +267,22 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - scripts 01–19 累計 **91 PASS + 1 記錄 REFUTED（G2）= 92 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11）
 - docs/18–19；register：O188 notes ×2（R5）
 - **誠實聲明**：R5 係 O188 嘅**關鍵轉折** —— L2 由「喺序/incidence 家族搵唔到 3」進步到「**3 嘅正確家族 = ℝ³ threshold**（IDCM K ∧ LQG normal frame 都係成員）」，L1 單點獲得三重身份語義；仍然冇任何一條完整閉合（L2 係機制級對應、L1 係單點候選），但兩者而家都指向「幾何閾值結構」呢個共同根
+
+---
+
+## 十三、R6 具體成員對應（2026-10-10）
+
+> append-only 新節；scripts/20（6 PASS + 0 FAIL，判準零放寬）＋ docs/20
+
+### L2d（docs/20，scripts/20 — 6/6 PASS）— IDCM evaluation frame = 二十面體 cell frame ★★
+- ✅ **62 axes = 12 vertex + 20 face + 30 edge**（O222 frozen input 04_b2_settings.json 自己分類）= **Icosahedron V+F+E**
+- ✅ **31 條 antipodal lines = 6 + 10 + 15**（ℚ(√5) 精確）：I 群嘅全部 rotation axes
+- ✅ **Fold 結構（stabiliser）**：line-D（20,10 / 12,6 / 8,4）× 2I；pointwise C5/C3/C2 —— vertex 5-fold / face 3-fold / edge 2-fold（精確）
+- ✅ **2:1 double cover：2I(120) → I(60)**（generic direction 計數）；vertex orbit = 12 —— 同 O223 |GeoAut|=60（手性 I）、|Aut|=120（I_h）**完全一致**
+- ✅ **判決**：L2 具體成員對應 = 共享**二十面體 cell frame**（IDCM evaluation ∧ LQG boundary normal frame = 同一幾何 frame）
+- 🔴 未閉合：elementwise spin-label 對應未建立（frame 級 ≠ 態級）；唔 claim
+
+### R6 水位
+- scripts 01–20 累計 **97 PASS + 1 記錄 REFUTED（G2）= 98 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6）
+- docs/20；register：O188 notes ×1（R6）
+- **誠實聲明**：R6 係 O188 至今**最強嘅「具體」對應** —— 唔再係抽象家族，而係釘實「雙方共用二十面體 cell frame」呢個幾何事實（62=12+20+30、31=6+10+15、2I→I）；仍係 frame 級（唔係 spin-label 級），但已由「對應候選」推進到「**構造性共享 frame**」

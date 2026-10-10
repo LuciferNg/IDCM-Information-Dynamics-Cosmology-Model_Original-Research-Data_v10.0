@@ -128,4 +128,15 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第六輪，R6 具體成員對應）
+
+- **交付**：scripts/20（6 PASS + 0 FAIL）＋ docs/20
+- **結果**：
+  - **L2d ★★**：O222 嘅 62 axes = **二十面體 cell frame**（12V + 20F + 30E = 62）；31 條 antipodal lines = 6+10+15（I 嘅 rotation axes）；fold 結構 C5/C3/C2（stabiliser 精確）；**2I(120) → I(60) 2:1 double cover**（同 O223 |GeoAut|=60 一致）
+  - 判決：L2 具體成員對應 = 共享**二十面體 cell frame**（IDCM evaluation ∧ LQG boundary normal frame 同一 frame）；elementwise spin-label 唔 claim
+- **狀態**：🟡 partial（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6 = **97 PASS + 1 REFUTED = 98 checks**；判準零放寬）
+- 累計水位：L1 唯一交點 + 三重身份；**L2 具體 frame 對應（二十面體）**；L3 計數側同構/幾何側借入；L4 構造存在
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
