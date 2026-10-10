@@ -5,12 +5,13 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone ->1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, c_G=0.2250613); A3-续 (scripts/36 6/6: eta-ladder continuum - interior densification x1/4/level, LIGHT-CONE GAP >= ln 2, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); A4 done (scripts/37 7/7: 1+1D Poincare algebra on the ladder - [H,P]=0, [K,H]=P, [K,P]=H exact all 44 modes, K^2=+Id, Casimir=1, algebra closure; finite-diff generator D_ell->K error ~ h^2 = 4^{-2ell} (ratios monotone -> 1/16); 3+1D NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-37 = 913/913
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = phase-sampling convention (deficit 0.87-0.95, k-independent at 7 k; dual/cube averaging kills deficit to ~1e-3..1e-5 at unseen k 2pi/7, 3pi/10, 4pi/5 BUT amplitude degenerate: dual==cube exactly - half-space identity sum w over each half = 60 = 120/2 for axial k; NOT closed - no order meets zero-deficit AND M-stable together; candidates 1 (composite cell->vertex mapping) and 3 (A_TT primary) remain); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone ->1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, c_G=0.2250613); A3-续 (scripts/36 6/6: eta-ladder continuum - interior densification x1/4/level, LIGHT-CONE GAP >= ln 2, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); A4 done (scripts/37 7/7: 1+1D Poincare algebra on the ladder - [H,P]=0, [K,H]=P, [K,P]=H exact, K^2=+Id, Casimir=1, closure; finite-diff generator D_ell->K error ~ h^2 = 4^{-2ell}; 3+1D NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-38 = 923 checks (920 PASS + 3 recorded FAIL in scripts/38; no threshold relaxed)
 owner:   O221
 created: 2026-09-28
 updated: 2026-10-02
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
+-->
 -->
 -->
 -->
@@ -235,3 +236,6 @@ docs/24 A3-續 執行：按「連續統 = 族 {M_ℓ} 嘅性質」（docs/02）+
 
 ## 四十二、Round 27 A4：1+1D Poincaré 代數於 η-階梯（2026-10-02，scripts/37 7/7）— 新增節，不改舊節
 docs/24 A4 執行（接 R26 C5）：88-mode 階梯殼上函數 H=csc θ_n、p=cot θ_n 組裝 Poincaré 扇區。**P1** [H,P]=0；**P2** [K,H]=P、[K,P]=H（K=d/dη，全 44 modes 精確）；**P3** K²=+Id；**P4** Casimir E²−p²=1（全 modes）；**P5** 三括號 + Casimir = 完整 1+1D Poincaré 代數（Jacobi ≡ 0 於 derivation 表示）；**P6（新律）** ℓ-階梯有限差分生成元 D_ℓ→K 誤差 ∝ h²=4^{−2ℓ}（err 0.00197→2.6e-8；比單調→1/16）；**P7** 誠實：只 1+1D worldline 扇區，3+1D（空間旋轉）未宣稱。零審計側修正。推導累計 **913/913**。
+
+## 四十三、Round 28：殘餘⑤閉合嘗試——dual-cell 權重（2026-10-02，scripts/38 7/10）— 新增節，不改舊節
+docs/20 §4② 執行：零新參數 dual 取樣器（Kuhn 24-單形對 4-cube 頂點入射計數權重；w(0)=w(1111)=24、w(single)=6×4、w(pair)=4×6、w(triple)=6×4、Σ=120=24·5）。**結果 7 PASS + 3 記錄 FAIL（W4/W5/W6c）**：消 deficit 保留（|d|=5.0e-4<0.05 @k=π/2；unseen-k 2π/7、3π/10、4π/5 為 [1.3e-3, 2.3e-3, 4.7e-5] ≈ 0）**但振幅退化未修復**（A_TT 5.0661 @階梯 = cube 原位；unseen-k [2.37, 2.68, 2.43] 超 1.25）。★ **決定性結構發現：dual ≡ cube（machine-exact）**——kvec 軸向 (0,0,0,1) + Hamming 對稱權重半空間恆等式 Σ_{off_i=0}w = Σ_{off_i=1}w = 60 = 120/2 ⟹ 加權平均 ≡ 均勻平均 ⟹ **振幅退化係結構性**（docs/20 候選② 已檢驗並坍縮）。殘餘⑤ **未閉合**（判準收緊、零放寬）；剩候選：①複合取樣（cell→精確頂點位移）、③A_TT 主判準。檢查累計 **923（PASS 920 + 記錄 FAIL 3）**。

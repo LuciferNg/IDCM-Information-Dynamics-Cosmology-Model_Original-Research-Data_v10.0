@@ -5,12 +5,13 @@ pid:     O221
 title:   連續化層：低能極限過渡 (Continuum / Low-Energy Limit: GR & QM 還原)
 state:   partial
 verdict: partial
-flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = map-measure convention (R24 Q6); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone ->1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, c_G=0.2250613); A3-续 (scripts/36 6/6: eta-ladder continuum - interior densification x1/4/level, LIGHT-CONE GAP >= ln 2, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); A4 done (scripts/37 7/7: 1+1D Poincare algebra on the ladder - [H,P]=0, [K,H]=P, [K,P]=H exact all 44 modes, K^2=+Id, Casimir=1, algebra closure; finite-diff generator D_ell->K error ~ h^2 = 4^{-2ell} (ratios monotone -> 1/16); 3+1D NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-37 = 913/913
+flags:   gap1+gap2 closed (gauge-fixed: dim 6, rank N-D=6, no kernel, inertia (1+,5-); conformal anomaly = gauge contamination 40.82->1.4118); residual3 attributed (TT drift = action response); residual4 closed (midpoint O(k^2a^2), vanishes at fixed k); residual5 = phase-sampling convention (deficit 0.87-0.95, k-independent at 7 k; dual/cube averaging kills deficit to ~1e-3..1e-5 at unseen k 2pi/7, 3pi/10, 4pi/5 BUT amplitude degenerate: dual==cube exactly - half-space identity sum w over each half = 60 = 120/2 for axial k; NOT closed - no order meets zero-deficit AND M-stable together; candidates 1 (composite cell->vertex mapping) and 3 (A_TT primary) remain); Q2 plateau REFUTED (R24) -> NEW LAW CONFIRMED (R25b blind2 {10,14}: A_conf monotone ->1; TT exponent -1.105); A3 done (scripts/31 6/6; scripts/33 4/4: Galilean band k*=19, generator = HYPERBOLIC boost d2/deta2=+Id, c_G=0.2250613); A3-续 (scripts/36 6/6: eta-ladder continuum - interior densification x1/4/level, LIGHT-CONE GAP >= ln 2, Casimir exact, Noether share 4^{-ell}; full Poincare NOT claimed); A4 done (scripts/37 7/7: 1+1D Poincare algebra on the ladder - [H,P]=0, [K,H]=P, [K,P]=H exact, K^2=+Id, Casimir=1, closure; finite-diff generator D_ell->K error ~ h^2 = 4^{-2ell}; 3+1D NOT claimed); L-WP done (scripts/34 5/5: spectral-variance law); CORRECTION docs/29: d2/deta2=+Id = hyperbolic boost; scripts 01-38 = 923 checks (920 PASS + 3 recorded FAIL in scripts/38; no threshold relaxed)
 owner:   O221
 created: 2026-09-28
 updated: 2026-10-02
 prereq:  O210, O140, O139, O138, O86, O213, O202, O212
 source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 docs/02 §二 L8 時空層（湧現重力/愛因斯坦方程）+ §四 Phase 5.3/5.4
+-->
 -->
 -->
 -->
@@ -108,3 +109,8 @@ source:  調律者指令 2026-09-28（重用墓碑 O221）; 缺口出處 = O115 
 - **R27** `scripts/37_poincare_algebra_ladder.py` **7/7**：P1 [H,P]=0；P2 [K,H]=P、[K,P]=H（全 44 modes 精確）；P3 K²=+Id；P4 Casimir E²−p²=1；P5 代數閉合（完整 1+1D Poincaré；Jacobi ≡ 0）；P6 離散生成元收斂（誤差 ∝ h²=4^{−2ℓ}，err 0.00197→2.6e-8、比單調→1/16）；P7 誠實（3+1D 未宣稱）。
 - 零審計側修正（P1–P7 全按預註冊 PASS）。
 - 水位 **913/913**（37:7）。docs/33 新。
+
+## Session 28 記錄（2026-10-02，R28 殘餘⑤ dual-cell 權重）
+- **R28** `scripts/38_dual_cell_weights.py` **7 PASS + 3 記錄 FAIL**：W1/W1b/W2/W3/W6a/W6b/W7 PASS；W4/W5/W6c FAIL（A_TT 退化未修復）。消 deficit 喺 7 個 k k-無關（unseen-k ≈ 0）；**dual ≡ cube（machine-exact）由半空間恆等式 Σw_{off_i=0}=60=120/2 證明**。殘餘⑤未閉合；docs/34 記錄負結果＋候選剩餘（①複合、③A_TT 主判準）。
+- 審計側修正 ×1（跑前 none；W1 首跑 bit-index 測試索引錯→修正後 PASS——唔涉物理）。
+- 檢查水位 **923 檢查（920 PASS + 3 記錄 FAIL）**。docs/34 新。

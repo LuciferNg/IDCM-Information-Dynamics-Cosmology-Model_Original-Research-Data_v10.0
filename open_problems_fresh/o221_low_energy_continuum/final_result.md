@@ -87,3 +87,8 @@ O210 → O140 → O139 → O138 → O86 → O213 → O221（並列 O202 / O212 /
 - scripts 01–37 累計 **913/913**（37:7 新增）。
 - A4（docs/33）：**1+1D Poincaré 代數於 η-階梯 7/7**——[H,P]=0、[K,H]=P、[K,P]=H（全 44 modes 精確）、K²=+Id、Casimir E²−p²=1、代數閉合（完整 1+1D Poincaré）；**離散生成元收斂新律**：ℓ-階梯有限差分 D_ℓ→K 誤差 ∝ h²=4^{−2ℓ}（逐層比單調→1/16）。**完整 Lorentz 區第一塊已證磚**；3+1D 空間扇區未宣稱。
 - 尚未閉合：3+1D Poincaré（空間旋轉）、GR/EH 湧現（shape-extended deficit）、QM 導出（O222）、殘餘⑤ 10⁷ MC null、L-QFT 散射。
+
+## 現時水位（2026-10-02，Round 28 dual-cell）
+- scripts 01–38 累計檢查 **923：PASS 920 + 記錄 FAIL 3**（37=913→+38 十檢查：7 PASS、3 記錄 REFUTED——W4/W5/W6c；判準收緊、零放寬）。
+- R28（docs/34）：**dual-cell 權重取樣器（零新參數）**——消 deficit 保留（unseen-k 2π/7、3π/10、4π/5：deficit [1.3e-3, 2.3e-3, 4.7e-5] ≈ 0；naive TT deficit 喺 7 個 k 屬純相位取樣約定效應）**但振幅退化結構性**：**dual ≡ cube（半空間恆等式 Σ_{off_i=0}w=60=120/2 ⟹ 加權平均=均勻平均）**，A_TT 5.0661 原位 ⇒ docs/20 候選②已坍縮。**殘餘⑤未閉合**——剩候選：①複合取樣（cell→精確頂點位移映射）、③A_TT 為主判準。
+- 尚未閉合：GR/EH 湧現（shape-extended deficit——本輪顯示 Regge 型 hinge×dual-area 唔足以收斂 conf/TT 振幅）、QM 導出（O222）、10⁷ MC null 5σ 統計盲測、L-QFT 散射。
