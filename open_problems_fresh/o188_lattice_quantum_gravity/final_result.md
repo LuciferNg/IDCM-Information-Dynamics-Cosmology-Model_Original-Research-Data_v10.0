@@ -108,3 +108,10 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
 - register：`O188` partial，R8 notes ×1
 - **R8 結果（L4b ★）**：2I（IDCM evaluation cover）包含完整 quaternion units {±1,±i,±j,±k} + Hamilton 關係；Q8 ⊂ 2I；**Z₄ = ⟨i⟩ 三處出現**（L4a 構造 / IDCM odd sector J / 2I 內部）⟹ L4 由「構造存在」升為「**嵌入代數**」（SU(2)-type skeleton）—— L2/L4 由同一群物件 2I 匯流
 - 狀態：🟡 partial（離散 2I skeleton ↔ 連續 SU(2) 升格需 limit 論證（未做）；elementwise 唔 claim）
+
+## 現時水位（2026-10-10，R9）
+- scripts 01–23 累計 **118 PASS + 1 記錄 REFUTED（G2）= 119 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8、R9 6；判準零放寬）
+- docs/23；01_problem_record §十六（append-only）；SESSION_START Session 9
+- register：`O188` partial，R9 notes ×1
+- **R9 結果（L1d ★）**：J_odd²=−I **定理化**（λ_m=i^m，odd sector λ²=−1 精確零誤差）；⟨J⟩≅⟨i⟩⊂2I explicit iso；J_odd ±i-eigenspace 各 44 ⟹ 22 對共軛（22 = 單點 n，coincidence 記錄）⟹ L1/L4 交匯於 Z₄
+- 狀態：🟡 partial（四缺口狀態明確：L1 定理級 / L2 frame 級 / L3 部分同構 / L4 嵌入代數 —— 具備結構性終述條件）
