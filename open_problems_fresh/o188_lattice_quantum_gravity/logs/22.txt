@@ -1,0 +1,10 @@
+[PASS] F1: 2I contains the 8 quaternion units: all present (exact Q(sqrt5) membership in the O222-built 120-group)
+[PASS] F2: unit squares: i^2 = j^2 = k^2 = -1 inside 2I (Hamilton)
+[PASS] F3: cyclic products: ij = k, jk = i, ki = j (orientation chosen)
+[PASS] F4: anti-commutation: ij = -ji, jk = -kj, ki = -ik (non-abelian)
+[PASS] F5: Hamilton identity: ijk = -1
+[PASS] F6: closure of <i,j,k> = 8 elements == Q8 = {+/-1,+/-i,+/-j,+/-k} (8 units) -- Q8 < 2I (quaternion subgroup)
+[PASS] F7: Z_4 = <i> < Q8 < 2I: the same Z_4 as R3 L4a's (i*S_2)^2 = -I phase construction and as IDCM's J (odd sector, N_d = 44, J^2 = -I) -- one algebraic object, three appearances (L4a construction / IDCM sector / 2I cover interior)
+[PASS] F8: verdict: L4 deepens from single construction to EMBEDDED ALGEBRA -- 2I (IDCM evaluation cover) contains the quaternion units with full Hamilton relations (i^2=j^2=k^2=ijk=-1), i.e. the SU(2)-type algebraic skeleton that LQG spin networks use (SU(2) representation space); map is algebra-skeleton level, elementwise spin-label map NOT claimed (honest)
+
+SYNTHESIS O188/R8/L4b: 8 checks PASS, 0 checks FAIL (quaternion units < 2I; doc 22)

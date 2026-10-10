@@ -101,3 +101,10 @@ IDCM 嘅因果張量 𝒯 = K_chain ⊗ K_tree 與 LQG 嘅 spin network 之間�
 - register：`O188` partial，R7 notes ×1
 - **R7 結果（L2e ★）**：full 120×62 K 表 threshold identity **7440 entries 零 mismatch**；generic reference 下表層 **2:1 double cover**（60 distinct rows = |I|）；vertex reference 下表 row space = **12 個二十面體 vertices**；sign_rank≤3 by construction 全表成立
 - 狀態：🟡 partial（L2「構造→群→表」三層閉環完成；elementwise spin-label 未 claim）
+
+## 現時水位（2026-10-10，R8）
+- scripts 01–22 累計 **112 PASS + 1 記錄 REFUTED（G2）= 113 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8；判準零放寬）
+- docs/22；01_problem_record §十五（append-only）；SESSION_START Session 8
+- register：`O188` partial，R8 notes ×1
+- **R8 結果（L4b ★）**：2I（IDCM evaluation cover）包含完整 quaternion units {±1,±i,±j,±k} + Hamilton 關係；Q8 ⊂ 2I；**Z₄ = ⟨i⟩ 三處出現**（L4a 構造 / IDCM odd sector J / 2I 內部）⟹ L4 由「構造存在」升為「**嵌入代數**」（SU(2)-type skeleton）—— L2/L4 由同一群物件 2I 匯流
+- 狀態：🟡 partial（離散 2I skeleton ↔ 連續 SU(2) 升格需 limit 論證（未做）；elementwise 唔 claim）

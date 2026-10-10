@@ -150,4 +150,15 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 
 ---
 
+## Session 2026-10-10（第八輪，R8 嵌入代數）
+
+- **交付**：scripts/22（8 PASS + 0 FAIL）＋ docs/22
+- **結果**：
+  - **L4b ★**：2I 包含完整 quaternion units（{±1,±i,±j,±k}）+ Hamilton 關係（i²=j²=k²=ijk=−1、循環積、反交換）；Q8 = ⟨i,j,k⟩ ⊂ 2I；**Z₄ = ⟨i⟩ 三處出現**（L4a 構造 / IDCM odd sector J / 2I cover 內部）
+  - 判決：L4 由「構造存在」升為「**嵌入代數**」（SU(2)-type skeleton）；L2 同 L4 由同一群物件 2I 匯流
+- **狀態**：🟡 partial（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8 = **112 PASS + 1 REFUTED = 113 checks**；判準零放寬）
+- 累計水位：L1 唯一交點 + 三重身份；**L2 全表 threshold + cover**；L3 計數側同構/幾何側借入；**L4 嵌入代數（quaternion skeleton）**
+
+---
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**

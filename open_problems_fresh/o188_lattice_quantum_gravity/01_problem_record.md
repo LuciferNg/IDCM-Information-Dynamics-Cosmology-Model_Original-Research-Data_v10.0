@@ -80,6 +80,7 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 | 6 | 2026-10-10 | R5：threshold 家族 + 單點語義（L2c/L1c） | scripts/18–19（11 PASS）＋ docs/18–19 |
 | 7 | 2026-10-10 | R6：具體成員對應（L2d 二十面體 frame） | scripts/20（6 PASS）＋ docs/20 |
 | 8 | 2026-10-10 | R7：全量 K 表驗證（L2e threshold identity + double cover） | scripts/21（7 PASS）＋ docs/21 |
+| 9 | 2026-10-10 | R8：嵌入代數（L4b quaternion units ⊂ 2I） | scripts/22（8 PASS）＋ docs/22 |
 
 ## 七、相關文件
 
@@ -306,3 +307,22 @@ IDCM 是基於離散晶格（88-site 雙鏈 + K_tree 樹）的框架；LQG 是�
 - scripts 01–21 累計 **104 PASS + 1 記錄 REFUTED（G2）= 105 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7）
 - docs/21；register：O188 notes ×1（R7）
 - **誠實聲明**：R7 完成 L2 嘅「構造→群→表」三層閉環 —— threshold 家族（R5）→ 具體 frame（R6）→ 全表驗證 + 表層 cover（R7）；IDCM evaluation semantics 而家有完整嘅「二十面體 ℝ³ threshold 暨 SU(2)-type cover」結構陳述
+
+---
+
+## 十五、R8 嵌入代數（2026-10-10）
+
+> append-only 新節；scripts/22（8 PASS + 0 FAIL，判準零放寬）＋ docs/22
+
+### L4b（docs/22，scripts/22 — 8/8 PASS）— quaternion units ⊂ 2I ★
+- ✅ **2I 包含完整 quaternion units**：{±1, ±i, ±j, ±k}（精確 ℚ(√5) membership）
+- ✅ **Hamilton 代數**：i² = j² = k² = ijk = −1；循環積 ij=k、jk=i、ki=j；反交換 ij=−ji（非阿貝爾）
+- ✅ **Q8 = ⟨i,j,k⟩**（closure = 8 元素）⊂ 2I
+- ✅ **Z₄ = ⟨i⟩ < Q8 < 2I** —— 同 R3 L4a 嘅 (iS₂)²=−I 相位構造、IDCM odd sector 嘅 J²=−I（N_d=44）係**同一個 Z₄**（「一個代數物件，三種出現」）
+- ✅ 判決：L4 由「構造存在」→「**嵌入代數**」（SU(2)-type skeleton：quaternion units + Hamilton relations）
+- 🔴 未閉合：離散 2I skeleton ↔ 連續 SU(2) 嘅升格需要 limit 論證（未做）；elementwise spin-label 唔 claim
+
+### R8 水位
+- scripts 01–22 累計 **112 PASS + 1 記錄 REFUTED（G2）= 113 checks**（R1 21、R2 16+1R、R3 29、R4 14、R5 11、R6 6、R7 7、R8 8）
+- docs/22；register：O188 notes ×1（R8）
+- **誠實聲明**：R8 令 L4 由「最弱缺口」升為「有多重群論支撐」—— 同一 Z₄ 喺 L4a 構造、IDCM odd sector、2I cover 內部三處出現；L2 同 L4 而家由同一個群物件（2I）匯流
