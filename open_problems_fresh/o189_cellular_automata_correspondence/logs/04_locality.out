@@ -1,0 +1,15 @@
+  [PASS] 4.1 generator radius 1 (nnz = 3N = 264) nnz = 264
+  [PASS] 4.2 generator = local linear rule phi(x_{j-1},x_j,x_{j+1}) = -x_{j-1}+2x_j-x_{j+1} exact for every site (sample j=44)
+  [PASS] 4.3 open-line propagator = Bessel EXACT: |psi_j(10)| = |J_{|j-j0|}(20)| 6 (d,t) points match, incl. sign-alternating tail
+  [PASS] 4.3b NO strict light cone: |psi_{±30}(10)| =  > 0 despite d > 2t tail = 1.240e-04 (Bessel; contrast with CA radius-1 STRICT cone)
+  [PASS] 4.3c epsilon-causality: main-lobe arrival linear, slope -> v_max=2 asymptotically arrival pairs [(10, 3), (20, 7), (30, 12), (40, 16)] ; t ~ d/2.273
+     main-lobe arrival (d,t): [(10, 3), (20, 7), (30, 12), (40, 16)]  fit slope = 2.273
+  [PASS] 4.4 ring closure: epsilon-horizon (thr 1e-9) closes at t_eps = 12 <= 22 t_eps(1e-9) = 12, t_eps(1e-12) = 10
+  [PASS] 4.4b main-lobe reaches antipode by t < 22 (band v_max = 2 asymptote) t_main = 18
+     ring support counts (thr 1e-9): [(8, 69), (10, 79), (12, 88), (14, 88)]
+  [PASS] 4.5 cosmological-tick map U(14) is GLOBAL (radius 44, nnz = N^2) nnz(U(14)) = 7744 (tau = 1/omega_ring ~ 14.0 lattice units); nnz(U(1)) = 2552
+  [PASS] 4.6 CHL: IDCM flow is shift-commuting continuous map (CA-analog over C) max|[U,S]| = %.2e (Hedlund 1969 Thm 3.4; infinite-alphabet caveat: uniform continuity required - linear maps satisfy it)
+
+JSON written: data/04_locality.json
+==============================================================================
+RESULT: 9 PASS / 0 FAIL

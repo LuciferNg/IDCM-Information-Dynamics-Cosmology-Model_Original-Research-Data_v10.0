@@ -1,0 +1,30 @@
+  [PASS] A1 [H,S] = 0 exact integers max|.| = 0
+  [PASS] A3 generator radius 1: nnz(H) = 3N = 264 nnz = 264
+  [PASS] A2 [U(t=0.01),S]=0 err = 2.55e-15, nnz = 792
+  [PASS] A2 [U(t=0.1),S]=0 err = 2.57e-15, nnz = 1320
+  [PASS] A2 [U(t=0.3),S]=0 err = 1.69e-15, nnz = 1848
+  [PASS] A2 [U(t=1.0),S]=0 err = 1.04e-15, nnz = 2552
+  [PASS] A2 [U(t=4.0),S]=0 err = 2.49e-15, nnz = 4664
+  [PASS] A2 [U(t=8.0),S]=0 err = 3.71e-15, nnz = 6952
+  [PASS] A2 [U(t=14.0),S]=0 err = 4.90e-15, nnz = 7744
+  [PASS] A2 [U(t=3.141592653589793),S]=0 err = 2.13e-15, nnz = 4136
+  [PASS] A4 finite-tau map GLOBALIZES monotonically: nnz(U(12)) = N^2 = 7744 nnz(12) = 7744 ; nnz sweep: 1848(0.3) 2552(1) 4664(4) 6952(8) -> full
+  [PASS] A5 superposition exact (linearity): ||U(ca+db) - cUa - dUb|| ~ 1e-15 err = 7.02e-16
+  [PASS] A5b unitarity: norm preserved 
+  [PASS] B1 rule 90 linear over F2 (200/200 pairs) 200/200
+  [PASS] B1b rule 90 F(0)=0 
+  [PASS] B2 rule 110 NON-linear over F2 (counterexample exists) first diff indices = [0, 4, 6, 9, 16]
+  [PASS] B3 rule-90 ring map rank+nullity = 88 (kernel>0) rank = 86, nullity = 2
+  [PASS] B4b rule-90 orbit NOT necessarily exact-return (kernel destroys info) preperiod = 3, period = 248 (seed 0)
+  [PASS] B4a IDCM unitary reversible (contrast): norm conserved for every mode 
+  [PASS] B5 circulant/DFT diagonalizes BOTH maps (shared translation structure) IDCM H eig_0 = 0.000000 = 4 sin^2(pi/88); rule-90 M eig_0 = 2.0000
+
+[C] BLIND SCAN: sign-bit projection of IDCM trajectory vs all 256 ECA
+  [PASS] C1 NO elementary rule reproduces the projected IDCM dynamics min err = 911/2112 bit-steps (rules [174]), best = 1103
+  [PASS] C2 candidate-with-least-error is not exact (no threshold fit) min err = 911 (threshold: any rule with 0 errors would count)
+  [PASS] C3 positive control: finder recovers rule 110 exactly matched rules = [110]
+  [PASS] C4 Im-bit projection also fails (independent channel) min err = 952
+
+JSON written: data/02_rule_equivalence.json
+==============================================================================
+RESULT: 24 PASS / 0 FAIL

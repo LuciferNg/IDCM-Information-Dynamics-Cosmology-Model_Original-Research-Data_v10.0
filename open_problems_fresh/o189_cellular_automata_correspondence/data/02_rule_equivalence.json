@@ -1,0 +1,31 @@
+{
+  "nnz_H": 264,
+  "nnz_U1": 2552,
+  "nnz_sweep": [
+    1848,
+    2552,
+    4664,
+    6952,
+    7744,
+    7744
+  ],
+  "rule90_linear": true,
+  "rule110_nonlinear": true,
+  "rule90_nullity": 2,
+  "rule90_orbit": {
+    "preperiod": 3,
+    "period": 248,
+    "exact_return": false
+  },
+  "blind_scan": {
+    "min_err": 911,
+    "best_rules": [
+      174
+    ],
+    "positive_control": [
+      110
+    ]
+  },
+  "H_eig0": 1.1066909997271573e-16,
+  "H_eig1": 0.005095770779492877
+}

@@ -1,0 +1,27 @@
+==============================================================================
+O189 / scripts/03 - computational universality audit (C3)
+==============================================================================
+
+[A] claim audit: did O222 prove universal computation?
+   total matched lines (non-frozen O222 docs): 0
+   of which 'generic machine-semantics property': 0
+  [PASS] A1 O222 contains NO genuine universality/Turing proof only generic machine-semantics language found: 0 lines
+  [PASS] A2 SESSION_START claim 'O222 proved universal computation' is REFUTED-as-written O222 proved: force single-valuedness, memo determinism, resource bounds (62^2=3844), sign_rank<=3 (LHV), machine-generic CHSH excess
+
+[B] lattice dynamics: quasi-periodicity, reversibility, entropy
+     omega_1/omega_2 = 0.5003187902965018 ; CF = [0, 1, 1, 783, 1, 2, 1, 1, 67, 1, 2, 28]
+  [PASS] B1 omega_1/omega_2 = 1/(2cos(pi/88)) does not terminate as rational (Niven) CF length = 24 (Niven: cos(pi/88) not in {0,±1/2,±1})
+  [PASS] B2a 44-mode flow: no exact return over 2000 steps (quasiperiodic) min ||c(t)-c0|| = 0.9966 at t=1841
+  [PASS] B2b rational toy DOES return exactly at t=2pi (control) ||c(2pi)-c0|| = 2.56e-16
+  [PASS] B3 finite-state rule-90 orbit is eventually periodic (preperiod+period finite) preperiod = 4, period = 248
+  [PASS] B4a IDCM unitarity: position Shannon entropy evolves (delocalization) but amplitude information never lost (isometry, see below) H(p): 5.8617 -> 6.0297 (bound log2(88) = 6.4594)
+  [PASS] B4b IDCM isometry: ||U(a-b)|| = ||a-b|| machine-exact (bijective, reversible) d: 0.0014142136 -> 0.0014142136
+  [PASS] B4c rule-110 NOT isometric: single-bit perturbation spreads non-monotonically (1 bit -> max 5 bits) hdist(t) = [1, 2, 3, 4, 2, 2, 4, 3, 2]...
+  [PASS] B4d rule-110 Hamming distance NOT constant (no metric isometry, contrast B4b) distinct values = 5 (IDCM: exactly constant)
+  [PASS] B5a discrete step capacity on 88-ring = 2^88 configs (finite) 
+  [PASS] B5b O228 info lower bound k_min >= ceil(log2 m): identifying a full 88-ring state needs >= 88 bits O228 general machine theorem: k_min >= ceil(log2 m)
+  [PASS] B5c 88-ring dynamics is bounded & decidable (exact orbit enumerable) -> no halting problem, no Rule-110-style undecidability unbounded lattice required for TM simulation (Cook 2004)
+
+JSON written: data/03_computational_universality.json
+==============================================================================
+RESULT: 13 PASS / 0 FAIL

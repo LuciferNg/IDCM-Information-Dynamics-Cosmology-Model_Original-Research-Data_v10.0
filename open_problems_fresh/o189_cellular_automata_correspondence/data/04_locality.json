@@ -1,0 +1,52 @@
+{
+  "generator_nnz": 264,
+  "bessel_exact": true,
+  "tail_at_d30_t10": 0.00012401536360344417,
+  "open_line": {
+    "arrival": [
+      [
+        10,
+        3
+      ],
+      [
+        20,
+        7
+      ],
+      [
+        30,
+        12
+      ],
+      [
+        40,
+        16
+      ]
+    ],
+    "fit_slope": 2.272727272727272
+  },
+  "ring": {
+    "t_eps_1e9": 12,
+    "t_eps_1e12": 10,
+    "t_main_antipode": 18,
+    "support_counts": [
+      [
+        8,
+        69
+      ],
+      [
+        10,
+        79
+      ],
+      [
+        12,
+        88
+      ],
+      [
+        14,
+        88
+      ]
+    ]
+  },
+  "finite_tau_nnz": 2552,
+  "cosmological_tau_nnz": 7744,
+  "chl_err": 1.0370338861126152e-15
+}

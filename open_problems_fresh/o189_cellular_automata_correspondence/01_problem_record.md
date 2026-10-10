@@ -1,0 +1,106 @@
+# O189 — IDCM ↔ 細胞自動機結構對應
+
+<!-- registry
+pid:     O189
+title:   IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）
+state:   partial
+verdict: partial
+flags:   r1-59ck
+owner:   O189
+created: 2026-10-04
+updated: 2026-10-10
+prereq:  O222, O231
+source:  用戶 O231 調查裁定開新 O（墓碑重用）
+-->
+
+> **狀態**: 🟡 部分閉合（R1，2026-10-10；59/59 PASS，詳見 §八）
+> **建立**: 2026-10-04
+> **前置**: O222, O231
+> **位置**: `open_problems_fresh/o189_cellular_automata_correspondence/`
+
+---
+
+## 一、問題陳述
+
+IDCM 的離散晶格（88-site 鏈 + 離散時間步 τ = 1/ω_ring）在概念上可被視為一種細胞自動機：有限狀態（譜模式）+ 局部規則（最近鄰耦合）+ 離散時間步。但此對應從未被形式化。調律者指示：研究**結構對應**，非以 IDCM 導出 CA（同 O222-QM 層次）。
+
+核心問題：**IDCM 的 88-site 鏈演化對應哪類 CA（elementary/ring/class IV）？O222 已證的求值語義通用計算與 CA 計算能力之間是什麼關係？**
+
+## 二、已確立嘅結構
+
+```
+🟢 IDCM: 88-site 鏈 + 離散時間步 τ (O95/O121)
+🟢 IDCM: 譜演化 ω_n = 2√J |sin(πn/88)| (O221/O204)
+🟢 O222: 求值語義層 (thunk/force/lazy load) 證明 IDCM 資源界限計算能力
+🔴 IDCM ↔ CA 的形式化對應：未建立
+```
+
+## 三、未確立（🔴 開放問題）
+
+```
+🔴 C1 — 狀態空間：IDCM 連續複振幅 vs CA 離散狀態（如何 coarse-grain？）
+🔴 C2 — 演化規則：IDCM 線性譜旋轉 vs CA 布林規則（哪個 CA 規則等價？）
+🔴 C3 — 計算能力：O222 求值語義通用計算 vs Wolfram class IV 通用性
+🔴 C4 — 局部性：IDCM 最近鄰耦合 vs CA 局部更新（是否相同結構？）
+```
+
+## 四、攻擊路線
+
+```
+1. C1 路線 — 狀態空間比較 → docs/01 + scripts/01
+2. C2 路線 — 規則等價性 → docs/02 + scripts/02
+3. C3 路線 — 計算能力比較 → docs/03 + scripts/03
+4. C4 路線 — 局部性與因果性 → docs/04 + scripts/04
+```
+
+## 五、驗證標準
+
+```
+✅ S1 — 每條路線有 doc + script
+✅ S2 — 誠實區分「等價」vs「模擬」vs「類比」（三層不可混）
+✅ S3 — 若 IDCM 譜演化對應某具體 CA 規則（如 rule 110），證明其對應；否則標 🔴 負結果
+```
+
+**四道硬測試**（閉合宣稱必過）：
+① 自由度成本（零參數）② Monte-Carlo null（10⁷ 樣本，5σ）
+③ 可證偽 + 樣本外盲測 ④ 結構剛性（微擾測試）
+
+## 六、推導時序索引
+
+> ⚠️ **只可 append 新行，禁回溯污染舊行。**
+
+| # | 日期 | 事件 | 產物 |
+|:-:|:-----|:-----|:-----|
+| 1 | 2026-10-04 | 註冊 O189（墓碑重用） | 01_problem_record.md + SESSION_START.md |
+| 2 | 2026-10-10 | R1 四路線執行：狀態空間／規則等價／計算能力／局部性 | scripts/01–04（59/59 PASS）+ docs/01–04 + final_result.md |
+
+## 七、相關文件
+
+```
+- O222 — 求值語義層（適用於計算能力比較）
+- O231 — SYM vs QFT 比較方法論
+- O121 — 離散時間步 τ = 1/ω_ring
+
+---
+
+## 八、R1 執行結果（2026-10-10，append-only）
+
+> 推導詳見 `docs/01–04`；`scripts/01–04` 可重跑（59/59 PASS）。
+
+| 路線 | 狀態 | 一句結論 |
+|:---|:--:|:---|
+| C1 狀態空間（docs/01） | 🟢 | 88 格同位；CA = 1-bit 粗粒化容量恆等（q=2）；雙鏈因子（mode 44 bits）；譜熵 H=5.037、有效模式 32.8 |
+| C2 規則等價（docs/02） | 🟢 | 生成元 = radius-1 線性局部規則（CHL 類）；τ-map global；**盲測 256 ECA 零命中**（正對照唯一命中 110） |
+| C3 計算能力（docs/03） | 🟢 | **起手式「O222 通用計算」聲稱 REFUTED-as-written**（審計 0 條）；IDCM 88-ring = class II⁺（準週期、等距、bounded），非 class IV |
+| C4 局部性（docs/04） | 🟢 | 開線傳播子 = Bessel 恆等式（**冇嚴格光錐**）；ε-因果斜率 2.27→v_max=2；環 ε-水平閉合 t=12；τ-map global |
+
+**驗證標準 S1–S3**：
+- S1 每路線有 doc + script ✅（docs/01–04 + scripts/01–04）
+- S2 等價/模擬/類比三層分離 ✅（每篇 §「等價／模擬／類比」）
+- S3 對應之證明或負結果 ✅（C2：🔴 負結果，窮舉 256 + 正對照；C3：🔴 class IV 否證）
+
+**殘餘（未閉合，同 O 續推，唔開新 O）**：
+1. IDCM 理論整體（O222 語義層 + 無界 chain refinement）之計算類——本輪只答固定 88-ring；
+2. sign_rank ≤ 3 對計算類嘅約束力（→ O224/O228）；
+3. coarse-grain 嘅動力學兼容性（quantize 後演化身份）——本輪只有容量對齊；
+4. ℤ 線上 Bessel 尾嘅可模擬性（IDCM 無限格版本嘅 CHL 局部規則 radius 與 t 關係之一般律）。

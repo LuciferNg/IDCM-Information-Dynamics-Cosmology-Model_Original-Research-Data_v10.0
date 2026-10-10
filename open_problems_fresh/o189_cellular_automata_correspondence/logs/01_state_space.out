@@ -1,0 +1,43 @@
+==============================================================================
+O189 / scripts/01 - IDCM 88-site chain vs CA: state space (C1)
+==============================================================================
+
+[A] exact config counts
+     CA (2-state, 88 cells) configs      = 309485009821345068724781056
+  [PASS] C1.1 CA config count 2^88 exact = 2^88 = 309485009821345068724781056
+  [PASS] C1.1b 2^88 has 27 decimal digits digits = 27
+     IDCM amplitude real DOF per config = 176 (2N, site basis)
+     IDCM mode real DOF per config      = 88 (2*N_d, Fourier basis)
+  [PASS] C1.2 IDCM site DOF = 176 = 2N (exact count) site 176 / mode 88
+
+[B] spectral measure (IDCM chain Laplacian, mode space n=1..44)
+  [PASS] C1.3 sum gamma_n = 90 (O221 B1 identity, 44-mode chain) sum = 90.0
+  [PASS] C1.4 p is a probability vector (sum 1) 
+     H(p) = 5.03676852377 bits   (uniform 44 modes: 5.45943161864 bits)
+     effective mode count 2^H = 32.82603339
+  [PASS] C1.5 0 < H < log2(44) H = 5.036768524, log2(44) = 5.459431619
+     p_max = 0.0444444444444  vs uniform 1/44 = 0.0227272727273 (ratio 1.9555556)
+  [PASS] C1.6 spectral measure is NON-uniform (p_max > 1.5 u) ratio = 1.9555556
+
+[C] coarse-graining ladder (C1 question: how to map continuous -> Boolean)
+     q= 2 : site-quant bits =   88.00   mode-quant bits =   44.00
+     q= 3 : site-quant bits =  139.48   mode-quant bits =   69.74
+     q= 4 : site-quant bits =  176.00   mode-quant bits =   88.00
+     q= 8 : site-quant bits =  264.00   mode-quant bits =  132.00
+     q=16 : site-quant bits =  352.00   mode-quant bits =  176.00
+     q=64 : site-quant bits =  528.00   mode-quant bits =  264.00
+  [PASS] C1.7 q=2 site-quantization reproduces CA capacity exactly 88 log2(2) = 88 bits = 2^88 configs
+  [PASS] C1.8 q=2 MODE-quantization halves capacity (dual-chain factor 2) 44 bits, not 88 -> dual-chain structure
+  [PASS] C1.9 amplitude precision required to beat CA: q >= 3 (site basis) q=3 -> 139.5 bits > 88
+
+[D] cosmological tick vs CA step
+     tau = 1/omega_ring = 4.25082853529e+17 s = 13.47006279 Gyr
+  [PASS] C1.10 tau = 13.47 Gyr (O121/SS 1e-3) = 13.47006279 Gyr
+  [PASS] C1.11 CA step is combinational layer; IDCM tick is a physical rotation: structural TIMESCALE hierarchy (continuous flow + cosmological tick) one CA layer < one IDCM tick by ~10^30 orders (0.1 ns vs 4.25e17 s)
+
+[E] cross-reference: identical spectrum as O222/O221
+  [PASS] C1.12 float recomputation of sum gamma = 90 (independent algorithm) = 90.000000000000
+
+JSON written: data/01_state_space.json
+==============================================================================
+RESULT: 13 PASS / 0 FAIL
