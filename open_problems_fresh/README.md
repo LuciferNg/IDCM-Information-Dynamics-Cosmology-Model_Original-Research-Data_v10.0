@@ -206,7 +206,7 @@ IDCM v10.0 開放問題系統。每個問題獨立資料夾，含 01_problem_rec
 | **O186** | **TRGB/Miras 校準差異機制（原 O17 duplicate, 2026-10-04 搬移）** | 🟢 已閉合 (19/19 PASS) | **原 O17 距離階梯第二路線：TRGB/Miras 校準差異機制 + 兩層校準家族，19/19 PASS；🟡 RR Lyrae 0.5σ 待 JWST/Gaia DR5。搬移至 O186 釋放 O17 編號衝突。** |
 | **O187** | **Deterministic Selection Rule & LOOCV（原 O143 duplicate, 2026-10-04 搬移）** | 🔴 未開始 | **原 O143 分支：Deterministic (n, P_f) Selection Rule & LOOCV 協議。搬移至 O187 釋放 O143 編號衝突。** |
 | **O188** | **IDCM ↔ LQG 結構對應（離散晶格 vs 圈量子重力）** | 🟡 **R5 partial** | **墓碑重用 (2026-10-04)。累計 91 PASS + 1 REFUTED = 92 checks。R5 關鍵轉折：L2c — K 表=sign(⟨rot,axis⟩) 係 ℝ³ threshold 矩陣（sign_rank≤3 by construction）；LQG 𝕊² normal 表同一家族 ⟹ L2 嘅 3 喺幾何閾值家族。L1c 單點三重身份 γ₂₂=2=Casimir=4-valent intertwiner dim。** |
-| **O189** | **IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）** | 🟡 **部分閉合（R1+R2，2026-10-10，79/79）** | **墓碑重用 (2026-10-04)。R1：C1 狀態空間（CA=1-bit 粗粒化容量恆等）、C2 盲測 256 ECA 零命中（生成元=radius-1 線性局部規則；τ-map global）、C3 O222「通用計算」聲稱 REFUTED（class II⁺ 非 class IV）、C4 Bessel 傳播子冇嚴格光錐（ε-水平閉合 t=12）。R2：mod-q 商群投影 = 線性 CA——q=2 ⟹ Rule 90 精確 intertwinement（R-C answered）。scripts/01–05 + docs/01–05。前置: O222, O231。** |
+| **O189** | **IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）** | 🟡 **部分閉合（R1+R2+R3，2026-10-10，97/97＋4 記錄 FAIL）** | **墓碑重用 (2026-10-04)。R1：C1 狀態空間、C2 盲測 256 ECA 零命中、C3 O222「通用計算」REFUTED（class II⁺）、C4 Bessel 冇嚴格光錐。R2：mod-q 商群 = 線性 CA——q=2 ⟹ Rule 90 精確 intertwinement（R-C answered）。R3：連續流 2-adic no-go 閉合（U(t)∉M₈₈(ℤ) for 非零代數 t）；period 248 = 8·31 = 2³(2⁵−1)閉式；ε-CHL 律 r_ε = 2t + C_eff(ln)^{2/3}t^{1/3}（v1 4 FAIL 記錄＋v2 3/3）。scripts/01–08b + docs/01–08。R-A（理論整體計算類）唯一剩低。前置: O222, O231。** |
 ## 已閉合問題（摘要）
 
 - O1: 15.11° 座標系假象（🔴 否定）；新邊長 26.09° 群論閉合

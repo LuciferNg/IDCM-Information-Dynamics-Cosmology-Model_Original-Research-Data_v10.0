@@ -1,0 +1,14 @@
+{
+  "factor_x88m1": "x^88-1 = (x^11-1)^8 over F2",
+  "ord11_2": 10,
+  "gf_orders": [
+    31
+  ],
+  "max_gf_order": 31,
+  "orbit_periods": [
+    248
+  ],
+  "lcm_period": 248,
+  "max_preperiod": 4,
+  "closed_form": "248 = 8*31 = 2^3*(2^5-1)"
+}

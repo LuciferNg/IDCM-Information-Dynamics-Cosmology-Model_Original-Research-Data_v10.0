@@ -1,0 +1,14 @@
+==============================================================================
+O189 / scripts/07 - Rule-90 period 248 closed form (residual 2)
+==============================================================================
+  [PASS] A1 over F2: (x^11-1)^8 == x^88-1 Frobenius multiplicity 8 = exponent of the 11th-root part
+  [PASS] A2 ord_11(2)=10; 2 has NO multiplicative order mod 88 (not a unit) => 11th roots live in F_{2^10}; even-part kills DFT over F2
+  [PASS] A3 1023 = 3*11*31; 31 = 2^5 - 1 (31 not dividing 3*11) 1023 = 1023, 31 = 31
+  [PASS] B1 GF(2^10): x primitive (order 1023); lambda = x^93 has order 11 poly p = 0b10000001001
+  [PASS] B2 ord(lambda^j + lambda^-j) in F_{2^10}: all | 1023, max = 31 orders = [31] (max 31)
+  [PASS] C1 300 random seeds: periods | 248, lcm = 248, max preperiod <= 4 distinct periods = [248], lcm = 248, max preperiod = 4
+  [PASS] C2 period 248 = 8 * 31 (unipotent order 8 from Frobenius multiplicity, semisimple order 31 = 2^5 - 1) 248 = 2^3 * (2^5 - 1) = 2^8 - 8
+
+JSON written: data/07_period_248.json
+==============================================================================
+RESULT: 7 PASS / 0 FAIL

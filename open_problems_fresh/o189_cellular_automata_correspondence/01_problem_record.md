@@ -5,7 +5,7 @@ pid:     O189
 title:   IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）
 state:   partial
 verdict: partial
-flags:   r1+r2-79ck
+flags:   r1+r2+r3-97ck
 owner:   O189
 created: 2026-10-04
 updated: 2026-10-10
@@ -74,6 +74,7 @@ IDCM 的離散晶格（88-site 鏈 + 離散時間步 τ = 1/ω_ring）在概念�
 | 1 | 2026-10-04 | 註冊 O189（墓碑重用） | 01_problem_record.md + SESSION_START.md |
 | 2 | 2026-10-10 | R1 四路線執行：狀態空間／規則等價／計算能力／局部性 | scripts/01–04（59/59 PASS）+ docs/01–04 + final_result.md |
 | 3 | 2026-10-10 | R2 mod-q 商群投影（R-C 攻堅） | scripts/05（20/20 PASS）+ docs/05 —— mod-2 ⇔ Rule 90 精確 intertwinement |
+| 4 | 2026-10-10 | R3 三殘餘：連續流 2-adic／period 248／ε-CHL 律 | scripts/06（8/8）+ 07（7/7）+ 08b（3/3）+ docs/06–08（08 v1 4 FAIL 記錄） |
 
 ## 七、相關文件
 
@@ -120,3 +121,12 @@ IDCM 的離散晶格（88-site 鏈 + 離散時間步 τ = 1/ω_ring）在概念�
 - 🟢 **2-adic 合併結構**：γ₀=0 ↔ γ₄₄=4 都 ≡0 (mod 2) ⟹ kernel(F mod 2) = span{1, (−1)^j}（nullity 2）；奇 p（p∤88）nullity 1。R1 嘅 Rule-90 nullity 2 / period 248 由此獲得結構解釋。
 - 🔴 **新殘餘**（R2 後）：① unitary 連續流嘅 2-adic 行為（e^{−iFt} 非整數）未答；② Rule-90 period 248 閉式（ord(2 mod 88) 系）未閉。
 - **R-C 狀態**：已回答（商群意義）；R-A、R-D 照舊留 O189。
+
+## 十一、R3 執行結果（2026-10-10，append-only）
+
+> 推導詳見 docs/06–08；scripts/06（8/8）＋ scripts/07（7/7）＋ scripts/08+08b（v1 0/4 FAIL 記錄 ＋ v2 3/3 PASS）。
+
+- 🟢 **殘餘①閉合**（docs/06）：連續流 2-adic no-go 定理——U(t) ∈ M₈₈(ℤ) ⟹ 特徵值 e^{−iγ_n t} 係代數整數 ⟹ Kronecker 單位根 ⟹ t 超越；π 超越（Lindemann）＋ γ_n 代數 ⟹ γ_n/π ∉ ℚ。**連續時間對任何非零代數 t 冇模 q 商群**；唯一商群 = 生成元映射（R2）。
+- 🟢 **殘餘②閉合**（docs/07）：**period 248 = 8×31 = 2³(2⁵−1)**——8 = Frobenius 重數（(x^11−1)^8 = x^88−1 over F₂），31 = max ord(λ^j+λ^{−j})（GF(2¹⁰) 內 λ 本原 11 次根；31 = 2⁵−1 唔除 3·11）；300 seeds lcm = 248、max preperiod ≤ 4。
+- 🟢 **R-D 閉合**（docs/08）：**ε-CHL 律** r_ε(t) = 2t + C_eff(ln 1/ε)^{2/3} t^{1/3}，C_eff = 1.3106[1−(ln t)/(2 ln 1/ε)]^{2/3}（Debye 尾）；v1 預註冊 C=1.432 **0/4 FAIL（原樣保留，唔拆）**，v2 修正律 3/3（WA 9 格 0.91–0.97、WB 0.972、WC 0.653）；coarse-ε（1e-2）係 peaks-limited regime，不屬本律。
+- **R-A（理論整體計算類）為 O189 唯一剩低殘餘**。

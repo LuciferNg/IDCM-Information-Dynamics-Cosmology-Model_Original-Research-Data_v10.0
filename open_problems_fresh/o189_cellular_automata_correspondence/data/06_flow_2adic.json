@@ -1,0 +1,16 @@
+{
+  "gamma_over_pi_min_dist": 0.006479871352790801,
+  "defects": {
+    "0": 3.0342239213563575e-40,
+    "1": 0.47558561632013907,
+    "2": 0.32555484483936,
+    "3": 0.34766525048680885,
+    "0.5": 0.41343807449223535,
+    "1.5": 0.48122670064308404
+  },
+  "theorem": {
+    "T1": "gamma_n algebraic nonzero; pi transcendental (Lindemann)",
+    "T2": "U(t) in M_88(Z) => e^{-i gamma_n t} algebraic integer => root of unity (Kronecker) => t transcendental",
+    "conclusion": "no mod-q quotient of continuous flow at algebraic t != 0"
+  }
+}

@@ -5,7 +5,7 @@ pid:     O189
 title:   IDCM ↔ 細胞自動機結構對應（88-site 鏈作為 CA）
 state:   partial
 verdict: partial
-flags:   r1+r2-79ck
+flags:   r1+r2+r3-97ck
 owner:   O189
 created: 2026-10-04
 updated: 2026-10-10
@@ -94,6 +94,16 @@ source:  用戶 O231 調查裁定開新 O（墓碑重用）
 - **誠實邊界**：unitary 連續流 e^{−iFt} 非整數矩陣 ⟹ intertwinement 唔延伸連續時間
 
 **判據修正**：無（預註冊全數命中；B1/B2/C1b 初版漏 `%2` 係執行 bug，修正後即過——非 threshold 變動）。
+
+### Session 3 — 2026-10-10（R3：三條殘餘一次過）
+
+**執行**：
+1. `scripts/06_flow_2adic.py` **8/8 PASS** → `docs/06`：**殘餘①閉合（no-go 定理）**——連續流 U(t) 喺任何非零代數 t 都 ∉ M₈₈(ℤ)（π 超越 Lindemann ＋ γ_n/π∉ℚ ＋ Kronecker 單位根）⟹ 連續時間冇模 q 商群（t=0 除外）；商群唯一通道 = 生成元映射（R2）
+2. `scripts/07_period_248.py` **7/7 PASS** → `docs/07`：**殘餘②閉合**——period 248 = 8×31 = 2³(2⁵−1)：8 = Frobenius 重數（x^88−1=(x^11−1)^8 over F₂），31 = ord(λ+λ⁻¹) max（GF(2¹⁰) 驗證，λ 本原 11 次根）
+3. `scripts/08_eps_chl_law.py` **v1 0/4 FAIL（原樣保留）** ＋ `scripts/08b_eps_chl_law_v2.py` **3/3 PASS** → `docs/08`：**R-D 閉合**——ε-CHL 律 r_ε(t) = 2t + C_eff(ln 1/ε)^{2/3} t^{1/3}，C_eff = 1.3106·[1−(1/2)ln t/ln(1/ε)]^{2/3}（Debye 尾推導；v1 漏 -2/3√2 前因子＋ln t 修正 ⟹ 真·盲測 FAIL，唔拆）
+
+**R3 合計**：18 PASS ＋ 4 記錄 FAIL；累計 79+18=97 PASS（R1 59 + R2 20 + R3 18）、記錄 4 FAIL。
+**殘餘狀態**：殘餘①（連續流 2-adic）✅ 閉合；殘餘②（period 248）✅ 閉合；R-D（ε-CHL 律）✅ 閉合；R-A（理論整體計算類）唯一剩低。
 
 ---
 
