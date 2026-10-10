@@ -164,3 +164,21 @@ S3 — AdS/CFT dictionary vs IDCM 投影/信道 (全息 bulk reconstruction)
 - **累計**: 97/97 PASS (scripts/01-08)
 - **剩餘隊列**: G3 數值層（需具體弦論緊化模型, α' 尺度）——唯一未閉合項
 - **禁區**（防重推）: A5 ε=9/32 相等、R8ᵇ ℤ₄ 平均 44.5、G6 b³=198 機制
+
+### ★ 2026-10-10 IF6 Round 6（G4 injectivity 硬化 + G5 面積律核實）
+
+- scripts/09_injectivity_hardening.py (**11/11 PASS**)
+- **G4 — R1 dictionary injectivity 硬化**:
+  - 投影 P = T_pipe σ 截斷（diag: n<27→1, n=27→0.77196, n≥28→0）
+  - A3 **顯式碰撞**: P e_28 = P e_29 = 0 (e_28≠e_29) ⟹ P 非全域一對一
+  - A4/A5 restricted injective: P|_保留區 rank=27, 5 隨機對 0 假碰撞
+  - A6 判決: ker=17=F_proj=sync sector=R2 wedge (IF3) ⟹
+    **R1「決定性」缺口 ≡ R2「信息損失」——兩規則互補咬合**
+  - R1 升級: 71/88 bits 唯一 + 17 bits 視界（部分決定性, 比「決定性」準確）
+- **G5 — 面積律核實（發現已閉合）**:
+  - O151 docs/24 (2026-09-06) 已閉合 1/B 機制（SI 錨 + 雙側: 世界0.25+觀察者0.25）
+  - 本輪 B1-B5 重現 SI 錨/雙側/比例 2=log₂B/1/B 全部一致 ⟹ O185 引用正確
+  - **G5 唔需要喺 O185 重複證明**（由前置 O 完成）
+- **累計**: 108/108 PASS (scripts/01-09)
+- **剩餘隊列**: G3 數值層（外部依賴, 個球喺弦論側）、S3 移交 O147
+- flags: S1/S2/S3/IF2-IF6 done; 主體 open（S3 移交 O147 待定）
