@@ -79,6 +79,7 @@ source:  調律者 2026-10-10: 開新O掃全部開放問題; tan 分析示範
 | 1 | 2026-10-10 | 註冊 O246（調律者指示：掃全部開放問題 + tan 示範 + 交接 + 不推） | scaffold |
 | 2 | 2026-10-10 | tan 示範分析完成（scripts/01 10/10 PASS）：pole/FOLD/Parseval/八角/1247/φ盲測/O221對格 | docs/02 + scripts/01 |
 | 3 | 2026-10-11 | 全開放問題掃描分類完成：主 O 131（A=14/B=55/C=62）+ 子問題 157（A=18/B=77/C=62）；1247 repo 查重（無 Σtan² 先例 ⟹ 新產物確認）；6 項 register handoff（O221/O140/O117/O123/O7/O35)；README 行 + handoff 記錄 | docs/03 + scripts/02 + register |
+| 4 | 2026-10-11 | 🔴 六項 handoff 全部撤回：O140 docs/17 否決（(N−1)(N−2)/6=digamma 重述，適用性❌）；O117 docs/06 否決（八角格 sec 對 M_obs 零命中）；scripts/03 按其餘 4 項重審（O221 fold=∀x 恆等、O7 pole 喺 π/2 非 π、O123 n*=15.506 非整、O35 零交集）全 FAIL ⟹ register note 撤回；docs/02 §2.4 宣稱降格（append-only 更正） | docs/04 + scripts/03 + register note |
 
 ## 七、相關文件
 
