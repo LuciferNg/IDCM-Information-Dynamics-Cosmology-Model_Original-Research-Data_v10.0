@@ -1,3 +1,13 @@
+## ⚠️ 更正附註 (2026-10-11, append-only)⚠️
+
+**§1 嘅「單項 4-trace 全零」claim 已被 scripts/16 否證**——用 `.real` 取 trace 係 bug：
+232/1032 個單項 trace 非零，**全部純虛**（例 (0,1,2,7) → ±i/(8√3) ± 0.07217i）。
+正確機制（docs/11）：**消滅發生喺 pol 排列組合層**——單項 4-trace 虛部喺
+T_δ = 24·pol 嘅對稱化排列中反號抵消；T_δ ≡ 0（|·| 全枚舉 worst 1.33e-15）仍然真。
+§2（slot-pair 相位對稱）與 §3（off-diag 成塊 split）不受影響。
+
+---
+
 # O244 docs/10 — 封閉代數證明：E2 su(2)-closure 單項消滅 ＋ 成塊相位對稱（scripts/15, 7/7 PASS）
 
 > **date**: 2026-10-10 · **script**: 15_closed_proofs.py · **log**: logs/15.txt
