@@ -173,4 +173,4 @@ data/                  — script 輸出 json
 - ⚠ β 身份不可判（CI 容納 −9/5, −11/6, −19/(4φ²), −20/11）——池 null 紀律
 - 方法學: 903×720k 點必須 numpy searchsorted（O(log N)）, Python min() 逐點 timeout
 
-**commit**: 待 commit（第九輪）。
+**commit**: `b1f4274`（O239 R9，2026-10-12，第九輪入檔）。
