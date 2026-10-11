@@ -75,6 +75,8 @@ source:  O209 docs/19 交接 (2026-10-11)
 | 1 | 2026-10-11 | 註冊 + session start（由 O209 docs/19 交接；聲明「先重現 scripts/19 驗證再推」） | 01_problem_record.md + SESSION_START.md |
 | 2 | 2026-10-11 | **推導鏈完整性重現 PASS**（O209 scripts/19 5/5 + 16 7/8 + 全鏈 423/426 + 04 181/181；git clean 確認未被並行改動）；標度 C 身位診斷：`C=M₀·|dm|_mode^{−φ²}` 排除（ref=603.2 最近 1.1%）、C/M₀ 池 0 命中、★C_n spread=RMS ⇒ 標度同 c/s 離群同源 | docs/02-03 + scripts/01-07 + data/01-07 + register note |
 | 3 | 2026-10-11 | **路線 1/2 收窄**：標度 C 凍結池+譜泛函+雙參數全排除；α≈φ² LOOCV 全域穩健（剔任何一點 0.42σ 內）；φ² vs 79/30 LOOCV 不可分（ratio 0.9983, P=0.50）；c/s 遮蔽標度（剔後 C −24.6%、RMS 0.252）；n≡1 mod4 族修正假象排除（P=0.22） | docs/03（整合） |
+| 4 | 2026-10-11 | **freeze v2 scheme 審計**：O209 b = ×3.291 混標度偽影坐實（O234 docs/03 §二）；α≈φ² 三套 scheme 全穩健（1σ 內）；**b 離群 −0.674→−0.23/0.42 係偽影退出**；c/s 離群 scheme 無關（三套 >0.5） | docs/04 + scripts/08 + data/08 |
+| 5 | 2026-10-11 | **κ 線全封 + 比空間決定性負**：κ→mode 無 natural mapping（36=3×12 vs 9 mode）；O233 已封 κ=C_f ⟹ 雙重封死；**fit 預言 quark 比 vs lattice 5/5 全滅（d/u +9.8σ、s/u −19.8σ、b/c +815σ）⟹ 公式係數量級律非閉合**；weighted fit 實驗權重陷阱（模型誤差 0.55 >> 實驗 1e-7） | docs/05 + scripts/09-10 + data/09-10 |
 
 ## 七、相關文件
 
