@@ -1,4 +1,15 @@
-# O244 docs/09 — 相位削減機制：色代數結構率（scripts/10–14, 23/23 PASS）
+## ⚠️ AUDIT 更正附註 (2026-10-11, append-only)⚠️
+
+**本檔標題原寫「23/23 PASS」唔實**——scripts/12/13 係**設計探針**（docstring 明寫
+「假設錯→深挖」），各有 3 FAIL 係**預期負結果**（否證「closure-pair split ⟺ 消失」
+同「commutator→單色」假設，O197 規矩：設計上要 FAIL 的探針可保留）。
+真實水位: 10=5 + 11=5 + 12=2 + 13=2 + 14=6 = **20 PASS + 6 記錄 FAIL**。
+結論（56 消失 = 7×8 成塊; N 無關; Ω-spin pairs）**不受影響**——探針 FAIL 全部指向
+更精細嘅 pair 結構，最終由 scripts/14 收口。修正後標題反映真實計數。
+
+---
+
+# O244 docs/09 — 相位削減機制：色代數結構率（scripts/10–14, 20 PASS + 6 記錄 FAIL）
 
 > **date**: 2026-10-10 · **scripts**: 10_phase_cancellation.py, 11_phase_structure.py,
 > 12_pair_split_mechanism.py, 13_pair_target_pattern.py, 14_omega_spin_pairs.py

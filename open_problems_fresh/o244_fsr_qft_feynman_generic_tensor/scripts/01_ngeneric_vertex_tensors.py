@@ -39,6 +39,8 @@ import random
 import numpy as np
 from scipy.linalg import expm
 
+random.seed(20261010)   # audit 修正 (2026-10-11): 固定 seed 令 C 節抽樣可重現
+
 PASS = 0; FAIL = 0; TOTAL = 0
 def check(name, cond, detail=""):
     global PASS, FAIL, TOTAL; TOTAL += 1

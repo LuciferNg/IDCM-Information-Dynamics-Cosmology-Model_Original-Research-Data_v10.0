@@ -134,8 +134,10 @@ check("B2 4同 + 2+2 全部有非零（耦合源頭）",
       f"(4同 {full_zero['4同']}, 2+2 {full_zero['2+2']})")
 print(f"       2+1+1 全滅 {full_zero['2+1+1']}/2016 | 全異 全滅 {full_zero['全異']}/1680")
 
-# ═══ C. su(2)-triple 身份 + 全異禁戒配對 ═══
-print("\n─── [C] su(2)-triple + 全異禁戒 ⟺ set 含 closure triple ───")
+# ═══ C. su(2)-triple 身份 + 全異禁戒配對（audit 修正 2026-10-11） ═══
+# 原判據「全異禁戒 ⟺ 含 closure triple」係假: 16 個 λ₈-家族 set（scripts/09）
+# 冇 closure triple 都禁戒 ⟹ 昇華為「closure 單向充分 + λ₈ 家族額外」完備分類。
+print("\n─── [C] su(2)-triple 單向充分 + λ₈ 家族額外（完備分類） ───")
 def is_propto(C, k):
     r = np.trace(T[k].conj().T @ C).real
     if abs(r) < 1e-10: return False
@@ -152,25 +154,35 @@ for i in range(8):
             if tr not in closures: closures.append(tr)
 print(f"       unordered su(2)-closure triples ({len(closures)}): "
       f"{[tuple(sorted(c)) for c in closures]}")
-# 全異 pattern: set 含 closure triple ⟺ T_δ 全滅
-okC = True; cnt_yes = 0; cnt_no = 0; mismatch = []
-for aa in itertools.product(range(8), repeat=4):
-    if mclass(aa) != "全異": continue
-    s = frozenset(aa)
-    has_triple = any(c <= s for c in closures)
-    allzero = T_all_max(aa) < 1e-9
-    if has_triple == allzero: cnt_yes += 1
-    else:
-        cnt_no += 1; mismatch.append((aa, has_triple, allzero))
-check("C1 全異禁戒 ⟺ set 含 su(2)-closure triple (1680/1680)", cnt_no == 0,
-      f"({cnt_yes} 一致, {cnt_no} 唔一致 {mismatch[:3]})")
-# 4-set 統計
-sets_with = sum(1 for s in itertools.combinations(range(8),4)
-                if any(c <= frozenset(s) for c in closures))
-print(f"       70 個 4-set 中含 triple: {sets_with} ⟹ 禁戒 {sets_with}×24 = {sets_with*24}; "
-      f"耦合 (70−{sets_with})×24 = {(70-sets_with)*24}")
-check("C2 全異 1416 = 59×24, 264 = 11×24 (set 級)", sets_with == 59,
-      f"(實測含 triple set = {sets_with})")
+# 4-set 級: closure(43) + λ₈家族(16) + 耦合(11) = 70
+sets_with = [frozenset(s) for s in itertools.combinations(range(8),4)
+             if any(c <= frozenset(s) for c in closures)]
+# λ₈ 家族: 全異禁戒 ∧ 唔含 closure triple（scripts/09 證 = 16 sets 全含 7）
+l8_family = []
+for s in itertools.combinations(range(8),4):
+    sf = frozenset(s)
+    if sf in sets_with: continue
+    if T_all_max(list(s)) > 1e-9: continue      # 禁戒先算
+    l8_family.append(sf)
+l8_family = list(set(l8_family))
+print(f"       closure sets: {len(sets_with)}; λ₈-家族: {len(l8_family)} "
+      f"(全含 7: {all(7 in s for s in l8_family)})")
+# C1' closure 單向充分: 含 closure triple ⟹ 禁戒（43 sets = 1032 patterns）
+bad_c1 = [s for s in sets_with if T_all_max(list(s)) > 1e-9]
+check("C1' closure triple ⟹ 禁戒（單向充分, 43 sets）", len(bad_c1) == 0,
+      f"({len(sets_with)} sets 全滅, {len(bad_c1)} 違反)")
+# C2' λ₈ 家族: 禁戒 ∧ 無 closure triple = 16 sets（負結果: closure 唔必要）
+check("C2' λ₈-家族 = 16 sets 冇 closure triple（2416/4096→closure 非必要）",
+      len(l8_family) == 16,
+      f"(實測 {len(l8_family)} sets)")
+# C3 完備: 禁戒 1416 = closure 43×24 + λ₈ 16×24 = 1032+384; 70 = 43+16+11
+forbid_sets = [frozenset(s) for s in itertools.combinations(range(8),4)
+               if T_all_max(list(s)) < 1e-9]
+n_cl_c = len(set(sets_with) & set(forbid_sets))   # 禁戒含 closure
+n_l8 = len(set(l8_family) & set(forbid_sets))
+check("C3 完備分類 1416 = 43×24 + 16×24; 70 = 43+16+11（set 級互斥）",
+      n_cl_c == 43 and n_l8 == 16 and n_cl_c + n_l8 == len(forbid_sets),
+      f"(closure禁戒 {n_cl_c}, λ₈ {n_l8}, 總禁戒 set {len(forbid_sets)})")
 
 # ═══ D. 主定理: coupling ⟺ max_δ|T_δ| > 0; 對照 scripts/05 D 表 ═══
 print("\n─── [D] 主定理對照 scripts/05（結構級 vs 相位級） ───")

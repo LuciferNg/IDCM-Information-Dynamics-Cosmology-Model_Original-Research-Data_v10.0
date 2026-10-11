@@ -60,6 +60,8 @@ EXACT 0（1.3e-15 浮點噪聲級）已是定理級。── 殘餘降級為「F
 - docs/09 §4 #1/#2 閉合: off-diag split 精確選取（C1）；成塊 ⟹ ΣφT=0 機制
   = slot-pair 相位對稱（B1）
 - 累計: 191 + 7 = **198/198 PASS**（scripts/01–15）；全枚舉/閉式, 零擬合
+  ⚠️ AUDIT 更正 (2026-10-11): scripts/15 A4''' 用 .real 係假 PASS（見 scripts/15 附註
+  同 docs/11）；正確: 6 PASS + 1 REFUTED。O244 總水位見 final_result audit 段。
 - 剩餘（細項）: E2 嘅 Fierz 層紙上推導（可選）；N > 176 由結構無關性保證（未跑但數學閉合）
 
 ## 相關

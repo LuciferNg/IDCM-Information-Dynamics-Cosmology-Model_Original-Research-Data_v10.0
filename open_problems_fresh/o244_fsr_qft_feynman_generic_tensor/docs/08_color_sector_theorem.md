@@ -1,4 +1,15 @@
-# O244 docs/08 — 色 sector 主定理：T_δ 單項消滅分類（scripts/07+08+09, 7+9+6 = 22/22 PASS）
+## ⚠️ AUDIT 更正附註 (2026-10-11, append-only)⚠️
+
+**scripts/08 原 v2 係 7/9 FAIL（C1/C2）**——原判據「全異禁戒 ⟺ 含 closure triple」
+係**假**（λ₈ 家族 16 sets = 384 patterns 冇 triple 都禁戒）。scripts/09 補完咗
+分類但 scripts/08 自己一直冇修正（2026-10-11 audit 發現）。修正後 C 節昇華為
+「closure 單向充分 (43 sets) ＋ λ₈ 家族額外 (16 sets) ＋ 完備分類 1416 = 43×24+16×24」
+⟹ **10/10 PASS**；本檔標題同 final_result 水位相應更正（7+10+6 = 23）。
+原 C1/C2「等價」表述唔成立，唔係 threshold 問題——係判據層錯誤，現已昇華修正。
+
+---
+
+# O244 docs/08 — 色 sector 主定理：T_δ 單項消滅分類（scripts/07+08+09, 7+10+6 = 23/23 PASS）
 
 > **date**: 2026-10-10 · **scripts**: 07_ct_trace_identity.py, 08_color_sector_theorem.py, 09_extra_forbidden_sets.py · **logs**: 07/08/09.txt
 > **目的**: 閉合 docs/06 誠實缺口 #1 — 「C_t ≡ 0 嘅封閉 trace-identity 證明」。

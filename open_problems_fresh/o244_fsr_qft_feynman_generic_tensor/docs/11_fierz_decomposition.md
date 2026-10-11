@@ -47,6 +47,9 @@ Q4 對 slot-swap 對稱（scripts/07）＋ Tr cyclic ⟹ pol 係**排列對稱�
 - 新證據: D1（|·| 全枚舉 T_δ worst 1.33e-15）+ A1（232 純虛 + 800 真零）
   + B1（Cartan 平方）+ C1（±i/(8√3) 配對）+ E1（mixed 先耦合）
 - 累計: 198 + 5 = **203/203 PASS**（scripts/01–16）；全枚舉/閉式, 零擬合
+  ⚠️ AUDIT 更正 (2026-10-11): 「203/203」錯計——scripts/08 原 7/9（C1/C2 假判據）、
+  scripts/12/13 係探針（6 記錄 FAIL）、scripts/15 A4''' 假 PASS ⟹ 正確總水位 =
+  **200 PASS + 7 記錄**（見 final_result audit 段, docs/08/09 附註）。結論不變。
 - 剩餘: 無（docs/09 §4 全閉; E2 機制已 Fierz 層完整化; N>176 結構閉合）
 
 ## 相關

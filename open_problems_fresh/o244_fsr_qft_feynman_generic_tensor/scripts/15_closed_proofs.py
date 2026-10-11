@@ -256,5 +256,10 @@ check("C1 4 off-diag sets: 消失8 精確 = 同target pair 成塊", okC,
 print(f"\n{'='*78}")
 print(f"  RESULT: {PASS}/{TOTAL} PASS, {FAIL}/{TOTAL} FAIL")
 print(f"{'='*78}")
+# ═══ AUDIT 更正附註 (2026-10-11) ═══
+# A4''' 用 np.trace(...).real 判斷「單項 4-trace 全零」——係假 PASS:
+# scripts/16 用 |·| 重掃發現 232/1032 個單項 trace 非零（全部純虛 ±i/(8√3)）。
+# 本 script 之 7/7 入面 A4''' 結論唔成立；E2 真正機制 = pol 排列組合消滅（docs/11）。
+# 正確水位: 6 PASS + 1 REFUTED（A4'''）。唯一輸入不變, 零自由參數。
 import sys
 sys.exit(0 if FAIL == 0 else 1)
