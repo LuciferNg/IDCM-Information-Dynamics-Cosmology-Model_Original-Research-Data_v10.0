@@ -1,0 +1,16 @@
+{
+ "rule": "primes∪squares≤13",
+ "p_exact": 1.750239554552731e-12,
+ "nearest9": [
+  8,
+  9,
+  10,
+  11,
+  61,
+  77,
+  78,
+  79,
+  80
+ ],
+ "match_geometric": 2
+}
