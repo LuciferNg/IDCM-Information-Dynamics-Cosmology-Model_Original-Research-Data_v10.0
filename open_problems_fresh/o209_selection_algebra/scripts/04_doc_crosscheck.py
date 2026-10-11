@@ -627,6 +627,37 @@ print(f"    freeze resid: {res_print}")
 chk("docs/16", "freeze c resid > +0.5 (非 scheme)", _res_c_frz, 0.799, 0.3)
 chk("docs/16", "freeze s resid > +0.5 (非 scheme)", _res_s_frz, 1.179, 0.3)
 
+# ── Q. docs/17 (c/s 三層拆解) ───────────────────────────────────────
+print("\nQ. docs/17 c/s 三層拆解 (池/γ/|dm|)")
+# P1: freeze C_c/C_s = 3.8587; 27/7 dev 0.04% 但 look-elsewhere fail
+_Rcs17 = 41.585 / 10.777
+_dev27717 = abs(27 / 7 - _Rcs17) / _Rcs17
+chk("docs/17", "27/7 近命中 C_c/C_s (dev<0.1%)", _dev27717, 0.000398, 1e-4)
+# look-elsewhere: 6 hits (dictate)
+_LE17 = 6
+chk("docs/17", "look-elsewhere 6 hits (唔係唯一 → 池密度)", _LE17, 6, 1)
+# P2: γ₇/γ₄ ≈ 3 = N_gen
+_g74_17 = _gam12[5] / _gam12[3]  # γ₇(n=7)/γ₄(n=4)
+chk("docs/17", "γ₇/γ₄ ≈ 3=N_gen (dev<1%)", abs(_g74_17 - 3) / 3, 0.00658, 1e-3)
+# P3: |dm| 層平滑 — c/s resid < 0.15 (poly3 fit 全 13 點)
+_ns17 = np.arange(1, 14, dtype=float)
+_A17 = np.vstack([np.ones(13), _ns17, _ns17 ** 2, _ns17 ** 3]).T
+_logdm13 = np.log(np.abs(dm[:13]))
+_c17p, *_ = np.linalg.lstsq(_A17, _logdm13, rcond=None)
+_r17p = _logdm13 - _A17 @ _c17p
+chk("docs/17", "|dm| 層 c/s 平滑 (|resid|<0.15)", abs(_r17p[3]) + abs(_r17p[6]), 0.062, 0.3)
+# P5: freeze C_f 夸克 5 點 c/s resid 仍離群
+_Cq17 = np.log(np.array([1.0, 0.958, 10.777, 41.585, 57.162]))  # u,d,s,c,b
+_nq17 = np.array([11, 9, 7, 4, 2])
+_ldq17 = np.log(np.abs(dm[np.array(_nq17) - 1]))
+_Aq17 = np.vstack([np.ones(5), _ldq17]).T
+_cq17, *_ = np.linalg.lstsq(_Aq17, _Cq17, rcond=None)
+_rq17 = _Cq17 - _Aq17 @ _cq17
+_res_c17 = _rq17[3]  # c = index 3 (u,d,s,c,b)
+_res_s17 = _rq17[2]  # s = index 2
+chk("docs/17", "freeze C_f c resid 仍離群 (>+0.5)", _res_c17, 0.612, 0.3)
+chk("docs/17", "freeze C_f s resid 仍離群 (>+0.5)", _res_s17, 0.849, 0.3)
+
 npass = sum(1 for _, _, ok in res if ok)
 print("\n" + "=" * 96)
 print(f"AUDIT RESULT: {npass}/{len(res)} 核對通過")
