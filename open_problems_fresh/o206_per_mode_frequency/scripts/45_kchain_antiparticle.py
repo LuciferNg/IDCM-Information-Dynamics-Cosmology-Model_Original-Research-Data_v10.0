@@ -55,8 +55,8 @@ def W88(m):
 
 # −ω_n = 2cos((44+n)π/88) = −2sin(nπ/88)
 G1a_pass = all(abs(W88(44 + n) + omega(n)) < 1e-12 for n in range(1, 44))
-check("G1a: −ω_n = W88(44+n) (cos 譜負半, n=1..43)", G1a_pass,
-      "W88 = {2cos(mπ/88)}, m=44+n")
+check("G1a: −ω_n = W88(44+n) (Galois 代數鏡像, n=1..43)", G1a_pass,
+      "W88 = {2cos(mπ/88)} 係代數閉合描述, 非物理負頻譜")
 
 # G1a2: −ω_n ∉ 2sin 正頻譜 {ω_1..ω_44} (外延性 — 負頻係代數鏡像非實譜元素)
 G1a2 = all(abs(omega(m) + omega(n)) > 1e-9 for m in range(1, 45) for n in range(1, 44))
@@ -113,18 +113,18 @@ check("G3a: closure 87 元素 (±43 + Nyquist 2)", len(S) == 87, f"|S|={len(S)}"
 # G3.2: 0 缺席 = 真空點 = 鏈開端 (n=0 唔存在)
 check("G3b: 0 ∉ closure (真空點缺席)", 0.0 not in S)
 
-# G3.3: 負頻譜 = W88 嘅 m = 45..87 (cos 譜負半, 43 個) — 2sin 譜冇負元素
+# G3.3: −ω 代數鏡像集 = W88 嘅 m = 45..87 (代數閉合, 43 個) — IDCM 物理譜冇負頻
 neg = set()
 for m in range(45, 88):
     neg.add(round(W88(m), 14))
-check("G3c: 負頻譜 = W88 {m=45..87} (43 個 = cos 譜負半)", len(neg) == 43, f"|neg|={len(neg)}")
+check("G3c: −ω 鏡像 = W88 {m=45..87} (43 個 = 代數閉合)", len(neg) == 43, f"|neg|={len(neg)}")
 
 # G3.4: 一對一配對 n ↔ 44+n (W88 正半 m=1..43 ↔ 負半 m=45..87) 43 對
 pairs = 0
 for n in range(1, 44):
     if abs(W88(44 + n) + omega(n)) < 1e-12:
         pairs += 1
-check("G3d: 一對一 ± 配對 (n ↔ 44+n, W88 鏡像) 43 個", pairs == 43, f"{pairs} pairs")
+check("G3d: 一對一 ± 配對 (n ↔ 44+n, W88 代數鏡像) 43 個", pairs == 43, f"{pairs} pairs")
 
 # G3.5: Nyquist ω_44=2 對偶 — 88 與 44 係同一個 (γ 週期 π)
 G3e = abs(omega(44) - omega(88)) < 1e-12 if False else True  # ω_88 = 0, 唔係!
