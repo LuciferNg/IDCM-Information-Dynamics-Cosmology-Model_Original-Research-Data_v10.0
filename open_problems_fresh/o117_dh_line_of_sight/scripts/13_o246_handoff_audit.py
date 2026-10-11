@@ -91,8 +91,12 @@ print("  C. Domain intersection: octagon grid ∩ arch n_c domain")
 print("-"*78)
 l_max = 0.79248  # ell_t = log4(3)
 nc_min = N_D/2
-nc_max = N_D/2 + B_K*math.sin(PI*ELL_T)
-print(f"  arch n_c domain: [{nc_min:.3f}, {nc_max:.3f}]  (ℓ∈[0, ℓ_t={ELL_T:.4f}])")
+# sin(pi*ell) global max over ell in [0, ell_t] is at ell=1/2 (=1), NOT at ell_t:
+# ell_t=0.7925 > 0.5, so n_c domain is [22, 26] with apex at z=1.
+nc_max = N_D/2 + B_K  # = 26 at ell = 0.5
+nc_end = N_D/2 + B_K*math.sin(PI*ELL_T)
+print(f"  arch n_c domain: [{nc_min:.3f}, {nc_max:.3f}]  (ℓ∈[0, ℓ_t={ELL_T:.4f}]; "
+      f"max at ℓ=½, endpoint n_c(ℓ_t)={nc_end:.3f})")
 inside = [n for n in oct_n if nc_min-1e-9 <= n <= nc_max+1e-9]
 print(f"  octagon grid points n=11k inside domain: {inside}")
 check("only n=22 (=N_D/2, the known lock point) intersects", inside == [22],
@@ -140,7 +144,7 @@ print("  '可能關' = hypothesis non-committal; no predicted z, no predicted M,
 print("  no new observable, no conditional statement that could be falsified.")
 # A predictive version would say e.g. "M at ℓ where n_c=11k should equal sec".
 # Test the strongest charitable version: M(ℓ*) == sec(π·33/88) at some ℓ*? 
-# n_c max in domain = nc_max = 24.43 < 33, so sec(33π/88)=2.6131 is NEVER in domain.
+# n_c max in domain = 26 (at ℓ=0.5) < 33, so sec(33π/88)=2.6131 is NEVER in domain.
 print(f"  strongest charitable reading: M(ℓ*) = sec(3π/8) = {1/math.cos(3*PI/8):.4f}")
 print(f"  requires n_c=33, but max n_c in domain = {nc_max:.2f} < 33  -> impossible")
 check("no octagon sec value other than √2 is reachable in the arch domain", True,
@@ -179,7 +183,7 @@ print("                         the single intersection (n=22→√2) is N_D/2, 
 print("                         O170 lock point, not a tan-derived structure.")
 print("  有預測性  ❌ FAIL     -- '可能關' commits to no z, no value, no observable;")
 print("                         the strongest charitable reading is impossible")
-print("                         (n_c max 24.4 < 33 required).")
+print("                         (n_c max 26 < 33 required).")
 print("  非秘數    ⚠️ PASS     -- Σtan²=1247 is a standard digamma-family closure,")
 print("                         genuine but inert for O117; near-miss to the VOIDED")
 print("                         C_DM (1.1%) identified and excluded.")
@@ -199,7 +203,7 @@ out = {
     "handoff": "sec 家族延伸: tan²=sec²−1; 八角子格 n=11k 可能關 M(l)=sec(π n_c/88)",
     "claims": {
         "blind_test": "FAIL -- octagon sec vs M_obs: 0 hits; only intersection n=22=N_D/2 (O170 lock, not tan-derived)",
-        "predictive": "FAIL -- '可能關' non-committal; charitable reading needs n_c=33 > domain max 24.43",
+        "predictive": "FAIL -- '可能關' non-committal; charitable reading needs n_c=33 > domain max 26.0",
         "non_numerology": "PASS -- Σtan²=1247 standard closure, inert; near-miss tan²(π/8) vs VOID C_DM 1.1% excluded",
         "reversible": "FAIL -- tan²=sec²−1 argument-blind; cannot derive n_c(ℓ) map",
     },

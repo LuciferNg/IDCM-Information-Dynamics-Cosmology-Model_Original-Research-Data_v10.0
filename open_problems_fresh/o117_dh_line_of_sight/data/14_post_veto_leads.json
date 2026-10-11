@@ -1,0 +1,22 @@
+{
+  "trigger": "post-veto lead scan",
+  "date": "2026-10-11",
+  "fix": "scripts/13 C: n_c domain max corrected from endpoint 24.427 to true 26.0 at ell=0.5 (z=1); verdict unchanged",
+  "arch_shape": {
+    "M(0)": 1.41421356,
+    "M_max": 1.66867557,
+    "z_apex": 1.0,
+    "M(z>=2)": 1.41421356
+  },
+  "falsifiable_predictions": [
+    "M=1.6693 at z=1 (apex)",
+    "M=sqrt2 flat for all z>=2 (lock)",
+    "descent M(1.5)=1.6300 -> M(2)=1.5546"
+  ],
+  "live_threads": [
+    "O170 N1 BOSS cross-survey (pre-existing)",
+    "apex/lock shape falsifiers (from this audit)"
+  ],
+  "pass": 6,
+  "fail": 0
+}

@@ -4,7 +4,7 @@
   "handoff": "sec \u5bb6\u65cf\u5ef6\u4f38: tan\u00b2=sec\u00b2\u22121; \u516b\u89d2\u5b50\u683c n=11k \u53ef\u80fd\u95dc M(l)=sec(\u03c0 n_c/88)",
   "claims": {
     "blind_test": "FAIL -- octagon sec vs M_obs: 0 hits; only intersection n=22=N_D/2 (O170 lock, not tan-derived)",
-    "predictive": "FAIL -- '\u53ef\u80fd\u95dc' non-committal; charitable reading needs n_c=33 > domain max 24.43",
+    "predictive": "FAIL -- '\u53ef\u80fd\u95dc' non-committal; charitable reading needs n_c=33 > domain max 26.0",
     "non_numerology": "PASS -- \u03a3tan\u00b2=1247 standard closure, inert; near-miss tan\u00b2(\u03c0/8) vs VOID C_DM 1.1% excluded",
     "reversible": "FAIL -- tan\u00b2=sec\u00b2\u22121 argument-blind; cannot derive n_c(\u2113) map"
   },
