@@ -64,3 +64,12 @@ register verdict 建議：`partial → closed-as-classified`（若調律者接�
 ## 六、檔案
 
 scripts/24 + data/24 + docs/13 —— O238 全 9 docs、24 scripts、R1-R8+ 終審
+---
+
+## 七、★ 審計更正附註（2026-10-12, docs audit）
+
+> **§四「C 數值身份：需要 freeze v2 新量度（ms/mu killer：IDCM 預言 12.9 vs O234 42.9）」已被 R10 後續裁決降格**（O234 docs/04 回覆）：
+>
+> - ms/mu 42.89 = **循環**（C_s 校準自 FLAG ms/mu ⟹ Δ=0 Z≡0）——唔係 killer
+> - **正確 killer = lattice 直量 mu/md 1–2% 對 P2 純 γ（γ3/γ2 = 2.245204）**——C 數值身份等呢個量度
+> - §五「推薦 closeout」「O238 = done-in-scope（partial）」建議維持：結構裁決完成，剩等待類

@@ -93,3 +93,12 @@ A₅ = {1,2,3,4,5,7,9,11,13}
 ## 六、檔案
 
 scripts/18-20 + data/18-20 + docs/10 —— O238 共 6 docs、20 scripts 完成
+---
+
+## 七、★ 審計更正附註（2026-10-12, docs audit）
+
+> **§四「剩餘開放：C 完全閉合等 freeze v2 ms/mu killer」已被 R10 後續裁決降格**（O234 docs/04 回覆）：
+>
+> - 「ms/mu killer」表述作廢：ms/mu 42.89 係**循環**（C_s 校準自 FLAG ⟹ 預言同觀測唔獨立）
+> - **正確 killer = lattice 直量 mu/md 1–2% 對 P2 純 γ（γ3/γ2 = 2.245204）**——等 freeze v2 新量度落地先可閉合 C
+> - 其餘「剩餘開放」維持（c/s 機制跨 O、投影 operator 動態已由 docs/14 LO4 閉合）
