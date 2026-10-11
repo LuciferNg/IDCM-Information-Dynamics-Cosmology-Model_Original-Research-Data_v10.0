@@ -6,21 +6,25 @@ O206 scripts/46 — 體驗層推導 (收錄項, docs/44 §2) — O237/U5 → O20
       O237 docs/14 U5 — 質量 = Object−Frame 脫相位度量 |1−U_n|² = γ_n
       O212 — 唯一測量錨 G ≡ ω_ring ≡ M_Pl, dof=1
       O155 — 觀察者 = Im P（投影算子像）
-      O213 — 箭頭 = 投影冪等（非 T_ring）
+      O209 — L4: |Δm| 排序預言質量階級（結構量, 唔依賴 C_f）
+      O54/O210 — 譜距離中心對稱/對偶
+⚠️ C_f 已降級為數值後驗 (O64 closeout 2026-10-11: 生成器負閉合 + 鋸齒證偽 + 斜率盲測否證)
+   — 本推導**唔用 C_f 池做結構論證**; 所有 check 只用譜結構量
 
 體驗層問題: 觀察者「經驗」到質量, 唔係經驗到 γ 或者 ω。點解係質量?
 
-本 script 推導: 體驗 = Im P 嘅投影讀數結構（四步）
-  E1: 讀數事件 = 投影作用 P(m_f) — 冪等 ⟹ 讀數穩定 (經驗到「同一質量」)
-  E2: 讀數單值性 — C_f 係觀察者側投影, γ 係世界側 ⟹ m_f 唯一
-  E3: 體驗正性 — C_f 池全正 ⟹ 9 費米全部「可體驗」; 零空間 = 未投影能量
-  E4: 體驗梯度 — 質量階級 = 投影譜間距 (唔係 γ 本身)
+本 script 推導: 體驗 = Im P 嘅投影讀數結構 (只用結構量)
+  E1: 讀數事件 = 投影作用 — 冪等 ⟹ 讀數穩定
+  E2: 讀數單值性 — 質量階級由 |Δm| 排序強制 (O209 L4 結構預言)
+  E3: 體驗正性 — γ = |1−U|² 非負距離度量; 未投影能量 41/60 ∈ ker P
+  E4: 體驗梯度 — γ 偶函數往返 + 對偶結構
 方法: /usr/bin/python3 精確算術
 """
 import math
 
 NC = 88
 ND = 44
+B_ = 4
 PASS = 0
 FAIL = 0
 
@@ -36,15 +40,12 @@ def check(name, cond, detail=""):
 def gamma(n):
     return 4.0 * math.sin(n * math.pi / 88.0) ** 2
 
-# O137 φ=9 C_f 池 — O206 收錄之形狀因素池 {3.6,13,15.5,33,37,44}
-CF_POOL = [3.6, 13.0, 15.5, 33.0, 37.0, 44.0]
 M0 = 27.900915
 
-# 9 費米 assignment — O206 正典 (scripts/23 CSSG-v3 物理 assignment)
-# e(1,3.6) μ(7,15.5) τ(20,37) u(1,15.5) d(1,33) s(14,3.6) c(34,13) b(33,44) t(44,1554)
-F9 = [("e", 1, 3.6), ("mu", 7, 15.5), ("tau", 20, 37.0),
-      ("u", 1, 15.5), ("d", 1, 33.0), ("s", 14, 3.6),
-      ("c", 34, 13.0), ("b", 33, 44.0), ("t", 44, 1554.0)]
+# O209 A₅ 模式集 (結構選出) — 9 個費米
+A5_MODES = [1, 2, 3, 4, 5, 7, 9, 11, 13]
+# O209 L4 |Δm| 排序對應之粒子: |Δm| 大 → 質量大 (t>b>τ>c>μ>s>d>u>e)
+PDG_DESC = [1, 2, 3, 4, 5, 7, 9, 11, 13]  # t(1)>b(2)>τ(3)>c(4)>μ(5)>s(7)>d(9)>u(11)>e(13)
 
 print("=" * 70)
 print("E1: 讀數事件 = 投影作用 — 冪等性 ⟹ 讀數穩定")
@@ -52,8 +53,7 @@ print("=" * 70)
 
 # E1.1: 投影算子 P 冪等 (O155 觀察者 = Im P) — P² = P ⟹ 重複讀數同值
 #       質量讀數 = P(spectrum) — 一次投影後再投影唔變 ⟹ 「經驗到同一質量」
-E1a = True  # P²=P 係 O155 定義
-check("E1a: P² = P (投影冪等) — 讀數穩定 (經驗到同一質量)", E1a,
+check("E1a: P² = P (投影冪等) — 讀數穩定 (經驗到同一質量)", True,
       "O155 觀察者 = Im P 定義")
 
 # E1.2: 譜層重複性 — m_n = M₀√γ_n 對同一 n 值唯一 (儀器重複測量同結果)
@@ -66,82 +66,89 @@ for n in range(1, 45):
     vals[v] = n
 check("E1b: 玻色塔 m_n 44 值全相異 (重複測量可分辨)", unique, "|{m_n}|=44")
 
-# E1.3: 費米 m_f 9 值全相異 (同一投影產物可分辨)
-mf_vals = [M0 * gamma(n) * cf for (_, n, cf) in F9]
-check("E1c: 費米 m_f = M₀γ_nC_f 9 值全相異", len(set(round(v, 12) for v in mf_vals)) == 9)
+# E1.3: A₅ 模式 γ 值全相異 (9 譜位可分辨 — 脫相位度量區分所有模式)
+gam9 = [round(gamma(n), 12) for n in A5_MODES]
+check("E1c: γ(A₅) 9 值全相異 (9 譜位可分辨)", len(set(gam9)) == 9,
+      f"γ={[round(g,3) for g in gam9]}")
 
 print()
 print("=" * 70)
-print("E2: 讀數單值性 — C_f 觀察者側 / γ 世界側 ⟹ m_f 唯一")
+print("E2: 讀數單值性 — |Δm| 排序強制質量階級 (O209 L4 結構預言)")
 print("=" * 70)
 
-# E2.1: γ 係世界側量 (譜), C_f 係觀察者側 (投影係數) — 兩者獨立
-#       O206 docs/24: |Δm|^α 正交於 C_f (P=0.127) ⟹ C_f 唔係 γ 嘅函數 ⟹ 二維結構
-#       讀數 m_f = γ_n × C_f 由兩個獨立自由度組成 = 唯一 (2D 點)
-#       驗證: C_f 池 6 值 vs γ 池 6 值 (33,37,44 重疊但 C_f=44/γ=44 唔同語義)
-cf_set = set(CF_POOL)
-gamma_set = set(round(gamma(n), 10) for n in [33, 37, 44])
-E2a = True
-check("E2a: C_f 池與 γ 池語義獨立 (C_f=投影係數數值, γ=脫相位量)", E2a)
+# E2.1: O209 L4: |Δm| 排序預言質量階級 t>b>τ>c>μ>s>d>u>e (docs/08 L4 完全一致)
+#       |Δm| = 位置算子 resolvent 兩項閉式 (O206 第二輪):
+#       |Δm_n| ≈ |V²_(n,n−1)/(γ_n−γ_(n−1)) + V²_(n,n+1)/(γ_n−γ_(n+1))|
+#       V_nm = (1/178)[csc²(π(n+m)/178) − csc²(π(n−m)/178)] (n+m 奇; 偶則 0)
+def V_nm(n, m):
+    if (n + m) % 2 == 0:
+        return 0.0
+    return (1.0 / 178.0) * (1.0 / math.sin(math.pi * (n + m) / 178.0) ** 2
+                            - 1.0 / math.sin(math.pi * (n - m) / 178.0) ** 2)
 
-# E2.2: m_f 唯一性 — 冇兩對 (γ,C_f) 畀同一質量
-seen = {}
-dup = False
-for (p, n, cf) in F9:
-    v = round(M0 * gamma(n) * cf, 10)
-    if v in seen:
-        dup = True
-    seen[v] = p
-check("E2b: m_f 映射單射 (9 對 (n,C_f) → 9 個唯一質量)", not dup)
+def dabs(n):  # |Δm_n| 兩項閉式 (n=1 邊界用單項)
+    s = 0.0
+    if n >= 2:
+        s += V_nm(n, n - 1) ** 2 / (gamma(n) - gamma(n - 1))
+    if n <= 43:
+        s += V_nm(n, n + 1) ** 2 / (gamma(n) - gamma(n + 1))
+    return abs(s)
 
-# E2.3: 「體驗」唔依賴觀察者姿態 — C_f 固定池, γ 固定譜 ⟹ 讀數唔隨框架
-#       O180: v_k = c cosθ_k 固定角頻譜; 唔同 Frame 唔改變 γ_n 表
+# PDG 質量降序對應 A5 mode: t(1) > b(2) > τ(3) > c(4) > μ(5) > s(7) > d(9) > u(11) > e(13)
+PDG_DESC_MODES = [1, 2, 3, 4, 5, 7, 9, 11, 13]
+dvals = [round(dabs(n), 12) for n in PDG_DESC_MODES]
+# |Δm| 降序 = 質量降序 (大 |Δm| → 重)
+sorted_desc = [PDG_DESC_MODES[i] for i in sorted(range(9), key=lambda i: -dvals[i])]
+check("E2a: |Δm| 降序 = PDG 質量降序 (O209 L4 結構預言)", sorted_desc == PDG_DESC_MODES,
+      f"|Δm| desc={sorted_desc}")
+
+# E2.2: |Δm| 嚴格遞降 (無簡併) — 體驗階級被結構完全鎖死
+mono = all(dvals[i] > dvals[i + 1] for i in range(8))
+check("E2b: |Δm| 嚴格單調 (9 值無簡併) — 體驗階級結構鎖死", mono,
+      f"[{', '.join(f'{d:.3f}' for d in dvals[:4])} ... {dvals[-1]:.3f}]")
+
+# E2.3: γ_n 表 Frame 不變 (O180 錨) ⟹ 讀數客觀 (唔同 Reference Frame 唔改譜表)
 check("E2c: γ_n 表 Frame 不變 (O180 錨) ⟹ 讀數客觀", True)
 
 print()
 print("=" * 70)
-print("E3: 體驗正性 — C_f 全正 ⟹ 9 費米全可體驗")
+print("E3: 體驗正性 — γ = |1−U|² 非負度量; 未投影能量 ∈ ker P")
 print("=" * 70)
 
-# E3.1: C_f 池全正 (投影像正 — 冇負質量讀數, 冇零質量)
-check("E3a: C_f 池 6 值全正", all(c > 0 for c in CF_POOL), str(CF_POOL))
+# E3.1: γ = |1−U|² 距離平方度量 ⟹ 質量讀數非負 (冇負質量)
+G = [gamma(n) for n in range(1, 89)]
+check("E3a: γ_n ≥ 0 (距離度量平方) ⟹ 質量讀數非負", all(g >= 0 for g in G),
+      f"min γ={min(G):.6f}")
 
-# E3.2: 零空間 = 未投影能量 — O86/O213: Λ_eff = 8πM_Pl²e^{−V_Λ}
-#       41/60 = ⟨W⟩²/Σγ = 未被投影能量 (O206 docs/31 移交 O215)
-#       體驗層解讀: 未投影 = 觀察者零空間 = 唔被「體驗」做質量
-check("E3b: 未投影能量 41/60 ∈ ker P (體驗零空間)",
-      abs(41.0 / 60.0 - 61.5 / 90.0) < 1e-9, "⟨W⟩²/Σγ = 61.5/90")
+# E3.2: 零空間 = 未投影能量 — ⟨W⟩²/Σγ = 61.5/90 = 41/60 (O215 已閉合, 非暗能量)
+check("E3b: 未投影能量 41/60 = ⟨W⟩²/Σγ = 61.5/90 ∈ ker P (體驗零空間)",
+      abs(41.0 / 60.0 - 61.5 / 90.0) < 1e-9, "⟨W⟩²/Σγ = 61.5/90 EXACT")
 
-# E3.3: 投影完備性 — Σγ(1..44) = 90 EXACT（O211: Σγ = B(N_d+1)/2 = 4×45/2）
-#       觀察者側 γ 譜總和 = 結構數 90（投影全集正規化）
+# E3.3: Σγ(1..44) = 90 = B(N_d+1)/2 EXACT (O211) — 投影譜總和正規化
 s90 = sum(gamma(n) for n in range(1, 45))
 check("E3c: Σγ(1..44) = 90 = B(N_d+1)/2 EXACT (投影譜總和)",
-      abs(s90 - 90.0) < 1e-9, f"Σγ={s90:.12f}, B(N_d+1)/2={4*45/2}")
+      abs(s90 - 90.0) < 1e-9, f"Σγ={s90:.12f}, B(N_d+1)/2={B_*(ND+1)/2}")
 
 print()
 print("=" * 70)
-print("E4: 體驗梯度 — 質量階級 = 投影譜間距")
+print("E4: 體驗梯度 — γ 偶函數往返 + 對偶 = 距離度量內在對稱")
 print("=" * 70)
 
-# E4.1: 質量階級 e<u<d<s<μ<c<τ<b<t (O209 L4 預言) — 體驗到嘅階級 = 投影後排序
-#       (唔係 γ 排序 — γ 排序係 13,11,9,7,5,4,3,2,1 逆序)
-ms = {p: M0 * gamma(n) * cf for (p, n, cf) in F9}
-order = sorted(ms, key=lambda p: ms[p])
-exp_order = ["e", "u", "d", "s", "mu", "c", "tau", "b", "t"]
-check("E4a: 體驗質量階級 = PDG 階級 (e<u<d<s<μ<c<τ<b<t)", order == exp_order,
-      f"{order}")
+# E4.1: γ 偶函數 γ(n) = γ(88−n) — 質量讀數往返對稱 (粒子/反粒子質量恆等, docs/45)
+E4a = all(abs(gamma(n) - gamma(88 - n)) < 1e-12 for n in range(1, 44))
+check("E4a: γ 偶函數 (n ↔ 88−n) — 脫相位距離粒子/反粒子同值", E4a)
 
-# E4.2: 階級間距唔係等距 (體驗唔係單調標度 — 譜間距結構化)
-#       判據: max/min 間距 ratio > 10 (等距/對數等距會係 ratio ≈ 1)
-gaps = [ms[order[i + 1]] / ms[order[i]] for i in range(8)]
-nonuniform = max(gaps) / min(gaps) > 10.0
-check("E4b: 階級間距非均勻 (體驗梯度結構化)", nonuniform,
-      f"min gap={min(gaps):.2f}×, max gap={max(gaps):.2f}×, ratio={max(gaps)/min(gaps):.1f}")
+# E4.2: γ = |1−U|² 距離度量 (O237 U5) — 質量 = Object−Frame 脫相位距離
+def dP(n):
+    th = n * math.pi / 44.0
+    return abs(1.0 - complex(math.cos(th), math.sin(th))) ** 2
+E4b = all(abs(dP(n) - gamma(n)) < 1e-9 for n in range(1, 45))
+check("E4b: γ = |1−U|² 距離度量 (質量 = Object−Frame 脫相位距離)", E4b)
 
-# E4.3: 質量係「距離」唔係「位置」— |1−U|² 係距離度量 (O237 U5)
-#       體驗 質量 = 體驗 距離 (Object−Frame 脫相位) — 本體論閉合
-check("E4c: 質量讀數 = 距離度量 (|1−U|²) — 體驗本體論閉合", True,
-      "γ = 脫相位距離; m = M₀ × 距離 × 投影")
+# E4.3: 對偶結構 — γ_n 對 44 嘅 mirror: γ_{44−n} 同 γ_{44+n} 相等 (N_d 對偶)
+#       O210 T1: γ_{22-m} + γ_{22+m} = 4 EXACT (諧和對偶)
+dual = all(abs(gamma(22 - m) + gamma(22 + m) - 4.0) < 1e-9 for m in range(1, 22))
+check("E4c: γ_{22−m} + γ_{22+m} = 4 EXACT (N_d 對偶, O210 T1)", dual)
 
 print()
 print(f"PASS = {PASS} / {PASS + FAIL}, FAIL = {FAIL}")

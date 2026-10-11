@@ -90,11 +90,12 @@ for n in range(1, 44):
         G2a_pass = False
 check("G2a: m(ω_n) = m(−ω_n) 玻色塔 (√γ 偶函數)", G2a_pass)
 
-# G2.2: 費米公式 m = M₀γ_n·C_f — γ 對 ±n 不變 ⟹ 費米質量對反粒子不變
-#       反粒子費米 = (n 同, 相位相反) ⟹ γ 相同 ⟹ m 相同 (CPT 結構)
-G2b_pass = all(cf_of(n) is None or abs(gamma(n) - gamma(88 - n)) < 1e-12 for n in [33, 37, 44])
-check("G2b: 費米 C_f 池 (33,37,44) 對 ±ω 鏡像 γ 不變 ⟹ m_f 不變", G2b_pass,
-      "m_f = M₀γ_nC_f 冇符號自由度")
+# G2.2: 費米質量恆等 — 唔依賴 C_f 數值! (C_f 已降級為後驗, O64 closeout 2026-10-11)
+#       論證: m_f = M₀·γ_n·C_f 形式 (O137 Decoupling), γ 對 ±ω 鏡像對稱 ⟹
+#       任何 C_f>0 下 m_f(反粒子) = m_f(粒子) — 質量恆等係 γ 對稱嘅必然, 唔靠 C_f 池
+G2b_pass = all(abs(gamma(n) - gamma(88 - n)) < 1e-12 for n in range(1, 45))
+check("G2b: γ 鏡像對稱 ⟹ ∀C_f>0: m_f(反)=m_f(粒子) (C_f 無關)", G2b_pass,
+      "m_f = M₀γC_f 形式 · γ 偶函數 ⟹ 質量恆等結構必然")
 
 print()
 print("=" * 70)
