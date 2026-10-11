@@ -132,3 +132,5 @@ tan 示範分析已完成並實測（2026-10-10 當日，mpmath 40-50 dps）：
 **判決**：**六項 handoff 全部撤回，註銷為 O246 自身產物**。數學恆等本身成立（EXACT、N 通用 13/13），但「適用性/新發現」宣稱級全部 FAIL。docs/03 掃描分類表獨立於 handoff 有效性，仍然係本 O 掃描產物（130 主 O + 157 子問題已掃，A/B/C 分類保留）。
 
 **剩餘（誠實記錄）**：tan 對 IDCM「位元/二元層潛在適用」維持「未驗證」🟡 狀態（docs/02 §三 判定 3）——冇任何 O 實質承接；1247 只係 tan 家族譜和事實。
+
+> **🔴 Commit 歸屬勘誤（append-only，2026-10-11）**：commit `838d748`（六項 handoff 全撤回）git add 成個 `open_problems_fresh/README.md`，連帶帶入 **O123 行**（並行 session 之 δ_PMNS 閉合摘要更新，內容零損失、完整入庫）。O123 目錄**冇**任何檔案被掃入（`git show --name-only 838d748 | grep -c o123_` = 0）。commits `c0b44b7` 同 `838d748` 皆係 scoped pathspec 鏈（o246 目錄 ＋ README ＋ register.jsonl 外科手術式 stage），register.jsonl 喺 `838d748` 淨帶自己 O246 撤回行（+1，`git diff HEAD^..HEAD -- register.jsonl` 核實）；O140 並行 note（09:31:12 docs/18 否決後頭緒）保留 working tree 由對方 commit。教訓重申：README 混線時 commit message 應誠實列明帶咗邊個 session 嘅行。
