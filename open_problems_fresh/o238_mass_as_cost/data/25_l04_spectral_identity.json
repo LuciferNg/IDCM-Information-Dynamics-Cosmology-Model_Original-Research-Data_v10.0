@@ -1,0 +1,25 @@
+{
+ "top9_disp_overlap": 1,
+ "top9_lsp_overlap": 1,
+ "low4": [
+  55,
+  77,
+  33,
+  11
+ ],
+ "drop": [
+  6,
+  8,
+  10,
+  12
+ ],
+ "cand_overlaps": {
+  "top9-|lnD−med|": 1,
+  "top9-spacing": 1,
+  "extreme(5hi+4lo)": 0,
+  "top9-|OLSresid|": 1,
+  "top9-|dm|": 1,
+  "top9-γ": 0
+ },
+ "SEL9_rms": 0.5455714726743505
+}
