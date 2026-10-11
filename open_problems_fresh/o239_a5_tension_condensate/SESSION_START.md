@@ -86,4 +86,4 @@ data/                  — script 輸出 json
 - 🔴 誠實標注: 26/19 質數身份未推;「18=26−8」唔砌; 冇新增閉合宣稱; 實際質量公式判定仍等 freeze v2
 - **意義**: 質量層缺口可能落點 = K_Tree stair 投影層, 唔喺 A₅ 幾何池（docs/02 已封）——跨 O 交接 p10_ktree_structure → register note mirror 必要
 
-**commit**: `9910373` 之後待 commit（第二輪）。
+**commit**: `e8cc6fe`（O239 R2，2026-10-12，第二輪入檔）。
