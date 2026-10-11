@@ -110,3 +110,34 @@ Gemini 主張「宏觀宇宙與微觀粒子共用同一套 A₅ chiral icosahedr
 
 `docs/02_no_go_and_baseline.md`, `docs/03_delta_pmns_derivation.md`, `final_result.md`,
 `scripts/01–04`, `data/00_observational_constraints.md`
+
+---
+
+# 2026-09-27 Session Round 2（續推）— π 分支 + 深度 + 唯一性
+
+> **append-only**：以上原文一字不刪。
+
+## 狀態
+
+🟡 **結構派生候選** — Round 1 三項開放問題: π 分支 🟢、深度 n 🟡、1e-8 唯一性 🟢 全部處理。
+
+## Round 2 新增
+
+| 項 | 結果 |
+|:--|:--|
+| **π 分支定理** 🟢 | tree 扇區**唯一負物件** = F-matrix 元 −φ⁻¹ ⟹ π 嘅算子身份; chain 全正 ⟹ δ_CKM 冇 π |
+| **統一相位公式** 🟡 | δ_sector = arg(Z_canon) + atan(\|Z_canon\|): chain → 66.399960°, tree → 211.717474° |
+| **Sector-Chirality** 🟢 | sign(J_PMNS) = −sign(J_CKM); J_PMNS = −0.01766 vs NuFIT 6.1 −0.0178 ✓ |
+| **深度 n** 🟡 | 族 = β 嘅有理收斂子; 精確 = β (tree 相鄰能階); 5-step F₅/F₆ dev 0.29°; 統計辨別 FAIL (誠實) |
+| **1e-8 唯一性** 🟢 | tree-池 924 式: 只有 β (3 個代數別名), 最近競爭者 1e-3 = 相位間距 0.05° |
+| **理論窗** 🟢 | δ_PMNS ∈ 211.72° ± 0.15°（DUNE/HK 精度 ~2–5° ⟹ 不可分辨但係單一候選） |
+
+## 檔案
+
+`scripts/05_pi_branch_chirality.py` (7/7), `scripts/06_depth_and_uniqueness.py` (3/4),
+`docs/04_pi_branch_and_depth.md`
+
+## 剩餘 🔴（唯一）
+
+統一相位公式 δ = arg(Z) + atan|Z| 嘅**底層推導**（由 U_PMNS 構造逐步推出,
+唔係「兩扇區同 pattern」嘅歸納）— 需接 ckm_reconstruction 嘅 texture 算子。

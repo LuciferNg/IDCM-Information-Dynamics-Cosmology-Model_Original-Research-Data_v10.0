@@ -66,6 +66,8 @@
 | T2 | 2026-09-27 | `scripts/02_tensor_phase_nogo.py` | 4/4 PASS — 張量積譜全實；複結構來源 = 0（Z₅ 被 P4 殺） | docs/02 §2 |
 | T3 | 2026-09-27 | `scripts/04_numerology_null_230.py` | 230° 4 Hard Tests 3 關 FAIL（coverage 100%、115 witness、循環 J） | docs/02 §3 |
 | T4 | 2026-09-27 | `scripts/03_delta_pmns_derivation.py` | **7/7 PASS** — δ_PMNS = π + atan(β) = 211.7175°；J_CP = −0.0176 | docs/03 |
+| T5 | 2026-09-27 | `scripts/05_pi_branch_chirality.py` | **7/7 PASS** — π 分支定理: tree 唯一負物件 −φ⁻¹; δ_sector = arg(Z)+atan\|Z\|; Sector-Chirality J_PMNS<0<J_CKM | docs/04 |
+| T6 | 2026-09-27 | `scripts/06_depth_and_uniqueness.py` | **3/4 PASS** — 深度: 精確 = β (族=有理收斂子); 唯一性 1e-8 (mult=1, 競爭者 0.05°); D2 J 帶統計辨別誠實 FAIL | docs/04 |
 
 ## 依賴鏈
 
@@ -82,7 +84,9 @@ ChronologicalStringSpectralGeometry-v2/docs/06 (Z₅ 主張) ─→ 本輪否證
 - **SESSION_START 指定路線（CY₃ 投影 / Z₅ twisted sector）→ 🔴 死**: P4 no-go（uniform Z₅ twist ⇒ J≡0）+ sector separation。
 - **上游 4 個互相矛盾候選全部否證**: 222.5° (φ-trap)、72°/144° (Z₅ no-go)、72.6° (無源)、230° (numerology)。
 - **新候選 🟡**: `δ_PMNS = π + atan(β) = 211.717474°`，J_CP = −0.0176（符號負）。
-- **剩餘 🔴**: π 分支推導、有限深度 n 釘死、1e-8 唯一性論證。
+- **Round 2 續推**: π 分支定理 🟢（tree 唯一負物件 −φ⁻¹ ⇒ Sector-Chirality J_PMNS < 0 < J_CKM）；
+  深度釘死 🟡（精確 = β；理論窗 0.29° 有界）；唯一性 🟢（1e-8, mult=1, 競爭者間距 0.05°）。
+- **剩餘 🔴**: 統一相位公式 δ = arg Z + atan|Z| 嘅底層推導（由 U_PMNS 構造, 唔係 pattern 推論）。
 
 ## 譜定義注意
 
