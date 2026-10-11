@@ -50,3 +50,24 @@ data/                  — script 輸出 json
 - 文檔歷史：append-only；跨文檔引用數字必核歸一化
 - commit：每輪一個 commit，message 詳列正負結果
 - 收結：推無可推先 close；register 事件全程同步
+
+---
+
+## Session 記錄
+
+### 2026-10-12 — 第一輪：P1（問題 5）+ P2（問題 4）盲測攻堅
+
+**P1「挫阻扣減」幾何/譜層 signature**（scripts/01-05, 累計 19/25 PASS）:
+- 🟢 挫阻距離場離散 6 帶（unique 45 ≪ MC 88）——挫阻 = 規則子格（scripts/01-02: 8/10）
+- 🟢 面型 census: 32 挫阻 = 20 短+12 長; 88 透明 = 40 短+48 長; **13.306° 第一帶 = 40 短透明邊 ↔ 20 △-挫阻 完美二分**（scripts/04: 7/7）
+- 🔴 近/遠挫阻 CMB 溫度同端點挫阻負擔無差異（scripts/03: 1/4, 負）
+- 🔴 譜層: |dm| 連續、同 γ 無 rank 相關、top-9 ∩ M9 = ∅（scripts/05: 2/4, 負）——挫阻扣減係幾何操作非譜操作
+
+**P2「A₅ 幾何缺陷→粒子譜 非表示論」**（scripts/06, 2/2）:
+- 🔴 幾何序↔譜量 rank 對應 no-go（max|r|=0.367）
+- 🔴 挫阻幾何池 vs 質量層目標池 0/462 命中
+- 🔴 M9 喺池 {1..13} 內無 |dm| rank 特權（z=−1.21）
+
+**判決**: 問題 5 推到盡（幾何層正、譜層負）、問題 4 封死（三路線全負）——O239 推無可推，等 freeze v2 / 調律者裁決是否 close。
+**docs**: `docs/01_frust_subtraction_geometry.md` + `docs/02_p2_nonrep_mapping.md`。
+**commit**: 待 commit（第一輪）。

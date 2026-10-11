@@ -1,0 +1,36 @@
+{
+ "obs": {
+  "unique": 45,
+  "n_bands": 6,
+  "max_band": 40,
+  "bands": {
+   "13.31": 40,
+   "16.11": 20,
+   "21.67": 12,
+   "24.4": 10,
+   "26.05": 2,
+   "29.35": 4
+  }
+ },
+ "mc1_rand88_true32": {
+  "unique_mean": 87.9998,
+  "unique_0.5pct": 88.0,
+  "nband_mean": 86.4268,
+  "nband_0.5pct": 82.0,
+  "maxband_mean": 1.8168,
+  "maxband_99.5pct": 3.0
+ },
+ "mc2_true88_rand32": {
+  "unique_mean": 87.9998,
+  "unique_0.5pct": 88.0
+ },
+ "mc3_double_random": {
+  "unique_mean": 88.0,
+  "unique_0.5pct": 88.0
+ },
+ "face_cross": [
+  12,
+  20
+ ],
+ "N_MC": 5000
+}
