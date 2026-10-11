@@ -1,0 +1,22 @@
+{
+ "n_rules": 7,
+ "best_rules": [
+  "coprime11≤9",
+  "primes∪sq≤13",
+  "primes∪sq≤14",
+  "primes∪sq≤15",
+  "primepower≤13",
+  "primepower≤14",
+  "primepower≤15"
+ ],
+ "p_lookelsewhere": 1.225e-11,
+ "rules_r2": {
+  "coprime11≤9": 0.9954300839160327,
+  "primes∪sq≤13": 0.9920053692453021,
+  "primes∪sq≤14": 0.9920053692453021,
+  "primes∪sq≤15": 0.9920053692453021,
+  "primepower≤13": 0.990335789622145,
+  "primepower≤14": 0.990335789622145,
+  "primepower≤15": 0.990335789622145
+ }
+}
