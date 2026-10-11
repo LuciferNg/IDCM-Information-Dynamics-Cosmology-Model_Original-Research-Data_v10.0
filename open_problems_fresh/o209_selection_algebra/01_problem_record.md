@@ -242,6 +242,7 @@ O209 全部推導 = **同一條對話**，經 6 次上下文壓縮分叉成 7 �
 | 16 | docs/17_cs_three_layer.md + scripts/17_cs_three_layer.py + data/17_cs_three_layer.json | 2026-10-11 17:41 | 2026-10-11 | 全文（scripts/04 section Q 獨立重算 6/6；scripts/17 8/9） | ✅ 已驗 |
 | 17 | docs/18_relational_cosmology.md + scripts/18_relational_cosmology.py + data/18_relational_cosmology.json | 2026-10-11 18:23 | 2026-10-11 | 全文（scripts/04 section R 獨立重算 3/3；scripts/18 3/3） | ✅ 已驗 |
 | 18 | docs/19_inverse_cost.md + scripts/19_inverse_cost.py + data/19_inverse_cost.json | 2026-10-11 19:46 | 2026-10-11 | 全文（scripts/04 section S 獨立重算 5/5；scripts/19 5/5） | ✅ 已驗 |
+| 19 | docs/20_o238_incoming_verify.md + scripts/20_o238_incoming_verify.py + data/20_o238_incoming_verify.json | 2026-10-11 21:59 | 2026-10-11 | 全文（scripts/20 由零重現 7/7） | ✅ 已驗 |
 
 **水位規則**（idcm-closeout §2 T0）：下次 closeout 只驗水位之後嘅增量；判定「未變」用 git diff / byte 對比，唔止 mtime。
 
@@ -254,3 +255,5 @@ O209 全部推導 = **同一條對話**，經 6 次上下文壓縮分叉成 7 �
 | 2026-10-11 18:23 | ★ **關係宇宙學 × 質量譜（docs/18 + scripts/18 3/3）**：回答「可否透過關係宇宙學推質量譜」——① freeze C_f 池 × 宇宙量池身份掃描 8/8 命中（μ=8.356=(1/Ω_m)·√7 dev 0.01% 等）但 **null 對照 P=0.630**（200 MC median 27 vs 真實 25）= 池密度；② **O212 dof=1 結構性禁止**：宇宙池全部 = f(ω_ring) 零新增自由度；③ α=2.633254 冇宇宙量身份（最佳 dev 18.5%）——「關係宇宙學」只活喺尺度層（M₀-H₀ 錨 O38/O170 已落實），身份層要譜內算子（κ 非對角 O53/O59）；④ α=79/30 維持譜內結構數身份 | **3/3 PASS** | docs/18 + scripts/18 + data/18 |
 
 | 2026-10-11 19:46 | ★ **逆推：質量 = 幾何連結代價（docs/19 + scripts/19 5/5）**：回應「放棄推 C_f，逆推：不找數值，用幾何連結本身推質量，質量視為代價」——① 幾何中心性候選全敗（eigenvector 0.6223 / degree 1.93 / betweenness 2.77 / closeness 3.21）——代價唔係拓撲位置，係 \|dm\| 能量倒數耦合（0.5802 仍最佳，O136 docs/25 二階自能確認）；② **freeze OLS α = 2.61698 ≈ φ² = 4cos²(π/5) 二十面體角（0.01σ；79/30 0.11σ 退次選）**——scheme 揀候選：PDG 捧 79/30、freeze 捧 φ²；統計上不可分，但 freeze 有獨立理據（O234）⟹ φ² 新首選；③ C_f ∝ \|dm\|^{φ²}/γ FAIL（slope 0.374）——O233 5 線負維持，C_f 仍無算子；④ 標度 C = 1.47e−6 MeV ≠ M₀ 未閉合（docs/25 同病） | **5/5 PASS** | docs/19 + scripts/19 + data/19 |
+
+| 2026-10-11 21:59 | ★ **Incoming 驗證：O238 混標度 b 偽影（docs/20 + scripts/20 7/7）**：O238 handoff 指控成立——O209 docs/16/19 質量集 B 嘅 b=93.4×11.652×3.291=3581.6 用咗混標度 mb(mb)/mc(mc)=3.291（O234 docs/03 §二 已裁定偽影）；正確 ×4.586（b=4991, HPQCD 21 @3GeV）或 RGI 6938；由零重現三套：α_OLS S1 2.616977 / S2 2.642463 / S3 2.615977 全部一致；α≈φ² 三套 1σ 內唔受影響；S2 RMS 0.544（比 S1 0.580 更好）；**b 離群 −0.674→−0.416/−0.228 退出（偽影要撤）**；c/s 離群三套 >0.5 = 真結構維持（C_f 生成層）；docs/16/17/19 加更正附註；新準則：質量層 fit 默認 freeze v2 | **7/7 PASS** | docs/20 + scripts/20 + data/20 |
