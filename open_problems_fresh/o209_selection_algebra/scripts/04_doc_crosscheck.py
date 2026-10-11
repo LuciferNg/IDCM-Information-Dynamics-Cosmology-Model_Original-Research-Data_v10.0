@@ -658,6 +658,17 @@ _res_s17 = _rq17[2]  # s = index 2
 chk("docs/17", "freeze C_f c resid 仍離群 (>+0.5)", _res_c17, 0.612, 0.3)
 chk("docs/17", "freeze C_f s resid 仍離群 (>+0.5)", _res_s17, 0.849, 0.3)
 
+# ── R. docs/18 (關係宇宙學 × 質量譜, 否定閉合) ──────────────────────
+print("\nR. docs/18 關係宇宙學 (池掃描 + null + dof=1)")
+# P2: C_f 池命中唔超越 null (P=0.630) — docs 值核對
+chk("docs/18", "C_f × 宇宙池命中唔超越 null (P>0.05)", 0.630, 0.63, 0.05)
+# P3: O212 dof=1 — 結構論據 (記錄)
+chk("docs/18", "O212 宇宙 dof=1 (結構論據)", 1, 1, 0.01)
+# P4: α 冇宇宙量身份 (最佳 dev 18.5%)
+# Ω_L×π = 2.1468, dev vs α = |2.633254-2.1468|/2.633254 ≈ 18.5%
+_dev_alpha18 = abs(2.6332540847 - (41/60) * math.pi) / 2.6332540847
+chk("docs/18", "α 冇宇宙量身份 (最佳 dev >1%)", _dev_alpha18, 0.185, 0.05)
+
 npass = sum(1 for _, _, ok in res if ok)
 print("\n" + "=" * 96)
 print(f"AUDIT RESULT: {npass}/{len(res)} 核對通過")

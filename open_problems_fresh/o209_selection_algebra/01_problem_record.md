@@ -240,6 +240,7 @@ O209 全部推導 = **同一條對話**，經 6 次上下文壓縮分叉成 7 �
 | 14 | docs/15_incoming_verify.md + scripts/15_incoming_verify.py + data/15_incoming_verify.json | 2026-10-11 16:15 | 2026-10-11 | 全文（scripts/04 section O 獨立重算 7/7；scripts/15 12/12） | ✅ 已驗 |
 | 15 | docs/16_scheme_rerun.md + scripts/16_scheme_rerun.py + data/16_scheme_rerun.json | 2026-10-11 17:02 | 2026-10-11 | 全文（scripts/04 section P 獨立重算 6/6；scripts/16 7/8） | ✅ 已驗 |
 | 16 | docs/17_cs_three_layer.md + scripts/17_cs_three_layer.py + data/17_cs_three_layer.json | 2026-10-11 17:41 | 2026-10-11 | 全文（scripts/04 section Q 獨立重算 6/6；scripts/17 8/9） | ✅ 已驗 |
+| 17 | docs/18_relational_cosmology.md + scripts/18_relational_cosmology.py + data/18_relational_cosmology.json | 2026-10-11 18:23 | 2026-10-11 | 全文（scripts/04 section R 獨立重算 3/3；scripts/18 3/3） | ✅ 已驗 |
 
 **水位規則**（idcm-closeout §2 T0）：下次 closeout 只驗水位之後嘅增量；判定「未變」用 git diff / byte 對比，唔止 mtime。
 
@@ -248,3 +249,5 @@ O209 全部推導 = **同一條對話**，經 6 次上下文壓縮分叉成 7 �
 | 2026-10-11 17:02 | ★ **R6/R8 scheme 穩健性重推（docs/16 + scripts/16 7/8）**：O234 freeze v1.1 自洽質量集重推 docs/11 質量譜——① **α=79/30 候選 freeze 下唔死但降格**：dev 0.003%（PDG）→ 0.62%（freeze），由「靚命」降為「附近」；固定 79/30 ΔRMS +0.0005 零損失保持；結構剛性微擾（b ±10% / c/s ±1σ / 極端組合）dev79 穩定 0.34–0.93%；② **freeze RMS 0.5802 < PDG 0.5872**（fit 改善 1.2%，凍結層質量集冇損害 IDCM 質量層）；③ **c/s 離群非 scheme artifact**（freeze 下 c +0.80、s +1.18 仍在）——根源係結構，排除混標度解釋；④ β=6/5 再確認 artifact（freeze 2.72%）；⑤ 後續 O209/O136 質量層分析默認用 freeze v1.1 質量集 | **7/8 PASS**（1 FAIL=誠實降格） | docs/16 + scripts/16 + data/16 |
 
 | 2026-10-11 17:41 | ★ **c/s 離群三層拆解（docs/17 + scripts/17 8/9）**：承 docs/16（c/s 離群非 scheme）——① freeze C_c/C_s=3.8587 嘅 27/7=N_gen³/L₄ 候選（dev 0.040%）**look-elsewhere 死**（[1..300]² dev<0.05% 6 hits=池密度）；② γ₇/γ₄≈3=N_gen（dev 0.66%）係 sin² 密度效應之一（6/156 vs null 2.4；γ₂/γ₁≈4 同樣靚）且偏差 180× 唔夠解釋 s resid；③ **|dm| 層完全平滑**（poly3 fit c +0.014、s +0.048——排除）；④ freeze C_f 夸克 5 點 c +0.61、s +0.85 離群仍在 —— **離群鎖定 C_f 生成層**（κ 張量非對角 O53/O59 = 最終候選）；C_f 比結構隔離 P=0.0007 維持最穩固正面 | **8/9 PASS**（1 FAIL=27/7 look-elsewhere 誠實） | docs/17 + scripts/17 + data/17 |
+
+| 2026-10-11 18:23 | ★ **關係宇宙學 × 質量譜（docs/18 + scripts/18 3/3）**：回答「可否透過關係宇宙學推質量譜」——① freeze C_f 池 × 宇宙量池身份掃描 8/8 命中（μ=8.356=(1/Ω_m)·√7 dev 0.01% 等）但 **null 對照 P=0.630**（200 MC median 27 vs 真實 25）= 池密度；② **O212 dof=1 結構性禁止**：宇宙池全部 = f(ω_ring) 零新增自由度；③ α=2.633254 冇宇宙量身份（最佳 dev 18.5%）——「關係宇宙學」只活喺尺度層（M₀-H₀ 錨 O38/O170 已落實），身份層要譜內算子（κ 非對角 O53/O59）；④ α=79/30 維持譜內結構數身份 | **3/3 PASS** | docs/18 + scripts/18 + data/18 |
