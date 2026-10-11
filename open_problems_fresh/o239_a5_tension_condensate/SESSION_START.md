@@ -70,4 +70,4 @@ data/                  — script 輸出 json
 
 **判決**: 問題 5 推到盡（幾何層正、譜層負）、問題 4 封死（三路線全負）——O239 推無可推，等 freeze v2 / 調律者裁決是否 close。
 **docs**: `docs/01_frust_subtraction_geometry.md` + `docs/02_p2_nonrep_mapping.md`。
-**commit**: 待 commit（第一輪）。
+**commit**: `610481c`（O239 R1，2026-10-12T02:33）。
