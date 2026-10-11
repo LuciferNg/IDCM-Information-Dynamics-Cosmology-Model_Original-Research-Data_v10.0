@@ -136,4 +136,4 @@ data/                  — script 輸出 json
 
 **T2 完成 = docs/04 缺口 2 閉合**: F=dp/dt 離散形式 = 固定相位步 + cot/csc 幾何, 加速成本 dE/dv ∝ csc³θ → ∞。零新參數; 剩缺口 = 合成律封閉性（O140 🔴）
 
-**commit**: 待 commit（第六輪）。
+**commit**: `4d4ff6c`（O239 R6，2026-10-12，第六輪入檔）。
