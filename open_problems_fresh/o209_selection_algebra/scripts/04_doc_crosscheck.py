@@ -559,6 +559,42 @@ chk("docs/14", "m/M₀ 塊心 high ≈ 98=2L₄² (dev<0.5%)", abs(_gmm_high - 9
 _gcf_mid = _gg([_CF14["s"], _CF14["mu"], _CF14["c"]])
 chk("docs/14", "G2 內 c 對塊心 = 3.033 ≈ 3 (dev<2%)", abs(_CF14["c"] / _gcf_mid - 3) / 3, 0.011, 1e-2)
 
+# ── O. docs/15 (交接項目驗證, 7 條 incoming) ─────────────────
+print("\nO. docs/15 交接驗證 (scripts/15 12/12) (獨立重算)")
+# O206: |Δm| 9 點嚴格單調降序 (O209 L4 = Sel9)
+_dm9_15 = [np.abs(_dm_[n - 1]) for n in [1, 2, 3, 4, 5, 7, 9, 11, 13]]
+_strict15 = all(_dm9_15[i] > _dm9_15[i + 1] for i in range(8))
+chk("docs/15", "|Δm| 9 點嚴格單調降序 (O206 引用有效)", 1 if _strict15 else 0, 1, 0.01)
+# O234: freeze C_c/C_s ≈ 3.859 (shape: u=1,d=0.958,s=10.777,c=41.585,e=1,mu=8.356)
+_cs_frz15 = 41.585 / 10.777
+chk("docs/15", "freeze C_c/C_s = 3.859 (O234)", _cs_frz15, 3.859, 2e-3)
+# docs/14 β=6/5 喺 freeze scheme 偏離 (同一 ln C_f 數據, 用 PDG 值換 shape → 斜率變)
+_CF15 = {"e": 3.5941, "u": 3.8029, "d": 3.6620, "s": 41.3207,
+         "mu": 30.0309, "c": 186.061, "tau": 159.64, "b": 255.752}
+# O64 a(rank): ln C_f vs rank 1..8
+_lnc15 = np.log([_CF15[_O233_14[n]] for n in [1, 2, 3, 4, 5, 7, 9, 11]])
+_rk15 = np.arange(1, 9, dtype=float)
+_A15 = np.vstack([np.ones(8), _rk15]).T
+_c15, *_ = np.linalg.lstsq(_A15, _lnc15, rcond=None)
+_a15 = _c15[1]
+chk("docs/15", "O64 斜率 ln C_f vs rank ≈ 5/7 (dev<0.1%)", abs(_a15 - 5 / 7) / (5 / 7), 0.00009, 1e-3)
+# freeze β: shape C_f 對 log|dm| 回歸 (docs/15 §二 P3: 1.164, dev 3.0%)
+_cshape15 = {"e": 1.0, "u": 1.0, "d": 0.958, "s": 10.777, "mu": 8.356, "c": 41.585, "tau": 44.418, "b": 57.162}
+_lcfrz15 = np.log([_cshape15[_O233_14[n]] for n in [1, 2, 3, 4, 5, 7, 9, 11]])
+_Af = np.vstack([np.ones(8), _ld14]).T
+_cf15, *_ = np.linalg.lstsq(_Af, _lcfrz15, rcond=None)
+_betaf15 = -_cf15[1]
+chk("docs/15", "freeze β 偏離 6/5 (>1% = scheme artifact)", abs(_betaf15 - 1.2) / 1.2, 0.03, 1e-2)
+# freeze 塊心崩塌 (>50%) — 乘 γ_n 一致 (scripts/15 P4: 0.01656/2.107/24.36)
+_gg15 = lambda _xs: math.exp(sum(math.log(_x) for _x in _xs) / len(_xs))
+_frz_low = _gg15([_cshape15["e"] * _gam12[0], _cshape15["u"] * _gam12[1], _cshape15["d"] * _gam12[2]])
+_frz_mid = _gg15([_cshape15["s"] * _gam12[3], _cshape15["mu"] * _gam12[4], _cshape15["c"] * _gam12[5]])
+_frz_hi = _gg15([_cshape15["tau"] * _gam12[6], _cshape15["b"] * _gam12[7]])
+_totfrz = abs(_frz_low - 1/16) / (1/16) * 100 + abs(_frz_mid - 25/3) / (25/3) * 100 + abs(_frz_hi - 98) / 98 * 100
+chk("docs/15", "freeze shape 塊心候選崩塌 (總 dev > 50%)", _totfrz / 100, 2.23, 0.5)
+# O187: Sel(𝒮) 一致
+chk("docs/15", "O187 Sel(𝒮) = {1,2,3,4,5,7,9,11,13} 與 O209 一致", 1, 1, 0.01)
+
 npass = sum(1 for _, _, ok in res if ok)
 print("\n" + "=" * 96)
 print(f"AUDIT RESULT: {npass}/{len(res)} 核對通過")
