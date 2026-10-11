@@ -14,7 +14,7 @@ source:  O209 docs/19 交接 (2026-10-11)
 -->
 
 > **Session**: 2026-10-11（新建立）
-> **狀態**: 📄 **已註冊 — 未開始**
+> **狀態**: 📄 **已註冊 — 已推 R1–R9（partial，結構已裁決：數量級律+投影 signature）**
 > **來源**: O209 docs/19（逆推「質量 = 幾何連結代價」攻堅，commit `63252ee`）
 > **前置**: O209（docs/19 + scripts/19 + data/19）、O136（docs/25/29）、O234（freeze v1.1 質量集）
 > **位置**: `open_problems_fresh/o238_mass_as_cost/`
