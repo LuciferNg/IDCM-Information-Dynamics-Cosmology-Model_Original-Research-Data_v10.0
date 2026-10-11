@@ -149,3 +149,14 @@ O233 用 γ升序（1=e…13=t，輕子{1,5,9}）、O209 docs/03 用 |Δm| 唯�
 - **O137**：授權 A₅ γ升序（e→1..t→13）O209 已用（docs/14 frame 一致）。
 - **docs/14 §七 修正**：β=6/5 同塊心候選降級為 PDG scheme artifact；Id(f) 後續必須用凍結層 scheme，屬 O136。
 - 交付: docs/15 + scripts/15（12/12）+ data/15；scripts/04 section O（161/161）；全鏈 **400/401**（唯一 FAIL = scripts/12 P1.1 誠實負）。
+
+## §十二、R6/R8 scheme 穩健性重推（2026-10-11 17:02 · docs/16 + scripts/16 7/8）
+
+承接 docs/15（O234 scheme watch 驗證）——將 scheme 重推應用到 R6/R8 質量譜本身（docs/11 用 PDG 絕對質量）。
+
+- **α=79/30 候選 freeze 下唔死但降格**：dev 0.003%（PDG）→ 0.62%（freeze v1.1 自洽質量集）——由「靚命」降為「附近」，唔可以宣稱閉合、亦唔可以話死；結構剛性微擾（b ±10%、c/s ±1σ、HPQCD 極端）dev79 穩定 0.34–0.93%
+- **freeze RMS 0.5802 < PDG 0.5872**：凍結層質量集整體 fit 改善 1.2%——支持 O234 凍結層做後續基準
+- **c/s 離群非 scheme artifact**：freeze 下 c +0.80、s +1.18 仍在——根源係結構（O233 分歧位），排除混標度解釋
+- **β=6/5 再確認 artifact**：freeze 2.72%（docs/15 P3 結論複現）
+- **記錄**：data/16_scheme_rerun.json；scripts/04 section P（167/167）；全鏈 **407/409**
+- **新準則**：O209/O136 質量層分析默認用 O234 freeze v1.1 質量集（docs/16 §二），唔再用 PDG 混標度絕對質量做 fit

@@ -238,7 +238,10 @@ O209 全部推導 = **同一條對話**，經 6 次上下文壓縮分叉成 7 �
 | 12 | docs/13_cs_offgroup.md + scripts/13_cs_offgroup.py + data/13_cs_offgroup.json | 2026-10-06 20:46 | 2026-10-06 | 全文（scripts/04 section M 獨立重算 8/8；scripts/13 8/8） | ✅ 已驗 |
 | 13 | docs/14_idf_handoff.md + scripts/14_idf_handoff.py + data/14_idf_handoff.json | 2026-10-06 21:58 | 2026-10-06 | 全文（scripts/04 section N 獨立重算 9/9；scripts/14 9/9） | ✅ 已驗 |
 | 14 | docs/15_incoming_verify.md + scripts/15_incoming_verify.py + data/15_incoming_verify.json | 2026-10-11 16:15 | 2026-10-11 | 全文（scripts/04 section O 獨立重算 7/7；scripts/15 12/12） | ✅ 已驗 |
+| 15 | docs/16_scheme_rerun.md + scripts/16_scheme_rerun.py + data/16_scheme_rerun.json | 2026-10-11 17:02 | 2026-10-11 | 全文（scripts/04 section P 獨立重算 6/6；scripts/16 7/8） | ✅ 已驗 |
 
 **水位規則**（idcm-closeout §2 T0）：下次 closeout 只驗水位之後嘅增量；判定「未變」用 git diff / byte 對比，唔止 mtime。
 
 | 2026-10-11 16:15 | ★ **交接項目驗證（docs/15 + scripts/15 12/12）**：處理 7 條 incoming（O233×2/O234/O137/O187/O64/O206）—— ① O234 scheme watch **驗證成立**：freeze C_c/C_s=3.8587 vs PDG 4.5028 → **docs/14 β=6/5 否決**（freeze β=1.164 dev 3.0%=PDG 混標度 artifact）、**m/M₀ 塊心候選否決**（freeze shape 崩 223%=標度 artifact）；② O64 斜率 5/7 盲測否證（a=0.714348 dev 0.009% 重現，LOO 1007%）**同時殺死 β=6/5**（同一 ln C_f 數據兩個投影）；③ O206 \|Δm\| 9 點嚴格單調降序 **驗證有效**（16862>4988>2960>1802>1187>610>360>230>153）；④ O187 Sel(𝒮) 引用一致、O137 授權指派已用；⑤ **C_f 比結構隔離 P=0.0007 維持穩固**（比層不受 scheme 影響）；docs/14 §七附註降級 β/塊心為 artifact；O209 partial 不變 | **12/12 PASS** | docs/15 + scripts/15 + data/15 |
+
+| 2026-10-11 17:02 | ★ **R6/R8 scheme 穩健性重推（docs/16 + scripts/16 7/8）**：O234 freeze v1.1 自洽質量集重推 docs/11 質量譜——① **α=79/30 候選 freeze 下唔死但降格**：dev 0.003%（PDG）→ 0.62%（freeze），由「靚命」降為「附近」；固定 79/30 ΔRMS +0.0005 零損失保持；結構剛性微擾（b ±10% / c/s ±1σ / 極端組合）dev79 穩定 0.34–0.93%；② **freeze RMS 0.5802 < PDG 0.5872**（fit 改善 1.2%，凍結層質量集冇損害 IDCM 質量層）；③ **c/s 離群非 scheme artifact**（freeze 下 c +0.80、s +1.18 仍在）——根源係結構，排除混標度解釋；④ β=6/5 再確認 artifact（freeze 2.72%）；⑤ 後續 O209/O136 質量層分析默認用 freeze v1.1 質量集 | **7/8 PASS**（1 FAIL=誠實降格） | docs/16 + scripts/16 + data/16 |

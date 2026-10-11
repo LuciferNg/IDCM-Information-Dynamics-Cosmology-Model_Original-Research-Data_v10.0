@@ -595,6 +595,38 @@ chk("docs/15", "freeze shape 塊心候選崩塌 (總 dev > 50%)", _totfrz / 100,
 # O187: Sel(𝒮) 一致
 chk("docs/15", "O187 Sel(𝒮) = {1,2,3,4,5,7,9,11,13} 與 O209 一致", 1, 1, 0.01)
 
+# ── P. docs/16 (R6/R8 scheme 穩健性重推, freeze vs PDG) ──────────────
+print("\nP. docs/16 scheme 重推 (凍結層 vs PDG)")
+# P1: PDG α/RMS 重現 (docs/11 一致) — log m vs log|dm| 9 點 O209 |dm| 分配 frame
+_logm_PDG16 = np.log(np.array([1270.0, 4180.0, 1776.86, 105.6583755, 93.4, 4.67, 2.16, 0.51099895, 172690.0]))
+# O209 frame: t,b,τ,c,μ,s,d,u,e 對應 SEL 順序 logdm9
+_logdm9 = np.log(absdm)
+_A16 = np.vstack([np.ones(9), _logdm9]).T
+# 需要先建置 O209 frame 對應: SEL=[1,2,3,4,5,7,9,11,13] 已係 |dm| 降序, 質量降序 t>...>e
+_logm16 = np.log(np.array([172690.0, 4180.0, 1776.86, 1270.0, 105.6583755, 93.4, 4.67, 2.16, 0.51099895]))
+_c16, *_ = np.linalg.lstsq(_A16, _logm16, rcond=None)
+_r16 = _logm16 - _A16 @ _c16
+_alpha16 = float(_c16[1])
+_rms16 = float(np.sqrt((_r16 ** 2).mean()))
+chk("docs/16", "PDG α_OLS = 2.63325408 (重現)", _alpha16, 2.63325408, 1e-4)
+chk("docs/16", "PDG RMS = 0.58722813 (重現)", _rms16, 0.58722813, 1e-4)
+# freeze 質量集 B: s=93.4 錨, u=93.4/42.890, d=u·2.1505, c=s·11.652, b=c·3.291
+_lm_frz16 = np.log(np.array([172690.0, 93.4*11.652*3.291, 1776.86, 93.4*11.652, 105.6583755, 93.4,
+                             93.4/42.890*2.1505, 93.4/42.890, 0.51099895]))
+_cf16, *_ = np.linalg.lstsq(_A16, _lm_frz16, rcond=None)
+_alpha_frz16 = float(_cf16[1])
+_chk_alpha79 = abs(79/30 - _alpha_frz16) / (79/30)
+chk("docs/16", "freeze α 偏離 79/30 > 0.1% (候選降格, 非 PDG 0.003%)", _chk_alpha79, 0.0062, 0.01)
+chk("docs/16", "freeze RMS 改善 (0.58017 < 0.58723)", float(np.sqrt(((_lm_frz16 - _A16 @ _cf16) ** 2).mean())), 0.580171, 1e-4)
+# c/s 離群 freeze 下仍在
+_rf16 = _lm_frz16 - _A16 @ _cf16
+_res_c_frz = _rf16[3]   # c = index 3 (t,b,τ,c,...), c=1270/1088
+_res_s_frz = _rf16[5]   # s = index 5
+res_print = f"c={_res_c_frz:+.3f} s={_res_s_frz:+.3f}"
+print(f"    freeze resid: {res_print}")
+chk("docs/16", "freeze c resid > +0.5 (非 scheme)", _res_c_frz, 0.799, 0.3)
+chk("docs/16", "freeze s resid > +0.5 (非 scheme)", _res_s_frz, 1.179, 0.3)
+
 npass = sum(1 for _, _, ok in res if ok)
 print("\n" + "=" * 96)
 print(f"AUDIT RESULT: {npass}/{len(res)} 核對通過")
