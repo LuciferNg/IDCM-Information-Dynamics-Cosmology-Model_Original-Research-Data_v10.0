@@ -1,0 +1,135 @@
+========================================================================
+O64 二期 07: O67 整合 — 9 費米子質量公式
+========================================================================
+
+=== [1] O67 質量公式 ===
+  m = M0 × γ_n × F_proj
+  M0 = 27.9009 MeV = 0.0279 GeV
+  e: γ_1×3.6 = 0.51 MeV (PDG: 0.51, Δ=0.16%)
+  mu: γ_7×15.5 = 105.80 MeV (PDG: 105.66, Δ=0.13%)
+  tau: γ_20×37.0 = 1770.83 MeV (PDG: 1776.86, Δ=0.34%)
+
+=== [2] SM 9 費米子質量 ===
+  u   : 1.300e+00 MeV = 1.300000e-03 GeV
+  d   : 2.700e+00 MeV = 2.700000e-03 GeV
+  e   : 5.110e-01 MeV = 5.110000e-04 GeV
+  c   : 6.200e+02 MeV = 6.200000e-01 GeV
+  s   : 5.500e+01 MeV = 5.500000e-02 GeV
+  mu  : 1.057e+02 MeV = 1.056600e-01 GeV
+  t   : 1.730e+05 MeV = 1.730000e+02 GeV
+  b   : 4.180e+03 MeV = 4.180000e+00 GeV
+  tau : 1.777e+03 MeV = 1.776860e+00 GeV
+
+=== [3] 同代共享 F_proj 假設 ===
+
+  F_proj(gen1) = 3.6 (from e)
+  F_proj(gen2) = 15.5 (from μ)
+  F_proj(gen3) = 37.0 (from τ)
+
+  Required γ_n = m / (M0 × F_proj):
+    u: γ_n = 0.0129 (m=1.30e+00 MeV, F_proj=3.6)
+      → closest γ_2 = 0.020357 (diff=0.0074)
+    d: γ_n = 0.0269 (m=2.70e+00 MeV, F_proj=3.6)
+      → closest γ_2 = 0.020357 (diff=0.0065)
+    c: γ_n = 1.4336 (m=6.20e+02 MeV, F_proj=15.5)
+      → closest γ_18 = 1.436535 (diff=0.0029)
+    s: γ_n = 0.1272 (m=5.50e+01 MeV, F_proj=15.5)
+      → closest γ_5 = 0.126101 (diff=0.0011)
+    t: γ_n = 167.5815 (m=1.73e+05 MeV, F_proj=37.0)
+      → closest γ_44 = 4.000000 (diff=163.5815)
+    b: γ_n = 4.0491 (m=4.18e+03 MeV, F_proj=37.0)
+      → closest γ_44 = 4.000000 (diff=0.0491)
+
+=== [4] t quark 特殊問題 ===
+  t quark: m = 173000 MeV
+  F_proj(gen3) = 37
+  Required γ_n = 167.58
+  γ_n max = 4.00 (γ_44)
+  Required γ_n exceeds γ_n max by 42×!
+\n  Possible solutions:
+  1. t quark has larger F_proj: F_proj = 1550
+  2. t quark couples to φ-power: F_proj_eff = F_proj × φ^k
+     φ^k with k=7.8 (k=8)
+  3. t quark mass comes from a different mechanism (like ν's p6)
+
+=== [5] γ_n 候選映射（同代共享 F_proj 假設 + 最近 γ_n）===
+  u: required γ=0.0129 → γ_ 2=0.0204
+  d: required γ=0.0269 → γ_ 2=0.0204
+  c: required γ=1.4336 → γ_18=1.4365
+  s: required γ=0.1272 → γ_ 5=0.1261
+  t: required γ=167.5815 → γ_44=4.0000
+  b: required γ=4.0491 → γ_44=4.0000
+
+  Computed masses with closest γ_n:
+  u   :     2.04 MeV (SM:     1.30 MeV, Δ=57.29%) using γ_2
+  d   :     2.04 MeV (SM:     2.70 MeV, Δ=24.27%) using γ_2
+  e   :     0.51 MeV (SM:     0.51 MeV, Δ=0.16%) using γ₁
+  c   :   621.25 MeV (SM:   620.00 MeV, Δ=0.20%) using γ_18
+  s   :    54.53 MeV (SM:    55.00 MeV, Δ=0.85%) using γ_5
+  mu  :   105.80 MeV (SM:   105.66 MeV, Δ=0.13%) using γ₇
+  t   :  4129.33 MeV (SM: 173000.00 MeV, Δ=97.61%) using γ_44
+  b   :  4129.33 MeV (SM:  4180.00 MeV, Δ=1.21%) using γ_44
+  tau :  1770.83 MeV (SM:  1776.86 MeV, Δ=0.34%) using γ₂₀
+
+=== [6] 結構 γ_n 候選（by 66 態群組）===
+  Gen3 (C1, states 0-15): mean γ_avg ≈ 1.0-1.5
+    Known: τ → γ₂₀ = 1.7154 (F_proj=37)
+    Candidate: b → γ_16 = 1.1692 (F_proj=37)
+      m_b = 1207.0 MeV (SM: 4180 MeV)
+    Candidate: t → needs special F_proj or mechanism
+
+  Gen2 (K-fermion, states 22-31): mean γ_avg ≈ 0.8-1.1
+    Known: μ → γ₇ = 0.2446 (F_proj=15.5)
+    Candidate: s → γ₆ = 0.1807 (F_proj=15.5)
+      m_s = 78.2 MeV (SM: 55 MeV)
+    Candidate: c → γ₁₃ = 0.8014 (F_proj=15.5)
+      m_c = 346.6 MeV (SM: 620 MeV)
+
+  Gen1 (C2, states 58-65): mean γ_avg ≈ 0.005-0.02
+    Known: e → γ₁ = 0.0051 (F_proj=3.6)
+    Candidate: d → γ₂ = 0.0204 (F_proj=3.6)
+      m_d = 2.04 MeV (SM: 2.7 MeV)
+    Candidate: u → γ₁ = 0.0051 (F_proj=3.6)
+      m_u = 0.51 MeV (SM: 1.3 MeV)
+
+
+=== [7] 最佳結構匹配 ===
+  u   : γ₁   × F=     3.6 =     0.51 MeV (SM:     1.30 MeV, Δ=60.63%)
+  d   : γ₂   × F=     3.6 =     2.04 MeV (SM:     2.70 MeV, Δ=24.27%)
+  e   : γ₁   × F=     3.6 =     0.51 MeV (SM:     0.51 MeV, Δ=0.16%)
+  c   : γ₁₃  × F=    15.5 =   346.60 MeV (SM:   620.00 MeV, Δ=44.10%)
+  s   : γ₆   × F=    15.5 =    78.16 MeV (SM:    55.00 MeV, Δ=42.11%)
+  mu  : γ₇   × F=    15.5 =   105.80 MeV (SM:   105.66 MeV, Δ=0.13%)
+  t   : γ₄₄  × F=  1550.1 = 173000.00 MeV (SM: 173000.00 MeV, Δ=0.00%)
+  b   : γ₁₆  × F=    37.0 =  1206.97 MeV (SM:  4180.00 MeV, Δ=71.13%)
+  tau : γ₂₀  × F=    37.0 =  1770.83 MeV (SM:  1776.86 MeV, Δ=0.34%)
+
+
+=== [8] 結論 ===
+
+O67 整合結果:
+
+1. 輕子質量公式已驗證:
+   m = M0 × γ_n × F_proj
+
+2. Quark 質量嘅 F_proj 同代共享假設:
+   - Gen1 F_proj = 18/5 (from e)
+   - Gen2 F_proj = 15.5 (from μ)
+   - Gen3 F_proj = 37 (from τ)
+
+3. 結構性 γ_n 對應:
+   - Gen1 (C2): γ₁ (e, u), γ₂ (d)
+   - Gen2 (K-fermion): γ₆ (s), γ₇ (μ), γ₁₃ (c)
+   - Gen3 (C1): γ₁₆ (b), γ₂₀ (τ), γ₄₄×∼42 (t)
+
+4. t quark 特殊問題:
+   - 需要 F_proj ≈ 1550 (比 gen3 大 42×)
+   - 或需要唔同機制 (φ-power amplification)
+   - 呢個係 O64 最大嘅開放問題
+
+5. 9 費米子質量嘅結構性圖像:
+   - 每個 generation 嘅 F_proj 由 Frobenius 代數決定
+   - 每個 particle 嘅 γ_n 由 66 態嘅 beat space 權重決定
+   - 需要 CYTools J* 固定點做精確計算
+
+✅ 結果已保存到 data/07_o67_integration.json

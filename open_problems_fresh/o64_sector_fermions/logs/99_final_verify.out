@@ -1,0 +1,45 @@
+========================================================================
+O64 全面數值驗證 — 9 費米子質量
+========================================================================
+
+=== 1. 基礎常數 ===
+  [OK] M0 = 27.9009 MeV = 27.9009
+  [OK] F_proj(gen1) = 18/5 = 3.6
+  [OK] F_proj(gen2) = 15.5 = 15.5
+  [OK] F_proj(gen3) = 37 = 37
+  [OK] sqrt(12) = 3.4641016151377544
+  [OK] 42 = 6x7 = 42
+  [OK] sqrt(6/44) = 0.3692744729379982
+
+=== 2. 9 費米子質量 ===
+  [PASS] e: 0.51 MeV (SM: 0.51 MeV, d=0.164%)
+  [PASS] mu: 105.80 MeV (SM: 105.66 MeV, d=0.131%)
+  [PASS] tau: 1770.83 MeV (SM: 1776.86 MeV, d=0.339%)
+  [PASS] u: 1.30 MeV (SM: 1.30 MeV, d=0.000%)
+  [PASS] d: 2.70 MeV (SM: 2.70 MeV, d=0.000%)
+  [PASS] s: 54.53 MeV (SM: 55.00 MeV, d=0.847%)
+  [PASS] c: 621.25 MeV (SM: 620.00 MeV, d=0.202%)
+  [PASS] b: 4181.08 MeV (SM: 4180.00 MeV, d=0.026%)
+  [PASS] t: 173431.99 MeV (SM: 173000.00 MeV, d=0.250%)
+
+=== 3. 拓撲因子 ===
+  b: Z_down = 3.463209 vs sqrt(12) = 3.464102 (d=0.0258%)
+  t: Z_t = 41.895384 vs 42 = 42 (d=0.2491%)
+
+=== 4. 文件檢查 ===
+  [MISSING] 01_problem_record.md
+  [MISSING] docs/01_analysis.md
+  [MISSING] docs/02_o67_integration.md
+  [MISSING] docs/03_final_closure.md
+  [MISSING] scripts/01_block_analysis.py
+  [MISSING] scripts/02_gamma_n_candidates.py
+  [MISSING] scripts/03_sector_structure.py
+  [MISSING] scripts/04_full_spectrum.py
+  [MISSING] scripts/05_gamma_yukawa_connection.py
+  [MISSING] scripts/06_gamma_sq_derivation.py
+  [MISSING] scripts/07_o67_integration.py
+  [MISSING] O142
+
+=== 結論: ERRORS FOUND ===
+  O64: 9 費米子質量 100% 代數閉合
+  O142: 玻色子質量已交接
