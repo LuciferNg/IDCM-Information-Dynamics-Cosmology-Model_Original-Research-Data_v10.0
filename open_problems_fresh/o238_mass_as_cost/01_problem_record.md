@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O238
 title:   質量 = 代價^{φ²}：逆推質量譜 (mass as geometric cost)
-state:   open
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O238
 created: 2026-10-11
@@ -73,6 +73,8 @@ source:  O209 docs/19 交接 (2026-10-11)
 | # | 日期 | 事件 | 產物 |
 |:-:|:-----|:-----|:-----|
 | 1 | 2026-10-11 | 註冊 + session start（由 O209 docs/19 交接；聲明「先重現 scripts/19 驗證再推」） | 01_problem_record.md + SESSION_START.md |
+| 2 | 2026-10-11 | **推導鏈完整性重現 PASS**（O209 scripts/19 5/5 + 16 7/8 + 全鏈 423/426 + 04 181/181；git clean 確認未被並行改動）；標度 C 身位診斷：`C=M₀·|dm|_mode^{−φ²}` 排除（ref=603.2 最近 1.1%）、C/M₀ 池 0 命中、★C_n spread=RMS ⇒ 標度同 c/s 離群同源 | docs/02-03 + scripts/01-07 + data/01-07 + register note |
+| 3 | 2026-10-11 | **路線 1/2 收窄**：標度 C 凍結池+譜泛函+雙參數全排除；α≈φ² LOOCV 全域穩健（剔任何一點 0.42σ 內）；φ² vs 79/30 LOOCV 不可分（ratio 0.9983, P=0.50）；c/s 遮蔽標度（剔後 C −24.6%、RMS 0.252）；n≡1 mod4 族修正假象排除（P=0.22） | docs/03（整合） |
 
 ## 七、相關文件
 

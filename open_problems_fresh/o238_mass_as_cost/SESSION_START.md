@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O238
 title:   質量 = 代價^{φ²}：逆推質量譜 (mass as geometric cost)
-state:   open
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O238
 created: 2026-10-11
