@@ -1,0 +1,53 @@
+==============================================================================
+O221 / scripts/42 - Round 32: LINEAR-ORDER structure (per-edge basis; EPS-exponent)
+==============================================================================
+    L1 M=4 naive: n_edges = 311040 (1215.0 M^4-scaled), conf raw 4.533e-01 fd 4.525e-01
+    L1 per-edge RMS |c_e|: conf 6.285e-05 TT 4.612e-05 (random per-edge fields, B=200)
+    L1 naive smooth-field coherence |q(cos)|/sqrt(Var): conf 12.9 TT 0.9
+  [PASS] L1 per-edge basis confirmed: the per-edge coefficient scale is LARGE while the per-simplex lumped weight is tiny (intra-simplex cancellation) - the R31-N0 lumping artifact explained per-edge RMS 6.29e-05 ; per-simplex max 1.25e-10 ; cancellation factor 1587319
+      (naive M=3 n=1) conf raw 1.529e-01 fd 1.527e-01 | TT raw 6.271e-03 fd 6.364e-03
+      (naive M=4 n=2) conf raw 4.533e-01 fd 4.525e-01 | TT raw 2.219e-02 fd 2.263e-02
+      (naive M=6 n=3) conf raw 1.429e+00 fd 1.426e+00 | TT raw 4.891e-02 fd 5.091e-02
+      (naive M=8 n=4) conf raw 3.269e+00 fd 3.258e+00 | TT raw 8.453e-02 fd 9.051e-02
+      (naive M=12 n=6) conf raw 1.064e+01 fd 1.059e+01 | TT raw 1.749e-01 fd 2.036e-01
+      (naive M=16 n=8) conf raw 2.477e+01 fd 2.462e+01 | TT raw 2.736e-01 fd 3.620e-01
+      (vert M=3 n=1) conf raw 1.528e-02 fd 1.527e-02 | TT raw -1.309e-05 fd -1.343e-09
+      (vert M=4 n=2) conf raw 4.526e-02 fd 4.525e-02 | TT raw -3.192e-05 fd -1.469e-09
+      (vert M=6 n=3) conf raw 1.426e-01 fd 1.426e-01 | TT raw -1.006e-04 fd -4.764e-09
+      (vert M=8 n=4) conf raw 3.261e-01 fd 3.258e-01 | TT raw -2.301e-04 fd -1.106e-08
+      (vert M=12 n=6) conf raw 1.060e+00 fd 1.059e+00 | TT raw -7.481e-04 fd -3.657e-08
+      (vert M=16 n=8) conf raw 2.466e+00 fd 2.462e+00 | TT raw -1.740e-03 fd -8.577e-08
+      (cube M=3 n=1) conf raw -8.441e-07 fd -3.979e-10 | TT raw -8.086e-07 fd -2.323e-11
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/42_linearized_deficit.py:199: RuntimeWarning: invalid value encountered in divide
+  A[name] = float(np.sum(np.abs(q) / out[name]["R_map"])
+      (cube M=4 n=2) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=6 n=3) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=8 n=4) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=12 n=6) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=16 n=8) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+    naive raw deficit +1.0737 (c +2.886 t +1.812) | FD deficit +0.8828 (c +2.883 t +2.000)
+    vert  raw deficit -0.0000 (c +2.884 t +2.884) | FD deficit -0.0511 (c +2.883 t +2.934)
+    cube  raw deficit +nan (c +nan t +nan) | FD deficit +nan (c +nan t +nan)
+  [FAIL] L2 for naive: |deficit_fd - deficit_raw| < 0.10 -> the docs/17-29 exponents ARE first-order exponents |d_fd - d_raw| = 0.1910
+  [PASS] L2 for vert: |deficit_fd - deficit_raw| < 0.10 -> the docs/17-29 exponents ARE first-order exponents |d_fd - d_raw| = 0.0510
+  [FAIL] L2 for cube: |deficit_fd - deficit_raw| < 0.10 -> the docs/17-29 exponents ARE first-order exponents |d_fd - d_raw| = nan
+
+  L3 FD-level A_TT (M=12 -> 16):
+      naive A_TT_fd(12->16) = 1.5371 OUT
+  [FAIL] L3 for naive: FD-level A_TT M-stability in [0.8, 1.25] A_TT_fd = 1.5371
+      vert  A_TT_fd(12->16) = 1.1651 OK
+  [PASS] L3 for vert: FD-level A_TT M-stability in [0.8, 1.25] A_TT_fd = 1.1651
+      cube  A_TT_fd(12->16) = nan OUT
+  [FAIL] L3 for cube: FD-level A_TT M-stability in [0.8, 1.25] A_TT_fd = nan
+      naive |deficit_fd| = 0.8828 OUT ; A_TT_fd = 1.5371 OUT -> not
+      vert  |deficit_fd| = 0.0511 OUT ; A_TT_fd = 1.1651 OK -> not
+      cube  |deficit_fd| = nan OUT ; A_TT_fd = nan OUT -> not
+  [FAIL] L4 docs/20 acceptance AT THE FD (linear) ORDER: any family with |deficit_fd| < 0.05 AND A_TT_fd in [0.8,1.25] none - candidate 3 / structural terminal statement remains
+    L5 EPS-exponent conf/raw: alpha = 1.0004 (values 4.53e-01 4.53e-02 4.53e-03)
+    L5 EPS-exponent conf/fd: alpha = 1.0000 (values 4.53e-01 4.53e-02 4.53e-03)
+    L5 EPS-exponent TT/raw: alpha = 0.9958 (values 2.22e-02 2.26e-03 2.26e-04)
+    L5 EPS-exponent TT/fd: alpha = 1.0000 (values 2.26e-02 2.26e-03 2.26e-04)
+  [PASS] L5 the EPS-exponent: BOTH sectors, raw AND fd, scale as EPS^1 (alpha in [0.9,1.1]) - the sector responses are first-order linear, confirming the R32 probe and correcting the R31-N0 '2nd-order dominated' interpretation alphas: conf/raw 1.000 conf/fd 1.000 TT/raw 0.996 TT/fd 1.000
+
+RESULT: 4/9 PASS
+HONEST STATUS: 5 FAIL - see above; no physics threshold was relaxed.

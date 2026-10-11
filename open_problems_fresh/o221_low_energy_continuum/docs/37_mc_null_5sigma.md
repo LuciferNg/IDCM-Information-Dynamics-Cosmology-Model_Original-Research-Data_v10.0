@@ -37,3 +37,9 @@
 - **未閉合嘅剩最後一條**：單一取樣次序同時「零 deficit ∧ 振幅 M-穩定」（docs/20 收緊判準）——R30（對角-k dual）喺度試緊；若 R30 都 FAIL，則候選③（A_TT 為主判準重測＝判準重釋）需調律者批准，或者將「兩軸解耦＋形狀平均完備性（R28/R29）+ 統計真確性（本輪）」視為結構性最終陳述。
 
 **支援**：`scripts/41_mc_null_5sigma.py`（7 ck：6 PASS + N0 記錄）、docs/21 ④（判準出處）、docs/15（TT 振幅壓縮）、docs/20（候選/收緊判準）、docs/28（R28 dual≡cube）、docs/35（R29 求積階梯）。
+
+## 附註更正（2026-10-10，append-only——N0 詮釋修正，原文唔改）
+- **R32 嘅 EPS 標度探測推翻 N0 嘅「interaction/二階主導」詮釋**：M=4 naive 下 conf/TT raw 同 FD-odd 響應全部按 **EPS¹** 標度（1e-3→1e-4→1e-5 比率 0.100/0.100/0.100，精確線性）⟹ **full-field 扇區響應係一階線性主導**（conf even 污染 0.15%、TT ~2%）。
+- N0 嘅測量數字本身正確（per-simplex FD 權重 ~1e-10、平移不變 1.5e-19、可加性失效）——但**錯喺詮釋**：per-simplex lumping 係錯誤分解基底（10 條邊嘅 per-edge 線性係數暴力相消至 1e-10），唔代表響應非線性。**線性 10⁷-MC 模型被拒嘅結論仍然正確**（per-simplex 加權和模型無效），但原因係基底錯、唔係二階主導。
+- **實際意義**：raw 響應 ≈ 一階響應 ⟹ docs/17-29 嘅 M-指數同 deficit（+0.88 等）**本身就係一階結構嘅指數**，唔需要「消除二階污染」重推。R31 嘅實證 null（B=5000 full-field）全部結論不受影響（N3/N4/N5 照企）。
+- 更正由 `scripts/42_linearized_deficit.py` 執行探測（L5）確認；per-edge 權重結構見 docs/38（R32）。

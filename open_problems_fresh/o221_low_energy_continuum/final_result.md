@@ -104,3 +104,10 @@ O210 → O140 → O139 → O138 → O86 → O213 → O221（並列 O202 / O212 /
 - **R31（docs/37）10⁷-MC-null-5σ：6/6 PASS**——實證 full-Regge null（B=5000 Rademacher）下 conf z=27.5σ、TT **抑制**（z=0.1＝docs/15 TT-damping 統計腿）、joint Mahalanobis=27.49σ ⟹ **殘餘⑤ 結構真、非隨機相位人為產物**；N0 記錄：per-simplex 線性分解喺 EPS=1e-3 失效（raw 響應 interaction/二階主導＝機器協議結構事實，線性模型 10⁷ MC 已拒）。
 - 殘餘⑤ 終局狀態：**已定位＋取樣族階梯完備（naive→cell→vert(=cube=dual)三階窮盡）＋統計真確（27.5σ）＋未閉合**（無單一階同時零 deficit ∧ 振幅穩定）。剩餘：候選③（需批准）或接受「兩軸解耦＋完備性＋真確性」為結構性最終陳述。
 - 尚未閉合：GR/EH 湧現、QM 導出（O222）、L-QFT 散射。
+
+## 現時水位（2026-10-11，Round 32——線性階結構確認 + O246 handoff 未接納）
+- scripts 01–42 累計檢查 **950：PASS 939 + FAIL 10 + N0 記錄**（+scripts/42 九檢查：4 PASS + 5 記錄 FAIL；R31-N0 更正後重計）。
+- **R32（docs/39）線性階結構**：L5 **EPS¹ 4/4**（α=1.000）⟹ raw 扇區響應一階線性（R31-N0「二階主導」詮釋正式更正，docs/37 附註坐實）；L1 per-edge 基底（相消因子 1.59e6）；**cube 響應 M≥4 精確為零**（R28「deficit→0」真正機制＝響應身份消失）；naive FD deficit +0.8828 ≈ 經典 +0.88（docs 嘅 ladder 本身就量一階）；**vert FD deficit −0.0511（差 0.05 門檻 2%）+ A_TT_fd 1.1651 OK＝迄今最近一次接近 docs/20 收緊判準（一階 order）**；L4 仍唔閉合。
+- **O246→O221 handoff（fold 語言）＝未接納（作為結果）**：B 盲測（docs/38，預註冊）——B1 VOID（cube 崩潰）、B2/B3 無 fold 結構 ⟹ 無正面盲測證據；fold 身份僅作可用數學工具；建議保持 OPEN；register note O246+O221。
+- 殘餘⑤ 終局狀態更新：候選③ 在 FD 階下最強（vert A_TT_fd 穩定 + deficit≈0.05）——仍需調律者批准 A_TT 主判準；或結構性最終陳述。
+- 尚未閉合：GR/EH 湧現、QM 導出（O222）、L-QFT 散射。
