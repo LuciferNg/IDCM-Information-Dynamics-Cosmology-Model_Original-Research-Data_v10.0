@@ -1,0 +1,26 @@
+{
+ "pre_registered": "2026-10-12, 未見 v3 數據前凍結",
+ "context": {
+  "gamma_v10": -4.7503,
+  "sig_g": 0.0361,
+  "alpha_v10": 2.617822,
+  "phi2": 2.618033988749895
+ },
+ "J1_gamma_window": [
+  -4.82,
+  -4.68
+ ],
+ "J2_k_window": [
+  1.95,
+  2.05
+ ],
+ "J3_alpha_window": [
+  2.61672497175552,
+  2.6193430057442697
+ ],
+ "J4_mu_local_converge": "改寫(docs/24): μ local = −ln(c/s)/ln(7/4) 係 c/s 比值代理; v3 c/s → 11.652 家族 ⟹ μ local −4.388=19.5σ B′死; v3 c/s 維持 13.60 ⟹ −4.664=2.85σ B′有牙",
+ "J5_falsify": "γ 漂出窗或 >3σ ⟹ stair 線 k=2 否決",
+ "J6_version_rule": "v3 tag, 層內判",
+ "J7_scheme_record": "連 scheme 記, 漂移用 J1-J5 裁決",
+ "verdict": "freeze v3 判決表盲測預註冊完成 — J1-J7 全部凍結; v3 數據一到逐項照判, 唔准後見改閾值; 現有 v1.0 全部喺窗內（一致性 baseline）"
+}
