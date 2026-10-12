@@ -92,6 +92,7 @@ source:  O209 docs/19 交接 (2026-10-11)
 | 17 | 2026-10-11 | **挫阻→張力→質量機制鏈 probe**: 120=88+32 計數鏈成立（88 透明邊=88-chain 節點數、阻挫中點∩88 節點=0 disjoint）⟹ **88-chain 本身就係 A₅ 網剔走挫阻後嘅乾淨骨架**（質量譜引擎=挫阻扣減）；32 挫阻形成規則子格（最近距 median 26.05°≈邊長）；**但應變 ε(1%) vs OLS α 誤差(5.8%) 級別冇檢驗力——「張力→α」不可分辯（誠實負）**；32/88=4/11 只記錄 | docs/14 §八 + scripts/29 + data/29 |
 | 18 | 2026-10-12 | **文檔層 Audit（T2-docs，所有 docs 公式/數字核對）**：scripts/81 抽查 39 項全 PASS（C/RMS/α/LOOCV/b resid/γ3γ2/p 值/CSG/C 通道/強子 6/17/規則 RMS）——docs 數字本體全部正確；**5 項發現全屬「定義/後續裁決冇標明」**：① docs/04(−0.416, OLS) vs docs/05(−0.381, 固定 φ²) b resid 定義未標明（兩者正確）② docs/09 ③ docs/10 ④ docs/13 ⑤ final_result 引用舊「ms/mu killer」冇 R10 降格附註——**全部已加 append-only 更正附註**（docs/04 §七、docs/05 §八、docs/09 §六、docs/10 §七、docs/13 §七、final_result） | scripts/81_doc_audit.py + 6 處附註 |
 | 19 | 2026-10-12 | **最後未推盡位：剔除集重合 MC null（最終確認推無可推）**：調律者「是否已推盡」——誠實檢視發現 docs/10 P4「剔除集 {6,8,10,12}=log\|dm\| 集中區」從未 MC。scripts/30（200k MC）：P1 剔除集 std 0.6424 percentile **4.2% 邊緣**，但後見+Bonferroni ×3=12.6% 唔顯著；P2 A₅ 大離散 83% 巧合；P3 同 11×奇數子格 0/4 唔係同一回事 ⟹ **邊緣巧合，唔算結構**；定義附註（docs/10 0.56=ddof=0 vs scripts/30 0.6424=ddof=1，MC 對照一致）⟹ **O238 已推無可推全線確認**（LO4/LO3 closed、LO1 等 lattice、LO2 跨 O） | docs/14 §九 + scripts/30 + data/30 |
+| 20 | 2026-10-12 | **S2/S3 結構池正式掃描**：調律者「Freeze v2 一直都在」——docs/04 §二 P2 只掃 S1、S2/S3 用「同量級」論證跳過；既然 freeze v2 一直都在，補正式掃描。scripts/31（196 池原樣凍結、2% 窗）：**S1 0 命中 / S2(freeze v2) 0 命中 / S3(RGI) 0 命中**（密度基準全 0.1）⟹ 「C 冇結構池身份」由 scheme 論證升級為三套實掃確認 | docs/14 §十 + scripts/31 + data/31 |
 
 ## 七、相關文件
 
