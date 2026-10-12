@@ -174,3 +174,18 @@ data/                  — script 輸出 json
 - 方法學: 903×720k 點必須 numpy searchsorted（O(log N)）, Python min() 逐點 timeout
 
 **commit**: `b1f4274`（O239 R9，2026-10-12，第九輪入檔）。
+
+### 2026-10-12 — 第十輪：拆解「等 freeze v2」（scripts/12, docs/10）
+
+**調律者質疑**: 「點解一定要等 freeze v2, 而唔可以靠 freeze v1.1 或 PDG?」
+
+**核對事實**:
+- 🟢 O206 MASS = PDG2024 = **O234 freeze v1.0**（同一批數字）——T3 由頭到尾都用緊 freeze v1
+- 🟢 freeze v2 **已存在**（O234 docs/03, FLAG 2024 RGI 已入層, 2026-10-06 凍結）
+- 🟢 ±1σ 誤差傳播: 18 變體 γ spread = 0.069 = **1.5%**（u 誤差 22.7% 只令 γ 漂 0.03）
+- 🟢 freeze v2 RGI 方案（u/d/s 換 RGI）: γ = −4.6407, dev **2.3%**
+- 🔴 **修正舊語義**: 「最終判定等 freeze v2」錯誤——freeze v2 已存在, 真正要等係 **freeze v3 級精度（lattice 直量 1-2%）** 先判到 γ/β 數字身份; 冪律形式（γ≈−4.75±0.37）已經穩
+
+**結論**: 冪律係 freeze v1.1/v2 現有數據嘅**穩健結論**, 唔係等公文袋; 數字身份先要等精度升級
+
+**commit**: 待 commit（第十輪）。
