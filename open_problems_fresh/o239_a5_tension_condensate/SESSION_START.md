@@ -189,3 +189,17 @@ data/                  — script 輸出 json
 **結論**: 冪律係 freeze v1.1/v2 現有數據嘅**穩健結論**, 唔係等公文袋; 數字身份先要等精度升級
 
 **commit**: `97ebc39`（O239 R10，2026-10-12，第十輪入檔）。
+
+### 2026-10-12 — 第十一輪：模擬重整化合成數據（scripts/13+14, docs/11）
+
+**調律者問題**: 「即使沒有 lattice, 是否可以模擬類似重整化技術來合成數據?」
+
+**兩種「模擬 RG」方法（全 PASS）**:
+- 🟢 **scripts/13 偽 lattice ensemble（5/5）**: freeze v2 多 scheme 值（PDG/RGI/3GeV）當唔同 renormalization 方案 = 偽 ensembles; u/d/s RGI + c/b freeze v2 ratio 重建質量組 ⟹ γ_RGI=−4.7215 **dev 0.6%**, R²=0.956, α dev 0.6%——冪律係 scheme 穩健結構
+- 🟢 **scripts/14 MC 誤差袋（2/2, 20 萬組, seed 固定）**: 
+  - ★★**方法學修正**: γ 真實數據不確定性 = **±0.036**, 唔係 scripts/09 用 linregress stderr 嘅 ±0.37!stderr 係「冪律模型不完美」（R²=0.959）嘅擬合殘差, 唔係質量誤差——R9「CI 半寬 18.5%」用錯誤差, 應更正
+  - **判別力**: 現況 −19/4 vs −33/7 距離 0.99σ 不可判（P=69.2%）; 模擬 lattice u/d→1% ⟹ std 收窄 16.6×（0.0022）, **分離 16σ 可判**
+  - **M4 判決: freeze v3（lattice 1-2%）有牙, 等得過**——但現有中心已強烈傾向 −19/4（距 0.008σ）, lattice 係確認唔係由無到有
+- ⚠ O140 鏈乘法律禁重推（SM 選取規則已否證, 946 網格 null 26.1%）——只用 scheme ensemble + MC 方法
+
+**commit**: 待 commit（第十一輪）。

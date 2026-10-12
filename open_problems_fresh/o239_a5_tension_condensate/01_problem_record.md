@@ -14,6 +14,7 @@
 > | 9 | 2026-10-12 | 合成律誤差衰減律（scripts/10 4/4 PASS）: η_a+η_b 合成誤差對層 ℓ 階梯尾部收斂（比 0.27-0.46<0.5）冇平台; FSR 升層回答實證有效; 離散階梯=rung display, 物理合成空間=ηℝ; κ-Poincaré 排除 → docs/08 |
 > | 10 | 2026-10-12 | 全譜修正 + 903 全掃描（scripts/11）: ★T3 修正——\|dm\|∝θ^β 冪律只屬質量模態區 n≤13（R²=0.9934）, 全 88 譜 R²=0.008 唔係冪律; ★903 對合成: 中位收斂比 0.408 全域有效, 但殘餘∝η_sum（最差對全部細 n 高能, 好對全部大 n 低能）= 高能時空離散效應候選 → docs/09 |
 > | 11 | 2026-10-12 | 調律者質疑「等 freeze v2?」⟹ 拆解: O206 MASS=PDG2024=freeze v1.0（T3 已用緊）; freeze v2 已存在（FLAG2024 RGI 已入層）; ±1σ 誤差傳播 spread 1.5% + RGI 方案 dev 2.3%（3/3 PASS）——冪律係 freeze 現有數據穩健結論, 真正要等係 freeze v3 級精度（lattice 1-2%）→ docs/10 |
+> | 12 | 2026-10-12 | 模擬重整化合成數據（scripts/13 5/5 + scripts/14 2/2）: ★freeze v2 偽 lattice ensemble（u/d/s RGI + c/b 重建）γ dev 0.6% 冪律 scheme 穩健; ★★MC 誤差袋 20 萬組: **γ=±0.036 唔係 ±0.37**（方法學修正——linregress stderr 係擬合殘差非數據誤差）; 模擬 lattice u/d→1% ⟹ γ 收窄 16.6×, −19/4 vs −33/7 分離 16σ——**freeze v3 有牙, 等得過** → docs/11 |
 
 <!-- registry
 pid:     O239
