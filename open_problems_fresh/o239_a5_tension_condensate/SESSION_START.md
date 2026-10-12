@@ -649,4 +649,4 @@ O136 scripts/69 揭示真正結構 `ln m = lnM₀ + α·ln|dm| + δ·even_rank +
 **真正逐點質量公式**: ln m = lnM₀ + φ²·ln|Δm| + δ·even_rank
 (依賴譜權重|Δm|, 唔係 θ^γ)。
 
-**commit**: 待 commit（第三十二輪，scripts/39 + docs/32）。
+**commit**: `6b9aaf9`（O239 R32: ★O239→O136 質量生成橋, 第三十二輪入檔）。
