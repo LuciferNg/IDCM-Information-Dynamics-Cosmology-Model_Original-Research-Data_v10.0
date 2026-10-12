@@ -572,4 +572,4 @@ docs/16/17**（β_A5 8.8 步 = 88/10 + 88−Σstair=10）——「stair 深度�
 
 **剩餘判決唯一**: freeze v3（scripts/29 J1–J7）一票終審。
 
-**commit**: 待 commit（第二十九輪，scripts/35 + docs/29）。
+**commit**: `278727e`（O239 R29: 機構缺口閉合「點解 k=2」, 第二十九輪入檔）。
