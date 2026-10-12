@@ -751,4 +751,4 @@ O136 scripts/69 揭示真正結構 `ln m = lnM₀ + α·ln|dm| + δ·even_rank +
    『數據容器』, 唔係 α=φ² 引擎**（pole 組 +1.96σ 貼近 2σ 邊緣, 誠實標記）
 3. 之後引用閉合式質量數據要附標注表（scheme/scale/2GeV?）
 
-**commit**: 待 commit（第三十七輪，scripts/45 + docs/37）。
+**commit**: `fe33287`（O239 R37: 質量數據 scale 標注 + mixed-scale 穩健檢定, 第三十七輪入檔）。
