@@ -124,3 +124,13 @@ source:  調律者2026-10-12: O239 R36 遺留 + 開新O解決以上問題(只開
 4. **O247 狀態**: Q1 已關; Q2 絕對質量 no-go（雙譜域印證）+ Rydberg 閉合 + 投影算符層閉合; 真正剩餘 = 跨 O（lattice mu/md killer 等數據）
 
 ---
+
+## Session 5 — 2026-10-12（CY3 空白查證 + 投影算符層核子攻堅）
+
+1. **CY3 空白查證**（調律者問題）: v6/v7 CY3 庫完全冇考慮質子/中子 — v1_masses.py「ALL 9 MASSES」= 9 費米子, SM_FINGERPRINT 唯一 Proton 命中 = 質子衰變 gate; v10 六個 CY3 O-series 零核子; RAG v10 938/939 零命中; ⚠O122 m_n 係函數名唔係中子
+2. **發現兩個未測載體**: O53 m₄₄ = M_Pl·e^(−44) = 0.9493 GeV (44=N_d) 從未對準核子 (離核子僅 ~1%); O238 scripts/21 只測單 mode 投影, 未測 uud/udd 複合節點
+3. **scripts/08 三路全滅**: G1 m₄₄ 標度 dev −1.23%/−1.10% (MC 3.23% 唔夠); G2 複合節點組合 ≥2.9% (γ 節點/裸夸克/m₄₄−節點); G3 m_n−m_p = 9·M₀γ₁ dev 1.06% 線索但唔過 1% 閘 (k=9=N_gen² 唯一有意義, MC 池 2/88)
+4. **判決**: 核子質量公式三層一致 no-go (①譜域 ②A₅ 出處 ③投影算符層); CY3 空白 = 結構必然 (9-fermion 閉合不含複合態), 唔係漏洞
+5. **禁區**: m₄₄=核子標度, γ 節點 uud/udd, m_n−m_p=k·M₀γ₁ 升格; 真正未測跨 O = O144 docs/10 SU(3) connection functional σ (d_tensor 12³)
+
+---
