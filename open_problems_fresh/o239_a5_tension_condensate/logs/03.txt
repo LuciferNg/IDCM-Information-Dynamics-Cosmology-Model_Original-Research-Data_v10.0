@@ -1,9 +1,9 @@
 split: near=44 far=44 (d>median)
 
 ── E1/E2: 近/遠挫阻 CMB M1（SMICA/Commander/SEVEM @4.17°）──
-      SMICA: ΔM1(near−far) = +0.00987  perm=[-0.12383,0.12340]  p=0.8364  —
-  Commander: ΔM1(near−far) = +0.03314  perm=[-0.12362,0.12712]  p=0.5030  —
-      SEVEM: ΔM1(near−far) = +0.01173  perm=[-0.12542,0.12470]  p=0.8138  —
+      SMICA: ΔM1(near−far) = +0.00987  perm=[-0.12129,0.12814]  p=0.8518  —
+  Commander: ΔM1(near−far) = +0.03314  perm=[-0.12513,0.12088]  p=0.5142  —
+      SEVEM: ΔM1(near−far) = +0.01173  perm=[-0.12374,0.12374]  p=0.8308  —
   [XX ] E1 CMB M1 split 顯著（SMICA） ΔM1=+0.00987
   [XX ] E2 跨地圖一致性（≥2/3 圖同向顯著） 顯著圖: []
 

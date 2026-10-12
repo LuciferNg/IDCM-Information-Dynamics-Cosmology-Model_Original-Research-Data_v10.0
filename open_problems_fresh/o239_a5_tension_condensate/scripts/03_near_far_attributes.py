@@ -77,7 +77,7 @@ sig_maps = []
 for name in MAPS:
     T = np.array(json.load(open(O182 / f"temps2_{name}_4.17deg.json"))["G88"], float)
     obs = diff_m1(near, T)
-    rr = np.random.default_rng(hash(name) % (2**32))
+    rr = np.random.default_rng(20261012 + {"SMICA": 0, "Commander": 1, "SEVEM": 2}[name])
     perm = np.empty(N_PERM)
     for k in range(N_PERM):
         g = rr.permutation(near)  # shuffle 標籤, 保持 44/44
