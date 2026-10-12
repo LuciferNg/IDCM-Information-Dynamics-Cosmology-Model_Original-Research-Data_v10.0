@@ -202,4 +202,4 @@ data/                  — script 輸出 json
   - **M4 判決: freeze v3（lattice 1-2%）有牙, 等得過**——但現有中心已強烈傾向 −19/4（距 0.008σ）, lattice 係確認唔係由無到有
 - ⚠ O140 鏈乘法律禁重推（SM 選取規則已否證, 946 網格 null 26.1%）——只用 scheme ensemble + MC 方法
 
-**commit**: 待 commit（第十一輪）。
+**commit**: `ae26ec9`（O239 R11，2026-10-12，第十一輪入檔）。
