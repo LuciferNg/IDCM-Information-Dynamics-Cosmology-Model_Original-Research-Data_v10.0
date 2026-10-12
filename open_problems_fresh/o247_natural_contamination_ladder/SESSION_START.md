@@ -80,3 +80,14 @@ source:  調律者2026-10-12: O239 R36 遺留 + 開新O解決以上問題(只開
 
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
+
+---
+
+## Session 1 — 2026-10-12（調律者指令: OPEN-4 close + register 修復 + 方向攻防）
+
+**指令**: 「OPEN-4直接close 不推；修register, 但只限o247；先研究哪些方向是有可能，哪些已證偽」
+
+1. **Q1 判決（OPEN-4 close）**: 三水平簇生成規則正式關閉，本 O 唔承接（O206 docs/26 簇=A₅ 偽影，O206-OPEN-4 已正式關閉 2026-09-22）。詳見 01_problem_record §八。
+2. **register 修復（只限 O247）**: REF-MISSING（registered 事件 slug 寫漏 o247_ 前綴）經 register.py 翻譯層 O247_SLUG_FIX 修復；README 補 O247 行。
+3. **方向攻防研究產物**: `docs/01_direction_map.md` — Q1 全線關閉；Q2 留 P2 路（節點+束縛能量，n/p BBN 比 γ₇/γ₂₀ 係唯一結構錨）；Q3 冇載體（階梯級距已死），唯一形式化活路 = T>0 熱光子 → δm/m 盲測。
+4. **狀態**: 保持 📄 registered（未開推）— 等調律者揀路線。

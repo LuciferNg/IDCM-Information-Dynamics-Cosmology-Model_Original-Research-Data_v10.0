@@ -164,6 +164,16 @@ REF_PATH_FIX = {
 }
 
 
+# 2026-10-12 修正 O247 類⑦ REF-MISSING: registered 事件 ref 嘅目錄 slug 寫漏
+# `o247_` 前綴（"open_problems_fresh/natural_contamination_ladder/..." vs 實際
+# o247_natural_contamination_ladder）。JSONL 歷史事件唔改（append-only），
+# 翻譯層補回——同 O144 O243_SLUG_FIX 先例一致；只影響 O247 自己嘅 ref 解析。
+O247_SLUG_FIX = {
+    os.path.join(OPF, "natural_contamination_ladder/01_problem_record.md"):
+        os.path.join(OPF, "o247_natural_contamination_ladder/01_problem_record.md"),
+}
+
+
 def theme_dir(name):
     """Resolve a theme folder by its legacy pid first-segment (name).
     Returns the post-migration main_problems/ path when moved, else open_problems_fresh/."""
@@ -202,6 +212,11 @@ def resolve_ref(fp):
     if fp == P3_PRE_REG_REF and os.path.exists(P3_PRE_REG_REF_TO):
         return P3_PRE_REG_REF_TO
     new = REF_PATH_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-12 O247 類⑦: registered 事件 ref slug 寫漏 oNNN_ 前綴 →
+    # 翻譯層（上方 O247_SLUG_FIX）；only-for-O247，唔做全庫猜測。
+    new = O247_SLUG_FIX.get(fp)
     if new and os.path.exists(new):
         return new
     for src, dst in MOVED_SRC.items():
