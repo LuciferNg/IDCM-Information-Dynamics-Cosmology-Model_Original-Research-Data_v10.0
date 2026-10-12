@@ -1,0 +1,15 @@
+{
+ "T1_topo_integers": true,
+ "T2_negative_dim_exist": "χ/superdim/K-theory/Deligne 全部整數",
+ "T3_gamma_frac": -4.75,
+ "is_int": false,
+ "T4_exponent_ok": "θ^γ any real γ; θ^(a+b)=θ^a·θ^b",
+ "T5_structural": "γ = −(33−14)/4, 負號=stair 方向+PAIR 序",
+ "T6_tensor": "dim(A⊗B)=dimA·dimB>0 永遠正; 但矩陣元素可負, exponent 加法可負",
+ "extra_idcm": {
+  "sum_gamma": 90,
+  "dim_chain_tree": 2904,
+  "F10": 55
+ },
+ "verdict": "−19/4 唔係拓撲自由度（拓撲不變量全部整數/非負, 分數排除）; 負維度先例存在但全部整數（Euler χ、superdim、K-theory、Deligne）; γ 嘅正確範疇係 exponent（scaling index）——實數指數完全正當, 負/分數係常態; 『負維度積』喺張量積維度層唔存在（正×正=正）, 但矩陣元素同 exponent 加法都可以負 —— γ=−19/4 係『負斜率』（stair 方向 + PAIR 序）, 唔係『負維度』; 唔需要正數化, 因為佢從來唔係維度, 係指數"
+}
