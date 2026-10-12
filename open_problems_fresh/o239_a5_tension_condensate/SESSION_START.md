@@ -690,4 +690,4 @@ O136 scripts/69 揭示真正結構 `ln m = lnM₀ + α·ln|dm| + δ·even_rank +
    ⟹ **α=φ² 係族無關結構常數**, m=M₀|Δm|^φ² 喺每族各自成立;
    k 係分類(stair 指數來源)唔係公式第二維度
 
-**commit**: 待 commit（第三十四輪，scripts/42 + docs/34）。
+**commit**: `22a028c`（O239 R34: 道精度 + 60% 波動 + k/n 矩陣檢定, 第三十四輪入檔）。
