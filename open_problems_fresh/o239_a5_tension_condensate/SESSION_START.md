@@ -480,4 +480,4 @@ docs/16/17**（β_A5 8.8 步 = 88/10 + 88−Σstair=10）——「stair 深度�
 **意義**: O239 嘅 19 唔受 O64「F_proj 巧合」污染; 反過來 F_proj(gen2) 都唔可以
 借 19 補結構——兩線獨立。
 
-**commit**: 待 commit（第二十五輪，scripts/31 + docs/25）。
+**commit**: `62c4c18`（O239 R25: 19 vs F_proj 巧合檢定, 第二十五輪入檔）。
