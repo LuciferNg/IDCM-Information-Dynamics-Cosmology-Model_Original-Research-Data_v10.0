@@ -796,4 +796,4 @@ O136 scripts/69 揭示真正結構 `ln m = lnM₀ + α·ln|dm| + δ·even_rank +
 4. bug 修正: ①targets 池包含自己推出嘅 M_req_max 假命中→刪;
    ②chk 判定倒轉（想證明冇命中/冇落入）→修正
 
-**commit**: 待 commit（第三十九輪，scripts/47 + docs/39）。
+**commit**: `17c7adb`（O239 R39: ★e/ν 質量通道——投影 vs 激發, 第三十九輪入檔）。
