@@ -1,0 +1,33 @@
+{
+ "prediction": 2.245204,
+ "data": [
+  {
+   "label": "BMW 16A Nf=2+1",
+   "center": 2.057,
+   "err": 0.086,
+   "scheme": "MS@2GeV"
+  },
+  {
+   "label": "RM123+FNAL/MILC Nf=2+1+1",
+   "center": 2.196,
+   "err": 0.09,
+   "scheme": "MS@2GeV"
+  },
+  {
+   "label": "FLAG avg Nf=2+1+1",
+   "center": 2.1505,
+   "err": 0.111,
+   "scheme": "MS@2GeV"
+  },
+  {
+   "label": "FLAG avg (RGI)",
+   "center": 2.1987,
+   "err": 0.092,
+   "scheme": "RGI"
+  }
+ ],
+ "P2_sim": {
+  "1pct_center_21505": -4.403813066728674,
+  "1pct_center_2196": -2.2406193078324232
+ }
+}
