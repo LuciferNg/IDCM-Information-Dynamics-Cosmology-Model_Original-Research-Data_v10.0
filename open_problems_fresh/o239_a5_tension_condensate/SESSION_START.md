@@ -618,4 +618,4 @@ docs/16/17**（β_A5 8.8 步 = 88/10 + 88−Σstair=10）——「stair 深度�
 
 **docs/22 已 append 更正**（「三量一條線」→ 兩條幂律）。
 
-**commit**: 待 commit（第三十一輪，scripts/38 + docs/31）。
+**commit**: `50beeb9`（O239 R31: ★範疇釐清 γ vs β 兩條幂律, 第三十一輪入檔）。
