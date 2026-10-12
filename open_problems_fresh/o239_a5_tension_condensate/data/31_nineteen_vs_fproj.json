@@ -1,0 +1,14 @@
+{
+ "F_proj_pool": {
+  "gen1": 3.6,
+  "gen2": 15.5,
+  "gen3": 37.0
+ },
+ "P1_19_not_in_pool": true,
+ "P2_gamma_distinction": "O239 γ=冪律指數 −19/4; O64 γ_n=K_Chain 譜因子 4sin²∈[0,4] — 兩個獨立量撞名",
+ "P3_range": "19 > max(γ_n)=4",
+ "P4_stair_identity": "M_k=33−7k, k=2, γ/β 雙反解 1.9998/1.9996",
+ "P5_fproj_status": "O64 audit: gen2=15.5 冇結構源 🔴; γ_n 索引大多數值匹配 🔴",
+ "extra_19_M0_gamma": "19·M₀·γ_n 連續帶 0.5MeV-3.8GeV 冇已知粒子命中",
+ "verdict": "『19 係 F_proj 巧合?』→ 唔係: ①19 ∉ F_proj 池{3.6,15.5,37} ②19 有 stair 線身份 (M_k=33−7k 三點 pinned, 零新常數) 而 F_proj(gen2)=15.5 係孤立反推 🔴冇結構源 ③O239 γ(冪律)同 O64 γ_n(譜因子)係兩個獨立量, 撞名要分開 — 今後 γ=O239 冪律指數, γ_n=O64 譜因子; O239 19 嘅結構鏈唔經過 F_proj 框架"
+}
