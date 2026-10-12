@@ -712,4 +712,4 @@ O136 scripts/69 揭示真正結構 `ln m = lnM₀ + α·ln|dm| + δ·even_rank +
 4. 🔴中群 c≈1 FAIL、c/s outlier(c→φ² 4.4% / s→π 0.1%)未解釋、
    9 點整體 median P=0.28 唔顯著 ⟹ **唔宣稱污染因子=φ^j 結構, 標信號待機制**
 
-**commit**: 待 commit（第三十五輪，scripts/43 + 44 + docs/35）。
+**commit**: `92d41ef`（O239 R35: 反向裸質量 + 污染因子分類, 第三十五輪入檔）。
