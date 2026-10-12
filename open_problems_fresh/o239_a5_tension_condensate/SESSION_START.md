@@ -732,4 +732,4 @@ O136 scripts/69 揭示真正結構 `ln m = lnM₀ + α·ln|dm| + δ·even_rank +
    生成規則🔴)
 4. 可檢定性警示: 污染框架唔可以當免死金牌, 要階梯級距定義先算數
 
-**commit**: 待 commit（第三十六輪，docs/36 + docs/35 append 修正）。
+**commit**: `85eedba`（O239 R36: 天然污染框架 + O206 先例重現承認, 第三十六輪入檔）。
