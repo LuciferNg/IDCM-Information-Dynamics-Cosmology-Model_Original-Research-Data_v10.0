@@ -1,0 +1,103 @@
+{
+ "scale_table": [
+  {
+   "label": "t",
+   "n": 1,
+   "mass": 172690.0,
+   "scheme": "pole",
+   "scale": "pole (PDG 主報); MS̄(m_t)=162.5 GeV 另報",
+   "is_2GeV": false
+  },
+  {
+   "label": "b",
+   "n": 2,
+   "mass": 4180.0,
+   "scheme": "MS̄",
+   "scale": "MS̄(μ=m_b)=4.18 GeV",
+   "is_2GeV": false
+  },
+  {
+   "label": "tau",
+   "n": 3,
+   "mass": 1776.86,
+   "scheme": "pole",
+   "scale": "pole (lepton 冇 running)",
+   "is_2GeV": false
+  },
+  {
+   "label": "c",
+   "n": 4,
+   "mass": 1270.0,
+   "scheme": "MS̄",
+   "scale": "MS̄(μ=m_c)=1.27 GeV",
+   "is_2GeV": false
+  },
+  {
+   "label": "mu",
+   "n": 5,
+   "mass": 105.6584,
+   "scheme": "pole",
+   "scale": "pole (lepton 冇 running)",
+   "is_2GeV": false
+  },
+  {
+   "label": "s",
+   "n": 7,
+   "mass": 93.4,
+   "scheme": "MS̄",
+   "scale": "MS̄(μ=2 GeV)=93.4 MeV",
+   "is_2GeV": true
+  },
+  {
+   "label": "d",
+   "n": 9,
+   "mass": 4.67,
+   "scheme": "MS̄",
+   "scale": "MS̄(μ=2 GeV)=4.67 MeV",
+   "is_2GeV": true
+  },
+  {
+   "label": "u",
+   "n": 11,
+   "mass": 2.16,
+   "scheme": "MS̄",
+   "scale": "MS̄(μ=2 GeV)=2.16 MeV",
+   "is_2GeV": true
+  },
+  {
+   "label": "e",
+   "n": 13,
+   "mass": 0.510999,
+   "scheme": "pole",
+   "scale": "pole (lepton 冇 running)",
+   "is_2GeV": false
+  }
+ ],
+ "data09_has_scale_field": false,
+ "group_alpha": {
+  "pole": {
+   "n": 4,
+   "alpha": 2.718789966021826,
+   "se": 0.0515305168516968,
+   "dev_sigma": 1.9552681290176814
+  },
+  "2GeV": {
+   "n": 3,
+   "alpha": 3.913522659864738,
+   "se": 1.136852991263501,
+   "dev_sigma": 1.1395393081343208
+  },
+  "mc_mb": {
+   "n": 2,
+   "note": "2 點, 唔 fit 斜率"
+  },
+  "all": {
+   "n": 9,
+   "alpha": 2.6332540743666586,
+   "se": 0.1532438591930484,
+   "dev_sigma": 0.0993193834774824
+  }
+ },
+ "group_all_pass": true,
+ "verdict": "9 點中只有 u/d/s 係 MS̄(2GeV); c/b 係 m_c/m_b MS̄; e/μ/τ/t 係 pole。按 scale 分組 fit α: {'pole': 1.96, '2GeV': 1.14, 'mc_mb': '2pt', 'all': 0.1} —— 全 <2σ ⟹ α=φ² scale 穩健"
+}
