@@ -105,3 +105,29 @@ source:  O247 session: 調律者提出微觀投影通道總容量 + 多望遠鏡
 4. Stage 2 待辦（判據已凍結）: N1 → 數據提取 → T1-T3 → docs/04
 
 **時序**: 2026-10-13; commit 記錄見註冊表。
+
+---
+
+## Session 記錄 #2（2026-10-13, Stage 2 執行 — 盲測落地）
+
+**執行摘要**: 判據凍結（docs/03）照跑, 零放寬（兩處 audit-side 公式澄清記入 docs/04/docstring, threshold 本質不變）。
+
+- scripts/02_null_mc.py（N1 MC null）: **9/9 PASS**（logs/02.txt）
+  - N1a 全隨機: 鏡像門 0/10⁴（measure-zero）⟹ 三指紋聯合 < 1e-7 ✓
+  - N1b Z₂ 對稱族: rank 普遍 23（2000/2000）, **rank22 = 0/2000** ⟹ F1 (rank 22 = 23−1) 特異加強, 唔係 Z₂ 普遍後果
+  - N1b-BA: 平台 0/300; beat 參照 |ΔC| = 9.0e-11 nats（平台成立）⟹ F6 專利
+  - N1c 微擾: F5 閘破 ε=1e-7; F6 平台破 ε=1e-4
+- scripts/03_macro_blind_tests.py（T1/T2/T3）: 判決 🟡/🔴/🔴（logs/03.txt）
+  - T1: I_pair = 0.882075 bits（σ=0.288, z=3.06）→ 🟡 部分（未達 5σ 終判; 方向同 IDCM 矛盾）
+  - T2: 宏觀 r_eff/N = q/N（0.025→0.7）; ½ 只喺 q=p/2 by-construction → 🔴 否決
+  - T3: ΔI(d→0) = 0.8821 bits ≠ 0 → 🔴 否決
+  - N2: 數據閘（Nature 1956 冇原始時序, 置換 null 無法執行; σ 傳播代替）
+- D4/D5 形式層（logs/04_d4_form_check.txt）: 宏觀 Z₂ → block 結構（7.0e-13）; 微觀 Z₂ → row 湮滅（4.0e-16）——形式同構 🟡 但強度唔同, 宏觀冇 F5 對應
+- Q1 表更新: D2 VLBI 光纖鏈 1e-18 級 / D3 NIST 280-m jitter Cₙ² factor-5; E2I2 只係 proposal 冇實測數列
+
+**結論**: O249 主問題 宏觀抖動 ≟ 微觀飽和 —— **機制層 🔴 否決**（T2/T3 乾淨否決, T1 3.06σ 未夠終判）; 形式層 🟡。IDCM 側指紋經 N1 嚴格化（F1/F6 喺 Z₂ 族都係特異）。
+
+**唔 close**（推盡≠結論）: T1 終判（需現代 HBT 原始時序/r² 高精度）+ N2 數據閘 + Q4 池閘 —— 維持 partial 等數據。
+
+**交產生**: docs/04_stage2_result.md（判決表全文）; scripts/02, 03; logs/02, 03, 04_d4_form_check; data/02_null_mc.json, 03_macro_blind_tests.json; 01_problem_record §九 + 事件 row 3。
+

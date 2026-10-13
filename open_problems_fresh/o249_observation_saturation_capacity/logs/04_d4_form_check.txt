@@ -1,0 +1,6 @@
+[D4 宏觀] ||P G − G P|| = 7.02e-13  (Z₂ ⟹ block 結構)
+[D4 宏觀] even sector sum=4024.49, odd sum=3864.67 — 譜唔等 ⟹ 只 block, 無湮滅
+[D4b 微觀] ||P_row P − P|| = 3.99e-16   (exact row degeneracy, O151 F4 3.47e-17 級)
+[D4b 微觀] ||P_row P − P P_row|| = 1.49e-01
+⟹ 宏觀 Z₂ → block 結構 (形式層); 微觀 Z₂ → row 湮滅 P_row P = P (更強)
+⟹ 🟡 形式層同構成立但強度唔同: 宏觀冇 F5 對應 (beam 對輸出唔會相同)

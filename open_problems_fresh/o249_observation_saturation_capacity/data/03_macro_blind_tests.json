@@ -1,0 +1,39 @@
+{
+ "T1": {
+  "r2": 0.84,
+  "r2_err": 0.07,
+  "I_pair_bits": 0.882075211746218,
+  "sigma_bits": 0.2881469714818989,
+  "z": 3.0611989680468636,
+  "verdict": "部分(未定)",
+  "idcm_prediction_bits": 3.6e-15,
+  "audit_note": "docs/03 原式分母退化 (I(single)=0⟹G≡1), 操作化為絕對量, threshold 不變"
+ },
+ "T2": {
+  "p": 40,
+  "q_scan": {
+   "1": 0.025,
+   "2": 0.05,
+   "4": 0.1,
+   "8": 0.2,
+   "16": 0.4,
+   "20": 0.5,
+   "24": 0.6,
+   "30": 0.625,
+   "40": 0.7
+  },
+  "verdict": "否決",
+  "note": "宏觀秩由源數 q 決定 ≈ min(N,q); ½ 只有 q=N/2 by-construction",
+  "idcm_prediction": 0.5
+ },
+ "T3": {
+  "delta_I_bits": 0.882075211746218,
+  "idcm_platform_bits": 4.24e-13,
+  "verdict": "否決"
+ },
+ "N2": {
+  "gate": "raw time series unavailable (Nature 1956 aggregate only)",
+  "note": "permutation null 不可執行; σ propagation 代替",
+  "t1_z": 3.0611989680468636
+ }
+}
