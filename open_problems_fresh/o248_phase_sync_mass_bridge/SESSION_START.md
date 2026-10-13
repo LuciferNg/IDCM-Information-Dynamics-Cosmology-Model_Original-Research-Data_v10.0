@@ -90,3 +90,14 @@ O247 本 session 集中推 Q2（質子/中子/原子），Q3 唔會喺 O247 出�
 **判決**: P1 = 明確 no-go（結構性）—— 相位模質量無關。P2/P3 終止（判據域空）。
 **閉合**: register `close --verdict negative`（state=closed, verdict=negative）; 免死金牌閘未解除 —— O239 60% 殘差仍開放（O239/O136 續）。
 **交接**: O247 Q3（路線關閉）＋ O239（殘差歸屬）各一 register note。
+
+> ⚠️ **commit 106d385 (2026-10-13) 勘誤 — register.jsonl 被並行 add 覆寫 index**：
+> 本 session 只屬意 commit 自己 5 條 O248/O247/O239 事件行（splice `git apply --cached` 後
+> `git diff --cached --numstat` 確認 5/0）；於 commit 前並行 session 嘅 `git add` 覆寫咗 index，
+> 令 commit 106d385 連帶入庫 6 條外國真實事件行：O142 note (`11a4f110e5d3fa78`)、
+> O144/R5 registered (`4dab64d72b65f1ff`)、O144/R12 registered (`cfb231529a3247b3`)、
+> O144 notes (`adae0ac5e4a9ac54`, `b1638ec75490e019`, `f801ba36743aad26`)。
+> 內容全部真實，且已於 HEAD 入庫一次（其 session 唔會 double-append）；唯一代價 = commit
+> subject 歸屬共享。唔 rewrite 歷史（append-only 紀律）。教訓：apply --cached 後緊接
+> commit 前必須喺同一 && 鏈再核 `git diff --cached --numstat problem_register/register.jsonl`，
+> `git commit -o` 唔保護 index 被覆寫。
