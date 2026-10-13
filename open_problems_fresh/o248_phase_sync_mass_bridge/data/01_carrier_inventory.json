@@ -1,0 +1,68 @@
+{
+  "script": "01_carrier_inventory_no_go",
+  "checks": [
+    {
+      "id": "C1",
+      "result": "PASS",
+      "note": "\u03b3_n = |1\u2212e^(in\u03c0/44)|\u00b2 \u2200n=1..44, maxdev = 0.00e+00 (tol 1e-30)"
+    },
+    {
+      "id": "C2",
+      "result": "PASS",
+      "note": "V(|W|) \u5c0d \u03b8 \u5e73\u79fb\u504f\u5dee = 0.0e+00 (EXACT \u7121\u95dc); (\u2202\u03b8)\u00b2 \u5e73\u79fb\u4e0d\u8b8a \u27f9 S \u4e0d\u8b8a"
+    },
+    {
+      "id": "C3",
+      "result": "PASS",
+      "note": "\u03b8 \u96f6\u52e2 (m_\u03b8=0); \u552f\u4e00\u8026\u5408 (W\u2080+\u03c1)\u00b2(\u2202\u03b8)\u00b2 \u5168\u5c0e\u6578\u578b; \u5187 \u03b8\u00b7\u8cea\u91cf / \u03b8\u00b7\u03c6_n\u00b2 \u9802\u9ede"
+    },
+    {
+      "id": "C4a",
+      "result": "PASS",
+      "note": "\u03b5\u2087/\u03b5\u2082\u2080 = 0.1426176130 \u2248 0.14261761 (O140 docs/16 \u6b63\u5178: n/p BBN \u9589\u5408)"
+    },
+    {
+      "id": "C4b",
+      "result": "PASS",
+      "note": "\u9589\u5408\u503c\u843d\u89c0\u6e2c\u7a97\u53e3 \u27f9 T~m_e \u71b1\u6d74\u8655 f_i \u2261 1 (\u7121\u6c61\u67d3); \u6c61\u67d3\u7406\u8ad6\u9700\u89e3\u91cb \u70ba\u4f55 f(BBN)=1 \u800c f(\u5be6\u9a57\u5ba4)\u22601 \u2014\u2014 \u540c\u6a19\u6e96\u71b1\u7269\u7406 (\u4fee\u6b63\u96a8 T \u589e) \u76f8\u53cd"
+    },
+    {
+      "id": "C5",
+      "result": "PASS",
+      "note": "\u03b4m/m \u4e0a\u754c = 2.08e-17 \u2264 1e-10 \u27f9 \u5730\u9762/\u661f\u9ad4\u91cf\u6e2c (T\u226am) \u71b1\u4fee\u6b63\u5e7e\u4f55\u7d1a \u5fae\u4e0d\u8db3\u9053, \u5514\u53ef\u80fd\u4fc2 O239 60% \u7d1a\u6b98\u5dee"
+    },
+    {
+      "id": "C6a",
+      "result": "PASS",
+      "note": "\u5168\u8b5c\u6383\u63cf \u03b8'\u2208(\u22123,3): \u5187\u4efb\u4f55\u55ae\u4e00\u5168\u5c40\u76f8\u4f4d\u4ee4 [1, 2, 5, 9, 13, 20, 33, 34, 44] \u4e4b 4 \u500b <1 \u9ede\u540c\u6642 <1 \u4e14 2 \u500b >1 \u9ede\u540c\u6642 >1 (u/c \u7b26\u865f\u77db\u76fe)"
+    },
+    {
+      "id": "C6b",
+      "result": "PASS",
+      "note": "\u71b1\u65b9\u5dee: e(13) \u9810\u6e2c\u6b63\u4fee\u6b63 (cos(13\u03c0/44)=+0.599) \u4f46\u89c0\u6e2c 0.648<1; c(34) \u9810\u6e2c\u8ca0\u4fee\u6b63 (cos=-0.756) \u4f46\u89c0\u6e2c 2.508>1 \u27f9 \u65b9\u5411\u5168\u53cd"
+    },
+    {
+      "id": "C6c",
+      "result": "PASS",
+      "note": "\u6700\u4f73\u55ae \u03b8' fit log-RMS = 0.571 (\u03b8'=+6.272) \u2265 0.30 \u27f9 \u6a5f\u5236\u89e3\u91cb\u529b \u2248 \u96f6 (\u89c0\u6e2c\u6a21\u5f0f\u6709\u5bb6\u65cf\u7d50\u69cb, \u975e n-\u55ae\u8abf)"
+    },
+    {
+      "id": "C7",
+      "result": "PASS",
+      "note": "\u03b3_n \u4e4b\u76f8\u4f4d n\u03c0/88 \u4fc2\u8b5c\u7d22\u5f15\u6b65\u9577 (\u975c\u614b\u7d50\u69cb), \u975e Goldstone \u5834 \u03b8; \u8cea\u91cf\u516c\u5f0f \u2202/\u2202\u03b8 = 0 \u4e14 \u2202/\u2202T = 0 (\u968e\u68af + O239 \u6295\u5f71\u90fd\u5514\u542b \u03b8/T)"
+    },
+    {
+      "id": "C8",
+      "result": "PASS",
+      "note": "P1=no-go \u53ea\u95dc\u9589\u300e\u5929\u7136\u6c61\u67d3/\u76f8\u4f4d\u540c\u6b65\u300f\u8def\u7dda; O239 60% \u9589\u5408\u6b98\u5dee\u4ecd\u7136\u958b\u653e (\u2192 O136 \u9010\u9ede\u516c\u5f0f / freeze v3 \u6578\u64da\u9598), \u5514\u53ef\u4ee5\u7576\u5df2\u89e3\u91cb"
+    }
+  ],
+  "npass": 11,
+  "nchk": 11,
+  "key": {
+    "gamma_identity_maxdev": 0.0,
+    "n_p_eps_ratio": 0.14261761295541647,
+    "thermal_dm_max_room": 2.0808614300281717e-17,
+    "single_theta_best_rms": 0.5712012792803671
+  }
+}

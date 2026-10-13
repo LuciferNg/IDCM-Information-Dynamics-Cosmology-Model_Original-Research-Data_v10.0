@@ -3,18 +3,18 @@
 <!-- registry
 pid:     O248
 title:   相位橋: W-field 相位模 → 觀測質量污染 (相位同步污染框架形式化, 承接 O247 Q3)
-state:   registered
-verdict: -
+state:   closed
+verdict: negative
 flags:   -
 owner:   O248
 created: 2026-10-12
-updated: 2026-10-12
+updated: 2026-10-13
 prereq:  O247 Q3 (docs/01) + O239 R36 + O73 + O204
 source:  調律者2026-10-12: O247 Q3 移交開新O, 推導用新session
 -->
 
 > **Session**: 2026-10-12（新建立）
-> **狀態**: 📄 **已註冊 — 未開始（推導用新 session）**
+> **狀態**: 🟢 **已閉合 (2026-10-13, verdict=negative — P1 明確 no-go：相位模質量無關, v10 無載體)**
 > **來源**: 調律者 2026-10-12「開新o 接相位橋，推導用新session」——O247 Q3 移交
 > **前置**: O247 Q3（docs/01 §三）；O239 R36（docs/36）；O73（Goldstone 相位模）；O204（W₀）
 > **位置**: `open_problems_fresh/o248_phase_sync_mass_bridge/`
@@ -74,3 +74,19 @@ O247 本 session 集中推 Q2（質子/中子/原子），Q3 唔會喺 O247 出�
 
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
+
+---
+
+## Session 記錄 — 2026-10-13（推導 session #1：P1 載體盤點 → 明確 no-go → 閉合）
+
+**執行**: scripts/01_carrier_inventory_no_go.py（11/11 PASS, exit 0; logs/01.txt）+ docs/01_carrier_inventory_no_go.md
+
+**四層載體盤點結論**（詳見 docs/01）:
+- 算子層: θ 零勢（m_θ=0）, 唯一耦合導數型 `(W₀+ρ)²(∂θ)²`, 全局相位平移 S 不變 ⟹ θ 不可觀察; O204 G8 θ=時鐘模≠光子
+- 語義層: 質量本身 = 脫相位 `|1−U_n|²`（O237）—— 相位同步偏差係質量定義, 唔係污染源
+- 幅度層: 地面熱修正 δm/m ≤ 2e-17; BBN n/p = ε₇/ε₂₀ = 0.14261761 裸譜 EXACT 閉合, 污染因子 ≡ 1
+- 後驗層: 唯一 O(1) 候選 O206 簇 = A₅ 偽影已撤回; 單一 θ' 無法重現 O239 c(n)（log-RMS 0.571）
+
+**判決**: P1 = 明確 no-go（結構性）—— 相位模質量無關。P2/P3 終止（判據域空）。
+**閉合**: register `close --verdict negative`（state=closed, verdict=negative）; 免死金牌閘未解除 —— O239 60% 殘差仍開放（O239/O136 續）。
+**交接**: O247 Q3（路線關閉）＋ O239（殘差歸屬）各一 register note。
