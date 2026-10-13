@@ -1,0 +1,21 @@
+==========================================================================
+定理 A: identifying Z₂ (Pρ=P) ⟹ partner pair MI = 0 (annihilation)
+  500 identifying channels: annihilation 率 = 1.0000 (max pair MI = 0.00e+00)
+  [ 1] PASS A: identifying ⟹ annihilation 100% (率 ≥ 0.99, max MI < 1e-6) -- rate=1.0000, maxMI=0.00e+00
+
+==========================================================================
+定理 B: separating Z₂ (可逆, commute) ⟹ partner pair MI > 0 (無湮滅)
+  500 separating channels: annihilation 率 = 0.0000 (min pair MI = 2.18e-06)
+  [ 2] PASS B: separating ⟹ 無湮滅 (annihilation 率 ≤ 0.01, min MI > 1e-6) -- rate=0.0000, minMI=2.18e-06
+
+==========================================================================
+定理 C: 宏觀 reflection-symmetric frame ⟹ [G,P]=0 block, 但冇 pair 湮滅
+  300 reflection-symmetric frames: pair-identical 率 = 0.0000 (= 湮滅/identifying 出現率)
+  [ 3] PASS C: 宏觀 frame pair generically 唔相同 (識別率 ≤ 0.01) -- rate=0.0000
+
+==========================================================================
+分類定理驗證結果:
+  identifying Z₂ (Pρ=P, rank-reducing)  ⟹ annihilation (I_pair=0)   [micro: row Z₂]
+  separating Z₂  (ρ 可逆, 只 block)     ⟹ 無湮滅 (I_pair>0)          [macro: frame]
+  ⟹ 宏觀冇 F5 對應嘅代數根源 = Z₂ 以 separating 實現, 唔係 identifying
+==========================================================================

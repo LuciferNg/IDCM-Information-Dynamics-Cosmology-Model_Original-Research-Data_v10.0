@@ -144,3 +144,37 @@ IDCM 528 = B²·33 = 16×33   （譜乘法階梯頂, O147）
 - 反而強化 T2/T3 否定: 宏觀容量由幾何組合生成, 微觀階梯由譜乘法生成, 冇共享生成機制
 
 **記錄**: 2026-10-13 調律者質詢; 計算 C(n,2) 掃描 (33,528) 唯一; 維持 O249 主結論。
+
+---
+
+## 九、形式層分類定理（2026-10-13, scripts/04 3/3 PASS）
+
+**問題**: docs/03/04 嘅「形式層🟡 強度差（macro block vs micro annihilation）」可否升級成乾淨定理？
+
+**定理（經 MC 驗證, logs/04.txt + data/04_z2_classification.json）**:
+```
+對 Z₂-symmetric channel P (ρ²=I):
+  identifying 實現:  Pρ = P  (ρ rank-reducing projection, P[ρx]=P[x])
+      ⟹ partner pair 輸出完全相同 ⟹ I(X∈{x,ρx};Y) = 0 精確 (annihilation)
+  separating 實現:   ρ 可逆, Pρ = ρP (block 結構, P[ρx]≠P[x] generically)
+      ⟹ pair MI > 0 幾乎必然 (無湮滅)
+```
+- 驗證: 500 identifying → annihilation 率 1.0000（max pair MI = 0.00e+00 **精確零**）; 500 separating → 0.0000（min MI 2.18e-06）; 300 宏觀 reflection-symmetric frame → pair-identical 率 0.0000
+- **IDCM micro = identifying 實現**（row r ≡ row 44−r, F5 3.6e-15 係 float 捨入版嘅精確零）; **宏觀 frame = separating 實現**（反射只 block, 唔湮滅）
+
+**結論**: 宏觀冇 F5 對應嘅**代數根源** = Z₂ 以 separating（可逆 isometry）實現, 唔係 identifying（rank-reducing projection）。形式層 🟡 升級為**分類定理**, open item #4（「可作新 O」）就地完成, 唔使開新 O。
+
+---
+
+## 十、T1 數據閘 — 現代 SII 文獻確認（2026-10-13）
+
+搜尋現代 stellar intensity interferometry（SII）評估 T1 5σ 終判所需數據:
+
+| 實驗 | 量度 | 對 T1 意義 |
+|---|---|---|
+| C2PU/Calern（Guerin 2017/2018, 1805.06653; 1805.06078） | 實驗室 artificial star zero-baseline 校準 A₀=1.37±0.05 ps; on-sky V²(15m) SNR~10 | 確認「第二通道有信息」(bunching>0), 但 A₀ 係 bandwidth-convolved 校準, 唔等於直接 r²(0) |
+| VERITAS-SII（1908.03587; 2020 β UMa 角直徑 1.07±0.04 mas） | V²(baseline) 曲線 | 250+ 小時/39 星, 但全部 d≫0 基線, 冇零基線高精度 r²(0) |
+| Narrabri（Hanbury Brown 1974） | 最短基線 9.5m SNR 11.5 | 歷史最準 SII, 仍冇 d=0 |
+| MAGIC/H.E.S.S. SII（2020-2024） | 大陣列 V² | 同上, 冇零基線 |
+
+**確認**: 自 1956 至今, **冇任何實驗直接量度「兩望遠鏡零基線 r²(0)」高精度值**（△ r²(0) ≲ 0.03 先令 T1 z≥5）。T1 維持 🟡 部分（3.06σ）; 終判所需 = 現代光子計數陣列（MAGIC/VERITAS 級）喺最近距離基線（幾 m）對 unresolved star 嘅 g⁽²⁾(0) 直接量度, 或 HBT 1956 原始資料重分析。

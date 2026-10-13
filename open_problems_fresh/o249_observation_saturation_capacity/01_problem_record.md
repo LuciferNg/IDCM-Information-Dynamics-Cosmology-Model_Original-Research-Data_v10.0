@@ -142,6 +142,11 @@ IDCM 結構, ③兩者是否同一結構 (宏觀↔微觀同構), ④可證偽�
 
 **池閘 ⛔ 唔過**（維持 ex-ante 🟡 負面證據）: C(N,2) 對所有 N 泛型成立（ALMA 66/VLA 27/EHT 8 全部三角形）, 33/528 冇特殊天文行為 ⟹ 相撞 = 結構性巧合, 非同構。細節: docs/04 §八。
 
+## 十一、形式層分類定理 + T1 數據閘確認（2026-10-13, 「繼續推」輪）
+
+- **scripts/04 3/3 PASS**（docs/04 §九）: 分類定理——Z₂-symmetric channel 嘅 annihilation ⟺ **identifying 實現**（Pρ=P, rank-reducing projection）; separating 實現（可逆, 只 block）無湮滅。500 identifying → annihilation 率 1.0000（**精確零** max pair MI, 比 beat F5 3.6e-15 更嚴格——後者係 float 捨入版）; 500 separating → 0.0000（min MI 2.18e-06）; 300 宏觀 frame → pair-identical 0.0000。IDCM micro = identifying; 宏觀 frame = separating ⟹ 宏觀冇 F5 對應嘅代數根源確立。形式層 open item #4 就地完成, 唔開新 O。
+- **T1 數據閘現代文獻確認**（docs/04 §十）: 自 1956 至今冇實驗直接量度兩望遠鏡零基線 r²(0) 高精度值（C2PU A₀=1.37±0.05 ps 係 bandwidth-convolved 校準; VERITAS 250+h / 39 星但全部 d≫0; Narrabri 最短基線 9.5m）⟹ T1 維持 🟡 部分（3.06σ）; 終判需現代光子計數陣列最近基線 g⁽²⁾(0) 直接量度或 HBT 1956 原始資料重分析。
+
 ## 七、相關文件
 
 ```

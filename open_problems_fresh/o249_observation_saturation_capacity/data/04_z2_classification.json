@@ -1,0 +1,23 @@
+{
+ "checks": [
+  true,
+  true,
+  true
+ ],
+ "total": 3,
+ "n": 3,
+ "details": {
+  "A": {
+   "rate": 1.0,
+   "max_pair_mi": 0.0
+  },
+  "B": {
+   "annihilation_rate": 0.0,
+   "min_pair_mi": 2.183136492917015e-06
+  },
+  "C": {
+   "pair_identical_rate": 0.0,
+   "n": 300
+  }
+ }
+}
