@@ -2,7 +2,7 @@
 
 > **創建日期**: 2026-10-05（**由零重建**；舊 O85 目錄已全刪——污染：O89 硬編碼 `M_GUT/M_PS/M_R`、O88 舊框架 `(4,3)/T₃R/B−L`、已否證 Chain A'）
 > **來源**: O72 場論學家 Q6 ——「SU(12) 係 global 定 gauge？冇 gauge boson！」
-> **狀態**: 🟢 已閉合（2026-10-05 closeout；scripts 01–17 = 269/269 PASS 含 Layer-2 38/38 + Layer-3 8/8；docs/01–15；final_result.md）
+> **狀態**: 🟢 已閉合（2026-10-05 closeout＋2026-10-10 攻関輪 S(m)；scripts 01–21 = 328/328 PASS 含 Layer-2 38/38 + Layer-3 8/8；docs/01–19；final_result.md）
 > **備份**: `~/.hermes/backups/o85_su12_breaking_ARCHIVE_20261005.tar.gz`（舊 12 檔）；`o85_su12_breaking.contaminated.20261005_113210.tar.gz`（舊完整版）
 
 ## 原始問題（O72 場論學家 Q6，逐字）
