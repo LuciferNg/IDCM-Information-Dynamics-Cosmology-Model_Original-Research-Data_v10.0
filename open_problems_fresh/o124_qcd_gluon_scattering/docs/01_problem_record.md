@@ -803,3 +803,53 @@ register/文件新增令斷言過時（唔係推導有錯）：
 | T34 | 2026-10-14 | O142/O144 閉合影響分析（v14/v16/σ） | 本節 + docs/09 §8 + docs/10 §9 |
 | T35 | 2026-10-14 | docs/09 §7.1 符號更正（−0.78→+0.78, O142 驗證） | docs/09 §8.1 + scripts/15 D4 |
 | T36 | 2026-10-14 | O124→O142 handoff 已接受（O142 docs/18 6/7） | 本節 §3 |
+
+
+---
+
+## 廿六、本輪新增 (2026-10-14 — O250 handoff 檢查: Q2 前置「3g+4g+鬼場未查」已閉合)
+
+> ⚠️ 以上 (§一–§二十五) 一字不改。本節為 append-only 新增。
+
+**來源**: 用戶指示「檢查O250 handoff」。
+
+### 1. O250 狀態 + 事件全景
+
+O250（重整化次數與 K-Tree 關聯性探針）📄 registered（只註冊禁推導，Q1–Q3 等調律者裁決）。
+register 5 事件：registered (00:05) + 開 O note (18:39) + 3 × prereq push (20:26) 到
+O124 / O88/composite-dB1-channel / O140/local-l-level。
+
+### 2. O250→O124 prereq push (20:26) 內容
+
+```
+「O250 Q2 route 依賴閉合『標準 QCD β（3g+4g+鬼場）未查』（docs/09 缺口）
+ — IDCM-native running 階數嘅 QFT loop 對照需要」
+```
+
+### 3. ★ 檢查發現：缺口已由 O124 docs/06 閉合，O250 引用嘅係過時標記
+
+```
+O250 宣稱: 「標準 QCD β（3g+4g+鬼場）未查」（docs/09 缺口）
+實際:      docs/06_beta_consistency.md (Script 07, 27/27 PASS) 早已完整判決：
+           🔴 O142 §1.1「膠子 8+鬼場 3」撤回（維度計數 + 鬼場數錯）
+           🟢 標準圈分解 = (10/3)C_A + (1/3)C_A = 10 + 1
+           🔴 3g = 0 ⟹ 膠子 bubble 恆零; 冇 gauge fixing ⟹ 冇鬼場
+           🟢 4g tadpole 質量型 (log N), 非耦合重整 ⟹ 1-loop 冇耦合 running
+           🟢 b₀ = L₄ = 7 存活為 T̂ 不變量（零圈輸入)「1-loop 一致性」ill-posed
+           🟢 同 O139 繞數 running 互相印證
+引文錯處: 缺口唔喺 docs/09；係 docs/05 L209「未查」過時標記（docs/06 已專檔閉合）
+⟹ O250 Q2 直接答案 = IDCM 冇標準 QFT loop 階（3g 零/冇鬼場/冇耦合重整發散）
+```
+
+### 4. 處理（append-only 文檔 + register 回應）
+
+| 項 | 動作 |
+|:---|:-----|
+| docs/05 L209「未查」 | 🔴 過時標記 —— 本節記錄為準（docs/06 已閉合），原行唔刪 |
+| register | O124→O250 回應 note + O250 記錄 note（2026-10-14 20:34, hash 2b31274c/6254c66b） |
+
+### 5. 記錄
+
+| T | 日期 | 事件 | 記錄 |
+|:-:|:-----|:-----|:-----|
+| T38 | 2026-10-14 | O250 handoff 檢查：Q2 前置已閉合（docs/06 27/27）| 本節 + register 2b31274c |

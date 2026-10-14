@@ -225,3 +225,14 @@ F4 驗證 4g contact 色代數：`G_ss = Σ(f^{abe}f^{cde})² = C_A²(N_c²−1)
 ---
 
 *本檔 append-only。舊節（docs/02、docs/03、docs/04）一字不改。*
+
+
+---
+
+## 10. ⚠️ 更正 (2026-10-14, O250 handoff 檢查)
+
+> append-only。§8 誠實表 L209「3g = 0 對 b₀ = L₄ = 7 嘅 1-loop 一致性 🔴 未查」
+> 係過時標記 —— 該問題已由 **`docs/06_beta_consistency.md`**（Script 07, 27/27 PASS）
+> 完整判決：3g = 0 ⟹ 膠子 bubble 恆零、冇鬼場、4g tadpole 質量型非耦合重整 ⟹
+> IDCM 冇 QFT 1-loop β；b₀ = L₄ = 7 存活為 T̂ 不變量（零圈輸入)「1-loop 一致性」
+> ill-posed。O250 Q2 前置已由此閉合（register 2b31274c）。以本節為準。
