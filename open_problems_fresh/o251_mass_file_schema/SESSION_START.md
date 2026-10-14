@@ -86,3 +86,14 @@ O248 已裁（11/11 PASS）：相位模→質量污染無載體，質量 = Objec
 
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
+
+> ⚠️ **commit 63c4fb6 (2026-10-14) 勘誤 — register.jsonl 再次被並行 add 覆寫 index**：
+> 本 O 只屬意 commit 自己 2 條 O251 行（scaffold + note；`git diff --cached --numstat` 喺 apply 後
+> 核實 `2 0`），但 apply 核實後、跨 call 嘅 commit 前，並行 session 嘅 `git add` 再次覆寫 index，
+> 令 commit 63c4fb6 連帶入庫 8 條外國真實事件行：O124 note/handed_off/note/handed_off
+> (`0d44f5ea`, `690f0448`, `462b26a0`, `8f99b8a7`)、O142 progress v14/v15/v16
+> (`d3e5d4f7`, `8af01d16`, `e50b8e31`)、O250 registered (`5c838cfd`)。
+> 內容全真且已於 HEAD 入庫一次（對方 session 唔會 double-append）；唯一代價 = commit
+> subject 歸屬共享。唔 rewrite 歷史。教訓（第二犯, 2026-10-13 第一次 106d385）:
+> **apply+verify+commit 必須喺同一 `&&` 命令鏈同一個 terminal call**——跨 call 即開窗；
+> commit 前最後一步喺鏈內再核 numstat，唔好信上一 call 嘅 check。
