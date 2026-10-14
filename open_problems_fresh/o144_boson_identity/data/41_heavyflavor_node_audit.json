@@ -1,0 +1,271 @@
+{
+ "M0": 27.90091451,
+ "NA": {
+  "u": 2.177663791093495,
+  "d": 4.6830659827465615,
+  "s": 93.4,
+  "c": 1088.2968,
+  "b": 4990.929124800001
+ },
+ "NB": {
+  "u": 2.177663791093495,
+  "d": 4.6830659827465615,
+  "s": 93.4,
+  "c": 1548.45,
+  "b": 4730.15
+ },
+ "bounds": {
+  "b_max": "Upsilon/2",
+  "b_src": "Upsilon/2",
+  "c_max": "Jpsi/2",
+  "c_src": "Jpsi/2"
+ },
+ "setA": {
+  "T0": {
+   "le3": 0,
+   "n": 17,
+   "median": 0.817,
+   "max": 0.99037,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T1a": {
+   "le3": 2,
+   "n": 17,
+   "median": 0.09897,
+   "max": 3.59843,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T1b": {
+   "le3": 4,
+   "n": 17,
+   "median": 0.15603,
+   "max": 1.32463,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T2": {
+   "le3": 0,
+   "n": 17,
+   "median": 1.39873,
+   "max": 3.72807,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T3": {
+   "le3": 0,
+   "n": 17,
+   "median": 0.53918,
+   "max": 2.11528,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T5": {
+   "le3": 0,
+   "n": 17,
+   "median": 0.74246,
+   "max": 0.93089,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T6": {
+   "le3": 3,
+   "n": 17,
+   "median": 0.1206,
+   "max": 5.87222,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  }
+ },
+ "setB": {
+  "T0": {
+   "le3": 0,
+   "n": 15,
+   "median": 0.85628,
+   "max": 0.99037,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T1a": {
+   "le3": 4,
+   "n": 15,
+   "median": 0.15603,
+   "max": 3.59843,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T1b": {
+   "le3": 4,
+   "n": 15,
+   "median": 0.08487,
+   "max": 1.32463,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T2": {
+   "le3": 1,
+   "n": 15,
+   "median": 1.23896,
+   "max": 3.72807,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T3": {
+   "le3": 1,
+   "n": 15,
+   "median": 0.53918,
+   "max": 2.11528,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T5": {
+   "le3": 0,
+   "n": 15,
+   "median": 0.74682,
+   "max": 0.93089,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  },
+  "T6": {
+   "le3": 2,
+   "n": 15,
+   "median": 0.15603,
+   "max": 5.87222,
+   "C1": false,
+   "C2": false,
+   "C3": false,
+   "PASS": false
+  }
+ },
+ "residual": [
+  {
+   "hadron": "pi0",
+   "NA_R": 4.5918,
+   "NB_R": 4.5918,
+   "M_obs": 134.9768
+  },
+  {
+   "hadron": "pi+",
+   "NA_R": 4.7565,
+   "NB_R": 4.7565,
+   "M_obs": 139.57039
+  },
+  {
+   "hadron": "K+",
+   "NA_R": 14.2683,
+   "NB_R": 14.2683,
+   "M_obs": 493.677
+  },
+  {
+   "hadron": "K0",
+   "NA_R": 14.3195,
+   "NB_R": 14.3195,
+   "M_obs": 497.611
+  },
+  {
+   "hadron": "eta",
+   "NA_R": 16.0425,
+   "NB_R": 16.0425,
+   "M_obs": 547.862
+  },
+  {
+   "hadron": "eta'",
+   "NA_R": 30.7345,
+   "NB_R": 30.7345,
+   "M_obs": 957.78
+  },
+  {
+   "hadron": "p",
+   "NA_R": 33.3048,
+   "NB_R": 33.3048,
+   "M_obs": 938.272088
+  },
+  {
+   "hadron": "n",
+   "NA_R": 33.2613,
+   "NB_R": 33.2613,
+   "M_obs": 939.565421
+  },
+  {
+   "hadron": "Lambda",
+   "NA_R": 36.3939,
+   "NB_R": 36.3939,
+   "M_obs": 1115.683
+  },
+  {
+   "hadron": "Sigma+",
+   "NA_R": 39.1247,
+   "NB_R": 39.1247,
+   "M_obs": 1189.37
+  },
+  {
+   "hadron": "Xi0",
+   "NA_R": 40.3529,
+   "NB_R": 40.3529,
+   "M_obs": 1314.86
+  },
+  {
+   "hadron": "D0",
+   "NA_R": 27.7541,
+   "NB_R": 11.2617,
+   "M_obs": 1864.84
+  },
+  {
+   "hadron": "D+",
+   "NA_R": 27.8371,
+   "NB_R": 11.3447,
+   "M_obs": 1869.66
+  },
+  {
+   "hadron": "B+",
+   "NA_R": 10.2582,
+   "NB_R": 19.6048,
+   "M_obs": 5279.32
+  },
+  {
+   "hadron": "B0",
+   "NA_R": 10.1795,
+   "NB_R": 19.5261,
+   "M_obs": 5279.63
+  },
+  {
+   "hadron": "J/psi",
+   "NA_R": 32.9848,
+   "NB_R": 0.0,
+   "M_obs": 3096.9
+  },
+  {
+   "hadron": "Upsilon",
+   "NA_R": -18.6932,
+   "NB_R": 0.0,
+   "M_obs": 9460.3
+  }
+ ]
+}
