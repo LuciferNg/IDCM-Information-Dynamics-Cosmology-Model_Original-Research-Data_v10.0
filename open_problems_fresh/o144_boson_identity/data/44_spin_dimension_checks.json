@@ -1,0 +1,75 @@
+{
+ "container": {
+  "C": 2.388403081407454,
+  "ds_meson": 22.943,
+  "ds_baryon": 9.606,
+  "sigma": 0.04,
+  "non_pair_only": true
+ },
+ "power_law": {
+  "alphas": [
+   0.12646709238980577,
+   0.36693287365015587,
+   1.0180500473385803
+  ],
+  "max_dalpha": 0.8915829549487745,
+  "excluded": true
+ },
+ "additive": {
+  "G1 γ-sum-pos": {
+   "le3": 0,
+   "devs": [
+    4.88,
+    52.15,
+    63.28
+   ],
+   "PASS": false
+  },
+  "G1 γ-sum-inv": {
+   "le3": 0,
+   "devs": [
+    59.37,
+    73.39,
+    71.97
+   ],
+   "PASS": false
+  },
+  "G3 E′-sum-pos": {
+   "le3": 0,
+   "devs": [
+    32.02,
+    62.03,
+    74.98
+   ],
+   "PASS": false
+  },
+  "G3 E′-sum-inv": {
+   "le3": 0,
+   "devs": [
+    43.15,
+    66.46,
+    58.86
+   ],
+   "PASS": false
+  },
+  "G5 m-sum-pos": {
+   "le3": 0,
+   "devs": [
+    95.65,
+    97.75,
+    89.48
+   ],
+   "PASS": false
+  },
+  "G5 m-sum-inv": {
+   "le3": 1,
+   "devs": [
+    788.76,
+    465.1,
+    2.19
+   ],
+   "PASS": false
+  }
+ },
+ "verdict": "dimensions-narrowed-honest-negative"
+}
