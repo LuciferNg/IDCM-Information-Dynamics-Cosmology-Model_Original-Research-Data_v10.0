@@ -3,9 +3,9 @@
 <!-- registry
 pid:     O251
 title:   質量檔案 schema：譜點/標度/算子/拓撲/標籤五層格式規範 (讀數 reframe, 承接 O237 pipeline + O248 讀數裁決)
-state:   registered
+state:   retracted
 verdict: -
-flags:   -
+flags:   migrated-to-v11-m1
 owner:   O251
 created: 2026-10-14
 updated: 2026-10-14
@@ -14,7 +14,7 @@ source:  調律者2026-10-13: 開新O 承接質量檔案schema五層格式 (只�
 -->
 
 > **Session**: 2026-10-14（新建立）
-> **狀態**: 📄 **已註冊 — 未開始（推導用新 session）**
+> **狀態**: ❌ **已遷移 → v11 Reality-Architecture main_problems/m1（2026-10-14, retracted；推導喺 v11 新 session）**
 > **來源**: 調律者 2026-10-13「開新o, 但不直接推」——承接「質量 = 讀數/dof=1 ⟹ 推質量檔案嘅函數結構同變量」reframe（blender 類比）
 > **前置**: O237（mass pipeline roadmap）；O248（讀數裁決）；O239（閉合式/殘差）；O140（階梯正典）；O212（dof=1）
 > **位置**: `open_problems_fresh/o251_mass_file_schema/`
