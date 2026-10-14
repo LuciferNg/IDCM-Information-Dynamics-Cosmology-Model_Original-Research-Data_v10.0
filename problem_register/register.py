@@ -45,7 +45,9 @@ THEME_DIRS = ("bbn", "cmb_cl", "cmb_cold_spot", "h0_tension", "kchain_number_fie
               "ktree_structure", "little_red_dots", "neutrino_p6_mode", "p7_reionization",
               "ckm_reconstruction", "crystal_stress", "data_gated_unlock",
               "uhecrs", "beat_periodic_table", "global_routing_table",
-              "early_derivations")
+              "early_derivations",
+              # 2026-10-14: cross-version register (v1.0–v9.0, v11.0) + v11 problem m1
+              "m1", "v1.0", "v2.0", "v3.0", "v4.0", "v5.0", "v6.0", "v7.0", "v8.0", "v9.0", "v11.0")
 
 # 2026-10-05: non-O problem folders moved from open_problems_fresh/ to main_problems/
 # with p-index prefixes (P1-P5 numbers reused from the retired P universe; P6/P7 kept).
@@ -60,6 +62,18 @@ THEME_MOVE = {
     "little_red_dots": "p11_little_red_dots", "uhecrs": "p12_uhecrs",
     "beat_periodic_table": "p13_beat_periodic_table", "global_routing_table": "p14_global_routing_table",
     "early_derivations": "p15_early_derivations",
+    # 2026-10-14: cross-version register —— 版本 repo 喺 v10 repo 外面, 用絕對路徑 (join 唔識返上一層)
+    "m1": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m1_mass_file_schema",
+    "v1.0": "/home/wsl/Projects/IDCM-Original/IDM-v1.0--Information-Dynamics-Cosmology",
+    "v2.0": "/home/wsl/Projects/IDCM-Original/IDM-v2.0--Consistency-Importance-Weight",
+    "v3.0": "/home/wsl/Projects/IDCM-Original/IDM-v3.0--Domain-Framework",
+    "v4.0": "/home/wsl/Projects/IDCM-Original/IDM-v4.0--Consistency-Field-Applied-Science",
+    "v5.0": "/home/wsl/Projects/IDCM-Original/IDM-v5.0--Recursive-Structural-Cosmology",
+    "v6.0": "/home/wsl/Projects/IDCM-Original/IDCM-v6.0--Information-Dynamics-Cosmology-Model",
+    "v7.0": "/home/wsl/Projects/IDCM-Original/IDCM-v7.0--Information-Dynamics-Cosmology-Model",
+    "v8.0": "/home/wsl/Projects/IDCM-Original/IDCM-v8.0--Compiled-Cosmology",
+    "v9.0": "/home/wsl/Projects/IDCM-Original/IDCM-v9.0--W-Field-Lattice",
+    "v11.0": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture",
 }
 MOVED_SRC = {os.path.join(OPF, k): os.path.join(MAIN, v) for k, v in THEME_MOVE.items()}
 

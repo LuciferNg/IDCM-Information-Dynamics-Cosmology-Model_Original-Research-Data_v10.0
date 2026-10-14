@@ -12,7 +12,7 @@ import re, os, sys
 
 ROOT = "/home/wsl/Projects/IDCM-Original"
 V10  = os.path.join(ROOT, "IDCM-v10.0--It-From-Beat")
-V11  = os.path.join(ROOT, "IDCM-v11.0--Equation-Verification")
+V11  = os.path.join(ROOT, "IDCM-v11.0--Reality-Architecture")
 
 MD_FILES = []
 for base in (V10, V11):
