@@ -1,0 +1,48 @@
+{
+  "session": "2026-09-17 O144-03 glueball + Ebind scan",
+  "glueball": {
+    "formula": "M0*N_phi8*S_phi8 = M0*5*17",
+    "pred_MeV": 2371.5765,
+    "target_MeV": 2370.0,
+    "dev_pct": 0.06651898734177737,
+    "closure_candidate": true
+  },
+  "glueball_proton_ratio": {
+    "structural": "N_phi8/gamma_22 = 5/2 = 2.5",
+    "obs": 2.5259197702187883,
+    "dev_pct": 1.0367908087515332
+  },
+  "node_P_sum": {
+    "formula": "2*P_u+P_d = 2*15.5+33 = 64",
+    "phi9_identity": "Phi[3,6] = 1+9*7"
+  },
+  "Ebind_resid": {
+    "value": 0.30652416230300616,
+    "best_candidates": [
+      {
+        "formula": "gamma_7*5/4",
+        "val": 0.3058025260818609,
+        "dev_pct": -0.2354255585345617
+      },
+      {
+        "formula": "gamma_1*60",
+        "val": 0.305746246769575,
+        "dev_pct": -0.25378604009107875
+      }
+    ]
+  },
+  "proton_delta": {
+    "value": 0.010919443985888733,
+    "candidates_rejected": [
+      "34*89/90 (0.019%)",
+      "34*90/91 (0.007%)",
+      "34-gamma_9 (0.082%)",
+      "33+phi_inv (0.032%)"
+    ],
+    "note": "⚠️ 校正 2026-09-17 (docs/07 A4): 原標籤 '34-phi_inv (0.043%)' 值實為 33+φ⁻¹; 四行 dev 全部改正為獨立重算值 (scripts/18 C24-C27)",
+    "verdict": "all fall into fitting-trap zone (no derivation) - rejected as closure"
+  },
+  "verdict": "glueball closure candidate (0.067%, zero-param phi-group); proton residual + Ebind residual remain open",
+  "passed": 3,
+  "failed": 0
+}

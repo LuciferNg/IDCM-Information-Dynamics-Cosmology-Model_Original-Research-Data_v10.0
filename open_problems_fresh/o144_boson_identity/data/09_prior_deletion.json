@@ -1,0 +1,80 @@
+{
+  "session": "2026-09-17 O144-09 prior-principle deletion",
+  "modes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    41,
+    42,
+    43,
+    44
+  ],
+  "pool_size": 16,
+  "window": 0.025,
+  "baseline_solution_space": 6468,
+  "options_per_particle": {
+    "e": 1,
+    "mu": 2,
+    "tau": 11,
+    "u": 1,
+    "d": 2,
+    "s": 3,
+    "c": 7,
+    "b": 7
+  },
+  "survivors_D2D3D4": 369,
+  "true_grid_survives": true,
+  "row_sums": {
+    "L": {
+      "n_sum": 28,
+      "pf_sum": 56.1
+    },
+    "U": {
+      "n_sum": 35,
+      "pf_sum": 28.5
+    },
+    "D": {
+      "n_sum": 48,
+      "pf_sum": 80.6
+    }
+  },
+  "cross_duality": [
+    [
+      "d",
+      "b"
+    ]
+  ],
+  "verdict": "pending"
+}

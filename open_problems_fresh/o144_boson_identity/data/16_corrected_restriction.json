@@ -1,0 +1,9 @@
+{
+  "session": "2026-09-17 O144-16 corrected restriction",
+  "solution_space": 6468,
+  "buckets": 3,
+  "unique_triples": 3,
+  "distinct_grids": 3,
+  "true_grid_selected": true,
+  "verdict": "NOT forced: 3 grids"
+}

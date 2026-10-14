@@ -1,0 +1,9 @@
+{
+  "session": "2026-09-17 O144-15 restricted forcedness",
+  "solution_space": 6468,
+  "restricted_buckets": 33,
+  "unique_triples": 4,
+  "distinct_grids": 4,
+  "true_grid_selected": false,
+  "verdict": "NOT forced: 4 competing grids"
+}

@@ -1,0 +1,231 @@
+{
+  "session": "2026-09-18 O144-27 bridge correction: 2nd-order + tensor factorization",
+  "A_exact": {
+    "corr": "0.00126984126984126984126984126984126984127",
+    "corr_frac": "4/3150",
+    "f1": "0.02222222222222222222222222222222222222222",
+    "f2": "0.05714285714285714285714285714285714285714",
+    "f1_identity": "mu2/Sigma_gamma_even = 1/(N_d+1)",
+    "f2_identity": "mu2/(M_tree+mu2)",
+    "single_ratio_hits": 0,
+    "portal_identity": "lambda_WH * <W>^2 = mu2/2 = 1 (O86 N6, pre-existing)"
+  },
+  "B_second_order": {
+    "dev_linear_f1": 0.02097902055695169,
+    "dev_linear_f2": 0.055944055537060555,
+    "dev_series": 0.07692307652512588,
+    "dev_product": 4.3111363057905813e-10,
+    "dev_inverse": 1.6129305650681242e-06,
+    "dev_exp": 8.073630538909399e-07,
+    "discrimination_ratio": 3741.3119202510184,
+    "principle": "tadpole cancellation: dV/dv=0 kills first order"
+  },
+  "C_tensor_factorization": {
+    "f1_inputs": [
+      "mu2",
+      "Sigma_gamma_even (chain)"
+    ],
+    "f2_inputs": [
+      "mu2",
+      "M_tree (tree)"
+    ],
+    "shared_input": "mu2 only"
+  },
+  "D_uniqueness": {
+    "restricted_pairs": [
+      [
+        "M_tree+μ²",
+        "Σγ_even"
+      ]
+    ],
+    "restricted_unique": true,
+    "relaxed_pairs_count": 17,
+    "relaxed_pairs": [
+      [
+        2,
+        1575
+      ],
+      [
+        3,
+        1050
+      ],
+      [
+        5,
+        630
+      ],
+      [
+        6,
+        525
+      ],
+      [
+        7,
+        450
+      ],
+      [
+        9,
+        350
+      ],
+      [
+        10,
+        315
+      ],
+      [
+        14,
+        225
+      ],
+      [
+        15,
+        210
+      ],
+      [
+        18,
+        175
+      ],
+      [
+        21,
+        150
+      ],
+      [
+        25,
+        126
+      ],
+      [
+        30,
+        105
+      ],
+      [
+        35,
+        90
+      ],
+      [
+        42,
+        75
+      ],
+      [
+        45,
+        70
+      ],
+      [
+        50,
+        63
+      ]
+    ],
+    "verdict": "unique only under the condensate-fraction restriction"
+  },
+  "E_portal": {
+    "delta_v_over_v": "-mu2/(4*mu_H2)",
+    "required_muH2": "393.75",
+    "muH2_reading_a": "393.75",
+    "muH2_reading_b": "393.75",
+    "verdict": "form reproduced, mu_H2 not independently derived"
+  },
+  "F_spectral_search": {
+    "family_size": 18,
+    "hits": 0
+  },
+  "passed": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "A1",
+      "check": "修正 = μ⁴/(Σγ_even·(M_tree+μ²)) 精確",
+      "ok": true
+    },
+    {
+      "id": "A2",
+      "check": "修正 = f₁·f₂ (兩個凝聚分數之乘積)",
+      "ok": true
+    },
+    {
+      "id": "A3",
+      "check": "f₁ = μ²/Σγ_even = 1/(N_d+1) = 1/45",
+      "ok": true
+    },
+    {
+      "id": "A4",
+      "check": "f₂ = μ²/(M_tree+μ²) = 2/35",
+      "ok": true
+    },
+    {
+      "id": "A5",
+      "check": "4/3150 不能寫成兩核心常數之比 (需 ≥3 常數) ⟹ 乘積形被迫",
+      "ok": true
+    },
+    {
+      "id": "A6",
+      "check": "λ_WH·⟨W⟩² = μ²/2 = 1 (O86 N6: λ_WH ≡ 1/⟨W⟩²)",
+      "ok": true
+    },
+    {
+      "id": "B1",
+      "check": "線性 f₁ 形式偏離 > 1% ⟹ 一階項缺席",
+      "ok": true
+    },
+    {
+      "id": "B2",
+      "check": "線性 f₂ 形式偏離 > 1% ⟹ 一階項缺席",
+      "ok": true
+    },
+    {
+      "id": "B3",
+      "check": "(1−f₁)(1−f₂) 偏離 > 1% ⟹ 唔係兩個一階修正之串聯",
+      "ok": true
+    },
+    {
+      "id": "B4",
+      "check": "乘積 f₁·f₂ 形式命中 (< 1e-6)",
+      "ok": true
+    },
+    {
+      "id": "B5",
+      "check": "減法形 1−f 優於 1/(1+f) 及 exp(−f) (差 >100×)",
+      "ok": true
+    },
+    {
+      "id": "B6",
+      "check": "線性項 f₁ 係觀測修正之 17.5× (1/f₂) ⟹ 一階缺席、觀測值恰為二階",
+      "ok": true
+    },
+    {
+      "id": "C1",
+      "check": "f₁ 只用鏈量 (μ²/Σγ_even); 不含 M_tree",
+      "ok": true
+    },
+    {
+      "id": "C2",
+      "check": "f₂ 只用樹量 (μ²/(M_tree+μ²)); 不含 Σγ",
+      "ok": true
+    },
+    {
+      "id": "C3",
+      "check": "唯一共用輸入 = μ² ⟹ 兩因子屬不同張量因子 ⟹ 乘積 = 張量積之自然結構",
+      "ok": true
+    },
+    {
+      "id": "D1",
+      "check": "凝聚分數限制下分解唯一 (只有 (Σγ_even=90, M_tree+μ²=35))",
+      "ok": true
+    },
+    {
+      "id": "D2",
+      "check": "放寬詞彙後分解不唯一 (17 對) ⟹ 唯一性依賴 motivated restriction",
+      "ok": true
+    },
+    {
+      "id": "E1",
+      "check": "δv/v = −μ²/(4μ_H²) 於 μ_H² = 393.75 時 = −修正 (形式一致)",
+      "ok": true
+    },
+    {
+      "id": "E2",
+      "check": "所需 μ_H² = 393.75 係複合量 (非單一結構常數) ⟹ 未閉合",
+      "ok": true
+    },
+    {
+      "id": "F1",
+      "check": "譜和兩兩乘/比中 δ<1e-5 命中數 = 0 ⟹ 無直接譜和推導",
+      "ok": true
+    }
+  ],
+  "verdict": "The correction's ORDER (2nd order, subtractive) and its PRODUCT form are now forced by principles: linear terms absent, single-ratio form impossible, and the two factors factorize exactly along the causal-tensor split K_chain (x) K_tree. Still unclosed: why THESE two sector budgets (Sigma_gamma_even, M_tree+mu2) as denominators - i.e. the structural identity of mu_H^2 = 393.75 in the portal route."
+}

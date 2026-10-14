@@ -1,0 +1,241 @@
+{
+  "session": "2026-09-18 O144-28 correction origin: sector weights + Gram/correlation + mu_H2 non-independence",
+  "A_weights": {
+    "S_even": "90.0",
+    "S_odd": "88.0",
+    "S_total": "178.0",
+    "S_44site_full": "90.0",
+    "mu2": "2.0",
+    "chain_weight": "Sigma_gamma_odd + mu2 = 88 + 2 = 90",
+    "tree_weight": "M_tree + mu2 = 33 + 2 = 35",
+    "unified_form": "intrinsic sector weight + shared condensate mu2"
+  },
+  "B_gram": {
+    "rho": "0.03563483225498991795794046411730046954053",
+    "rho_squared": "0.00126984126984126984126984126984126984127",
+    "correction": "0.00126984126984126984126984126984126984127",
+    "det_G": "3146.0",
+    "one_minus_delta": "det(G)/(G11*G22)",
+    "gram_schmidt": "orthogonalised norm^2 = 1 - rho^2",
+    "form_selected": "linear (1 - rho^2), NOT sqrt(1 - rho^2)"
+  },
+  "C_second_order": {
+    "delta": "mu^4/(Delta1*Delta2)",
+    "tadpole_absent": true,
+    "principle": "dV/dv = 0 forces second order"
+  },
+  "D_muH2": {
+    "mu_H2": "393.75",
+    "reading": "mu2/(4*delta) = A*B_w/(4*mu2) = 3150/8",
+    "density_hits_delta_1e-4": 6,
+    "distinct_values": 2,
+    "density_note": "template only recovers the same identity 3150/8 - no discriminating power",
+    "decisive_argument": "the kinematic reading (section B) derives delta = rho^2 with zero new parameters, so the portal route is UNNECESSARY and mu_H2 is not a fundamental constant awaiting derivation",
+    "verdict": "portal route unnecessary; mu_H2 is a relabelling of the correction"
+  },
+  "E_honesty": {
+    "cap_pairs": [
+      [
+        1,
+        1048
+      ],
+      [
+        3,
+        628
+      ],
+      [
+        4,
+        523
+      ],
+      [
+        5,
+        448
+      ],
+      [
+        7,
+        348
+      ],
+      [
+        8,
+        313
+      ],
+      [
+        12,
+        223
+      ],
+      [
+        13,
+        208
+      ],
+      [
+        16,
+        173
+      ],
+      [
+        19,
+        148
+      ],
+      [
+        23,
+        124
+      ],
+      [
+        28,
+        103
+      ],
+      [
+        33,
+        88
+      ],
+      [
+        40,
+        73
+      ],
+      [
+        43,
+        68
+      ],
+      [
+        48,
+        61
+      ]
+    ],
+    "ambiguous": true,
+    "verdict": "the 'intrinsic + mu2' form is not unique; the specific pair relies on requiring named sector weights"
+  },
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "A1",
+      "check": "Σγ_even = 90",
+      "ok": true
+    },
+    {
+      "id": "A2",
+      "check": "Σγ_odd = 88 = 2N_d",
+      "ok": true
+    },
+    {
+      "id": "A3",
+      "check": "Σγ_total = 178 = 2F₁₁",
+      "ok": true
+    },
+    {
+      "id": "A4",
+      "check": "44-site 鏈全譜 Σγ = 90 (獨立量, 巧合)",
+      "ok": true
+    },
+    {
+      "id": "A5",
+      "check": "μ² = Σγ_even − Σγ_odd = 2",
+      "ok": true
+    },
+    {
+      "id": "A6",
+      "check": "鏈權重 A = Σγ_odd + μ² (intrinsic + 共用凝聚)",
+      "ok": true
+    },
+    {
+      "id": "A7",
+      "check": "樹權重 B_w = M_tree + μ² (intrinsic + 共用凝聚)",
+      "ok": true
+    },
+    {
+      "id": "A8",
+      "check": "兩扇區權重同形 (intrinsic, +μ²): (88, 33) + 2 → (90, 35)",
+      "ok": true
+    },
+    {
+      "id": "A9",
+      "check": "λ_WH⟨W⟩² = μ²/2 = 1 (O86 N6, 引用)",
+      "ok": true
+    },
+    {
+      "id": "B1",
+      "check": "δ = ρ² = μ⁴/(A·B_w) (兩扇區正規化重疊平方)",
+      "ok": true
+    },
+    {
+      "id": "B2",
+      "check": "1 − δ = det G/(A·B_w) (正規化 Gram 行列式)",
+      "ok": true
+    },
+    {
+      "id": "B3",
+      "check": "det G = A·B_w − μ⁴",
+      "ok": true
+    },
+    {
+      "id": "B4",
+      "check": "Gram–Schmidt 正交化範數² = 1 − ρ² (幾何讀法)",
+      "ok": true
+    },
+    {
+      "id": "B5",
+      "check": "線性形 (1−ρ²) 勝平方根形 √(1−ρ²) (數據可判別)",
+      "ok": true
+    },
+    {
+      "id": "B6",
+      "check": "ρ² ≡ (μ²/A)·(μ²/B_w) (與 docs/13 兩凝聚分數乘積一致)",
+      "ok": true
+    },
+    {
+      "id": "C1",
+      "check": "δ = |V|²/(Δ₁Δ₂) 於 V=μ², Δ₁=Σγ_even, Δ₂=M_tree+μ²",
+      "ok": true
+    },
+    {
+      "id": "C2",
+      "check": "一階 (tadpole) 項各偏 >1% ⟹ 觀測缺席 (tadpole 相消)",
+      "ok": true
+    },
+    {
+      "id": "C3",
+      "check": "二階係領頭項 (由 ∂V/∂v = 0 強制), 非擬合",
+      "ok": true
+    },
+    {
+      "id": "D1",
+      "check": "μ_H² = μ²/(4δ) = 393.75",
+      "ok": true
+    },
+    {
+      "id": "D2",
+      "check": "μ_H² = A·B_w/(4μ²) = 3150/8 (同式)",
+      "ok": true
+    },
+    {
+      "id": "D3",
+      "check": "密度測試 (INFO): 同型表達 6 條 / 相異值 2 — 只復現同一身份 (無判別力)",
+      "ok": true
+    },
+    {
+      "id": "D4",
+      "check": "★ 運動學讀法零新參數導出 δ ⟹ portal 路線非必要, μ_H² 非待導出常數",
+      "ok": true
+    },
+    {
+      "id": "D5",
+      "check": "δ 之輸入集 = {N_d, M_tree, μ²} 純結構 (A = 2N_d+μ², B_w = M_tree+μ²)",
+      "ok": true
+    },
+    {
+      "id": "E1",
+      "check": "(M_tree+μ², 2N_d+μ²) = (35, 90) 命中且為命名扇區權重",
+      "ok": true
+    },
+    {
+      "id": "E2",
+      "check": "「intrinsic + μ²」形不唯一 ⟹ 具體配對依賴 restriction",
+      "ok": true
+    },
+    {
+      "id": "E3",
+      "check": "(45, 70) = (N_d−1+μ², 2F₉+μ²) 亦命中 ⟹ 誠實歧義",
+      "ok": true
+    }
+  ],
+  "verdict": "The '+mu^2' in both sector weights is explained (each sector's weight includes the SHARED condensate mu^2, docs/14 section C) - this explains why 90 (not 88) and 35 (not 33). The correction is rho^2, the SQUARED NORMALISED OVERLAP between the two sectors (= 1 - det G/(G11 G22) = Gram-Schmidt orthogonalisation deficit), a KINEMATIC reading with zero new parameters. Consequently mu_H^2 = 393.75 is NOT an independent constant - it is mu^2/(4*delta) by definition, and the portal route introduces no derivable new parameter. Residual gap: why THESE two intrinsic weights (M_tree, 2N_d) - the form is not unique."
+}

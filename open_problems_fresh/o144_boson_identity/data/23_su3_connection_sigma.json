@@ -1,0 +1,220 @@
+{
+  "session": "2026-09-18 O144-23 sec4.3 SU(3) connection functional -> sigma",
+  "A_functional": {
+    "form": "E_conn[U] = M0 * sum_k |1 - U_k|^2",
+    "SW_total": "89.0",
+    "SW_identity": "S_W = 89 = F_11 (exact)",
+    "sum_gamma": "178.0",
+    "sum_gamma_even": "90.0",
+    "sum_gamma_odd": "88.0",
+    "sum_lambda": "176.0",
+    "E_conn_MeV": "4966.3602",
+    "wilson_phase": "44.5 pi"
+  },
+  "B_sigma": {
+    "sigma_MeV2": "778.46022081",
+    "sigma_GeV2": "0.00077846022081",
+    "a_MeV_inv": "0.07168227548215290546183098036264063166421",
+    "a_fm": "14.14484696909418692586977481013157281665",
+    "lambda_bar": "2.0"
+  },
+  "C_ebind": {
+    "E_bind_obs_MeV": "929.282",
+    "ell_links": "16.65326208115150407334530427333885286855",
+    "ell_fm": "235.5578436741070039827768293336180598153",
+    "E_struct_MeV": "920.7297",
+    "residual_pct": "0.9203126715033757244840640408401324893833"
+  },
+  "D_obs": {
+    "sigma_obs_GeV2": "0.18",
+    "ratio": "231.2256878234666799839714214465360203355",
+    "density_hits": 207,
+    "density_examples": [
+      "F8·Sum_phi8·Eproj2/88",
+      "B·Sum_phi8·Sum_phi8/5",
+      "F9·F9/5",
+      "L3·Sum_phi8·Sum_phi8/5",
+      "L5·L8·F10/123",
+      "L8·F10·pure_b0/123",
+      "N_d·F10·Sum_phi8/178",
+      "F7·h11·Sg_od/178",
+      "L6·F7·n176/178",
+      "F7·F11/5",
+      "L6·L6·F5/7",
+      "L6·Sg_ev/7"
+    ]
+  },
+  "E_transmutation": {
+    "alpha_s_inv_MZ": "8.470776",
+    "b0": 7,
+    "b0_pure": 11,
+    "Lambda_b0_7_GeV": "0.04548230932223916889334518648116427998688",
+    "sigma_b0_7_GeV2": "0.002068640461283844006858709599471716979307",
+    "b0_required": "9.910670829203384088168451046991973102265"
+  },
+  "passed": 32,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "A1",
+      "check": "|1−U_k|² = γ_k^(176-L) = 4sin²(kπ/176) 對全部 k=1..88",
+      "ok": true
+    },
+    {
+      "id": "A2",
+      "check": "U_k† = U_k⁻¹ (么正, 全部 k)",
+      "ok": true
+    },
+    {
+      "id": "A3",
+      "check": "Σγ = 178 = 2F₁₁",
+      "ok": true
+    },
+    {
+      "id": "A4",
+      "check": "Σγ_even = 90",
+      "ok": true
+    },
+    {
+      "id": "A5",
+      "check": "Σγ_odd = 88 = 2N_d",
+      "ok": true
+    },
+    {
+      "id": "A6",
+      "check": "Σγ_even − Σγ_odd = μ² = 2",
+      "ok": true
+    },
+    {
+      "id": "A7",
+      "check": "★ S_W = Σ_k (1 − cos 2θ_k) = 89 = F₁₁ (精確)",
+      "ok": true
+    },
+    {
+      "id": "A8",
+      "check": "Σγ = 2·S_W (泛函與 Wilson 作用量一致)",
+      "ok": true
+    },
+    {
+      "id": "A9",
+      "check": "Σ(2θ_k) = Σ kπ/88 = 44.5π = (89/2)π",
+      "ok": true
+    },
+    {
+      "id": "A9b",
+      "check": "Σθ_k (半角) = 22.25π = (89/4)π",
+      "ok": true
+    },
+    {
+      "id": "A10",
+      "check": "Σλ(0..87) = 176 = 4N_d (含零模)",
+      "ok": true
+    },
+    {
+      "id": "A11",
+      "check": "λ_0 = 0 (無質量膠子)",
+      "ok": true
+    },
+    {
+      "id": "A12",
+      "check": "Σλ(1..44) = 90 = Σγ_even",
+      "ok": true
+    },
+    {
+      "id": "A13",
+      "check": "γ_(2n) = λ_n (176-L even = 88-L) 對 n=1..44",
+      "ok": true
+    },
+    {
+      "id": "A14",
+      "check": "E_conn = 178 M0 = 2F₁₁ M0",
+      "ok": true
+    },
+    {
+      "id": "B1",
+      "check": "λ̄ = Σλ/88 = 2 = μ² (精確)",
+      "ok": true
+    },
+    {
+      "id": "B2",
+      "check": "a = 2/M0 (鏈自身色散鎖定)",
+      "ok": true
+    },
+    {
+      "id": "B3",
+      "check": "★ σ = M0² (精確, 由泛函導出)",
+      "ok": true
+    },
+    {
+      "id": "C1",
+      "check": "ℓ/a ≈ M_tree/2 = 16.5 條連結 (0.93%)",
+      "ok": true
+    },
+    {
+      "id": "C2",
+      "check": "E_bind = M0 × M_tree = 33 M0 (0.92%)",
+      "ok": true
+    },
+    {
+      "id": "C3",
+      "check": "E_bind/M0 觀測 = 33.3065 (殘差 0.3065 未閉合)",
+      "ok": true
+    },
+    {
+      "id": "C4",
+      "check": "膠球 = Σγ_odd·M0 = 88 M0 = 2455.3 MeV (3.3% vs X(2370))",
+      "ok": true
+    },
+    {
+      "id": "C5",
+      "check": "膠球結構預言與 X(2370) 差 3.3% (🟡, 零擬合)",
+      "ok": true
+    },
+    {
+      "id": "D1",
+      "check": "σ_IDCM = 7.7846e-4 GeV² (M0²)",
+      "ok": true
+    },
+    {
+      "id": "D2",
+      "check": "★ σ_IDCM 與 QCD σ 相差 ~231× → 偽證 (M0 尺度鏈非 QCD 通量管)",
+      "ok": true
+    },
+    {
+      "id": "D3",
+      "check": "密度測試: 231.2 有 207 條結構表達 → 分解本身唔攜帶信息",
+      "ok": true
+    },
+    {
+      "id": "D4",
+      "check": "E_bind/M0 亦有 58 條表達 → 33.3065 同樣非唯一",
+      "ok": true
+    },
+    {
+      "id": "E1",
+      "check": "α_s⁻¹(M_Z) = 8.4707757 (O124)",
+      "ok": true
+    },
+    {
+      "id": "E2",
+      "check": "Λ_QCD(1-loop, b₀=7) = 0.04548 GeV",
+      "ok": true
+    },
+    {
+      "id": "E3",
+      "check": "σ = Λ²(b₀=7) = 2.06e-3 GeV² → 比觀測細 87× (失敗)",
+      "ok": true
+    },
+    {
+      "id": "E4",
+      "check": "所需 b₀ = 9.909 非結構 → 1-loop 蛻變路線失敗",
+      "ok": true
+    },
+    {
+      "id": "E5",
+      "check": "σ = Σγ_odd·Λ² = 0.1820 GeV² (1.13%) — 但 ×88 無推導 (後驗)",
+      "ok": true
+    }
+  ],
+  "verdict": "A: functional constructed (exact); B: sigma = M0^2 exact; C: E_bind = 33 M0 (0.92%); D: FALSIFIED vs QCD sigma by 231x; E: transmutation route fails"
+}

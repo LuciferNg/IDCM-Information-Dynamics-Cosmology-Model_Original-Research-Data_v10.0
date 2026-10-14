@@ -1,0 +1,156 @@
+{
+ "passed": 30,
+ "failed": 0,
+ "rows": [
+  {
+   "id": "A1",
+   "check": "Σγ_odd = 88.0 = 2N_d = 88 (精確)",
+   "ok": true
+  },
+  {
+   "id": "A2",
+   "check": "Σγ_even = 90.0 = 90 (精確)",
+   "ok": true
+  },
+  {
+   "id": "A3",
+   "check": "Σλ(tree) = 66.0 = 2M_tree = 66 (精確)",
+   "ok": true
+  },
+  {
+   "id": "A4",
+   "check": "μ² = Σγ_even − Σγ_odd = 2.0 = 2 (精確)",
+   "ok": true
+  },
+  {
+   "id": "A5",
+   "check": "μ² = γ₄₄ = 2.0 = 2 (自對偶模, 精確)",
+   "ok": true
+  },
+  {
+   "id": "A6",
+   "check": "γ₈₈ = 4.0 = B = 4 (Nyquist, 精確)",
+   "ok": true
+  },
+  {
+   "id": "A7",
+   "check": "樹 per-level 權重 = Σλ/M_tree = 2.0 = 2 = μ² (精確)",
+   "ok": true
+  },
+  {
+   "id": "A8",
+   "check": "鏈 per-site 權重 = Σγ_odd/(2N_d) = 1.0 = 1 (精確)",
+   "ok": true
+  },
+  {
+   "id": "A9",
+   "check": "Σγ_even = 21B + γ₄₄ + γ₈₈ = 84 + 2 + 4 = 90 (o159 §2 分解)",
+   "ok": true
+  },
+  {
+   "id": "A10",
+   "check": "Σγ_odd = 22B = 88 = 88 (完整 Z₂ 對)",
+   "ok": true
+  },
+  {
+   "id": "B1",
+   "check": "Z₂ 配對 k↔88−k: γ_k + γ_{88−k} = B = 4 (k=1..43, 精確)",
+   "ok": true
+  },
+  {
+   "id": "B2",
+   "check": "k=44 自對偶 (88−44=44), γ₄₄ = B/2",
+   "ok": true
+  },
+  {
+   "id": "B3",
+   "check": "odd k ⟹ (−1)^k = −1 ⟹ 反週期 (J²=−1, 觀察者/虛)",
+   "ok": true
+  },
+  {
+   "id": "B4",
+   "check": "even k ⟹ (−1)^k = +1 ⟹ 週期 (J²=+1, 世界/實)",
+   "ok": true
+  },
+  {
+   "id": "B5",
+   "check": "Σγ = Tr(L_dual) = 178.0 = 2F₁₁ = 178 (精確)",
+   "ok": true
+  },
+  {
+   "id": "C1",
+   "check": "μ² ≡ Σγ_even − Σγ_odd = 2.0 (定義性, 非假設)",
+   "ok": true
+  },
+  {
+   "id": "C2",
+   "check": "A_w = Σγ_even = Σγ_odd + μ² = 90.0 = 90 (基底+隙)",
+   "ok": true
+  },
+  {
+   "id": "C3",
+   "check": "88 鏈 Tr(Dir)−Tr(Neu) = 178−176 = 2 = μ² (o159 fact 2)",
+   "ok": true
+  },
+  {
+   "id": "C4",
+   "check": "33 樹鏈 Tr(Dir)−Tr(Neu) = 66−64 = 2 = μ² (o159 fact 2)",
+   "ok": true
+  },
+  {
+   "id": "D1",
+   "check": "M_tree = 33 = 3(φ⁵−φ⁻⁵) (O34 §4.4 樹深度, 精確)",
+   "ok": true
+  },
+  {
+   "id": "D2",
+   "check": "Σλ = 2M_tree = 66.0 = 66 (trace 定理, 精確)",
+   "ok": true
+  },
+  {
+   "id": "D3",
+   "check": "A_w − 2N_d = 2.0 = μ² (鏈 extra)",
+   "ok": true
+  },
+  {
+   "id": "D4",
+   "check": "B_w − M_tree = 2.0 = μ² (樹 extra)",
+   "ok": true
+  },
+  {
+   "id": "E1",
+   "check": "3150 = (X+μ²)(Y+μ²) 之解數 = 16 (docs/15 §6 之 16)",
+   "ok": true
+  },
+  {
+   "id": "E2",
+   "check": "(33,88) 喺解集中",
+   "ok": true
+  },
+  {
+   "id": "E3",
+   "check": "兩員皆已命名之解 = (33, 88) (唯一)",
+   "ok": true
+  },
+  {
+   "id": "E4",
+   "check": "33 = M_tree 有獨立推導 (O34 §4.4, 🟢)",
+   "ok": true
+  },
+  {
+   "id": "E5",
+   "check": "88 = Σγ_odd 有獨立推導 (o159 §2, 精確)",
+   "ok": true
+  },
+  {
+   "id": "E6",
+   "check": "43 = N_d−1 冇獨立結構身份 (非扇區和/深度)",
+   "ok": true
+  },
+  {
+   "id": "E7",
+   "check": "68 冇獨立結構身份 (僅 2F₉)",
+   "ok": true
+  }
+ ]
+}

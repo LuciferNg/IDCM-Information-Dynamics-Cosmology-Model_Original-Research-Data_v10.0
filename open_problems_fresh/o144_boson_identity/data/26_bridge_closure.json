@@ -1,0 +1,208 @@
+{
+  "session": "2026-09-18 O144-26 bridge closure: factor audit",
+  "A_factors": {
+    "bridge": "6240.066031746031746031746031746031746032",
+    "Bstar": "6240.069274505096854903108448104222032734",
+    "Bstar_formula_M0": "6240.066029055854225192430219496114259473",
+    "f1_88": {
+      "identities": [
+        "2N_d",
+        "Sigma_gamma_odd",
+        "prod_ratio"
+      ],
+      "derived": true
+    },
+    "f2_71": {
+      "form": "2N_d - L5 - C(4,2)",
+      "source": "O34 sec 4.10 gen ladder",
+      "derived": true
+    },
+    "f3_correction": {
+      "form": "4/(90*35)",
+      "derived": false
+    }
+  },
+  "B_identities": {
+    "Nd_plus_1": "45",
+    "Sigma_even_over_mu2": "45.0",
+    "corr_A": "0.00126984126984126984126984126984126984127",
+    "corr_B": "0.00126984126984126984126984126984126984127",
+    "corr_C": "0.00126984126984126984126984126984126984127",
+    "reading": "mu2/(Nd+1)/(M_tree+mu2) = (mu2/Sigma_even)*(mu2/(M_tree+mu2))"
+  },
+  "C_principles": {
+    "Pr1_bare_1over_cells": {
+      "min_rel_dev_pct": 45.764462809917354,
+      "verdict": "fail"
+    },
+    "Pr2_condensate_product": "exact form, reading-level (restatement of canonical form)",
+    "Pr3_depletion": "fail",
+    "Pr4_spectral_sum": "fail",
+    "Pr5_1loop": "fail",
+    "Pr6_tree_nodes": "fail",
+    "Pr7_phi": "fail"
+  },
+  "D_reframe": {
+    "bridge_is": "dimensionless Yukawa denominator",
+    "y7": "0.00007926406525060976473869032022170575182365",
+    "gap": "(a) derive pure number 6240.06603175; (b) anchor M0 (O212)"
+  },
+  "E_mH_candidate": {
+    "claim": "m_H = (2N_d-21)^2 M0 = 67^2 M0",
+    "dev_pct": 0.0022833532934131737,
+    "density_V_core": {
+      "1e-06": 0,
+      "1e-05": 5,
+      "0.0001": 52,
+      "0.001": 1278
+    },
+    "density_V_wide": {
+      "1e-06": 1,
+      "1e-05": 42,
+      "0.0001": 427,
+      "0.001": 9581
+    },
+    "n67_structural_expressions": 4,
+    "verdict": "does not exist (density product)"
+  },
+  "passed": 27,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "A1",
+      "check": "88 = 2N_d",
+      "ok": true
+    },
+    {
+      "id": "A2",
+      "check": "88 = ∏γ_even/∏γ_odd (行列式比, docs/12 §2)",
+      "ok": true
+    },
+    {
+      "id": "A3",
+      "check": "∏γ_odd = μ² = 2",
+      "ok": true
+    },
+    {
+      "id": "A4",
+      "check": "∏γ_even = 4N_d = 176",
+      "ok": true
+    },
+    {
+      "id": "A5",
+      "check": "17 = L₅ + C(4,2)",
+      "ok": true
+    },
+    {
+      "id": "A6",
+      "check": "71 = 2N_d − 17",
+      "ok": true
+    },
+    {
+      "id": "A7",
+      "check": "787.5 = Σγ_even·(M_tree+μ²)/B",
+      "ok": true
+    },
+    {
+      "id": "A8",
+      "check": "橋 = 88·71·(1−4/3150) 重現 (與 docs/11 一致)",
+      "ok": true
+    },
+    {
+      "id": "B1",
+      "check": "N_d+1 = Σγ_even/μ² (精確)",
+      "ok": true
+    },
+    {
+      "id": "B2",
+      "check": "Σγ_even = 2N_d + μ² (由 μ² 定義 + Σγ_odd=2N_d)",
+      "ok": true
+    },
+    {
+      "id": "B3",
+      "check": "2N_d/μ² = N_d (因 μ²=2)",
+      "ok": true
+    },
+    {
+      "id": "B4",
+      "check": "修正項三形等價 (i)=(ii)=(iii)",
+      "ok": true
+    },
+    {
+      "id": "B5",
+      "check": "修正項三形等價 (ii)=(iii)",
+      "ok": true
+    },
+    {
+      "id": "B6",
+      "check": "μ²/Σγ_even = 1/(N_d+1) = 1/45",
+      "ok": true
+    },
+    {
+      "id": "B7",
+      "check": "μ²/(M_tree+μ²) = 2/35",
+      "ok": true
+    },
+    {
+      "id": "C1",
+      "check": "Pr-1 裸 1/N_cells: 5 個自然 cells 全偏 ≥ 45.8% ⟹ 不成立",
+      "ok": true
+    },
+    {
+      "id": "C2",
+      "check": "Pr-2 凝聚分數乘積: 形式精確命中",
+      "ok": true
+    },
+    {
+      "id": "C3",
+      "check": "Pr-3 模態耗盡: 任何整數比 ≠ 1/787.5 ⟹ 不成立",
+      "ok": true
+    },
+    {
+      "id": "C4",
+      "check": "Pr-4 頻譜和: Σ1/γ_n = 322.75, Σ1/γ_k = 1290.75, 皆 ≠ 787.5 ⟹ 不成立",
+      "ok": true
+    },
+    {
+      "id": "C5",
+      "check": "Pr-5 1-loop: 所有候選 ≫ 目標修正 ⟹ 不成立",
+      "ok": true
+    },
+    {
+      "id": "C6",
+      "check": "Pr-6 樹節點: 21 = (B³−1)/(B−1) 但未進入修正項",
+      "ok": true
+    },
+    {
+      "id": "C7",
+      "check": "Pr-7 φ-冪: 非整數 (距 0.1599) 且 18+7/44 讀法非精確 (0.0043%) ⟹ 拒絕",
+      "ok": true
+    },
+    {
+      "id": "D1",
+      "check": "y₇ = ω₇/橋 = 7.9264e-5 (O86 記錄同級)",
+      "ok": true
+    },
+    {
+      "id": "D2",
+      "check": "橋因子與 M₀ 無關 (y_n 中 M₀ 相消) ⟹ 係無量綱純結構數",
+      "ok": true
+    },
+    {
+      "id": "E1",
+      "check": "m_H/M₀ = 67² 命中 (dev 0.00228335%)",
+      "ok": true
+    },
+    {
+      "id": "E2",
+      "check": "★ 密度: δ<1e-3 有 9581 條同型命中; δ<1e-4 有 427 條",
+      "ok": true
+    },
+    {
+      "id": "E3",
+      "check": "★ 67 本身之結構表達不唯一: a−b=67 有 4 種 ⟹ 67 非特別",
+      "ok": true
+    }
+  ],
+  "verdict": "Bridge reframed as a DIMENSIONLESS Yukawa denominator (M0 cancels). 2 of 3 factors now have derivations (88 = det-ratio; 71 = 2N_d - L5 - C(4,2)). New: (N_d+1) = Sigma_gamma_even/mu2 is DEFINITIONAL, giving correction = product of two condensate fractions. Only the correction's principle remains open; 6 of 7 routes excluded. Post-hoc m_H = 67^2 M0 candidate: density product, does not exist."
+}

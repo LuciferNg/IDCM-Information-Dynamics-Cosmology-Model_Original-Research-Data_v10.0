@@ -1,0 +1,20 @@
+{
+  "session": "2026-09-17 O144-10 incremental deletion",
+  "baseline": 6468,
+  "survivors_after_all": 6,
+  "applied": [
+    "C1 無重複對",
+    "C2 P_f共享對={(e,s),(μ,u)}",
+    "C3 家族內互異",
+    "C5 U行和=28.5",
+    "C6 L行n和=28",
+    "C8 世代n遞增"
+  ],
+  "true_grid_unique": false,
+  "min_sufficient": [
+    "C2 P_f共享對={(e,s),(μ,u)}",
+    "C5 U行和=28.5",
+    "C6 L行n和=28"
+  ],
+  "verdict": "not unique"
+}

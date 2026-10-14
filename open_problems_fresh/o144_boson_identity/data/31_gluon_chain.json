@@ -1,0 +1,106 @@
+{
+ "passed": 20,
+ "failed": 0,
+ "rows": [
+  {
+   "id": "A1",
+   "check": "N_c = B − 1 = 3 = N_gen = 3 (O85 V14)",
+   "ok": true
+  },
+  {
+   "id": "A2",
+   "check": "B = N_c + 1 = 4 = 4 (分形級聯分支數, O34 §4)",
+   "ok": true
+  },
+  {
+   "id": "B1",
+   "check": "膠子數 = N_c² − 1 = 8 = 8 (adjoint SU(3))",
+   "ok": true
+  },
+  {
+   "id": "B2",
+   "check": "N_c² − 1 = (B−1)² − 1 = B² − 2B = 8",
+   "ok": true
+  },
+  {
+   "id": "B3",
+   "check": "B² − 2B = B(B−2) = 8",
+   "ok": true
+  },
+  {
+   "id": "B4",
+   "check": "2B = 8 = 8",
+   "ok": true
+  },
+  {
+   "id": "B5",
+   "check": "F₆ = 8 = 8",
+   "ok": true
+  },
+  {
+   "id": "B6",
+   "check": "B(B−2) = 2B ⟺ B² − 4B = 0 ⟺ B = 4 (單一方程)",
+   "ok": true
+  },
+  {
+   "id": "B7",
+   "check": "「雙重身份」退化: N_c²−1 = 2B = F₆ 全部 ⟺ B = 4 (同一方程)",
+   "ok": true
+  },
+  {
+   "id": "C1",
+   "check": "每代 Σ N_c Q² = N_c(4/9) + N_c(1/9) + 1 = 8/3 = 8/3",
+   "ok": true
+  },
+  {
+   "id": "C2",
+   "check": "Σ_f N_c Q_f² = 3 × 8/3 = 8 = 8",
+   "ok": true
+  },
+  {
+   "id": "C3",
+   "check": "一般式: Σ_f N_c Q_f² = N_gen[(B−1)·5/9 + 1] = 8 (B=4, N_gen=3)",
+   "ok": true
+  },
+  {
+   "id": "C4",
+   "check": "Σ_f N_c Q_f² = N_c²−1 只喺 (B, N_gen) = (4, 3) 成立 (非恆等式)",
+   "ok": true
+  },
+  {
+   "id": "D1",
+   "check": "1 + 8 + 3 = 12 = 12 (SU(3) 表示維度: 單態+伴隨+基礎)",
+   "ok": true
+  },
+  {
+   "id": "D2",
+   "check": "12 = B·N_gen = 12",
+   "ok": true
+  },
+  {
+   "id": "D3",
+   "check": "12 = L₅ + 1 = 12",
+   "ok": true
+  },
+  {
+   "id": "D4",
+   "check": "12 = 2L₄ − μ² = 12.0 (2L₄ = N_gen+L₅ = 14, O142 v11)",
+   "ok": true
+  },
+  {
+   "id": "D5",
+   "check": "SU(12) 基本表示 = 12 (O85 V1: = L₅+1)",
+   "ok": true
+  },
+  {
+   "id": "E1",
+   "check": "「8」之結構表達數 (a±b, a×b, a/b, a²±b; 詞彙 25) = 25",
+   "ok": true
+  },
+  {
+   "id": "E2",
+   "check": "「8」命中數 (25) 唔顯著高於對照 「10」(22) ⟹ 無密度優勢",
+   "ok": true
+  }
+ ]
+}

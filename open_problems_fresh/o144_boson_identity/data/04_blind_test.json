@@ -1,0 +1,251 @@
+{
+  "session": "2026-09-17 O144-04 blind test v2",
+  "axioms": {
+    "A1": "m = M0*gamma_n*C_f",
+    "A2": "anti-periodic modes",
+    "A3": "R = Phi ∪ Phi/2 ∪ {(17+δ)/5}",
+    "modes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      41,
+      42,
+      43,
+      44
+    ],
+    "R": [
+      0.5,
+      1,
+      2,
+      2.5,
+      3.0,
+      3.4,
+      3.5,
+      3.6,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      10.5,
+      14.0,
+      15.5,
+      16,
+      18.0,
+      18.5,
+      21,
+      27.5,
+      28,
+      31,
+      32.0,
+      36,
+      37,
+      55,
+      64
+    ],
+    "|P|": 1113
+  },
+  "hits_by_target": {
+    "e": {
+      "T": 0.511,
+      "best_dev_pct": 0.16354743436282426,
+      "best_pred": 0.511835727389594,
+      "best_cf": 3.6,
+      "best_n": 1,
+      "n_hit1": 1,
+      "n_hit2": 1,
+      "verdict": "校準(循環)"
+    },
+    "mu": {
+      "T": 105.66,
+      "best_dev_pct": 0.13141650527321352,
+      "best_pred": 105.79885467947167,
+      "best_cf": 15.5,
+      "best_n": 7,
+      "n_hit1": 5,
+      "n_hit2": 6,
+      "verdict": "校準(循環)"
+    },
+    "tau": {
+      "T": 1776.86,
+      "best_dev_pct": 0.01632710687264236,
+      "best_pred": 1776.5698901688227,
+      "best_cf": 16,
+      "best_n": 42,
+      "n_hit1": 8,
+      "n_hit2": 10,
+      "verdict": "校準(循環)"
+    },
+    "u": {
+      "T": 2.16,
+      "best_dev_pct": 2.0248684997261868,
+      "best_pred": 2.203737159594086,
+      "best_cf": 15.5,
+      "best_n": 1,
+      "n_hit1": 0,
+      "n_hit2": 0,
+      "verdict": "❌ 未命中"
+    },
+    "d": {
+      "T": 4.67,
+      "best_dev_pct": 1.6940973871096043,
+      "best_pred": 4.590885652021981,
+      "best_cf": 3.6,
+      "best_n": 3,
+      "n_hit1": 0,
+      "n_hit2": 1,
+      "verdict": "🟡 邊緣"
+    },
+    "s": {
+      "T": 93.0,
+      "best_dev_pct": 0.3117209140702895,
+      "best_pred": 93.28990045008537,
+      "best_cf": 18.5,
+      "best_n": 6,
+      "n_hit1": 2,
+      "n_hit2": 2,
+      "verdict": "✅ 命中(1%內,唯一性OK)"
+    },
+    "c": {
+      "T": 1270.0,
+      "best_dev_pct": 0.49422932594815727,
+      "best_pred": 1263.7232875604584,
+      "best_cf": 16,
+      "best_n": 28,
+      "n_hit1": 3,
+      "n_hit2": 7,
+      "verdict": "✅ 命中(1%內,唯一性OK)"
+    },
+    "b": {
+      "T": 4180.0,
+      "best_dev_pct": 0.917723345851387,
+      "best_pred": 4141.639164143412,
+      "best_cf": 55,
+      "best_n": 27,
+      "n_hit1": 1,
+      "n_hit2": 4,
+      "verdict": "✅ 命中(1%內,唯一性OK)"
+    },
+    "p": {
+      "T": 938.2720813,
+      "best_dev_pct": 0.13056662001572772,
+      "best_pred": 937.0470111568953,
+      "best_cf": 10.5,
+      "best_n": 31,
+      "n_hit1": 4,
+      "n_hit2": 10,
+      "verdict": "🟡 命中但無辨識度(4個)"
+    },
+    "X(2370)": {
+      "T": 2376.3,
+      "best_dev_pct": 0.5096327860086044,
+      "best_pred": 2364.1895961060777,
+      "best_cf": 27.5,
+      "best_n": 30,
+      "n_hit1": 1,
+      "n_hit2": 8,
+      "verdict": "✅ 命中(1%內,唯一性OK)"
+    }
+  },
+  "overfit_control": {
+    "mc_mean": 13.6775,
+    "mc_std": 3.6912726463917562,
+    "actual": 4,
+    "z": -2.621724518089939,
+    "significant": "❌ 不顯著 (過擬合風險)"
+  },
+  "posthoc_ops": [
+    {
+      "name": "質子候選A",
+      "value": 34,
+      "formula": "γ₂₂×Σφ8 = 2×17",
+      "note": "∉ R — 看到 938 後組合"
+    },
+    {
+      "name": "膠球",
+      "value": 85,
+      "formula": "N_φ8×Σφ8 = 5×17",
+      "note": "∉ R — 看到 2370 後組合"
+    },
+    {
+      "name": "d",
+      "value": 33,
+      "formula": "N_d−L₅ = K_Tree",
+      "note": "∉ R — O136 後驗"
+    },
+    {
+      "name": "c",
+      "value": 13,
+      "formula": "F₇",
+      "note": "∉ R — O136 後驗"
+    },
+    {
+      "name": "b",
+      "value": 44,
+      "formula": "N_d",
+      "note": "∉ R — O136 後驗"
+    },
+    {
+      "name": "節點",
+      "value": 64,
+      "formula": "Φ[3,6] = 1+9×7",
+      "note": "✅ ∈ R! 但指派給質子節點是後驗"
+    }
+  ],
+  "verdict": {
+    "closed_by_blind_test": [
+      "s"
+    ],
+    "marginal": [
+      "u"
+    ],
+    "unpredicted": [
+      "d",
+      "c",
+      "b",
+      "p",
+      "X(2370)"
+    ],
+    "posthoc_demoted": [
+      "proton A (34)",
+      "glueball (85)",
+      "d (33)",
+      "c (13)",
+      "b (44)"
+    ],
+    "note": "glueball closure candidate and proton candidate A REVOKED as blind-test failures (post-hoc)"
+  }
+}

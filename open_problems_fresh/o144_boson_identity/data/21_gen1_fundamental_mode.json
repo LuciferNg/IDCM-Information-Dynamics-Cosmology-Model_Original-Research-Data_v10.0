@@ -1,0 +1,38 @@
+{
+  "session": "2026-09-17 O144-21 gen1 fundamental mode prior",
+  "base": {
+    "S": 6468,
+    "buckets": 439,
+    "triples": 362,
+    "grids": 311
+  },
+  "P1": {
+    "S_prime": 3234,
+    "grids_311_satisfying": 242,
+    "grids_after_P1": 242,
+    "compression": 1.2851239669421488,
+    "true_satisfies": true
+  },
+  "P1_V10": {
+    "n": 5,
+    "n_charm": [
+      25,
+      27,
+      33,
+      34
+    ]
+  },
+  "P1_V10_P2_P3": {
+    "n": 4,
+    "n_charm": [
+      25,
+      27,
+      33,
+      34
+    ],
+    "true_in": true
+  },
+  "p_raw": 0.012861736334405145,
+  "bonferroni_x4": 0.05144694533762058,
+  "verdict": "RESIDUAL_4"
+}

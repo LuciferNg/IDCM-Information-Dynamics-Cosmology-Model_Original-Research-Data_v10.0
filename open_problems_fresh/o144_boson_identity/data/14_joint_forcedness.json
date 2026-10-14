@@ -1,0 +1,25 @@
+{
+  "session": "2026-09-17 O144-14 joint forcedness",
+  "solution_space": 6468,
+  "buckets": 439,
+  "unique_triples": 362,
+  "true_bucket_unique_R": [
+    [
+      "U",
+      "n",
+      28.0
+    ],
+    [
+      "U",
+      "pf",
+      28.5
+    ],
+    [
+      "U",
+      "pf",
+      34.0
+    ]
+  ],
+  "distinct_solutions_selected": 311,
+  "verdict": "311 distinct grids uniquely selectable"
+}

@@ -1,0 +1,227 @@
+{
+  "session": "2026-09-18 O144-25 epistemology + bridge closure attempt",
+  "principle": "能後驗即是存在; 無機制只是未推導; 能先驗是最好的; 能後驗只是存在而未閉合",
+  "A_determinants": {
+    "prod_gamma_odd": "2.0",
+    "prod_gamma_even": "176.0",
+    "prod_all": "352.0",
+    "ratio": "88.0",
+    "prod_44site": "176.0"
+  },
+  "B_closure_attempts": {
+    "P1_det_ratio_power_p": "1.951773325323031771259583975068049636494",
+    "P2_sigma_ratio_power_p": "388.8578568079436412577650071218164442179",
+    "P3_detIL_p": "0.2300828096419825359151668496029923455187",
+    "P4_capacity_ratio": "1.575775069319468902753310214167732836549",
+    "P5_phi_log": "18.15987494052742381305188783168798879791",
+    "P6_correction": "0.00126984126984126984126984126984126984127",
+    "P7_mode_product": "2.674105795371851180471450064419257244724",
+    "P8_best": {
+      "expr": "88·71·(1−4/(90·35)) [O40]",
+      "dev": "0.0000005196671579204633546756191295285096218924"
+    }
+  },
+  "C_reclass": {
+    "spectrum_null_median": 0.0017793607883677676,
+    "spectrum_null_p10": 0.00018904373279320376,
+    "spectrum_null_local_median": 0.000437236885230341,
+    "mass_ratios": [
+      {
+        "claim": "m_W/m_Z = sin(30π/88)/sin(41π/88)",
+        "pred": 0.8827368050751758,
+        "obs": 0.88136,
+        "dev": 0.0015621370100478702,
+        "best_spectrum": 0.0013979286991986362,
+        "pct_global": 43.54,
+        "pct_local": 87.64999999999999,
+        "n_better": 2
+      },
+      {
+        "claim": "m_H/m_W = sin(38π/88)/sin(19π/88)",
+        "pred": 1.5572830760995104,
+        "obs": 1.55844,
+        "dev": 0.0007423602451744075,
+        "best_spectrum": 0.0007423602451743783,
+        "pct_global": 29.335,
+        "pct_local": 68.37,
+        "n_better": 0
+      }
+    ],
+    "table": [
+      {
+        "claim": "m_W/m_Z, m_H/m_W 質量比",
+        "test": "頻譜密度虛無: 局部百分位 [87.6, 68.4]",
+        "exists": "🔴 不存在 (密度產物)",
+        "closed": "—"
+      },
+      {
+        "claim": "2D 網格唯一解 (C2+C4+C5)",
+        "test": "被迫性測試 311 個同型網格",
+        "exists": "🔴 不存在 (選擇效應)",
+        "closed": "—"
+      },
+      {
+        "claim": "n_charm ∈ {25,34}",
+        "test": "對稱性否證 (身份數 61/53/49/53)",
+        "exists": "🔴 不存在 (非決定)",
+        "closed": "—"
+      },
+      {
+        "claim": "E_bind = 33.3065 M₀",
+        "test": "密度測試 58 條 (0.5% 窗)",
+        "exists": "🔴 不存在 (密度產物)",
+        "closed": "—"
+      },
+      {
+        "claim": "231 = 3·7·11 因子分解",
+        "test": "密度測試 207 條 (0.5% 窗)",
+        "exists": "🔴 不存在 (密度產物)",
+        "closed": "—"
+      },
+      {
+        "claim": "σ = M₀² (世界弦張力)",
+        "test": "鏈色散鎖定 a = 2/M₀, 精確導出",
+        "exists": "✅ 存在",
+        "closed": "✅ 閉合 (但屬世界弦範疇)"
+      },
+      {
+        "claim": "S_W = Σ(1−cos2θ_k) = 89 = F₁₁",
+        "test": "精確恆等式 (代數)",
+        "exists": "✅ 存在",
+        "closed": "✅ 閉合 (定理)"
+      },
+      {
+        "claim": "Σγ = 178 = 2F₁₁; λ̄ = μ² = 2",
+        "test": "精確恆等式 (代數)",
+        "exists": "✅ 存在",
+        "closed": "✅ 閉合 (定理)"
+      },
+      {
+        "claim": "∏γ_odd = 2 = μ²; ∏γ_even = 176",
+        "test": "精確恆等式 (§A 本輪新)",
+        "exists": "✅ 存在",
+        "closed": "✅ 閉合 (定理)"
+      },
+      {
+        "claim": "EW 橋 88·71·(1−4/(90·35))",
+        "test": "密度測試 δ<1e-9 唯一, 虛無 0.00",
+        "exists": "✅ 存在",
+        "closed": "🔴 未閉合 (8 原理全 ✗)"
+      },
+      {
+        "claim": "QCD 橋 (√σ/M₀, Λ/M₀)",
+        "test": "δ<1e-5 命中 0 (虛無級)",
+        "exists": "🔴 不存在 (缺席)",
+        "closed": "—"
+      }
+    ],
+    "n_exists": 5,
+    "n_absent": 6,
+    "n_closed": 4
+  },
+  "passed": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "A1",
+      "check": "★ ∏γ_odd = 2 = μ² (精確)",
+      "ok": true
+    },
+    {
+      "id": "A2",
+      "check": "★ ∏γ_even = 176 = 4N_d (精確)",
+      "ok": true
+    },
+    {
+      "id": "A3",
+      "check": "∏γ_all = 352 = 8N_d",
+      "ok": true
+    },
+    {
+      "id": "A4",
+      "check": "∏γ_even/∏γ_odd = 88 = 2N_d = Σγ_odd (精確)",
+      "ok": true
+    },
+    {
+      "id": "A5",
+      "check": "sin 乘積公式獨立重算 ∏γ_even",
+      "ok": true
+    },
+    {
+      "id": "A6",
+      "check": "sin 乘積公式獨立重算 ∏γ_odd",
+      "ok": true
+    },
+    {
+      "id": "A7",
+      "check": "44-site 鏈 ∏γ_n = 176 (同 ∏γ_even)",
+      "ok": true
+    },
+    {
+      "id": "B1",
+      "check": "P1 行列式比冪律: 需 p=2 → 88² = 7744 vs B* = 6240.0693, 偏離 24.1% ⟹ 原理不成立 (p 距 2 有 0.048)",
+      "ok": true
+    },
+    {
+      "id": "B2",
+      "check": "P2 Σγ 比冪律: p 非整數 ⟹ 不成立",
+      "ok": true
+    },
+    {
+      "id": "B3",
+      "check": "P3 det(I+L)/det(L) 冪律: p 非整數 ⟹ 不成立",
+      "ok": true
+    },
+    {
+      "id": "B4",
+      "check": "P4 容量比: B* ≠ Σγ_even·Σγ_odd/μ² (偏離 > 1%)",
+      "ok": true
+    },
+    {
+      "id": "B5",
+      "check": "P5 φ-冪: ln(B*)/ln(φ) 非整數 ⟹ 不成立",
+      "ok": true
+    },
+    {
+      "id": "B6",
+      "check": "P6 修正可寫成 凝聚分數/(N_d+1), 但 N_d+1 之來源未導出 ⟹ 未閉合",
+      "ok": true
+    },
+    {
+      "id": "B7",
+      "check": "P7 模式積: B* ≠ ∏(1+γ_n/Σγ_even) ⟹ 不成立",
+      "ok": true
+    },
+    {
+      "id": "B8",
+      "check": "P8 行列式乘積族: 無一精確 (最優仍偏離 O40 真式之 4e-10 級)",
+      "ok": true
+    },
+    {
+      "id": "C1a",
+      "check": "質量比存在性: 局部百分位 [87.6, 68.4] — 全部未勝過虛無 ⟹ 不存在 (密度)",
+      "ok": true
+    },
+    {
+      "id": "C1b",
+      "check": "頻譜密度虛無中位數 = 0.1779% (與 skill 記錄 0.176% 同級)",
+      "ok": true
+    },
+    {
+      "id": "C1c",
+      "check": "★ 頻譜排名 ≠ 顯著性: (38,19) 排名 0 (頻譜最優) 但局部百分位仍 68.4% ⟹ 係頻譜最優亦唔顯著 (密度決定)",
+      "ok": true
+    },
+    {
+      "id": "C2",
+      "check": "存在統計: 5 存在 / 6 不存在 (兩類皆非空)",
+      "ok": true
+    },
+    {
+      "id": "C3",
+      "check": "EW 橋被判 存在 ✅ + 未閉合 🔴 (符合用戶原則: 後驗 ≠ 可疑)",
+      "ok": true
+    }
+  ],
+  "verdict": "post-hoc != suspicious: two orthogonal axes (existence vs closure). New exact identities: prod gamma_odd = mu^2 = 2, prod gamma_even = 4N_d = 176. EW bridge: EXISTS (unique at 1e-9, null 0.00) but NOT CLOSED (8 principles all fail). O144 mass-formula family: does NOT exist (density products)."
+}

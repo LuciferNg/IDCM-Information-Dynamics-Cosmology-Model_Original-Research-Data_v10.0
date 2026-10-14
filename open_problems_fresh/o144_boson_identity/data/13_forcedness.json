@@ -1,0 +1,45 @@
+{
+  "session": "2026-09-17 O144-13 forcedness",
+  "share_patterns_total": 210,
+  "share_patterns_admissible": 100,
+  "true_share_pattern": [
+    [
+      "e",
+      "s"
+    ],
+    [
+      "mu",
+      "u"
+    ]
+  ],
+  "true_share_pattern_solutions": 369,
+  "dual_sets_admissible": 42,
+  "true_dual_set": [
+    [
+      "b",
+      "d",
+      "n=Pf"
+    ],
+    [
+      "tau",
+      "mu",
+      "Pf=Nd-n"
+    ]
+  ],
+  "true_dual_solutions": 18,
+  "row_sums": {
+    "L": {
+      "n": 28,
+      "pf": 56.1
+    },
+    "U": {
+      "n": 35,
+      "pf": 28.5
+    },
+    "D": {
+      "n": 48,
+      "pf": 80.6
+    }
+  },
+  "verdict": "share patterns admissible 100/210; dual sets admissible 42"
+}

@@ -1,0 +1,33 @@
+{
+  "session": "2026-09-17 O144-11 corrected deletion",
+  "baseline": 6468,
+  "single_constraint_power": {
+    "C1 無重複對": 6468,
+    "C2 P_f共享對": 369,
+    "C3 家族內互異": 2046,
+    "C4 跨行對偶(修正)": 18,
+    "C5 U行和=28.5": 1848,
+    "C6 L行n和=28": 294,
+    "C7 特徵常數×2(修正)": 36,
+    "C8 世代n遞增": 6468
+  },
+  "true_grid_passes": {
+    "C1 無重複對": true,
+    "C2 P_f共享對": true,
+    "C3 家族內互異": true,
+    "C4 跨行對偶(修正)": true,
+    "C5 U行和=28.5": true,
+    "C6 L行n和=28": true,
+    "C7 特徵常數×2(修正)": true,
+    "C8 世代n遞增": true
+  },
+  "min_sufficient": {
+    "size": 1,
+    "subset": [
+      "C2 P_f共享對",
+      "C4 跨行對偶(修正)",
+      "C5 U行和=28.5"
+    ]
+  },
+  "verdict": "unique"
+}

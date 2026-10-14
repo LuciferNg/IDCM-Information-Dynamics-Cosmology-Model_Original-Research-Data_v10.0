@@ -1,0 +1,83 @@
+{
+  "session": "2026-09-17 O144-02 proton candidate adjudication",
+  "phi_sectors": {
+    "phi12": 28,
+    "phi9": 9,
+    "phi8": 5,
+    "phi6": 2
+  },
+  "phi9_intersection_matrix": [
+    [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8
+    ],
+    [
+      1,
+      6,
+      16,
+      21,
+      31,
+      36
+    ],
+    [
+      1,
+      10,
+      28,
+      37,
+      55,
+      64
+    ]
+  ],
+  "phi9_values": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    16,
+    21,
+    28,
+    31,
+    36,
+    37,
+    55,
+    64
+  ],
+  "sum_phi8_gen1": 17,
+  "candidate_A": {
+    "formula": "M0*F_proj*wmax = M0*17*2",
+    "pred": 948.6306,
+    "dev_pct": 1.1039994588401265,
+    "Cp_identity": {
+      "L6_minus_1": true,
+      "Sigma_phi8": true,
+      "in_Phi9": false
+    },
+    "gamma_factor": "gamma_22 = 2 (phi6 Nyquist)",
+    "rewrite": "M0*F9"
+  },
+  "candidate_B": {
+    "formula": "M0*g20^2*g7*47",
+    "pred": 943.9802558523826,
+    "dev_pct": 0.6083709263174275,
+    "Cp_identity": {
+      "L8": true,
+      "in_Phi9": false
+    },
+    "gamma_factor": "g20^2*g7 (lepton modes)"
+  },
+  "P1_node_mass_MeV": 9.09930182025945,
+  "E_bind_MeV": 929.282,
+  "E_bind_over_M0": 33.306524162303006,
+  "glueball_ratio": 2.5259197702187883,
+  "adjudication": "Candidate A wins Cp identity test (P1 direction viable); Candidate B Cp has no phi-group identity; both deviate >0.5% - true closure needs A residual fix or P2 link term",
+  "passed": 19,
+  "failed": 3
+}

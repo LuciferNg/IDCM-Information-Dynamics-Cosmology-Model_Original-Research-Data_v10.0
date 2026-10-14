@@ -1,0 +1,140 @@
+{
+  "session": "2026-09-17 O144-20 open-problem attack",
+  "solution_space": 6468,
+  "grids": 311,
+  "true_in_grids": true,
+  "p12": {
+    "true_pattern": {
+      "dual_same_fam": 2,
+      "share_cross_fam": 2,
+      "n_dual": 2,
+      "n_share": 2
+    },
+    "n_both_same_and_cross": 5,
+    "p": 0.01607717041800643,
+    "unique": false,
+    "joint_distribution": {
+      "0,1": 63,
+      "0,0": 59,
+      "1,1": 55,
+      "1,2": 47,
+      "0,2": 33,
+      "1,0": 21,
+      "1,3": 14,
+      "0,3": 10,
+      "2,2": 5,
+      "2,1": 2,
+      "2,3": 1,
+      "1,4": 1
+    }
+  },
+  "p11_13": {
+    "n_tests": 10,
+    "results": [
+      {
+        "id": "V1",
+        "type": "min",
+        "true_value": 111,
+        "grid_best": 85,
+        "true_is_best": false,
+        "n_tie_at_best": 1,
+        "p_if_true_best": null
+      },
+      {
+        "id": "V2",
+        "type": "min",
+        "true_value": 21.500112204265033,
+        "grid_best": 18.000522976261145,
+        "true_is_best": false,
+        "n_tie_at_best": 1,
+        "p_if_true_best": null
+      },
+      {
+        "id": "V3",
+        "type": "min",
+        "true_value": 84,
+        "grid_best": 61,
+        "true_is_best": false,
+        "n_tie_at_best": 2,
+        "p_if_true_best": null
+      },
+      {
+        "id": "V4",
+        "type": "min",
+        "true_value": 76.3,
+        "grid_best": 26.9,
+        "true_is_best": false,
+        "n_tie_at_best": 2,
+        "p_if_true_best": null
+      },
+      {
+        "id": "V6",
+        "type": "min",
+        "true_value": 111.0,
+        "grid_best": 95.0,
+        "true_is_best": false,
+        "n_tie_at_best": 1,
+        "p_if_true_best": null
+      },
+      {
+        "id": "V7",
+        "type": "min",
+        "true_value": 106.8,
+        "grid_best": 67.9,
+        "true_is_best": false,
+        "n_tie_at_best": 2,
+        "p_if_true_best": null
+      },
+      {
+        "id": "V5",
+        "type": "bool",
+        "true_satisfies": false,
+        "n_satisfying": 0,
+        "p_if_true_satisfies": null
+      },
+      {
+        "id": "V8",
+        "type": "bool",
+        "true_satisfies": false,
+        "n_satisfying": 0,
+        "p_if_true_satisfies": null
+      },
+      {
+        "id": "V9",
+        "type": "bool",
+        "true_satisfies": false,
+        "n_satisfying": 0,
+        "p_if_true_satisfies": null
+      },
+      {
+        "id": "V10",
+        "type": "bool",
+        "true_satisfies": true,
+        "n_satisfying": 5,
+        "p_if_true_satisfies": 0.01607717041800643
+      }
+    ],
+    "unique_hits": [],
+    "p_min": 0.01607717041800643,
+    "p_bonferroni": 0.1607717041800643
+  },
+  "p12b": {
+    "survivors": 5,
+    "c_n_values": [
+      25,
+      27,
+      33,
+      34
+    ],
+    "diff_particles": {
+      "c": 4,
+      "s": 1
+    },
+    "T4_survivors": 1,
+    "T4_unique_true": true,
+    "T4_status": "post-hoc (在 §2b 觀察後提出) — 不計入盲測",
+    "combined_p_raw": 0.0040192926045016075,
+    "combined_p_bonferroni14": 0.0562700964630225
+  },
+  "verdict": "P12 V10: 311->5 (p=0.0161, Bonferroni x10=0.161); P11/13 unique principles=0; P12b residual localized to ['s', 'c']"
+}

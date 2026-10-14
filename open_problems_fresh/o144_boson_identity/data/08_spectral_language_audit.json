@@ -1,0 +1,37 @@
+{
+  "session": "2026-09-17 O144-08 spectral language audit",
+  "A_grammar": {
+    "pool_size": 83,
+    "per_particle_options": {
+      "e": 2,
+      "mu": 12,
+      "tau": 13,
+      "u": 1,
+      "d": 2,
+      "s": 12,
+      "c": 8,
+      "b": 12
+    },
+    "min_options": 1,
+    "solution_space_upper_bound": 718848
+  },
+  "B_S3_forms": {
+    "L": "(X, N_d-X)",
+    "D": "(X, X)",
+    "U": "(X, (N_d-X)/2)",
+    "verdict": "three distinct forms — pattern imposed post-hoc"
+  },
+  "C_music": {
+    "monotonicity_violations": 24,
+    "key_counterexample": "tritone alpha=9.80 H=4 between P4 7.73 H=1 and P5 11.73 H=1",
+    "verdict": "cross-domain claim fails"
+  },
+  "D_out_of_sample": {
+    "predictions": 0,
+    "note": "grid covers only the 8 fermions used to build it"
+  },
+  "verdict": {
+    "spectral_kinematics_FSR": "USEFUL (axioms → predictions → falsifiable)",
+    "spectral_grammar_grid": "NOT USEFUL as predictive language (post-hoc re-encoding)"
+  }
+}
