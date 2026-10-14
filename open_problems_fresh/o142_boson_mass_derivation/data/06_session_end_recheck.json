@@ -1,0 +1,8 @@
+{
+  "test": "O142 session-end independent recheck (v8)",
+  "total": 102,
+  "pass": 102,
+  "fail": 0,
+  "fail_detail": [],
+  "method": "independent recomputation from first principles; no document values read as input"
+}

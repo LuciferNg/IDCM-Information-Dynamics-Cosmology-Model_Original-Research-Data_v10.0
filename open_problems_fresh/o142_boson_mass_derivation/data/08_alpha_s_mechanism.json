@@ -1,0 +1,21 @@
+{
+  "test": "O142 v10 alpha_s mechanism",
+  "total": 28,
+  "pass": 28,
+  "fail": 0,
+  "fail_detail": [],
+  "key": {
+    "b0": 7.0,
+    "b1": 26.0,
+    "b0_T_identity": "L₅−L₃=L₄=7",
+    "b1_T_identity": "2F₇=26",
+    "N_f": 6,
+    "N_c": 3,
+    "alpha_s_inv": 8.47077573296567,
+    "alpha_s": 0.1180529424369371,
+    "O89_inv": 8.426,
+    "SM_inv": 8.481764206955047,
+    "tr_chi2": 30,
+    "tr_chi3": 8.47077573296567
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "total_checks": 38,
+  "pass_checks": 38,
+  "failed_checks": 0,
+  "all_pass": true,
+  "g2": 0.6472086375185664,
+  "g2_sq": 0.4188790204786391,
+  "alpha_inv_0": 137,
+  "alpha_inv_MZ": 128,
+  "alpha_s": 0.11805293871541402,
+  "Omega_Lambda": 0.6832815729997477,
+  "N_0": 44,
+  "L4": 7,
+  "F5": 5,
+  "F6": 8,
+  "Tr_chi": 30
+}

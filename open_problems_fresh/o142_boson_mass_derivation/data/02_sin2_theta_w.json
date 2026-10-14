@@ -1,0 +1,12 @@
+{
+  "test": "O142 02: sin²θ_W derivation",
+  "sin2_correct_3_13": 0.23076923076923078,
+  "sin2_vs_sm_error_pct": 0.19495252606574986,
+  "sin2_structure": "N_gen/F₇ = 3/13 = N_orbit/(N₀-L₆) = 6/26",
+  "sin_theta_W": 0.4803844614152614,
+  "cos_theta_W": 0.8770580193070292,
+  "tan_theta_W": 0.5477225575051661,
+  "g_prime_over_g2": 0.5477225575051661,
+  "passed": 5,
+  "failed": 0
+}

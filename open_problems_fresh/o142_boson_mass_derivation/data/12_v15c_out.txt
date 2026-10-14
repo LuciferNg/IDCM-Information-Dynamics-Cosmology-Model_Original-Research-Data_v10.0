@@ -1,0 +1,8 @@
+P10  IDCM boundary -> Lambda^(3)_MSbar  (blind, preregistered)
+     Lambda_IDCM = 45.28486934 MeV,  alpha_s(MZ) = 0.1179854299
+
+  alpha_s chain: 3-loop with thresholds
+  alpha3 at m_c (match) = 0.38258859
+  alpha3(1.1 GeV) = 0.42630806
+  alpha3(1.0 GeV) = 0.53299555
+  alpha3(0.9 GeV) = 0.92149377

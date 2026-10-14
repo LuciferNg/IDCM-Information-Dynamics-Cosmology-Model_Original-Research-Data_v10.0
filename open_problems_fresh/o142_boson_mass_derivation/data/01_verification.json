@@ -1,0 +1,16 @@
+{
+  "test": "O142 01: boson formula verification",
+  "O34_mW_mZ": 0.8827368050751758,
+  "O34_mH_mW": 1.5572830760995107,
+  "O34_mW_mZ_error_pct": 0.14637357263036394,
+  "O34_mH_mW_error_pct": 0.06407839708554326,
+  "Gemini_sin2_theta_W": 0.15789473684210525,
+  "Gemini_sin2_error_pct": 31.712335938887097,
+  "Gemini_mH_GeV": 121.23335112065857,
+  "Gemini_mH_error_pct": 3.2069052928873707,
+  "Gemini_mW_GeV": 1.1916003704084015,
+  "Gemini_alpha_s": 0.12258064516129033,
+  "Gemini_alpha_s_error_pct": 3.970012859448961,
+  "passed": 3,
+  "failed": 1
+}
