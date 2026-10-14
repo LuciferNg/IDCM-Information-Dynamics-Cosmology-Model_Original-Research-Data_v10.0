@@ -141,17 +141,21 @@ for f, want in [("01_preverification", (27,27)), ("02_discrete_qcd", (53,53)),
     if r: tot += int(r[0])
 chk("docs/03", "總 PASS = 27+53+30 = 110", tot, 110, 0)
 
-# docs/03 誠實標記表計數
+# docs/03 誠實標記表計數 (⚠️ 2026-10-14 O249: α_s⁻¹=F₆+sin²θ_W+1/B 閉合已否證,
+# 🟢 13→12, 🔴 1→2；docs/03 誠實表已同步)
 txt = open("docs/03_derivation.md", encoding="utf-8").read()
 tbl = txt.split("## 誠實標記總表")[1].split("## 檔案")[0]
 rows = [l for l in tbl.splitlines() if l.startswith("| ") and "|" in l[2:]]
 data_rows = [l for l in rows if "---" not in l and "項目" not in l]
-g = sum(1 for l in data_rows if "🟢" in l); y = sum(1 for l in data_rows if "🟡" in l)
-r_ = sum(1 for l in data_rows if "🔴" in l)
+import re as _re
+# 狀態欄計數: 用「| emoji |」模式（空格包住）—— 避免 |G_off| 嘅 | 符號搞亂 split
+g = sum(1 for l in data_rows if _re.search(r"\| 🟢 \|", l))
+y = sum(1 for l in data_rows if _re.search(r"\| 🟡 \|", l))
+r_ = sum(1 for l in data_rows if _re.search(r"\| 🔴 \|", l))
 chk("docs/03", "誠實標記表 16 行", len(data_rows), 16, 0)
-chk("docs/03", "誠實標記表 🟢 13", g, 13, 0)
+chk("docs/03", "誠實標記表 🟢 12 (O249 後)", g, 12, 0)
 chk("docs/03", "誠實標記表 🟡 2", y, 2, 0)
-chk("docs/03", "誠實標記表 🔴 1", r_, 1, 0)
+chk("docs/03", "誠實標記表 🔴 2 (O249 後)", r_, 2, 0)
 print(f"      (實測: {len(data_rows)} 行, 🟢{g} 🟡{y} 🔴{r_})")
 
 print(f"\n{'='*78}")
