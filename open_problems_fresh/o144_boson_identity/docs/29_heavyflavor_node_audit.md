@@ -64,3 +64,20 @@ additive 模型 ⟹ 每節點 ≤ M_had − Σ其他節點
 - **家族層 0/7 誠實負維持**: 連結層公式仍需新推導（row 8/10/15 系）；殘差圖下輪假說種子（新族必須 scripts/4x 重新預註冊, 禁由此砌算子）
 - 描述種子 ⋲ scripts/40「R_h 非 multiset 函數」結論: η/η′/Λ 三值（16.0/30.7/36.4）仍然分離 ⟹ 態量子數依賴維持
 - register: O144 note (docs/29) — 重味節點 = 閾值 bound；家族 0/7
+
+## ⚠️ 附錄 A (2026-10-14): Gemini 網頁版外部批判（thinking=高）＋逐項 adjudication
+
+外部模型: Gemini web (思考水平=高), claim_id `gm-20261014-heavy-node-001`, validations 全部用真計算（data/41 + PDG）——**未驗證散文只當批判源, 唔當證據**。
+
+| Gemini 批判 | 分類 | Adjudication（計算） |
+|----|----|----|
+| C1 = 數學套套邏輯 | labelling | 接受；文中已標「純邏輯」 |
+| C2 依賴 E_link ≥ 0 硬假設 | missing-premise（已聲明） | 接受；docs/28 P5 已列為模型定義；計算確認 2×4990.929 = 9981.858 > ϒ 9460.30, E_link = **−521.558 MeV（+5.51% 超閾值）** |
+| C3「1S ≡ M(ϒ)/2」= 概念包裝/貼標籤 | labelling | 部分接受；「≡」係本框架定義（PDG m_b(1S) ≈ 4.73 GeV 與 ϒ/2=4.73015 GeV 一致 0.003%——標準方案稱謂冇錯, 但唔係預言）；結構保持 |
+| C4 排除 quarkonia = 合法 leave-one-out, 但節點內含隱性過擬合 | 已處理 | 接受；正正為此預註冊排除（唔含喺測試集）；0/7 兩集合 data/41 確認（setA 0/7, setB 0/7）——與本框架紀錄一致（模型重述 = post-hoc paraphrase, 零證據權重） |
+| **C5 = schema-shopping / cherry-picking（最弱）** | **真批判** | **接受為方法論修正**：NA 對 c 正性合法（1088.297 < 1548.45 PASS）而對 b 違法——唔係任意切換；但 33 M₀ 觀察**依賴節點方案**（NB 下 J/ψ binding ≡ 0 by 構造）⟹ **升格必須 scheme-invariant**, 維持禁砌算子 |
+| 真 QCD: χSB + confinement 動力學 vs M₀ 整數倍 | framework-boundary | 記錄；IDCM 唔輸入 QCD 動力學（結構立場）, additive 係框架內部一致性測試；Gemini 自認 MS 質量線性加法確有負結合 ⟹ 支持「方案要選啱」現象層 |
+| M₀ 微觀來源；七族推導源流 | 問題已回答 | M₀ = √(E_P ħ H₀)·φ^(47+37/528)（O38/O170 鏈）；七族係結構常數（M_tree=33 O145/docs/10, L₅=11 轉移矩陣, E′(q) 出自 SU(12) U_i docs/22→data/35), **非隨機組合** |
+| E_link ≥ 0 點解絕對禁令（微負可行？） | 真實開放問題 | 模型無相對論/renormalon 層；微負容許唔影響 C2（5.51% ≫ 任何 renormalon 尺度）——記錄為未來細化, 非漏洞 |
+
+**接受總數**: C5 方法論修正接受（維持 seed 地位）; C3 表述接受（結構不變）; C1/C2/C4 無數值反證 ✅。沒有 Gemini claims 需要改變數值結論——正性審計判決站穩（scheme contamination 定性不變）。
