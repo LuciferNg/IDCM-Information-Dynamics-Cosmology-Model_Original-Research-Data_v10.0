@@ -291,3 +291,12 @@ O137 (CY₃ 扇區矩陣 / Σφ8 / Φ 相交) → **O144**
 - decuplet R_h 梯: Δ 43.92 / Σ* 46.00 / Ξ* 48.24 / Ω 49.90（步 ~2 M₀）
 - ⚠️ constituent 1/(m_i m_j) 失敗 ⟹ IDCM 節點 ≠ constituent 標度
 - **下階段閘**: 自旋族 scripts/43 預註冊（跨味 pair 耦合, 零新常數）; register note ×1
+
+## 2026-10-14e 自旋分裂比例盲測（append-only）
+
+- ★★ **scripts/43 (docs/31) — 5/5 配方排除（誠實負）**: 等味自旋對比例（基線消走, 零參數）— 8 對 ΔS 資料庫 × 6 獨立比例 × 5 固定配方（γ-product, E′-product, √E′, √m, γ_{Δm}）⟹ **0/6 全排除**
+- ★ **單點命中示範**: P3/r5 2.85% = 30 候選中 null 密度預期 ~1 個, 唔構成證據
+- **結構排除**: constituent 1/√(m₁m₂) 8459% dev ⟹ IDCM 節點 ≠ constituent 標度（最終確認）; γ-product 方向錯
+- **殘餘**: r1 = 1.2175 (ud/us pair), r5 = 1.8138 (cc/bb pair)
+- **下階段閘**: 新形式必須解釋 r1-r6 六比例 + 零新常數 + scripts/44 預註冊
+- **O144 主狀態不變: partial** — 連結層（基線 + 自旋）形式都未閉合; register note ×1

@@ -1,0 +1,114 @@
+{
+ "M0": 27.90091451,
+ "pairs": [
+  {
+   "name": "Sigma*-Lambda",
+   "dS_M0": 9.60614,
+   "dS_MeV": 268.02,
+   "quarks": [
+    "u",
+    "d"
+   ]
+  },
+  {
+   "name": "Xi*-Xi0",
+   "dS_M0": 7.89006,
+   "dS_MeV": 220.14,
+   "quarks": [
+    "u",
+    "s"
+   ]
+  },
+  {
+   "name": "rho-pi",
+   "dS_M0": 22.94298,
+   "dS_MeV": 640.13,
+   "quarks": [
+    "u",
+    "d"
+   ]
+  },
+  {
+   "name": "K*-K0",
+   "dS_M0": 14.26261,
+   "dS_MeV": 397.94,
+   "quarks": [
+    "d",
+    "s"
+   ]
+  },
+  {
+   "name": "D*-D0",
+   "dS_M0": 5.0898,
+   "dS_MeV": 142.01,
+   "quarks": [
+    "c",
+    "d"
+   ]
+  },
+  {
+   "name": "B*-B0",
+   "dS_M0": 1.63328,
+   "dS_MeV": 45.57,
+   "quarks": [
+    "b",
+    "d"
+   ]
+  },
+  {
+   "name": "Jpsi-etac",
+   "dS_M0": 4.05005,
+   "dS_MeV": 113.0,
+   "quarks": [
+    "c",
+    "c"
+   ]
+  },
+  {
+   "name": "Upsilon-etab",
+   "dS_M0": 2.2329,
+   "dS_MeV": 62.3,
+   "quarks": [
+    "b",
+    "b"
+   ]
+  }
+ ],
+ "obs_ratios": {
+  "r1 Sigma*/Lambda ÷ Xi*/Xi0": 1.217498,
+  "r2 rho/pi ÷ K*/K0": 1.608609,
+  "r3 K*/K0 ÷ D*/D0": 2.802197,
+  "r4 D*/D0 ÷ B*/B0": 3.116305,
+  "r5 J/psi-etac ÷ Upsilon-etab": 1.813804,
+  "r6 rho/pi ÷ J/psi-etac": 5.664867
+ },
+ "family_results": {
+  "P1": {
+   "le3": 0,
+   "max": 0.99504,
+   "PASS": false
+  },
+  "P2": {
+   "le3": 0,
+   "max": 0.92796,
+   "PASS": false
+  },
+  "P3": {
+   "le3": 1,
+   "max": 0.88723,
+   "PASS": false
+  },
+  "P4": {
+   "le3": 0,
+   "max": 84.5947,
+   "PASS": false
+  },
+  "P5": {
+   "le3": 0,
+   "max": 2.26871,
+   "PASS": false
+  }
+ },
+ "winners": [],
+ "verdict": "honest-negative"
+}
