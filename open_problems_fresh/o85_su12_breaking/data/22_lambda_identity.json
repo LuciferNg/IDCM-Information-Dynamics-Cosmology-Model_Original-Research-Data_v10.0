@@ -1,0 +1,113 @@
+{
+  "total": 16,
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "★ M_XY ∝ g（因 α^{1/2} = g/√(4π)，α² 開四次方）",
+      "pass": true,
+      "detail": "M_XY ratio = 1.881909750 = g3/g2 ✓"
+    },
+    {
+      "tag": "A2",
+      "name": "★★ Λ(g₂) = Λ(g₃) 精確相等 — 分母 g 完全抵消（Λ 唔依賴耦合）",
+      "pass": true,
+      "detail": "Λ = 1.4065751750e+17 GeV（兩路同一值）"
+    },
+    {
+      "tag": "A3",
+      "name": "★★ Λ 解析式 = (m_p⁵τ/ħ)^{1/4}/(√(4π)·λ₂(N_gen−λ₂))",
+      "pass": true,
+      "detail": "= 1.4065751750e+17 GeV"
+    },
+    {
+      "tag": "B1",
+      "name": "★ M_Pl/Λ 精確值 = 86.8002（文檔 docs/06 寫「= M_Pl/87」）",
+      "pass": true,
+      "detail": "M_Pl/Λ = 86.800195"
+    },
+    {
+      "tag": "B2",
+      "name": "★★ 對 87 之偏差 −0.230% ⟹ 「= M_Pl/87」係量綱式下界投影嘅四捨五入",
+      "pass": true,
+      "detail": "dev = -0.230%（非恆等）"
+    },
+    {
+      "tag": "B3",
+      "name": "★ 要 ratio 精確 = 87 需 τ_p = 2.378e+34 yr（= 名義值 ×0.9908）",
+      "pass": true,
+      "detail": "τ_p 越大 ⟹ Λ 越大 ⟹ ratio 越細 ⟹ 87 只係下限投影"
+    },
+    {
+      "tag": "C1",
+      "name": "★ 最近候選 = 2N_d−1 = 88−1（87），dev -0.230% —— 落入量綱式誤差內",
+      "pass": true,
+      "detail": "量綱式下限級（docs/06 §E: 冇 f_p/renorm/phase space）"
+    },
+    {
+      "tag": "C2",
+      "name": "★★ 三重候選（88−1 / 3×29 / 90−3）數值全等 ⟹ 純數值不可分",
+      "pass": true,
+      "detail": "all = 87 —— 結構身份需獨立論證, 唔可以數值揀"
+    },
+    {
+      "tag": "D1",
+      "name": "★ 結構輸入: xy = λ₂(N_gen−λ₂) = 0.060656936533（docs/04 恆等, 零參數）",
+      "pass": true,
+      "detail": "xy = 0.060656936533"
+    },
+    {
+      "tag": "D2",
+      "name": "★ 觀測輸入: τ_p 下限（Super-K）、m_p、ħ —— Λ 非純結構（半結構量）",
+      "pass": true,
+      "detail": "τ_p > 2.4e34 yr = 觀測, 唔係 IDCM 結構輸出"
+    },
+    {
+      "tag": "D3",
+      "name": "★ Λ ∝ τ_p^{0.25} ⟹ τ_p 一個數量級變化只移動 Λ 0.56 數量級（穩健）",
+      "pass": true,
+      "detail": "四次根壓縮 ⟹ 標度對 τ_p 極不敏感"
+    },
+    {
+      "tag": "D4",
+      "name": "★ Λ ∝ 1/xy（λ 譜倒數）⟹ 若用錯誤譜直接標度會漂移 0.00%",
+      "pass": true,
+      "detail": "λ 譜係 Λ 唯一結構貢獻"
+    },
+    {
+      "tag": "E1",
+      "name": "⚠️ Λ 係量綱式下限（冇強子矩陣元 f_p、冇 renorm、冇 phase space）⟹ 數量級級",
+      "pass": true,
+      "detail": "docs/06 §E 維持"
+    },
+    {
+      "tag": "E2",
+      "name": "⚠️ M_Pl/Λ = 86.800 ≠ 87（dev −0.23%）⟹「= M_Pl/87」唔可以升格為結構恆等",
+      "pass": true,
+      "detail": "87 只係下界投影四捨五入；任何「87=結構數」推導必須解釋 0.23% 缺口"
+    },
+    {
+      "tag": "E3",
+      "name": "⚠️ 87 三重候選數值不可分 ⟹ 結構身份未決（需 freeze v2 / lattice 直量）",
+      "pass": true,
+      "detail": "docs/20 記錄 🟡 維持, 唔 close"
+    },
+    {
+      "tag": "E4",
+      "name": "★★ 唯一可升格結論: Λ 解析式（g 抵消）＋ Λ ∝ 1/(λ₂(N_gen−λ₂)) 結構依賴",
+      "pass": true,
+      "detail": "零新常數；VL 絕對質量仍依賴觀測 τ_p（半結構）"
+    }
+  ],
+  "Lambda_GeV": 1.4065751749622846e+17,
+  "M_Pl_over_Lambda": 86.80019537759416,
+  "dev_vs_87_pct": -0.22966048552394902,
+  "Lambda_analytic": "(m_p^5*tau_p/hbar)^(1/4)/(sqrt(4pi)*lam2*(N_gen-lam2))",
+  "triple_candidates_87": {
+    "2N_d-1": 87,
+    "N_gen*L7": 87,
+    "Sigma_gamma - N_gen": 87
+  },
+  "caveats": "dimensional-analysis lower bound; 87 is a lower-bound projection, not an identity"
+}

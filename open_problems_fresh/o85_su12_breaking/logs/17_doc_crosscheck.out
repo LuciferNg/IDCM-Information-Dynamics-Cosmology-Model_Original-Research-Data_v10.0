@@ -5,21 +5,21 @@ O85-17 Layer-3 doc crosscheck + 檔案集完整性（唯讀）
 ==============================================================================
 ① data/*.json checks 驗證
 ==============================================================================
-    data/ 共 20 個 JSON
-  ✅ [D1] ★ 01-20 共 19 個 data JSON: total==passed==checks 數   — 每檔 ['01_breaking_path_classification.json', '02_q6_global_vs_gauge.json', '03_breaking_chain.json', '04_mass_spectrum.json', '05_fermion_reps.json', '06_scale.json', '07_y_combination.json', '08_vl_mass.json', '09_u1_scale_ladder.json', '10_vl_assignment.json', '11_rep_consistency.json', '12_yi_assignment.json', '13_yi_observational.json', '14_singlet_mode.json', '15_uniqueness.json', '16_audit_independent.json', '18_vl_scale.json', '19_singlet_mode_interpretation.json', '20_vl_yukawa_o86.json']
-  ✅ [D2] ★ data 檔數 = 20（01-19 + 20 湯川承接）
+    data/ 共 21 個 JSON
+  ✅ [D1] ★ 01-20 共 20 個 data JSON: total==passed==checks 數   — 每檔 ['01_breaking_path_classification.json', '02_q6_global_vs_gauge.json', '03_breaking_chain.json', '04_mass_spectrum.json', '05_fermion_reps.json', '06_scale.json', '07_y_combination.json', '08_vl_mass.json', '09_u1_scale_ladder.json', '10_vl_assignment.json', '11_rep_consistency.json', '12_yi_assignment.json', '13_yi_observational.json', '14_singlet_mode.json', '15_uniqueness.json', '16_audit_independent.json', '18_vl_scale.json', '19_singlet_mode_interpretation.json', '20_vl_yukawa_o86.json', '22_lambda_identity.json']
+  ✅ [D2] ★ data 檔數 = 21（01-20 + 22 攻関 Λ；scripts/21 無 data 輸出）
 
 ==============================================================================
 ② docs 關鍵數字抽樣（獨立比對）
 ==============================================================================
-  ✅ [D3] ★ 15 份 docs 關鍵數字抽樣全部命中（19 檔 × 59 枚針）
+  ✅ [D3] ★ 15 份 docs 關鍵數字抽樣全部命中（20 檔 × 62 枚針）
 
 ==============================================================================
 ③ 檔案集對稱
 ==============================================================================
-  ✅ [D4] ★ scripts 數 = 21（01-20 + 21 攻関 S(m)）   — 實際 ['01_breaking_path_classification.py', '02_q6_global_vs_gauge.py', '03_breaking_chain.py', '04_mass_spectrum.py', '05_fermion_reps.py', '06_scale.py', '07_y_combination.py', '08_vl_mass.py', '09_u1_scale_ladder.py', '10_vl_assignment.py', '11_rep_consistency.py', '12_yi_assignment.py', '13_yi_observational.py', '14_singlet_mode.py', '15_uniqueness.py', '16_audit_independent.py', '17_doc_crosscheck.py', '18_vl_scale.py', '19_singlet_mode_interpretation.py', '20_vl_yukawa_o86.py', '21_sm_geometric_overlap.py']
-  ✅ [D5] ★ docs 數 = 19（01-19）
-  ✅ [D6] ★ logs/ 有正典 log（每 script 一支 .out）   — 實際 21 .out
+  ✅ [D4] ★ scripts 數 = 22（01-20 + 21 攻関 S(m) + 22 攻関 Λ）   — 實際 ['01_breaking_path_classification.py', '02_q6_global_vs_gauge.py', '03_breaking_chain.py', '04_mass_spectrum.py', '05_fermion_reps.py', '06_scale.py', '07_y_combination.py', '08_vl_mass.py', '09_u1_scale_ladder.py', '10_vl_assignment.py', '11_rep_consistency.py', '12_yi_assignment.py', '13_yi_observational.py', '14_singlet_mode.py', '15_uniqueness.py', '16_audit_independent.py', '17_doc_crosscheck.py', '18_vl_scale.py', '19_singlet_mode_interpretation.py', '20_vl_yukawa_o86.py', '21_sm_geometric_overlap.py', '22_lambda_identity.py']
+  ✅ [D5] ★ docs 數 = 20（01-20）
+  ✅ [D6] ★ logs/ 有正典 log（每 script 一支 .out）   — 實際 22 .out
   ✅ [D7] ★ scripts 宣告輸出 ↔ data 檔案: 缺 0 個   — 全部存在
 
 ==============================================================================
