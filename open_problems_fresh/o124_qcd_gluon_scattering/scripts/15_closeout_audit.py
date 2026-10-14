@@ -35,7 +35,7 @@ print("=" * 78)
 print("\n─── [A] 14 scripts 重跑 (絶對解譯器) ───")
 scripts = [s for s in sorted(glob.glob(os.path.join(ODIR, "scripts", "*.py")))
            if not os.path.basename(s).startswith("15_")]
-chk("A1 scripts 數 = 14 (01–14, 排除自身)", len(scripts) == 14, f"({len(scripts)})")
+chk("A1 scripts 數 = 16 (01–14,16,17; 排除自身)", len(scripts) == 16, f"({len(scripts)})")
 for s in scripts:
     nm = os.path.basename(s)
     r = subprocess.run([PY, s], cwd=ODIR, capture_output=True, text=True, timeout=900)
@@ -82,7 +82,7 @@ chk("B4 本鏈寫入範圍: 只有 o124 + README (唔含其他 O)",
 # ── [C] 文檔完整性 ──────────────────────────────────────────────
 print("\n─── [C] 文檔完整性 ───")
 docs = sorted(glob.glob(os.path.join(ODIR, "docs", "*.md")))
-chk("C1 docs 9 份存在 (01–09)", len(docs) == 9, f"({len(docs)})")
+chk("C1 docs 10 份存在 (01–10)", len(docs) == 10, f"({len(docs)})")
 for f in ("SESSION_START.md", "final_result.md"):
     chk(f"C2 {f} 存在", os.path.exists(os.path.join(ODIR, f)))
 d9 = open(os.path.join(ODIR, "docs/09_irreducible_inputs.md"), encoding="utf-8").read()
@@ -93,8 +93,10 @@ chk("C5 docs/09 無壓縮標記",
     "HERMES-CONTEXT-COMPRESSION" not in d9 and "omitted here" not in d9)
 for sd in ("SESSION_START.md", "docs/01_problem_record.md"):
     t = open(os.path.join(ODIR, sd), encoding="utf-8").read()
-    chk(f"C6 {sd} 無 φ³+φ^{{−3}} (已修正)",
-        "φ³+φ^{−3}" not in t and "φ³+φ⁻³ = L₃" not in t)
+    # C6: 只禁「錯式等號」φ³+φ⁻³ = L₃（=4）。docs/01 §十八/廿一 兩處 φ³+φ⁻³
+    #     係「描述筆誤本身」（O229 handoff 指正記錄），唔係錯式——允許存在。
+    chk(f"C6 {sd} 無 φ³+φ^{{−3}} 錯式等號 (已修正)",
+        "φ³+φ^{−3} = L₃" not in t and "φ³+φ⁻³ = L₃ = 4" not in t)
 fr = open(os.path.join(ODIR, "final_result.md"), encoding="utf-8").read()
 chk("C7 final_result 無 φ³+φ^{−3} 錯式", "φ³+φ^{−3} = L₃" not in fr)
 
