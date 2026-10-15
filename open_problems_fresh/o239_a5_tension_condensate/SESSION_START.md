@@ -863,4 +863,4 @@ g(n)」+ R41 恢復建議（O136 scripts/69 一直 free fit α≈2.633, block/ra
 5. 引用指引: α=φ² 鎖定必須結構層+數值層一齊寫; 質量數據附 scale
    標注（scripts/45）; 禁再用「γ/β 合成即鎖定」（代數恆等已裁）
 
-**commit**: 待 commit（第四十三輪，docs/43 + 結論 handoff）。
+**commit**: `fc149d7`（O239 R43: ★★最終結論 handoff → O136, 第四十三輪入檔）。
