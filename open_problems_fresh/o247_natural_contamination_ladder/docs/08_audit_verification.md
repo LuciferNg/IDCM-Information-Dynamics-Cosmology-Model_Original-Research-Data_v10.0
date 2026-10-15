@@ -136,3 +136,26 @@ register: note(審計) + handoff(O247 → 下游)     (T4/§4.10)
 ## 七、檔案
 - `scripts/11_audit_independent.py` + `logs/11.txt`（76/76 PASS）
 - 承接：`docs/01`–`docs/07`、`scripts/01`–`scripts/10`、`logs/01`–`logs/10`
+
+---
+
+## 八、內容級完整性檢查（2026-10-16，追加）
+
+> 起因：調律者發現內容級遺失疑慮 —— 要求① 檢查 O247 全部檔案冇被其他 session 動過 ② 內容級別檢查推導內容完整。
+> 本節係檢查結果記錄（append-only；上文一字未改）。
+
+### ① 其他 session 干擾檢查 — ✅ 零干擾（內容層）
+- git 層：`git log --all -- o247/` = 9 commits 全屬 O247 歷程（9092298 開題 → d7908b9 審計），**冇外來 commit 混入**；reflog 全部為本鏈/其他 O 常規 commit，無 O247 checkout/reset/restore
+- 內容層：33/33 tracked 檔工作樹 sha256 = HEAD 版本，全部一致；`git status --porcelain` 零；磁碟 33 = tracked 33，無 untracked/missing（`data/` 為空目錄）
+- session DB writer ledger：涉 O247 寫入嘅 session = 9 個，**全部** key=115025（本對話鏈，壓縮父子鏈完整）或 114012（O247 開題鏈）；2026-10-16 00:24 `20261016_002420_f3e0cf` parent=本 session，確認係本鏈自己嘅 record updated 欄位 patch
+- 23:34 mtime 異常已歸因：docs/01-05 + SESSION_START 嘅 mtime 觸碰係並行 O168 session（thread 68851）做 git restore 嘅 side-effect；內容 sha256 與 HEAD 一致（零 byte 變化）
+
+### ② 推導內容完整性檢查 — ✅ 完整（三層證據）
+1. **重現層**：11/11 scripts（01–11）用 `/usr/bin/python3` 重跑，輸出與正典 logs **逐 byte IDENTICAL**（rstrip 比對）；全部 rc=0、無 Traceback；說明 scripts/logs 冇遺失、冇 drift、可完整重建
+2. **綁定層**（`numeric_producer_binding.py`）：121 個 headline 數字 → BOUND_SRC=102 + BOUND_LOG=6 + ELSEWHERE=2；**UNBOUND=11 全數 triage 為跨 O 引用**（docs/01 已證偽候選表 948.63/943.98/937.97、O239 scripts/43 嘅 RGI 殘差 0.5876/0.6567、PDG 正式值 0.9383/0.9396 GeV、48176134 係 K_Tree size 等）——無真缺口
+3. **段落層**：docs/01-08 全部以正常完句收尾（docs/02「。」收尾係中文句號，非截斷）、無 U+FFFD、無截斷記號；scripts↔logs 編號 11/11 對稱；01_problem_record 123 行（§六時序 9 rows）、SESSION_START 165 行、final_result 43 行齊全
+4. **幽靈推導偵測**（session DB execute_code payload 全 parse）：涉 O247 嘅 execute_code 全部為驗證型/寫入型（register 推送、DB 審計查詢、git 比對），**零推導型幽靈** — 冇任何「只喺對話算完、未落碟」嘅 headline 數字
+
+### 結論
+> ✅ O247 全部檔案冇被其他 session 動過；✅ 推導內容完整（scripts↔logs↔docs↔record↔SESSION_START↔final_result 六類齊全、可重建、可追溯）。
+> 與 docs/08 §一–§六嘅 76/76 PASS 獨立審計互為補充：§一–§六驗「數字正確」，§八驗「記錄完整」。
