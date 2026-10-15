@@ -54,7 +54,7 @@ print("=" * 96)
 print(f"\n{'─'*96}\n[A] 檔案集完整性\n{'─'*96}")
 
 nd = len(list(DOCS.glob("*.md")))
-chk("A1 docs 數量 = 37", nd == 37, f"實際 {nd}")
+chk("A1 docs 數量 = 43", nd == 43, f"實際 {nd}")
 
 want_scripts = {f"{i:02d}_" for i in range(1, 46)}
 have_scripts = {p.name[:3] for p in SCR.glob("*.py")}
@@ -314,9 +314,15 @@ for label, needle in KEYVALS.items():
 # ══════════════════════════════════════════════════════════════════
 print(f"\n{'─'*96}\n[J] 交叉引用可達\n{'─'*96}")
 
-refs = set(re.findall(r"`?(scripts/\d\d_[a-z0-9_]+\.py)`?", ALLTXT))
-missing_refs = [r for r in sorted(refs) if not (BASE / r).exists()]
-chk("J1 文檔引用嘅 scripts 全部存在", not missing_refs, f"缺 {missing_refs}")
+# J1 修正 (2026-10-06): 跳過跨 O 引用 — `O134 `scripts/...`` 係其他 O 嘅 script,
+# 只檢查 O136 本地 scripts/ (跨 O 引用: match 前綴以 O<digits> 結尾)
+_missing = []
+for _m in re.finditer(r"([~`\w ]*?)(scripts/\d\d_[a-z0-9_]+\.py)", ALLTXT):
+    _prefix, _ref = _m.group(1), _m.group(2)
+    if not (BASE / _ref).exists() and not re.search(r"O\d+\s*[`~]*$", _prefix):
+        _missing.append(_ref)
+missing_refs = sorted(set(_missing))
+chk("J1 文檔引用嘅 scripts 全部存在 (本地)", not missing_refs, f"缺(本地) {missing_refs}")
 
 drefs = set(re.findall(r"docs/(\d\d)_[a-z0-9_]+\.md", ALLTXT))
 missing_dr = [d for d in sorted(drefs) if not (DOCS / f"{d}_").exists() and

@@ -1,0 +1,88 @@
+{
+ "frozen_targets": {
+  "m_c/m_s Nf=4": {
+   "value": 11.652,
+   "err": 0.065,
+   "nearest": 11.636363636363637,
+   "dev_pct": 0.13419467590424441,
+   "fraction": "128/11"
+  },
+  "m_c/m_s HPQCD": {
+   "value": 11.85,
+   "err": 0.16,
+   "nearest": 11.75,
+   "dev_pct": 0.8438818565400814,
+   "fraction": "47/4"
+  },
+  "m_s/m̂": {
+   "value": 27.227,
+   "err": 0.081,
+   "nearest": 27.4,
+   "dev_pct": 0.6353986851287261,
+   "fraction": "137/5"
+  },
+  "m_d/m_u": {
+   "value": 2.1505,
+   "err": 0.111,
+   "nearest": 2.1538461538461537,
+   "dev_pct": 0.1555988768264899,
+   "fraction": "28/13"
+  },
+  "m_s/m_u derived": {
+   "value": 42.89,
+   "err": 1.52,
+   "nearest": 43.0,
+   "dev_pct": 0.2564700396362775,
+   "fraction": "43"
+  },
+  "m_s/m_d derived": {
+   "value": 19.944,
+   "err": 0.33,
+   "nearest": 20.0,
+   "dev_pct": 0.28078620136382343,
+   "fraction": "20"
+  }
+ },
+ "corrected_CcCs_Nf4": 3.8586001683119595,
+ "corrected_CcCs_HPQCD": 3.9241685542822453,
+ "old_9over2_dev_pct_vs_corrected": 16.622604149437873,
+ "pool_size": 1396,
+ "expect_hits_0p5pct": 2.020916989123132,
+ "checks": [
+  {
+   "name": "C1. 9/2 對正確 C_c/C_s dev > 10% (混標度判死)",
+   "pass": true,
+   "detail": "16.62%"
+  },
+  {
+   "name": "D.m_c/m_s Nf=4: dev ≥ 0.01% (非結構命中級, 保持負閉合)",
+   "pass": true,
+   "detail": "0.1342%"
+  },
+  {
+   "name": "D.m_c/m_s HPQCD: dev ≥ 0.01% (非結構命中級, 保持負閉合)",
+   "pass": true,
+   "detail": "0.8439%"
+  },
+  {
+   "name": "D.m_s/m̂: dev ≥ 0.01% (非結構命中級, 保持負閉合)",
+   "pass": true,
+   "detail": "0.6354%"
+  },
+  {
+   "name": "D.m_d/m_u: dev ≥ 0.01% (非結構命中級, 保持負閉合)",
+   "pass": true,
+   "detail": "0.1556%"
+  },
+  {
+   "name": "D.m_s/m_u derived: dev ≥ 0.01% (非結構命中級, 保持負閉合)",
+   "pass": true,
+   "detail": "0.2565%"
+  },
+  {
+   "name": "D.m_s/m_d derived: dev ≥ 0.01% (非結構命中級, 保持負閉合)",
+   "pass": true,
+   "detail": "0.2808%"
+  }
+ ]
+}

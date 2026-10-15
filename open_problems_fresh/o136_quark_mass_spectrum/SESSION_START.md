@@ -325,3 +325,21 @@ Gemini 主張「宏觀宇宙與微觀粒子共用同一套 A₅ chiral icosahedr
   (O134 `scripts/05_sector_selection.py`, 14/14 PASS; `data/05_sector_selection.json`)。
 - 事項 2: 結構聲稱, 無數值判準 ⟹ 標 🔴 開放。
 - ⚠️ 本段只係**回報**, 唔改 O136 任何結論檔; 是否採納由 O136 專屬 session 裁定。
+
+---
+
+## 2026-10-06 殘留攻堅執行段（附註，append-only；09-15 原文 + 09-28 後續一切不動）
+
+承接 10-06 closeout 訂立次序 ①-⑥，本 session 完成 ①-③-⑥（②攻堅嘗試）:
+
+| 次序 | 項 | 結果 | ref |
+|:--|:--|:--|:--|
+| ① | α=79/30 盲測升格 | 🟢 36 比零參數 P=0.0008 + 樣本外 t 預言 7.3% ⟹ 升結構常數 | docs/38 |
+| ② | mass-shape 三因子 | 🔴 rank-parity 唔顯著（P=0.2165）; LOOCV 未閉環 | docs/38 |
+| ③ | c/s 離群 | 🔴 重定位 s/c 個別點; ★88/F₅−B=68/5 dev 0.019%（posthoc） | docs/39 |
+| ⑥ | dquark 下型 | 🔴 H_sector 預言 FAIL（down 無共同方向） | docs/39 |
+| ④ | Id(f) | 已交接 O53/O59（收據已註） | register |
+| ⑤ | LOOCV/dm | 觀察級，唔攻堅（LOOCV 3 因子 0.4586 亦無改善） | docs/38 |
+
+**攻堅產出**: scripts/68-71 + data/68-71 + docs/38-39；時序索引 81→83 行。
+**方法論新增**: 判準 6（參數膨脹需同複雜度 null）、判準 7（單點 vs 成對歸因）。

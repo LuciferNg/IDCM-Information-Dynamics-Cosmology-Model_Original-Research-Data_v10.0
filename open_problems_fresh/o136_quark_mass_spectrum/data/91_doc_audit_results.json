@@ -4,9 +4,9 @@
   "fail": 0,
   "checks": [
     {
-      "name": "A1 docs 數量 = 37",
+      "name": "A1 docs 數量 = 43",
       "ok": true,
-      "detail": "實際 37"
+      "detail": "實際 43"
     },
     {
       "name": "A2 scripts 01-45 齊全",
@@ -76,17 +76,17 @@
     {
       "name": "E2 時序索引表有行 (≥10)",
       "ok": true,
-      "detail": "81 行"
+      "detail": "85 行"
     },
     {
       "name": "E3 時序編號唯一",
       "ok": true,
-      "detail": "重複 [] (n=81)"
+      "detail": "重複 [] (n=85)"
     },
     {
       "name": "E4 時序編號遞增 (1..N 連續)",
       "ok": true,
-      "detail": "[1, 2, 3, 4, 5]...[79, 80, 81]"
+      "detail": "[1, 2, 3, 4, 5]...[83, 84, 85]"
     },
     {
       "name": "E5 每個時序行有日期",
@@ -166,7 +166,7 @@
     {
       "name": "H4 tally 跨文檔一致 (每個分母單一值)",
       "ok": true,
-      "detail": "92:[92] 93:[93]"
+      "detail": "3:[3] 5:[5] 8:[8] 14:[14] 92:[92] 93:[93]"
     },
     {
       "name": "H3 時序索引保留 08 月歷史行",
@@ -444,9 +444,9 @@
       "detail": ""
     },
     {
-      "name": "J1 文檔引用嘅 scripts 全部存在",
+      "name": "J1 文檔引用嘅 scripts 全部存在 (本地)",
       "ok": true,
-      "detail": "缺 []"
+      "detail": "缺(本地) []"
     },
     {
       "name": "J2 文檔引用嘅 docs 全部存在",
@@ -456,12 +456,12 @@
     {
       "name": "K1 scripts 檔數 ≥ 47 (45 + 90 + 91)",
       "ok": true,
-      "detail": "69"
+      "detail": "77"
     },
     {
       "name": "Z1 文檔引用嘅第 2 層 tally = 92/92",
       "ok": true,
-      "detail": "92/92 PASS 93/93 PASS"
+      "detail": "14/14 PASS 3/3 PASS 5/5 PASS 8/8 PASS 92/92 PASS 93/93 PASS"
     }
   ]
 }
