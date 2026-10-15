@@ -814,4 +814,4 @@ O136 scripts/69 揭示真正結構 `ln m = lnM₀ + α·ln|dm| + δ·even_rank +
 5. 教訓: ①handoff 要 check ②候選集要完整（O136 docs/35 表做 control）
    ③粗網格「唯一極小」係假保證 ④γ/β=φ² 恆等唔再講「合成橋鎖定」
 
-**commit**: 待 commit（第四十輪，scripts/48 + docs/40 + docs/38 append）。
+**commit**: `72a43b2`（O239 R40: ★固化判決重審——O136 incoming 否證 α=φ², 第四十輪入檔）。
