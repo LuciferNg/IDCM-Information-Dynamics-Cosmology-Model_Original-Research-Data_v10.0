@@ -847,4 +847,4 @@ g(n)」+ R41 恢復建議（O136 scripts/69 一直 free fit α≈2.633, block/ra
    ★關鍵: 結構層 vs 數值層徹底分離（scripts/49 鎖定 ✅ / scripts/50 修正
    ❌ 係兩個獨立層面）→ handoff O136
 
-**commit**: 待 commit（第四十二輪，scripts/50 + docs/42）。
+**commit**: `3444fe4`（O239 R42: ★固定 α=φ² 三因子掃描——O136 交接執行, 第四十二輪入檔）。
