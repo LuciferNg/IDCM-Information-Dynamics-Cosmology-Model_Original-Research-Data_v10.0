@@ -13,7 +13,7 @@ prereq:  O239 → O206-OPEN-4 (三水平簇生成規則) + O239 R36 (天然污�
 source:  調律者2026-10-12: O239 R36 遺留 + 開新O解決以上問題(只開不推)
 -->
 
-> **狀態**: 📄 **已註冊 — 未開始（只開不推）**
+> **狀態**: 🟡 **部分閉合（2026-10-16 phase-closeout）** — Q1 關閉（簇=A₅ 偽影）；Q2 終態（三層 no-go + 原子存在性閉合 docs/06 + 複合投影 docs/07）；Q3 no-go 移交 O142（register handoff 2026-10-15）
 > **建立**: 2026-10-12
 > **前置**: O239 R36（docs/36）；O206 docs/17（三水平簇）；O136 scripts/69（質量生成）；O64（γ_n/F_proj 線）
 > **位置**: `open_problems_fresh/o247_natural_contamination_ladder/`
@@ -103,6 +103,8 @@ O239 質量閉合式 `m = M₀·|Δm|^φ²`（α=φ² 結構鎖定, 0.10σ）對
 | 7 | 2026-10-12 | 調律者本體論反擊: 「原子存在, 而且是電子顯微鏡能真正看見的東西, no-go不適用於這情況」 → scripts/09 原子存在性 (a₀ + R∞) | docs/06 — 5/5 PASS: a₀ = ħc·α⁻¹/m_e dev 3e-8% + R∞ dev 1e-8 (零新常數 α,m_e); 「原子存在」= channel B 投影可實現 (電子顯微鏡尺度匹配); no-go 邊界修正: 只適用絕對質量值, 唔適用原子存在性 |
 | 8 | 2026-10-12 | 調律者: 「先搞清楚原子層面是複合投影還是單獨投影」 → scripts/10 五路判定 | docs/07 — 5/5 PASS: 原子層 = 複合投影 (結構強制: P1 3300核素>>88mode 單獨投影資訊論不可能, P2 A,Z連續函數非離散譜, P3 m_H=m_p+m_e−R∞ dev 1.4e-3% 複合形式已驗證); 單獨投影路線永久關閉; 性質層閉合 vs 數值層(核部件)no-go 分離 — ⚠️ P3 dev 數字見 row #9 審計修正 |
 | 9 | 2026-10-15 | 調律者: 「對O247 所有docs推導文檔、problem record、session start、final_result 等記錄中的計算結果數字及結論審計及驗證，完成後檢查推送至O247 handoff」 → scripts/11 獨立審計（零 import 原 scripts，第一原理重算） | docs/08 審計報告 — **76/76 PASS**; Finding S1(真): scripts/09 C5 + scripts/10 P3 m_H 單位 1000× 錯（13.6 keV 當 R∞）→ 正確 m_H=938.7830735 MeV dev 1.06e-7%（結論不變且更強）; F1(γ₁ docstring 誤值)/F2(G2.1 sign bug 假 PASS)/F3(5.4 mode/A 表述) 皆註解級; docs/06+docs/07 加 append-only 修正塊; **final_result.md 補建**（此前不存在）; 全 O247 handoff 推送（核子缺口→O142） |
+| 10 | 2026-10-16 | 調律者: 「檢查O247所有檔案是否被其他session 動過」 + 「由於發現內容級遺失, 需要內容級別檢查推導內容是否完整」 | docs/08 §八 內容級完整性檢查 — **另外 session 零干擾**（git 9 commits 全屬 O247 歷程 / 33 tracked sha256=HEAD / writer ledger 全為本鏈 115025+開題鏈 114012）; **推導內容完整**（11/11 scripts 重跑逐 byte IDENTICAL 正典 logs / 121 headline 數字 UNBOUND 11 全數跨 O 引用 / 幽靈推導 0）; commit 4769b85 |
+| 11 | 2026-10-16 | 調律者: 「O247先完成數字審計及階段性Closeout」 → **phase-closeout** | 狀態行三份同步 → 🟡 部分閉合; register close --verdict partial（Q1 關閉/Q2 終態 no-go + 原子存在性閉合/Q3 移交 O142） |
 
 ## 八、Q1 判決 — O206-OPEN-4 關閉（2026-10-12 調律者指令）
 

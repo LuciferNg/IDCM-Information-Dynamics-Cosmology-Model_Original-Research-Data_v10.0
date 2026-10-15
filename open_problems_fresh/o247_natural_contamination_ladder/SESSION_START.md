@@ -14,7 +14,7 @@ source:  調律者2026-10-12: O239 R36 遺留 + 開新O解決以上問題(只開
 -->
 
 > **Session**: 2026-10-12（新建立）
-> **狀態**: 📄 **已註冊 — 未開始（只開不推）**
+> **狀態**: 🟡 **部分閉合（2026-10-16 phase-closeout）** — Q1 關閉（簇=A₅ 偽影）；Q2 終態（三層 no-go + 原子存在性閉合 docs/06 + 複合投影 docs/07）；Q3 no-go 移交 O142（register handoff 2026-10-15）
 > **來源**: 調律者 2026-10-12「開新O解決以上問題，只寫problem record, session start 不直接推」
 > **前置**: O239 R36（docs/36 天然污染框架）；O206 docs/17（三水平簇）；O136 scripts/69
 > **位置**: `open_problems_fresh/o247_natural_contamination_ladder/`
