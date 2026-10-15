@@ -880,4 +880,4 @@ g(n)」+ R41 恢復建議（O136 scripts/69 一直 free fit α≈2.633, block/ra
 5. **O247 維持只開不推, 等開推指示**——本輪只 register handoff,
    冇寫 O247 任何檔案（跨 O 紀律）
 
-**commit**: 待 commit（第四十四輪，時序 #47 + register handoff）。
+**commit**: `5a8c2aa`（O239 R44: O247 問題 handoff → O247, 不推, 第四十四輪入檔）。
