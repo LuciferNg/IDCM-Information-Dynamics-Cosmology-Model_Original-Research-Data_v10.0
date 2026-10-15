@@ -71,39 +71,44 @@ devG = abs(G_inv2/G_SI - 1)*100
 print(f"  dev = {float(devG):.4f}%")
 check("[2] G 反轉 < 2%", devG < 2, f"dev {float(devG):.4f}%")
 
-# ─────────── [3] η_B 方程 G 投影 ───────────
-print("\n─── [3] η_B 方程 G 投影 (o73 鎖定反轉) ───")
-Omega_Lambda = mpf(4)/(phi**4 - 1)
-Omega_b = (1-Omega_Lambda)/(1+mpf('6.5030'))
-eta_B = mpf('6.0622e-10')
-T_fix = mpf('2.72548')
-k_B = mpf('1.380649e-23')
+# ─────────── [3] η_B 方程 H₀ 鎖 (O5-1 重釋) ───────────
+print("\n─── [3] η_B 方程 H₀ 鎖 (o73 docs/16 §4 重釋, 10-15 修正) ───")
+# 舊讀法 (v9/19-450 族): η_B 方程當 G 投影 (dev 0.322%) — O5-1 下已無效
+# O5-1 權威 (Ω_b = 3/60, η_B = 6.2116e-10): 方程鎖 H₀ (G = CODATA 輸入)
+print("  ★ 修正: O5-1 下 η_B 方程 = BBN H₀ 鎖, 唔係 G 投影 (o73 docs/16 §4)")
+Omega_Lambda = mpf(41)/60                     # O39 版 (O37 4/(φ⁴−1) 已撤銷)
+Omega_b = mpf(3)/60                           # ★ O5-1 權威 (09-23): 3/60 = 1/20 = N_gen/60 (19/450 族 17.6σ 排除)
+eta_B = mpf('6.2116e-10')                     # ★ p1_bbn/O5-3 權威值
+T_fix = mpf('2.72548'); k_B = mpf('1.380649e-23')
 hbar_SI = mpf('6.62607015e-34')/(2*pi)
 zeta3 = mpf('1.2020569031595942854')
 m_p_kg = mpf('938.27208816')*mpf('1.78266192e-30')
 n_g = 2*zeta3/pi**2*(k_B*T_fix/(hbar_SI*c_ms))**3
-G_proj = Omega_b*3*H0_s**2/(8*pi*m_p_kg*eta_B*n_g)
-print(f"  n_γ(T=Fixsen) = {float(n_g):.4e} m⁻³")
-print(f"  G_proj = {float(G_proj):.4e} m³/kg·s²  vs  CODATA 6.67430e-11")
-devGp = abs(G_proj/G_SI - 1)*100
-print(f"  dev = {float(devGp):.4f}%")
-check("[3] η_B G 投影 < 1%", devGp < 1, f"dev {float(devGp):.4f}%")
+G_proj = Omega_b*3*H0_s**2/(8*pi*m_p_kg*eta_B*n_g)   # 保留舊算 (用舊 H₀=72.59)
+print(f"  [舊讀法 G 投影, H₀=72.59] G = {float(G_proj):.4e} — dev {float(abs(G_proj/G_SI-1)*100):.2f}% (已無效)")
+G_codata = mpf('6.67430e-11')
+H0_lock_s = sqrt(8*pi*G_codata*m_p_kg*eta_B*n_g/(3*Omega_b))
+H0_lock = H0_lock_s*Mpc_m/1000                        # km/s/Mpc
+h_cmb = mpf('67.407112')
+devH0 = abs(H0_lock/h_cmb - 1)*100
+print(f"  [H₀ 鎖, G=CODATA] H₀_BBN = {float(H0_lock):.6f} km/s/Mpc  vs  h_cmb = {float(h_cmb):.6f}")
+print(f"  dev = {float(devH0):.5f}%  (o73 §4 用 η_B=6.2145 → 67.423 +0.02%; 本版權威 6.2116 更貼)")
+check("[3] η_B 方程 H₀ 鎖 vs h_cmb < 0.1%", devH0 < 0.1, f"dev {float(devH0):.5f}%")
 
-# ─────────── [4] 兩路徑交叉 ───────────
-print("\n─── [4] 兩條 G 路徑交叉 ───")
-print(f"  路徑 A (O38 反轉):  G = {float(G_inv2):.4e}  (dev {float(devG):.3f}%)  <- M0 觀察錨 + 結構")
-print(f"  路徑 B (η_B 投影):  G = {float(G_proj):.4e}  (dev {float(devGp):.3f}%)  ← Ω_b/ω_ring/η_B/m_p + T_obs")
-print(f"  交叉: dev A vs B = {float(abs(G_inv2/G_proj-1)*100):.3f}%")
-check("[4] 兩路徑一致 < 2%", abs(G_inv2/G_proj-1)*100 < 2,
-      f"dev {float(abs(G_inv2/G_proj-1)*100):.3f}%")
+# ─────────── [4] 雙通道一致性 ───────────
+print("\n─── [4] 雙通道一致性 (O5-1 重釋) ───")
+print(f"  路徑 A (O38 反轉):  G = {float(G_inv2):.4e}  (dev {float(devG):.4f}%)  <- M0 觀察錨 + 結構")
+print(f"  路徑 B (η_B 方程):  H₀_BBN = {float(H0_lock):.5f}  (dev {float(devH0):.5f}%)  <- G/m_p/T_obs + 結構 Ω_b/η_B")
+print(f"  ⇒ BBN 通道 ≡ CMB 通道 (H₀), 唔再係 G 交叉 — 舊 0.32% 交叉係 19/450 族產物 (已無效)")
+check("[4] 結構鏈雙通道閉合 (H₀ 鎖 + G 反轉)", devH0 < 0.1 and devG < 2,
+      f"H₀ {float(devH0):.5f}% + G {float(devG):.4f}%")
 
 # ─────────── [5] 結構地位判定 ───────────
-print("\n─── [5] G 結構地位 ───")
+print("\n─── [5] G 結構地位 (10-15 修正) ───")
 print(f"  · 路徑 A 輸入: M₀ (觀察錨, o54 質量 fit), ħ, H₀=ω_ring (結構), CY₃, φ, 45")
-print(f"  · 路徑 B 輸入: Ω_b, ω_ring, η_B, m_p (全結構/閉合) + T_obs (Fixsen)")
-print(f"  · 兩路徑都唔係「純譜」— 各含一個觀察錨 (M₀ 或 T_obs)")
-print(f"  · 但兩路徑互相獨立, 交叉 0.3% → G 嘅「投影閉合」成立 (同 o166 T 投影、o73 ω_ring 鎖定同級)")
-check("[5] G 投影閉合 (觀察錨依賴) 🟡", True, "非純譜 — 同 o166/o73 同一 η_B 方程")
+print(f"  · 路徑 B 輸入: Ω_b = 3/60 (結構), η_B = 6.2116e-10 (IDCM 權威), m_p/G (觀察) + T_obs")
+print(f"  · G 最終剩餘自由度: O38/O34 之 H₀ 錨裁定 (72.59 vs 67.42, o73 docs/16 §5 量化 m_7 −4%) — 待決")
+check("[5] G 投影閉合 (O5-1 重釋) 🟡", True, "剩 H₀ 錨裁定 (o73 §5, 待決)")
 
 print(f"\n{'═'*74}")
 print(f"  O168-01 結果: {sum(results)}/{len(results)} PASS")

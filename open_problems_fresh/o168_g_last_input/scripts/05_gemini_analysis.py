@@ -44,8 +44,7 @@ check("[2] F 目標 = 8.42e-12 確認", True, f"F={float(F_target):.4e}")
 
 # ── [3] O166 標度指數: T ∝ M_P^α ──
 print("\n─── [3] O166 投影閉合標度指數 (數值) ───")
-Omega_L = mpf(4)/(phi**4-1); Omega_b = (1-Omega_L)/(1+mpf('6.5030'))
-eta_B = mpf('6.0622e-10')
+Omega_L = mpf(41)/60; Omega_b = mpf(3)/60; eta_B = mpf('6.2116e-10')   # O5-1 權威 (09-23, 19/450 族 禁)
 hbar_Js = mpf('1.054571817e-34')
 kB_JK = mpf('1.380649e-23')
 c_ms = mpf('299792458'); z3 = mpf('1.2020569031595942854')

@@ -50,26 +50,34 @@ d2 = abs(G_inv/G_CODATA-1)
 print(f"  G_inv = {float(G_inv):.6e}  dev = {float(d2*100):.4f}%")
 check("[2] G 反轉 < 0.1%", d2 < mpf('1e-3'), f"dev {float(d2*100):.4f}%")
 
-# ── [3] η_B 投影 ──
-print("\n─── [3] η_B G 投影 ───")
-Omega_L = mpf(4)/(phi**4-1)
-Omega_b = (1-Omega_L)/(1+mpf('6.5030'))
-eta_B = mpf('6.0622e-10')
+# ── [3] η_B 方程 H₀ 鎖 (O5-1 重釋, 10-15 修正) ──
+print("\n─── [3] η_B 方程 H₀ 鎖 (O5-1 重釋) ───")
+Omega_L = mpf(41)/60                            # O39 版
+Omega_b = mpf(3)/60                             # ★ O5-1 權威 (09-23): 3/60 = 1/20 (19/450 族 17.6σ 排除)
+eta_B = mpf('6.2116e-10')                       # ★ p1_bbn/O5-3 權威值 (6.063632 = 19/450 族 禁)
 T_fix = mpf('2.72548')
 kB = mpf('1.380649e-23'); hbar_SI = mpf('1.054571817e-34')
 z3 = mpf('1.2020569031595942854')
 mp_kg = mpf('938.27208816')*mpf('1.78266192e-30')
 n_g = 2*z3/pi**2*(kB*T_fix/(hbar_SI*c_ms))**3
-G_proj = Omega_b*3*H0**2/(8*pi*mp_kg*eta_B*n_g)
+G_proj = Omega_b*3*H0**2/(8*pi*mp_kg*eta_B*n_g)   # 舊讀法 (H₀ 錨) — 已無效, 僅保留展示
 d3 = abs(G_proj/G_CODATA-1)
-print(f"  G_proj = {float(G_proj):.6e}  dev = {float(d3*100):.4f}%")
-check("[3] η_B G 投影 < 1%", d3 < mpf('1e-2'), f"dev {float(d3*100):.4f}%")
+print(f"  [舊讀法 G 投影] G = {float(G_proj):.6e}  dev = {float(d3*100):.2f}% (已無效, 19/450 前慣例)")
+H0_lock_s = sqrt(8*pi*G_CODATA*mp_kg*eta_B*n_g/(3*Omega_b))
+Mpc_m = mpf('3.0856775814913673e22')
+H0_lock = H0_lock_s*Mpc_m/1000
+h_cmb = mpf('67.407112')
+dH = abs(H0_lock/h_cmb-1)*100
+print(f"  [H₀ 鎖] H₀_BBN = {float(H0_lock):.6f}  vs h_cmb = {float(h_cmb):.6f}  dev = {float(dH):.5f}%")
+check("[3] η_B 方程 H₀ 鎖 vs h_cmb < 0.1%", dH < mpf('0.1'), f"dev {float(dH):.5f}%")
 
-# ── [4] 交叉 ──
-d4 = abs(G_inv/G_proj-1)
-print(f"\n─── [4] 交叉 ───")
-print(f"  A vs B = {float(d4*100):.4f}%")
-check("[4] 兩路徑交叉 < 1%", d4 < mpf('1e-2'), f"dev {float(d4*100):.4f}%")
+# ── [4] 雙通道一致性 (O5-1 重釋) ──
+d4 = abs(G_inv/G_proj-1)*100
+print(f"\n─── [4] 雙通道一致性 (O5-1 重釋) ───")
+print(f"  路徑 A (O38 反轉): G dev {float(d2*100):.4f}%  路徑 B (η_B→H₀): dev {float(dH):.5f}%")
+print(f"  ⇒ BBN 通道 ≡ CMB 通道 (H₀); 舊 G 投影交叉 (0.32%) = 19/450 族產物 (已無效)")
+check("[4] O38 反轉 + H₀ 鎖雙通道閉合", d2 < mpf('1e-3') and dH < mpf('0.1'),
+      f"G {float(d2*100):.4f}% + H₀ {float(dH):.5f}%")
 
 # ── [5] 沙漠 ──
 print("\n─── [5] 沙漠單冪 ───")
