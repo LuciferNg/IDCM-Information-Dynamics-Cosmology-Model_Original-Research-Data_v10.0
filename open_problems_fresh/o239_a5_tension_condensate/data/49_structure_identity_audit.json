@@ -1,0 +1,32 @@
+{
+ "verdict": "★結構鎖定 = φ² — 唯一零任意常數候選 (φ² 本身係 x²+x−1=0 根嘅平方) + γ/β 雙反解 k=2 支撐; π−1/2/79/30/2+5/8 需任意常數 / 冇生成鏈, O136 LOOCV『揀優』係選擇題, 唔係結構判準",
+ "audit": {
+  "φ² = 2.618034": {
+   "arbitrary_constants": 0,
+   "expr": "(1/φ⁻²)",
+   "is_structural": true
+  },
+  "π−1/2 = 2.641593": {
+   "arbitrary_constants": 1,
+   "expr": null,
+   "is_structural": false
+  },
+  "79/30 = 2.633333": {
+   "arbitrary_constants": 1,
+   "expr": null,
+   "is_structural": false
+  },
+  "2+5/8 = 2.625000": {
+   "arbitrary_constants": 1,
+   "expr": null,
+   "is_structural": false
+  },
+  "α_OLS = 2.633254": {
+   "arbitrary_constants": 1,
+   "expr": null,
+   "is_structural": false
+  }
+ },
+ "evidence": "scripts/27 k_γ=1.9998, k_β=1.9996; β_fit −19/(4φ²) 0.005σ",
+ "o136_loocv_note": "π−1/2 LOOCV 0.2811 vs φ² 0.3335 — 差 0.0524 喺 bootstrap σ 內 (O136 docs/43 §五.2 自認); LOOCV 揀唔出結構"
+}
