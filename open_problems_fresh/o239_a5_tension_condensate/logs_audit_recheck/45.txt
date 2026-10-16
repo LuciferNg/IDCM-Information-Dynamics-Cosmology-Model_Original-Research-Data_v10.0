@@ -1,0 +1,39 @@
+==============================================================================
+O239 scripts/45 — 質量數據 scale 標注 + mixed-scale 穩健檢定
+==============================================================================
+
+── S1: ★質量數據 scale 標注表 (PDG2024 標準報值) ──
+     粒子  n  mass(MeV) scheme                scale  2GeV?
+      t  1 172690.0000   pole pole (PDG 主報); MS̄(m_t)=162.5 GeV 另報  False
+      b  2  4180.0000    MS̄  MS̄(μ=m_b)=4.18 GeV  False
+    tau  3  1776.8600   pole pole (lepton 冇 running)  False
+      c  4  1270.0000    MS̄  MS̄(μ=m_c)=1.27 GeV  False
+     mu  5   105.6584   pole pole (lepton 冇 running)  False
+      s  7    93.4000    MS̄ MS̄(μ=2 GeV)=93.4 MeV   True
+      d  9     4.6700    MS̄ MS̄(μ=2 GeV)=4.67 MeV   True
+      u 11     2.1600    MS̄ MS̄(μ=2 GeV)=2.16 MeV   True
+      e 13     0.5110   pole pole (lepton 冇 running)  False
+
+   ⟹ 只有 u/d/s 3/9 係 2GeV; c/b 係 m_c/m_b; e/μ/τ/t 係 pole
+  [PASS] S1 標注表完成 3/9 係 2GeV
+
+── S2: data/09 mass9 scale 標注現況 ──
+   data/09 keys: ['PAIR', 'dm9', 'mass9', 'dm_full', 'theta88'] —— True
+   mass9 冇 scale 欄 ⟹ 需要標注表（本 script S1）
+  [PASS] S2 確認 data/09 無 scale 欄 mass9 裸數值, 無 scheme/scale
+
+── S3: ★按 scale 分組 fit α (ln m vs ln|Δm|) ──
+   pole (n=4): α = 2.7188 ± 0.0515, dev vs φ² = +1.96σ
+   2GeV (n=3): α = 3.9135 ± 1.1369, dev vs φ² = +1.14σ
+   mc_mb (n=2): 2 點唔 fit 斜率, 只報: c -12.4799 / b -13.4436
+   all (n=9): α = 2.6333 ± 0.1532, dev vs φ² = +0.10σ
+  [PASS] S3 各 scale 組 α 全部 <2σ vs φ² pole: +2.0σ; 2GeV: +1.1σ; all: +0.1σ
+
+── S4: mixed-scale 輸入對閉合式嘅意義 ──
+   ⟹ 若 S3 全過: α=φ² 喺 pole/2GeV 子集各自成立——
+     scale 混雜係『容器』, 唔係 α=φ² 引擎; 閉合式結論 scale 穩健
+   ⟹ 若 S3 有組 FAIL: 該 scale 子集 α 偏離 ⟹ 閉合式依賴 scale, 要拆
+  [PASS] S4 結論成立 (S3 全過) 混合源自數據容器, 非引擎
+
+==============================================================================
+判定: 4/4 PASS

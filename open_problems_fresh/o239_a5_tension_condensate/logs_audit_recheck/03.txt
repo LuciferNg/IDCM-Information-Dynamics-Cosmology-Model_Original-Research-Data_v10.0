@@ -1,0 +1,20 @@
+split: near=44 far=44 (d>median)
+
+── E1/E2: 近/遠挫阻 CMB M1（SMICA/Commander/SEVEM @4.17°）──
+      SMICA: ΔM1(near−far) = +0.00987  perm=[-0.12129,0.12814]  p=0.8518  —
+  Commander: ΔM1(near−far) = +0.03314  perm=[-0.12513,0.12088]  p=0.5142  —
+      SEVEM: ΔM1(near−far) = +0.01173  perm=[-0.12374,0.12374]  p=0.8308  —
+  [XX ] E1 CMB M1 split 顯著（SMICA） ΔM1=+0.00987
+  [XX ] E2 跨地圖一致性（≥2/3 圖同向顯著） 顯著圖: []
+
+── E3: 88 透明邊端點 frustration_neighbors 總和 ──
+  端點挫阻負擔: near=1.977 far=1.841 Δ=+0.136  perm=[-0.455,0.455]  —
+  [XX ] E3 端點挫阻負擔 split 顯著 Δ=+0.136
+
+── E4: 透明邊短/長分類（O223: (△,□)短 60/(⬠,□)長 60）──
+  透明邊短/長: short=40 long=48（期望 88 全為 26.09/26.17 級）
+  近挫阻組: short=40/44, 遠挫阻組: short=0/44
+  Δshort ratio = +0.9091  perm=[-0.2727,0.2727]  ★
+  [PASS] E4 短/長比例 split 顯著 Δ=+0.9091
+
+RESULT: 1/4 checks passed

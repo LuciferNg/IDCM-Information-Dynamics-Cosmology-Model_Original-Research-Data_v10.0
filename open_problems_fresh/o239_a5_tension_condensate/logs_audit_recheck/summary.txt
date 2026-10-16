@@ -1,0 +1,19 @@
+exit=0 01 3/5 checks passed
+exit=0 02 5/5 checks passed
+exit=0 03 1/4 checks passed
+exit=0 04 7/7 checks passed
+exit=0 05 2/4 checks passed
+exit=0 06 2/2 checks passed
+exit=124 07 
+exit=0 08 7/7 checks passed
+exit=0 09 4/6 checks passed
+exit=124 10 
+exit=0 11 2/7 checks passed
+exit=0 12 3/3 checks passed
+exit=0 13 5/5 checks passed
+exit=124 14 
+bash: [588538: 1 (255)] tcsetattr: Inappropriate ioctl for device
+exit=143 15 
+exit=0 16 0/3 checks passed
+exit=0 17 6/7 checks passed
+exit=0 18 4/4 checks passed
