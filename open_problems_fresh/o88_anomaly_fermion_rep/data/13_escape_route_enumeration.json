@@ -1,0 +1,235 @@
+{
+  "script": "13_escape_route_enumeration.py",
+  "version": "v2-two-methods",
+  "date": "2026-10-03",
+  "purpose": "首輪兩個未驗證斷言之真算：(A) 逃生路線完整枚舉 (B) 封閉代數普查",
+  "deprecated": "v1_prerun 曾憑記憶寫 15⊗15 分解 ⟹ 廢棄（logs/13_escape_route_enumeration.v1_prerun.py, sha 開頭 bed6f6dfcc9689af）",
+  "methods": {
+    "Lambda_k": "⊕_{λ⊢k} S_λ(4) ⊗ S_{λ'}(3)  = Λ^k(12)",
+    "Sym_k": "⊕_{λ⊢k} S_λ(4) ⊗ S_λ(3)   = Sym^k(12)",
+    "indep_1": "SU(3)⊗U(1) 直接分裂（3⊗3 = 3̄⊕6）",
+    "indep_2": "SSYT 權重多集 + 最高權重減去法（GL4 張量積）"
+  },
+  "dimension_conservation_violations": [],
+  "escape_route_k_sets": {
+    "Lambda": [
+      2,
+      6,
+      10
+    ],
+    "Sym": [
+      2,
+      6,
+      10
+    ]
+  },
+  "claim_A_verified": {
+    "Lambda6": [
+      {
+        "lambda": "(3, 2, 1)",
+        "dim_su4": 64,
+        "mu": "(3, 2, 1)",
+        "dim_su3": 8,
+        "qualifying": true
+      },
+      {
+        "lambda": "(3, 1, 1, 1)",
+        "dim_su4": 10,
+        "mu": "(4, 1, 1)",
+        "dim_su3": 10,
+        "qualifying": true
+      },
+      {
+        "lambda": "(2, 2, 2)",
+        "dim_su4": 10,
+        "mu": "(3, 3)",
+        "dim_su3": 10,
+        "qualifying": true
+      },
+      {
+        "lambda": "(2, 2, 1, 1)",
+        "dim_su4": 6,
+        "mu": "(4, 2)",
+        "dim_su3": 27,
+        "qualifying": true
+      }
+    ],
+    "Sym6": [
+      {
+        "lambda": "(4, 1, 1)",
+        "dim_su4": 70,
+        "mu": "(4, 1, 1)",
+        "dim_su3": 10,
+        "qualifying": true
+      },
+      {
+        "lambda": "(3, 2, 1)",
+        "dim_su4": 64,
+        "mu": "(3, 2, 1)",
+        "dim_su3": 8,
+        "qualifying": true
+      },
+      {
+        "lambda": "(2, 2, 2)",
+        "dim_su4": 10,
+        "mu": "(2, 2, 2)",
+        "dim_su3": 1,
+        "qualifying": true
+      }
+    ]
+  },
+  "adjoint_side_by_computation": {
+    "15 ⊗ 15": {
+      "decomposition": {
+        "(2, 2, 2, 2)": 1,
+        "(3, 2, 2, 1)": 2,
+        "(3, 3, 1, 1)": 1,
+        "(3, 3, 2)": 1,
+        "(4, 2, 1, 1)": 1,
+        "(4, 2, 2)": 1
+      },
+      "total_dim": 225,
+      "qualifying_components": [],
+      "expect_qualifying": false
+    },
+    "15 ⊗ 15̄": {
+      "decomposition": {
+        "(2, 2, 2, 1)": 1,
+        "(3, 2, 1, 1)": 1,
+        "(3, 2, 2)": 1
+      },
+      "total_dim": 60,
+      "qualifying_components": [],
+      "expect_qualifying": false
+    },
+    "15 ⊗ 4": {
+      "decomposition": {
+        "(2, 1, 1, 1)": 1,
+        "(2, 2, 1)": 1,
+        "(3, 1, 1)": 1
+      },
+      "total_dim": 60,
+      "qualifying_components": [],
+      "expect_qualifying": false
+    },
+    "15 ⊗ 4̄": {
+      "decomposition": {
+        "(2, 2, 2, 1)": 1,
+        "(3, 2, 1, 1)": 1,
+        "(3, 2, 2)": 1
+      },
+      "total_dim": 60,
+      "qualifying_components": [],
+      "expect_qualifying": false
+    },
+    "4 ⊗ 4": {
+      "decomposition": {
+        "(1, 1)": 1,
+        "(2,)": 1
+      },
+      "total_dim": 16,
+      "qualifying_components": [
+        "(2,)",
+        "(1, 1)"
+      ],
+      "expect_qualifying": true
+    },
+    "4̄ ⊗ 4̄": {
+      "decomposition": {
+        "(2, 2, 1, 1)": 1,
+        "(2, 2, 2)": 1
+      },
+      "total_dim": 16,
+      "qualifying_components": [
+        "(2, 2, 2)",
+        "(2, 2, 1, 1)"
+      ],
+      "expect_qualifying": true
+    },
+    "4 ⊗ 4̄": {
+      "decomposition": {
+        "(1, 1, 1, 1)": 1,
+        "(2, 1, 1)": 1
+      },
+      "total_dim": 16,
+      "qualifying_components": [],
+      "expect_qualifying": false
+    }
+  },
+  "closed_algebra_finding": {
+    "verdict": "REFUTED —— 首輪『封閉組合生唔出合格載體』為假（限 fundamental⊗fundamental 一支）",
+    "witness": "4 ⊗ 4 = Λ²(4) ⊕ Sym²(4) = 6 ⊕ 10；6 與 10 皆為合格 SU(4) irrep",
+    "colour_level": "3_{1/3} ⊗ 3_{1/3} = 3̄_{2/3} ⊕ 6_{2/3}（9 = 3+6）",
+    "adjoint_side_ok": "15⊗15、15⊗4、15⊗4̄ 之合格分量真算 = 無 ⟹ adjoint-only 封閉性成立（首輪此部分正確）",
+    "locus_of_error": "由『elementary 場清單』跳到『全算子空間』= non sequitur"
+  },
+  "applicability_rewrite": {
+    "elementary_sector": "無 renormalizable（dim ≤ 4）ΔB=1 耦合 ✓ 已證（維持）",
+    "operator_sector": "dim ≥ 5 通道存在（未排除）🟡",
+    "sufficient_conditions_for_tau_p_infinity": [
+      "禁止 φφ 型算子（≥2 fundamentals）",
+      "合格複合算子之 Wilson 係數結構性為 0（需推導）",
+      "判據被更強結構取代（算子層選擇定則）"
+    ]
+  },
+  "impact": {
+    "maintained": [
+      "PD#1 gauge support",
+      "PD#2/#3 表示論結論",
+      "PD#4 判據修正",
+      "逃生路線最小 66/78 + 完整規格",
+      "九路線逐條充分性 + 零外部接觸 6 條",
+      "docs/11 之 E1／E2 裁定"
+    ],
+    "corrected": [
+      "docs/10 §7 封閉性",
+      "docs/11 §5 第 5 項措辭",
+      "τ_p=∞ 之範圍"
+    ],
+    "new_open_problem": "框架是否禁止/壓制由 ≥2 fundamentals 組成之 gauge-invariant 算子？"
+  },
+  "checks": [
+    {
+      "id": "S1  ★ SSYT 機械自檢：權重總數 = hook 維數（7 個 rep）＋ 6 個已知分解（GL 標籤）",
+      "pass": true,
+      "detail": "sanity=[('(1,)', '(1, 1, 1)', True), ('(1,)', '(1,)', True), ('(2, 1, 1)', '(1,)', True), ('(2, 1, 1)', '(1, 1, 1)', True), ('(2, 1, 1)', '(2, 1, 1)', True), ('(2, 1, 1)', '(1, 1, 1, 1)', True)]"
+    },
+    {
+      "id": "S2  ★ 維數守恆（Λ^k = C(12,k)；Sym^k = C(12+k−1,k)）：k = 2..12 違例 = 0",
+      "pass": true,
+      "detail": "dimfail=[]"
+    },
+    {
+      "id": "S3  ★ 首輪斷言核實：`Λ⁶(12)` 與 `Sym⁶(12)` 皆含合格分量（λ = (3,2,1)，dim 64；μ = adjoint 8）",
+      "pass": true,
+      "detail": "Λ⁶ λ=['(3, 2, 1)', '(3, 1, 1, 1)', '(2, 2, 2)', '(2, 2, 1, 1)'] ; Sym⁶ λ=['(4, 1, 1)', '(3, 2, 1)', '(2, 2, 2)']"
+    },
+    {
+      "id": "S4  ★★ 逃生路線完整規格已建立（唔再係「最小 + 例」）",
+      "pass": true,
+      "detail": "Λ=[2, 6, 10] ; Sym=[2, 6, 10]"
+    },
+    {
+      "id": "S5  ★★★ 【否證】`4 ⊗ 4 = Λ²(4) ⊕ Sym²(4) = 6 ⊕ 10`，且 `6`／`10` 皆合格 ⟹ 首輪「封閉組合生唔出合格載體」為**假**",
+      "pass": true,
+      "detail": "6 合格=True ; 10 合格=True"
+    },
+    {
+      "id": "S6  ★★ 機械②真算（7 案）：含 adjoint 之案（4）全部**無**合格分量 ✓（首輪此部分正確）；fundamental⊗fundamental 之案（2）**有**合格分量 ⟹ 首輪遺漏確認 ✗",
+      "pass": true,
+      "detail": "逐案: 15 ⊗ 15→無 ; 15 ⊗ 15̄→無 ; 15 ⊗ 4→無 ; 15 ⊗ 4̄→無 ; 4 ⊗ 4→['(2,)', '(1, 1)'] ; 4̄ ⊗ 4̄→['(2, 2, 2)', '(2, 2, 1, 1)'] ; 4 ⊗ 4̄→無"
+    },
+    {
+      "id": "S7  ★ 適用域改寫：原「τ_p = ∞（結構判定）」→ (i) elementary ✓ 已證＋(ii) 算子扇區 🟡 未排除",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S8  ★ 影響逐項分離（6 項維持 / 3 項修正 / 1 項新開放問題）",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 8,
+  "n_total": 8
+}

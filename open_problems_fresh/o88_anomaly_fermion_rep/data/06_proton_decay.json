@@ -1,0 +1,128 @@
+{
+  "task": "O88/proton-decay",
+  "formula_source": "arXiv:2401.16907 eq.(4.47) (Dorsner et al.)",
+  "formula": "Gamma(p->pi0 e+) = (mp^2-mpi^2)^2/mp^3 * (pi/2) * A_L^2 * alpha_GUT^2/M_GUT^4 * |c * <pi0|(ud)_L u_L|p>|^2",
+  "structural_inputs": {
+    "M_Planck_GeV": 1.2209e+19,
+    "gamma1": 0.0050957708,
+    "M_GUT_GeV": 6.22142656972e+16,
+    "alpha_GUT_inv": 47,
+    "source": "O89 (46/46)"
+  },
+  "external_inputs": {
+    "alpha_H_GeV2": 0.134,
+    "A_L": 1.4,
+    "status": "🔴 外部 QCD／重整化輸入，非 IDCM 結構"
+  },
+  "leptoquark_count": {
+    "N_LQ": 48,
+    "colour_octet": 64,
+    "colour_singlet": 8,
+    "total_step1_broken": 120,
+    "coset_total": 131
+  },
+  "prediction_yr": {
+    "single_channel": 1.3876348794147362e+40,
+    "all_48_incoherent": 2.8909059987807002e+38
+  },
+  "experiment": {
+    "SuperK_bound_yr": 2.4e+34,
+    "HyperK_10yr_yr": 1e+35
+  },
+  "v9_legacy": {
+    "M_X_GeV": 1.96e+16,
+    "tau_yr": 6.1e+34,
+    "reproducible": false,
+    "standard_formula_at_v9_MX_single_channel_yr": 1.3669089109709439e+38,
+    "standard_formula_at_v9_MX_48_channel_yr": 2.847726897856133e+36,
+    "claim_over_standard_ratio": 0.00044626236254960417,
+    "verdict": "唔能由標準 dimension-6 gauge boson 公式用 v9 自己 M_X 重現"
+  },
+  "falsifiability_verdict": {
+    "hyperK_10yr_reach_yr": 1e+35,
+    "prediction_lower_bound_yr": 2.8909059987807002e+38,
+    "within_hyperK_reach": false,
+    "statement": "v9『在 Hyper-K 靈敏度範圍內』唔成立；v10 預言超出 Hyper-K 10yr"
+  },
+  "tests": [
+    {
+      "tag": "P1",
+      "claim": "M_GUT = M_Pl·γ₁",
+      "got": "6.22142656972e+16",
+      "want": "6.22142656972e+16",
+      "pass": true
+    },
+    {
+      "tag": "P2",
+      "claim": "O89 記錄 M_GUT = 6.2214e16 GeV",
+      "got": "1.0000042706979138",
+      "want": "1.0",
+      "pass": true
+    },
+    {
+      "tag": "S1",
+      "claim": "(15,8) = 15×8 = 120",
+      "got": "120",
+      "want": "120",
+      "pass": true
+    },
+    {
+      "tag": "S2",
+      "claim": "15+8+120 = 143 = dim SU(12)",
+      "got": "143",
+      "want": "143",
+      "pass": true
+    },
+    {
+      "tag": "S3",
+      "claim": "120 + (23−12) = 131 = 143 − 12",
+      "got": "131",
+      "want": "131",
+      "pass": true
+    },
+    {
+      "tag": "S4",
+      "claim": "8 + 3 + 3 + 1 = 15",
+      "got": "15",
+      "want": "15",
+      "pass": true
+    },
+    {
+      "tag": "S5",
+      "claim": "64 + 48 + 8 = 120",
+      "got": "120",
+      "want": "120",
+      "pass": true
+    },
+    {
+      "tag": "S6",
+      "claim": "N_LQ = 6 × 8 = 48",
+      "got": "48",
+      "want": "48",
+      "pass": true
+    },
+    {
+      "tag": "C1",
+      "claim": "minimal SU(5) 校準: τ(1e15,1/40) ∈ (1e31,1e35) yr ⟹ 吻合『已被排除』",
+      "got": "1.0",
+      "want": "1.0",
+      "pass": true
+    },
+    {
+      "tag": "V1",
+      "claim": "v9 宣稱 τ_p 與標準 dimension-6 公式一致（比值 ∈ [0.5, 2]）",
+      "got": "0.0",
+      "want": "1.0",
+      "pass": false
+    },
+    {
+      "tag": "V1c",
+      "claim": "★發現：v9 宣稱與標準公式**唔一致**（比值 < 0.5 或 > 2）",
+      "got": "1.0",
+      "want": "1.0",
+      "pass": true
+    }
+  ],
+  "passed": 10,
+  "total": 11
+}

@@ -1,0 +1,41 @@
+=== S1. adjoint 143 = 12⊗12̄ − 1 分解 ===
+✅ 12⊗12̄ 維數 = 144: got=144 expected=144
+✅ 143 = 144 − 1（adjoint）: got=143 expected=143
+✅ 色-弱交叉塊維數 = 12（(3,2̄)+(3̄,2)）: got=12 expected=12
+
+=== S2. X/Y 來源塊 ＋ 結構量子數 ===
+✅ Y(X) = −1/3 − 1/2 = −5/6: got=-5/6 expected=-5/6
+✅ Y(Y) = +1/2 + 1/3 = +5/6: got=5/6 expected=5/6
+✅ ΔB(X) = +1/3: got=1/3 expected=1/3
+✅ ΔB(Y) = −1/3: got=-1/3 expected=-1/3
+  ⟹ Y/X 電荷（Q = T₃ + Y；T₃(2̄) = ∓1/2）
+✅ Q(X) = {−1/3, −4/3}: got=[Fraction(-4, 3), Fraction(-1, 3)] expected=[Fraction(-4, 3), Fraction(-1, 3)]
+✅ Q(Y) = {+4/3, +1/3}: got=[Fraction(1, 3), Fraction(4, 3)] expected=[Fraction(1, 3), Fraction(4, 3)]
+  X(3,2̄): Q ∈ {-1/3, -4/3}   Y(3̄,2): Q ∈ {4/3, 1/3}
+
+=== S3. 結構量子數與 7 個單態 y_i 無關 ===
+  X = (3,1)⊗(1,2̄)：兩塊都唔含 (1,1) ⟹ y_i 無貢獻 ✓
+  Y = (1,2)⊗(3̄,1)：同上 ✓
+✅ X/Y 之 B、Y、Q 全部由 embedding 決定（零 y_i 單態）: got=True expected=True
+
+=== S4. 標準 SU(5) X/Y（(3,2)_{+5/6} + c.c.）對照 ===
+✅ SU(5) X(3,2): Q = {4/3, 1/3}: got=[Fraction(1, 3), Fraction(4, 3)] expected=[Fraction(1, 3), Fraction(4, 3)]
+✅ SU(5) Y(3̄,2): Q = {−2/3, +1/3}: got=[Fraction(-2, 3), Fraction(1, 3)] expected=[Fraction(-2, 3), Fraction(1, 3)]
+  新鏈 X(3,2̄): Q = {−1/3, −4/3}（與 SU(5) X 無重疊）
+  新鏈 Y(3̄,2): Q = {+1/3, +4/3} = **SU(5) X 電荷譜**（leptoquark 特徵）
+  ⟹ 新鏈 X/Y 電荷譜 ≠ SU(5)；角色錯位：新鏈 Y 承載 SU(5) X 之電荷譜
+
+=== S5. ΔB=1 過程：最小 X/Y 交換數 ===
+✅ 3X + 0Y: ΔB = +1: got=1 expected=1
+✅ 2X + 1Y: ΔB = +1/3: got=1/3 expected=1/3
+✅ 1X + 2Y: ΔB = −1/3: got=-1/3 expected=-1/3
+✅ 0X + 3Y: ΔB = −1: got=-1 expected=-1
+  ⟹ ΔB=1 之最低階 = 3 個 X/Y 交換（正負都係 3 個）
+
+=== S6. 裁定：X/Y 結構層 ===
+  ✅ B、Y、Q 量子數完整（零 y_i 依賴）⟹ 12 個 X/Y 態身份確定
+  🟡 質量標度/耦合強度：需標度譜（O85）＋ y_i（O85）
+  🟡 ΔB=1 振幅：3 X/Y 階 + Wilson 係數（跨 O O81）
+
+===== PASS=16 FAIL=0 =====
+data/20_xy_structure.json written

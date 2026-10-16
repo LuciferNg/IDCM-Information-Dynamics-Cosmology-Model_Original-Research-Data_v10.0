@@ -1,0 +1,86 @@
+{
+  "script": "10_pd3_rigidity.py",
+  "version": "v1",
+  "date": "2026-10-02",
+  "purpose": "PD #2 判定之結構剛性測試（Hard Test ④ 擾動測試）",
+  "criterion": "DeltaB=1 需 colour (anti)triplet ∧ |B-L| = 2/3 ⟹ 需 SU(4) 6 或 10 分量",
+  "su4_irreps_qualified": [
+    "6",
+    "10"
+  ],
+  "recorded_scalar_set_db1_count": 0,
+  "minimal_escape_reps": [
+    [
+      66,
+      "Λ^10(12)"
+    ],
+    [
+      66,
+      "Λ^2(12)"
+    ],
+    [
+      78,
+      "Sym^2(12)"
+    ],
+    [
+      924,
+      "Λ^6(12)"
+    ]
+  ],
+  "fundamental_vev_triplet_BL": "1/3 (12) / -1/3 (12bar) — 仍無 DeltaB=1",
+  "verdict": "判定對 T1 之修正剛性；逃生路線 = 加入 66 或 78",
+  "checks": [
+    {
+      "id": "S1  ★ 判據完備: 含 |B−L| = 2/3 (反)三重態之 SU(4) irrep 恰為 {6, 10}",
+      "pass": true,
+      "detail": "got ['6', '10']"
+    },
+    {
+      "id": "S2  ★ 記錄之 scalar 集合冇任何 SU(4) 6/10 ⟹ 0 個 ΔB=1（PD #2 判定重現）",
+      "pass": true,
+      "detail": "count=0"
+    },
+    {
+      "id": "S2b ★ 與 scripts/08 §S23 之普查一致（k ≤ 6 之四項，含 dim 12376 之 Sym⁶）",
+      "pass": true,
+      "detail": "k≤6 = ['Sym^2(12)', 'Sym^6(12)', 'Λ^2(12)', 'Λ^6(12)'] ; 全清單(k≤11) = ['Λ^10(12)', 'Λ^2(12)', 'Sym^2(12)', 'Λ^6(12)']"
+    },
+    {
+      "id": "S3  ★ 最小含 SU(4) 6/10 之 scalar dim = 66（= Λ² 及其共軛 Λ¹⁰）",
+      "pass": true,
+      "detail": "dim66=['Λ^10(12)', 'Λ^2(12)'] ; 次小=[(66, 'Λ^2(12)'), (78, 'Sym^2(12)')]"
+    },
+    {
+      "id": "S3b ★ 66 之共軛 Λ¹⁰(12) 亦合格（Λ¹⁰ ≅ Λ²*，66 為實表示）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S4  ★ 66 = 2·K_tree（IDCM 既有結構數，逃生路線非 exotic）",
+      "pass": true,
+      "detail": "2 x 33 = 66"
+    },
+    {
+      "id": "S5  ★★ fundamental VEV 之色三重態 |B−L| = 1/3 ≠ 2/3 ⟹ 仍無 ΔB=1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S6  ★★ 12bar 同理 ⟹ fundamental 擾動下判定不塌",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S7  ★★ 剛性聲明: 判定對 T1 之修正剛性（依賴唯一條件，該條件在 fundamental/adjoint 下皆成立）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S8  ★ 逃生路線精確: 需 66 或 78，N_{ΔB=1} = 9",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 10,
+  "n_total": 10
+}

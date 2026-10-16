@@ -1,0 +1,60 @@
+{
+  "N": 12,
+  "reps": {
+    "12": {
+      "dim": 12,
+      "A": 1
+    },
+    "12\u0304": {
+      "dim": 12,
+      "A": -1
+    },
+    "143": {
+      "dim": 143,
+      "A": 0
+    },
+    "66": {
+      "dim": 66,
+      "A": 8
+    },
+    "78": {
+      "dim": 78,
+      "A": 16
+    },
+    "220": {
+      "dim": 220,
+      "A": 27
+    },
+    "495": {
+      "dim": 495,
+      "A": 18
+    },
+    "792": {
+      "dim": 792,
+      "A": -14
+    },
+    "924": {
+      "dim": 924,
+      "A": 0
+    }
+  },
+  "tensor_product_checks": {
+    "12x12_to_66_and_78": {
+      "A_12x12": 24,
+      "A_66_plus_78": 24,
+      "pass": true
+    },
+    "12x12bar_to_1_and_143": {
+      "A_12x12bar": 0,
+      "pass": true
+    }
+  },
+  "recommended_combination": {
+    "name": "3\u00d7(12\u229512\u0304)",
+    "total_dim": 72,
+    "total_A": 0,
+    "anomaly_free": true,
+    "idcm_connection": "36 = 3\u00d712 = h11 = K_tree + N_gen = 33+3"
+  },
+  "anomaly_free_combos_found": 78
+}

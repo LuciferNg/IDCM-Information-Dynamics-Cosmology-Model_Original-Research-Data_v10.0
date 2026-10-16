@@ -1,0 +1,284 @@
+{
+  "script": "08_pd2_scalar_sector.py",
+  "version": "v1",
+  "date": "2026-10-02",
+  "purpose": "O88/PD #2 — Scalar 扇區之 DeltaB=1 算子",
+  "su4_bl_decomp": {
+    "4": {
+      "1/3": 3,
+      "-1": 1
+    },
+    "4bar": {
+      "-1/3": 3,
+      "1": 1
+    },
+    "6=Λ²(4)": {
+      "2/3": 3,
+      "-2/3": 3
+    },
+    "10=Sym²(4)": {
+      "2/3": 6,
+      "-2": 1,
+      "-2/3": 3
+    },
+    "20=Sym³(4)": {
+      "1": 18,
+      "-1/3": 15,
+      "-5/3": 6,
+      "-3": 1
+    }
+  },
+  "su4_adjoint_bl": {
+    "0": 9,
+    "4/3": 3,
+    "-4/3": 3
+  },
+  "end12_decomp": "(1,1)+(1,8)+(15,1)+(15,8) = 144",
+  "adjoint143": "(1,8)+(15,1)+(15,8) = 143 — no (1,1)",
+  "commutant_dim_real": 1,
+  "stabilizer_dim23_partitions": [
+    [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  ],
+  "no_11_in_alt_sym": [],
+  "higgs_content_db1_count": 0,
+  "verdict": "記錄框架內無 DeltaB=1 算子 ⟹ 質子絕對穩定（renormalizable level）",
+  "minimal_scalar_source_if_added": "Lambda^2(12)=66 或 Sym^2(12)=78",
+  "N_deltaB1_new": 9,
+  "gravity_dim6_tau_yr": 6.373126164389207e+44,
+  "checks": [
+    {
+      "id": "S1  B-L(quark) = 1/3 (×3), B-L(lepton) = -1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S2  ★ (qq) B-L = 2/3 = (qbar lbar) B-L",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S3  ★ (qbar qbar) B-L = -2/3 = (q l) B-L",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S4  ★ 6 = Λ²(4) = 3bar_{2/3} (+) 3_{-2/3}",
+      "pass": true,
+      "detail": "got={'2/3': 3, '-2/3': 3}"
+    },
+    {
+      "id": "S5  ★ 10 = Sym²(4) = 6_{2/3} (+) 3_{-2/3} (+) 1_{-2}",
+      "pass": true,
+      "detail": "got={'2/3': 6, '-2': 1, '-2/3': 3}"
+    },
+    {
+      "id": "S6  ★ 15 = Adj(4) = 8_0 (+) 3_{4/3} (+) 3bar_{-4/3} (+) 1_0",
+      "pass": true,
+      "detail": "got={'0': 9, '4/3': 3, '-4/3': 3}"
+    },
+    {
+      "id": "S7  ★ 6 = Λ²(4) 含 3bar_{2/3} ⟹ 具 ΔB=1 資格",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S8  ★ 10 = Sym²(4) 含 3_{-2/3} ⟹ 具 ΔB=1 資格",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S9  ★★ 15 = Adj(4) 之三重態 |B−L| = 4/3 ≠ 2/3 ⟹ **冇** ΔB=1 資格",
+      "pass": true,
+      "detail": "triplets=['0', '4/3', '-4/3']"
+    },
+    {
+      "id": "S10 ★ 20 = Sym³(4) 之三重態 |B−L| = 5/3 ≠ 2/3 ⟹ **冇** ΔB=1 資格",
+      "pass": true,
+      "detail": "triplets=['1', '-1/3', '-5/3']"
+    },
+    {
+      "id": "S11 ★ 4 / 4bar（基本表示）冇色三重態 ⟹ 冇 ΔB=1 資格",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S12 ★ End(12) = (1,1)+(1,8)+(15,1)+(15,8), dim 144",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S13 ★★ 143 = (1,8)+(15,1)+(15,8) — **無 (1,1)**",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S14 ★★ su(4)⊕su(3)_tensor 喺 End(12) 之 commutant = C·1（維數 1）",
+      "pass": true,
+      "detail": "nullity=1"
+    },
+    {
+      "id": "S15 ★★ 定理: su(4)⊕su(3)_tensor 唔可能係 unbroken algebra",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S26 ★ 陽性對照: SU(5) 之 commutant 維數 = 2 ⟹ SU(5)→SU(3)×SU(2)×U(1) **可以**",
+      "pass": true,
+      "detail": "nu5=2"
+    },
+    {
+      "id": "S27 ★★ 對比: SU(12) 之 12=(4,3) 為單一不可約分量（commutant 1）vs SU(5) 之 5=3⊕2（2 分量）",
+      "pass": true,
+      "detail": "nu=1 nu5=2"
+    },
+    {
+      "id": "S16 ★ 存在重數組合使 coset = 120（計數可匹配）",
+      "pass": true,
+      "detail": "partitions=[[4, 1, 1, 1, 1, 1, 1, 1, 1], [3, 3, 1, 1, 1, 1, 1, 1], [3, 2, 2, 2, 1, 1, 1], [2, 2, 2, 2, 2, 2]]"
+    },
+    {
+      "id": "S17b ★ rank 差 6 個 U(1) —— 但 u(1)^6 亦唔可能（centralizer 為 0）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S17 ★★ Adjoint VEV 保秩（rank=11）⟹ 唔可能給 rank 5 之 SU(4)×SU(3)",
+      "pass": true,
+      "detail": "rank_stab=11, rank_SU4xSU3=5"
+    },
+    {
+      "id": "dim (1,)",
+      "pass": true,
+      "detail": "12 vs 12"
+    },
+    {
+      "id": "dim (1, 1)",
+      "pass": true,
+      "detail": "66 vs 66"
+    },
+    {
+      "id": "dim (2,)",
+      "pass": true,
+      "detail": "78 vs 78"
+    },
+    {
+      "id": "dim (1, 1, 1)",
+      "pass": true,
+      "detail": "220 vs 220"
+    },
+    {
+      "id": "dim (1, 1, 1, 1)",
+      "pass": true,
+      "detail": "495 vs 495"
+    },
+    {
+      "id": "dim (1, 1, 1, 1, 1)",
+      "pass": true,
+      "detail": "792 vs 792"
+    },
+    {
+      "id": "dim (2, 1)",
+      "pass": true,
+      "detail": "572 vs 572"
+    },
+    {
+      "id": "S18 hook formula 引擎正確（7 個 SU(12) 維數）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "Λ^2(12) dim sum = 66",
+      "pass": true,
+      "detail": "got 66, expect 66"
+    },
+    {
+      "id": "Sym^2(12) dim sum = 78",
+      "pass": true,
+      "detail": "got 78, expect 78"
+    },
+    {
+      "id": "Λ^3(12) dim sum = 220",
+      "pass": true,
+      "detail": "got 220, expect 220"
+    },
+    {
+      "id": "Λ^4(12) dim sum = 495",
+      "pass": true,
+      "detail": "got 495, expect 495"
+    },
+    {
+      "id": "S19 ★ Λ^k / Sym^k 維數和 = C(12,k) / C(11+k,k)（引擎自洽）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S20 ★★ Λ^k / Sym^k（k=1..11）全部冇 (1,1) 分量",
+      "pass": true,
+      "detail": "ones=[]"
+    },
+    {
+      "id": "S21 ★★ 記錄之 4 個 Higgs 全部冇 ΔB=1 標量",
+      "pass": true,
+      "detail": "count=0"
+    },
+    {
+      "id": "S22 ★★ 判定: 記錄框架內質子絕對穩定（τ_p = ∞，renormalizable level）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S23 ★ 最小含 SU(4) 6 或 10 之 SU(12) scalar = Λ²(12)=66 與 Sym²(12)=78",
+      "pass": true,
+      "detail": "candidates=['Λ^2(12)', 'Sym^2(12)', 'Λ^6(12)', 'Sym^6(12)']"
+    },
+    {
+      "id": "S24 ★ N_{ΔB=1} = 9 ≠ 48（取代 docs/04 之 48）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S25 ★ 重力壓低 τ_p ~ 1e45 yr ⟹ 遠超任何實驗（≫ Hyper-K 1e35）",
+      "pass": true,
+      "detail": "tau=6.373e+44 yr"
+    }
+  ],
+  "n_pass": 39,
+  "n_total": 39
+}

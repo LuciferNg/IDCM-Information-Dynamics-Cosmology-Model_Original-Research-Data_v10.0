@@ -1,0 +1,64 @@
+=== S1. adjoint 143 喺 S(U(3)×U(2)×U(1)⁷) 下之分解 ===
+✅ 塊內 dim = 8+3+7+1 = 19（docs/01: dim 19）: got=19 expected=19
+✅ 跨塊 dim = 12+42+28+42 = 124: got=124 expected=124
+✅ 19 + 124 = 143（adjoint 全維）: got=143 expected=143
+✅ ★ X/Y = 3×2×2 = 12（色×弱×正反）（O85 docs/04 §D）: got=12 expected=12
+✅ 143 = dim SU(12) = 12²−1: got=143 expected=143
+✅ 9 模式元素數 = 9 = N_gen²: got=9 expected=9
+✅ 36 通道 = C(9,2) = h11: got=36 expected=36
+
+=== S2. Λ^k(12) 新鏈分解（12 = (3,1) ⊕ (1,2) ⊕ 7×(1,1)） ===
+ k |  C(12,k) | 分解總維 (Σ 3^a·2^p·C(7,k−a−p))
+✅ Λ^0(12): 分解和 = C(12,0): got=1 expected=1
+✅ Λ^1(12): 分解和 = C(12,1): got=12 expected=12
+✅ Λ^2(12): 分解和 = C(12,2): got=66 expected=66
+✅ Λ^3(12): 分解和 = C(12,3): got=220 expected=220
+✅ Λ^4(12): 分解和 = C(12,4): got=495 expected=495
+✅ Λ^5(12): 分解和 = C(12,5): got=792 expected=792
+✅ Λ^6(12): 分解和 = C(12,6): got=924 expected=924
+✅ Λ^7(12): 分解和 = C(12,7): got=792 expected=792
+✅ Λ^8(12): 分解和 = C(12,8): got=495 expected=495
+✅ Λ^9(12): 分解和 = C(12,9): got=220 expected=220
+✅ Λ^10(12): 分解和 = C(12,10): got=66 expected=66
+✅ Λ^11(12): 分解和 = C(12,11): got=12 expected=12
+✅ Λ^12(12): 分解和 = C(12,12): got=1 expected=1
+
+=== S3. Λ^k(12) 中帶色分量（a=1 → 3；a=2 → 3̄）統計 ===
+  k= 0: 帶色分量維數 = 0
+  k= 1: 帶色分量維數 = 3
+  k= 2: 帶色分量維數 = 30
+  k= 3: 帶色分量維數 = 135
+  k= 4: 帶色分量維數 = 360
+  k= 6: 帶色分量維數 = 756
+  k=10: 帶色分量維數 = 30
+  k=12: 帶色分量維數 = 0
+✅ k=1: (3,1) 色分量存在（新鏈 fundamental 帶色）: got=3 expected=3
+✅ k=3: Λ³(3)=1 ⟹ 3 個色 fundamental 可組成 colour singlet: got=1 expected=1
+
+=== S4. 新鏈超荷指派：Y(色 fundamental)=a, Y(弱 fundamental)=b ===
+✅ Y(Q_L = a+b) = 1/6 == SM 觀測 1/6: got=1/6 expected=1/6
+✅ Y(u^c = 2a) = -2/3 == SM 觀測 -2/3: got=-2/3 expected=-2/3
+✅ Y(d^c = −a) = 1/3 == SM 觀測 1/3: got=1/3 expected=1/3
+✅ Y(L_L = −b) = -1/2 == SM 觀測 -1/2: got=-1/2 expected=-1/2
+✅ Y(e^c = 2b) = 1 == SM 觀測 1: got=1 expected=1
+✅ Y(ν^c = 0) = 0 == SM 觀測 0: got=0 expected=0
+✅ Y 色:弱 比例 = a:b = −2:3 == H(2,−3) 方向: got=-2/3 expected=-2/3
+✅ H 方向 色:弱 = 2:−3: got=-2/3 expected=-2/3
+
+=== S5. B 數方向審查：B ∝ diag(1/3·I₃, 0, …) 是否喺 U(1)⁸？ ===
+✅ B 之 α（由弱）= 0: got=0 expected=0
+✅ B 之 α（由色）= 1/6 ≠ 0 ⟹ 矛盾: got=1/6 expected=1/6
+✅ ★ B 唔喺 U(1)⁸ 空間（α 矛盾）: got=False expected=False
+✅ X/Y 單個 ΔB = 1/3（色 1/3 − 弱 0）: got=1/3 expected=1/3
+✅ 3 個色 X/Y 合成 ΔB = 1: got=1 expected=1
+✅ X/Y 數 = 3 色 × 2 弱 × 2（正反）= 12: got=12 expected=12
+
+=== S6. ΔB=1 判據：舊鏈 vs 新鏈 ===
+  colour 載體: 舊鏈 SU(4) 6/10（Λ²(4)=6⊕10） ｜ 新鏈 (3,1) 色 fundamental（12 直接）+ 複合 3̄
+  B / B−L 來源: 舊鏈 SU(4)_PS：4 = 3⊕1 ⟹ B−L ｜ 新鏈 🔴 無 SU(4) ⟹ B 唔喺 U(1)⁸（本檔 S5 證）
+  媒介玻色子: 舊鏈 48 coset (3,8)+(3̄,8)（PD#1） ｜ 新鏈 X/Y = 12 個 (3,2)+c.c. adjoint 分量
+  ΔB 單體: 舊鏈 max|ΔB| = 2/3 < 1 ⟹ 無 ｜ 新鏈 色-弱交叉 ⟹ ±1/3（3 色合成 1）
+  判據狀態: 舊鏈 🔴 撤（docs/12 §4） ｜ 新鏈 🟡 需 B 算子之外部定義（開放）
+
+===== PASS=36 FAIL=0 =====
+data/16_newchain_db1_judgement.json written

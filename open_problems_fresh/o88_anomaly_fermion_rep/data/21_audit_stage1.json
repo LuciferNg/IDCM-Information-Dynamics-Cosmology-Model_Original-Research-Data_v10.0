@@ -1,0 +1,237 @@
+{
+ "script": "21_audit_stage1",
+ "date": "2026-10-16",
+ "stage": "closeout-audit-1",
+ "pass": 38,
+ "fail": 0,
+ "results": [
+  {
+   "name": "A₃(Λ¹(12)) = 1（歸一）",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "A₃(Λ²(12)) = C(9,1)/C(11,1) = 9/11",
+   "got": "9/11",
+   "expected": "9/11",
+   "ok": true
+  },
+  {
+   "name": "A₃(Λ³(12)) = C(9,2)/C(11,2) = 36/55",
+   "got": "36/55",
+   "expected": "36/55",
+   "ok": true
+  },
+  {
+   "name": "SU(12)³：A(12)+A(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "grav²×SU(12)：A(12)+A(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "dim Λ²(12) = C(12,2) = 66",
+   "got": "66",
+   "expected": "66",
+   "ok": true
+  },
+  {
+   "name": "dim Sym²(12) = C(12+2-1,2) = 78",
+   "got": "78",
+   "expected": "78",
+   "ok": true
+  },
+  {
+   "name": "66+78 = 144 = 12²",
+   "got": "144",
+   "expected": "144",
+   "ok": true
+  },
+  {
+   "name": "Λ²(12) 分解維數守恆 = 66",
+   "got": "66",
+   "expected": "66",
+   "ok": true
+  },
+  {
+   "name": "56 場 + 10 額外 = 66（docs/14 §三）",
+   "got": "66",
+   "expected": "66",
+   "ok": true
+  },
+  {
+   "name": "C1: 框架層 ΔB=1 唔被禁止（T2 假）",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "C2: Wilson 係數超代數層不可達",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "C3: τ_p=∞ 唔可由代數層導出（三條件全閉合）",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "D1: Y(k=5) = 3(−1/3)+2(1/2) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "D2: ΔB = 3/3 = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "D3: dim Λ⁵(12) = C(12,5) = 792",
+   "got": "792",
+   "expected": "792",
+   "ok": true
+  },
+  {
+   "name": "D4: k=5 純分量重數 = C(7,0)·1·1 = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "D5: 舊鏈∩新鏈 = ∅",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "E: χ(1) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "E: χ(3) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "E: χ(3̄) = 2",
+   "got": "2",
+   "expected": "2",
+   "ok": true
+  },
+  {
+   "name": "E: χ(6) = 2",
+   "got": "2",
+   "expected": "2",
+   "ok": true
+  },
+  {
+   "name": "E: χ(6̄) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "E: χ(8) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "E: χ(15) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "E: χ(3)+χ(3̄) = 0 = χ(8⊕1)",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "E: 3 色 χ_total = 3·1 ≡ 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "F1: Y(X) = −5/6",
+   "got": "-5/6",
+   "expected": "-5/6",
+   "ok": true
+  },
+  {
+   "name": "F2: Y(Y) = +5/6",
+   "got": "5/6",
+   "expected": "5/6",
+   "ok": true
+  },
+  {
+   "name": "F3: ΔB(X) = +1/3",
+   "got": "1/3",
+   "expected": "1/3",
+   "ok": true
+  },
+  {
+   "name": "F4: ΔB(Y) = −1/3",
+   "got": "-1/3",
+   "expected": "-1/3",
+   "ok": true
+  },
+  {
+   "name": "F5: Q(X) = {−4/3, −1/3}",
+   "got": "[Fraction(-4, 3), Fraction(-1, 3)]",
+   "expected": "[Fraction(-4, 3), Fraction(-1, 3)]",
+   "ok": true
+  },
+  {
+   "name": "F6: Q(Y) = {+1/3, +4/3}",
+   "got": "[Fraction(1, 3), Fraction(4, 3)]",
+   "expected": "[Fraction(1, 3), Fraction(4, 3)]",
+   "ok": true
+  },
+  {
+   "name": "F7: dim(12⊗12̄) = 144, adjoint = 143",
+   "got": "143",
+   "expected": "143",
+   "ok": true
+  },
+  {
+   "name": "G: y_i=0: ΣY(12)+ΣY(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "G: y_i=1/3: ΣY(12)+ΣY(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "G: y_i=-2/3: ΣY(12)+ΣY(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "G: y_i=7/13: ΣY(12)+ΣY(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  }
+ ]
+}

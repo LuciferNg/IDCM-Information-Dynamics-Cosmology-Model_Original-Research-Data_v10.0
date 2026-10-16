@@ -1,0 +1,257 @@
+{
+  "test_count": 46,
+  "passed": 46,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "[V1] A(12) = 1",
+      "pass": true,
+      "detail": "A(12) = 1"
+    },
+    {
+      "id": "[V1] A(12x) = -1",
+      "pass": true,
+      "detail": "A(12x) = -1"
+    },
+    {
+      "id": "[V1] A(66) = 8",
+      "pass": true,
+      "detail": "A(66) = 8"
+    },
+    {
+      "id": "[V1] A(78) = 16",
+      "pass": true,
+      "detail": "A(78) = 16"
+    },
+    {
+      "id": "[V1] A(143) = 0",
+      "pass": true,
+      "detail": "A(143) = 0"
+    },
+    {
+      "id": "[V1] A(220) = 27",
+      "pass": true,
+      "detail": "A(220) = 27"
+    },
+    {
+      "id": "[V1] A(495) = 18",
+      "pass": true,
+      "detail": "A(495) = 18"
+    },
+    {
+      "id": "[V1] A(792) = -14",
+      "pass": true,
+      "detail": "A(792) = -14"
+    },
+    {
+      "id": "[V1] A(924) = 0",
+      "pass": true,
+      "detail": "A(924) = 0"
+    },
+    {
+      "id": "[V1a] A(12) = 1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V1b] A(12x) = -1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V1c] A(adj) = 0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V1d] A(924) = 0 (self-dual)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V2] A(12x12) = A(66) + A(78)",
+      "pass": true,
+      "detail": "A(12x12)=24, A(66)+A(78)=24"
+    },
+    {
+      "id": "[V3] A(12x12x) = 0",
+      "pass": true,
+      "detail": "A(12x12x)=0"
+    },
+    {
+      "id": "[V4] A(12x66) = 162",
+      "pass": true,
+      "detail": "A(12x66)=162"
+    },
+    {
+      "id": "[V5] 3x(12+12x) anomaly-free",
+      "pass": true,
+      "detail": "A=3x(1)+3x(-1)=0"
+    },
+    {
+      "id": "[V6] dim(3x(12+12x)) = 72",
+      "pass": true,
+      "detail": "dim=72"
+    },
+    {
+      "id": "[V7] dim >= 48 (SM fermion count)",
+      "pass": true,
+      "detail": "dim=72 >= 48"
+    },
+    {
+      "id": "[V8] 2x(12+12x) = 48 also anomaly-free",
+      "pass": true,
+      "detail": "A=0, dim=48"
+    },
+    {
+      "id": "[V9] Adj(143) anomaly-free",
+      "pass": true,
+      "detail": "A(143)=0"
+    },
+    {
+      "id": "[V10] 12+12x+66+66x anomaly-free",
+      "pass": true,
+      "detail": "A=0"
+    },
+    {
+      "id": "[V11] 12 = (4, 3) under SU(4)xSU(3)",
+      "pass": true,
+      "detail": "12 = (4, 3) = B x N_gen = 4 x 3"
+    },
+    {
+      "id": "[V12] 12x = (4x, 3x) under SU(4)xSU(3)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V13] 66 = (6,6) + (10,3x)",
+      "pass": true,
+      "detail": "36 + 30 = 66"
+    },
+    {
+      "id": "[V14] 78 = (10,6) + (6,3x)",
+      "pass": true,
+      "detail": "60 + 18 = 78"
+    },
+    {
+      "id": "[V15] 143 adjoint decomposition",
+      "pass": true,
+      "detail": "15+8+120=143"
+    },
+    {
+      "id": "[V16] 12 gives 9 left quarks + 3 left leptons",
+      "pass": true,
+      "detail": "9+3 = 12 Weyl (left)"
+    },
+    {
+      "id": "[V17] 12x gives 9 right quarks + 3 right leptons",
+      "pass": true,
+      "detail": "9+3 = 12 Weyl (right)"
+    },
+    {
+      "id": "[V18] 3x(12+12x) contains SM 48",
+      "pass": true,
+      "detail": "72 total, 48 SM fermions, 24 extra vector-like pairs"
+    },
+    {
+      "id": "[V19] SM per gen = 16 Weyl",
+      "pass": true,
+      "detail": "sum=16"
+    },
+    {
+      "id": "[V20] 3 gen SM = 48 Weyl",
+      "pass": true,
+      "detail": "3x16=48"
+    },
+    {
+      "id": "[V21] 12 = B x N_gen = 4 x 3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V22] 12 = L_5 + 1 = 11 + 1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V23] 12 = (N_d - 2B)/3 = 12",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V24] 36 = 3 x 12 = h11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V25] h11 = 36 = K_tree + N_gen = 33+3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V26] 72 = 2 x h11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V27] 66 = 2 x K_tree = 2x33",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V28] dim(SU(12)) = 143 = BxK_tree + L_5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "[V29] Grav^2 x SU(12) anomaly auto-cancels with A=0",
+      "pass": true,
+      "detail": "Since sum A(R) = 0, mixed gravitational anomaly also cancels"
+    },
+    {
+      "id": "[V30] SU(12)^3 anomaly cancels: sum A(R)=0",
+      "pass": true,
+      "detail": "3x(+1) + 3x(-1) = 0"
+    },
+    {
+      "id": "[V31] SU(12)^2 x U(1) anomaly auto-cancels",
+      "pass": true,
+      "detail": "12 and 12x have opposite U(1) charges, 3 copies each -> sum=0"
+    },
+    {
+      "id": "[V32] 12 is unique: 12 = B x N_gen = 4 x 3",
+      "pass": true,
+      "detail": "\u552f\u4e00\u6eff\u8db3 12 = 4x3 \u5605 SU(N)"
+    },
+    {
+      "id": "[V33] SU(5) can't embed 3 gen with nu_R",
+      "pass": true,
+      "detail": "SU(5): 5+10=15 per gen, 3x15=45 < 48 (no nu_R)"
+    },
+    {
+      "id": "[V34] SU(12) minimal anomaly-free = 48 (2x(12+12x))",
+      "pass": true,
+      "detail": "dim=48"
+    }
+  ],
+  "recommended_embedding": {
+    "representation": "3x(12+12x)",
+    "total_dim": 72,
+    "anomaly": 0,
+    "sm_fermions": 48,
+    "extra_vector_like": 24,
+    "idcm_connection": "36 = 3x12 = h11 = K_tree + N_gen = 33+3"
+  },
+  "anomaly_coefficients": {
+    "12": 1,
+    "12x": -1,
+    "66": 8,
+    "78": 16,
+    "143": 0,
+    "220": 27,
+    "495": 18,
+    "792": -14,
+    "924": 0
+  },
+  "timestamp": "2026-08-26"
+}

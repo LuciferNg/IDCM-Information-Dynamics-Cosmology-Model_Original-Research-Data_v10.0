@@ -1,0 +1,220 @@
+{
+  "script": "09_anomaly_first_principles.py",
+  "version": "v2.1-int-holefix",
+  "date": "2026-10-02",
+  "supersedes": {
+    "file": "logs/09_anomaly_first_principles.v1_superseded.py",
+    "sha256_prefix": "e489747064a0a9b3"
+  },
+  "purpose": "三階異常係數之第一性原理計算（全整數，取締擬合閉式）",
+  "method": "A(R) = Sum_mu m_mu t_a t_b t_c / Sum_fund t_a t_b t_c,  t_a = mu_a - mu_{a+1} (integer)",
+  "N12": {
+    "12": "1",
+    "66": "8",
+    "220": "27",
+    "495": "48",
+    "792": "42",
+    "924": "0",
+    "78": "16",
+    "364": "135",
+    "143": "0"
+  },
+  "nonexistent_reps_skipped": [
+    [
+      "924",
+      5
+    ]
+  ],
+  "N12_extended": {
+    "Λ^7": "-42",
+    "Λ^8": "-48",
+    "Λ^9": "-27",
+    "Λ^10": "-8",
+    "Λ^11": "-1"
+  },
+  "verdict_495": "48",
+  "verdict_792": "42",
+  "old_03verifier": {
+    "495": 18,
+    "792": -14
+  },
+  "doc03_correction": {
+    "495": 48,
+    "792": 42
+  },
+  "closed_form_candidate": "A(Lambda^k) = C(N-3,k-1)*(N-2k)/(N-k-1)",
+  "closed_form_mismatches": [],
+  "closed_form_outside_domain": [
+    [
+      4,
+      5,
+      "-1"
+    ],
+    [
+      5,
+      5,
+      "0"
+    ],
+    [
+      5,
+      6,
+      "-1"
+    ]
+  ],
+  "table": {
+    "k=1,N=5": "1",
+    "k=1,N=6": "1",
+    "k=1,N=7": "1",
+    "k=1,N=8": "1",
+    "k=1,N=9": "1",
+    "k=1,N=10": "1",
+    "k=1,N=11": "1",
+    "k=1,N=12": "1",
+    "k=1,N=13": "1",
+    "k=2,N=5": "1",
+    "k=2,N=6": "2",
+    "k=2,N=7": "3",
+    "k=2,N=8": "4",
+    "k=2,N=9": "5",
+    "k=2,N=10": "6",
+    "k=2,N=11": "7",
+    "k=2,N=12": "8",
+    "k=2,N=13": "9",
+    "k=3,N=5": "-1",
+    "k=3,N=6": "0",
+    "k=3,N=7": "2",
+    "k=3,N=8": "5",
+    "k=3,N=9": "9",
+    "k=3,N=10": "14",
+    "k=3,N=11": "20",
+    "k=3,N=12": "27",
+    "k=3,N=13": "35",
+    "k=4,N=5": "-1",
+    "k=4,N=6": "-2",
+    "k=4,N=7": "-2",
+    "k=4,N=8": "0",
+    "k=4,N=9": "5",
+    "k=4,N=10": "14",
+    "k=4,N=11": "28",
+    "k=4,N=12": "48",
+    "k=4,N=13": "75",
+    "k=5,N=5": "0",
+    "k=5,N=6": "-1",
+    "k=5,N=7": "-3",
+    "k=5,N=8": "-5",
+    "k=5,N=9": "-5",
+    "k=5,N=10": "0",
+    "k=5,N=11": "14",
+    "k=5,N=12": "42",
+    "k=5,N=13": "90"
+  },
+  "checks": [
+    {
+      "id": "A(12,N=12) vs known",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "id": "A(66,N=5) vs known",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "id": "A(66,N=7) vs known",
+      "pass": true,
+      "detail": "3 vs 3"
+    },
+    {
+      "id": "A(66,N=12) vs known",
+      "pass": true,
+      "detail": "8 vs 8"
+    },
+    {
+      "id": "A(220,N=6) vs known",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "id": "A(220,N=7) vs known",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "id": "A(924,N=12) vs known",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "id": "A(78,N=5) vs known",
+      "pass": true,
+      "detail": "9 vs 9"
+    },
+    {
+      "id": "A(78,N=6) vs known",
+      "pass": true,
+      "detail": "10 vs 10"
+    },
+    {
+      "id": "A(78,N=12) vs known",
+      "pass": true,
+      "detail": "16 vs 16"
+    },
+    {
+      "id": "A(143,N=5) vs known",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "id": "A(143,N=7) vs known",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "id": "A(143,N=12) vs known",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "id": "S0  ★★ 空洞修復: ① consensus_A([]) 改為 raise ✓；② 唔存在之 rep 明確跳過 [('924', 5)]（期望 [('924', 5)]）",
+      "pass": true,
+      "detail": "skipped=[('924', 5)] ; expected=[('924', 5)] ; raise=True"
+    },
+    {
+      "id": "S1  方法自驗: 全部 known values 命中（13 項）",
+      "pass": true,
+      "detail": "n=13/13"
+    },
+    {
+      "id": "S2  ★ 全部 rep 之 A(R) 對最多 66 個 (a,b,c) 三重一致（共識）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S3  ★ A(Λ³)=A(220) = 27（現行記錄正確）",
+      "pass": true,
+      "detail": "got 27"
+    },
+    {
+      "id": "S4  ★ A(Λ⁶)=A(924) = 0（自對偶 ⟹ A = −A 之唯一整數解）",
+      "pass": true,
+      "detail": "got 0"
+    },
+    {
+      "id": "S5  ★ 對偶律 A(Λ^k) = −A(Λ^{N−k})（N=12, k=4..11）",
+      "pass": true,
+      "detail": "Λ⁸=-48 vs −Λ⁴=-48 ; Λ⁷=-42 vs −Λ⁵=-42 ; Λ⁹=-27 vs −Λ³=-27 ; Λ^10=-8 vs −Λ²=-8 ; Λ^11=-1 vs −Λ¹=-1"
+    },
+    {
+      "id": "S6  ★ 候選閉式 C(N−3,k−1)·(N−2k)/(N−k−1) 於其定義域內全中（42 點）",
+      "pass": true,
+      "detail": "值不符=[] ; 定義域外=[(4, 5, '-1'), (5, 5, '0'), (5, 6, '-1')]"
+    },
+    {
+      "id": "★ 現行 03_verifier Λ⁴ 閉式缺陷確認",
+      "pass": true,
+      "detail": "N=12 真值 48 vs 現行 18"
+    }
+  ],
+  "n_pass": 21,
+  "n_total": 21
+}

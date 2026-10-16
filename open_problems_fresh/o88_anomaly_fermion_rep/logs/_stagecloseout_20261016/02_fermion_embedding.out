@@ -1,0 +1,122 @@
+========================================================================
+O88 — SU(12) -> SU(4) x SU(3) Branching Rules
+========================================================================
+
+SU(12) -> SU(4) x SU(3) via tensor product: 12 = (4, 3)
+  IDCM: 12 = B x N_gen = 4 x 3
+
+  12 = (4, 3)
+      dim: 4x3 = 12
+  12x = (4x, 3x)
+      dim: 4x3 = 12
+
+  66 = Lambda^2(12) = (6, 6) + (10, 3x)  [from O59]
+      dim: 6x6 + 10x3 = 36+30 = 66
+  78 = Sym^2(12) = (10, 6) + (6, 3x)  [from O59]
+      dim: 10x6 + 6x3 = 60+18 = 78
+
+  143 = Adj(12) = (15, 1) + (1, 8) + (15, 8)
+      dim: 15+8+120 = 143 = 143
+
+  220 = Lambda^3(12), dim = C(12,3) = 220
+  495 = Lambda^4(12), dim = C(12,4) = 495
+  792 = Lambda^5(12), dim = C(12,5) = 792
+  924 = Lambda^6(12), dim = C(12,6) = 924 (self-dual)
+
+========================================================================
+36 = 3x12: 3 代 SU(4) x SU(3) 分解
+========================================================================
+
+  36 = 3x(4, 3) = (4, 3x3) = (4, 6) + (4, 3x)
+      3x12 = 36 = 3x4x3 = 36
+      dim: 4x6 + 4x3 = 24+12 = 36
+
+  Under SU(4)_PS -> SU(3)_c x U(1)_{B-L}:
+    4 = 3_{1/3} + 1_{-1}
+    4x = 3x_{-1/3} + 1_{1}
+    6 = Lambda^2(4) = 3x_{2/3} + 3_{-2/3}
+    10 = Sym^2(4) = 6_{2/3} + 3_{-2/3} + 1_{-2}
+
+  (4, 3x) for 3 generations:
+    = (3, 3x)_{1/3} + (1, 3x)_{-1}
+    = 9 quarks (3 colors x 3 gen) + 3 leptons (3 gen)
+    dim: 9+3 = 12
+
+  Under SU(4)_PS -> SU(2)_L x SU(2)_R:
+    4 = (2, 2), 4x = (2, 2)
+    6 = (3, 1) + (1, 3)
+    10 = (1, 1) + (3, 3)
+
+========================================================================
+SM Fermion Content — 3 Generations
+========================================================================
+
+  Per generation (Pati-Salam):
+    (4, 2, 1)_L = 8 Weyl: Q_L + L_L
+    (4x, 1, 2)_R = 8 Weyl: u^c_R + d^c_R + e^c_R + nu^c_R
+    Total per gen: 16 Weyl fermions
+    3 generations: 3 x 16 = 48 Weyl fermions
+
+  Under SU(3)_c x SU(2)_L x U(1)_Y (per generation):
+    Q_L = (3, 2)_{1/6}  (6 Weyl)
+    u^c_R = (3x, 1)_{-2/3}  (3 Weyl)
+    d^c_R = (3x, 1)_{1/3}  (3 Weyl)
+    L_L = (1, 2)_{-1/2}  (2 Weyl)
+    e^c_R = (1, 1)_{1}  (1 Weyl)
+    nu^c_R = (1, 1)_{0}  (1 Weyl)
+    Total: 6+3+3+2+1+1 = 16
+
+========================================================================
+核心: 12 = (4, 3) 的 SM 內容
+========================================================================
+
+  12 = (4, 3) under SU(4)_PS x SU(3)_gen
+  4 = 3_{1/3} + 1_{-1} under SU(3)_c x U(1)_{B-L}
+  12 = (3, 3)_{1/3} + (1, 3)_{-1}
+     = 9 quarks (3 colors x 3 generations) + 3 leptons (3 generations)
+     = 12 Weyl fermions (LEFT chirality)
+
+  12x = (4x, 3x) = (3x, 3x)_{-1/3} + (1, 3x)_{1}
+     = 9 anti-quarks + 3 anti-leptons
+     = 12 Weyl fermions (RIGHT chirality)
+
+  3x(12+12x) = 72 Weyl fermions:
+    36 = 3x12  -> 27 left-handed quarks + 9 left-handed leptons
+    36x = 3x12x -> 27 right-handed quarks + 9 right-handed leptons
+    Total: 54 quarks + 18 leptons = 72 Weyl fermions
+
+  SM: 48 Weyl fermions (36 quarks + 12 leptons)
+  3x(12+12x): 72 Weyl fermions (54 quarks + 18 leptons)
+  Extra: 24 vector-like pairs -> mass at high scale
+
+========================================================================
+關鍵解析: 12 = (4, 3) 如何匹配 SM?
+========================================================================
+
+  12 = (4, 3) under SU(4)_PS x SU(3)_gen
+
+  SU(4)_PS -> SU(3)_c x U(1)_{B-L}:
+    4 = 3_{1/3} + 1_{-1}
+
+  SO 12 = (3, 3)_{1/3} + (1, 3)_{-1}
+    (3, 3)_{1/3}: 9 個左旋夸克 (3 色 x 3 代)
+    (1, 3)_{-1}: 3 個左旋輕子 (3 代)
+
+  12x = (4x, 3x) = (3x, 3x)_{-1/3} + (1, 3x)_{1}
+    (3x, 3x)_{-1/3}: 9 個右旋反夸克
+    (1, 3x)_{1}: 3 個右旋反輕子
+
+  3x(12+12x) = 72: 3 代完整 fermion content
+  Anomaly-free: 3x(+1) + 3x(-1) = 0
+
+  IDCM 對應:
+    36 = 3 x 12 = h11 = K_tree + N_gen = 33+3
+    36x = 3 x 12x = h11 的共軛
+
+  為什麼 72 而不是 48?
+    3x(12+12x) = 72 包含 24 個 vector-like 配對
+    這些配對在 SU(4)_PS -> SU(2)_L x SU(2)_R 破缺時
+    透過 Higgs 機制獲得質量，留下 48 個零質量 Weyl fermions
+
+
+結果已保存: data/02_fermion_embedding.json

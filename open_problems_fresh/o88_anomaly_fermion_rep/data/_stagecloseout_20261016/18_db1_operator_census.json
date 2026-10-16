@@ -1,0 +1,101 @@
+{
+ "script": "18_db1_operator_census",
+ "date": "2026-10-15",
+ "version": 2,
+ "pass": 14,
+ "fail": 0,
+ "results": [
+  {
+   "name": "唔含單態：唯一中性解 k=5（p=2）",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "唔含單態：k=3（p=0）非中性",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "p=0: Σy_i 需 = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "p=2: Σy_i 需 = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "k=5 純分量（a=3,p=2,r=0）重數 ≥ 1",
+   "got": "78",
+   "expected": "78",
+   "ok": true
+  },
+  {
+   "name": "k=5 純分量重數 = C(7,0)·Λ³(3)·Λ²(2) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "Y_total = 3(−1/3) + 2(1/2) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "ΔB = 3/3 = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "色 singlet：Λ³(3) = 1",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "弱 singlet：Λ²(2) = 1",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "維數：Λ⁵(12) = C(12,5) = 792",
+   "got": "792",
+   "expected": "792",
+   "ok": true
+  },
+  {
+   "name": "新鏈合格 k（s=0） = {5}",
+   "got": "[5]",
+   "expected": "[5]",
+   "ok": true
+  },
+  {
+   "name": "重疊 = ∅",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "S 裁定：載體存在 ⟹ 條件式維持",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  }
+ ],
+ "new_chain_s0": [
+  5
+ ],
+ "old_chain": [
+  2,
+  6,
+  10
+ ]
+}

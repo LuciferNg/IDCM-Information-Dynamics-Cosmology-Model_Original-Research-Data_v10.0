@@ -1,0 +1,522 @@
+{
+ "script": "14_o210_verdict_absorb",
+ "date": "2026-10-15",
+ "pass": 71,
+ "fail": 0,
+ "results": [
+  {
+   "name": "Λ^0(12) = C(12,0)",
+   "kind": "calc",
+   "got": 1,
+   "expected": 1,
+   "ok": true
+  },
+  {
+   "name": "Sym^0(12) = C(11,0)",
+   "kind": "calc",
+   "got": 1,
+   "expected": 1,
+   "ok": true
+  },
+  {
+   "name": "Λ^1(12) = C(12,1)",
+   "kind": "calc",
+   "got": 12,
+   "expected": 12,
+   "ok": true
+  },
+  {
+   "name": "Sym^1(12) = C(12,1)",
+   "kind": "calc",
+   "got": 12,
+   "expected": 12,
+   "ok": true
+  },
+  {
+   "name": "Λ^2(12) = C(12,2)",
+   "kind": "calc",
+   "got": 66,
+   "expected": 66,
+   "ok": true
+  },
+  {
+   "name": "Sym^2(12) = C(13,2)",
+   "kind": "calc",
+   "got": 78,
+   "expected": 78,
+   "ok": true
+  },
+  {
+   "name": "Λ^3(12) = C(12,3)",
+   "kind": "calc",
+   "got": 220,
+   "expected": 220,
+   "ok": true
+  },
+  {
+   "name": "Sym^3(12) = C(14,3)",
+   "kind": "calc",
+   "got": 364,
+   "expected": 364,
+   "ok": true
+  },
+  {
+   "name": "Λ^4(12) = C(12,4)",
+   "kind": "calc",
+   "got": 495,
+   "expected": 495,
+   "ok": true
+  },
+  {
+   "name": "Sym^4(12) = C(15,4)",
+   "kind": "calc",
+   "got": 1365,
+   "expected": 1365,
+   "ok": true
+  },
+  {
+   "name": "Λ^5(12) = C(12,5)",
+   "kind": "calc",
+   "got": 792,
+   "expected": 792,
+   "ok": true
+  },
+  {
+   "name": "Sym^5(12) = C(16,5)",
+   "kind": "calc",
+   "got": 4368,
+   "expected": 4368,
+   "ok": true
+  },
+  {
+   "name": "Λ^6(12) = C(12,6)",
+   "kind": "calc",
+   "got": 924,
+   "expected": 924,
+   "ok": true
+  },
+  {
+   "name": "Sym^6(12) = C(17,6)",
+   "kind": "calc",
+   "got": 12376,
+   "expected": 12376,
+   "ok": true
+  },
+  {
+   "name": "Λ^7(12) = C(12,7)",
+   "kind": "calc",
+   "got": 792,
+   "expected": 792,
+   "ok": true
+  },
+  {
+   "name": "Sym^7(12) = C(18,7)",
+   "kind": "calc",
+   "got": 31824,
+   "expected": 31824,
+   "ok": true
+  },
+  {
+   "name": "Λ^8(12) = C(12,8)",
+   "kind": "calc",
+   "got": 495,
+   "expected": 495,
+   "ok": true
+  },
+  {
+   "name": "Sym^8(12) = C(19,8)",
+   "kind": "calc",
+   "got": 75582,
+   "expected": 75582,
+   "ok": true
+  },
+  {
+   "name": "Λ^9(12) = C(12,9)",
+   "kind": "calc",
+   "got": 220,
+   "expected": 220,
+   "ok": true
+  },
+  {
+   "name": "Sym^9(12) = C(20,9)",
+   "kind": "calc",
+   "got": 167960,
+   "expected": 167960,
+   "ok": true
+  },
+  {
+   "name": "Λ^10(12) = C(12,10)",
+   "kind": "calc",
+   "got": 66,
+   "expected": 66,
+   "ok": true
+  },
+  {
+   "name": "Sym^10(12) = C(21,10)",
+   "kind": "calc",
+   "got": 352716,
+   "expected": 352716,
+   "ok": true
+  },
+  {
+   "name": "Λ^11(12) = C(12,11)",
+   "kind": "calc",
+   "got": 12,
+   "expected": 12,
+   "ok": true
+  },
+  {
+   "name": "Sym^11(12) = C(22,11)",
+   "kind": "calc",
+   "got": 705432,
+   "expected": 705432,
+   "ok": true
+  },
+  {
+   "name": "Λ^12(12) = C(12,12)",
+   "kind": "calc",
+   "got": 1,
+   "expected": 1,
+   "ok": true
+  },
+  {
+   "name": "Sym^12(12) = C(23,12)",
+   "kind": "calc",
+   "got": 1352078,
+   "expected": 1352078,
+   "ok": true
+  },
+  {
+   "name": "k=2: k mod 4 = 2",
+   "kind": "calc",
+   "got": 2,
+   "expected": 2,
+   "ok": true
+  },
+  {
+   "name": "k=6: k mod 4 = 2",
+   "kind": "calc",
+   "got": 2,
+   "expected": 2,
+   "ok": true
+  },
+  {
+   "name": "k=10: k mod 4 = 2",
+   "kind": "calc",
+   "got": 2,
+   "expected": 2,
+   "ok": true
+  },
+  {
+   "name": "k=0: k mod 4 = 0 ≠ 2（逃生規格外）",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "k=4: k mod 4 = 0 ≠ 2（逃生規格外）",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "k=8: k mod 4 = 0 ≠ 2（逃生規格外）",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "dim 4 (1, 0, 0, 0)",
+   "kind": "calc",
+   "got": 4,
+   "expected": 4,
+   "ok": true
+  },
+  {
+   "name": "dim 6 (1, 1, 0, 0)",
+   "kind": "calc",
+   "got": 6,
+   "expected": 6,
+   "ok": true
+  },
+  {
+   "name": "dim 10 (2, 0, 0, 0)",
+   "kind": "calc",
+   "got": 10,
+   "expected": 10,
+   "ok": true
+  },
+  {
+   "name": "dim 15 (2, 1, 1, 0)",
+   "kind": "calc",
+   "got": 15,
+   "expected": 15,
+   "ok": true
+  },
+  {
+   "name": "dim 20 (2, 1, 0, 0)",
+   "kind": "calc",
+   "got": 20,
+   "expected": 20,
+   "ok": true
+  },
+  {
+   "name": "dim 4̄ (1, 1, 1, 0)",
+   "kind": "calc",
+   "got": 4,
+   "expected": 4,
+   "ok": true
+  },
+  {
+   "name": "χ(4) = |(1, 0, 0, 0)| mod 4 = 1",
+   "kind": "calc",
+   "got": 1,
+   "expected": 1,
+   "ok": true
+  },
+  {
+   "name": "χ(6) = |(1, 1, 0, 0)| mod 4 = 2",
+   "kind": "calc",
+   "got": 2,
+   "expected": 2,
+   "ok": true
+  },
+  {
+   "name": "χ(10) = |(2, 0, 0, 0)| mod 4 = 2",
+   "kind": "calc",
+   "got": 2,
+   "expected": 2,
+   "ok": true
+  },
+  {
+   "name": "χ(15) = |(2, 1, 1, 0)| mod 4 = 0",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "χ(20) = |(2, 1, 0, 0)| mod 4 = 3",
+   "kind": "calc",
+   "got": 3,
+   "expected": 3,
+   "ok": true
+  },
+  {
+   "name": "χ(4̄) = |(1, 1, 1, 0)| mod 4 = 3",
+   "kind": "calc",
+   "got": 3,
+   "expected": 3,
+   "ok": true
+  },
+  {
+   "name": "χ(4) = χ(4+1⁴)",
+   "kind": "calc",
+   "got": 1,
+   "expected": 1,
+   "ok": true
+  },
+  {
+   "name": "χ(6) = χ(6+1⁴)",
+   "kind": "calc",
+   "got": 2,
+   "expected": 2,
+   "ok": true
+  },
+  {
+   "name": "χ(10) = χ(10+1⁴)",
+   "kind": "calc",
+   "got": 2,
+   "expected": 2,
+   "ok": true
+  },
+  {
+   "name": "χ(15) = χ(15+1⁴)",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "χ(20) = χ(20+1⁴)",
+   "kind": "calc",
+   "got": 3,
+   "expected": 3,
+   "ok": true
+  },
+  {
+   "name": "χ(4̄) = χ(4̄+1⁴)",
+   "kind": "calc",
+   "got": 3,
+   "expected": 3,
+   "ok": true
+  },
+  {
+   "name": "4 ⊗ 4̄: 每個分量 χ == χ((1, 0, 0, 0))+χ((1, 1, 1, 0)) = 0",
+   "kind": "calc",
+   "got": true,
+   "expected": true,
+   "ok": true
+  },
+  {
+   "name": "4 ⊗ 4̄: 維數守恆 4×4 = 16",
+   "kind": "calc",
+   "got": 16,
+   "expected": 16,
+   "ok": true
+  },
+  {
+   "name": "4 ⊗ 4: 每個分量 χ == χ((1, 0, 0, 0))+χ((1, 0, 0, 0)) = 2",
+   "kind": "calc",
+   "got": true,
+   "expected": true,
+   "ok": true
+  },
+  {
+   "name": "4 ⊗ 4: 維數守恆 4×4 = 16",
+   "kind": "calc",
+   "got": 16,
+   "expected": 16,
+   "ok": true
+  },
+  {
+   "name": "4 ⊗ 6: 每個分量 χ == χ((1, 0, 0, 0))+χ((1, 1, 0, 0)) = 3",
+   "kind": "calc",
+   "got": true,
+   "expected": true,
+   "ok": true
+  },
+  {
+   "name": "4 ⊗ 6: 維數守恆 4×6 = 24",
+   "kind": "calc",
+   "got": 24,
+   "expected": 24,
+   "ok": true
+  },
+  {
+   "name": "k=2: 2 個分量 Q≡χ 全過",
+   "kind": "calc",
+   "got": 2,
+   "expected": 2,
+   "ok": true
+  },
+  {
+   "name": "k=6: 18 個分量 Q≡χ 全過",
+   "kind": "calc",
+   "got": 18,
+   "expected": 18,
+   "ok": true
+  },
+  {
+   "name": "k=10: 10 個分量 Q≡χ 全過",
+   "kind": "calc",
+   "got": 10,
+   "expected": 10,
+   "ok": true
+  },
+  {
+   "name": "k=2: dim-5 χ_total=2+2 ≡ 0 → 中性（期望 True）",
+   "kind": "calc",
+   "got": true,
+   "expected": true,
+   "ok": true
+  },
+  {
+   "name": "k=6: dim-5 χ_total=6+2 ≡ 0 → 中性（期望 True）",
+   "kind": "calc",
+   "got": true,
+   "expected": true,
+   "ok": true
+  },
+  {
+   "name": "k=10: dim-5 χ_total=10+2 ≡ 0 → 中性（期望 True）",
+   "kind": "calc",
+   "got": true,
+   "expected": true,
+   "ok": true
+  },
+  {
+   "name": "k=0: dim-5 χ_total=0+2 ≡ 2/6 → 非中性（反例，期望 False）",
+   "kind": "calc",
+   "got": false,
+   "expected": false,
+   "ok": true
+  },
+  {
+   "name": "k=4: dim-5 χ_total=4+2 ≡ 2/6 → 非中性（反例，期望 False）",
+   "kind": "calc",
+   "got": false,
+   "expected": false,
+   "ok": true
+  },
+  {
+   "name": "k=8: dim-5 χ_total=8+2 ≡ 2/6 → 非中性（反例，期望 False）",
+   "kind": "calc",
+   "got": false,
+   "expected": false,
+   "ok": true
+  },
+  {
+   "name": "dim-6 QQQL k=0: χ_total=4 ≡ 0",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "dim-6 QQQL k=2: χ_total=4 ≡ 0",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "dim-6 QQQL k=4: χ_total=4 ≡ 0",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "dim-6 QQQL k=6: χ_total=4 ≡ 0",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "dim-6 QQQL k=8: χ_total=4 ≡ 0",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "name": "dim-6 QQQL k=10: χ_total=4 ≡ 0",
+   "kind": "calc",
+   "got": 0,
+   "expected": 0,
+   "ok": true
+  }
+ ],
+ "chain_dependency": [
+  {
+   "name": "O210-T2 類型層 no-go",
+   "dep": "鏈無關（𝒯 七運算 {⊗,⊕,Tr,Spec,Proj,†,Contr} 本身）",
+   "verdict": "維持 ✓"
+  },
+  {
+   "name": "O210-T3 分支荷 χ=SU(B)=SU(4) 中心荷",
+   "dep": "舊鏈 12=B·N_c=4·3 分支標籤",
+   "verdict": "🟡 新鏈 (3,1)⊕(1,2)⊕7(1,1) 下需另行定義 → docs/14 費米子重核"
+  },
+  {
+   "name": "逃生規格 k∈{2,6,10}",
+   "dep": "值本身鏈無關（Λ^k(12) 維數 C(12,k)）",
+   "verdict": "🟢 維數層維持；語義層待 docs/14"
+  }
+ ]
+}

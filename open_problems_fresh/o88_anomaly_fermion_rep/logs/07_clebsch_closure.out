@@ -1,0 +1,96 @@
+==============================================================================
+O88/PD #1 — N_LQ = 48 相干 vs 非相干：群論 Clebsch 完整計算 (v3)
+==============================================================================
+
+SECTION 1: Generator 建構（normalization Tr(T T') = delta/2）
+------------------------------------------------------------------------------
+  [PASS] S1  SU(4)_PS 生成元數 = 15 got=15
+  [PASS] S2  SU(3)_F  生成元數 = 8 got=8
+  [PASS] S3  SU(4) 正規化 Tr=delta/2 
+  [PASS] S4  SU(3) 正規化 Tr=delta/2 
+
+SECTION 2: PS 4-plet 內容 同 SU(4)_PS adjoint 分解
+------------------------------------------------------------------------------
+  PS 4-plet (B, L, B-L): [('1/3', '0', '1/3'), ('1/3', '0', '1/3'), ('1/3', '0', '1/3'), ('0', '1', '-1')]
+  [PASS] S5  B-L(quark)=1/3, B-L(lepton)=-1 BL=['1/3', '1/3', '1/3', '-1']
+  SU(4)_PS adjoint: 8_c = 8 ; LQ (3 + 3bar) = 6 ; B-L singlet = 1
+  [PASS] S6  ★ 15 = 8(colour octet) + 6(leptoquark) + 1(B-L) got=(8,6,1)
+
+SECTION 3: ★★ 核心否證 — coset generator support 與 DeltaB
+------------------------------------------------------------------------------
+  LQ generator 之 (index_a, index_b) 類型集合 = [('l', 'q'), ('q', 'l')]
+  [PASS] S7  ★ LQ generator 只在 (quark,lepton) 或 (lepton,quark) 有 support kinds=[('l', 'q'), ('q', 'l')]
+  [PASS] S8  ★ 冇 LQ generator 有 (quark,quark) support（⟹ 無 diquark 電流） kinds=[('l', 'q'), ('q', 'l')]
+  [PASS] S9  ★ 冇 LQ generator 有 (lepton,lepton) support kinds=[('l', 'q'), ('q', 'l')]
+  LQ 電流 J 之 (DeltaB, DeltaL) = [('-1/3', '1'), ('1/3', '-1')]
+  [PASS] S10 ★ 每個 LQ 電流帶 (DeltaB, DeltaL) = (+1/3,-1) 或 (-1/3,+1)（每個只含一 q 一 l） set=[('-1/3', '1'), ('1/3', '-1')]
+
+  ── 兩電流任意配對之 (DeltaB, DeltaL) 全集合 ──
+  [('-2/3', '2'), ('0', '0'), ('2/3', '-2')]
+  [PASS] S11 ★★ 任意兩 LQ 電流配對之 |DeltaB| ∈ {0, 2/3}（結構上取不到 1） |DeltaB| set=['0', '2/3', '2/3']
+
+  ★★ N_channel(|DeltaB| = 1) = 0   （docs/04 宣稱 48）
+  [PASS] S12 ★★ N_channel(|DeltaB|=1) = 0 ⟹ 48 唔係 DeltaB=1 通道數 N_db1=0
+  [PASS] S13 ★★ 無任何 LQ 電流有 (q,q) 或 (l,l) 支撐 ⟹ 無 diquark 耦合 ⟹ 唔中介 DeltaB=±1 n_db1=0 kinds=[('l', 'q'), ('q', 'l')]
+
+  ── 全部 coset 分量之 leg 類型 ──
+     SU3c   leg 類型 = [('q', 'q')]
+     LQ     leg 類型 = [('l', 'q'), ('q', 'l')]
+     BL     leg 類型 = [('l', 'l'), ('q', 'q')]
+  全部 coset 電流之 (DeltaB, DeltaL) = [('-1/3', '1'), ('0', '0'), ('1/3', '-1')]
+  ★★ 全部 120 個 coset 生成元: 單 boson 交換之 max|DeltaB| = 2/3
+  [PASS] S13b ★★ 全 (15,8) coset: 單 boson 交換 max|DeltaB| = 2/3 < 1 ⟹ 廣義無質子衰變 max|dB|=2/3
+
+SECTION 4: 副定理 — 張量積分解 + 部分和精確閉式 + Casimir
+------------------------------------------------------------------------------
+  ★ sum_{A in LQ} T^A_ab T^A_cd 閉式 max|dev| = 0.000e+00
+  [PASS] S14 ★ PS LQ 部分和 = (1/2)[d_b4 d_c4 d_ad^col + d_a4 d_d4 d_bc^col] maxdev=0.00e+00
+  ★ 分解恆等 max|full - (SU3c + LQ + BL)| = 6.939e-18
+  [PASS] S15 ★ 15-adjoint = 8_c + LQ + B-L（部分和分解恆等） maxdev=6.94e-18
+  Casimir: C2(SU(4) fund) = 1.8750000000 (15/8) ; C2(SU(3) fund) = 1.3333333333 (4/3)
+  [PASS] S16 ★ sum_a T^a T^a = C2·1（SU(4) fund, C2 = 15/8） C2=1.8750000000
+  [PASS] S17 ★ sum_a t^a t^a = C2·1（SU(3) fund, C2 = 4/3） C2=1.3333333333
+  ★ SU(3)_F 完備性 max|dev| = 5.551e-17
+  [PASS] S18 ★ SU(3)_F 完備性 = (1/2)[d_il d_kj - (1/3) d_ij d_kl] maxdev=5.55e-17
+  ★ Schur: (sum_i d_ii)x(sum_k d_kk) = 5.551e-17
+  [PASS] S19 ★ Schur: family-adjoint 湮滅 family-singlet（收縮 = 0，唔係 8） val=5.55e-17
+  12-dim K = T^A_PS (x) t^a_F 生成元數 = 48
+  [PASS] S20 ★ 48 = 6 (LQ) x 8 (SU(3)_F adjoint) 生成元數 got=48
+  ★ 張量積分解 max|sum_{48} K K - (sum_6 T T)(sum_8 t t)| = 3.469e-18
+  [PASS] S21 ★★ 48-生成元和 = (6-和) x (8-和) ⟹ 乘數唔可能係獨立之 48 maxdev=3.47e-18
+
+SECTION 5: ★★ 結論 — docs/04 tau_p 範圍之處置
+------------------------------------------------------------------------------
+
+  docs/04 §2.2 宣稱: 「(3,8) (+) (3bar,8) 色三重態 | 48 | DeltaB = 1 | leptoquark（耦合 qq 同 qbar l）」
+  docs/04 §4.1 範圍: [2.891e38, 1.388e40] yr（跨度 48 = N_LQ，非相干 vs 相干）
+
+  本推導判定:
+   ① support 檢查 (S7-S9):  LQ generator 只在 (q,l)/(l,q) 有 support ⟹ **無 diquark 耦合**
+   ② 電流電荷 (S10):        J 帶 (DeltaB, DeltaL) = (+1/3,-1) 或 (-1/3,+1)
+   ③ 兩電流任意配對 (S11):  |DeltaB| ∈ {0, 2/3} —— 結構上取不到 1
+   ④ 通道數  (S12-S13):     N_channel(|DeltaB| = 1) = 0
+
+  ⟹ 「DeltaB = 1」標籤唔成立；48 個 gauge boson 唔中介質子衰變。
+  ⟹ [2.891e38, 1.388e40] yr 唔係「收窄」，而係**前提否證** → 整個範圍撤回。
+  ⟹ 副定理 (S14-S21)：48 個生成元之和結構性分解為 (6 部分)x(8 部分)，
+     乘數係 O(1)；且 SU(3)_F adjoint 對 family-singlet 收縮 = 0（Schur）。
+     故 48 / 48^2 / 8 / 6 四種假設全部結構性排除。
+
+  結構理由（不依賴 12 / 12bar 選擇）: coset generator 之 support 定義上係
+  (colour <-> lepton)，故任一雙線性算子必含「恰好一 q 一 l」。
+  DeltaB=1 之質子衰變卻要求交換 boson 具 diquark 耦合（(q q) <-> (qbar lbar)），
+  在此結構下不存在 ⟹ |DeltaB| = 1 無法生成。
+
+  IDCM v10 SU(12) 鏈之質子衰變: **唔由 gauge leptoquark 中介**。
+  DeltaB=1 算子若要出現，須由 **scalar 扇區**（Higgs leptoquark：鏈中 (15,8) 標量
+  或 PS 破缺 Higgs (4,1,2)/(4bar,1,2)）提供 —— 本 O 從未分析 ⟹ 新開放項。
+
+  [PASS] S22 ★★ 判定: gauge-LQ 介質之 tau_p 範圍撤回（前提否證） 
+  [PASS] S23 ★★ 新開放項已識別: DeltaB=1 須由 scalar 扇區提供 
+
+==============================================================================
+結果: 24/24 PASS
+==============================================================================
+
+已寫入: data/07_clebsch_closure.json

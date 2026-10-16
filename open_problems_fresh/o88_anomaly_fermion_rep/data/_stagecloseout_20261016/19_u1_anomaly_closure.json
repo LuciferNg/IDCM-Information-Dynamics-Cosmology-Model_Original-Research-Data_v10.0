@@ -1,0 +1,74 @@
+{
+ "script": "19_u1_anomaly_closure",
+ "date": "2026-10-15",
+ "pass": 11,
+ "fail": 0,
+ "results": [
+  {
+   "name": "ΣY(12) = 3(−1/3)+2(1/2)+7·(1/7) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "ΣY(12̄) = 3(1/3)+2(−1/2)+7·(−1/7) = −1",
+   "got": "-1",
+   "expected": "-1",
+   "ok": true
+  },
+  {
+   "name": "Σ_f Y_f (12⊕12̄) = 0（自消）",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "y_i=0：ΣY(12)+ΣY(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "y_i=1/3：ΣY(12)+ΣY(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "y_i=-2/3：ΣY(12)+ΣY(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "y_i=7/13：ΣY(12)+ΣY(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "SU(12)³：A(12)+A(12̄) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "grav²×SU(12)：= 0（同 A）",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "SU(12)²×U(1)：Σ_f Y_f = 0（本檔 S1）",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "收口判定：SU(12)²×U(1) 異常詳細驗證閉合",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  }
+ ]
+}

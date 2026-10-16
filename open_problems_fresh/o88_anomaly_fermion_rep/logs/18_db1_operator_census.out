@@ -1,0 +1,51 @@
+=== S1. Λ^k(12): n=3(ΔB=1), p∈{0,2}(弱 singlet), s=k−3−p ===
+  s=0, p=0, k=3: Y = -1 ✗ 非中性
+  s=0, p=2, k=5: Y = 0 ✓ 中性
+✅ 唔含單態：唯一中性解 k=5（p=2）: got=0 expected=0
+✅ 唔含單態：k=3（p=0）非中性: got=True expected=True
+
+=== S1b. 含單態（s≥1）：Y 中性條件 = Σy_i = 1−p/2 ===
+✅ p=0: Σy_i 需 = 1: got=1 expected=1
+  ⟹ k = 3+p+s, s≥1：k ≥ 4（Σy 條件未定，y_i 開放）
+✅ p=2: Σy_i 需 = 0: got=0 expected=0
+  ⟹ k = 3+p+s, s≥1：k ≥ 6（Σy 條件未定，y_i 開放）
+
+=== S2. Λ^k(12) 含色-弱 singlet 分量多重度（Λ^a(3), a∈{0,3}; Λ^p(2), p∈{0,2}） ===
+  k= 0: (1,1) 重數 = 1
+  k= 1: (1,1) 重數 = 7
+  k= 2: (1,1) 重數 = 22
+  k= 3: (1,1) 重數 = 43
+  k= 4: (1,1) 重數 = 63
+  k= 5: (1,1) 重數 = 78
+  k= 6: (1,1) 重數 = 84
+  k= 7: (1,1) 重數 = 78
+  k= 8: (1,1) 重數 = 63
+  k= 9: (1,1) 重數 = 43
+  k=10: (1,1) 重數 = 22
+  k=11: (1,1) 重數 = 7
+  k=12: (1,1) 重數 = 1
+✅ k=5 純分量（a=3,p=2,r=0）重數 ≥ 1: got=78 expected=78
+✅ k=5 純分量重數 = C(7,0)·Λ³(3)·Λ²(2) = 1: got=1 expected=1
+
+=== S3. k=5（n=3, p=2, s=0）完整檢查 ===
+✅ Y_total = 3(−1/3) + 2(1/2) = 0: got=0 expected=0
+✅ ΔB = 3/3 = 1: got=1 expected=1
+✅ 色 singlet：Λ³(3) = 1: got=True expected=True
+✅ 弱 singlet：Λ²(2) = 1: got=True expected=True
+✅ 維數：Λ⁵(12) = C(12,5) = 792: got=792 expected=792
+
+=== S4. 舊鏈 vs 新鏈（Λ^k(12), s=0） ===
+✅ 新鏈合格 k（s=0） = {5}: got=[5] expected=[5]
+✅ 重疊 = ∅: got=0 expected=0
+  舊鏈 [2, 6, 10]（SU(4) 判據，定義域已消失）
+  新鏈 [5] + y_i-conditional k ≥ 4（含單態）
+  ⟹ ★ 逃生規格完全改變：舊鏈 k≡2 (mod 4)；新鏈 k=5 為 s=0 唯一
+
+=== S5. 裁定 ===
+  elementary 扇區（docs/12 (i)）：維持 ✓ 無 renorm. ΔB=1
+  算子扇區（docs/12 (ii)）：🟡 未排除 —— **已具體化**：Λ⁵(12) 含 s=0 載體
+  ⟹ τ_p = ∞ **唔可升格**（算子層載體存在）；亦唔係『質子會衰變』（Wilson 未推）
+✅ S 裁定：載體存在 ⟹ 條件式維持: got=True expected=True
+
+===== PASS=14 FAIL=0 =====
+data/18_db1_operator_census.json written

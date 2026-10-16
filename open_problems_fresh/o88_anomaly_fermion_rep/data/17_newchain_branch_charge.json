@@ -1,0 +1,260 @@
+{
+ "script": "17_newchain_branch_charge",
+ "date": "2026-10-15",
+ "pass": 42,
+ "fail": 0,
+ "results": [
+  {
+   "name": "dim 1 (Dynkin 0,0) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "dim 3 (Dynkin 1,0) = 3",
+   "got": "3",
+   "expected": "3",
+   "ok": true
+  },
+  {
+   "name": "dim 3̄ (Dynkin 0,1) = 3",
+   "got": "3",
+   "expected": "3",
+   "ok": true
+  },
+  {
+   "name": "dim 6 (Dynkin 2,0) = 6",
+   "got": "6",
+   "expected": "6",
+   "ok": true
+  },
+  {
+   "name": "dim 6̄ (Dynkin 0,2) = 6",
+   "got": "6",
+   "expected": "6",
+   "ok": true
+  },
+  {
+   "name": "dim 8 (Dynkin 1,1) = 8",
+   "got": "8",
+   "expected": "8",
+   "ok": true
+  },
+  {
+   "name": "dim 15 (Dynkin 2,1) = 15",
+   "got": "15",
+   "expected": "15",
+   "ok": true
+  },
+  {
+   "name": "χ(1) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "χ(3) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "χ(3̄) = 2",
+   "got": "2",
+   "expected": "2",
+   "ok": true
+  },
+  {
+   "name": "χ(6) = 2",
+   "got": "2",
+   "expected": "2",
+   "ok": true
+  },
+  {
+   "name": "χ(6̄) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "χ(8) = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "χ(15) = 1",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "(a) χ(1) + 1 = χ(1⊗3)",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "(a) χ(3) + 1 = χ(3⊗3)",
+   "got": "2",
+   "expected": "2",
+   "ok": true
+  },
+  {
+   "name": "(a) χ(3̄) + 1 = χ(3̄⊗3)",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "(a) χ(6) + 1 = χ(6⊗3)",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "(a) χ(6̄) + 1 = χ(6̄⊗3)",
+   "got": "2",
+   "expected": "2",
+   "ok": true
+  },
+  {
+   "name": "(a) χ(8) + 1 = χ(8⊗3)",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "(a) χ(15) + 1 = χ(15⊗3)",
+   "got": "2",
+   "expected": "2",
+   "ok": true
+  },
+  {
+   "name": "(b) 3 ⊗ 3̄ = 8 ⊕ 1: 維數守恆 = 9",
+   "got": "9",
+   "expected": "9",
+   "ok": true
+  },
+  {
+   "name": "(b) 3 ⊗ 3̄ = 8 ⊕ 1: 每分量 χ = (1+2) mod 3 = 0",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "(b) 3 ⊗ 3 = 3̄ ⊕ 6: 維數守恆 = 9",
+   "got": "9",
+   "expected": "9",
+   "ok": true
+  },
+  {
+   "name": "(b) 3 ⊗ 3 = 3̄ ⊕ 6: 每分量 χ = (1+1) mod 3 = 2",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "(b) 3 ⊗ 8 = 15 ⊕ 6̄ ⊕ 3: 維數守恆 = 24",
+   "got": "24",
+   "expected": "24",
+   "ok": true
+  },
+  {
+   "name": "(b) 3 ⊗ 8 = 15 ⊕ 6̄ ⊕ 3: 每分量 χ = (1+0) mod 3 = 1",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "(b) 8 ⊗ 8 = 27 ⊕ 10 ⊕ 10̄ ⊕ 8 ⊕ 8 ⊕ 1: 維數守恆 = 64",
+   "got": "64",
+   "expected": "64",
+   "ok": true
+  },
+  {
+   "name": "(b) 8 ⊗ 8 = 27 ⊕ 10 ⊕ 10̄ ⊕ 8 ⊕ 8 ⊕ 1: 每分量 χ = (0+0) mod 3 = 0",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "(c) 可算：χ = p+2q mod 3（純組合）",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "3 色 fundamental: χ_total = 3·1 ≡ 0（中性）",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "1 色: χ = 1 ≠ 0（亦非 gauge singlet）",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "2 色: χ = 2 ≠ 0（亦非 gauge singlet）",
+   "got": "2",
+   "expected": "2",
+   "ok": true
+  },
+  {
+   "name": "χ=0 之色 irrep ⊇ {1, 8}",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "U(1)⁸ 方向之色:弱 = 2:−3",
+   "got": "-2/3",
+   "expected": "-2/3",
+   "ok": true
+  },
+  {
+   "name": "B 之弱分量 = 0 ⟹ 無法滿足 2:−3",
+   "got": "True",
+   "expected": "True",
+   "ok": true
+  },
+  {
+   "name": "B−L 色:弱 = (1/3):(−1) = −1:3",
+   "got": "-1/3",
+   "expected": "-1/3",
+   "ok": true
+  },
+  {
+   "name": "★ B−L 比例 −1:3 ≠ 2:−3 ⟹ 唔喺 U(1)⁸",
+   "got": "False",
+   "expected": "False",
+   "ok": true
+  },
+  {
+   "name": "well-typed 候選數 = 1（僅 SU(3)_c 中心荷）",
+   "got": "1",
+   "expected": "1",
+   "ok": true
+  },
+  {
+   "name": "壓制 ΔB=1 之候選數 = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "★ 條件③（新鏈）可達性 = 唔可達",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  },
+  {
+   "name": "三條件中可達者數 = 0",
+   "got": "0",
+   "expected": "0",
+   "ok": true
+  }
+ ]
+}

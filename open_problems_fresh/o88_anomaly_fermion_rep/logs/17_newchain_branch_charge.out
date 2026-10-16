@@ -1,0 +1,86 @@
+=== S1. 候選① SU(3)_c 中心荷 χ = p+2q mod 3：三檢 ===
+✅ dim 1 (Dynkin 0,0) = 1: got=1 expected=1
+✅ dim 3 (Dynkin 1,0) = 3: got=3 expected=3
+✅ dim 3̄ (Dynkin 0,1) = 3: got=3 expected=3
+✅ dim 6 (Dynkin 2,0) = 6: got=6 expected=6
+✅ dim 6̄ (Dynkin 0,2) = 6: got=6 expected=6
+✅ dim 8 (Dynkin 1,1) = 8: got=8 expected=8
+✅ dim 15 (Dynkin 2,1) = 15: got=15 expected=15
+✅ χ(1) = 0: got=0 expected=0
+✅ χ(3) = 1: got=1 expected=1
+✅ χ(3̄) = 2: got=2 expected=2
+✅ χ(6) = 2: got=2 expected=2
+✅ χ(6̄) = 1: got=1 expected=1
+✅ χ(8) = 0: got=0 expected=0
+✅ χ(15) = 1: got=1 expected=1
+✅ (a) χ(1) + 1 = χ(1⊗3): got=1 expected=1
+✅ (a) χ(3) + 1 = χ(3⊗3): got=2 expected=2
+✅ (a) χ(3̄) + 1 = χ(3̄⊗3): got=0 expected=0
+✅ (a) χ(6) + 1 = χ(6⊗3): got=0 expected=0
+✅ (a) χ(6̄) + 1 = χ(6̄⊗3): got=2 expected=2
+✅ (a) χ(8) + 1 = χ(8⊗3): got=1 expected=1
+✅ (a) χ(15) + 1 = χ(15⊗3): got=2 expected=2
+✅ (b) 3 ⊗ 3̄ = 8 ⊕ 1: 維數守恆 = 9: got=9 expected=9
+✅ (b) 3 ⊗ 3̄ = 8 ⊕ 1: 每分量 χ = (1+2) mod 3 = 0: got=True expected=True
+✅ (b) 3 ⊗ 3 = 3̄ ⊕ 6: 維數守恆 = 9: got=9 expected=9
+✅ (b) 3 ⊗ 3 = 3̄ ⊕ 6: 每分量 χ = (1+1) mod 3 = 2: got=True expected=True
+✅ (b) 3 ⊗ 8 = 15 ⊕ 6̄ ⊕ 3: 維數守恆 = 24: got=24 expected=24
+✅ (b) 3 ⊗ 8 = 15 ⊕ 6̄ ⊕ 3: 每分量 χ = (1+0) mod 3 = 1: got=True expected=True
+✅ (b) 8 ⊗ 8 = 27 ⊕ 10 ⊕ 10̄ ⊕ 8 ⊕ 8 ⊕ 1: 維數守恆 = 64: got=64 expected=64
+✅ (b) 8 ⊗ 8 = 27 ⊕ 10 ⊕ 10̄ ⊕ 8 ⊕ 8 ⊕ 1: 每分量 χ = (0+0) mod 3 = 0: got=True expected=True
+✅ (c) 可算：χ = p+2q mod 3（純組合）: got=True expected=True
+
+=== S2. 候選① 壓制判定：χ_total ≡ 0 對 ΔB=1 算子 ===
+✅ 3 色 fundamental: χ_total = 3·1 ≡ 0（中性）: got=0 expected=0
+✅ 1 色: χ = 1 ≠ 0（亦非 gauge singlet）: got=1 expected=1
+✅ 2 色: χ = 2 ≠ 0（亦非 gauge singlet）: got=2 expected=2
+✅ χ=0 之色 irrep ⊇ {1, 8}: got=True expected=True
+  χ=0 集：['1', '8']
+  ⟹ χ 中性 ⟺ 可成色 singlet（3 個 fundamental 或 adjoint 組合）
+  ⟹ 與 gauge 不變性重合 ⟹ **不提供額外選擇定則** ⟹ 唔壓制 ΔB=1
+
+=== S3. 候選②③ U(1)_B / U(1)_{B−L} 是否喺 U(1)⁸？ ===
+✅ U(1)⁸ 方向之色:弱 = 2:−3: got=-2/3 expected=-2/3
+✅ B 之弱分量 = 0 ⟹ 無法滿足 2:−3: got=True expected=True
+✅ B−L 色:弱 = (1/3):(−1) = −1:3: got=-1/3 expected=-1/3
+✅ ★ B−L 比例 −1:3 ≠ 2:−3 ⟹ 唔喺 U(1)⁸: got=False expected=False
+  ⟹ B、B−L 皆為外部（全域）量子數；用作壓制 = 定義性恆真（ΔB=0 ⟹ ΔB=0）⟹ 無鑑別力
+
+=== S4. 新鏈分支荷候選窮舉（5 條）＋型別/壓制判定 ===
+  ① SU(3)_c 中心荷 ℤ₃（χ=p+2q mod 3）
+    型別: ✅ well-typed（三檢過，S1）
+    壓制: ❌ 唔壓制：χ 中性 ⟺ 可成色 singlet = gauge 不變性 ⟹ 無額外選擇定則（S2）
+  ② U(1)_B（外部全域）
+    型別: ✗ 唔喺 U(1)⁸（弱分量 0 ⟹ α 矛盾，docs/15 §四）
+    壓制: ❌ 定義性恆真（要求 ΔB=0 再驗 ΔB=0）⟹ 無鑑別力
+  ③ U(1)_{B−L}（外部全域）
+    型別: ✗ 唔喺 U(1)⁸（色:弱 = −1:3 ≠ 2:−3，S3）
+    壓制: ❌ 同上（定義性恆真）
+  ④ U(1)⁸ 任一內方向（如 H）
+    型別: ✗ U(1) 無中心荷；mod 模數無結構依據 ⟹ ill-typed
+    壓制: ✗ 不可判定（無離散分級）
+  ⑤ 複合層 Λ²(12) 奇偶（66 恆偶）
+    型別: ✗ Λ² 恆偶 ⟹ 無分級
+    壓制: ✗ 不可判定
+✅ well-typed 候選數 = 1（僅 SU(3)_c 中心荷）: got=1 expected=1
+✅ 壓制 ΔB=1 之候選數 = 0: got=0 expected=0
+
+=== S5. 綜合：O210 條件③ 在新鏈下之可達性 ===
+  ① SU(3)_c 中心荷：well-typed 但唔壓制（與 gauge 不變重合）
+  ②③ B / B−L：新鏈下無內部來源（外部量子數）⟹ 作為選擇定則為恆真
+  ④⑤ 其餘：ill-typed
+  ⟹ ★ 條件③ 新鏈下 **唔可達**：冇任何 well-typed 且非恆真之分支荷可壓制 ΔB=1
+✅ ★ 條件③（新鏈）可達性 = 唔可達: got=0 expected=0
+  ⚠️ 與 O210-T3 對照：舊鏈「有 SU(4) 中心荷但唔壓制」；新鏈「SU(4) 定義域消失 + 唯一 well-typed
+     中心荷（SU(3)_c）亦唔壓制」⟹ 兩個鏈下條件③ 皆唔可達（理由不同）
+
+=== S6. 裁定：τ_p 條件式維持 ===
+  條件① 框架禁止: 🔴 假（O210-T2，鏈無關維持）
+  條件② Wilson 係數: 🔴 超代數層不可達
+  條件③ 分支荷選擇定則: 🟡 新鏈下唔可達（本檔 S4–S5）
+  τ_p = ∞: 🟡 條件式維持（elementary ✓ + 算子扇區未排除）
+✅ 三條件中可達者數 = 0: got=0 expected=0
+  ⟹ 要壓制 ΔB=1 必須**新增結構**（新算子／新型別規則／動力學機制）—— 與 O210 §7 一致
+
+===== PASS=42 FAIL=0 =====
+data/17_newchain_branch_charge.json written

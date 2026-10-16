@@ -1,0 +1,221 @@
+{
+  "script": "12_external_constraints.py",
+  "version": "v1",
+  "date": "2026-10-03",
+  "purpose": "PD #4 之外部約束登記：E1（α 端點錨）+ E2（質子衰變可否證端）+ 逐路線充分性 + 不可外部驗證清單",
+  "no_mc_reason": "代數恆等類無隨機量、無觀測比較 ⟹ MC null 無定義域；正確檢驗 = 守恆律自檢（維數守恆，違例 0）",
+  "endpoints_E1": [
+    {
+      "name": "α⁻¹(0)",
+      "structural": "137",
+      "external": "137.035999177",
+      "sigma": "2.1E-8",
+      "dev": "-0.0002626986865947708563260487372393978",
+      "dev_pct": "-0.02626986865947708563260487372393978",
+      "pull_sigma": "-1714246.523809523809523809523809524",
+      "source": "O139 docs/06 標題逐字: 137 → 137.035999177"
+    },
+    {
+      "name": "α⁻¹(M_Z)",
+      "structural": "128",
+      "external": "127.930",
+      "sigma": "0.008",
+      "dev": "0.0005471742359102634253107167982490424",
+      "dev_pct": "0.05471742359102634253107167982490424",
+      "pull_sigma": "8.75",
+      "source": "O139 final_result「Scheme 鑑定」: 128 ↔ MS-bar 127.930(8)"
+    },
+    {
+      "name": "running",
+      "structural": "9",
+      "external": "9.105999",
+      "sigma": "0.008",
+      "dev": "-0.01164056793768591452733522153911943",
+      "dev_pct": "-1.164056793768591452733522153911943",
+      "pull_sigma": "-13.249875",
+      "source": "O139 final_result: 物理 running 9.1060(8)；結構 = F_proj−2B = (B−1)² = N_gen²"
+    }
+  ],
+  "quoted_not_rederived": {
+    "source_o139": "final_result.md「Scheme 鑑定」+ docs/06 標題；🔴 dressing 四類機制全排除",
+    "running_delta": "δ = +0.1060(8)；微擾 4.979 vs 色散 3.814；差 1.1654 = 11δ；δ/spread = 0.0910 ⟹ 非 13.2σ",
+    "source_o204_null": "v7 候選 rank 38/7497；放寬形式命中 12623 ≫ 期望 9326 ⟹ 選擇效應；禁區"
+  },
+  "proton_decay_E2": {
+    "sk_limit_yr": "2.4E+34",
+    "hyperk_projection_yr": "1.0E+35",
+    "sk_ref": "PRD 102, 112011 (2020), arXiv:2010.16098",
+    "hyperk_ref": "Hyper-K proton-decay projection (GUTPC 2024 overview; arXiv:2602.23063)",
+    "verdict": "相容（trivially）但檢驗力 = 0；單向可否證；僅『觀測到衰變』可推翻"
+  },
+  "route_sufficiency": {
+    "R1": {
+      "relation": "C(B²,2)+B²+1 = 137",
+      "target_source": "α⁻¹(0)（外部測量）",
+      "kind": "obs",
+      "solutions_B_1_12": [
+        4
+      ]
+    },
+    "R2": {
+      "relation": "B·L₅ = N_d = 44",
+      "target_source": "N_d = B(3B−1)（結構）",
+      "kind": "struct",
+      "solutions_B_1_12": [
+        4
+      ]
+    },
+    "R3": {
+      "relation": "B² = 16",
+      "target_source": "dim(SO(10) 旋量)（數學）",
+      "kind": "struct",
+      "solutions_B_1_12": [
+        4
+      ]
+    },
+    "R4": {
+      "relation": "B·2L₅ = 88",
+      "target_source": "N_site = 2B(3B−1)（結構）",
+      "kind": "struct",
+      "solutions_B_1_12": [
+        4
+      ]
+    },
+    "R5": {
+      "relation": "(B−1)² = 9 = Δα⁻¹",
+      "target_source": "F_proj−2B（結構；觀測識別同 E1）",
+      "kind": "struct",
+      "solutions_B_1_12": [
+        4
+      ]
+    },
+    "R6": {
+      "relation": "N_d − 2B = 36 = h¹¹",
+      "target_source": "h¹¹（CY₃ 數學）",
+      "kind": "struct",
+      "solutions_B_1_12": [
+        4
+      ]
+    },
+    "R7": {
+      "relation": "B² + N_d = 60",
+      "target_source": "預算 60（結構）",
+      "kind": "struct",
+      "solutions_B_1_12": [
+        4
+      ]
+    },
+    "R8": {
+      "relation": "B/(N_d−B) = 1/10",
+      "target_source": "λ_Edd（觀測類 🟡）",
+      "kind": "obs",
+      "solutions_B_1_12": [
+        4
+      ]
+    },
+    "R12": {
+      "relation": "L_B = b₀ = 7",
+      "target_source": "Lucas L_B；b₀ = 11 − 2N_f/3（理論）",
+      "kind": "struct",
+      "solutions_B_1_12": [
+        4
+      ]
+    }
+  },
+  "route_classification": {
+    "struct_target": [
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R12"
+    ],
+    "external_target": [
+      "R1",
+      "R8"
+    ],
+    "zero_external_contact": [
+      "R2",
+      "R3",
+      "R4",
+      "R6",
+      "R7",
+      "R12"
+    ]
+  },
+  "handoff_note_refinement": "前輪 note 寫「餘 8 條純內部路線(R2–R8,R12)」⟹ 更正為：8 條之目標非外部測量值，但 R5（觀測識別同 E1）與 R8（λ_Edd 觀測類）有保留 ⟹ 保守 = 6 條",
+  "algebraic_items_not_externally_verifiable": [
+    [
+      1,
+      "分支結構鏈（12 關係，12 = B(B−1) 為根）",
+      "整數恆等"
+    ],
+    [
+      2,
+      "O229 九路線之「唔用 N_c」性質",
+      "對自身結構之陳述（S4 逐條實算）"
+    ],
+    [
+      3,
+      "Pieri 完備普查（合格 dims {6,10,64,70,270,300}）",
+      "SU(4) 表示論恆等 + 維數守恆自檢"
+    ],
+    [
+      4,
+      "判據修正（ΔB=1 ⟺ colour 三重態 ∧ |B−L|=2/3）",
+      "表示論恆等"
+    ],
+    [
+      5,
+      "記錄 scalar 扇區 0 個合格載體",
+      "表示論恆等 + 對框架記錄內容之讀取"
+    ],
+    [
+      6,
+      "N_{ΔB=1} = 9；逃生路線最小 66/78 + 型類",
+      "表示論計數"
+    ]
+  ],
+  "firstrun_note": "首跑 6/7（S1 FAIL = check bug：手打期望值把 running 之 dev 誤寫 6e-4）；已改往返恆等，log 保留為 logs/12_external_constraints.firstrun_checkbug.out",
+  "checks": [
+    {
+      "id": "S1  ★ 三端點偏差獨立重算（零 import O139；外部值先固定後比對 ⟹ 非擬合）；核法 = 往返恆等 + 引文推期望（零手打）",
+      "pass": true,
+      "detail": "α⁻¹(0) dev=-0.026269% ; running δ=0.105999"
+    },
+    {
+      "id": "S2  ★ 引文自洽：δ/spread = 0.1060/1.1654 = 0.0910（與 O139 一致；機制結論不在本輪範圍）",
+      "pass": true,
+      "detail": "computed=0.0910"
+    },
+    {
+      "id": "S3  ★ E2：`τ_p = ∞` 與 SK 界相容但**零檢驗力**（單向可否證）；Hyper-K 亦不改變此性質",
+      "pass": true,
+      "detail": "SK=2.4E+34 HK=1.0E+35"
+    },
+    {
+      "id": "S4  ★★ 九條路線**逐條各自唯一**給 B = 4（唔靠引述；掃 B = 1..12）",
+      "pass": true,
+      "detail": "solutions={'R1': [4], 'R2': [4], 'R3': [4], 'R4': [4], 'R5': [4], 'R6': [4], 'R7': [4], 'R8': [4], 'R12': [4]}"
+    },
+    {
+      "id": "S5  ★ 敏感度：即使 R1（E1 錨）+ R5 + R8 全失效，仍有 6 條**零外部接觸**路線各自定 B = 4",
+      "pass": true,
+      "detail": "core=['R2', 'R3', 'R4', 'R6', 'R7', 'R12']"
+    },
+    {
+      "id": "S6  ★ 明文登記 6 項代數恆等類 + 逐條 N/A 理由（拒絕假做 MC）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S7  ★ 交付裁定：2 項外部相依中，1 項（E1）對 B=4 不敏感、1 項（E2）單向可否證",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 7,
+  "n_total": 7
+}

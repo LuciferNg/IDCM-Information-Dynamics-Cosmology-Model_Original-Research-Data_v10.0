@@ -1,0 +1,427 @@
+{
+  "auditor": "scripts/04_audit_independent.py",
+  "method": "weight method A(R)=sum_weights sum_i lambda_i^3 / (N-1)(N-2)/N",
+  "imports_of_o88_scripts": 0,
+  "scored": 42,
+  "passed": 40,
+  "failed": 2,
+  "report_only": 2,
+  "record_mismatches": [
+    {
+      "item": "495 / Λ4",
+      "recorded": 18,
+      "correct": 48
+    },
+    {
+      "item": "792 / Λ5",
+      "recorded": -14,
+      "correct": 42
+    }
+  ],
+  "vacuous_in_03": {
+    "count": 9,
+    "real": 37
+  },
+  "canonical_anomaly_table": {
+    "Lambda^1": {
+      "dim": 12,
+      "A": 1
+    },
+    "Lambda^2": {
+      "dim": 66,
+      "A": 8
+    },
+    "Lambda^3": {
+      "dim": 220,
+      "A": 27
+    },
+    "Lambda^4": {
+      "dim": 495,
+      "A": 48
+    },
+    "Lambda^5": {
+      "dim": 792,
+      "A": 42
+    },
+    "Lambda^6": {
+      "dim": 924,
+      "A": 0
+    },
+    "Lambda^7": {
+      "dim": 792,
+      "A": -42
+    },
+    "Lambda^8": {
+      "dim": 495,
+      "A": -48
+    },
+    "Lambda^9": {
+      "dim": 220,
+      "A": -27
+    },
+    "Lambda^10": {
+      "dim": 66,
+      "A": -8
+    },
+    "Lambda^11": {
+      "dim": 12,
+      "A": -1
+    }
+  },
+  "tests": [
+    {
+      "tag": "A0",
+      "claim": "A(fund) = 1（歸一化自洽）",
+      "got": "1",
+      "want": "1",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A1",
+      "claim": "A(12) = 1",
+      "got": "1",
+      "want": "1",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A2",
+      "claim": "A(12bar) = -1",
+      "got": "-1",
+      "want": "-1",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A3",
+      "claim": "A(66)=A(Λ²) = 8",
+      "got": "8",
+      "want": "8",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A4",
+      "claim": "A(220)=A(Λ³) = 27",
+      "got": "27",
+      "want": "27",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A5",
+      "claim": "A(924)=A(Λ⁶) = 0",
+      "got": "0",
+      "want": "0",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A6",
+      "claim": "A(495)=A(Λ⁴) 記錄 18",
+      "got": "48",
+      "want": "18",
+      "pass": false,
+      "vacuous": false
+    },
+    {
+      "tag": "A7",
+      "claim": "A(792)=A(Λ⁵) 記錄 -14",
+      "got": "42",
+      "want": "-14",
+      "pass": false,
+      "vacuous": false
+    },
+    {
+      "tag": "A6c",
+      "claim": "A(495)=A(Λ⁴) = 48（正解，取代記錄 18）",
+      "got": "48",
+      "want": "48",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A7c",
+      "claim": "A(792)=A(Λ⁵) = 42（正解，取代記錄 -14）",
+      "got": "42",
+      "want": "42",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A8.k1",
+      "claim": "A(Λ^1) = -A(Λ^11)",
+      "got": "1",
+      "want": "1",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A8.k2",
+      "claim": "A(Λ^2) = -A(Λ^10)",
+      "got": "8",
+      "want": "8",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A8.k3",
+      "claim": "A(Λ^3) = -A(Λ^9)",
+      "got": "27",
+      "want": "27",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A8.k4",
+      "claim": "A(Λ^4) = -A(Λ^8)",
+      "got": "48",
+      "want": "48",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A8.k5",
+      "claim": "A(Λ^5) = -A(Λ^7)",
+      "got": "42",
+      "want": "42",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A9",
+      "claim": "A(adj) = 0",
+      "got": "0",
+      "want": "0",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A10",
+      "claim": "A(Sym²) = N+4 = 16",
+      "got": "16",
+      "want": "16",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A11",
+      "claim": "A(12⊗12) = dim·A + dim·A = 24 = A(66)+A(78)",
+      "got": "24",
+      "want": "24",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A12",
+      "claim": "A(12⊗66) = dim(66)·A(12) + dim(12)·A(66) = 66·1 + 12·8 = 162",
+      "got": "162",
+      "want": "162",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "A13",
+      "claim": "A(12⊗12bar) = 0（1 ⊕ 143）",
+      "got": "0",
+      "want": "0",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "B1",
+      "claim": "3×(12⊕12bar) 異常自由：3(+1)+3(-1) = 0",
+      "got": "0",
+      "want": "0",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "B2",
+      "claim": "dim 3×(12⊕12bar) = 72",
+      "got": "72",
+      "want": "72",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "B3",
+      "claim": "dim 2×(12⊕12bar) = 48（最小異常自由）",
+      "got": "48",
+      "want": "48",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "B4",
+      "claim": "72 - 48 = 24 個 vector-like 配對",
+      "got": "24",
+      "want": "24",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "C1",
+      "claim": "12 = (4,3)：4×3 = 12",
+      "got": "12",
+      "want": "12",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "C2",
+      "claim": "66 = (6,6)⊕(10,3̄)：36+30 = 66",
+      "got": "66",
+      "want": "66",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "C3",
+      "claim": "78 = (10,6)⊕(6,3̄)：60+18 = 78",
+      "got": "78",
+      "want": "78",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "C4",
+      "claim": "143 = (15,1)⊕(1,8)⊕(15,8)：15+8+120 = 143",
+      "got": "143",
+      "want": "143",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "C5",
+      "claim": "143 = dim(SU(12)) = 12²−1",
+      "got": "143",
+      "want": "143",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "C6",
+      "claim": "12⊗12bar = 144 = 1 ⊕ 143",
+      "got": "144",
+      "want": "144",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "D1",
+      "claim": "每代 SM Weyl 數 = 16",
+      "got": "16",
+      "want": "16",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "D2",
+      "claim": "3 代 SM Weyl 數 = 48",
+      "got": "48",
+      "want": "48",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "D3",
+      "claim": "12 提供 9 夸克 + 3 輕子 = 12（左手徵）",
+      "got": "12",
+      "want": "12",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "D4",
+      "claim": "12bar 提供 9 夸克 + 3 輕子 = 12（右手徵）",
+      "got": "12",
+      "want": "12",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "E1",
+      "claim": "N_d = B·L_5 = 4×11 = 44",
+      "got": "44",
+      "want": "44",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "E2",
+      "claim": "N = B·N_gen = 4×3 = 12",
+      "got": "12",
+      "want": "12",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "E3",
+      "claim": "N = L_5 + 1 = 12",
+      "got": "12",
+      "want": "12",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "E4",
+      "claim": "h11 = 3N = 36",
+      "got": "36",
+      "want": "36",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "E5",
+      "claim": "h11 = K_tree + N_gen = 33+3 = 36",
+      "got": "36",
+      "want": "36",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "E6",
+      "claim": "dim 3×(12⊕12bar) = 2·h11 = 72",
+      "got": "72",
+      "want": "72",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "E7",
+      "claim": "dim Λ²(12) = 66 = 2·K_tree",
+      "got": "66",
+      "want": "66",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "E8",
+      "claim": "dim(SU(12)) = 143 = B·K_tree + L_5 = 4·33+11",
+      "got": "143",
+      "want": "143",
+      "pass": true,
+      "vacuous": false
+    },
+    {
+      "tag": "F1",
+      "claim": "03_verifier 空洞斷言計數",
+      "got": 9,
+      "want": null,
+      "pass": true,
+      "vacuous": true,
+      "note": "報告項（唔計入分母）"
+    },
+    {
+      "tag": "F2",
+      "claim": "03_verifier 真斷言計數",
+      "got": 37,
+      "want": null,
+      "pass": true,
+      "vacuous": true,
+      "note": "報告項（唔計入分母）"
+    }
+  ]
+}

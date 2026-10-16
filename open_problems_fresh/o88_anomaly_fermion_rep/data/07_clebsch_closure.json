@@ -1,0 +1,200 @@
+{
+  "script": "07_clebsch_closure.py",
+  "version": "v3",
+  "date": "2026-10-02",
+  "purpose": "O88/PD #1 — N_LQ=48 相干 vs 非相干：群論 Clebsch 完整計算",
+  "main_result": "coset generator 只喺 (q,l) 有 support ⟹ 無 diquark 耦合 ⟹ |DeltaB|=1 通道數 = 0",
+  "lq_generator_support_kinds": [
+    [
+      "l",
+      "q"
+    ],
+    [
+      "q",
+      "l"
+    ]
+  ],
+  "lq_current_charges": [
+    [
+      "-1/3",
+      "1"
+    ],
+    [
+      "1/3",
+      "-1"
+    ]
+  ],
+  "two_current_pairings": [
+    [
+      "-2/3",
+      "2"
+    ],
+    [
+      "0",
+      "0"
+    ],
+    [
+      "2/3",
+      "-2"
+    ]
+  ],
+  "exchange_conjugate_pairing": [
+    [
+      "-2/3",
+      "2"
+    ],
+    [
+      "0",
+      "0"
+    ],
+    [
+      "2/3",
+      "-2"
+    ]
+  ],
+  "n_channel_deltaB_1": 0,
+  "ps_lq_partial_sum": "sum_{A in LQ} T^A_ab T^A_cd = (1/2)[d_b4 d_c4 d_ad^col + d_a4 d_d4 d_bc^col]",
+  "decomposition_identity": "full SU(4) adjoint sum = (8_c sum) + (LQ sum) + (B-L sum)",
+  "su3_completeness": "sum_{a=1..8} t^a_ij t^a_kl = (1/2)[d_il d_kj - (1/3) d_ij d_kl]",
+  "tensor_factorization_dev": 3.469446951953614e-18,
+  "casimir_su4_fund": 1.875,
+  "casimir_su3_fund": 1.3333333333333333,
+  "secondary_theorem": "48-生成元和 = (6-和)x(8-和) ⟹ 乘數 O(1)，非 48/48^2/8/6",
+  "falsified_hypotheses": {
+    "incoherent_x48": true,
+    "coherent_x48sq": true,
+    "family_count_x8": true,
+    "lq_count_x6": true,
+    "gauge_LQ_mediates_DeltaB1": true
+  },
+  "tau_old_range_yr": [
+    2.891e+38,
+    1.388e+40
+  ],
+  "tau_new_status": "RETRACTED（前提否證：gauge-LQ 唔中介 DeltaB=1）",
+  "new_open_item": "DeltaB=1 算子須由 scalar 扇區（Higgs leptoquark）提供 —— 未分析",
+  "checks": [
+    {
+      "id": "S1  SU(4)_PS 生成元數 = 15",
+      "pass": true,
+      "detail": "got=15"
+    },
+    {
+      "id": "S2  SU(3)_F  生成元數 = 8",
+      "pass": true,
+      "detail": "got=8"
+    },
+    {
+      "id": "S3  SU(4) 正規化 Tr=delta/2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S4  SU(3) 正規化 Tr=delta/2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S5  B-L(quark)=1/3, B-L(lepton)=-1",
+      "pass": true,
+      "detail": "BL=['1/3', '1/3', '1/3', '-1']"
+    },
+    {
+      "id": "S6  ★ 15 = 8(colour octet) + 6(leptoquark) + 1(B-L)",
+      "pass": true,
+      "detail": "got=(8,6,1)"
+    },
+    {
+      "id": "S7  ★ LQ generator 只在 (quark,lepton) 或 (lepton,quark) 有 support",
+      "pass": true,
+      "detail": "kinds=[('l', 'q'), ('q', 'l')]"
+    },
+    {
+      "id": "S8  ★ 冇 LQ generator 有 (quark,quark) support（⟹ 無 diquark 電流）",
+      "pass": true,
+      "detail": "kinds=[('l', 'q'), ('q', 'l')]"
+    },
+    {
+      "id": "S9  ★ 冇 LQ generator 有 (lepton,lepton) support",
+      "pass": true,
+      "detail": "kinds=[('l', 'q'), ('q', 'l')]"
+    },
+    {
+      "id": "S10 ★ 每個 LQ 電流帶 (DeltaB, DeltaL) = (+1/3,-1) 或 (-1/3,+1)（每個只含一 q 一 l）",
+      "pass": true,
+      "detail": "set=[('-1/3', '1'), ('1/3', '-1')]"
+    },
+    {
+      "id": "S11 ★★ 任意兩 LQ 電流配對之 |DeltaB| ∈ {0, 2/3}（結構上取不到 1）",
+      "pass": true,
+      "detail": "|DeltaB| set=['0', '2/3', '2/3']"
+    },
+    {
+      "id": "S12 ★★ N_channel(|DeltaB|=1) = 0 ⟹ 48 唔係 DeltaB=1 通道數",
+      "pass": true,
+      "detail": "N_db1=0"
+    },
+    {
+      "id": "S13 ★★ 無任何 LQ 電流有 (q,q) 或 (l,l) 支撐 ⟹ 無 diquark 耦合 ⟹ 唔中介 DeltaB=±1",
+      "pass": true,
+      "detail": "n_db1=0 kinds=[('l', 'q'), ('q', 'l')]"
+    },
+    {
+      "id": "S13b ★★ 全 (15,8) coset: 單 boson 交換 max|DeltaB| = 2/3 < 1 ⟹ 廣義無質子衰變",
+      "pass": true,
+      "detail": "max|dB|=2/3"
+    },
+    {
+      "id": "S14 ★ PS LQ 部分和 = (1/2)[d_b4 d_c4 d_ad^col + d_a4 d_d4 d_bc^col]",
+      "pass": true,
+      "detail": "maxdev=0.00e+00"
+    },
+    {
+      "id": "S15 ★ 15-adjoint = 8_c + LQ + B-L（部分和分解恆等）",
+      "pass": true,
+      "detail": "maxdev=6.94e-18"
+    },
+    {
+      "id": "S16 ★ sum_a T^a T^a = C2·1（SU(4) fund, C2 = 15/8）",
+      "pass": true,
+      "detail": "C2=1.8750000000"
+    },
+    {
+      "id": "S17 ★ sum_a t^a t^a = C2·1（SU(3) fund, C2 = 4/3）",
+      "pass": true,
+      "detail": "C2=1.3333333333"
+    },
+    {
+      "id": "S18 ★ SU(3)_F 完備性 = (1/2)[d_il d_kj - (1/3) d_ij d_kl]",
+      "pass": true,
+      "detail": "maxdev=5.55e-17"
+    },
+    {
+      "id": "S19 ★ Schur: family-adjoint 湮滅 family-singlet（收縮 = 0，唔係 8）",
+      "pass": true,
+      "detail": "val=5.55e-17"
+    },
+    {
+      "id": "S20 ★ 48 = 6 (LQ) x 8 (SU(3)_F adjoint) 生成元數",
+      "pass": true,
+      "detail": "got=48"
+    },
+    {
+      "id": "S21 ★★ 48-生成元和 = (6-和) x (8-和) ⟹ 乘數唔可能係獨立之 48",
+      "pass": true,
+      "detail": "maxdev=3.47e-18"
+    },
+    {
+      "id": "S22 ★★ 判定: gauge-LQ 介質之 tau_p 範圍撤回（前提否證）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "S23 ★★ 新開放項已識別: DeltaB=1 須由 scalar 扇區提供",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 24,
+  "n_total": 24
+}
