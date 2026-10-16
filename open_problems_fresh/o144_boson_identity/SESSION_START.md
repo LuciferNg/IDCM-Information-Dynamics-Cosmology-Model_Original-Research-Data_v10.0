@@ -483,3 +483,11 @@ QCD 橋 = 缺席。兩橋無共同基。
 - 🔴 **δℓ = ΔS/σ_macro 盲測 0/5 全負**: δℓ 8 對（ρ−π 0.700 / K* 0.435 / D* 0.155 / B* 0.050 / Σ* 0.293 / Ξ* 0.237 / J/ψ 0.124 / ϒ 0.068 fm）；C1–C5 (ħc/μ_red, ħc/Σ1/m, ħc/√prod, ħc/Σm, +spectator) 全 ✗ ⟹ **δℓ = 容器幾何量, 需 Y-junction 幾何**
 - **docs/10 §6「偽證 231.2×」+ docs/35 路線 C 加 append-only 更正附註（原文不動）**
 - **row15 重啟完成度 1/3**: σ 側 ✓（231.82 EXACT）；M₀→v 由 v13 ✓；R3 (lattice −3.37σ) / R4 (core 生成, M₀ φ 鏈禁區) 上游殘餘轉 O142 邊界; register note ×1
+
+## 2026-10-14l 階段性 Closeout #2（append-only）
+
+- **指令**: 調律者「O144 先完成數字審計然後階段性Closeout」; 性質 = 繼 docs/25 後第二次 stage closeout
+- ✅ **scripts/48 (docs/38) 全量數字審計 = 54 PASS / 0 FAIL**: 45 支 scripts 重跑零 crash; B2 tally 對照 01..39 全 PASS (19/0, 3/0, 199/0, 32/0, 17/0, 20/0, 27/0, 20/0, 26/0, 30/0, 21/0, 20/0, 18/0, 18/0, 39/0, 24/0, 25/0, 30/0, 14/0); **D 段獨立重算 13/13** (Λ=45.28486854, σ 三形式 0.180463300 rel diff <1e-35, 231.8206, C 四點, r1–r6, δℓ 0.699948/0.293066); 時序 r1..r42 連續; **H3 污染檢查: 本輪 commits 零 touch o142 路徑**; register O142↔O144 四步閉環
+- **O144 保持 partial 不變**: P1/P2/P3 ✅ closed; row15 重啟中 (σ ✓ / M₀→v ✓ / R3R4 上游); row 8/10 連結層 = 主開放 (需 Y-junction 幾何); E_bind 0.3065 / 膠球 3.32% 開放
+- ⚠️ 軟提示: O142 目錄 git untracked (已報未拍板, 唔代 O142 commit); v̄ citation 斷鏈; O247 歸屬等裁決
+- register note ×1

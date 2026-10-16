@@ -346,3 +346,9 @@ O137 (CY₃ 扇區矩陣 / Σφ8 / Φ 相交) → **O144**
 - 🔴 **δℓ = ΔS/σ_macro 0/5**: δℓ 8 對入冊（容器幾何量, 唔係 Compton/構成標度）; C = δℓ_mes/δℓ_bar = 2.388 絃幾何比
 - **row15 重啟完成度 1/3**（σ ✓; M₀→v ✓ v13; R3/R4 上游殘餘轉 O142 邊界）
 - **O144 主狀態不變: partial**；register note ×1
+
+## 2026-10-14l 階段性 Closeout #2（append-only）
+
+- ✅ **scripts/48 (docs/38): 54 PASS / 0 FAIL** — 45 支 scripts 重跑零 crash; tally 全對; 獨立重算 13/13 (σ 0.180463300 / 231.82 / C 四點 / r1–r6 / δℓ); 時序 r1..r42; O142 污染檢查零
+- **O144 保持 partial** — P1/P2/P3 ✅ closed; row15 重啟中; row 8/10 連結層 = 主開放
+- register note（closeout）×1

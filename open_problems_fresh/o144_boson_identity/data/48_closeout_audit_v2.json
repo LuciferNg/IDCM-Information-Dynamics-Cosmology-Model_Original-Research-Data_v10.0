@@ -1,0 +1,514 @@
+{
+ "passed": 54,
+ "failed": 0,
+ "rows": [
+  {
+   "id": "A1",
+   "desc": "docs: 01..37 全存在 (n=37)",
+   "ok": true,
+   "note": "37"
+  },
+  {
+   "id": "A2",
+   "desc": "scripts: 編號集 = 01..48 除 17 (47 支; 34=v1 引擎, 48=v2 引擎)",
+   "ok": true,
+   "note": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]"
+  },
+  {
+   "id": "A3",
+   "desc": "data: 01..47 全存在 (n=48)",
+   "ok": true,
+   "note": "48"
+  },
+  {
+   "id": "A4",
+   "desc": "markdown 圍欄平衡",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "id": "A5",
+   "desc": "水位初始化 (全檔全驗)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "B1",
+   "desc": "重跑 45 支 (01..48 除 17/34/48) 無 Traceback/crash",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "id": "B1b",
+   "desc": "scripts/40..47 判決關鍵字全在 (內容層, 非格式層)",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "id": "B2-01",
+   "desc": "scripts/01 = 19/0 (期望 19/0)",
+   "ok": true,
+   "note": "19/0 vs 19/0"
+  },
+  {
+   "id": "B2-02",
+   "desc": "scripts/02 = 19/3 (期望 19/3)",
+   "ok": true,
+   "note": "19/3 vs 19/3"
+  },
+  {
+   "id": "B2-03",
+   "desc": "scripts/03 = 3/0 (期望 3/0)",
+   "ok": true,
+   "note": "3/0 vs 3/0"
+  },
+  {
+   "id": "B2-18",
+   "desc": "scripts/18 = 199/0 (期望 199/0)",
+   "ok": true,
+   "note": "199/0 vs 199/0"
+  },
+  {
+   "id": "B2-23",
+   "desc": "scripts/23 = 32/0 (期望 32/0)",
+   "ok": true,
+   "note": "32/0 vs 32/0"
+  },
+  {
+   "id": "B2-24",
+   "desc": "scripts/24 = 17/0 (期望 17/0)",
+   "ok": true,
+   "note": "17/0 vs 17/0"
+  },
+  {
+   "id": "B2-25",
+   "desc": "scripts/25 = 20/0 (期望 20/0)",
+   "ok": true,
+   "note": "20/0 vs 20/0"
+  },
+  {
+   "id": "B2-26",
+   "desc": "scripts/26 = 27/0 (期望 27/0)",
+   "ok": true,
+   "note": "27/0 vs 27/0"
+  },
+  {
+   "id": "B2-27",
+   "desc": "scripts/27 = 20/0 (期望 20/0)",
+   "ok": true,
+   "note": "20/0 vs 20/0"
+  },
+  {
+   "id": "B2-28",
+   "desc": "scripts/28 = 26/0 (期望 26/0)",
+   "ok": true,
+   "note": "26/0 vs 26/0"
+  },
+  {
+   "id": "B2-29",
+   "desc": "scripts/29 = 30/0 (期望 30/0)",
+   "ok": true,
+   "note": "30/0 vs 30/0"
+  },
+  {
+   "id": "B2-30",
+   "desc": "scripts/30 = 21/0 (期望 21/0)",
+   "ok": true,
+   "note": "21/0 vs 21/0"
+  },
+  {
+   "id": "B2-31",
+   "desc": "scripts/31 = 20/0 (期望 20/0)",
+   "ok": true,
+   "note": "20/0 vs 20/0"
+  },
+  {
+   "id": "B2-32",
+   "desc": "scripts/32 = 18/0 (期望 18/0)",
+   "ok": true,
+   "note": "18/0 vs 18/0"
+  },
+  {
+   "id": "B2-33",
+   "desc": "scripts/33 = 18/0 (期望 18/0)",
+   "ok": true,
+   "note": "18/0 vs 18/0"
+  },
+  {
+   "id": "B2-35",
+   "desc": "scripts/35 = 39/0 (期望 39/0)",
+   "ok": true,
+   "note": "39/0 vs 39/0"
+  },
+  {
+   "id": "B2-36",
+   "desc": "scripts/36 = 24/0 (期望 24/0)",
+   "ok": true,
+   "note": "24/0 vs 24/0"
+  },
+  {
+   "id": "B2-37",
+   "desc": "scripts/37 = 25/0 (期望 25/0)",
+   "ok": true,
+   "note": "25/0 vs 25/0"
+  },
+  {
+   "id": "B2-38",
+   "desc": "scripts/38 = 30/0 (期望 30/0)",
+   "ok": true,
+   "note": "30/0 vs 30/0"
+  },
+  {
+   "id": "B2-39",
+   "desc": "scripts/39 = 14/0 (期望 14/0)",
+   "ok": true,
+   "note": "14/0 vs 14/0"
+  },
+  {
+   "id": "C1",
+   "desc": "scripts 寫入模式 /tmp 命中 = 0",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "id": "D1",
+   "desc": "Λ = M₀ρ√λ_max = 45.28486854 MeV (=45.2849)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D2",
+   "desc": "σ 三形式 = 0.180463300 GeV² (rel diff < 1e-35)",
+   "ok": true,
+   "note": "0.180463300061 / 0.180463300061 / 0.180463300061"
+  },
+  {
+   "id": "D3",
+   "desc": "σ_macro/σ_link = λ_max·72/11 = 231.8206 (=231.8206)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D4",
+   "desc": "Λ = core·N_gen/L₅ (3/11 EXACT)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D5",
+   "desc": "C(ud;s) = 2.388367 (=2.3884)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D6",
+   "desc": "C(ud;c) = 3.826469 (=3.8265)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D7",
+   "desc": "C(ud;b) = 3.308165 (=3.3082)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D8",
+   "desc": "C(us;s) = 1.834516 (=1.8345)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D9",
+   "desc": "r1..r6 比例 (1.2175/1.6086/2.8022/3.1163/1.8138/5.6649)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D10",
+   "desc": "ΔS(ρ−π) = 22.943 M₀ (=640.13 MeV)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D11",
+   "desc": "δℓ(ρ−π) = 0.699948 fm (=0.6999)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D12",
+   "desc": "δℓ(Σ*−Λ) = 0.293066 fm (=0.2931)",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "D13",
+   "desc": "v = 246.21 GeV (階梯 v/core 比, O142 v13/v18 已審計)",
+   "ok": true,
+   "note": "v 全算子跡屬 O142 審計鏈 (docs/21 27/27), O144 記覆蓋"
+  },
+  {
+   "id": "E1",
+   "desc": "docs↔scripts mtime (INFO; docs 前 scripts = 後續 patch benign)",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "id": "E2",
+   "desc": "§〇 時序索引 = 42 行 (r1..r42)",
+   "ok": true,
+   "note": "42"
+  },
+  {
+   "id": "E3",
+   "desc": "步號 1..42 連續",
+   "ok": true,
+   "note": "[38, 39, 40, 41, 42]"
+  },
+  {
+   "id": "E4",
+   "desc": "日期非遞減",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "F1-17",
+   "desc": "data/17 inline 例外由 scripts/18 覆蓋",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "F2",
+   "desc": "全部 data/*.json 有 producer script 引用",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "id": "F3",
+   "desc": "每支 script 有 data/ 產物 (除 19/34 只讀審計)",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "id": "G1",
+   "desc": "開放問題表行數 = 16 (16 行)",
+   "ok": true,
+   "note": "ids=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]"
+  },
+  {
+   "id": "G2",
+   "desc": "帶判定加注行 = 16 (真開放無判定 = [])",
+   "ok": true,
+   "note": "noverd=[]"
+  },
+  {
+   "id": "G3",
+   "desc": "開放問題表所有 docs/ 引用存在",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "id": "H1",
+   "desc": "final_result 含 ## 狀態/結論/依賴",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "H2",
+   "desc": "final_result 含 PASS 計數",
+   "ok": true,
+   "note": ""
+  },
+  {
+   "id": "H3",
+   "desc": "本輪 commits 冇 touch o142 路徑",
+   "ok": true,
+   "note": "[]"
+  }
+ ],
+ "tallies": {
+  "1": "19/0",
+  "2": "19/3",
+  "3": "3/0",
+  "4": "rc=0",
+  "5": "rc=0",
+  "6": "rc=0",
+  "7": "rc=0",
+  "8": "rc=0",
+  "9": "rc=0",
+  "10": "rc=0",
+  "11": "rc=0",
+  "12": "rc=0",
+  "13": "rc=0",
+  "14": "rc=0",
+  "15": "rc=0",
+  "16": "rc=0",
+  "18": "199/0",
+  "19": "299/3",
+  "20": "rc=0",
+  "21": "rc=0",
+  "22": "rc=0",
+  "23": "32/0",
+  "24": "17/0",
+  "25": "20/0",
+  "26": "27/0",
+  "27": "20/0",
+  "28": "26/0",
+  "29": "30/0",
+  "30": "21/0",
+  "31": "20/0",
+  "32": "18/0",
+  "33": "18/0",
+  "35": "39/0",
+  "36": "24/0",
+  "37": "25/0",
+  "38": "30/0",
+  "39": "14/0",
+  "40": "rc=0",
+  "41": "rc=0",
+  "42": "rc=0",
+  "43": "rc=0",
+  "44": "rc=0",
+  "45": "rc=0",
+  "46": "rc=0",
+  "47": "rc=0"
+ },
+ "root_mtimes": {
+  "01_qcd_mass_budget.md": "2026-10-15 23:34",
+  "02_candidate_adjudication.md": "2026-10-15 23:34",
+  "03_blind_test.md": "2026-10-15 23:34",
+  "04_sequential_attack.md": "2026-10-15 23:34",
+  "05_spectral_language_audit.md": "2026-10-15 23:34",
+  "06_forcedness_test.md": "2026-10-15 23:34",
+  "07_closeout_audit.md": "2026-10-15 23:34",
+  "08_remaining_open_problems.md": "2026-10-15 23:34",
+  "09_n_charm_decisive.md": "2026-10-15 23:34",
+  "10_su3_connection_functional_sigma.md": "2026-10-15 23:34",
+  "11_scale_bridge.md": "2026-10-15 23:34",
+  "12_epistemology_reclass.md": "2026-10-15 23:34",
+  "13_bridge_closure.md": "2026-10-15 23:34",
+  "14_bridge_principle.md": "2026-10-15 23:34",
+  "15_correction_origin.md": "2026-10-15 23:34",
+  "16_sector_naming.md": "2026-10-15 23:34",
+  "17_photon_phase_mode.md": "2026-10-15 23:34",
+  "18_gluon_chain.md": "2026-10-15 23:34",
+  "19_sin2thetaW_adjudication.md": "2026-10-15 23:34",
+  "20_alpha_s_fragility.md": "2026-10-15 23:34",
+  "21_closeout_audit.md": "2026-10-15 23:34",
+  "22_su12_connection_u_i.md": "2026-10-15 23:34",
+  "23_su12_breaking_mechanism.md": "2026-10-15 23:34",
+  "24_qcd_confinement_verdict.md": "2026-10-15 23:34",
+  "25_phase_closeout_2026_10_13.md": "2026-10-15 23:34",
+  "26_routeA_even_h3_law.md": "2026-10-15 23:34",
+  "27_routeB_su12_linkage.md": "2026-10-15 23:34",
+  "28_linkage_layer_blind.md": "2026-10-15 23:34",
+  "29_heavyflavor_node_audit.md": "2026-10-15 23:34",
+  "30_spin_sector_out_of_sample.md": "2026-10-15 23:34",
+  "31_spin_splitting_ratio_blind.md": "2026-10-15 23:34",
+  "32_spin_dimension_checks.md": "2026-10-15 23:34",
+  "33_residual_form_sweep.md": "2026-10-15 23:34",
+  "34_container_factor_table.md": "2026-10-15 23:34",
+  "35_stage2_boundary.md": "2026-10-15 23:34",
+  "36_cover_check_o142_o124.md": "2026-10-15 23:34",
+  "37_sigma_two_layer.md": "2026-10-15 23:34",
+  "01_qcd_mass_budget_audit.py": "2026-09-03 14:58",
+  "02_candidate_adjudication.py": "2026-09-17 20:58",
+  "03_glueball_ebind.py": "2026-09-18 00:42",
+  "04_blind_test_protocol.py": "2026-09-17 21:21",
+  "05_step1_color_rule.py": "2026-09-17 22:13",
+  "06_step2_resolution.py": "2026-09-17 22:14",
+  "07_step3_composite.py": "2026-09-17 22:15",
+  "08_spectral_language_audit.py": "2026-09-17 23:34",
+  "09_prior_deletion.py": "2026-09-18 00:00",
+  "10_incremental_deletion.py": "2026-09-18 00:00",
+  "11_corrected_deletion.py": "2026-09-18 00:02",
+  "12_honest_loocv.py": "2026-09-18 00:03",
+  "13_forcedness.py": "2026-09-18 00:04",
+  "14_joint_forcedness.py": "2026-09-18 00:04",
+  "15_restricted_forcedness.py": "2026-09-18 00:05",
+  "16_corrected_restriction.py": "2026-09-18 00:06",
+  "18_full_chain_verify.py": "2026-09-18 00:47",
+  "19_doc_audit.py": "2026-10-13 17:24",
+  "20_open_problem_attack.py": "2026-09-18 00:58",
+  "21_gen1_fundamental_mode.py": "2026-09-26 18:36",
+  "22_n_charm_decisive.py": "2026-09-26 18:41",
+  "23_su3_connection_sigma.py": "2026-09-26 20:26",
+  "24_scale_bridge.py": "2026-09-26 21:09",
+  "25_epistemology_reclass.py": "2026-09-26 22:03",
+  "26_bridge_closure.py": "2026-09-26 23:01",
+  "27_bridge_principle.py": "2026-09-27 00:10",
+  "28_correction_origin.py": "2026-09-27 02:16",
+  "29_sector_naming.py": "2026-09-27 12:02",
+  "30_photon_phase_mode.py": "2026-09-27 18:21",
+  "31_gluon_chain.py": "2026-09-27 18:22",
+  "32_sin2thetaW_adjudication.py": "2026-09-27 18:24",
+  "33_alpha_s_fragility.py": "2026-09-28 08:47",
+  "34_closeout_audit.py": "2026-10-13 17:24",
+  "35_su12_connection_u_i.py": "2026-10-13 17:21",
+  "36_su12_breaking_mechanism.py": "2026-10-05 00:43",
+  "37_qcd_confinement_verdict.py": "2026-10-08 23:26",
+  "38_routeA_even_h3_law.py": "2026-10-14 09:33",
+  "39_routeB_su12_linkage.py": "2026-10-14 09:35",
+  "40_linkage_layer_blind.py": "2026-10-14 09:52",
+  "41_heavyflavor_node_audit.py": "2026-10-14 11:06",
+  "42_spin_sector_out_of_sample.py": "2026-10-14 11:32",
+  "43_spin_splitting_ratio_blind.py": "2026-10-14 11:37",
+  "44_spin_dimension_checks.py": "2026-10-14 12:00",
+  "45_residual_form_sweep.py": "2026-10-14 12:13",
+  "46_container_factor_table.py": "2026-10-14 14:06",
+  "47_sigma_two_layer.py": "2026-10-14 16:15",
+  "48_closeout_audit_v2.py": "2026-10-16 23:19",
+  "01_qcd_mass_budget_audit.json": "2026-10-16 23:15",
+  "02_candidate_adjudication.json": "2026-10-16 23:15",
+  "03_glueball_ebind.json": "2026-10-16 23:15",
+  "04_blind_test.json": "2026-10-16 23:15",
+  "05_step1_color_rule.json": "2026-10-16 23:15",
+  "06_step2_resolution.json": "2026-10-16 23:15",
+  "07_step3_composite.json": "2026-10-16 23:15",
+  "08_spectral_language_audit.json": "2026-10-16 23:15",
+  "09_prior_deletion.json": "2026-10-16 23:15",
+  "10_incremental_deletion.json": "2026-10-16 23:15",
+  "11_corrected_deletion.json": "2026-10-16 23:15",
+  "12_honest_loocv.json": "2026-10-16 23:15",
+  "13_forcedness.json": "2026-10-16 23:15",
+  "14_joint_forcedness.json": "2026-10-16 23:15",
+  "15_restricted_forcedness.json": "2026-10-16 23:15",
+  "16_corrected_restriction.json": "2026-10-16 23:15",
+  "17_min_residual.json": "2026-09-18 00:07",
+  "18_full_chain_verify.json": "2026-10-16 23:15",
+  "19_doc_audit.json": "2026-10-16 23:17",
+  "20_open_problem_attack.json": "2026-10-16 23:17",
+  "21_gen1_fundamental_mode.json": "2026-10-16 23:17",
+  "22_n_charm_decisive.json": "2026-10-16 23:17",
+  "23_su3_connection_sigma.json": "2026-10-16 23:17",
+  "24_scale_bridge.json": "2026-10-16 23:18",
+  "25_epistemology_reclass.json": "2026-10-16 23:18",
+  "26_bridge_closure.json": "2026-10-16 23:18",
+  "27_bridge_principle.json": "2026-10-16 23:18",
+  "28_correction_origin.json": "2026-10-16 23:18",
+  "29_sector_naming.json": "2026-10-16 23:18",
+  "30_photon_phase_mode.json": "2026-10-16 23:18",
+  "31_gluon_chain.json": "2026-10-16 23:18",
+  "32_sin2thetaW_adjudication.json": "2026-10-16 23:18",
+  "33_alpha_s_fragility.json": "2026-10-16 23:18",
+  "34_closeout_audit.json": "2026-10-13 17:29",
+  "35_su12_connection_u_i.json": "2026-10-16 23:18",
+  "36_su12_breaking_mechanism.json": "2026-10-16 23:18",
+  "37_qcd_confinement_verdict.json": "2026-10-16 23:18",
+  "38_routeA_even_h3_law.json": "2026-10-16 23:18",
+  "39_routeB_su12_linkage.json": "2026-10-16 23:18",
+  "40_linkage_layer_blind.json": "2026-10-16 23:18",
+  "41_heavyflavor_node_audit.json": "2026-10-16 23:18",
+  "42_spin_sector_out_of_sample.json": "2026-10-16 23:18",
+  "43_spin_splitting_ratio_blind.json": "2026-10-16 23:19",
+  "44_spin_dimension_checks.json": "2026-10-16 23:18",
+  "45_residual_form_sweep.json": "2026-10-16 23:18",
+  "46_container_factor_table.json": "2026-10-16 23:18",
+  "47_sigma_two_layer.json": "2026-10-16 23:18",
+  "48_closeout_audit_v2.json": "2026-10-16 23:18",
+  "01_problem_record.md": "2026-10-15 23:34",
+  "SESSION_START.md": "2026-10-15 23:34",
+  "final_result.md": "2026-10-15 23:34"
+ }
+}
