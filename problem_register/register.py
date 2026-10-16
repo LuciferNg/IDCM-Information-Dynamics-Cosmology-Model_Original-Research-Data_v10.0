@@ -1072,6 +1072,11 @@ def cmd_check(a):
     for pid, r in sorted(db.items()):
         for ref in con.execute("SELECT ref FROM event WHERE pid=? AND ref IS NOT NULL", (pid,)):
             rf = ref["ref"].split("#")[0].strip()
+            # 2026-10-15 類⑥ 延伸 (O137 自引入): ref 可帶 section 標記
+            # （'…/docs/36_gap_attack_round19.md §1.3'）。'§' 唔會喺 repo
+            # 檔名出現（docs/scripts/data 檔名全 ASCII），故此後綴係註釋
+            # 唔係路徑 — 剝走 '§' 及其後內容再檢查。
+            rf = re.split(r"\s*§\s*", rf)[0].strip()
             if not rf or rf.startswith(("http", "-")):
                 continue
             segs = [s.strip() for s in re.split(r"\s*[+;]\s+", rf)]
