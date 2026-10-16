@@ -738,7 +738,7 @@ O137 **自身剩餘 🔴 = 0**。入向交接 8 組全處理（docs/01 水位 §
 
 ---
 
-# R23: 重啟收口 — O140 FSR-QFT 對接 + O209×3 + p9（2026-10-09）— append-only
+# R23: 重啟收口 — O140 FSR-QFT 對接 + O209×3 + P9（2026-10-09）— append-only
 
 > **本節為新增，以上原文一字不刪。**
 
@@ -747,7 +747,7 @@ O137 **自身剩餘 🔴 = 0**。入向交接 8 組全處理（docs/01 水位 §
 ```
 2026-10-06  O137 完整 closeout（docs/01 水位 + R21 截斷階閉合 + R22 O233 處理）
 2026-10-09  register reopened O137（O140 handoff: FSR-QFT 對接屬 O137 範圍）
-2026-10-09  R23 收口: O140 承接 + O209×3 裁定 + p9 登記（docs/39）; scripts/74 6/7
+2026-10-09  R23 收口: O140 承接 + O209×3 裁定 + P9 登記（docs/39）; scripts/74 6/7
 ```
 
 ## 受處理之入向交接（詳見 docs/39 §四）
@@ -758,7 +758,7 @@ O137 **自身剩餘 🔴 = 0**。入向交接 8 組全處理（docs/01 水位 §
 | O209 (a) | σ_g 殘餘 → gap 5 手徵橋 | ✅ 去向已定（O67/merged_o222 承接物理映射）|
 | O209 (b) | γ升序 vs \|Δm\| → O137 裁定 | ✅ R22 延續：授權 γ 升序 |
 | O209 (c) | docs/11 A_γ 0.930 / c/s 1.397 | 📌 確認（frame 典範差異，不矛盾）|
-| p9 kchain | −ω_n ↔ 反粒子扇區 → gap 5 | 🟡 已登記（負頻率鏡像 = 手性 flip 線索）|
+| P9 kchain | −ω_n ↔ 反粒子扇區 → gap 5 | 🟡 已登記（負頻率鏡像 = 手性 flip 線索）|
 
 ## 水位更新
 
@@ -817,3 +817,44 @@ FSR-QFT 對接: 🟡 已完成正式場論層（56/56）; 剩餘 = 費曼圖求�
 自身剩餘 🔴: 0
 入向交接 backlog: 0
 ```
+
+---
+
+# 2026-10-15 階段性數字審計 + Closeout — append-only
+
+> **本節為新增，以上原文一字不刪。**
+
+## 數字審計結果（全部重跑，2026-10-15）
+
+| script | 內容 | 結果 |
+|:-------|:-----|:----:|
+| scripts/66_audit_independent_verification.py | 獨立審計（§1–§10 全面覆蓋） | **114/114 PASS ✅** |
+| scripts/73_D_quark_truncation.py | D_quark 截斷階結構 | **12/12 PASS ✅** |
+| scripts/74_fsr_qft_docking.py | FSR-QFT 初探（對偶） | **6/7 PASS**（1 FAIL = 誠實負結果，已記錄） |
+| scripts/75_fsr_qft_docking_formal.py | FSR-QFT 正式第 I 層 [A][B][C] | **40/40 PASS ✅** |
+| scripts/76_fsr_qft_docking_layer2.py | FSR-QFT 第 II 層 [D][E][F] | **16/16 PASS ✅** |
+
+**logs 補齊**：`logs/73_output.txt`、`logs/74_output.txt`、`logs/75_output.txt`、`logs/76_output.txt`（正典 log 帶 RESULT 行）。
+
+## 階段性 Closeout 狀態
+
+```
+自身剩餘 🔴: 0（R21 後無新增）
+入向交接 backlog: 0
+outgoing handoff: 5 條（O140 質量澄清 / O124 張量 / O209 裁定交返 / O67 反粒子 / O244 尾巴 T1-T4）
+尾巴去向: FSR-QFT T1-T4 → O244（已開新 O 承接）
+register: state=open（階段性 closeout，等 O140 質量語義回覆 + O209 最終裁定後可最終閉合）
+```
+
+## 水位更新
+
+| 檔 | 行數 | 變更 |
+|:---|:-----|:-----|
+| logs/73_output.txt … logs/76_output.txt | 新檔 | 正典 log（RESULT 行） |
+| SESSION_START.md | 645 行 | 前段 append-only ✅ |
+
+## 最終閉合條件（待）
+
+- [ ] O140 質量公式語義回覆（m_k = M₀√ε vs M₀ε）→ O244 T4 物理閉合
+- [ ] O209 最終裁定（γ升序 vs |Δm|）→ O137 verdict 可 finalize
+- [ ] 兩者完成後 O137 可轉 verdict=closed
