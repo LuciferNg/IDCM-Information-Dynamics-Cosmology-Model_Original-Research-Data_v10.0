@@ -1,0 +1,154 @@
+{
+ "audit": "65_numeric_audit_round6",
+ "date": "2026-10-17",
+ "targets": [
+  "52",
+  "53",
+  "55",
+  "60",
+  "61/63",
+  "48"
+ ],
+ "results": [
+  {
+   "id": "A1_all_sum",
+   "desc": "Σ_{k=1..88} γ'_k 期望 178",
+   "ok": true,
+   "detail": "178.0"
+  },
+  {
+   "id": "A2_even_sum",
+   "desc": "Σ k偶 γ'_k 期望 90.0 (O51 世界能量)",
+   "ok": true,
+   "detail": "90.0"
+  },
+  {
+   "id": "A3_odd_sum",
+   "desc": "Σ k奇 = 178−90 = 88",
+   "ok": true,
+   "detail": "88.0"
+  },
+  {
+   "id": "A4_pair",
+   "desc": "偶+奇 = 全和 178",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "A5_44sum",
+   "desc": "44-site Σγ (n=1..44) 期望 90",
+   "ok": true,
+   "detail": "90.0"
+  },
+  {
+   "id": "B1_pair44",
+   "desc": "γ'_{2n}=γ_n 44/44 EXACT (worst diff)",
+   "ok": true,
+   "detail": "0.0"
+  },
+  {
+   "id": "B2_k14",
+   "desc": "γ'_14 = γ_7 (DM m_7)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B3_k66",
+   "desc": "γ'_66 = γ_33 (KTREE)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B4_k44",
+   "desc": "γ'_44 = 4sin²(44π/176)=4sin²(π/4)=2 (μ²)",
+   "ok": true,
+   "detail": "2.0"
+  },
+  {
+   "id": "C1_dCKM",
+   "desc": "δ_CKM 期望 66.39996°",
+   "ok": true,
+   "detail": "66.39996005"
+  },
+  {
+   "id": "C2_mtau_mb",
+   "desc": "m_τ/m_b 期望 0.425370",
+   "ok": true,
+   "detail": "0.4253702712"
+  },
+  {
+   "id": "C3_th23_recalc",
+   "desc": "θ₂₃ 重算 49.3202° (±1e-3)",
+   "ok": true,
+   "detail": "49.320228"
+  },
+  {
+   "id": "C4_count",
+   "desc": "55 號聲稱 11 精確 + 1 實驗式 = 12 (源碼數對)",
+   "ok": true,
+   "detail": "12 label 清單本身由 55 號 source 定義"
+  },
+  {
+   "id": "D1_pair87",
+   "desc": "ω_n=ω_{88−n} 87/87 EXACT (worst diff)",
+   "ok": true,
+   "detail": "8.018294130276587e-51"
+  },
+  {
+   "id": "D2_value_set",
+   "desc": "88-site ω 譜值 = 44-site ∪ {0}: 88→45 unique vs 44→44 unique",
+   "ok": true,
+   "detail": "uniq44=44 uniq88=45 has0=True"
+  },
+  {
+   "id": "E1_B_base",
+   "desc": "判準 B 領域 21/87 = 24.1%",
+   "ok": true,
+   "detail": "p=0.4484 (63 號 0.4484)"
+  },
+  {
+   "id": "E2_A_base",
+   "desc": "判準 A 領域 47/87 = 54.0%",
+   "ok": true,
+   "detail": "p=0.4183 (63 號 0.4183)"
+  },
+  {
+   "id": "E3_p_nonsig",
+   "desc": "兩個 p > 0.05 (唔顯著結論維持)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "E4_61_base",
+   "desc": "61 號領域 37/87 = 42.5%, p=0.51",
+   "ok": true,
+   "detail": "p=0.5096 (61 號 0.51)"
+  },
+  {
+   "id": "F1_stable4",
+   "desc": "4 個穩定 (7/14/22/33)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "F2_transfer_unstable",
+   "desc": "20 變 (gcd 8→4)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "F3_value_20",
+   "desc": "20: gcl(20,44)=8, gcl(20,88)=4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "F4_out4of5",
+   "desc": "88-site R5 輸出保留 4/5 magic (20 失去)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 23,
+ "fail": 0
+}
