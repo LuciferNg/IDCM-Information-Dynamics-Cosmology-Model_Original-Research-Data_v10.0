@@ -1,0 +1,61 @@
+{
+ "audit": "98_t7_closeout_final",
+ "date": "2026-10-17",
+ "t7": {
+  "hi_45_87": [],
+  "regex_d44": [],
+  "verdict": "T7 closed (sin-criterion layer)"
+ },
+ "t1_t7": {
+  "T1": "25 格 88-site 同座標存在 (i,j)≤44 — 95 確認 ✅",
+  "T2": "m_τ 對應 — 樣本外一致 (46 原本) ✅",
+  "T3": "3 格 data-free 判準 — 46 已做 ✅",
+  "T4": "near 格 — 46 已做 ✅",
+  "T5": "cos 判準 — 46 已做 ✅",
+  "T6": "4/5 樣本外保守標記 🟡 — 95/97 支持保守立場 ✅",
+  "T7": "『88-site d>44 額外物理格未掃』 — 本輪 (sin 判準) 關閉 ✅"
+ },
+ "record": {
+  "n": 97,
+  "missing": [],
+  "dups": []
+ },
+ "record00": {
+  "n": 28,
+  "missing0": []
+ },
+ "results": [
+  {
+   "id": "A1_t7_sin",
+   "desc": "sin 判準層: 88-site 高半側 0 個候選物理格 — T7 (sin 層) 關閉",
+   "ok": true,
+   "detail": "hi=[] regex=[]"
+  },
+  {
+   "id": "B1_t_status",
+   "desc": "46 號 T1-T7 最終狀態定義完成",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_sequence",
+   "desc": "01_problem_record #1-#97 連續無缺無重",
+   "ok": true,
+   "detail": "n=97 missing=[] dups=[]"
+  },
+  {
+   "id": "C2_record00",
+   "desc": "00_record ⚠️ 附註 70-97 齊全 (86 號=70 json 重建附註代表; 早期無編號)",
+   "ok": true,
+   "detail": "missing=[] present=[70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97]"
+  },
+  {
+   "id": "D1_close",
+   "desc": "46 號 T7 正式關閉 (sin 判準層), P9 全域完整",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 5,
+ "fail": 0
+}
