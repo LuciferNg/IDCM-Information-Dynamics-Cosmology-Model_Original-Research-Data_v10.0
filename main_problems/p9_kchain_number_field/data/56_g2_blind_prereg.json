@@ -1,0 +1,39 @@
+{
+ "test": "56_g2_blind_prereg",
+ "date": "2026-10-17",
+ "domain": "k in [45,87] 88-site exclusive",
+ "rule": "HALF mirror complement k* = 88 - k",
+ "source_magic": [
+  7,
+  14,
+  20,
+  22,
+  33
+ ],
+ "full_mirror": [
+  81,
+  74,
+  68,
+  66,
+  55
+ ],
+ "excluded_known": [
+  66
+ ],
+ "exclude_reason": "66 = 2*33 even-mode carry known (55號)",
+ "BLIND_SET": [
+  55,
+  68,
+  74,
+  81
+ ],
+ "prediction": "4/4 have O-series physical identity",
+ "control_set": [
+  46,
+  56,
+  62,
+  73
+ ],
+ "control_prediction": "low or zero hits",
+ "status": "LOCKED — do not query identity before commit"
+}
