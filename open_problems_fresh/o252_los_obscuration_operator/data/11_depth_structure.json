@@ -1,0 +1,32 @@
+{
+  "tau_eff_4xM4": 1.8666666666666667,
+  "depth_pred": 0.8453617354507452,
+  "obs_median": 0.8157836509374428,
+  "dev_pct": 3.4988672035801907,
+  "top3_mean": 0.9226637188953588,
+  "corr_depth_dv": 0.4657504932698227,
+  "corr_depth_sigma": -0.0254150663281237,
+  "note": "D-e 用 O179 M₄/M₀=7/15 質量 fraction; C1-C3 診斷性",
+  "checks": [
+    {
+      "name": "D1 τ_eff=28/15 中位命中 (dev<10%)",
+      "pass": true,
+      "detail": "dev 3.50%"
+    },
+    {
+      "name": "D2 top-3 近 τ_w=4 上限 (dev<8%)",
+      "pass": true,
+      "detail": "top3=0.923 vs 0.9817 (dev 6.0%)"
+    },
+    {
+      "name": "C1 corr(depth, |dv|) ~ 0 (帶幾何唔主導)",
+      "pass": false,
+      "detail": "ρ=0.466"
+    },
+    {
+      "name": "C2 corr(depth, σ_dip) ~ 0",
+      "pass": true,
+      "detail": "ρ=-0.025"
+    }
+  ]
+}
