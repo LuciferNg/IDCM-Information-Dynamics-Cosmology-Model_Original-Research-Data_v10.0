@@ -3,7 +3,10 @@
 > **背景**: 74 號測完 O 源頭數 (#5/37 冇優勢)；75 號測最後、最關鍵維度——
 > **角色多樣性**（49 號「宇宙 5 支柱」直接測試）
 > **Script**: `75_magic_role_diversity.py` → `data/75_magic_role_diversity.json`
-> **方法**: 重建 37 過閘集合、計 label cover (11) 同支柱 cover (5)
+> **⚠️ 76 號更正附註 (2026-10-17)**: 「magic 唯一 cover 全 5 支柱」係**集合論
+> tautology**（cover 全支柱 = 包含全部 5 個指定 d = 只能係 magic）；支柱 label
+> 由 49 號 magic 定義 ⇒ 循環。**本輪「第一個 magic 有優勢維度」結論降級 🟡**。
+> 有內容嘅檢查喺 76 號（O 源頭重疊 8 個 shared、14 孤立、4 個非 magic 強角色）。
 
 ---
 

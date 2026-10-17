@@ -571,6 +571,8 @@ filler:       32 行無 label
 
 > ⚠️ **75 號 Magic 角色多樣性附註 (2026-10-17, 75_magic_role_diversity)**: **6/6 PASS ★★★ 第一個 magic 有優勢維度**。窮舉 37 過閘集合計支柱 cover (5 支柱: ANCHOR 7/GEN 14/TRANSFER 20/HALF 22/KTREE 33): **magic 係唯一 cover 全 5 支柱嘅集合** (其他 36 個 cover ≤4: cover4=10/cover3=18/cover2=8/cover0=0——22+33 gcd 強制保證≥2)。label cover (11 集) magic #1/37。⟹ 「宇宙 5 支柱唯一承載集」有窮舉證明——角色多樣性 = 真正 distinctiveness。七判準總結: 統計六維度 FAIL (anchor/37 集/身份/深度/O 源頭) + 角色維度 ✅。72 vs 75 label cover 表面矛盾: 9 格 d 值集 vs label+支柱 11 集——兩者啱。
 
+> ⚠️ **76 號 5 支柱循環診斷附註 (2026-10-17, 76_pillar_cycle_check)**: **3/3 PASS (A1 誠實負面)**。★★75 號「magic 唯一 cover 全 5 支柱」= 集合論 tautology——cover 全支柱 = 包含全部 5 個指定 d = 只能係 magic；支柱 label 由 49 號 magic 定義 ⇒ 循環，**75 號結論降級 🟡**。有內容檢查: 5 magic O 源頭 8 個 shared (34/35/37/38/39/51/54/145)、14 直接源頭 0 個孤立、Jaccard max 0.167、非 magic 強角色 d=2 (54 O 源頭)/4 (28)/1 (8)/19 (6) = 角色唔係 magic 獨有。Magic rows 統計層 unique claim 定案: 全部撤回，剩 R5 consistency 5/5 + 結構稀有 47 倍 + label 存在性 (弱主張)。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)

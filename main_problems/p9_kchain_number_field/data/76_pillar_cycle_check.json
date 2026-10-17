@@ -1,0 +1,65 @@
+{
+ "audit": "76_pillar_cycle_check",
+ "date": "2026-10-17",
+ "magic": [
+  7,
+  14,
+  20,
+  22,
+  33
+ ],
+ "shared_o": [
+  34,
+  35,
+  37,
+  38,
+  39,
+  51,
+  54,
+  145
+ ],
+ "jaccard": {
+  "f{a}-{b}": 0.03773584905660377
+ },
+ "strong_others": [
+  [
+   2,
+   54
+  ],
+  [
+   4,
+   28
+  ],
+  [
+   1,
+   8
+  ],
+  [
+   19,
+   6
+  ]
+ ],
+ "tautology": true,
+ "results": [
+  {
+   "id": "A1_o_overlap",
+   "desc": "5 個 magic 之間共有 O 源頭 = 8 個",
+   "ok": false,
+   "detail": "shared={34: 2, 35: 3, 37: 2, 38: 2, 39: 2, 51: 2, 54: 2, 145: 2}"
+  },
+  {
+   "id": "B1_jaccard",
+   "desc": "max pairwise Jaccard ≥ 0.10 — 5 支柱有共通 O 根基",
+   "ok": true,
+   "detail": "maxj=0.167"
+  },
+  {
+   "id": "C1_strong_others",
+   "desc": "非 magic 強支柱 d 數 = 4 (除 magic 外仲有冇實質角色?)",
+   "ok": true,
+   "detail": "count=4 [(2, 54), (4, 28), (1, 8), (19, 6)]"
+  }
+ ],
+ "pass": 2,
+ "fail": 1
+}
