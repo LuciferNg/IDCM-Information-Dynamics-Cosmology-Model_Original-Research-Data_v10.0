@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-17",
+  "sources": {
+    "naidu_bhstar": {
+      "file": "/home/wsl/.hermes/cache/scratch/p11_data/mom_uds01_prism.fits",
+      "z": 7.76,
+      "resolution": "PRISM ~R100 (z=7.76, BH* MoM-uds01)",
+      "Hbeta": {
+        "peaks": [
+          {
+            "lam": 4.267732820577568,
+            "dv_kms": 643.8821827944639
+          }
+        ],
+        "outer_dv_kms": null,
+        "mid_offset_kms": null,
+        "symmetric": null
+      }
+    },
+    "rusakov_A_JADES_GN_68797": {
+      "file": "/home/wsl/.hermes/cache/scratch/p11_data/objA_g395h.fits",
+      "z": 5.0385,
+      "resolution": "G395H R~2700 (z~5.04, JADES-GN-68797)",
+      "Halpha": {
+        "peaks": [
+          {
+            "lam": 3.941268571428738,
+            "dv_kms": -1639.9320489020565
+          },
+          {
+            "lam": 3.9558571428573117,
+            "dv_kms": -536.3230604208497
+          },
+          {
+            "lam": 3.965371428571599,
+            "dv_kms": 183.42193206689385
+          },
+          {
+            "lam": 3.9837657142858873,
+            "dv_kms": 1574.9289175431982
+          },
+          {
+            "lam": 3.9863028571430306,
+            "dv_kms": 1766.8609155399297
+          },
+          {
+            "lam": 3.988840000000174,
+            "dv_kms": 1958.7929135366614
+          }
+        ],
+        "outer_dv_kms": 3598.7249624387177,
+        "mid_offset_kms": 159.43043231730238,
+        "symmetric": true
+      }
+    },
+    "rusakov_G_RUBIES_EGS_58237": {
+      "file": "/home/wsl/.hermes/cache/scratch/p11_data/objG_g395m.fits",
+      "z": 3.6493,
+      "resolution": "G395M R~1000 (z=3.6493, RUBIES-EGS-58237)",
+      "Halpha": {
+        "peaks": [
+          {
+            "lam": 3.0516380952381374,
+            "dv_kms": 38.85803450805571
+          },
+          {
+            "lam": 3.060161904761948,
+            "dv_kms": 876.3443115143516
+          }
+        ],
+        "outer_dv_kms": 837.4862770062958,
+        "mid_offset_kms": 457.60117301122546,
+        "symmetric": false
+      }
+    }
+  },
+  "idcm_ladder_matches": [
+    "rusakov_A_JADES_GN_68797/Halpha: Δv=3599 ≈ 1.08×ℓ=2 n=5 (3345) 近",
+    "rusakov_A_JADES_GN_68797/Halpha: Δv=3599 ≈ 3.07×ℓ=3 n=7 (1171) 近",
+    "rusakov_G_RUBIES_EGS_58237/Halpha: Δv=837 ≈ 5×ℓ=3 n=1 (167) EXACT (dev +0.8%)",
+    "rusakov_G_RUBIES_EGS_58237/Halpha: Δv=837 ≈ 1×ℓ=3 n=5 (836) EXACT (dev +0.2%)"
+  ],
+  "t1_notes": [
+    "T1 (Δv_Hβ=Δv_Hα) 判別: 未有光源同時有 R≥1000 嘅 Hα+Hβ — G 嘅 Hβ 只有 PRISM R~100 (不可辨 3000 km/s 內)"
+  ]
+}

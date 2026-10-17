@@ -43,5 +43,7 @@ crystal_stress（初版，2026-08-16）→ O140/O159/O161/O171 → O173（應變
 - 🔴 新節點出現機制 → **O179**（`open_problems_fresh/o179_new_node_mechanism/`）
 - 🟡 位置檢驗 p=0.051 邊際（未達 5%）；需更大面積 LRD 樣本（JADES/CEERS/Euclid）
 - 🟡 β 判別檢驗（需 ±0.15 斜率誤差）；🟡 scatter 53/47 分解驗證
-- 🔴 巴爾末雙峰 T1-T4 判別（等 NIRSpec R≳2700 Hβ 樣本）；🔴 raw FWHM 1000-1500 vs 2V_max 819.6 張力
+- 🔴 巴爾末雙峰 T1-T4 判別（等 NIRSpec R≳2700 Hβ 樣本；🔴 raw FWHM 1000-1500 vs 2V_max 819.6 張力）
+  — 2026-10-17 盲測進展 (record 16): 3 公開光譜下載; 形態 0/2 對稱雙峰
+    (A 單峰, G 不對稱 -458); **G Δv=837≈ℓ=3 n=5 (836.1, 0.2%) 單點命中** n=1 未定論
 - 🟡 Q3 宿主星系 M_host = M_BH×306（JWST）；P13（Euclid DR1）；P15（Gaia DR4）；P9′（AugerPrime 2035）
