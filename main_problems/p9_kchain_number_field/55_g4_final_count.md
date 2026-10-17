@@ -66,3 +66,11 @@
 55_g4_final_count.py
 data/55_g4_final_count.json
 ```
+## ⚠️ 104 號更正附註 (append-only, 原文唔改)
+
+**G4 PASS 表述需要分層正名**: 103/104 號審出「偶模 7 carry = γ'_{2n}=γ_n
+重影 (同一實數兩個寫法)」— 原計數 12 依賴 carry 計入。正確分層:
+- ✅ **存在層 PASS**: 88-site label 身份存在 = 12 ≥ 9 (含 carry, 事實)
+- 🔴 **獨立層 FAIL**: 奇模專屬 (真正 88-site 樣本外) = 7 < 9
+判準語義由 51 號「≥9 獨立 label」漂移到 53 號「≥9 label 存在」—
+呢個係嚴格性補救, 唔係推翻計數。詳見 `104_g4_carry_ruling.md`。

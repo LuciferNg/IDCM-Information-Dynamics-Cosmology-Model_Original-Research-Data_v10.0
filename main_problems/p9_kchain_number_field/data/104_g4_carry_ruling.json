@@ -1,0 +1,54 @@
+{
+ "audit": "104_g4_carry_ruling",
+ "date": "2026-10-17",
+ "criterion_trace": {
+  "51_independent": true,
+  "53_exists": true,
+  "55_independent": true
+ },
+ "odd_only": {
+  "all": [
+   1,
+   3,
+   5,
+   7,
+   9,
+   13,
+   21,
+   47
+  ],
+  "exact": [
+   1,
+   3,
+   5,
+   9,
+   13,
+   21,
+   47
+  ],
+  "n_exact": 7
+ },
+ "ruling": "G4 分層: label 存在 12≥9 PASS; 獨立 7<9 FAIL; 判準漂移真 (獨立→存在)",
+ "results": [
+  {
+   "id": "A1_criterion_drift",
+   "desc": "判準原文追蹤完成 (51 獨立 label → 53 label 存在 → 55 計數)",
+   "ok": true,
+   "detail": "ind51=True ind53=True ind55=True"
+  },
+  {
+   "id": "B1_odd_count",
+   "desc": "奇模專屬精確 = 7 個 (< 9 → 獨立判準 FAIL)",
+   "ok": true,
+   "detail": "[1, 3, 5, 9, 13, 21, 47]"
+  },
+  {
+   "id": "C1_ruling",
+   "desc": "裁定: G4 分層 (存在 12≥9 PASS / 獨立 7<9 FAIL) — 唔宣稱單一 PASS",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 3,
+ "fail": 0
+}
