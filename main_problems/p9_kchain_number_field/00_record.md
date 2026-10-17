@@ -587,6 +587,8 @@ filler:       32 行無 label
 
 > ⚠️ **83 號 M_F vs M_L 完整對比附註 (2026-10-17, 83_parallel_magic_full_compare)**: **5/5 PASS**。★身份層兩版都 5/5 (5/10 都有 sin 身份; 無身份 d={21,32,36,39}) — 82 號「M_F 冇 label」表述修正: 身份唔係 Lucas 獨家。Lucas 話系真實優勢 = 支柱 cover 5/5 (7/14=ANCHOR/GEN, 75 號唯一) + anchor 收緊 14 倍 (3 vs 42)。★最終裁決: K_chain 結構 (22/33/20) + Lucas 話系 (7/14) 唯一 cover 宇宙 5 支柱 — magic 攻堅 (25-83) 完整定案。
 
+> ⚠️ **84 號 Magic rows 攻堅最終報告附註 (2026-10-17, 84_magic_campaign_final_report)**: **4/4 — Magic 攻堅 (25-84) 正式收線**。一句話結論: magic rows = K_chain 上唯一滿足 R5 程序一致 + 3 算術必然 (22/33/20) + Lucas 話系 (7/14) + 唯一 cover 宇宙 5 支柱。統計獨特性 7 維度撤回 (誠實) + 結構核心/話系/支柱 cover 全有窮舉+算術證明 (80-83)。「支撐物理世界」最終靠 O-series 閉合 vs 觀測 (O55/O171 ✓, O35/O158 開放)。剩餘開放: G2 出路/O35/O158。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
