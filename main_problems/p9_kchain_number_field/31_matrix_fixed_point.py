@@ -106,13 +106,17 @@ for k in range(1, 44):
 # Galois fixed: ω_n 嘅 stabilizer size = deg(ω_n) 嘅 complement = φ(176)/2 / deg
 # ∪: σ_a fixed ω_n ⟺ a ≡ ±1 (mod 176/gcd(n,176))  — 等我直接數
 def galois_fixed(dom):
-    """σ_a(ω_d)=ω_d 嘅 a 集合 (mod 176, a invertible)"""
+    """σ_a(ω_d)=ω_d 嘅 a 集合 (mod 176, a invertible)
+    正確固定條件 (50 號審計修正): a·d ≡ d (mod 176) 或 d(a+1) ≡ 88 (mod 176)
+    舊條件 (a·d)%176 ∈ {d, 176−d} 係 ±ω_d 鏡像 — 錯! (σ_a(ω_d)=ω_d 係真正固定)"""
     a_set = []
     for a in range(1, 176):
         if gcd(a, 176) != 1:
             continue
-        # σ_a(ω_d) = 2sin(π·a·d/88)
-        if (a * d) % 176 in (d % 176, (176 - d) % 176):
+        # σ_a(ω_d) = 2sin(π·a·d/88) = ω_d ⟺ sin 相等:
+        #   a·d ≡ d        (mod 176)  同角
+        #   d(a+1) ≡ 88    (mod 176)  sin 互補 (sin(πx/88)=sin(π(88−x)/88))
+        if (a * dom) % 176 == dom % 176 or ((a + 1) * dom) % 176 == 88:
             a_set.append(a)
     return a_set
 galois = {}

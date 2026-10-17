@@ -1,0 +1,82 @@
+{
+ "audit": "99_script31_fix_verify",
+ "date": "2026-10-17",
+ "galois": {
+  "3": {
+   "fixed": [
+    1,
+    87
+   ]
+  },
+  "7": {
+   "fixed": [
+    1,
+    87
+   ]
+  },
+  "29": {
+   "fixed": [
+    1,
+    87
+   ]
+  }
+ },
+ "results": [
+  {
+   "id": "A_3",
+   "desc": "d=3 正確固定集 = [1, 87]",
+   "ok": true,
+   "detail": "[1, 87]"
+  },
+  {
+   "id": "A_7",
+   "desc": "d=7 正確固定集 = [1, 87]",
+   "ok": true,
+   "detail": "[1, 87]"
+  },
+  {
+   "id": "A_29",
+   "desc": "d=29 正確固定集 = [1, 87]",
+   "ok": true,
+   "detail": "[1, 87]"
+  },
+  {
+   "id": "A_sin_3",
+   "desc": "d=3: σ_1/σ_87(ω_d)=ω_d sin 值驗證",
+   "ok": true,
+   "detail": "[1, 87]"
+  },
+  {
+   "id": "A_sin_7",
+   "desc": "d=7: σ_1/σ_87(ω_d)=ω_d sin 值驗證",
+   "ok": true,
+   "detail": "[1, 87]"
+  },
+  {
+   "id": "A_sin_29",
+   "desc": "d=29: σ_1/σ_87(ω_d)=ω_d sin 值驗證",
+   "ok": true,
+   "detail": "[1, 87]"
+  },
+  {
+   "id": "B1_md",
+   "desc": "修正後 script 同 31 md 正文一致",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_keys",
+   "desc": "json 結構完整 (test/fixed_table/magic_unique_fixed/gshift/galois)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "D1_replaced",
+   "desc": "json 冇任何 [1,175] 殘留 (全 [1,87])",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 9,
+ "fail": 0
+}

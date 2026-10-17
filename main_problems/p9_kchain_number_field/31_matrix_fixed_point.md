@@ -73,6 +73,10 @@ data/31_matrix_fixed_point.json — 完整輸出
 
 ---
 
+
+> **99 號修正落實註記 (2026-10-17)**: 本附註所述 script bug 已喺 99 號正式修正
+> （`galois_fixed()` 條件改為 `a·d ≡ d (mod 176) 或 d(a+1) ≡ 88 (mod 176)`，
+> json sample 由 [1,175] 更正為 [1,87]）。9/9 PASS 驗證，結論不變。
 ## ⚠️ 更正附註 (append-only, 2026-10-17, 第五輪審計 50)
 
 **script `galois_fixed()` 嘅固定條件用錯** — 原文保留，script 值 vs 正確值以下:

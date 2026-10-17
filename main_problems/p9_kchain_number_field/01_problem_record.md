@@ -128,6 +128,8 @@
 | 96 | 10-17 | **88-site 有理 γ' 點 + R5 獨有身份根源** | `96_site88_rational_gamma.py` + `data/96_site88_rational_gamma.json` + `96_site88_rational_gamma.md` | **4/4 — 44 身份根源確定**: 88-site 有理 γ' 點 (Niven) = {22:2, 44:4, 66:2}; ★R5 揀 44=HALF 軸 (gcd44 唯一) 同 44 有身份 (γ_44=4 有理特化) 係兩件獨立事; 28 命中=sin(28π/88)+sin(56π/176) 都喺 corpus; ★有理≠corpus: 66 有理但冇身份 (89 mirror 單側反例); 身份=corpus 存在事實、有理點=結構事實; 95 號 n=2 補強 — 46 T6 🟡 保守立場繼續合理 | ✅ |
 | 97 | 10-17 | **88-site 身份側集中度終審** | `97_site88_identity_side.py` + `data/97_site88_identity_side.json` + `97_site88_identity_side.md` | **5/5 — 身份 = corpus 覆蓋側現象**: d≤44 (研究側) 40/44=90.9% vs d≥45 (新增側) 0/43=0.0%; 高半側含有理點 66 (γ'_66=2) 都冇身份 — 結構驅動假設 0/43 否證; 90 號『身份=存在事實』跨 N 最終強化; 88-site 高半側零身份 = 『magic 88-site 獨立身份』最強否證, 46 號 T6/T7 🟡 立場最終成立; 88-site 對照鏈 (88-97) 十連完成 | ✅ |
 | 98 | 10-17 | **46 號 T7 最終關閉 + P9 全域完整性終審** | `98_t7_closeout_final.py` + `data/98_t7_closeout_final.json` + `98_t7_closeout_final.md` | **5/5 — T7 正式關閉**: 46 號『88-site d>44 額外物理格未掃』— 95/97 已用統一 sin 判準掃全 1..87: 高半側 0 個候選; 若物理格判準=corpus label (sin), T7 關閉 (只限 sin 層, O218 label 判準獨立唔混淆); 46 號 T1-T7 全部最終狀態確定; ★01_problem_record #1-#97 連續無缺無重; 00_record ⚠️ 附註 70-97 齊全 (86 號=70 json 重建附註代表); 88-site 對照鏈+46 樣本外完整收官; C2 審計員修正 ×3 (早期無編號格式/86 標題特別) | ✅ |
+| 99 | 10-17 | **31 號 script galois_fixed 修正落實** | `99_script31_fix_verify.py` + `data/99_script31_fix_verify.json` + `99_script31_fix_verify.md` + 31 script/json 修正 | **9/9 — 50 號 B4 開放項封印**: 31 script galois_fixed() 條件由錯『(a·d)%176∈{d,176−d} (±ω 鏡像→[1,175])』改為正確『a·d≡d 或 d(a+1)≡88 (sin 同角/互補→[1,87])』; sin 值獨立驗證 σ_1/σ_87(ω_d)=ω_d ✓; json 由錯 [1,175] 更正為 [1,87]; 結論不變 (σ_87=Z₂ 固定奇數嘅選擇, 唔係 7 特有); 31 md 落「修正落實註記」; 其他 T1-T8 全部保留 | ✅ |
+
 
 
 
