@@ -1,0 +1,179 @@
+{
+ "audit": "67_numeric_audit_round8",
+ "date": "2026-10-17",
+ "targets": [
+  "29_probe",
+  "chain_closure",
+  "edge_energy",
+  "magic_gcd_map",
+  "s33_pipeline",
+  "periodic_table",
+  "早期族"
+ ],
+ "results": [
+  {
+   "id": "A1_44_gcd",
+   "desc": "44-site gcd 類 {1:20,2:10,4:5,8:3,11:2,16:2,22:1}",
+   "ok": true,
+   "detail": "{1: 20, 2: 10, 4: 5, 8: 3, 11: 2, 16: 2, 22: 1}"
+  },
+  {
+   "id": "A2_88_gcd_total",
+   "desc": "88-site gcd 類覆蓋 d=1..87 (87 個)",
+   "ok": true,
+   "detail": "n=87 classes=9"
+  },
+  {
+   "id": "A3_deg_omega_44_1",
+   "desc": "44-site deg_ω(1) = 40",
+   "ok": true,
+   "detail": "40"
+  },
+  {
+   "id": "A4_deg_omega_88_1",
+   "desc": "88-site deg_ω(1) = 80 (ζ₃₅₂⁺)",
+   "ok": true,
+   "detail": "80"
+  },
+  {
+   "id": "A5_deg_omega_176_1",
+   "desc": "176-site deg_ω(1) = 160 (ζ₇₀₄⁺)",
+   "ok": true,
+   "detail": "160"
+  },
+  {
+   "id": "A6_deg_gamma",
+   "desc": "deg_γ(1): 44-site=20, 88-site=40",
+   "ok": true,
+   "detail": "44:20 88:40"
+  },
+  {
+   "id": "B1_chain946",
+   "desc": "鏈閉合 beat(i,j)=Σadj 946/946 EXACT",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B2_43edges",
+   "desc": "43 條相鄰邊 (n=1..43)",
+   "ok": true,
+   "detail": "定義性"
+  },
+  {
+   "id": "C1_edge_energy",
+   "desc": "Σe_k² = 0.1070469136 (±1e-6)",
+   "ok": true,
+   "detail": "0.10704691359"
+  },
+  {
+   "id": "C2_edge_gamma",
+   "desc": "e_k² = 4sin²(π/176)·γ_{87−2k} (補充角恒等)",
+   "ok": true,
+   "detail": "diff=0.0e+00"
+  },
+  {
+   "id": "D1_magic_gcd",
+   "desc": "magic gcd 類: 7→1, 14→2, 20→8, 22→22, 33→11",
+   "ok": true,
+   "detail": "{7: 1, 14: 2, 20: 8, 22: 22, 33: 11}"
+  },
+  {
+   "id": "D2_gcd_unique2",
+   "desc": "magic 分佈 5 個唔同 gcd 類 (互斥)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "D3_missing_4_16",
+   "desc": "缺 {4,16} gcd 類",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "E1_s33_df",
+   "desc": "s=33 列 16 格 (d=1,3,...,31)",
+   "ok": true,
+   "detail": "定義性"
+  },
+  {
+   "id": "E2_anchor_cell",
+   "desc": "(13,20): d=7, s=33 (ANCHOR 格)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "F1_nine_cells",
+   "desc": "9 格 d 值 unique = {11,13,14,17,19,21,25}",
+   "ok": true,
+   "detail": "[11, 13, 14, 17, 19, 21, 25]"
+  },
+  {
+   "id": "F2_data_overlap",
+   "desc": "data 行全部 6 個都有格 (11,13,17,19,21,25)",
+   "ok": true,
+   "detail": "overlap=[11, 13, 17, 19, 21, 25]"
+  },
+  {
+   "id": "F3_beat720",
+   "desc": "beat(7,20) 計算正常 (正值)",
+   "ok": true,
+   "detail": "0.8151084668"
+  },
+  {
+   "id": "G1_deg_dist44",
+   "desc": "44-site deg(ω) 分佈 {40:20,20:10,10:5,5:5,4:2,2:1,0:1}",
+   "ok": true,
+   "detail": "{40: 20, 20: 10, 5: 5, 10: 5, 4: 2, 2: 1, 0: 1}"
+  },
+  {
+   "id": "G2_seven_identity",
+   "desc": "7 ∈ gcd1 類 (deg40)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "G3_seed_90",
+   "desc": "Σγ (n=1..44) = 90 (種子 90_88)",
+   "ok": true,
+   "detail": "90.0"
+  },
+  {
+   "id": "G4_pair224",
+   "desc": "γ_{22+m}+γ_{22−m}=4 ∀m (smod4 基礎)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "G5_gamma22",
+   "desc": "γ_22 = 2 (有理, v₂ 判準核心)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "G6_parity946",
+   "desc": "946 拍頻奇偶: 奇 484 + 偶 462",
+   "ok": true,
+   "detail": "odd=484 even=462"
+  },
+  {
+   "id": "G7_gamma1",
+   "desc": "γ_1 = 4sin²(π/88) (低端點結構)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "G8_missing_gcd",
+   "desc": "七類缺 {4,16} — 兩類冇 magic",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "G9_unassigned",
+   "desc": "946 − 25 label = 921 未指派 (定義性)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 27,
+ "fail": 0
+}

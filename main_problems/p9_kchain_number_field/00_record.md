@@ -553,6 +553,8 @@ filler:       32 行無 label
 
 > ⚠️ **第七輪審計附註 (2026-10-17, 66_numeric_audit_round7)**: **25/25 PASS (六+七輪 48/48)**。覆蓋 46 (25 格/88-site R5 前向 4/5/37 原版 3/5)、47 (N=176/352 4/5 20 失去、gcd 跨 N 一致、28 取代)、49 (5 magic 5 gcd 類互斥/5 deg 層/deg(20)=5 44-site 層/data 5 格 6 次)、51 (9 mapping/γ'_d deg 分佈 EXACT)、54 (sin7π/88=sin14π/176 EXACT/θ₂₃ 49.3202°)、56-59 (盲測集互斥、B1=88−magic、B2=88−Fib、合併 p=0.69)。**審計員 check 修正 ×3 全係自身期望錯 (C3 deg 層混淆 20: 10→5; C4/D2 端點 vs 距離定義)**; 原位 odoc/script **零錯**。46-63 全鏈而家有審計覆蓋 (65+66)。
 
+> ⚠️ **第八輪審計附註 (2026-10-17, 67_numeric_audit_round8)**: **27/27 PASS (八輪累計 75/75)**。覆蓋 29 探針 (88-site deg_ω(1)=80 ζ₃₅₂⁺、176-site=160 ζ₇₀₄⁺ — N-site 推廣 EXACT)、chain_closure (946 鏈閉合)、edge_energy (Σe_k²=0.1070469136)、magic_gcd_map/s33/periodic_table + 數論族 (Σγ=90、γ_{22±m}=4、946 奇偶 484+462、deg 分佈)。**第八輪原產物零錯**; 審計員 check 修正 ×1 (F1 9 格 d 期望)。早期 scripts 家族核心數學全覆蓋; 剩餘 = blind_test/self_loop 執行層輸出 (探索層產物)。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
