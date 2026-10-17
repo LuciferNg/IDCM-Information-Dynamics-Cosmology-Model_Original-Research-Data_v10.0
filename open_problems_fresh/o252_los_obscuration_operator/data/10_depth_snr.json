@@ -1,0 +1,37 @@
+{
+  "N": 13,
+  "corr_pearson": -0.02642452792734599,
+  "kendall_tau": 0.05128205128205128,
+  "median_depth": 0.8157836509374428,
+  "max_depth": 0.9451542270215912,
+  "high_AIC_n": 10,
+  "high_AIC_median_depth": 0.8124702994783825,
+  "top3_depth": [
+    0.9451542270215912,
+    0.9366300521023192,
+    0.8862068775621662
+  ],
+  "conclusion": "SNR bias 唔明顯 — depth gap 仍然係結構 gap",
+  "checks": [
+    {
+      "name": "G1 corr(depth, ΔAIC) > 0.3",
+      "pass": false,
+      "detail": "τ=0.051"
+    },
+    {
+      "name": "G2 高 ΔAIC 群 depth ≈ 0.982±0.05",
+      "pass": false,
+      "detail": "中位 0.812"
+    },
+    {
+      "name": "G3 top-3 depth ≈ 0.982 (dev<10%)",
+      "pass": true,
+      "detail": "mean top3=0.923"
+    },
+    {
+      "name": "G4 A Hα 高解像 h 深 (ΔAIC 高)",
+      "pass": true,
+      "detail": "0.82→0.94"
+    }
+  ]
+}
