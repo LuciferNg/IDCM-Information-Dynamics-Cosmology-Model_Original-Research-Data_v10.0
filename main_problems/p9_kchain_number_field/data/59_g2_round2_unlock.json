@@ -1,0 +1,65 @@
+{
+ "test": "59_g2_round2_unlock",
+ "B2": {
+  "54": {
+   "hit": false,
+   "simp": "sin(54π/176)=sin(27π/88)",
+   "src": "零直接命中 (O117 係 sin(27π/176)=k27 唔關事)"
+  },
+  "67": {
+   "hit": false,
+   "simp": "sin(67π/176)",
+   "src": "零"
+  },
+  "75": {
+   "hit": false,
+   "simp": "sin(75π/176)",
+   "src": "零"
+  },
+  "80": {
+   "hit": false,
+   "simp": "sin(80π/176)=sin(5π/11)",
+   "src": "O142 係 sin(5π/22) 唔同角"
+  },
+  "83": {
+   "hit": false,
+   "simp": "sin(83π/176)",
+   "src": "零"
+  }
+ },
+ "C2": {
+  "52": {
+   "hit": false,
+   "simp": "sin(52π/176)=sin(13π/44)",
+   "src": "零"
+  },
+  "59": {
+   "hit": false,
+   "simp": "sin(59π/176)",
+   "src": "零"
+  },
+  "82": {
+   "hit": true,
+   "simp": "sin(82π/176)=sin(41π/88)",
+   "src": "O35/O144: m_W/m_Z = sin(30π/88)/sin(41π/88) = 0.882737"
+  },
+  "84": {
+   "hit": false,
+   "simp": "sin(84π/176)=sin(21π/44)",
+   "src": "零"
+  },
+  "86": {
+   "hit": true,
+   "simp": "sin(86π/176)=sin(43π/88)",
+   "src": "P15 research_record: (42,43)/(41,42) beat pairs"
+  }
+ },
+ "B2_hits": 0,
+ "C2_hits": 2,
+ "combined": {
+  "B": "3/9",
+  "C": "3/9",
+  "p_hypergeo_onetail": 0.69
+ },
+ "verdict": "G2 盲測 FAIL: B2=0/5 零命中, 合併 3/9 vs 2/9 flat, p≈0.68; mirror 規則冇預測力"
+}
