@@ -487,6 +487,8 @@ filler:       32 行無 label
 
 > ⚠️ **對角線排除附註 (2026-10-17, 30_mirror_exclusion)**: 調律者指示「4/16 對角線排除後兩邊鎖死 7」。對角線 = d↔44−d 鏡像軸。STEP1 — gcd4/gcd16 鏡像全出走 ✓ (R4a 必要唔充要 🟡, gcd8 出走但有 magic 20); **d=22 唯一自鏡像 = HALF magic 結構必然**; 自封閉類 {1,2,11,22} 100% magic。STEP2 — 3/7/29 鏡像伴侶全 filler, 盲測 P=0.70 🔴 鎖 7 FAIL; **33↔11 = magic↔data 唯一鏡像對**; **20↔24 = gcd8中心↔gcd4中心互映, magic 鏡像落入缺類 = 缺口經鏡像補償**。
 
+> ⚠️ **2D 矩陣不動點附註 (2026-10-17, 31_matrix_fixed_point)**: 調律者指示「7 當作 2D pattern 矩陣不動點測試」。P_d=|i−j|=d 位置集 × 8 operator (transpose/mirror44/mirror88/neg/diag shift/antidiag) + Galois + gcd_shift: **7 唔係任何 operator 獨特不動點 🔴** — 3/7/29 Galois 全 {1,87}, σ_87 固定所有奇數 d (Z₂ 奇偶選擇, 唔係 7 特有); gcd_shift 唯一 k=43 trivial。**唯一不動 magic = 22** (T2/T3/T5/T6, 2D 層確認 30 號對稱軸結論)。結論: 7 嘅特殊唔喺不動點層 — 維持 Lucas/代表選擇層 🟡🔴。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
