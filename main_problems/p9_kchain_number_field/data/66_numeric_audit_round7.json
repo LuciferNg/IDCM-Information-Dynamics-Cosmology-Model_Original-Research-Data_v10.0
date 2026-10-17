@@ -1,0 +1,166 @@
+{
+ "audit": "66_numeric_audit_round7",
+ "date": "2026-10-17",
+ "targets": [
+  "46",
+  "47",
+  "49",
+  "51",
+  "54",
+  "56-59"
+ ],
+ "results": [
+  {
+   "id": "A1_25cells",
+   "desc": "25 格全部 (i,j) ≤ 44 < 88",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "A2_r5_88_fix",
+   "desc": "88-site data-free 前向輸出 [7,14,22,28,33,44]",
+   "ok": true,
+   "detail": "[7, 14, 22, 28, 33, 44]"
+  },
+  {
+   "id": "A3_kept4of5",
+   "desc": "保留 magic 4/5 (20 失去)",
+   "ok": true,
+   "detail": "[7, 14, 22, 33]"
+  },
+  {
+   "id": "A4_lost20",
+   "desc": "失去 = 20",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "A5_orig3of5",
+   "desc": "37 T4 原版輸出唔同 (data=∅) — 複算",
+   "ok": true,
+   "detail": "kept=[7, 14, 22] out=[7, 11, 14, 22, 28, 44]"
+  },
+  {
+   "id": "B1_N176",
+   "desc": "176-site 輸出 4/5 保留 (20 失去)",
+   "ok": true,
+   "detail": "out=[7, 14, 22, 28, 33, 44] kept=[7, 14, 22, 33]"
+  },
+  {
+   "id": "B2_N352",
+   "desc": "352-site 輸出 4/5 保留 (20 失去)",
+   "ok": true,
+   "detail": "out=[7, 14, 22, 28, 33, 44] kept=[7, 14, 22, 33]"
+  },
+  {
+   "id": "B3_20_consistent",
+   "desc": "20 嘅 gcd 跨 N: 44→8, 88/176/352→4",
+   "ok": true,
+   "detail": "{44: 8, 88: 4, 176: 4, 352: 4}"
+  },
+  {
+   "id": "B4_28_replaces",
+   "desc": "28 喺 gcd4 類代表 (取代 20)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_gcd_unique",
+   "desc": "5 magic 5 個唔同 gcd 類 (互斥 cover)",
+   "ok": true,
+   "detail": "{1: [7], 2: [14], 8: [20], 22: [22], 11: [33]}"
+  },
+  {
+   "id": "C2_deg_unique",
+   "desc": "5 magic 5 個唔同 deg 層",
+   "ok": true,
+   "detail": "{7: 40, 14: 20, 20: 5, 22: 2, 33: 4}"
+  },
+  {
+   "id": "C3_deg_values",
+   "desc": "deg(7)=40 deg(14)=20 deg(20)=5 deg(22)=2 deg(33)=4 (44-site γ 層)",
+   "ok": true,
+   "detail": "{7: 40, 14: 20, 20: 5, 22: 2, 33: 4}"
+  },
+  {
+   "id": "C4_data_magic_cross",
+   "desc": "data 9 格中端點 ∈ magic 嘅格數=5 次數=6 (32 號核實)",
+   "ok": true,
+   "detail": "cells=5 hits=6"
+  },
+  {
+   "id": "D1_9mapping",
+   "desc": "G0: 9 個 mapping 格全 (i,j) ≤ 44",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "D2_map_magic_hit",
+   "desc": "9 mapping 格端點 ∈ magic: 5 格 6 次 (32 號核實)",
+   "ok": true,
+   "detail": "cells=5 hits=6"
+  },
+  {
+   "id": "D3_deg_distrib",
+   "desc": "γ'_d deg 分佈 (51 號 G7): {40:20,20:10,10:5,5:5,4:2,2:1,1:1}",
+   "ok": true,
+   "detail": "{40: 20, 20: 10, 10: 5, 5: 5, 4: 2, 2: 1, 1: 1}"
+  },
+  {
+   "id": "E1_sin_id",
+   "desc": "sin(7π/88) = sin(14π/176) EXACT",
+   "ok": true,
+   "detail": "diff=0.0e+00"
+  },
+  {
+   "id": "E2_th23",
+   "desc": "θ₂₃ = atan(sin7π/88/sin6π/88) = 49.3202° (±1e-3)",
+   "ok": true,
+   "detail": "49.32022796"
+  },
+  {
+   "id": "E3_seven_identity",
+   "desc": "7 經 k=14 carry = γ'_{2·7}=γ_7 (DM m_7)",
+   "ok": true,
+   "detail": "diff=0.0e+00"
+  },
+  {
+   "id": "E4_gam_carry",
+   "desc": "γ'_{14} = γ_7 → 7 嘅對偶鏈身份 (k=14)",
+   "ok": true,
+   "detail": "diff=0.0e+00"
+  },
+  {
+   "id": "F1_sets_disjoint",
+   "desc": "B1∩C1=∅, B2∩C2=∅, B1∪C1∪B2∪C2 兩輪互斥",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "F2_B1_mirror",
+   "desc": "B1 = 88−{44-magic}?? 實際: B1={55,68,74,81} = HALF mirror",
+   "ok": true,
+   "detail": "{81, 74, 68, 55}"
+  },
+  {
+   "id": "F3_B2_fib",
+   "desc": "B2 = 88−{F5..F9} = {83,80,75,67,54}",
+   "ok": true,
+   "detail": "{80, 67, 83, 54, 75}"
+  },
+  {
+   "id": "F4_consumed",
+   "desc": "第一輪 8 個 + 66 全部喺 consumed",
+   "ok": true,
+   "detail": "{66, 68, 73, 74, 46, 81, 55, 56, 62}"
+  },
+  {
+   "id": "F5_comb_stat",
+   "desc": "合併 B 3/9 vs C 3/9 (9+9=18) — p=0.69",
+   "ok": true,
+   "detail": "p=0.6900 (59 號 0.69)"
+  }
+ ],
+ "pass": 25,
+ "fail": 0
+}
