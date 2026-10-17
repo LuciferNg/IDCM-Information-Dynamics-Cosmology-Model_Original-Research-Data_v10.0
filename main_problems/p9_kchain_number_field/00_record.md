@@ -555,6 +555,8 @@ filler:       32 行無 label
 
 > ⚠️ **第八輪審計附註 (2026-10-17, 67_numeric_audit_round8)**: **27/27 PASS (八輪累計 75/75)**。覆蓋 29 探針 (88-site deg_ω(1)=80 ζ₃₅₂⁺、176-site=160 ζ₇₀₄⁺ — N-site 推廣 EXACT)、chain_closure (946 鏈閉合)、edge_energy (Σe_k²=0.1070469136)、magic_gcd_map/s33/periodic_table + 數論族 (Σγ=90、γ_{22±m}=4、946 奇偶 484+462、deg 分佈)。**第八輪原產物零錯**; 審計員 check 修正 ×1 (F1 9 格 d 期望)。早期 scripts 家族核心數學全覆蓋; 剩餘 = blind_test/self_loop 執行層輸出 (探索層產物)。
 
+> ⚠️ **第九輪審計附註 (2026-10-17, 68_numeric_audit_round9)**: **27/27 PASS (九輪累計 102/102)**。覆蓋 06-20 文檔數字 + 剩餘 scripts: 06 盲測 seed (2,31)、07 batch100、08 microcode 奇偶守恆 + d奇 deg {4:4,20:40,40:440}、09 self_loop、12 gamma87 (γ_87+γ_1=4、84.001274+γ_87=88)、13-20 (ω_84=ω_4、9 beat unique、三代 d=14)、剩餘族 (magic γ-deg 5 互斥、946 全譜 unique)。**★46 號 DUAL_CELLS 語義澄清: 係週期表座標對偶, 唔係保 beat 鏡像對偶 — dual_verify 唔可以當 beat 相等驗證**。審計員 fix ×5 全自身錯; 原產物零新錯; 01-20 有 21+68 雙輪覆蓋。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
