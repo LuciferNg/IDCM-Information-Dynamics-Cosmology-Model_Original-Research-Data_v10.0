@@ -31,12 +31,14 @@ crystal_stress（初版，2026-08-16）→ O140/O159/O161/O171 → O173（應變
 - 獨立核對 **61/61 PASS**（records 02-14 由零重算，1 個算術錯誤已修正：凝聚時標 3.2e7→4.54e6 yr）
 - 巴爾末雙峰 script 21 **9/9 PASS**
 - **2026-10-17 首次 closeout 獨立審計 62/62 PASS**（script 22，由原始常數重算全 records headline 數字，零 import）
+- **2026-10-17 closeout 攻堅 11/11 PASS**（script 23：#24 π² 來源閉合 + #10 β 形式 I 守恆強逼 + √4=L² 保範）
 - 全 scripts 重跑 **19/19 exit 0**（2026-10-17，p11 遷移後）
 - ⚠️ 位置檢驗 p 值更正（02 §21）：0.044 → **0.051**（s03 seed=42 重跑），Fisher 3.6σ → **3.55σ**（定性不變）
 
 ## 開放問題
 
-- 🔴 β 函數形式證明（壓縮比公設已立）；🔴 E_strain π² 來源
+- 🔴 β 微觀動力學（#10 形式已閉合：I=21×β=88 守恆強逼比值 + log 排除，record 15；剩「點解每步跨越=模態比」🔴）
+- 🟢 #24 E_strain π² 來源已閉合（球/環合成：ρ_crit π⁻¹ × λ_sync³ π³ = π²，record 15）
 - 🔴 LRD = 10% Eddington 效率（可證偽，等光譜質量）
 - 🔴 新節點出現機制 → **O179**（`open_problems_fresh/o179_new_node_mechanism/`）
 - 🟡 位置檢驗 p=0.051 邊際（未達 5%）；需更大面積 LRD 樣本（JADES/CEERS/Euclid）
