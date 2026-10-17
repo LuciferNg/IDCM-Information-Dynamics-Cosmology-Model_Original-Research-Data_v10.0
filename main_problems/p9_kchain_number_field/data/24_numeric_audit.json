@@ -1,0 +1,111 @@
+{
+ "date": "2026-10-17",
+ "results": [
+  {
+   "name": "A1 deg(ω_n) 分佈",
+   "pass": true,
+   "detail": "got {40: 20, 20: 10, 5: 5, 10: 5, 4: 2, 2: 1, 1: 1}"
+  },
+  {
+   "name": "A2 γ orbit size = deg(γ_n) ∀n",
+   "pass": true,
+   "detail": "7 orbits: [1, 2, 5, 10, 20]"
+  },
+  {
+   "name": "A3 7 gcd 類別",
+   "pass": true,
+   "detail": "[(1, 20), (2, 10), (4, 5), (8, 5), (11, 2), (22, 1), (44, 1)]"
+  },
+  {
+   "name": "B1 |Gal(ℚ(ζ88)+/ℚ)| = 20",
+   "pass": true,
+   "detail": "R40=40, /2 = 20"
+  },
+  {
+   "name": "B2 ω σ-像瀉出 48.6%",
+   "pass": true,
+   "detail": "856/1760 = 48.6% (預言 856/1760=48.6%)"
+  },
+  {
+   "name": "B3 σ_3(ω_1) 負頻率",
+   "pass": true,
+   "detail": "σ_3(ω_1) = -0.2137902431"
+  },
+  {
+   "name": "C1 A1 946/946",
+   "pass": true,
+   "detail": "946/946"
+  },
+  {
+   "name": "D1 ω_11·ω_33 = √2",
+   "pass": true,
+   "detail": "1.4142135623730950488"
+  },
+  {
+   "name": "D2 譜線補償 21/21",
+   "pass": true,
+   "detail": "21/21"
+  },
+  {
+   "name": "D3 γ-beat 6 閉合",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E1 closure size 87",
+   "pass": true,
+   "detail": "87 個"
+  },
+  {
+   "name": "E2 closure 集 = {±ω_1..±ω_43}∪{2}",
+   "pass": true,
+   "detail": "closure−exp=[], exp−closure=[]"
+  },
+  {
+   "name": "E3 0 缺席 (σ_a(ω_n)=0 無解)",
+   "pass": true,
+   "detail": "命中: None"
+  },
+  {
+   "name": "E4 closure ⊆ W88",
+   "pass": true,
+   "detail": "|W88|=88"
+  },
+  {
+   "name": "E5 W88 − closure = {0}",
+   "pass": true,
+   "detail": "缺席 ['4.3348337e-51']"
+  },
+  {
+   "name": "F1 Σγ_even=46, Σγ_odd=44",
+   "pass": true,
+   "detail": "even=46.0, odd=44.0"
+  },
+  {
+   "name": "F2 V_min = −μ⁴L₁₀/8 = −61.5",
+   "pass": true,
+   "detail": "-61.5"
+  },
+  {
+   "name": "F3 ⟨W⟩² = L₁₀/2 = 61.5",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F4 V_min = −L₁₀/2 = −⟨W⟩²",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G1 Z₂ 2 階元素 {23,65,87}",
+   "pass": true,
+   "detail": "[23, 65, 87]"
+  },
+  {
+   "name": "G2 σ_43/45/87 正負各半",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "summary": "21/21"
+}

@@ -119,8 +119,8 @@ K_Chain 嘅 44 個 eigenvalue γ_n = 4sin²(πn/88) 之中:
 ## 待辦 / 開放
 
 - [x] beat 數域嘅精確描述 (Q(ζ₁₇₆)⁺ degree ≤ 40, 2026-08-18 完成: 04+05 腳本)
-- [ ] 有理骨架 (Σγ=90, pairing=4) 同 SYNC 週期嘅關係
-- [ ] 若 γ_n 全體係 Q(ζ_88)⁺ 嘅一組生成元, 佢哋嘅對稱群結構
+- [ ] 有理骨架 (Σγ=90, pairing=4) 同 SYNC 週期嘅關係 → **2026-10-09 交接 O203** (register note, 只交接唔推)
+- [x] 若 γ_n 全體係 Q(ζ_88)⁺ 嘅一組生成元, 佢哋嘅對稱群結構 → **2026-10-09 閉合 (22_galois_symmetry)**: orbit = gcd 類別, 7 orbits, size = degree, 有理骨架 = Galois 不變量, 固定點 = 有理點
 
 ---
 
@@ -566,14 +566,14 @@ beat 值隨 s 遞減而單調遞增
 ### 跨文檔修正
 
 受影響 8 個檔案已全部更新 (ℚ(ζ₈₈)→ℚ(ζ₁₇₆)):
-- `04_beat_irrational_formulas.py` + `.md` — 全文重寫
+- `main_problems/p9_kchain_number_field/04_beat_irrational_formulas.py` + `.md` — 全文重寫
 - `main_problems/p15_early_derivations/docs/research_record.md` — 14.1 數域修正註記 + 14.1b 拍頻數字列表
 - `main_problems/p15_early_derivations/docs/session_20260815_summary.md` — 數域修正
 - `main_problems/p15_early_derivations/docs/pmns_derivation.md` — 數域修正
-- `ktree_structure/06_beat_ratio_number_field.py` — 5 處 ζ₈₈→ζ₁₇₆
-- `ktree_structure/07_doc_audit_record.md` — 數域證明更新
-- `ktree_structure/09_foundational_article_NOEXPANSION.md` — 拍頻數域修正
-- `kchain_number_field/00_record.md` — 本記錄更新
+- `main_problems/p10_ktree_structure/06_beat_ratio_number_field.py` — 5 處 ζ₈₈→ζ₁₇₆
+- `main_problems/p10_ktree_structure/07_doc_audit_record.md` — 數域證明更新
+- `main_problems/p10_ktree_structure/09_foundational_article_NOEXPANSION.md` — 拍頻數域修正
+- `main_problems/p9_kchain_number_field/00_record.md` — 本記錄更新
 - `memory_archive/MEMORY_full_export.md` — 數域修正
 
 ### 驗證
@@ -588,3 +588,100 @@ beat 值隨 s 遞減而單調遞增
 7. γ_n 骨架:   ✅ Σγ=90, γ_n+γ_{44-n}=4, γ_11·γ_33=2
 8. 數據檔案:   ✅ 946 行, 格式正確
 ```
+
+---
+
+## 🔬 Galois 對稱群結構 + ⟨W⟩² = L₁₀/2 (2026-10-09)
+
+> **狀態**: ✅ 開放項 #2 閉合 (22_galois_symmetry.py/.md)
+> **背景**: Gemini 946 拓撲詮釋審計 — 唯一有結構價值聲稱 V_min = −L₁₀/2 = −⟨W⟩², 已盲測確認結構身份 (O243 note 記錄)
+
+### A. γ_n 對稱群結構 (7 orbits = gcd 類別)
+
+已知: 44 個 γ_n 嘅 Q-rank = 20 = [ℚ(ζ₈₈)⁺ : ℚ] (04_rational_skeleton 已證) ⟹ γ_n 生成整個數域。
+
+```
+Gal(ℚ(ζ₈₈)⁺/ℚ) = (ℤ/88ℤ)×/{±1}, |Gal| = 20
+σ_a(γ_n) = γ_{an mod 88}
+
+gcd(n,88)=22 → {22}          size 1 = deg 1 ✅
+gcd(n,88)=44 → {44}          size 1 = deg 1 ✅
+gcd(n,88)=11 → {11,33}       size 2 = deg 2 ✅
+gcd(n,88)= 4 → {4,12,20,28,36}  size 5 = deg 5 ✅
+gcd(n,88)= 8 → {8,16,24,32,40}  size 5 = deg 5 ✅
+gcd(n,88)= 2 → {2,6,...,42}  size 10 = deg 10 ✅
+gcd(n,88)= 1 → {1,3,...,43}  size 20 = deg 20 ✅
+```
+
+- **orbit size = degree ∀n ✅** — 伽羅瓦定理 (orbit = 共軛集)
+- **有理骨架 = Galois 不變量**: Σγ=90 (σ_a(Σγ)=90 ∀a), pairing=4 (44a ≡ 44 mod 88) — 結構非巧合
+- **固定點 = 有理點 = 群固定子**: {22,44} ⟹ γ_22=2 (v_g=c), γ_44=4 (Nyquist)
+- **Stabilizer**: sizes {20,10,4,2,1} = |Gal|/|orbit| (對偶因子格), gcd(4,8) 類別 stabilizer {1,23,45,67} (a·4≡4 mod 88 ⟺ a≡1 mod 22)
+
+> ⚠️ **審計修正附註 (2026-10-17, 24_numeric_audit.py)**: stabilizer 原寫 `{1,21,23,43}` — 錯（σ_21(γ_4)=84≠4, σ_43(γ_4)=84≠4）。正確 `{1,23,45,67}`。誤源 = 誤用 o48 (ℤ/44ℤ)× 對合元集。原文保留，以本附註為準。
+- **群結構**: Gal ≅ C₁₀ × (C₂×C₂)/{±1}
+
+### ★ ω 對照: 88 vs 176 數域差異嘅群論根源
+
+```
+ω_n = 2cos(π(44−n)/88) ∈ ℚ(ζ₁₇₆)⁺, |Gal| = 40
+正確作用: σ_a(ω_n) = 2cos(π·(a(44−n) mod 176)/88)
+```
+
+- full orbit size = degree ∀n ✅ (40/20/10/5/4/2/1)
+- **48.6% σ-像 (856/1760) 瀉出 44-site 集** — 負頻率成員 (例 σ_3(ω_1) = −0.2138)
+- ⟹ ω 需要 ℚ(ζ₁₇₆)⁺ (176=2×88) 先裝得晒全部 Galois 共軛
+- ⟹ **88 vs 176 差異 = γ 有 pairing (4−γ) 閉合, ω 冇 — 群論必然**, 非任意選擇
+
+### C. ⟨W⟩² = L₁₀/2 身份鏈 (Gemini 審計衍生, 盲測確認)
+
+```
+L₁₀ = N_gen(N_d−N_gen) = 3×41 = 123
+⟨W⟩² = 61.5 (O243/O62: w_0 = √61.5 = 7.84219357068)
+V_min = −μ⁴·L₁₀/8 = −4×123/8 = −61.5 EXACT  (μ²=2, λ=2/L₁₀)
+⟹ V_min = −L₁₀/2 = −⟨W⟩² = −61.5  (三寫法同一身份)
+結構鍵: μ²=2 (Σγ_even−Σγ_odd, O41) + λ=2/L₁₀ (O39) — 零自由參數
+⟹ ⟨W⟩² = L₁₀/2 係真結構 (唔係 phantom), 同 O243 P6d 預言一致
+```
+
+### 新舊檔案對照
+
+| 檔案 | 說明 |
+|:-----|:------|
+| `22_galois_symmetry.py` | 對稱群結構完整驗證 (7 orbits, stabilizer, ω 對照) |
+| `22_galois_symmetry.md` | 文檔 — 本章摘要 + 物理意義 + 延伸 |
+| `register O203 note` | 有理骨架 ↔ SYNC 週期交接 (2026-10-09) |
+| `register O243 note` | Gemini 946 審計 + V_min 盲測結果 (2026-10-09) |
+
+---
+
+## 🔬 γ/ω 拍頻分解 + 譜線補償 + Galois Closure (2026-10-09 申延)
+
+> **狀態**: ✅ A1-A3 全部閉合 (預註冊盲測 6/6 PASS)
+> **檔案**: `23_beat_harmonic_bridge.{py,md}` + `data/23_beat_bridge.json`
+> **性質**: 純代數恆等式 (ω_n = 2sin(πn/88) 單一生成元家族決定)
+
+### A1: |γ_i − γ_j| = beat(i,j) × (ω_i + ω_j) ★
+
+946/946 EXACT。γ = ω² ⟹ 平方差 = 和 × 差。**兩條 946 拍頻譜（ω-beat ∈ ℚ(ζ₁₇₆)⁺ deg≤40 同 γ-beat ∈ ℚ(ζ₈₈)⁺ deg≤20）之間嘅代數橋**——和頻係 carrier，乘完跌返 γ 域。
+
+### A2: ω 封閉形式 + 譜線補償
+
+```
+A2a: ω_11·ω_33 = √2 EXACT
+A2b: ★ ω_{2m} + ω_44 = γ_{22+m}  (m=1..21, 21/21 EXACT)
+     證明: γ_{22+m} = 2−2cos(π/2+mπ/44) = 2+2sin(mπ/44) = ω_{2m} + ω_44
+     ⟹ γ 譜高半段 (23..43) 由偶頻率 + Nyquist 2 重建 — ω 加法直接嵌入 γ 譜
+A2c: γ-beat 閉合: |γ_11−γ_22| = |γ_22−γ_33| = √2, |γ_11−γ_33| = 2√2,
+     |γ_11−γ_44| = 2+√2, |γ_22−γ_44| = 2, |γ_33−γ_44| = 2−√2
+```
+
+### A3: ω Galois Closure = {±ω_1..±ω_43} ∪ {2} (87 個) ★
+
+- closure = 完整正負鏡像譜, 粒子/反粒子對應
+- **0 缺席**: σ_a(ω_n) = 0 ⟺ ak ≡ 44 (mod 88) ⟺ k ≡ 44/132 (mod 176), 但 k = 44−n ∈ {0..43} 無解
+- 0 = 鏈零點 (γ_0 = ω_0 = 0) — 44-site 由 index 1 開始, 開端排除真空
+
+### 延伸 handoff 建議
+
+負頻率 −ω_n ↔ 反粒子扇區 (O137 chiral / O206 observer) — 未開新 O, 待 register
