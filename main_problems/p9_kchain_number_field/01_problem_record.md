@@ -62,6 +62,7 @@
 | 26 | 10-09 | **Galois 對稱群結構** | `22_galois_symmetry.{py,md}` | 7 orbits = gcd 類別, orbit size = degree ∀n, 有理骨架 = Galois 不變量, 固定點 = 有理點, ω 48.6% 瀉出 → 88/176 數域差異群論根源; ⟨W⟩² = L₁₀/2 身份鏈盲測 | ✅ |
 | 27 | 10-09 | **γ/ω 拍頻分解** | `23_beat_harmonic_bridge.{py,md}` + `data/23_beat_bridge.json` | A1: \|γ_i−γ_j\| = beat×sum 946/946; A2: ω_11·ω_33=√2, ★ω_{2m}+ω_44=γ_{22+m} 21/21 譜線補償, γ-beat 6 閉合; A3: ω closure = {±ω_1..±ω_43}∪{2} 87 缺 0 | ✅ |
 | 28 | 10-17 | **數字審計 (第二輪)** | `24_numeric_audit.py` + `data/24_numeric_audit.json` | 21/21 PASS: deg 分佈/7 orbits/orbit=degree/48.6% 瀉出/946 A1/√2/21 譜線補償/6 閉合/closure 87/W88 缺 0/V_min 身份鏈/Z₂ 2 階 {23,65,87}; 修正 stabilizer 錯誤 (見附註) | ✅ |
+| 29 | 10-17 | **Magic rows 開放項攻堅** | `25_magic_rows_open.py` + `data/25_magic_open.json` + `25_magic_rows_open.md` | 新閉合×2: 「缺{4,16}」精確化 = deg=10 唯一缺類 (gcd=4 係 deg10 唯一來源) + gcd=16 係 deg5 第二來源; data-free 代表規則 (gcd=11: 揀 33 避開 data 11); 新事實: 8-adic 指紋 + Lucas 鏈 {L₄,2L₄,2L₅,3L₅}+20; 維持 🔴: 7 vs 3、20 生成鏈、24 身份 | 🟡 |
 
 ## 時序完整性聲明
 
