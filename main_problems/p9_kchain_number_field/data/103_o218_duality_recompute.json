@@ -1,0 +1,43 @@
+{
+ "audit": "103_o218_duality_recompute",
+ "date": "2026-10-17",
+ "algebra": "γ'_{2n} = 4sin²(π·2n/176) = 4sin²(πn/88) = γ_n (代數恆等)",
+ "numeric_44_44": true,
+ "rational_evens": [
+  [
+   44,
+   22,
+   2.0
+  ]
+ ],
+ "semantics": "偶模 carry = 44-site 身份重影, 非 88-site 獨立 label",
+ "g4_carry_issue": "55 計 12 (carry 計入) vs 剔 carry 6<9 — 留檔待裁定",
+ "results": [
+  {
+   "id": "A1_algebra",
+   "desc": "代數恆等 γ'_{2n}=γ_n (數值 44/44 零差)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "B1_rational",
+   "desc": "偶模有理點 = k=44 only (γ'_44=2=γ_22; 96 號一致)",
+   "ok": true,
+   "detail": "[(44, 22, 2.0)]"
+  },
+  {
+   "id": "C1_semantics",
+   "desc": "53 號語義釐清: 偶模 carry ≠ 88-site 獨立 label",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "D1_g4_view",
+   "desc": "G4 carry 計入問題記錄 (55: 計 12; carry 剔: 6<9) — 留檔",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 4,
+ "fail": 0
+}
