@@ -1,0 +1,156 @@
+{
+ "step": "30_mirror_exclusion",
+ "rules": {
+  "R4a": "排除=鏡像出走類",
+  "R4b": "代表=鏡像伴侶身份",
+  "R4c": "鎖7=鏡像伴侶非L*"
+ },
+ "STEP1_mirror_flow": {
+  "1": {
+   "gcd1": 20,
+   "self_closed": true,
+   "all_exit": false
+  },
+  "2": {
+   "gcd2": 10,
+   "self_closed": true,
+   "all_exit": false
+  },
+  "4": {
+   "gcd8": 3,
+   "gcd16": 2,
+   "self_closed": false,
+   "all_exit": true
+  },
+  "8": {
+   "gcd4": 3,
+   "self_closed": false,
+   "all_exit": true
+  },
+  "11": {
+   "gcd11": 2,
+   "self_closed": true,
+   "all_exit": false
+  },
+  "16": {
+   "gcd4": 2,
+   "self_closed": false,
+   "all_exit": true
+  },
+  "22": {
+   "gcd22": 1,
+   "self_closed": true,
+   "all_exit": false
+  }
+ },
+ "R4a_check": {
+  "no_magic_classes": [
+   4,
+   16
+  ],
+  "all_exit_classes": [
+   4,
+   8,
+   16
+  ],
+  "all_exit_but_magic": [
+   8
+  ],
+  "verdict": "PARTIAL — gcd4/gcd16 出走 ✓ 但 gcd8 都出走而有 magic ⟹ 出走唔係排除嘅充要條件"
+ },
+ "STEP2_magic_partner": {
+  "d7": {
+   "mirror": 37,
+   "mirror_gcd": 1,
+   "mirror_role": "filler",
+   "own_role": "magic"
+  },
+  "d14": {
+   "mirror": 30,
+   "mirror_gcd": 2,
+   "mirror_role": "filler",
+   "own_role": "magic"
+  },
+  "d20": {
+   "mirror": 24,
+   "mirror_gcd": 4,
+   "mirror_role": "filler",
+   "own_role": "magic"
+  },
+  "d22": {
+   "mirror": 22,
+   "mirror_gcd": 22,
+   "mirror_role": "magic",
+   "own_role": "magic"
+  },
+  "d33": {
+   "mirror": 11,
+   "mirror_gcd": 11,
+   "mirror_role": "data",
+   "own_role": "magic"
+  }
+ },
+ "R4b_check": {
+  "mirror_roles_of_magic": [
+   "filler",
+   "filler",
+   "filler",
+   "magic",
+   "data"
+  ],
+  "note": "每個 magic 嘅鏡像伴侶: 7↔37(filler), 14↔30(filler), 20↔24(gcd4 被排除類!), 22↔22(軸心), 33↔11(data 行!) —— 冇一條共同 pattern"
+ },
+ "STEP2b_lock7": {
+  "gcd1_lucas_primes": [
+   3,
+   7,
+   29
+  ],
+  "detail": [
+   {
+    "d": 3,
+    "is_Lucas": true,
+    "L_index_unique": true,
+    "mirror": 41,
+    "mirror_in_LSTAR": false,
+    "mirror_in_data": false,
+    "mirror_in_magic": false
+   },
+   {
+    "d": 7,
+    "is_Lucas": true,
+    "L_index_unique": true,
+    "mirror": 37,
+    "mirror_in_LSTAR": false,
+    "mirror_in_data": false,
+    "mirror_in_magic": false
+   },
+   {
+    "d": 29,
+    "is_Lucas": true,
+    "L_index_unique": true,
+    "mirror": 15,
+    "mirror_in_LSTAR": false,
+    "mirror_in_data": false,
+    "mirror_in_magic": false
+   }
+  ],
+  "pattern": {
+   "3": "mirror 41: 非L* 非data 非magic",
+   "7": "mirror 37: 非L* 非data 非magic ← 同 3 一樣, 冇分別!",
+   "29": "mirror 15: 非L* 非data 非magic"
+  },
+  "verdict": "R4c FAIL 候選 — 3/7/29 嘅鏡像伴侶全部都係 filler (唔係 L*/data/magic), 鏡像伴侶身份分唔開 7 同 3 ⟹ 鎖 7 唔可以靠『兩邊』鏡像身份"
+ },
+ "blind_mirror_g1": {
+  "P(隨機 gcd1 元素嘅鏡像伴侶係 filler)": 0.69992,
+  "7 嘅伴侶 37": "filler",
+  "verdict": "7 嘅伴侶係 filler 概率0.700 — 唔特別"
+ },
+ "summary": [
+  "STEP1 (排除 4/16): gcd4/gcd16 喺 44−d 鏡像下全出走 ✓ — 但 gcd8 都出走而有 magic ⟹ 出走唔足以解釋排除",
+  "STEP2 (鎖 7): 3/7/29 嘅鏡像伴侶全部 filler, 鏡像身份分唔開 7 vs 3 ⟹ 「兩邊鎖7」用鏡像伴侶角色做唔到",
+  "★ 真正嘅鏡像結構: d=22 係唯一自鏡像 (對稱軸自己 = HALF magic); gcd2 嘅 14↔30 兩邊 filler; gcd11 嘅 33↔11 = magic↔data 唯一跨層對",
+  "★ 20↔24: magic 20 嘅鏡像落入被排除類 gcd4 — 「magic 鏡像落入缺類」可能先係 20 嘅特殊身份"
+ ]
+}

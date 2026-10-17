@@ -66,6 +66,7 @@
 | 30 | 10-17 | **Magic rows 規則盲測** | `26_blind_test_magic_rows_rules.py` + `data/26_blind_test.json` + `26_blind_test_magic_rows_rules.md` | A1 data-free null=0.375 🔴 FAIL; A2 Lucas null=0.008 🟡 邊緣 (0.8% 未到5σ); A3 gcd→deg 唔係單射 (gcd8/16 均 deg5) → 表述修正「gcd類缺{4,16}」; TEST B P13 正側 label 一致 ✅ (但同源非獨立); TEST C R1+R2 篩剩 15 候選唔唯一 → **magic 代表選擇規則未閉合**, 25號閉合標記降級 | 🔴 |
 | 31 | 10-17 | **Magic rows 深推** | `27_magic_rows_deeper.py` + `data/27_magic_deeper.json` + `27_magic_rows_deeper.md` | TEST D: magic vs filler 成員結構**零差異** (s step 全2, s_mean 全45) → magic=行標籤層, 唔係行結構層; TEST E: v₂奇⇒magic 單向 3/3 ✅ 但 g=1,11 例外 (偶都有 magic) — 規則唔充要; TEST F: **L₄/L₅ 連續 Lucas 質數對 (7,11 gap=4=L₃ 前半) 生成 4/5 magic**, 20 仍然唯一冇鏈; 29=L₇ 排除 (後半+mod4=1) | 🟡 |
 | 32 | 10-17 | **數字審計第三輪** | `28_numeric_audit_round3.py` + `28_numeric_audit_round3.md` | **46/46 PASS** — 零 import 第一原理重算 25/26/27 全部 headline 數字 (gcd 七類/deg 分佈/0.375/0.008/15 候選/零差異/v₂ 規則/Lucas 對); 首輪 FAIL 全數係審計員 check bug ×4 (null model 撈錯/舊 draft 行/round 比較/JSON key), 25/26/27 推導零錯; 重跑決定性 | ✅ |
+| 33 | 10-17 | **對角線排除 + 兩邊鎖 7** | `30_mirror_exclusion.py` + `data/30_mirror_exclusion.json` + `30_mirror_exclusion.md` | 「對角線」= d↔44−d 鏡像軸。STEP1: gcd4/gcd16 鏡像全出走 ✓ 但 gcd8 都出走而有 magic ⟹ R4a 必要唔充要 🟡; ★ d=22 唯一自鏡像 = HALF magic 結構必然; 自封閉類 {1,2,11,22} 100% magic。STEP2: 3/7/29 鏡像伴侶全部 filler (盲測 P=0.70) ⟹ R4c 鎖 7 🔴 FAIL; ★ 33↔11 magic↔data 唯一鏡像對; ★ 20↔24 gcd8中心↔gcd4中心互映 = 缺口經鏡像補償 | 🟡 |
 
 ## 時序完整性聲明
 

@@ -485,6 +485,8 @@ filler:       32 行無 label
 
 > ⚠️ **數字審計第三輪附註 (2026-10-17, 28_numeric_audit_round3)**: 零 import 第一原理重算 25/26/27 全部 headline 數字 → **46/46 PASS** (gcd 七類/d 面 deg 分佈 {40:20,20:10,10:5,5:5,4:2,2:1}/A1 0.375+A2 0.008 closed-form+MC 雙 seed/15 候選/magic∩候選 4/5/TEST D-F)。首輪 7 FAIL 全數係審計員 check bug ×4 (A1/A2 null model 撈錯「無類別 43 揀 5」vs 26 號「每 gcd 類揀 1 代表」; 舊 draft 錯誤預期行; round 位數硬碰 ==; JSON key 猜錯) — **25/26/27 推導零錯**, 依 §4.7 有罪推定成立。重跑決定性 (JSON hash 穩定)。
 
+> ⚠️ **對角線排除附註 (2026-10-17, 30_mirror_exclusion)**: 調律者指示「4/16 對角線排除後兩邊鎖死 7」。對角線 = d↔44−d 鏡像軸。STEP1 — gcd4/gcd16 鏡像全出走 ✓ (R4a 必要唔充要 🟡, gcd8 出走但有 magic 20); **d=22 唯一自鏡像 = HALF magic 結構必然**; 自封閉類 {1,2,11,22} 100% magic。STEP2 — 3/7/29 鏡像伴侶全 filler, 盲測 P=0.70 🔴 鎖 7 FAIL; **33↔11 = magic↔data 唯一鏡像對**; **20↔24 = gcd8中心↔gcd4中心互映, magic 鏡像落入缺類 = 缺口經鏡像補償**。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
