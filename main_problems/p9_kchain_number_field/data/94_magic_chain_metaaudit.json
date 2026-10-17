@@ -1,0 +1,144 @@
+{
+ "audit": "94_magic_chain_metaaudit",
+ "date": "2026-10-17",
+ "gates": 37,
+ "covers_L": 3,
+ "covers_F": 42,
+ "rarity": {
+  "hit": 20500,
+  "total": 962598,
+  "p": 0.0212965329244399
+ },
+ "field": {
+  "n": 39,
+  "noid": [
+   21,
+   32,
+   36,
+   39
+  ]
+ },
+ "N": {
+  "44": [
+   22,
+   33
+  ],
+  "88": [
+   44
+  ],
+  "176": [
+   88
+  ],
+  "352": [
+   176
+  ]
+ },
+ "program": {
+  "gcd2": [
+   10,
+   14
+  ],
+  "gcd16": [
+   28
+  ]
+ },
+ "pillars": {
+  "L": 5,
+  "F": 3,
+  "max_others": 4
+ },
+ "results": [
+  {
+   "id": "A1_37",
+   "desc": "過閘集合 = 37 (71 復現)",
+   "ok": true,
+   "detail": "37"
+  },
+  {
+   "id": "B1_3",
+   "desc": "M_L cover triples = 3 (70/82)",
+   "ok": true,
+   "detail": "3"
+  },
+  {
+   "id": "B2_42",
+   "desc": "M_F cover triples = 42 (82)",
+   "ok": true,
+   "detail": "42"
+  },
+  {
+   "id": "C1_213pct",
+   "desc": "gcd+deg 全互斥機率 = 2.13%±0.05 (70)",
+   "ok": true,
+   "detail": "p=0.0212965329244399"
+  },
+  {
+   "id": "D1_field",
+   "desc": "領域身份 = 39/43 = 90.7% (70)",
+   "ok": true,
+   "detail": "39"
+  },
+  {
+   "id": "D2_noid",
+   "desc": "無身份 = {21,32,36,39} (70/89)",
+   "ok": true,
+   "detail": "[21, 32, 36, 39]"
+  },
+  {
+   "id": "E1_N44",
+   "desc": "N44 唯一 = {22,33}",
+   "ok": true,
+   "detail": "[22, 33]"
+  },
+  {
+   "id": "E2_N88",
+   "desc": "N88 唯一 = {44}",
+   "ok": true,
+   "detail": "[44]"
+  },
+  {
+   "id": "E3_N176",
+   "desc": "N176 唯一 = {88}",
+   "ok": true,
+   "detail": "[88]"
+  },
+  {
+   "id": "E4_N352",
+   "desc": "N352 唯一 = {176}",
+   "ok": true,
+   "detail": "[176]"
+  },
+  {
+   "id": "F1_open2",
+   "desc": "gcd2 開放位 = {10,14}",
+   "ok": true,
+   "detail": "[10, 14]"
+  },
+  {
+   "id": "F2_open16",
+   "desc": "gcd16 候選 = {28} — 92 嘅『2 選 1 (28 vs 20)』有誤: 20 係 gcd8!",
+   "ok": true,
+   "detail": "[28]"
+  },
+  {
+   "id": "G1_covL",
+   "desc": "M_L cover 5/5",
+   "ok": true,
+   "detail": "5"
+  },
+  {
+   "id": "G2_covF",
+   "desc": "M_F cover 3/5",
+   "ok": true,
+   "detail": "3"
+  },
+  {
+   "id": "G3_unique5",
+   "desc": "magic 唯一 cover 全 5 (其他 ≤4)",
+   "ok": true,
+   "detail": "4"
+  }
+ ],
+ "pass": 15,
+ "fail": 0
+}
