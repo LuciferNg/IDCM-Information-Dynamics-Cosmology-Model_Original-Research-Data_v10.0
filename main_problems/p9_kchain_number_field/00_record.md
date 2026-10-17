@@ -521,6 +521,8 @@ filler:       32 行無 label
 
 > ⚠️ **Magic=44-site 特有？統計失望附註 (2026-10-17, 48_magic_44site_specificity)**: 事實 — 20 = 唯一 gcd 歸類不穩定 magic (gcl 8→4); 不穩定集 = {4,8,...,40} = 4 嘅倍數 (10/43 = 23.3%) ⟹ 20 不穩定必然 (20=4F₅≡0 mod 4)。**★★統計 FAIL**: magic 1/5 不穩定, P = C(5,1)·0.233·0.767⁴ = **0.403 = 隨機水平** ⟹ 「Magic=44-site 特有」統計支持 = 零, **閉合宣稱撤回**; T4 語義論證維持 🟡 唔係獨立證明。**教訓（審計員第 8 個 self-check）**: 差啲做咗後驗閉合（「失去嘅 = 唯一 gcd 不穩定嘅」聽落靚但唔穩定率本身 23.3%）— **統計檢查必須喺閉合論證之前**, 唔係之後兜。88-site 樣本外維持 4/5 🟡 唔閉合。
 
+> ⚠️ **Magic 獨特性 = 宇宙 5 支柱附註 (2026-10-17, 49_magic_distinctiveness)**: **★用戶方向轉移**: uniqueness (統計唯一性, 48 號 FAIL) → **distinctiveness (結構獨特性/不可替代性)** — 「以支撐我們物理世界存在, 冇咗就唔係我哋宇宙」。**T1/T2 gcd+deg 互斥 cover**: magic 5 個 cover 5 個唔同 gcd 類 {1,2,8,11,22} + 5 個唔同 deg 層 {40,20,5,4,2}, 每個自家類唯一不可互相取代 ✅。**★★T3 宇宙 5 支柱**: ANCHOR(7)=DM 13.8 MeV 錨 (冇 DM 冇星系); GEN(14)=三代費米子世代 (冇 CKM/CP violation → 冇重子不對稱 → 冇恆星冇生命); TRANSFER(20)=能量傳遞; HALF(22)=鏡像對稱 (γ_n=γ_{88−n}); KTREE(33)=結構層級深度 (3L₅=M=(CY₃−2)/4)。**T5 magic×data 交叉**: ★(7,20) = ANCHOR×TRANSFER 唯一全 magic 端點 (n/p BBN); ★(19,33) = GEN 行 t/b 格同時撞 KTREE 端點 = GEN×KTREE 直接連住; GEN 冇 data 端點因為自己就係 data 行。誠實標記: T4 係 IF-THEN 論證層唔係證明; uniqueness FAIL 唔影響 distinctiveness (0 唯一中性元嘅結構角色唔會因揀 0 概率而變)。Magic = 宇宙 5 支柱唯一承載行 — p9 對「magic rows 點解緊要」嘅終極表述。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
