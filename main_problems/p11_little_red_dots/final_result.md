@@ -56,5 +56,8 @@ crystal_stress（初版，2026-08-16）→ O140/O159/O161/O171 → O173（應變
     channel; A Hα 負振幅 = P-Cygni 吸收 dip 直接證據。
     **C17 (record 22) 自身審計**: 「10/10 藍弱」= narrow-line z 陷阱 (broad
     centroid 紅移退化); 穩健峰位中心量度 6/10 (P=0.377) — 吸收藍弱未獲支持。
-    預言: T3/T1 拒證方向, T2 未判 — 活預言樣辦。
+    **C18 (record 23) 全樣本掃描 (10 fits)**: T2 峰距 mean=120±99, 冇大階梯
+    聚集 ⟹ 唔支持; T3 M2 ΔAIC 9/10 拒 (E 例外=noise wiggles) ⟹ 擴展 9/10;
+    broad centroid 系統性紅移 +35..+457 km/s。
+    預言: T1/T2/T3/吸收四判別全傾向唔支持 — 活預言樣辦。
 - 🟡 Q3 宿主星系 M_host = M_BH×306（JWST）；P13（Euclid DR1）；P15（Gaia DR4）；P9′（AugerPrime 2035）
