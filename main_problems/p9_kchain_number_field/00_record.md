@@ -507,6 +507,8 @@ filler:       32 行無 label
 
 > ⚠️ **SYNC pipeline r2 附註 (2026-10-17, 41_sync_saxis)**: 40 號 off-by-one 修正 (member count=44−d, d=29=15 成員); s 軸全景: **s=24..34 重載帶** 6 偶數 s × 3 magic 格 (d=14/20/22 s 值域交集=座標算術); M-pipeline s=33 單點 magic = (13,20) m7 anchor (odd s∩magic 代數必然); **i 行冇結構特殊** — SYNC 家族只係座標關係 (負結果); s=33 6 data 格 (37.5%); s=33 beat 冇光譜規律 (負結果)。SYNC 三開放項維持 🟡/🔴 — 冇新突破, 排雷輪。
 
+> ⚠️ **SYNC pipeline r3 附註 (2026-10-17, 42_d29_row_deep)**: d=29 行全鏡 — 15 成員全 gcd1/deg40/R5✗/非 magic/非 data; j=30..44 連續, i≤15; mirror d=15; s 全 odd; 零 magic/data 觸碰 (含曼哈頓≤2)。**06 §4 三開放項終結**: ① ⚫ 降級 (「M-pipeline SYNC 家族」物理語義撤回, 保留 (2,31) i=2 代數 fact) ② 🔴 框架內否證 (冇 opcode 執行信號) ③ 🟢 掃完 bounded (已測特徵下零特殊, 唔可外推「一定冇角色」)。**P9 SYNC 線 = 掃到盡 (排雷/降級), 唔係解到盡 (新突破)**。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
