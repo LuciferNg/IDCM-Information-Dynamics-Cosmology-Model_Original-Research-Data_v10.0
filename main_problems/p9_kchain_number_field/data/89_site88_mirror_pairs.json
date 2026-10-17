@@ -1,0 +1,87 @@
+{
+ "audit": "89_site88_mirror_pairs",
+ "date": "2026-10-17",
+ "pairs_identity": {
+  "both": 1,
+  "one": 39,
+  "none": 4
+ },
+ "R5_mirrors": {
+  "7": {
+   "self": true,
+   "mirror": false,
+   "mirror_d": 81
+  },
+  "14": {
+   "self": true,
+   "mirror": false,
+   "mirror_d": 74
+  },
+  "22": {
+   "self": true,
+   "mirror": false,
+   "mirror_d": 66
+  },
+  "28": {
+   "self": true,
+   "mirror": false,
+   "mirror_d": 60
+  },
+  "33": {
+   "self": true,
+   "mirror": false,
+   "mirror_d": 55
+  },
+  "44": {
+   "self": true,
+   "mirror": true,
+   "mirror_d": 44
+  }
+ },
+ "none_pairs": [
+  [
+   21,
+   67
+  ],
+  [
+   32,
+   56
+  ],
+  [
+   36,
+   52
+  ],
+  [
+   39,
+   49
+  ]
+ ],
+ "results": [
+  {
+   "id": "A1_symmetry_strong",
+   "desc": "鏡像對身份對稱 (both+one 佔大宗, 唔係 none)",
+   "ok": true,
+   "detail": "both=1 one=39 none=4"
+  },
+  {
+   "id": "B1_magic_mirror",
+   "desc": "R5 88-site 輸出自身或鏡像至少有身份 (6/6)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_mirror_none",
+   "desc": "冇身份鏡像對好少",
+   "ok": true,
+   "detail": "8"
+  },
+  {
+   "id": "D1_read",
+   "desc": "88-site mirror 對身份對稱確認: HALF 軸唯一性 = mirror 兩側共生",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 4,
+ "fail": 0
+}
