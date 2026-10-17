@@ -1,0 +1,40 @@
+{
+  "post_hoc": true,
+  "note": "候選由 μ_hat=235.7 導出 — 只係辨識力",
+  "n": 11,
+  "hits_hop4": 9,
+  "hits_hop2": 11,
+  "chi2_hop4": 33.704924646893936,
+  "chi2_hop2": 18.369050988715827,
+  "mc_p_hop4": 0.00015,
+  "mc_p_hop2": 0.0,
+  "W2": 1.0,
+  "W4": 0.6363636363636364,
+  "checks": [
+    {
+      "name": "H2a hop=2 使命率 ≥ hop=4",
+      "pass": true,
+      "detail": "11 vs 9"
+    },
+    {
+      "name": "H2b hop=2 χ² < hop=4",
+      "pass": true,
+      "detail": "18.4 < 33.7"
+    },
+    {
+      "name": "H2c hop2 MC null < 0.01",
+      "pass": true,
+      "detail": "p=0"
+    },
+    {
+      "name": "H2c' hop4 MC null 維持 < 0.01",
+      "pass": true,
+      "detail": "p=0.00015"
+    },
+    {
+      "name": "H2d hop=2 W 權重 < hop=4 (吸收層係 hop=2?)",
+      "pass": false,
+      "detail": "W2=1.000 vs W4=0.636"
+    }
+  ]
+}

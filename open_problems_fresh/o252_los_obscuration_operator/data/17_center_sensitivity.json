@@ -1,0 +1,22 @@
+{
+  "mu_hat_full": 235.7,
+  "mu_hat_highqual": 235.68619049793614,
+  "checks": [
+    {
+      "name": "M2-4 排除低位後 μ_hat",
+      "pass": true,
+      "detail": "μ_hat=237.6"
+    },
+    {
+      "name": "M3 剔除低質後 hop4 入 CI",
+      "pass": false,
+      "detail": "μ_hat=235.7±27.1, CI=[183,289], hop4=289.8"
+    },
+    {
+      "name": "M3' 剔除低質後 hop2 入 CI",
+      "pass": true,
+      "detail": "μ_hat=235.7±27.1, hop2=204.9"
+    }
+  ],
+  "scan": {}
+}
