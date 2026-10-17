@@ -1,0 +1,128 @@
+{
+ "test": "43_open_ledger_33_duality",
+ "T1": {
+  "R5GEN43": [
+   5,
+   7,
+   10,
+   11,
+   14,
+   15,
+   20,
+   21,
+   22,
+   28,
+   33
+  ],
+  "three_in_R5": false,
+  "gcd1_members": [
+   5,
+   7,
+   15,
+   21
+  ],
+  "gcd1_rep": 7,
+  "reason": "三重過濾唯一剩"
+ },
+ "T2": {
+  "magic_d": [
+   7,
+   14,
+   20,
+   22,
+   33
+  ],
+  "special_s": {
+   "33": "M-pipeline throughput (CY₃−2)/4",
+   "44": "N_d-domain",
+   "22": "? (HALF)"
+  },
+  "intersection": [
+   22,
+   33
+  ],
+  "note": "33 雙重身份兩軸獨立產生"
+ },
+ "T3": [
+  {
+   "item": "24 算子身份",
+   "status": "✅ 閉合",
+   "evidence": "38 號: 24=2B·N_gen (O142 v16 引用), ρ=3/11, γ₂₀ 補角"
+  },
+  {
+   "item": "20 生成鏈",
+   "status": "✅ 閉合",
+   "evidence": "33 號: 20=4F₅"
+  },
+  {
+   "item": "缺 {4,16}",
+   "status": "✅ 閉合",
+   "evidence": "37 T1 mod-8 代數必然 + 38 缺類重組 {4,16}→{8,16,32}"
+  },
+  {
+   "item": "d=29 角色",
+   "status": "✅ 閉合",
+   "evidence": "42 號: 行全普通 (15 成員零特殊, bounded)"
+  },
+  {
+   "item": "SYNC 物理語義",
+   "status": "⚫ 降級",
+   "evidence": "42 號: 物理主張撤回, 保留 i=2 代數 fact"
+  },
+  {
+   "item": "SYNC opcode 執行",
+   "status": "🔴 否證(框架內)",
+   "evidence": "42 號: 冇執行信號"
+  },
+  {
+   "item": "7 vs 3 終極判準",
+   "status": "🟡→✅ 構造排除",
+   "evidence": "43 T1: 3 ∉ R5 生成集 (anchor≥5) — 由構造排除"
+  },
+  {
+   "item": "R5 程序 44-site 唯一鎖定",
+   "status": "✅ 5/5 EXACT",
+   "evidence": "37 T3 兩階段程序"
+  },
+  {
+   "item": "R5 程序 88-site 樣本外",
+   "status": "🟡 等數據",
+   "evidence": "37 T4: 3/5 保留 (20→28, 33→11); 88-site 冇 label"
+  },
+  {
+   "item": "R5 gcd2 判準 (14 vs 10)",
+   "status": "🟡 等數據",
+   "evidence": "Lucas 鏈優先; 冇樣本外可測"
+  },
+  {
+   "item": "R5 gcd16 判準 (28 排除)",
+   "status": "✅ 機制清楚",
+   "evidence": "36/37: S3 deg5 撞層 + 前半優先"
+  },
+  {
+   "item": "33 對偶 (magic d × M s)",
+   "status": "🟡 新觀察",
+   "evidence": "43 T2: 唯一交叉, 兩身份獨立產生"
+  },
+  {
+   "item": "s=24..34 重載帶",
+   "status": "✅ 座標算術",
+   "evidence": "41 號: 14/20/22 s 值域交集"
+  },
+  {
+   "item": "TEST F m≤3 窗口",
+   "status": "🟡 未驗證",
+   "evidence": "28=4L₄ 超窗 — 窗口唔可為 fit 改"
+  }
+ ],
+ "T5": {
+  "internal_closeable": [
+   "33 對偶",
+   "TEST F 窗口審計"
+  ],
+  "external_gated": [
+   "R5 88-site 樣本外",
+   "R5 gcd2 判準"
+  ]
+ }
+}
