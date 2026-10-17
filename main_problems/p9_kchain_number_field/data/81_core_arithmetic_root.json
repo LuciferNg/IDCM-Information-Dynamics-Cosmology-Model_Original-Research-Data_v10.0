@@ -1,0 +1,91 @@
+{
+ "audit": "81_core_arithmetic_root",
+ "date": "2026-10-17",
+ "class22": [
+  22
+ ],
+ "class11": [
+  11,
+  33
+ ],
+ "class8": [
+  4,
+  20,
+  36
+ ],
+ "core_sources": {
+  "22": "δ=22 m=1 唯一 (44/2)",
+  "33": "δ=11 m=1, data-free 排 11 (44−11)",
+  "20": "生成集 4·5 唯一 (全域 4,20,36)"
+ },
+ "membership": {
+  "22": 31,
+  "33": 31,
+  "20": 17,
+  "all3": 11
+ },
+ "results": [
+  {
+   "id": "A1_delta22",
+   "desc": "gcd(|44−22|,176) = 22 (δ=22, m=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "A2_class11",
+   "desc": "gcd11 類 = {11, 33}",
+   "ok": true,
+   "detail": "[11, 33]"
+  },
+  {
+   "id": "A3_class22",
+   "desc": "gcd22 類 = {22} (唯一!)",
+   "ok": true,
+   "detail": "[22]"
+  },
+  {
+   "id": "A4_class8",
+   "desc": "gcd8 類 = {4, 20, 36}",
+   "ok": true,
+   "detail": "[4, 20, 36]"
+  },
+  {
+   "id": "B1_half_root",
+   "desc": "22 = 44/2 — HALF 算術根源 (δ=22 m=1 唯一)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B2_ktree_root",
+   "desc": "33 = 44−11 — 11 係 data 排走後唯一 (δ=11 m=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B3_transfer_root",
+   "desc": "20 = 4·F₅, 生成集 gcd8 唯一 (4,20,36 全域/生成集得 20)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_zero_param",
+   "desc": "22/33 零參數 (δ 唯一); 20 依賴乘數 4 + anchor 5",
+   "ok": true,
+   "detail": "22/33 = 純算術; 20 = 4·F₅ (m=4 仍屬 S1 嘅 4 乘數)"
+  },
+  {
+   "id": "C2_core3_membership",
+   "desc": "核心 3 個 (22/33/20) 喺過閘集合出現率",
+   "ok": true,
+   "detail": "22:31 33:31 20:17"
+  },
+  {
+   "id": "D1_arithmetic",
+   "desc": "算術根源確認: 22/33/20 零參數由 88=8·11 決定",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 10,
+ "fail": 0
+}
