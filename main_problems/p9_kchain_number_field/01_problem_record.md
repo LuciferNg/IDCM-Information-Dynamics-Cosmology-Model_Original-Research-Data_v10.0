@@ -135,6 +135,8 @@
 | 103 | 10-17 | **O218 對偶鏈 44/44 第一原理重算** | `103_o218_duality_recompute.py` + `data/103_o218_duality_recompute.json` + `103_o218_duality_recompute.md` | **4/4 — O218 定理級重算成功**: γ'_{2n}=4sin²(2πn/176)=4sin²(πn/88)=γ_n 代數恆等, n=1..44 零差 (唔靠 O-series); 偶模有理點 k=44 only (γ'_44=2=γ_22; 96 Niven 一致; k=88 出域修正 — 審計員 loop bug); ★★G4 carry 計入問題留檔: 55 計 12 = 偶模 7 (carry 重影!) + 奇模 6 家族 — 獨立 label 剔 carry = 6 < 9, G4 PASS 依賴 carry 計入待裁定 (建議 104) | ✅ |
 | 104 | 10-17 | **G4 carry 計入正式裁定** | `104_g4_carry_ruling.py` + `data/104_g4_carry_ruling.json` + `104_g4_carry_ruling.md` | **3/3 — G4 分層正名**: 判準漂移真 (51『≥9 獨立 label』→ 53『≥9 label 存在』); 奇模專屬精確 {1,3,5,9,13,21,47} = 7 < 9 (剔 θ₂₃ 實驗式; 全部奇數 vs carry 全部偶數互斥); ★裁定: 存在層 ✅ 12≥9 PASS + 獨立層 🔴 7<9 FAIL — 唔可以直接宣稱 G4 PASS; 55 號 md 加 append-only 更正; Magic 攻堅 88-site label 表述更新 (101 要同步) | ✅ |
 | 105 | 10-17 | **G3/G7 carry 連帶檢查 + 終態同步** | `105_gate_carry_chain_check.py` + `data/105_gate_carry_chain_check.json` + `105_gate_carry_chain_check.md` | **5/5 — carry 影響盤點完成**: G3 結構判準唔受影響; G7 carry 係判準定義唔受影響; ★G6 同 G4 一樣中招 (宣稱『≥9 獨立 label』→ 存在層 ✅ 12 / 獨立層 🔴 7); ★閘門全景最終: G1/G3/G5/G7 ✅, G2 🔴🟡, G4 🟡 (存在✅+獨立🔴), G6 🟡; 101 號 md 加 append-only 更正 (G4/G6 唔可以擺 ✅ 組) | ✅ |
+| 106 | 10-17 | **R5 88-site 輸出身份來源分解** | `106_r5_identity_source_decomposition.py` + `data/106_r5_identity_source_decomposition.json` + `106_r5_identity_source_decomposition.md` | **3/3 — R5 88-site 身份 100% carry 來源**: 6 個輸出 [7,14,22,28,33,44] — 4 個直接偶模 carry (14/22/28/44→γ_7/γ_11/γ_14/γ_22) + 2 個奇模 (7/33) 但身份都靠偶模對偶 (k=14/k=66) 或 44-site 已有; ★零個奇模專屬獨立; ★R5 輸出 ∩ 奇模專屬身份集 = ∅; 『6/6 有身份』= 存在層 ✅ / 獨立層 🔴 — 88-site 樣本外宣傳實際係 carry/存量; 46 T6 4/5 可更嚴格 | ✅ |
+
 
 
 

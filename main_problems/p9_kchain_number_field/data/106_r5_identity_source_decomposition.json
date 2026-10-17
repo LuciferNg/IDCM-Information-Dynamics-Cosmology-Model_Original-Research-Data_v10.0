@@ -1,0 +1,61 @@
+{
+ "audit": "106_r5_identity_source_decomposition",
+ "date": "2026-10-17",
+ "decomposition": [
+  {
+   "k": 7,
+   "kind": "odd",
+   "source": "奇模專屬 (但身份經偶模對偶或 44-site 已有)"
+  },
+  {
+   "k": 14,
+   "kind": "carry",
+   "source": "偶模 carry: γ'_k=γ_7 (44-site 身份重影)"
+  },
+  {
+   "k": 22,
+   "kind": "carry",
+   "source": "偶模 carry: γ'_k=γ_11 (44-site 身份重影)"
+  },
+  {
+   "k": 28,
+   "kind": "carry",
+   "source": "偶模 carry: γ'_k=γ_14 (44-site 身份重影)"
+  },
+  {
+   "k": 33,
+   "kind": "odd",
+   "source": "奇模專屬 (但身份經偶模對偶或 44-site 已有)"
+  },
+  {
+   "k": 44,
+   "kind": "carry",
+   "source": "偶模 carry: γ'_k=γ_22 (44-site 身份重影)"
+  }
+ ],
+ "n_carry": 4,
+ "n_odd": 2,
+ "verdict": "R5 88-site 6/6 身份 100% carry 來源 (存在層), 獨立層 = 0; R5 ∩ 奇模專屬 = 空",
+ "results": [
+  {
+   "id": "B1_decomposition",
+   "desc": "6/6 身份全部 carry 來源 (4 直接 + 2 經對偶) — 零奇模專屬獨立",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_layer",
+   "desc": "『6/6 有身份』= 存在層; 獨立層 = 0 獨立發現",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "D1_disjoint",
+   "desc": "R5 88-site 輸出 同 奇模專屬身份集 零交集 (R5 全 carry)",
+   "ok": true,
+   "detail": "[]"
+  }
+ ],
+ "pass": 3,
+ "fail": 0
+}
