@@ -1,0 +1,18 @@
+{
+  "note": "Δχ² dip fit; noise 掃描; 最終 noise=0.30",
+  "v_abs": 289.758881257888,
+  "sig3": 167.22758942727745,
+  "tau_w": 4.0,
+  "checks": [
+    {
+      "name": "V5-obs 10/13 合模擬 q_blue 分佈",
+      "pass": false,
+      "detail": "obs 10/13, q_blue=0.493, P(≥10/13)=0.0418"
+    },
+    {
+      "name": "V5-bias q_blue>0.5",
+      "pass": false,
+      "detail": "q_blue=0.493"
+    }
+  ]
+}
