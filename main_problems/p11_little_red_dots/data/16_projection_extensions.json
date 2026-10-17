@@ -1,0 +1,23 @@
+{
+  "partA": {
+    "relation": "D_app/R_H + 4^-ell = 1 + 2/phi\u00b7ell\u00b7(1-4^-ell)",
+    "interpretation": "\u6295\u5f71\u4e92\u88dc: 44\u00b74^-ell \u672a\u6295\u5f71, 44(1-4^-ell) \u5df2\u6295\u5f71"
+  },
+  "partB": {
+    "log_eta_inv": 21,
+    "dbdl": 4.190476190476191,
+    "product": 88.0,
+    "identity": "21 \u00d7 176/42 = 88 = 2N_d (\u4ee3\u6578\u7cbe\u78ba)",
+    "C": 0.36363636363636365,
+    "Mhop": 0.4666666666666667,
+    "C_from_Mhop": 0.3636363636363636,
+    "dbdl_times_Mhop": 1.9555555555555557
+  },
+  "partC": {
+    "Lbol_med": 45.943432102560806,
+    "lam_Edd": 9.996058275790906,
+    "E_strain_infer": 5697668551113.2,
+    "ratio_vs_1565e12": 3.640682780264026,
+    "LH_factor": 817456.0331582784
+  }
+}

@@ -35,11 +35,19 @@
       熵定理 (O175) / 觀測裁決 (O176) / 364 身份 (O177)
 - [ ] **O179 開題**（新節點出現機制）: 4^{−ℓ} 層級點樣產生新星系位置 —
       `open_problems_fresh/o179_new_node_mechanism/`
+- [x] **2026-10-17 首次 closeout** ✅: 全 scripts 重跑 19/19 exit 0 + 獨立審計 62/62 PASS
+      (script 22) + 位置檢驗 p 值更正 (0.044→0.051, 02 §21) + final_result 更新。
+      殘留: 上列 🔴/🟡 全為等數據/結構攻堅, 非審計 deficiency。
 
 ## 工作目錄
 
-`main_problems/p11_little_red_dots/` — records/ (01-13) + scripts/ (01-20) +
-data/ (11-20 JSON + COSMOS-Web_LRDs.dat + a5 routing)
+`main_problems/p11_little_red_dots/` — records/ (01-14) + scripts/ (01-21) +
+data/ (11-21 JSON + COSMOS-Web_LRDs.dat + a5 routing)
+> ⚠️ 2026-10-17: 由 `open_problems_fresh/little_red_dots/` 遷入 P11。
+> records 02/05/06 內文標題嘅位置 metadata（`main_problems/p5_crystal_stress/little_red_dots/`）
+> 係**舊時序快照，append-only 保留**；本次遷移整理——scripts 03/06-09/11/12 嘅
+> 舊 repo hardcode 路徑已改指向 `open_problems_fresh/cmb_cold_spot/data`（11/12 用
+> `../../open_problems_fresh/...`）；ghost-tree 5 命中處理狀態見下方 §三。
 
 ## 判準提醒
 
@@ -95,6 +103,12 @@ data/ (11-20 JSON + COSMOS-Web_LRDs.dat + a5 routing)
 | 5 | `little_red_dots/scripts/08_kchain_modes.py:171` | `main_problems/p5_crystal_stress/little_red_dots/data` |
 
 ### 二. 處置（別 O 執行；本節只記移交）
+
+> ✅ **已處理 (2026-10-17, p11 遷移時順手清理)** — 5 命中全修：
+> - #1/#2 (03): `CMB_DATA` → `open_problems_fresh/cmb_cold_spot/data`（改咗 sed 一行）
+> - #3/#4/#5 (06/07/08): `OUT_DIR` + `CMB_DATA` → `main_problems/p11_little_red_dots/data` + `open_problems_fresh/cmb_cold_spot/data`
+> - 另修 11/12 嘅 `../cmb_cold_spot` → `../../open_problems_fresh/cmb_cold_spot`（搬位後斷）
+> 全部 19 scripts 由 p11 目錄 cwd 重跑：**18/18 ✓**（s03 = 3000×434 MC 慢，背景跑緊）+ 61/61 獨立核對 + 9/9 判定。
 
 ```
 ⚠️ ghost tree 依赖：5 個 call site 讀 `/home/wsl/Projects/IDCM/IDCM-v10.0/`。

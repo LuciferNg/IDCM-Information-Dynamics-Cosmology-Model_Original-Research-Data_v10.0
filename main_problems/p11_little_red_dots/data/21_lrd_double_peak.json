@@ -1,0 +1,40 @@
+{
+  "script": "21_lrd_double_peak.py",
+  "date": "2026-09-13",
+  "checks": "9/9 PASS",
+  "conjugate_pair_theorem": {
+    "statement": "theta_{176-k} = pi - theta_k; r_{176-k} = r_k (same radius); v_{176-k} = -v_k (opposite velocity)",
+    "consequence": "symmetric double peak is structural necessity",
+    "delta_v_k": "2*c*cos(theta_k) = 2*sqrt(a0*r_k)"
+  },
+  "center_mode": {"k": 88, "theta_deg": 90.0, "v_kms": 0.0, "r": 0.0,
+                  "gamma_44": 2.0, "identity": "mu^2"},
+  "triple_peak_prediction": "center mode + conjugate pairs = central peak + symmetric double peaks",
+  "ladder_quantum": {
+    "formula": "delta_v_quantum = c*pi/(88*4^l)",
+    "l0": 10702.566, "l1": 2675.641, "l2": 668.910, "l3": 167.228,
+    "l3_rungs": {"n6": 1003.37, "n9": 1505.05}
+  },
+  "flat_part": {"V_max_kms": 409.7809, "two_V_max_kms": 819.5619,
+                "R_c_kpc": 48.506, "R_d_kpc": 12.127, "delta_v_at_R_d": 409.78},
+  "observational_anchors": [
+    {"name": "LRD broad Halpha FWHM selection threshold", "value": 1000, "kind": "threshold", "source": "Matthee+2024/Greene+2024"},
+    {"name": "The Cliff Halpha FWHM", "value": 1500, "kind": "measurement", "source": "A&A 2025 aa54681-25"},
+    {"name": "intrinsic Doppler width (scattering-corrected)", "value": 300, "kind": "measurement", "source": "Rusakov+2026 Nature"},
+    {"name": "narrow-line LRD FWHM", "value": 250, "kind": "measurement", "source": "Zhang+2026"},
+    {"name": "Halpha/Hbeta velocity offset median", "value": 106, "kind": "measurement", "source": "Pang+2026"}
+  ],
+  "radius_inversion": {"formula": "r = (delta_v/2)^2/a0",
+    "300": 6.499, "409.8": 12.128, "819.6": 48.511, "1000": 72.216, "1500": 162.487},
+  "honest_flags": [
+    "1000 km/s is a selection threshold, not a measurement -> match is circular",
+    "FWHM != peak separation",
+    "flat-part cap 2*V_max = 819.56 km/s < observed raw FWHM 1000-1500 km/s"
+  ],
+  "falsifiable_tests": {
+    "T1": "double-peaked Hbeta with delta_v(Hbeta)=delta_v(Halpha) kills resonant scattering (BR3=0.261)",
+    "T2": "peak separation quantized in units of c*pi/(88*4^l)",
+    "T3": "exact symmetry about line center",
+    "T4": "cross-scale a0 consistency with BTFR"
+  }
+}

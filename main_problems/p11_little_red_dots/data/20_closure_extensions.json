@@ -1,0 +1,18 @@
+{
+  "partA": {
+    "identity": "75 = L4*L5 - mu2 = 77-2",
+    "E_new": 3.1135091218280893e+42,
+    "dev_pct": 0.045520331500381594
+  },
+  "partB": {
+    "weighted_dbdl": 4.080733175925888,
+    "naive_intercept": 2.3886097487680744,
+    "candidate_12_5": 2.4,
+    "verdict": "\u5916\u63a8\u91cf, \u5224\u5225\u529b\u4f4e, \u5514\u5165\u5217"
+  },
+  "partC": {
+    "sigma_logM_pred": 0.22608726412426394,
+    "obs_scatter": 0.428,
+    "coverage_pct": 52.82412713183737
+  }
+}
