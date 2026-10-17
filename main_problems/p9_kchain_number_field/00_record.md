@@ -505,6 +505,8 @@ filler:       32 行無 label
 
 > ⚠️ **SYNC pipeline 攻堅附註 (2026-10-17, 40_sync_pipeline_d29)**: 06_blind_test_beat231 §4 三開放項攻堅 — **d=29 唔係 magic 已閉合** (R5 外 {m×L₄,L₅,F₅} ∌ 29 + TEST F 後半/1mod4; 對比 7: R5✓ 前半✓ 3mod4✓); s=33 列 16 格全景: 15 gcd1 + 1 gcd11 (d=11 half-node), 唯一 magic 格 = d=7 (13,20) m7 anchor, data 格 5 個; **s=33 對稱**: d 對和 = 32 = 2B² (1↔31...15↔17) 🟡; (2,31) = s=33×d=29 唯一交叉 = i=2 SYNC 家族 (s−d=4=B); d=29 行角色 🟡 結構描述完成未證明; SYNC 語義 🟡。
 
+> ⚠️ **SYNC pipeline r2 附註 (2026-10-17, 41_sync_saxis)**: 40 號 off-by-one 修正 (member count=44−d, d=29=15 成員); s 軸全景: **s=24..34 重載帶** 6 偶數 s × 3 magic 格 (d=14/20/22 s 值域交集=座標算術); M-pipeline s=33 單點 magic = (13,20) m7 anchor (odd s∩magic 代數必然); **i 行冇結構特殊** — SYNC 家族只係座標關係 (負結果); s=33 6 data 格 (37.5%); s=33 beat 冇光譜規律 (負結果)。SYNC 三開放項維持 🟡/🔴 — 冇新突破, 排雷輪。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
