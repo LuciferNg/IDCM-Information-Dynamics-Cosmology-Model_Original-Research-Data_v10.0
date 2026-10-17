@@ -1,0 +1,52 @@
+{
+ "audit": "96_site88_rational_gamma",
+ "date": "2026-10-17",
+ "rational_points": [
+  {
+   "d": 22,
+   "val": 2.0
+  },
+  {
+   "d": 44,
+   "val": 4.0
+  },
+  {
+   "d": 66,
+   "val": 2.0
+  }
+ ],
+ "identity_check": {
+  "22": true,
+  "44": true,
+  "66": false
+ },
+ "conclusion": "44 身份 = γ_44=4 有理特化點 (69); 有理≠corpus (66 反例); 身份=存在事實 (90)",
+ "results": [
+  {
+   "id": "A1_rational",
+   "desc": "88-site 有理 γ' 點 = {22:2, 44:4, 66:2} (Niven)",
+   "ok": true,
+   "detail": "[(22, 2.0), (44, 4.0), (66, 2.0)]"
+  },
+  {
+   "id": "B1_44",
+   "desc": "44 身份根源 = γ_44=4 有理特化點 (69 號; γ_44 係 44-site 都提)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_rational_identity",
+   "desc": "有理點身份: 22 有, 44 有, 66 冇 (89 號 mirror 單側)",
+   "ok": true,
+   "detail": "22=True 44=True 66=False"
+  },
+  {
+   "id": "D1_conclusion",
+   "desc": "44 身份根源 = γ_44=4 有理特化點 (同 69); 身份≠有理 (66 反例)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 4,
+ "fail": 0
+}
