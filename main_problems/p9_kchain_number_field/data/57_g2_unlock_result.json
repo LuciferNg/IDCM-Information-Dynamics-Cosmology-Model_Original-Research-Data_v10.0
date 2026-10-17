@@ -1,0 +1,58 @@
+{
+ "test": "57_g2_unlock_result",
+ "B": {
+  "55": {
+   "hit": true,
+   "simp": "sin(55π/176)=sin(5π/16)",
+   "src": "O171 scripts 06/11: 4sin²(5π/16) band_count=55 (A5 partition)",
+   "st": "強: 4sin² 形式出現"
+  },
+  "68": {
+   "hit": true,
+   "simp": "sin(68π/176)=sin(17π/44)",
+   "src": "P15 phi_power + p2 phi_power_full: V_ub 公式分母 sin(17π/44)",
+   "st": "★強: CKM V_ub 物理公式"
+  },
+  "74": {
+   "hit": true,
+   "simp": "sin(74π/176)=sin(37π/88)=γ_37 偶模",
+   "src": "P15 research_record: (6,37)/(3,37) beat pairs",
+   "st": "弱: 偶模 carry 出現, 非直接物理量"
+  },
+  "81": {
+   "hit": false,
+   "simp": "sin(81π/176)=cos(7π/176)",
+   "src": "零命中",
+   "st": "零"
+  }
+ },
+ "C": {
+  "46": {
+   "hit": true,
+   "simp": "sin(46π/176)",
+   "src": "O158 docs 21/18 + scripts/24: √(γ₄₆/γ₁)=sin(46π/176)/sin(π/176)=41.005 vs m_t/m_b 41.33",
+   "st": "★強: 對照組都中 (m_t/m_b!)"
+  },
+  "56": {
+   "hit": false,
+   "simp": "sin(56π/176)=sin(7π/22)",
+   "src": "零命中",
+   "st": "零"
+  },
+  "62": {
+   "hit": false,
+   "simp": "sin(62π/176)=sin(31π/88)",
+   "src": "零命中",
+   "st": "零"
+  },
+  "73": {
+   "hit": false,
+   "simp": "sin(73π/176)",
+   "src": "零命中",
+   "st": "零"
+  }
+ },
+ "hits_B": 3,
+ "hits_C": 1,
+ "verdict": "G2 🟡 PARTIAL: B* 3/4 vs C 1/4 方向支持但 n=8 冇權力; k=81 零命中; 對照 46 都中; 唔可以 PASS"
+}
