@@ -1,0 +1,15 @@
+{
+ "test": "52_oseries_gamma_prescan",
+ "T1": {
+  "sum_all": 178.0,
+  "sum_even": 90.0,
+  "sum_odd": 88.0
+ },
+ "T2_ckm_d": {
+  "tan12": "1/6",
+  "tan23": "4/19",
+  "sin13": "1/21",
+  "Vus": "20/31"
+ },
+ "T4": "88-site 單點 label = 0, G4 維持 FAIL"
+}
