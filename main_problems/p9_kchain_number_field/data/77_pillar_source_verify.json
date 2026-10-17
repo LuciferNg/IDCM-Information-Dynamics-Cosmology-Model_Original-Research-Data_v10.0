@@ -1,0 +1,94 @@
+{
+ "audit": "77_pillar_source_verify",
+ "date": "2026-10-17",
+ "sources": {
+  "7 ANCHOR/DM": "13.8 MeV / (13,20)",
+  "14 GEN": "三代 quark 格",
+  "20 TRANSFER": "(7,20) n/p BBN",
+  "22 HALF": "γ_22 / 自鏡像",
+  "33 KTREE": "(8,33) m_c/m_b / ×41"
+ },
+ "hits": {
+  "7_dm": [
+   "main_problems/p13_beat_periodic_table/01_problem_record.md",
+   "main_problems/p13_beat_periodic_table/docs/01_derivation_record.md",
+   "main_problems/p13_beat_periodic_table/scripts/03_magic_rows.py",
+   "main_problems/p13_beat_periodic_table/scripts/06_full_table.py",
+   "main_problems/p13_beat_periodic_table/scripts/07_physics_mapping.py"
+  ],
+  "14_gen": [
+   "main_problems/p13_beat_periodic_table/docs/01_derivation_record.md",
+   "main_problems/p13_beat_periodic_table/scripts/03_magic_rows.py",
+   "main_problems/p13_beat_periodic_table/scripts/06_full_table.py",
+   "main_problems/p13_beat_periodic_table/scripts/08_verification.py",
+   "main_problems/p13_beat_periodic_table/scripts/12_master_atlas_xlsx.py"
+  ],
+  "20_transfer": [
+   "main_problems/p13_beat_periodic_table/01_problem_record.md",
+   "main_problems/p13_beat_periodic_table/docs/01_derivation_record.md",
+   "main_problems/p13_beat_periodic_table/scripts/07_physics_mapping.py",
+   "main_problems/p13_beat_periodic_table/scripts/09_visualize.py",
+   "main_problems/p13_beat_periodic_table/scripts/10_master_atlas.py"
+  ],
+  "22_half": [
+   "main_problems/p13_beat_periodic_table/docs/01_derivation_record.md",
+   "main_problems/p13_beat_periodic_table/scripts/02_boundary_closure.py",
+   "open_problems_fresh/README.md",
+   "open_problems_fresh/o136_quark_mass_spectrum/scripts/90_verify_all.py",
+   "open_problems_fresh/o140_finite_spectral_relativity/scripts/01_verify_fsr_identities.py"
+  ],
+  "33_ktree": [
+   "main_problems/p13_beat_periodic_table/01_problem_record.md",
+   "main_problems/p13_beat_periodic_table/docs/01_derivation_record.md",
+   "main_problems/p13_beat_periodic_table/scripts/07_physics_mapping.py",
+   "main_problems/p13_beat_periodic_table/scripts/09_visualize.py",
+   "main_problems/p13_beat_periodic_table/scripts/10_master_atlas.py"
+  ]
+ },
+ "results": [
+  {
+   "id": "A1_dm_138",
+   "desc": "13.8 MeV 喺 O-series/P13 出現 (DM 錨格出處)",
+   "ok": true,
+   "detail": "640 檔: ['main_problems/p13_beat_periodic_table/01_problem_record.md', 'main_problems/p13_beat_periodic_table/docs/01_derivation_record.md', 'main_problems/p13_beat_periodic_table/scripts/03_magic_rows.py']"
+  },
+  {
+   "id": "B1_gen_cells",
+   "desc": "三代 quark 格子喺 P13/docs 出現 (GEN 直接出處)",
+   "ok": true,
+   "detail": "239 檔"
+  },
+  {
+   "id": "C1_bbn",
+   "desc": "(7,20) n/p BBN 喺 docs 出現 (TRANSFER 出處)",
+   "ok": true,
+   "detail": "1068 檔"
+  },
+  {
+   "id": "D1_half",
+   "desc": "γ_22/自鏡像喺 docs 出現 (HALF 出處)",
+   "ok": true,
+   "detail": "111 檔"
+  },
+  {
+   "id": "E1_ktree",
+   "desc": "(8,33) m_c/m_b / ×41 喺 docs 出現 (KTREE 出處)",
+   "ok": true,
+   "detail": "709 檔"
+  },
+  {
+   "id": "E2_o158",
+   "desc": "O158 register 狀態: 證 (f_unproj = 41 點解同時出現喺質子同希格斯殘差)」\", \"kind\": \"registered\", \"note\": \"用戶建議 — 「×41 聚類嘅算子驗證 (f",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "F1_all5",
+   "desc": "全部 5 支柱都有 docs 出處",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 7,
+ "fail": 0
+}

@@ -573,6 +573,8 @@ filler:       32 行無 label
 
 > ⚠️ **76 號 5 支柱循環診斷附註 (2026-10-17, 76_pillar_cycle_check)**: **3/3 PASS (A1 誠實負面)**。★★75 號「magic 唯一 cover 全 5 支柱」= 集合論 tautology——cover 全支柱 = 包含全部 5 個指定 d = 只能係 magic；支柱 label 由 49 號 magic 定義 ⇒ 循環，**75 號結論降級 🟡**。有內容檢查: 5 magic O 源頭 8 個 shared (34/35/37/38/39/51/54/145)、14 直接源頭 0 個孤立、Jaccard max 0.167、非 magic 強角色 d=2 (54 O 源頭)/4 (28)/1 (8)/19 (6) = 角色唔係 magic 獨有。Magic rows 統計層 unique claim 定案: 全部撤回，剩 R5 consistency 5/5 + 結構稀有 47 倍 + label 存在性 (弱主張)。
 
+> ⚠️ **77 號 5 支柱源頭驗證附註 (2026-10-17, 77_pillar_source_verify)**: **7/7 PASS** — A 層 label 真實性企穩: 5 支柱 label 全部有 P13/O-series docs 出處 (7 DM 13.8 MeV / 14 三代 quark / 20 n/p BBN / 22 γ_22 / 33 m_c/m_b + O158 partial)。Magic rows 攻堅最終全景: 統計 7 維度 (領域/anchor/37 集/身份/深度/O 源頭/cover 支柱) 全部撤回 + 企穩層 (R5 consistency 5/5、結構稀有 47 倍、22+33 強制、A 層 label 真實性、12 label 存在性)。「宇宙係唔係我哋嘅宇宙」由 O-series 閉合觀測符合度支撐；P9 角色 = 程序一致 + label 有結構根，已完成。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
