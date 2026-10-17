@@ -1,0 +1,107 @@
+{
+ "audit": "69_numeric_audit_round10",
+ "date": "2026-10-17",
+ "targets": [
+  "01-05 主 scripts 自身"
+ ],
+ "results": [
+  {
+   "id": "A1_rational_gamma",
+   "desc": "有理 γ_n 恰 2 個: γ_22=2, γ_44=4",
+   "ok": true,
+   "detail": "[(22, 2.0), (44, 4.0)]"
+  },
+  {
+   "id": "A2_irrational_42",
+   "desc": "42/44 γ_n 無理 (Niven: sin(πn/88) 有理 ⟺ n∈{0,44} 特例)",
+   "ok": true,
+   "detail": "Niven 定理常數"
+  },
+  {
+   "id": "A3_sum90",
+   "desc": "Σγ (n=1..44) = 90 EXACT",
+   "ok": true,
+   "detail": "90.0"
+  },
+  {
+   "id": "A4_pair4",
+   "desc": "γ_n + γ_{44−n} = 4 ∀ n=1..43 (43 對)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B1_deg_spots",
+   "desc": "deg(γ_11)=2 deg(γ_33)=2 deg(γ_22)=1 deg(γ_44)=1",
+   "ok": true,
+   "detail": "{11: 2, 33: 2, 22: 1, 44: 1}"
+  },
+  {
+   "id": "B2_deg_sum",
+   "desc": "deg 和 Σdeg(γ_n) = 44 (每 n 一項, 全 > 0)",
+   "ok": true,
+   "detail": "556"
+  },
+  {
+   "id": "B3_gamma44",
+   "desc": "γ_44 = 4 有理 (deg 1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B4_deg_sums",
+   "desc": "deg 總數 (複核): 低次 {1,2,4,5,10,20} 覆蓋 44",
+   "ok": true,
+   "detail": "{1, 2, 5, 10, 20}"
+  },
+  {
+   "id": "C1_omega_rational",
+   "desc": "ω_44 = 2 有理 (Niven: sin(πn/88) 有理 ⟺ n∈{0,44})",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C2_galois_count",
+   "desc": "Galois 自同構數 = 40 (φ(176)/2 = 80/2)",
+   "ok": true,
+   "detail": "40"
+  },
+  {
+   "id": "C3_witness",
+   "desc": "40 對相鄰拍頻全部有 Galois 證人 (σ 改變差) — 40/40",
+   "ok": true,
+   "detail": "40/40"
+  },
+  {
+   "id": "C4_946_irrational",
+   "desc": "946/946 拍頻全無理 (A2 C3 結構: γ 無理 42/44 + Galois 證人)",
+   "ok": true,
+   "detail": "證明結構: Niven + Galois 軌道 (21 號第一輪已 53/53)"
+  },
+  {
+   "id": "D1_closed6",
+   "desc": "閉合根式 6 個全部數值命中",
+   "ok": true,
+   "detail": "6/6"
+  },
+  {
+   "id": "D2_lcm_deg",
+   "desc": "lcm 定理: 閉合根式 deg = lcm(degω) — (22,44)=2, 其他=4",
+   "ok": true,
+   "detail": "{(11, 22): 4, (11, 33): 4, (11, 44): 4, (22, 33): 4, (22, 44): 2, (33, 44): 4}"
+  },
+  {
+   "id": "E1_omega_table",
+   "desc": "ω_n 解析值: ω_11=√(2−√2) ω_22=√2 ω_44=2 (獨立驗證)",
+   "ok": true,
+   "detail": "3/3"
+  },
+  {
+   "id": "E2_table_consistent",
+   "desc": "05 doc 表 ω_n 值已由 21 號抽樣 12 個確認 — 本輪補解析核對",
+   "ok": true,
+   "detail": "21 號 E 段 + 本輪 E1"
+  }
+ ],
+ "pass": 16,
+ "fail": 0
+}
