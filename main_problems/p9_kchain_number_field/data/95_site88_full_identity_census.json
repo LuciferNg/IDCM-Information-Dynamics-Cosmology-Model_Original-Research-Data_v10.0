@@ -1,0 +1,123 @@
+{
+ "audit": "95_site88_full_identity_census",
+ "date": "2026-10-17",
+ "total": 87,
+ "yes": 40,
+ "rate": 0.45977011494252873,
+ "no_identity": [
+  21,
+  32,
+  36,
+  39,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61,
+  62,
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  82,
+  83,
+  84,
+  85,
+  86,
+  87
+ ],
+ "R5_88": {
+  "7": true,
+  "14": true,
+  "22": true,
+  "28": true,
+  "33": true,
+  "44": true
+ },
+ "field_rate_excl_R5": 0.41975308641975306,
+ "p_full6": 0.0054696985140005846,
+ "label_sample": {
+  "grid_criterion": "T1 all (i,j)≤44",
+  "ok": true
+ },
+ "inherit_vs_unique": {
+  "inherit": [
+   7,
+   14,
+   22,
+   33
+  ],
+  "unique88": [
+   28,
+   44
+  ],
+  "unique_hits": 2
+ },
+ "results": [
+  {
+   "id": "A1_census",
+   "desc": "88-site 全 87 d 盤點完成",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B1_r5_6",
+   "desc": "R5 88-site 輸出 6/6 有身份",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_field88",
+   "desc": "88-site 領域率 = 42.0% (vs 44-site 90.7%)",
+   "ok": true,
+   "detail": "p_field=0.41975308641975306"
+  },
+  {
+   "id": "D1_labels",
+   "desc": "46 號 label 格 (格座標判準): 全部 (i,j)≤44<88 = 88-site 同座標存在",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "D2_inherit_vs_unique",
+   "desc": "R5 88-site 命中主要係 44-site 繼承 (4/6); 獨有 28/44 需獨立審視",
+   "ok": true,
+   "detail": "unique88=[28, 44] hits=2"
+  },
+  {
+   "id": "E1_conclusion",
+   "desc": "88-site 完整盤點確認領域常態 (同 63/70/90 一致)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 6,
+ "fail": 0
+}
