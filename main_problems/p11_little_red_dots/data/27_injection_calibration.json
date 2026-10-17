@@ -1,0 +1,333 @@
+{
+  "false_positive": {
+    "A_G395H": 1.0,
+    "C_G395H": 1.0,
+    "G_G395M": 1.0
+  },
+  "injection": {
+    "A_G395H/dv=836_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3222.4,
+      "scatter_kms": 227.0
+    },
+    "A_G395H/dv=836_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3223.0,
+      "scatter_kms": 226.6
+    },
+    "A_G395H/dv=836_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3229.0,
+      "scatter_kms": 225.7
+    },
+    "A_G395H/dv=836_amp=0.50": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3187.7,
+      "scatter_kms": 255.2
+    },
+    "A_G395H/dv=836_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3167.6,
+      "scatter_kms": 251.4
+    },
+    "A_G395H/dv=836_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3132.4,
+      "scatter_kms": 272.5
+    },
+    "A_G395H/dv=1672_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2397.5,
+      "scatter_kms": 218.6
+    },
+    "A_G395H/dv=1672_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2372.7,
+      "scatter_kms": 233.3
+    },
+    "A_G395H/dv=1672_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2368.4,
+      "scatter_kms": 239.0
+    },
+    "A_G395H/dv=1672_amp=0.50": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2378.1,
+      "scatter_kms": 229.1
+    },
+    "A_G395H/dv=1672_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2371.7,
+      "scatter_kms": 252.1
+    },
+    "A_G395H/dv=1672_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2340.8,
+      "scatter_kms": 237.3
+    },
+    "A_G395H/dv=3345_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.307,
+      "bias_kms": 731.2,
+      "scatter_kms": 209.2
+    },
+    "A_G395H/dv=3345_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.372,
+      "bias_kms": 715.6,
+      "scatter_kms": 219.6
+    },
+    "A_G395H/dv=3345_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.328,
+      "bias_kms": 721.1,
+      "scatter_kms": 222.9
+    },
+    "A_G395H/dv=3345_amp=0.50": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.355,
+      "bias_kms": 703.6,
+      "scatter_kms": 241.0
+    },
+    "A_G395H/dv=3345_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.362,
+      "bias_kms": 705.6,
+      "scatter_kms": 231.2
+    },
+    "A_G395H/dv=3345_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.482,
+      "bias_kms": 645.0,
+      "scatter_kms": 257.3
+    },
+    "C_G395H/dv=836_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3621.7,
+      "scatter_kms": 501.3
+    },
+    "C_G395H/dv=836_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3654.4,
+      "scatter_kms": 469.6
+    },
+    "C_G395H/dv=836_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3651.6,
+      "scatter_kms": 458.9
+    },
+    "C_G395H/dv=836_amp=0.50": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3692.2,
+      "scatter_kms": 443.0
+    },
+    "C_G395H/dv=836_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3573.6,
+      "scatter_kms": 499.8
+    },
+    "C_G395H/dv=836_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3436.8,
+      "scatter_kms": 552.6
+    },
+    "C_G395H/dv=1672_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2806.4,
+      "scatter_kms": 494.6
+    },
+    "C_G395H/dv=1672_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2840.6,
+      "scatter_kms": 428.8
+    },
+    "C_G395H/dv=1672_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2798.0,
+      "scatter_kms": 480.5
+    },
+    "C_G395H/dv=1672_amp=0.50": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2798.4,
+      "scatter_kms": 497.6
+    },
+    "C_G395H/dv=1672_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2773.5,
+      "scatter_kms": 497.7
+    },
+    "C_G395H/dv=1672_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 2703.0,
+      "scatter_kms": 560.2
+    },
+    "C_G395H/dv=3345_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.128,
+      "bias_kms": 1174.5,
+      "scatter_kms": 412.7
+    },
+    "C_G395H/dv=3345_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.102,
+      "bias_kms": 1189.6,
+      "scatter_kms": 394.9
+    },
+    "C_G395H/dv=3345_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.113,
+      "bias_kms": 1164.2,
+      "scatter_kms": 396.9
+    },
+    "C_G395H/dv=3345_amp=0.50": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.128,
+      "bias_kms": 1159.8,
+      "scatter_kms": 411.7
+    },
+    "C_G395H/dv=3345_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.165,
+      "bias_kms": 1125.4,
+      "scatter_kms": 415.3
+    },
+    "C_G395H/dv=3345_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.195,
+      "bias_kms": 1115.5,
+      "scatter_kms": 449.4
+    },
+    "G_G395M/dv=836_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3025.9,
+      "scatter_kms": 935.7
+    },
+    "G_G395M/dv=836_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.0,
+      "bias_kms": 3038.1,
+      "scatter_kms": 946.4
+    },
+    "G_G395M/dv=836_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.005,
+      "bias_kms": 3014.2,
+      "scatter_kms": 1010.0
+    },
+    "G_G395M/dv=836_amp=0.50": {
+      "raw_recover": 0.998,
+      "corrected_recover": 0.005,
+      "bias_kms": 2986.5,
+      "scatter_kms": 1002.7
+    },
+    "G_G395M/dv=836_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.01,
+      "bias_kms": 2847.1,
+      "scatter_kms": 1046.6
+    },
+    "G_G395M/dv=836_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.02,
+      "bias_kms": 2814.0,
+      "scatter_kms": 1111.1
+    },
+    "G_G395M/dv=1672_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.025,
+      "bias_kms": 2323.8,
+      "scatter_kms": 933.5
+    },
+    "G_G395M/dv=1672_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.037,
+      "bias_kms": 2214.1,
+      "scatter_kms": 929.1
+    },
+    "G_G395M/dv=1672_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.013,
+      "bias_kms": 2258.0,
+      "scatter_kms": 854.6
+    },
+    "G_G395M/dv=1672_amp=0.50": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.07,
+      "bias_kms": 2094.7,
+      "scatter_kms": 1044.1
+    },
+    "G_G395M/dv=1672_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.06,
+      "bias_kms": 2033.6,
+      "scatter_kms": 1008.6
+    },
+    "G_G395M/dv=1672_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.055,
+      "bias_kms": 2046.2,
+      "scatter_kms": 969.5
+    },
+    "G_G395M/dv=3345_amp=0.10": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.388,
+      "bias_kms": 608.8,
+      "scatter_kms": 861.1
+    },
+    "G_G395M/dv=3345_amp=0.20": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.285,
+      "bias_kms": 761.2,
+      "scatter_kms": 794.7
+    },
+    "G_G395M/dv=3345_amp=0.35": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.365,
+      "bias_kms": 686.7,
+      "scatter_kms": 808.0
+    },
+    "G_G395M/dv=3345_amp=0.50": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.367,
+      "bias_kms": 718.1,
+      "scatter_kms": 668.9
+    },
+    "G_G395M/dv=3345_amp=0.70": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.37,
+      "bias_kms": 742.4,
+      "scatter_kms": 689.8
+    },
+    "G_G395M/dv=3345_amp=0.90": {
+      "raw_recover": 1.0,
+      "corrected_recover": 0.352,
+      "bias_kms": 758.3,
+      "scatter_kms": 669.0
+    }
+  }
+}

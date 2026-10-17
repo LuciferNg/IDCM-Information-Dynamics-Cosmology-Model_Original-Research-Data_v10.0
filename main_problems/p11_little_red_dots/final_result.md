@@ -48,5 +48,7 @@ crystal_stress（初版，2026-08-16）→ O140/O159/O161/O171 → O173（應變
     MC 擊中率 95.5% ⟹ 無階梯聚集; 對稱 1/5; G 單點命中 = 多重檢驗必然。
     **未達證偽**: T1 (雙線同測) 仍等數據; C G395M 單峰 vs G395H 雙峰 = pipeline
     resolution-dependent; injection recover 0.08-0.87 ⟹ 模型依賴成份實質。
-    預言 alive, 現有數據 weak tension。判生死: injection-calibrated + R≥2700 全樣本 + T1。
+    **C14 (record 19) T3 首次真拒證 (3/3)**: forward-model AIC M2(IDCM 對稱) +34..+88
+    全拒; M1(自由) −24..−190; record 17 峰距統計 = pipeline artifact (假陽性 100%)。
+    預言: T3 拒證, T1 等數據 — 係活預言嘅樣辦。
 - 🟡 Q3 宿主星系 M_host = M_BH×306（JWST）；P13（Euclid DR1）；P15（Gaia DR4）；P9′（AugerPrime 2035）

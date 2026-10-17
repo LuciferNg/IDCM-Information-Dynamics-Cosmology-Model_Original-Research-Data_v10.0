@@ -69,6 +69,7 @@ IDCM 支持宇宙連續製造星系核，但創造-吸收鏈開放循環 → **O
 | C11 | 24 | 16 | **2026-10-17 數據攻堅**: 下載 3 公開光譜 (Naidu BH* Zenodo + Rusakov A/G DJA v4.4); T1-T4 盲測: 形態 0/2 對稱雙峰 (A 單峰, G 不對稱 -458); G Δv=837≈ℓ=3 n=5 (0.2%) 單點階梯命中 | 🟡 n=1 唔足以定論 |
 | C12 | 25 | 17 | **2026-10-17 系統掃描負結果**: Rusakov 9 光源全掃 (新增 C/E/F/I/J/K); 峰距 567-837 連續; MC null 擊中率 95.5% ⟹ G 0.2% 命中 = 多重檢驗必然 (P=0.795); 對稱 1/5 | 🔴 拒證方向 |
 | C13 | — | 18 | **2026-10-17 判定層次**: 未達證偽 (T1 未測 + R~1000 分辨力 + pipeline 未校準); C 光源 G395M 單峰 vs G395H 雙峰 = resolution-dependent 模型依賴證據; injection test recover 0.08-0.87; MC null + A R~2700 單峰 = model-free 弱張力; 預言 alive, 判生死需 injection-calibrated + R≥2700 全樣本 + T1 雙線 | 🟡 未證偽, 弱張力 |
+| C14 | 26 | 19 | **2026-10-17 Forward-model 判別**: ① injection cal: 舊 pipeline 假陽性率 100%, record 17 峰距統計 = artifact; ② AIC (A/C/G 3/3): M1 自由雙峰 ΔAIC −24..−190; **M2 IDCM 對稱 ΔAIC +34..+88 拒證 (T3 首次真拒證)**; T1 仍等雙線數據 | 🔴 T3 拒證 3/3 |
 
 ---
 

@@ -48,6 +48,10 @@
       (新增 C/E/F/I/J/K DJA G395M); 峰距 567-837 連續; MC null 擊中率 95.5%
       ⟹ G 0.2% 命中 = 多重檢驗必然 (P=0.795); 對稱 1/5. T2/T3 拒證方向;
       T1 (雙線同測) 仍等數據. 10 光譜檔案留碟.
+- [x] **2026-10-17 Injection cal + Forward-model (script 26 + scratch, record 19)**
+      🔴 T3 首次真拒證: 舊 pipeline 假陽性 100% ⟹ record 17 峰距統計 = artifact;
+      AIC (A/C/G 3/3): M1 自由雙峰 −24..−190, M2 IDCM 對稱 +34..+88 全拒;
+      T1 仍等 R≥2700 雙線. 判生死條件 ①② 已做, ③ 等數據.
 
 ## 工作目錄
 
