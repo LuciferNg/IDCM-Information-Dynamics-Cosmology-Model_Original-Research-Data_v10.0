@@ -577,6 +577,8 @@ filler:       32 行無 label
 
 > ⚠️ **78 號 Magic rows 攻堅終裁附註 (2026-10-17, 78_magic_final_adjudication)**: **3/3 終裁完成**。撤回層 = 統計 7 維度全 🔴 (領域命中率/anchor 唯一/37 集合/身份完整/標 label 覆蓋/身份深度/O 源頭數); 企穩層 = 5 項 ✅ (R5 consistency 5/5、結構稀有 p=2.1%、22+33 結構強制、A 層 label 真實性、12 label 存在性); ★出路 = 「支撐物理世界」靠 O-series 樣本外閉合 (O55 closed/O171 closed/O35 open/O158 partial), 唔係 P9 統計。P9 角色完成: magic 有結構根 + 程序一致 + label 有出處——Magic rows 攻堅 (25-78) 正式收線。
 
+> ⚠️ **79 號 P9 Magic rows 攻堅鏈收線總結附註 (2026-10-17, 79_p9_magic_chain_closeout)**: **全部 PASS 收線**。企穩 7 項 (946 全無理/R5 5/5/三定理/magic 結構 2.1%/22+33 強制/A 層 label 真實性/12 label 存在性) + 撤回 8 項 (身份/anchor/37 集/身份完整/深度/O 源頭/cover 支柱 tautology/G2 盲測 p=0.69) + 開放 3 項 (O35 open/O158 partial/G2 出路未裁)。★61/63 最大缺口已封閉 (44-site R5 對照基準 70-78 量化完成: 領域 91%/37 集/身份/深度/O 源頭/角色/支柱)。P9 維持 active (G2 未過) 但攻堅鏈正式收線。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
