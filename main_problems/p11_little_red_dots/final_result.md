@@ -50,5 +50,7 @@ crystal_stress（初版，2026-08-16）→ O140/O159/O161/O171 → O173（應變
     resolution-dependent; injection recover 0.08-0.87 ⟹ 模型依賴成份實質。
     **C14 (record 19) T3 首次真拒證 (3/3)**: forward-model AIC M2(IDCM 對稱) +34..+88
     全拒; M1(自由) −24..−190; record 17 峰距統計 = pipeline artifact (假陽性 100%)。
-    預言: T3 拒證, T1 等數據 — 係活預言嘅樣辦。
+    **C15 (record 20) T1 首測 (A G395H 雙線同窗)**: Δv(Hβ)/Δv(Hα)=337/201=1.68≠1
+    — IDCM 相等預言唔支持 (n=1, 峰距近解像極限, 仍需統計樣本)。
+    預言: T3/T1 拒證方向, T2 未判 — 活預言樣辦。
 - 🟡 Q3 宿主星系 M_host = M_BH×306（JWST）；P13（Euclid DR1）；P15（Gaia DR4）；P9′（AugerPrime 2035）
