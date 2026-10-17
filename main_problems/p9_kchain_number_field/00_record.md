@@ -483,6 +483,8 @@ filler:       32 行無 label
 
 > ⚠️ **深推附註 (2026-10-17, 27_magic_rows_deeper)**: TEST D — magic 成員結構同 filler **零差異** (s step 全 2, s_mean 全 45) ⟹ magic = 行標籤層 assign, 唔係行結構層; TEST E — v₂奇⇒magic 單向 3/3 (g=2,8,22) 成立但唔充要 (g=1,11 偶都有 magic); TEST F — **L₄/L₅ 連續 Lucas 質數對 (7,11, gap=4=L₃, 都 < half-node 22) 生成 4/5 magic**: 7=L₄, 14=2L₄, 22=2L₅, 33=3L₅, 20=2n_u 仍然唯一冇鏈; 29=L₇ 排除 (後半+mod4=1)。樣本 n=5 未可盲測, 待 88-site/176-site 擴展。
 
+> ⚠️ **數字審計第三輪附註 (2026-10-17, 28_numeric_audit_round3)**: 零 import 第一原理重算 25/26/27 全部 headline 數字 → **46/46 PASS** (gcd 七類/d 面 deg 分佈 {40:20,20:10,10:5,5:5,4:2,2:1}/A1 0.375+A2 0.008 closed-form+MC 雙 seed/15 候選/magic∩候選 4/5/TEST D-F)。首輪 7 FAIL 全數係審計員 check bug ×4 (A1/A2 null model 撈錯「無類別 43 揀 5」vs 26 號「每 gcd 類揀 1 代表」; 舊 draft 錯誤預期行; round 位數硬碰 ==; JSON key 猜錯) — **25/26/27 推導零錯**, 依 §4.7 有罪推定成立。重跑決定性 (JSON hash 穩定)。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
