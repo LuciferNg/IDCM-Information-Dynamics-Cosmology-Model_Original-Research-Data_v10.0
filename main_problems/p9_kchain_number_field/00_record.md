@@ -561,6 +561,8 @@ filler:       32 行無 label
 
 > ⚠️ **70 號 Magic 獨特性 Null 對照附註 (2026-10-17, 70_magic44_uniqueness)**: **10/10 (記錄誠實結論)**。① ★cover magic 5/5 嘅 3-anchor 全枚舉 = 3 個 ((5,7,11)/(7,10,11)/(7,11,20))——anchor 唔唯一, Lucas/Fib 揀法後驗 🟡; ② 隨機 5 個 gcd+deg 全互斥 p=0.0213 (窮舉 962,598) 稀有 47 倍; ③ ★O-series 身份領域命中率 39/43=90.7%——magic 5/5 全中二項 p=0.614 唔顯著 (γ pattern 污染已淘汰, 第一版 100% 係 bug); ⟹「magic 特別有意義」claim 全面撤回, 與 88-site 結論一致; 剩 gap: magic 唯一性 vs 方便性 (唯一同時過全部約束嘅 5-collection) 未驗。
 
+> ⚠️ **71 號 Magic 唯一性判決附註 (2026-10-17, 71_magic45_uniqueness_exhaustive)**: **7/8 (D3 誠實 FAIL)**。窮舉 962,598 個 5-collection 過 4 閘 (gcd 互斥/deg 互斥/data-free/3-anchor 可生成): G1G2G3 = 9,625; G1-G4 = **37 個**。★**magic {7,14,20,22,33} 唔係唯一結構解**——37 個其中一個。成員頻率: 22/33 = 31/37 (84%, gcd22 類唯一 + gcd11 data-free 唯一 = 結構強制核心); 7/40 = 23/37; 20/28 = 17/37; 10/14 = 13/37。「magic 由結構唯一鎖定」claim 全面撤回 (anchor 3 解、37 集合、領域 91% 三判準全 FAIL)。仍企穩: R5 程序 consistency 5/5、magic gcd/deg 結構稀有 47 倍 (純結構)、22+33 近乎強制。gap: 37 個替代入面有冇其他都有完整 label——領域 91% 已斷定冇信息量。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
