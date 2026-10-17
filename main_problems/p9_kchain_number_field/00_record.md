@@ -585,6 +585,8 @@ filler:       32 行無 label
 
 > ⚠️ **82 號 Lucas/Fib 語系對稱性附註 (2026-10-17, 82_lucas_fib_symmetry)**: **7/7 PASS**。★Fib 平行 magic M_F={5,10,20,22,33} 過晒 G1-G4——「7/14 揀 Lucas」唔係結構強制; 但 M_F cover 3/5 支柱 (冇 ANCHOR/GEN) vs M_L cover 唯一 5/5 (75 號); cover triple M_L=3 vs M_F=42 (Lucas anchor 收緊 14 倍)。★最終表述: magic = 3 算術必然 ({22,33,20}) + 2 Lucas 語系選擇 ({7,14}); 「宇宙 5 支柱 cover 需要 7/14」企穩, 「Lucas vs Fib」係有後果嘅語系規則。
 
+> ⚠️ **83 號 M_F vs M_L 完整對比附註 (2026-10-17, 83_parallel_magic_full_compare)**: **5/5 PASS**。★身份層兩版都 5/5 (5/10 都有 sin 身份; 無身份 d={21,32,36,39}) — 82 號「M_F 冇 label」表述修正: 身份唔係 Lucas 獨家。Lucas 話系真實優勢 = 支柱 cover 5/5 (7/14=ANCHOR/GEN, 75 號唯一) + anchor 收緊 14 倍 (3 vs 42)。★最終裁決: K_chain 結構 (22/33/20) + Lucas 話系 (7/14) 唯一 cover 宇宙 5 支柱 — magic 攻堅 (25-83) 完整定案。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)

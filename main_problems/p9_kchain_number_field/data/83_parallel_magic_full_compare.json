@@ -1,0 +1,86 @@
+{
+ "audit": "83_parallel_magic_full_compare",
+ "date": "2026-10-17",
+ "M_L": [
+  7,
+  14,
+  20,
+  22,
+  33
+ ],
+ "M_F": [
+  5,
+  10,
+  20,
+  22,
+  33
+ ],
+ "identity_L": {
+  "7": true,
+  "14": true,
+  "20": true,
+  "22": true,
+  "33": true
+ },
+ "identity_F": {
+  "5": true,
+  "10": true,
+  "20": true,
+  "22": true,
+  "33": true
+ },
+ "pillars_L": [
+  "ANCHOR",
+  "GEN",
+  "TRANSFER",
+  "HALF",
+  "KTREE"
+ ],
+ "pillars_F": [
+  "TRANSFER",
+  "HALF",
+  "KTREE"
+ ],
+ "covers_L": 3,
+ "covers_F": 42,
+ "no_identity_d": [
+  21,
+  32,
+  36,
+  39
+ ],
+ "results": [
+  {
+   "id": "L1_identity",
+   "desc": "M_L/M_F 身份層都 5/5 (5/10 都有 sin 身份 — 領域 91% 包括佢哋)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "L2_pillars",
+   "desc": "M_L 5/5 支柱 / M_F 3/5 (冇 ANCHOR/GEN)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "L3_anchor",
+   "desc": "M_L anchor 收緊 14 倍 (3 vs 42)",
+   "ok": true,
+   "detail": "L=3 F=42"
+  },
+  {
+   "id": "L4_rarity",
+   "desc": "結構稀有性 2.13% 係『任一過閘集合』嘅特性 — M_F 一樣稀有",
+   "ok": true,
+   "detail": "兩組都係過閘集合, 共享同一稀有性"
+  },
+  {
+   "id": "L5_verdict",
+   "desc": "Lucas 話系真實優勢 = 支柱 cover + anchor 收緊 (唔係身份層)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 5,
+ "fail": 0
+}
