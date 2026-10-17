@@ -1,0 +1,40 @@
+{
+ "audit": "70_magic44_uniqueness",
+ "date": "2026-10-17",
+ "verdict": "10/10 PASS (PASS = 記錄誠實結論, 唔係驗證 magic 獨特)",
+ "core": {
+  "anchor_cover_triples": [[5, 7, 11], [7, 10, 11], [7, 11, 20]],
+  "anchor_unique": false,
+  "anchor_note": "(7,11,5) 唔係唯一 — Lucas/Fib 語意後驗命名; 3/12341=0.024% 仍稀有",
+  "structure_rarity_gcd_deg": 0.0213,
+  "structure_rarity_gcd_only": 0.0345,
+  "structure_rarity_factor": "稀有 47 倍, 但唔極端",
+  "field_identity_rate": "39/43 = 90.7%",
+  "magic_identity": "5/5 全中",
+  "binomial_p": 0.614,
+  "gamma_pattern": "γ_n 全譜 44/44=100% 污染, 淘汰 — 判準只用 sin(dπ/88)/sin(2dπ/176)",
+  "88site_compare": "88-site 領域 24-54% vs R5 33-67% (p=0.42-0.51) 🔴 — 兩 site 同構失敗"
+ },
+ "three_layer_verdict": [
+  "magic 5/5 由 R5 程序鎖定 — ✅ 真 (anchor 唔唯一 🟡)",
+  "magic 結構 5 gcd+5 deg cover 稀有 47 倍 — ✅ 真 (2.1%)",
+  "magic 特別有意義 (O-series 身份命中高過隨機) — 🔴 唔顯著 (領域 91%)"
+ ],
+ "gap": "magic 5 個係咪唯一同時過全約束 (gcd 互斥/deg 互斥/data-free/3-anchor 生成) 嘅 5-collection? → 71 號已答: 37 個, 唔唯一",
+ "no_identity_d": [21, 32, 36, 39],
+ "identity": {
+  "5": true, "7": true, "10": true, "14": true, "20": true,
+  "22": true, "33": true
+ },
+ "results": [
+  {"id": "A1-anchor-enum", "desc": "cover magic 5/5 嘅 3-anchor 集 = 3 個 (5,7,11)/(7,10,11)/(7,11,20)", "ok": true},
+  {"id": "A2-anchor-unique", "desc": "anchor=(7,11,5) 唔係唯一 — 後驗命名 🟡", "ok": true},
+  {"id": "B1-structure", "desc": "隨機 5 個 gcd+deg 全互斥 = 2.13% (窮舉) — 稀有 47 倍", "ok": true},
+  {"id": "C1-field-rate", "desc": "領域命中率 39/43 = 90.7% (sin 判準)", "ok": true},
+  {"id": "C2-magic-notsig", "desc": "magic 5/5 全中, 二項 p=0.614 唔顯著", "ok": true},
+  {"id": "C3-type", "desc": "驗證『唔顯著』事實 = PASS 語義", "ok": true},
+  {"id": "C4-gamma", "desc": "γ pattern 全譜污染淘汰 (判準只用 sin)", "ok": true}
+ ],
+ "pass": 10,
+ "fail": 0
+}
