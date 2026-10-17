@@ -489,6 +489,8 @@ filler:       32 行無 label
 
 > ⚠️ **2D 矩陣不動點附註 (2026-10-17, 31_matrix_fixed_point)**: 調律者指示「7 當作 2D pattern 矩陣不動點測試」。P_d=|i−j|=d 位置集 × 8 operator (transpose/mirror44/mirror88/neg/diag shift/antidiag) + Galois + gcd_shift: **7 唔係任何 operator 獨特不動點 🔴** — 3/7/29 Galois 全 {1,87}, σ_87 固定所有奇數 d (Z₂ 奇偶選擇, 唔係 7 特有); gcd_shift 唯一 k=43 trivial。**唯一不動 magic = 22** (T2/T3/T5/T6, 2D 層確認 30 號對稱軸結論)。結論: 7 嘅特殊唔喺不動點層 — 維持 Lucas/代表選擇層 🟡🔴。
 
+> ⚠️ **整欄/整列同構與接觸附註 (2026-10-17, 32_column_isomorph_contact)**: 列同構 = deg 層 (lcm 定理 corollary): **每 deg 層一 magic, deg10(gcd4) 列層缺** = 缺{4,16}列層投影 ✅; data 格端點 6/9 撞 magic 端點 — **d=13 (7,20) 唯一全 magic 端點 data 格 (ANCHOR×TRANSFER, n/p BBN)**, 三代 quark 格 c/s=(8,22)→22, t/b=(19,33)→33, u/d=(10,24)→24=gcd4 端點; **gcd4 缺口唔係真空 — 24 經 data 格同鏡像 (20↔24) 兩條路補償** 🟡; magic 5 個只有 14 冇做 data 端點 (14 自己係操作=數據行); gcd1 層 7 = 第 4 位唔係最小, 維持 L₄ 唯一索引判準。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)

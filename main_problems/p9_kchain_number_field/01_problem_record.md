@@ -68,6 +68,7 @@
 | 32 | 10-17 | **數字審計第三輪** | `28_numeric_audit_round3.py` + `28_numeric_audit_round3.md` | **46/46 PASS** — 零 import 第一原理重算 25/26/27 全部 headline 數字 (gcd 七類/deg 分佈/0.375/0.008/15 候選/零差異/v₂ 規則/Lucas 對); 首輪 FAIL 全數係審計員 check bug ×4 (null model 撈錯/舊 draft 行/round 比較/JSON key), 25/26/27 推導零錯; 重跑決定性 | ✅ |
 | 33 | 10-17 | **對角線排除 + 兩邊鎖 7** | `30_mirror_exclusion.py` + `data/30_mirror_exclusion.json` + `30_mirror_exclusion.md` | 「對角線」= d↔44−d 鏡像軸。STEP1: gcd4/gcd16 鏡像全出走 ✓ 但 gcd8 都出走而有 magic ⟹ R4a 必要唔充要 🟡; ★ d=22 唯一自鏡像 = HALF magic 結構必然; 自封閉類 {1,2,11,22} 100% magic。STEP2: 3/7/29 鏡像伴侶全部 filler (盲測 P=0.70) ⟹ R4c 鎖 7 🔴 FAIL; ★ 33↔11 magic↔data 唯一鏡像對; ★ 20↔24 gcd8中心↔gcd4中心互映 = 缺口經鏡像補償 | 🟡 |
 | 34 | 10-17 | **7 作為 2D 矩陣不動點** | `31_matrix_fixed_point.py` + `data/31_matrix_fixed_point.json` + `31_matrix_fixed_point.md` | P_d=|i−j|=d 位置集 × 8 operator + Galois + gcd_shift。**7 唔係任何 operator 獨特不動點 🔴**; T2/T3/T5/T6 唯一固定 magic = **22** ✅ (2D 層確認對稱軸); Galois σ_a: 3/7/29 全 {1,87}, σ_87 固定所有奇數 d (Z₂ 奇偶選擇) 唔係 7 特有; gcd_shift 唯一 k=43 trivial。**結論: 7 嘅特殊唔喺不動點層, 22 先係** | 🔴 |
+| 35 | 10-17 | **整欄/整列同構與接觸** | `32_column_isomorph_contact.py` + `data/32_column_isomorph_contact.json` + `32_column_isomorph_contact.md` | 列同構 = deg 層: **每 deg 層一 magic, deg10(gcd4) 層缺** = 「缺{4,16}」列層投影 ✅; data 格端點 6/9 撞 magic 端點, **d=13 (7,20) 唯一全 magic 端點 data 格** 🟡; **gcd4 缺口唔係真空 — 端點 24 透過 (10,24) u/d 參與** (同 20↔24 鏡像補償收斂) 🟡; gcd1 層 7 係第 4 位, 唔係最小 — 維持 L₄ 唯一索引判準 | 🟡 |
 
 ## 時序完整性聲明
 
