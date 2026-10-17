@@ -1,0 +1,34 @@
+{
+  "n_all_grating": 17,
+  "n_dedup": 13,
+  "class_all": {
+    "dip": 13,
+    "nodip": 2,
+    "bound": 2
+  },
+  "class_dedup": {
+    "dip": 11,
+    "bound": 1,
+    "nodip": 1
+  },
+  "Hα_mean_dAIC": 171.31465302910377,
+  "Hβ_mean_dAIC": 36.94840507188906,
+  "note": "冇 dip / bound 窗全數納入命中率分母 — 保守修正",
+  "checks": [
+    {
+      "name": "N-c MC null hop4 289.76",
+      "pass": true,
+      "detail": "p=0.0004"
+    },
+    {
+      "name": "N-c MC null hop2 204.89",
+      "pass": true,
+      "detail": "p=0"
+    },
+    {
+      "name": "N-d Hβ 系統性弱 (SNR 解釋冇 dip)",
+      "pass": true,
+      "detail": "Hα 171 > Hβ 37"
+    }
+  ]
+}
