@@ -495,6 +495,8 @@ filler:       32 行無 label
 
 > ⚠️ **R5 完整程序附註 (2026-10-17, 35_r5_full_procedure)**: R5 昇做完整選擇程序 — Q1: cover triples 只有 3 個, **(5,7,11) 唯一質數 anchor triple** ✅ (其他兩個要撈 10=2F₅ 或 magic 20); 程序 S1-S4 後剩 6 類鎖 4 (gcd1/8/11/22), **gcd2 (14 vs 10) 同 gcd16 (28) 未閉合**; ★「Lucas 鏈優先」判準 FAIL — 20=4F₅ 係 Fib 被揀, 28=4L₄ 係 Lucas 被捨, magic 自己混用 L/F 兩種鏈。
 
+> ⚠️ **Anchor 鏈→類映射附註 (2026-10-17, 36)**: **更正 35 號「Lucas>Fib FAIL」係誤報** — 20∈gcd8 / 28∈gcd16 唔係同類對決, 28 排除 = S3 每 deg 層一代表 (gcd8/gcd16 都 deg5 撞層), 唔係鏈比較; Lucas 優先喺 gcd2 (14 vs 10) 冇被違反。data-free 自動除 21 (3L₄ ∈ DATA 新發現)。28 = 4L₄ 超 TEST F m≤3 窗口 (唔可以為 fit 改)。一刀切 A–F 全 False — 同剩 9 候選, 5/5 靠 6 規則 stacking 後驗拼湊 🟡 唔閉合。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
