@@ -1,0 +1,16 @@
+{
+ "test": "60_g3_migration_uniqueness",
+ "T1": "ω_n=ω_{88−n} 87/87 EXACT — 88-site 譜值=44-site 譜值 (重覆)",
+ "T2": {
+  "n7": "k=14 or 162",
+  "n14": "k=28 or 148",
+  "n33": "k=66 or 110",
+  "note": "176−2n≥90 (n≤43) 出 88-site 對偶鏈域 ⟹ 唯一解 k=2n"
+ },
+ "T3": {
+  "R1_vs_R3": "equal (mirror alias)",
+  "R4": "trivial = same beat"
+ },
+ "T4": "G3 ✅ PASS: 對偶鏈域唯一遷移 = 偶模 carry k=2n (O218); 格層 R1/R3 係同名",
+ "verdict": "G3 由 🟡 升級 ✅ — canonical 遷移唯一 (偶模 carry)"
+}
