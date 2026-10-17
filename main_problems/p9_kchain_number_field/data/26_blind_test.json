@@ -1,0 +1,241 @@
+{
+ "test": "26_blind_test_magic_rows_rules",
+ "rules": {
+  "R1": "data-free",
+  "R2": "Lucas-chain",
+  "R3": "deg-cover"
+ },
+ "TEST_A": {
+  "A1_data_free_null": {
+   "closed_form": 0.375,
+   "mc_1e6": 0.375039,
+   "per_class": {
+    "1": 0.75,
+    "2": 1.0,
+    "4": 1.0,
+    "8": 1.0,
+    "11": 0.5,
+    "16": 1.0,
+    "22": 1.0
+   },
+   "verdict": "FAIL 唔顯著 (data 只塞喺 gcd=1/11 類, 巧合機會高)"
+  },
+  "A2_lucas_null": {
+   "closed_form": 0.008,
+   "mc_1e6": 0.008288,
+   "per_class": {
+    "1": 0.3,
+    "2": 0.4,
+    "4": 0.2,
+    "8": 0.6666666666666666,
+    "11": 1.0,
+    "16": 0.5,
+    "22": 1.0
+   },
+   "LSTAR": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    14,
+    18,
+    21,
+    22,
+    29,
+    33,
+    36
+   ],
+   "verdict": "邊緣"
+  },
+  "A3_deg_cover": {
+   "deg_per_gcd_unique": false,
+   "deg_hist": {
+    "40": 1,
+    "20": 1,
+    "5": 2,
+    "10": 1,
+    "4": 1,
+    "2": 1
+   },
+   "mc_P_5distinct_gcd": 0.0,
+   "note": "gcd→deg 唔係單射 (gcd=8/16 都 deg5); 『缺 deg10』只啱一半 — gcd=4 係 deg10 唯一來源 (deg10 全缺), 但 gcd=16 缺係『同一 deg5 嘅第二 gcd 來源冇代表』, 唔係 deg 缺",
+   "verdict": "R3 表述修正: 缺 = gcd 類缺 {4,16}, 唔係 deg 缺 (deg5 仍有 gcd=8 代表)"
+  }
+ },
+ "TEST_B": {
+  "P13_row_label_d": [
+   7,
+   14,
+   20,
+   22,
+   33
+  ],
+  "P9_magic": [
+   7,
+   14,
+   20,
+   22,
+   33
+  ],
+  "exact_match": true,
+  "row_labels": {
+   "-33": "Row K_tree",
+   "-22": "Row half-node",
+   "-20": "Row T(s->d)",
+   "-14": "Row GEN d=14",
+   "-7": "Row m7 anchor",
+   "7": "Row m7 anchor",
+   "14": "Row GEN d=14",
+   "20": "Row T(s->d)",
+   "22": "Row half-node",
+   "33": "Row K_tree"
+  },
+  "physics_labels_sample": {
+   "-25": "m_c/m_b (O34)",
+   "-21": "m_s/m_d (O35)",
+   "-19": "m_H/m_W (O34)",
+   "-17": "m_mu/m_tau (O34)",
+   "-14": "c/s Quark (O34)",
+   "-13": "n/p BBN (O13)",
+   "-11": "m_W/m_Z (O34)",
+   "0": "DIAG zero/self",
+   "11": "m_W/m_Z (O34)",
+   "13": "n/p BBN (O13)",
+   "14": "c/s Quark (O34)",
+   "17": "m_mu/m_tau (O34)"
+  },
+  "verdict": "✅ 一致",
+  "note": "P13 label 同 p9 分類同源 (唔係獨立盲測), 只做一致性命題 (非預言證據)"
+ },
+ "TEST_C": {
+  "per_class": {
+   "1": {
+    "candidates": [
+     1,
+     3,
+     5,
+     7,
+     9,
+     13,
+     15,
+     17,
+     19,
+     21,
+     23,
+     25,
+     27,
+     29,
+     31,
+     35,
+     37,
+     39,
+     41,
+     43
+    ],
+    "R1R2_survivors": [
+     1,
+     3,
+     7,
+     9,
+     29
+    ],
+    "actual_magic": [
+     7
+    ]
+   },
+   "2": {
+    "candidates": [
+     2,
+     6,
+     10,
+     14,
+     18,
+     26,
+     30,
+     34,
+     38,
+     42
+    ],
+    "R1R2_survivors": [
+     2,
+     6,
+     14,
+     18
+    ],
+    "actual_magic": [
+     14
+    ]
+   },
+   "4": {
+    "candidates": [
+     8,
+     16,
+     24,
+     32,
+     40
+    ],
+    "R1R2_survivors": [
+     8
+    ],
+    "actual_magic": []
+   },
+   "8": {
+    "candidates": [
+     4,
+     20,
+     36
+    ],
+    "R1R2_survivors": [
+     4,
+     36
+    ],
+    "actual_magic": [
+     20
+    ]
+   },
+   "11": {
+    "candidates": [
+     11,
+     33
+    ],
+    "R1R2_survivors": [
+     33
+    ],
+    "actual_magic": [
+     33
+    ]
+   },
+   "16": {
+    "candidates": [
+     12,
+     28
+    ],
+    "R1R2_survivors": [
+     12
+    ],
+    "actual_magic": []
+   },
+   "22": {
+    "candidates": [
+     22
+    ],
+    "R1R2_survivors": [
+     22
+    ],
+    "actual_magic": [
+     22
+    ]
+   }
+  },
+  "total_survivors_5classes": 15,
+  "unique_lock": false,
+  "verdict": "❌ 唔唯一 — R1+R2 只係必要條件, 唔係充分預言規則",
+  "detail": "gcd=1 類仲有幾個 Lucas 候選 (1/3/7/29) → 7 需要額外判準 (未預註冊, 唔可以後驗加入)"
+ }
+}
