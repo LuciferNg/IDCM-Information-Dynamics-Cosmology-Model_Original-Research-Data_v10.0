@@ -1,0 +1,48 @@
+{
+ "test": "37_r5_necessity_and_extension",
+ "T1": {
+  "anchor_residues_mod8": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "gcd4_intersect": []
+ },
+ "T2": {
+  "gcd16": [
+   12,
+   28
+  ],
+  "12_in_gen": false,
+  "28_in_gen": true,
+  "deg5_gen": [
+   20,
+   28
+  ]
+ },
+ "T3": {
+  "proc44_output": [
+   7,
+   14,
+   20,
+   22,
+   33
+  ],
+  "match_magic": true
+ },
+ "T4": {
+  "proc88_output": [
+   7,
+   11,
+   14,
+   22,
+   28,
+   44
+  ],
+  "magic_in_88": false
+ }
+}

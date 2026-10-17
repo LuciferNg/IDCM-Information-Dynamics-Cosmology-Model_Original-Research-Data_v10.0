@@ -497,6 +497,8 @@ filler:       32 行無 label
 
 > ⚠️ **Anchor 鏈→類映射附註 (2026-10-17, 36)**: **更正 35 號「Lucas>Fib FAIL」係誤報** — 20∈gcd8 / 28∈gcd16 唔係同類對決, 28 排除 = S3 每 deg 層一代表 (gcd8/gcd16 都 deg5 撞層), 唔係鏈比較; Lucas 優先喺 gcd2 (14 vs 10) 冇被違反。data-free 自動除 21 (3L₄ ∈ DATA 新發現)。28 = 4L₄ 超 TEST F m≤3 窗口 (唔可以為 fit 改)。一刀切 A–F 全 False — 同剩 9 候選, 5/5 靠 6 規則 stacking 後驗拼湊 🟡 唔閉合。
 
+> ⚠️ **R5 必然性+88 前向附註 (2026-10-17, 37)**: T1 gcd4 缺 = **代數必然** (anchor{5,7,11}×m{1,2,3,4} mod8 永不出 0, gcd4 全 ≡0 mod8) ✅; T2 gcd16 缺 = deg5 撞層 (28 唯一候選被 20 撞走) ✅; T3 **完整兩階段程序唯一鎖 magic 5/5 EXACT** (Phase A 每類一代表: S5 唯一Lucas∧質數 → Lucas鏈優先; Phase B 每 deg 一代表, 撞層前半優先) ✅; **T4 88-site 前向部分 FAIL 🟡**: 保留 7/14/22, 20→28 (88-site 都 gcd4 撞層), 33→11 (88-site 冇 data label); ★20 喺 88-site 屬 gcd4 = **缺類重組**, 同 30 號 20↔24 補償呼應; 程序唔 scale-invariant — T4 = 第一份樣本外盲測報告, 誠實 FAIL 標記, 等 88-site label。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
