@@ -1,0 +1,39 @@
+{
+ "audit": "92_r5_open_slots_adjudication",
+ "date": "2026-10-17",
+ "program_outputs": [
+  "magic",
+  "M_F_parallel",
+  "gcd16_28_14",
+  "gcd16_28_10"
+ ],
+ "verdict": "R5 程序級 4 組合 — magic 唔唯一; lip優勢=支柱 cover+label 話系",
+ "results": [
+  {
+   "id": "A1_open_slots",
+   "desc": "gcd2 {10,14} + gcd16 {20,28} 兩個開放位確認",
+   "ok": true,
+   "detail": "gcd2=[10, 14] gcd16=[28]"
+  },
+  {
+   "id": "B1_program_nonunique",
+   "desc": "R5 程序級: 4 個組合輸出 — magic 唔唯一 (35+82 整合)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_lucas_fib_final",
+   "desc": "Lucas>Fib 唔係結構判準 (35 FAIL + 82 平行 + 83 語意優勢)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "D1_final",
+   "desc": "最終整合: magic 優勢=支柱 cover+語意, 唔係程序/集合唯一",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 4,
+ "fail": 0
+}
