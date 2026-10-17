@@ -59,5 +59,8 @@ crystal_stress（初版，2026-08-16）→ O140/O159/O161/O171 → O173（應變
     **C18 (record 23) 全樣本掃描 (10 fits)**: T2 峰距 mean=120±99, 冇大階梯
     聚集 ⟹ 唔支持; T3 M2 ΔAIC 9/10 拒 (E 例外=noise wiggles) ⟹ 擴展 9/10;
     broad centroid 系統性紅移 +35..+457 km/s。
-    預言: T1/T2/T3/吸收四判別全傾向唔支持 — 活預言樣辦。
+    **C19 (record 24) 矯正版 T1 終判**: Nikopoulos+2026 self-absorption 確認
+    (E −65.8 重現); A Hα absorber −97 但 Hβ 冇 ⟹ 舊 1.68 有污染;
+    M6(IDCM對稱×dip) ≡ M4(單×dip) (+0.6/+0.7, 峰距退化 100) ⟹ 修正後仍拒。
+    預言: T1/T2/T3/吸收/散射 五判別全傾向唔支持 — 現有樣本上對稱雙峰唔成立。
 - 🟡 Q3 宿主星系 M_host = M_BH×306（JWST）；P13（Euclid DR1）；P15（Gaia DR4）；P9′（AugerPrime 2035）

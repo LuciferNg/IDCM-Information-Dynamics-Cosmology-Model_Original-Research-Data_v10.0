@@ -69,6 +69,11 @@
       T3: M2 ΔAIC 9/10 拒 (唯 E −18.4 = noise wiggles, M1 仍好) ⟹ 擴展 9/10;
       新 finding: broad centroid 系統性紅移 +35..+457 km/s.
       四判別 T1/T2/T3/吸收 全傾向唔支持.
+- [x] **2026-10-17 矯正版 T1 終判 (script 30/31, record 24)** 🔴: Nikopoulos+2026
+      self-absorption 確認 (E Hα ΔAIC −65.8 重現 paper); A Hα (R~2700)
+      absorber −97 (dv=−283 藍側) 但 Hβ 冇 ⟹ 舊 T1 1.68 有污染;
+      **M6(IDCM對稱×dip) ≡ M4(單×dip)** (+0.6/+0.7, 峰距退化 100 km/s)
+      ⟹ 修正後對稱模態對仍唔支持 — T1 終判拒證; 五判別全傾向唔支持.
 
 ## 工作目錄
 
