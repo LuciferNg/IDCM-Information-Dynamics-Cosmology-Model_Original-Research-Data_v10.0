@@ -136,6 +136,8 @@
 | 104 | 10-17 | **G4 carry 計入正式裁定** | `104_g4_carry_ruling.py` + `data/104_g4_carry_ruling.json` + `104_g4_carry_ruling.md` | **3/3 — G4 分層正名**: 判準漂移真 (51『≥9 獨立 label』→ 53『≥9 label 存在』); 奇模專屬精確 {1,3,5,9,13,21,47} = 7 < 9 (剔 θ₂₃ 實驗式; 全部奇數 vs carry 全部偶數互斥); ★裁定: 存在層 ✅ 12≥9 PASS + 獨立層 🔴 7<9 FAIL — 唔可以直接宣稱 G4 PASS; 55 號 md 加 append-only 更正; Magic 攻堅 88-site label 表述更新 (101 要同步) | ✅ |
 | 105 | 10-17 | **G3/G7 carry 連帶檢查 + 終態同步** | `105_gate_carry_chain_check.py` + `data/105_gate_carry_chain_check.json` + `105_gate_carry_chain_check.md` | **5/5 — carry 影響盤點完成**: G3 結構判準唔受影響; G7 carry 係判準定義唔受影響; ★G6 同 G4 一樣中招 (宣稱『≥9 獨立 label』→ 存在層 ✅ 12 / 獨立層 🔴 7); ★閘門全景最終: G1/G3/G5/G7 ✅, G2 🔴🟡, G4 🟡 (存在✅+獨立🔴), G6 🟡; 101 號 md 加 append-only 更正 (G4/G6 唔可以擺 ✅ 組) | ✅ |
 | 106 | 10-17 | **R5 88-site 輸出身份來源分解** | `106_r5_identity_source_decomposition.py` + `data/106_r5_identity_source_decomposition.json` + `106_r5_identity_source_decomposition.md` | **3/3 — R5 88-site 身份 100% carry 來源**: 6 個輸出 [7,14,22,28,33,44] — 4 個直接偶模 carry (14/22/28/44→γ_7/γ_11/γ_14/γ_22) + 2 個奇模 (7/33) 但身份都靠偶模對偶 (k=14/k=66) 或 44-site 已有; ★零個奇模專屬獨立; ★R5 輸出 ∩ 奇模專屬身份集 = ∅; 『6/6 有身份』= 存在層 ✅ / 獨立層 🔴 — 88-site 樣本外宣傳實際係 carry/存量; 46 T6 4/5 可更嚴格 | ✅ |
+| 107 | 10-17 | **Carry 線最終總結** | `107_carry_line_final_summary.py` + `data/107_carry_line_final_summary.json` + `107_carry_line_final_summary.md` | **6/6 — carry 線 (103-106) 整合收尾**: G2 存在性層 🟡 維持 (carry 定理級=存在, 唔侵犯存在層); ★七閘全景定稿: G1/G3/G5/G7 ✅, G2 🔴🟡, G4/G6 🟡 分層 (存在✅/獨立🔴); 46 T6 🟡 可更嚴格 + T7 ✅ 關閉; ★Magic 88-site 身份終態: 存在層成立 (12), 獨立層唔成立 (R5 0 獨立) — 同 48/61/63 統計撤回一致; 101 號補 R5 carry 附註 | ✅ |
+
 
 
 
