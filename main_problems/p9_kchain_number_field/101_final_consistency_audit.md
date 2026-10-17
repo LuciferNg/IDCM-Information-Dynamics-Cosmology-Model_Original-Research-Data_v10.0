@@ -40,3 +40,10 @@ P9 唔證明; 開放: O35/O158 (已 handoff)、G2 出路② protocol。
 101_final_consistency_audit.py
 data/101_final_consistency_audit.json
 ```
+## ⚠️ 104/105 號更正附註 (append-only, 原文唔改)
+
+**閘門全景 G4/G6 需要分層正名**: 103/104/105 號審出「偶模 carry =
+γ'_{2n}=γ_n 重影」— G4 同 G6 嘅「≥9 獨立 label」宣稱只係「存在層」
+成立 (12≥9), 「獨立層」得奇模專屬 7 < 9。正確全景:
+- ✅ G1/G3/G5/G7; 🔴🟡 G2; 🟡 G4 (存在✅+獨立🔴); 🟡 G6 (存在✅+獨立🔴)
+詳見 `104_g4_carry_ruling.md` + `105_gate_carry_chain_check.md`。
