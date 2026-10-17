@@ -1,0 +1,57 @@
+{
+  "v_abs_kms": 289.75888125788794,
+  "sigma_window_kms": 167.22758942727745,
+  "obs": [
+    {
+      "source": "A",
+      "line": "Hα",
+      "v_kms": -283.01,
+      "sigma_obs_kms": 183.0,
+      "note": "depth 0.979, M4_abs_dv (record 24)"
+    },
+    {
+      "source": "E",
+      "line": "Hα",
+      "v_kms": 47.0,
+      "sigma_obs_kms": 175.0,
+      "note": "paper +47 FWHM 350 (Rusakov outflow?)"
+    },
+    {
+      "source": "E",
+      "line": "Hβ",
+      "v_kms": -79.0,
+      "sigma_obs_kms": 260.0,
+      "note": "paper −79 FWHM 520"
+    }
+  ],
+  "F1_tight_sigma": 0.03687913255676473,
+  "F2_ratio": 1.0943170360030905,
+  "MC": {
+    "N": 100000,
+    "p_single": 0.22528,
+    "p_ge1_3samples": 0.535019967741952
+  },
+  "posterior_note": "「用 hop=4 層」係後驗收窄; v_abs 數值本身零參數。E 反例最要命: 唔可 all-in 窗模型",
+  "checks": [
+    {
+      "name": "F1 A dip 緊度 <1σ",
+      "pass": true,
+      "detail": "|283.01−289.76|/183 = 0.0369σ"
+    },
+    {
+      "name": "F2 σ 同量級 (1±0.2)",
+      "pass": true,
+      "detail": "183/167.23 = 1.094"
+    },
+    {
+      "name": "F3 MC null p ≪ 0.05",
+      "pass": false,
+      "detail": "p(≥1 hit in 3) = 0.5350 (隨機)"
+    },
+    {
+      "name": "F4 E 唔喺窗內 (樣本外反例, 誠實)",
+      "pass": true,
+      "detail": "E +47/−79 細速度 = outflow/窄線 成份 (Rusakov mild outflow 支持)"
+    }
+  ]
+}

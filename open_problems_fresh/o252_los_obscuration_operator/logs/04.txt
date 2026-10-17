@@ -1,0 +1,23 @@
+====================================================================================
+O252/04 — hop 階梯徑向層 → τ(v) 速度窗 (second round, zero-obs)
+====================================================================================
+hop 階梯 Σ=60, 凝聚重心 ⟨hop⟩ = 4.000000
+R_c = 48.483 kpc, V_max = 409.781 km/s
+  A_lin_Rc: r₄(h=4) = 24.241 kpc → v₄ = 289.76 km/s
+  B_lin_Rband: r₄(h=4) = 27.473 kpc → v₄ = 308.47 km/s
+  C_cos2: r₄(h=4) = 24.241 kpc → v₄ = 289.76 km/s
+[PASS] S1.1 凝聚重心層 hop=4 有轉速 (結構窗中心) 
+窗寬 σ = FSR ℓ=3 quantum = 167.23 km/s
+
+★ v_abs 候選 (凝聚重心 hop=4 轉速, 零參數):
+  A_lin_Rc: v_abs = 289.76 km/s (r₄=24.241 kpc)
+  B_lin_Rband: v_abs = 308.47 km/s (r₄=27.473 kpc)
+  C_cos2: v_abs = 289.76 km/s (r₄=24.241 kpc)
+  A_lin_Rc sign=+1.0: dip 位 = [141.0]
+  A_lin_Rc sign=-1.0: dip 位 = [-141.2]
+  B_lin_Rband sign=+1.0: dip 位 = [141.8]
+  B_lin_Rband sign=-1.0: dip 位 = [-142.0]
+  C_cos2 sign=+1.0: dip 位 = [141.0]
+  C_cos2 sign=-1.0: dip 位 = [-141.2]
+
+結果: 1/1 PASS → data/04_hop_windows.json

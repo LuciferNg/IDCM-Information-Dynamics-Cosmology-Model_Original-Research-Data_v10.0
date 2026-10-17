@@ -1,0 +1,26 @@
+====================================================================================
+O252/03 — 盲測閉合 (結構預言 vs 觀測) — pre-registered hits criteria
+====================================================================================
+結構預言:
+  D3 窗中心 |v_co| (ℓ=0..3):  [119599.9, 18030.4, 2718.2, 409.8]  km/s
+  D4 FSR ℓ=3 rungs n·167.23:  [167.2, 334.5, 501.7, 668.9, 836.1, 1003.4]  km/s
+  band 方向: 藍弱 (v<0 τ 大)
+
+觀測 dip (record 24 / Nikopoulos+2026):
+  A Hα: v = -283.0 km/s (M4_abs_dv (depth 0.979, σ fit 異常->手動 183?))
+  E Hα: v = +47.0 km/s (Nikopoulos paper: redshifted +47, FWHM 350)
+  E Hβ: v = -79.0 km/s (Nikopoulos paper: blueshifted −79, FWHM 520)
+
+── 命中結果 ──
+  A Hα |v|= 283.0: window_hit=[(3, 409.8, 167.2)], rung_hit=[(2, 334.5)]
+  E Hα |v|=  47.0: window_hit=—, rung_hit=—
+  E Hβ |v|=  79.0: window_hit=—, rung_hit=—
+[PASS] H1 窗中心命中 (≥1) 1/3
+[PASS] H2 rung 命中 (≥1) 1/3
+[PASS] H3 dip 藍側 (v<0) ≥ 2/3 2/3
+
+MC null (10⁴ × 3 dips, 均勻 ±819.56):
+  window: obs=1, MC 命中率 mean=1.2099 (±0.85), p=0.7888, z=-0.25
+  rung:   obs=1, MC 命中率 mean=2.6906 (±0.52), p=0.9991, z=-3.22
+
+結果: 3/3 PASS → data/03_blind_closure.json
