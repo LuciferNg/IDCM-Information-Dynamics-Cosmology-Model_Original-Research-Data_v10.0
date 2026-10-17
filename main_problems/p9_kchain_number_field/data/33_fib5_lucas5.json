@@ -1,0 +1,79 @@
+{
+ "test": "33_fib5_lucas5_relation",
+ "V1": {
+  "F5": 5,
+  "L5": 11,
+  "5_is_Lucas": false,
+  "11_is_Lucas": true,
+  "same_index": "F_5=L_5 index=5"
+ },
+ "V2": {
+  "L5_binet": "11.0",
+  "L5_exact": 11,
+  "diff": "1.24460305557222834142881281075602484811805043374423342662022e-60"
+ },
+ "V3": {
+  "5x11": 55,
+  "F10": 55,
+  "eq": true
+ },
+ "V4": {
+  "20_eq_4F5": true,
+  "4F5": 20,
+  "20_has_lucas_chain": false,
+  "20_has_fib_chain": true
+ },
+ "V5": {
+  "magic_generators": {
+   "7": "L4=7",
+   "14": "2·L4=14",
+   "22": "2·L5=22",
+   "33": "3·L5=33",
+   "20": "4·F5=20"
+  },
+  "multipliers": {
+   "1": 1,
+   "2": 2,
+   "3": 3,
+   "4": 4
+  },
+  "multiplier_is_lucas_head": true
+ },
+ "V5b": {
+  "candidate_set": [
+   5,
+   7,
+   11,
+   14,
+   20,
+   22,
+   33
+  ],
+  "n_candidates": 7,
+  "magic_covered": [
+   7,
+   14,
+   20,
+   22,
+   33
+  ]
+ },
+ "V6": {
+  "first_odd_primes": [
+   3,
+   5,
+   7,
+   11,
+   13,
+   17
+  ],
+  "3_5_7_11": [
+   3,
+   5,
+   7,
+   11
+  ],
+  "triplet_357": true,
+  "note": "3,5,7 唯一三連續奇質數; +11 = 前四奇質數"
+ }
+}
