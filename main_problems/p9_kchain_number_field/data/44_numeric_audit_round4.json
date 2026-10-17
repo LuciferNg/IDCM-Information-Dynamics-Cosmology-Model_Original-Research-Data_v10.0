@@ -1,0 +1,420 @@
+{
+ "audit": "44_numeric_audit_round4",
+ "results": [
+  {
+   "id": "A1",
+   "desc": "F₅ = 5",
+   "expected": "5",
+   "got": "5",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A2",
+   "desc": "L₅ = 11",
+   "expected": "11",
+   "got": "11",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A3",
+   "desc": "L₅ = φ⁵−φ⁻⁵",
+   "expected": "11 (60dps)",
+   "got": "11.0",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A4",
+   "desc": "F₅×L₅ = 55 = F₁₀",
+   "expected": "55",
+   "got": "55",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A5",
+   "desc": "20 = 4·F₅",
+   "expected": "20",
+   "got": "20",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A6",
+   "desc": "magic 生成: 7=L₄",
+   "expected": "7",
+   "got": "7",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A7",
+   "desc": "14 = 2·L₄",
+   "expected": "14",
+   "got": "14",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A8",
+   "desc": "22 = 2·L₅",
+   "expected": "22",
+   "got": "22",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A9",
+   "desc": "33 = 3·L₅",
+   "expected": "33",
+   "got": "33",
+   "verdict": "PASS"
+  },
+  {
+   "id": "A10",
+   "desc": "乘數 {1,2,3,4} = {L₁,L₀,L₂,L₃}",
+   "expected": "{1, 2, 3, 4}",
+   "got": "{1, 2, 3, 4}",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B1",
+   "desc": "C(43,3)",
+   "expected": "12341",
+   "got": "12341",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B2",
+   "desc": "cover triples 數 = 3",
+   "expected": "3",
+   "got": "3",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B3",
+   "desc": "cover triples 內容",
+   "expected": "[(5, 7, 11), (7, 10, 11), (7, 11, 20)]",
+   "got": "[(5, 7, 11), (7, 10, 11), (7, 11, 20)]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B4",
+   "desc": "R5a closed-form 3/12341",
+   "expected": "0.000243",
+   "got": "0.000243092",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B5",
+   "desc": "F/L ≤43 對數 = 6",
+   "expected": "6",
+   "got": "6",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B6",
+   "desc": "★ BOTH-PRIME 對數 (doc 33_34 講「只有 k=5」)",
+   "expected": "1",
+   "got": "3",
+   "verdict": "FAIL"
+  },
+  {
+   "id": "B7",
+   "desc": "可達 5/5 嘅 F/L 對 (加第三 anchor)",
+   "expected": "[(5, 5, 11, 7)]",
+   "got": "[(5, 5, 11, 7)]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B8",
+   "desc": "L* m≤3 集",
+   "expected": "[1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 14, 18, 21, 22, 29, 33, 36]",
+   "got": "[1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 14, 18, 21, 22, 29, 33, 36]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B9",
+   "desc": "★ 定義偏離 (m≤4 新增) = [16,28]",
+   "expected": "[16, 28]",
+   "got": "[16, 28]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "B10",
+   "desc": "34 R5d 候選 R5 11 個",
+   "expected": "11",
+   "got": "11",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C1",
+   "desc": "36 號 claim: 20∈gcd8, 28∈gcd16",
+   "expected": "(8, 16)",
+   "got": "(8, 16)",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C2",
+   "desc": "37 T1: gcd4 候選全 ≡0 mod 8",
+   "expected": "[0]",
+   "got": "[0]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C3",
+   "desc": "37 T1: anchor×m mod 8 集 (缺 0)",
+   "expected": "{1, 2, 3, 4, 5, 6, 7}",
+   "got": "{1, 2, 3, 4, 5, 6, 7}",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C4",
+   "desc": "37 T2: gcd16 候選 = {12,28}",
+   "expected": "[12, 28]",
+   "got": "[12, 28]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C5",
+   "desc": "deg(20) = deg(28) = 5 (44-site 撞層)",
+   "expected": "(5, 5)",
+   "got": "(5, 5)",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C6",
+   "desc": "37 T3: 程序 44-site = magic 5/5",
+   "expected": "[7, 14, 20, 22, 33]",
+   "got": "[7, 14, 20, 22, 33]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C7",
+   "desc": "44-site gcd 類表 (data-free 後: 21/11 剔除)",
+   "expected": "{1: [5, 7, 15], 2: [10, 14], 8: [20], 11: [33], 16: [28], 22: [22]}",
+   "got": "{1: [5, 7, 15], 2: [10, 14], 8: [20], 11: [33], 16: [28], 22: [22]}",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C8",
+   "desc": "37 T4: 88-site R5窗口 m≤4 (如記錄) = [7,11,14,22,28,44]",
+   "expected": "[7, 11, 14, 22, 28, 44]",
+   "got": "[7, 11, 14, 22, 28, 44]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C9",
+   "desc": "★ 88-site L* 窗口 m≤3 → [7,11,14,22] (4 代表)",
+   "expected": "[7, 11, 14, 22]",
+   "got": "[7, 11, 14, 22]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C10",
+   "desc": "★ magic 保留兩個窗口都 = {7,14,22} 3/5",
+   "expected": "([7, 14, 22], [7, 14, 22])",
+   "got": "([7, 14, 22], [7, 14, 22])",
+   "verdict": "PASS"
+  },
+  {
+   "id": "C11",
+   "desc": "★ 20=4F₅ / 28=4L₄ / 44=4L₅ 需 m=4 → m≤3 窗口下唔生成",
+   "expected": "(True, True, True)",
+   "got": "(True, True, True)",
+   "verdict": "PASS"
+  },
+  {
+   "id": "D1",
+   "desc": "gcd44: 20→8, 24→4, 28→16",
+   "expected": "(8, 4, 16)",
+   "got": "(8, 4, 16)",
+   "verdict": "PASS"
+  },
+  {
+   "id": "D2",
+   "desc": "gcd88: 20→4, 24→32, 28→4",
+   "expected": "(4, 32, 4)",
+   "got": "(4, 32, 4)",
+   "verdict": "PASS"
+  },
+  {
+   "id": "D3",
+   "desc": "γ₂₀ = 4cos²(3π/11)",
+   "expected": "1.715370323453429719112415",
+   "got": "1.715370323453429719112415",
+   "verdict": "PASS"
+  },
+  {
+   "id": "D4",
+   "desc": "γ₂₄ = 4sin²(3π/11)",
+   "expected": "2.284629676546570280887585",
+   "got": "2.284629676546570280887585",
+   "verdict": "PASS"
+  },
+  {
+   "id": "D5",
+   "desc": "γ₂₀+γ₂₄ = 4 EXACT",
+   "expected": "4",
+   "got": "4.0",
+   "verdict": "PASS"
+  },
+  {
+   "id": "D6",
+   "desc": "ρ = 24/88 = 3/11",
+   "expected": "3/11",
+   "got": "3/11",
+   "verdict": "PASS"
+  },
+  {
+   "id": "D7",
+   "desc": "γ_{22+m}+γ_{22−m} = 4 ∀m∈1..21",
+   "expected": "全 4",
+   "got": "全 4",
+   "verdict": "PASS"
+  },
+  {
+   "id": "D8",
+   "desc": "24 = 2B·N_gen = 2·4·3",
+   "expected": "24",
+   "got": "24",
+   "verdict": "PASS"
+  },
+  {
+   "id": "E1",
+   "desc": "39 T4: 統一規則 FAIL 預測 [5,7,10,14,15,20,22,33]",
+   "expected": "[5, 7, 10, 14, 15, 20, 22, 33]",
+   "got": "[5, 7, 10, 14, 15, 20, 22, 33]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "E2",
+   "desc": "39 T4: 預測 ≠ magic (規則確實 FAIL)",
+   "expected": "True",
+   "got": "True",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F1",
+   "desc": "member count = 44−d (d=29 → 15)",
+   "expected": "15",
+   "got": "15",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F2",
+   "desc": "40 T5 off-by-one (range(1,44−d) → 14)",
+   "expected": "14",
+   "got": "14",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F3",
+   "desc": "d=29 行全 gcd1",
+   "expected": "{1}",
+   "got": "{1}",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F4",
+   "desc": "d=29 行零 magic/data 觸碰",
+   "expected": "(0, 0)",
+   "got": "(0, 0)",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F5",
+   "desc": "s=33 列 16 格 d 值",
+   "expected": "[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31]",
+   "got": "[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F6",
+   "desc": "s=33 列唯一 magic 格 = (13,20) d=7",
+   "expected": "[(13, 20)]",
+   "got": "[(13, 20)]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F7",
+   "desc": "s=33 列 gcd 分佈 15×gcd1 + 1×gcd11",
+   "expected": "{1: 15, 11: 1}",
+   "got": "{1: 15, 11: 1}",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F8",
+   "desc": "40 T2: s=33 d 對和 = 32 (1+31=32...)",
+   "expected": "True",
+   "got": "True",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F9",
+   "desc": "41 T2: ≥3 magic 格 s 總數 = 22, 前 6 = 24..34 偶數",
+   "expected": "(22, [24, 26, 28, 30, 32, 34])",
+   "got": "(22, [24, 26, 28, 30, 32, 34])",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F10",
+   "desc": "41 T2: magic 格最多 = 3 (冇 4+)",
+   "expected": "3",
+   "got": "3",
+   "verdict": "PASS"
+  },
+  {
+   "id": "F11",
+   "desc": "41: s=33 列 data 格 = [11,13,17,19,21,25] (6 個)",
+   "expected": "[11, 13, 17, 19, 21, 25]",
+   "got": "[11, 13, 17, 19, 21, 25]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "G1",
+   "desc": "3 ∉ R5 生成集",
+   "expected": "False",
+   "got": "False",
+   "verdict": "PASS"
+  },
+  {
+   "id": "G2",
+   "desc": "gcd1 内 R5 成員 = [5,7,15,21]",
+   "expected": "[5, 7, 15, 21]",
+   "got": "[5, 7, 15, 21]",
+   "verdict": "PASS"
+  },
+  {
+   "id": "G3",
+   "desc": "33 = 3L₅ = 3×11",
+   "expected": "33",
+   "got": "33",
+   "verdict": "PASS"
+  },
+  {
+   "id": "G4",
+   "desc": "CY₃ = h¹¹+h²¹ = 134",
+   "expected": "134",
+   "got": "134",
+   "verdict": "PASS"
+  },
+  {
+   "id": "G5",
+   "desc": "(CY₃−2)/4 = 33",
+   "expected": "33",
+   "got": "33",
+   "verdict": "PASS"
+  },
+  {
+   "id": "G6",
+   "desc": "33 = M (K_Tree 深度)",
+   "expected": "33",
+   "got": "33",
+   "verdict": "PASS"
+  },
+  {
+   "id": "G7",
+   "desc": "magic d × 特別 s 交集 = {33}",
+   "expected": "[33]",
+   "got": "[33]",
+   "verdict": "PASS"
+  }
+ ],
+ "pass": 58,
+ "fail": 1
+}
