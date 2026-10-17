@@ -523,6 +523,8 @@ filler:       32 行無 label
 
 > ⚠️ **Magic 獨特性 = 宇宙 5 支柱附註 (2026-10-17, 49_magic_distinctiveness)**: **★用戶方向轉移**: uniqueness (統計唯一性, 48 號 FAIL) → **distinctiveness (結構獨特性/不可替代性)** — 「以支撐我們物理世界存在, 冇咗就唔係我哋宇宙」。**T1/T2 gcd+deg 互斥 cover**: magic 5 個 cover 5 個唔同 gcd 類 {1,2,8,11,22} + 5 個唔同 deg 層 {40,20,5,4,2}, 每個自家類唯一不可互相取代 ✅。**★★T3 宇宙 5 支柱**: ANCHOR(7)=DM 13.8 MeV 錨 (冇 DM 冇星系); GEN(14)=三代費米子世代 (冇 CKM/CP violation → 冇重子不對稱 → 冇恆星冇生命); TRANSFER(20)=能量傳遞; HALF(22)=鏡像對稱 (γ_n=γ_{88−n}); KTREE(33)=結構層級深度 (3L₅=M=(CY₃−2)/4)。**T5 magic×data 交叉**: ★(7,20) = ANCHOR×TRANSFER 唯一全 magic 端點 (n/p BBN); ★(19,33) = GEN 行 t/b 格同時撞 KTREE 端點 = GEN×KTREE 直接連住; GEN 冇 data 端點因為自己就係 data 行。誠實標記: T4 係 IF-THEN 論證層唔係證明; uniqueness FAIL 唔影響 distinctiveness (0 唯一中性元嘅結構角色唔會因揀 0 概率而變)。Magic = 宇宙 5 支柱唯一承載行 — p9 對「magic rows 點解緊要」嘅終極表述。
 
+> ⚠️ **第五輪審計附註 (2026-10-17, 50_numeric_audit_round5)**: 範圍 30–32, **35/36 PASS, 1 FAIL = 真 script bug**。**★B4**: 31 script `galois_fixed()` 用錯條件 `(a·d) mod 176 ∈ {d, 176−d}` (σ=±ω 鏡像), 原 JSON sample [1,175]; 正確固定條件 `d(a+1)≡88 (mod 176)` 得 {1,87} (md 正文啱) — 結論不變 (兩種值都 3/7/29 全同 ⟹ σ₈₇ 固定奇數 = Z₂ 奇偶唔係 7 特有), 31 md 已附註, script 要修正先重用。**★C2 真 doc 錯**: 32 md「6 格有 magic 端點 7 次命中」實為 **5 格 6 次** ((7,20)=2 + 其餘 4 格各 1) — 已 append-only 更正, 結構結論不變。**審計員 check bug ×2**: C1 期望漏 deg0 (n=44, ω₄₄=2 gcl=176 om_deg=0) → 正確 {40:20,20:10,10:5,5:5,4:2,2:1,0:1}; C2 初始照抄原 doc「6/9」後逐格手數確認 = 真 doc 錯。30/31/32 推導結論全部穩健。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)

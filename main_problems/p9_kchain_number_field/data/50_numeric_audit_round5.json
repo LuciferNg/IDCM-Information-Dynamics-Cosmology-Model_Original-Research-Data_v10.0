@@ -1,0 +1,400 @@
+{
+ "A1_class_sizes": {
+  "got": {
+   "1": 20,
+   "2": 10,
+   "4": 5,
+   "8": 3,
+   "11": 2,
+   "16": 2,
+   "22": 1
+  },
+  "exp": {
+   "1": 20,
+   "2": 10,
+   "4": 5,
+   "8": 3,
+   "11": 2,
+   "16": 2,
+   "22": 1
+  },
+  "ok": true
+ },
+ "A2_flow_gcd4": {
+  "got": {
+   "8": 3,
+   "16": 2
+  },
+  "exp": {
+   "8": 3,
+   "16": 2
+  },
+  "ok": true
+ },
+ "A2_flow_gcd16": {
+  "got": {
+   "4": 2
+  },
+  "exp": {
+   "4": 2
+  },
+  "ok": true
+ },
+ "A2_flow_gcd8": {
+  "got": {
+   "4": 3
+  },
+  "exp": {
+   "4": 3
+  },
+  "ok": true
+ },
+ "A3_no_magic": {
+  "got": [
+   4,
+   16
+  ],
+  "exp": [
+   4,
+   16
+  ],
+  "ok": true
+ },
+ "A3_all_exit": {
+  "got": [
+   4,
+   8,
+   16
+  ],
+  "exp": [
+   4,
+   8,
+   16
+  ],
+  "ok": true
+ },
+ "A3_exit_but_magic": {
+  "got": [
+   8
+  ],
+  "exp": [
+   8
+  ],
+  "ok": true
+ },
+ "A4_partner_roles": {
+  "got": {
+   "3": "filler",
+   "7": "filler",
+   "29": "filler"
+  },
+  "exp": {
+   "3": "filler",
+   "7": "filler",
+   "29": "filler"
+  },
+  "ok": true
+ },
+ "A4_7_mirror_is_37": {
+  "got": 37,
+  "exp": 37,
+  "ok": true
+ },
+ "A5_blind": {
+  "p": 0.69992,
+  "exp": 0.6999,
+  "ok": true
+ },
+ "A6_33_mirror_11": {
+  "got": 11,
+  "exp": 11,
+  "ok": true
+ },
+ "A6_20_mirror_24": {
+  "got": 24,
+  "exp": 24,
+  "ok": true
+ },
+ "A6_22_self": {
+  "got": 22,
+  "exp": 22,
+  "ok": true
+ },
+ "A6_22_gcl": {
+  "got": 22,
+  "exp": 22,
+  "ok": true
+ },
+ "B1_T1_transpose": {
+  "d7_fixed": true,
+  "unique_magic": [],
+  "n_fixed": 43,
+  "ok": true
+ },
+ "B1_T2_mirror44": {
+  "d7_fixed": false,
+  "unique_magic": [
+   22
+  ],
+  "n_fixed": 1,
+  "ok": true
+ },
+ "B1_T3_mirror88": {
+  "d7_fixed": false,
+  "unique_magic": [
+   22
+  ],
+  "n_fixed": 1,
+  "ok": true
+ },
+ "B1_T4_neg_left": {
+  "d7_fixed": false,
+  "unique_magic": [],
+  "n_fixed": 0,
+  "ok": true
+ },
+ "B1_T4_neg_right": {
+  "d7_fixed": false,
+  "unique_magic": [],
+  "n_fixed": 1,
+  "ok": true
+ },
+ "B1_T5_diag_shift1": {
+  "d7_fixed": false,
+  "unique_magic": [
+   22
+  ],
+  "n_fixed": 1,
+  "ok": true
+ },
+ "B1_T6_diag_shift2": {
+  "d7_fixed": false,
+  "unique_magic": [
+   22
+  ],
+  "n_fixed": 1,
+  "ok": true
+ },
+ "B1_T7_antidiag_s1": {
+  "d7_fixed": false,
+  "unique_magic": [],
+  "n_fixed": 1,
+  "ok": true
+ },
+ "B2_galois_7": {
+  "got": [
+   1,
+   87
+  ],
+  "exp": [
+   1,
+   87
+  ],
+  "ok": true
+ },
+ "B2_galois_3": {
+  "got": [
+   1,
+   87
+  ],
+  "exp": [
+   1,
+   87
+  ],
+  "ok": true
+ },
+ "B2_galois_29": {
+  "got": [
+   1,
+   87
+  ],
+  "exp": [
+   1,
+   87
+  ],
+  "ok": true
+ },
+ "B2_sigma87_odds": {
+  "got": [
+   true,
+   true
+  ],
+  "exp": [
+   true,
+   true
+  ],
+  "ok": true
+ },
+ "B4_script_cond": {
+  "script_gives": [
+   [
+    1,
+    175
+   ],
+   [
+    1,
+    175
+   ],
+   [
+    1,
+    175
+   ]
+  ],
+  "correct": [
+   [
+    1,
+    87
+   ],
+   [
+    1,
+    87
+   ],
+   [
+    1,
+    87
+   ]
+  ],
+  "ok": false,
+  "note": "31 script 用 (176−d) = −d 條件 (σ=± 鏡像), 正確固定條件係 d(a+1)≡88; 但 run 出嚟 md 寫 {1,87} — script 同 md 唔一致, 需查原 JSON"
+ },
+ "B3_gcd_shift_keepers": {
+  "got": [
+   43
+  ],
+  "exp": [
+   43
+  ],
+  "ok": true
+ },
+ "C1_deg_distrib": {
+  "got": {
+   "40": 20,
+   "20": 10,
+   "10": 5,
+   "5": 5,
+   "4": 2,
+   "2": 1,
+   "0": 1
+  },
+  "exp": {
+   "40": 20,
+   "20": 10,
+   "10": 5,
+   "5": 5,
+   "4": 2,
+   "2": 1,
+   "0": 1
+  },
+  "ok": true
+ },
+ "C1b_per_layer": {
+  "by_deg": {
+   "40": [
+    7
+   ],
+   "20": [
+    14
+   ],
+   "5": [
+    20
+   ],
+   "10": [],
+   "4": [
+    33
+   ],
+   "2": [
+    22
+   ],
+   "0": []
+  },
+  "ok": true
+ },
+ "C2_data_endpoint_magic": {
+  "got": {
+   "(30, 41)": [],
+   "(7, 20)": [
+    7,
+    20
+   ],
+   "(8, 22)": [
+    22
+   ],
+   "(10, 24)": [],
+   "(19, 33)": [
+    33
+   ],
+   "(1, 18)": [],
+   "(19, 38)": [],
+   "(1, 22)": [
+    22
+   ],
+   "(8, 33)": [
+    33
+   ]
+  },
+  "exp": {
+   "(30, 41)": [],
+   "(7, 20)": [
+    7,
+    20
+   ],
+   "(8, 22)": [
+    22
+   ],
+   "(10, 24)": [],
+   "(19, 33)": [
+    33
+   ],
+   "(1, 18)": [],
+   "(19, 38)": [],
+   "(1, 22)": [
+    22
+   ],
+   "(8, 33)": [
+    33
+   ]
+  },
+  "ok": true
+ },
+ "C2_n_hit_cells": {
+  "got": 5,
+  "exp": 5,
+  "ok": true
+ },
+ "C2_anchor_transfer": {
+  "got": [
+   7,
+   20
+  ],
+  "exp": [
+   7,
+   20
+  ],
+  "ok": true
+ },
+ "C2_14_no_endpoint": {
+  "got": [
+   14
+  ],
+  "exp": [
+   14
+  ],
+  "ok": true
+ },
+ "C3_pos7": {
+  "got": [
+   4,
+   20
+  ],
+  "exp": [
+   4,
+   20
+  ],
+  "ok": true
+ },
+ "C3_first_lucas_prime": {
+  "got": 3,
+  "exp": 3,
+  "ok": true
+ }
+}
