@@ -1,0 +1,233 @@
+{
+ "test": "27_magic_rows_deeper",
+ "TEST_D": {
+  "s_step_mode": {
+   "magic": [
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "filler_mean": 2.0,
+   "filler_range": [
+    2,
+    2
+   ],
+   "magic_outside": []
+  },
+  "s_parity_mix": {
+   "magic": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "filler_mean": 1.0,
+   "filler_range": [
+    1,
+    1
+   ],
+   "magic_outside": []
+  },
+  "s_mean_scaled": {
+   "magic": [
+    0.5114,
+    0.5114,
+    0.5114,
+    0.5114,
+    0.5114
+   ],
+   "filler_mean": 0.5114,
+   "filler_range": [
+    0.5114,
+    0.5114
+   ],
+   "magic_outside": []
+  },
+  "step_mode_counts": {
+   "magic": {
+    "2": 5
+   },
+   "filler": {
+    "2": 31
+   }
+  },
+  "s_mean_verdict": "magic s_mean 全部喺 filler 範圍內 — 冇結構差異"
+ },
+ "TEST_E": {
+  "per_gcd": {
+   "1": {
+    "d_list": [
+     1,
+     3,
+     5,
+     7,
+     9,
+     13,
+     15,
+     17,
+     19,
+     21,
+     23,
+     25,
+     27,
+     29,
+     31,
+     35,
+     37,
+     39,
+     41,
+     43
+    ],
+    "has_magic": true,
+    "magic_d": [
+     7
+    ],
+    "v2_176_over_g": 4,
+    "v2_parity": "even",
+    "contains_11_factor": true
+   },
+   "2": {
+    "d_list": [
+     2,
+     6,
+     10,
+     14,
+     18,
+     26,
+     30,
+     34,
+     38,
+     42
+    ],
+    "has_magic": true,
+    "magic_d": [
+     14
+    ],
+    "v2_176_over_g": 3,
+    "v2_parity": "odd",
+    "contains_11_factor": true
+   },
+   "4": {
+    "d_list": [
+     8,
+     16,
+     24,
+     32,
+     40
+    ],
+    "has_magic": false,
+    "magic_d": [],
+    "v2_176_over_g": 2,
+    "v2_parity": "even",
+    "contains_11_factor": true
+   },
+   "8": {
+    "d_list": [
+     4,
+     20,
+     36
+    ],
+    "has_magic": true,
+    "magic_d": [
+     20
+    ],
+    "v2_176_over_g": 1,
+    "v2_parity": "odd",
+    "contains_11_factor": true
+   },
+   "11": {
+    "d_list": [
+     11,
+     33
+    ],
+    "has_magic": true,
+    "magic_d": [
+     33
+    ],
+    "v2_176_over_g": 4,
+    "v2_parity": "even",
+    "contains_11_factor": false
+   },
+   "16": {
+    "d_list": [
+     12,
+     28
+    ],
+    "has_magic": false,
+    "magic_d": [],
+    "v2_176_over_g": 0,
+    "v2_parity": "even",
+    "contains_11_factor": true
+   },
+   "22": {
+    "d_list": [
+     22
+    ],
+    "has_magic": true,
+    "magic_d": [
+     22
+    ],
+    "v2_176_over_g": 3,
+    "v2_parity": "odd",
+    "contains_11_factor": false
+   }
+  },
+  "v2_odd_classes": [
+   2,
+   8,
+   22
+  ],
+  "v2_even_classes": [
+   1,
+   4,
+   11,
+   16
+  ],
+  "rule": "v₂(176/g) 奇 → 必有 magic? (g∈{2,8,22})",
+  "rule_check": true,
+  "even_exceptions": [
+   1,
+   11
+  ],
+  "note": "v₂ 奇數類 3/3 全 magic; v₂ 偶數類 4 個, g=4/16 filler, g=1/11 magic (有例外) — 規則唔完整, 只係『v₂ 奇 ⇒ magic』單向"
+ },
+ "TEST_F": {
+  "gcd1_lucas": [
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    7
+   ],
+   [
+    7,
+    29
+   ]
+  ],
+  "candidates": {
+   "3": "L₂=L₃ (重複索引) mod4=3",
+   "7": "L₄ (唯一) mod4=3 前半",
+   "29": "L₇ (唯一) mod4=1 後半"
+  },
+  "seven_symmetry": {
+   "partner_88": 81,
+   "partner_44": 37,
+   "half_relation": "7 < 22 (half-node)"
+  },
+  "twenty_nine_symmetry": {
+   "partner_88": 59,
+   "partner_44": 15,
+   "half_relation": "29 > 22"
+  },
+  "verdict": "7 = 前半獨有 Lucas 質數 mod4=3; 29 後半 + mod4=1; 3 重複索引 → 7 唯一滿足全部三條件 (但未有預言力測試 — 樣本 1)"
+ }
+}

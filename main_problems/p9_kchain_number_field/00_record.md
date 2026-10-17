@@ -481,6 +481,8 @@ filler:       32 行無 label
 
 > ⚠️ **盲測附註 (2026-10-17, 26_blind_test_magic_rows_rules)**: 上列攻堅「閉合」經盲測降級 — A1 data-free null=0.375 🔴 FAIL (data 只塞 gcd=1/11 類, 巧合 37.5%); A2 Lucas null=0.008 🟡 邊緣 (0.8% 未到 5σ); A3 「缺 deg10」表述修正 → gcd→deg 唔係單射 (gcd8/16 均 deg5), 正確表述 = **gcd 類缺 {4,16} (七揀五)**; TEST B P13 正側 label 同源一致 ✅ 非獨立證據; TEST C R1+R2 篩剩 15 候選唔唯一鎖定 → **magic 代表選擇規則未閉合**, 需新結構判準先可以再盲測。
 
+> ⚠️ **深推附註 (2026-10-17, 27_magic_rows_deeper)**: TEST D — magic 成員結構同 filler **零差異** (s step 全 2, s_mean 全 45) ⟹ magic = 行標籤層 assign, 唔係行結構層; TEST E — v₂奇⇒magic 單向 3/3 (g=2,8,22) 成立但唔充要 (g=1,11 偶都有 magic); TEST F — **L₄/L₅ 連續 Lucas 質數對 (7,11, gap=4=L₃, 都 < half-node 22) 生成 4/5 magic**: 7=L₄, 14=2L₄, 22=2L₅, 33=3L₅, 20=2n_u 仍然唯一冇鏈; 29=L₇ 排除 (後半+mod4=1)。樣本 n=5 未可盲測, 待 88-site/176-site 擴展。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
