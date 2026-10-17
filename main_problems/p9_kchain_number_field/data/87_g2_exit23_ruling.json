@@ -1,0 +1,35 @@
+{
+ "audit": "87_g2_exit23_ruling",
+ "date": "2026-10-17",
+ "ident_min": "2026-10-17 11:03:51.595731",
+ "prog_min": "2026-10-17 13:44:32.219424",
+ "delta_program_minus_ident": "2:40:40.623693",
+ "exit3_program_registration_gate": false,
+ "exit2_future_prereg": "採納為未來 protocol",
+ "G2_final": {
+  "existence": "🟡 O-series 時序獨立 (85)",
+  "predictability": "🔴 盲測 FAIL (59)"
+ },
+ "results": [
+  {
+   "id": "B1_exit3",
+   "desc": "出路③ 程序預註冊閘",
+   "ok": false,
+   "detail": "Δ=2:40:40.623693; 程序>識別"
+  },
+  {
+   "id": "C1_exit2",
+   "desc": "出路② 採納為未來 protocol (唔影響現狀)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "D1_G2_final",
+   "desc": "G2 整合裁決: 存在性🟡 + 可預測性🔴",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 2,
+ "fail": 1
+}
