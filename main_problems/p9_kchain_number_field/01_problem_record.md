@@ -119,6 +119,8 @@
 | 87 | 10-17 | **G2 出路②③ 裁決** | `87_g2_exit23_ruling.py` + `data/87_g2_exit23_ruling.json` + `87_g2_exit23_ruling.md` | **2/3 (B1 誠實 FAIL)**: ★出路③ 程序預註冊閘唔成立 — R5 程序 (35/37 號 13:44/13:56) 係 magic 識別 (11:03) 之後 2時40分 formalize, 程序本身係後驗構建; 出路② 未來真預註冊採納為 protocol (唔影響現狀); ★G2 完整性裁決 (85+87): 唯一出口 = 出路① O-series 閉合先行 (🟡 存在性), 規則可預測性 🔴 (59 p=0.69); G2 最終 = 🔴(規則)+🟡(存在性), 唔會升 PASS | 🟡 存在性/🔴 可預測性 |
 | 88 | 10-17 | **88-site Magic 核心算術必然對照** | `88_site88_core_arithmetic.py` + `data/88_site88_core_arithmetic.json` + `88_site88_core_arithmetic.md` | **3/4 (D1 誠實 FAIL=真發現)**: ★「算術必然」唔跨 N scale — 域層 data-free 唯一: 44-site {22,33} (2個) vs 88-site {44} (1個); 88-site R5 輸出中 22→{22,66} 鏡像對 / 33→{33,55,77} 都唔唯一, 得 44=88/2 HALF 軸唯一; ★80/81 修正: 「3 必然」分兩層 = 域層 {22,33} (真算術) + 生成集層 {20} (4F₅∈G, G-contingent); magic 核心算術必然是 44-site 中心結構特有, 唔可擴展到 88-site (46 4/5 照舊) | ✅ 修正 |
 | 89 | 10-17 | **88-site 鏡像對身份** | `89_site88_mirror_pairs.py` + `data/89_site88_mirror_pairs.json` + `89_site88_mirror_pairs.md` | **4/4 (結論同假設相反, 誠實修正)**: ★鏡像身份係單側唔係對稱共生 — 44 對中 both=1 (44,44)/one=39/none=4; R5 88-site 輸出 6 個全部自身✅鏡像❌ (得 44 self-pair); ★冇身份鏡像對 = {21,67},{32,56},{36,52},{39,49} — 「無身份」跨 N 穩定 (44-site {21,32,36,39} + 88-site 鏡像 4 個); 修正「HALF 軸=mirror 兩側共生」講法 — 正確係「44 唯一 self-mirror 點」; O218 label 判準與 sin 判準要分開引用 | ✅ 修正 |
+| 90 | 10-17 | **無身份集合結構審計** | `90_no_identity_structure.py` + `data/90_no_identity_structure.json` + `90_no_identity_structure.md` | **3/3 — 無身份冇結構對偶判準**: {21,32,36,39} 冇任何簡單結構性質同時排除佢哋而保留 magic (21=F₈ Fib 但冇身份→Fib 唔係身份保證; 32/36 deg5 區但 20 都 gcd8/deg5 分唔得); 無身份=corpus 缺席唔係結構缺席; ★70 號復確認: 身份=存在事實非結構判準, magic 5/5=領域常態 91%; 89 號『無身份跨 N 穩定』修正為 corpus 一致性 | ✅ |
+
 
 
 

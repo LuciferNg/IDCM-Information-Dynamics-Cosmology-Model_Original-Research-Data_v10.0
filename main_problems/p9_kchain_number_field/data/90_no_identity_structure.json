@@ -1,0 +1,174 @@
+{
+ "audit": "90_no_identity_structure",
+ "date": "2026-10-17",
+ "nod": [
+  21,
+  32,
+  36,
+  39
+ ],
+ "mirrors": [
+  49,
+  52,
+  56,
+  67
+ ],
+ "table": {
+  "21": {
+   "gcd": 1,
+   "deg": 40,
+   "inG": true,
+   "prime": false,
+   "lucas": false,
+   "fib": true
+  },
+  "32": {
+   "gcd": 4,
+   "deg": 10,
+   "inG": false,
+   "prime": false,
+   "lucas": false,
+   "fib": false
+  },
+  "36": {
+   "gcd": 8,
+   "deg": 5,
+   "inG": false,
+   "prime": false,
+   "lucas": false,
+   "fib": false
+  },
+  "39": {
+   "gcd": 1,
+   "deg": 40,
+   "inG": false,
+   "prime": false,
+   "lucas": false,
+   "fib": false
+  },
+  "7": {
+   "gcd": 1,
+   "deg": 40,
+   "inG": true,
+   "prime": true,
+   "lucas": true,
+   "fib": false
+  },
+  "14": {
+   "gcd": 2,
+   "deg": 20,
+   "inG": true,
+   "prime": false,
+   "lucas": false,
+   "fib": false
+  },
+  "20": {
+   "gcd": 8,
+   "deg": 5,
+   "inG": true,
+   "prime": false,
+   "lucas": false,
+   "fib": false
+  },
+  "22": {
+   "gcd": 22,
+   "deg": 2,
+   "inG": true,
+   "prime": false,
+   "lucas": false,
+   "fib": false
+  },
+  "33": {
+   "gcd": 11,
+   "deg": 4,
+   "inG": true,
+   "prime": false,
+   "lucas": false,
+   "fib": false
+  }
+ },
+ "candidate_results": [
+  [
+   "gcd 類重複",
+   [
+    21,
+    32,
+    36,
+    39
+   ],
+   [
+    7,
+    14,
+    20,
+    22,
+    33
+   ]
+  ],
+  [
+   "唔係質數且唔係 Lucas 且唔係 Fib ∧ 乘數錨",
+   [
+    32,
+    36,
+    39
+   ],
+   [
+    14,
+    20,
+    22,
+    33
+   ]
+  ],
+  [
+   "deg ≥ 10 且 gcd 唔唯一類",
+   [
+    21,
+    32,
+    39
+   ],
+   [
+    7,
+    14
+   ]
+  ],
+  [
+   "唔喺 G({7,11,5}) 且唔係質數",
+   [
+    32,
+    36,
+    39
+   ],
+   []
+  ],
+  [
+   "gcd1 且唔係質數",
+   [
+    21,
+    39
+   ],
+   []
+  ]
+ ],
+ "perfect_criterion": 0,
+ "results": [
+  {
+   "id": "B1_gcd_repeat",
+   "desc": "無身份 4 個 gcd 類重複 (21/39 都 gcd1) — 唔係 5 類全覆蓋",
+   "ok": true,
+   "detail": "{8, 1, 4}"
+  },
+  {
+   "id": "C1_criterion",
+   "desc": "結構判準完全對偶: 無身份 4/4 hit + magic 0/5 = 0 個候選",
+   "ok": true,
+   "detail": "完美判準冇: [('gcd 類重複', 4, 5), ('唔係質數且唔係 Lucas 且唔係 Fib ∧ 乘數錨', 3, 4), ('deg ≥ 10 且 gcd 唔唯一類', 3, 2), ('唔喺 G({7,11,5}) 且唔係質數', 3, 0), ('gcd1 且唔係質數', 2, 0)]"
+  },
+  {
+   "id": "D1_no_structure",
+   "desc": "無身份集合冇結構對偶判準 — 身份 = corpus 存在事實",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 3,
+ "fail": 0
+}
