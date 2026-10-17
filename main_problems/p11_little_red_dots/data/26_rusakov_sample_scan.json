@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-17",
+  "sample_size": 9,
+  "results": {
+    "A_JADES-GN-68797": {
+      "n_peaks": 2,
+      "peaks_dv": [
+        -687.9828582256821,
+        85.5408463058048
+      ],
+      "max_sep": 773.5237045314868,
+      "mid_off": -301.22100595993857
+    },
+    "C_JADES-GN-73488": {
+      "n_peaks": 1,
+      "peaks_dv": [
+        32.63809218396493
+      ],
+      "max_sep": null,
+      "mid_off": null
+    },
+    "C_JADES-GN-73488_H": {
+      "n_peaks": 2,
+      "peaks_dv": [
+        -551.0492761256891,
+        69.93440964810058
+      ],
+      "max_sep": 620.9836857737897,
+      "mid_off": -240.55743323879426
+    },
+    "E_RUBIES-EGS-49140": {
+      "n_peaks": 2,
+      "peaks_dv": [
+        -354.1024009355492,
+        456.5414230763952
+      ],
+      "max_sep": 810.6438240119444,
+      "mid_off": 51.21951107042298
+    },
+    "F_CEERS-EGS-1244": {
+      "n_peaks": 1,
+      "peaks_dv": [
+        35.10170382175363
+      ],
+      "max_sep": null,
+      "mid_off": null
+    },
+    "G_RUBIES-EGS-58237": {
+      "n_peaks": 2,
+      "peaks_dv": [
+        38.85803450805571,
+        876.3443115143516
+      ],
+      "max_sep": 837.4862770062958,
+      "mid_off": 457.60117301122546
+    },
+    "I_JADES-GN-53501": {
+      "n_peaks": 1,
+      "peaks_dv": [
+        88.1754683378553
+      ],
+      "max_sep": null,
+      "mid_off": null
+    },
+    "J_JADES-GN-38147": {
+      "n_peaks": 2,
+      "peaks_dv": [
+        -455.0704738652268,
+        111.84200050042037
+      ],
+      "max_sep": 566.9124743656472,
+      "mid_off": -171.6142366823737
+    },
+    "K_RUBIES-EGS-50052": {
+      "n_peaks": 1,
+      "peaks_dv": [
+        136.44802068550615
+      ],
+      "max_sep": null,
+      "mid_off": null
+    }
+  },
+  "summary": {
+    "measured": 5,
+    "ladder_hit": 5,
+    "hit_fraction": 1.0
+  }
+}
