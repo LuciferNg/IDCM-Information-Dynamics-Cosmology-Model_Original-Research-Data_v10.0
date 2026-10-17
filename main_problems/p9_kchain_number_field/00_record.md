@@ -575,6 +575,8 @@ filler:       32 行無 label
 
 > ⚠️ **77 號 5 支柱源頭驗證附註 (2026-10-17, 77_pillar_source_verify)**: **7/7 PASS** — A 層 label 真實性企穩: 5 支柱 label 全部有 P13/O-series docs 出處 (7 DM 13.8 MeV / 14 三代 quark / 20 n/p BBN / 22 γ_22 / 33 m_c/m_b + O158 partial)。Magic rows 攻堅最終全景: 統計 7 維度 (領域/anchor/37 集/身份/深度/O 源頭/cover 支柱) 全部撤回 + 企穩層 (R5 consistency 5/5、結構稀有 47 倍、22+33 強制、A 層 label 真實性、12 label 存在性)。「宇宙係唔係我哋嘅宇宙」由 O-series 閉合觀測符合度支撐；P9 角色 = 程序一致 + label 有結構根，已完成。
 
+> ⚠️ **78 號 Magic rows 攻堅終裁附註 (2026-10-17, 78_magic_final_adjudication)**: **3/3 終裁完成**。撤回層 = 統計 7 維度全 🔴 (領域命中率/anchor 唯一/37 集合/身份完整/標 label 覆蓋/身份深度/O 源頭數); 企穩層 = 5 項 ✅ (R5 consistency 5/5、結構稀有 p=2.1%、22+33 結構強制、A 層 label 真實性、12 label 存在性); ★出路 = 「支撐物理世界」靠 O-series 樣本外閉合 (O55 closed/O171 closed/O35 open/O158 partial), 唔係 P9 統計。P9 角色完成: magic 有結構根 + 程序一致 + label 有出處——Magic rows 攻堅 (25-78) 正式收線。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)

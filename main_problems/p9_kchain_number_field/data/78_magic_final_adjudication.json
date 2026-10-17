@@ -1,0 +1,42 @@
+{
+ "adjudication": "78_magic_final_adjudication",
+ "date": "2026-10-17",
+ "withdrawn_7": [
+  "70 領域命中率",
+  "70 anchor 唯一性",
+  "71 5-collection 唯一",
+  "72 身份完整度",
+  "72 label 覆蓋",
+  "73 身份深度",
+  "74 O 源頭數"
+ ],
+ "stable_5": [
+  "R5 程序 consistency",
+  "magic 結構稀有",
+  "22+33 結構強制",
+  "A 層 label 真實性",
+  "12 label 存在性"
+ ],
+ "results": [
+  {
+   "id": "A1_seven_withdrawn",
+   "desc": "統計 7 維度全部撤回確認",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "B1_stable5",
+   "desc": "企穩層 5 項確認",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "C1_register_scan",
+   "desc": "O-series 閉合狀態可查 (closed/partial/open)",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "pass": 3,
+ "fail": 0
+}
