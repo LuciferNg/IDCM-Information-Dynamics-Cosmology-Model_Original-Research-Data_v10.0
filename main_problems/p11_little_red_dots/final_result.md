@@ -70,4 +70,8 @@ crystal_stress（初版，2026-08-16）→ O140/O159/O161/O171 → O173（應變
     **C21 (record 28) 真相收斂**: O143 𝒫 (CMB 高斯窗口) 唔填到遮蔽缺口;
     三層投影 ①O180 位置 🟢 ②O143 天球 🟢 ③視線遮蔽 **從缺 🔴** —
     τ(v) 需 hop 階梯零參數推出 (禁凑), 模型「模態對+遮蔽」未公平測試。
+    **C22 (records 29-30) 遮蔽算子排除鏈**: O179 hop 階梯 [1,4,8,11,12,11,8,4,1]
+    Σ=60 對稱 (record 28 截頭更正); W(i) 屬位置層 (434/434) 非遮蔽層;
+    𝒫∘W 失衡來源係 𝒫 自身 (𝒫^T·uniform 都失衡) 且 channel 身份錯誤
+    (𝒫=Galactic longitude vs 模態對=極角 θ) ⟹ category error; τ(v) 真從缺。
 - 🟡 Q3 宿主星系 M_host = M_BH×306（JWST）；P13（Euclid DR1）；P15（Gaia DR4）；P9′（AugerPrime 2035）
