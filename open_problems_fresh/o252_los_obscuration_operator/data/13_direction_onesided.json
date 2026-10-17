@@ -1,0 +1,22 @@
+{
+  "n": 13,
+  "blue": 10,
+  "red": 3,
+  "p_one_sided": 0.046142578125,
+  "p_two_sided": 0.09228515625,
+  "pre_registered_dip_sign": false,
+  "record21": "峰比 R<1 事前預言, 冇 dip sign 預言",
+  "conclusion": "方向 gap 維持未閉合: two-sided p=0.092 唔顯著; one-sided p=0.046 係 post-hoc 收窄, 唔當閉合",
+  "checks": [
+    {
+      "name": "X1 報告 one-sided 探索性值",
+      "pass": true,
+      "detail": "p_one=0.0461 — 只係探索性上界, 唔係閉合"
+    },
+    {
+      "name": "X2 事前性: record 21 有 dip sign 預言",
+      "pass": false,
+      "detail": "record 21 只預言峰比 R<1, O252 τ(v) 從未事前預言 dip 藍側"
+    }
+  ]
+}
