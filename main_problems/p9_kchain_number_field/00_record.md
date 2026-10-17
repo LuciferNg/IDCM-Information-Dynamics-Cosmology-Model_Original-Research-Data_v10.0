@@ -569,6 +569,8 @@ filler:       32 行無 label
 
 > ⚠️ **74 號 Magic 閉合源頭數對比附註 (2026-10-17, 74_magic_osource_compare)**: **2/4 PASS (D1/D2 誠實 FAIL)**。magic O 源頭數 67, 排名 #5/37 (top 70) 冇優勢; ★明細: 14 直接源頭 0 個 (GEN 以格身份, 唔係 d 直接)、22 嘅 51 個係譜討論污染 (γ_22=2 最簡有理例子)、7 源頭多 (O34-39/O51/O54/O171/O233)。六判準 (anchor/37 集/身份 37/37/label/深度/O 源頭) 全 FAIL。剩「角色多樣性」(49 號宇宙 5 支柱) 未測。
 
+> ⚠️ **75 號 Magic 角色多樣性附註 (2026-10-17, 75_magic_role_diversity)**: **6/6 PASS ★★★ 第一個 magic 有優勢維度**。窮舉 37 過閘集合計支柱 cover (5 支柱: ANCHOR 7/GEN 14/TRANSFER 20/HALF 22/KTREE 33): **magic 係唯一 cover 全 5 支柱嘅集合** (其他 36 個 cover ≤4: cover4=10/cover3=18/cover2=8/cover0=0——22+33 gcd 強制保證≥2)。label cover (11 集) magic #1/37。⟹ 「宇宙 5 支柱唯一承載集」有窮舉證明——角色多樣性 = 真正 distinctiveness。七判準總結: 統計六維度 FAIL (anchor/37 集/身份/深度/O 源頭) + 角色維度 ✅。72 vs 75 label cover 表面矛盾: 9 格 d 值集 vs label+支柱 11 集——兩者啱。
+
 ---
 
 ## 🔬 開放問題閉合 (2026-08-25)
