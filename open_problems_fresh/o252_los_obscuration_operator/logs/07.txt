@@ -1,0 +1,29 @@
+====================================================================================
+O252/07 — 全樣本 dip 掃描 + 統計閉合
+====================================================================================
+預言: |v|=289.76±167.23 (P1+P2), depth=0.9817 (P3), 藍側 (P4)
+  [A objA_g395m Hα] dv= -365.4 depth=0.82 σ=  172 ΔAIC= +148.3 ✓dip HIT
+  [A objA_g395m Hβ] dv= -223.1 depth=0.86 σ=  198 ΔAIC=  +48.9 ✓dip HIT
+  [A objA_g395h Hα] dv= -295.9 depth=0.94 σ=  181 ΔAIC= +371.5 ✓dip HIT
+  [A objA_g395h Hβ] dv=   +0.0 depth=0.44 σ=  180 ΔAIC=  -25.1   — 
+  [C objC_g395m Hα] dv= -291.5 depth=0.72 σ=  231 ΔAIC= +160.0 ✓dip HIT
+  [C objC_g395h Hα] dv= -158.4 depth=0.70 σ=  135 ΔAIC= +311.8 ✓dip HIT
+  [E objE_g395m Hα] dv=  -89.6 depth=0.44 σ=  185 ΔAIC= +131.8 ✓dip 
+  [E objE_g395m Hβ] dv= -800.0 depth=0.30 σ=  400 ΔAIC=  +70.1 ✓dip 
+  [F objF_g395m Hα] dv= -265.9 depth=0.82 σ=  183 ΔAIC= +133.9 ✓dip HIT
+  [F objF_g395m Hβ] dv=   +0.0 depth=0.40 σ=  180 ΔAIC=  -11.3   — 
+  [G objG_g395m Hα] dv= +134.6 depth=0.50 σ=  193 ΔAIC= +245.9 ✓dip HIT
+  [I objI_g395m Hα] dv= +211.7 depth=0.81 σ=  232 ΔAIC= +165.2 ✓dip HIT
+  [J objJ_g395m Hα] dv= -232.3 depth=0.95 σ=  171 ΔAIC= +179.7 ✓dip HIT
+  [J objJ_g395m Hβ] dv= -265.8 depth=0.83 σ=  228 ΔAIC=  +67.7 ✓dip HIT
+  [J objJ_g395h Hβ] dv= +493.3 depth=1.50 σ=  400 ΔAIC= +127.8 ✓dip 
+  [K objK_g395m Hα] dv= +148.5 depth=0.89 σ=  166 ΔAIC= +205.8 ✓dip HIT
+  [K objK_g395m Hβ] dv=  -29.1 depth=0.81 σ=  184 ΔAIC=   +9.3 ✓dip 
+
+顯著 dip: 15, 預言窗命中 (|v|∈289.76±167.23): 11
+命中率 73.33%
+藍側比例: 11/15
+[PASS] S1 命中數 vs MC null 11/15 hits, p(≥11 by chance)=0.0000 (p_single=0.1115)
+[PASS] S2 藍側方向 11/15 藍側
+
+結果: 2/2 PASS → data/07_full_sample_scan.json

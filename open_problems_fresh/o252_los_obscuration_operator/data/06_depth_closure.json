@@ -1,0 +1,23 @@
+{
+  "v_abs_kms": 289.758881257888,
+  "sigma_kms": 167.22758942727745,
+  "depth_A_obs": 0.9789568609591053,
+  "depth_candidates": {
+    "D_a_hop4": 0.9816843611112658,
+    "D_b_n4": 0.18126924692201818,
+    "D_c_1": 0.6321205588285577
+  },
+  "note": "D-a 之前 (script 04) 已用 ⟨hop⟩=4 推位置; 深度標籤後驗",
+  "checks": [
+    {
+      "name": "D-a ⟨hop⟩=4 深度命中 <2%",
+      "pass": true,
+      "detail": "dev 0.28%"
+    },
+    {
+      "name": "E-dip 藍側 (dv<0, 同 paper +47 分歧)",
+      "pass": true,
+      "detail": "dv=-89.6"
+    }
+  ]
+}

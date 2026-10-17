@@ -1,0 +1,56 @@
+{
+  "uniq": {
+    "n": 12,
+    "hits": 9,
+    "blue": 9,
+    "p_ge": 4.2637010250015895e-07
+  },
+  "all_nobound": {
+    "N": 13,
+    "hits": 11,
+    "z": 8.416314079130645,
+    "p_single": 0.11148533333333334
+  },
+  "sigma_dip": {
+    "median": 184.37776076491215,
+    "mean": 189.28861845031588,
+    "pred": 167.228
+  },
+  "depth": {
+    "max": 0.9451542270215912,
+    "median": 0.8157836509374428,
+    "pred": 0.9817
+  },
+  "direction": {
+    "blue": 10,
+    "N": 13,
+    "p_two_sided": 0.09228515625
+  },
+  "checks": [
+    {
+      "name": "V1 去重後命中 MC null",
+      "pass": true,
+      "detail": "9/12 hits, p=4.264e-07 (p_single=0.1115)"
+    },
+    {
+      "name": "V2 z-score ≥ 3",
+      "pass": true,
+      "detail": "z = 8.42 (11/13, p_single=0.1115)"
+    },
+    {
+      "name": "V3 σ_dip 中位 ≈ σ₃ (1±0.3)",
+      "pass": true,
+      "detail": "median=184.4, mean=189.3, σ₃=167.2, ratio=1.103"
+    },
+    {
+      "name": "V4 depth 上限近 0.9817 (⟨hop⟩=4)",
+      "pass": true,
+      "detail": "max=0.945 (pred 0.9817, dev 3.7%), median=0.816"
+    },
+    {
+      "name": "V5 藍側比例 (two-sided binom)",
+      "pass": false,
+      "detail": "10/13 藍側, p=0.0923"
+    }
+  ]
+}
