@@ -169,8 +169,8 @@ REF_PATH_FIX = {
         os.path.join(OPF, "o222_qm_evaluation_semantics/scripts/70_r27d_nogo.py"),
     os.path.join(REPO, "o229_mu2_b4_particle_accounting"):
         os.path.join(OPF, "o229_mu2_b4_particle_accounting/01_problem_record.md"),
-    os.path.join(MAIN, "p5_crystal_stress/01_problem_record.md"):
-        os.path.join(MAIN, "p5_crystal_stress/docs/01_problem_record.md"),
+    os.path.join(MAIN, "p5_crystal_stress/docs/01_problem_record.md"):
+        os.path.join(MAIN, "p5_crystal_stress/01_problem_record.md"),
     os.path.join(MAIN, "p11_little_red_dots/01_problem_record.md"):
         os.path.join(MAIN, "p11_little_red_dots/records/01_problem_record.md"),
     os.path.join(MAIN, "p12_uhecrs/01_problem_record.md"):
@@ -185,6 +185,27 @@ REF_PATH_FIX = {
 O247_SLUG_FIX = {
     os.path.join(OPF, "natural_contamination_ladder/01_problem_record.md"):
         os.path.join(OPF, "o247_natural_contamination_ladder/01_problem_record.md"),
+}
+
+
+# 2026-10-18 修正 P10 REF-MISSING: registered 事件 ref 指
+# main_problems/p10_ktree_structure/01_ktree_definition.py，但 P10 於 2026-10-18
+# 結構重組（跟 O-series 慣例：root 只留 README/final_result/01_problem_record/
+# SESSION_START；*.md→docs/、*.py→scripts/）後該檔已移入 scripts/。
+# JSONL 歷史事件唔改（append-only），翻譯層補回——同 REF_PATH_FIX 先例一致。
+P10_REF_FIX = {
+    os.path.join(MAIN, "p10_ktree_structure/01_ktree_definition.py"):
+        os.path.join(MAIN, "p10_ktree_structure/scripts/01_ktree_definition.py"),
+}
+
+# 2026-10-18 P12 結構重整 (records→docs, root 建齊四檔): 註冊時嘅 note event ref
+# 指 records/03_uhecrs_record.md，該檔已移入 docs/。JSONL 歷史事件唔改
+# （append-only），翻譯層補回——同 P10_REF_FIX 先例一致；只影響 uhecrs 自己 ref 解析。
+P12_REF_FIX = {
+    os.path.join(MAIN, "p12_uhecrs/records/03_uhecrs_record.md"):
+        os.path.join(MAIN, "p12_uhecrs/docs/03_uhecrs_record.md"),
+    os.path.join(MAIN, "p12_uhecrs/records/05_psz1_vacuum_result.md"):
+        os.path.join(MAIN, "p12_uhecrs/docs/05_psz1_vacuum_result.md"),
 }
 
 
@@ -231,6 +252,14 @@ def resolve_ref(fp):
     # 2026-10-12 O247 類⑦: registered 事件 ref slug 寫漏 oNNN_ 前綴 →
     # 翻譯層（上方 O247_SLUG_FIX）；only-for-O247，唔做全庫猜測。
     new = O247_SLUG_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-18 P10 結構重組 (md→docs, py→scripts) 翻譯層
+    new = P10_REF_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-18 P12 結構重整 (records→docs) 翻譯層
+    new = P12_REF_FIX.get(fp)
     if new and os.path.exists(new):
         return new
     for src, dst in MOVED_SRC.items():

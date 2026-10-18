@@ -1,0 +1,11 @@
+{
+  "alpha_candidates_rad": {
+    "eps5_32_60": 4.696351236951785e-05,
+    "eps5_4": 2.2014146423211493e-05,
+    "kappa_eps3": 0.00023053513427713843
+  },
+  "rms_cold_spot": 1.1007073211605747e-05,
+  "prediction": "Polarization rotation ~1e-5 rad near frustration edges",
+  "falsifiable": "No polarization anomaly in edge bands would falsify",
+  "cmb_s4_sensitivity": "0.01 deg = 1.7e-4 rad (S/N needs stacking)"
+}

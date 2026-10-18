@@ -1,0 +1,9 @@
+{
+  "E_GZK_eV": 4.8910295446012174e+19,
+  "E_max_eV": 3.165540817257876e+20,
+  "E_max_EeV": 316.5540817257876,
+  "omg_ratio": 1.0108857173959847,
+  "prediction": "No UHECR event > 3.166e20 eV (316.6 EeV)",
+  "falsifiable": "Event > 316.6 EeV would falsify IDCM",
+  "status": "all known events consistent"
+}
