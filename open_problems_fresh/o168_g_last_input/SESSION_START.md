@@ -1,7 +1,7 @@
 # O168 — Session Handoff (下一 session 交接)
 
 > **交接日期**: 2026-09-10 (最後更新 10-16)
-> **狀態**: 🟡 **部分閉合 (phase-closeout 10-16)** — 30 scripts (368+4)/371 PASS + 盲測 scripts/30 (樣本外判決: 1/1749 否證 🔴); 已判層: η_B 否證 / Ω_b=1/20 / H₀ 鎖 / α-跑動量=9 強迫 (O139 已答世代平方) / 18π / 70+67=137 / M_P(ω_ring) 算子維持 0.057% 無結構殘餘 (1/1749 已否證); **真正剩餘 1 項** (10-16 register 核對 + 盲測): **M₀ 標度 → O38/m0-scale** — verdict=partial, commit 42e450c + 盲測
+> **狀態**: 🟡 **部分閉合 (phase-closeout 10-16)** — 29 scripts 368/371 PASS (3 FAIL = scripts/23 誠實否定) + 獨立審計 48/48 + 盲測 scripts/30 (樣本外判決: 1/1749 否證 🔴, 非 PASS 制); 已判層: η_B 否證 / Ω_b=1/20 / H₀ 鎖 / α-跑動量=9 強迫 (O139 已答世代平方) / 18π / 70+67=137 / M_P(ω_ring) 算子維持 0.057% 無結構殘餘 (1/1749 已否證); **真正剩餘 1 項** (10-16 register 核對 + 盲測): **M₀ 標度 → O38/m0-scale** — verdict=partial, commit 42e450c + 36dafcc
 
 ## 已完成 (本 session)
 
