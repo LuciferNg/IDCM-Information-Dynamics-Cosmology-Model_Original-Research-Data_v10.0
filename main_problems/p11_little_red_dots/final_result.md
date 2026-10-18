@@ -74,4 +74,9 @@ crystal_stress（初版，2026-08-16）→ O140/O159/O161/O171 → O173（應變
     Σ=60 對稱 (record 28 截頭更正); W(i) 屬位置層 (434/434) 非遮蔽層;
     𝒫∘W 失衡來源係 𝒫 自身 (𝒫^T·uniform 都失衡) 且 channel 身份錯誤
     (𝒫=Galactic longitude vs 模態對=極角 θ) ⟹ category error; τ(v) 真從缺。
+    **C23 (record 31) O252 回交**: τ(v) 第一版建立 (R1-R13+closeout+R14)
+    遮蔽層由從缺→部分閉合: 窗存在 (9-11/13 p=0.0004/p=0) + 窗寬 (dev
+    0.12%) + 深度上限/中位 (0.982/0.845) 零常數閉合; 窗中心 μ_hat=235.7
+    出 289.76 CI (最硬 gap 🔴), hop=2 後驗無身份; 方向 p=0.092 🔴;
+    depth~|dv| ρ=0.612 MC 93.3% 真實 🟢; 等 Cycle 3/4 — record 14 判決維持.
 - 🟡 Q3 宿主星系 M_host = M_BH×306（JWST）；P13（Euclid DR1）；P15（Gaia DR4）；P9′（AugerPrime 2035）
