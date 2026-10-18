@@ -114,6 +114,10 @@ Euclid DR1（2026-11-12）；O110 全譜缺口。
 - ⚠️ **首輪兩個方法 bug 已修正重跑**（① 球面弧內容判定寫錯 → 邊帶誤縮成節點帶；② 條件化不對等
   → 假 deficit）。詳見 `docs/07` §三。舊讀數「edge-only 0/68、p=4.8e-10」**已撤銷，不得引用**。
 - 低能段 46-80 EeV: 0/14 vs MC 4.0±1.7 → 單尾 **p=0.0090**；80+ EeV 段 43.2%
+- `scripts/26_lee_correction.py`（LEE 校正 ✅）: family-wise max-statistic null（4 層 × 2 窗, |F|=8）
+  → 節點側最強點（80-100 EeV <8°, z=+2.37）naive 0.0160 → **校正 0.0848（唔顯著）**；
+  低能避開（−z=2.38）naive 0.0070 → **校正 0.0080（仍顯著）** ⟹ 唯一過校正嘅訊號 = 低能避開
+- 記錄: `docs/07`（§4 + §4.5 + §六局限）；輸出: `data/lee_correction.json`
 - **判決**: 🔴 32 阻挫邊方向預言 **否證**（四個獨立角度全部落 null）；🟡 60 節點 ±8° 邊際支持（+1.40σ）
 - 記錄: `docs/07_frustration_edge_and_lowenergy.md`；輸出: `data/edge_auger_and_lowenergy.json`,
   `data/frustration_edge_verdict.json`
