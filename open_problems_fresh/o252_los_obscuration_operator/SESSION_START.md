@@ -14,7 +14,7 @@ source:  p11_little_red_dots records 25-30 (死因定案: 遮蔽層從缺)
 -->
 
 > **Session**: 2026-10-17（新建立）
-> **狀態**: 📄 **已註冊 — 未開始**
+> **狀態**: 🟡 **部分閉合**（R1-R13 + closeout 2026-10-17: 窗存在/窗寬閉合, 深度上限/中位命中, 窗中心身份 + 方向開放）
 > **來源**: p11_little_red_dots records 25-30（LRD 死因定案：遮蔽層從缺）
 > **前置**: O180（世界環投影核）、O143（𝒫 天球投影）、O179（hop 階梯/W 權重）
 > **位置**: `open_problems_fresh/o252_los_obscuration_operator/`
@@ -75,3 +75,26 @@ source:  p11_little_red_dots records 25-30 (死因定案: 遮蔽層從缺)
 
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
+
+---
+
+## 六、攻堅結果加注 (closeout 2026-10-17)
+
+```text
+✅ 已閉合: τ(v)=帶+窗 結構存在 — 窗存在含冇-dip 反例 (hop2 11/13 p=0,
+   hop4 9/13 p=0.0004), 窗寬 σ=σ₃·17/15=189.52 (dev 0.12%)
+✅ 已閉合: 冇-dip 窗由 Hβ SNR 極限解釋 (Hα ΔAIC 171 vs 37)
+🟡 已收窄: 深度上限 τ_w=4 (top-3 0.923, 6%) + 中位 τ_eff=28/15 (3.5%),
+   per-source scatter 未鎖定
+🟡 後驗 — 唔當結構閉合: hop=2 (204.9) 窗中心候選, 需 pre-register 盲測
+🔴 負結果: 窗中心 289.76 (hop=4 事前) — μ_hat=235.7±21.6 出 CI (R10)
+🔴 負結果: band-bias 方向 (R4), one-sided 方向 (R8) — 方向 two-sided
+   p=0.092 未閉合
+🟢 診斷性閉合: hop 階梯 ⟨v⟩=280.03 ≠ 窗中心 235.7 — 需吸收截面新機制 (R13)
+
+新開放問題 (register 已記錄, 唔喺本檔註冊):
+  1. 窗中心結構身份 (吸收截面權重機制) — 最硬 gap
+  2. 深度 per-source scatter (需每源凝聚密度模型)
+  3. 方向 sign (需凝聚層側向身份或更大樣本)
+  4. 精確窗中心驗證 (Cycle 3/4 R~2700 高解像 pre-register 分辨 204.9 vs 236)
+```

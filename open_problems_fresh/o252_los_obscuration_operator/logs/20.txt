@@ -1,0 +1,23 @@
+====================================================================================
+O252/20 — docs↔data 交叉核對 (唯讀)
+====================================================================================
+[PASS] docs/03 引 9/12 命中 —
+[PASS] docs/03 引 p=4.26e-7 data/08 V1 p_ge=4.26e-07
+[PASS] docs/03 引 z=8.42 data/08 z=8.42
+[PASS] docs/07 引 189.52 —
+[PASS] docs/07 引 dev 0.12% data/12 S1 dev=0.12%
+[PASS] docs/07 引 t=-0.03 data/12 t_sigE=-0.03
+[PASS] docs/10 引 μ_hat 235.7 data/15 mu_hat=235.7
+[PASS] docs/10 引 ±21.6 data/15 se=21.6
+[PASS] docs/10 引 CI [193,278] data/15 ci95=[193.40242429317723, 278.05623242963503]
+[PASS] docs/12 引 9/13 —
+[PASS] docs/12 引 11/13 —
+[PASS] docs/12 引 Hβ 171 vs 37 data/18 Hα=171 Hβ=37
+[PASS] docs/13 引 280.03 data/19 mean_v=280.0281
+[PASS] docs/11 引 ΔAIC≥150 μ_hat 203.7 —
+[PASS] docs/09 引 p=0.0003 data/14 null_uniform_p=0.0003
+docs 01-13 存在檢查: missing=[]
+[PASS] docs 01-13 全部存在 missing=[]
+
+結果: 16/16 PASS → (唯讀, 唔寫 data)
+→ data/20_doc_crosscheck.json 記錄

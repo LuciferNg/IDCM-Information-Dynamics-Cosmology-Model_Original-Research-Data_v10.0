@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "name": "docs/03 引 9/12 命中",
+      "pass": true,
+      "detail": "—"
+    },
+    {
+      "name": "docs/03 引 p=4.26e-7",
+      "pass": true,
+      "detail": "data/08 V1 p_ge=4.26e-07"
+    },
+    {
+      "name": "docs/03 引 z=8.42",
+      "pass": true,
+      "detail": "data/08 z=8.42"
+    },
+    {
+      "name": "docs/07 引 189.52",
+      "pass": true,
+      "detail": "—"
+    },
+    {
+      "name": "docs/07 引 dev 0.12%",
+      "pass": true,
+      "detail": "data/12 S1 dev=0.12%"
+    },
+    {
+      "name": "docs/07 引 t=-0.03",
+      "pass": true,
+      "detail": "data/12 t_sigE=-0.03"
+    },
+    {
+      "name": "docs/10 引 μ_hat 235.7",
+      "pass": true,
+      "detail": "data/15 mu_hat=235.7"
+    },
+    {
+      "name": "docs/10 引 ±21.6",
+      "pass": true,
+      "detail": "data/15 se=21.6"
+    },
+    {
+      "name": "docs/10 引 CI [193,278]",
+      "pass": true,
+      "detail": "data/15 ci95=[193.40242429317723, 278.05623242963503]"
+    },
+    {
+      "name": "docs/12 引 9/13",
+      "pass": true,
+      "detail": "—"
+    },
+    {
+      "name": "docs/12 引 11/13",
+      "pass": true,
+      "detail": "—"
+    },
+    {
+      "name": "docs/12 引 Hβ 171 vs 37",
+      "pass": true,
+      "detail": "data/18 Hα=171 Hβ=37"
+    },
+    {
+      "name": "docs/13 引 280.03",
+      "pass": true,
+      "detail": "data/19 mean_v=280.0281"
+    },
+    {
+      "name": "docs/11 引 ΔAIC≥150 μ_hat 203.7",
+      "pass": true,
+      "detail": "—"
+    },
+    {
+      "name": "docs/09 引 p=0.0003",
+      "pass": true,
+      "detail": "data/14 null_uniform_p=0.0003"
+    },
+    {
+      "name": "docs 01-13 全部存在",
+      "pass": true,
+      "detail": "missing=[]"
+    }
+  ],
+  "ok": 16,
+  "total": 16
+}
