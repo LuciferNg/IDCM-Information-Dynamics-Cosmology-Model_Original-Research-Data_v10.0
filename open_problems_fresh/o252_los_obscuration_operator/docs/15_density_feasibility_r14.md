@@ -113,4 +113,22 @@ MC60: 合成 ρ 中位 +0.162, 95% CI [−0.521, +0.605], 實際 +0.612 @ 96.7% 
 3. 若 A 真 + 有 RA/Dec → 新 O 推「天球位置 → hop 節點 → column
    density」投影模型 (唔係 W 算子, record 30 已封位置層)
 
+## 10. handoff 記錄 (2026-10-17, 只經 register — 禁寫 O143/O179 目錄)
+
+欠缺項已 handoff（`handed_off` events, mirror 已跑）:
+
+| 目標 | 欠缺項 | 內容 |
+|:--|:--|:--|
+| **O143** | 𝒫 per-source 凝聚身份模型 | 天球位置 → hop 節點 → column density per-source 投影；RA/Dec 渠道已確認 (nirspec_v44 A/C/I + records/17 E/F/J/K)；ABCD 篇 covering factor 做外部對照 |
+| **O179** | hop 階梯 per-source 身份 + 吸收截面權重 | hop 階梯普適冇 per-source 身份；窗中心 μ_hat=235.7 未命中質量統計 ⟨v⟩=280.03 — 需「吸收截面權重」新統計量 |
+
+狀態: O252 本身維持 🟡 partial（窗存在/窗寬/深度閉合 + 層A depth~|dv| 真實
+結構傾向; 窗中心身份 + 方向 + 層B column density 開放→O143/O179）
+
+1. **MC 60 強化** (已完成, 見 §9) — 收窄 CI, A 部分升 🟢 傾向真實
+2. **攞 E/F/G/J/K RA/Dec** (nirspec_v44 剩餘 grep + ABCD/paper table) —
+   B 部分數據可齊
+3. 若 A 真 + 有 RA/Dec → 新 O 推「天球位置 → hop 節點 → column
+   density」投影模型 (唔係 W 算子, record 30 已封位置層)
+
 *文檔: O252 攻堅 R14 · 可行性診斷 · 2026-10-17*
