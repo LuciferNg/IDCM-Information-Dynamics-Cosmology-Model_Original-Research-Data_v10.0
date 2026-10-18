@@ -14,6 +14,10 @@ UHECR 係空間晶格應力釋放（Topological Stress Release）——60 個 A�
 - E_max = 4φ·E_GZK = 3.166×10²⁰ eV（Oh-My-God 上限 1.08%）
 - Auger 各向異性（109 events, 8° 節點）：Fisher 2.66σ / 能量加權 3.99σ
 - 星系團節點真空（4 目錄）：Fisher4 p=0.0003 = 3.43σ；P5 DESI 第 5 重 Fisher5=4.69σ（2026-10-17）
+- P12 精化（2026-10-18, docs/06）：DESI 5th exact Binomial @3.0° = 1.242e-5 ⟹ **Fisher5 = 5.153σ**
+- P12 路線 3 補完（2026-10-18, docs/07）：**32 阻挫邊 ±5° 方向預言否證**（修正球面弧段判定後
+  全樣本 + 4 能量層 + 條件化 rate + 三分區 χ²=2.10 p=0.350 全部落 null）；方向證據只支持節點側
+  （節點帶 +1.40σ 邊際）；低能段 46-80 EeV 避開節點 p=0.0090（0/14 vs MC 4.0±1.7）
 
 ## 依賴
 
@@ -34,6 +38,8 @@ IDCM-v10.0 → O140 FSR → P5 crystal_stress → P12 uhecrs（＋ P11 LRD）
 - 🔴 偏振宇稱：edge-band mask 已凍結（P5 docs/09），等 CMB-S4/SO
 - 🔴 60 節點 Euclid 檢驗：等 DR1（2026-11-12，P5 預註冊）
 - 🔴 全譜 10⁹–10¹⁹ eV 缺口 → O110
+- 🟡 60 節點 ±8° 方向檢驗：+1.40σ 邊際（Auger 109, 8° 窗單尾 p=0.093）；能量加權 Fisher 3.99σ 屬另一統計量
+- 🟡 低能段（46-80 EeV）避開節點 p=0.0090（N=14；分層 look-elsewhere 未校正，待 AugerPrime）
 
 > ⚠️ 密度基準：本目錄唔新設閉合宣稱（主體閉合喺 P5）；各向異性 p 值為文獻級 MC（1500-5000 次），
 > 5σ 級宣稱需合併樣本（Euclid / AugerPrime 路線）。

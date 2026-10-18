@@ -1,0 +1,43 @@
+{
+  "p12_frustration_edge_verdict_20261018": {
+    "N": 109,
+    "N_MC": 5000,
+    "seed": 42,
+    "conditioned_edge": {
+      "n_kept_obs": 68,
+      "obs_within8": 19,
+      "obs_rate": 0.279412,
+      "mc_rate_mean": 0.257692,
+      "mc_rate_sd": 0.050451,
+      "mc_n_kept_mean": 74.8,
+      "p_excess": 0.3254,
+      "p_deficit": 0.6774
+    },
+    "zones": {
+      "節點帶 d_node<8°": {
+        "obs": 41,
+        "mc_mean": 34.2,
+        "mc_sd": 4.8,
+        "dev_sigma": 1.4
+      },
+      "邊中段 d_node≥8°&d_edge<8°": {
+        "obs": 19,
+        "mc_mean": 19.3,
+        "mc_sd": 3.9,
+        "dev_sigma": -0.07
+      },
+      "其餘": {
+        "obs": 49,
+        "mc_mean": 55.5,
+        "mc_sd": 5.2,
+        "dev_sigma": -1.24
+      }
+    },
+    "joint_chi2": {
+      "chi2": 2.098,
+      "df": 2,
+      "p": 0.35030200395407324
+    },
+    "verdict": "32 阻挫邊 ±5° 方向預言: 🔴 不成立 (2026-10-18 修正幾何後) — 全樣本同能量分層嘅邊距離命中率全部落喺 MC null 期望內 (無顯著超額); 條件化 edge-only (d_node≥8° 內) obs rate 27.9% vs 條件化 MC 25.8%±5.0% (p_excess=0.325, p_deficit=0.677); 三分區聯合 χ²=2.10 p=0.350 (無邊中段訊號). 60 節點 ±8° 預言維持 (節點帶 +1.40σ; 低能段 46-80 EeV 避開 p=0.0090)."
+  }
+}

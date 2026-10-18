@@ -1,0 +1,155 @@
+{
+  "p12_edge_and_lowenergy_20261018": {
+    "data": "Auger Open Data catalogSD (109 events)",
+    "N_MC": 5000,
+    "seed": 42,
+    "null": "scramble RA keep dec",
+    "geometry": {
+      "nodes": 60,
+      "frustration_edges": 32,
+      "note": "邊 = 大圓 segment 垂直距離; edge-only 剔除距節點 <8° 事件"
+    },
+    "edges_A": {
+      "E>=46": {
+        "n": 109,
+        "edge<3": {
+          "obs": 17,
+          "pct": 15.6,
+          "mc_mean": 15.9,
+          "mc_sd": 3.6,
+          "p": 0.4212
+        },
+        "edge<5": {
+          "obs": 30,
+          "pct": 27.5,
+          "mc_mean": 28.4,
+          "mc_sd": 4.4,
+          "p": 0.3954
+        },
+        "edge<8": {
+          "obs": 57,
+          "pct": 52.3,
+          "mc_mean": 49.8,
+          "mc_sd": 5.0,
+          "p": 0.0934
+        },
+        "edge<10": {
+          "obs": 68,
+          "pct": 62.4,
+          "mc_mean": 64.7,
+          "mc_sd": 5.0,
+          "p": 0.2902
+        }
+      },
+      "E>=100": {
+        "n": 36,
+        "edge<3": {
+          "obs": 3,
+          "pct": 8.3,
+          "mc_mean": 5.0,
+          "mc_sd": 2.0,
+          "p": 0.8992
+        },
+        "edge<5": {
+          "obs": 6,
+          "pct": 16.7,
+          "mc_mean": 9.3,
+          "mc_sd": 2.6,
+          "p": 0.9338
+        },
+        "edge<8": {
+          "obs": 18,
+          "pct": 50.0,
+          "mc_mean": 16.3,
+          "mc_sd": 2.9,
+          "p": 0.333
+        },
+        "edge<10": {
+          "obs": 22,
+          "pct": 61.1,
+          "mc_mean": 21.2,
+          "mc_sd": 2.9,
+          "p": 0.4636
+        }
+      },
+      "E>=130": {
+        "n": 9,
+        "edge<3": {
+          "obs": 1,
+          "pct": 11.1,
+          "mc_mean": 1.4,
+          "mc_sd": 1.1,
+          "p": 0.7976
+        },
+        "edge<5": {
+          "obs": 2,
+          "pct": 22.2,
+          "mc_mean": 2.5,
+          "mc_sd": 1.3,
+          "p": 0.7658
+        },
+        "edge<8": {
+          "obs": 5,
+          "pct": 55.6,
+          "mc_mean": 4.1,
+          "mc_sd": 1.4,
+          "p": 0.394
+        },
+        "edge<10": {
+          "obs": 5,
+          "pct": 55.6,
+          "mc_mean": 5.3,
+          "mc_sd": 1.4,
+          "p": 0.7172
+        }
+      },
+      "E>=150": {
+        "n": 4,
+        "edge<3": {
+          "obs": 1,
+          "pct": 25.0,
+          "mc_mean": 0.5,
+          "mc_sd": 0.7,
+          "p": 0.4274
+        },
+        "edge<5": {
+          "obs": 1,
+          "pct": 25.0,
+          "mc_mean": 1.1,
+          "mc_sd": 0.9,
+          "p": 0.727
+        },
+        "edge<8": {
+          "obs": 3,
+          "pct": 75.0,
+          "mc_mean": 2.0,
+          "mc_sd": 1.0,
+          "p": 0.3134
+        },
+        "edge<10": {
+          "obs": 3,
+          "pct": 75.0,
+          "mc_mean": 2.6,
+          "mc_sd": 0.9,
+          "p": 0.5642
+        }
+      }
+    },
+    "low_energy_B": {
+      "n": 14,
+      "obs8": 0,
+      "pct8": 0.0,
+      "mc8_mean": 4.0,
+      "mc8_sd": 1.7,
+      "p_deficit8": 0.009,
+      "obs10": 5,
+      "p_deficit10": 0.3114,
+      "high_n": 95,
+      "high_pct8": 43.2
+    },
+    "d_edge_summary": {
+      "median": 7.647,
+      "mean": 9.036
+    }
+  }
+}
