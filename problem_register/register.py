@@ -208,6 +208,15 @@ P12_REF_FIX = {
         os.path.join(MAIN, "p12_uhecrs/docs/05_psz1_vacuum_result.md"),
 }
 
+# 2026-10-18 O168 越界產物撤回 (調律者裁決「register 發還 O38 重做」): 09:50 handoff
+# 事件嘅 ref 指 docs/29_m0_scale_blueprint.md，該藍圖已隨 `git revert f306a18` + `git rm`
+# 撤回刪除 ⟹ 永久 REF-MISSING。JSONL 歷史事件唔改（append-only），翻譯層指向代表檔
+# docs/28_phase_closeout.md（載有 10-16 裁決註記）；同 REF_PATH_FIX/O247_SLUG_FIX 先例一致。
+O168_RETRACT_FIX = {
+    os.path.join(OPF, "o168_g_last_input/docs/29_m0_scale_blueprint.md"):
+        os.path.join(OPF, "o168_g_last_input/docs/28_phase_closeout.md"),
+}
+
 
 def theme_dir(name):
     """Resolve a theme folder by its legacy pid first-segment (name).
@@ -260,6 +269,10 @@ def resolve_ref(fp):
         return new
     # 2026-10-18 P12 結構重整 (records→docs) 翻譯層
     new = P12_REF_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-18 O168 越界藍圖撤回 (docs/29 已刪) 翻譯層
+    new = O168_RETRACT_FIX.get(fp)
     if new and os.path.exists(new):
         return new
     for src, dst in MOVED_SRC.items():
