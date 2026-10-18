@@ -1,0 +1,29 @@
+分析樣本: 13 顯著 dip (剔 bound/退化)
+
+=== A. 相關矩陣 (depth vs 每源量) ===
+  depth vs dv      : Pearson ρ=-0.302
+  depth vs |dv|    : Pearson ρ=+0.466
+  depth vs sig_dip : Pearson ρ=-0.025
+  depth vs dAIC    : Pearson ρ=-0.026
+
+=== B. 類別 depth 差異 ===
+  Hα       : n=10 mean=0.757 vs 其他 n= 3 mean=0.835 — Welch t=-1.37 p=0.201
+  藍側 dv<0  : n=10 mean=0.788 vs 其他 n= 3 mean=0.731 — Welch t=+0.45 p=0.690
+  紅側 dv>0  : n= 3 mean=0.731 vs 其他 n=10 mean=0.788 — Welch t=-0.45 p=0.690
+
+=== C. 帶幾何 ℓ_band 預言 vs obs ===
+  depth ~ α·(|dv|/dvmax)+β: α=+0.316 β=+0.614
+  R²=0.217 (線性 |dv| 預言)
+  obs depth 範圍 [0.436,0.945], 殘差 std=0.131 (scatter 未被 |dv| 解釋)
+  殘差 vs dv      : ρ=+0.004
+  殘差 vs sig_dip : ρ=-0.147
+  殘差 vs dAIC    : ρ=-0.134
+
+=== D. 判準 ===
+[FAIL] |dv| 相關 < 0.3 (帶幾何唔主導) ρ=0.466
+[PASS] 殘差 vs 每源量全無關 (無結構可推) 
+scatter std = 0.148 (τ_eff=28/15 預言 0.845, 殘差 std 0.131)
+
+裁決: 🟡 部分可推: 有弱結構但 n 細, 需更多源先鎖定函數形式
+
+結果: 1/2 → data/21_density_feasibility.json
