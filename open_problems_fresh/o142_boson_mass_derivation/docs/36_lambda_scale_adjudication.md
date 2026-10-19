@@ -141,3 +141,13 @@ O142 docs/16 已標「可作 O144 row15 交接內容」；本輪**唔越界推**
 - `scripts/24_lambda_scale_adjudication.py`: 11/11 PASS（mpmath 50 dps）
 - 獨立重算，**唔 re-run** `scripts/10`（v13 原式）/ `scripts/13`（v16 原式）
 - 所有數字由腳本實測輸出，無手抄；APPEND-ONLY：本檔為新增，O142 原文一字不動
+
+## §8 遷移更正附註（2026-10-19，append）
+
+⚠️ **用戶指令：「避免在 O38 資料夾內寫入任何檔案和內容，已寫入的移到 O142 內」。**
+
+- 16:10 曾寫入 `o38_kappa_prediction/docs/29_lambda_scale_reconciliation.md`（O38 側更正表）
+- **已撤回並刪除**；內容一字不動遷移至 **O142 `docs/37_lambda_scale_o38_reconciliation.md`**
+- O38 側 `docs/04 §2`／`docs/27 §2·§4`／`row 46`／`final_result §238` 之 stale 引用更正，
+  由 **O38 session 依 docs/37 §4 自行應用**（O142 唔再寫 O38 檔）
+- register ref（O142→O38 handoff 16:11:55）已以 note 更正指向 docs/37

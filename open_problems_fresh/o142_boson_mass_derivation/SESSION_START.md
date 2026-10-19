@@ -177,7 +177,7 @@ O124 ×3（10-09 05:56 b₂ / 10-13 11:56 requirement / 10-14 11:58 docs/18）+ 
 > **文件**: `docs/36_lambda_scale_adjudication.md`
 
 - ① **v16 閉合確認**（獨立重算，唔 re-run scripts/10,13）：Λ_IDCM=ρ√λ_max·M₀=**45.284869 MeV**（定點 45.2849）；γ₂₀=4cos²(ρπ) 兩徑 EXACT；α_s(M_Z)=**0.11798543** vs PDG 0.1180±0.0009 → −0.016σ
-- ② **O38 stale 更正**：O38 多處（`row 46` / `docs/27 §2·§4` / `final_result §238` / `docs/04 §2`）標 Λ_IDCM「機制仍開放」引用 O142 **`docs/13 §4`（v14）**；但 **v16（`docs/16`，同日）已閉合機制⑥ 🟢** → 發 O38 `docs/29_lambda_scale_reconciliation.md` + register handoff（O142→O38）
+②**O38 stale 更正**：O38（row 46 / docs/27 §2·§4 / final_result §238 / docs/04 §2）標 Λ_IDCM「機制仍開放」引用 O142 **docs/13 §4（v14）**——但 **v16（docs/16）同日已閉合機制⑥ 🟢**；依用戶指令 O38 不寫檔，更正表遷 O142 **docs/37_lambda_scale_o38_reconciliation.md**（原 O38 docs/29 已撤回）+ register handoff（O142→O38）
 - ③ ★ **Λ 作 N_O38 獨立 pin 🔴 不可行（三重阻斷）**：(a) ∝M₀ 同源（Λ/M₀=ρ√λ_max=常數）；(b) 精度 **δM₀/M₀=(2π/L₄)·δα_s/α_s²=5.81%**（N 閉合需 ~0.1%，差 2 數量級）；(c) ρ=N_gen/L₅ 由 α_s 反選（v13 density scan ratio_target 3.66322 vs 11/3 dev 0.094%）⟹ 循環
 - ④ **真殘餘** = `docs/16 §6` #4「v/Λ 共用 √λ_max·M₀ 核心」🟡（維持；本輪唔越界推）
 - ⑤ **N_O38 缺口維持 🔴**（O38/m0-scale open）— Λ 尺度機制閉合**唔改變**核心缺口
