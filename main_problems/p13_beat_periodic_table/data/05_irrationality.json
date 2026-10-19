@@ -10,7 +10,7 @@
   },
   "sin_degree_formula_verified": true,
   "sin_degree_checks": 88,
-  "sin_degree_time_s": 4.01,
+  "sin_degree_time_s": 3.59,
   "product_samples": {
     "note": "乘積次數 = lcm(component) 域論定理; sympy 對 sin×cos 高次組合 minpoly 已知極慢 (分鐘級), 用 component 驗證代替"
   },

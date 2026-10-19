@@ -1,8 +1,21 @@
 # Beat Periodic Table — 拍頻周期表 (946 無理數的分層結構)
 
+<!-- registry
+pid:     beat_periodic_table
+title:   拍頻周期表 — 946 無理數可分離三角表
+state:   partial
+verdict: -
+flags:   -
+owner:   beat_periodic_table
+created: 2026-10-05
+updated: 2026-10-20
+prereq:  O35, O36, O51, O54
+source:  調律者問題 2026-08-24「946 個拍頻是否有像元素周期表一樣的分層」；遷移自 beat_periodic_table（2026-10-05 register 為 P13）
+-->
+
 > **調律者問題 (2026-08-24)**: 「946 個拍頻,估計是一個比元素周期表更大的工程,而且全是無理數,是否有能像元素周期表一樣的分層和周期相似性等作為排列列表」
 > **回答**: 有!而且比元素周期表更嚴格 — 946 個拍頻 = **43×87 可分離三角表** (1D×1D 結構)
-> **狀態**: 🟢 **結構閉合 (2026-08-24, 8 scripts 全部 PASS)**
+> **狀態**: 🟢 **結構閉合 (2026-08-24, 8 scripts 全部 PASS)** + 🟢 **Master Atlas 44×44 全矩陣 (2026-08-25, scripts 10-12)**
 
 ---
 
@@ -50,16 +63,32 @@ u/d→行14×列34, c/s→行14×列30, t/b→行14×列52, m_c/m_b→行25×列
 m_s/m_d→行21×列23, m_W/m_Z→行11×列71, m_H/m_W→行19×列57,
 m_μ/m_τ→行17×列19, n/p→行13×列27 — **有聚類冇散落** ✅
 
+## Master Atlas 44×44 全矩陣 (2026-08-25 升級)
+
+由 946 個點升級為**宇宙算符總表**:44×44 = 1936 格正方形張量:
+
+```
+- 下三角 (m>n): 差頻 > 0 (物質算符, 946 格)
+- 上三角 (m<n): 差頻 < 0 (CPT 反物質對偶, 946 格)
+- 對角線 (m=n): 和頻自耦合 4sin(nπ/88) (真空基態, 44 格)
+```
+
+- **差頻反對稱**: B(n,m) = −B(m,n), 946/946 配對驗證
+- **和頻對稱**: B'(n,m) = B'(m,n), 946/946
+- 每格含: [n,m] 座標 + (d,s) 可分離座標 + 代數次數 + 差頻/和頻值 + 物理標籤 (304 格有標籤)
+- 產出: `master_atlas.png` + `data/master_atlas.csv` (1936 格) + `data/master_atlas.xlsx`
+
 ## 誠實標記
 
 | 項目 | 狀態 |
 |:-----|:----|
 | 6 大結構定理 | ✅ 全部 PASS |
+| Master Atlas 44×44 (scripts 10-12) | ✅ 差頻反對稱 + 和頻對稱 946/946 |
 | 乘積 minpoly 直接驗證 | 🔴 sympy 極慢, 用域論 lcm 代替 |
 | 完整 946 物理功能標記 | 🔴 未開始 (大工程) |
 | 列 s 特殊列物理對應 | 🔴 未開始 |
 | 次數層 → 物理對應 | 🟡 初步 |
-| **盲測驗證 (2026-08-25)** | ✅ beat(2,31) 鑑定: 功能 = command/workflow, d=29=L₇ opcode 行, s=33=M pipeline 列, 非物理參數 (98.1% 係 workflow 填充) — 見 kchain_number_field/06 |
+| **盲測驗證 (2026-08-25)** | ✅ beat(2,31) 鑑定: 功能 = command/workflow, d=29=L₇ opcode 行, s=33=M pipeline 列, 非物理參數 (98.1% 係 workflow 填充) — 見 `main_problems/p9_kchain_number_field/06_blind_test_beat231.md` (遷移前 `kchain_number_field/06`) |
 
 ## 檔案
 
@@ -67,7 +96,12 @@ m_μ/m_τ→行17×列19, n/p→行13×列27 — **有聚類冇散落** ✅
 beat_periodic_table/
 ├── 01_problem_record.md   ← 本文件
 ├── SESSION_START.md       ← 交接
-├── scripts/01-08          ← 全部 PASS
-├── data/                  ← 完整表 + 驗證 JSON
+├── scripts/01-08          ← 結構定理 (全部 PASS)
+├── scripts/09_visualize.py      ← 拍頻周期表 PNG
+├── scripts/10-11          ← Master Atlas 數據 + 44×44 方格圖
+├── scripts/12_master_atlas_xlsx.py ← Excel 版
+├── data/                  ← 完整表 + 驗證 JSON + CSV + xlsx
+├── beat_periodic_table.png     ← 4 格圖 (下三角熱圖)
+├── master_atlas.png            ← 44×44 宇宙算符總表
 └── docs/01_derivation_record.md ← 完整推導記錄
 ```
