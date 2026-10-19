@@ -149,3 +149,10 @@ o86_sm_gr_coupling/docs/04_open_problem_closure.md    §1 (N1: Λ_eff 橋)
 
 - 唔准 tune 返舊結論、唔准引入新常數；出唔到就誠實標 🔴。
 - 只改本 O 檔案。
+### ⑦ 交接檢查 (2026-10-19)
+
+- **觸發**: 用戶「檢查 O142 的 handoff（其他 session 檢查過，可忽略）」——本 session 自行核對 register.jsonl
+- **inbound 5 條**: O144×3 + O124×1 已閉環 ✅；**O247（10-15, Q2 終態裁定）未閉環 → 本 session 已出收據**（docs/12 §8.3）：σ_macro 標度層 v18 已閉合、O247 note 引用「O144 σ 偽證 231×」係 stale（docs/37 已推翻 = λ_max·72/11 EXACT）、E_bind 0.3065 唔喺 O142 範圍
+- **outbound 7 條**: O124×3 + O144×4 全數收訖 ✅
+- **完整性**: docs/28 + scripts/16（v22）原 untracked → 本 session 補 commit；O142 目錄無其他 session 改動
+- **⚠️ 時間校準**: 本 session context 日期 stale；真實 = 2026-10-19 HKT

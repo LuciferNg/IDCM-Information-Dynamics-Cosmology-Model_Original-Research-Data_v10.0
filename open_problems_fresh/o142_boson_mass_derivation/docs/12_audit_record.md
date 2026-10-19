@@ -130,3 +130,41 @@
 - data JSON 讀取核對（§3）
 - register status/log 交叉檢查（§5）
 - 本 audit 只寫 `o142_boson_mass_derivation/`（docs/11、01_problem_record、SESSION_START）+ register note；無寫任何其他 O 目錄
+
+---
+
+## §8 交接檢查（2026-10-19，本 session 核 — 原文以上一字不動）
+
+> **觸發**: 用戶「檢查 O142 的 handoff（有其他 session 檢查過，但可以忽略）」
+> **方法**: register.jsonl 直接抽 inbound/outbound handoff 全表 + 收據配對；git status 核目錄完整性；README 交叉核
+> **⚠️ 時間校準**: 本 session context 日期 stale（寫 10-14），真實系統時間 = **2026-10-19 14:34 HKT**
+
+### §8.1 Inbound handoff（5 條）— 4 閉環 / 1 未閉環
+
+| # | 日期 | 來源 | 事項 | 收據 | 狀態 |
+|:--|:-----|:-----|:-----|:-----|:----:|
+| 1 | 10-04 | O144 | α_s⁻¹ 非閉合（fragility）| O142 10-09 00:21 outbound 回應 | ✅ |
+| 2 | 10-09 | O144 | σ 標度橋依賴鎖（row15）| O144 10-14 17:03 更正 + O142 17:08 收據 | ✅ |
+| 3 | 10-13 | O124 | α_EM⁻¹(0)=137.036 端點殘餘 | O142 10-14 11:58 收據（docs/18）| ✅ |
+| 4 | 10-14 | O144 | handoff 更正（hash 8252bc）| O142 17:08 收據（docs/28）| ✅ |
+| 5 | **10-15** | **O247** | **Q2 終態裁定：核子/原子質量唔喺譜域，唯一活路=標度橋** | **無** | **🔴 未閉環** |
+
+### §8.2 Outbound handoff（7 條）— 全數收訖 ✅
+
+O124 ×3（10-09 05:56 b2 / 10-13 11:56 requirement / 10-14 11:58 docs/18）+ O144 ×4（10-09 00:21 / 10-13 11:57 / 10-14 11:59 row15 解除 / 10-14 17:08 收據）——全部有對方 register note 收訖。
+
+### §8.3 O247 handoff 判定（inbound #5）
+
+- **接收內容**：O247 Q2 裁定（三層 no-go：單量池密度 5/5 / K_Tree λ·Σλ 全滅 / 投影算符 m₄₄ −1.23%）；「唯一活路 = 標度橋」
+- **⚠️ 引用 stale**：O247 note 寫「O144 σ 偽證 231×」——**已由 O144 docs/37（2026-10-14）推翻**：231.82 = λ_max·72/11 結構比，σ_macro=88Λ²=0.1804633 GeV² 已閉合（非偽證）
+- **O142 立場**：σ_macro 標度層 = O142 v18 已閉合（σ_macro/σ_link = 231.8206 EXACT）；E_bind 殘差 0.3065 = 核子/原子質量層，**唔喺 O142 已閉合範圍**（O142 出玻色子質量譜 + α_s 標度架構）；已出收據（register handoff O142→O247）
+
+### §8.4 完整性／stale 發現
+
+| 項 | 發現 | 處置 |
+|:---|:-----|:-----|
+| docs/28 + scripts/16 (v22) | **untracked**（v22 commit 漏 add）| ✅ 本 session 補 commit |
+| `01_problem_record.md` 狀態行 | stale（寫「84/84+102/102+v9+v10+v11」，實際到 v29）| ✅ 本 session 更新 |
+| `README.md` O142 行（line 71）| 🔴 stale 嚴重 — 寫「🟢 已閉合 (38/38 PASS)」= v6 時代；實際 partial、docs 到 35 (v29)、scripts 到 23 | ⏸ **喺 O142 目錄外（shared 文件）— 報告用戶決策，唔自改** |
+| `README.md` O139 行（line 51）| 🔴 **同 O142 最新結論矛盾** — 寫「α⁻¹(0)=137 同 α⁻¹(M_Z)=128 各有兩個獨立身份…Δ=9=N_gen²」；v29 已拆穿 Δ=9 係 round artifact、128 冇計數地位（O124 13.2σ 否證）| ⏸ 同上 |
+| O142 目錄其他改動 | 無（git status 清白，10-19 session 冇寫入 O142 任何檔案）| ✅ |
