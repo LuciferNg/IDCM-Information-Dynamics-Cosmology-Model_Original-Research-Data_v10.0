@@ -47,7 +47,12 @@ THEME_DIRS = ("bbn", "cmb_cl", "cmb_cold_spot", "h0_tension", "kchain_number_fie
               "uhecrs", "beat_periodic_table", "global_routing_table",
               "early_derivations",
               # 2026-10-14: cross-version register (v1.0–v9.0, v11.0) + v11 problem m1
-              "m1", "v1.0", "v2.0", "v3.0", "v4.0", "v5.0", "v6.0", "v7.0", "v8.0", "v9.0", "v11.0")
+              # 2026-10-15: v11 m2/m3 (只開不推)
+              # 2026-10-18: pid 跟隨 O 系列 —— 大寫 M1..M3 / P1..P15 (block/文檔引用一致)
+              "m1", "m2", "m3", "M1", "M2", "M3",
+              "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9",
+              "P10", "P11", "P12", "P13", "P14", "P15",
+              "v1.0", "v2.0", "v3.0", "v4.0", "v5.0", "v6.0", "v7.0", "v8.0", "v9.0", "v11.0")
 
 # 2026-10-05: non-O problem folders moved from open_problems_fresh/ to main_problems/
 # with p-index prefixes (P1-P5 numbers reused from the retired P universe; P6/P7 kept).
@@ -64,6 +69,27 @@ THEME_MOVE = {
     "early_derivations": "p15_early_derivations",
     # 2026-10-14: cross-version register —— 版本 repo 喺 v10 repo 外面, 用絕對路徑 (join 唔識返上一層)
     "m1": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m1_mass_file_schema",
+    "m2": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange",
+    "m3": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock",
+    # 2026-10-18: pid 跟隨 O 系列 —— 大寫 M/P 全名嘅絕對路徑 (register --pid M1 等)
+    "M1": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m1_mass_file_schema",
+    "M2": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange",
+    "M3": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock",
+    "P1": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p1_bbn",
+    "P2": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction",
+    "P3": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl",
+    "P4": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p4_cmb_cold_spot",
+    "P5": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p5_crystal_stress",
+    "P6": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p6_neutrino",
+    "P7": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p7_reionization",
+    "P8": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p8_h0_tension",
+    "P9": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p9_kchain_number_field",
+    "P10": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p10_ktree_structure",
+    "P11": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p11_little_red_dots",
+    "P12": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p12_uhecrs",
+    "P13": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p13_beat_periodic_table",
+    "P14": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p14_global_routing_table",
+    "P15": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p15_early_derivations",
     "v1.0": "/home/wsl/Projects/IDCM-Original/IDM-v1.0--Information-Dynamics-Cosmology",
     "v2.0": "/home/wsl/Projects/IDCM-Original/IDM-v2.0--Consistency-Importance-Weight",
     "v3.0": "/home/wsl/Projects/IDCM-Original/IDM-v3.0--Domain-Framework",
@@ -218,6 +244,16 @@ O168_RETRACT_FIX = {
 }
 
 
+# 2026-10-20 P6 結構重組 (root 建齊四檔, *.py→scripts/): registered 事件 ref 指
+# main_problems/p6_neutrino/neutrino_p6_derivation.py，該檔已移入 scripts/01_。
+# JSONL 歷史事件唔改（append-only），翻譯層補回——同 P10_REF_FIX 先例一致；
+# 只影響 P6/neutrino_p6_mode 自己 ref 解析。
+P6_REF_FIX = {
+    os.path.join(MAIN, "p6_neutrino/neutrino_p6_derivation.py"):
+        os.path.join(MAIN, "p6_neutrino/scripts/01_neutrino_p6_derivation.py"),
+}
+
+
 def theme_dir(name):
     """Resolve a theme folder by its legacy pid first-segment (name).
     Returns the post-migration main_problems/ path when moved, else open_problems_fresh/."""
@@ -261,6 +297,10 @@ def resolve_ref(fp):
     # 2026-10-12 O247 類⑦: registered 事件 ref slug 寫漏 oNNN_ 前綴 →
     # 翻譯層（上方 O247_SLUG_FIX）；only-for-O247，唔做全庫猜測。
     new = O247_SLUG_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-20 P6 結構重組 (md→docs, py→scripts) 翻譯層
+    new = P6_REF_FIX.get(fp)
     if new and os.path.exists(new):
         return new
     # 2026-10-18 P10 結構重組 (md→docs, py→scripts) 翻譯層
@@ -1155,6 +1195,13 @@ def cmd_check(a):
         if not bp:
             problems.append(("BLOCK-DRIFT", "%s: block has no pid" % rel))
             continue
+        # 2026-10-18: v11 M-series 大寫 block pid (M1/M2/M3) ↔ register 細寫 pid (m1/m2/m3)
+        # 翻譯層 —— block 按命名規範寫大寫 M, register row 用細寫 m（跨版本 register 慣例）
+        mt = re.match(r"^M(\d+)$", bp)
+        if mt:
+            low = "m" + mt.group(1)
+            if low in db:
+                bp = low
         row = db.get(bp)
         if row is None:
             problems.append(("BLOCK-UNREGISTERED", "%s: block pid %s not in register" % (rel, bp)))

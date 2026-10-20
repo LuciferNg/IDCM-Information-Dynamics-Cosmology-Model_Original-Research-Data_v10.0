@@ -50,7 +50,7 @@ $$\nu_\tau : \nu_\mu : \nu_e = 1 : \varphi^{-1} : \varphi^{-2}$$
 2. **φ-power 結構** — 質量比必須係 φ-power hierarchy（或 beat frequency 比例）
 3. **CY₃ 幾何** — M_comp 來自 CY₃(36,98) 嘅 Hodge numbers
 4. **Z₃ × Z₅ 對稱性** — 世代結構由 n mod 3 同 n mod 5 決定
-5. **p6 mode** — 中微子係 W-field 嘅 p6 mode (n=6)，唔係 Seesaw 機制
+5. **P6 mode** — 中微子係 W-field 嘅 P6 mode (n=6)，唔係 Seesaw 機制
 6. **Majorana** — 中微子係 Majorana 粒子（實數 W-field mode）
 
 ## 候選解決方向
@@ -63,9 +63,9 @@ M_comp 可能唔係直接用 M_Pl/(2×h¹¹×h²¹×N_d)，而係有額外幾何
 
 ### 方向 B：質量公式修正
 m₀ = (γ₆ × v)² / M_comp 可能唔係正確嘅質量公式。
-可能係 m ∝ beat(6, n) 嘅函數（p6 harmonic 系列）。
+可能係 m ∝ beat(6, n) 嘅函數（P6 harmonic 系列）。
 
-p6 harmonic beat frequencies：
+P6 harmonic beat frequencies：
 - beat(6, 12) = 0.406
 - beat(6, 18) = 0.773
 - beat(6, 24) = 1.086
@@ -77,7 +77,7 @@ p6 harmonic beat frequencies：
 例如：1:φ⁻²:φ⁻⁴ 或 φ⁻¹:φ⁻²:φ⁻³。
 
 ### 方向 D：二次 beat（beat of beats）
-中微子質量可能來自 p6 harmonic 嘅二次 beat frequency：
+中微子質量可能來自 P6 harmonic 嘅二次 beat frequency：
 - |beat(6,12) - beat(6,18)| = 0.368
 - |beat(6,18) - beat(6,24)| = 0.313
 - |beat(6,24) - beat(6,30)| = 0.244
@@ -104,7 +104,7 @@ M = 33（K_Tree 層數）可能引入邊界效應修正。
 ω_n = 2|sin(πn/88)|, γ_n = 4sin²(πn/88), n=1..44
 
 n=1: γ=0.0051, ω=0.0714
-n=6: γ=0.1807, ω=0.4251 ← p6 mode
+n=6: γ=0.1807, ω=0.4251 ← P6 mode
 n=12: γ=0.6903, ω=0.8308
 n=18: γ=1.4365, ω=1.1986
 n=24: γ=2.2846, ω=1.5115
