@@ -1,0 +1,82 @@
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/scripts/10b_highl_tail_form_snr.py:76: RuntimeWarning: overflow encountered in exp
+  lam = np.exp(-ic/sl)
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/scripts/10b_highl_tail_form_snr.py:95: RuntimeWarning: divide by zero encountered in scalar divide
+  A = np.sum(w*ds*np.exp(-x/lam))/np.sum(w*np.exp(-2*x/lam))
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/scripts/10b_highl_tail_form_snr.py:96: RuntimeWarning: invalid value encountered in multiply
+  pred = A*np.exp(-x/lam)
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/scripts/10b_highl_tail_form_snr.py:95: RuntimeWarning: invalid value encountered in scalar divide
+  A = np.sum(w*ds*np.exp(-x/lam))/np.sum(w*np.exp(-2*x/lam))
+============================================================================
+P3/high-l-tail-transfer — R2b 形式辨識 (SNR 閘)
+============================================================================
+SPT ℓ>1409: 32 bins → SNR>2: 32 bins
+  ℓ 1437..2962, D 45.6..820.2
+    ℓ=  1437  D=   820.2  SNR= 50.7  ★
+    ℓ=  1487  D=   748.2  SNR= 50.8  ★
+    ℓ=  1537  D=   624.1  SNR= 52.7  ★
+    ℓ=  1587  D=   492.4  SNR= 54.1  ★
+    ℓ=  1637  D=   410.9  SNR= 54.2  ★
+    ℓ=  1687  D=   396.2  SNR= 54.8  ★
+    ℓ=  1737  D=   408.3  SNR= 56.5  ★
+    ℓ=  1787  D=   385.5  SNR= 56.5  ★
+    ℓ=  1837  D=   349.9  SNR= 59.2  ★
+    ℓ=  1887  D=   276.4  SNR= 55.9  ★
+    ℓ=  1937  D=   242.1  SNR= 55.8  ★
+    ℓ=  1987  D=   239.5  SNR= 58.1  ★
+    ℓ=  2037  D=   242.7  SNR= 59.8  ★
+    ℓ=  2087  D=   221.1  SNR= 57.5  ★
+    ℓ=  2137  D=   198.9  SNR= 58.5  ★
+    ℓ=  2187  D=   167.0  SNR= 57.6  ★
+    ℓ=  2238  D=   141.1  SNR= 55.8  ★
+    ℓ=  2288  D=   129.3  SNR= 55.5  ★
+    ℓ=  2337  D=   124.3  SNR= 55.5  ★
+    ℓ=  2387  D=   121.3  SNR= 56.1  ★
+    ℓ=  2411  D=   108.0  SNR= 53.1  ★
+    ℓ=  2461  D=    94.4  SNR= 50.0  ★
+    ℓ=  2512  D=    86.4  SNR= 48.8  ★
+    ℓ=  2588  D=    77.4  SNR= 45.6  ★
+    ℓ=  2637  D=    76.1  SNR= 45.9  ★
+    ℓ=  2662  D=    72.6  SNR= 44.7  ★
+    ℓ=  2711  D=    65.9  SNR= 41.8  ★
+    ℓ=  2761  D=    60.5  SNR= 39.7  ★
+    ℓ=  2838  D=    53.2  SNR= 36.0  ★
+    ℓ=  2888  D=    49.1  SNR= 33.9  ★
+    ℓ=  2937  D=    45.6  SNR= 31.9  ★
+    ℓ=  2962  D=    45.6  SNR= 32.2  ★
+
+=== 形式辨識 (SPT SNR>2) ===
+  α=1.00: λ=     inf  RMS=   8.2%
+         ℓ^α 擬合: ln D = 9.215 -0.001860·ℓ^1.0  (λ=inf)
+  α=1.24: λ=     inf  RMS=   9.5%
+         ℓ^α 擬合: ln D = 8.445 -0.000237·ℓ^1.24  (λ=inf)
+  α=1.50: λ=     inf  RMS=  11.3%
+         ℓ^α 擬合: ln D = 7.888 -0.000026·ℓ^1.5  (λ=inf)
+  α=2.00: λ=     inf  RMS=  15.0%
+         ℓ^α 擬合: ln D = 7.223 -0.000000·ℓ^2.0  (λ=inf)
+
+=== 直接比較 (SPT SNR>2, 用 SPT diag σ) ===
+  α=1 λ=297(峰週期)          : χ²= 19331.4  χ²/dof=623.59  (A=156702.6)
+  α=1 λ=484(L₅×44)        : χ²=  1001.7  χ²/dof= 32.31  (A=15160.4)
+  α=1 λ=538(fit)          : χ²=   543.4  χ²/dof= 17.53  (A=9865.6)
+  α=1.24 λ=1411(Silk)     : χ²= 46737.6  χ²/dof=1507.67  (A=482105.8)
+  α=1.5 λ=9055(峰高)        : χ²= 57778.5  χ²/dof=1863.82  (A=584088.7)
+  α=1.5 λ=897(fit R2)     : χ²= 81256.9  χ²/dof=2621.19  (A=202889326583558461339513913344.0)
+
+=== 網格 (α, λ) χ² 掃描 (SPT SNR>2) ===
+  最佳: χ²=576.3  α=1.00  λ=550  A=9050.1
+  span: Δℓ_fit = 1525, N=32
+  λ=297? 1.852 | λ=484? 1.136 | λ=1411? 0.390
+  α 結構候選: 1 (鋸齒週期), 1.24 (ΛCDM), 1.5 (IDCM峰高), 2 (高斯/Silk 擴散)
+  [PASS] R2b-1: 最佳 α ∈ {1, 1.24, 1.5, 2} ±0.15 α=1.00
+  [PASS] R2b-2: 最佳 λ 有結構身份 (297/484/1411 ±20%) λ=550 hits=[484]
+  ★ λ 身份命中: 484
+
+=== Planck 對照 (1418..2200, 46 bins) ===
+  λ=297                       : χ²=    32.6  χ²/dof=  0.72
+  λ=484                       : χ²=     4.5  χ²/dof=  0.10
+  Silk 1411                   : χ²=   116.8  χ²/dof=  2.60
+  SPT 最佳 (α=1.00,λ=550)       : χ²=     5.8  χ²/dof=  0.13
+
+============================================================================
+SUMMARY: 2/2 PASS, 0/2 FAIL
+============================================================================

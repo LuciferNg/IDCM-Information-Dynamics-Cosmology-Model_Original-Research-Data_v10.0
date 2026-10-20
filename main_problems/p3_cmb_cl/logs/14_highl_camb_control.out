@@ -1,0 +1,18 @@
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/scripts/14_highl_camb_control.py:92: RuntimeWarning: overflow encountered in exp
+  lam = np.exp(-ic/sl)
+============================================================================
+P3/high-l-tail-transfer — R6 CAMB 前向對照
+============================================================================
+CAMB lensed   高ℓ尾: best α=0.50 λ=0.0 RMS=0.0
+         純指數 α=1: λ=503.1 RMS=0.0
+CAMB unlensed 高ℓ尾: best α=0.50 λ=0.0 RMS=0.0
+         純指數 α=1: λ=498.6 RMS=0.0
+
+SPT 實測  : best α=0.50 λ=1322364200405050013892269075070976.0 RMS=27.1
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/scripts/14_highl_camb_control.py", line 101, in <module>
+    sl_u, ic_u = np.polyfit(l, np.log(D_u[mask] if False else D[ells==l[0]][0] + 0), 1)
+                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wsl/.local/lib/python3.13/site-packages/numpy/lib/_polynomial_impl.py", line 647, in polyfit
+    raise TypeError("expected 1D or 2D array for y")
+TypeError: expected 1D or 2D array for y

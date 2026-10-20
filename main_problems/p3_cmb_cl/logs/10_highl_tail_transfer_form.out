@@ -1,0 +1,29 @@
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl/scripts/10_highl_tail_transfer_form.py:74: RuntimeWarning: invalid value encountered in power
+  return A * np.exp(-(l/lam)**alpha)
+============================================================================
+P3/high-l-tail-transfer — R2 傳輸函數形式辨識
+============================================================================
+
+=== A. Silk 型三參數 fit (Planck 高ℓ尾) ===
+  fit 失敗: Optimal parameters not found: Number of calls to function has reached maxfev = 20000.
+
+=== B. 固定 α=1.24: fit (A, λ) ===
+  A=9964.8  λ=671.1  RMS=41.5
+  λ=671.1: 1411? dev -52.4%
+  [FAIL] B1: α=1.24 fit λ ≈ 1411 ±40% λ=671.1 vs 1411
+
+=== C. 固定 α=1.5: fit (A, λ) ===
+  A=5752.1  λ=897.1  RMS=43.6
+  λ=897.1: 297? 3.020 | 294? 3.051 | 264? 3.398
+
+=== D. 冪律 fit (log-log) ===
+  D ∝ ℓ^-3.89  RMS=34.2
+  p=3.89: 比較 Silk α=1.24 fit RMS (上)
+  [PASS] D1: 冪律 RMS > Silk型 RMS (形式區分) p=3.89
+
+=== E. SPT 高ℓ尾 Silk fit (α 自由) ===
+  fit 失敗: Optimal parameters not found: Number of calls to function has reached maxfev = 20000.
+
+============================================================================
+SUMMARY: 1/2 PASS, 1/2 FAIL
+============================================================================
