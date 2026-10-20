@@ -109,11 +109,41 @@ p(超額) = 0.325    p(不足) = 0.677
 
 **追加產物**: `scripts/26_lee_correction.py`；`data/lee_correction.json`
 
+## 4.6 RA 曝光非均勻 null 硬化（script 27, 2026-10-18 追加）
+
+消耗 §六局限 (3)。**Auger SD 標準曝光係 dec-only**（地面陣列滿日覆蓋 → RA 平坦），而
+scramble-RA keep-dec 已含 dec 曝光 ⟹ 唯一未測成份 = 觀測目錄 RA 邊緣平坦度。
+
+(1) **RA 邊緣平坦度**（catalogSD 109 events）：
+| 檢驗 | 統計量 | p |
+|:-----|:------:|:--:|
+| Rayleigh（圓均勻） | R̄=0.0183, z=0.037 | 0.964 |
+| χ²（12×30° bins） | χ²=3.62 (df=11) | 0.980 |
+| KS vs Uniform(0,1) | D=0.0472 | 0.959 |
+
+⟹ 與平坦一致，**scramble-RA 前提獲實證支持**。
+
+(2) **實證-RA null 對照**（從觀測 RA 邊緣平滑抽樣 keep-dec, 獨立 seed 44；uniform-RA seed 43；
+兩者 N_MC=5000）：
+
+| 統計 | obs | uniform-RA | empirical-RA | 結論 |
+|:-----|:---:|:---:|:---:|:---|
+| 節點帶 <8°（109） | 41 | p=0.0934 | p=0.1724 | 兩空都唔顯著 |
+| 邊帶 <8°（109） | 57 | p=0.0912 | p=0.1810 | 兩空都唔顯著 |
+| 低能 46-80 <8°（14） | 0 | p(不足)=0.0060 | p(不足)=0.0094 | **兩空都顯著避開** |
+| 節點側 family LEE (|F|=8) | 最強 80-100<8° | p_lee=0.0696 (z=2.45) | p_lee=0.1346 (z=2.04) | 兩空都唔過校正 |
+
+⟹ **結論對 RA 曝光假設穩健**：唯一未測成份嘅任何 RA 結構都改變唔到方向性結論
+（無節點聚集、無邊訊號、低能避開成立）。empirical-RA null 略保守（抽樣自觀測邊緣注入少量 variance）。
+
+**追加產物**: `scripts/27_ra_exposure_null.py`；`data/ra_exposure_null.json`
+
 ## 六、局限
 
 1. Auger Open Data catalogSD 只到 166 EeV；高能段（真正 UHECR）樣本 N=4-9
 2. 分層掃描有 look-elsewhere（4 層 × 2 窗）→ **已由 §4.5 校正**（節點側最強點 p 0.0160→0.0848；低能避開 0.0070→0.0080）
-3. scramble-RA null 假設 RA 完全隨機（已處理 dec/footprint，未處理 RA 曝光非均勻）
+3. scramble-RA null 假設 RA 完全隨機（已處理 dec/footprint，未處理 RA 曝光非均勻）→ **已由 §4.6 硬化**：
+   RA 邊緣平坦度三檢驗全過（p>0.95），實證-RA null 對照結論不變
 4. **12/25 本目錄歷史 scripts 含失效硬編碼路徑**（`~/Projects/IDCM/IDCM-v10.0/`）：03,04,07,09,
    10,11,12,13,14,16,17,21 —— 不可直接重跑（時序潔癖：不修改歷史 scripts）。可重跑路徑 = P5
    scripts/10-16（重驗）或本目錄 22-25（相對路徑）。**新 scripts 一律用相對路徑**（22-25 已示範）。

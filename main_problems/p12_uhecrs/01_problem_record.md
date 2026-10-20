@@ -57,6 +57,8 @@ source:  遷移自 open_problems_fresh/crystal_stress/uhecrs（2026-09-27 分拆
 > ⚠️ 更正附註（2026-10-18, append-only）：**look-elsewhere 校正已由 script 26 收口**（family-max null，
 > 節點側最強 z=2.37 → p=0.0848；低能避開 → p=0.0080）—— docs/07 §4.5。剩餘 = 高能段樣本（等數據）
 > + RA 曝光非均勻 null（方法論可做）。
+>> ⚠️ 更正附註 2（2026-10-18, append-only）：**RA 曝光 null 亦已硬化**（script 27：RA 邊緣平坦度
+>> 三檢驗 p>0.95；實證-RA null 對照結論不變）⟹ §三「仍未閉合」只剩等數據項（高能段樣本）。
 ```
 
 ## 四、攻擊路線
@@ -96,6 +98,7 @@ source:  遷移自 open_problems_fresh/crystal_stress/uhecrs（2026-09-27 分拆
 | 9 | 2026-10-18 | 路線 3 補完：32 阻挫邊 ±5° 正式 MC null（首輪兩個方法 bug 已修正重跑）→ **否證** | docs/07；scripts/24,25；data/edge_auger_and_lowenergy.json, frustration_edge_verdict.json |
 | 10 | 2026-10-18 | 低能段 46-80 EeV 避開節點正式化：p=0.0090；三分區分解（節點帶 +1.40σ） | docs/07 §4.3–4.4 |
 | 11 | 2026-10-18 | look-elsewhere 校正（family-max null）：節點側最強 z=2.37 → p=0.0848；低能避開 → p=0.0080 | docs/07 §4.5；scripts/26；data/lee_correction.json |
+| 12 | 2026-10-18 | RA 曝光 null 硬化：RA 邊緣平坦度三檢驗 p>0.95；uniform vs empirical-RA 兩 null 結論一致 | docs/07 §4.6；scripts/27；data/ra_exposure_null.json |
 
 ## 七、相關文件
 

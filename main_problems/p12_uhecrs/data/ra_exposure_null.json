@@ -1,0 +1,115 @@
+{
+  "p12_ra_exposure_null_20261018": {
+    "data": "Auger Open Data catalogSD",
+    "N": 109,
+    "N_MC": 5000,
+    "seed": {
+      "uniform": 43,
+      "empirical": 44
+    },
+    "null": "scramble RA (uniform vs empirical marginal) keep dec",
+    "node<8": {
+      "obs": 41,
+      "n_events": 109,
+      "uniform-RA": {
+        "mc_mean": 34.29,
+        "mc_sd": 4.69,
+        "p_excess": 0.0934,
+        "p_deficit": 0.9348
+      },
+      "empirical-RA": {
+        "mc_mean": 36.02,
+        "mc_sd": 4.78,
+        "p_excess": 0.1724,
+        "p_deficit": 0.8718
+      }
+    },
+    "node<10": {
+      "obs": 59,
+      "uniform-RA": {
+        "mc_mean": 51.9,
+        "mc_sd": 5.02,
+        "p_excess": 0.0982,
+        "p_deficit": 0.9364
+      },
+      "empirical-RA": {
+        "mc_mean": 53.55,
+        "mc_sd": 4.99,
+        "p_excess": 0.1572,
+        "p_deficit": 0.8856
+      }
+    },
+    "edge<8": {
+      "obs": 57,
+      "uniform-RA": {
+        "mc_mean": 49.74,
+        "mc_sd": 5.08,
+        "p_excess": 0.0912,
+        "p_deficit": 0.9336
+      },
+      "empirical-RA": {
+        "mc_mean": 51.97,
+        "mc_sd": 5.03,
+        "p_excess": 0.181,
+        "p_deficit": 0.8684
+      }
+    },
+    "edge<10": {
+      "obs": 68,
+      "uniform-RA": {
+        "mc_mean": 64.74,
+        "mc_sd": 4.98,
+        "p_excess": 0.2914,
+        "p_deficit": 0.775
+      },
+      "empirical-RA": {
+        "mc_mean": 66.52,
+        "mc_sd": 4.93,
+        "p_excess": 0.4128,
+        "p_deficit": 0.6672
+      }
+    },
+    "low_node<8": {
+      "obs": 0,
+      "n_events": 14,
+      "uniform-RA": {
+        "mc_mean": 4.01,
+        "mc_sd": 1.67,
+        "p_excess": 1.0,
+        "p_deficit": 0.006
+      },
+      "empirical-RA": {
+        "mc_mean": 3.9,
+        "mc_sd": 1.66,
+        "p_excess": 1.0,
+        "p_deficit": 0.0094
+      }
+    },
+    "family_LEE_uniform-RA": {
+      "strongest": [
+        "80-100",
+        8
+      ],
+      "z_obs": 2.449,
+      "p_lee": 0.0696
+    },
+    "family_LEE_empirical-RA": {
+      "strongest": [
+        "80-100",
+        8
+      ],
+      "z_obs": 2.036,
+      "p_lee": 0.1346
+    },
+    "ra_flatness": {
+      "rayleigh_z": 0.0367,
+      "rayleigh_p": 0.9639769834945529,
+      "chi2": 3.624,
+      "chi2_p": 0.9797,
+      "ks_D": 0.0472,
+      "ks_p": 0.9589,
+      "min_p": 0.958910601372775
+    },
+    "verdict": "RA 邊緣: min p = 0.959 — 與平坦一致 ⟹ scramble-RA null 有效 (keep-dec 已含 dec 曝光); uniform vs empirical-RA 兩 null 結論一致 (節點 8°: p=0.093 vs 0.172; 低能避開 p(不足)=0.0060 vs 0.0094) ⟹ 結果對 RA 曝光假設穩健"
+  }
+}

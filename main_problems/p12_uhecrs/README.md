@@ -24,7 +24,8 @@ GZK = Nyquist 天花板（2.18%）、Oh-My-God 上限（1.08%）、Auger 各向�
 | `scripts/22-23` | 路線 2 精化（inner grid + exact Binomial）| 🟢 |
 | `scripts/24-25` | 路線 3 補完（阻挫邊 MC null + 條件化三分區判決）| 🟢 |
 | `scripts/26` | look-elsewhere family-max 校正（LEE）| 🟢 |
-| `data/` | Auger 目錄 + 掃描輸出（24 份 json/csv） | 🟢 |
+| `scripts/27` | RA 曝光 null 硬化（平坦度 + 實證-RA 對照）| 🟢 |
+| `data/` | Auger 目錄 + 掃描輸出（25 份 json/csv） | 🟢 |
 
 ## 依賴
 

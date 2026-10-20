@@ -118,6 +118,11 @@ Euclid DR1（2026-11-12）；O110 全譜缺口。
   → 節點側最強點（80-100 EeV <8°, z=+2.37）naive 0.0160 → **校正 0.0848（唔顯著）**；
   低能避開（−z=2.38）naive 0.0070 → **校正 0.0080（仍顯著）** ⟹ 唯一過校正嘅訊號 = 低能避開
 - 記錄: `docs/07`（§4 + §4.5 + §六局限）；輸出: `data/lee_correction.json`
+- `scripts/27_ra_exposure_null.py`（RA 曝光硬化 ✅）: RA 邊緣平坦度三重檢驗全過（Rayleigh p=0.964 /
+  χ² p=0.980 / KS p=0.959）；實證-RA null（從觀測邊緣抽樣 keep-dec, seed 44）對照 uniform-RA（seed 43）：
+  節點帶 0.093/0.172、邊帶 0.091/0.181（兩空都唔顯著）、低能避開 0.0060/0.0094（**兩空都顯著**）、
+  family LEE 0.070/0.135（都唔過）⟹ 結論對 RA 曝光假設穩健
+- 記錄: `docs/07` §4.6 + §六局限(3) 已標記硬化；輸出: `data/ra_exposure_null.json`
 - **判決**: 🔴 32 阻挫邊方向預言 **否證**（四個獨立角度全部落 null）；🟡 60 節點 ±8° 邊際支持（+1.40σ）
 - 記錄: `docs/07_frustration_edge_and_lowenergy.md`；輸出: `data/edge_auger_and_lowenergy.json`,
   `data/frustration_edge_verdict.json`
