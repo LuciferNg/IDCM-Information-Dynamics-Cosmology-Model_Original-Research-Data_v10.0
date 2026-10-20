@@ -1,0 +1,16 @@
+[RESULT] O255 closeout 獨立重驗: 15/15 PASS
+  [PASS] A.circle44: v_g²+γ/4=1 ∀n∈[0,44]
+  [PASS] B.goldstone: |v_g|=1 ⟺ n=0 ([0])
+  [PASS] C.gap: gap(N)=1−cos(π/N)=2sin²(π/2N), 單調收縮 (ℓ=0..9)
+  [PASS] D.lorentz: γ_L = csc(πn/88) = 2/√γ_n ∀n∈[1,44]
+  [PASS] E.chain22: 鏈 n=22 v_g=0.707106781187 = 1/√2
+  [PASS] E.tree17: 樹 c=17 v_g=0.707106781187 = 1/√2
+  [PASS] F.treesum: Σλ = 66.0000000000 = 66 = 2K_tree
+  [PASS] G.rapidity: η_n = atanh(v_g) = ln cot(πn/176) ∀n∈[1,44]
+  [PASS] H.cone: leapfrog 亮錐 u_j(t)=0 EXACT ∀|j−C|>t (獨立 Fraction 實作)
+  [PASS] I.capacity: C(L,T)=floor((88/π)arccos(L/cT)) ≡ 暴力 (抽樣)
+  [PASS] J.modes: 信息行波總量 43 = N/2−1; 3D 43³ = 79507
+  [PASS] K.3D: 3D |∇ω| ≤ 1 (max=0.070265; 唔係 √3c=1.7321)
+  [PASS] L.gate: K(44) = 32.4 bits ≥ 32 (閉式 0.737d)
+  [PASS] M.allN: |v_g|=1 ⟺ n≡0 (mod N) ∀N∈[3,200] (抽樣一階)
+  [PASS] N.ring: Ring 88 亮錐 cyclic EXACT (獨立 Fraction 實作)
