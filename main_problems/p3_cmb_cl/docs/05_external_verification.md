@@ -116,3 +116,11 @@ raw_cl=True 峰位置: 220.0, 536.0, 813.0, ...
 *框架：IDCM v10.0 (共震點宇宙學)*
 *狀態：三重驗證 (Planck 論文 + CAMB + ACT) 🟢*
 *日期：2026-08-16*
+
+> ⚠️ **驗證修正附註 (2026-10-20, P3 audit)**: 本節所引用 CAMB 峰 220.0/536.0/813.0 實測復現時發現 —
+> `scripts/05_camb_peak_verification.py` 用 `powers['total']`（**lensed** 譜），重跑實際得 286.1/584.1/843.1
+> （透鏡平滑推偏），**唔係** raw。`raw_cl=True` 版本（unlensed_scalar）由 audit 獨立生成，得
+> 220.0/536.0/813.0/1129.0 — 峰 1-3 先真正閉合。docs/05 原宣稱「用 raw_cl=True」與 script 實作不符，
+> **script 層 finding**；文獻閉合結論 (m=1-3 0.0-0.4%) 喺 raw 譜下成立。m=4 CAMB raw 1129 vs IDCM 1014
+> = 11.3% 真實偏差 — 誠實記錄，O9 已判 CAMB 高ℓ峰 = 假峰（damping tail 平台凸起），真實觀測
+> (Planck binned 1013) 閉合。引用 CAMB 峰位請註明 raw vs lensed。

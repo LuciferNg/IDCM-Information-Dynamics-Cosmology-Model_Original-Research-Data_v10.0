@@ -23,8 +23,10 @@ pars.InitPower.set_params(ns=ns, As=As)
 pars.set_for_lmax(3000, lens_potential_accuracy=0)
 
 results = camb.get_results(pars)
-powers = results.get_cmb_power_spectra(pars)
-TT = powers['total'][:, 0]  # TT spectrum in muK^2
+# ★ 2026-10-20 P3 audit 修正: 原本用 powers['total'] (lensed) — 峰位被透鏡推偏 (286/584/843)。
+#   改為 raw_cl=True + unlensed_scalar = 聲學峰真正位置 (docs/05 §2.2 已聲明, 但程式未跟)。
+powers = results.get_cmb_power_spectra(raw_cl=True)
+TT = powers['unlensed_scalar'][:, 0]  # TT spectrum in muK^2 (raw, unlensed)
 lmax = len(TT) - 1
 ell = np.arange(lmax + 1)
 
