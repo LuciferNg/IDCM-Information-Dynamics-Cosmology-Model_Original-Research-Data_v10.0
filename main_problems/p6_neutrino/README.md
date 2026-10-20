@@ -1,6 +1,6 @@
 # P6 — neutrino（中微子質量譜：W-field p6 模式）
 
-## 狀態: 🟢 上游閉合（O49/O66）＋ 真剩餘 4 項 🟡
+## 狀態: 🟢 上游閉合（O49/O66）＋ P6 推盡（docs/02-09）＋ 剩餘 3 項 🟡/🔴
 
 **IDCM v10.0「中微子質量譜」問題**：從 K_Chain γ_n = 4sin²(πn/88)
 （n=6, γ₆=0.180736）＋ 12D WDVV eigenvalue 推導 m_νi 同 Δm²₂₁/Δm²₃₁，
@@ -26,8 +26,27 @@ vs 校準 0.051%）＋ 閉合零參數質量公式（m₃=γ₆²A、m₁=(γ₄
 | `01_problem_record.md` | 問題陳述 + 時序索引 + 審計註記 + §8 判決附註 | 🟡 |
 | `docs/01_neutrino_mass_gap_prompt.md` | 質量譜 gap 分析 prompt（方向 A-F 候選） | 🟡 |
 | `docs/02_closure_status.md` | 閉合鏈核對＋攻堅結果（11/11 獨立重算） | 🟢 |
+| `docs/03_audit_report.md` | 全檔數據審核＋O49 EXACT 核實＋m_ββ 重算 | 🟢 |
+| `docs/04_ring_tightbinding.md` | N-環 tight-binding 統一（N=2B/2F₅）＋ m=2 禁閉預言 | 🟢 |
+| `docs/05_hop_interference_closure.md` | O179 hop 干涉核交叉閉合＋結構剛性 | 🟢 |
+| `docs/06_identity_refinement.md` | 9=n₄+n₅、76=88−hop_max、\|A₅\|=60、CP 修正 | 🟢 |
+| `docs/07_final_status.md` | 推盡總結（閉合鏈完整版） | 🟢 |
+| `docs/08_tool_attack_negative.md` | 自製工具否定：Feshbach 極點＋譜積身份（排除兩路） | 🔴 |
+| `docs/09_gaplessness_hop.md` | ✅ gaplessness 閉合 t=Δ/2（剩餘 #1） | 🟢 |
 | `scripts/01-05_*.py` | 五條探索路線（08-15 原創；審計後保留原狀） | 🔴/🟡 |
+| `scripts/06_hop_bound_state_locator.py` | 工具 #1：Feshbach 極點（否定單缺陷散射） | 🧰 |
+| `scripts/07_spectral_log_identity_searcher.py` | 工具 #2：譜積↔log 搜尋（否定譜積路） | 🧰 |
+| `scripts/08_gaplessness_hop.py` | 工具 #3：gaplessness 驗證（閉合 t=Δ/2） | 🧰 |
 | `data/neutrino_p6_results.txt` | 05 最後輸出（校準＋Z₃） | 🟡 |
+
+## 剩餘項（docs/07 §3 + docs/09 更新）
+
+| # | 剩餘 | 狀態 |
+|:--|:---|:---:|
+| 1 | hop 強度 t=Δ/2 機制 | 🟢 **gaplessness 閉合**（docs/09；充分 Hamiltonian 留新 O） |
+| 2 | 1/76 log10 修正機制 | 🔴（譜積路已排除 docs/08；需 log10 operator 理論 → 新 O） |
+| 3 | m_ββ Majorana 相位 | 🟡 [6.108, 22.169] meV 帶（需 dim-5 算符相位理論） |
+| 4 | Σm vs DESI | 🟡 0.09714 硬預言 vs ΛCDM<0.072（等 DESI LRG/ELG + KATRIN/LEGEND） |
 
 ## 依賴
 
