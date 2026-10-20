@@ -41,7 +41,7 @@ print(f"帶通 ℓ∈[20,60]: std={m_band.std()*1e6:.1f} μK")
 
 # ============ 2. 節點溫度 ============
 nodes = []
-with open("/home/wsl/Projects/IDCM/IDCM-v10.0/main_problems/p4_cmb_cold_spot/data/a5_nodes.txt") as f:
+with open("data/a5_nodes.txt") as f:
     for line in f:
         ra, dec = map(float, line.split())
         nodes.append((ra, dec))
@@ -127,7 +127,7 @@ for i in order_cold[-5:]:
     print(f"  #{i}: T={T_band[i]*1e6:.1f} μK, 色={'冷' if color[i]==1 else '熱'}")
 
 # 儲存
-with open("/home/wsl/Projects/IDCM/IDCM-v10.0/main_problems/p4_cmb_cold_spot/data/smica_bandpass.txt", "w") as f:
+with open("data/smica_bandpass.txt", "w") as f:
     f.write(f"# SMICA 帶通濾波結果\n")
     f.write(f"# 帶通 ℓ∈[20,60]: 冷熱差={(T_cold.mean()-T_hot.mean())*1e6:.1f}μK, 相關 r={corr:.3f}\n")
     f.write(f"# idx color T_band_uK\n")

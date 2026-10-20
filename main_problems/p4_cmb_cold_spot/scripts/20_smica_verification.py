@@ -24,7 +24,7 @@ print(f"SMICA: NSIDE={nside}, npix={len(m)}, std={m.std()*1e6:.1f} μK")
 
 # ============ 2. 載入 60 節點 (RA, Dec) ============
 nodes = []
-with open("/home/wsl/Projects/IDCM/IDCM-v10.0/main_problems/p4_cmb_cold_spot/data/a5_nodes.txt") as f:
+with open("data/a5_nodes.txt") as f:
     for line in f:
         ra, dec = map(float, line.split())
         nodes.append((ra, dec))
@@ -139,7 +139,7 @@ if unmasked.sum() >= 20:
 rng = np.random.default_rng(42)
 random_ra = rng.uniform(0, 360, 60)
 random_dec = rng.uniform(-90, 90, 60)
-sc_r = SkyCoord(ra=random_ra*u.deg, dec=random_dec*u.deg, frame='icrs')
+sc_r = SkyCoord(ra=random_ra, dec=random_dec, unit=('deg', 'deg'), frame='icrs')
 gal_r = sc_r.galactic
 pix_r = hp.ang2pix(nside, gal_r.l.deg, gal_r.b.deg, lonlat=True)
 T_rand = m[pix_r]
@@ -164,7 +164,7 @@ if len(dT_rand_edges) > 5:
     print(f"隨機邊 |ΔT|: mean = {dT_rand_edges.mean()*1e6:.1f} μK, std = {dT_rand_edges.std()*1e6:.1f}")
 
 # 儲存
-with open("/home/wsl/Projects/IDCM/IDCM-v10.0/main_problems/p4_cmb_cold_spot/data/smica_verification.txt", "w") as f:
+with open("data/smica_verification.txt", "w") as f:
     f.write(f"# SMICA 雙峰驗證\n")
     f.write(f"# 全部邊: fr_mean={dT_fr.mean()*1e6:.1f}uK, norm_mean={dT_norm.mean()*1e6:.1f}uK, sep={sep:.2f}sigma\n")
     f.write(f"# 剔除銀河: fr_mean={dT_fr2.mean()*1e6:.1f}uK, norm_mean={dT_norm2.mean()*1e6:.1f}uK, sep={sep2:.2f}sigma\n")

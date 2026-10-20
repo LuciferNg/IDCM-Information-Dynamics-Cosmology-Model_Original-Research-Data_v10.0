@@ -40,7 +40,7 @@ print(f"減偶極: std={m_final.std()*1e6:.1f} μK")
 
 # ============ 2. 節點溫度 ============
 nodes = []
-with open("/home/wsl/Projects/IDCM/IDCM-v10.0/main_problems/p4_cmb_cold_spot/data/a5_nodes.txt") as f:
+with open("data/a5_nodes.txt") as f:
     for line in f:
         ra, dec = map(float, line.split())
         nodes.append((ra, dec))
@@ -147,7 +147,7 @@ corr = np.corrcoef([color[i] for i in range(60)], T_s)[0, 1]
 print(f"\n著色-溫度相關: r = {corr:.3f}")
 
 # 儲存
-with open("/home/wsl/Projects/IDCM/IDCM-v10.0/main_problems/p4_cmb_cold_spot/data/smica_smoothed.txt", "w") as f:
+with open("data/smica_smoothed.txt", "w") as f:
     f.write(f"# SMICA 5° 平滑驗證\n")
     f.write(f"# 冷熱差={(T_cold.mean()-T_hot.mean())*1e6:.1f}μK, 相關 r={corr:.3f}, binomial={n_match}/10 p={p_val:.4f}\n")
     f.write(f"# idx color T_smooth_uK l_deg b_deg\n")
