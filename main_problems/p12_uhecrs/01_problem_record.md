@@ -54,6 +54,9 @@ source:  遷移自 open_problems_fresh/crystal_stress/uhecrs（2026-09-27 分拆
 🔴 60 節點 A₅ 與 32 阻挫邊嘅獨立方向檢驗：需 Euclid DR1（2026-11-12，P5 預註冊）
 🟢→🔴 （2026-10-18 更新）32 阻挫邊側已用 Auger 109 事件完成獨立檢驗 → **否證**（docs/07）；60 節點側嘅 Euclid DR1 檢驗仍待
 🔴 路線 3 補完後仍未閉合：高能段（E>166 EeV）樣本、look-elsewhere 校正、RA 曝光非均勻 null
+> ⚠️ 更正附註（2026-10-18, append-only）：**look-elsewhere 校正已由 script 26 收口**（family-max null，
+> 節點側最強 z=2.37 → p=0.0848；低能避開 → p=0.0080）—— docs/07 §4.5。剩餘 = 高能段樣本（等數據）
+> + RA 曝光非均勻 null（方法論可做）。
 ```
 
 ## 四、攻擊路線

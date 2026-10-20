@@ -126,3 +126,5 @@ Euclid DR1（2026-11-12）；O110 全譜缺口。
 
 **剩餘（等數據，無內部可推）**: AugerPrime 盲測（N_for_5σ=53）；CMB-S4/SO 偏振；Euclid DR1（2026-11-12）；
 O110 全譜缺口；look-elsewhere 校正 / RA 曝光非均勻 null（方法論，非數據）。
+> ⚠️ 更正附註（2026-10-18, append-only）：**look-elsewhere 校正已收口**（script 26 → docs/07 §4.5）；
+> 剩餘方法論項只剩 RA 曝光非均勻 null。

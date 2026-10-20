@@ -42,7 +42,7 @@ IDCM-v10.0 → O140 FSR → P5 crystal_stress → P12 uhecrs（＋ P11 LRD）
 - 🔴 60 節點 Euclid 檢驗：等 DR1（2026-11-12，P5 預註冊）
 - 🔴 全譜 10⁹–10¹⁹ eV 缺口 → O110
 - 🟡 60 節點 ±8° 方向檢驗：+1.40σ 邊際（Auger 109, 8° 窗單尾 p=0.093）；能量加權 Fisher 3.99σ 屬另一統計量
-- 🟡 低能段（46-80 EeV）避開節點 p=0.0090（N=14；分層 look-elsewhere 未校正，待 AugerPrime）
+- 🟡 低能段（46-80 EeV）避開節點 p=0.0090（N=14；LEE 校正後 0.0080 仍顯著——docs/07 §4.5，待 AugerPrime）
 
 > ⚠️ 密度基準：本目錄唔新設閉合宣稱（主體閉合喺 P5）；各向異性 p 值為文獻級 MC（1500-5000 次），
 > 5σ 級宣稱需合併樣本（Euclid / AugerPrime 路線）。
