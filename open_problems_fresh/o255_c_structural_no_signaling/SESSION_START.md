@@ -80,5 +80,25 @@ docs: `docs/04_causal_propagation_capacity.md`
 
 **判據修正（Round 3）**: 06 step() OOB 動態長度; C3 初版閘係冇結構根據嘅期望 (假想嚴格零) — 修正為 Bessel 型結構判據, 內容由「尾巴細」改為「尖錐屬離散層, 連續層指數尾巴」(結構發現); K4 初版期望 C→44 錯 — 正解 C→43 (Nyquist 駐波排除)
 
+---
+
+## Session 4 (2026-10-20, Round 4 — ∀N 全譜族 + Ring 亮錐 + 3D + 尾巴閘)
+
+**剩餘缺口全部閉合**（用戶指示: 全部喺 O255 一次過推, 唔開新 O）
+
+**結果**: 🟢 24/24 PASS（四支 scripts）
+- `scripts/08_all_N_spectral_family.py` (7/7): **∀N∈[2,10000] 全譜族** — 唯一 Goldstone (|v_g|=1 ⟺ n≡0 mod N), 半鏈嚴格遞減, 速度-質量圓 ∀N, Z₂, **奇偶分支定理** (N 偶: Nyquist v_g=0 唯一; N 奇: 冇零速模)
+- `scripts/09_ring_light_cone.py` (4/4): **Ring 88 亮錐 cyclic 版** — u_j(t)=0 EXACT ∀ d_c(j)>t (Fraction 零容差), τ_first(d)=d EXACT ∀d=1..44 (對蹠 44=t), 左右對稱, wrap 冇捷徑
+- `scripts/10_3d_generalization.py` (5/5): **3D 推廣** — |∇ω| ≤ 1 = c (唔係 √3 c!), Goldstone 唯一 3D, leapfrog 亮錐 EXACT (L1≤t), 信息模總量 43³=79507
+- `scripts/11_tail_information_gate.py` (8/8): **尾巴-信息閘** — Bessel 尾巴係數學殘影: 分辨成本 K(d)≥0.737d bits, 操作層離散 tick EXACT 零, 可證偽性
+
+**記錄修正**: docs/02 §五補 O222/B 系交叉引用 (Bell/CHSH 違反性屬 O222 專線, 唔喺本 O)
+
+docs: `docs/05_all_N_ring_3d_tail_gate.md`
+
+**判據修正（Round 4）**: T1 初版驗到 t=40,d≥4 嘅 wrap 區 (比率 1.9) — 唔係尾巴失效係 ring 週期; 修正只驗冇 wrap 區 (j+t+1≤43)
+
+**剩餘**: O255 全部範圍內課題閉合。明確屬其他 O: Bell 違反性結構層 (O222/B 系), 觀測層 Bell 測試 (sky 系), C(L,T)→rate 能量論證 (O138), leapfrog=tick 物理演化橋 (O213)
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
