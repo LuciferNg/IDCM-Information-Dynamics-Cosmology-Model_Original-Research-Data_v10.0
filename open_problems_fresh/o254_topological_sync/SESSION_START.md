@@ -93,3 +93,21 @@ Q1 🔴 傾向否證（晶體側真物理/宇宙格側無基礎）| Q2 🔴 mJ �
 ### 待辦
 - 若 Q1-Q3 維持 🔴 → 出「拓撲同步假說否證」文件 + 回報 P14 docs/30 降級（SESSION_START §五）
 - P14 scripts/56 算術錯 等 P14 側回應（register incoming）
+
+---
+
+## Session 2 (2026-10-20) — R2 第三槍：正式否證
+
+### 已做
+- 「拓撲同步假說否證」正式文件 ✅ `docs/03_falsification_topological_sync.md`
+  - 三層獨立論證：能量（docs/01）/ 尺標（scripts/02 C1-C2: 1m=4.84e-24 hops, docs/21 重演 dev 0.062%）/ 定義域+文獻（陳數 2D vs K_Chain 1D, 零先例）
+  - 保留鉉：聲子-K_Chain 形状同構 🟢 + 普通聲子拓撲物理 🟢
+  - 降級建議交回 P14 docs/30（Level 2/4/6 🟡→🔴, 10⁴⁰ J 字眼刪除）— 經 register，未改 P14 檔
+  - 可證偽性保留（3 條翻案條件），符合閉合紀律
+- `scripts/02_falsification_checks.py` **5/5 PASS** → data/02 + logs/02
+- 記錄：01_problem_record 時序 #3 + §八第三槍；待 README + register notes
+
+### 狀態
+**O254 verdict: 否證（「晶體=宇宙電話」🔴）**，維持 registered：
+- 唔 close — 等 P14 對降級建議回應 + 翻案條件長期開放
+- 範圍只含該假說，唔牽連聲子同構/普通拓撲物理/O7 UHECR

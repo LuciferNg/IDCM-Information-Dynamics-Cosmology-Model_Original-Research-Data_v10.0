@@ -1,0 +1,16 @@
+{
+  "title": "O254 scripts/02 否證結構/尺標檢查",
+  "hop_Mpc": 6.7,
+  "desktop_1m_hops": 4.836984014096067e-24,
+  "earth_diameter_hops": 6.170056808380944e-17,
+  "chern_requires_2D_BZ": true,
+  "notes": "C2/C3/C4 係結構論證 (跳過 MC, N_search=1; O208 規則)",
+  "checks": {
+    "C1": true,
+    "C1b": true,
+    "C2": true,
+    "C3": true,
+    "C4": true
+  },
+  "conclusion": "Q1-Q3 全 🔴 — 假說否證條件滿足; 見 docs/03"
+}
