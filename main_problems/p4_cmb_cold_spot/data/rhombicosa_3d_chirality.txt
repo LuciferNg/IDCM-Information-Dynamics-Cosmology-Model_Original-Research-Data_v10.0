@@ -1,0 +1,11 @@
+# A5 3D chirality gauge — O213 scripts/10 reproduction + OBJ output
+dev_proper   = 0.000096872 deg   (C5 < 1e-3)
+dev_improper = 5.340202135 deg   (C7 [strictly chiral])
+delta_m      = 2.670063062 deg   (C8 expect 2.670063)
+2*delta_m    = 5.340126124 deg   (C15 expect 5.3402)
+antipodal    = 5.340200000 deg   (C13 = 2*delta_m)
+chi_pseudo   = -2.670063062 deg   (C16 absolute sense)
+mirror_resid = 5.340200000 deg   (C17 > 0)
+|GeoAut|     = 60 proper, 0 improper  (O223 B1/B2/B3)
+verdict      = chiral-strict
+enantiomers  = R:R (chi -2.6701), L:L (chi +2.6701)
