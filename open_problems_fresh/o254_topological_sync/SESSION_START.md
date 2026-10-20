@@ -104,7 +104,8 @@ Q1 🔴 傾向否證（晶體側真物理/宇宙格側無基礎）| Q2 🔴 mJ �
   - 保留鉉：聲子-K_Chain 形状同構 🟢 + 普通聲子拓撲物理 🟢
   - 降級建議交回 P14 docs/30（Level 2/4/6 🟡→🔴, 10⁴⁰ J 字眼刪除）— 經 register，未改 P14 檔
   - 可證偽性保留（3 條翻案條件），符合閉合紀律
-- `scripts/02_falsification_checks.py` **5/5 PASS** → data/02 + logs/02
+- `scripts/02_falsification_checks.py` **4/4 PASS**（R2 審計更正: 原 5/5 中 C3=結構論證報告行, 禁 vacuous check）→ data/02 + logs/02
+- **R3 審計 (2026-10-20): 全面 verify & audit** ✅ docs/04 — determinism STABLE + 獨立重算 15 項 dev 0 + AST 空 check 清零 (E2/E6/C3/C4 修正) + 文獻反查 ×8 (Ge/Li/Liu ref 修正) + N_IDCM 結構精確化 7.884689e60 (E3a dev→0) + data conclusion stale 修復。verdict 否證維持 🔴
 - 記錄：01_problem_record 時序 #3 + §八第三槍；待 README + register notes
 
 ### 狀態

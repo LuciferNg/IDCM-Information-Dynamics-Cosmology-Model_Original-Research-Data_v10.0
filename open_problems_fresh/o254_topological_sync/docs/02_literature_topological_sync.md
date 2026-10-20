@@ -25,7 +25,7 @@ P14:  冇 → 兩塊晶體係兩個獨立 Hamiltonian, 各自 BZ, 各自陳數
 |:----:|:-----|:-----|:-------|
 | 2015 | Süsstrunk & Huber, Science 349:47 (arXiv:1503.06808) | 機械振子陣列 QSHE analogue | phononic helical edge states, 拓撲保護（缺陷免疫）|
 | 2015 | Wang, Lu & Bertoldi, PRL 115:104302 | gyroscopic phononic crystals | 一維 chiral edge waves, bulk C=1,2 免疫背散射 |
-| 2018 | He et al., PRApplied 10:014017 | acoustic Weyl phononic crystal | 3D Weyl points + Fermi arcs, 一步障礙零反射 |
+| 2018 | Ge et al., PRApplied 10:014017 (arXiv:1803.00828) | acoustic Weyl phononic crystal | 3D Weyl points + Fermi arcs, 一步障礙零反射 |
 | 2018 | Zhang et al., Comms Physics 1:97 | 綜述 | "Topological sound": spin/valley 自由度, 缺陷免疫 |
 | 2018 | Zhang et al., NSR 5:314 (arXiv:1707.07142) | Perspective | phonon Berry phase/曲率定義 + honeycomb platform |
 | 2023 | Xu et al., PRApplied 19:034062 | phononic crystal | topological valley Hall edge states（材料差異實現）|
@@ -38,7 +38,8 @@ P14:  冇 → 兩塊晶體係兩個獨立 Hamiltonian, 各自 BZ, 各自陳數
 | 年份 | 工作 | 內容 | 有冇「分離晶體無介質」? |
 |:----:|:-----|:-----|:-----------------------|
 | 2023 | Wächtler & Platero, PRR 5:023021 | quantum vdP oscillators 喺 SSH chain / Kagome lattice 上, 邊界 oscillator 經拓撲態同步 | ❌ 同一 lattice, 邊界↔bulk 耦合 |
-| 2025 | Liu et al., Sci. Adv. 11:eady5649 | 兩個 trapped-ion 量子 vdP 振子 sync（量子同步實驗首例） | ❌ 同一離子阱, engineered dissipation 耦合 |
+| 2025 | Li et al., Sci. Adv. 11:eady5649 | 單一 trapped-ion 量子 vdP 振子（實驗首例） | ❌ 單一離子, 唔涉及兩體同步 |
+| 2025 | Liu et al., arXiv:2509.18423 | 兩個 trapped-ion 量子 vdP 振子 sync（量子同步兩體首例） | ❌ 同一離子阱, engineered collective dissipation 耦合 |
 | 2025 | Di et al., Comms Physics (s42005-025-01999-1) | non-Hermitian topological synchronization — 非線性 topolectrical circuit 實驗 | ❌ 同一電路網絡 |
 | 2023 | (PMC8847423) | 混沌系統「拓撲同步」= multifractal structure 收斂 | ❌ 耦合的兩個 oscillator, zipper effect |
 
@@ -78,5 +79,5 @@ Q2 已由 docs/01 圍堵: mJ 端否證 (能量差 ≥4 個數量級), 10⁴⁰ J
 - arXiv:1707.07142 (phonon Berry phase & topology Perspective)
 - arXiv:1503.06808 → Science 349:47 (2015)
 - PRL 115, 104302 (2015); PRApplied 10, 014017 (2018); Comms Physics 1:97 (2018)
-- PRR 5, 023021 (2023); Sci. Adv. 11:eady5649 (2025); Comms Physics 2025 (non-Hermitian)
+- PRR 5, 023021 (2023); Sci. Adv. 11:eady5649 (Li 2025 單 vdP); arXiv:2509.18423 (Liu 2025 兩 vdP); Comms Physics 2025 (non-Hermitian)
 - 檢索工具經 web_search（keyless tier），引用前應以官方 DOI 頁複核；本文件只攞結構性結論（都係「同一耦合系統內」），唔依賴特定數字

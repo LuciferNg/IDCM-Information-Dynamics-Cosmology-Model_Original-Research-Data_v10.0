@@ -61,10 +61,10 @@ E_Pl = math.sqrt(hbar * c**5 / G)    # J
 # 宇宙 K_Chain 單模量子 E2
 E_q_ring = hbar * omega_ring_rad
 
-# 相干全晶格翻轉 E3: N_IDCM·ℏω_ring; N_IDCM = τ/t_Pl (τ = 1/ω_ring) ⟹ = ℏ/t_Pl = E_Pl 恆等
-# 注意: N_IDCM 定義用 τ=1/ω_ring 唔係 T_ring=2π/ω_ring (O86/O213 register), 所以閉式係 E_Pl 唔係 2πE_Pl
-N_IDCM = 7.88e60          # register O86/O213
-E_coherent = N_IDCM * E_q_ring       # 直接乘
+# ⿻ 審計修正 (2026-10-20): N_IDCM 用結構定義 N_exact=1/(ω_ring·t_Pl), dev E3a→0; 空 check 修正
+N_reg = 7.88e60          # register O86/O213 (3 sig, 僅對照)
+N_IDCM = 1.0 / (omega_ring_rad * math.sqrt(hbar * G / c**5))  # = τ/t_Pl ≡ 7.884689e60, dev 0
+E_coherent = N_IDCM * E_q_ring       # 直接乘 (N 由 ω_ring,t_Pl 導出)
 E_Pl_ref = hbar / math.sqrt(hbar * G / c**5)  # ℏ/t_Pl = E_Pl (= sqrt(ℏc⁵/G) 同值)
 E_mJ = 1e-3               # J
 
@@ -105,8 +105,9 @@ chk("E1", N_ph_mJ > 1e20, f"mJ 含 ≫1 個聲子 (N_ph={N_ph_mJ:.2e}) — 能�
 
 p("\n[E2] 宇宙 K_Chain 單模量子")
 p(f"  ℏω_ring             = {E_q_ring:.4e} J")
+p(f"  N_IDCM(結構)        = {N_IDCM:.6e} (≡ τ/t_Pl; 對照 register 7.88e60)")
 p(f"  對比聲子: E_ph/E_q  = {E_ph/E_q_ring:.4e} (~{math.log10(E_ph/E_q_ring):.1f} 數量級, docs/29 23 數量級係頻率比)")
-chk("E2", True, f"單量子 ℏω_ring={E_q_ring:.2e} J — 單量子極細, 但拓撲翻轉係集體事件, E2 唔係限制端 (報告)")
+chk("E2", E_q_ring < E_ph, f"單量子 ℏω_ring={E_q_ring:.2e} J < 聲子 {E_ph:.2e} J — 單量子極細 (唔係限制端, 但真比較)")
 
 p("\n[E3] 相干全晶格翻轉下限")
 p(f"  E_coherent = N_IDCM·ℏω_ring = {E_coherent:.4e} J")
@@ -133,7 +134,8 @@ p("  corpus 考古 (P14 docs/29/32 + scripts/55-58):")
 p("    docs/29:52  「天文級 (10⁴⁰ J)?」 — 首次出現, 純問題形式")
 p("    docs/32:651  「Q2 能量 mJ vs 10⁴⁰ J — 呢個數量級估算未推導 (只係問題), 唔係答案」")
 p("    scripts/55:326 問題重述; scripts/58 結論係「1-10 mJ 可改變全域陳數」(docs/32 評過樂觀)")
-chk("E6", True, "10⁴⁰ J 無結構推導支持 = 佔位數; 真實圍堵: E4~10 J (事件錨) ≪ 10⁴⁰ ≪ E5~10⁶⁹ J (全球凝聚)")
+chk("E6", (E_uhecr_2 < 1e40 < E_vac_world),
+    f"1e40 J 落喺事件錨 {E_uhecr_2:.0f} J 與全球凝聚 {E_vac_world:.3e} J 之間 — 冇對應已推導宇宙能量階, 佔位數 (真比較)")
 
 p("\n[E7] 能量槓桿 Λ₀ 重算 (P14 scripts/56 對照)")
 p(f"  Λ₀ = ρ_vac·V_int/(ℏ·Δω) = {Lambda0:.4e}")
@@ -189,7 +191,7 @@ rows = {
     "resp_mJ_nominal_J": resp_mJ_nominal,
     "resp_mJ_critical_J": resp_mJ_crit,
     "checks": {n: bool(c) for n, c in checks},
-    "conclusion": "mJ vs 1e40 J 假二分; 圍堵 = 事件錨~10J / 相干下限~1.23e10J / 全球凝聚~1e69J; mJ 端能量否證, Q1/Q3 耦合算子先係真殺手",
+    "conclusion": "mJ vs 1e40 J 假二分; 圍堵 = 事件錨~10J / 相干下限~1.96e9J (=E_Pl, N_IDCM·ℏω_ring 恆等) / 全球凝聚~1e69J; mJ 端能量否證, Q1/Q3 耦合算子先係真殺手",
 }
 
 with open(os.path.join(OUT_D, "01_energy_enclosure.json"), "w", encoding="utf-8") as f:

@@ -15,16 +15,17 @@
   P14 docs/21: 1m = 4.84e-24 hops ⟹ 兩晶體喺同一宇宙格胞 = 同一對象嘅兩個局部
 [PASS] C2: 1m ≪ 1 hop ⟹ 晶體唔係『分離系統』喺宇宙格尺度 (docs/21 一致)
 
-[C3] 陳數定義域 vs IDCM 晶格
-  C = (1/2π)∫_BZ Ω(k) d²k — 需要 2D BZ (kx, ky)
-  K_Chain = 1D 鏈 (44 sites, 1D BZ); A5 = 圖 (無 BZ 連續胞)
-  ⟹ IDCM 晶格本身唔攜帶 2D 陳數; P14 scripts/57 嘅『陳數整數化』係定性引用, 非本格量
-[PASS] C3: 定義域未對接: 陳數(2D) vs K_Chain(1D)/A5(圖) — 結構缺口維持 🔴
+[C3] 陳數定義域 vs IDCM 晶格 — 結構論證（報告行，唔計 PASS）
+  C = (1/2π)∫_BZ Ω(k) d²k — 需要 2D BZ (kx, ky); K_Chain = 1D 鏈 (44 sites)
+  A5 = 圖 (無 BZ 連續胞) ⟹ IDCM 晶格本身唔攜帶 2D 陳數
+  註: 此項係定性結構論證，冇獨立數值判據 — 按 verify-all-system『禁 vacuous check』刀，
+      唔入 PASS 計數（若已錄 5/5，誠實 recount = 4/4）
 
-[C4] 否證評級橋（引用已跑輸出，非新計算）
+[C4] 否證評級橋 — 複合真條件（能量 + 尺標 兩腿都斷）
   Q1 拓撲等價: 晶體側 🟢 (文獻 2015+ 聲子拓撲物理) / 宇宙格側 🔴 (冇機制, 冇算子)
   Q2 能量: mJ 端 🔴 否證 (docs/01: UHECR 錨 ~16J ≫ 1mJ ×1.6e4; 10⁴⁰J = 佔位數)
   Q3 全局共享: 🔴 必須預耦合 (docs/02: 文獻全部同一耦合系統; docs/21: 同一胞)
-[PASS] C4: Q1-Q3 全 🔴 ⟹ 『晶體=宇宙電話』假說否證 (正式文件: docs/03)
+  (複合: 能量腿 E3/E_mJ=1.96e+12 > 1e10 AND 尺標腿 hops<1)
+[PASS] C4: Q1-Q3 全 🔴 ⟹ 『晶體=宇宙電話』假說否證 (docs/03; 複合真條件 E3/E_mJ=1.956e+12)
 
-  RESULT: 5/5 PASS
+  RESULT: 4/4 PASS

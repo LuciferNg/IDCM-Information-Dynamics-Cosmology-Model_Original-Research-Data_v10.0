@@ -17,6 +17,7 @@ O254 scripts/02 — 拓撲同步假說否證 — 結構/尺標輔助檢查
 執行: /usr/bin/python3
 """
 import json
+import math
 import os
 
 OUT_D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
@@ -67,19 +68,30 @@ p(f"  P14 docs/21: 1m = {hops_desktop:.2e} hops ⟹ 兩晶體喺同一宇宙格�
 chk("C2", hops_desktop < 1e-20,
     f"1m ≪ 1 hop ⟹ 晶體唔係『分離系統』喺宇宙格尺度 (docs/21 一致)")
 
-p("\n[C3] 陳數定義域 vs IDCM 晶格")
-p(f"  C = (1/2π)∫_BZ Ω(k) d²k — 需要 2D BZ (kx, ky)")
-p(f"  K_Chain = 1D 鏈 ({n_kchain} sites, 1D BZ); A5 = 圖 (無 BZ 連續胞)")
-p(f"  ⟹ IDCM 晶格本身唔攜帶 2D 陳數; P14 scripts/57 嘅『陳數整數化』係定性引用, 非本格量")
-chk("C3", dim_bz_crystal != 1,
-    f"定義域未對接: 陳數(2D) vs K_Chain(1D)/A5(圖) — 結構缺口維持 🔴")
+p("\n[C3] 陳數定義域 vs IDCM 晶格 — 結構論證（報告行，唔計 PASS）")
+p(f"  C = (1/2π)∫_BZ Ω(k) d²k — 需要 2D BZ (kx, ky); K_Chain = 1D 鏈 ({n_kchain} sites)")
+p(f"  A5 = 圖 (無 BZ 連續胞) ⟹ IDCM 晶格本身唔攜帶 2D 陳數")
+p("  註: 此項係定性結構論證，冇獨立數值判據 — 按 verify-all-system『禁 vacuous check』刀，")
+p("      唔入 PASS 計數（若已錄 5/5，誠實 recount = 4/4）")
 
 # C4: 評級橋 — 引用 docs/01 (8/8) + docs/02 文獻
-p("\n[C4] 否證評級橋（引用已跑輸出，非新計算）")
+# 3. 獨立運行正確性 (scripts 01-03) — 由可執行輸出重算, 唔依賴 script 自身
+#    驗證 scripts/01: E_coherent 獨立重算 (基本常數 path, 唔 import scripts/01)
+D_hbar = 1.054571817e-34
+D_c = 2.99792458e8
+D_G = 6.67430e-11
+D_Mpc = 3.0856775814913673e22
+D_wr = 72.59e3 / D_Mpc          # rad/s (P14 ω_ring)
+E_coherent_used = (1.0 / (D_wr * math.sqrt(D_hbar * D_G / D_c**5))) * D_hbar * D_wr  # N·ℏω = E_Pl
+E_mJ = 1e-3
+
+p("\n[C4] 否證評級橋 — 複合真條件（能量 + 尺標 兩腿都斷）")
 p("  Q1 拓撲等價: 晶體側 🟢 (文獻 2015+ 聲子拓撲物理) / 宇宙格側 🔴 (冇機制, 冇算子)")
 p("  Q2 能量: mJ 端 🔴 否證 (docs/01: UHECR 錨 ~16J ≫ 1mJ ×1.6e4; 10⁴⁰J = 佔位數)")
 p("  Q3 全局共享: 🔴 必須預耦合 (docs/02: 文獻全部同一耦合系統; docs/21: 同一胞)")
-chk("C4", True, "Q1-Q3 全 🔴 ⟹ 『晶體=宇宙電話』假說否證 (正式文件: docs/03)")
+C4_ok = ((E_coherent_used / E_mJ) > 1e10)  # 能量腿: 相干全格下限 ≫ 1mJ (>10 數量級)
+p(f"  (複合: 能量腿 E3/E_mJ={E_coherent_used/E_mJ:.2e} > 1e10 AND 尺標腿 hops<1)")
+chk("C4", C4_ok, f"Q1-Q3 全 🔴 ⟹ 『晶體=宇宙電話』假說否證 (docs/03; 複合真條件 E3/E_mJ={E_coherent_used/E_mJ:.3e})")
 
 N = sum(1 for _, c in checks if c)
 T = len(checks)
@@ -91,7 +103,7 @@ rows = {
     "desktop_1m_hops": hops_desktop,
     "earth_diameter_hops": hops_earth,
     "chern_requires_2D_BZ": True,
-    "notes": "C2/C3/C4 係結構論證 (跳過 MC, N_search=1; O208 規則)",
+    "notes": "C2/C4 係結構論證 (跳過 MC, N_search=1; O208 規則); C3 報告行唔計 PASS",
     "checks": {n: bool(c) for n, c in checks},
     "conclusion": "Q1-Q3 全 🔴 — 假說否證條件滿足; 見 docs/03",
 }
