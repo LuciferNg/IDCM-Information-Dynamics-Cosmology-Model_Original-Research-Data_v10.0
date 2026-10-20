@@ -1,0 +1,28 @@
+{
+  "title": "O254 scripts/01 能量數量級圍堵",
+  "E_mJ_J": 0.001,
+  "E_ph_10MHz_J": 6.62607015e-27,
+  "N_ph_per_mJ": 1.509190179642152e+23,
+  "E_q_ring_J": 2.4808608862832408e-52,
+  "N_IDCM": 7.88e+60,
+  "E_coherent_J": 1954918378.3911936,
+  "E_Pl_ref_J": 1956081636.0991085,
+  "E_uhecr_1e19eV_J": 1.6021766339999999,
+  "E_uhecr_1e20eV_J": 16.02176634,
+  "E_vac_world_J": 5.2014295676019074e+69,
+  "E10_40_J": 1e+40,
+  "Lambda0": 905514108340.1171,
+  "resp_mJ_nominal_J": 905514108.3401171,
+  "resp_mJ_critical_J": 9.055141083401172e+17,
+  "checks": {
+    "E1": true,
+    "E2": true,
+    "E3a": true,
+    "E3b": true,
+    "E4": true,
+    "E6": true,
+    "E7a": true,
+    "E7b": true
+  },
+  "conclusion": "mJ vs 1e40 J 假二分; 圍堵 = 事件錨~10J / 相干下限~1.23e10J / 全球凝聚~1e69J; mJ 端能量否證, Q1/Q3 耦合算子先係真殺手"
+}
