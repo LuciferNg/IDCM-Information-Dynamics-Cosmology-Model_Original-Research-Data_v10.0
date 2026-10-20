@@ -109,3 +109,13 @@ M_comp(φ法) = 4.5965×10¹⁶ GeV → m_ν = **4.30×10⁻⁵** eV（唔係聲
 - 🔴 **本次修正 O49 script 11**：δ_CP 應為 211.717474°（O123），原 72.6° 係被否證候選；M₂₃=15.185 meV（δ 唔敏感幾乎唔變），M₁₂/M₁₃ 錯號修正。
 - 🟡 **真剩餘 4 項**：束縛態機制、「點解 1/L₉」生成鏈、m_ββ Majorana 相位、Σm vs DESI（等數據，維持 partial 唔 close）。建議分別註冊新 O 攻堅。
 - 新增檔：`docs/02_closure_status.md`（推導時序索引更新：§8 之後）。
+
+## 9. 階段性 closeout 附註（2026-10-20，append-only）
+
+> 詳見 `docs/10_closeout_20261020.md`（審計報告）；`scripts/09_audit_docs04_09.py`（獨立重算，32/32 PASS）。
+
+- ✅ **#1 束縛態 hop 強度 t=Δ/2 閉合**（docs/09）：gaplessness 條件（hop 帶頂 γ₄+2t = 譜頂 γ₅）唯一決定 t = Δ/2；零自由參數、非 fit。充分 Hamiltonian 留新 O。
+- ✅ **身份精修**（docs/06）：Δ 嘅 9 = n₄+n₅（非 N_gen²——後驗標籤修正）；76 = 88−hop_max（hop_max=12=B·N_gen）；hop 階梯和 = 60 = |A₅|；Σγ_odd = Σγ_even = 88。
+- 🔴 **兩條機制路經自製工具否定**（docs/08）：Feshbach 極點（0 位置命中 t=Δ/2）＝hop 階梯唔係單缺陷散射；譜積身份搜尋（1/γ₆−1/76 冇 operator 命中）＝1/76 唔係譜積產物。
+- 🟡 **第 2 輪審計**：docs/04-09 + scripts/06-08 全部核過（scripts/09，32/32 PASS）；docs/01-03、scripts/01-05 仍屬 764b017 已審核狀態。
+- 🟡 **剩餘 3 項**（原 4 項 − #1 已閉合）：1/76 log10 修正機制（🔴）、m_ββ 相位（🟡）、Σm vs DESI（🟡 等數據）——全部 register 已更新。

@@ -43,6 +43,13 @@
 - 🟡 **剩餘 #4**：Σm=0.09714 vs DESI<0.072（模型依賴；等 DESI LRG/ELG + KATRIN/LEGEND）。
 - ⚠️ O49 docs/03「EXACT」聲稱唔成立（75/64 dev 0.097%、16/105 dev 0.094%）——後續引用用生成鏈，唔用 operator 比。
 
+### 階段性 closeout（2026-10-20，docs/10）
+
+- ✅ **#1 hop 強度 t=Δ/2 閉合**（docs/09）：gaplessness（帶頂 γ₄+2t=γ₅）唯一決定；充分 Hamiltonian 留新 O。
+- 🔴 兩條機制路否定（docs/08）：Feshbach 極點 0 命中；譜積身份搜尋冇 1/76。
+- ✅ 第 2 輪審計：scripts/09_audit_docs04_09.py **32/32 PASS**（docs/04-09 全核）；scripts/06-08 重跑 exit=0 一致。
+- 🟡 剩餘 3 項：#2 1/76 log10 機制（🔴）、#3 m_ββ 相位（🟡）、#4 Σm vs DESI（🟡 等數據）。
+
 ## 5. 依賴
 
 - d_tensor：`main_problems/p15_early_derivations/data/d_tensor_positive.npy`（12×12×12）
