@@ -68,5 +68,17 @@ docs: `docs/03_sr_structural_comparison.md` (SR 對比 + 全譜族定理)
 
 **剩餘 (partial 原因)**: ~全譜族定理已閉合 (K_Chain+樹+精化+半整數); Bell 實驗觀測檢定非本 O 範圍 (spectral boundary 已完成, 觀測層屬 sky 系)
 
+---
+
+## Session 3 (2026-10-20, Round 3 — 時間域因果 + 信道容量)
+
+**結果**: 🟢 19/19 PASS（兩支 scripts）
+- `scripts/06_causal_propagation.py` (9/9): **離散亮錐定理** — leapfrog u_j(t)=0 EXACT ∀|j|>t (Fraction 零容差), 前沿速度=1 site/步=c, τ_first(d)=d EXACT (N4 下界以等號); **連續時間尾巴 = Bessel 型指數壓制** (~0.065 d=1, 幾何收縮 <0.6, d=7 <5e-4) — 尖錐屬離散操作層, 連續層係指數尾巴 (Lieb-Robinson); 群-前沿速度分離 (包峰 v_g=0.9595c < c, 前沿 c)
+- `scripts/07_channel_capacity.py` (10/10): **信道容量閉式** C(L,T)=floor((88/π)arccos(L/cT)) 零參數 ≡ 暴力計數; 因果閾值 C=0 ∀ L>cT; 首次通道 L*=cT·cos(π/88); **新閉合: 信息行波總量 43 = N/2−1** (Nyquist 駐波 v_g=0 唔載信息); 單調性
+
+docs: `docs/04_causal_propagation_capacity.md`
+
+**判據修正（Round 3）**: 06 step() OOB 動態長度; C3 初版閘係冇結構根據嘅期望 (假想嚴格零) — 修正為 Bessel 型結構判據, 內容由「尾巴細」改為「尖錐屬離散層, 連續層指數尾巴」(結構發現); K4 初版期望 C→44 錯 — 正解 C→43 (Nyquist 駐波排除)
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。

@@ -1,0 +1,6 @@
+[結果] C1-C2: leapfrog h=1 精確亮錐 u_j(t)=0 ∀|j|>t (Fraction 零容差), 前沿速度=1 site/步=c
+[結果] C3: 連續時間錐外 = Bessel 型尾巴 (transition ~0.065, 每 site 幾何收縮 <0.6, d=7 <5e-4)
+[結果]   —— 尖錐只屬於離散步進 (C1); 連續時間係指數壓制尾巴 (Lieb-Robinson 型, 非嚴格零)
+[結果] C4: 波包峰 ≈ v_g(n=8)·t (60.0 vs 57.6) — 群速度 < c, 前沿仍 c
+
+結果: 9/9 PASS
