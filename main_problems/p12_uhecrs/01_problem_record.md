@@ -8,12 +8,12 @@ verdict: -
 flags:   -
 owner:   uhecrs
 created: 2026-10-05
-updated: 2026-10-18
+updated: 2026-10-20
 prereq:  O7, O110, O121, O173
 source:  遷移自 open_problems_fresh/crystal_stress/uhecrs（2026-09-27 分拆；register 2026-10-05）
 -->
 
-> **狀態**: 🔴 開放（詳情目錄；主體閉合屬 P5）
+> **狀態**: 🔴 開放（詳情目錄；主體閉合屬 P5）｜**階段閉合 2026-10-20**（內部推項清零，剩等數據）
 > **建立**: 2026-08-16（開題）｜分拆入 P12: 2026-09-27
 > **前置**: O7, O110, O121, O173
 > **位置**: `main_problems/p12_uhecrs/`
@@ -54,10 +54,10 @@ source:  遷移自 open_problems_fresh/crystal_stress/uhecrs（2026-09-27 分拆
 🔴 60 節點 A₅ 與 32 阻挫邊嘅獨立方向檢驗：需 Euclid DR1（2026-11-12，P5 預註冊）
 🟢→🔴 （2026-10-18 更新）32 阻挫邊側已用 Auger 109 事件完成獨立檢驗 → **否證**（docs/07）；60 節點側嘅 Euclid DR1 檢驗仍待
 🔴 路線 3 補完後仍未閉合：高能段（E>166 EeV）樣本、look-elsewhere 校正、RA 曝光非均勻 null
-> ⚠️ 更正附註（2026-10-18, append-only）：**look-elsewhere 校正已由 script 26 收口**（family-max null，
+> ⚠️ 更正附註（2026-10-20, append-only）：**look-elsewhere 校正已由 script 26 收口**（family-max null，
 > 節點側最強 z=2.37 → p=0.0848；低能避開 → p=0.0080）—— docs/07 §4.5。剩餘 = 高能段樣本（等數據）
 > + RA 曝光非均勻 null（方法論可做）。
->> ⚠️ 更正附註 2（2026-10-18, append-only）：**RA 曝光 null 亦已硬化**（script 27：RA 邊緣平坦度
+>> ⚠️ 更正附註 2（2026-10-20, append-only）：**RA 曝光 null 亦已硬化**（script 27：RA 邊緣平坦度
 >> 三檢驗 p>0.95；實證-RA null 對照結論不變）⟹ §三「仍未閉合」只剩等數據項（高能段樣本）。
 ```
 
@@ -98,7 +98,8 @@ source:  遷移自 open_problems_fresh/crystal_stress/uhecrs（2026-09-27 分拆
 | 9 | 2026-10-18 | 路線 3 補完：32 阻挫邊 ±5° 正式 MC null（首輪兩個方法 bug 已修正重跑）→ **否證** | docs/07；scripts/24,25；data/edge_auger_and_lowenergy.json, frustration_edge_verdict.json |
 | 10 | 2026-10-18 | 低能段 46-80 EeV 避開節點正式化：p=0.0090；三分區分解（節點帶 +1.40σ） | docs/07 §4.3–4.4 |
 | 11 | 2026-10-18 | look-elsewhere 校正（family-max null）：節點側最強 z=2.37 → p=0.0848；低能避開 → p=0.0080 | docs/07 §4.5；scripts/26；data/lee_correction.json |
-| 12 | 2026-10-18 | RA 曝光 null 硬化：RA 邊緣平坦度三檢驗 p>0.95；uniform vs empirical-RA 兩 null 結論一致 | docs/07 §4.6；scripts/27；data/ra_exposure_null.json |
+| 12 | 2026-10-20 | RA 曝光 null 硬化：RA 邊緣平坦度三檢驗 p>0.95；uniform vs empirical-RA 兩 null 結論一致 | docs/07 §4.6；scripts/27；data/ra_exposure_null.json |
+| 13 | 2026-10-20 | **階段性閉合**：未審計檔驗證（docs/03-07+README 全 marker 已判定；時序 stamp 修正 10-18→10-20）＋ repro 決策驗證 23/25/26/27 hash 一致（22/24 另跑） | 本輪記錄；docs/03 §4 cross-ref |
 
 ## 七、相關文件
 

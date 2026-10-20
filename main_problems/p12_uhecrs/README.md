@@ -1,6 +1,6 @@
 # P12 — uhecrs（UHECR 超高能宇宙射線）
 
-## 狀態: 🟢 主體已閉合（P5 45/45）/ 🟡 詳情等數據（AugerPrime / CMB-S4/SO / Euclid DR1）
+## 狀態: 🟢 主體已閉合（P5 45/45）/ 🟡 詳情等數據（AugerPrime / CMB-S4/SO / Euclid DR1）｜階段閉合 2026-10-20
 
 **UHECR = 空間晶格應力釋放**（Topological Stress Release）：宇宙 = 88-site 對偶鏈晶格（K_chain ⊗ K_tree），
 60 個 A₅ 節點 + 32 條阻挫邊係應力集中點；相位滑動／阻挫邊重聯一次性釋放 10²⁰ eV 級，唔使逐次加速。

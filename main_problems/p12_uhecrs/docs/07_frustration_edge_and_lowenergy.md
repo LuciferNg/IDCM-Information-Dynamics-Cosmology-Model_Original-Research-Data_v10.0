@@ -109,7 +109,7 @@ p(超額) = 0.325    p(不足) = 0.677
 
 **追加產物**: `scripts/26_lee_correction.py`；`data/lee_correction.json`
 
-## 4.6 RA 曝光非均勻 null 硬化（script 27, 2026-10-18 追加）
+## 4.6 RA 曝光非均勻 null 硬化（script 27, 2026-10-20 追加）
 
 消耗 §六局限 (3)。**Auger SD 標準曝光係 dec-only**（地面陣列滿日覆蓋 → RA 平坦），而
 scramble-RA keep-dec 已含 dec 曝光 ⟹ 唯一未測成份 = 觀測目錄 RA 邊緣平坦度。

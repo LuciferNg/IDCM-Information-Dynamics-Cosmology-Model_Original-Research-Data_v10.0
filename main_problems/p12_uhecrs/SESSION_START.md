@@ -8,13 +8,13 @@ verdict: -
 flags:   -
 owner:   uhecrs
 created: 2026-10-05
-updated: 2026-10-18
+updated: 2026-10-20
 prereq:  O7, O110, O121, O173
 source:  遷移自 open_problems_fresh/crystal_stress/uhecrs（2026-09-27 分拆；register 2026-10-05）
 -->
 
 > **Session**: 2026-10-18（結構重整 session——非研究攻堅）
-> **狀態**: 🔴 開放（register 權威；主體閉合屬 P5）
+> **狀態**: 🔴 開放（register 權威；主體閉合屬 P5）｜**階段閉合 2026-10-20**（內部推項清零，剩等數據）
 > **來源**: P5 crystal_stress SESSION_START（2026-10-17）交接建議 → 本 session
 > **前置**: O7, O110, O121, O173
 > **位置**: `main_problems/p12_uhecrs/`
@@ -131,5 +131,5 @@ Euclid DR1（2026-11-12）；O110 全譜缺口。
 
 **剩餘（等數據，無內部可推）**: AugerPrime 盲測（N_for_5σ=53）；CMB-S4/SO 偏振；Euclid DR1（2026-11-12）；
 O110 全譜缺口；look-elsewhere 校正 / RA 曝光非均勻 null（方法論，非數據）。
-> ⚠️ 更正附註（2026-10-18, append-only）：**look-elsewhere 校正已收口**（script 26 → docs/07 §4.5）；
+> ⚠️ 更正附註（2026-10-20, append-only）：**look-elsewhere 校正已收口**（script 26 → docs/07 §4.5）；
 > 剩餘方法論項只剩 RA 曝光非均勻 null。
