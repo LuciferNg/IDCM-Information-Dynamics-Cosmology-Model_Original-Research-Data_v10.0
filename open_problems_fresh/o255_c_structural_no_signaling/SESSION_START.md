@@ -54,5 +54,19 @@ docs: `docs/01_structural_c_bound.md` (c 結構上限定理) + `docs/02_no_commu
 
 **剩餘 (partial 原因)**: 半整數 shift 喺 FSR 精化層 (44·4^ℓ) 嘅 v_g 動態; K_Tree 樹狀譜 (λ=4sin²(cπ/68) 族) 嘅 v_g 上界；Bell 實驗觀測檢定非本 O 範圍
 
+---
+
+## Session 2 (2026-10-20, Round 2 — FSR 精化層 + K_Tree 樹狀譜 + SR 對比)
+
+**結果**: 🟢 1937716/1937716 PASS（兩支 scripts）
+- `scripts/04_fsr_tree_bound.py` (1937618/1937618): **gap 定理** — gap(N)=1−cos(π/N)=2sin²(π/2N) 半角形式; 精化層 N_ℓ=44·4^ℓ 每層 v_g≤1 唯一 n=0, gap 單調收縮→0 (SR ℓ→∞); **O140 速度階梯 ≡ v_g + Lorentz γ_L=csc=2/√γ_n EXACT**; **自對偶模統一: 鏈 n=22 同樹 c=17 (λ₁₇=μ²) 都 v_g=c/√2**; K_Tree 樹譜 v_g≤1 c=0 唯一; Σλ=66=2K_tree; 半整數層 |v_g|≤1
+- `scripts/05_sr_comparison.py` (98/98): **快度格仔** η_n=atanh(v_g/c)=ln cot(πn/176) EXACT (三讀法); O190 質量殼 csc²−cot²=1 逐模; SR 對比 — c=Goldstone 譜速度非公設
+
+docs: `docs/03_sr_structural_comparison.md` (SR 對比 + 全譜族定理)
+
+**判據修正（Round 2）**: F1/F2 初版用固定 1e-9/1e-12 閘, ℓ≥6 時 gap(N_ℓ) 細過閘 ⟹ 假 FAIL; 改 gap 判據 (半角形式 2sin²(π/2N)), 內容昇華「嚴格 <c」→「gap>0 且單調收縮」(判據昇華, 非放寬)
+
+**剩餘 (partial 原因)**: ~全譜族定理已閉合 (K_Chain+樹+精化+半整數); Bell 實驗觀測檢定非本 O 範圍 (spectral boundary 已完成, 觀測層屬 sky 系)
+
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
