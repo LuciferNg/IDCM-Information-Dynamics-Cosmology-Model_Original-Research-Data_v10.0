@@ -1,0 +1,816 @@
+                                         Draft version June 5, 2018
+                                         Preprint typeset using LATEX style emulateapj v. 6/22/04
+
+
+
+
+                                                                  THE NON-GAUSSIAN COLD SPOT IN THE 3-YEAR WMAP DATA
+                                                                                                      M. Cruz1
+                                                                                 IFCA, CSIC-Univ. de Cantabria, Avda. los Castros, s/n,
+                                                                                                E-39005-Santander,
+                                                                                                      Spain
+
+
+                                                                                                      L. Cayón
+                                                                  Department of Physics, Purdue University, 525 Northwestern Avenue, West Lafayette,
+                                                                                               IN 47907-2036, USA
+arXiv:astro-ph/0603859v2 25 Sep 2006
+
+
+
+
+                                                                                               E. Martı́nez-González
+                                                                                 IFCA, CSIC-Univ. de Cantabria, Avda. los Castros s/n,
+                                                                                             39005-Santander,Spain
+
+
+                                                                                                     P. Vielva2
+                                                                                 IFCA, CSIC-Univ. de Cantabria, Avda. los Castros, s/n,
+                                                                                              39005-Santander,Spain
+                                                                                                         and
+                                                                                                        J. Jin
+                                                                 Department of Statistics. Purdue University. 150 N. University Street, West Lafayette,
+                                                                                                   IN 47907-2067
+                                                                                             Draft version June 5, 2018
+
+                                                                                            ABSTRACT
+                                                  The non-Gaussian cold spot detected in wavelet space in the WMAP 1–year data, is detected again
+                                                in the coadded WMAP 3–year data at the same position (b = −57◦ , l = 209◦) and size in the sky
+                                                (≈ 10◦ ). The present analysis is based on several statistical methods: kurtosis, maximum absolute
+                                                temperature, number of pixels below a given threshold, volume and Higher Criticism. All these
+                                                methods detect deviations from Gaussianity in the 3–year data set at a slightly higher confidence
+                                                level than in the WMAP 1–year data. These small differences are mainly due to the new foreground
+                                                reduction technique and not to the reduction of the noise level, which is negligible at the scale of
+                                                the spot. In order to avoid a posteriori analyses, we recalculate for the WMAP 3–year data the
+                                                significance of the deviation in the kurtosis. The skewness and kurtosis tests were the first tests
+                                                performed with wavelets for the WMAP data. We obtain that the probability of finding an at least
+                                                as high deviation in Gaussian simulations is 1.85%. The frequency dependence of the spot is shown
+                                                to be extremely flat. Galactic foreground emissions are not likely to be responsible for the detected
+                                                deviation from Gaussianity.
+                                                Subject headings: methods: data analysis – cosmic microwave background
+
+                                                             1. INTRODUCTION                                  verse with standard inflation explains most of the ob-
+                                         The Cosmic Microwave Background (CMB) is at the                      servations confirming the widely accepted concordance
+                                       moment the most useful tool in the study of the ori-                   model. According to standard inflation, the tempera-
+                                       gin of the universe. A precise knowledge of its power                  ture anisotropies of the CMB are predicted to represent
+                                       spectrum constrains significantly the values of the cos-               a homogeneous and isotropic Gaussian random field on
+                                       mological parameters which determine the cosmological                  the sky. A first Gaussianity analysis found the data to
+                                       model. The 1–year Wilkinson Microwave Anisotropy                       be compatible with Gaussianity (Komatsu et al. 2003).
+                                       Probe data (WMAP, Bennett et al. 2003a), measured                         Several non–Gaussian signatures or asymmetries were
+                                       the anisotropies of the CMB with unprecedented accu-                   detected in the 1–year WMAP data in subsequent works.
+                                       racy, finding that the standard model fits these data.                 A variety of methods were used and applied in real, har-
+                                       A flat Λ–dominated Cold Dark Matter (ΛCDM) uni-                        monic and wavelet space: low multipole alignment statis-
+                                                                                                              tics (de Oliveira–Costa et al. 2004, Copi et al. 2004,
+                                          1 Also at Dpto. de Fı́sica Moderna, Univ. de Cantabria, Avda.       2005, Schwarz et al. 2004, Land & Magueijo 2005a,b,c,
+                                       los Castros, s/n, 39005-Santander, Spain                               Bielewicz et al. 2005, Slosar & Seljak 2004); phase cor-
+                                       Electronic address: cruz@ifca.unican.es                                relations (Chiang et al. 2003, Coles et al. 2004); hot
+                                       Electronic address: cayon@physics.purdue.edu
+                                       Electronic address: martinez@ifca.unican.es                            and cold spot analysis (Larson & Wandelt 2004, 2005);
+                                          2 Also at Astrophysics Group, Cavendish Laboratory, Madingley       local curvature methods (Hansen et al. 2004, Cabella et
+                                       Road, Cambridge CB3 0HE, UK                                            al. 2005); correlation functions (Eriksen et al. 2004a,
+                                       Electronic address: vielva@ifca.unican.es                              2005, Tojeiro et al. 2005); structure alignment statistics
+                                       Electronic address: jinj@stat.purdue.edu
+2
+
+(Wiaux et al. 2006); multivariate analysis (Dineen &            Gaussian properties of the Spot.
+Coles 2005); Minkowski functionals (Park 2004, Eriksen            CJT applied Higher Criticism statistics (hereafter HC)
+et al. 2004b); gradient and dispersion analyses (Chyzy et       to the 1–year maps after convolving them with the
+al. 2005); and several statistics applied in wavelet space      SMHW. This method provided a direct detection of the
+(Vielva et al. 2004, Mukherjee & Wang 2004, Cruz et             Spot. The HC values appeared to be higher than 99% of
+al. 2005, 2006, McEwen et al. 2005a and Cayón, Jin &           the Gaussian simulations.
+Treaster 2005).                                                   Note that although the Spot has not been detected
+  The recently released 3–year WMAP data with higher            in real space, this structure exists but is hidden by
+signal to noise ratio is key to confirm or disprove all these   structures at different scales. The convolution with the
+results.                                                        SMHW at the appropriate scale, amplifies the Spot, mak-
+  In the 3–year papers, the WMAP team (Hinshaw et al.           ing it more prominent.
+2006) re-evaluates potential sources of systematic errors         Several attempts have been made in order to explain
+and concludes that the 3–year maps are consistent with          the non-Gaussian nature of this cold spot. Tomita (2005)
+the 1–year maps. The exhaustive polarization analysis           suggested that local second–order gravitational effects
+enhances the confidence on the accuracy of the temper-          could produce the Spot. Inoue & Silk (2006) consid-
+ature maps. The ΛCDM model continues to provide the             ered the possibility of explaining the Spot and other large
+best fit to the data.                                           scale anomalies by local compensated voids. Jaffe et al.
+  Spergel et al. (2006) perform a Gaussianity analysis          (2005a) and Cayón et al. (2006) assumed an anisotropic
+of the 3–year data. No departure from Gaussianity is            Bianchi VIIh model showing that it could explain the ex-
+detected based on the one point distribution function,          cess of kurtosis and the HC detection as well as several
+Minkowski functionals, the bispectrum and the trispec-          large scale anomalies. On the other hand, McEwen et al.
+trum of the maps. The authors do not re-evaluate the            (2005b) still detect non-Gaussianity in the Bianchi cor-
+other statistics showing asymmetries or non–Gaussian            rected maps. Jaffe et al. (2005b) proved the incompati-
+signatures in the 1–year data.                                  bility of the extended Bianchi models including the dark
+  The aim of this paper is to check the results of Vielva       energy term with the 1–year data. Adler et al. (2006),
+et al. (2004), Cruz et al. (2005), Cayón, Jin & Treaster       developed a finite cosmology model which would explain
+(2005) and Cruz et al. (2006), (hereafter V04, C05, CJT         the Spot and the low multipoles in the angular power
+and C06 respectively) with the recently released WMAP           spectrum. Up to date there are no further evidences of
+data. All these analyses were based on wavelet space.           the validity of any of the above suggested explanations.
+In particular the data were convolved with the Spherical          Our paper is organized as follows. We discuss the
+Mexican Hat Wavelet (SMHW). Convolution of a CMB                changes in the new WMAP data release and the simula-
+map with the SMHW at a particular wavelet scale in-             tions in section §2. The analysis using all the mentioned
+creases the signal to noise ratio at that scale. Moreover,      estimators is described in section §3. In section §4, the
+the spatial location of the different features of a map is      significance of our findings is discussed. We analyse the
+preserved.                                                      frequency dependence of the Spot in section §5, and our
+  V04 detected an excess of kurtosis in the 1–year              discussion and conclusions are presented in sections §6
+WMAP data compared to 10000 Gaussian simulations.               and §7.
+This excess occurred at wavelet scales around 5◦ (an-
+gular size in the sky of ≈ 10◦ ). The excess was found                 2. WMAP 3–YEAR DATA AND SIMULATIONS
+to be localized in the southern Galactic hemisphere. A            The WMAP data are provided at five frequency-bands,
+very cold spot, called the Spot, at galactic coordinates        namely K–band (22.8 GHz, one receiver), Ka–band (33.0
+(b = −57◦ , l = 209◦ ), was pointed out as the possible         GHz, one receiver), Q–band (40.7 GHz, two receivers),
+source of this deviation.                                       V–band (60.8 GHz, two receivers) and W–band (93.5
+  C05 showed that indeed the Spot was responsible for           GHz, four receivers). Foreground cleaned maps for
+the detection. The number of cold pixels below sev-             the Q, V, and W channels are also available at the
+eral thresholds (cold Area) of the Spot was unusually           Legacy Archive for Microwave BAckground Data Anal-
+high compared to the spots appearing in the simulations.        ysis (LAMBDA) web site 3 .
+Compatibility with Gaussianity was found when mask-               Most of the 1–year Gaussianity analyses were per-
+ing this spot in the data. The minimum temperature of           formed using the WMAP combined, foreground cleaned
+the Spot was as well highly significant.                        Q–V–W map (hereafter WCM; see Bennett et al. 2003a).
+  C06 confirmed the robustness of the detection and             CMB is the dominant signal at these bands and noise
+analysed the morphology and the foreground contribu-            properties are well defined for this map. The de-biased
+tion to the Spot. The Spot appeared statistically robust        Internal Linear Combination map, (DILC) proposed by
+in all the performed tests, being the probability of find-      the WMAP team, estimates the CMB on the whole sky.
+ing a similar or bigger spot in the Gaussian simulations        However its noise properties are complicated and regions
+less than 1%. The shape of the Spot was shown to be             close to the Galactic plane will be highly contaminated
+roughly circular, using Elliptical Mexican Hat Wavelets         by foregrounds. Chiang, Naselsky & Coles (2006) find
+on the sphere. Moreover the foreground contribution in          evidences for the foreground contamination of the DILC.
+the region of the Spot was found to be very low. The            Therefore we will still use the more reliable WCM in the
+Spot remained highly significant independently of the           3–year data analysis.
+used foreground reduction technique. In addition the              Hinshaw et al. (2006) describe some changes in the
+frequency dependence of the Spot was shown to be ex-            3–year temperature analysis with respect to the 1–year
+tremely flat. Even considering large errors in the fore-
+ground estimation it was not possible to explain the non-         3 http://lambda.gsfc.nasa.gov
+                                                                                                                                        3
+
+
+
+
+  Fig. 1.— Image showing an azimuthal projection of a 22◦ × 22◦ patch from the WCM HEALPix map with resolution nside = 256,
+centered on the Spot and in µK. In the first row we have the 1–year and 3–year images of the Spot in real space, whereas in the second row
+the Spot is shown at wavelet scale R9 . The image is divided in 1024 × 1024 pixels and the y-axis is oriented in the Galactic north-south
+direction.
+
+
+
+one. Coadding the three years of observations reduces                     V04 and C05 performed a very careful analysis in or-
+the instrumental noise. The 3–year maps have ≈ 3 times                  der to study the power spectrum and noise dependence
+lower variance. Refinements in gain calibration and beam                of the kurtosis and cold Area estimators. Considering
+response models have been implemented and a new fore-                   different power spectra within the 1σ error band of the
+ground reduction technique has been used. The latter                    1–year data, the differences in the significance of the kur-
+seems to provide a better correction than the one ap-                   tosis were found to be negligible (see Figure 11 in V04).
+plied to the first year data. As discussed in C06 the                   The Area of a particular spot was neither affected by
+Galactic foreground estimation is a very important issue                the power spectrum (see section 5.3 in C05). The results
+in Gaussianity analyses. The exclusion masks defined by                 were almost noise independent. The convolution with
+Bennett et al. (2003b) have not been modified, except                   the SMHW reduces considerably the noise contribution.
+for the inclusion of 81 new point sources in the kp0 mask.              Even if similar results are expected, we perform 10000
+This mask excludes the highly contaminated pixels close                 Gaussian simulations of the 3–year coadded data follow-
+to the Galactic plane.                                                  ing the same steps as for the 1–year simulations. The
+  Despite these changes the 3–year maps have been found                 only differences between the 3–year and the 1–year sim-
+to be consistent with the 1–year maps by the WMAP                       ulations are a lower noise contribution and a very slight
+team.                                                                   variation in the power spectrum used to generate the
+4
+             2.5                                                       M ax, HC and a new one, the volume. The definitions of
+                       1−year data
+                       3−year data
+                                                                       each estimator will be given in the following subsections.
+              2                                                        Analyses were also performed in real space, which will
+                                                                       be referred as wavelet scale zero. In real space, the data
+             1.5                                                       are found to be compatible with Gaussian predictions
+                                                                          In the following subsections we will give the upper tail
+              1
+                                                                       probabilities of the data at one particular scale. The up-
+                                                                       per tail probability is the probability that the relevant
+                                                                       statistic takes a value at least as large as the one ob-
+ Kurtosis
+
+
+
+
+             0.5
+                                                                       served, when the null hypothesis is true.
+                                                                          In section §4 we will give a more rigorous measure of
+              0                                                        the significance, considering the total number of per-
+                                                                       formed tests to calculate the p-value of the Spot. The
+            −0.5                                                       p-value is the probability that the relevant statistic takes
+                                                                       a value at least as extreme as the one observed, when the
+             −1                                                        null hypothesis is true. In our case, the null hypothesis
+                                                                       is the Gaussianity of the temperature fluctuations.
+            −1.5
+                                                                                             3.1. Kurtosis
+             −2
+                   0                 5             10           15
+                                                                         Given a random variable X, the kurtosis κ is defined
+                                                                                      E[X 4 ]
+                                           #R                          as κ(X) = (E[X     2 ])2 − 3. In V04 the kurtosis of the
+                                                                       wavelet coefficients was compared to the acceptance in-
+  Fig. 2.— WCM kurtosis values for the 1–year (asterisks) and the      tervals given by the simulations. In Figure 2 the kurtosis
+3–year data (circles). The acceptance intervals for the 32% (inner),   of the 1–year data are represented by asterisks and the 3–
+5% (middle) and 1% (outer) significance levels, given by the 10000     year data by circles. Hereafter we will use these symbols
+simulations are also plotted.
+                                                                       to represent 1–year and 3–year data. Both are plotted
+                                                                       versus the 15 wavelet scales. Scale 0 corresponds to real
+                                                                       space. The acceptance intervals given by the simulations
+simulations. For a detailed description of the simulation              will be plotted in the same way in all figures: the 32%
+pipeline, see section 2 of V04.                                        interval corresponds to the inner band, the 5% interval to
+  We will use all these maps in the HEALPix pixelisation               the middle band and the 1% acceptance interval, to the
+scheme (Górski et al. 2005) 4 with resolution parameter               outer one. As expected, the acceptance intervals remain
+Nside = 256.                                                           almost unchanged with respect to those obtained from
+                                                                       1–year simulations. This will happen as well for all the
+                                     3. ANALYSIS                       other estimators. The 3–year kurtosis values follow the
+  Our aim in this section is to repeat the same tests per-             same pattern as the 1–year ones, confirming the initial
+formed in V04, C05, CJT and C06 but with the 3–year                    results. However there are slight differences at the scales
+data. Then we will compare the new results to the old                  where the deviation is detected, being the kurtosis even
+ones. One can see the region of the Spot in real and                   higher in the 3–year data. The most significant deviation
+wavelet space at scale 5◦ for both releases of the WMAP                from the Gaussian values, occurs at scale R9 = 5◦ . In Ta-
+data in Figure 1. In real space the 3–year data image ap-              ble 1 we list the kurtosis values at scale R9 , considering
+pears clearly less noisy, whereas the wavelet space images             the 1–year data as published in 2003, the 1–year data re-
+present only very small differences.                                   lease applying the changes in the data analysis described
+  In V04, data and simulations were convolved with the                 in Hinshaw et al.(2006), and the coadded 3–year data.
+SMHW at 15 scales, namely (R1 = 13.7, R2 = 25,                         The biggest difference is found between both releases of
+R3 = 50, R4 = 75, R5 = 100, R6 = 150, R7 = 200,                        the 1–year data. The kurtosis value of the 1–year data
+R8 = 250, R9 = 300, R10 = 400, R11 = 500, R12 = 600,                   increases ≈ 7%. This may be due to the new foreground
+R13 = 750, R14 = 900 and R15 = 1050 arcmin). The                       reduction technique. As expected the noise reduction
+SMHW optimally enhances some non-Gaussian signa-                       due to coadding the three years of observations, implies
+tures on the sphere (Martı́nez–González et al. 2002) and              a much lower increase in the kurtosis, since the noise con-
+has the following expression:                                          tribution in wavelet space is very small. The upper tail
+                                                                       probabilities (i.e. the probabilities of obtaining higher
+                   1     h     y 2 i2 h    y 2 i −y2 /2R2            or equal values assuming the Gaussian hypothesis) are
+ ΨS (y, R) = √            1+            2−        e         ,          given in the right column of Table 1. Hereafter we will
+                2πN (R)        2           R
+                                                                       compare the first release of the 1–year data with the 3–
+where
+  p N (R) is a normalisation constant: N (R) ≡                         year data.
+R 1 + R2 /2 + R4 /4. The distance y on the tangent                       Analysing both Galactic hemispheres separately, we
+plane is related to the polar angle (θ) as: y ≡ 2 tan θ/2.             obtain the results presented in Figure 3. Again the kur-
+   We will use the same 15 scales in our present analy-                tosis follows the same pattern as in the 1–year results.
+sis, considering those estimators where non-Gaussianity                As expected, the deviation appears only in the southern
+was found in the 1–year data, namely kurtosis, Area,                   hemisphere and it is slightly higher in the 3–year data.
+                                                                       The upper tail probability obtained in V04 was 0.11%
+    4 http://www.eso.org/science/healpix/                              at scale R7 in the southern hemisphere, whereas now we
+                                                                                                                                                                           5
+                          2.5                                                                                           3
+
+
+
+                           2                                                                                   2.5              1−year data
+                                                                                                                                3−year data
+
+                                                                                                                        2
+                          1.5
+
+                                                                                                               1.5
+
+
+
+
+                                                                         Kurtosis South
+        Kurtosis North
+
+
+                           1
+
+                                                                                                                        1
+                          0.5
+                                                                                                               0.5
+
+                           0
+                                                                                                                        0
+
+                         −0.5
+                                                                                                              −0.5
+
+
+                          −1                                                                                    −1
+
+
+                         −1.5                                                                                 −1.5
+                                0          5              10        15                                                      0    5            10        15
+                                                   #R                                                                                 #R
+
+ Fig. 3.— As in Figure 2 but for the northern (left plot) and southern (right plot) Galactic hemispheres.
+
+
+
+
+                                                                                                              6.5
+                                     TABLE 1                                                                                                            1−year data
+                            Kurtosis values at scale R9                                                                                                 3−year data
+                                                                                                               6
+
+
+                            Data          kurtosis   probabilitya
+                                                                                Maximum absoute observation
+
+
+
+
+                                                                                                              5.5
+              1–year data (2003)           0.836        0.38%
+              1–year data (2006)           0.895        0.28%                                                  5
+                 3–year data               0.915        0.23%
+                                                                                                              4.5
+           Note. — Kurtosis values of different WCM
+         versions at scale R9 . The right column gives
+         the probability of obtaining a higher or equal                                                        4
+         value in Gaussian simulations.
+                                                                                                              3.5
+
+
+have 0.08% again at scale R7 . The deviation from Gaus-                                                        3
+sianity is localised in the southern hemisphere because
+the Spot is responsible for it (see C05).                                                                     2.5
+
+
+                                3.2. Maximum statistic                                                         2
+
+  Given n individual observations Xi , M ax is defined as
+the largest (absolute) observation :                                                                          1.5
+                                                                                                                    0             5                10                 15
+
+                   M axn = max{|X1 |, |X2 |, . . . , |Xn |}.                                                                             #R
+
+The very cold minimum temperature of the Spot, was
+                                                                           Fig. 4.— Maximum absolute observation versus the 15 wavelet
+shown to deviate from the Gaussian behaviour in V04.                     scales. Again the circles represent the 3–year data and the asterisks
+In this work and in C05, C06 the minimum tempera-                        the 1–year data. The bands represent the acceptance intervals as
+ture estimator was used to characterise the Spot whereas                 in previous figures.
+in CJT the chosen estimator was M ax. As M ax is a
+classical and more conservative estimator, we will use it
+in the present paper instead of the minimum tempera-
+ture. Our n observations correspond to values in real or
+wavelet space (normalized to zero mean and dispersion                    very similar results. The data lie outside the 1% accep-
+one). The Spot appears to be the maximum absolute                        tance interval at scales R9 and R10 . The 3–year data
+observation of the data at scales between 200 and 400                    show slightly higher values than the 1–year data at these
+arcmin. In Figure 4, the 1–year and 3–year WMAP data                     scales. In particular, the upper tail probability for the
+values of M ax are compared to those obtained from the                   1–year data was 0.56%, whereas for the 3–year data we
+simulations. As for the kurtosis, both data releases show                obtain 0.38% at scale R9 .
+6
+
+                                                    Threshold = 4.0                                                                      Scale R
+                                                                                                                                                        9
+                             600                                                                              11000
+                                                     1−year data
+                                                     3−year data                                              10000
+
+                             500
+                                                                                                               9000
+
+
+                                                                                                               8000
+
+                             400
+                                                                                                               7000
+              Area, pixels
+
+
+
+
+                                                                                              Area, pixels
+                                                                                                               6000
+                             300
+                                                                                                               5000
+
+
+                                                                                                               4000
+                             200
+
+                                                                                                               3000
+
+
+                                                                                                               2000
+                             100
+
+                                                                                                               1000
+
+
+                                   0                                                                                  0
+                                       0                  5              10              15                               2      2.5       3       3.5        4       4.5
+                                                                # R                                                                     Threshold
+
+  Fig. 5.— The left panel shows the cold Area in pixels, at threshold 4.0 versus the number of the scale. In the right panel the cold Area
+is represented versus the thresholds, while the scale is fixed at R9 . As in previous figures the asterisks represent the 1–year and the circles
+the 3–year data. The bands represent the acceptance intervals as in Figure 2
+
+
+
+                                             Scale R , threshold 4.0
+                                                      9                                                                             TABLE 2
+                                                                                                               Upper tail probabilities for the Area of the Spot at
+                                                                                                                                     scale R9
+10000
+
+                                                                                                             threshold        probability 1–year data    probability 3–year data
+                                                                                                                3.0                    0.68%                      0.63%
+                                                                         1−year data
+                                                                         3−year data                            3.5                    0.36%                      0.37%
+ 1000                                                                                                           4.0                    0.34%                      0.27%
+                                                                                                                4.5                    0.44%                      0.35%
+
+
+
+    100
+                                                                                                                                    TABLE 3
+                                                                                                               Upper tail probabilities for the volume of the Spot,
+                                                                                                                                    scale R9
+
+     10                                                                                                      threshold        probability 1–year data    probability 3–year data
+                                                                                                                3.0                    0.51%                      0.45%
+                                                                                                                3.5                    0.33%                      0.38%
+                                                                                                                4.0                    0.32%                      0.27%
+      1
+                                                                                                                4.5                    0.44%                      0.35%
+          0                  200              400         600      800        1000     1200
+                                           Spot area, number of pixels
+
+  Fig. 6.— Histogram of all biggest spots of the simulations at
+threshold 4.0 and scale R9 . The dashed vertical line represents the                               to deviate from the Gaussian behaviour at scales R8 and
+Spot in the 1–year data and the solid one represents the Spot in                                   R9 and thresholds above 3.0 (see Figures 1 and 2 in C05).
+the 3–year data.                                                                                     C05 found that the large cold Area of the Spot was
+                                                                                                   responsible for this deviation. Such a big spot was very
+                                                                                                   unlikely to be found under the Gaussian model at several
+                                                                                                   thresholds (see Table 2 of C05).
+                                                    3.3. Area                                        In the present paper we will define the Area as the
+  We define the hot Area as the number of pixels above                                             maximum between hot and cold Area at a given threshold
+a given threshold ν and the cold Area as the number                                                and scale. As for the M ax estimator, we obtain in this
+of pixels below a given threshold −ν. The threshold is                                             way a more conservative estimator since the Spot will
+given in units of the dispersion of the considered map.                                            be compared to the biggest spot in each simulation no
+  In C05 the total cold Area of the 1–year data was found                                          matter if it is a cold or a hot spot.
+                                                                                                                                7
+                    250
+
+
+
+
+                    200       1−year data
+                              3−year data
+ Higher Criticism
+
+
+
+
+                    150
+
+
+
+
+                    100
+
+
+                                                                    Fig. 8.— Higher Criticism of the 3–year WCM at scale R9 .
+
+                     50
+
+
+
+
+                      0
+                          0           5             10      15
+                                            #R
+
+  Fig. 7.— Higher Criticism values of the 1–year WCM (aster-
+isks) and the 3–year WCM (circles). The acceptance intervals are
+plotted as in previous figures.
+
+
+  However the Area still deviates from the Gaussian be-
+haviour as can be seen in Figure 5. The most significant
+deviation is again found at scale R9 and thresholds above
+3.0.
+  Figure 6 shows the histogram of the biggest spot of
+each simulation compared to the 1–year and 3–year Area
+of the Spot at scale R9 and threshold 4.0. The Spot is
+more prominent in the 3–year data and only very few
+simulations show bigger spots. The upper tail proba-
+bilities obtained at scale R9 for 1–year and 3–year data
+are presented in table 2. As in the previous estimators,
+the 3–year data are in general slightly more significant.
+The new and more conservative definition of the Area
+estimator reduces the upper tail probability of the Spot
+although it is still widely below 1%.
+                                      3.4. Volume
+   From the previous subsections we know that the Spot
+is extremely cold and it has a large Area at thresholds
+above 3.0. The best estimator to characterise the Spot
+would be therefore the volume. Hence we define the
+volume referred to a particular threshold as the sum of              Fig. 9.— Image projected as in Figure 1, showing the 3–year
+the temperatures of the pixels conforming a spot at this           WCM map (upper panel) and the Higher Criticism map (lower
+threshold. In Table 3 we compare the probability of find-          panel), both at scale R9 .
+ing a spot with higher or equal Volume as the data, as-
+suming the Gaussian hypothesis. The values are very
+similar to those obtained for the Area estimator. Val-
+ues for the Volume are slightly more significant and they
+show less variations with the threshold.                           these extreme observations by means of HC values cal-
+                                                                   culated at every individual data point.
+                               3.5. Higher Criticism                 For a set of n individual observations Xi from a cer-
+  The HC statistic proposed by Donoho & Jin (2004) was             tain distribution (Xi normalized to zero mean and dis-
+designed to detect deviations from Gaussianity that are            persion one), HC is defined as follows. The Xi ob-
+caused by either a few extreme observations or a small             served values are first converted into p-values: p(i) =
+proportion of moderately extreme observations. More-               P {|N (0, 1)| > |Xi |}. After sorting the p-values in as-
+over, the statistic provides a direct method to locate             cending order p(1) < p(2) < . . . < p(n) , we define the HC
+8
+
+at each pixel with p-value pi , by:
+                                                                                        TABLE 4
+                       √       i/n − p(i)                                        p-values for different
+              HCn,i = n p                       ,                                      estimators.
+                               p(i) (1 − p(i) )
+   We compute the values of the HC statistic of the 3–year                         Estimators       p-value
+WCM in real and in wavelet space. The obtained values                               kurtosis         0.86%
+of the HC statistic are presented in Figure 7. These val-                     skewness + kurtosis    1.85%
+ues correspond to the maximum of the HC values found                                 Max            11.64%
+at the individual pixels. As in previous figures, circles                          Area 3.0          3.27%
+                                                                                   Area 4.0          1.09%
+denote the results obtained from the 3–year WCM, as-                            Higher Criticism     3.48%
+terisks those from the 1–year WCM and the bands repre-
+sent the acceptance intervals. As one can see in the Fig-
+ure, the data in wavelet space are not compatible with
+Gaussian predictions at scales R8 and R9 at the 99% c.l.
+This is in agreement with the result obtained by CJT for      4.97% whereas C06 obtained 1.91% taking into account
+the 1–year WMAP data although there the HC values             that the data deviate at three consecutive scales. It is
+at scale R8 were just below the 99% c.l. The upper tail       also interesting to note that, when both Galactic hemi-
+probabilities for the 1–year and 3–year maximum HC val-       spheres were considered independently, C06 found a p-
+ues at scale R9 , are 0.56% and 0.36% respectively. The       value of 0.69%, although this could be considered as a
+map of HC values at scale R9 is presented in Figure 8. It     followup test.
+is clear that the pixels responsible for the detected devi-      Some readers could find that the three-consecutive-
+ation from Gaussianity are located at the position of the     scales criterion is an a posteriori choice since we look first
+Spot. Convolution with the wavelet causes the observed        at the data and given that they deviate at three consec-
+ring structure in the HC map. Figure 9 shows a blowout        utive scales, we then calculate from the simulations how
+image of the Spot as it appears at scale R9 in the wavelet    probable this is. Therefore we should consider a new test
+map and in the HC map.                                        which eliminates this a posteriori choice. We fix a priori
+                                                              a significance level which is the 1% acceptance interval
+                     4. SIGNIFICANCE                          given in all figures, and count for each estimator (skew-
+  In the previous section, the upper tail probabilities of    ness and kurtosis) how many scales lie outside, no matter
+each estimator at scale R9 were given. All the consid-        if they are consecutive or not. Then we search through
+ered estimators showed the lowest upper tail probability      the simulations how many show at least that many scales
+at scale R9 . However these are not rigorous measures         outside the 1% acceptance interval as the data.
+of the significance of the Spot, since the number of per-        Applying this test to the 3–year WCM, we find that
+formed tests is not taken into account. In this section we    scales R8 and R9 lie outside the 1% acceptance interval
+will recalculate the p-value of the deviation in the kur-     and scale R7 lies on the border for the kurtosis estimator
+tosis found by V04 and discuss the issue of a posteriori      as can be seen in Figure 2. Searching through the sim-
+significances.                                                ulations how many deviate in three scales either in the
+  When an anomaly is detected in a data set following a       skewness or in the kurtosis estimator, we find a p-value
+blind approach, usually several additional tests are per-     of 1.85%, which is still below the p-value obtained for the
+formed afterwards to further characterize the anomaly.        1–year data with the three-consecutive-scales criterion.
+In most of these cases, the only reason these tests have         As already discussed we should not include the fol-
+been performed is the previous finding of the initial         lowup tests in a rigorous significance analysis. However
+anomaly. If another anomaly would have been detected,         it is difficult to assess if some of these tests would have
+other followup tests would have been performed. Hence         been performed or not without the first finding of V04.
+these followup tests have not been performed blindly and      In fact, the area and maxima analyses are very intuitive
+should not be taken into account to calculate the signif-     and simple. If V04 had performed their blind analysis on
+icance of the initial detection.                              those estimators instead of using skewness and kurtosis,
+  This issue was already discussed in C06 and McEwen et       then the significance would be different. We should dis-
+al. (2005). Both papers recalculated the significance of      tinguish between those tests which are clearly followup
+the excess of kurtosis in the 1–year WCM found by V04.        tests, because the only reason they have been performed
+The excess of kurtosis was found performing a blind test,     is the initial detection, and other tests which just have
+since no model was used and no previous findings con-         been performed after the initial detection, but could have
+ditioned the choice of the scales. Since 15 wavelet scales    been performed before.
+and two estimators (skewness and kurtosis) were consid-          Hence we apply our new robustness test to kurtosis,
+ered, a total sum of 30 tests were performed. Three of        Max, Area at thresholds 3.0 and 4.0 and Higher Crit-
+these tests detected a strong deviation from Gaussianity.     icism separately. Note that whereas the first two esti-
+Scales R7 , R8 and R9 presented upper tail probabilities      mators are two-sided, the Area and Higher Criticism are
+0.67%, 0.40% and 0.38% in the 1–year data. This fact          one sided estimators. The p-values obtained in this way
+was taken into account in C06, but it was not by McEwen       are listed in Table 4. The kurtosis and Area at thresh-
+et al. (2005). The latter searched through the simula-        old 4.0 show p-values around 1%, Higher Criticism and
+tions in order to find how many of them showed a higher       Area at threshold 3.0 around 3%. On the contrary the
+or equal deviation than the maximum deviation of the          Max estimator does not show a significant deviation from
+data, ignoring that the data showed a high deviation at       Gaussianity according to this robustness test.
+two adjacent scales. The p-value found in this way was           The most conservative and reliable value is the 1.85%
+                                                                                                                                                                                               9
+                               −0.0175
+                                                                                                                                                         Scale= R
+                                                                                                                                                                    9
+                                                                                                                           1400
+
+                                −0.018
+                                                                                                                           1300
+                                                                                                                                                                   Threshold = 3.0
+
+                                                                                                                           1200
+                               −0.0185
+
+
+
+
+                                                                                                Area of the Spot, pixels
+                                                                                                                           1100
+
+
+                                −0.019                                                                                     1000
+ T, mK
+
+
+
+
+                                                                                                                           900
+                               −0.0195                                                                                                                             Threshold = 3.5
+                                                                                                                           800
+
+
+                                 −0.02                                                                                     700
+
+
+                                                                                                                           600
+
+                               −0.0205
+                                                                                                                           500
+                                                                                                                                                                   Threshold = 4.0
+
+                                                                                                                           400
+                                −0.021                                                                                        30     40       50         60        70          80    90   100
+                                      30   40   50       60    70    80    90   100      110
+                                                                                                                                                       frequency, GHz
+                                                         frequency, GHz
+
+                                                                                                 Fig. 12.— Frequency dependence of the Area of the Spot at
+  Fig. 10.— Frequency dependence of the temperature at the
+                                                                                               scale R9 and several thresholds. Asterisks represent the 1–year
+center of the Spot at scale R9 . Again the asterisks represent the 1–
+                                                                                               data and the circles the 3–year data. The 3–year WCM values are
+year data and the circles the 3–year data. The horizontal line shows
+                                                                                               represented by horizontal lines.
+the value of the 3–year WCM. The data at the same frequency have
+been slightly offset in abscissa for readability.
+                                                                                                                           250
+
+                               6.5
+                                                                                Q−Band
+                                                                                V−Band
+                                 6                                              W−Band
+                                                                                WCM                                        200
+                                                                                                                                          Q−Band
+                                                                                                                                          V−Band
+ Maximum absoute observation
+
+
+
+
+                               5.5
+                                                                                                                                          W−Band
+                                                                                                                                          WCM
+                                 5
+                                                                                                                           150
+
+                               4.5
+                                                                                                HC
+
+
+
+
+                                 4
+                                                                                                                           100
+
+                               3.5
+
+
+                                 3
+                                                                                                                            50
+
+                               2.5
+
+
+                                 2
+                                                                                                                             0
+                                                                                                                                 0                 5                      10              15
+
+                               1.5                                                                                                                            #R
+                                     0               5                10                 15
+                                                              #R
+                                                                                                 Fig. 13.— Higher Criticism values for the Q, V and W bands,
+                                                                                               compared to the 3–year WCM values.
+ Fig. 11.— Maximum absolute observation for the Q, V and W
+bands, compared to the 3–year WCM values.
+
+
+                                                                                                                                     5. FREQUENCY DEPENDENCE
+figure since it is not suspicious of being obtained through                                      In this section we will analyse the frequency depen-
+a posteriori analyses. Nevertheless it is still noticeable                                     dence of the previously analysed estimators. A flat fre-
+that the followup tests performed in C05, C06, CJT and                                         quency dependence is characteristic of CMB, whereas
+in the present paper, confirm the initial finding with a                                       other emissions such as Galactic foregrounds show a
+very similar significance. Even if strictly speaking these                                     strong frequency dependence. Figure 14 shows that the
+should not be taken into account for establishing the sig-                                     kurtosis has almost identical values at the three fore-
+nificance of the Spot, they confirm the robustness of the                                      ground cleaned channels, namely Q,V and W. Same be-
+detection.                                                                                     haviour was observed in the 1–year data (see Figure 7 in
+10
+             2.5                                                 issues raised by Spergel et al. (2006), since it is very dif-
+                                                                 ficult to get completely rid of it. Most analyses perform
+              2        Q−Band                                    many tests and it is not easy to assess how many of them
+                       V−Band                                    are followup tests and which is the probability of finding
+                       W−Band
+             1.5       WCM                                       an anomaly by chance. As discussed in section 4 a very
+                                                                 careful analysis shows that the Spot remains statistically
+              1
+                                                                 significant at least at the 98% confidence level, without
+                                                                 using any a posteriori statistics.
+                                                                    In addition C06 proved that the Spot remained highly
+ Kurtosis
+
+
+
+
+             0.5
+                                                                 significant no matter which foreground reduction tech-
+                                                                 nique was used. These results are confirmed in the
+              0                                                  present paper. The new foreground reduction used in
+                                                                 the 3–year data enhances slightly the significance of our
+            −0.5                                                 detection. Moreover the multi-frequency analysis of the
+                                                                 previous section shows an even flatter frequency depen-
+             −1                                                  dence of the Spot.
+                                                                    As already discussed in previous sections the noise does
+            −1.5
+                                                                 not affect significantly our wavelet analysis. In fact the
+                                                                 coadded 3–year results are very similar to those obtained
+                                                                 with the 1–year data of the new data release. No signif-
+             −2
+                   0            5           10             15    icant cold spot is observed based on the analysis of the
+                                    #R                           three difference maps (year 1 - year 2, year 2 - year 3, and
+                                                                 year 1 - year 3). Moreover Figure 10 shows that even the
+  Fig. 14.— Kurtosis values for the Q, V and W bands, compared   particularly 1/f contaminated W4 Difference Assembly
+to the 3–year WCM values.                                        shows almost the same result as all the other Difference
+                                                                 Assemblies.
+                                                                                      7. CONCLUSIONS
+C06). Strong frequency dependent foreground emissions               In this paper we repeat the analyses that detected the
+are unlikely to produce the detected excess of kurtosis.         non-Gaussian cold spot called the Spot at (b = −57◦ , l =
+  The frequency dependence of the temperature at the             209◦) in wavelet space in the 1–year of WMAP data, us-
+center of the Spot, i.e. at the pixel where the temperature      ing the recently released 3–year WMAP data. The pre-
+of the Spot is minimum in the WCM map, is presented in           vious works V04, C05, CJT and C06 found the Spot to
+Figure 10. The error bars of the 1–year data have been           deviate significantly from the Gaussian behaviour. The
+estimated performing 1000 noise simulations as explained         Spot was detected using several estimators, namely kur-
+in section 5.1 of C06. As the noise variance is ≈ 3 times        tosis, Area, M ax and HC. This work confirms the de-
+lower in the 3–year data, we estimate  √ the new error bars      tection applying all these estimators to the recently pub-
+simply by dividing the old ones by 3. No frequency de-           lished 3–year WMAP data. At scale R9 , the upper tail
+pendence is found for the new data set in agreement with         probabilities of all these estimators when applied to the
+the results for the 1–year data. M ax, Area and HC val-          3 year WMAP data are smaller than the corresponding
+ues at different frequencies (see Figure 11, Figure 12 and       ones for the first year WMAP data. This is mostly due
+Figure 13) show a very low relative variation compared           to the improved foreground reduction of the data. We
+to the 3–year WCM.                                               calculate the probability of finding such a deviation from
+  All these results confirm the analysis performed in sec-       Gaussianity considering only skewness and kurtosis since
+tion 5 of C06 where the data were found to fit a flat            these were initially used by V04 following a blind ap-
+CMB spectrum. The present analysis confirms the dis-             proach. Therefore excluding followup tests which could
+agreement between the conclusions of C06 and those of            be considered as a posteriori analyses we obtain a p-value
+the work of Liu & Zhang (2005) where Galactic fore-              of 1.85%. Moreover, the Spot appears to be almost fre-
+grounds were considered to be the most likely source for         quency independent. This result reinforces the previous
+non-Gaussian features found with spherical wavelets.             foreground analyses performed by C06. It is very unlikely
+                                                                 that foregrounds are responsible for the non-Gaussian be-
+                            6. DISCUSSION                        haviour of the Spot. Comparing the WMAP single year
+   Spergel et al. (2006) enumerate several reasons to            sky maps, we conclude that the noise has a very low con-
+be cautious about the different anomalies found in the           tribution to our wavelet analysis as already claimed in
+WMAP data: Galactic foregrounds or noise could be                V04, C05. Future works will be aimed at finding the ori-
+generating the non-Gaussianity, and in addition most of          gin of the Spot. As discussed in the introduction several
+the claimed detections are based on a posteriori statis-         possibilities have been considered, based on Rees-Sciama
+tics. Also spatial variations of the noise variance and 1/f      effects (Rees & Sciama 1968, Martı́nez–González & Sanz
+noise could affect some of the perfomed analyses. They           1990, Martı́nez–González et al. 1990) and inhomogenous
+suggest several tests to be done using difference maps           or anisotropic universes. We are presently working on
+(year 1 - year 2, year 2 - year 3, etc.) and multi-frequency     studying another: topological defects (Turok & Spergel
+data.                                                            1990, Durrer et al. 1999) as textures could produce cold
+   We have tried to address all those points for the Spot.       spots. New and more detailed analyses are required in
+The a posteriori analysis is one of the most important           order to answer that question.
+                                                                                                                                       11
+
+  The authors kindly thank R.B. Barreiro, L.M. Cruz-                  provided by the NASA Office of Space Science. This
+Orive and J.L. Sanz for very useful comments and R.                   work has used the software package HEALPix (Hierar-
+Marco for computational support. MC thanks Spanish                    chical, Equal Area and iso-latitude pixelization of the
+Ministerio de Educacion Cultura y Deporte (MECD) for                  sphere, http://www.eso.org/science/healpix), developed
+a predoctoral FPU fellowship. PV thanks a I3P contract                by K.M. Górski, E. F. Hivon, B. D. Wandelt, J. Banday,
+from the Spanish National Research Council (CSIC).                    F. K. Hansen and M. Barthelmann; the visualisation pro-
+MC, EMG and PV acknowledge financial support from                     gram Univiewer, developed by S.M. Mingaliev, M. Ash-
+the Spanish MCYT project ESP2004-07067-C03-01 and                     down and V. Stolyarov; and the CAMB and CMBFAST
+the use of the Legacy Archive for Microwave Background                software, developed by A. Lewis and A. Challinor and by
+Data Analysis (LAMBDA). Support for LAMBDA is                         U. Seljak and M. Zaldarriaga respectively.
+                                                              REFERENCES
+Adler R. J., Bjorken J. D., Overduin J. M., 2006, gr-qc/0602102.      Inoue K. T., Silk J., 2006, (astro-ph/0602478)
+Bennett C.L., et al., 2003, ApJS, 148, 1.                             Jaffe T. R., Banday A. J., Eriksen H. K., Górski K. M., Hansen F.
+Bennett C.L., et al., 2003, ApJS, 148, 97.                              K., 2005, ApJ, 629, 1.
+Bielewicz P., Eriksen H. K., Banday A. J., Górski K. M., Lilje P.    Jaffe T. R., Hervik S., Banday A. J., Górski K. M., 2005, submitted
+  B., 2005, ApJ, 635, 750B                                              to ApJ (astro-ph/0512433).
+Cabella P., Liguori M., Hansen F.K., Marinucci D.,Matarrese S.,       Komatsu E. et al. , 2003, ApJs, 148, 119.
+  Moscardini L., Vittorio N., 2005, MNRAS, 358, 684.                  Land K., Magueijo J., 2005a, MNRAS, 357, 994.
+Cayón L., Jin J., Treaster A., 2005, MNRAS, 362, 826.(CJT)           Land K., Magueijo J., 2005b, MNRAS, 362, 16.
+Cayón L., Banday A. J., Jaffe T., Eriksen H. K., Hansen              Land K., Magueijo J., 2005d, MNRAS, 362, 838.
+  F.K., Gorski K. M., Jin J., 2005, submitted to MNRAS,               Larson D. L., Wandelt B. D., 2004, ApJ, 613, 85.
+  (astro-ph/0602023).                                                 Larson D. L., Wandelt B. D., 2005, submitted to Phys. Rev. D.
+Chiang L. -Y., Naselsky P. D., Verkhodanov O. V., 2003, ApJ, 590,       (astro-ph/0505046).
+  65.                                                                 Liu X., Zhang S.N., 2005, ApJ, 633, 542.
+Chiang L-Y, Naselsky P.D., Coles P., 2006, (astro-ph/0603662).        Martı́nez–González E. & Sanz J. L., Silk, J., 1990, ApJL, 335, 5.
+Chyzy     K.T.,     Novosyadlyj    B.,    Ostrowski    M.,    2005,   Martı́nez–González E. & Sanz J. L., 1990, MNRAS, 247, 473.
+  (astro-ph/0512020).                                                 Martı́nez–González E., Gallegos J. E., Argüeso F., Cayón L. &
+Coles P., Dineen P., Earl J., Wright D., 2004, MNRAS, 350, 989.         Sanz J. L., 2002, MNRAS, 336, 22.
+Copi C. J., Huterer D., Starkman G. D., 2004, Phys. Rev. D., 70,      McEwen J. D., Hobson M. P., Lasenby A. N., Mortlock D. J., 2005,
+  043515.                                                               MNRAS, 359, 1583.
+Copi C. J., Huterer D., Schwarz D. J., Starkman G. D., 2005,          McEwen J. D., Hobson M. P., Lasenby A. N., Mortlock D. J., 2005,
+  submitted to MNRAS (astro-ph/0508047).                                submitted to MNRAS (astro-ph/0510349).
+Cruz M., Martı́nez–González E., Vielva P., Cayón L., 2005,          Mukherjee P., Wang Y., 2004, ApJ, 613, 51.
+  MNRAS, 356, 29. (C05).                                              de Oliveira-Costa A., Tegmark M., Zaldarriaga M., Hamilton A.,
+Cruz M., Tucci M., Martı́nez–González E., Vielva P., 2006,             2004, Phys. Rev. D., 69, 63516.
+  accepted in MNRAS, (astro-ph/0601427). (C06).                       Park C. G. 2004, MNRAS 349, 313-320.
+Dineen     P., Coles      P.,   2005,   submitted    to    MNRAS      Rees M. J. & Sciama D. W., 1968, Nature, 517, 611.
+  (astro-ph/0511802).                                                 Schwarz D. J., Starkman G. D., Huterer D., and Copi C. J., 2004,
+Donoho D., Jin J., 2004, Ann. Statist., 32, 962                         Phys. Rev. Lett., 93, 221301.
+Durrer R., 1999, New Astron. Rev., 43, 111.                           Slosar A., Seljak U., 2004, Phys. Rev. D., 70, 8.
+Eriksen H. K., Banday A. J., Górski K. M., Lilje P. B., 2005, ApJ,   Spergel et al. 2006, submitted to ApJ, (astro-ph/0603449)
+  622, 58.                                                            Tojeiro R., Castro P.G., Heavens A.F., Gupta S., 2005, submitted
+Eriksen H. K., Hansen F. K., Banday A. J., Górski K. M., Lilje P.      to MNRAS (astro-ph/0507096).
+  B., 2004, ApJ, 605, 14.                                             Tomita K., 2005, Phys. Rev. D, 72, 10.
+Eriksen, H. K., Novikov, D. I., Lilje, P. B, Banday, A. J., Górski   Turok N. & Spergel D. N., 1990, Phys. Rev. Letters, 64, 2736
+  K. M., 2004, ApJ, 612, 64.                                          Vielva P., Martı́nez–González E., Barreiro R. B., Sanz J.L., Cayón
+Górski K.M., Hivon E. F., Wandelt B. D., Banday J., Hansen F.          L., 2004, ApJ, 609, 22. (V04).
+  K., Barthelmann M., 2005, ApJ 622, 759.                             Wiaux Y., Vielva P., Martı́nez–González E., Vandergheynst P.,
+Hansen F.K., Cabella P., Marinucci D., Vittorio N., 2004, ApJL,         2006, submitted to Phys. Rev. Letters.
+  607, L67.
+Hinshaw et al., 2006, submitted to ApJ, (astro-ph/0603451)
+

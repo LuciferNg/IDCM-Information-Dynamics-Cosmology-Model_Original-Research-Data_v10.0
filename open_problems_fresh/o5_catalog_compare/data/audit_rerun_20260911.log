@@ -1,0 +1,101 @@
+=== [07_verify.py] exit=0 1s | ✅x13 ❌x0 RESULT-line=[('12', '0')]
+   | ==================================================================
+   | O5 STEP 7: DOUBLE VERIFICATION
+   | ==================================================================
+   |   ✅ node0 ICRS (48.2999, -20.4373)
+   |   ✅ node0 galactic = (209,-57) (209.000, -57.000)
+   |   ✅ cold spot == node0 (Galactic (209,-57) -> ICRS) distance 0.00 arcmin
+   |   ✅ SMICA 5.0° cold catalogue contains (209,-57) nearest peak: (0.9016641947101476, 208.39986235375085, -56.32707123291033)
+   |   ✅ cold spot matched to node at 0.00° 1 match(es)
+   |   ✅ sky coverage 5° ≈ 11.4% 11.4%
+   |   ✅ node0 hit in ≥2 scales (cold) scales=['1.0', '3.0', '5.0']
+   |   ✅ all-35 mean-nearest p < 0.1 obs=8.60°, rot mean=10.08°±0.80°, p=0.030
+   |   ✅ exists: literature_catalog.json 
+   |   ✅ exists: smica_catalog.json 
+   |   ✅ exists: match_results.json 
+   |   ✅ exists: cross_scale_match.json 
+   | 
+   | ==================================================================
+   | RESULT: 12 passed, 0 failed
+   | ✅ ALL CHECKS PASSED
+
+=== [08_node9_deepdive.py] exit=0 2s | ✅x0 ❌x0 RESULT-line=[]
+   | ==================================================================
+   | NODE 9 DEEP DIVE — MULTI-SCALE TEMPERATURE PROFILE
+   | ==================================================================
+   | 
+   |  scale   node9 μK   node0 μK node9 rank
+   | ------------------------------------------
+   |   0.5°     -163.7     -203.1       4/60
+   |   1.0°     -117.1     -174.4       4/60
+   |   1.5°     -112.2     -161.8       4/60
+   |   2.0°     -113.8     -154.7       4/60
+   |   3.0°     -110.6     -145.0       3/60
+   |   4.0°     -107.4     -136.0       3/60
+   |   5.0°     -105.0     -124.6       3/60
+   |   7.0°      -99.1      -99.7       3/60
+   |  10.0°      -90.3      -68.8       1/60
+   | 
+   | Radial profile cold spot → node9 (1.0° smoothing):
+   |     0% (209.00,-57.00):  -174.4 μK
+   |    10% (209.88,-54.50):  -114.8 μK
+   |    20% (210.67,-51.95):   -65.2 μK
+   |    30% (211.38,-49.36):   -62.4 μK
+   |    40% (212.03,-46.74):   -46.9 μK
+   |    50% (212.62,-44.12):   +75.4 μK
+   |    60% (213.16,-41.48):   -71.2 μK
+   |    70% (213.65,-38.86):    -9.4 μK
+   |    80% (214.11,-36.26):   -54.3 μK
+   |    90% (214.53,-33.69):  -104.6 μK
+   |   100% (214.92,-31.16):  -117.1 μK
+   | 
+   | node9 series: ['-163.7', '-117.1', '-112.2', '-113.8', '-110.6', '-107.4', '-105.0', '-99.1', '-90.3']
+
+=== [09_node9_null.py] exit=0 2s | ✅x0 ❌x0 RESULT-line=[]
+   | ==================================================================
+   | NODE 9 — SECOND COLD STRUCTURE?
+   | ==================================================================
+   | 
+   | [1] node9 at 3.0°: T = -110.6 μK (global σ=44.6 μK)
+   |     z = -2.48σ — NOT extreme by itself
+   | 
+   | [2] Null test — random positions 26° from cold spot:
+   |     T at 26° ring: mean=+5.8, std=+59.0 μK
+   |     node9 T=-110.6 → percentile 1.8% (p=0.018) 🟢 cold
+   | 
+   | [3] Antipode of node9:
+   |     antipode (l,b)=(34.92,+31.16) → T=+24.0 μK
+   | 
+   | [4] All 60 nodes at 3.0° (coldest 10):
+   |     node0:  -145.0 μK
+   |     node47:  -135.7 μK
+   |     node9:  -110.6 μK
+   |     node33:   -99.3 μK
+   |     node56:   -84.3 μK
+   |     node51:   -56.3 μK
+   |     node15:   -52.2 μK
+   |     node26:   -49.0 μK
+   |     node8:   -43.5 μK
+   |     node27:   -37.2 μK
+
+=== [10_node9_hop.py] exit=0 0s | ✅x0 ❌x0 RESULT-line=[]
+   | Hop-level temperature stats at 3.0 deg:
+   |   hop 0: n=1, mean=-145.0, std=+0.0, min=-145.0 (node0)
+   |   hop 1: n=4, mean=-9.7, std=+59.4, min=-110.6 (node9)
+   |   hop 2: n=8, mean=-7.9, std=+47.2, min=-99.3 (node33)
+   |   hop 3: n=11, mean=+25.1, std=+39.0, min=-25.5 (node1)
+   |   hop 4: n=12, mean=-15.7, std=+46.8, min=-135.7 (node47)
+   |   hop 5: n=11, mean=+0.4, std=+42.4, min=-84.3 (node56)
+   |   hop 6: n=8, mean=-4.5, std=+34.9, min=-49.0 (node26)
+   |   hop 7: n=4, mean=+23.7, std=+38.6, min=-30.6 (node5)
+   |   hop 8: n=1, mean=+4.8, std=+0.0, min=+4.8 (node57)
+   | 
+   | Hop=1 nodes at 3.0 deg:
+   |   node9: -110.6 uK
+   |   node41: +4.9 uK
+   |   node20: +32.7 uK
+   |   node50: +34.0 uK
+   | 
+   | node9 z within hop1: -1.70
+
+SUMMARY: {"07_verify.py": 0, "08_node9_deepdive.py": 0, "09_node9_null.py": 0, "10_node9_hop.py": 0}

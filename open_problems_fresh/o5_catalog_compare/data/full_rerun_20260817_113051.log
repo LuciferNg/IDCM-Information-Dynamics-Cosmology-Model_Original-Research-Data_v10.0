@@ -1,0 +1,17 @@
+==============================================================
+O5 FULL RERUN START: Mon Aug 17 11:30:51 AM HKT 2026
+Cache 狀態: 所有 /tmp/smica2_smooth*.fits 已改名 .prefull
+==============================================================
+
+>>> [02_smica_catalog.py] START: 11:30:52
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o5_catalog_compare/scripts/02_smica_catalog.py", line 22, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+>>> [02_smica_catalog.py] FAILED (exit=1, 0s): 11:30:52
+    ⚠️  script 停止 — 檢查 log 尾部搵 bug
+
+==============================================================
+RUN ABORTED — SCRIPT FAILURE: Mon Aug 17 11:30:52 AM HKT 2026
+Log: /home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o5_catalog_compare/data/full_rerun_20260817_113051.log
+==============================================================

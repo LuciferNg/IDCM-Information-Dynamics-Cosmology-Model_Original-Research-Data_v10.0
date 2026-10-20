@@ -1,0 +1,70 @@
+# Fibonacci ladder fit results
+# Smoothing: 5.0° FWHM
+
+# BFS distances from cold spot (node 0)
+node 0: bfs_dist=0, color=cold, T=-124.6
+node 1: bfs_dist=3, color=hot, T=-19.5
+node 2: bfs_dist=4, color=cold, T=+15.5
+node 3: bfs_dist=6, color=cold, T=-16.8
+node 4: bfs_dist=5, color=hot, T=-10.6
+node 5: bfs_dist=7, color=hot, T=-21.6
+node 6: bfs_dist=4, color=cold, T=+41.8
+node 7: bfs_dist=6, color=cold, T=-3.7
+node 8: bfs_dist=4, color=cold, T=-46.8
+node 9: bfs_dist=1, color=hot, T=-105.0
+node 10: bfs_dist=5, color=hot, T=-14.7
+node 11: bfs_dist=3, color=hot, T=+55.0
+node 12: bfs_dist=3, color=hot, T=+11.9
+node 13: bfs_dist=3, color=hot, T=+16.9
+node 14: bfs_dist=2, color=cold, T=+10.2
+node 15: bfs_dist=2, color=cold, T=-40.8
+node 16: bfs_dist=2, color=cold, T=+53.8
+node 17: bfs_dist=2, color=cold, T=+5.1
+node 18: bfs_dist=3, color=hot, T=+21.3
+node 19: bfs_dist=3, color=hot, T=+9.7
+node 20: bfs_dist=1, color=hot, T=+38.3
+node 21: bfs_dist=5, color=hot, T=+93.7
+node 22: bfs_dist=4, color=cold, T=-18.4
+node 23: bfs_dist=5, color=hot, T=+29.1
+node 24: bfs_dist=4, color=cold, T=-25.5
+node 25: bfs_dist=3, color=hot, T=+2.7
+node 26: bfs_dist=6, color=cold, T=-45.0
+node 27: bfs_dist=2, color=cold, T=-33.4
+node 28: bfs_dist=4, color=cold, T=+37.7
+node 29: bfs_dist=6, color=cold, T=+63.5
+node 30: bfs_dist=6, color=cold, T=-9.3
+node 31: bfs_dist=7, color=hot, T=+2.6
+node 32: bfs_dist=4, color=cold, T=-9.0
+node 33: bfs_dist=2, color=cold, T=-77.0
+node 34: bfs_dist=6, color=cold, T=-26.5
+node 35: bfs_dist=7, color=hot, T=+43.1
+node 36: bfs_dist=3, color=hot, T=+11.2
+node 37: bfs_dist=4, color=cold, T=-8.1
+node 38: bfs_dist=5, color=hot, T=-29.3
+node 39: bfs_dist=6, color=cold, T=-9.2
+node 40: bfs_dist=3, color=hot, T=+54.4
+node 41: bfs_dist=1, color=hot, T=-7.5
+node 42: bfs_dist=5, color=hot, T=+14.9
+node 43: bfs_dist=4, color=cold, T=+5.2
+node 44: bfs_dist=5, color=hot, T=+5.1
+node 45: bfs_dist=5, color=hot, T=-10.3
+node 46: bfs_dist=5, color=hot, T=-31.2
+node 47: bfs_dist=4, color=cold, T=-116.3
+node 48: bfs_dist=4, color=cold, T=+6.7
+node 49: bfs_dist=3, color=hot, T=-19.5
+node 50: bfs_dist=1, color=hot, T=+36.9
+node 51: bfs_dist=4, color=cold, T=-36.3
+node 52: bfs_dist=6, color=cold, T=-4.2
+node 53: bfs_dist=3, color=hot, T=+102.8
+node 54: bfs_dist=7, color=hot, T=+71.7
+node 55: bfs_dist=2, color=cold, T=+30.5
+node 56: bfs_dist=5, color=hot, T=-71.5
+node 57: bfs_dist=8, color=cold, T=+6.2
+node 58: bfs_dist=2, color=cold, T=+30.7
+node 59: bfs_dist=5, color=hot, T=-6.9
+
+# Ladder model χ²
+3-level: chi2=53.1, dof=59, chi2/dof=0.90
+5-level: chi2=32.4, dof=59, chi2/dof=0.55
+6-level: chi2=32.0, dof=59, chi2/dof=0.54
+continuous: chi2=69.2, dof=59, chi2/dof=1.17

@@ -1,0 +1,10 @@
+nearest 8:
+  theta=26.091357 alpha=120.0
+  theta=26.091357 alpha=120.0
+  theta=26.166371 alpha=72.0
+  theta=26.166371 alpha=72.0
+  theta=31.678679 alpha=180.0
+  theta=42.108721 alpha=180.0
+  theta=42.971157 alpha=144.0
+  theta=42.971157 alpha=144.0
+理論公式驗證: 26.091357 vs 26.091357

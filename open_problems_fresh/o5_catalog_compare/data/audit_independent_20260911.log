@@ -1,0 +1,145 @@
+======================================================================
+O5 INDEPENDENT DOC AUDIT — PART 1: nodes + literature
+======================================================================
+  OK   A1 60 nodes x 2 cols  (60, 2)
+  OK   A2 node0 ICRS (48.2999,-20.4373)  [ 48.2999 -20.4373]
+  OK   A3 node0 gal (209,-57)  (209.000,-57.000)
+  OK   A4 node spacing 26.09 (mean NN)  mean=26.091
+  OK   A5 Voronoi radius ~13.05  13.046
+  OK   A6 all NN distances in (25,28) deg  range 26.09-26.09
+  OK   B1 lit 6 spots  6
+  OK   B2 lit 2 confirmed  2
+  OK   B3 lit 4 sub-spots  4
+  OK   B4 cold spot (209,-57)  
+  OK   B5 cold spot -> nearest node 0.00 deg node0  d=0.00001 node=0
+  OK   B6 gp10 nearest ~10.05 deg  d=10.05
+  OK   B7 gp10 nearest node = 21 [OI]  node=21
+  OK   B8 sub-spot A dist 3.65  d=3.655 node=0
+  OK   B8 sub-spot B dist 1.14  d=1.142 node=0
+  OK   B8 sub-spot C dist 3.21  d=3.206 node=0
+  OK   B8 sub-spot D dist 3.46  d=3.458 node=0
+  OK   B9 lit all hits 5/6  5
+  OK   B10 lit confirmed hits 1/2  1
+PART1: 19 passed, 0 failed
+======================================================================
+PART 2: SMICA catalogue + hit rates + coverage
+======================================================================
+  OK   C1 SMICA 15 cold  15
+  OK   C2 SMICA 14 hot  14
+  OK   C3 cold#2 = (208.40,-56.33)  (208.40,-56.33)
+  OK   C4 cold#2 amp -126.6  -126.63
+  OK   C5 cold#2 -> node0 0.75 deg  d=0.749 node=0
+  OK   C6 other cold nearest in 5.9-14.1  min=5.93 max=14.07
+  OK   C7 SMICA cold hits 1/15  1
+  OK   C8 SMICA hot hits 2/14  2
+  OK   C9 hot hit dists 1.11 / 2.03  [np.float64(1.11), np.float64(2.03)]
+  OK   C10 hot non-hits min 7.06  7.06
+  OK   C11 coverage 11.4%  11.41%
+  OK   D1 35 spots total  35
+  OK   D2 all hits = 8  8
+  OK   D3 expected 4.0 = 0.114x35  3.99
+  OK   D4 mean-nearest 8.60  8.595
+  OK   D5 max nearest 17.80  17.796
+PART2: 35 passed, 0 failed
+======================================================================
+PART 3: significance (1000 rotations)
+======================================================================
+  OK   E1 all (35) hits 8 p=0.113  obs=8 p=0.1130
+  OK   E2 all (35) mean-nearest 8.6 p=0.042 z=-1.77  obs=8.60 rot=10.13+-0.87 z=-1.77 p=0.0420
+  OK   E1 lit-confirmed (2) hits 1 p=0.197  obs=1 p=0.1970
+  OK   E2 lit-confirmed (2) mean-nearest 5.03 p=0.046 z=-1.75  obs=5.03 rot=10.11+-2.91 z=-1.75 p=0.0460
+  OK   E1 smica-cold (15) hits 1 p=0.831  obs=1 p=0.8310
+  OK   E2 smica-cold (15) mean-nearest 9.23 p=0.173 z=-0.94  obs=9.23 rot=10.13+-0.96 z=-0.94 p=0.1730
+  OK   E1 smica-hot (14) hits 2 p=0.488  obs=2 p=0.4880
+  OK   E2 smica-hot (14) mean-nearest 10.07 p=0.424 z=-0.11  obs=10.07 rot=10.19+-1.14 z=-0.11 p=0.4240
+  OK   E1 all-minus-coldspot (34) hits 7 p=0.134  obs=7 p=0.1340
+  OK   E2 all-minus-coldspot (34) mean-nearest 8.85 p=0.072 z=-1.58  obs=8.85 rot=10.12+-0.80 z=-1.58 p=0.0720
+  OK   E3 stability seed999 p<0.1  p=0.036
+PART3: 46 passed, 0 failed
+======================================================================
+PART 4: cross-scale flood-fill (independent)
+======================================================================
+  1.0 deg: sigma=64.9
+  OK   F1 1.0 cold top12 2/12 nodes=[0, 9]  got 2/12 nodes=[0, 9] hitdists=[3.65, 4.28]
+  OK   F1 1.0 hot top12 1/12 nodes=[42]  got 1/12 nodes=[42] hitdists=[1.89]
+  3.0 deg: sigma=44.6
+  OK   F1 3.0 cold top12 1/12 nodes=[0]  got 1/12 nodes=[0] hitdists=[1.27]
+  OK   F1 3.0 hot top12 1/12 nodes=[53]  got 1/12 nodes=[53] hitdists=[1.33]
+  5.0 deg: sigma=38.1
+  OK   F1 5.0 cold top12 1/12 nodes=[0]  got 1/12 nodes=[0] hitdists=[0.75]
+  OK   F1 5.0 hot top12 2/12 nodes=[53, 54]  got 2/12 nodes=[53, 54] hitdists=[1.11, 2.03]
+  OK   F2 node0 cold hit in >=2 scales  ['1.0', '3.0', '5.0']
+  OK   F3 N9 peak (213.73,-32.53) at 1.71 deg from node9  d=1.71
+  OK   F4 1.0deg component contains peak (213.73,-32.53)  1 comps
+     peak of owning comp = (213.73,-32.53) amp=-190623536.0 uK rank=62 top12=False
+  OK   F5 owning comp peak = (213.73,-32.53)  (213.73,-32.53)
+PART4: 56 passed, 0 failed
+======================================================================
+PART 5a: node9 multi-scale + radial profile
+======================================================================
+  OK   G1 node9 ICRS (75.268,-15.212)  [ 75.2682 -15.212 ]
+  OK   G2 node9 gal (214.923,-31.159)  (214.923,-31.159)
+  OK   G3 node9 BFS hop = 1  1
+  OK   G4 node9 neighbors = {0,16,33,58}  [0, 16, 33, 58]
+  OK   G5 0.5 node9=-163.7 node0=-203.1 rank=4  got n9=-163.7 n0=-203.1 rank=4
+  OK   G5 1.0 node9=-117.1 node0=-174.4 rank=4  got n9=-117.1 n0=-174.4 rank=4
+  OK   G5 1.5 node9=-112.2 node0=-161.8 rank=4  got n9=-112.2 n0=-161.8 rank=4
+  OK   G5 2.0 node9=-113.8 node0=-154.7 rank=4  got n9=-113.8 n0=-154.7 rank=4
+  OK   G5 3.0 node9=-110.6 node0=-145.0 rank=3  got n9=-110.6 n0=-145.0 rank=3
+  OK   G5 4.0 node9=-107.4 node0=-136.0 rank=3  got n9=-107.4 n0=-136.0 rank=3
+  OK   G5 5.0 node9=-105.0 node0=-124.6 rank=3  got n9=-105.0 n0=-124.6 rank=3
+  OK   G5 7.0 node9=-99.1 node0=-99.7 rank=3  got n9=-99.1 n0=-99.7 rank=3
+  OK   G5 10.0 node9=-90.3 node0=-68.8 rank=1  got n9=-90.3 n0=-68.8 rank=1
+  OK   G6 node0 3.0 rank 1/60  
+  OK   G7 radial 0% = -174.4 @(209.0,-57.0)  got -174.4 @(209.00,-57.00)
+  OK   G7 radial 20% = -65.2 @(210.67,-51.95)  got -65.2 @(210.67,-51.95)
+  OK   G7 radial 50% = 75.4 @(212.62,-44.12)  got 75.4 @(212.62,-44.12)
+  OK   G7 radial 90% = -104.6 @(214.53,-33.69)  got -104.6 @(214.53,-33.69)
+  OK   G7 radial 100% = -117.1 @(214.92,-31.16)  got -117.1 @(214.92,-31.16)
+  OK   G8 3.0 full-map sigma 44.6  44.6
+  OK   G9 node9 global z -2.48  -2.48
+  OK   G10 hop1 z -1.70  -1.70
+  OK   G11 hop1 others +4.9/+32.7/+34.0  [np.float32(4.9), np.float32(32.7), np.float32(34.0)]
+  OK   G12 rank order node0,node47,node9 = top3  [np.int64(0), np.int64(47), np.int64(9)]
+  OK   G13 node47 3.0 = -135.7  -135.7
+PART5a: 81 passed, 0 failed
+======================================================================
+PART 5b: null test + antipode + cross-map
+======================================================================
+  OK   H1 26 ring mean +5.8  5.8
+  OK   H2 26 ring std 59.0  59.0
+  OK   H3 26 ring p=0.018  p=0.0175 (n=2000)
+  OK   H4 antipode (34.92,+31.16)  (34.92,31.16)
+  OK   H5 antipode T = +24.0  24.0
+  OK   H6 SMICA rank 3/60  rank=3
+  OK   H6 NILC rank 3/60  rank=3
+  OK   H6 Commander rank 3/60  rank=3
+  OK   H7 node9 spread 2.6%  2.6%
+  OK   H8 node0 spread 0.7%  0.7%
+  OK   H9 SMICA n9 -110.6 / NILC -110.8 / Comm -107.9  {'SMICA': np.float64(-110.6), 'NILC': np.float64(-110.8), 'Commander': np.float64(-107.9)}
+  OK   H10 SMICA n0 -145.0 / Comm -144.0  {'SMICA': np.float64(-145.0), 'NILC': np.float64(-145.0), 'Commander': np.float64(-144.0)}
+  OK   H11 verifier p=0.0215 repro  p=0.0215
+PART5b: 94 passed, 0 failed
+======================================================================
+PART 6: open-issues values + node-index bug
+======================================================================
+  OK   I1 node47 gal (313.47,-8.58)  (313.47,-8.58)
+  OK   I2 node47-coldspot 90.5  90.5
+  OK   I3 node47-gp10 77.6  77.6
+  OK   I4 gp10 nearest node21 10.1  node21 d=10.1
+  OK   I5 gp10 node26 20.2 -49.0  d=20.2 T=-49.0
+  OK   I6 gp10 node22 24.0 -31.2  d=24.0 T=-31.2
+  node57: d(node0)=174.66 d(coldspot)=174.66 temps={0.5: np.float32(-5.8), 1.0: np.float32(-36.4), 1.5: np.float32(-31.3), 2.0: np.float32(-15.4), 3.0: np.float32(4.8), 4.0: np.float32(8.4), 5.0: np.float32(6.2), 7.0: np.float32(2.6), 10.0: np.float32(5.5)}
+  OK   I7 node57 174.66 deg from node0 [SS]  174.66
+  OK   I8 node57 +8.2 uK ~= 4.0 deg value  4.0deg=8.4 3.0deg=4.8
+  node47 all scales: {0.5: np.float32(-249.6), 1.0: np.float32(-211.6), 1.5: np.float32(-174.4), 2.0: np.float32(-153.8), 3.0: np.float32(-135.7), 4.0: np.float32(-125.0), 5.0: np.float32(-116.3), 7.0: np.float32(-102.1), 10.0: np.float32(-86.1)}
+  OK   I9 node47 -123.4 not at O5 3.0 (=-135.7); nearest 4.0 (-125.0)  3.0=-135.7 4.0=-125.0
+  OK   J1 03 node field = FARTHEST (argmin-dots bug confirmed)  35/35 = farthest, 0/35 = nearest
+  OK   J2 distances in match are correct  
+  OK   J3 cross_scale node fields = nearest  
+  OK   K1 FRL sigma 5.0 = 38.1  38.09
+  OK   K2 cold-spot family = lit hits + c2  ['LIT: The Cold Spot (Vielva 2004)', 'LIT: CS sub-spot A (Cruz 2005 T4)', 'LIT: CS sub-spot B (Cruz 2005 T4)', 'LIT: CS sub-spot C (Cruz 2005 T4)', 'LIT: CS sub-spot D (Cruz 2005 T4)', 'SMICA-c2']
+
+======================================================================
+FINAL: 108 passed, 0 failed  (total 108)
+AUDIT_EXIT=0

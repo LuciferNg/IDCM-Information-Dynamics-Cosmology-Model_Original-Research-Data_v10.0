@@ -1,0 +1,25 @@
+# O8 最終核對 (第 3 重獨立驗證)
+# 23 PASS / 0 FAIL
+# PASS: T8 邊長
+# PASS: T8b 邊數
+# PASS: T8c 第二層 26.166
+# PASS: T9 a/2π
+# PASS: T10 180/44
+# PASS: T11 profile 表一致
+# PASS: T12 外推 HWHM
+# PASS: T12b R²
+# PASS: T12c 閉合 (<0.5%)
+# PASS: T13 獨立重算
+# PASS: T13b 偏差
+# PASS: T14 第三估計 4.1477
+# PASS: T15 Gaussian A
+# PASS: T15b Gaussian σ
+# PASS: T15c Gaussian R²
+# PASS: T16 真空比例
+# PASS: T17 ℓ
+# PASS: T17b ℓ≈44
+# PASS: T18 26.09/4.17
+# PASS: T18b vs 2π
+# PASS: T19 1148 vs 1131
+# PASS: T19b 1.5%
+# PASS: T20 誤差

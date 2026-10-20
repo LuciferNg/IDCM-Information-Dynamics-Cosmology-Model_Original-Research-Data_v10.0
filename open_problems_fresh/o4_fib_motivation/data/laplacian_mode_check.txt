@@ -1,0 +1,3 @@
+# O4 17: 特徵模態投影分析
+# FWHM=0.5: 見 stdout
+# FWHM=4.17: 見 stdout

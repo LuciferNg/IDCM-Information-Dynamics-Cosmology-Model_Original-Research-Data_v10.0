@@ -1,0 +1,46 @@
+# Cross-map validation results
+# Maps: SMICA, NILC, Commander
+# All maps NSIDE=2048, RING ordering after processing
+
+# Key positions (T in uK)
+# 0.0deg raw
+0.0 F6_hotspot SMICA=407.5 NILC=415.4 Commander=428.0 
+0.0 F7_hotspot SMICA=406.7 NILC=410.7 Commander=404.9 
+0.0 Cold_spot SMICA=-283.3 NILC=-288.7 Commander=-293.7 
+# 0.5deg smoothed
+0.5 F6_hotspot SMICA=337.0 NILC=337.8 Commander=337.8 
+0.5 F7_hotspot SMICA=353.0 NILC=353.1 Commander=353.2 
+0.5 Cold_spot SMICA=-203.1 NILC=-205.7 Commander=-201.6 
+# 1.0deg smoothed
+1.0 F6_hotspot SMICA=277.6 NILC=276.8 Commander=278.6 
+1.0 F7_hotspot SMICA=235.4 NILC=234.1 Commander=235.2 
+1.0 Cold_spot SMICA=-174.4 NILC=-175.3 Commander=-173.1 
+# 1.5deg smoothed
+1.5 F6_hotspot SMICA=223.7 NILC=222.5 Commander=224.8 
+1.5 F7_hotspot SMICA=165.2 NILC=163.7 Commander=165.1 
+1.5 Cold_spot SMICA=-161.8 NILC=-162.2 Commander=-160.6 
+# 3.0deg smoothed
+3.0 F6_hotspot SMICA=141.0 NILC=139.9 Commander=142.5 
+3.0 F7_hotspot SMICA=78.5 NILC=77.1 Commander=78.6 
+3.0 Cold_spot SMICA=-145.0 NILC=-145.0 Commander=-144.0 
+# 5.0deg smoothed
+5.0 F6_hotspot SMICA=95.7 NILC=94.7 Commander=97.4 
+5.0 F7_hotspot SMICA=37.5 NILC=36.3 Commander=37.7 
+5.0 Cold_spot SMICA=-124.6 NILC=-124.5 Commander=-123.8 
+
+# 60-node correlation matrix (3 deg smoothing)
+corr_SMICA_SMICA 1.0000
+corr_SMICA_NILC 0.9994
+corr_SMICA_Commander 0.9970
+corr_NILC_SMICA 0.9994
+corr_NILC_NILC 1.0000
+corr_NILC_Commander 0.9948
+corr_Commander_SMICA 0.9970
+corr_Commander_NILC 0.9948
+corr_Commander_Commander 1.0000
+rr_NILC_SMICA 0.9994
+corr_NILC_NILC 1.0000
+corr_NILC_Commander 0.5838
+corr_Commander_SMICA 0.5864
+corr_Commander_NILC 0.5838
+corr_Commander_Commander 1.0000

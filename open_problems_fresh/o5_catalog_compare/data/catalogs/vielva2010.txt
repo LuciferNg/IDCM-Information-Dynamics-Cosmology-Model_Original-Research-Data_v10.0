@@ -1,0 +1,1335 @@
+                                                                       A comprehensive overview of the Cold Spot
+                                                                                                    Patricio Vielva
+                                                                              Instituto de Fı́sica de Cantabria (CSIC - Univ. de Cantabria)
+                                                                                    Avda. Los Castros s/n, E39005 - Santander, Spain
+                                                                                                e-mail : vielva@ifca.unican.es
+
+
+                                                                                                        Abstract
+arXiv:1008.3051v1 [astro-ph.CO] 18 Aug 2010
+
+
+
+
+                                                        The report of a significant deviation of the CMB temperature anisotropies distribution from Gaussianity (soon
+                                                    after the public release of the WMAP data in 2003) has become one of the most solid WMAP anomalies. This
+                                                    detection grounds on an excess of the kurtosis of the Spherical Mexican Hat Wavelet coefficients at scales of around
+                                                    10 degrees. At these scales, a prominent feature —located in the southern Galactic hemisphere— was highlighted
+                                                    from the rest of the SMHW coefficients: the Cold Spot. This article presents a comprehensive overview related
+                                                    to the study of the Cold Spot, paying attention to the non-Gaussianity detection methods, the morphological
+                                                    characteristics of the Cold Spot, and the possible sources studied in the literature to explain its nature. Special
+                                                    emphasis is made on the Cold Spot compatibility with a cosmic texture, commenting on future tests that would
+                                                    help to give support or discard this hypothesis.
+
+
+
+                                              1    Introduction                                                  flationary paradigm. It is organized as follows: in Sec-
+                                                                                                                 tion 2, I justify the use of wavelets as a natural tool
+                                                                                                                 for probing the Gaussianity of the CMB temperature
+                                              Besides the great success of the NASA WMAP satel-                  fluctuations. I also present the different statistics ap-
+                                              lite on providing a detailed knowledge of the cosmo-               plied in the wavelet space that had led to point out the
+                                              logical parameters that define the physical properties             WMAP data incompatibility with the standard model.
+                                              of the Universe (e.g., [69, 41]), some unexpected re-              In section 3, I briefly describe the morphological char-
+                                              sults have attracted the attention of the cosmological             acteristics of the Cold Spot. The important question
+                                              community soon after the first release of the WMAP                 of the actual significance of the detection of the Cold
+                                              data: the so-called WMAP anomalies. Some of these                  Spot, and the aspects associated with a posteriori in-
+                                              anomalies are related to hemispherical asymmetries                 terpretations are addressed in Section 4. Some of the
+                                              (e.g., [42, 58, 43, 59, 38, 63, 95, 123, 89]), an anoma-           different sources that have been considered in the liter-
+                                              lous alignment of the quadrupole and octopole compo-               ature to explain the Cold Spot feature are discussed in
+                                              nents (e.g., [10, 107, 25, 37, 11, 71, 26, 1, 55, 49]), sig-       Section 5. In Section 6, I explain in detail a plausible
+                                              nificantly low variance of the CMB temperature fluc-               hypothesis to accommodate the existence of the Cold
+                                              tuations (e.g., [82, 5, 21, 33]), or anomalous align-              Spot together with the standard cosmological model:
+                                              ment of the CMB features toward the Ecliptic poles                 a cosmic texture. In addition, I also describe possible
+                                              (e.g., [127, 120]). Some of these aspects are addressed            follow-up tests that could help to confirm or discard
+                                              in this special issue. In addition to the previous find-           such hypothesis. Finally, my conclusions are given in
+                                              ings, the prominent cold spot (hereinafter, the Cold               Section 7.
+                                              Spot) detected in the southern hemisphere by [118] be-
+                                              came one of the most studied anomalies of the WMAP
+                                              data. The Cold Spot was identified after testing that              2    The non-Gaussianity detection
+                                              the Spherical Mexican Hat Wavelet (SMHW) coeffi-
+                                              cients of the WMAP data presented an excess of kur-                The Cold Spot was firstly identified through a blind
+                                              tosis (at scales of around 10◦ in the sky), as compared            Gaussianity test of the WMAP first year data [118].
+                                              to the distribution derived from isotropic and Gaussian            This test was designed to probe the isotropic and Gaus-
+                                              CMB simulations. This paper presents a complete re-                sian nature of the CMB, as predicted by the standard
+                                              view on the detection and characterization of this non-            inflationary model (see, for instance [72]), and it was
+                                              standard signature, and a description of the different             based in a multiresolution analysis performed with the
+                                              attempts made so far in understanding what could be                Spherical Mexican Hat Wavelet (SMHW). In this Sec-
+                                              the cause behind such departure from the standard in-              tion, I summarize the non-Gaussianity detection that
+
+
+                                                                                                             1
+led to the identification of the Cold Spot. I start by jus-         to non-standard inflationary scenarios, cosmic defects
+tifying why an analysis based on wavelets was proposed,             like strings or textures, secondary anisotropies, fore-
+and presenting the main characteristics of the wavelet              ground emissions, . . . ).
+used in the analysis: the SMHW. Afterwards, I explain
+which statistics (all of them based on the SMHW co-
+efficients) reported the original deviations from Gaus-
+sianity of the WMAP data.
+
+
+2.1   Why a wavelet?
+Nowadays, the CMB scientific community is already
+very familiar with the application of wavelets (and other
+members of the -lets zoo, like curvelets, ridglets or
+needlets) to data analysis. However, it is worth re-
+calling that this is a relatively new custom. Although
+wavelet applications in cosmology shyly started already
+in mid 80s, it was not until 1997 that the first appli-
+cation to CMB was presented [46], precisely in a ex-
+ercise devoted to probe the Gaussianity of the CMB;
+and it was just a year afterwards that the first CMB
+data analyses with wavelets came to light [97, 90], in
+particular, with two applications to COBE [8] data.
+During the last decade, the application of wavelets to              Figure 1: Figure shows the profile on the SMHW as a
+extract cosmological information from CMB data has                  function of the angular distance θ for different wavelet
+growth considerably, in many different branches: com-               scales R, ranging from 1◦ to 45◦ . Notice that the am-
+pact source detection (e.g. [113, 18, 117, 51, 74, 96]),            plitude of the SMHW at θ ≡ 0 has been fixed to 1, to
+Gaussianity (e.g. [2, 84, 6, 7, 19, 78, 118, 28, 79, 94, 129,       allow for an easier comparison.
+34, 101]), cross-correlation with large scale structure
+(e.g. [119, 93, 73, 81]), decomposition of the coupled                    In this sense, when a Gaussianity analysis of the
+E/B signals [16], probing isotropy (e.g. [127, 120, 95]),           CMB is performed in wavelet space, we are in a very
+cosmic string detection [57], microwave sky recovery                adequate framework to probe, almost separately, any
+(e.g. [75, 83, 60, 36]), CMB denoising (e.g. [104, 113]),           potential non-Gaussian signatures present in the data.
+CMB power spectrum determination [44], and primor-                  The ability of wavelets to amplify a given signature is
+dial power spectrum recovery (e.g. [85]) are some of the            explained Rbecause they can be seen as compensated fil-
+application fields. I refer the reader to [80, 121] for some        ters (i.e., <n Ψ = 0, where <n is the space where the
+reviews on the wavelets applications to CMB data, with              wavelet Ψ is defined). This property is not satisfied
+a particular emphasis on data analysis on the sphere.               by other standard filters, as the top-hat or the Gaus-
+      The wavelet transform (e.g. [88, 4]) has become               sian functions. As mentioned above, wavelets do not
+very popular for a major reason: they offer a unique                only provide us with the capability of selecting a given
+opportunity to probe scale-dependent phenomena, but                 scale range, but they also allow one to keep the in-
+keeping, at the same time, information about spatial                formation about spatial localization: we do not just
+localization. This is a clear advantage —for many                   study, for instance, the compatibility with Gaussianity,
+purposes— over classical Fourier or harmonic trans-                 but we are also able to identify where in the data a
+forms: physical processes typically exhibit a clear scale-          deviation might be spatially localized. This intrinsic
+dependent behaviour, and, often, such behaviour differs             property of the wavelet transform (spatial localization)
+enough from one phenomenon to another (e.g., in a mi-               is also unique to explore not only Gaussianity, but also
+crowave image, the localized emission due to cluster of             isotropy, since the statistical properties can be studied
+galaxies has very different properties as compared to               (almost independently) from one region in the data to
+the large-scale signal produced by the Galactic compo-              another, in a self-consistent way. Hereinafter I will fo-
+nents).                                                             cus in the use of the two-dimensional (2D) continuous
+      The capability of emphasising or amplifying some              wavelet transform (CWT, see, for instance, Chapter 2
+features (at a particular scale) makes wavelets unique              in [4]), and, in particular, on the 2D CWT defined on
+to probe the Gaussianity of the CMB: there are many                 the sphere. There are different ways to define wavelets
+different physical processes that might introduce non-              on the sphere (e.g. [3, 126, 105, 128]); most of the works
+Gaussian signatures into a CMB signal, at a very partic-            related to the Cold Spot have been performed using
+ular scale range (e.g., primordial non-Gaussianity due              the definition of the isotropic Spherical Mexican Hat
+
+
+
+                                                                2
+Wavelet (SMHW) proposed by [78] which is a stereo-
+graphic projection of the Mexican Hat Wavelet, as pro-
+posed by [3]:
+
+                1
+                            y 2 2     y 2      y2
+Ψ (θ; R) = √            1+             2−          e− 2R2 ,
+              2πRNR           2            R
+                                                        (1)
+where y ≡ 2 tan θ2 is the stereographic projection vari-
+able, θ q∈ [0, π) is the co-latitude, and the constant
+                 2          4
+NR ≡ 1 + R2 + R4 is chosen such as the square of
+the wavelet function Ψ (θ; R) is normalized to unity. In
+figure 1 the radial profile of the SMHW, for different
+wavelet scales R, is shown. For a signal T (θ, φ) defined
+on the sphere, its spherical harmonic coefficients t`m
+are defined as:
+                        Z
+                                ∗
+             t`m =          dΩY`m (θ, φ) T (θ, φ) ,           (2)
+
+
+where dΩ = dθ sin θdφ, the spherical coordinates are,                   Figure 2: Figure showing the positive deviation of the
+as mentioned above, the co-latitude θ (related to the                   kurtosis of the wavelet coefficients at scales R of 250 and
+latitude b as b = π/2 − θ), and φ ∈ [0, 2π) is the longi-               300 arcmin found by [118]. Red, green and magenta re-
+tude. The function Y`m (θ, φ) is the spherical harmonic                 gions represent the acceptance intervals at 32%, 5% and
+of order ` and m, and ∗ denotes complex conjugation.                    1%, respectively.
+For an isotropic 2D CWT on the sphere the wavelet
+coefficients w (θ, φ; R) are obtained as:                               2.2.1   The kurtosis
+                                                                        The two most obvious indicators for a possible de-
+                 `X
+                  max       `
+                            X                                           viation from Gaussianity of a given data set z =
+ w (θ, φ; R) =                  t`m Ψ` (R) Y`m (θ, φ) T (θ, φ) ,        {z1 , z2 , . . . , zN } are the third (µ3 ) and fourth (µ4 ) cen-
+                 `=0 m=−`
+                                                                        tral moments. The n-central moment of a random set
+                                                       (3)
+                                                                        of N numbers is defined as:
+where Ψ` (R) is the window function associated with
+                                                                                                      N
+the wavelet function (e.g., Ψ (θ; R) in equation 1), and                                          1 X            n
+`max represents the maximum multipole associated with                                      µn =         (zi − z̄) ,                  (4)
+                                                                                                  N i=1
+a given resolution of the signal T (θ, φ), typically lim-
+                                                                                           PN
+ited by the size of the pixel adopted to represent such                 where z̄ = (1/N ) i=1 zi is the mean value of the data
+signal on the sphere.                                                   set. For a Gaussian random data set of zero mean (i.e.,
+                                                                        µ1 = z̄ ≡ 0) and dispersion σ (i.e., µ2 ≡ σ 2 ), it is trivial
+                                                                        to prove that higher order central moments are either
+2.2   The statistics                                                    zero (in the case of µ2n+1 , for n ≥ 1) or a given func-
+                                                                        tion of the dispersion (in the case of µ2n , for n ≥ 1).
+The Cold Spot was firstly detected via a positive devi-
+                                                                        Usually, it is much more convenient to work with nor-
+ation of the kurtosis of the SMHW coefficients at scales
+                                                                        malized central moments νn , such as:
+of around R ≈ 300◦ . The inspection of the map of the
+SMHW coefficients at these scales revealed the presence                                                µn
+                                                                                                 νn = n .                          (5)
+of a very large and cold spot in the southern hemi-                                                    σ
+sphere. The comparison of the amplitude and the area                    The normalized central moments are more convenient
+of this cold spot as compared with Gaussian simulations                 than central moments, since they are referred to the in-
+showed that it was particularly anomalous. Finally, a                   trinsic fluctuations of the random data set (represented
+higher criticism test of the SMHW coefficients also in-                 by the dispersion). This helps to absorb into νn possi-
+dicated a deviation, at around the same wavelet scales,                 ble uncertainties on the knowledge on the amplitude of
+also showing that the major source for such deviation                   the fluctuations of the random sample. The normalized
+was located in the position of the Cold Spot. In the                    central moment ν3 is normally referred to as the skew-
+following subsections I describe briefly these statistics:              ness (S), whereas K ≡ ν4 − 3 is called kurtosis. The
+the kurtosis, the amplitude, the area and the higher                    reason for the subtraction of the number 3 in the previ-
+criticism.                                                              ous expression comes from the fact that, for a Gaussian
+
+
+
+                                                                    3
+Figure 3: Left panel: CMB cleaned map derived from the 4th release of the WMAP data, obtained via the template
+fitting technique described in [50]. Right panel: wavelet coefficients of the previous map, obtained after the SMHW
+convolution at a scale of R = 250 arcmin. The location of the Cold Spot is indicated in both panels by the circle.
+The centre of the Cold Spot is θ = 147◦ and φ = 210◦ .
+
+
+
+random variable, µ4 = 3σ 4 and, therefore, ν4 = 3. The                 represents the mean value obtained from 10,000 CMB
+previous definition assures that, as it happens for the                Gaussian random simulations, taking into account the
+skewness (S), the kurtosis (K) of a Gaussian field is                  instrumental properties of the analyzed data, and gen-
+zero. Applying these concepts to the SMHW coeffi-                      erated from an angular power spectrum derived form
+cients w (θ, φ; R), the skewness SR and the kurtosis KR                the best-fit cosmological model. The coloured regions
+of the wavelet coefficients, as a function of the wavelet              (red, green and magenta) represent the acceptance in-
+scale R, can be defined as follows:                                    tervals at 32%, 5% and 1%, respectively. Notice that
+                                                                       at R scales of 250 and 300 arcmin, the kurtosis of
+                           Npix (R)
+                 1    1     X                       3                  the WMAP data was above the 1% acceptance inter-
+     SR    =     3                  w (θi , φi ; R)          (6)       val. In detail, the excess of kurtosis is given by a p-
+                σR Npix (R) i=1
+                                                                       value of ≈ 4 × 10−3 for the two scales. No significant
+                             Npix (R)
+                 1     1      X                      4                 deviations were found related to the skewness of the
+    KR     =     4 N                  w (θi , φi ; R) − 3,             wavelet coefficients. The analysis was repeated in the
+                σR   pix (R)  i=1
+                                                                       two Galactic hemispheres separately. This was moti-
+where, at each scale, it is assumed that the coefficients              vated by previous findings of asymmetries related to the
+w (θ, φ; R) have zero mean. σR is the dispersion of the                genus [91] and the N-point correlation function [42]. It
+wavelet coefficients at the scale R:                                   was found that whereas there was not deviation on the
+                                                    1/2              northern hemisphere, the excess of kurtosis was even
+                           Npix (R)
+                     1      X                      2
+                                                                       more remarkable in the southern region. In partic-
+      σR =                         w (θi , φi ; R)  . (7)            ular, at the scale of 250 arcmin, the kurtosis of the
+                 Npix (R) i=1
+                                                                       SMHW coefficients was associated with a p-value of
+                                                                       ≈ 2×10−3 . Again, no deviation on the skewness was no-
+In the previous expressions, Npix (R) represents the
+                                                                       ticed. Hence, these analyses indicated that the source
+number of wavelet coefficients at a given scale R. Notice
+                                                                       for the deviation on the kurtosis of the wavelet coeffi-
+that, very often, CMB data is not available in the full
+                                                                       cient was related to feature/s with a typical length of
+celestial sphere (for instance because strong contamina-
+                                                                       around 10◦ in the sky, and located in the southern hemi-
+tion from astrophysical foregrounds has to be masked).
+                                                                       sphere. Thanks to the frequency/spatial properties of
+In most of the works in the CMB field, the HEALPix
+                                                                       the SMHW decomposition, it was possible to study in
+tessellation [52] is adopted. In this scheme, the resolu-
+                                                                       detail such features. In the left panel of figure 3, the
+tion of a given image represented on the sphere is given
+                                                                       cleaned CMB map obtained from the fourth release of
+by the NSIDE parameter, which indicates how many di-
+                                                                       the WMAP data is given. In particular, I plot the opti-
+visions of the 12 basic pixels are required to achieve
+                                                                       mal combination for cosmological analysis (hereinafter,
+such resolution. The NSIDE parameter is related with the
+                                                                       the QVW map), obtained as a noise-weighted linear
+number of the pixels (Npix ) required to fill the sphere
+                                                                       combination of the Q-, V-, and W-bands, previously
+at that resolution as: Npix = 12NSIDE 2 . In figure 2 the
+                                                                       cleaned via a template fitting (e.g. [50]). Regions highly
+major result of the seminal work [118] on the Cold Spot
+                                                                       contaminated by Galactic foregrounds, nearby clusters,
+is shown. It represents the kurtosis of the wavelet co-
+                                                                       and extragalactic point sources, have been masked. In
+efficients, as a function of the scale, for the first release
+                                                                       the right panel, the SMHW coefficients of the previous
+of the WMAP data (blue stars). The solid yellow line
+
+
+
+                                                                   4
+Figure 4: Right panel: cold area of the SMHW coefficients (at R = 300 arcmin), as a function of the threshold (ν).
+Left panel: cold area (A−ν
+                        R ) of the SMHW coefficients (at ν = 3σR ), as a function of the scale (R). As in figure 2,
+the red, green, and magenta regions represent the 32%, 5% and 1% acceptance intervals, respectively. These plots
+correspond to the analysis done by [28].
+
+
+
+map are represented, at the scale R = 250 arcmin. It                   the one mentioned in the previous subsection. The rea-
+is evident the presence of the Cold Spot in the south-                 son for this change is, as commented, that the MAX
+west side of the image. In particular, the centre of the               statistic is more robust than simply selecting the small-
+Cold Spot is estimated to be θ = 147◦ and φ = 209◦ .                   est values of the observations.
+The study of the Cold Spot, through the application
+of follow-up tests, provided further evidences for its
+                                                                       2.2.3    The area
+anomalous nature. Let me review these tests in the
+following subsections.                                                 The area above or below a given threshold is one of the
+                                                                       most common statistics used to characterize the prop-
+2.2.2   The amplitude                                                  erties of a random field. In particular, the area is the
+                                                                       most commonly Minkowski functional used in the lit-
+One of the most trivial statistics to study extreme val-               erature1 (see, for instance, [23, 53, 106]). Generalizing
+ues (as the Cold Spot) in a random sample is the                       this concept to the case of the wavelet coefficients, we
+largest/smallest observation. In [118] it was established              can define cold (A−ν                +ν
+                                                                                           R ) and hot (AR ) areas, at a given
+that the temperature of the Cold Spot was -4.57 times                  threshold ν and a given scale R, as:
+the dispersion of the SMHW coefficients at R = 250 ar-
+cmin. This cold value represented a p-value of 0.01                                A−ν     =    # {w (θi , φi ; R) < −ν} ,          (9)
+                                                                                    R
+(relative to Monte Carlo simulations). A more ro-
+                                                                                   A+ν
+                                                                                    R      =    # {w (θi , φi ; R) ≥ +ν} ,
+bust statistic related to the extreme values is the MAX
+statistic, understood as the largest observation (in ab-
+                                                                       where the number operator #{conditioni } indicates
+solute value). For the particular case of the SMHW
+                                                                       how many times conditioni is satisfied, for i rang-
+coefficients, MAX is defined, at scale R, as:
+                                                                       ing from 1 to Npix (R). The cold and hot areas of the
+             MAXR = max {|w (θi , φi ; R)|} .               (8)        WMAP data were analyzed by [28]. It was reported
+                                                                       that, whereas the hot area was consistent with the ex-
+The MAX statistic is more robust than selecting the                    pected behaviour for the standard Gaussian model (at
+coldest of the extrema, since the selection of the lowest              all the scales R and thresholds ν), the cold area was not
+values could be seen as an a posteriori selection. This                compatible. In particular, deviations from Gaussian-
+statistic was studied in [30], showing that the Cold Spot              ity were found, again, at SMHW scales of R ≈ 300◦ .
+was always the maximum absolute observation of the                     The deviation took place for thresholds equal or smaller
+WMAP data at scales around 300 arcmin, representing                    than −3σR (see figure 4). The analysis per different re-
+an upper tail probability of 0.38% (relative to Monte                  gions of the sky confirmed that the anomaly on the
+Carlo simulations). This value was less significant than               cold area was localized in the southern-west Galactic
+   1 For 2D images, there are three Minkowski functionals, namely the contour or length, the area, and the genus. These three quantities
+
+are defined above/below a given threshold.
+
+
+
+
+                                                                   5
+quadrant of the sky, and that the Cold Spot was re-
+sponsible for this anomaly. In particular, the cold area
+of the WMAP data (at the mentioned scales, and be-
+low a threshold of −3σR ) was found anomalous with a
+probability of ≈ 99.7%, whereas it became fully com-
+patible with Gaussian simulations, once the Cold Spot
+was not considered in the analysis. As for the case of
+the MAX statistic, a more conservative estimator (i.e.,
+less dependent from the fact that the Cold Spot is nega-
+tive) can be considered, just by selecting the maximum
+value of the previous cold and hot areas:
+                AνR = max A−ν       +ν
+                           
+                               R , AR    .          (10)
+This new statistic was used by [30], finding, again,
+that the WMAP data was anomalous about thresholds
+larger than |3σR |, for scales of the SMHW of around
+                                                                                         i
+300 arcmin.                                                         Figure 5: The HCN      pix
+                                                                                               values obtained from the anal-
+                                                                    ysis of the QVW map. The solid red line corresponds
+2.2.4   The Higher criticism                                        to the application of the equation 12 to the CMB map
+                                                                    in the real space (i.e., R ≡ 0), whereas the dot-dash
+Higher criticism (HC) is a relatively new statistic intro-          blue line corresponds to the analysis of the SMHW co-
+duced in 2004 by [39], and firstly applied to the context           efficients at scale R = 300 arcmin. HCN    i
+                                                                                                                     curves are
+                                                                                                                 pix
+of probing the Gaussianity of the CMB only a year after             normalized by their respective minimum values.
+by [20]. Although there is not a unique definition for the
+HC, all the forms proposed in the literature satisfy the                 As explained in [20], the HC represents, under cer-
+same key concept: HC is a measurement of the distance               tain conditions, some advantages with respect to more
+between a given sample of n elements to a Gaussian                  traditional statistics designed to study the Gaussian-
+probability density distribution, established by means              ity of a given sample. In particular, HC seems to be a
+of the difference between the p-value pi of a given obser-          better estimator than the MAX statistic: whereas the
+vation Xi —assuming it comes from a N(0, 1)—, and its               latter is designed to capture Gaussian deviations caused
+cardinal position on the sorted list (in increasing order)          by very large values of the distribution, the HC is also
+of p-values pi (i.e., pi−1 < pi < pi+1 , ∀ i = 1, . . . , n).       sensitive to anomalies produced by moderate values. In
+The HC associated with the sample is just defined as                addition, the HC can identify which values (in a given
+the largest value of such differences.                              sample) are the ones that differ from the theoretical
+     This concept can be applied to the SMHW coeffi-                Gaussian distribution.
+cients of a given signal (e.g., the QVW map) at a given                  In [20] it was reported that the HCNpix (R) was
+scale R. This was the analysis proposed by [20]. Let                above the 1% acceptance interval, again, at the SMHW
+us adopt the following definition for the HC associated             scale R = 300 arcmin. They found that, actually, all
+with Npix (R) wavelet coefficients w (θi , φi ; R), at scale        the SMHW coefficients associated with HCN      i
+                                                                                                                         (R) val-
+                                                                                                                     pix
+R:                              n
+                                     i
+                                              o                     ues above the 1% acceptance interval set by CMB Gaus-
+            HCNpix (R) = max HCN           (R) ,        (11)
+                                       pix                          sian simulations, where localized in the position of the
+where the maximization is made over the quantity                    Cold Spot. This extra test was an additional support
+HCN i
+          (R), that provides the difference between the             to the anomalous nature of the WMAP data, and of the
+      pix
+experimental probability of the wavelet coefficients                Cold Spot in particular. Results were confirmed by [30]
+w (θi , φi ; R) at scale R and the corresponding theoreti-          for the analysis of the second WMAP data release, re-
+cal p-value. Such quantity reads as:                                porting an upper tail probability even lower than for
+                                                                    the 1-year data.
+                                  i
+       i
+                     p       Npix (R) − pi (R)                           As an illustration of the HC statistic, in figure 5
+     HCN pix
+             (R) =    Npix p                     ,      (12)        I represent (in solid red) the HCN  i
+                                                                                                              values obtained
+                             pi (R) (1 − pi (R))                                                          pix
+                                                                    from the QVW map in the real space, and (in dot-
+where the p-value is given by pi (R) = P {|N(0, 1)| >               dash blue) the corresponding curve for R = 300 arcmin.
+|ŵ (θi , φi ; R) |}. The ˆ operator indicates that the             These quantities are normalized to their minimum val-
+Npix (R) SMHW coefficients at the scale R have been                 ues, for a better comparison. They are represented in
+transformed into a zero mean and unit variance sam-                 an increasing order. It is remarkable that, for the case
+ple. Let me remark that the p-values have been sorted               of the analyses performed on the SMHW coefficients,
+                                                                                                                i
+in increasing order.                                                there is a tail of very large values of HCN   pix
+                                                                                                                      , that are
+
+
+
+                                                                6
+                        i
+Figure 6: Maps of HCN     pix
+                              obtained from the analysis of the QVW map derived from the WMAP data. Left panel
+corresponds to the study of the real space case, while right panel shows the outcome of the analysis of the SMHW
+coefficients at R = 300 arcmin. Whereas for the former there are not particular signatures in the map, the wavelet
+analysis shows some prominent features, being the Cold Spot the most pronounced one.
+
+
+
+not present for the real space case. This is due to the            an isotropic filter and, therefore, the symmetric features
+ability of the SMHW transform to enhance features of               of the Cold Spot could be amplified, erasing any possi-
+a given scale and shape. In figure 6, these values are             ble intrinsic anisotropy. This issue was studied in detail
+represented on the celestial sphere (left panel for the            by [29]. Instead of applying an isotropic wavelet, the
+real space case, and right panel for the SMHW coeffi-              anisotropic Elliptical Spherical Mexican Hat Wavelet
+cients). The figure indicates that there are not partic-           (ESMHW) was adopted. The cleaned CMB map de-
+ular signatures in the real space, whereas the SMHW                rived form the WMAP was transformed into ESMHW
+coefficients at R = 300 arcmin allow us for a clear iden-          coefficients (at the scales for which the WMAP data
+tification of the features causing the anomalous values            appeared as anomalous), for different ratios ζ between
+of the HCNpix (R). In particular, the key role played by           the smallest and the largest axes of the ESMHW, and
+the Cold Spot is highlighted.                                      for different orientations. This work proved that the
+                                                                   maximum matching between the Cold Spot and the
+                                                                   ESMHW took place when ζ ∈ [0.875, 1] and, hence,
+3    The characteristics of the Cold Spot                          indicated that the Cold Spot structure was quite close
+                                                                   to be isotropic (assuming that the ratio of the ESMHW
+In this Section, I summarize briefly some of the most              axes mimics, somehow, the ratio between the Cold Spot
+important properties of the Cold Spot. I will focus in             axes).
+two major aspects: its morphology and its frequency                      The frequency dependence of the Cold Spot has
+dependence.                                                        been a matter of study soon after its discovery. Already
+      The morphological properties of the Cold Spot are            in [118] the SMHW coefficients of the cleaned WMAP
+different depending whether we do the analysis in the              frequency channels (namely, Q, V and W bands) were
+real or wavelet space. As it was pointed out in [28],              computed, and the mean value of the coefficients as-
+the region associated with the Cold Spot, in the real              sociated with the Cold Spot at the scale R = 250
+space, appears as formed by several small cold spots.              arcmin was estimated. No obvious frequency depen-
+The amplitude of the most prominent of these spots is              dence of this mean value of the wavelet coefficients was
+. −350µK with a size of ≈ 1◦ . None of these struc-                found, hence, being fully consistent with the expected
+tures is particularly anomalous. An image of the Cold              behaviour for the CMB emission2 , and, therefore, quite
+Spot in the real space is shown in the left panel of fig-          different to the typical frequency dependence of the
+ure 7. It is, however, in the wavelet space where the              Galactic foregrounds.
+Cold Spot appears more interesting. In the right panel
+of figure 7, I present a close view of the Cold Spot af-
+ter convolution with the SMHW at a scale R = 250                   4    The significance of the detection: the
+arcmin. Besides all the anomalous characteristics pre-                  a posteriori issue
+viously discussed (i.e., area, HC, and MAX), the Cold
+Spot appears as a very symmetric feature. However,                 One of the most questioned aspects of the WMAP
+this effect could be biased since, after all, the SMHW is          anomalies in general, and of the Cold Spot in partic-
+   2 The analyzed WMAP frequency channels were in thermodynamical temperature and, therefore, the CMB appears as a frequency
+
+independent emitter. Notice that, since the SMHW transform is a linear operation, the same behaviour is expected for the wavelet
+coefficients.
+
+
+
+
+                                                               7
+Figure 7: Image of the Cold Spot (θ = −147◦ , φ = 209◦ ) in the real (left panel) and wavelet (right panel) spaces.
+The homogenously filled circles correspond to positions where known extragalactic point sources have been masked.
+
+
+
+ular, is the issue of the actual significance of the de-          HC) were applied. I believe that there is not a unique
+tection. This is a very important point that is inti-             and clear way to solve these ambiguities and, to my
+mately linked to the blind nature of all the Gaussian-            view, this point is not usually addressed in the litera-
+ity/isotropy tests that led to the report of such anoma-          ture. However, whereas for the latter aspect (i.e., the
+lies.                                                             significance for the follow-up tests) the solution is hard,
+      Let me review where this problem comes from: if             for the former there could be some possible getaway,
+many tests are performed in a given data set, it is not           at least depending on the complexity of the prelimi-
+strange that some of them report some deviation from              nary analysis. Actually, the Cold Spot is one of the
+the null hypothesis. It is quite usual to face the follow-        few WMAP anomalies where this particular aspect has
+ing situation: a set of blind tests (i.e., tests that just        been considered with deeper interest. In fact, it was
+challenge the compatibility of the data with a given null         the matter of several papers [79, 29] and, in particular,
+hypothesis, H0 , and not confronting such hypothesis              of [30].
+with an alternative one, H1 ) claim a given incompatibil-              In this last work, the significance of the first detec-
+ity of the WMAP data. A subsequent test is performed,             tion was addressed, focusing in the a posteriori selec-
+taking into account the previous finding and, usually,            tion of the statistic (the kurtosis) and the scale range
+in such a way that the initial reported deviation is now          (≈ 250 arcmin). A conservative procedure to establish
+found at higher significance. In this procedure there             the p-value of the non-Gaussian detection, based on
+are two weak points: the first one, already mentioned,            the characteristics of the analysis, was proposed. More
+is to assess the probability of finding a deviation as the        specifically, since 30 statistics were applied to the QVW
+one claimed during the first step, taking into account            map (i.e., the skewness and the kurtosis of the SMHW
+all the possible tests that were performed. The second            coefficients at 15 scales), and only 3 out of these 30
+one is the credibility of the probability for the follow-up       statistics were found as anomalous (i.e., the kurtosis of
+test, where a particularity was studied in greater detail.        the SMHW at scales R = 200, 250, and, 300 arcmin
+      As mentioned above, this is a common situation for          were outside the 1% acceptance interval —see [30] for
+the WMAP anomalies works and, therefore, the Cold                 details), then, it was decided to estimate the signifi-
+Spot is not an exception. Several tests were made in the          cance of the non-Gaussianity detection by exploring in
+first work by [118], namely, the estimation of the skew-          how many out of 10,000 CMB Gaussian simulations it
+ness and the kurtosis at several scales of the SMHW.              was observed that the skewness or the kurtosis of the
+A particular deviation was highlighted: the excess of             SMHW coefficients were outside the 1% acceptance in-
+kurtosis at several scales around R = 250 arcmin. Af-             terval, at least, at three scales. The p-value obtained in
+ter that, the Cold Spot was identified as a prominent             this manner was 0.0185. This p-value can serve, as ex-
+feature, and further tests (the MAX, the cold area, the           plained in [30], as a conservative probability related to
+
+
+
+                                                              8
+the non-Gaussianity associated with the SMHW anal-                of the large scale fluctuations of the background.
+ysis.
+      In this spirit, the following up tests (e.g., the am-
+plitude, the area or the HC) can be just seen as addi-
+tional probes to explore/understand the previous devi-
+ation, rather than as independent sources for establish-
+ing a proper significance level for the detection.
+      Recently, [130] has questioned the non-Gaussianity
+found by [118], since the excess of the kurtosis was
+clearly found with the SMHW, but it was not the case
+with other analyzing kernels (proposed in [130]), as the
+top-hat and the Gaussian filters. The authors argued
+that these tools are more natural than a wavelet like the
+SMHW and that, therefore, the selection of the SMHW
+is somehow a posteriori. Contrary to this reasoning, I
+found that the results obtained by [130] imply a dif-
+ferent conclusion: the lack of detection when analyzing
+with the top-hat and the Gaussian filter is a proof of
+                                                                  Figure 8: Frequency dependence of the excess of the
+the issue discussed in Section 2.1, namely, that any fil-
+                                                                  kurtosis of the SMHW coefficients. The plot shows the
+tering kernel is not necessary suitable for the detection
+                                                                  variation of the kurtosis as a function of the scale KR for
+of any non-Gaussian feature. It is clear that some fea-
+                                                                  cleaned CMB maps obtained from the WMAP data at
+tures (like point sources, cosmic strings or textures) are
+                                                                  three cosmological frequencies (Q-,V-, and W-bands),
+much better detected after applying optimal or targeted
+                                                                  and for the optimal CMB cleaned map provided by
+filters, rather than general ones (like the top-hat or the
+                                                                  WMAP, as noise-weighted combinations of the previous
+Gaussian functions).
+                                                                  maps (the QVW map). The coloured regions represent,
+      The reason why a compensate filter as the SMHW
+                                                                  as for other figures, the 32%, 5% and 1% acceptance in-
+gets a much larger amplification as compared to uncom-
+                                                                  tervals provided by simulations.
+pensated kernels as the previous ones is that it is much
+more efficient to remove the background fluctuations                   Finally, it is worth recalling that the Cold
+above and below a given scale interval. Even more, it             Spot has been identified as an anomalous feature
+can be shown (e.g., [61]) that the SMHW is close to               by other tools different from the SMHW: by direc-
+the optimal or Matched filter to detect objects with              tional wavelets [79], scalar indices [98, 99], steer-
+a Gaussian-like profile embedded in CMB-dominated                 able wavelets [120], needlets [94], and the Kolmogorov
+background (as it is the case in the region of the Cold           stochastic parameter [56].
+Spot). The form of a Matched filter designed for a given
+situation is defined, not only by the shape of the fea-
+                                                                  5    Some possible sources to explain the
+ture to be detected, but also by the statistical proper-
+ties of the background. In particular, the Matched filter              Cold Spot
+(defined in the Harmonic space) is proportional to the
+                                                                  To find an explanation for the non-Gaussianity devi-
+shape of the feature, and inversely proportional to the
+                                                                  ation associated with the Cold Spot is the next step,
+angular power spectrum of the background. Therefore,
+                                                                  once its anomalous nature (i.e., non-compatible with
+bearing in mind that (at degree scales) the CMB is
+                                                                  the standard inflationary scenario) is accepted. With
+well described by an angular power spectrum close to
+                                                                  this aim, many efforts have been done in the last years,
+C` ∝ `−2 , it is trivial to show that the SMHW is near
+                                                                  considering different sources for the observed anomaly.
+to be an optimal tool for detecting a feature described
+                                                                  The possible causes addressed so far account for system-
+by a Gaussian-like profile, and embedded in such back-
+                                                                  atics effects, mostly due to instrumental aspects that
+ground.
+                                                                  are not well understood/modelled; spurious emissions
+      Let me remark that, as it was said in Section 2.1,
+                                                                  due to foregrounds or contaminants of the cosmological
+the selection of wavelets as a suitable tool for non-
+                                                                  signal; non-accounted secondary anisotropies induced
+Gaussian analysis, as it was shown by several authors in
+                                                                  on the CMB photons, as the interaction with the ion-
+the past (e.g., [62, 2, 78]), can not be considered as an
+                                                                  ized medium (e.g., the Sunyaev-Zeldovich effect) or the
+a posteriori choice, but, rather, as a natural option for
+                                                                  non-linear evolution of the gravitational potential (e.g.,
+studying scale-dependent phomena. In particular, the
+                                                                  the Rees-Sciama effect); and, of course alternative (or
+compensation property satisfied by wavelets make them
+                                                                  complementary) models to the standard inflationary
+extremely good analyzing kernels to amplify certain fea-
+                                                                  scenario (as cosmic defects). In the following subsec-
+tures, precisely because it assures a strong suppression
+                                                                  tion, and also in Section 6, I address these possibilities,
+
+
+
+                                                              9
+Figure 9: Null tests performed on difference maps, free of any foreground and cosmological signal. The left panel
+represents the kurtosis of the SMHW coefficients, as a function of the scale R, for the Q1 − Q2 map, i.e., for a map
+built as the difference of the difference assemblies observations at 41 GHz. The middle panel is as the previous one,
+but for the V 1 − V 2 difference map, i.e., at 61 GHz. Finally, the right panel provides the variation of the SMHW
+coefficients as a function of the wavelet scale, but for the difference map obtained with the 4 difference assemblies
+of WMAP at 90 GHz, i.e., W 1 − W 2 + W 3 − W 4. The blue asterisks represent values for the data, whereas red,
+green and magenta regions represented the acceptance intervals at 32%, 5% and 1%, respectively, determined by
+simulations.
+
+
+starting from those hypotheses that are less dramatic            is presented in all the WMAP detectors, at a similar
+from the point of view of strong implications for the            level.
+standard cosmological model.                                           The second type of analyses are null tests. The
+                                                                 cosmological frequencies of the WMAP satellite (i.e., Q
+                                                                 band at 41 GHz, V-band at 61 GHz and W-band at
+5.1   Systematics
+                                                                 94 GHz) are made from more than one difference as-
+To test the influence of unknown/unmodeled system-               sembly. Hence, just subtracting difference assemblies
+atics on the non-Gaussianity deviation is, as one could          at the corresponding band can produce noise maps per
+imagine, a very hard task. The analyses that can be              frequency. Neglecting small differences from the op-
+carried out to probe such sources are, basically of two          tical beams and the band-pass widths, the CMB and
+types.                                                           foreground emissions have been cancelled out in this
+     One of these analyses are consistency tests. As             new map. Therefore, the application of the statistical
+most of the CMB experiments, WMAP satellite can                  tools to these difference maps helps to check whether
+provided us with cleaned CMB maps (for instance, fol-            the non-Gaussian signal is a noisy artifact (if such sig-
+lowing the template fitting approach described by [50])          nal is still present) or not (if consistency with Monte
+for several detectors. Therefore, focusing in the non-           Carlo simulations is found). These was done by [118]
+Gaussian deviation associated with the Cold Spot, an             and [28], again, for the kurtosis and the area of the
+obvious procedure would be to check whether the ap-              SMHW coefficients, respectively. As for the previous
+plication of the different statistical tools reveals that        type of systematics probe, there was a clear indication
+such a feature is associated with only one detector, or          that the non-Gaussian signal was not related to any
+a smaller set of detectors. If this were the case that           instrumental signature. As an example, in figure 9,
+would be a clear indication for a lack of consistency            the result obtained by [118] for KR is presented. On
+and, therefore, that the non-Gaussianity detection is            the left panel, I represent the variation of the SMHW
+associated with a given instrumental feature. This was           wavelet coefficients for the difference map constructed
+done by [118] and [28] for the kurtosis (KR ) and the            at 41 GHz as Q1 − Q2. Similarly, the results for the
+area (AνR ) of the SMHW wavelet coefficients. No incon-          V 1 − V 2 map at 61 GHz are provided in the middle
+sistency was found: the excess of kurtosis and of area           panel. Finally, in the right panel, I give the output for
+was found to be the same for every difference assem-             the difference map obtained at the 94 GHz band as the
+bly. As an illustration, in 8 the kurtosis of the SMHW           combination W 1 − W 2 + W 3 − W 4. Results for the
+coefficients (as a function of the scale KR ) for 4 dif-         WMAP data is given as blue asterisks, whereas, as for
+ferent CMB maps is presented. In particular, results             previous figures, the red, green, and magenta regions
+for the Q-, V-, and W-band cleaned CMB maps are                  provide the 32%, 5% and 1% acceptance intervals, re-
+shown, together with the curve obtained from the anal-           spectively.
+ysis of the optimal QVW-map. These curves are quite                    Summarizing, consitency and null tests do not
+similar, which indicates that the non-Gaussian signal            reveal the presence of systematics behind the non-
+
+
+
+                                                            10
+Gaussianity associated with the Cold Spot . Besides
+these test, it is important to remark that the angular
+size associated with this feature is ≈ 10◦ in the sky. It
+is not trivial to think in a systematic effect affecting at
+this scale, and providing such localized feature in the
+sky as the Cold Spot .
+      Finally, the subsequent releases of the WMAP
+data (where the modelling of the instrumental prop-
+erties have been improving with time) have shown that
+there are not changes in the non-Gaussianity deviation,
+except for a slight increasing on its significance, which
+reflects the higher signal-to-noise that WMAP data is
+getting as observational time increases.
+
+
+
+5.2   Foregrounds                                                    Figure 10: Frequency dependence of area of the SMHW
+                                                                     coefficients. The plot shows the area of the wavelet coef-
+Astrophysical contaminants or foregrounds are the next               ficients at R = 300 arcmin for different thresholds (from
+possible origin for the non-Gaussianity associated with              top to bottom: 3, 3.5, and 4σR ), as a function of the
+the Cold Spot,. It is well known that foregrounds are                frequency. The circles represent the values obtained for
+highly non-Gaussian signals. It is worth commenting                  cleaned CMB maps obtained from the WMAP data at
+that, although the Cold Spot is negative, it is still pos-           three cosmological frequencies (Q-,V-, and W-bands).
+sible to think in an additive source (as foregrounds are)            The solid lines represent the areas, at different thresh-
+as a feasible explanation. To understand this point, it is           olds, for the noise-weighted QVW map.
+important to recall that the QVW map (that, as I said
+before, is commonly adopted in the literature for cosmo-                  The results obtained for this study are given in
+logical analyses) is obtained as a noise-weighted linear             figure 8. The kurtosis KR is presented for the 41, 61,
+combination of cleaned CMB maps at different frequen-                and 94 GHz channels, and for the noise-weighted lineal
+cies. These maps (at 41, 61 and 94 GHz) are produced,                combination (the QVW map). It is remarkable the high
+as mentioned previously, via a template fitting (see, for            similarity of the curves. The pattern of the kurtosis, as
+instance, [50]). Therefore, any over-subtraction of fore-            a function of the SMHW scale, is the same for all the
+grounds templates could caused a foreground residual                 maps. The same is observed for its normalization. An
+in the form of a cold emission3 .                                    equivalent test can be done for the area of the SMHW
+      Since, as mentioned before, the size of the Cold               coefficients (AνR ), as proposed by [28, 29]. Results, at
+Spot is of several degrees, it is really hard to believe             R = 300 arcmin, are presented in figure 10. Notice
+that this feature could be associated with residuals from            that the agreement of the area of the SMHW coeffi-
+point sources (i.e., from radio and infrared galaxies).              cients (above threshold ν =3, 3.5, 4σR ) among differ-
+Therefore, only galactic emissions (as synchrotron, free-            ent frequency bands (Q, V, and W) and the combined
+free, and thermal and spinning dust) could be responsi-              QVW map (represented by the solid lines in the figure)
+ble for a large feature as the Cold Spot. However, notice            is very high. These kind of tests show that there is not
+that the Cold Spot is located at 57◦ from the Galactic               any evident frequency dependence of the statistics asso-
+plane, and at a longitude of 209◦ . In other words, the              ciated with the non-Gaussian deviation and, therefore,
+Cold Spot is placed in a region of low Galactic contam-              that such anomaly is fully consistent with the expected
+ination. According to the previous reasoning, it is al-              behaviour for a CMB feature.
+ready hard to make compatible the presence of the Cold                    Additional tests supporting this idea have been
+Spot with a given Galactic emission. Even though, of                 proposed in the literature. First [118], the kurtosis of
+course, the issue has been a matter of discussion. I                 the SMHW coefficients was analyzed for a CMB-free
+review here some of these analyses.                                  map, constructed as the combination of the 4 differ-
+      The most obvious test is, of course, to check                  ence assemblies at the W-band minus the sum of the 4
+whether there is or not any frequency dependence of                  ones at Q- and V-band (i.e., W 1 + W 2 + W 3 + W 4 −
+the statistical estimators that indicated the Gaussian               Q1 − Q2 − V 1 − V 2). This kind of map could have
+deviation. For instance, in [118, 29], the kurtosis of               a contribution of the Galactic contaminants (outside a
+the SMHW coefficients (KR ) was studied for the dif-                 given observing mask), since foreground emissions are
+ferent CMB cleaned maps obtained at the Q-, V-, and                  not frequency independent. This analysis did not show
+W-bands.                                                             any significant deviation from the expected behaviour
+  3 In some works, a VW map is adopted, i.e., a map built as a noise-weighted linear combination of the cleaned V- and W-bands.
+
+
+
+
+                                                                11
+from Gaussian simulations, and, therefore, discarding
+the presence of significant foreground residuals.
+      Second, as suggested by [29], different CMB re-
+coveries from the WMAP data (where independent and
+alternative component separation approaches were fol-
+lowed) could be analyzed. In particular, the cleaned
+CMB maps obtained by [112] were probed. The kurto-
+sis, the area, and the MAX of the SMHW coefficients
+do not changed significantly from the different CMB
+maps.
+      [29] explored a more complicate scenario: a sit-
+uation in which combinations of different foreground
+emissions could mimic, in the region of the Cold Spot,
+the behaviour associated with the CMB, i.e., a fre-
+quency independent global emission. To check this
+possibility, several templates were used as tracers of
+the Galactic foregrounds, namely, the Rodhes/HartRa0                   Figure 11: Best-fit of the WMAP data —across the 8
+2326 MHz [68] radio survey for synchrotron, the Hα                     difference assemblies for the Q-, V-, and W- bands— to
+by [48] for the free-free, and the thermal dust model                  a CMB (solid line) and a SZ spectra (dashed line). The
+by [47]. Authors studied the expected contribution of                  fit is performed to the minimum amplitude of the Cold
+foregrounds in the region of the Cold Spot, and they                   Spot in wavelet space, at a scale of R = 300 arcmin.
+found that, taking into account the uncertainties in the               Error bars are obtained from Gaussian simulations.
+extrapolation of these templates from their original ob-
+servations to the WMAP frequency range, it was pos-                         There is not evidence for the existence of any
+sible to find a global Galactic emission that was nearly               large cluster in the direction of the Cold Spot. How-
+frequency-independent from 41 to 94 GHz (i.e., from                    ever, [15] reported the presence of a large concentra-
+Q- to W-bands). However, it was found that the emis-                   tion of galaxies in that direction —referred to as the
+sion was at a level of one order of magnitude below                    Eridanus super-group—, that could account for a total
+the Cold Spot temperature. It was checked that, even                   mass of ≈ 1014 M (see [32] for details).
+accounting twice for that hypothetical foreground emis-                     This scenario implies, therefore, that the SZ could
+sion, it was not possible to reconcile observations with               explain the nature of the Cold Spot, at least, partially.
+the Gaussian model.                                                    In other words, it could be possible that a combina-
+      All these tests on the impact of the foregrounds                 tion of a SZ contribution plus a large (but not anoma-
+indicated that the non-Gaussian signal associated with                 lous) CMB fluctuation could account for the Cold Spot
+the Cold Spot was fully consistent with a CMB like                     emission. This was studied by [29], and the results
+frequency dependence, and that the role played by as-                  are summarized in figure 11. In this figure, the val-
+trophysical contaminants was negligible.                               ues of the SMHW coefficients w (θ, φ; R), at the po-
+                                                                       sition of the Cold Spot and at R = 300 arcmin, are
+                                                                       given for the eight CMB cleaned maps at the Q-, V-,
+                                                                       and W-bands. The corresponding error bars were com-
+5.3   The Sunyaev-Zeldovich effect                                     puted from CMB plus noise simulations, corresponding
+                                                                       to the instrumental properties of these detectors, and
+After checking that the possible impact of systemat-                   convolved with the appropriate SMHW kernel.
+ics and foregrounds on the non-Gaussian detection is                        Three different fits to the data were explored.
+very low, the next step is to study whether secondary                  First, a pure CMB spectrum was using, giving a very
+anisotropies of the CMB could explain the anomalous                    good fit with a reduced χ2 = 1.00. Such fit is repre-
+nature of the Cold Spot.                                               sented by the solid line in figure 11. Second, a pure SZ
+     The Sunyaev-Zeldovich effect4 (SZ) could be a po-                 spectrum was tested, obtaining a very poor fit (dashed
+tential candidate to explain the anomaly. Two major                    line) with a reduced χ2 = 9.12. Finally, a joint fit to a
+reasons support this possibility: first, the size of the               CMB plus SZ spectra was explored, obtaining an am-
+Cold Spot is nearly compatible with the fluctuations                   plitude for the SZ spectrum consistent with zero, and a
+caused by the nearest clusters of galaxies, and, sec-                  reduced χ2 quite similar to the first case. These results
+ond, this fluctuations (in the frequency range covered                 confirm that the frequency dependence of the Cold Spot
+by WMAP) produce cold spots [110].                                     is consistent with a CMB-like spectrum. They also rule
+   4 It is produced by the inverse Compton interaction of the CMB photons, as they cross the hot electron gas that is found in clusters
+
+of galaxies.
+
+
+
+
+                                                                  12
+out the possibility that the SZ is playing any significant        Spot could be explained in terms of systematics, fore-
+role.                                                             grounds, and secondary anisotropies as the Sunyaev-
+                                                                  Zeldovich and the Rees-Sciama effects. None of these
+5.4   The late evolution of the large scale struc-                possibilities seem to provide a satisfactory explanation
+      ture                                                        and, therefore, other sources should be investigated.
+                                                                        In this Section, I pay attention to the suggestion
+Another secondary anisotropy that could explain the               made by [31]: the Cold Spot could be caused by a
+anomalous nature of the Cold Spot, is the one due to              cosmic texture. Cosmic textures [114] are a type of
+the non-linear evolution of the gravitational field: the          cosmic defects. They are supposed to be generated at
+so-called Rees-Sciama effect (RS). In particular, it is           some stage of the early Universe, associated with the
+known [76, 77] that voids in the large scale structure            symmetry-braking phase transitions that are predicted
+could induce a negative non-linear anisotropy in the              by certain theoretical models of high energy physics
+CMB photons. The size of such secondary anisotropies              (see, for instance, [125] and references therein for a
+depends on the proper size of the void and its redshift.          much more detailed explanation). In short, defects can
+Therefore, as for the SZ, the RS is another potential             be understood as space regions of a given phase state,
+candidate to explain the anomalous nature of the Cold             surrounded by a space already in a new phase. In some
+Spot.                                                             cases, as for textures, these regions could collapse and,
+      Extra support for this hypothesis came from two             therefore, left an imprint on the CMB photons.
+different paths. On the one hand, theoretical works                     Among the different types of cosmic defects, tex-
+as [64, 65] proposed that a very large void (of ≈ 300h−1          tures are the most plausible candidate to explain the
+Mpc) and located at low redshift (z  1) could pro-               anomalous nature of the Cold Spot, since the interac-
+duce large negative CMB fluctuations such as the Cold             tion of the CMB photons with the time variation of
+Spot, even with modest density contrast values (i.e.,             the gravitational potential, associated with an even-
+in a quasi-linear regime). On the other hand, it was              tual collapse of the texture, produces spots in the CMB
+suggested [102] that the NVSS catalogue [24] seems to             fluctuations [115]. Even more, cosmic textures are ex-
+show, at the position of the Cold Spot, a lack in the             pected to be a possible source of kurtosis deviation,
+number count of radio galaxies.                                   whereas the expected level of skewness is almost negli-
+      Against these ideas, some criticisms can be made.           gible (at least for values of the symmetry-breaking en-
+First, this kind of voids are not observed and, even              ergy scale compatible with current observations). This
+more, according to current N-body simulations [22]                is caused by the even probability of textures producing
+they are extremely rare events (≈ 13σ, i.e., much more            cold and hot spots and, therefore, providing a nearly
+rare than the Cold Spot deviation itself, that was a              symmetric distribution of temperature fluctuations. In
+98.15% event!) in the standard cosmological frame-                fact, the equilateral fN L expected from textures goes as
+work. Second, the claim made on the NVSS data has                 fN L ≈ 1.5 × 10−100 ψ06 [103], where ψ0 is the symmetry-
+been recently questioned by [108], suggesting that such           breaking energy scale, measured in Gev. For typical
+finding was an artefact caused by possible systematics            limits in ψ0 imposed by the CMB angular power spec-
+related with the NVSS data processing, the statistical            trum analysis (e.g., [9, 116]), the expected equilateral
+procedure and the a posteriori selection of the Cold              fN L is ≈ 10−9 , i.e., a tiny value well below the current
+Spot position.                                                    constraints [70].
+      In addition, observational campaigns on the region                The isotropic shape of the temperature fluctua-
+of the Cold Spot were made by [54] with the MegaCam               tions related to these spots can be approximated, at
+on the Canada-France-Hawaii Telescope, and by [12]                least at small angular distances ϑ, as [92]:
+with the VIMOS spectrograph on the Very Large Tele-
+scope. Both works have reported that the large scale                            ∆T               1
+structure in that direction, and up to z ≈ 1, is fully                             (ϑ) = ±ε r       2 ,              (13)
+                                                                                 T
+consistent with the standard model, and that there is                                        1 + 4 ϑϑc
+no evidence of such large voids as those required by
+the non-linear evolution of the gravitational potential
+                                                                  where ϑ represents the angular distance from the centre
+hypothesis.
+                                                                  of the spot, and ϑc is a characteristic scale parameter
+                                                                  of the spot —that is related to the redshift of the spot
+6     A plausible explanation: cosmic tex-                        and the dynamics of the Universe [31]. The amplitude ε
+      tures                                                       is proportional to the symmetry-breaking energy scale
+                                                                  ψ0 : ε = 8π 2 Gψ02 . It is worth remarking that, accord-
+In the previous Section, I have presented an overview             ing to cosmic texture models, the amplitude ε is the
+of the several works carried out to establish whether             same for every single spot generated by the collapsing
+the non-Gaussianity detection associated with the Cold            defects.
+
+
+
+                                                             13
+                                                                        servative upper limit imposed by CMB measurements
+                                                                        (e.g. [40, 9]).
+                                                                              Let me remark that the results obtained with a
+                                                                        profile as the one given in equation 14, and that are
+                                                                        reviewed in the next Section, do not depend very much
+                                                                        with the specific function adopted for the extrapolation.
+                                                                        Similar results are obtained, for instance, when an ex-
+                                                                        ponential function or a SMHW-like kernel are used.
+
+                                                                        6.1    The Bayesian framework
+                                                                        Attending to the issues discussed in the previous sub-
+                                                                        section, a cosmic texture could be a strong candidate to
+                                                                        explain the Cold Spot: textures produce spots on the
+                                                                        CMB temperature fluctuations, they are non-Gaussian
+                                                                        signals, and, depending on their amplitude (or the
+                                                                        symmetry-breaking scale), they could be compatible
+                                                                        with current constraints on the role played by cosmic
+                                                                        defects on the structure formation and evolution of the
+                                                                        Universe.
+Figure 12: Radial profile (solid blue/red lines) of a
+                                                                              [31] proposed to make use of the texture profile
+cosmic texture, as given in equation 14. The param-
+                                                                        of equation 14 to perform a hypothesis test to decide
+eters defining this profile are ε = 10−4 and ϑc = 5◦ .
+                                                                        whether the WMAP data (in the position of the Cold
+The dashed lines represent the truncated values of the
+                                                                        Spot) is more likely to be described by a large (but not
+profiles given by equation 13 (blue), and the Gaussian
+                                                                        anomalous) CMB spot (i.e., the null H0 hypothesis) or
+function (red). See text for details.
+                                                                        by a cosmic texture of amplitude ε and size ϑ added to
+                                                                        a random Gaussian and isotropic CMB field (i.e., the
+     As mentioned above, the profile proposed in equa-
+                                                                        alternative H1 hypothesis).
+tion 13 is only valid up to small relative distances (e.g.,
+                                                                              The optimal way of performing such hypotheses
+ϑ ≈ ϑc )5 . In order to have a profile valid at larger
+                                                                        test is within the Bayesian framework. Bayes’ theo-
+angular distances, [31] proposed to extend the profile
+                                                                        rem states that, given a data set D and some unknown
+given by equation 13 from its half-maximum, following
+                                                                        parameters Θ (defining a given model in the context
+a Gaussian function. The extension is done by impos-
+                                                                        of a given hypothesis Hi ), the posterior probability of
+ing continuity, both, of the profile itself and of its first
+                                                                        the parameters/model given the data P (Θ | D, Hi ), is
+derivative.
+                                                                        related to the likelihood P (D | Θ, Hi ) (i.e., the proba-
+     Taking into account these conditions, the assumed
+                                                                        bility of the data given the parameters/model) as:
+profile for the CMB temperature fluctuation caused by
+a collapsing cosmic texture would be given by:                                                    P (D | Θ, Hi )P (Θ | Hi )
+                                                                               P (Θ | D, Hi ) =                             ,   (15)
+                                                                                                         P (D | Hi )
+                        ε
+                
+                                       if ϑ ≤ ϑ∗
+                                                                        where P (Θ | Hi ) is a measurement of our a priori
+                   q
+                              2
+                
+                
+                    1+4( ϑϑc )
+      ∆T                                                               knowledge about the parameters/model (i.e., the prior),
+           =±                                          (14)
+       T        
+                                                                       and P (D | Hi ) is a constant (i.e., it does not depend on
+                 ε − 2ϑ12c (ϑ2 +ϑ2∗ )
+                
+                                                                       the parameters/model) called Bayesian evidence (BE).
+                   2e                  if ϑ > ϑ∗ ,
+                                                                        The BE is nothing but the average likelihood with re-
+             √                                                          spect to the prior,
+where ϑ∗ = 3/2ϑc .                                                                         Z
+     In figure 12, I show the radial section of the above                   P (D | Hi ) = P (D | Θ, Hi )P (Θ | Hi ) dΘ,       (16)
+profile (solid line). The red and blue parts of the
+solid line correspond to the Gaussian function and to                   and it is a largely used mechanism to perform hypothe-
+the profile of equation 13, respectively. The dashed                    ses test. In particular, its role on different cosmology
+lines represent the truncated regions for both curves.                  fields has been quite remarkable during the last years
+The cosmic texture parameters used in this profile are                  (e.g., [86] for dark energy studies, [13] for anisotropic
+ϑ = 5◦ (i.e., similar to the SMHW scale at which the                    models of the Universe expansion, [87] for studying dif-
+Cold Spot appears as anomalous) and ε = 10−4 . This                     ferent re-ionization models, [17] for point source detec-
+value corresponds to a symmetry-breaking energy scale                   tion, and [122] for exploring non-standard inflationary
+of ψ0 = 1.13 × 1016 GeV, that corresponds to a con-                     models).
+  5 To my knowledge, there is not any analytical or numerical solution for the full profile of a given cosmic texture yet.
+
+
+
+
+                                                                   14
+     The importance of BE for hypotheses test is clear.            —i.e., equation 14 for H1 , and ≡ 0 for H0 . Finally, T
+First, it is obvious that the quantity that we would like          denotes standard matrix transpose.
+to obtain is a measurement of the probability of a given                 The priors adopted by [31] for the parameters
+hypothesis H0 , given the data, i.e., P (H0 | D). This             Θ ≡ (ε , ϑc ) were chosen attending to observational con-
+probability can be written, attending to the probability           straints and cosmic texture simulations. In particular,
+multiplication rule, as:                                           the prior on the amplitude was |ε| ≤ 10−4 , whereas the
+                                                                   prior of the size 1◦ ≤ ϑc ≤ 15◦ was assumed. The am-
+                                       P (H0 )                     plitude prior was uniformly distributed, and, as men-
+            P (H0 | D) = P (D | H0 )           ,      (17)
+                                       P (D)                       tioned above, it is a conservative constraint imposed
+i.e., it is proportional to the BE and to the probabil-            from the contribution of cosmic defects to the CMB
+ity of the hypothesis, and inversely proportional to the           angular power spectrum. The size ϑc follows a scale-
+probability of the data. Under certain circumstances,              invariant law, and the limits comes form texture sim-
+the probability of the hypothesis could be known, but,             ulations. Textures below 1◦ should be smeared out by
+however, it is not the case for the probability of the             photon diffusion and, in addition, they would be related
+data. In other words, we only can learn about the prob-            to collapsing events above redshift ≈ 1000, which would
+ability of the hypothesis H0 up to a factor. Therefore,            not affect the CMB image. The upper limit is due to the
+what we can extract is a relative measurement of the               unlikely probability of generating such large textures in
+probability of two hypotheses (H0 and H1 ), given the              the finite celestial sphere. Even so, [31] tested that re-
+same data set D. This relative measurement is called               sults were not specially sensitivity to the prior selection,
+the posterior probability ratio, ρ, and reads:                     since the likelihood was clearly peaked, within a region
+                                                                   of the parameter space clearly allowed by observations
+                  P (H1 | D)   E1 P (H1 )                          and texture models.
+             ρ≡              =            ,           (18)
+                  P (H0 | D)   E0 P (H0 )                                The marginalization of the posterior probability
+                                                                   in equation 15, led to the determination of the tex-
+where, for simplicity, I re-write the BE, P (D | Hi ), as          ture parameters, obtaining ε = 7.3+2.5              −5
+                                                                                                            −3.6 × 10      and
+Ei . Hence, if ρ > 1, we can conclude that the hypoth-                        ◦ +2.8
+                                                                                     ◦
+                                                                   ϑc = 4.9 −2.4◦ at 95% confidence. The BE ratio was
+esis H1 is favoured by the data with respect to H0 . In
+                                                                   150, which, in terms of the empirical rules [67], is a
+some cases, there is not a clear choice for the probabil-
+                                                                   strong indication that the texture hypothesis for the
+ity of the hypotheses. In this case, empirical rules for
+                                                                   Cold Spot is favoured over the isotropic and Gaussian
+the ratio of evidences —as the Jeffreys’ scale [67]— are
+                                                                   CMB fluctuation option. Adopting a ratio for the prob-
+usually adopted.
+                                                                   ability of the hypotheses given by the fraction of the
+     Therefore, the procedure required to explore
+                                                                   sky that is covered by a cosmic texture as large as the
+whether the Cold Spot is more likely to be explained
+                                                                   one required for the Cold Spot (≈ 0.017), the posterior
+in terms of a cosmic texture (H1 ) rather than by a
+                                                                   probability ratio was ρ = 2.5, which also favours the
+Gaussian CMB fluctuation (H0 ) is clear: first, the like-
+                                                                   texture hypothesis.
+lihood is computed for both hypotheses; second, the
+                                                                         It is worth mentioning that the estimated value
+BE is estimated, taking into account the adequate pri-
+                                                                   for the texture amplitude could be affected by selection
+ors (equation 16); finally, the posterior probability ratio
+                                                                   bias. In [31] it is established that such bias could pro-
+(equation 18) is evaluated, making use of suitable a pri-
+                                                                   vide an overestimate of the texture amplitude by a fac-
+ori probabilities for H0 and H1 .
+                                                                   tor of 2. This bias is caused because the texture ampli-
+     This was the procedure followed in [31]. It is
+                                                                   tude is estimated in a low signal-to-noise regime, were
+straightforward to show that, since the noise term is
+                                                                   the features placed in large background fluctuations are
+caused by standard CMB Gaussian fluctuations and
+                                                                   more easily detected. Even so, the estimated value for
+instrumental Gaussian noise, the likelihood function
+                                                                   the texture amplitude, ε = 7.3 × 10−5 , would imply
+reads as:
+                                                                   a symmetry-breaking energy scale of ψ0 = 8.7 × 1015
+              P (D | Θ, Hi ) ∝ exp −χ2 /2 ,
+                                            
+                                                       (19)        GeV, which, on the one hand, is fully compatible with
+                                                                   more recent constraints imposed from the analysis of
+                                             T                     the CMB temperature and polarization power spectra
+where χ2 = (D − T (Θ)) C −1 (D − T (Θ)) . The corre-
+lation matrix C accounts for the full Gaussian CMB                 (e.g. [116]), and, on the other hand, is in agreement
+                                                                   with the predictions of most of the models for parti-
+P noise correlations —i.e., 2C = S + N , where sij ∝
+and
+                                                                   cle physics. In addition, by relating the angular size of
+   C` P` (cos θij ) and nij = σi δij , being P` the Legen-
+dre polynomials, θij the angular distance between the              the CMB texture profile to the cosmological parameters
+pixels i and j, σi2 the instrumental noise contribution            defining the geometry and evolution of the Universe, it
+to pixel i, and δij represents the Kronecker delta. D              was possible to establish that the texture collapse (that
+represents the data (i.e., the QVW map) and the func-              generated the CMB profile in equation 14) occurred at
+tion T (Θ) represents the model behind the hypotheses              redshift z ≈ 6.
+
+
+
+                                                              15
+Figure 13: Left panel, CMB temperature fluctuations obtained from WMAP data, centred in the position of the
+Cold Spot. Middle panel, best-fit of a texture profile to the data, according to equation 14. Right panel: CMB map,
+at the position of the Cold Spot, after the subtraction of the best-fit texture model.
+
+
+
+     The figure 13 shows the effect of correcting the            and reviewed in the previous subsection, have to be un-
+QVW map from the texture emission. In the left panel             derstood as a (clear) indication that the cosmic texture
+the region of the sky where the Cold Spot was identified         is plausible. However, before accepting it as the final
+is shown. The middle panel presents the best-fit of the          explanation, it should be confirmed by additional tests.
+texture profile, according to the parameters previously          In particular, if the cosmic texture hypothesis would be
+mentioned. On the right panel, I present the resulting           the right one, then there are some clear predictions that
+map after the subtraction of the estimated cosmic tex-           could be tested (at least in the near feature, once on-
+ture contribution. The Cold Spot is noticeably reduced.          going/upcoming experiments as SPT, ACT, QUIJOTE
+More quantitative measurements were made by [31]. It             and ALMA are fully operative).
+was proved that, if cosmic textures (adequate to the pa-              In this subsection I comment on the three most
+rameters fixed by the Cold Spot analysis) were added             obvious follow-up tests that could help to discard, or
+to isotropic and Gaussian simulations of CMB signals,            accept, the cosmic texture. These follow-up tests are:
+as seen in the QVW WMAP map, then the kurtosis                   the searching of more textures, the local polarization of
+of the SMHW became compatible. Even more, [14]                   the CMB, and the local CMB lensing. These foreseen
+showed that the WMAP map (corrected from the cos-                effects were firstly pointed out by [31].
+mic texture contribution in the location of the Cold
+Spot) was not compatible with anisotropic patterns for           6.2.1   Looking for more textures
+non-standard expansions of the Universe (in particular,
+for Bianchi VIIh models), as it was previously the case          If a texture were found in the location of the Cold Spot,
+for the uncorrected data (e.g. [66, 13]).                        then, attending to cosmic texture models, there should
+     Finally, let me remark that [32] proposed a sim-            be more cold and hot spots randomly distributed across
+ilar approach as the one described in this Section to            the sky. In fact, the distribution of CMB spots caused
+study (attending to spatial templates) whether SZ and            by cosmic textures follows a scale-invariant law:
+RS could provided more suitable hypotheses than the
+                                                                                                   4πνκ3
+standard isotropic and Gaussian model. This Bayesian                               Nsp (> ϑc ) =         ,              (20)
+analysis indicated that neither of these hypotheses is                                              3ϑ2c
+favoured.
+                                                                 i.e., the number of cold/hot spots with a scale equal or
+                                                                 larger than ϑc , is inversely proportional to ϑ2c (see [109]
+6.2   Follow-up tests                                            for the grounds and [31] for a derivation). The ν and κ
+                                                                 parameters are associated with the physics of the cos-
+The studies described in Section 5 and in the previous           mic texture models, and their specific meaning is out
+subsection, clearly indicates that, among all the realis-        of the scope of this review. Let me remark here that,
+tic sources that could explain the anomalous nature of           according to state-of-the-art simulations, these param-
+the Cold Spot, only the cosmic texture hypothesis re-            eters are well consistent with ν ≈ 2 and κ ≈ 0.1 values,
+mains as a feasible option. The results obtained by [31],        when ϑc is expressed in radians. Before continuing the
+
+
+
+                                                            16
+discussion, let me stress that the number of expected               the definition of an optimal Fisher discriminant statis-
+cold/hot spots with a scale ϑc equal or larger than 5◦              tic (e.g. [27]).
+(i.e., as the Cold Spot scale) is ≈ 1. In other words,
+the fact that we only found a Cold Spot of a scale sim-
+ilar or larger than the Cold Spot size is fully consistent
+with the cosmic texture scenario. This fact, of course,
+is an extra support for the texture hypothesis causing
+the Cold Spot emission.
+      Let me come back to equation 20. A straightfor-
+ward calculation tells as that, if the cosmic texture hy-
+pothesis is correct, then the CMB temperature fluctu-
+ations should contain ≈ 28 spots with a scale ϑc ≥ 1◦ ,
+and ≈ 7 spots with a scale ϑc ≥ 2◦ . Poisson errors
+can be safely assumed for these numbers. Therefore,
+the number of cold/hot spots expected in the WMAP
+data are 1 . Nsp (> 2◦ ) . 13 at the 95% confidence
+level. Current work is in progress to check this pre-
+diction, by using a fast cluster nesting sampling algo-
+rithm —MULTINEST [45]— to explore the posterior
+probability ratio. There are well founded hopes to find
+                                                                    Figure 14: The curve indicates the probability (the
+new textures. In particular, some non-Gaussian anal-
+                                                                    p-value) for rejecting the texture hypothesis, attending
+yses as [120, 94, 56] reported some hot/cold spots (in
+                                                                    to the T-E correlation, as a function of the instrumen-
+addition to the Cold Spot) as potentially anomalous.
+                                                                    tal noise sensitivity in polarization. From left to right,
+                                                                    the vertical lines indicate the noise level associated with
+6.2.2   The polarization of the CMB                                 QUIJOTE, Planck, and WMAP experiments.
+
+The effect of a collapsing texture on the passing by                      The method was applied to probe the capabilities
+CMB photons is nothing but a secondary anisotropy                   of current and upcoming CMB experiments for discrim-
+of the CMB fluctuations, whose origin is merely grav-               inating between the two hypotheses. In particular, the
+itational. Hence, the effect of such gravitational phe-             cases of WMAP, Planck [111], and QUIJOTE [100] were
+nomenon on the E-mode polarization is almost negli-                 considered.
+gible (only vector modes would be affected, which are                     As the major conclusion, it can be established that
+well below the scalar mode contribution).                           the discrimination power of the T-E correlation is not
+      Strictly speaking, this lack of polarization is not           very high. In fact, for an ideal noise-free experiment,
+a unique signature produced by cosmic textures. As                  at a power of the test of 0.5, the significance level is
+I said, any secondary anisotropy of gravitational ori-              (up most) 0.8%. The reason for this limitation is that
+gin would cause it. However, these other effects (as                the characteristic size of the Cold Spot is ≈ 10◦ , which,
+huge voids) are quite implausible explanations (see Sec-            roughly, corresponds to multipoles of ` ≈ 40. It hap-
+tion 5.4). For that reason, this effect is a valid follow-up        pens that, at this multipole scales, the T-E angular
+test to probe the texture hypothesis.                               cross-power spectrum is very close to zero, already for
+      The procedure is simple: to compare the E-mode                H0 and, therefore, it is hard to discriminate it from H1 .
+polarization in the position of a temperature spot (as                    The results are graphically summarized in fig-
+large and extreme as the Cold Spot is), under two dif-              ure 14. I represent the significance level or p-value (for a
+ferent hypotheses, the null or H0 one (i.e., the temper-            power of the test of 0.5) as a function of the instrumen-
+ature spot is caused by a Gaussian fluctuation) and the             tal noise sensitivity for the E-mode polarization. The
+alternative or H1 option (i.e., the temperature spot is a           three experiments previously mentioned are indicated
+secondary anisotropy caused by the collapse of an evolv-            as vertical lines. Notice that the WMAP instrumental
+ing texture). In fact, as proposed by [124], the best dis-          characteristics do not allow for any significant discrim-
+criminating measurement is the T-E correlation, rather              ination between hypotheses. With Planck, it would be
+than simply the E signal. This cross-correlation is ex-             possible to reach a modest 7% significance level. Fi-
+pected to be close to zero for the H1 hypothesis. The               nally, the upcoming QUIJOTE experiment would al-
+approach suggested in this work was to estimate the                 low for a 1.4% detection. However, if the significance
+correlation of the T and E profiles around the position             of the Cold Spot obtained via the first non-Gaussianity
+of the spot temperature signal. This statistic was com-             wavelet analysis (i.e., 1.85%, as mentioned in Section 4)
+puted for many simulations according to the H0 and H1               is also considered, [124] claims that a joint T and T-E
+hypotheses, and a hypothesis test was performed, via                significance detections of 0.025% and 0.12% could be
+
+
+
+                                                               17
+imposed on the texture hypothesis, for the QUIJOTE                tions [29, 32].
+and Planck experiments respectively.                                   A plausible explanation in terms of a cosmic de-
+                                                                  fect was addressed by [31]. It would imply the presence
+6.2.3   Gravitational lensing                                     of a collapsing cosmic texture at redshift z ≈ 6, with
+                                                                  a typical scale of ≈ 5◦ , corresponding to a symmetry-
+Besides the lack of polarization discussed in the previ-          breaking energy scale of ψ0 ≈ 9 × 1015 . In addition,
+ous subsection, the lensing of the CMB photons would              some follow-up tests were proposed to confirm or dis-
+be another foreseen effect caused by the gravitational            card the cosmic texture hypothesis. In particular, one
+field generated by the collapsing texture. This point             should expect to have more spots generated by evolv-
+was recently addressed by [35]. This work studied the             ing textures in CMB observations (e.g., ≈ 7 with scales
+capabilities of small-scale CMB experiments as ACT to             ϑ & 2◦ ); a lack of E-mode polarization is predicted, as
+detect a possible lensing effect occurring at the position        compared to the values associated with spots derived
+of the Cold Spot, caused by the gravitational field of a          from a Gaussian CMB field; and, finally, a lensing of
+texture placed at z = 6, and with a typical scale of              the CMB photons is potentially detectable with future
+5◦ , associated with a symmetry-breaking energy scale             small scale CMB experiments as ACT or SPT.
+of ψ0 = 4.5 × 1015 GeV (i.e., comparable to the param-                 Summarizing, the study of the Cold Spot has pro-
+eters determined by [31]).                                        vided a wealth of information, and the upcoming high
+      As for the polarization test, the power of the lens-        quality CMB data, as the one expected from Planck,
+ing analysis to probe the existence of the texture is             guarantee that still more knowledge will come from the
+relatively modest. For instance, detection is made at             analysis of this very interesting feature.
+the 3σ level after 1000 minutes of integration time. In
+other words, this test would require of a dedicated ob-
+servational campaign.
+                                                                  Acknowledgements
+                                                                  I thank R. Belén Barreiro, Marcos Cruz and Enrique
+7   Conclusions                                                   Martı́nez-González for a careful reading of this article.
+                                                                  The issue reviewed in this paper is the result of a very
+In this article I have presented a comprehensive                  fruitful and exciting collaboration with them (and with
+overview of the Cold Spot. Since its detection in 2003            other colleagues) during the last 7 years... and I pre-
+by [118], this feature proved to be one of the most in-           sume it is not over yet, since new data is expected to
+triguing anomalies found in the WMAP data.                        come in the near future. I acknowledge partial financial
+     The Cold Spot was detected after performing a                support from the Spanish Ministerio de Ciencia e Inno-
+non-Gaussianity test on a cleaned CMB (obtained via               vación project AYA2007-68058-C03-02. I also thank
+a template fitting of the WMAP difference assemblies              financial support from the Ramón y Cajal programme.
+at Q-, V-, and W-bands). The non-Gaussian analy-
+sis was performed by comparing the values obtained                References
+for the skewness and the kurtosis of the SMHW coeffi-
+cients (at several scales) for such cleaned CMB map to              [1] Abramo L.R., Bernui A., Ferreiro I.S., Villela T.,
+the distribution expected from isotropic and Gaussian                   Wuensche C.A., 2006, Phys. Rev. D, 74, 063506
+CMB realizations. This analysis indicated an excess of              [2] Aghanim N., Forni O., 1999, A&A, 347, 409
+the kurtosis at SMHW scales R of around 300 arcmin.                 [3] Antoine J.-P., Vandergheynst P., 1998, Journal of
+Subsequent analysis of the SMHW coefficients, based                     Mathematical Physics, 39, 8, 3987
+on the area above/below a given threshold, the Higher
+                                                                    [4] Antoine J.-P., Murenzi R., Vandergheynst P., Ali
+Criticism, and the maximum value, agreed in detect-
+                                                                        S.T., 2004, Two-dimensional wavelets and their
+ing the non-Gaussian deviation occurring at the same
+                                                                        relatives, Ed. The Cambridge University Press,
+scales, and confirmed the peculiar role played by the
+                                                                        Cambridge, UK
+Cold Spot. Avoiding any possible a posteriori choice of
+                                                                    [5] Ayaita Y., Weber M., Wetterich C., 2010, Phys.
+statistics, a conservative significance detection level of
+                                                                        Rev. D, 81, 023507
+1.85% was placed by [30].
+     The Cold Spot was found to be highly                           [6] Barreiro R.B., Hobson M.P., Lasenby A.N.,
+isotropic [29], and the impact of possible systemat-                    Banda A.J., Górski K.M., Hinshaw G., 2000, MN-
+ics and residual foreground contamination was dis-                      RAS, 318, 475
+carded [118, 28, 29, 30]. Equivalently, some secondary              [7] Barreiro R.B., Hobson M.P., 2001, MNRAS, 327,
+anisotropies (potentially responsible for the Cold Spot                 813
+emission) as the Sunyaev-Zeldovich and the Rees-                    [8] Bennett C.L., et al., 1996, ApJ, 464, L1
+Sciama effects, that, in principle, could be accepted               [9] Bevis N., Hindmarsh M., Kunz M., 2004, Phys.
+as valid solutions, were show to be unlikely explana-                   Rev. D, 70, 043508
+
+
+                                                             18
+[10] Bielewicz P., Górski K.M., Banday A.J., 2004,             [36] Delabrouille J., Cardoso J.-F., Le June M., Be-
+     MNRAS, 355, 1283                                                toule M., Fay G., Gullaoux F., 2009, A&A, 493,
+[11] Bielewicz P., Eriksen H.K., Banday A.J., Górski                835
+     K.M., Lilje P.B., 2005, ApJ, 635, 750                      [37] de Oliveira-Costa A., Tegmark M., Zaldarriaga
+[12] Bremer M.N., Silk J., Davies L.J.M., Lehnert                    M., Hamilton A., 2004, Phys. Rev. D, 69, 063516
+     M.D., 2010, MNRAS, 404, L69                                [38] Donoghue E.P., Donoghue J.F., 2005, Phys. Rev.
+[13] Bridges M., McEwen J.D., Lasenby A.N., Hobson                   D, 71, 043002
+     M.P., 2007, MNRAS, 377, 1473                               [39] Donoho D., Jin J., 2004, Ann. Statist., 2004, 32,
+[14] Bridges M., McEwen J.D., Cruz M., Lasenby                       3, 962
+     A.N., Hobson M.P., Vielva P., Martı́nez-González          [40] Durrer R., Kunz M., Melchiorri A., 2004, Phys.
+     E., 2008, MNRAS, 390, 1372                                      Rev. D, 59, 123005
+[15] Brough S. Forbes D.A., Kilborn V.A., Couch W.,             [41] Larson D, et al., 2010, (preprint arXiv:1001.4635)
+     Colless M., 2006, MNRAS, 369, 1365                         [42] Eriksen H.K., Hansen F.K., Banday A.J., Górski
+[16] Cao L., Fang, L.-Z., 2009, ApJ, 706, 1545                       K.M., Lilje P.B., 2004, ApJ, 605, 14
+[17] Carvalho P., Rocha G., Hobson M.P., 2009, MN-              [43] Eriksen H.K., Novikov D.I., Lilje P.B., Banday
+     RAS, 393, 681                                                   A.J., Górski K.M., 2004, ApJ, 612, 64
+[18] Cayón L., Sanz J.L., Barreiro R.B., Marı́nez-             [44] Faÿ G., Guilloux F., Betoule M., Cardoso J.-F.,
+     Gonz’alez E., Vielva P., Toffolatti L., Silk J.,                Delabrouille J., Le June M., 2008, Phys. Rev. D,
+     Diego J.M., Argüeso F., 2000, MNRAS, 315, 757                  78, 3013
+[19] Cayón L., Sanz J.L., Marı́nez-González E., Ban-          [45] Feroz F., Hobson M.P., Bridges M., 2009, MN-
+     day A.J., Argüeso F., Gallegos J.E., Górski K.M.,             RAS, 398, 1601
+     Hinshaw G., 2001, MNRAS, 326, 1243                         [46] Ferreira P.G., Magueijo J., Silk J., 1997, Phys.
+[20] Cayón L., Jin J., Treaster A., 2005, MNRAS, 362,               Rev. D, 56, 4592
+     826                                                        [47] Finkbeiner D.P., Davis M., Schlegel D.J., 1999,
+[21] Cayón L., 2010, MNRAS, in press                                ApJ, 524, 867
+[22] Colberg J.M., Sheth R.K., Diaferio A., Liang G.,           [48] Finkbeiner D.P., 2003, ApJS, 146, 407
+     Yoshida N., 2005, MNRAS, 360, 216                          [49] Frommert M., Ensslin T.A., 2010, MNRAS, 403,
+[23] Coles P., 1988, MNRAS, 234, 509                                 1739
+[24] Condon J.J., Cotton W.D., Greisen E.W., Yin                [50] Gold B., et al., 2009, ApJS, 180, 283
+     Q.F., Perley R.A., Taylor G.B., Broderick J.J.,            [51] González-Nuevo J., Argüeso F., López-Caniego
+     1998, AJ, 115, 1693                                             M., Toffolatti L., Sanz J.L., Vielva P., Herranz
+[25] Copi C.J., Huterer D., Starkman G.D., 2004,                     D., 2006, MNRAS, 369, 1603
+     Phys. Rev. D, 70, 043515                                   [52] Górski K.M., Hivon E., Banday A.J., Wandelt
+[26] Copi C.J., Huterer D., Schwarz D.J., Starkman                   B.D., Hansen F.K., Reinecke M., Bartelmann M.,
+     G.D., 2006, MNRAS, 367, 79                                      2005, ApJ, 622, 759
+[27] Cowan G., 1998, Statistical Data Analysis, Ox-             [53] Gott J.R., Park C., Juszkiwicz R., Bies W.E.,
+     ford University Press                                           Bennett D.P., Bouchet F.R., Stebbins A., 1990,
+[28] Cruz M., Martı́nez-González E., Vielva P., Cayón              ApJ, 352, 1
+     L., 2005, MNRAS, 356, 29                                   [54] Granett B.R., Szapudi I., Neyrinck M.C., 2009,
+[29] Cruz M., Tucci M., Martı́nez-González E., Vielva               ApJ, 714, 825
+     P., 2006, MNRAS, 369, 57                                   [55] Gruppuso A., Burigana C., 2010, JCAP, 8, 4
+[30] Cruz M., Cayón L., Martı́nez-González E., Vielva         [56] Gurzadyan V.G., et al., 2009, A&A, 497, 343
+     P., Jin J., 2007a, ApJ, 655, 11                            [57] Hammond D.K., Wiaux Y., Vandergheynst P.,
+[31] Cruz M., Turok N., Vielva P., Martı́nez-González               2009, MNRAS, 398, 1371
+     E., Hobson M.P., 2007b, Science, 318, 1612                 [58] Hansen F.K., Cabella P., Marinucci D., Vittorio
+[32] Cruz M., Martı́nez-González E., Vielva P., Diego               N., 2004, ApJ, 607, L67
+     J.M., Hobson M.P., Turok N., 2008, MNRAS,                  [59] Hansen F.K., Banday A. J., Górski K.M., 2004,
+     390, 913                                                        MNRAS, 354, 641
+[33] Cruz M., Vielva P., Martı́nez-González E., Bar-           [60] Hansen F.K., Banday A. J., Eriksen H.K., Górski
+     reiro R.B., 2010, (preprint arXiv:1005.1264)                    K.M., Lilje P.B., 2006, ApJ, 648, 748
+[34] Curto A., Martı́nez-González E., Barreiro R.B.,           [61] Herranz D., Sanz J.L.,Barreiro R.B., Martı́nez-
+     2009, ApJ, 706, 399                                             González E., 2002, ApJ, 580, 610
+[35] Das S., Spergel D.N., 2009, Phys. Rev. D, 79,              [62] Hobson M.P., Jones A.W., Lasenby A.N., 1999,
+     043007                                                          MNRAS, 309, 125
+
+
+
+                                                           19
+[63] Hoftuft J., Eriksen H.K., Banday A.J., Górski              [89] Paci F., Gruppuso A., Finelli F., Cabella P., Da
+     K.M., Hansen F.K. Lilje P.B., 2009, ApJ, 699,                    Rosa A., Mandolesi N., Natoli P., 2010, MNRAS,
+     9856                                                             in press
+[64] Inoue K.T., Silk J., 2006, ApJ, 648, 23                     [90] Pando J., Valls-Gabaud D., Fang L.-Z., 1998,
+[65] Inoue K.T., Silk J., 2007, ApJ, 664, 650                         Phys. Rev. Lett., 81, 4568
+[66] Jaffe T.R., Banday A.N., Eriksen H.K., Górski              [91] Park C.-G., 2004, MNRAS, 349, 313
+     K.M., Hansen F.K., 2005, ApJ, 629, 1                        [92] Pen U.-L., Spergel D.N., Turok N., 1994, Phys.
+[67] Jeffreys H., 1961, Theory of Probability, 3rd edn.               Rev. D, 49, 692
+     Oxford Univ. Press, Oxford                                  [93] Pietrobon D., Balbi A., Marinucci D., 2006, Phys.
+[68] Jonas J., Baart E.E., Nicholson G.D., 1998, MN-                  Rev. D, 74, 043524
+     RAS, 297, 997                                               [94] Pietrobon D., Amblard A., Balbi A., Cabella P.,
+[69] Komatsu E., et al., 2009, ApJS, 180, 330                         Cooray A., Marinucci D., 2008, Phys. Rev. D, 78,
+[70] Komatsu E., et al., 2010, (preprint, arXiv                       103504
+     1001.4538)                                                  [95] Pietrobon D., Cabella P., Balbi A., Crittenden
+[71] Land K., Magueijo J., 2005, MNRAS, 357, 994                      R., de Gasperis G., Vittorio N., 2010, MNRAS,
+[72] Liddle A., Lyth D. H., 2000, Cosmological infla-                 402, 34
+     tion and large-scale structure, Cambridge Univer-           [96] Pires S., Juin J.B., Yvon D., Moudden Y., An-
+     sity Press                                                       thoine S., Pierpaoli E., 2006, A&A, 455, 741
+[73] Liu X., Zhang S.N., 2006, ApJ, 636, 1                       [97] Popa L., 1998, New Astron., 3, 539
+[74] López-Caniego M., Herranz D., González-Nuevo              [98] Räth C., Schuecker P., Banday A.J., 2007, MN-
+     J., Sanz J.L., Barreiro R.B., Vielva P., Argüeso                RAS, 380, 466
+     F., Toffolatti L., 2006, MNRAS, 370, 2047
+                                                                 [99] Rossmanith G., Räth C., Banday A.J., Morfill G.,
+[75] Maisinger K., Hobson M.P., Lasenby A.N., 2004,                   2009, MNRAS, in press
+     MNRAS, 347, 339
+                                                                [100] Rubiño-Martı́n J.A. et al., 2010, in Highlights of
+[76] Martı́nez-González E., Sanz J.L., 1990, MNRAS,
+                                                                      Spanish Astrophysics V, Proceedings of the VIII
+     247, 473
+                                                                      Scientific Meeting of the Spanish Astronomical
+[77] Martı́nez-González E., Sanz J.L., Silk J., 1990,                Society (SEA), Eds. J. Gorgas, L. J. Goicoechea,
+     ApJ, 355, 5                                                      J. I. González-Serrano, J. M. Diego
+[78] Martı́nez-González E., Gallegos J.E., Argüeso F.,        [101] Rudjord O., Hansen F.K., Lan X., Liguori M.,
+     Cayón L., Sanz J.L., 2002, MNRAS, 336, 22                       Marinucci D., Matarrese S., 2009, ApJ, 701, 369
+[79] McEwen J.D., Hobson M.P., Lasenby A.N., Mort-
+                                                                [102] Rudnick L., Brown S., Williams L.R., 2007, ApJ,
+     lock D.J., 2005, MNRAS, 359, 1583
+                                                                      671, 40
+[80] McEwen J.D., Vielva P., Wiaux Y., Barreiro
+                                                                [103] Silvestri A., Trodden M., 2009, Phys. Rev. Lett.,
+     R.B., Cayón L., Hobson M.P., Lasenby A.N.,
+                                                                      103, 251301
+     Martı́nez-González E., Sanz J.L., 2007, Journal
+     Fourier Analyses and Applications, 13, 495                 [104] Sanz J.L., Argüeso F., Martı́nez-González E.,
+                                                                      Cayón L., Barreiro R.B., Toffolatti L., 1999, MN-
+[81] McEwen J.D., Wiaux Y., Hobson M.P., Van-
+                                                                      RAS, 309, 672
+     dergheynst P., Lasenby A.N., 2008, MNRAS, 384,
+     1289                                                       [105] Sanz J.L., Herranz D., López-Caniego M.,
+[82] Monteserı́n C., Barreiro R.B., Vielva P.,                        Argüeso F., 2006 Proceedings of the 14th Eu-
+     Martı́nez-González E., Hobson, M.P., Lasenby                    ropean Signal Processing Conference (EUSIPCO
+     A.N., 2008, MNRAS, 387, 209                                      2006), Eds. F. Gini and E.E. Kuruoglu
+[83] Moudden Y., Abbrial P., Vielva P., Melin J.-               [106] Schmalzing J., Górski K.M., 1998, MNRAS, 297,
+     B., Starck J.-L., Cardoso J.-F., Delabrouille J.,                355
+     Nguyen M.K., 2005, Proc. Int. Conf. Physics in             [107] Schwarz D.J., Starkman G.D., Huterer D., Copi
+     Signal and Image Processing (PSIP)                               C.J., 2004, Phys. Rev. Lett., 93, 221301
+[84] Mukherjee P., Hobson M.P., Lasenby A.N., 2000,             [108] Smith K.M., Huterer D., 2010, MNRAS, 403, 2
+     MNRAS, 318, 1157                                           [109] Spergel D.N., Turok N., Press W.H., Ryden B.S.,
+[85] Mukherjee P., Wang Y., 2003, ApJ, 599, 1                         1991, Phys. Rev. D, 43, 1038, 2
+[86] Mukherjee P., Parkinson D., Liddle A,, 2006,               [110] Sunyaev R.A., Zeldovich Y.B., 1970, Ap&SS, 7,
+     ApJ, 638, L51                                                    3
+[87] Mukherjee P., Liddle A., 2008, MNRAS, 389, 209             [111] The Planck collaboration: Tauber J. et al., 2010,
+[88] Odgen R.T., 1997, Essential wavelets for sta-                    A&A, in press
+     tistical applications and data analysis, Ed.               [112] Tegmark M., de Oliveira-Costa A., Hamilton A.,
+     Birkhäuser, Boston, USA                                         2003, Phys. Rev. D, 68, 123523
+
+
+                                                           20
+[113] Tenorio L., Jaffe A.H., Hanany S., Lineweaver             [123] Vielva P., Sanz J.L., 2010, MNRAS, 404, 895
+      C.H., 1999, MNRAS, 310, 823                               [124] Vielva P., Martı́nez-González E., Cruz M., Bar-
+[114] Turok N., 1989, Phys. Rev. Lett., 63, 2625                      reiro R.B., Tucci M., 2010, MNRAS in press
+[115] Turok N., Spergel D.N., 1990, Phys. Rev. Lett.,                 (preprint arXiv:1001.4029)
+      64, 2736                                                  [125] Vilenkin A., Shellard E.P.S., 2000, Cosmic strings
+[116] Urrestilla D., Bevis N., Hindmarsh M., Kunz M.,                 and other topological defects, Cambridge Univer-
+      Liddle A.R., 2008, JCAP, 07, 010                                sity Press, Cambridge, UK
+[117] Vielva P., Marı́nez-González E., Gallegos J.E.,
+                                                                [126] Wiaux Y., Jacques L., Vandergheynst P., 2005,
+      Toffolatti L., Sanz J.L., 2003, MNRAS, 344, 89
+                                                                      ApJ, 632, 15
+[118] Vielva P., Martı́nez-González E., Barreiro R.B.,
+                                                                [127] Wiaux Y., Vielva P., Martı́nez-González E., Van-
+      Sanz J.L., Cayón L., 2004, ApJ, 609, 22
+                                                                      dergheynst P., 2006, Phys. Rev. Lett., 96, 151303
+[119] Vielva P., Martı́nez-González E., Tucci M., 2006,
+      MNRAS, 365, 891                                           [128] Wiaux Y., McEwen J.D., Vielva P., 2007, Journal
+[120] Vielva P., Wiaux Y., Martı́nez-González E., Van-               Fourier Analyses and Applications, 13, 477
+      dergheynst P., 2007, MNRAS, 381, 932                      [129] Wiaux Y., Vielva P., Barreiro R.B., Martı́nez-
+[121] Vielva P., 2007, in Wavelets XII. Edited by Van                 González E., Vandergheynst P., 2008, MNRAS,
+      De Ville, Dimitri; Goyal, Vivek K.; Papadakis,                  385, 939
+      Manos. Proceedings of the SPIE, 6701, 19,                 [130] Zhang R., Huterer D., 2010, Astropart. Phys., 33,
+[122] Vielva P., Sanz J.L., 2009, MNRAS, 397, 837                     2, 69
+
+
+
+
+                                                           21
+

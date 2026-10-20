@@ -1,0 +1,65 @@
+{
+  "spots": [
+    {
+      "name": "The Cold Spot (Vielva 2004)",
+      "l": 209.0,
+      "b": -57.0,
+      "source": "astro-ph/0310273 (Vielva et al. 2004)",
+      "note": "Official WMAP detection at SMHW scale R8=4.17°. IDCM node 0.",
+      "scale_deg": 4.17,
+      "status": "confirmed"
+    },
+    {
+      "name": "Planck gp10 cold spot",
+      "l": 32.0,
+      "b": -8.0,
+      "source": "1303.5083 (Planck 2013 XXIII) Sect. 4.4",
+      "note": "Second prominent cold spot, partially masked by Galactic plane. Near Galactic centre — foreground caveat.",
+      "scale_deg": 10.0,
+      "status": "confirmed"
+    },
+    {
+      "name": "CS sub-spot A (Cruz 2005 T4)",
+      "l": 213.0,
+      "b": -60.0,
+      "source": "astro-ph/0405341 (Cruz et al. 2005) Table 4",
+      "note": "Sub-component of The Cold Spot before 4° Gaussian filter. Amplitude -346 μK, area 46 px.",
+      "scale_deg": 4.17,
+      "status": "sub-spot"
+    },
+    {
+      "name": "CS sub-spot B (Cruz 2005 T4)",
+      "l": 210.0,
+      "b": -56.0,
+      "source": "astro-ph/0405341 (Cruz et al. 2005) Table 4",
+      "note": "Sub-component of The Cold Spot. Amplitude -398 μK, area 67 px.",
+      "scale_deg": 4.17,
+      "status": "sub-spot"
+    },
+    {
+      "name": "CS sub-spot C (Cruz 2005 T4)",
+      "l": 211.0,
+      "b": -54.0,
+      "source": "astro-ph/0405341 (Cruz et al. 2005) Table 4",
+      "note": "Sub-component of The Cold Spot. Amplitude -331 μK, area 42 px.",
+      "scale_deg": 4.17,
+      "status": "sub-spot"
+    },
+    {
+      "name": "CS sub-spot D (Cruz 2005 T4)",
+      "l": 203.0,
+      "b": -56.0,
+      "source": "astro-ph/0405341 (Cruz et al. 2005) Table 4",
+      "note": "Sub-component of The Cold Spot. Amplitude -317 μK, area 88 px.",
+      "scale_deg": 4.17,
+      "status": "sub-spot"
+    }
+  ],
+  "not_found": [
+    "Cruz 2005 \"~10+ cold spots catalogue\" — NO such table exists. Cruz 2005 (astro-ph/0405341) is a Gaussianity study; Table 4 lists only sub-spots of the single Cold Spot.",
+    "Cruz 2007 (astro-ph/0603859) — same single Cold Spot, no catalogue.",
+    "Hou 2009 (0903.4446) — statistical study of hot/cold spot populations, no coordinate catalogue.",
+    "Vielva 2007 hot spot catalogue — mis-remembered; Planck 2013/2015 mention an anomalous HOT area (see O2: F6=277.6μK at (157.8°,-70.3°), confirmed).",
+    "Gurzadyan 2007 cold spot statistics — arXiv search shows no such catalogue; Gurzadyan 2014 (1404.6347) re-analyzes the SAME Cold Spot."
+  ]
+}

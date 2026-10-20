@@ -1,0 +1,23 @@
+# O4 15: 宣稱 vs 實際 交叉驗證
+✅ C01 λ₂ = φ⁻² (文檔: 0.381966011250)
+✅ C02 ω₂ = φ⁻¹
+✅ C03 cos(36°)=φ/2
+✅ C04 χ₃(5A)=φ, χ₃(5B)=1-φ
+✅ C05 21/21 通過
+✅ C11 阻挫 = 32
+✅ C14 BFS profile
+✅ C06 vertex-transitive 1 profile
+✅ C07 旋轉 std=0
+✅ C08 BIC continuous 37.6
+✅ C09 0.5° d1/d0 = 0.593
+✅ C10 4.17° d1/d0 = 0.344
+✅ C12 ε³×30 = 0.111 μK
+✅ C13 RMS→30μK, 冷斑→150μK
+✅ C15 14/14 PASS
+✅ C16 F₄/F₅=0.600, F₃/F₄=0.667
+✅ D1 03_complete_record 有 §10 開放問題
+✅ D2 03_complete_record 有 21/21
+✅ D3 05_full_test_record 有 v3 14/14
+✅ D4 04_open_issues 有 O4-1..O4-8
+
+20/20 通過

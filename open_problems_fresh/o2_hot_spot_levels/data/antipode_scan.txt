@@ -1,0 +1,14 @@
+# Antipode scan results
+# Cold spot: (l,b)=(209.0,-57.0)
+# Antipode: (l,b)=(29.0,57.0)
+# Search radius: 5.0°
+# Smoothing: 5.0° FWHM
+T_cold_spot -124.6
+T_antipode_exact 17.9
+T_max_disk 41.6
+l_max 19.93
+b_max 56.47
+T_mean_disk 23.4
+T_std_disk 8.4
+T_nearest_node 6.2
+nearest_node_idx 57

@@ -1,0 +1,1043 @@
+                                              Mon. Not. R. Astron. Soc. 000, 1–15 (2009)     Printed 30 October 2018   (MN LATEX style file v2.2)
+
+
+
+
+                                              The Hot and Cold Spots in Five-Year WMAP Data
+
+                                              Zhen
+                                              1
+                                                   Hou1,2,3⋆, A.J. Banday2,4, K.M. Górski5,6,7
+                                                  Purple Mountain Observatory, Chinese Academy of Sciences, 210008, Nanjing, China
+                                              2 Max-Planck-Institute for Astrophysics, Karl-Schwarzschildstrasse 1, D-85748, Garching bei Muenchen, Germany
+                                              3 Graduate University of Chinese Academy of Sciences, 100049, Beijing, China
+arXiv:0903.4446v1 [astro-ph.CO] 25 Mar 2009
+
+
+
+
+                                              4 Centre d’Etude Spatiale des Rayonnements, 9 av du Colonel Roche, BP 44346, 31028 Toulouse Cedex 4, France
+                                              5 Jet Propulsion Laboratory, 4800 Oak Grove Drive, Pasadena CA 91109, USA
+                                              6 California Institute of Technology, Pasadena, CA 91125, USA
+                                              7 Warsaw University Observatory, Aleje Ujazdowskie 4, 00-478 Warszawa, Poland
+
+
+
+
+                                              30 October 2018
+
+
+                                                                                ABSTRACT
+                                                                                We present an extensive frequentist analysis of the one-point statistics (number, mean,
+                                                                                variance, skewness and kurtosis) and two-point correlation functions determined for
+                                                                                the local extrema of the cosmic microwave background temperature field observed in
+                                                                                five-years of Wilkinson Microwave Anisotropy Probe (WMAP ) data. Application of
+                                                                                a hypothesis test on the one-point statistics indicates a low-variance of hot and cold
+                                                                                spots in all frequency bands of the WMAP data. The consistency of the observa-
+                                                                                tions with Gaussian simulations of the the best-fitting cosmological model is rejected
+                                                                                at the 95% C.L. outside the WMAP KQ75 mask and the northern hemispheres in
+                                                                                the Galactic and ecliptic coordinate frames. We demonstrate that it is unlikely that
+                                                                                residual Galactic foreground emission contributes to the observed non-Gaussianities.
+                                                                                However, the application of a high-pass filter that removes large angular scale power
+                                                                                does improve the consistency with the best-fitting cosmological model.
+                                                                                     Two-point correlation functions of the local extrema are calculated for both the
+                                                                                temperature pair product (T-T) and spatial pair-counting (P-P). The T-T observa-
+                                                                                tions demonstrate weak correlation on scales below 20◦ and lie completely below the
+                                                                                lower 3σ confidence region once various temperature thresholds are applied to the
+                                                                                extrema determined for the KQ75 mask and northern sky partitions. The P-P corre-
+                                                                                lation structure corresponds to the clustering properties of the temperature extrema,
+                                                                                and provides evidence that it is the large angular-scale structures, and some unusual
+                                                                                properties thereof, that are intimately connected to the properties of the hot and
+                                                                                cold-spots observed in the WMAP five-year data.
+                                                                                Key words: methods: data analysis – cosmic microwave background.
+
+
+
+                                              1    INTRODUCTION                                                 local extrema, defined as those pixels whose temperature
+                                                                                                                values are higher (hotspots) or lower (coldspots) than all of
+                                              Generic inflationary theories predict that the initial con-
+                                                                                                                the adjacent (neighbour) pixels (Wandelt, Hivon & Górski
+                                              ditions of the universe are Gaussian random fields with a
+                                                                                                                1998). The connection between the maxima of Gaussian
+                                              nearly scale invariant or Harrison-Zel’dovich spectrum. The
+                                                                                                                random fields and CMB temperature fluctuations result-
+                                              cosmic microwave background (CMB) carries the imprint of
+                                                                                                                ing from gravitational fluctuations has long been estab-
+                                              such random fields in the temperature fluctuations observed
+                                                                                                                lished (Zabotin & Naselski 1985; Sazhin 1985a,b). A com-
+                                              from the last-scattering surface. The statistical properties
+                                                                                                                prehensive study of the statistical properties of local ex-
+                                              of the observed CMB sky, by comparison with theoretical
+                                                                                                                trema in the CMB temperature field, including the num-
+                                              predictions, thus provide a mechanism to test whether the
+                                                                                                                ber density and angular correlation function of the peaks
+                                              early universe is consistent with the Gaussian hypothesis or
+                                                                                                                (hotspots) and troughs (coldspots) for Gaussian random
+                                              whether a primordial non-Gaussian component is required.
+                                                                                                                processes was undertaken by Bond & Efstathiou (1987) and
+                                                   In this paper, we consider the detailed properties of
+                                                                                                                Vittorio & Juszkiewicz (1987). Coles & Barrow (1987) ex-
+                                                                                                                tended these predictions for various toy (Rayleigh, Maxwell,
+                                                                                                                Chi-squared, lognormal, rectangular and Gumbel type I)
+                                              ⋆   E-mail: houzhen@mpa-garching.mpg.de
+
+                                              c 2009 RAS
+2     Hou, Banday, Górski
+non-Gaussian random fields including statistics such as the      cal instrumental properties as the data. Section 2.2 details
+mean size and frequency of occurrence of upcrossings, and        the masks adopted in order to minimise contamination from
+discussed whether it is possible to determine if the ob-         non-cosmological sources, 2.3 prescribes the technique used
+served statistics of the CMB sky are indeed Gaussian as          to subtract large-angular scale structure to test the sensi-
+predicted by standard inflationary theory. Barreiro et al.       tivity of the results to putative anomalous features therein,
+(1997) showed that the number and Gaussian curvature             and 2.4 describes the process for simulating the CMB sky
+of local extrema valid for a given threshold were sensi-         in a manner consistent with the WMAP data. Section 2.5
+tive enough to distinguish the geometry of the universe.         specifies the method for determining local extrema from the
+The temperature-correlation function of CMB hotspots             observed sky maps and simulations, and the statistics used
+above a certain threshold has been accurately calculated         in our analysis are specified in section 2.6. Results are re-
+by Heavens & Sheth (1999) on small-angle separations in          ported in Section 3, including the analysis and discussion of
+the flat-plane approximation, and subsequently extended to       one-point statistics (Section 3.1) and two-point correlation
+full-sky coverage in Heavens & Gupta (2001). It is consid-       functions (Section 3.2). Finally, we present our conclusions
+ered that these correlations provide a test of the Gaussian      in Section 4.
+hypothesis of initial conditions and can discriminate between
+inflation and topological defect models.
+      This statistical analysis technique has been applied to
+three types of observations by Martı́nez-González & Sanz        2     METHOD
+(1989) and to study the Tenerife Experiment data along a
+strip in the CMB sky (Gutiérrez et al. 1994). Kogut et al.      Even though the literature contains extensive theoretical
+(1995, 1996) used the properties of local extrema to test the    predictions of the statistics of local extrema in the CMB,
+consistency of the COBE -DMR data to the predictions of          such as the number density and two-point correlation func-
+inflationary cosmological models, also including a compari-      tions, a frequentist approach based on simulated statistics to
+son to several toy non-Gaussian models.                          be compared with the corresponding values for the WMAP
+      Data from the Wilkinson Microwave Anisotropy               data is indicated here, since the inhomogeneous observing
+Probe (WMAP ) currently provide the most comprehen-              strategy and complicated sky-coverage of the mask used dur-
+sive, full-sky, high-resolution information on the CMB.          ing data analysis are difficult to account for analytically.
+Larson & Wandelt (2004) made the first analysis of the sta-      This section provides the key information required for such
+tistical properties of hot and cold spots in the first-year      an analysis and comparison.
+of WMAP data computing their number, mean, variance,
+skewness and kurtosis values. Their main conclusions were
+that the mean excursion of hot and cold spots were not hot       2.1     The WMAP data
+and cold enough respectively compared to their Gaussian
+                                                                 The WMAP instrument is composed of 10 differencing as-
+simulations, and there was also evidence for low variance
+                                                                 semblies (DAs) spanning five frequencies from 23 to 94 GHz
+in the northern ecliptic hemisphere. In a subsequent paper,
+                                                                 (Bennett et al. 2003). The two lowest frequencies (K and
+they developed a hypothesis test schema in order to study
+                                                                 Ka) are generally used as Galactic foreground monitoring
+the robustness of the earlier claims, and particularly evalu-
+                                                                 bands, with the three highest (Q, V, and W) being avail-
+ated the dependence of the earlier work to variations in the
+                                                                 able for cosmological assessment. Note, however, that the
+noise model assumptions and to the resolution of the maps
+                                                                 Q-band information is dropped by the WMAP team for
+(Larson & Wandelt 2005). In addition, a 3σ-level anomaly
+                                                                 their power-spectrum analysis of the 5-year data. There are
+has been detected using the temperature-correlation func-
+                                                                 2 high-frequency DAs for Q band (Q1, Q2), 2 for V (V1,
+tions of the local extrema. Tojeiro et al. (2006) concentrated
+                                                                 V2), and 4 for W (W1,W2,W3,W4), each with a corre-
+on the properties of the extrema point-correlation function
+                                                                 sponding beam profile and characteristic noise properties.
+using a technique well-known in galaxy clustering studies.
+                                                                 The maps are provided in the HEALPix pixelization scheme
+Evidence for non-Gaussianity was found on large-scales, but
+                                                                 (Górski et al. 2005), with resolution parameter Nside = 512.
+its origin was not definitely established.
+                                                                 We utilize the 5-year foreground-reduced temperature maps
+      In this paper, we analyse both the one- and two-point
+                                                                 available from the LAMBDA website1 .
+statistics of local extrema in the five-year release of WMAP
+                                                                      The instrumental noise can be considered to consist
+data. The hypothesis test introduced by Larson & Wandelt
+                                                                 mainly of two parts: a white noise contribution, and a 1/f
+(2005) is adopted in our one-point analysis to make a state-
+                                                                 component. The noise in the WMAP sky maps is weakly
+ment at a certain significance level regarding whether the
+                                                                 correlated as a consequence of the differential nature of the
+observed statistics are consistent with our Gaussian ran-
+                                                                 observations, the inhomogeneous scanning strategy and the
+dom simulations. Further analysis, using additional equato-
+                                                                 1/f term. This biases measurements on certain low-ℓ modes,
+rial Galactic cuts, and the removal of specific low-ℓ modes,
+                                                                 although it remains unimportant for temperature analysis
+has been carried out to elucidate the origin of these anoma-
+                                                                 because of the high signal-to-noise on these scales. The ef-
+lies. We undertake both temperature- (T-T) and point- (P-
+                                                                 fect is not important at high-ℓ (Hinshaw et al. 2007). Thus
+P) correlation analyses to further confirm the findings of our
+                                                                 we consider that the noise can be entirely described by an
+one-point analysis and relate the correlation structures to
+                                                                 uncorrelated instrumental white noise component with rms
+spatial temperature distributions. This paper is organized as
+follows. In Section 2.1 we present an overview of the WMAP
+data used in the analysis and key properties necessary to
+allow the generation of Gaussian realizations having identi-     1   http://lambda.gsfc.nasa.gov/product/map/dr3/maps da forered r9 iqu 5yr get.cf
+
+                                                                                                c 2009 RAS, MNRAS 000, 1–15
+                                                                         The Hot and Cold Spots in WMAP5                       3
+value per pixel given by                                          to both the WMAP data and each simulation, the differ-
+                               σ0,i                               ences should not be relevant or bias the analysis.
+                    σi (n) = p                             (1)
+                              Nobs,i (n)
+where σ0,i is the rms noise per observation for a given DA
+                                                                  2.4   Simulations
+(as tabulated in Hinshaw et al. (2008)), and Nobs,i (n) is the
+number of observations at a given pixel. The scan pattern         We generate a large number of simulations that should rep-
+is such that the latter is greatest at the ecliptic poles and     resent accurate approximations of the assumed Gaussian pri-
+in rings surrounding them, and fewest in the ecliptic plane       mordial temperature fluctuations combined with the WMAP
+(Bennett et al. 2003).                                            observation properties (beam resolution and noise ampli-
+     For analysis purposes, we average the individual DAs at      tudes). These should provide sufficient reference statistics to
+a given frequency for the Q, V and W bands using uniform          allow us to search for evidence of primordial non-Gaussianity
+and equal weights over all pixels rather than noise weighting     in the data.
+(as utilized for some aspects of the WMAP power spectrum               We perform each Gaussian simulation to yield a map
+analysis), since this results in a simple effective beam at       for further analysis in the following way.
+each frequency. We also form simple combinations of the
+least foreground-contaminated V and W bands (VW), and                1 We generate the array of spherical harmonic coeffi-
+all of the Q, V, W band data (QVW).                               cients alm as a set of Gaussian random numbers with vari-
+                                                                  ance defined by the WMAP 5 best-fitting ‘lcdm+sz+lens’
+                                                                  model power spectrum. Since we wish to create maps with
+2.2   Masks                                                       the WMAP resolution level Nside = 512, the set of coeffi-
+                                                                  cients is truncated corresponding to a maximum multipole
+To avoid contamination of the cosmological signal by emis-        ℓmax = 1024. The corresponding pixelization window func-
+sion from the diffuse Galactic foreground and distant point       tion pl is applied to each alm coefficient. Similarly, the ap-
+sources, the WMAP mask for extended temperature analy-            propriate beam transfer function for each DA, bl , is also
+sis (KQ75, roughly 72% sky coverage) is applied to the data.      applied to obtain the coefficients ãlm = bl pl alm .
+We also extend the KQ75 mask to include data only from               2 The CMB sky realization is created pixel-by-pixel by
+specific hemispheres – Galactic North and South (GN, GS),
+                                                                                             lX   m
+and Ecliptic North and South (EN, ES). In the remainder                                       max X
+
+of the paper, we will often refer to results derived on the                        T (n) =            ãlm Ylm (n).          (2)
+                                                                                             l=0 −m
+KQ75 sky coverage as ‘full-sky’ results for convenience, and
+to distinguish from those values computed with additional            3 We create a noise realization for each DA by combining
+hemisphere masking. The possibility that any evidence for         a set of Gaussian random numbers, g(n), with zero mean
+non-Gaussianity can be associated with residual Galactic          and unit variance with the expected noise rms pixel-by-pixel
+foregrounds implies the need for tests utilizing more aggres-     N (n) = g(n)σb (n), then add it to the CMB realization
+sive pixel rejection. We construct additional masks which ex-     T (n).
+clude various symmetric latitude cuts, specifically |b| < 15◦ ,      4 We set the temperature of pixels lying inside the masked
+20◦ , 25◦ , 30◦ , in addition to the KQ75 regions to help con-    regions defined previously to the HEALPix sentinel value.
+strain our one-point statistics.
+                                                                      Now, we have both the WMAP measurements and
+                                                                  simulated realizations of them to analyse. The processing
+2.3   ℓ-dependence                                                method hereafter is identical for both of them.
+
+As is now standard practise in CMB data analysis, we sub-
+tract the best-fitting monopole and dipole terms from the
+data.                                                             2.5   Analysis
+     However, the low value of the quadrupole as observed in      In this section, we introduce the processing steps necessary
+the WMAP 5-year data, together with the observed strong           for allowing the study of the local extrema in either the
+alignment between the quadrupole and octopole moments             data or simulated maps as specified in Section 2.1. Gener-
+(possibly extending to even higher orders) motivates the re-      ally, this closely follows the scheme defined in Section 4 of
+moval of the quadrupole in addition to the monopole and           Larson & Wandelt (2005), which is in summary
+dipole. As in previous studies by Tojeiro et al. (2006), we
+also remove higher moments for some specific comparisons,            1 We fit and subtract the monopole and dipole contribu-
+and in particular we consider the ranges ℓ = 0–5 and ℓ =          tions, together with the quadrupole and higher multipoles
+0–10.                                                             (ℓ = 0–5 or ℓ = 0–10 for certain bands) if required, from
+     The fitting method is a χ2 minimization technique. For       maps outside the mask region.
+cut-sky fitting, the multipoles are coupled and there are dif-       2 We smooth the maps in each band, as well as any mask
+ferences between the corresponding derived multipoles for         to be applied, with a Gaussian beam of FWHM as defined
+different fitting ranges. For example, we fit multipoles ℓ =      in Section 2.5.1 and recorded in Table 1.
+0–2 and ℓ = 0–5, then the dipole or quadrupole realizations          3 On the region of valid pixels (defined in Section 2.5.2),
+fitted by these two are different. However, since our aim is      we find the local extrema and compute the temperature
+not to determine the actual values of these low order multi-      standard deviation of all the valid pixels, σsky .
+poles, and given that the subtraction is applied consistently
+
+c 2009 RAS, MNRAS 000, 1–15
+4       Hou, Banday, Górski
+                                                                        2.5.2    Valid pixels
+                                                                        After smoothing, we are concerned that edge effects due to
+                                                                        pixels close to the boundaries of the mask may create arte-
+                                                                        facts in the local extrema measured in these regions. To solve
+                                                                        this problem, we apply the method used by Eriksen et al.
+                                                                        (2005). The original mask is convolved with a Gaussian
+                                                                        FWHM beam as in Eq.4 and valid pixels for further anal-
+                                                                        ysis are defined as those with a value larger than 0.90 in
+                                                                        the smoothed mask. We have tested that 0.90 is sufficiently
+                                                                        conservative in our local extrema analysis.
+
+
+                                                                        2.6     The statistics
+                                                                        In this section, we introduce the statistics by which a com-
+                                                                        parison will be made between the WMAP 5-year data and
+                                                                        simulations, as well as the methodology applied in order to
+Figure 1. Determination of smoothing FWHM. This is achieved
+                                                                        establish confidence levels on these statistics.
+by evaluating the ℓ-value satisfying the criterion that signal-to-
+noise is unity (S/N = 1). The black-solid curve is the WMAP 5
+best-fitting ‘lcdm+sz+lens’ model power spectrum excluding any
+                                                                        2.6.1    One-point statistics
+correction for pixelization and instrumental beam window func-
+tions; the red-dotted, green-dashed, blue-dash-dot, purple-dash-        Following the analysis performed by Larson & Wandelt
+dot-dot, and lightblue-long-dashes curve are averaged noise spec-       (2004), we calculate the number, mean, variance, skewness
+tra for the Q, V, W, VW and QVW bands respectively, decon-              and kurtosis value of local extrema. The mean and skewness
+volved from pixelization and instrumental beams to be consistent
+                                                                        values of the cold spots are multiplied by −1 for convenience
+with the theoretical power spectrum. The ℓS/N=1 values can be
+                                                                        when comparing with hotspots. We compute the fraction of
+determined by the position of the crossing points.
+                                                                        simulated statistical values that are lower than those for the
+                                                                        WMAP data and use these numbers to make a statement
+                                                                        about whether the measurements are consistent with the
+Table 1. The Gaussian FWHM scale (arcmin) of all the bands              Gaussian process assumed for the simulations.
+for 5-year S/N normalization.                                                To achieve this, we adopt the hypothesis test method-
+                                                                        ology introduced by Larson & Wandelt (2005), and exten-
+                Q           V          W         VW      QVW            sively described in their appendix 2, to establish statistically
+                                                                        robust confidence limits for this assessment of our one-point
+        θf1   30.984     28.657     29.698      22.828   22.123
+        θf2   47.015     43.485     45.064      34.640   33.569
+                                                                        analysis.
+                                                                             As a brief summary of this methodology, consider that
+                                                                        we have one number, x0 , the mean value determined from
+                                                                        the observed local extrema, and a sample, {xi }, from the
+                                                                        simulations. We consider the hypothesis ‘x0 comes from the
+2.5.1    Applied smoothing                                              same distribution as {xi }’. If there are n total samples in
+Smoothing is applied in our analysis because it enhances                the simulated ensemble, and i do fall below x0 , then we can
+the signal-to-noise ratio (S/N) and removes the local sensi-            define the quantity p as i/n where p defines the position of
+tivity to the fine-structure of the noise. The angular scale of         x0 in the appropriate PDF. We then choose a hypothesis
+smoothing is determined by a S/N normalization criterion                about p
+as shown in Figure 1. For each band, the observed power                                     H : p ∈ (α/2, 1 − α/2),                 (5)
+spectrum, C̃l , is related to the underlying spectrum Cl , on
+average, as                                                             where α is the significance level much less than 1. It is a
+                                                                        two-sided hypothesis because x0 is less likely to come from
+                       hC̃l i = b2l p2l Cl + hNl i,               (3)   the distribution than {xi } if it lies on the tail of {xi } or
+                                                                        beyond, as naturally considered. The frequentist statement
+where Nl is the noise power spectrum of each band. We                   is that ‘H is true in a fraction 1 − α of all possible Gaus-
+find the ℓ values corresponding to S/N = 1, i.e., Cl =                  sian universes’. We make tests for each statistic twice: first,
+b−2  −2
+  l pl hNl i, for the Q, V, W, VW and QVW bands, listed                 the Type I error (rejection of true hypothesis) probability is
+in Figure 1. The smoothing suppression factor in ℓ-space is             controlled to be small; and second, the Type II error (accep-
+                                      1                                 tance of the false hypothesis) is controlled. See Appendix 2
+              g(ℓ, θFWHM ) = exp(− ℓ(ℓ + 1)σ 2 ),               (4)     of Larson & Wandelt (2005) for comprehensive details.
+                                      2
+                        √
+where σ = θFWHM / 8 log 2, and θFWHM is the Gaussian
+                                                                        2.6.2    Two-point statistics
+FWHM scale in radians. We choose two different FWHM
+                                                 b
+scales (θf1 and θf2 ) for each band such that g(lS/N=1 , θf1,f2 ) =     There are two kinds of two-point analysis performed in this
+ −1     −1
+e , 10 . The FWHM values for the 5-year S/N normaliza-                  paper: the temperature- (T-T) and point- (P-P) angular cor-
+tion are listed in arcmin in Table 1.                                   relation functions.
+
+                                                                                                        c 2009 RAS, MNRAS 000, 1–15
+                                                                                    The Hot and Cold Spots in WMAP5                     5
+   The T-T correlation function discussed here has the                     order to make s symmetrically distributed around 0 and to
+same definition as that discussed by Eriksen et al. (2005),                avoid an infinite confidence assignment for the largest value.
+                                                                           The χ2 value and the covariance matrix are computed from
+                   ξTT (θ) = hT (n 1 )T (n 2 )i                      (6)
+                                                                           the transformed configurations of the correlation function.
+where cos θ = n 1 · n 2 , and the points n 1 and n 2 at which
+the temperatures are defined correspond to local extrema.
+We analyse the maxima and minima separately, i.e., only the
+maxima-maxima (Tmax −Tmax ) and minima-minima (Tmin −
+Tmin ) correlation functions are evaluated.
+     The P-P angular correlation function is defined as the                3     RESULTS AND DISCUSSIONS
+excess probability of finding a pair of local extrema at angu-             3.1     One-point results
+lar separation θ by direct analogy with the definition used
+in galaxy distribution studies,                                            The one-point statistics establish the shape of the temper-
+                                                                           ature distribution function for local extrema. For example,
+                       dP = n̄[1 + ξPP (θ)]dΩ,                       (7)
+                                                                           skewness represents the degree of symmetry between the left
+where n̄ is the mean number density of our sample. The                     and right tails of the probability distribution, and kurtosis
+Hamilton estimator of the P-P correlation function is                      measures its ‘peakedness’.
+adopted here (Hamilton 1993),
+                                DD(θ)RR(θ)
+                 ξPP (θ) =                 − 1,                      (8)
+                                 [DR(θ)]2
+                                                                           3.1.1    General results
+where DD(θ) is the number of pairs of local extrema in our
+data (for either the WMAP observations or a particular sim-                Thousands of simulations are performed for five bands on
+ulation) inside the interval [θ, θ+dθ), RR(θ) is the number of             two smoothing scales with the low-ℓ multipoles removed in
+pairs in a random generated sample with separation in the                  the range [0, ℓrmv ], with ℓrmv = 1, 2. Five kinds of one-point
+same interval, and DR(θ) has the same meaning but the                      statistic – the number, mean, variance, skewness and kurto-
+pairs are selected between the data and the random sample.                 sis – of local maxima and minima, are calculated. The fre-
+     We generate 200000 random points uniformly dis-                       quencies of the simulated statistics lower than the observed
+tributed on the full sphere. We eliminate any adjacent points              values are shown in Table 2 and Table 3. As mentioned in
+since these cannot correspond to local extrema as defined in               Section 2.6.1, a hypothesis test is performed on each fre-
+this work. This leaves 135889 surviving points, still at least             quency twice, with significance level α = 0.05. First, the
+ten times more numerous than the average number in our                     probability of a Type I error is controlled to be as small as
+data catalog, which is usually considered sufficient for the               α, and the frequencies rejected by our test are marked by
+correlation function study.                                                an asterisk; secondly, we control the probability of a Type II
+     χ2 values are computed for both T-T and P-P correla-                  error to be as small as α, then the frequencies rejected this
+tion functions to quantify the degree of agreement between                 time but accepted by the first test are marked by a question
+observations and simulations. The χ2 statistic is calculated               mark. For the cases marked by an asterisk, we assert that
+from the difference between each sample (either observation                the data is not consistent with our Gaussian process, with
+or simulation) and the average of the simulations on a given               an associated probability 5% of a Type I error.
+scale and defined as                                                            We ignore the skewness results because no rejection oc-
+               Nbin
+                 X                                                         curs. Tests reject several cases for the number of local ex-
+        χ2 =                          −1
+                      [ξ(i) − hξ(i)i]Mij [ξ(j) − hξ(j)i],            (9)   trema, most of which occur on smaller smoothing scales (θf1 )
+               i,j=1                                                       and in the northern hemisphere for cold spots. The mean
+        −1
+                                                                           values are quite consistent with simulations at the 95% con-
+where Mij  is the inverse covariance matrix estimated from                 fidence level, except for rejections of the W band with θf2
+the ensemble of correlation functions determined from the                  smoothing in the Galactic northern hemisphere, implying
+Gaussian simulations.                                                      that the cold spots are not cold enough. Other bands with
+                       Nsim                                                θf2 smoothing show a similar suppression of cold spots, al-
+             1         X
+  Mij =                       [ξn (i) − hξ(i)i][ξn (j) − hξ(j)i].   (10)   though the values are accepted by our test.
+          Nsim − 1 n=1
+                                                                                The main one-point abnormality appears in the vari-
+where Nsim is the total number of simulations.                             ance results. There is also significant hemispherical asym-
+     The χ2 statistic is optimized for studies on CMB                      metry indicated in Table 3 – almost all of the full-sky (NS)
+N -point (especially even-ordered) correlation functions                   and northern (GN and EN) results are strongly rejected for
+(Eriksen et al. 2004, 2005) since they are strongly asym-                  ℓrmv = 1, as well as GN and most of EN for ℓrmv = 2.
+metrically distributed. Each 2-point configuration of the full             The frequencies with values outside the 3σ confidence re-
+correlation function is transformed by the relation                        gion have been detected and underlined. It is worth noting
+                                        Z s                                that the measured variance on the full-sky is more consistent
+      Rank of observed map          1           1 2
+                                = √          e− 2 t dt   (11)              with simulations after quadrupole removal, and also slightly
+    Total number of maps + 1        2π −∞                                  improved for the northern Ecliptic hemisphere, which give
+The numerator of the left hand side is the number of real-                 us evidence that the observed low-quadrupole is a possible
+izations with a lower value than the current one, and the                  source of such anomalous behaviour, but this may not be
+denominator is the total number of realizations plus 1 in                  the complete explanation.
+
+c 2009 RAS, MNRAS 000, 1–15
+6       Hou, Banday, Górski
+3.1.2    Residual Galactic foreground                              of our one-point statistics, especially the variance, the
+                                                                   temperature-temperature correlation of local extrema at
+The conventional wisdom suggests that evidence for non-
+                                                                   zero lag. Thus, conceivably, such a low-ℓ subtraction is also
+Gaussianity may be associated with residual Galactic fore-
+                                                                   of importance to the correlation study. According to the the-
+grounds. We test this simply by imposing additional masks
+                                                                   oretical calculation of T-T correlation by Heavens & Sheth
+with |b| < 15◦ , 20◦ , 25◦ , 30◦ symmetric cuts around the
+                                                                   (1999), there are oscillation features on angular scales from
+Galactic equator to constrain the one-point statistics. We
+                                                                   10 to 100 arcmin, however, we will not attempt to investi-
+choose the V band and smoothing scale θf2 to carry out
+                                                                   gate these features because of the observational resolution
+the test. The maxima and minima in the Galactic-cut re-
+                                                                   and smoothing procedure during the data processing. We ex-
+gion will then not be involved in the conclusions. Table
+                                                                   pect stronger signal in this angular range by the forthcoming
+4 presents the statistics after imposing the Galactic cuts,
+                                                                   higher resolution full-sky CMB survey, the PLANCK mis-
+with monopole and dipole, as well as quadrupole subtrac-
+                                                                   sion.
+tion. Since the skewness is unrevealing, it will not be listed
+again.
+     The results are generally similar to the previous cases.      3.2.1   T-T correlation
+In particular, the variance remains as asymmetric as ever.
+Although in some cases the low-variance improves with in-          We show the temperature-temperature correlation functions
+creasing Galactic cut, it is difficult to assert whether this is   without threshold applied in Figure 2.2 The correlation func-
+significant. Therefore, it seems unlikely that residual Galac-     tions have been rebinned to 100 bins for both full sky and
+tic foregrounds constitute a solution to the anomalies seen        hemispheres and the first bins are dropped.
+in the one-point statistics.                                            Spergel et al. (2003) and Copi et al. (2008) report a
+                                                                   lack of correlated signal compared to the ΛCDM model for
+                                                                   angular scales greater than 60◦ for WMAP 1 and WMAP 5,
+3.1.3    Low-ℓ subtraction                                         respectively. However, as shown by the top and middle pan-
+Motivated by the quadrupole evidence in Section 3.1.1, we          els of Figure 3, there is no significant lack of correlation for
+proceed to remove higher moments of ℓ = 0–5 and ℓ = 0–10           the hot and cold spots on corresponding scales, when com-
+separately from observed and simulated maps on V band.             puted on either the full-sky or hemispheres. However, what
+The number, mean, variance and kurtosis of hotspots and            is of note is the lack of variance in the bins on these angu-
+cold spots for ℓrmv = 5 and ℓrmv = 10 are put in Table 2           lar scales – almost all lie within the 2σ confidence region.
+and Table 3.                                                       In fact, the correlation properties of the hot and cold spots
+      The number, mean and variance show good agreement            show several interesting properties as a function of angular
+with simulations for ℓrmv = 5 and even better for ℓrmv =           scale and temperature threshold, as we discuss below.
+10, but problems of the kurtosis for ℓrmv = 5 show that                 In the case of the full sky analysis with ℓrmv = 1 and
+the peak of the extrema temperature distribution on ES             without any threshold applied, it should be apparent that
+is much sharper than the Gaussian one, and it disappears           there is a strong suppression of the correlation function for
+after subtraction of the higher moments. This result suggests      the bins of both hot and cold spots on scales less than about
+that the anomalies of the extrema temperature distribution         20◦ (corresponding to the typical scale of ℓ = 10), to ampli-
+are related to the large-scale moments, especially the first       tudes around or even below the lower limit of the Gaussian
+five. However, it is difficult to further confirm how the large-   3σ confidence region. Similar behaviour is seen on scales
+scale moments affect the temperature distribution of local         less than 10◦ in the Galactic and Ecliptic north (ℓrmv = 1),
+extrema if only the one-point analysis is available. A two-        whereas the southern sky shows quite a good agreement with
+point analysis is necessary, for which we will also investigate    theoretical expectations. This corresponds to a hemispher-
+the properties of the two-point correlation as a function of       ical asymmetry of power seen in the fluctuations of local
+different temperature intervals.                                   extrema. The suppression still exists after quadrupole sub-
+                                                                   traction, in particular the correlation of cold spots in the
+                                                                   Galactic north is lower than the 3σ confidence region at
+3.2     Two-point results                                          small scales. After removing the modes for ℓrmv = 5 and
+                                                                   10, the small-scale suppression become less significant and
+We study the correlation functions of hot and cold spots           the hotspots correlation shows perfect agreement with the
+for the V-band in five sky coverages with three kinds of           median, especially on the full-sky, which gives strong and
+temperature threshold applied – no threshold (Tmax > −∞,           self-consistent evidence that large-scale moments (ℓ ⩽ 10)
+Tmin < ∞), 1σsky (Tmax > 1σsky , Tmin < −1σsky ) and               affect the small-scale temperature-correlation of local ex-
+2σsky (Tmax > 2σsky , Tmin < −2σsky ), where σsky is the           trema. Notice that the distribution of correlations becomes
+standard deviation of the temperature of all the valid pixels      less structured on large-scale if higher moments are sub-
+in a certain sky region. For the sky region outside the KQ75       tracted.
+mask, we compute correlation functions from 0◦ to 180◦ ,                The angular structure of correlations for hot spots and
+divided into 1000 bins, and from 0◦ to 90◦ with 500 bins for       cold spots should be identical in theory, but the discrepancy
+the four hemispheres in question, since in these cases pairs
+with separations larger than 90◦ are so rare, in particular for
+the 2σsky threshold, that the correlation functions become         2 The full categories of correlation function plots, includ-
+strongly oscillatory, affecting the accuracy of inversion of the   ing T-T and P-P correlations of all the cases discussed
+covariance matrix.                                                 in this paper, can be downloaded from this address:
+     Large-scale modes do affect the confidence level              http://www.mpa-garching.mpg.de/∼houzhen/cf.tar.gz
+
+                                                                                                  c 2009 RAS, MNRAS 000, 1–15
+                                                                                The Hot and Cold Spots in WMAP5                     7
+
+Table 2. Frequencies of the extrema one-point statistics derived from simulations with lower values than the WMAP 5 data. NS, GN,
+GS, EN and ES correspond to full-sky, Galactic North, Galactic South, Ecliptic North and Ecliptic South sky-coverage outside KQ75
+mask, respectively. θf1,f2 gives the smoothing scale described by step 2 in Section 2.5. The number 1000, 2000 or 10000 corresponds to
+how many simulations were performed. The values rejected by the hypothesis test are marked by a * or ?. Frequencies outside the 3σ
+confidence region are underlined.
+
+             NUMBER             ℓrmv = 1                                         ℓrmv = 2
+         5yr, KQ75 MASK         NS       GN          GS       EN       ES        NS       GN          GS        EN       ES
+
+          Q, max (θf1 ,1000)    0.980?     0.894     0.953    0.945    0.943     0.989*     0.852     0.974?    0.937    0.965
+          Q, min (θf1 ,1000)    0.996*     0.989*    0.934    0.983*   0.977?    0.993*     0.986*    0.909     0.973?   0.991*
+         W, max (θf1 ,1000)     0.714      0.577     0.691    0.528    0.641     0.690      0.497     0.789     0.606    0.578
+          W, min (θf1 ,1000)    0.957      0.988*    0.377    0.984*   0.633     0.938      0.990*    0.365     0.986*   0.573
+       QVW, max (θf1 ,1000)     0.922      0.904     0.756    0.924    0.679     0.948      0.793     0.844     0.932    0.671
+       QVW, min (θf1 ,1000)     0.894      0.849     0.723    0.894    0.588     0.847      0.889     0.678     0.905    0.591
+          V, max (θf1 ,2000)    0.8410     0.4940    0.9615   0.8630   0.6435    0.8880     0.2560    0.9695?   0.9045   0.6700
+          V, min (θf1 ,2000)    0.7855     0.8390    0.5585   0.8310   0.6270    0.7535     0.9180    0.3680    0.8110   0.7905
+        VW, max (θf1 ,2000)     0.8995     0.9065    0.6930   0.8980   0.6670    0.9365     0.8355    0.8300    0.9085   0.6490
+        VW, min (θf1 ,2000)     0.7715     0.9735?   0.1860   0.9225   0.4450    0.7490     0.9905*   0.1580    0.9010   0.3775
+          Q, max (θf2 ,1000)    0.889      0.744     0.871    0.959    0.673     0.859      0.654     0.811     0.941    0.600
+          Q, min (θf2 ,1000)    0.908      0.886     0.815    0.880    0.839     0.896      0.869     0.767     0.733    0.855
+         W, max (θf2 ,1000)     0.769      0.468     0.872    0.824    0.679     0.824      0.583     0.883     0.852    0.656
+          W, min (θf2 ,1000)    0.980?     0.996*    0.371    0.973?   0.812     0.966      0.995*    0.333     0.944    0.858
+       QVW, max (θf2 ,1000)     0.766      0.625     0.685    0.788    0.610     0.839      0.410     0.772     0.814    0.675
+       QVW, min (θf2 ,1000)     0.881      0.819     0.769    0.917    0.676     0.821      0.794     0.784     0.880    0.803
+         V, max (θf2 ,10000)    0.5574     0.2597    0.8034   0.5319   0.6107    0.6076     0.2190    0.8228    0.4592   0.6013
+         V, min (θf2 ,10000)    0.9666     0.9618    0.7395   0.9721   0.9073    0.9704     0.9752?   0.6951    0.9657   0.9070
+        VW, max (θf2 ,2000)     0.3810     0.2230    0.5665   0.5890   0.3095    0.3235     0.1395    0.6250    0.5850   0.2025
+        VW, min (θf2 ,2000)     0.7055     0.8150    0.4390   0.8625   0.5105    0.6785     0.8665    0.2880    0.8255   0.6595
+
+                                ℓrmv = 5                                         ℓrmv = 10
+          V, max (θf2 ,10000)   0.6932   0.1272      0.9408   0.5051   0.6778    0.6951   0.2259      0.9135    0.3168   0.8733
+          V, min (θf2 ,10000)   0.9001   0.9419      0.5887   0.9264   0.5525    0.8438   0.9132      0.6724    0.8914   0.7488
+
+              MEAN              ℓrmv = 1                                         ℓrmv = 2
+
+          Q, max (θf1 ,1000)    0.332      0.249     0.461    0.498    0.359     0.387      0.414     0.557     0.538    0.252
+          Q, min (θf1 ,1000)    0.132      0.082     0.500    0.256    0.077     0.167      0.044     0.422     0.268    0.064
+         W, max (θf1 ,1000)     0.486      0.237     0.689    0.610    0.515     0.568      0.488     0.785     0.688    0.478
+          W, min (θf1 ,1000)    0.411      0.283     0.728    0.229    0.537     0.476      0.196     0.584     0.247    0.649
+       QVW, max (θf1 ,1000)     0.178      0.057     0.529    0.263    0.236     0.161      0.132     0.631     0.381    0.261
+       QVW, min (θf1 ,1000)     0.503      0.496     0.538    0.247    0.694     0.588      0.509     0.462     0.286    0.775
+          V, max (θf1 ,2000)    0.3925     0.3290    0.4960   0.4475   0.4895    0.4295     0.4230    0.5035    0.4065   0.3590
+          V, min (θf1 ,2000)    0.5445     0.4555    0.6845   0.5205   0.4105    0.6670     0.3950    0.7440    0.6025   0.4270
+        VW, max (θf1 ,2000)     0.4230     0.2385    0.6145   0.3715   0.5690    0.4385     0.3130    0.7485    0.4270   0.5570
+        VW, min (θf1 ,2000)     0.3995     0.2790    0.6950   0.1160   0.7160    0.4540     0.2660    0.6890    0.2130   0.7570
+          Q, max (θf2 ,1000)    0.186      0.203     0.310    0.137    0.322     0.170      0.500     0.234     0.258    0.357
+          Q, min (θf2 ,1000)    0.096      0.095     0.326    0.206    0.082     0.139      0.081     0.484     0.208    0.133
+         W, max (θf2 ,1000)     0.190      0.208     0.376    0.344    0.222     0.175      0.478     0.351     0.424    0.209
+          W, min (θf2 ,1000)    0.065      0.014*    0.441    0.055    0.140     0.082      0.006*    0.493     0.049    0.234
+       QVW, max (θf2 ,1000)     0.309      0.111     0.624    0.305    0.517     0.338      0.366     0.624     0.392    0.523
+       QVW, min (θf2 ,1000)     0.161      0.101     0.407    0.167    0.304     0.260      0.108     0.530     0.278    0.364
+         V, max (θf2 ,10000)    0.1653     0.1369    0.3753   0.1999   0.3296    0.1638     0.4857    0.4187    0.3162   0.2739
+         V, min (θf2 ,10000)    0.1066     0.0769    0.3814   0.1181   0.1713    0.1509     0.0425    0.4078    0.1352   0.1719
+        VW, max (θf2 ,2000)     0.2980     0.1280    0.7070   0.4125   0.4245    0.3790     0.2320    0.7705    0.5585   0.3730
+        VW, min (θf2 ,2000)     0.2790     0.0880    0.6940   0.2050   0.3485    0.3215     0.0475    0.7790    0.2455   0.5065
+
+                                ℓrmv = 5                                         ℓrmv = 10
+          V, max (θf2 ,10000)   0.4486   0.6654      0.2473   0.3489   0.2955    0.4703   0.4729      0.3356    0.6542   0.2627
+          V, min (θf2 ,10000)   0.0720   0.0339      0.3632   0.1334   0.1788    0.1100   0.1764      0.4261    0.1804   0.1273
+
+
+
+
+between them gets larger as higher moments are removed                      The application of temperature thresholds to the set
+on both the full-sky and two northern hemispheres. The                 of hot and cold spots included in the correlation study is
+hotspots are quite consistent with the median of the pre-              also revealing (Figure 3). There are strong suppressions on
+dicted curves, whereas the cold spots on NS, GN and EN                 the full-sky and northern hemispheres at all scales if the
+are less correlated in the cases ℓrmv = 5 and 10.                      1σsky or 2σsky threshold is applied. For ℓrmv = 1 and 2 on
+
+
+c 2009 RAS, MNRAS 000, 1–15
+8     Hou, Banday, Górski
+
+Table 3. Continued from Table 2
+
+         VARIANCE            ℓrmv = 1                                            ℓrmv = 2
+      5yr, KQ75 MASK         NS       GN          GS        EN         ES        NS       GN           GS       EN        ES
+
+       Q, max (θf1 ,1000)    0.006*     0.013*    0.382     0.006*     0.248     0.063      0.005*     0.683    0.017*    0.541
+       Q, min (θf1 ,1000)    0.006*     0.002*    0.482     0.005*     0.325     0.077      0.004*     0.851    0.030?    0.629
+      W, max (θf1 ,1000)     0.002*     0.011*    0.233     0.003*     0.187     0.018?     0.006*     0.507    0.007*    0.444
+       W, min (θf1 ,1000)    0.001*     0.001*    0.433     0.003*     0.226     0.027?     0.000*     0.773    0.016*    0.456
+    QVW, max (θf1 ,1000)     0.007*     0.018?    0.339     0.006*     0.276     0.077      0.018?     0.667    0.024?    0.572
+    QVW, min (θf1 ,1000)     0.002*     0.001*    0.474     0.003*     0.238     0.027?     0.000*     0.790    0.013*    0.524
+       V, max (θf1 ,2000)    0.0030*    0.0090*   0.3035    0.0035*    0.2170    0.0340     0.0075*    0.6415   0.0110*   0.5200
+       V, min (θf1 ,2000)    0.0045*    0.0015*   0.4265    0.0025*    0.2335    0.0520     0.0010*    0.7495   0.0235?   0.5815
+     VW, max (θf1 ,2000)     0.0010*    0.0060*   0.2445    0.0015*    0.1795    0.0220?    0.0035*    0.5360   0.0060*   0.4250
+     VW, min (θf1 ,2000)     0.0025*    0.0010*   0.3660    0.0040*    0.1715    0.0320     0.0000*    0.6830   0.0160*   0.4530
+       Q, max (θf2 ,1000)    0.009*     0.004*    0.494     0.003*     0.359     0.082      0.005*     0.813    0.011*    0.688
+       Q, min (θf2 ,1000)    0.006*     0.003*    0.478     0.003*     0.337     0.053      0.001*     0.807    0.021?    0.613
+      W, max (θf2 ,1000)     0.005*     0.007*    0.353     0.003*     0.308     0.050      0.003*     0.662    0.010*    0.591
+       W, min (θf2 ,1000)    0.007*     0.002*    0.465     0.004*     0.300     0.048      0.001*     0.810    0.022?    0.566
+    QVW, max (θf2 ,1000)     0.003*     0.006*    0.358     0.003*     0.227     0.021?     0.004*     0.644    0.011*    0.515
+    QVW, min (θf2 ,1000)     0.005*     0.001*    0.510     0.002*     0.338     0.057      0.000*     0.846    0.018?    0.648
+      V, max (θf2 ,10000)    0.0040*    0.0021*   0.4491    0.0009*    0.3188    0.0564     0.0031*    0.7875   0.0059*   0.6949
+      V, min (θf2 ,10000)    0.0028*    0.0011*   0.4345    0.0009*    0.2750    0.0343     0.0013*    0.8188   0.0061*   0.5911
+     VW, max (θf2 ,2000)     0.0055*    0.0105*   0.3425    0.0035*    0.2425    0.0465     0.0090*    0.5935   0.0080*   0.5040
+     VW, min (θf2 ,2000)     0.0065*    0.0025*   0.4445    0.0015*    0.3110    0.0630     0.0025*    0.7925   0.0155*   0.6145
+
+                             ℓrmv = 5                                            ℓrmv = 10
+       V, max (θf2 ,10000)   0.0808   0.0716      0.6817    0.0443     0.4864    0.0953    0.2413      0.2928   0.2689    0.3853
+       V, min (θf2 ,10000)   0.1213   0.0342      0.6285    0.0229?    0.4688    0.0463    0.1644      0.2450   0.1584    0.3040
+
+         KURTOSIS            ℓrmv = 1                                            ℓrmv = 2
+
+       Q, max (θf1 ,1000)    0.247      0.373     0.104     0.195      0.532     0.231      0.259      0.327    0.082     0.648
+       Q, min (θf1 ,1000)    0.515      0.140     0.575     0.290      0.824     0.752      0.062      0.884    0.309     0.820
+      W, max (θf1 ,1000)     0.567      0.755     0.254     0.642      0.608     0.643      0.596      0.479    0.559     0.724
+       W, min (θf1 ,1000)    0.716      0.613     0.465     0.493      0.804     0.800      0.382      0.675    0.493     0.847
+    QVW, max (θf1 ,1000)     0.645      0.861     0.221     0.756      0.621     0.741      0.732      0.660    0.715     0.821
+    QVW, min (θf1 ,1000)     0.735      0.579     0.560     0.571      0.791     0.818      0.234      0.756    0.435     0.913
+       V, max (θf1 ,2000)    0.7010     0.9090    0.2355    0.7250     0.6925    0.8130     0.8690     0.6605   0.7105    0.8420
+       V, min (θf1 ,2000)    0.7055     0.6930    0.4000    0.6395     0.7935    0.8015     0.4760     0.6505   0.6335    0.8845
+     VW, max (θf1 ,2000)     0.4770     0.7145    0.1925    0.6290     0.5885    0.6125     0.5700     0.6410   0.6430    0.7670
+     VW, min (θf1 ,2000)     0.6050     0.6375    0.3105    0.5475     0.6420    0.6560     0.2700     0.4720   0.4250    0.7020
+       Q, max (θf2 ,1000)    0.742      0.826     0.382     0.824      0.693     0.801      0.719      0.642    0.781     0.846
+       Q, min (θf2 ,1000)    0.440      0.700     0.085     0.482      0.598     0.682      0.363      0.437    0.520     0.756
+      W, max (θf2 ,1000)     0.822      0.850     0.604     0.897      0.784     0.890      0.715      0.733    0.881     0.845
+       W, min (θf2 ,1000)    0.881      0.942     0.381     0.579      0.932     0.932      0.774      0.642    0.615     0.942
+    QVW, max (θf2 ,1000)     0.477      0.483     0.264     0.536      0.533     0.514      0.390      0.569    0.454     0.668
+    QVW, min (θf2 ,1000)     0.705      0.584     0.424     0.514      0.811     0.800      0.304      0.646    0.483     0.911
+      V, max (θf2 ,10000)    0.8272     0.8613    0.5090    0.7485     0.8380    0.8448     0.7720     0.6555   0.6487    0.8630
+      V, min (θf2 ,10000)    0.8999     0.9194    0.5643    0.8362     0.8908    0.9741?    0.8131     0.8130   0.8565    0.9359
+     VW, max (θf2 ,2000)     0.5245     0.6395    0.2705    0.4855     0.6195    0.5710     0.4900     0.6170   0.4370    0.8310
+     VW, min (θf2 ,2000)     0.7000     0.6475    0.4175    0.4475     0.8770    0.8170     0.4605     0.5855   0.4135    0.9170
+
+                             ℓrmv = 5                                            ℓrmv = 10
+       V, max (θf2 ,10000)   0.9663   0.6138      0.9147    0.2776     0.9833*   0.6631    0.5874      0.5407   0.2317    0.9339
+       V, min (θf2 ,10000)   0.9909*  0.7515      0.9754?   0.6519     0.9864*   0.9728?   0.8389      0.8678   0.7187    0.9685
+
+
+
+
+GN and EN, most bins are suppressed to the lower limit of             tial clustering (or anti-clustering of local extrema), but as
+3σ confidence region, and many are apparently under the               a consequence of the statistical nature of the observed tem-
+lower limit of the 3σ confidence region defined by simula-            perature distribution. Specifically, it is conceivable that the
+tions. Conversely, results for the southern sky still indicate        local extrema with higher temperatures in the northern sky
+agreement with the best-fitting cosmological model. How-              are not extreme enough.
+ever, it should be recognised that, apart from an overall                  Investigation of the corresponding cases for the P-P cor-
+scale-factor, the detailed shape of the observed point-sets is        relation function should then also prove revealing.
+consistent with the median at all other scales. This implies               We calculate the χ2s value defined by Eq.9 based on
+that the T-T properties arise not from an anomalous spa-              the transformed distribution of the correlation functions to
+
+                                                                                                      c 2009 RAS, MNRAS 000, 1–15
+                                                                               The Hot and Cold Spots in WMAP5                         9
+
+Table 4. One-point statistics as a function of the Galactic cut, |b| = 15◦ , 20◦ , 25◦ and 30◦ , imposed in addition to the KQ75 mask for
+ℓrmv = 1 and 2. 10000 simulations were performed for V band, with smoothing FWHM = 43.485′ .
+
+
+                            ℓrmv = 1                                           ℓrmv = 2
+              |b|(degree)   NS       GN          GS        EN         ES       NS       GN           GS        EN         ES
+
+          NUM(max) 15       0.5818    0.3038     0.7204    0.4550     0.6224   0.5521     0.3483     0.8076    0.3983     0.6242
+                   20       0.4414    0.3606     0.5036    0.3480     0.5576   0.4110     0.4099     0.6079    0.2775     0.5359
+                   25       0.4747    0.3329     0.5817    0.3205     0.5952   0.4183     0.3706     0.6329    0.2659     0.5143
+                   30       0.3189    0.2562     0.4371    0.2720     0.3507   0.2365     0.2598     0.4745    0.2055     0.2871
+
+          NUM(min) 15       0.9839*   0.9672     0.8194    0.9849*    0.9280   0.9827*    0.9712     0.7839    0.9791*    0.9127
+                   20       0.9932*   0.9902*    0.8124    0.9935*    0.9557   0.9938*    0.9931*    0.7843    0.9911*    0.9361
+                   25       0.9802*   0.9812*    0.7173    0.9832*    0.9322   0.9855*    0.9840*    0.7055    0.9814*    0.9264
+                   30       0.9156    0.9917*    0.3048    0.9731?    0.7751   0.9379     0.9952*    0.2802    0.9733?    0.7995
+
+        MEAN(max) 15        0.1553    0.0507     0.3109    0.1326     0.2744   0.0666     0.5647     0.5054    0.1618     0.1535
+                  20        0.3028    0.0924     0.3289    0.1662     0.4353   0.1026     0.7123     0.5231    0.1505     0.3231
+                  25        0.4125    0.1132     0.4237    0.2434     0.4702   0.1462     0.5455     0.6947    0.2206     0.3787
+                  30        0.4713    0.1369     0.4425    0.2914     0.4812   0.1585     0.3582     0.5935    0.2892     0.3596
+
+        MEAN(min) 15        0.4629    0.6680     0.3954    0.4417     0.4593   0.6154     0.0837     0.2139    0.4418     0.5819
+                  20        0.4863    0.6534     0.5305    0.5805     0.4183   0.6997     0.0354     0.3214    0.5704     0.5198
+                  25        0.4539    0.6290     0.4977    0.6005     0.3845   0.6756     0.0681     0.2671    0.5768     0.4469
+                  30        0.4520    0.5258     0.6342    0.5708     0.4604   0.7103     0.1645     0.6419    0.5195     0.5961
+
+          VAR(max) 15       0.0028*   0.0006*    0.4936    0.0005*    0.3152   0.0460     0.0017*    0.7935    0.0023*    0.6481
+                   20       0.0033*   0.0014*    0.4748    0.0010*    0.3046   0.0493     0.0024*    0.7675    0.0039*    0.6652
+                   25       0.0027*   0.0028*    0.3957    0.0028*    0.1961   0.0409     0.0027*    0.6755    0.0050*    0.5817
+                   30       0.0020*   0.0042*    0.2589    0.0010*    0.1514   0.0195*    0.0037*    0.5766    0.0022*    0.5319
+
+           VAR(min) 15      0.0013*   0.0006*    0.3974    0.0005*    0.2368   0.0183*    0.0013*    0.7396    0.0015*    0.5043
+                    20      0.0019*   0.0011*    0.4116    0.0009*    0.2532   0.0235?    0.0012*    0.7340    0.0024*    0.5714
+                    25      0.0023*   0.0020*    0.3898    0.0032*    0.1640   0.0207*    0.0014*    0.7382    0.0063*    0.5098
+                    30      0.0026*   0.0029*    0.3302    0.0020*    0.1716   0.0176*    0.0020*    0.7049    0.0040*    0.5517
+
+        KURT(max) 15        0.8411    0.8573     0.5413    0.7013     0.8641   0.8571     0.7929     0.7216    0.6022     0.9074
+                  20        0.7587    0.8111     0.4698    0.6584     0.7888   0.7785     0.7396     0.6777    0.5720     0.8724
+                  25        0.7332    0.8665     0.3666    0.6614     0.8423   0.7816     0.8404     0.7091    0.6413     0.9210
+                  30        0.6148    0.8270     0.3273    0.5461     0.7880   0.6786     0.7711     0.7072    0.4947     0.8280
+
+         KURT(min) 15       0.8666    0.8631     0.6038    0.7742     0.8656   0.9641     0.8418     0.8050    0.7753     0.9310
+                   20       0.8556    0.8654     0.5891    0.6777     0.9060   0.9526     0.8694     0.7891    0.7309     0.9439
+                   25       0.7774    0.7677     0.5720    0.5745     0.8959   0.9048     0.6792     0.7995    0.6469     0.9033
+                   30       0.8698    0.8064     0.7411    0.7471     0.9221   0.9510     0.7932     0.8945    0.8110     0.9146
+
+
+
+
+quantify the degree of agreement between the observed data             the valid spots, but only their spatial positions are taken
+and our Gaussian simulations. The fractions of simulations             into account. Some of the results are plotted in Figure 4.
+with χ2s value lower than observed are listed in Table 6,              We take the simple averaged confidence regions for hotspots
+with those larger than 0.975 underlined. All the values after          and cold spots since the profiles of these two are again es-
+ℓrmv = 10 become normal. Notice that there are cases with              sentially identical.
+very low p-values, implying very, in some cases overly, good                We do not show results corresponding to the applica-
+agreement with the median. The disagreement of the small-              tion of no threshold since the observed structure is trivial,
+scale correlation without an applied threshold on full-sky             essentially a scatter around zero over all separation angles,
+coverage cannot be distinguished by this full-scale analysis,          and no high-significance results are found under these con-
+and additional small-scale analysis is necessary.                      ditions. This means that the extrema in our data set are
+                                                                       nearly-uniformly distributed on the sphere. Instead, we fo-
+                                                                       cus on the correlation structure of valid spots as a function of
+3.2.2   P-P correlation
+                                                                       temperature thresholds. We expect stronger clustering if we
+The spatial clustering of local extrema quantified by the P-P          introduce a certain level threshold that retains only higher
+correlation function is analysed by comparing with 5000 sim-           amplitude peaks. We also introduce the notion of a ‘cluster-
+ulations. This analysis is also based on V-band data with a            ing scale’ by analogy with studies of the galaxy two-point
+43.485′ FWHM Gaussian beam smoothing applied. As with                  correlation function, The first decline to zero amplitude de-
+the temperature correlation, we rebin the original structure           fines the characteristic radius of an extended hot or cold
+to 100 bins for both full sky and hemispheres and drop the             region (or ‘cluster’) and bumps on larger scales reflect the
+first bins. Temperature thresholds are also applied to select          correlation among ‘clusters’. Since the major clustering re-
+
+c 2009 RAS, MNRAS 000, 1–15
+10     Hou, Banday, Górski
+
+Table 5. Continued from Table 4 with ℓrmv = 5 and 10.
+
+                            ℓrmv = 5                                               ℓrmv = 10
+             |b|(degree)    NS       GN         GS            EN         ES        NS        GN          GS         EN         ES
+
+        NUM(max) 15         0.7432    0.2372    0.9537        0.4920     0.7149    0.7470    0.3177      0.9212     0.3593     0.9189
+                 20         0.6206    0.3685    0.7804        0.3241     0.6494    0.6891    0.3648      0.8352     0.3061     0.8972
+                 25         0.6084    0.3158    0.7905        0.2675     0.6004    0.6783    0.4069      0.8071     0.3005     0.8891
+                 30         0.3821    0.2499    0.5695        0.1833     0.3841    0.3867    0.3080      0.5927     0.2512     0.6930
+
+         NUM(min) 15        0.9378    0.9597    0.6160        0.9598     0.6016    0.8918    0.9318      0.7042     0.9262     0.7854
+                  20        0.9674    0.9822*   0.6840        0.9779*    0.6868    0.9574    0.9796*     0.7329     0.9462     0.8530
+                  25        0.9498    0.9755?   0.6276        0.9531     0.6514    0.9375    0.9682      0.6480     0.8907     0.8752
+                  30        0.8915    0.9885*   0.2275        0.9234     0.3993    0.8764    0.9882*     0.3297     0.8783     0.6698
+
+       MEAN(max) 15         0.3757    0.5227    0.2834        0.2356     0.3585    0.4453    0.4188      0.4247     0.6438     0.2208
+                 20         0.4934    0.6329    0.3103        0.2488     0.5865    0.4512    0.6615      0.2511     0.5414     0.3296
+                 25         0.7283    0.6669    0.6404        0.5735     0.7172    0.6779    0.5447      0.5576     0.6904     0.5320
+                 30         0.7607    0.6678    0.6307        0.7316     0.6048    0.6975    0.4704      0.5787     0.7336     0.4436
+
+       MEAN(min) 15         0.2167    0.1231    0.3206        0.2959     0.2545    0.1851    0.2985      0.3055     0.2505     0.2442
+                 20         0.2078    0.0765    0.4253        0.3014     0.1706    0.1919    0.1318      0.5056     0.2762     0.1873
+                 25         0.0705    0.0318    0.2508        0.1136     0.0786    0.0767    0.1317      0.2935     0.2037     0.0598
+                 30         0.0898    0.0223*   0.5859        0.0642     0.3915    0.1743    0.1343      0.6256     0.1912     0.3039
+
+         VAR(max) 15        0.1011    0.0597    0.7851        0.0533     0.5263    0.1112    0.1893      0.3943     0.2894     0.4045
+                  20        0.1124    0.0637    0.7398        0.0501     0.4753    0.0984    0.1415      0.3727     0.3446     0.3012
+                  25        0.0822    0.0420    0.5815        0.0352     0.3717    0.0595    0.1208      0.2426     0.2619     0.1737
+                  30        0.0588    0.0391    0.4834        0.0225?    0.4489    0.0604    0.2150      0.1922     0.2931     0.2051
+
+         VAR(min) 15        0.1020    0.0385    0.6171        0.0192*    0.5127    0.0246?   0.1240      0.1634     0.1131     0.2558
+                  20        0.1183    0.0285    0.6540        0.0195*    0.5278    0.0261?   0.0606      0.2471     0.1367     0.2534
+                  25        0.1547    0.0230?   0.7443        0.0423     0.4741    0.0466    0.0667      0.3211     0.2351     0.1873
+                  30        0.1752    0.0260?   0.7560        0.0294     0.6663    0.1199    0.1905      0.4644     0.3255     0.3856
+
+       KURT(max) 15         0.9673    0.6796    0.8800        0.2059     0.9888*   0.6835    0.6629      0.4533     0.2227     0.9488
+                 20         0.9756?   0.6771    0.9253        0.2814     0.9913*   0.6926    0.6320      0.5131     0.2714     0.9477
+                 25         0.9882*   0.8077    0.9453        0.3999     0.9950*   0.7609    0.7060      0.5327     0.3122     0.9657
+                 30         0.9495    0.4888    0.9208        0.3806     0.9672    0.5898    0.5610      0.4905     0.3529     0.9347
+
+        KURT(min) 15        0.9948*   0.7858    0.9848*       0.6574     0.9907*   0.9859*   0.8352      0.9078     0.7469     0.9780*
+                  20        0.9951*   0.8475    0.9819*       0.5897     0.9956*   0.9841*   0.8354      0.8896     0.6954     0.9844*
+                  25        0.9859*   0.7030    0.9786*       0.5293     0.9904*   0.9487    0.6758      0.8421     0.5825     0.9551
+                  30        0.9927*   0.7418    0.9887*       0.6970     0.9885*   0.8970    0.5917      0.7800     0.6058     0.8987
+
+
+
+
+Table 6. The frequencies of χ2s values from simulations with lower amplitude than the WMAP data as determined for the transformed
+T-T correlation functions. The values higher than 0.9750 are underlined to demonstrate rejection of the Gaussian hypothesis at 2σ level.
+
+
+         χ2s (T T )-frequencies   ℓrmv = 1                                         ℓrmv = 2
+               Thresholds         NS       GN        GS         EN        ES       NS       GN         GS         EN         ES
+
+            Tmax > −∞             0.5774   0.9156    0.0077     0.6503    0.1141   0.5379   0.5070     0.0942     0.5199     0.0375
+             Tmin < ∞             0.7595   0.7728    0.1413     0.7883    0.2150   0.4973   0.9488     0.0672     0.5863     0.2967
+           Tmax > 1σsky           0.9958   0.9947    0.1553     0.9994    0.4059   0.9219   0.9968     0.4824     0.9983     0.2031
+           Tmin < −1σsky          0.9947   0.9991    0.2315     0.9973    0.3624   0.9470   0.9944     0.4083     0.9892     0.1161
+           Tmax > 2σsky           0.9919   0.9795    0.3493     0.9955    0.4131   0.8506   0.9739     0.5942     0.9746     0.5306
+           Tmin < −2σsky          0.9815   0.9928    0.0575     0.9973    0.0627   0.7562   0.9887     0.6556     0.9916     0.6736
+                                  ℓrmv = 5                                         ℓrmv = 10
+            Tmax > −∞             0.0962   0.2958    0.1807     0.3249    0.2915   0.0233   0.0473     0.1605     0.1377     0.4012
+             Tmin < ∞             0.8520   0.9400    0.2723     0.8133    0.5824   0.7731   0.7038     0.1791     0.6973     0.7379
+           Tmax > 1σsky           0.8714   0.9628    0.2982     0.9862    0.0029   0.8287   0.7957     0.0259     0.6694     0.0186
+           Tmin < −1σsky          0.9394   0.8610    0.2107     0.9732    0.2949   0.9505   0.6467     0.4162     0.7179     0.5368
+           Tmax > 2σsky           0.7214   0.7034    0.3321     0.9540    0.5583   0.7839   0.3833     0.5271     0.1774     0.4144
+           Tmin < −2σsky          0.7261   0.8316    0.4718     0.8683    0.1474   0.8029   0.7024     0.0438     0.7411     0.4075
+
+
+
+
+                                                                                                            c 2009 RAS, MNRAS 000, 1–15
+                                                                            The Hot and Cold Spots in WMAP5                          11
+
+
+
+
+Figure 2. Temperature-temperature correlation functions of hotspots and cold spots without temperature threshold, for five sky-
+coverages adopted in this paper. The red (blue) dots correspond to the correlation function bins of hotspots (cold spots) observed in
+the WMAP V-band data. The light, middle and dark gray shaded bands show, respectively, the 68.26%, 95.44% and 99.74% confidence
+regions determined from 10000 MC simulations, and the black solid line shows the median. Since the statistical bands of hotspots and
+cold spots are quite identical, we plot averaged bands here. The correlation functions on both full sky and hemispheres are rebinned to
+100 bins.
+
+
+
+
+Figure 3. Temperature-temperature correlation functions of            Figure 4. Point-point correlation functions of hotspots and cold
+hotspots and cold spots valid for thresholds (1σsky and 2σsky ).      spots valid for thresholds (1σsky and 2σsky ). 5000 simulations are
+The nomenclature of the dots and bands follows the same style         performed. The nomenclature of the dots and bands follows the
+as Figure 2.                                                          same style as Figure 2.
+
+
+
+
+c 2009 RAS, MNRAS 000, 1–15
+12      Hou, Banday, Górski
+gions are determined by large-scale modes, and the local
+extrema created by other modes in these regions can be en-
+hanced or suppressed by a certain level, the features of the
+CMB local extrema correlation functions (both T-T and P-
+P) represent the magnitude and scale of the hot and cold
+regions of large-scale modes.
+     The results are consistent with our expectations. The
+positive-valued structure demonstrates an approximate 30◦
+typical clustering scale before removing the quadrupole, and
+valid points for the 2σsky threshold show a much stronger
+clustering amplitude (the left-three panels of Figure 4).
+Moreover, the curves decline to zero faster after more mo-
+ments are removed, and are less structured on larger angular
+separations because there is no sufficiently-long wavelength
+fluctuation to correlate the local extrema on these scales.
+Thus, this typical clustering scale corresponds to the spatial
+pattern of large-scale modes.
+     There is a 3σ-level suppression for both 1σsky thresh-
+olded hot and cold spot correlations on scales less than 20◦
+as computed for the full sky and ℓrmv = 1, and an approxi-
+mately 2σ-level suppression for the 2σsky threshold, result-
+ing from the less correlated northern sky. After the first 5 or
+10, moments are removed, better consistency with the sim-
+ulations is again seen yielding additional evidence that the
+abnormal properties of the large angular-scale temperature
+structure affects the statistical properties of our observed
+sky.
+     Table 7 lists the frequency for which the χ2s values
+computed for the simulations are lower than the observed          Figure 5. The P-P hotspot correlation function on the full-sky
+                                                                  with ℓrmv = 1 and 5. The green dots corresponds to the WMAP
+WMAP values for the transformed P-P correlation func-
+                                                                  V band data, and the red and blue dots are for two simulations
+tions. No rejection is detected, supporting the consistency       marked S1 and S2, respectively. For ℓrmv = 1, θ0 s give the angular
+of the spatial distribution of the observed local extrema with    scales of the correlation functions at the first zero-crossing. The
+our Gaussian simulations, over the whole angular range of         correlations for ℓrmv = 5 are less structured and fit the simulated
+our concern, while suppression on small-scales is not revealed    statistical distribution, with few points outside 3σ confidence.
+by this analysis.
+
+                                                                  are always subtracted in this work) to 5 affect the observed
+3.2.3   Analysis on small scales                                  P-P correlation structure. In the following section we at-
+Both the T-T (no threshold) and P-P (thresholded) corre-          tempt to discuss how the specific nature of these modes can
+lation functions record a 3σ-level suppression on scales less     affect the structure of the correlation functions and even the
+than 20◦ for the full sky and 10◦ for northern hemispheres.       one-point statistics.
+Tojeiro et al. (2006) find evidence for non-Gaussianity using
+the P-P correlation function of local extrema in WMAP 1
+                                                                  3.2.4   Correlation structure analysis
+data. The correlation function they use is estimated and
+rebinned to 19 equally spaced bins up to a maximum sepa-          Since the correlation results, as well as our 1-point statis-
+ration of 30◦ . To make a comparison with their results, we       tics, for the observed sky show sensitivity to the first 5 large
+analyse the χ2s -frequency of rebinned T-T and P-P correla-       angular-scale modes, it is worth analysing the large-scale
+tions on scales less than 30◦ with the first 17 bins for the      phase pattern with the help of the structure of the correla-
+full sky and on scales less than 15◦ with first 9 bins for the    tion functions. The best-fitting multipoles as removed from
+hemispheres.                                                      the data are evaluated on the sky region outside the KQ75
+     The χ2s -frequencies are listed in Table 8. High signif-     mask. It is inevitable that the derived modes are coupled
+icance is still detected on the northern hemispheres for          for such incomplete sky-coverage and our best-fitting ampli-
+ℓrmv = 1 and 2, which is consistent with the conclusions of       tudes also vary with the number of modes included in the
+Tojeiro et al. (2006) for the first year of WMAP data. How-       fit. However, such behaviour will also be found in the refer-
+ever, the simulation sample volume of their work is only 250      ence set of simulations, whereas other unusual properties of
+simulations. As presumed in Section 3.2.2, the suppression        these modes, such as intrinsic correlations and alignments
+of the P-P correlation is connected with the less structured      will not be. The analysis presented here will give a first as-
+large-scale temperature distribution. However, as shown in        sessment of the relation between the large-scale temperature
+Table 8 and Table 7, this suppression disappears after re-        distribution and the local extrema correlation structures.
+moving first 5 moments after which good consistency is                  We focus on the full-sky hotspots correlations, and
+found for the whole angular range. Therefore, it appears          in particular the 2σsky threshold for P-P, with only the
+that the CMB moments from ℓ = 2 (monopole and dipole              monopole and dipole removed. An identical analysis can
+
+                                                                                                  c 2009 RAS, MNRAS 000, 1–15
+                                                                                   The Hot and Cold Spots in WMAP5                    13
+
+Table 7. The frequencies of χ2s values from our simulations with amplitudes lower than the WMAP data for the transformed P-P
+correlation functions.
+
+         χ2s (P P )-frequencies    ℓrmv = 1                                         ℓrmv = 2
+               Thresholds          NS       GN        GS        EN        ES        NS       GN        GS        EN        ES
+
+            Tmax > −∞              0.2896   0.8154    0.2632    0.5712    0.7857    0.1993   0.7161    0.2228    0.6309    0.7139
+             Tmin < ∞              0.4936   0.2940    0.5508    0.0260    0.8302    0.3725   0.0458    0.3352    0.0055    0.6782
+           Tmax > 1σsky            0.9139   0.7250    0.3310    0.8926    0.6794    0.4111   0.7817    0.5479    0.5460    0.4217
+           Tmin < −1σsky           0.8601   0.8479    0.1380    0.9190    0.5717    0.5655   0.8608    0.6618    0.3590    0.6761
+           Tmax > 2σsky            0.9075   0.6543    0.4716    0.7523    0.7584    0.6277   0.6851    0.2454    0.5536    0.1664
+           Tmin < −2σsky           0.7554   0.5749    0.0364    0.8834    0.3955    0.0878   0.7157    0.7559    0.2125    0.6901
+                                   ℓrmv = 5                                         ℓrmv = 10
+            Tmax > −∞              0.4964   0.8852    0.0597    0.7042    0.7577    0.2212   0.9706    0.2468    0.6877    0.8827
+             Tmin < ∞              0.3305   0.0296    0.1814    0.0083    0.7874    0.2064   0.1126    0.3476    0.0156    0.8086
+           Tmax > 1σsky            0.4998   0.7692    0.3950    0.6966    0.0114    0.3355   0.9616    0.1350    0.7969    0.2687
+           Tmin < −1σsky           0.4470   0.6074    0.9161    0.7757    0.6521    0.5145   0.4639    0.6108    0.6913    0.7653
+           Tmax > 2σsky            0.1050   0.2946    0.0795    0.5207    0.5148    0.1550   0.3517    0.0167    0.7053    0.1376
+           Tmin < −2σsky           0.2703   0.8831    0.7519    0.5813    0.0762    0.1392   0.4512    0.8849    0.5299    0.8398
+
+
+
+
+Table 8. χ2s -frequency for T-T (no threshold) and P-P (thresholds) correlations on small angular scales, up to the maximum separation
+of 30◦ for full sky and 15◦ for hemispheres.
+
+
+             χ2s -fractions       ℓrmv = 1                                         ℓrmv = 2
+             Thresholds           NS       GN        GS        EN        ES        NS       GN        GS        EN        ES
+
+            TTT
+             max > −∞             0.9527   0.9980    0.3425    0.9968    0.5120    0.8982   0.9682    0.3055    0.9828    0.2511
+             TTT
+              min < ∞             0.9682   0.9968    0.0788    0.9936    0.6851    0.8026   0.9994    0.5489    0.9674    0.3035
+           TPP
+             max > 1σsky          0.9851   0.9806    0.0384    0.9944    0.4503    0.7419   0.9851    0.6912    0.9657    0.3813
+           TPP
+            min < −1σsky          0.9643   0.9986    0.1756    0.9825    0.4230    0.7369   0.9946    0.7110    0.9570    0.2748
+           TPP
+             max > 2σsky          0.9850   0.9351    0.6916    0.9894    0.6918    0.7164   0.9696    0.5238    0.9599    0.2122
+           TPP
+            min < −2σsky          0.8410   0.9509    0.0518    0.9768    0.2010    0.3378   0.9702    0.5541    0.8320    0.2622
+                                  ℓrmv = 5                                         ℓrmv = 10
+            TTT
+             max > −∞             0.1885   0.3167    0.0529    0.8406    0.2342    0.2272   0.4377    0.4106    0.0645    0.5216
+             TTT
+              min < ∞             0.9002   0.9934    0.2804    0.9226    0.2513    0.8145   0.8266    0.3016    0.7282    0.7371
+           TPP
+             max > 1σsky          0.0770   0.7088    0.4147    0.9670    0.0196    0.5500   0.7012    0.3371    0.4481    0.3506
+           TPP
+            min < −1σsky          0.3565   0.8849    0.0636    0.7811    0.1294    0.8249   0.8276    0.2964    0.6549    0.3212
+           TPP
+             max > 2σsky          0.2480   0.6266    0.0102    0.8651    0.0057    0.7978   0.6273    0.2420    0.2128    0.0298
+           TPP
+            min < −2σsky          0.3898   0.9387    0.2267    0.7418    0.8274    0.1856   0.0926    0.9066    0.0228    0.5863
+
+
+
+
+be applied to cold spots. Two extremely behaved simula-                    large-scale modes of temperature distribution. Therefore,
+tions, S1 and S2 hereafter, are selected from our samples                  the structures of the P-P correlation function for ℓrmv = 1
+to make a comparison with the WMAP one in Figure 5.                        are sensitive to the large-scale pattern of temperature fluctu-
+S1 corresponds to a χ2s -frequency 1.0000 and S2 to χ2s (30◦ )-            ations. When modes corresponding to ℓrmv = 5 are removed
+frequency 0.9970. S1 demonstrates strong spatial correlation               (Figure 5), the correlation profile of S1, S2 and the WMAP
+over a range of angular serparations before declining to zero              data become less structured and more consistent with the
+at θ0S1 = 47.7◦ (within 2σ confidence). Conversely, S2 is                  statistical distribution determined from the simulations –
+highly suppressed on small separation scales with the zero-                the points fit the median curve well with few points outside
+crossing at θ0S2 = 22.5◦ , and shows a similar structure to the            3σ confidence.
+WMAP data. The median determined from our ensemble of                           It is also notable from Figure 6 that a pronounced
+simulations first crosses zero at 35◦ , with the WMAP one                  north-south (both Galactic and Ecliptic) asymmetry is vis-
+at 24.3◦ around the 2σ lower bound.                                        ible for the hot and cold regions of the integrated large
+                                                                           angular-scale temperature distribution in the WMAP data.
+     We plot the coadded large-scale moments from ℓ = 2 to
+                                                                           This asymmetry is consistent with the statistical behaviour
+5 in Figure 6, as well as the number-density of hotspots
+                                                                           of the temperature extrema on the sky.
+above 2σsky , making a comparison with the correlation
+structures. In particular, we note that the strong P-P cor-
+relation of S1 below θ0 is related to the large and continu-
+ous hot area, while the hot regions of S2 and WMAP are
+                                                                           4      CONCLUSIONS
+smaller and more scattered, which can be visually recognized
+from the number-density realizations and gives strong con-                 In this paper, we have investigated the statistical properties
+nection between the structure of extreme-hotspots and the                  of local extrema in the five-year WMAP data release, and
+
+c 2009 RAS, MNRAS 000, 1–15
+14     Hou, Banday, Górski
+
+
+
+
+Figure 6. Left: The coadded low order moments ℓ = 2 ∼ 5 determined from (top to bottom) S1, S2 and the WMAP V band, shown in
+the Galactic coordinate system with a 30◦ scalar graticule. Right: The corresponding number-density of hotspots for a 2σsky temperature
+evaluated at resolution Nside = 16. The KQ75 mask has been applied to the maps ad shown in gray. The black dashed line on the bottom
+panel marks the Ecliptic plane.
+
+
+
+compared with Gaussian simulations to determine whether               ing to the data, and attributed the earlier anomalies to the
+the observed universe is consistent with such processes. The          noise properties of the first-year WMAP data.
+analysis is carried out on different frequency bands and                   Our main results are the determination of anomalously
+five sky-coverages. Both the one-point distribution and two-          low-variance for the local extrema, and the presence of a
+point correlation of local extrema have been studied, includ-         north-south asymmetry, the latter of which has been found
+ing their dependence on large-scale CMB moments.                      to be indicated in other studies of the WMAP data using
+     The hypothesis test on one-point statistics shows good           different statistical estimators. We find that the data is in-
+consistency of the number, mean, skewness and kurtosis val-           consistent with simulations at the 95% C.L. for almost all
+ues with the Gaussian model used for comparison in most               frequency bands and both full-sky and the northern hemi-
+conditions. A few cases of rejection occur for the mean value         spheres of two particular coordinate systems. We also find
+of cold spots, somewhat consistent with the conclusion of             some measurements on various scales/thresholds that are
+Larson & Wandelt (2004), but these results are not signifi-           even lower than the 3σ confidence region.
+cant for all bands. Larson & Wandelt (2005) also found less                Our results argue against a residual-Galactic-
+significant results for the mean values after applying smooth-        foreground explanation finding that the application of
+
+                                                                                                      c 2009 RAS, MNRAS 000, 1–15
+                                                                     The Hot and Cold Spots in WMAP5                    15
+larger Galactic cuts, including equatorial bands out to 30◦      Copi C.J., Huterer D., Schwarz D.J., Starkman G.D., 2008,
+Galactic latitude, yields no improvement in the consistency       arXiv:0808.3767
+of data and Gaussian model predictions. However, an im-          Eriksen H.K, Hansen F.K., Banday A.J., Górski K.M., Lilje
+provement is observed after removing the first 5 multipole        P.B., 2004, ApJ, 605, 14
+moments, with the exception of the kurtosis values for cold      Eriksen H.K, Banday A.J., Górski K.M., Lilje P.B., 2005,
+spots in the southern Ecliptic sky, and all the statistics        ApJ, 622, 58
+are well fitted after subtraction of the first 10 moments.       Eriksen H.K, Banday A.J., Górski K.M., Hansen F.K., Lilje
+This strongly suggests that the anomalies are related to the      P.B., 2007, ApJ, 660, L81
+first 5 large-scale moments, possibly extending to ℓ = 10.       Górski K.M., Hivon E., Banday A.J., Wandelt B.D.,
+Further confirmation is found via the two-point analysis.         Hansen F.K., Reinecke M., Bartelmann M., 2005, ApJ,
+     Two kinds of two-point correlation analysis are per-         622, 759
+formed to study both the temperature behavior and spatial        Gutiérrez C.M., Martı́nez-González E., Cayón L., Rebolo
+distribution of local extrema. Limitations of the WMAP an-        R., Sanz J.L, 1994, MNRAS, 271, 553
+gular resolution and data processing imply that correlation      Hamilton A.J., 1993, ApJ, 417, 19
+features (Heavens & Sheth 1999) on fine-scales (10 ∼ 100         Heavens A.F., Sheth R.K., 1999, MNRAS, 310, 1062
+arcmin) cannot be investigated here. We find that the T-T        Heavens A.F., Gupta S., 2001, MNRAS, 324, 960
+correlation functions with applied temperature thresholds        Hinshaw G., et al., 2007, ApJS, 170, 288
+are dramatically suppressed on the full-sky and northern         Hinshaw G., et al., 2009, ApJS, 180, 225
+hemispheres. The P-P correlations determined without any         Kogut A., Banday A. J., Bennett C. L., Hinshaw G., Lubin
+applied threshold trivially oscillate around zero and lie well    P. M, Smoot G. F., 1995, ApJ, 439, L29
+within the confidence regions defined by simulations. How-       Kogut A., Banday A. J., Bennett C. L., Górski K. M.,
+ever, both the T-T correlation function without threshold         Hinshaw G., Smoot G. F., Wright E. L., 1996, ApJ, 464,
+and the P-P function with thresholds are suppressed on            L29
+small angular separations. The χ2s values quantify the sup-      Larson D.L., Wandelt B.D., 2004, ApJ, 613, L85
+pression level and some 3σ detections are found. All of this     Larson        D.L.,        Wandelt        B.D.,      2005,
+anomalous behaviour is improved for ℓrmv = 5 and totally          arXiv:astro-ph/0505046v1
+disappears for ℓrmv = 10.                                        Martı́nez-González E., Sanz J.L., 1989, MNRAS, 237, 939
+     Using two extreme simulations from our ensemble, we         Sazhin M.V., 1985a, SvA, 11, L239
+demonstrate a connection between the P-P correlation struc-      Sazhin M.V., 1985b, MNRAS, 216, 25
+tures and the pattern of the corresponding fitted large-scale    Spergel D.N., et al., 2003, ApJS, 148, 175
+moments (ℓ = 2–5). The number-density distribution of            Tojeiro R., Castro P.G., Heavens A.F., Gupta S., 2006,
+extreme-hotspots (T > 2σsky ) shows apparent correlation          MNRAS, 365, 265
+with hot regions of such large-scale moments and so does         Vittorio N., Juszkiewicz R., 1987, ApJ, 314, L29
+the coldspots. For the WMAP data, it is also apparent that       Wandelt B.D., Hivon E., Górski K.M., 1998,
+the northern hemisphere in both the Galactic and ecliptic co-     arXiv:astro-ph/9803317v2, in Fundamental Parame-
+ordinate systems exhibit suppressed total temperature fluc-       ters in Cosmology, Proc. 33rd Rencontres de Moriond,
+tuations, which directly results in an insufficient enhance-      ed. J. Tran Thanh Van, 237
+ment (suppression) of hot (cold) spots from moments ℓ > 5.       Zabotin N.A., Naselski P.D., 1985, SvA, 29, 614
+Therefore, the low-variance of local extrema is connected to
+features of large-scale moments, as is the full-scale suppres-
+sion of the T-T correlation with thresholds.
+
+
+
+ACKNOWLEDGEMENTS
+Z.H. acknowledges the support by Max-Planck-Gesellschaft
+Chinese Academy of Sciences Joint Doctoral Promotion Pro-
+gramme (MPG-CAS-DPP). We also thank Benjamin D.
+Wandelt, Hans K. Eriksen and Cheng Li for useful discus-
+sions. Some of the results in this paper have been derived
+using the HEALPix (Górski et al. 2005) software and anal-
+ysis package. We acknowledge use of the Legacy Archive for
+Microwave Background Data Analysis (LAMBDA).
+
+
+
+REFERENCES
+ Barreiro R.B., Sanz J.L., Martı́nez-González E., Cayón L.,
+  Silk J., 1997, ApJ, 478, 1
+ Bennett C.L., et al., 2003, ApJS, 148, 1
+ Bond J.R., Efstathiou G., 1987, MNRAS, 226, 655
+ Coles P., Barrow J.D., 1987, MNRAS, 228, 407
+
+c 2009 RAS, MNRAS 000, 1–15
+

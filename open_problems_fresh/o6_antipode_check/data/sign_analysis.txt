@@ -1,0 +1,12 @@
+# O6 冷色/熱色 vs 溫度符號 (SMICA 多尺度)
+# fisher_4.17: p=0.1205, odds=2.591
+# cold_pos=12 nodes [2, 6, 14, 16, 17, 28, 29, 43, 48, 55, 57, 58], cold_neg=18, hot_pos=19, hot_neg=11
+# node57_in_cold_pos_rank=4/12
+scale 0.5 match_rate 60.0%
+scale 1.0 match_rate 63.3%
+scale 2.0 match_rate 63.3%
+scale 3.0 match_rate 61.7%
+scale 4.17 match_rate 61.7%
+scale 5.0 match_rate 60.0%
+scale 7.0 match_rate 58.3%
+scale 10.0 match_rate 60.0%

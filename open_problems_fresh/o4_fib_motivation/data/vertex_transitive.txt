@@ -1,0 +1,5 @@
+# O4 11: vertex-transitivity + 旋轉
+# profiles: 1 (1 = vertex-transitive)
+# λ₂=0.381966011250, φ⁻²=0.381966011250, 差=8.33e-16
+# rotation std: 0.00e+00
+# random graph λ₂: mean=-0.0000±0.0000 (n=4)

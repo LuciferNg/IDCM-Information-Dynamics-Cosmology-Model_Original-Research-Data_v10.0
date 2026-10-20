@@ -1,0 +1,1463 @@
+                                                Detection of non-Gaussianity in the WMAP 1-year data
+                                                                using spherical wavelets
+                                               P. Vielva1 , E. Martı́nez-González1 , R. B. Barreiro1 , J. L. Sanz1 and L. Cayón1,2
+
+                                            (1) Instituto de Fı́sica de Cantabria, Fac. de Ciencias, Av. de los Castros s/n,
+                                                                         39005-Santander, Spain
+arXiv:astro-ph/0310273v2 15 Mar 2004
+
+
+
+
+                                       (2) Department of Physics, Purdue University, 525 Northwestern Avenue, West Lafayette,
+                                                                          IN 47907-2036, USA
+
+                                                                                 ABSTRACT
+
+                                                   A non-Gaussian detection in the WMAP 1-year data is reported. The detec-
+                                               tion has been found in the combined Q-V-W map proposed by the WMAP team
+                                               (Komatsu et al. 2003) after applying a wavelet technique based on the Spherical
+                                               Mexican Hat Wavelet (SMHW). The skewness and the kurtosis of the SMHW
+                                               coefficients are calculated at different scales (ranging from a few arcmins to tens
+                                               of degrees). A non-Gaussian signal is detected at scales of the SMHW around
+                                               4◦ (size in the sky of around 10◦). The right tail probability of the detection is
+                                               ≈ 0.4%. In addition, a study of Gaussianity is performed in each hemisphere. The
+                                               northern hemisphere is compatible with Gaussianity, whereas the southern one
+                                               deviates from Gaussianity with a right tail probability of ≈ 0.1%. Systematics,
+                                               foregrounds and uncertainties in the estimation of the cosmological parameters
+                                               are carefully studied in order to identify the possible source of non-Gaussianity.
+                                               The detected deviation from Gaussianity is not found to be caused by systematic
+                                               effects: 1) each one of the Q, V and W receivers shows the same non-Gaussianity
+                                               pattern, and 2) several combinations of the different receivers at each frequency
+                                               band —that highly reduce the CMB and the foreground emissions— do not show
+                                               this non-Gaussian pattern. Similarly, galactic foregrounds show a negligible con-
+                                               tribution to the non-Gaussian detection: non-Gaussianity is detected in all the
+                                               WMAP maps (from 23 GHz to 94 GHz) and no frequency dependence is observed.
+                                               Moreover, the expected foreground contribution to the combined WMAP map
+                                               was added to CMB Gaussian simulations showing a behaviour compatible with
+                                               the Gaussian model. Influence of uncertainties in the CMB power spectrum es-
+                                               timation are also quantified. Hence, possible intrinsic temperature fluctuations
+                                               (like secondary anisotropies and primordial features) can not be rejected as the
+
+                                         0
+                                             e-mail: vielva@ifca.unican.es
+                                            –2–
+
+
+     source of this non-Gaussian detection. We remark that our result implies not
+     only asymmetries north/south —like other previous WMAP analyses— but also
+     a direct non-Gaussian detection.
+
+     Subject headings: methods: data analysis – cosmic microwave background
+
+
+
+                                     1.   Introduction
+
+     The study of the Gaussianity of the Cosmic Microwave Background (CMB) is one of the
+most powerful mechanisms for understanding the nature of the primordial density fluctua-
+tions: by estimating the probability distribution from the measured temperature fluctuations
+of the CMB, several models for the primordial density fluctuations can be rejected or accepted
+at a certain significance level. For instance, standard inflationary models predict that the
+temperature fluctuations of the CMB correspond to a Gaussian, homogeneous and isotropic
+random field; whereas non-standard inflation (Linde & Mukhanov 1997, Peebles 1997, Be-
+nardeau & Uzan 2002 and Acquaviva et al. 2002) and topological defects models (Turok
+& Spergel 1990 and Durrer 1999) usually predict non-Gaussian random fields. Moreover,
+Gaussianity analyses can also be used to study the effect of secondary anisotropies produced
+by the reionization of the universe (Ostriker & Vishniac 1986 and Aghanim et al. 1996), the
+Rees-Sciama effect due to the non-linear evolution of the large scale structure (Rees & Sciama
+1968 and Martı́nez–González & Sanz 1990), gravitational lensing (Martı́nez–González et al.
+1997, Hu 2000 and Goldberg & Spergel 1999), etc. One of the handicaps within the de-
+tection of non-Gaussian signatures is related to the contamination of the CMB signal due
+to foregrounds (like the Galactic emissions and the compact sources). These components
+produce spurious non-Gaussian signals that can contaminate any intrinsic signature.
+     In order to uncover the nature of the primordial density fluctuations (or to conclude that
+the anisotropies are secondary), it is essential to have high-resolution, low-noise and large-
+coverage CMB data. Recently, the Wilkinson Microwave Anisotropy Probe (WMAP) NASA
+satellite has reported results from the 1-year all-sky data (Bennet et al. 2003a). The WMAP
+science team (Komatsu et al. 2003) found the data to be consistent with Gaussianity. Two
+statistics were used: a measure of the phase correlations of temperature fluctuations (taking
+into account several combinations of the bispectrum) and the Minkowski functionals; more-
+over, improved limits for the non-linear coupling parameter were established. Other groups
+have presented different analyses of Gaussianity on WMAP data: Colley & Gott (2003) have
+done an independent genus topology (one of the three Minkowski functionals) study, by per-
+forming a stereographic projection of the WMAP data, finding also Gaussian compatibility.
+Chiang et al. (2003) presented a Gaussianity study (using a statistic based on the random-
+                                                    –3–
+
+
+phase hypothesis) of the CMB map obtained from the WMAP data by Tegmark et al.
+(2003). They found a significant non-Gaussian contribution at high-order multipoles. The
+authors conclude that this non-Gaussianity is due to unresolved foreground contamination.
+Gaztañaga & Wagg (2003) have performed a 3-point angular correlation function analysis,
+finding good agreement with the Gaussian hypothesis. Higher-order moments (up to six)
+of the angular correlation function were calculated by Gaztañaga et al. (2003) which show
+the same Gaussian agreement. Another genus-statistic study has been done by Park (2003)
+using the foreground cleaned frequency maps of the WMAP data; a stereographic projection
+is also used finding a non-Gaussian detection by comparing the difference of the negative
+and positive genus —with respect to the Gaussian prediction— at different threshold levels.
+Several sources are considered in order to explain this detection, but higher signal-to-noise
+ratio data is needed to distinguish among them. Eriksen et al. (2003) have computed 2-
+and 3-point correlations finding north/south asymmetries in the WMAP data. These asym-
+metries appear at large and intermediate scales and are associated with a lack of structure
+in the northern hemisphere, while the southern one is compatible with the Gaussian model
+(additional asymmetries east/west are also found)1 .
+     In this work we present a wavelet analysis of the Gaussianity of the WMAP 1-year all-sky
+map performed in wavelet space. Wavelets have been extensively used in the analysis of the
+CMB data, not only concerning Gaussianity studies, but also in the component separation
+field (Tenorio et al. 1999, Cayón et al. 2001, Vielva et al. 2001a, Vielva et al. 2001b,
+Vielva et al. 2003 and Stolyarov et al. 2003) and in denoising techniques (Sanz et al.
+1999a,b). Regarding the application of wavelets to Gaussianity studies, Hobson et al. (1999)
+have shown that the wavelet coefficients provide a significantly better detection of non-
+Gaussian features due to cosmic strings than the Minkowski functionals. Similarly, Aghanim
+et al. (2003) have shown that wavelets are more efficient to detect certain non-Gaussian
+features than other typical estimators like those based in Fourier analysis (bispectrum and
+trispectrum). Even more, due to the special nature of wavelets, the non-Gaussian sources
+can not only be detected but also identified in the maps, since the spatial information is
+kept in the wavelet space. Moreover, as it was shown in Barreiro & Hobson (2001) and in
+Martı́nez–González et al. (2002), the optimal combination of the information given by the
+wavelet coefficients at different scales, highly increases the power of wavelets to detect weak
+non-Gaussian signals.
+    The first application of wavelet techniques to detect non-Gaussian signatures was done
+by Pando et al. (1998), where the 2D flat Daubechies-4 wavelet was used to analyse the
+
+  1
+      During the refereeing process new works have appeared in astro-ph like Eriksen et al. 2004.
+                                           –4–
+
+
+COBE-DMR data (see Mukherjee et al. 2000 for a critical review of this work). Lately,
+several works have used wavelets to study the Gaussianity of the COBE-DMR maps in the
+HEALPix scheme (Górski et al. 1999): Barreiro et al. (2000) have used the Spherical Haar
+Wavelet (SHW), whereas Cayón et al. (2001, 2003) have used the Spherical Mexican Hat
+Wavelet (SMHW). A critical comparison between the performances of both spherical wavelets
+for detecting non-Gaussian features (skewness and kurtosis) was done by Martı́nez–González
+et al. (2002).
+    The aim of this paper is to apply the technique developed in Cayón et al. (2001)
+and Martı́nez–González et al. (2002) to the 1-year all-sky WMAP data in order to detect
+non-Gaussian features. It is organized as follows. In Section 2 the process to generate the
+simulations and to reduce the data is explained. In Section 3 the SMHW is briefly described
+and the different statistics are defined. The SMHW analysis is presented in Section 4, and
+the possible sources of the detected non-Gaussianity are discussed in Section 5. Finally the
+conclusions are given in Section 6.
+
+
+
+             2.    The WMAP data reduction and WMAP-like simulations
+
+     The NASA Wilkinson Microwave Anisotropy Probe (WMAP) satellite was launched in
+the summer of 2001 and in February 2003 the 1-year results were presented. The WMAP ra-
+diometers observe at 5 frequency bands: K-band (22.8 GHz, 1 receiver), Ka-Band (33.0 GHz,
+1 receiver), Q-Band (40.7 GHz, 2 receivers), V-Band (60.8 GHz, 2 receivers) and W-Band
+(93.5 GHz, 4 receivers). All the papers, data and products generated by the WMAP team
+can be found in the Legacy Archive for Microwave Background Data Analysis (LAMBDA)
+web page 2 . The noise and beam properties can also be found in the LAMBDA web page.
+The WMAP maps are presented in the Hierarchical, Equal Area and iso-Latitude Pixeliza-
+tion (HEALPix, Górski et al. 1999) at the Nside = 512 resolution parameter. The number
+                          2
+of pixels is given by 12Nside .
+     In order to perform the Gaussianity study, the WMAP team (Komatsu et al. 2003)
+suggests combining all the maps produced by the receivers where the CMB is the dominant
+signal (Q-Band, V-Band and W-Band). We have followed the recommendation given by the
+WMAP team in the choice of the combined map used in the analysis. We would like to
+point out that none of the previous Gaussianity studies of the WMAP data have used this
+combined map (except the analysis performed by the WMAP team itself).
+
+  2
+      http://cmbdata.gsfc.nasa.gov/
+                                              –5–
+
+
+     A very simple pipeline is given in Bennett et al. (2003b). At a given position in the sky
+(x), the temperature is given by:
+                                             10
+                                             X
+                                  T (x) =          Tj (x) wj (x),                          (1)
+                                             j=3
+
+where the indices j = 3, 4 refer to the Q-Band receivers, j = 5, 6 to the ones of the V-Band
+and, finally, j = 7, 8, 9, 10 correspond to the receivers of the W-Band (the indices j = 1, 2
+are used for the K and Ka receivers, respectively). The noise weight wj (x) is defined by:
+
+                                     w̄j (x)                         N (x)
+                          wj (x) = P10          ,        w̄j (x) = σj0j 2                  (2)
+                                    j=3 w̄j (x)
+
+where σ0j is the noise dispersion per observation and Nj (x) is the number of observations
+made by the receiver j at position x (see Bennett et al. 2003a). Equation (1) provides a single
+map where the signal-to-noise has been increased. Although the CMB dominated frequencies
+have been chosen, we still have significant contribution due to Galactic foregrounds (thermal
+dust, free-free and synchrotron) as well as extragalactic point sources (negligible Sunyaev-
+Zel’dovich contribution due to galaxy clusters is expected, see Bennett et al. 2003b). In
+order to avoid the Galactic emissions, the WMAP team performed a foreground template
+fit described in Section 6 of Bennett et al. 2003b. The 94 GHz dust map of Finkbeiner et
+al. (1999) is used as the thermal dust template; the Hα map of Finkbeiner (2003) corrected
+for extinction through the EB−V map of Schlegel et al. (1998) is used as the free-free
+template; finally, the synchrotron template is the 408 MHz Haslam et al. (1982) map.
+Hence, Equation (1) is modified by:
+                                             10
+                                                   Tˆj (x) wj (x),
+                                             X
+                                  T̂ (x) =                                                 (3)
+                                             j=3
+
+
+where Tˆj (x) is the temperature at position x for the receiver j after foreground correction.
+The parameters for the best-fit of the foreground templates are given in Bennett et al.
+(2003b). Even more, the foreground cleaned frequency maps can be found in the LAMBDA
+site.
+     The map is then degraded to resolution Nside = 256 —since the very small scales are
+dominated by noise— and a mask is applied to avoid the contamination due to the strong
+emission at the Galactic plane and the contribution due to known radio point sources. This
+mask, that can also be found in the LAMBDA site, is called Kp0 and keeps 76.8% of the
+sky. Finally, the residual monopole and dipole outside the mask are removed. The final map
+is shown in Figure 1.
+                                            –6–
+
+
+     In order to study the Gaussianity of this map, we have produced 10000 Gaussian sim-
+ulations. Using CMBFAST (Seljak & Zaldarriaga 1996), we have calculated the Cℓ given
+by the cosmological parameters estimated by the WMAP team (Table 1 of Spergel et al.
+2003). Random Gaussian aℓm of CMB realizations have been generated and convolved at
+each one of the WMAP receivers with the adequate beams. After the transformation from
+harmonic to real space, uncorrelated Gaussian noise realizations have been added following
+the number of observations per pixel (Nj (x)) and the noise dispersion per observation (σ0j ).
+We have combined all the maps following Equation (3). Finally, the 10000 simulations have
+been degraded to Nside = 256, the Kp0 mask has been applied, and the residual monopole
+and dipoles have been fitted and subtracted for each simulation independently.
+
+
+
+                   3.   The tool and the non-Gaussian estimators
+
+     Wavelet techniques have been shown to be very powerful for detecting non-Gaussianity
+in CMB data (Hobson et al. 1999, Aghanim et al. 2003). Due to the special nature of
+wavelets, a multi-scale study can be performed to amplify the signature of the non-Gaussian
+features dominating at a given scale. Moreover, the SMHW is ideal for the enhancement
+of non-Gaussian signatures with spherical symmetry. The SMHW has been already applied
+for non-Gaussian studies to the COBE-DMR data (Cayón et al. 2001, 2003) and to Planck
+simulations (Martı́nez-González et al. 2002). The SMHW can be obtained from the Eu-
+clidean Mexican Hat Wavelet (MHW) following the stereographic projection suggested by
+Antoine & Vanderheynst (1998). This projection ensures that the wavelet properties are
+kept and that the MHW is recovered in the small angle limit (see Martı́nez-González et al.
+2002 for a graphical explanation of this extension). The SMHW satisfies the compensation,
+admissibility and normalization properties that define a wavelet and is given by:
+                                     1    h   y 2 i2 h     y 2i 2 2
+                   ΨS (y, R) = √           1+( )      2 − ( ) e−y /2R ,                    (4)
+                                   2πN(R)     2            R
+
+where R is the scale and N(R) is a normalization constant:
+                                                     1/2
+                                            R2 R4 
+                                N(R) ≡ R 1 +   +         .                                 (5)
+                                             2   4
+The distance on the tangent plane is given by y that is related to the polar angle (θ) through:
+                                                  θ
+                                         y ≡ 2 tan .                                       (6)
+                                                  2
+
+    At a given scale (R), several statistics can be defined. In this work we have used two
+                                           –7–
+
+
+simple non-Gaussian estimators: skewness (S(R)) and kurtosis (K(R)):
+                                         NR
+                                       1 X          .
+                           S(R) =            wi (R)3 σ(R)3                                (7)
+                                      NR i=1
+                                     NR
+                                   1 X           .
+                           K(R) =        wi (R) σ(R)4 − 3,
+                                               4
+                                                                                          (8)
+                                  NR i=1
+
+where NR is the number of coefficients at scale R and σ(R) is the dispersion of the wavelet
+coefficients at the scale R (wi (R)):
+                                           NR
+                                         1 X
+                                  2
+                                σ (R) =        wi (R)2 .                                  (9)
+                                        NR i=1
+
+In the previous S(R), K(R) and σ(R) definitions, it is assumed that the NR wavelet coeffi-
+cients (wi (R)) have zero mean at each scale R.
+
+
+
+                         4.   The Spherical Wavelet analysis
+
+    In order to test the Gaussianity of the WMAP 1-year data, we have applied the following
+analysis using the SMHW.
+     We have performed 10000 simulations following the pipeline proposed by Bennett et
+al. (2003b) and already indicated in Section 2. Each one of these simulations have been
+convolved with the SMHW at different scales (R1 = 13.7, R2 = 25, R3 = 50, R4 = 75, R5 =
+100, R6 = 150, R7 = 200, R8 = 250, R9 = 300, R10 = 400, R11 = 500, R12 = 600, R13 = 750,
+R14 = 900 and R15 = 1050 arcmin). Acceptance intervals at certain significance levels α
+(e.g., 32%, 5% and 1%) have been established at each scale based on these simulations.
+These acceptance intervals are defined as the intervals which contain a probability 1 − α and
+the remaining probability is the same above and below the interval, i.e. α/2 at each side.
+The acceptance intervals have been determined by studying the distribution of the skewness
+and the kurtosis at each scale independently and calculating the corresponding percentiles.
+We have checked that the number of simulations performed (10000) is enough to establish
+those acceptance intervals with good precision. Finally, the same analysis has been applied
+to the WMAP map (T̂ (x)) plotted in Figure 1.
+     Since we are convolving a map with a large Galactic mask plus known point sources
+(the so-called Kp0 mask) with the SMHW, we are introducing in the wavelet analysis a
+large number of pixels —those near the border of the mask— largely affected by the zero
+value of the mask. This effect is taken into account through the simulations, but, obviously,
+                                             –8–
+
+
+it is introducing an undesirable loss of efficiency. In order to avoid this effect, we will not
+consider pixels whose SMHW coefficients have a strong contamination from the mask. In
+other words, we exclude these pixels after the SMHW convolution. Since we are convolving
+the combined WMAP map (T̂ (x)) with different scales, the number of pixels to be excluded
+is growing with the scale. There could be several criteria to define this set of exclusion masks.
+We have tested several definitions and all of them lead to the same results. The results here
+presented were obtained with an exclusion mask defined as follows: at a given scale (R),
+the exclusion mask M(R) is composed by the Kp0 mask plus those pixels that are closer
+than 2.5R to any one of the pixels of the Kp0 mask that are in the Galactic plane. In other
+words, at a given scale, the exclusion mask is an enlargement (proportional to the scale) of
+the Kp0 mask from the Galactic plane (but note that the mask is not increased around the
+masked point sources). The exclusion masks corresponding to the 15 scales are plotted in
+Figure 2.
+     Following this process we obtain the results presented in Figure 3: an excess of kurtosis
+is detected at two consecutive scales: R8 = 4.17◦ and R9 = 5◦ . The value of the kurtosis at
+R8 = 4.17◦ is a non-Gaussian detection outside the acceptance interval at the 1% significance
+level. Even more, only 40 of the 10000 simulations present a kurtosis value larger or equal
+than the one detected in the combined WMAP map at this scale. This corresponds to a
+right tail probability of ≈ 0.4%. A similar result is found at scale R9 = 5◦ for which the
+right tail probability is also ≈ 0.4%.
+     We want to remark that this value is obtained for very different definitions of the
+exclusion mask. For instance, we have tested an enlargement of the Kp0 mask from the
+Galactic plane scaling with the SMHW scale (R) as: 0.7R, 0.8R, 0.9R, 1.0R and 1.75R.
+Moreover, an enlargement of the whole Kp0 mask not only from the Galactic plane but also
+from all the masked point sources has been also checked, leading to similar results.
+     In addition we have performed the SMHW analysis in each hemisphere to determine
+if the non-Gaussian detection is present in all the sky. Previous non-Gaussianity works on
+the WMAP data have reported some asymmetries between the northern and the southern
+hemisphere (Park 2003, Eriksen et al. 2003). As Figure 4 clearly shows, the kurtosis is
+located in the southern hemisphere. The non-Gaussian detection in the southern hemisphere
+occurs at the R7 = 3.33◦ and R8 = 4.17◦ SMHW scales. The value of the kurtosis at scale
+R7 = 3.33◦ is above the acceptance interval at the 1% significance level. Only 11 of the
+10000 simulations present values for the kurtosis equal or larger than the one detected at
+this scale, which corresponds to a right tail probability of ≈ 0.1%. A similar result is found
+for the scale R8 = 4.17◦ for which the right tail probability is ≈ 0.2%.
+    By looking at the scalogram of the wavelet coefficients in the northern and southern
+                                            –9–
+
+
+hemispheres (dispersions at the different scales R in Figure 4), we can see that the northern
+hemisphere shows less structure than the southern one, at scales between 4◦ and 12◦ . On
+the contrary, the northern hemisphere has more structure than the southern one at larger
+scales. However, the scalograms of both hemispheres are within the acceptance intervals of
+the Gaussian model.
+     Let us remark that, as mentioned before, previous works have reported asymmetries
+between the northern and southern hemispheres. For instance, Park (2003) has found dif-
+ferent north/south genus behaviour which implies a non- Gaussian detection at the 99%.
+Eriksen et al. (2003) also found an asymmetric behaviour north/south regarding the struc-
+ture level at large and intermediate angular scales: the northern hemisphere has a lack of
+structure whereas the southern one is compatible with the Gaussian model. However, our
+study reveals: 1) a direct measurement of non-Gaussian signatures related to the kurtosis of
+those structures with a typical size in the sky of around 10◦ , with a probability ≈ 0.4%; 2)
+the southern hemisphere shows an excess of kurtosis with a probability ≈ 0.2% (around the
+previous scale) whereas the northern one is compatible with the Gaussian model.
+      Finally, we would like to point out that we have also performed a wavelet analysis based
+on the Spherical Haar Wavelet (SHW) as it was proposed in Martı́nez- González et al. (2002).
+We did not find any non-Gaussian detection using the SHW. This is not so surprising, since
+(as it was shown in Martı́nez- González et al., 2002) the SHW is less efficient than the SMHW
+to detect non- Gaussian signals.
+
+
+
+                     5.   Discussion: Sources of non-Gaussianity
+
+    The detection of non-Gaussianity in the WMAP map (T̂ (x)) was presented in the pre-
+vious Section. The kurtosis of the wavelet coefficients at scales R ≈ 4◦ was found to have
+a very low probability ≈ 0.4%. The non-Gaussianity detection is localized in the southern
+hemisphere.
+    The aim of this Section is to study, as far as we can, the source of this non- Gaussianity.
+Let us summarise the major hypotheses that have been assumed:
+
+
+  1. The CMB is a homogeneous and isotropic multivariate Gaussian random field on the
+     sphere
+
+  2. The WMAP data are free from systematics
+
+  3. The WMAP data outside the Kp0 mask are not contaminated by foregrounds
+                                                – 10 –
+
+
+   4. The uncertainties in the cosmological parameters have a negligible effect on the results
+
+
+     Obviously, the most critical hypothesis is 1. If we find that hypotheses 2 to 4 have a
+negligible effect on the results, then we could conclude that hypothesis 1 is not verified. In
+fact, hypothesis 1 contains at least 2 hypotheses:
+
+
+   • The CMB is a homogeneous and isotropic random field on the sphere
+
+   • The CMB is a multivariate Gaussian random field (or equivalently the alm are Gaus-
+     sian)
+
+
+     In practice it is very difficult to distinguish between these two hypotheses. On the
+one hand, since we are using non-Gaussian estimators, we prefer to refer to a non-Gaussian
+detection which is produced by localised regions. More precisely, we have found a non-
+Gaussian detection that seems to be present in the southern hemisphere rather than in the
+northern one. On the other hand, homogeneity and isotropy is a more fundamental principle
+in cosmology than Gaussianity.
+     Systematic effects are a possible source of non-Gaussianity. In Subsection 5.1, we will
+study if there are any systematic effects: are any of the receivers producing the non-Gaussian
+feature?, or the noise?, or the beam?. In Subsection 5.2 we present tests to study the possible
+influence of the Galactic foregrounds on the detection. The influence of the accuracy of the
+estimated power spectrum of the WMAP data (or of the derived cosmological parameters)
+on our results is also studied (Subsection 5.3). Finally, in Subsection 5.4, we speculate about
+intrinsic fluctuations.
+
+
+
+                                        5.1.   Systematics
+
+      Our first test to check the influence of systematics in the non-Gaussian detection consists
+on looking for any rare receiver. Instead of analysing the WMAP map (T̂ (x)) obtained by the
+weighted average of all the Q-Band, V-Band and W-Band receivers, we perform the SMHW
+analysis in each receiver map (T̂Q1 (x), T̂Q2 (x), T̂V1 (x), T̂V2 (x), T̂W1 (x), T̂W2 (x), T̂W3 (x) and
+T̂W4 (x)) independently. If the results are the same for these maps, then we can conclude
+that the detection of non-Gaussianity is not produced by any particular receiver.
+     Results are presented in Figure 5. The K(R) curve obtained for the WMAP map (T̂ (x))
+is plotted together with the curves obtained for each of the receivers (KQ1 (R), KQ2 (R),
+                                            – 11 –
+
+
+KV1 (R), KV2 (R), KW1 (R), KW2 (R), KW3 (R), KW4 (R)). We can see how the pattern for the
+K(R) curve is almost perfectly followed by the other kurtosis curves.
+     We have also checked the influence of possible systematics related to instrumental fea-
+tures (noise and beams). We have performed the SMHW analysis on maps produced from
+the subtraction of receivers at the same frequency. These maps are almost free from CMB
+and foreground contribution (remaining residuals can be present due to the slightly different
+resolutions between the two subtracted channels). In particular, we have analysed the maps
+obtained by subtracting the two receivers in the Q-band (Q1 − Q2 ), the two receivers in
+V-Band (V1 − V2 ) and the map obtained from W1 − W2 + W3 − W4 . As seen in Figure 6,
+the patterns followed by the kurtosis in these three cases are compatible with simulations
+assuming a Gaussian CMB and performing the same operations as for the real data at each
+frequency (for each case, 1000 simulations were generated to establish the acceptance inter-
+vals at the 32%, 5% and 1% significance levels). In addition, they are completely different
+from the K(R) curve obtained for the WMAP map (T̂ (x)).
+     Hence, these tests seem to indicate that systematic effects do not have a significant role
+in the non-Gaussian signature.
+
+
+
+                                    5.2.   Foregrounds
+
+     Foregrounds have been considered as the next possible source of non-Gaussianity. We
+do not consider emission from point sources because the brightest radio sources have been
+previously masked and, moreover, the angular scale of the non-Gaussian detection is much
+larger than the WMAP angular resolution. As regards the expected Sunyaev-Zel’dovich effect
+contribution due to galaxy clusters, it has been shown to be almost negligible (Bennett et
+al. 2003b).
+     In order to study the frequency dependence of the non-Gaussian detection we have
+independently analysed the combined frequency maps: T̂Q (x), T̂V (x) and T̂W (x). For the
+frequency range of Q, V and W (from 41 GHz to 94 GHz), the non-Gaussian pattern found
+for the kurtosis does not resemble any of the frequency dependence due to the Galactic
+foregrounds (synchrotron, free-free and thermal dust).
+     We have also studied the clearly foreground contaminated K and Ka channels in this
+test. The pattern of the kurtosis curve for these channels does not completely follow the one
+for the other WMAP channels. Whereas the peak around R8 clearly appears, the behaviour
+is very different at scales below R6 . In addition, there is an offset along all the scales.
+We think that this effect corresponds to the very high foreground contamination that these
+                                            – 12 –
+
+
+channels show. In order to clarify this point, we have done the following exercise. We have
+generated an additional CMB map by subtracting the Ka map (at 33 GHz) from the K
+one (at 23 GHz), multiplying the first one by a factor of 2.65. This number corresponds to
+the expected increment of the synchrotron emission from 33 GHz to 23 GHz3 . As seen in
+Figure 7, the pattern of the kurtosis curve for this map is the same as the one detected for
+the combined WMAP map (T̂ (x)). Therefore, the same pattern for the kurtosis is found,
+not only for the Q, V and W bands, but also for the whole WMAP frequency range (from 23
+GHz to 94 GHz). This implies not only that the synchrotron does not seem to be the source
+of the non-Gaussian signature, but also that this detection does not show any significant
+frequency dependence.
+     An additional test to check the influence of the foregrounds was done by analysing a
+map where the CMB contribution is small: the two receivers of the Q- Band and the two
+ones of the V-Band are subtracted from the four receivers of the W-Band. In this map we
+have significant contributions from the foregrounds and the noise. The SMHW analysis of
+this map also shows (Figure 8) that, apparently, the foregrounds are not the source of the
+non-Gaussian detection since they are compatible with their own Gaussian bands. Even
+more, the pattern of the kurtosis curve is completely different from the one estimated from
+the combined WMAP map (T̂ (x)).
+     Finally, we have done the following exercise. We have estimated the foreground correc-
+tion (F (x)) subtracted from the data by the WMAP team just by doing: F (x) = T (x)−T̂ (x).
+This foreground correction is added to a Gaussian simulation of the combined WMAP map.
+The SMHW analysis was performed in this contaminated map. As shown in Figure 9, the
+curve for the kurtosis (K(R)) not only has a pattern completely different from the one
+detected in the combined WMAP map (T̂ (x)) but is also very similar to the uncontami-
+nated Gaussian simulation. Even more, the foreground correction (F (x)) was added twice
+to the Gaussian simulation, finding the same behaviour. This exercise —as the previous
+ones— also seems to discard the Galactic foreground emissions as the ones responsible for
+the non-Gaussian detection.
+
+  3
+    A power law is assumed for the frequency dependence of the synchrotron emission: Tsyn (ν) ∝
+               −2.7
+Tsyn (ν0 ) ν/ν0       , as it was proposed by Bennet et al. (2003b).
+                                           – 13 –
+
+
+       5.3.   Influence of the uncertainties in the cosmological parameters
+
+     Since we use CMB Gaussian simulations following the power spectrum generated by
+CMBFast, we must also check how the uncertainties in the cosmological parameters (and,
+hence, in the power spectrum) could affect the results. In particular, how the 1% significance
+bands depend on these uncertainties? An exhaustive analysis would require a very sophis-
+ticated statistical framework that can accomodate uncertainties of cosmological parameter
+estimates. Instead we have adopted two simplified approaches that, nevertheless, we believe
+are good indicators of the effect on our results from the uncertainties in the Cℓ ’s.
+     First, we have performed Gaussian simulations with three different power spectra, being
+all of them compatible with the 1σ errors of the WMAP estimated power spectrum. In
+Figure 10 the power spectrum given by CMBFast using the best-fit Cosmological Model of
+the WMAP team (solid red line) and the power spectrum estimation for the WMAP (cyan)
+have been plotted. The three additional power spectra are defined as follows: the so-called
+’upper-limit’ and ’lower-limit’ power spectra are created from the best-fit power spectrum by
+adding (or subtracting) the 1σ error estimated by the WMAP team; the so- called ’zig-zag’
+power spectrum is an intentionally exotic power spectrum that oscillates around the best-fit
+one, always within the ’upper-limit’ and ’lower- limit’ power spectra. By analysing Gaussian
+simulations following these power spectra, we can estimate the influence of the uncertainties
+of the power spectrum determination on the acceptance intervals at the 1% significance level
+already established for the best-fit WMAP model. This is plotted in Figure 11. It can be
+seen that for small and intermediate scales (including the one at which the non-Gaussian
+detection is found), the uncertainties in the 1% significance bands are negligible. Only at
+large scales we can find some deviations (especially for the zig-zag power spectrum).
+     The second approach to test the influence of the uncertainties in the cosmological pa-
+rameters has been done by whitening the data as well as the simulations. By doing this, most
+of the influence of the input power spectrum is eliminated. In other words, we also detect
+non-Gaussianity wherever the original power spectrum was. In this case, we also obtain a
+non-Gaussian feature with the same probability around the same scales.
+
+
+
+                       5.4.   Is it due to Intrinsic fluctuations?
+
+    The previous Subsections have shown that there are not strong evidences for the non-
+Gaussian detection due to neither systematic effects nor Galactic foreground emissions nor
+uncertainties in the cosmological parameters. Therefore, other sources for this detection may
+be considered.
+                                            – 14 –
+
+
+      In particular, intrinsic fluctuations can not be rejected. One of the powerful advantages
+of the wavelet analysis is the possible identification, on the sky, of the non-Gaussian source.
+In Figure 12 (left panel) the SMHW coefficients at the scale R8 are plotted. The minimum
+value of this map is −4.57σ(R8 ), where σ(R8 ) is the dispersion of the wavelet coefficients at
+scale R8 . Using the 10000 Gaussian simulations, we have checked that the probability for
+an extreme like this is ≈ 1%. The right panel of Figure 12 shows those SMHW coefficients
+that are above (in absolute value) 3σ(R8 ). If these pixels are not taken into account in the
+kurtosis calculation, the estimation for this statistic is perfectly compatible with the Gaus-
+sian simulations. In fact, we have computed the acceptance intervals at the 32%, 5% and 1%
+significance levels for additional sets of 10000 Gaussian simulations, where those pixels with
+values above a given threshold are not taken into account in order to compute the kurtosis
+curve K(R). The thresholds are: 3.0σw (R), 3.5σw (R), 4.0σw (R) and 4.5σw (R). These accep-
+tance intervals have been used to check if the combined WMAP map satisfies the Gaussian
+hypothesis for each one of these different thresholds. The results are presented in Figure 13.
+It is clear that, as the threshold decreases, the combined WMAP data is more compatible
+with Gaussianity. In particular, for the 3σw threshold the WMAP data is compatible with
+the Gaussian hypothesis (within the acceptance interval at the 5% significance level).
+     A very interesting exercise was done in order to study the previous very cold spot (in
+SMHW space) in the southern hemisphere (b = −57◦ , l = 209◦ ). We have calculated the
+mean value of the cold spot (at R8 ) at each one of the WMAP frequency channels. As
+shown in Figure 14, the frequency dependence of this spot follows the CMB one, and is
+not compatible with any of the Galactic foregrounds. Notice that if the 2.65 times Ka map
+is subtracted from the K one, we get an even better agreement with constant frequency
+dependence, given by the dot-dashed line. We have also studied the frequency dependence
+of this cold spot in real space (after filtering all the frequency maps with a Gaussian beam
+of FWHM = 8◦ , the size corresponding to the SMHW scale R8 ). A good agreement with
+the CMB behaviour is found for bands Q, V and W, whereas a clear contamination due to
+synchrotron appears between bands K and Ka. However, when the 2.65 times Ka map is
+subtracted from the K one, the CMB behaviour is recovered. We notice that whereas for the
+K and Ka bands in real space the synchrotron emission dominates over CMB, this is not the
+case for K and Ka bands in wavelet space, since the SMHW has diminished the synchrotron
+amplitude relative to the CMB one (due to the large scale variation of the former). Hence,
+the frequency analysis performed on the cold spot, also indicates that the foregrounds do
+not seem to be the source of the non-Gaussianity detection. This cold spot appears as a real
+structure in the sky, not only seen by WMAP, but also by COBE-DMR. If the COBE-DMR
+map is convolved with the SMHW at R8 , we find some pixels above 3σw around this point.
+    There are several possibilities which can explain the non-Gaussian detection for the
+                                             – 15 –
+
+
+kurtosis of the SMHW coefficients. For instance, massive superstructures (like superclus-
+ters or Great Attractor-like structures) or large voids, can produce secondary anisotropies
+through the Rees-Sciama effect (Martı́nez-González & Sanz 1990). Even more, also primor-
+dial anisotropies can be considered. Non standard inflationary models could also explain the
+detected non-Gaussianity (see e.g. Acquaviva et al. 2002 and references therein). In ad-
+dition, some kind of topological defects like monopoles or textures (Turok & Spergel 1990)
+could be present in the sky. On the contrary, non isotropic topological defects like cos-
+mic strings may not produce this kind of non-Gaussianity, since their characteristic scale is
+around arcminutes and also the detection has been done with an isotropic wavelet.
+
+
+
+                                       6.   Conclusions
+
+     We have presented the detection of non-Gaussianity in the WMAP 1-year data, in the
+kurtosis of the SMHW coefficients at scales around 4◦ , which implies a size in the sky of
+around 10◦ . At those scales, the kurtosis values corresponding to the WMAP combined map
+are outside the acceptance interval at the 1% significance level, with a right tail probability of
+≈ 0.4%. The Gaussianity study was also done on both hemispheres independently, showing
+that the northern hemisphere is compatible with the Gaussian model, whereas the southern
+one presents a very clear non-Gaussian signal similar to the one detected in the all-sky
+analysis. This detection has a right tail probability of ≈ 0.1% The number of performed
+simulations has been checked to be enough to establish accurately the acceptance interval
+at the 1% significance level for the kurtosis values at the different SMHW scales studied.
+      The independent analyses performed on each hemisphere also show that the northern
+hemisphere seems to have less structure than the southern one at scales between 4◦ and
+12◦ , whereas the southern one has less structure than the northern hemisphere at larger
+scales. However, both scalograms, the one for the north and the one for the south, seem
+to be compatible with the Gaussian model. Our non-Gaussian detection differs from other
+asymmetries reported up to date (Park 2003 and Eriksen et al. 2003), since a direct non-
+Gaussian signature has been found in the kurtosis of the wavelet coefficients at scale R ≈ 10◦ .
+     Since those SMHW pixels clearly affected by the mask decrease the efficiency of the
+analysis, only those pixels with a small contribution from the Galactic mask (Kp0 ), at each
+SMHW scale, have been analysed. However, the non-Gaussian detection is quite insensitive
+to the particular choice of the exclusion masks, since we have tested that it appears outside
+the acceptance intervals at the same significance level for several choices.
+    We have performed several tests in order to identify the source of this non-Gaussian
+                                            – 16 –
+
+
+signature. Systematic effects and foregrounds have been carefully studied. The different
+channels have been checked, showing that all the CMB dominated ones (Q, V and W)
+have the same pattern for the kurtosis of the SMHW coefficients. Moreover, by analysing
+the maps produced by subtracting the data given by the receivers at each frequency —
+these maps are almost free of CMB and foreground contributions— we have shown that
+the non-Gaussian signal disappears. The non-Gaussian signal appears in the whole WMAP
+frequency range (from 23 GHz to 94 GHz) showing no frequency dependence. Even more,
+we added overestimated foreground contamination to Gaussian CMB maps, showing that
+the detected non-Gaussian signal does not appear in the SMHW analysis. This seems to
+indicate no correlation with Galactic foregrounds. Since the brightest point sources are
+masked and the non-Gaussian features appear at intermediate scales, we do not expect a
+significant contribution coming from this emission. The Sunyaev-Zel’dovich effect due to
+galaxy clusters is negligible for the WMAP 1-year data (only the most prominent local
+clusters like Coma can contribute at the 2σ level).
+     The uncertainties in the power spectrum estimation (and, hence, in the cosmological
+parameters) have also been taken into account, showing that the 1% significance bands
+for the kurtosis (at the scales of interest) are not affected by such uncertainties. Three
+additional power spectra covering the 1σ error band in the power spectrum determination
+were used. Even more, an additional test was done by performing a whitening of the maps.
+The non-Gaussian signal is also detected in this case. This gives robustness to the result,
+since possible errors in the estimation of the Cℓ of the Gaussian model do not affect it.
+      Thanks to the properties of the SMHW, we can identify (in the sky) the possible source of
+the non-Gaussianity. We have found a cold spot in the southern hemisphere (in b = −57◦ , l =
+209◦ ) with a probability ≈ 1%. The frequency dependence of this spot is compatible with the
+one of the CMB. A more detailed study of extrema will be presented in a future work. This
+study should be done in both real and wavelet spaces and could be very useful in order to
+clarify if the non-Gaussian signature is localized in certain positions on the sky or otherwise,
+it is produced by a non-Gaussian temperature distribution.
+    Finally, taking into account all the performed tests, intrinsic fluctuations (due to sec-
+ondary anisotropies like the Rees-Sciama effect or due to primordial fluctuations produced
+by topological defects or non-standard inflation) cannot be rejected. The WMAP 2-year
+data will be, undoubtedly, very useful to confirm or not these results.
+
+
+    Authors kindly thank Dr. Eiichiro Komatsu for very useful comments regarding the
+data reduction and suggestions and Julio Edgar Gallegos for useful discussions. PV thanks
+Universidad de Cantabria (UC) for a postdoc grant. RBB thanks UC and Spanish Ministerio
+                                             – 17 –
+
+
+de Ciencia y Tecnologı́a (MCYT) for a Ramón y Cajal contract. We acknowledge partial fi-
+nancial support from the Spanish MCYT project ESP2002- 04141-C03-01. We kindly thank
+IFCA for providing us with its Grid Wall cluster to generate and analyse the WMAP sim-
+ulations. We also thank Centro de Supercomputación de Galicia (CESGA) for providing
+the Compaq HPC320 supercomputer to run part of the analysis. We acknowledge the use
+of the Legacy Archive for Microwave Background Data Analysis (LAMBDA). Support for
+LAMBDA is provided by the NASA Office of Space Science. This work has used the soft-
+ware package HEALPix (Hierarchical, Equal Area and iso-latitude pixelization of the sphere,
+http://www.eso.org/science/healpix), developed by K.M. Gorski, E. F. Hivon, B. D. Wan-
+delt, J. Banday, F. K. Hansen and M. Barthelmann. We acknowledge the use of the software
+package CMBFAST (http://www.cmbfast.org) developed by U. Seljak and M. Zaldarriaga.
+
+
+
+                                       REFERENCES
+
+Acquaviva V., Bartolo N., Matarrese S. & Riotto A., 2002, preprint (astro-ph/0209156)
+
+Aghanim N., Desert F. X., Puget J. L. & Gispert R., 1996, A&A, 311, 1
+
+Aghanim N., Kunz M., Castro P. G. & Forni O., 2003, A&A, 406, 797
+
+Antoine J. P. & Vanderheynst P., 1998, J. Math Phys., 39, 3987
+
+Barreiro R. B., Hobson M. P., Lasenby A. N., Banday A. J., Górski K. M. & Hinshaw G.,
+       2000, MNRAS, 318, 475
+
+Barreiro R. B. & Hobson M. P., 2001, MNRAS, 327, 813
+
+Bennett C. L. et al., 2003a, ApJS, 148, 1
+
+Bennett C. L. et al., 2003b, ApJS, 148, 97
+
+Bernardeau F., Uzan J.-P., 2002, Phys. Rev. D, 66, 103506
+
+Cayón L., Sanz J. L., Barreiro R. B., Martı́nez–González E., Vielva P., Toffolatti L., Silk J.,
+       Diego J. M. & Argüeso F., 2000, MNRAS, 315, 757
+
+Cayón L., Sanz J. L., Martı́nez–González E., Banday A. J., Argüeso F., Gallegos J. E.,
+       Górski K. M. & Hinshaw G., 2001, MNRAS, 326, 1243
+
+Cayón L., Martı́nez–González E., Argüeso F., Banday A. J. & Górski K. M., 2003, MNRAS,
+       339, 1189
+                                          – 18 –
+
+
+Chiang L. -Y., Naselsky P. D., Verkhodanov O. V. & Way M. J., 2003, ApJ, 590, L65
+
+Colley W. N. & Gott J. R., 2003, preprint (astro-ph/0303020)
+
+Durrer R., 1999, New Astron. Rev., 43, 111
+
+Eriksen H. K., Hansen F. K., Banday A. J., Górski K. M. & Lilje P. B., 2003, preprint
+       (astro-ph/0307507)
+
+Eriksen H. K., Novikov D. I., Lilje P. B., Banday A. J. & Górski K. M., 2004, preprint
+       (astro-ph/0401276)
+
+Finkbeiner D. P., Davis M. & Schlegel D. J., 1999, ApJ, 524, 867
+
+Finkbeiner D. P., 2003, ApJS, 146, 407
+
+Gaztañaga E. & Wagg J., 2003, preprint (astro-ph/0305327)
+
+Gaztañaga E., Wagg J., Multamäki T., Montaña A. & Hughes D. H., 2003, preprint (astro-
+      ph/0304178)
+
+Goldberg D. M. & Spergel D. N., 1999, Phys. Rev., D59, 103002
+
+Górski K. M., Wandelt B. D., Hansen F. K., Hivon E. & Banday A. J., 1999, (astro-
+       ph/9905275)
+
+Haslam C. G. T., Salter C. J., Stoffel H. & Wilson W. E., 1982, A&AS, 47, 1
+
+Hobson M. P., Jones A. W. & Lasenby A. N. 1999, MNRAS, 309, 125
+
+Hu W., 2000, Phys. Rev., D62, 043007
+
+Komatsu E. & Spergel D. N., 2001, Phys. Rev. D, 63, 063002
+
+Komatsu E. et al., 2003, ApJ, in press
+
+Linde A. & Mukhanov V., 1997, Phys. Rew., D56, 535
+
+Martı́nez–González E. & Sanz J. L., 1990, MNRAS, 247, 473
+
+Martı́nez–González E., Sanz J. L. & Cayón L., 1997, ApJ, 484, 1
+
+Martı́nez–González E., Gallegos J. E., Argüeso F., Cayón L. & Sanz J. L., 2002, MNRAS,
+       336, 22
+
+Mukherjee P., Hobson M. P. & Lasenby A. N., 2000, MNRAS, 318, 1157
+                                              – 19 –
+
+
+Ostriker J. P. & Vishniac E. T., 1986, ApJ, 306, L51
+
+Pando J., Valls-Gabaud D. & Fang L. -Z., 1998, Phys. Rev. Lett., 81, 4568
+
+Park C. G. 2003, preprint (astro-ph/0307469)
+
+Peebles P. J. E., 1997, ApJ, 483, 1
+
+Rees M. J. & Sciama D. W., 1968, Nature, 517, 611
+
+Sanz J. L., Argüeso F., Cayón L., Martı́nez–González E., Barreiro R. B. & Toffolatti L.,
+      1999a, MNRAS, 309, 672
+
+Sanz J. L., Barreiro R. B., Cayón L., Martı́nez–González E., Ruiz G. A., Dı́az F. J., Argüeso
+       F., Silk J. & Toffolatti L., 1999b, A&AS, 140, 99
+
+Schlegel D. J., Finkbeiner D. P.& Davis M., 1998, ApJ, 500, 525
+
+Seljak U. & Zaldarriaga M., 1996, ApJ, 469, 437.
+
+Spergel D. N. et al., 2003a, ApJ, in press
+
+Stolyarov V., Vielva P., Barreiro R. B., Hobson M. P., Martı́nez–González E. & Lasenby A.
+       N., 2003, in preparation
+
+Tegmark M., de Oliveira-Costa A. & Hamilton A. J. S., 2003, preprint (astro-ph/0302496)
+
+Turok N. & Spergel D. N., 1990, Phys. Rev. Letters, 64, 2736
+
+Tenorio L., Jaffe A. H., Hanany S. & Lineweaver C. H., 1999, MNRAS, 310, 823
+
+Vielva P., Martı́nez–González E., Cayón L., Diego J. M., Sanz J. L. & Toffolatti L., 2001a,
+       MNRAS, 326, 181
+
+Vielva P., Barreiro R. B., Hobson M. P., Martı́nez–González E., Lasenby A. N., Sanz J. L.
+       & Toffolatti L., 2001b, MNRAS, 328, 1
+
+Vielva P., Martı́nez–González E., Gallegos J. E., Toffolatti L. & Sanz J. L., 2003, MNRAS,
+       344, 89
+
+
+
+
+   This preprint was prepared with the AAS LATEX macros v5.2.
+                                        – 20 –
+
+
+
+
+Fig. 1.— Analysed WMAP map at Nside = 256 (in mK units). It is a combination of all
+the receivers in Q-Band, V-Band and W-Band after the foreground correction described in
+Bennett et al. (2003b). The Kp0 mask has been applied and the residual monopole and
+dipole have been subtracted.
+                                          – 21 –
+
+
+
+
+Fig. 2.— Set of exclusion masks (M(R)) used in our analysis. This set is defined in order to
+discard in the SMHW analysis those pixels with a strong kp0 mask contamination. Since the
+number of excluded pixels grows with the SMHW scale, there is one exclusion mask per scale
+R. The exclusion masks (from left to right and top to bottom) correspond to the following
+scales: R1 = 13.7, R2 = 25, R3 = 50, R4 = 75, R5 = 100, R6 = 150, R7 = 200, R8 = 250,
+R9 = 300, R10 = 400, R11 = 500, R12 = 600, R13 = 750, R14 = 900 and R15 = 1050 arcmin
+                                                       – 22 –
+
+
+
+
+                        Skewness                                                       Kurtosis
+                                                                  3
+
+  1.5                                                            2.5
+
+                                                                  2
+   1
+
+                                                                 1.5
+  0.5
+                                                                  1
+
+   0                                                             0.5
+
+                                                                  0
+ −0.5
+                                                                −0.5
+
+  −1
+                                                                 −1
+
+
+ −1.5                                                           −1.5
+
+                                                                 −2
+        0   2   4   6      8       10   12   14   16                   0   2   4   6      8       10   12   14   16
+                          #R                                                             #R
+
+
+
+
+Fig. 3.— The skewness (S(R), left panel) and kurtosis (K(R), right panel) values obtained
+from the application of the SMHW analysis to the combined WMAP map (T̂ (x)) are shown
+as blue starts. Acceptance intervals for the 32% (red, inner), 5% (green, middle) and 1%
+(magenta, outer) significance levels are also plotted, as well as the mean value given by the
+10000 simulations performed in this work (yellow solid line). Only those pixels allowed by
+the exclusion masks set (M(R)) have been used in the analysis (see text).
+                                                               – 23 –
+
+                        Dispersion, Northern hemisphere                            Dispersion, Southern hemisphere
+             0.03                                                       0.03
+
+            0.025                                                   0.025
+
+             0.02                                                       0.02
+
+            0.015                                                   0.015
+
+             0.01                                                       0.01
+
+            0.005                                                   0.005
+
+               0                                                          0
+                    0          5           10             15                   0          5           10             15
+                                     #R                                                         #R
+
+                        Skewness, Northern hemisphere                              Skewness, Southern hemisphere
+
+              1.5                                                        1.5
+
+               1                                                          1
+
+              0.5                                                        0.5
+
+               0                                                          0
+
+             −0.5                                                       −0.5
+
+              −1                                                         −1
+
+             −1.5                                                       −1.5
+
+                    0          5           10             15                   0          5           10             15
+                                     #R                                                         #R
+
+                         Kurtosis, Northern hemisphere                              Kurtosis, Southern hemisphere
+               3                                                          3
+
+
+               2                                                          2
+
+
+               1                                                          1
+
+
+               0                                                          0
+
+
+              −1                                                         −1
+
+
+              −2                                                         −2
+                    0          5           10             15                   0          5           10             15
+                                     #R                                                         #R
+
+
+
+
+Fig. 4.— The dispersion (σ(R), top) skewness (S(R), middle) and kurtosis (K(R), bottom)
+values obtained from the application of the SMHW analysis to the combined WMAP map
+(T̂ (x)) are shown (blue starts). The left column corresponds to the analysis performed only
+in the northern hemisphere, whereas the analysis of the southern one is in the right column.
+Acceptance intervals for the 32% (red, inner), 5% (green, middle) and 1% (magenta, outer)
+significance levels are also plotted, as well as the mean value given by the 10000 simulations
+(yellow solid line). The exclusion masks set (M(R)) have been used in the analysis (see
+text).
+                                                – 24 –
+
+
+
+
+                                                 Kurtosis
+                             1
+
+
+
+                            0.5
+
+
+
+                             0
+
+
+
+                           −0.5       Q1
+                                      Q2
+                                      Q
+                                      Combined WMAP
+                            −1
+                                  0         5               10   15
+                                                      #R
+
+                                                 Kurtosis
+                             1
+
+
+
+                            0.5
+
+
+
+                             0
+
+
+
+                           −0.5       V1
+                                      V2
+                                      V
+                                      Combined WMAP
+                            −1
+                                  0         5               10   15
+                                                      #R
+
+                                                 Kurtosis
+                             1
+
+
+
+                            0.5
+
+
+
+                             0
+                                      W1
+                                      W2
+                           −0.5       W3
+                                      W4
+                                      W
+                                      Combined WMAP
+                            −1
+                                  0         5               10   15
+                                                      #R
+
+
+
+
+Fig. 5.— Kurtosis values (K(R)) obtained from the application of the analysis described
+in this work to each WMAP maps observed at channels: Q1 and Q2 (top panel), V1 and
+V2 (middle panel) and W1 , W2 , W3 and W4 (bottom panel). For a better comparison, the
+kurtosis obtained for the combined WMAP map has also been included (blue starts) in all
+the panels.
+                                                – 25 –
+
+
+
+
+                                                  Kurtosis
+                             3
+
+                                     Combined Q1−Q2 WMAP map
+                             2
+
+
+                             1
+
+
+                             0
+
+
+                            −1
+
+
+                            −2
+                                 0          5                10      15
+                                                    #R
+
+                                                  Kurtosis
+                             3
+
+                                     Combined V1−V2 WMAP map
+                             2
+
+
+                             1
+
+
+                             0
+
+
+                            −1
+
+
+                            −2
+                                 0          5                10      15
+                                                    #R
+
+                                                  Kurtosis
+                             3
+
+                                     Combined W1−W2+W3−W4 WMAP map
+                             2
+
+
+                             1
+
+
+                             0
+
+
+                            −1
+
+
+                            −2
+                                 0          5                10      15
+                                                    #R
+
+
+
+
+Fig. 6.— Kurtosis values (K(R)) obtained from the analysis of different receiver combi-
+nations (where the CMB and foreground contributions are negligible) are shown as stars:
+Q1 − Q2 (top panel), V1 − V2 (middle panel) and W1 − W2 + W3 − W4 (bottom panel). As
+in Figure 3, the acceptance intervals at the 32% (red, inner), 5% (green, middle) and 1%
+(magenta, outer) significance levels for the same receiver combination and the mean value
+given by the 1000 simulations (yellow solid line) are also shown.
+                                           – 26 –
+
+
+
+
+                                            Kurtosis
+              1
+
+
+             0.8
+
+
+             0.6
+
+
+             0.4
+
+
+             0.2
+
+
+              0
+
+
+            −0.2
+
+
+            −0.4
+
+
+            −0.6
+
+                       K−2.64Ka
+                       Q
+            −0.8
+                       V
+                       W
+                       Combined WMAP
+             −1
+                   0      2        4   6       8       10    12     14      16
+                                              #R
+
+
+
+
+Fig. 7.— Kurtosis values K(R) obtained from the analysis of the maps at each frequency
+maps. For reference, the kurtosis values of the combined WMAP map are also included. It
+is clear that for the whole WMAP frequency range (from 23 GHz to 94 GHz) this pattern is
+the same, indicating that there is not frequency dependence for our non-Gaussian detection.
+The kurtosis values obtained for the combination map K − 2.65Ka (see text for details) are
+also included.
+                                                 – 27 –
+
+
+
+
+                                                  Kurtosis
+              3
+
+                       Combined W−V−Q WMAP map
+             2.5
+
+
+              2
+
+
+             1.5
+
+
+              1
+
+
+             0.5
+
+
+              0
+
+
+            −0.5
+
+
+             −1
+
+
+            −1.5
+
+
+             −2
+                   0      2        4        6        8       10   12   14     16
+                                                    #R
+
+
+
+
+Fig. 8.— Kurtosis values K(R) obtained from a combined map defined by subtracting the Q
+and V receivers from the W ones. This map is almost free of CMB emission. The acceptance
+intervals at the 32% (red, inner), 5% (green, middle) and 1% (magenta, outer) significance
+levels and the mean value given by the 1000 simulations (yellow solid line) for this combined
+W − V − Q map are also plotted. This CMB cleaned map seems to be compatible with
+the Gaussian hypothesis, indicating that the remaining foreground contribution is not high
+enough to be detectable trough our Gaussian test.
+                                                       – 28 –
+
+
+
+
+                                                         Kurtosis
+              3
+
+                       Combined WMAP
+             2.5       Gaussian CMB
+                       Gaussian CMB + 100% Foreground correction
+                       Gaussian CMB + 200% Foreground correction
+
+              2
+
+
+             1.5
+
+
+              1
+
+
+             0.5
+
+
+              0
+
+
+            −0.5
+
+
+             −1
+
+
+            −1.5
+
+
+             −2
+                   0       2          4          6          8       10   12   14   16
+                                                           #R
+
+
+
+
+Fig. 9.— The kurtosis values K(R) obtained from artificially contaminated CMB Gaussian
+maps are presented, together with the ones calculated for the combined WMAP (blue aster-
+isks). Two different degrees of contamination have been considered by adding to a Gaussian
+simulation once and twice the foreground contribution obtained by the WMAP team. The
+acceptance intervals at the 32% (red, inner), 5% (green, middle) and 1% (magenta, outer)
+significance levels and the mean value given by the 10000 simulations (yellow solid line) for
+the combined WMAP map (T̂ (x)) are also given for a better comparison.
+                                                – 29 –
+
+
+
+
+                    8e-10
+
+
+                    7e-10
+
+
+                    6e-10         Best fit Cl
+                                       up-Cl
+                                    lower-Cl
+                                 zig-zag Cl
+                    5e-10    WMAP binned Cl
+  l(l+1)Cl/(2*PI)
+
+
+
+
+                    4e-10
+
+
+                    3e-10
+
+
+                    2e-10
+
+
+                    1e-10
+
+
+                        0
+
+
+                    -1e-10
+                                   10                        100                    1000
+                                                         l
+
+
+Fig. 10.— Power spectra used to the test the uncertainties in the cosmological paramters
+assumed in this work. The bes-fit power spectrum given by the WMAP team is plotted (solid
+red line) together with the power spectrum estimated by the WMAP team (cyan points and
+error bars). Three addional models are used: the so-called ’upper-limit’ and ’lower-limit’
+power spectra are constructed from the best-fit model by adding or subtracting 1σ and the
+so called ’zig-zag’ model which oscillates around the best-fit model, always within the 1σ
+error.
+                                              – 30 –
+
+
+
+                                         Kurtosis, upper−Cl
+                              3
+
+
+                              2
+
+
+                              1
+
+
+                              0
+
+
+                             −1
+
+
+                             −2
+                                  0     5                 10     15
+                                                   #R
+                                            Kurtosis, lower−Cl
+                              3
+
+
+                              2
+
+
+                              1
+
+
+                              0
+
+
+                             −1
+
+
+                             −2
+                                  0     5                 10     15
+                                                   #R
+                                        Kurtosis, zig−zag Cl
+                              3
+
+
+                              2
+
+
+                              1
+
+
+                              0
+
+
+                             −1
+
+
+                             −2
+                                  0     5                 10     15
+                                                   #R
+
+
+
+
+Fig. 11.— Modification of the acceptance interval of the kurtosis at the 1% significance
+level, due to the uncertainties in the power spectrum estimation. The 1% significance band
+obtained with the best-fit model is plotted (green line) together with the one obtained with
+the ’upper-limit’ power spectrum (upper panel, red line), the ’lower-limit’ power spectrum
+(middle panel, red line) and the ’zig-zag’ power spectrum (lower panel, red line).
+                                           – 31 –
+
+
+
+
+Fig. 12.— In the left panel, the SMHW coefficients at R8 = 250.0 arcmin outside the exclu-
+sion mask M(R8 ) are presented. In the right panel, only those coefficients above 3σ(R8 ) are
+plotted. If these coefficients are not considered, the kurtosis of the remaining ones is com-
+pletely compatible with the Gaussian model. The coldest (blue) spot at b = −57◦ , l = 209◦
+has a minimum value equals to −4.57σ(R8 ). The simulations indicate that the probability
+of this value is ≈ 1%.
+                                            – 32 –
+
+
+            Kurtosis 3.0σw threshold                          Kurtosis 3.5σw threshold
+  3                                                   3
+
+
+  2                                                   2
+
+
+  1                                                   1
+
+
+  0                                                   0
+
+
+ −1                                                  −1
+
+
+ −2                                                  −2
+      0        5             10        15                 0      5             10        15
+
+
+
+            Kurtosis 4.0σ threshold                           Kurtosis 4.5σ threshold
+                         w                                                 w
+  3                                                   3
+
+
+  2                                                   2
+
+
+  1                                                   1
+
+
+  0                                                   0
+
+
+ −1                                                  −1
+
+
+ −2                                                  −2
+      0        5             10        15                 0      5             10        15
+
+
+
+Fig. 13.— Kurtosis values for different thresholds of the wavelet coefficients. From left to
+right and top to bottom, only thoses pixels below 3σw , 3.5σw , 4σw and 4.5σw are considered.
+This process is done for both data (blue stars) and simulations. The acceptance intervals
+at the 32% (red, inner), 5% (green, middle) and 1% (magenta, outer) significance levels
+and the mean value given by the 10000 simulations (yellow solid line) for the combined
+WMAP map (T̂ (x)) are also given for a better comparison. As the coefficients with the
+most extreme values are not considered, the WMAP data get more compatible with the
+Gaussian hypothesis.
+                                             – 33 –
+
+
+
+
+                 10
+                                                                              cold spot
+                                                                           thermal dust
+                                                                               free-free
+                                                                            synchrotron
+                                                                    estimated cold spot
+     Amplitude
+
+
+
+
+                  1
+
+
+
+
+                 0.1
+                       20   30   40     50         60          70      80           90     100
+                                             Frequency (GHz)
+
+
+
+Fig. 14.— The mean frequency dependence followed by the 300 most negative SMHW coef-
+ficients in the cold spot at b = −57◦ , l = 209◦ (crosses) is plotted together with the expected
+frequency dependence for the different foregrounds, at Galactic latitudes −90◦ < b < −57◦ :
+synchrotron, free-free and thermal dust. The asterisk represents the cold spot, after the Ka
+map (corrected by the synchrotron factor, as indicated in the text) is subtracted from the K
+one. The dot-dashed line has been plotted for comparison with a perfect CMB behaviour.
+All the amplitudes are normalised to one at the Q-band. Notice that the frequency depen-
+dence for the different foregrounds is preserved in wavelet space, due to the linearity of the
+wavelet convolution.
+

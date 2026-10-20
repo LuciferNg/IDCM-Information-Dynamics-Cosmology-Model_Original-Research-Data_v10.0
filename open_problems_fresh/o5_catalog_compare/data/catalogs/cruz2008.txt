@@ -1,0 +1,587 @@
+                                          Mon. Not. R. Astron. Soc. 000, 000–000 (0000)     Printed 10 March 2021     (MN LATEX style file v1.4)
+
+
+
+
+                                          The CMB cold spot: texture, cluster or void?
+
+                                          M. Cruz,1⋆ E. Martı́nez-González,1 P. Vielva,1 J. M. Diego,1 M. Hobson,2 N. Turok3
+                                          1 IFCA, CSIC-Univ. de Cantabria, Avda. los Castros, s/n, 39005-Santander,Spain.
+                                          2 Astrophysics Group, Cavendish Laboratory, J.J. Thomson Avenue, Cambridge CB3 OHE, UK.
+                                          3 DAMTP, CMS, Wilberforce Road, Cambridge, CB3 0WA, UK.
+
+
+
+
+                                          Accepted Received ; in original form
+arXiv:0804.2904v2 [astro-ph] 2 Oct 2008
+
+
+
+
+                                                                             ABSTRACT
+
+                                                                                  The non-Gaussian cold spot found in the WMAP data has created controversy
+                                                                             about its origin. Here we calculate the Bayesian posterior probability ratios for three
+                                                                             different models that could explain the cold spot. A recent work claimed that the
+                                                                             Spot could be caused by a cosmic texture, while other papers suggest that it could
+                                                                             be due to the gravitational effect produced by an anomalously large void. Also the
+                                                                             Sunyaev-Zeldovich effect caused by a cluster is taken into account as a possible origin.
+                                                                             We perform a template fitting on a 20◦ radius patch centered at Galactic coordi-
+                                                                             nates (b = −57◦ , l = 209◦ ) and calculate the posterior probability ratios for the void
+                                                                             and Sunyaev-Zeldovich models, comparing the results to those obtained with texture.
+                                                                             Taking realistic priors for the parameters, the texture interpretation is favored, while
+                                                                             the void and Sunyaev-Zeldovich hypotheses are discarded. The temperature decre-
+                                                                             ment produced by voids or clusters is negligible considering realistic values for the
+                                                                             parameters.
+                                                                             Key words: methods: data analysis - cosmic microwave background
+
+
+
+                                          1   INTRODUCTION                                                   Hat Wavelet (SMHW) was used to detect this structure.
+                                                                                                             This spherical wavelet is an optimal tool to enhance non-
+                                          The study of the temperature anisotropies in the Cosmic
+                                                                                                             Gaussian features on the sphere. The first SMHW analysis
+                                          Microwave Background (CMB) can provide crucial informa-
+                                                                                                             (Vielva et al. 2004) was performed on 15 different wavelet
+                                          tion on the origin of the Universe and help us to discriminate
+                                                                                                             scales and two estimators, skewness and kurtosis, were used.
+                                          between different cosmological models. Recent observations
+                                                                                                             The kurtosis deviated significantly from the range of val-
+                                          in many cosmological fields tend to support the standard
+                                                                                                             ues expected from Gaussian simulations at scales around
+                                          inflationary model, which predicts the anisotropies to rep-
+                                                                                                             5◦ . The spot was found to be the main cause of the devia-
+                                          resent an isotropic Gaussian random field. The Wilkinson
+                                                                                                             tion from Gaussianity, using the area estimator (Cruz et al.
+                                          Microwave Anisotropy Probe (WMAP) 1-year data (Ben-
+                                                                                                             2005). Cruz et al. (2006) showed the incompatibility of the
+                                          nett et al. 2003), measured the CMB fluctuations with high
+                                                                                                             frequency independent signal of the CS with Galactic fore-
+                                          accuracy. In a first approach (Komatsu et al. 2003), these
+                                                                                                             grounds, and Cayón, Jin & Treaster (2005) introduced two
+                                          were found to be consistent with the Gaussian predictions.
+                                                                                                             new estimators, namely M ax and Higher Criticism, rede-
+                                          Further analyses revealed asymmetries or non-Gaussian fea-
+                                                                                                             tecting the CS. Cruz et al. (2007a) confirmed the detection
+                                          tures which have been confirmed in the 3-year WMAP data
+                                                                                                             in the 3-year WMAP data, using all the mentioned estima-
+                                          (Hinshaw et al. 2007). Some of these anomalies are: low mul-
+                                                                                                             tors. In the latter paper, the probability of finding an at
+                                          tipole alignments (de Oliveira-Costa et al. 2006, Copi et al.
+                                                                                                             least as high deviation in Gaussian simulations was calcu-
+                                          2007, Land & Magueijo 2007, Chiang et al. 2007), north-
+                                                                                                             lated without any a posteriori assumption. A conservative
+                                          south asymmetries (Eriksen et al. 2007), structure alignment
+                                                                                                             estimate of this probability was 1.85%, and hence this spot
+                                          (Vielva et al. 2007), non-Gaussian features found with steer-
+                                                                                                             is a very special feature whose origin deserves further in-
+                                          able (Wiaux et al. 2008) and directional wavelets (McEwen
+                                                                                                             vestigation. Räth et al.(2007) detect the CS in the 3-year
+                                          et al. 2006), and a very cold spot in the southern hemi-
+                                                                                                             WMAP data using scalar indices instead of wavelets.
+                                          sphere (Cruz et al. 2007a). This cold spot (CS) is found
+                                          at Galactic coordinates (b = −57◦ , l = 209◦ ), and has an              Several models were proposed in order to explain this
+                                          angular radius in the sky of ≈ 5◦ . The Spherical Mexican          anomaly: voids (Inoue & Silk 2006, 2007, Rudnick, Brown &
+                                                                                                             Williams 2007), second order gravitational effects (Tomita
+                                                                                                             2005, Tomita & Inoue 2007), anisotropic Bianchi VIIh model
+                                          ⋆ e-mail: cruz@ifca.unican.es                                      (Jaffe et al. 2005), finite cosmology model, (Adler, Bjorken &
+
+                                          c 0000 RAS
+2     M. Cruz et al.
+Overduin 2006), asymptotically flat Lemaitre-Tolman-Bondi         SMHW convolves all the pixels in this region and they con-
+model (Garcia-Bellido & Haugbolle 2008) and brane-world           tribute in an important way to the detected structure.
+model (Cembranos et al. 2008) are some of them. Also a                 In our template fitting we apply Bayesian statistics to
+large-scale, non-Gaussian angular modulation (Naselsky et         the data, D, in order to find the best Hypothesis, H, de-
+al. 2007) has been suggested although this hypothesis is not      scribing the data through a set of parameters, Θ.
+based on any physical model. The Bianchi VIIh model was                Bayes’ theorem states:
+proven by Jaffe et al. (2006) to be ruled out at high sig-
+                                                                                    P (D|Θ, H)P (Θ|H)
+nificance, whereas there is still no further evidence for the     P (Θ|D, H) =                        ,                    (1)
+                                                                                         P (D|H)
+validity of the other explanations. A full Bayesian evidence
+analysis of that Bianchi model can be found in Bridges et al.     where P (Θ|D, H) is the posterior distribution, P (D|Θ, H)
+(2007a). Bridges et al. (2007b) show that the cold spot was       the likelihood, P (Θ|H) the prior and P (D|H) the Bayesian
+likely to be driving any Bianchi VIIh template detection.         evidence.
+     Recently, Cruz et al. (2007b) showed that the CS could            The null hypothesis, H0 , describes the data as an
+be caused by a cosmic texture. The amplitude and scale            isotropic Gaussian random field (CMB) plus the noise of
+of the spot were consistent with that interpretation and the      the WMAP data. The alternative hypothesis, H1 describes
+kurtosis of the data was compatible with the Gaussian CMB         the data as CMB plus noise and an additional template, T ,
+plus texture model at all scales. The predicted number of         given by a physical model as for instance a texture spot, the
+spots at a scale of 5◦ or larger, is ≈ 1 which is consistent      SZ effect produced by a cluster or the Rees-Sciama effect
+with the observed spot.                                           generated by a local void. Hi (with i = 0, 1) depends on the
+     In this paper we study two other possibilities, namely       parameter set Θi .
+the Rees-Sciama (Rees & Sciama 1968) effect caused by                  For Hi , the probability density associated with the ob-
+voids as proposed by Inoue & Silk (2006, 2007), Rudnick,          served data is
+Brown & Williams (2007) and the Sunyaev-Zeldovich effect                        Z
+produced by clusters (hereafter SZ effect, Sunyaev & Zel-         P (D|Hi ) =       P (D|Θi , Hi )P (Θi |Hi )dΘi .         (2)
+dovich 1970) already considered in Cruz et al. (2005). Both
+of them could in principle produce temperature decrements         The evidence is hence the average of the likelihood with re-
+as the CS. In addition a dip (Rudnick, Brown & Williams           spect to the prior and has been extensively used for model
+2007) in the NRAO VLA Sky Survey data (NVSS, Condon               selection in cosmology (e.g. Jaffe 1996, Hobson, Bridle & La-
+et al. 1998) and the Eridanus group of galaxies (Brough et al.    hav 2002, Hobson & McLachlan 2003, Mukherjee, Parkin-
+2006) match approximately the size and position in the sky        son & Liddle 2005, Parkinson, Mukherjee & Liddle 2006).
+of the CS. However, the values required by the parameters         A model having a large evidence shows a high likelihood for
+of either model are not very realistic. A Bayesian framework      its allowed parameter space given the data.
+is very convenient to decide which model best describes the            We redefine our notation, with the likelihood L, and the
+data. The prior theoretical and observational knowledge on        prior Π so the previous integral for the evidence, E, reads:
+the parameters is included in the Bayesian analysis and can              Z
+be decisive in some cases. Our analysis is performed on the       Ei =       L(Θi |Hi )Π(Θi )dΘi .                         (3)
+recently released 5-year WMAP data (Hinshaw et al. 2008).                                                            
+The large-scale structure of the CMB anisotropies remains              The likelihood function is L ∝ exp −χ2 /2 , where χ2
+almost unchanged respect to the 3-year release (Komatsu et        is defined as:
+al. 2008).
+     We will first review the data and the template fitting       χ2 = (D − T )T N −1 (D − T ),                            (4)
+method in section 2, then we recall in section 3 the results      and N is the generalised noise matrix including CMB and
+obtained for the texture model in order to compare with the       noise. The template T depends on the parameter set Θ. The
+SZ effect in section 4 and the void model in section 5. Finally   calculation of the noise contribution to N is straightforward
+we present our conclusions in section 6.                          since the noise in the WCM is uncorrelated and well known.
+                                                                  In order to obtain the CMB part, we calculate the corre-
+                                                                  lation function for the WCM taking into account the pixel
+                                                                  and beam effects. Comparing the resulting evidence ratios
+2   BAYESIAN TEMPLATE FIT                                         obtained from the analytical expression for the WCM cor-
+                                                                  relation function with those obtained using simulations, the
+We use the combined, foreground-cleaned Q-V-W map                 errors are negligible.
+(hereafter WCM) of the 5-year WMAP data release (Hin-                  The posterior probability ratio:
+shaw et al. 2008). The WCM is in the HEALPix pixelization
+                                                                       Pr(H1 |D)   E1 Pr(H1 )
+scheme (Gorski et al. 2005) with resolution parameter Nside       ρ≡             =            ,                            (5)
+                                                                       Pr(H0 |D)   E0 Pr(H0 )
+= 64. Since the scale of the spot is around 5◦ this resolution
+is sufficient and reduces the number of pixels used in the        can be used to decide beween both hypotheses. The alter-
+template fitting.                                                 native hypothesis is the more probable one when ρ > 1. If
+     The template fitting is performed in a circular area of      ρ < 1 the null hypothesis is the preferred one to describe
+20◦ radius centered at Galactic coordinates (b = −57◦ , l =       the data. The a priori probability ratio for the two mod-
+209◦ ). Although the angular radius of the CS is about 5◦         els, Pr(H1 )/ Pr(H0 ) is set to the fraction of the sky, fS ,
+we have to consider at least a 20◦ radius patch to take into      covered by either texture, clusters or voids. In this man-
+account the whole neighborhood of the spot for the fit. The       ner we compensate the a posteriori selection of the pixel
+
+                                                                                               c 0000 RAS, MNRAS 000, 000–000
+                                                                   The CMB cold spot: texture, cluster or void?                    3
+where the template is centred, namely the center of the CS,               The presence of texture would explain the excess of kur-
+(b = −57◦ , l = 209◦ ).                                              tosis observed at scales around 5◦ . The 1◦ − 2◦ texture pre-
+                                                                     dicted by the model would be confused with Gaussian CMB
+                                                                     spots since the latter have their maximum power at these
+                                                                     scales.
+3   TEXTURE                                                               A number of follow-up tests can be performed to check
+Unified theories of high energy physics predict the produc-          the texture hypothesis. For instance an all-sky template fit-
+tion of topological defects (Kibble 1976, Vilenkin & Shellard        ting looking for several texture can confirm or refute the
+2000) during a symmetry-breaking phase transition in the             alternative hypothesis. Also a polarization analysis can help
+early universe. Depending on the order of the broken sym-            to decide, since Gaussian CMB spots have a correlated po-
+metry, different types of defects arise, such as domain walls,       larization pattern, whereas late texture do not show asso-
+strings, monopoles or texture. Each of these extremely ener-         ciated polarization. In addition the B-mode texture power
+getic events leave a characteristic pattern in the CMB. For          spectrum is expected to be larger than the typical inflation-
+instance cosmic texture (Turok 1989) produce hot and cold            ary one, having also a different shape (Urrestilla et al. 2007).
+spots in the CMB sky.
+      Cruz et al. (2007b) showed recently that the CS could
+be due to a collapsing texture. A Bayesian template fit was
+                                                                     4   CLUSTERS
+performed on the 3-year WMAP data, using an approxi-
+mated temperature profile based on the analytic result given         The hot gas trapped in clusters modifies the CMB spectrum
+in Turok & Spergel (1990). The a priori probability ratio for        through the Sunyaev-Zeldovich effect. The high-energetic
+the two models, Pr(H1 )/ Pr(H0 ), was estimated in this case         electrons present in the gas collide with the CMB photons,
+by the fraction of sky covered by texture, fS = 0.017. The           changing their original frequency. Two different components
+evidence ratio was E1 /E0 ≈ 150, hence the resulting poste-          can be identified. The former is produced by random ther-
+rior probability ratio was ρ = 2.5 favoring the texture hy-          mal motion of the electrons (thermal effect), and the second
+pothesis versus the null hypothesis. The scale and amplitude         one, by the peculiar motion of the cluster with respect to
+of the spot (5.1◦ and dT /T = 7.7 × 10−5 ) were consistent           the CMB (kinetic effect). The thermal SZ effect is typically
+with having being caused by a texture at redshift z ∼ 6 and          one order of magnitude higher than the kinetic one, and
+energy scale φ0 ≈ 8.7 × 1015 GeV . The number of texture             therefore we focus on the first one. The effect on the CMB
+spots of scale 5.1◦ or above is around 1.1 consistent with           photons is frequency dependent and at frequencies below
+the single observed spot.                                            217 GHz it produces a temperature decrement. Hence this
+      The amplitude of the texture spot was shown to be over-        effect is a possible candidate to explain an anomalously cold
+estimated by a selection bias. Texture spots with amplitude          spot at the WMAP frequencies which range from 23 GHz to
+4 × 10−5 were simulated and added to CMB Gaussian sim-               94 GHz.
+ulations. Performing a template fit on these single extreme               The temperature decrement is given by:
+events, the inferred amplitude was in average 7.9 × 10−5 , i.e.
+                                                                     ∆T
+almost twice the true amplitude. This means that the am-                = g(x)yc ,                                               (6)
+                                                                     T0
+plitude required by the CS is not in conflict with the upper
+limits on the amplitude calculated from the power spectrum           where x = hν/kB T0 is the frequency in dimensionless units,
+(Urrestilla et al. 2007).                                            with h and kB Planck and Boltzmann constants respectively,
+      Moreover, Bevis et al. (2008) and Urrestilla et al. (2007)     and g(x) = (xcoth(x/2) − 4). The cluster Comptonization
+find a 2σ preference for a cosmological model including tex-         parameter is defined as
+ture or strings, when considering only CMB data. How-                                Z
+                                                                            σ T kB
+ever this preference is reduced when including Hubble Key            yc =                Te ne dl,                               (7)
+                                                                            me c2
+Project (Freedman et al. 2001) and Big Bang nuclesosynthe-
+sis (Kirkman et al. 2003) constraints in the Bayesian power          where ne and Te are the intracluster electron density and
+spectrum anlysis.                                                    temperature, σT is the Thomson cross section, and me is
+      In order to estimate the significance of the ρ = 2.5 re-       the electron mass. The integral is performed along the line
+sult, the same fitting procedure was performed on 10,000             of sight through the cluster. In hot clusters (Te > 5 keV),
+Gaussian CMB simulations. The most prominent spot was                the relativistic electrons lead to a slightly modified spectral
+selected for each simulation and a texture profile was fitted        behaviour of the thermal SZ effect, but this is negligible in
+to it. Around 5.8% of the simulations showed ρ > 2.5 and             our analysis. Also neglected is the kinetic SZ effect of the
+the typical values where ρ ≈ 0.14. This result was found to          cluster.
+be almost independent on the priors or the exact shape of                 Cruz et al. (2006) showed that the flat frequency de-
+the approximated temperature profile.                                pendence of the CS is incompatible with being caused by
+      Using the 5-year data release we obtain E1 /E0 ≈ 160           a SZ signal alone. However a combination of CMB plus SZ
+and ρ = 2.7. The lower noise level allows a slightly better          effect may explain the spot and could have a sufficiently flat
+detection of the texture template in the new data release.           frequency spectrum.
+We have not repeated the frequentist estimation of the sig-               Cruz et al. (2005) already reported that a group of lo-
+nificance because the result was very similar to the 3-year          cal galaxies were present in the direction of the CS. They
+one. The probability of having an at least as extreme value          argued that the amount of gas needed to explain the whole
+(i.e. p-value) of ρ assuming that the null hypothesis is true,       signal was too large for a small group of galaxies. However
+should be again around 5%.                                           the group of galaxies in the direction of the spot has been
+
+c 0000 RAS, MNRAS 000, 000–000
+4     M. Cruz et al.
+                                                                   3/2) for the gas-density profile (see e.g. Atrio-Barandela &
+                                                                   Mücket, 1999):
+                                                                   ne (r) = nc (1 + (r/rc )2 )−3β/2 ,                                (8)
+                                                                   where nc is the central electron density and rc is the core
+                                                                   radius of the cluster. Expressing the virial radius of the clus-
+                                                                   ter rv in terms of the core radius as rv = prc , Eq. [7] can be
+                                                                   rewritten as:
+                                                                   yc = yo φ(θ),                                                     (9)
+                                                                                             2
+                                                                   where yo = [kB σT /me c ]rc T nc , and
+                                                                                                      r                
+                                                                                     2           −1        p2 − (θ/θc )2
+                                                                   φ(θ) = p             tan                              .          (10)
+                                                                           1 + (θ/θc )2                    1 + (θ/θc )2
+
+                                                                   The parameter θc is the angle subtended by the core radius
+                                                                   of the cluster, whereas p is not a parameter but a function
+                                                                   of mass M and redshift z. Typical values for clusters yield
+                                                                   p = 10 − 15.
+                                                                        Summarising, our temperature profile with parameters
+                                                                   θc and yo reads:
+                                                                                                             r               
+                                                                   ∆T                2                            p2 − (θ/θc )2
+                                                                      = g(x)yo p              tan−1                             .   (11)
+                                                                   T             1 + (θ/θc )2                     1 + (θ/θc )2
+
+                                                                   Eq. [11] gives the effect produced by a single cluster through
+                                                                   a particular line of sight. As the WCM is a combination
+                                                                   of maps at different frequencies, we choose the central fre-
+                                                                   quency, ν = 61 GHz.
+                                                                        We consider two alternative hypotheses in this context.
+                                                                   In the first one the spot would be caused by a rich cluster
+                                                                   and in the second one by a nearby group of the Nearby
+                                                                   Galaxies Catalog.
+                                                                        We simulate the entire population of clusters with flux
+                                                                   above 10 mJy (at 353 GHz), using a Monte Carlo algo-
+                                                                   rithm where masses and redshifts were assigned to each
+                                                                   cluster according to the Press-Schechter prescription (Press
+                                                                   & Schechter 1974). We assume Ωm = 0.3, ΩΛ = 0.7 and
+                                                                   σ8 = 0.8 (where Ωm and ΩΛ are the matter and vacuum
+                                                                   energy density parameters, and σ8 the dispersion of the den-
+Figure 1. Azimuthal projection of an ≈ 18◦ × 18◦ patch of the      sity field at scales of 8 Mpc). The cut in flux removes nearby
+WMAP combined map (WCM, top) and the Nearby Galaxies               small groups of galaxies and distant small clusters. The red-
+Catalog (bottom), centered at (b = −57◦ , l = 209◦ ) and con-      shifts of the simulated clusters range from 0.005 to 3.4. For
+volved with the SMHW at scale 5◦ . The units are wavelet coeffi-   each cluster with known mass and redshift the core radius
+cients of temperature in mK and number of counts for the WCM       is determined from the scaling relation:
+and Nearby Galaxies Catalog respectively.                                      1/3
+                                                                   rc = 150M15 (1 + z)−1 h−1 kpc                                    (12)
+                                                                   where M15 is the mass of the cluster in 1015 h−1 M⊙ . It is
+shown recently to be larger than previously thought. Brough        important to note that the cut in flux does not have any neg-
+et al. (2006), define it as the Eridanus supergroup with mass      ative effect in the results of this paper since the fluxes we are
+M ≈ 1014 M⊙ . The angular size and position in the sky of          trying to explain are much larger than 10 mJy. Since the red-
+Eridanus are similar to those of the CS, as can be seen in         shift and core radius are known for each cluster, we calculate
+Figure (1). The top panel shows the WCM data and the bot-          the angle subtended by the core, θc . We find the maximum
+tom one, the Nearby Galaxies Catalog (Tully, 1987). Both           angle of the 300,000 clusters to be θc ≈ 0.2◦ . Therefore the
+are ≈ 18◦ × 18◦ patches centered at (b = −57◦ , l = 209◦ )         cluster hypothesis has to be discarded for generating a 5◦
+and were convolved with the SMHW at scale 5◦ . However             spot.
+there are other, more prominent nearby groups which do not              Returning to the particular case of the Eridanus super-
+have an associated CMB spot, hence this could be a statis-         group found in the Nearby Galaxies Catalog, we can consider
+tical coincidence, but it is worth testing through a template      larger values of θc , due to its proximity and lower values of
+fit whether there is a hidden SZ-like template in the WCM          yo since it is not a cluster but a big group or an ensemble
+data.                                                              of groups. In addition we assume lower values of p because
+     The temperature profile as a function of the angle in         the gas could be rather dispersed since the gravitational at-
+the sky, θ, can be calculated assuming a β-model (with β =         traction is lower than in big clusters. Now the alternative
+
+                                                                                                 c 0000 RAS, MNRAS 000, 000–000
+                                                                  The CMB cold spot: texture, cluster or void?                     5
+hypothesis is that a big group from the Nearby Galaxies
+Catalog is causing the CS.
+      Although the center of Eridanus does not match ex-
+actly the center of the spot, we still center the template at
+(b = −57◦ , l = 209◦ ), since the gas does not need to fit ex-
+actly the positions of the galaxies. This assumption is the
+most favorable for the alternative hypothesis. If the CS was
+due to the SZ effect we would expect high X-ray emission in
+the considered region. We can use the ROSAT all-sky sur-
+vey (Snowden et al. 1997) to estimate the prior on yo . The
+ROSAT survey excludes some small regions of the sky, and
+one of them crosses the considered patch. However the es-
+timated average counts in the ROSAT R6 band are around
+80 cts s−1 arcmin−2 . The β-models which are compatible
+with this background and at the same time show an ex-
+tended SZ signal of several degrees, range between models
+with a core radius of 0.05 Mpc and bolometric luminosities
+of 1042 erg/s and models with 0.15 Mpc and bolometric lu-
+minosities of 7 × 1042 erg/s. These models would predict at
+most yo = 10−7 . The nearest groups in the Nearby Galaxies
+Catalog are at 5 Mpc distance and as we have shown, the
+upper limit for the core radius is 0.15 Mpc. In this case we        Figure 2. Azimuthal projection of an ≈ 18◦ × 18◦ patch of the
+get θc = 0.03 rad, which we set as the upper limit for θc .         WCM (left column) and the NVSS (right column), centered at
+We set the lower limit on θc to 1◦ , since the spot has 5◦          (b = −57◦ , l = 209◦ ) and convolved with the SMHW at scale
+radius and the pixel size is around 1◦ for the chosen res-          1.7◦ (top row) and scale 5◦ (bottom row). The units are wavelet
+olution. Hence we consider flat priors for parameter yo in          coefficients of temperature in mK and radio source number counts
+                                                                    for the WCM and NVSS respectively.
+the interval [0, 10−7 ] and for θc in [0.0175, 0.0300] radians.
+Setting p = 5 we obtain a relative evidence of E1 /E0 ≈ 1.
+The fraction of the sky covered by nearby galaxies in the
+catalog, is fS ≈ 0.05 therefore ρ ≈ 0.05 < 1 and the SZ             incidence is unclear. As the fraction of the Universe filled by
+hypothesis is discarded again. The best fit parameters are          voids is around 30% in volume at redshift z ≈ 1 (Colberg et
+the upper limits of the priors, yo ≈ 10−7 and θc = 0.03             al. 2005), the fraction of the sky covered in projection, fS , is
+rad. The amplitude of the temperature decrement does not            close to one and hence such coincidences are not rare. The
+exceed 1µK and is hence negligible compared to the deep             dip and the CS appear at different scales as can be seen in
+decrement. Therefore the E1 /E0 ≈ 1 result is not suggesting        Figure 2 where we present a ≈ 18◦ ×18◦ patch of the WMAP
+that the SZ hypothesis is viable for explaining the spot. As        and NVSS data convolved with the SMHW at scales 5◦ and
+the template has a negligible effect on the data, T ≈ 0, the        1.7◦ . At scale 5◦ the CS reaches its maximum power in the
+likelihood is almost constant in the whole parameter range          WCM, whereas there is no significant dip visible in the NVSS
+and as the priors integrate to unity we have E1 /E0 ≈ 1.            data. At scale 1.7◦ where the CS is not an outstanding fea-
+This is a well-known feature of Bayesian model selection.           ture, a dip becomes visible but there are other similar dips
+In any problem, if H1 has additional parameters compared            with no associated CMB spots, therefore the association be-
+to H0 , and the likelihood is insensitive to these parameters,      tween dip and spot is unclear and could be a coincidence.
+then E1 = E0 . The results do not significantly depend on           Moreover, there are several other dips with similar depth
+the value of p, the chosen priors or the resolution.                outside the selected region hence the dip does not seem to
+      The gravitational effect due to a supercluster cannot         be an outstanding feature of the NVSS data. McEwen et
+strongly affect large angular fluctuations because these mas-       al. (2007) found several regions where both data sets were
+sive structures are very concentrated in a particular region.       highly correlated and one of them was located close to the
+On the contrary, voids are better candidates to generate            CS. This could be due to the very cold temperature of the CS
+large angular spots.                                                which gives a high correlation with any underdense region in
+                                                                    the NVSS data at scale 5◦ and not to the relation between
+                                                                    dip and spot since they have different scales (see Figure 2).
+                                                                    Rudnick, Brown & Williams (2007) also performed an order
+5   VOIDS
+                                                                    of magnitude calculation to estimate the radius of the void,
+The gravitational effect produced by cosmic voids can pro-          rv , needed to generate such a CMB spot through the Rees-
+duce temperature decrements in the CMB and has been pro-            Sciama effect obtaining rv ≈ 200h−1 Mpc in concordance
+posed as a possible source of the CS (Inoue & Silk 2006,            with previous calculations (Inoue & Silk 2007). The prob-
+2007). In analogy to the cluster case with the Eridanus su-         ability of observing such a void in standard theory is very
+pergroup, there is a dip in the NVSS radio source catalogue         small. For instance, a void with rv = 140h−1 Mpc will occur
+that approximately matches the position of the spot. Rud-           with a probability of 5 × 10−10 in an optimistic case (Rud-
+nick, Brown & Williams (2007), claim that the dip could be          nick, Brown & Williams 2007). Typical observed values are
+associated with a void at redshift z < 1 which could be the         rv ∼ 10h−1 Mpc for a matter density contrast of δm ≈ −0.8
+origin of the CS, but affirm that the significance of this co-      (Hoyle & Vogeley 2004, Patiri et al. 2006). Similar results
+
+c 0000 RAS, MNRAS 000, 000–000
+6       M. Cruz et al.
+are found in N-body simulations (Colberg et al. 2005). How-                                              Prior on rv
+                                                                         0.18
+ever it is worth performing a Bayesian template fit for the
+void hypothesis.
+                                                                         0.16
+     Martı́nez–González et al. (1990) and Martı́nez–
+González & Sanz (1990), performed a calculation of the tem-             0.14
+perature anisotropy generated by a compensated void in an
+Einstein-de Sitter Universe,                                             0.12
+                                    r
+             rv3
+                                                  2
+∆T   16                                      d
+                                         
+                                                                          0.1
+   =                                1−                 sin2 α ×
+ T   3 (1 − d cos α)3                        rv
+                                                                       0.08
+                                                   2
+                                9             d
+                                          
+                        ×         γ−4+                  sin2 α    (13)
+                                2             rv                         0.06
+
+
+where α is the angle formed between the direction of obser-              0.04
+vation and the direction defined by the centre of the struc-
+ture, and d is the distance to the centre of the structure.              0.02
+
+They adopt the thin shell approximation, where the void is
+an empty spherical region surrounded by a thin shell con-                  0
+                                                                                0   10   20   30    40       50        60   70   80   90   100
+                                                                                                                       −1
+taining the matter which would have been inside the void.                                     Radius of the void h , Mpc
+Outside the void the Universe is represented by an Einstein-
+de Sitter model and the shell propagates approximately as                Figure 3. Prior on the radius of the void parameter (red line).
+rv ∝ tγ and γ ≈ 0.8. The units are 8πG = c = dh ≡ 1,                     The underlying histogram is taken from the distribution found
+                                                                         in the Two-Degree Field Galaxy Redshift Survey data (Fig. 3 in
+where dh is the horizon distance. Eq. [13] applies to photons
+                                                                         Hoyle & Vogeley 2004).
+crossing the void. The photons that do not cross the void
+are unaffected since there is no net mass excess.
+     It is straightforward to show that Eq. [13] is still valid in
+a flat, Λ - Cold Dark Matter (Λ-CDM) Universe, assuming                  to the evidence integral is negligible and the results remain
+that rv ∝ tγ , and considering that                                      unchanged varying the upper limit of parameter rv for val-
+             Z z
+                     dz                                                  ues above 30h−1 Mpc.
+    d    =                  ,                                     (14)        The big voids (rv > 100h−1 Mpc and z ≤ 1) described
+                   H0 F (z)
+             p0                                                          in Rudnick, Brown & Williams (2007) which do produce an
+F (z)    =     ΩΛ + (1 + z)3 Ωm + (1 + z)4 Ωr ,                   (15)   important temperature decrement are strongly penalized by
+                   −4
+where Ωr = 10 is the radiation density parameter. If we                  the prior, despite showing higher likelihood values. We re-
+further assume that rv remains constant in comoving coor-                define H1 in order to test the big void hypotesis. Now only
+dinates we have:                                                         voids with rv > 100h−1 Mpc and z ≤ 1.0 are considered.
+                            Z ∞                                          We renormalise the priors in the new parameter ranges and
+     d(log a)                            dz̄
+γ=            = F (z)                                             (16)   recalculate the prior probability ratio since the big voids
+     d(log t)                       (1 + z̄) F (z̄)
+                                z                                        (in case they exist) are expected to cover only a small
+with scale factor a.                                                     part of the sky. As shown above a void with rv = 140h−1
+     Introducing the above expressions for d and γ in Eq. [13]           Mpc is expected to occur with a probability of 5 × 10−10
+we have our temperature template with parameters z, rv in                (Rudnick, Brown & Williams 2007). Hence as a valid up-
+a flat Λ-CDM Universe.                                                   per limit we can assume that there is at most one big void
+     We choose the prior on rv in concordance with the void              with rv = 140h−1 Mpc and z = 1. The fraction of the sky
+radius distribution found in the Two-Degree Field Galaxy                 covered by this void is fS ≈ 0.008. Therefore we assume
+Redshift Survey data (Fig. 3 in Hoyle & Vogeley 2004). We                Pr(H1 )/ Pr(H0 ) = 0.008. Recalculating the evidence for the
+extrapolate these values for large rv through an exponential             new parameter range, we obtain E1 /E0 ≈ 2 which yields
+decay as shown in Figure (3). This extrapolation is gener-               ρ ≈ 0.016. This result discards the possibility of explaining
+ous with big voids since the derived decay is faster than the            the CS through such a void. Hence the void hypothesis has
+exponential used. For the redshift, we choose a flat prior               to be rejected.
+between 0 and 1. This assumption is again rather generous                     Inoue & Silk (2006, 2007) proposed slightly different
+with large radii, since according to N-body simulations (Col-            voids with very high values for the radius of the void, rv ∼
+berg et al. 2005) the void sizes should be smaller at high,              300h−1 Mpc and quasi linear density contrast values δm ≈
+unobserved redshifts. We set the a priori probability ratio              −0.3, while Rudnick, Brown & Williams (2007) used δm ≈
+for the two models to unity since voids cover almost all the             −1. Inoue & Silk (2007) recognize that the required values
+sky. The obtained evidence ratio is E1 /E0 ≈ 1 and therefore             for rv are inconsistent with observations at low z and N-
+the posterior probability ratio is ρ ≈ 1. This result is not             body simulations. Such a void is a 13σ result in the standard
+suggesting that the void model is viable as the best fit tem-            theory with σ8 = 0.74. They consider that a percolation
+plate corresponds to rv = 27h−1 Mpc and z = 0.03 which                   process of the typically observed small voids could form the
+produces a temperature anisotropy of 0.2µK. As in the clus-              large quasi linear voids. However these voids have not been
+ter case the template is completely negligible, the likelihood           observed yet and as already mentioned, according to N-body
+almost constant, and the priors integrate to unity, therefore            simulations (Colberg et al. 2005) the void sizes should be
+E1 /E0 ≈ 1. The contribution of voids with rv > 30h−1 Mpc                smaller at high, unobserved redshifts.
+
+                                                                                                         c 0000 RAS, MNRAS 000, 000–000
+                                                                  The CMB cold spot: texture, cluster or void?                     7
+6   CONCLUSIONS                                                     would be consistent with current cosmological observations.
+                                                                    They are even compatible with inflation. The only constraint
+In this paper we consider different possibilities to explain a      is that they should make a subdominant contribution to
+non-Gaussian cold spot found in the WMAP data. This spot            structure formation (see for instance Urrestilla et al. 2007).
+is located at Galactic coordinates (b = −57◦ , l = 209◦ ), cov-          The virtue of the texture hypothesis is that it is fully
+ers around 10◦ in the sky, has been shown to be incompatible        testable. A texture would not lead to a correlated polariza-
+with Gaussian simulations and is unlikely to be produced by         tion pattern around the cold spot, but it would lead to a
+foregrounds (Vielva et al. 2004, Cruz et al. 2005, Cruz et al.      very specific gravitational lensing pattern. In addition there
+2006, Cruz et al. 2007a). We compare three alternative hy-          should be more CMB texture spots at scales around 1 − 2◦ .
+potheses to explain the CS, namely texture, clusters and            Although they are more difficult to detect because the Gaus-
+voids versus the null hypothesis. The latter describes the          sian CMB reaches its maximum power at these scales, we
+data as an isotropic Gaussian random field (CMB) plus the           may be able to detect them through an all-sky Bayesian
+noise of the WMAP data. A Bayesian analysis takes into ac-          analysis, which is already in progress.
+count the prior observational and theoretical knowledge on
+the parameters and can be used to find the hypothesis best
+describing the data. The posterior probability ratio, ρ, is the
+quantity we use to compare the different hypotheses. The            ACKNOWLEDGMENTS
+alternative hypothesis is preferred if ρ > 1 and disfavored         MC, EMG and PV acknowledge financial support from
+otherwise. Cruz et al. (2007b) performed such an analysis for       the Spanish MCYT project AYA2007-68058-C03-02. PV
+the texture model, finding that this model is favored versus        acknowledges financial support from the Ramón y Cajal
+the hypothesis of Gaussian fluctuations with ρ ≈ 2.5. The           project. We acknowledge the use of the Legacy Archive for
+predicted size, amplitude, temperature profile, and number          Microwave Background Data Analysis (LAMBDA). Support
+of spots generated by texture is consistent with the observed       for LAMBDA is provided by the NASA Office of Space Sci-
+spot. Repeating this analysis for the 5-year WMAP data we           ence. This work has used the software package HEALPix
+find ρ ≈ 2.7 due to the lower noise level. The frequentist          (Hierarchical, Equal Area and iso-latitude pixelization of the
+p-value associated to this result is around 5%.                     sphere, http://www.eso.org/science/healpix), developed by
+     The finding of a local supergroup (Brough et al. 2006)         K.M. Górski, E. F. Hivon, B. D. Wandelt, J. Banday, F.
+and a dip in the NVSS survey (Rudnick, Brown & Williams             K. Hansen and M. Barthelmann; the visualisation program
+2007), which match the position of the CS could be a hint           Univiewer, developed by S.M. Mingaliev, M. Ashdown and
+for the cluster or void hypotheses, but our detailed Bayesian       V. Stolyarov; and the CAMB and CMBFAST software, de-
+analysis reveals that these are statistical coincidences. The       veloped by A. Lewis and A. Challinor and by U. Seljak and
+fraction of the sky covered by clusters and voids is included       M. Zaldarriaga respectively.
+in our analysis.
+     The large angular size and temperature decrement of
+the CS are hard to explain with conventional clusters or            REFERENCES
+voids. We would need either a local, rich cluster or a void
+with radius rv ∼ 100−200h−1 Mpc located at redshift z ≤ 1.          Adler R. J., Bjorken J. D., Overduin J. M., 2006, gr-qc/0602102.
+In the cluster case only a local group with Compton pa-             Atrio-Barandela F., Mücket J. P., 1999, ApJ 515, 465.
+                                                                    Garcia-Bellido J., Haugbolle T., 2008, JCAP, 04, 003.
+rameter yo < 10−7 is observed in the required direction.
+                                                                    Bennett C.L., et al., 2003, ApJS, 148, 1.
+The angular scale is marginally consistent with the spot
+                                                                    Bevis N., Hindmarsh M., Kunz M., Urrestilla J., 2008, Phys. Rev.
+but the temperature decrement generated is only a few µK               Lett., 100, 021301.
+and hence cannot account for the CS. Our Bayesian analysis          Bridges M., McEwen J.D., Lasenby A.N., Hobson M.P., 2007,
+gives ρ ≈ 0.05, discarding the cluster hypothesis.                     MNRAS, 377, 1473
+     For conventional voids with rv ∼ 10h−1 Mpc we ob-              Bridges M., McEwen J.D., Cruz M., Hobson M.P., Lasenby A.N.,
+tain ρ ≈ 1 because the likelihood is insensitive to the extra          Vielva P., Martı́nez–González E., 2008, submitted to MNRAS
+parameters. A detailed analysis reveals that these voids pro-          (arXiv:0712.1789).
+duce negligible temperature decrements below 1µK. Renor-            Brough, S., Forbes D. A., Kilborn V. A., Couch W., Colless M.,
+                                                                       2006, MNRAS, 369, 1365.
+malising the priors for voids with radius rv ∼ 100 − 200h−1
+                                                                    Cayón L., Jin L. & Treaster A., 2005, MNRAS, 362, 826.
+Mpc, we obtain a posterior probability ratio of ρ = 0.016.          Cembranos J. A. R., de la Cruz-Dombriz A., Dobado A., Maroto,
+Therefore the void hypothesis is not viable either. Explain-           A. L., 2008, (arXiv:0803.0694)
+ing the cold spot by a void with rv > 100h−1 Mpc, would             Condon J.J., Cotton W.D., Greisen E.W., Yin Q.F., Perley R.A.,
+introduce a 13σ anomaly in the standard model to solve the             Taylor G.B., Broderick J.J., 1998, AJ, 115, 1693.
+≈ 99% anomaly of the spot. The solution would be worse              Chiang L.-Y., Naselsky P. D., Coles P., 2007, ApJ, 664, 8.
+than the problem.                                                   Cruz M., Martı́nez–González E., Vielva P., Cayón L., 2005, MN-
+     Hence we can conclude that the texture hypothesis is              RAS, 356, 29.
+                                                                    Cruz M., Tucci M., Martı́nez–González E., Vielva P., 2006, MN-
+the most plausible explanation for the CS. Many scientists
+                                                                       RAS, 369, 57.
+are uncomfortable with cosmic defects, because these failed
+                                                                    Cruz M., Cayón L., Martı́nez–González E., Vielva P., Jin J.,
+to explain structure formation. However, cosmic defects are            2007a, ApJ, 655, 11.
+a generic consequence of symmetry breaking, which is an             Cruz M., Turok N., Vielva P., Martı́nez–González E., Hobson M.,
+essential ingredient in unified theories of particle physics.          2007b, Science, 318, 1612.
+Hence it is very plausible that they exist. They might be           Colberg J.M., Sheth R.K., Diaferio A., Liang G., Yoshida N., 2005
+formed at any scale below the Grand Unified scale, and                 MNRAS, 360, 216.
+
+c 0000 RAS, MNRAS 000, 000–000
+8     M. Cruz et al.
+Copi C. J., Huterer D., Schwarz D. J., Starkman G. D., 2007,
+    Phys. Rev. D 75, 023507.
+de Oliveira-Costa A., Tegmark M., 2006, Phys. Rev. D 74, 023005.
+Eriksen H. K., Banday A. J., Górski K. M., Hansen F. K., Lilje
+    P. B., 2007, ApJ, 660, 81.
+Freedman et al., 2001,, ApJ, 553, 47.
+Hinshaw et al., 2007, ApJS, 170, 288.
+Hinshaw et al., 2008, submitted to ApJ, (arXiv:0803.0732)
+Hobson M, Bridle S., Lahav O., 2002, 335, 377.
+Hobson M., McLachlan, 2003, MNRAS, 338, 765.
+Hoyle F.,Vogeley M. S., 2004, ApJ, 607,751.
+Inoue K. T., Silk J., 2006, ApJ, 648, 23.
+Inoue K. T., Silk J., 2007, ApJ, 664, 650.
+Jaffe A., 1996, ApJ, 471, 24.
+Jaffe T. R., Banday A. J., Eriksen H. K., Górski K. M., Hansen
+    F. K., 2005, ApJ, 629, 1.
+Jaffe T. R., Hervik S., Banday A. J., Górski K. M., 2006, ApJ
+    644, 701.
+Kibble, J. Phys., 1976, A9, 1387.
+Kirkman D., Tytler D., Suzuki N., O’Meara J.M., Lubin D., 2003,
+    ApJS, 149, 1.
+Komatsu E. et al. , 2003, ApJs, 148, 119.
+Komatsu E. et al. , 2008, submitted to ApJ, (arXiv:0803.0547).
+Land K., Magueijo J., 2007, MNRAS.378, 153.
+Martı́nez–González E. & Sanz J. L., 1990, MNRAS, 247, 473.
+Martı́nez–González E., Sanz J. L. & Silk J., 1990, ApJ, 355, 5.
+McEwen J.D., Hobson M.P., Lasenby A.N., Mortlock D.J., 2006,
+    MNRAS, 371, L50
+McEwen J.D., Vielva P., Hobson M.P., Martı́nez–González E.,
+    Lasenby A.N., 2007, MNRAS, 376, 1211.
+Mukherjee P., Parkinson D., Liddle A., 2005, ApJ, 635, 51.
+Naselsky P. D., Christensen P. R., Coles P., Verkhodanov O.,
+    Novikov D., Kim J., 2007, ApJ submitted, arxiv:0712.1118.
+Parkinson D., Mukherjee P., Liddle A., 2006, Phys Rev. D 73,
+    123523.
+Patiri S.G., Betancort-Rijo J., Prada F., Klypin A., Gottlöber S.
+    2006, MNRAS, 369, 335.
+Press W.H, Schechter P., 1974, ApJ, 187, 425.
+Räth C., Schuecker P., Banday A. J., 2007, MNRAS, 380, 466.
+Rees M.J., Sciama D.W., 1968, Nature, 217, 511.
+Rudnick L., Brown S., Williams L., 2007, ApJ accepted, astro-
+    ph/0704.0908.
+Tomita K., 2005, Phys. Rev. D, 72, 10.
+Tomita K., Inoue K.T., 2007, arXiv:0712.1291.
+Tully R. B., 1988 ,Nearby Galaxies Catalog. Cambridge Univer-
+    sity Press, 1988, 221 p.
+Turok N. & Spergel D. N., 1990, Phys. Rev. Letters, 64, 2736.
+Urrestilla J., Bevis N., Hindmarsh M., Kunz M., Liddle A., 2007,
+    arXiv:0711.1842.
+Vielva P., Martı́nez-González E., Barreiro R. B., Sanz J.L., Cayón
+    L., 2004, ApJ, 609, 22.
+Vielva P., Wiaux Y., Martı́nez-González E., Vandergheynst P.,
+    2007, MNRAS, 381, 932.
+Vilenkin A., Shellard E.P.S., 2000, Cosmic Defects and other
+    Topological defects (Cambridge Univ. Press).
+Wiaux Y., Vielva P., Barreiro R. B., Martı́nez-González E., Van-
+    dergheynst P., 2008, MNRAS, 385, 939.
+
+
+
+
+                                                                       c 0000 RAS, MNRAS 000, 000–000
+

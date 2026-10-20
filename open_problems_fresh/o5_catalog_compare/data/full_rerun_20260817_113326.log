@@ -1,0 +1,185 @@
+==============================================================
+O5 FULL RERUN START: Mon Aug 17 11:33:28 AM HKT 2026
+Cache 狀態: 所有 /tmp/smica2_smooth*.fits 已改名 .prefull
+==============================================================
+
+>>> [02_smica_catalog.py] START: 11:33:28
+==================================================================
+O5 STEP 2c: SMICA CATALOGUE — SPHERICAL FLOOD-FILL
+==================================================================
+Smoothing raw SMICA at 5.0°...
+setting the output map dtype to [dtype('float64')]
+  cached.
+NSIDE=2048, 5.0° smoothed: σ=38.1 μK (|b|≥25.0°), threshold=±76.2 μK (±2.0σ)
+
+[2/4] Flood-fill components at ±76.2 μK...
+  cold: 15 components (area≥2.0°²)
+  cold: 15 after merging within 5.0°
+  hot: 14 components (area≥2.0°²)
+  hot: 14 after merging within 5.0°
+
+[4/4] Cold Spot (209,-57) in catalogue: True
+
+Saved: data/smica_catalog.json
+kind    #    amp μK       l°       b°      RA°     Dec°   area°²
+cold    1    -130.0   156.99   -29.48    45.31   +24.67    121.6 <-- gal plane
+cold    2    -126.6   208.40   -56.33    48.86   -19.91     55.8
+cold    3    -120.3   205.49   -25.01    77.29    -5.07    232.8 <-- gal plane
+cold    4    -113.6   243.83   +41.11   152.53    -2.55     53.9
+cold    5    -113.3    79.15   -32.73   335.34   +17.09     49.4
+cold    6    -104.2   340.07   -41.76   318.39   -56.40     30.9
+cold    7     -94.0   347.61   -25.01   290.24   -50.02     16.6 <-- gal plane
+cold    8     -92.1   141.35   +30.26   118.18   +73.56     20.5
+cold    9     -89.3   293.01   +60.22   187.94    -2.27     47.2
+cold   10     -87.7   288.17   +50.24   183.29   -11.53     10.1
+cold   11     -84.6   201.07   -35.59    66.11    -6.70     11.3
+cold   12     -82.2   239.13   +65.67   170.40   +14.69      8.3
+cold   13     -82.1   213.18   +38.80   138.52   +16.42      5.9
+cold   14     -81.8   134.01   -37.17    22.58   +24.87      7.1
+cold   15     -79.6   223.51   +36.17   139.62    +7.89      3.1
+hot     1    +119.9   171.77   -45.83    44.61    +4.65    136.6
+hot     2    +106.8   320.21   -33.24   309.34   -73.89     32.8
+hot     3    +101.7   155.21   +77.41   184.42   +37.52     52.3
+hot     4     +97.9   155.55   -70.70    23.30   -10.52     28.3
+hot     5     +94.0   232.85   -66.00    39.88   -32.68     19.4
+hot     6     +87.2    46.36   +69.52   216.00   +29.97     13.6
+hot     7     +86.6   219.57   +25.70   128.70    +6.03      8.3 <-- gal plane
+hot     8     +86.2    50.01   +40.55   249.58   +29.67     31.6
+hot     9     +83.3    94.09   -37.80   348.98   +19.66      6.3
+hot    10     +81.2   305.11   -30.41   343.16   -86.20      4.2
+hot    11     +81.2    22.72   +28.61   252.94    +4.58     13.5 <-- gal plane
+hot    12     +80.6    29.42   +26.44   257.62    +8.87      9.2 <-- gal plane
+hot    13     +80.4   110.84   -82.55    11.20   -19.83      5.9
+hot    14     +78.4   269.21   -34.39    80.37   -60.27      2.5
+>>> [02_smica_catalog.py] DONE (exit=0, 240s): 11:37:28
+
+>>> [03_match_nodes.py] START: 11:37:28
+==================================================================
+O5 STEP 3: NODE MATCHING
+==================================================================
+
+Total spots: 35 (6 literature, 15 SMICA cold, 14 SMICA hot)
+
+name                               RA°     Dec° nearest node  hit<5°
+----------------------------------------------------------------------
+LIT: The Cold Spot (Vielva 2004)     48.30   -20.44    0.00   57       ✅
+LIT: Planck gp10 cold spot      289.57    -4.46   10.05   49       —
+LIT: CS sub-spot A (Cruz 2005 T4)     45.84   -23.29    3.65   57       ✅
+LIT: CS sub-spot B (Cruz 2005 T4)     49.50   -20.64    1.14   57       ✅
+LIT: CS sub-spot C (Cruz 2005 T4)     51.72   -20.56    3.21   57       ✅
+LIT: CS sub-spot D (Cruz 2005 T4)     48.03   -16.99    3.46   57       ✅
+SMICA-c1                         45.31   +24.67    8.09   29       —
+SMICA-c2                         48.86   -19.91    0.75   57       ✅
+SMICA-c3                         77.29    -5.07   10.34   54       —
+SMICA-c4                        152.53    -2.55    8.31   48       —
+SMICA-c5                        335.34   +17.09    9.09   59       —
+SMICA-c6                        318.39   -56.40   11.67    4       —
+SMICA-c7                        290.24   -50.02    9.54    6       —
+SMICA-c8                        118.18   +73.56    7.53   53       —
+SMICA-c9                        187.94    -2.27   14.07   15       —
+SMICA-c10                       183.29   -11.53   12.39   15       —
+SMICA-c11                        66.11    -6.70   12.37   54       —
+SMICA-c12                       170.40   +14.69    5.93   25       —
+SMICA-c13                       138.52   +16.42    7.61   22       —
+SMICA-c14                        22.58   +24.87    9.16   39       —
+SMICA-c15                       139.62    +7.89   11.51   48       —
+SMICA-h1                         44.61    +4.65    9.03   35       —
+SMICA-h2                        309.34   -73.89    1.11    4       ✅
+SMICA-h3                        184.42   +37.52   16.61   41       —
+SMICA-h4                         23.30   -10.52    8.28    7       —
+SMICA-h5                         39.88   -32.68   12.33   31       —
+SMICA-h6                        216.00   +29.97    8.43   41       —
+SMICA-h7                        128.70    +6.03   14.70   48       —
+SMICA-h8                        249.58   +29.67   15.61    9       —
+SMICA-h9                        348.98   +19.66    7.06   59       —
+SMICA-h10                       343.16   -86.20   12.69   34       —
+SMICA-h11                       252.94    +4.58    8.18    9       —
+SMICA-h12                       257.62    +8.87    2.03    9       ✅
+SMICA-h13                        11.20   -19.83    7.08    7       —
+SMICA-h14                        80.37   -60.27   17.80   34       —
+
+==================================================================
+HIT RATE SUMMARY (hit = nearest node < 5°)
+==================================================================
+  Literature confirmed spots: 1/2 hit
+  Literature all (incl sub-spots): 5/6 hit
+  SMICA cold spots: 1/15 hit
+  SMICA hot spots:  2/14 hit
+
+  Random expectation: 11.4% of sky within 5.0° of a node
+  → random catalogue of M spots: expect 0.3 hits per 3 spots
+
+Saved: data/match_results.json
+
+Nearest-node distance: mean=8.60°, median=8.43°, min=0.00°, max=17.80°
+>>> [03_match_nodes.py] DONE (exit=0, 1s): 11:37:29
+
+>>> [04_significance.py] START: 11:37:29
+==================================================================
+O5 STEP 4: SIGNIFICANCE — 1000 RANDOM ROTATIONS
+==================================================================
+
+  all (35):
+    observed hits: 8 | rotation mean 4.0 ± 2.5 | p(hits≥obs) = 0.1130
+    observed mean-nearest: 8.60° | rotation 10.13° ± 0.87° | z = -1.77σ | p = 0.0420
+
+  lit-confirmed (2):
+    observed hits: 1 | rotation mean 0.2 ± 0.4 | p(hits≥obs) = 0.1970
+    observed mean-nearest: 5.03° | rotation 10.11° ± 2.91° | z = -1.75σ | p = 0.0460
+
+  smica-cold (15):
+    observed hits: 1 | rotation mean 1.7 ± 1.2 | p(hits≥obs) = 0.8310
+    observed mean-nearest: 9.23° | rotation 10.13° ± 0.96° | z = -0.94σ | p = 0.1730
+
+  smica-hot (14):
+    observed hits: 2 | rotation mean 1.6 ± 1.2 | p(hits≥obs) = 0.4880
+    observed mean-nearest: 10.07° | rotation 10.19° ± 1.14° | z = -0.11σ | p = 0.4240
+
+  all-minus-coldspot (34):
+    observed hits: 7 | rotation mean 4.0 ± 2.3 | p(hits≥obs) = 0.1340
+    observed mean-nearest: 8.85° | rotation 10.12° ± 0.80° | z = -1.58σ | p = 0.0720
+
+  N_ROT = 1000, hit radius = 5.0°
+  Interpretation:
+    p < 0.05 → 🟢 alignment significant (nodes ARE the structure)
+    0.05 ≤ p < 0.2 → 🟡 weak/marginal
+    p ≥ 0.2 → 🔴 no evidence (null not rejected)
+>>> [04_significance.py] DONE (exit=0, 2s): 11:37:32
+
+>>> [05_scale_check.py] START: 11:37:32
+==================================================================
+O5 STEP 5: SCALE MATCHING + SPECIAL POSITIONS
+==================================================================
+
+[1/3] SMICA 5.0° component areas vs node cell size
+  Node spacing = 26.09°, Voronoi cell radius ≈ 13.05°
+  Cold Spot FWHM (R8) = 4.17° → fits inside one cell ✅
+  cold: 15 spots, area range 3.1-232.8°², 2 large (>100°² = multi-cell)
+  hot: 14 spots, area range 2.5-136.6°², 1 large (>100°² = multi-cell)
+
+[2/3] O2 Fibonacci hot spots vs A₅ nodes
+  F₆ hot (157.8,-70.3) @1.0°: +277.6 μK (confirmed) → nearest node 55 at 9.03° —
+  F₇ hot (0.2,-37.9) @0.5°: +353.4 μK (candidate) → nearest node 51 at 8.25° —
+
+[3/3] Cross-scale catalogue (1.0° & 3.0° — F₆/F₅ scales)
+setting the output map dtype to [dtype('float64')]
+  1.0° cold top10 peaks: 0/10 within 5° of a node (random expect ~1.1) 🔴
+  1.0° hot top10 peaks: 0/10 within 5° of a node (random expect ~1.1) 🔴
+setting the output map dtype to [dtype('float64')]
+  3.0° cold top10 peaks: 10/10 within 5° of a node (random expect ~1.1) 🟢
+  3.0° hot top10 peaks: 0/10 within 5° of a node (random expect ~1.1) 🔴
+
+  Random expectation: 10 peaks × 11.4% coverage ≈ 1.1 hits
+>>> [05_scale_check.py] DONE (exit=0, 287s): 11:42:19
+
+>>> [06_cross_scale_match.py] START: 11:42:19
+==================================================================
+O5 STEP 6: CROSS-SCALE CATALOGUE MATCHING (COMPONENTS)
+==================================================================
+
+--- 1.0° smoothing (σ=64.9 μK, ±2.5σ) ---
+  cold: 46 comps, top12 → 2/12 hit (random ≈ 1.4) nodes=[0, 9]
+  hot: 39 comps, top12 → 1/12 hit (random ≈ 1.4) nodes=[42]
+
+--- 3.0° smoothing (σ=44.6 μK, ±2.0σ) ---
+  cold: 36 comps, top12 → 1/12 hit (random ≈ 1.4) nodes=[0]

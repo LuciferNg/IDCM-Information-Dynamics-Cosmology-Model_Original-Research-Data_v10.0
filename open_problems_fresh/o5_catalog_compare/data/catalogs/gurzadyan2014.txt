@@ -1,0 +1,210 @@
+                                               Astronomy & Astrophysics manuscript no. Pl˙CS3                                                                    c ESO 2021
+                                               November 11, 2021
+
+
+
+
+                                                                        To the center of cold spot with Planck
+                                                       V.G. Gurzadyan1,2 , A.L. Kashin,2 , H. Khachatryan2 , E. Poghosian2 , S. Sargsyan2 , G. Yegorian2
+                                                   1
+                                                    SIA, Sapienza University of Rome, Rome, Italy
+                                                   2
+                                                    Center for Cosmology and Astrophysics, Alikhanian National Laboratory and Yerevan State University, Yerevan,
+                                                   Armenia
+
+
+                                                   Received (November 11, 2021)
+arXiv:1404.6347v3 [astro-ph.CO] 21 Nov 2014
+
+
+
+
+                                                                                                        ABSTRACT
+
+                                                   The structure of the cold spot, of a non-Gaussian anomaly in the cosmic microwave background (CMB) sky first detected
+                                                   by Vielva et al. is studied using the data by Planck satellite. The obtained map of the degree of stochasticity (K-map)
+                                                   of CMB for the cold spot, reveals, most clearly in 100 GHz band, a shell-type structure with a center coinciding with
+                                                   the minima of the temperature distribution. The shell structure is non-Gaussian at a 4σ confidence level. Such behavior
+                                                   of the K-map supports the void nature of the cold spot. The applied method can be used for tracing voids that have
+                                                   no signatures in redshift surveys.
+                                                   Key words. cosmic background radiation
+
+
+                                              1. Introduction                                                  the satellites measuring the Lense-Thirring effect predicted
+                                                                                                               by general relativity (Gurzadyan et al 2013).
+                                              The cold spot is a non-Gaussianity in the Cosmic                    Here we show that the Kolmogorov map (K-map) of
+                                              Microwave Background (CMB) sky, which since                      Planck’s 100 GHz data reveal a shell-like structure in the
+                                              its first detection (Vielva et al 2004) in Wilkinson             cental region of the cold spot, and this supports its void
+                                              Microwave Anisotropy Probe (WMAP) data has at-                   nature.
+                                              tracted much attention in the studies with various
+                                              statistical descriptors of non-Gaussian features in gen-
+                                              eral, as well as in its interpretation (Cruz et al 2005;         2. Hyperbolicity
+                                              Pietrobon et al 2008;               Gurzadyan et al 2008;
+                                                                                                               We consider the behavior of null geodesics in underdense
+                                              Das and Spergel 2009; Vielva 2010; Valkenburg 2012;
+                                                                                                               regions (cf. (Zeldovich 1964)). The equation of geodesic de-
+                                              Rossmanith 2013;               Fernandez-Cobos et al 2013;
+                                                                                                               viation for perturbed Friedmann-Robertson-Walker metric
+                                              Copi et al 2013;          Kovetz and Kamionkowski 2013;
+                                                                                                               can be reduced to (Gurzadyan & Kocharyan 2009)
+                                              Zhao 2013; Planck-XXIII 2013); and references therein).
+                                                  A void (i.e., an underdense region in the mat-                                      d2 ℓ
+                                              ter distribution) has been discussed as one of the                                           +r ℓ=0 ,                      (1)
+                                                                                                                                      dλ2
+                                              possible interpretations of the properties of the cold
+                                                                                                               where l is the deviation scalar,
+                                              spot     (Inoue and Silk 2006;    Masina and Notari 2009;                           Z z
+                                              Inoue 2012; Kovetz and Kamionkowski 2013). The results                                                 dξ
+                                              represented below offer additional support to the void             λ(z, ΩΛ , Ωm ) =     p                                ,
+                                                                                                                                   0     ΩΛ + [1 − ΩΛ + Ωm ξ] (1 + ξ)2
+                                              interpretation of the cold spot and are based on the                                                                       (2)
+                                              study of the stochasticity (randomness) properties in            and ΩΛ and Ωm are the density parameters for the dark
+                                              the temperature data of Planck (Planck-XXIII 2013).              energy and matter, respectively. For flat FRW metric the
+                                              Owing to the hyperbolicity of null geodesics the degree of       scalar r has the form
+                                              randomness towards the walls of a void has to be higher
+                                              than in its inner region (Gurzadyan & Kocharyan 2009;                                      r = 2Ωm δ0 ,                        (3)
+                                              Gurzadyan & Kocharyan 2009). This property of the                where
+                                              cold spot has already been noticed in the WMAP                                                  δρ0
+                                              data (Gurzadyan et al 2009), and as several other sky                                       δ0 ≡     ,                   (4)
+                                                                                                                                               ρ0
+                                              regions with similar properties have been identified.
+                                              The randomness of the CMB signal has been studied                and δρ0 is the local density contrast with respect to the
+                                              (Gurzadyan & Kocharyan 2008) using the Kolmogorov                mean matter density ρ0 .
+                                              stochasticity parameter (Kolmogorov 1933; Arnold 2008;              For voids,
+                                                                                                                                             ρvoid − ρ0
+                                              Arnold 2009a; Arnold 2009b), which enables determining                                 δvoid =
+                                              the degree of randomness in the given sequence of real                                             ρ0
+                                              numbers. That method enabled us to reveal X-ray galaxy           is negative, thus ensuring the hyperbolicity of null
+                                              clusters in XMM-Newton data (Gurzadyan et al 2011) and           geodesics; i.e., the low density contrast locally acts as a
+                                              to detect the thermal trust Yarkovsky-Rubincam effect for        negative curvature, even in a flat universe.
+2                                                  V.G.Gurzadyan et al: CMB
+
+3. K-maps                                                          shown in Fig.1. Then, in Fig. 2 we represent the 100 GHz
+                                                                   temperature Nside=2048 map (in µK scale, upper plot) and
+The randomness induced by the hyperbolicity of null                the corresponding K-map for the cold spot region, with de-
+geodesics can be studied using CMB data and the                    noted temperature minima location. A shell-like structure
+Kolmogorov stochasticity parameter (Kolmogorov 1933;               with a 0.6 degree radius of external boundary is visible in
+Arnold 2008; Arnold 2009a; Arnold 2009b). The latter is            the K-map, which is absent in the temperature map and
+defined for {X1 , X2 , . . . , Xn } real-valued variables X rep-   clearly surrounds the ‘center’ defined by temperature min-
+resented as X1 ≤ X2 ≤ · · · ≤ Xn . For such a sequence the         ima. The same shell structure is also available in 143 GHz
+empirical distribution function Fn (x) is given as                 K-map (Fig.3), again without a trace in its temperature
+                                                                  map, but has no such outlined signature in Nside=2048 70
+         0 ,      x < X1 ;
+                                                                   GHz K-map (Fig.4). To quantify the confidence level of the
+Fn (x) = k/n , Xk ≤ x < Xk+1 , k = 1, 2, . . . , n − 1 ;           shell, we used the same algorithm to estimate the behavior
+           1,      Xn ≤ x ,
+         
+                                                                   of Φ vs the radius for 200 regions of a Gaussian map with
+                                                                   Tmean = 27.47µK and σ = 119.99 µK of the Planck’s 100
+and the cumulative distribution function (CDF) is F (x) =          GHz map of the northern sky without the Galactic disk re-
+P {X √
+     ≤ x}. The stochasticity parameter λn is estimated as          gion (|b| < 20 degree). As seen from Fig. 5, the jump of Φ
+λn = n supx |Fn (x) − F (x)|.                                      of the cold spot yields over 4σ [(0.95-0.14)/0.2].
+   According         to      Kolmogorov’s        theorem
+(Kolmogorov 1933), one has the limit limn→∞ P {λn ≤
+λ} = Φ(λ) , for continuous CDF, so that Φ(0) = 0, and
+                    +∞
+                    X                 2   2
+          Φ(λ) =          (−1)k e−2k λ , λ > 0 ,            (5)
+                   k=−∞
+
+and Φ is independent on F . The interval 0.3 ≤ λn ≤ 2.4
+corresponds to the variation scale of Φ as of objective mea-
+sure of degree of randomness.
+    This approach has been applied for several se-
+quences of the theory of dynamical systems and num-
+ber theory (Arnold 2008; Arnold 2009a; Arnold 2009b;
+Atto et al 2013) and for extensive modeling of gener-
+ated systems (see (Gurzadyan et al 2011) and references
+therein). In the applications to CMB in view of its Gaussian
+feature, the Gaussian CDF was used for analyzing of the
+temperature sequences. The obtained Kolmogorov CMB
+maps (K-maps) for WMAP data readily reveal, for exam-
+ple, the Galactic disk and point sources (galaxies, quasars)
+that have different randomness (correlation) properties            Fig. 1. Temperature run vs latitude and longitude for the
+than the cosmological signal (Gurzadyan et al 2009), thus          cold spot region for Planck’s 100 GHz map.
+justifying the efficiency and predictive power of the ap-
+proach.
+    The randomness of the cold spot has also been stud-
+ied for WMAP data using this technique, and the results            4. Conclusions
+correspond to features expected for voids, i.e. underdense
+regions, with the increase in randomness toward their walls        We have studied the structure of the cold spot using the
+(Gurzadyan et al 2009). Also, a sample of regions has been         Planck CMB temperature maps and obtained the corre-
+revealed in the CMB sky, with similar behavior, although           sponding K-maps, i.e., the distribution of the degree of ran-
+less outlined, of the function Φ vs the radius.                    domness in that region. The quality of Planck data enabled
+    We now analyze the cold spot region using                      us to reveal in the 100 GHz K-map a shell-like structure,
+Planck’s temperature data (nominal) in HEALPix                     the center of which does coincide with the position of the
+format (Gorski et al 2005). The computations were                  temperature minima. Such a shell structure is also clear in
+performed in the following manner (for details see                 143 GHz K-map but has no such visible trace in the 70 GHz
+(Gurzadyan et al 2009). The temperature data sequences             K-map (Nside=2048).
+in ball regions of radius 0.5 degree located at step 0.05              The shell-type distribution of the degree of randomness
+degree have been chosen, containing about 950 pixels each          is expected at the hyperbolicity of null geodesics induced
+for 100 GHz Nside=2048 maps, and for them the function             by voids. The obtained structure in the K-map does there-
+Φ has been obtained. The stability of the results was              fore support the void nature of the cold spot. It is worth
+tested by varying the input parameters, most importantly           mentioning that the universality of the applied method
+the step (varying it e.g. within 0.01 - 0.05 degree) and the       enables a void to be traced independently of whether
+radius (see also (Gurzadyan et al 2009)), thus ensuring the        its walls are outlined well by luminous matter or mostly
+robustness of the results.                                         contain dark matter, hence have no clear correlations
+    First, using the temperature cuts for the cold spot re-        with available galaxy redshift surveys (Bremer et al 2010;
+gion, we determined the minima of the 100 GHz tempera-             Granett et al 2010). The void of the cold spot, therefore,
+ture plots, possessing the coordinates (210.04◦, -56.26◦), as      may need more refined alternative means for study. The
+                                                   V.G.Gurzadyan et al: CMB                                                            3
+
+
+
+
+Fig. 2. 100 GHz temperature map (above) and its K-map.             Fig. 3. Same as in Fig.2 but for 143 GHz.
+The denoted point of coordinates (210.04◦, -56.26◦) corre-
+sponds to the minima of the temperature run in Fig.1.
+                                                                    Gurzadyan V.G., Starobinsky A.A., et al, 2008, A&A, 490, 929
+                                                                    Gurzadyan V.G., Allahverdyan A.E., et al, 2009, A&A, 497, 343;
+                                                                    2011, A&A, 525, L7
+importance of the presence of voids with determined pa-             Gurzadyan V.G., Durret F. et al, 2011, Europhys. Lett. 95, 69001.
+rameters is obvious for understanding the formation of large        Gurzadyan V.G., Ghahramanyan T., Sargsyan S., 2011, Europhys.
+scale structure formation in the universe.                          Lett. 95, 19001
+                                                                    Gurzadyan V.G., Ciufolini I. et al, 2013, Europhys. Lett., 102, 60002
+                                                                    Inoue K. T. & Silk J. 2006, ApJ, 648, 23
+5. Acknowledgments                                                  Inoue K. T. 2012, MNRAS, 421, 2731
+                                                                    Kolmogorov A.N., 1933, G.Ist.Ital.Attuari, 4, 83
+We      acknowledge      the    useful    comments   by             Kovetz E.D., Kamionkowski M., 2013, Phys. Rev. Lett. 110, 171301
+                                                                    Masina I., Notari A., 2009, JCAP, 7, 35
+the    referee    and    the    use    of   Planck data             Pietrobon D., Amblard A., Balbi A., Cabella P., Cooray A.,
+(http://pla.esac.esa.int/pla/aio/planckProducts).                   Marinucci D., 2008, Phys. Rev. D, 78, 103504
+                                                                    Planck collaboration, XXIII, 2013, arXiv:1303.5074.
+                                                                    Rossmanith G., Non-linear Data Analysis on the Sphere, Springer
+References                                                          (2013).
+                                                                    Valkenburg W., 2012, JCAP, 01, 047
+ Arnold V.I., 2008, Uspekhi Mat.Nauk, 63, 5                         Vielva P., Martinez-Gonzalez E., Barreiro R.B. et al, 2004, ApJ, 609,
+ Arnold V.I., 2009a, Trans. Moscow Math. Soc., 70, 31               22
+ Arnold V.I., 2009b, Funct. An. Other Math. 2, 139                  Vielva P., 2010, Adv. Astr., 2010, id. 592094
+ Atto A.M., Berthoumieu Y., Megret R., 2013, Entropy, 15, 4782      Zeldovich Ya.B., 1964, Astron.Zh. 41, 19
+ Bremer M.N., Silk J., Davies L.J.M., Lehnert M.D., 2010, MNRAS,    Zhao W., 2013, MNRAS, 433, 3498
+ 404, L69
+ Copi C.J., Huterer D., Schwarz D.J., Starkman G.D., 2013,
+ arXiv:1311.4562
+ Cruz M., Martinez-Gonzalez E., Vielva P., Cay´on L., 2005,
+ MNRAS, 356, 29
+ Das S., Spergel D.N., 2009, Phys.Rev. D79, 043007
+ Fernandez-Cobos R., Vielva, P., Martinez-Gonzalez E., Tucci M.,
+ Cruz M., 2013, MNRAS, 435, 3096
+ Gorski K.M., Hivon E., et al, 2005, ApJ, 622, 759
+ Granett B.R., Szapudi I., Neyrinck M.C., 2010, ApJ, 714, 825
+ Gurzadyan V.G. & Kocharyan A.A., 2008, A&A 492, L33
+ Gurzadyan V.G. & Kocharyan A.A., 2009a, A&A, 493, L61
+ Gurzadyan V.G. & Kocharyan A.A., 2009b, Europhys. Lett. 86,
+ 29002
+4                                              V.G.Gurzadyan et al: CMB
+
+
+
+
+Fig. 4. Same as in Fig.2 but for 70 GHz.
+
+
+
+
+Fig. 5. Dependence of Φ vs the radius for the cold spot for
+100 GHz data and for 200 regions of simulated Gaussian
+map of the parameters of the 100 GHz map (more in the
+text).
+
