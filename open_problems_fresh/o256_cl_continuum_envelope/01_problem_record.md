@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O256
 title:   C_ℓ 連續譜包絡 (lensed Silk 複合形式) — 由 K_Chain/K_Tree 推出, 閉合 O202 R6
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O256
 created: 2026-10-21
@@ -13,7 +13,7 @@ prereq:  O202; O180; O48; O214
 source:  P3/high-l-tail-transfer 第二輪攻堅流向 + O202 R6 delivery C; 2026-10-21 開題只註冊禁推
 -->
 
-> **狀態**: 📄 **已註冊 — 未開始（只註冊，禁推）**
+> **狀態**: 🟡 **partial — R1 攻堅 + 微帶檢驗 + 審計完成（2026-10-21 階段性 closeout；維持 partial，唔 close）**
 > **建立**: 2026-10-21
 > **前置**: O202; O180; O48; O214
 > **位置**: `open_problems_fresh/o256_cl_continuum_envelope/`
@@ -114,6 +114,12 @@ IDCM 對 C_ℓ 連續譜（尤其高ℓ尾 ℓ>1409）**冇自己嘅連續形式
 | # | 日期 | 事件 | 產物 |
 |:-:|:-----|:-----|:-----|
 | 1 | 2026-10-21 | 註冊（只註冊，禁推） | P3 第二輪攻堅流向 → O202 R6 |
+| 2 | 2026-10-21 | 開閘「開始推」；R1 攻堅 scripts 01-10 | λ 上升=峰形攤開自然後果 (corr 0.957)；44模態權重 43.8% 未兌現；峰位公式 m≥8 飽和微帶 [1452,1476]；盲測數值閉合 FAIL (RMS 79.8-108%) |
+| 3 | 2026-10-21 | R1 終結 scripts 11-14 | ★λ₁=半週期/lnφ=308.60 (blind +0.19%)；λ₄=全間隙/lnφ=635.9 (−1.56%)；MC null p=0.026 但 band null 不可分辨 → R12 判決維持；4 新結構確立 |
+| 4 | 2026-10-21 | 微帶檢驗 scripts 15-16 | ★S5 微帶 bump 否證: Planck 微帶內三 bin −2.5/−3.2/−4.0% (相對兩側 −7.8%)；ACT/SPT +12~18% 係 50ℓ+ 平滑平台 (Lorentz ratio 3.1-3.4 vs 實測 1.1-1.2) = P3 Silk+lensing 複合, 非 IDCM 特有 |
+| 5 | 2026-10-21 | R3 偵察 | O162 R5 half-site shift (ghost 0.5/88.5, Wilson Π=i) 係 lensing displacement 候選; O222 無 lensing 先例 → R3 需獨立深推, 唔喺本 O 短攻內 |
+| 6 | 2026-10-21 | 全產物驗證+審計 (scripts 01-17 重跑, audit 17 48/48 PASS) | 重跑: exit=0×8 + 設計上 FAIL×8 (誠實負結果, 零 Traceback); 獨立重算: O83 峰位 7 峰 / 權重 43.8% / 飽和微帶 [1452,1476] / 半週期 148.5 EXACT / λ₁=308.60 (+0.031% vs 308.5) / λ₄=635.9 (−1.56%) / MC 100k p=0.0264 (seed 42) / band [289,316] mean RMSE 6.356%≈φ 6.371% (R12 維持); docs 01-03 ↔ logs 全數一致; 階梯近似 j≥5 <1% (漸進) |
+| 7 | 2026-10-21 | 階段性 closeout: final_result.md + register (partial + handoff ×3) | O256 → partial (close --verdict partial); handoff: 微帶 1ℓ 數據→P3/high-l-tail-transfer, R3 lensing 語義→O162, O83/O48 振幅分歧→O48; 解閘維持: 1ℓ 格高分辨數據 或 R3 完整建立; λ₂=410 身份待 R3 留本 O partial 殘餘 |
 
 ## 八、相關文件
 

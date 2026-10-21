@@ -1,0 +1,16 @@
+01_kchain_envelope_sum.py exit=0
+02_fsr_layer_envelope.py exit=1
+03_envelope_verdict.py exit=1
+04_peak_trough_model.py exit=0
+05_full_integration.py exit=0
+06_saturation_branch.py exit=1
+07_gamma_scan.py exit=0
+08_thermal_fsr.py exit=0
+09_microband_test.py exit=1
+10_microband_spt.py exit=1
+11_fibonacci_ladder.py exit=1
+12_fib_ladder_lam.py exit=0
+13_blind_envelope.py exit=1
+14_mc_null.py exit=0
+15_microband_crossbin.py exit=0
+16_microband_vs_plateau.py exit=1
