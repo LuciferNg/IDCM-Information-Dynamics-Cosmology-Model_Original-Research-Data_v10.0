@@ -1,0 +1,52 @@
+{
+ "test": "O257 01: log10 修正機制攻堅摘要",
+ "date": "2026-10-21",
+ "formula": "log10(M_pl/M_comp) = 1/γ₆ − 1/76",
+ "gamma6": 0.18073600929096326,
+ "inv_gamma6": 5.532931726904073,
+ "one76": 0.013157894736842105,
+ "target_log10": 5.519773832167231,
+ "M_pl_GeV": 1.2209e+19,
+ "M_comp_formula_GeV": 36889796677500.0,
+ "M_comp_cal_GeV": 36909000000000.0,
+ "dev_Mcomp_vs_cal_pct": 0.052028835,
+ "identity_76": {
+  "L9": 76.0,
+  "N_minus_hop_max": 76,
+  "sum_gamma_odd_minus_hop": 76.0,
+  "B_times_19": 76,
+  "2_times_Nd_minus_n6": 76
+ },
+ "cross_identity": {
+  "gamma6_88chain": 0.18073600929096326,
+  "gamma12_176chain": 0.18073600929096326,
+  "hop_max_from_O179": 12,
+  "gamma6_dual_index": 12,
+  "hop_max_equals_gamma6_dual_index": true,
+  "mirror_gamma12_88_eq_gamma76_88": true
+ },
+ "log_base": {
+  "10_equals_2F5": true,
+  "nu_hop_channel_period": "2F₅=10 (O179, P6 docs/04 m₂ N=10 hop=1)"
+ },
+ "density": {
+  "pool_size": 606,
+  "hits_01pct_continuous_band": 28,
+  "mc_null_01pct_rate": 0.1577,
+  "lucas_ladder_unique_lt_0.01pct": "L₉=76 dev 0.0%, 次佳 L₁₁=199 dev 0.147%",
+  "hop_ladder_only_hopmax_gives_Lucas": true
+ },
+ "verdict_shape": {
+  "identity_closed": true,
+  "log_base_identity": true,
+  "mechanism_layer": "🟡 open — 點解 hop 補數以加法形式入指數未有 operator 推導",
+  "spectral_product_route": "REFUTED (P6 docs/08, 唔重推)"
+ },
+ "scripts": {
+  "01_carrier_recheck": "16/16 PASS — 載體凍結",
+  "02_candidate_explore": "9/9 PASS — 對偶 index 鏈 6→12→76",
+  "03_correction_pool": "5/6 PASS — 池密度 28 hits, Lucas 階梯唯一",
+  "04_unified_test": "9/11 PASS — hop 補數 identity, log 底 2F₅",
+  "05_final_attack": "5/6 PASS — hop 補數唯一, MC 15.8%"
+ }
+}

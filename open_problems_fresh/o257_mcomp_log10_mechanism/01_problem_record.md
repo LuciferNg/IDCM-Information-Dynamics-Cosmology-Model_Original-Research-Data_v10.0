@@ -13,8 +13,9 @@ prereq:  P6, O66, O212, O179, O121
 source:  P6 docs/10_closeout_20261020.md 剩餘項 #2
 -->
 
-> **狀態**: 📄 **已註冊 — 未開始**
+> **狀態**: 🟡 **R1 完成 — partial**（2026-10-21）
 > **建立**: 2026-10-21
+> **R1 產物**: docs/01_round1_log10_mechanism.md、scripts/01-06、data/01_summary.json
 > **前置**: P6（來源）、O66（M_comp 閉合）、O212（Σγ=90）、O179（hop 身份）、O121（Lucas）
 > **位置**: `open_problems_fresh/o257_mcomp_log10_mechanism/`
 
@@ -72,6 +73,7 @@ M_comp = M_pl·10^-(1/γ₆−1/76) = **3.6890e13 GeV**（O66 閉合，vs 校準
 | # | 日期 | 事件 | 產物 |
 |:-:|:-----|:-----|:-----|
 | 1 | 2026-10-21 | 註冊（承接 P6 剩餘項 #2，只開不推） | P6 docs/10_closeout_20261020.md |
+| 2 | 2026-10-21 | R1 攻堅：76 四重 reparameterization EXACT；★hop_max=γ₆ 對偶 index cross-identity；log 底 10=2F₅；密度閘（數值層唔稀有、結構層唯一） | docs/01_round1_log10_mechanism.md, scripts/01-06, data/01_summary.json（48/50 PASS） |
 
 ## 七、相關文件
 
