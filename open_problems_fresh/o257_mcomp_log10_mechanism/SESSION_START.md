@@ -68,3 +68,34 @@ source:  P6 docs/10_closeout_20261020.md 剩餘項 #2
 
 > ⚠️ **本檔係起手式快照，唔係狀態權威。**
 > 當前狀態以 `open_problems_fresh/README.md` 為準；生命週期事件以 `problem_register/` 為準。
+---
+
+## 六、R1-R5 攻堅後交接更新（2026-10-21，append-only）
+
+> **核心裁定：negative —「1/76 log10 修正機制」= 假問題（唔存在）**。R4/R5 坐實。
+
+### 最終答案（詳見 docs/01-05）
+
+| 問題 | 裁定 |
+|:-----|:-----|
+| 1/76 log10 修正有 operator 機制? | 🔴 冇 — 後驗揀值（校準最優 1/75 唔係 76；O66 circular） |
+| ⁷⁶√10 root 次數有機制? | 🔴 冇 — 帶內 [76,80] 全近命中，最優 x=78=N−2F₅ 都唔唯一 |
+| log 本體? | 🔴 log = 計數壓縮，指數非整數不能 unroll |
+| 大數約化? | ✅ 88³/2 = N_d³·γ₄₄ = L₅·Πγ(176) EXACT（譜積+Lucas 對偶） |
+| 主項 1/γ₆? | ✅ 有 operator 出處（det ratio/propagator） |
+| M_comp 量級? | ✅ seesaw 閉合（m_ν₃=53.7 meV） |
+
+### M_comp 公式誠實狀態（修正 O66 聲稱）
+
+```
+M_comp ≈ M_pl·10^{-1/γ₆}（主項, operator 出處 = 1/γ₆ det ratio）
+        + ~3% 擬合修正（常數 75-80 帶內後驗, 冇結構地位）
+```
+
+76 自身身份（L₉/N−hop_max/4×19）真實存在，但**唔 support「1/76 係 M_comp 修正」**。
+
+### 下一步
+
+1. 調律者拍板：close O257（negative）？
+2. 若 close：P6 剩餘項 #2 更新「機制唔存在 (falsified)」
+3. 新 script 保持：scripts/13（root 帶寬+MC null）、scripts/14（L₅(2N)² EXACT）
