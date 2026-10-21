@@ -269,7 +269,7 @@ print(f"""
   4. PMNS 混合同 Z₅ phase 嘅關係
 """)
 
-with open("open_problems_fresh/neutrino_p6_results.txt", "w") as f:
+with open("data/neutrino_p6_results.txt", "w") as f:
     f.write("中微子 K_Chain harmonic 推導\n")
     f.write(f"γ_6 = {γ_n[5]:.6f}\n")
     f.write(f"m_ν(γ²) = {m_nu_sq*1e6:.2f} eV\n")

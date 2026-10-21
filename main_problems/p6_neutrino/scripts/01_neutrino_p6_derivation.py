@@ -26,7 +26,7 @@ print("=" * 80)
 # ══════════════════════════════════════════════════════════════
 print("\n1. 載入 d_tensor 同 eigenvalue 結構")
 
-d = np.load("data/d_tensor_positive.npy")
+d = np.load("../p15_early_derivations/data/d_tensor_positive.npy")
 v = np.array([φ ** (-k / 12) for k in range(12)])
 
 Y_full = np.zeros((12, 12), dtype=complex)
@@ -271,7 +271,7 @@ print(f"""
 """)
 
 # 儲存
-with open("open_problems_fresh/neutrino_p6_results.txt", "w") as f:
+with open("data/neutrino_p6_results.txt", "w") as f:
     f.write("中微子質量推導結果\n")
     f.write(f"ν_τ: λ={evals[9]:.6f}, m≈{evals[9]*M_Pl*math.exp(-V_nu_est)*1e6:.6e} eV\n")
     f.write(f"ν_μ: λ={evals[10]:.6f}, m≈{evals[10]*M_Pl*math.exp(-V_nu_est)*1e6:.6e} eV\n")

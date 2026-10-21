@@ -125,7 +125,7 @@ print(f"  中微子質量層級 (用 M_comp = {M_comp_1:.4e} GeV):")
 print(f"")
 
 # 載入 eigenvalue
-d = np.load("data/d_tensor_positive.npy")
+d = np.load("../p15_early_derivations/data/d_tensor_positive.npy")
 v_k = np.array([φ ** (-k / 12) for k in range(12)])
 Y_full = np.zeros((12, 12), dtype=complex)
 for i in range(12):
@@ -197,7 +197,7 @@ print(f"""
   Δm**2₃₁ = {Δm2_31:.6e} eV**2 (PDG: 2.45e-3)
 """)
 
-with open("open_problems_fresh/neutrino_p6_results.txt", "w") as f:
+with open("data/neutrino_p6_results.txt", "w") as f:
     f.write("中微子幾何緊化能標結果\n")
     f.write(f"M_comp = M_Pl × φ^(-V_cycle/4) = {M_comp_1:.4e} GeV\n")
     f.write(f"m_ν = {m_nu_1:.6f} eV\n")

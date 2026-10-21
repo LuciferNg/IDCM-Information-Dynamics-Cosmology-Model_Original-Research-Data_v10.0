@@ -109,7 +109,7 @@ print("─" * 80)
 # 更可能: 中微子質量差異來自 12D eigenvalue
 # ν_τ: λ_9, ν_μ: λ_10, ν_e: λ_11
 
-d = np.load("data/d_tensor_positive.npy")
+d = np.load("../p15_early_derivations/data/d_tensor_positive.npy")
 v_kahler = np.array([φ ** (-k / 12) for k in range(12)])
 Y_full = np.zeros((12, 12), dtype=complex)
 for i in range(12):
@@ -215,7 +215,7 @@ print(f"""
   需要更精確嘅 eigenvalue 分配同 Z₅ phase 分析
 """)
 
-with open("open_problems_fresh/neutrino_p6_results.txt", "w") as f:
+with open("data/neutrino_p6_results.txt", "w") as f:
     f.write("中微子幾何 Seesaw 公式\n")
     f.write(f"m_ν = (γ_6 × v)² / M_Pl = {m_nu_geometric*1e9:.6e} eV\n")
     f.write(f"ν_τ: {((ν_evals[0]*v)**2/M_Pl*1e9):.6e} eV\n")

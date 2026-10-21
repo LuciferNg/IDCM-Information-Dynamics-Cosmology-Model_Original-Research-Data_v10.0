@@ -154,7 +154,7 @@ print(f"""
 """)
 
 # 儲存
-with open("open_problems_fresh/neutrino_p6_results.txt", "w") as f:
+with open("data/neutrino_p6_results.txt", "w") as f:
     f.write("中微子 Δm² 最終對齊 (Z₃ 修正)\n")
     f.write(f"M_comp = {M_comp:.4e} GeV\n")
     f.write(f"Z₃ 修正因子 = {Z3_factor}\n")
