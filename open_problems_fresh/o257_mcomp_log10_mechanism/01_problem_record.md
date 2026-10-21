@@ -77,7 +77,8 @@ M_comp = M_pl·10^-(1/γ₆−1/76) = **3.6890e13 GeV**（O66 閉合，vs 校準
 | 3 | 2026-10-21 | R2 轉向（調律者 steers 三問）：log 唔天然確立（指數非整數不能 unroll）；大數 ≈ 88³/2×⁷⁶√10（譜積整數組合, dev 0.12%）；Πγ_odd=4=μ²、Πγ(1..44)=176 新恆等；無 for/while 歷遍 = 譜空間一次算子；−1/76 重新解讀做 root 算子次數 | docs/02_round2_nolog_turn.md, scripts/07-09（2/2+0+7/7 PASS） |
 | 4 | 2026-10-21 | R3 ε 攻堅：88³/2=N_d³×γ₄₄ EXACT（44³×4, γ₄₄=4=μ²=Πγ_odd）；三形式精度 O66 0.052% vs 無log 0.066%（log=計數壓縮確立）；ε=0.00118355 無 EXACT 身份（1/845 dev 0.010% 近對偶唔升格） | docs/03_round3_epsilon_close.md, scripts/10-11（4/5+2/2 PASS） |
 | 5 | 2026-10-21 | R4 KILLER TEST（調律者「76√10有湊數可能」）：校準 target 最優修正 = 1/75（dev 0.00092%）唔係 76（0.0041%）；hop 補數族 87/84/80/77/76 全近命中；O66 閉合 circular；四 Hard Tests 全 🔴 ⟹ 1/76 後驗揀值坐實，核心問題「1/76 log10 修正機制」= 假問題（唔存在） | docs/04_killer_test_negative.md, scripts/12（verdict negative） |
-| 6 | 2026-10-21 | R5 KILLER 延伸（調律者「結合O257結論繼續推」）：root 形式 ⁷⁶√10 都係後驗 —— 帶內 [60,100] 最優 x=78=N−2F₅（dev 0.011%）但 76-80 全近命中（<0.1%），MC null 0.01% 零信息量；主項 10^{-1/γ₆} dev −3.03%，缺口 1/gap ≈ 32=N_d−hop_max（0.124% 近對偶）；88³/2 = L₅·(2N)² = L₅·Πγ(176) EXACT（等價重寫唔係新數） | docs/05_round5_root78_verdict.md, scripts/13-14 |
+| 6 | 2026-10-21 | R6 缺口攻堅（調律者「繼續挖」）：gap 33/32 dev 0.0038% 靚但 density 閘 kill（結構池 9x 命中 3.7%＝隨機同級；MC null 6.5% vs 全帶 31.8%）；★最深挖：M_cal=3.6909e13 自身係 P6 05 由 PDG Δm²₃₁ 反推（fit），成個 O257 = 三重 fit（M_cal→1/76→32）全循環；O66 0.051% 閉合聲稱降級為量級閉合（~3%） | docs/06_round6_gap_identity_final.md, scripts/15 |
+| 7 | 2026-10-21 | R5 KILLER 延伸（調律者「結合O257結論繼續推」）：root 形式 ⁷⁶√10 都係後驗 —— 帶內 [60,100] 最優 x=78=N−2F₅（dev 0.011%）但 76-80 全近命中（<0.1%），MC null 0.01% 零信息量；主項 10^{-1/γ₆} dev −3.03%，缺口 1/gap ≈ 32=N_d−hop_max（0.124% 近對偶）；88³/2 = L₅·(2N)² = L₅·Πγ(176) EXACT（等價重寫唔係新數）〔補記 2026-10-21：本行原為 index 第 6 行，R6 patch 時誤覆寫，重補保留〕 | docs/05_round5_root78_verdict.md, scripts/13-14 |
 
 ## 七、相關文件
 
