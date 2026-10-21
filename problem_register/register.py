@@ -49,7 +49,8 @@ THEME_DIRS = ("bbn", "cmb_cl", "cmb_cold_spot", "h0_tension", "kchain_number_fie
               # 2026-10-14: cross-version register (v1.0–v9.0, v11.0) + v11 problem m1
               # 2026-10-15: v11 m2/m3 (只開不推)
               # 2026-10-18: pid 跟隨 O 系列 —— 大寫 M1..M3 / P1..P15 (block/文檔引用一致)
-              "m1", "m2", "m3", "M1", "M2", "M3",
+              # 2026-10-21: v11 m4 mass spectral readout (只開不推; O257 R7 差值閉合定案承接)
+              "m1", "m2", "m3", "m4", "M1", "M2", "M3", "M4",
               "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9",
               "P10", "P11", "P12", "P13", "P14", "P15",
               "v1.0", "v2.0", "v3.0", "v4.0", "v5.0", "v6.0", "v7.0", "v8.0", "v9.0", "v11.0")
@@ -71,10 +72,12 @@ THEME_MOVE = {
     "m1": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m1_mass_file_schema",
     "m2": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange",
     "m3": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock",
+    "m4": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m4_mass_spectral_readout",
     # 2026-10-18: pid 跟隨 O 系列 —— 大寫 M/P 全名嘅絕對路徑 (register --pid M1 等)
     "M1": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m1_mass_file_schema",
     "M2": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m2_sync_desync_exchange",
     "M3": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m3_omega_ratio_lock",
+    "M4": "/home/wsl/Projects/IDCM-Original/IDCM-v11.0--Reality-Architecture/main_problems/m4_mass_spectral_readout",
     "P1": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p1_bbn",
     "P2": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p2_ckm_reconstruction",
     "P3": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/main_problems/p3_cmb_cl",
