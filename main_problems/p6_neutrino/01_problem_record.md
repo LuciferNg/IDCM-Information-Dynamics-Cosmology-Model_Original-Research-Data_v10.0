@@ -119,3 +119,10 @@ M_comp(φ法) = 4.5965×10¹⁶ GeV → m_ν = **4.30×10⁻⁵** eV（唔係聲
 - 🔴 **兩條機制路經自製工具否定**（docs/08）：Feshbach 極點（0 位置命中 t=Δ/2）＝hop 階梯唔係單缺陷散射；譜積身份搜尋（1/γ₆−1/76 冇 operator 命中）＝1/76 唔係譜積產物。
 - 🟡 **第 2 輪審計**：docs/04-09 + scripts/06-08 全部核過（scripts/09，32/32 PASS）；docs/01-03、scripts/01-05 仍屬 764b017 已審核狀態。
 - 🟡 **剩餘 3 項**（原 4 項 − #1 已閉合）：1/76 log10 修正機制（🔴）、m_ββ 相位（🟡）、Σm vs DESI（🟡 等數據）——全部 register 已更新。
+## 10. 剩餘項去向裁決（2026-10-21，append-only）
+
+> 調律者裁決：**新 O 只含 #2；#3、#4 繼續留喺 P6**（唔開新 O）。
+
+- ✅ **#2 1/76 log10 修正機制** → 已開 **O257**（`open_problems_fresh/o257_mcomp_log10_mechanism`，state=registered 只開不推）。承接後 O257 嘅前置 = P6/O66/O212/O179；禁區（譜積路已否證、O49 docs/03 後驗凑合、Z₃=9/φ-power）已寫入其 problem record。
+- 🟡 **#3 m_ββ Majorana 相位** → **繼續留喺 P6**（曾開 O258 後根據「新O只含#2」即時撤回，2026-10-21 retracted；register 已加 O258_RETRACT_FIX 翻譯層，基線 REF-MISSING 5/HARD DRIFT 47 不變）。重點仍係 6.321 meV 候選無結構必要性、6.108 唔排除 CP。
+- 🟡 **#4 Σm vs DESI** → **繼續留喺 P6**（等 DESI LRG/ELG + KATRIN/LEGEND 數據，維持 partial 唔 close）。
