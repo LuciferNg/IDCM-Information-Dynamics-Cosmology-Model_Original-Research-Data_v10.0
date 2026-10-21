@@ -243,6 +243,14 @@ O168_RETRACT_FIX = {
         os.path.join(OPF, "o168_g_last_input/docs/28_phase_closeout.md"),
 }
 
+# 2026-10-21 O258 開立後旋即撤回 (調律者: 新O只含#2): registered+retracted 事件
+# 嘅 ref 指 o258_mbb_majorana_phase/01_problem_record.md，目錄已 git rm ⟹ 永久
+# REF-MISSING。JSONL 歷史事件唔改（append-only），翻譯層指向來源 P6 closeout 檔。
+O258_RETRACT_FIX = {
+    os.path.join(OPF, "o258_mbb_majorana_phase/01_problem_record.md"):
+        os.path.join(MAIN, "p6_neutrino/docs/10_closeout_20261020.md"),
+}
+
 
 # 2026-10-20 P6 結構重組 (root 建齊四檔, *.py→scripts/): registered 事件 ref 指
 # main_problems/p6_neutrino/neutrino_p6_derivation.py，該檔已移入 scripts/01_。
@@ -313,6 +321,10 @@ def resolve_ref(fp):
         return new
     # 2026-10-18 O168 越界藍圖撤回 (docs/29 已刪) 翻譯層
     new = O168_RETRACT_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-21 O258 開立後旋即撤回 (目錄已刪) 翻譯層
+    new = O258_RETRACT_FIX.get(fp)
     if new and os.path.exists(new):
         return new
     for src, dst in MOVED_SRC.items():
