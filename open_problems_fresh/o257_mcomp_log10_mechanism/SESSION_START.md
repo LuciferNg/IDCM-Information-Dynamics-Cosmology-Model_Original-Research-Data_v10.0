@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O257
 title:   1/76 log10 修正機制: 點解 M_comp = M_pl·10^{-(1/γ₆−1/76)} 喺 log10 尺度出現 −1/76 加法修正
-state:   registered
-verdict: -
+state:   partial
+verdict: negative
 flags:   -
 owner:   O257
 created: 2026-10-21
