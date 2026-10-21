@@ -40,7 +40,7 @@ g4, g5, g6 = gamma(4), gamma(5), gamma(6)
 DELTA = g5 - g4
 T0 = DELTA / 2
 M_comp = 1.2209e19 * 10**(-(1/g6 - 1/76))
-A = 246**2/M_comp * 1e9
+A = 246.2196**2/M_comp * 1e9
 
 print("="*78)
 print("D04 — N-環 tight-binding 統一 (docs/04)")
@@ -56,7 +56,7 @@ g_m2_10 = g4 + DELTA*math.cos(4*math.pi/10)
 n_eff = 88/math.pi * math.asin(math.sqrt(max(0,g_m2_10))/2)
 print(f"    [info] N=10 m=2: γ={g_m2_10:.6f}, n_eff={n_eff:.4f} (唔係整數 — 禁閉)")
 chk("D04.2 N=10 m=2 n_eff 非整數 (>4, <5)", abs(n_eff - 4.33), 0.01, 0.02)
-chk("D04.2 m₂ = A(γ₄+Δcos2π/10)²", A*(g4+DELTA*math.cos(2*math.pi/10))**2, 0.022645, 1e-5, " eV")
+chk("D04.2 m₂ = A(γ₄+Δcos2π/10)²", A*(g4+DELTA*math.cos(2*math.pi/10))**2, 0.022685, 1e-5, " eV")
 
 print()
 print("="*78)
@@ -70,7 +70,7 @@ chk("D05.1 t=0.95T0 留 gap (Δ/20)", gap_at_95, DELTA/20, 1e-12)
 # γ₆ 彈性: δγ₆=+1% → δΔm²₃₁
 g6p = g6 * 1.01
 Mp = 1.2209e19 * 10**(-(1/g6p - 1/76))
-Ap = 246**2/Mp * 1e9
+Ap = 246.2196**2/Mp * 1e9
 m1p = Ap*(g4+DELTA*math.cos(2*math.pi/8))**2
 m3p = Ap*g6p**2
 d31 = (m3p**2 - m1p**2) / ( (A*g6**2)**2 - (A*(g4+DELTA*math.cos(2*math.pi/8))**2)**2 ) - 1
@@ -141,8 +141,8 @@ pos8 = (E1_8-lo)/(hi-lo)*100
 pos10 = (E1_10-lo)/(hi-lo)*100
 chk("D09.3 N=8 m=1 帶内 85.4%", pos8, 85.4, 0.1, " %")
 chk("D09.3 N=10 m=1 帶内 90.5%", pos10, 90.5, 0.1, " %")
-chk("D09.3 m₁ = A(γ₁)² 閉合", A*E1_8**2, 0.020908, 1e-5, " eV")
-chk("D09.3 m₂ = A(γ₂)² 閉合", A*E1_10**2, 0.022645, 1e-5, " eV")
+chk("D09.3 m₁ = A(γ₁)² 閉合", A*E1_8**2, 0.020945, 1e-5, " eV")
+chk("D09.3 m₂ = A(γ₂)² 閉合", A*E1_10**2, 0.022685, 1e-5, " eV")
 
 print()
 print("="*78)

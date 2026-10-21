@@ -13,7 +13,7 @@ import numpy as np
 
 φ = (1 + math.sqrt(5)) / 2
 M_Pl = 1.220910e19  # GeV
-v = 246.0  # GeV
+v = 246.2196  # GeV (v_SM, IDCM 錨)
 γ_6 = 4 * math.sin(math.pi * 6 / 88)**2
 
 print("=" * 80)

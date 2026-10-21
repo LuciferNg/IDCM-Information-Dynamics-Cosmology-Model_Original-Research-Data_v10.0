@@ -50,6 +50,12 @@
 - ✅ 第 2 輪審計：scripts/09_audit_docs04_09.py **32/32 PASS**（docs/04-09 全核）；scripts/06-08 重跑 exit=0 一致。
 - 🟡 剩餘 3 項：#2 1/76 log10 機制（🔴）、#3 m_ββ 相位（🟡）、#4 Σm vs DESI（🟡 等數據）。
 
+### 全量審計＋v_SM 錨統一（2026-10-21，docs/11+12）
+
+- 🔴 **發現**：scripts/01-05 一直跑唔到（FileNotFoundError，舊審核靠 symlink 冇真執行）——按調律者授權「改script」修正 8 處路徑（讀 d_tensor→p15、寫出→data/），公式零改；重跑 01-09 全部 exit=0，09=32/32 PASS；data md5=HEAD 冇漂移。
+- 🟢 **docs/02 閉合鏈 11/11 重現**（v=246.0 版）；docs/03 O49 指正表 6/6 重現；m_ββ 帶用 O65 PMNS 完全重現 [6.1077, 22.1692] meV。
+- ⚠️ **v 錨統一（調律者裁定：v_SM=246.2196）**：A=1.64337、m₁=0.020945、m₂=0.022685、m₃=0.0536815、Σm=0.0973116 eV；Δm² dev 0.44%→**0.80%**、0.012%→**0.37%**（仍 <1% 過閘）；scripts/03/04/05/09 已改重跑（09 仍 32/32）；docs/02/05/07/10 舊數字以 docs/12 附註為準。
+
 ## 5. 依賴
 
 - d_tensor：`main_problems/p15_early_derivations/data/d_tensor_positive.npy`（12×12×12）
