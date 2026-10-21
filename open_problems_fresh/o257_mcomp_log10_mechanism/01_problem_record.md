@@ -74,6 +74,7 @@ M_comp = M_pl·10^-(1/γ₆−1/76) = **3.6890e13 GeV**（O66 閉合，vs 校準
 |:-:|:-----|:-----|:-----|
 | 1 | 2026-10-21 | 註冊（承接 P6 剩餘項 #2，只開不推） | P6 docs/10_closeout_20261020.md |
 | 2 | 2026-10-21 | R1 攻堅：76 四重 reparameterization EXACT；★hop_max=γ₆ 對偶 index cross-identity；log 底 10=2F₅；密度閘（數值層唔稀有、結構層唯一） | docs/01_round1_log10_mechanism.md, scripts/01-06, data/01_summary.json（48/50 PASS） |
+| 3 | 2026-10-21 | R2 轉向（調律者 steers 三問）：log 唔天然確立（指數非整數不能 unroll）；大數 ≈ 88³/2×⁷⁶√10（譜積整數組合, dev 0.12%）；Πγ_odd=4=μ²、Πγ(1..44)=176 新恆等；無 for/while 歷遍 = 譜空間一次算子；−1/76 重新解讀做 root 算子次數 | docs/02_round2_nolog_turn.md, scripts/07-09（2/2+0+7/7 PASS） |
 
 ## 七、相關文件
 
