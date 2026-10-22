@@ -1,0 +1,42 @@
+==============================================================================
+O253/07  R5: occupation layer vs identifiability
+==============================================================================
+PASS27 = 29.115463 ; BLOCK = 60.884537 ; SLAM = 66.0 ; E_proj = 28.5
+
+ cand | value      | dev vs 3.1028 | in band | mechanism sentence
+ K1 BLOCK/SLAM            | 0.92249298 |  -70.269 % | no     | blocked (unconvertible) weight per tree state: <1 implies conversion starved
+ K2 K_tree_mode/F_proj    | 1.9411765  |  -37.438 % | no     | tree states per unprojected chain mode
+ K3 SUM44/K_tree_mode     | 2.7272727  |  -12.103 % | YES    | world-sector chain weight per tree state
+ K4 ln(Lambda/kT_CMB)     | 25.98526   | +737.478 % | no     | QCD-scale to CMB ladder (dimensionless logarithm)
+ K5 E_J/E_proj            | 4.3157895  |  +39.093 % | no     | Ising coupling per projected energy
+[PASS] K1..K5 all evaluated against the frozen band  5 candidates
+
+[T1] in-band candidates: 1 ; expressible as closed ingredient ratios: 1 (K3 SUM44/K_tree_mode=2.7273 [Sum_gamma_even/K_tree_mode])
+[PASS] T1 every in-band candidate is a closed-ingredient ratio (inherits R2's family)  1/1
+[PASS] T1b non-identifiability inherited: R2 already contains 42 distinct in-band values  one extra member cannot single out n_struct
+
+[T2] 2000 random occupation-weighted functionals: 1147 inside band -> density 0.5735
+     R2 integer-pair base rate = 0.065733 ; random-weight family spans [1.7454, 4.7647]
+[PASS] T2 occupation weights INCREASE hit density (identifiability gets worse, not better)  density 0.5735 vs base 6.573%
+
+[T3] closed IDCM energy scales (eV) vs the ISM activation window [8.61733e-5, 0.0861733] eV
+     M_Pl               1.22091e+28  eV  outside  O212 anchor
+     v_SM               2.462196e+11 eV  outside  O86
+     Lambda_IDCM        45284870.0   eV  outside  O142 v16
+     h_bar_omega_ring   1.5483937e-33 eV  outside  O121 (1/T_ring)
+     k_B T_CMB(0)       0.00023486542 eV  INSIDE  O39/CMB
+[PASS] T3a exactly one closed scale occupies the ISM window (T_CMB; honest count, not zero)  1 inside: k_B T_CMB(0)
+[PASS] T3b T_CMB channel admits only T-power laws; required s = 1.75058 is not a closed half-integer  nearest half-integer delta = 0.24942
+     [external] H2 binding 4.52 eV at T=10 K -> Boltzmann exponent 5.25e+03 (absurdly suppressed)
+[PASS] T3c thermally-activated forms with a molecular binding scale are inadmissible (exponent >> 1)  E_a/kT = 5245.24
+
+VERDICT R5: FAIL as an identification route.
+  (i) the only in-band candidate (K3 = SUM44/33 = 2.7272727) is an inherited R2 ratio
+  (ii) occupation weights raise hit density to 0.5735 (identifiability worsens)
+  (iii) exactly one closed scale sits in the ISM window (k_BT_CMB = 0.000234865 eV); it admits
+        only T-power laws, and the required exponent (1.7506) is not closed;
+        Boltzmann forms on a molecular binding scale give e^-5245 (absurd)
+  => an occupation layer built from T's own objects adds no new degree of freedom;
+     a genuine conversion dynamics would require an external ISM/dust microphysics layer.
+
+RESULT: 7/7 PASS

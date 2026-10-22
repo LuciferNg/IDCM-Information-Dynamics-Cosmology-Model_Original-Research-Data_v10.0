@@ -1,0 +1,61 @@
+{
+ "script": "07_occupation_layer_test.py",
+ "candidates": [
+  {
+   "name": "K1 BLOCK/SLAM",
+   "value": 0.9224929834220879,
+   "in_band": false,
+   "mechanism": "blocked (unconvertible) weight per tree state: <1 implies conversion starved"
+  },
+  {
+   "name": "K2 K_tree_mode/F_proj",
+   "value": 1.9411764705882353,
+   "in_band": false,
+   "mechanism": "tree states per unprojected chain mode"
+  },
+  {
+   "name": "K3 SUM44/K_tree_mode",
+   "value": 2.727272727272727,
+   "in_band": true,
+   "mechanism": "world-sector chain weight per tree state"
+  },
+  {
+   "name": "K4 ln(Lambda/kT_CMB)",
+   "value": 25.985260009089657,
+   "in_band": false,
+   "mechanism": "QCD-scale to CMB ladder (dimensionless logarithm)"
+  },
+  {
+   "name": "K5 E_J/E_proj",
+   "value": 4.315789473684211,
+   "in_band": false,
+   "mechanism": "Ising coupling per projected energy"
+  }
+ ],
+ "in_band": [
+  "K3 SUM44/K_tree_mode"
+ ],
+ "inherited": [
+  "K3 SUM44/K_tree_mode"
+ ],
+ "weighted_density": 0.5735,
+ "weighted_hits": 1147,
+ "weighted_draws": 2000,
+ "base_rate": 0.065733,
+ "scales_eV": {
+  "M_Pl": 1.22091e+28,
+  "v_SM": 246219600000.0,
+  "Lambda_IDCM": 45284870.0,
+  "h_bar_omega_ring": 1.548393741976092e-33,
+  "k_B T_CMB(0)": 0.00023486541805581
+ },
+ "ism_window_eV": [
+  8.617333262e-05,
+  0.08617333262
+ ],
+ "scales_inside_window": [
+  "k_B T_CMB(0)"
+ ],
+ "verdict": "R5 FAIL: no occupation-layer identification (inherited family + density 0.5735 + only T_CMB in window, its power law s=1.7506 not closed)",
+ "pass": "7/7"
+}
