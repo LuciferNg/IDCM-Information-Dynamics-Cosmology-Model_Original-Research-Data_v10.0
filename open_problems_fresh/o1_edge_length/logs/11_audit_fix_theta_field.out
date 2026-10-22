@@ -1,0 +1,22 @@
+✅ 備份: edge_formula.txt.bak_20261022_224650
+原 theta_formula = 113.54247385  ← 變量覆蓋 bug
+
+重算:
+  δ              = 15.10851574°
+  θ (cos120°式)  = 26.09135714°
+  θ (球面直接式) = 26.09135714°
+  兩式一致       = 0.00e+00°
+  觀測           = 26.091346°
+  偏差           = 0.00001114°
+
+✅ 已修正 data/edge_formula.txt
+   原檔備份: edge_formula.txt.bak_20261022_224650
+
+修正後內容:
+delta=15.10851574
+theta_formula=26.09135714 theta_obs=26.09134600
+delta_rev=15.10850925
+theta2=26.09135714
+# audit 2026-10-22: theta_formula 原值 113.54247385 係 07_edge_formula_verify.py L121 loop 變量覆蓋 bug (非公式值);
+#   正解 = 26.09135714 (= theta2, 兩式等價); stdout 一直正確, 文檔未受污染
+

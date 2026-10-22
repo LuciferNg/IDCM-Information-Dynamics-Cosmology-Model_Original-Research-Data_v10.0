@@ -1,6 +1,6 @@
-# O5: 冷斑 Catalogue 對比
+# O5 — 冷斑 Catalogue 對比
 
-## 狀態: ✅ 完成 (2026-08-17)
+## 狀態: 完成 (2026-08-17)
 
 **問題**: 除咗大冷斑 (節點 0)，其他 59 個 A₅ 節點有冇對應公開冷斑/熱斑目錄？
 
@@ -33,3 +33,12 @@ python3 scripts/12_file_verify.py        # FILE SIMULATION VERIFIER (37/37 ✅)
 ```
 
 詳細結果: [NN_results.md](NN_results.md) · [NODE9_ANALYSIS.md](NODE9_ANALYSIS.md) · [FULL_RERUN_LOG.md](FULL_RERUN_LOG.md) · [VERIFIER_RESULT.md](VERIFIER_RESULT.md) · 問題記錄: [01_problem_record.md](01_problem_record.md)
+
+## 檔案
+
+| 檔案 | 描述 | 狀態 |
+|:----|:-----|:----:|
+| `01_problem_record.md` | 標準檔 | — |
+| `SESSION_START.md` | 標準檔 | — |
+| `final_result.md` | 標準檔 | — |
+| `scripts/` | 16 個腳本 | — |

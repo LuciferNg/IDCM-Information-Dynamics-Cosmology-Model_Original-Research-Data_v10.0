@@ -642,6 +642,13 @@ def replay(con, r):
         con.execute("INSERT OR REPLACE INTO collision (num,dirs,note,ts) VALUES (?,?,?,?)",
                     (r.get("num"), r.get("slug"), r.get("note"), r.get("ts")))
         return
+    if r.get("kind") == "collision_resolved":
+        # 碰撞解除（append-only: 原 collision 事件永久保留，只追加一次 retire）。
+        # 與 unreserve 對稱: 保留 tombstone 事件 + 追加 unreserve 取消保留編號。
+        num = r.get("num")
+        if num is not None:
+            con.execute("DELETE FROM collision WHERE num=?", (num,))
+        return
     if pid is None:
         return
     if r.get("kind") == "tombstone":
@@ -953,7 +960,18 @@ def cmd_collision(a):
         con.commit()
         print("scanned: registered %d new collision(s)" % n)
         return
-    sys.exit("use --scan or --list")
+    if a.retire is not None:
+        num = a.retire
+        have = con.execute("SELECT * FROM collision WHERE num=?", (num,)).fetchall()
+        if not have:
+            sys.exit("collision --retire: O%d 冇 collision 記錄" % num)
+        nreal = len(dirs_by_num().get(num, []))
+        replay(con, record(con, "collision_resolved", None, num=num,
+                           note="retired: 碰撞已解決, 實際 %d dir(s)" % nreal))
+        con.commit()
+        print("collision O%d retired (原記錄 dirs=%s)" % (num, have[0]["dirs"]))
+        return
+    sys.exit("use --scan / --list / --retire NUM")
 
 
 def cmd_resolve(a):
@@ -1600,6 +1618,8 @@ def build_parser():
     s = add("collision", cmd_collision)
     s.add_argument("--list", action="store_true")
     s.add_argument("--scan", action="store_true")
+    s.add_argument("--retire", type=int, metavar="NUM",
+                   help="解除已解決之碰撞記錄 (append-only: 原 collision 事件保留)")
 
     s = add("resolve", cmd_resolve)
     s.add_argument("--scope", required=True)

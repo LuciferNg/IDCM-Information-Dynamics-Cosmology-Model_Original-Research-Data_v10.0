@@ -1,4 +1,6 @@
-# Global Routing Table — 完整文檔目錄 (2026-10-20 結構合規更新)
+# P14 — Global Routing Table：完整文檔目錄（2026-10-20 結構合規更新）
+
+## 狀態: 開放
 
 ## 專案概述
 

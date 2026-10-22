@@ -1,6 +1,6 @@
-# O16: Cepheid PL 關係嘅 K_Chain 耦合機制
+# O16 — Cepheid PL 關係嘅 K_Chain 耦合機制
 
-## 狀態：🟢 全面閉合 (20/20 驗證通過)
+## 狀態： 全面閉合 (20/20 驗證通過)
 
 Cepheid 週光關係 (PL / Leavitt Law) 嘅 K_Chain 結構推導。
 **波段依賴 ε(λ) + Wesenheit + 零點 β(λ) 全部閉合！**

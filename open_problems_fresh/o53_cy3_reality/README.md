@@ -1,5 +1,7 @@
 # O53 — CY₃(36,98) Reality Check
 
+## 狀態: 全部閉合
+
 ## 最終狀態 (2026-08-22)
 
 ### ✅ 強閉合（3 項）
@@ -22,3 +24,13 @@
 - scripts/01-127: 全部腳本
 - data/polytopes/: 核心數據
 - 01_problem_record.md: 問題記錄
+
+## 檔案
+
+| 檔案 | 描述 | 狀態 |
+|:----|:-----|:----:|
+| `01_problem_record.md` | 標準檔 | — |
+| `SESSION_START.md` | 標準檔 | — |
+| `final_result.md` | 標準檔 | — |
+| `docs/` | 40 份推導記錄 | — |
+| `scripts/` | 133 個腳本 | — |

@@ -32,18 +32,18 @@ IDCM-v10.0--It-From-Beat/
 └── memory_archive/              # MEMORY/USER 完整導出（.gitignore，唔上傳）
 ```
 
-### O 系列分佈（register 快照 2026-10-18）
+## 狀態快照（register 2026-10-18）
+
 ```
-closed: 128 | open: 62 | partial: 55 | registered: 6 | retracted: 3 | merged: 1
+O 系列：255 個（O1–O255）— closed 128 / open 62 / partial 55 / registered 6 / retracted 3 / merged 1
+P 系列：15 個（P1–P15）＋子項 P3/high-l-tail-transfer
+M 系列：0（M1–M4 屬 v11.0--Reality-Architecture）
 ```
 
-### P 系列（main_problems）
-```
-P1 bbn / P2 ckm / P3 cmb_cl / P4 cmb_cold_spot / P5 crystal_stress / P6 neutrino /
-P7 reionization / P8 h0_tension / P9 kchain_number_field / P10 ktree_structure /
-P11 little_red_dots / P12 uhecrs / P13 beat_periodic_table / P14 global_routing_table / P15 early_derivations
-```
-（pid 一律大寫 P1..P15，folder 一律細寫 p1_bbn…；同 O 系列一致）
+P 系列目錄：p1_bbn / p2_ckm_reconstruction / p3_cmb_cl / p4_cmb_cold_spot / p5_crystal_stress /
+p6_neutrino / p7_reionization / p8_h0_tension / p9_kchain_number_field / p10_ktree_structure /
+p11_little_red_dots / p12_uhecrs / p13_beat_periodic_table / p14_global_routing_table / p15_early_derivations
+（pid 一律大寫 P1..P15，folder 一律細寫；同 O 系列一致）
 
 ## 已閉合關鍵結果（選錄）
 
@@ -65,7 +65,7 @@ P11 little_red_dots / P12 uhecrs / P13 beat_periodic_table / P14 global_routing_
 - register PID：M/P/S 跟隨 O 大寫（O1/P1/M1…）；folder 細寫；register.jsonl append-only 權威
 - 已否證路線設 FAIL + `-c` tag；跨版本引用先核歸一化
 
-## O/P 系列全列表
+## O/P/M 系列全列表
 
 | 編號 | 標題 | 核心發現 | 狀態 |
 |------|------|----------|------|

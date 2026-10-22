@@ -1,4 +1,4 @@
-# O19: 低 ℓ 異常 (60° Dodecahedron 尺度)
+# O19 — 低 ℓ 異常 (60° Dodecahedron 尺度)
 
 ## 問題陳述
 

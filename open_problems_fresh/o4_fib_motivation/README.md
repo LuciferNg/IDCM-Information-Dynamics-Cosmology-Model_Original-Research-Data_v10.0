@@ -1,4 +1,6 @@
-# O4: Fibonacci 等級模型物理動機
+# O4 — Fibonacci 等級模型物理動機
+
+## 狀態: 部分閉合
 
 > **狀態**: 🔴🔴 **核心觀測推導統計上唔成立 (2026-08-17 深夜)** · 數學閉合 ✅ · 觀測未證實 ❌ · **SMICA 特定假象確認**
 > **最重要文件**: `06_fatal_finding.md` + `07_tasks12_findings.md` — 距離衰減 = node 0 單點驅動 + SMICA 特定 (NILC/Commander 全部消失)
