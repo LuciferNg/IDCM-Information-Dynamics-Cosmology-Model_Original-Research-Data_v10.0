@@ -1,0 +1,36 @@
+{
+ "script": "03_dimension_forced_form.py",
+ "form": "eps_HI = n_struct * omega_ring ; omega_ring = 2*pi/T_ring",
+ "inputs": {
+  "T_ring_Gyr": 84.637,
+  "tau_dep_Gyr": 4.3414095,
+  "tau_rel_err": 0.2
+ },
+ "computed": {
+  "omega_ring_per_Gyr": 0.07423686221368417,
+  "eps_HI_per_Gyr": 0.23033993913727788,
+  "n_struct": 3.1027704063550665,
+  "n_band": [
+   2.5856420052958886,
+   3.878463007943833
+  ],
+  "tau_pred_Ngen3": 4.490132306156249,
+  "dev_Ngen3_pct": 3.425680211835546,
+  "candidates_inside": [
+   "3 (=N_gen)",
+   "pi",
+   "phi^2",
+   "L5/4 = 11/4",
+   "e",
+   "16/5",
+   "22/7",
+   "19/6"
+  ],
+  "required_precision_pct": 2.3598775598298873
+ },
+ "verdict": {
+  "form": "FORCED by dimensional argument (structural, zero free shape parameters)",
+  "coefficient": "NOT identified: 3 (=N_gen) and pi both inside the band; needs operator derivation + tau_dep precision < 2.3%"
+ },
+ "pass": "7/7"
+}

@@ -1,0 +1,60 @@
+==============================================================================
+O253/03  dimensional forcing of the HI->star conversion efficiency
+==============================================================================
+T_ring      = 84.637 Gyr
+omega_ring  = 0.074236862 /Gyr
+tau_dep(HI) = 4.3414095 Gyr  (+-20.0%)
+eps_HI      = 1/tau = 0.23033994 /Gyr
+n_struct    = eps_HI/omega_ring = 3.1027704
+n_struct band (+-20% on tau)    = [2.58564, 3.87846]
+
+[PASS] D1a eps = n*omega_ring reproduces eps exactly when n = n_struct  identity holds by construction (form is admissible, coefficient open)
+[D2] pre-registered coefficient family (size 20):
+     1              1.0  
+     phi            1.61803  
+     2              2.0  
+     sqrt5          2.23607  
+     sqrt(2*pi)     2.50663  
+     phi^2          2.61803  <== INSIDE BAND
+     e              2.71828  <== INSIDE BAND
+     L5/4 = 11/4    2.75  <== INSIDE BAND
+     3 (=N_gen)     3.0  <== INSIDE BAND
+     pi             3.14159  <== INSIDE BAND
+     22/7           3.14286  <== INSIDE BAND
+     19/6           3.16667  <== INSIDE BAND
+     16/5           3.2  <== INSIDE BAND
+     4 (=B)         4.0  
+     5 (=F5)        5.0  
+     6              6.0  
+     2pi            6.28319  
+     7 (=L4)        7.0  
+     8              8.0  
+     N_d/B = 11     11.0  
+  members inside the honest band: 8 -> ['3 (=N_gen)', 'pi', 'phi^2', 'L5/4 = 11/4', 'e', '16/5', '22/7', '19/6']
+[PASS] D2a >=2 pre-registered coefficients fall inside the band -> coefficient NOT identified  8 of 20 candidates inside [2.5856, 3.8785]
+
+[D3] nearest distinct structural coefficients above the band: N_gen=3, pi=3.14159
+     relative separation = 4.72%  -> would require tau_dep known to better than 2.36%
+     current tau_dep precision ~20% (Omega_HI 2.6%, CSFRD ~20%) -> 8.475x too coarse
+[PASS] D3a current precision is insufficient to separate N_gen from pi  need < 2.36%, have ~20%
+[PASS] D3b n_struct is consistent with N_gen = 3 at current precision  n_struct = 3.10277, N_gen = 3 -> sigma = 0.32
+
+[D4] consequence of the forced form: if n_struct carries no z-dependence,
+     tau_dep(HI) is CONSTANT and eps(z) is CONSTANT -> the observed weak
+     evolution of Omega_HI (1.35+-0.10) together with CSFRD (2.46) is then
+     a CONSISTENCY requirement, not a prediction of the ratio.
+     with n_struct = N_gen = 3: tau_pred = 4.49013 Gyr (measured 4.34141, dev 3.43%)
+[PASS] D4a N_gen=3 branch predicts tau_dep inside the honest band  tau_pred = 4.49013 Gyr
+
+[D5] IF the forced form holds at both epochs, the observation REQUIRES
+     n_struct to evolve by 1.8222 (raw) / 2.1964 (corrected):
+     n_struct(z=0.41) = 1.70274 (raw) / 1.41264 (corrected)   [today: 3.10277]
+     equivalent power-law exponent (1+z)^k : k = 1.7506 (raw) / 2.2955 (corrected)
+     => the naive CONSTANT-coefficient branch (n independent of cosmic time)
+        predicts CSFRD drop = Omega_HI drop = 1.35; the measured 2.46 kills it.
+     [DECOY] n_struct(z=0.41) candidate phi    = 1.61803 -> dev 15.0% (band ~20%: zero info)
+     [DECOY] n_struct(z=0.41) candidate sqrt2  = 1.41421 -> dev 0.11% (band ~20%: zero info)
+[PASS] D5a constant-coefficient branch is falsified (predicted CSFRD drop 1.35 vs measured 2.46)  factor 2.46 vs 1.35 -> 82%% excess (raw) / 120%% (corrected)
+[PASS] D5b required n_struct evolution is well-defined and dimensionless  1.82 (raw) .. 2.20 (corrected)
+
+RESULT: 7/7 PASS

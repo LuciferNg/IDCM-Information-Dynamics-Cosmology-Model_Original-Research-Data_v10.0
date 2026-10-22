@@ -1,0 +1,53 @@
+{
+ "script": "02_discrimination_audit.py",
+ "family_size": 41,
+ "ratio_family_size": 1316,
+ "T1": {
+  "raw_band": [
+   1.25,
+   1.45
+  ],
+  "corr_band": [
+   1.02,
+   1.22
+  ],
+  "pow1_candidate": 1.408843339
+ },
+ "T2": {
+  "band": [
+   2.56707,
+   2.67529
+  ],
+  "phi2": 2.618033988749895,
+  "phi_hits": [
+   2.618033988749895
+  ],
+  "pq_hits": 17
+ },
+ "T3": {
+  "target": 0.051294463,
+  "inv_n_hits_20pct": [
+   0.041666666666666664,
+   0.043478260869565216,
+   0.045454545454545456,
+   0.047619047619047616,
+   0.05,
+   0.05263157894736842,
+   0.05555555555555555,
+   0.058823529411764705
+  ]
+ },
+ "T4": {
+  "qualifying": [
+   "3/4",
+   "4/5",
+   "5/6",
+   "1"
+  ],
+  "total": 24
+ },
+ "MC_pq_single_hit_prob": 0.02586,
+ "MC_draws": 100000,
+ "verdict": "all four round-1 coincidences = decoys, zero identifying power",
+ "pass": "8/8"
+}

@@ -1,0 +1,94 @@
+{
+ "script": "01_observation_anchor_freeze.py",
+ "source": {
+  "doi": "10.1038/s41550-026-02965-9",
+  "arxiv": "2607.05326v1",
+  "survey": "FASHI-DESI HI stacking, 2.5e6 galaxies, 12000 deg2, 0<z<0.41"
+ },
+ "anchors": {
+  "Omega_HI_1e3_h70": 0.496,
+  "Omega_HI_1e3_err": 0.013,
+  "slope": 0.9,
+  "slope_err": 0.2,
+  "factor_raw": 1.35,
+  "factor_raw_err": 0.1,
+  "factor_corrected": 1.12,
+  "factor_corrected_err": 0.1,
+  "csfrd_factor": 2.46,
+  "z_max": 0.41,
+  "lookback_Gyr": 4.5
+ },
+ "idcm_inputs": {
+  "Om_b": "1/20",
+  "Om_m": "19/60",
+  "Om_L": "41/60",
+  "H0": 67.4071,
+  "T_ring_Gyr": 84.637
+ },
+ "computed": {
+  "t0_Gyr": 13.774276491533907,
+  "z_45Gyr": 0.40884333891846547,
+  "one_plus_z": 1.4088433389184654,
+  "ell": 0.2472555976154115,
+  "h": 0.674071,
+  "h70": 0.9629585714285714,
+  "rho_c": 126104792641.61105,
+  "Omega_HI": 0.0005150792720648122,
+  "rho_HI": 64953964.797725104,
+  "psi0": 0.01496149242863971,
+  "tau_dep_Gyr": 4.341409462159563,
+  "tau_over_T_ring": 0.05129446296725502,
+  "k_SFR": 2.6261454302532834,
+  "k_SFR_band": [
+   2.6752916049880135,
+   2.567071752517354
+  ],
+  "phi2": 2.618033988749895,
+  "sigma_pow1_vs_raw": 0.5884333891846547,
+  "sigma_pow1_vs_corr": 2.8884333891846548,
+  "eff_ratio_raw": 1.8222222222222222,
+  "eff_ratio_corrected": 2.1964285714285716,
+  "tau_dep_z0358": 2.531942467932299,
+  "tau_ratio": 1.7146556515973914,
+  "HI_share_of_baryons": 0.010301585441296243
+ },
+ "diagnostics": [
+  {
+   "tag": "C1",
+   "text": "t0 = 13.774276 Gyr under (19/60, 41/60, 67.4071) -- background self-consistency, not a new derivation"
+  },
+  {
+   "tag": "C2",
+   "text": "vs raw 1.35+-0.10  -> +0.59 sigma ;  vs corrected 1.12+-0.10 -> +2.89 sigma"
+  },
+  {
+   "tag": "C3",
+   "text": "candidate 0 (constant)                 (1+z)^0.0 -> -4.50 sigma"
+  },
+  {
+   "tag": "C3",
+   "text": "candidate +1 = |IDCM P1 exponent|      (1+z)^1.0 -> +0.50 sigma"
+  },
+  {
+   "tag": "C3",
+   "text": "candidate -1 = IDCM P1 exponent        (1+z)^-1.0 -> -9.50 sigma"
+  },
+  {
+   "tag": "C4",
+   "text": "phi^2 lands inside the z-window band by construction -> the apparent 0.3%% match carries ZERO information (banned phi-power fitting, O204/O136 register)"
+  },
+  {
+   "tag": "C5",
+   "text": "tau/T_ring = 0.0512945 vs 1/20 (dev 2.59%) -- observed error band is ~20% (Omega_HI 2.6%, CSFRD ~20%), so this match has NO discriminating power; must not be promoted without an operator mechanism"
+  },
+  {
+   "tag": "C7",
+   "text": "MF-based tau ratio 1.71466 vs paper factor ratio 1.82222 -- 5.9% apart; CSFRD anchor convention (M&F Eq.15) accounts for the gap, not IDCM"
+  },
+  {
+   "tag": "C8",
+   "text": "HI carries 1.0302% of the IDCM baryon budget; no closed IDCM identity for this share exists in corpus (0 hits) -> OPEN, must not be reverse-fitted"
+  }
+ ],
+ "pass": "10/10"
+}

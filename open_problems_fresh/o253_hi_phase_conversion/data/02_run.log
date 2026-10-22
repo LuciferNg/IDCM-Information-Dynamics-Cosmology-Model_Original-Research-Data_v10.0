@@ -1,0 +1,58 @@
+==============================================================================
+O253/02  discrimination audit (frozen structural family)
+==============================================================================
+family sizes: |S|=41  |p/q|=1316  |phi^k|=25  |1/n|=300  |small rat|=24
+
+------------------------------------------------------------------------------
+[T1] decline factor 1.35+-0.10 / 1.12+-0.10 ; candidate (1+z)^1 = 1.408843
+  [T1_raw] Omega_HI raw decline factor: band [1.25, 1.45] (relative width 14.8%)
+        phi^k hits = 0 ; p/q hits = 36
+        expected phi^k hits (log-uniform, 0.5-3.0) = 2.1
+[PASS] T1_raw family density >= 10 -> no identifying power  p/q hits = 36 in a 14.8%-wide band
+  [T1_corr] Omega_HI corrected decline factor: band [1.02, 1.22] (relative width 17.9%)
+        phi^k hits = 0 ; p/q hits = 38
+        expected phi^k hits (log-uniform, 0.5-3.0) = 2.5
+[PASS] T1_corr family density >= 10 -> no identifying power  p/q hits = 38 in a 17.9%-wide band
+
+------------------------------------------------------------------------------
+[T2] k_SFR target 2.626145 vs phi^2 = 2.618034 (dev 0.31%)
+  z-window band [2.56707, 2.67529] relative width 4.1%
+  phi^k members inside: ['2.61803']
+  p/q members inside  : 17 (first 8: ['2.5714', '2.5882', '2.5889', '2.6', '2.6111', '2.6154', '2.617', '2.6176'])
+[PASS] T2a phi^2 sits inside the band by construction  phi^2 = 2.618034
+[PASS] T2b band holds >=2 rational alternatives -> target is NON-UNIQUE (identification impossible)  hits = 17 (uniqueness would require exactly 1)
+  +-0.5% band [2.61301, 2.63928] -> p/q members: ['2.61538', '2.61702', '2.61765', '2.61798', '2.61818', '2.61905', '2.62069', '2.625', '2.63636']
+[PASS] T2c even a 1%%-wide window is non-unique  9 members (phi^2 among them)
+
+------------------------------------------------------------------------------
+[T3] tau_dep/T_ring = 0.0512945 vs 1/20 = 0.05 (dev 2.6%)
+  band +-5.0%: [0.0487297, 0.0538592] -> 1/n hits = 2 ['20.0', '19.0'] ; p/q hits = 10
+  band +-10.0%: [0.046165, 0.0564239] -> 1/n hits = 4 ['21.0', '20.0', '19.0', '18.0'] ; p/q hits = 21
+  band +-20.0%: [0.0410356, 0.0615534] -> 1/n hits = 8 ['24.0', '23.0', '22.0', '21.0', '20.0', '19.0'] ; p/q hits = 38
+[PASS] T3a 1/n family supplies >= 3 divisors inside the honest 20% band  no unique divisor identity available at current precision
+
+------------------------------------------------------------------------------
+[T4] Omega_HI slope 0.9 +- 0.2 : how many SMALL rationals qualify?
+  qualifying small rationals: 4 / 24
+  list: ['3/4', '4/5', '5/6', '1']
+[PASS] T4a >=2 small rationals qualify -> slope is NON-UNIQUE (identification impossible)  4/24 qualify (uniqueness requires exactly 1)
+
+------------------------------------------------------------------------------
+[MC] random-pair null for the p/q family (10^5 draws from S, log-uniform target window)
+  P(p/q lands in the 1.35+-0.10 band) = 0.02586
+  MC-expected hits over the 1316-member family = 34.0  (enumerated: 36)
+[PASS] MC1 MC density reproduces the enumerated hit count within 25%  expected 34.0 vs enumerated 36
+
+==============================================================================
+VERDICT (round 1)
+==============================================================================
+T1 (1+z)^1 = 1.4088 : survives raw (0.59 sigma) but is EXCLUDED by the
+                      systematics-corrected number (2.89 sigma) -> decoy.
+T2 phi^2 = 2.618    : inside the z-window band by construction; family
+                      density supplies dozens of alternatives -> decoy.
+T3 1/20             : error band +-20%% admits several divisors -> decoy.
+T4 slope 0.9        : 4/24 small rationals qualify -> no identification.
+=> NO IDCM mechanism may be promoted from round-1 numbers. Any future
+   structural claim must come from an OPERATOR identity, then be tested blind.
+
+RESULT: 8/8 PASS
