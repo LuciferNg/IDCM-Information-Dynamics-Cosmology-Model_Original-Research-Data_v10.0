@@ -173,3 +173,6 @@ scripts/AUDIT_B_r13r15.py logs/AUDIT_B_r13r15.out  (21 checks)
 scripts/AUDIT_C_docs_register.py logs/AUDIT_C_docs_register.out (28 checks)
 數據: /home/wsl/data/planck_2020_hillipop/ (38 fits, 持久)
 ```
+
+· `logs/22` 內同一 ℓ 段有兩組 λ（原始 co-add 段內 fit 316.7/568.8/875.4 vs λ_loc 40ℓ 窗模型擬合
+  221.6/339.5/310.8）— docs/11 §8 已加引用陷阱表；本審計確認 docs/11 §3.2 引用正確。
