@@ -13,3 +13,12 @@
 
 ## 依賴
 O1(15.11° 負結果) → 新O1（本閉合）; 閉合鏈: 冷斑位置碼 (l=180+L₇, b=−(44+F₇)) → δ → θ
+
+## 審計
+2026-10-22 全量審計: 10/10 script exit=0 重現, 文檔數值全對; 修正 1 個 data 欄 bug (不影響結論)。詳見 `04_audit_full.md`; 修正工具 `scripts/11_audit_fix_theta_field.py`。
+
+## 獨立驗證 (closeout)
+`scripts/12_audit_independent.py` — **21/21 PASS**（零 import 原 script; quaternion 旋轉 + mpmath dps=40）:
+θ 三條獨立路徑（球面餘弦定律 / quaternion 120° / 代數 cos²δ−sin²δ/2）全部 = 26.0913571445°，三路差 **1.1e-39°**;
+A₅ 群 60 元素, 角譜命中 26.0914←120°, 26.1664←72°, 31.6787←180°, 42.9712←144°; 旋轉不變性逐節點差 4.4e-39°。
+階段性 closeout 記錄: `05_closeout.md`。

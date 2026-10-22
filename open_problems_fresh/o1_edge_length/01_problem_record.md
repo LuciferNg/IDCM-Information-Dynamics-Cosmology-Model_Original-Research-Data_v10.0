@@ -1,5 +1,18 @@
 # 新O1: 邊長 26.09° — 精確結構公式
 
+<!-- registry
+pid:     O1/edge-length
+title:   新O1: 邊長 26.09° — A₅ 群論精確閉合
+state:   closed
+verdict: closed
+flags:   -
+owner:   O1
+created: 2026-10-22
+updated: 2026-10-22
+prereq:  O1
+source:  o1_edge_length scripts 01-10 (2026-08-16)
+-->
+
 ## 問題陳述
 
 60 節點 A₅ 軌道 (Rhombicosidodecahedron) 嘅邊長 = 26.09°（冷斑最近鄰距離, 4 個, 座標系無關）。呢個係真正嘅結構量，需要精確公式。
@@ -49,8 +62,30 @@
 | 15:01 | scripts/09_delta_formula.py | δ=15.1085° 結構搜索 (冇獨立公式) | 探索 |
 | 15:01 | scripts/10_delta_group_word.py | δ 大圓性發現 (v-n3-n5 共面) | 發現 |
 | 15:02 | 03_delta_closure.md | δ 自洽閉合 (位置碼→幾何) | 最終 |
+| 10-22 | scripts/11_audit_fix_theta_field.py | **審計修正**: 07 L121 loop 變量覆蓋 bug → data/edge_formula.txt theta_formula 113.54→26.091357 | 修正 |
+| 10-22 | 04_audit_full.md | 全量審計報告 (10/10 script exit=0 重現 + 文檔核對 + bug 記錄) | 審計 |
+| 10-22 | scripts/12_audit_independent.py | **獨立重驗 21/21 PASS** (quaternion + mpmath dps40, 零 import 原 script; θ 三路徑差 1.1e-39°) | 驗證 |
+| 10-22 | 05_closeout.md | 階段性 closeout (T0-T6 + §4.9 落碟 + §4.10 登記面) | closeout |
 
 **時序完整性:** ✅ 腳本順序 = 推導順序; 文檔寫入匹配; 無回溯污染。
+⚠️ 4 個 md (01/02/03/final_result) mtime 全部 2026-10-15 23:34:45 = 批次搬移/touch (非逐檔寫入證據, 內容與本索引一致)。
+⚠️ scripts/07 L121 已知 loop 變量覆蓋 bug (theta 被群元素角度覆蓋) — stdout/文檔正確, 只影響 data 檔已修正欄。
+
+## §檔案閉合水位 (close-out watermark, 2026-10-22 首次建立)
+
+| # | 檔案 | 上次檔案更新 (mtime) | 上次 closed-out | 已驗範圍 | 狀態 |
+|:-:|:-----|:---------------------|:----------------|:---------|:-----|
+| 1 | 01_problem_record.md | 2026-10-22 20:20 | 2026-10-22 20:20 | 全文 | ✅ 已驗 |
+| 2 | 02_results.md | 2026-10-15 23:34 | 2026-10-22 | 全文 | ✅ 已驗 |
+| 3 | 03_delta_closure.md | 2026-10-15 23:34 | 2026-10-22 | 全文 | ✅ 已驗 |
+| 4 | 04_audit_full.md | 2026-10-22 20:05 | 2026-10-22 20:05 | 全文 | ✅ 已驗 |
+| 5 | 05_closeout.md | 2026-10-22 20:20 | 2026-10-22 20:20 | 全文 | ✅ 已驗 |
+| 6 | final_result.md | 2026-10-22 20:20 | 2026-10-22 | 全文 | ✅ 已驗 |
+| 7 | SESSION_START.md | 2026-10-22 20:12 | 2026-10-22 | 全文 | ✅ 已驗 |
+| 8-19 | scripts/01…12 | 2026-08-16 (01-10) / 2026-10-22 (11-12) | 2026-10-22 | 全文+重跑 | ✅ 已驗 |
+| 20-27 | data/*.txt + 1 備份 | 2026-10-22 19:57-20:03 | 2026-10-22 | 內容核對 | ✅ 已驗 |
+
+> 增量規則: `mtime ≤ 上次 closed-out` ⟹ skip; `mtime >` ⟹ 只驗新增/改動部分。下次 closeout 沿用本表。
 
 ## 驗證路徑
 

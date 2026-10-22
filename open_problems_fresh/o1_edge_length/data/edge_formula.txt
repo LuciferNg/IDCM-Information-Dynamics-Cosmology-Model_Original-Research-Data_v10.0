@@ -1,4 +1,6 @@
 delta=15.10851574
-theta_formula=113.54247385 theta_obs=26.09134600
+theta_formula=26.09135714 theta_obs=26.09134600
 delta_rev=15.10850925
 theta2=26.09135714
+# audit 2026-10-22: theta_formula 原值 113.54247385 係 07_edge_formula_verify.py L121 loop 變量覆蓋 bug (非公式值);
+#   正解 = 26.09135714 (= theta2, 兩式等價); stdout 一直正確, 文檔未受污染
