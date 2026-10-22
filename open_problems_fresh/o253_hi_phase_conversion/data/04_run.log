@@ -1,0 +1,54 @@
+==============================================================================
+O253/04  R1 definition freeze (pipe algebra ingredients)
+==============================================================================
+SUM_176           = 178.0
+  even / odd      = 90.0 / 88.0
+SUM_88 (n=1..88)  = 176.0
+SUM_lam(tree)     = 66.0
+n* = N_d-L6+1     = 27 ; gamma88(n*) = 2.698928359
+S26 / S28-44      = 26.41653473 / 60.88453691
+E_proj / E_sync   = 28.5 / 61.5
+176-L window 1-27 / 28-88 = 8.416486704 / 169.5835133
+
+[PASS] F1 SUM_176 = 178 (176-L, k=1..88)  = 178.0
+[PASS] F2 even/odd = 90/88 (charter C2)  90.0 / 88.0
+[PASS] F3 SUM_88 = 176 (44-site ring reading differs from 176-L: 178)  = 176.0  (convention label mandatory)
+[PASS] F4 SUM_lam = 66 = B^3+B/2 = 2*K_tree_mode (graph theorem)  = 66.0
+[PASS] F5 n* = 27 = N_d-L6+1  n* = 27
+[PASS] F6 E_proj = 28.5 = 19/60 x Sigma_even(90)  = 28.5
+[PASS] F7 E_sync = 61.5 = 41/60 x 90 and E_proj/E_sync = 19/41  E_sync = 61.5 ; ratio = 0.463414634146
+[PASS] F6b S26 + g27 + S28_44 = 90 = Sigma_even (O33 budget scale)  SUM_44 = 90.0
+[PASS] F6c f_proj derived exactly = 0.771960196 -> rounds to O33's printed 0.7720  f_proj = 0.771960196 ; f_sync = 0.228039804
+[PASS] F8 K_tree_mode = 33 = N_gen*L5 ; K_tree_node = 34 = F9  33 / 34 (two counts, label mandatory)
+
+[ING] frozen ingredient set (24 entries):
+      B                4.0
+      B_176            169.5835133
+      E_proj           28.5
+      E_sync           61.5
+      F_proj           17.0
+      K_tree_mode      33.0
+      K_tree_node      34.0
+      L5               11.0
+      L6               18.0
+      L7               29.0
+      N_d              44.0
+      N_gen            3.0
+      N_gen3           27.0
+      P27_176          8.416486704
+      S26              26.41653473
+      S28_44           60.88453691
+      Sum_gamma_176    178.0
+      Sum_gamma_88     176.0
+      Sum_gamma_even   90.0
+      Sum_gamma_odd    88.0
+      Sum_lam_tree     66.0
+      f_proj_exact     0.771960196
+      n_star           27.0
+      sites_tree       68.0
+
+[FREEZE] family rule sha256 = ecadd8d30a6b4e55a08a03fc9632126075acfbb95b84f4c47dff7ff0c59dc69e
+         (scripts/05 must reproduce this hash before it may use the family)
+[PASS] F9 family rule hash reproducible  ecadd8d30a6b4e55...
+
+RESULT: 11/11 PASS

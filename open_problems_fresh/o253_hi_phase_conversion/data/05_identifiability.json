@@ -1,0 +1,119 @@
+{
+ "script": "05_identifiability.py",
+ "family_size": 647,
+ "hits_wide": 49,
+ "distinct_wide": 42,
+ "distinct_tight": 8,
+ "top": [
+  {
+   "value": 3.103448275862069,
+   "label": "Sum_gamma_even/L7",
+   "kind": "ratio",
+   "dev_pct": 0.02089325325734709
+  },
+  {
+   "value": 3.090909090909091,
+   "label": "K_tree_node/L5",
+   "kind": "ratio",
+   "dev_pct": -0.3832315679679351
+  },
+  {
+   "value": 3.087719298245614,
+   "label": "Sum_gamma_odd/E_proj",
+   "kind": "ratio",
+   "dev_pct": -0.4860352505603315
+  },
+  {
+   "value": 3.1386652963208483,
+   "label": "S26/P27_176",
+   "kind": "ratio",
+   "dev_pct": 1.1559010029923995
+  },
+  {
+   "value": 3.1578947368421053,
+   "label": "Sum_gamma_even/E_proj",
+   "kind": "ratio",
+   "dev_pct": 1.7756457664723884
+  },
+  {
+   "value": 3.0344827586206895,
+   "label": "Sum_gamma_odd/L7",
+   "kind": "ratio",
+   "dev_pct": -2.2017932634817052
+  },
+  {
+   "value": 3.0,
+   "label": "K_tree_mode/L5",
+   "kind": "ratio",
+   "dev_pct": -3.313136521851231
+  },
+  {
+   "value": 3.2079893843367313,
+   "label": "n_star/P27_176",
+   "kind": "ratio",
+   "dev_pct": 3.3901438809053586
+  },
+  {
+   "value": 3.259259259259259,
+   "label": "Sum_gamma_odd/n_star",
+   "kind": "ratio",
+   "dev_pct": 5.042518346630761
+  },
+  {
+   "value": 2.9235666237427576,
+   "label": "Sum_gamma_176/S28_44",
+   "kind": "ratio",
+   "dev_pct": -5.776504326970558
+  },
+  {
+   "value": 2.9011181816756215,
+   "label": "sqrt(P27_176)",
+   "kind": "sqrt",
+   "dev_pct": -6.499994144784667
+  },
+  {
+   "value": 2.894308943089431,
+   "label": "Sum_gamma_176/E_sync",
+   "kind": "ratio",
+   "dev_pct": -6.719448785309047
+  }
+ ],
+ "tight": [
+  {
+   "value": 3.103448275862069,
+   "label": "Sum_gamma_even/L7"
+  },
+  {
+   "value": 3.090909090909091,
+   "label": "K_tree_node/L5"
+  },
+  {
+   "value": 3.087719298245614,
+   "label": "Sum_gamma_odd/E_proj"
+  },
+  {
+   "value": 3.1386652963208483,
+   "label": "S26/P27_176"
+  },
+  {
+   "value": 3.1578947368421053,
+   "label": "Sum_gamma_even/E_proj"
+  },
+  {
+   "value": 3.0344827586206895,
+   "label": "Sum_gamma_odd/L7"
+  },
+  {
+   "value": 3.0,
+   "label": "K_tree_mode/L5"
+  },
+  {
+   "value": 3.2079893843367313,
+   "label": "n_star/P27_176"
+  }
+ ],
+ "null_base_rate": 0.0657327039236587,
+ "null_expected": 39.439622354195215,
+ "verdict": "not identifiable (wide band 42 distinct, tight band 8 distinct)",
+ "pass": "6/6"
+}

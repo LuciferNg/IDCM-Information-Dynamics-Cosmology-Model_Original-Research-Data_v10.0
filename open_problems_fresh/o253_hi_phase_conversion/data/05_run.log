@@ -1,0 +1,43 @@
+==============================================================================
+O253/05  R2: identifiability of n_struct inside the pipe algebra
+==============================================================================
+[PASS] G1 frozen family hash reproduced (no goalpost move)  ecadd8d30a6b4e55a08a... vs ecadd8d30a6b4e55a08a
+[PASS] G2 ingredient values agree with freeze to 1e-12  24 ingredients
+[FAM] enumerated 647 admissible functionals
+[HITS] 49 entries inside wide band [2.5856, 3.8785] -> 42 distinct values
+
+  rank | value      | dev vs 3.1028 | functional
+     1 | 3.1034483  |   +0.021 %    | Sum_gamma_even/L7 [ratio]
+     2 | 3.0909091  |   -0.383 %    | K_tree_node/L5 [ratio]
+     3 | 3.0877193  |   -0.486 %    | Sum_gamma_odd/E_proj [ratio]
+     4 | 3.1386653  |   +1.156 %    | S26/P27_176 [ratio]
+     5 | 3.1578947  |   +1.776 %    | Sum_gamma_even/E_proj [ratio]
+     6 | 3.0344828  |   -2.202 %    | Sum_gamma_odd/L7 [ratio]
+     7 | 3.0        |   -3.313 %    | K_tree_mode/L5 [ratio]
+     8 | 3.2079894  |   +3.390 %    | n_star/P27_176 [ratio]
+     9 | 3.2592593  |   +5.043 %    | Sum_gamma_odd/n_star [ratio]
+    10 | 2.9235666  |   -5.777 %    | Sum_gamma_176/S28_44 [ratio]
+    11 | 2.9011182  |   -6.500 %    | sqrt(P27_176) [sqrt]
+    12 | 2.8943089  |   -6.719 %    | Sum_gamma_176/E_sync [ratio]
+
+[TIGHT] 8 distinct values inside the discriminating band [2.9603, 3.2533]
+        3.1034483  = Sum_gamma_even/L7          dev +0.021 %
+        3.0909091  = K_tree_node/L5             dev -0.383 %
+        3.0877193  = Sum_gamma_odd/E_proj       dev -0.486 %
+        3.1386653  = S26/P27_176                dev +1.156 %
+        3.1578947  = Sum_gamma_even/E_proj      dev +1.776 %
+        3.0344828  = Sum_gamma_odd/L7           dev -2.202 %
+        3.0        = K_tree_mode/L5             dev -3.313 %
+        3.2079894  = n_star/P27_176             dev +3.390 %
+
+[NULL] integer pairs p/q in [2,200]: 2590/39402 = 0.065733 inside band
+       expected hits among 600 ratio-functionals = 39.44 ; observed ratio-hits = 44
+[PASS] G3 wide-band hits >= 2 distinct values => NOT identifiable  42 distinct hits
+[PASS] G4 tight band also non-unique  8 distinct in tight band
+[PASS] G5 observed ratio-hit count consistent with integer-pair base rate (within 2x)  obs 44 vs exp 39.44
+[PASS] G6 no functional carries a mechanism label that fixes it uniquely  all hits are bare ratios/products of spectral sums with Lucas/count factors
+
+VERDICT: n_struct = 3.1028 is NOT identifiable within the pipe algebra:
+         42 distinct admissible functionals land in the wide band (8 in tight band).
+
+RESULT: 6/6 PASS

@@ -1,0 +1,49 @@
+{
+ "script": "04_definition_freeze.py",
+ "sector_semantics": {
+  "chain (HI)": "176-L K_chain spectrum gamma_k = 4 sin^2(k pi/176), k=1..88",
+  "tree (H2/star)": "K_tree Dirichlet lambda_k = B sin^2(k pi/68), k=1..33",
+  "pipe": "T_pipe = diag(sigma_1..sigma_44), n* = N_d-L6+1 = 27, f_proj = 0.7720 (O33)",
+  "conversion": "eps_HI = SFRD/rho_HI = n_struct * omega_ring (O253 docs/02)"
+ },
+ "ingredients": {
+  "Sum_gamma_176": 178.0,
+  "Sum_gamma_even": 90.0,
+  "Sum_gamma_odd": 88.0,
+  "Sum_gamma_88": 176.0,
+  "Sum_lam_tree": 66.0,
+  "E_proj": 28.5,
+  "E_sync": 61.5,
+  "S26": 26.416534734944005,
+  "S28_44": 60.8845369058578,
+  "P27_176": 8.416486704048863,
+  "B_176": 169.58351329595115,
+  "n_star": 27,
+  "N_d": 44,
+  "B": 4,
+  "N_gen": 3,
+  "L5": 11,
+  "L6": 18,
+  "L7": 29,
+  "F_proj": 17,
+  "K_tree_mode": 33,
+  "K_tree_node": 34,
+  "sites_tree": 68,
+  "N_gen3": 27,
+  "f_proj_exact": 0.7719601959627247
+ },
+ "family_rule": "ING=B,B_176,E_proj,E_sync,F_proj,K_tree_mode,K_tree_node,L5,L6,L7,N_d,N_gen,N_gen3,P27_176,S26,S28_44,Sum_gamma_176,Sum_gamma_88,Sum_gamma_even,Sum_gamma_odd,Sum_lam_tree,f_proj_exact,n_star,sites_tree ; F1: all ratios p/q, p!=q, p,q in ING (mpf); F2: all products p*q for p,q in {N_d,B,N_gen,L5,L6,L7,F_proj,n_star,K_tree_mode,K_tree_node}; F3: all p/(2*pi), p/pi for p in {N_d,B,N_gen,L5,L6,L7,F_proj,n_star}; F4: n_struct = sqrt(p) for p in ING; band: n_struct observable band [2.5856, 3.8785] (tau_dep +-20%); tight band: [2.9603, 3.2533] (N_gen vs pi separation, +-2.36%)",
+ "family_rule_sha256": "ecadd8d30a6b4e55a08a03fc9632126075acfbb95b84f4c47dff7ff0c59dc69e",
+ "targets_do_not_touch": {
+  "n_struct": 3.1028,
+  "band": [
+   2.5856,
+   3.8785
+  ],
+  "tight": [
+   2.9603,
+   3.2533
+  ]
+ },
+ "pass": "11/11"
+}

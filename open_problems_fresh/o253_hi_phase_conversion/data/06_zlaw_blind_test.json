@@ -1,0 +1,104 @@
+{
+ "script": "06_zlaw_blind_test.py",
+ "z": 0.40884333891846547,
+ "one_plus_z": 1.4088433389184654,
+ "ell": 0.2472555976154115,
+ "Ez": 1.2525323129212649,
+ "t_frac_now": 0.16274533015960949,
+ "t_frac_then": 0.10957709404538048,
+ "required_raw": 1.8222222222222222,
+ "required_corr": 2.1964285714285716,
+ "candidates": [
+  {
+   "name": "Z1  4^-l = (1+z)^-1",
+   "ratio": 0.7098021280121007,
+   "sfrd_raw": 0.958232872816336,
+   "dev_raw_pct": -61.04744419445789,
+   "in_band": false,
+   "provenance": "O76 / O173-P1 (the only DERIVED z-law)"
+  },
+  {
+   "name": "Z2  4^+l = (1+z)^+1",
+   "ratio": 1.4088433389184654,
+   "sfrd_raw": 1.9019385075399284,
+   "dev_raw_pct": -22.685426522767138,
+   "in_band": false,
+   "provenance": "P1 inverted (no provenance, control)"
+  },
+  {
+   "name": "Z3  (t/T_ring)^-1",
+   "ratio": 1.4852130509338914,
+   "sfrd_raw": 2.0050376187607535,
+   "dev_raw_pct": -18.49440574143279,
+   "in_band": false,
+   "provenance": "O121 ring phase (no provenance)"
+  },
+  {
+   "name": "Z4  (t/T_ring)^+1",
+   "ratio": 0.6733040753790893,
+   "sfrd_raw": 0.9089605017617706,
+   "dev_raw_pct": -63.050386107245096,
+   "in_band": false,
+   "provenance": "O121 ring phase (no provenance)"
+  },
+  {
+   "name": "Z5  E(z)",
+   "ratio": 1.2525323129212649,
+   "sfrd_raw": 1.6909186224437076,
+   "dev_raw_pct": -31.26347063236961,
+   "in_band": false,
+   "provenance": "O215 background expansion"
+  },
+  {
+   "name": "Z6  E(z)^2",
+   "ratio": 1.5688371949118933,
+   "sfrd_raw": 2.1179302131310562,
+   "dev_raw_pct": -13.905275888981462,
+   "in_band": false,
+   "provenance": "O215 background expansion"
+  },
+  {
+   "name": "Z7  1+l",
+   "ratio": 1.2472555976154116,
+   "sfrd_raw": 1.6837950567808055,
+   "dev_raw_pct": -31.55304647232498,
+   "in_band": false,
+   "provenance": "level-count (no provenance)"
+  },
+  {
+   "name": "Z8  1/(1+l)",
+   "ratio": 0.8017602822644119,
+   "sfrd_raw": 1.082376381056956,
+   "dev_raw_pct": -56.000960119635934,
+   "in_band": false,
+   "provenance": "level-count (no provenance)"
+  },
+  {
+   "name": "Z9  4^(l/2) = (1+z)^(1/2)",
+   "ratio": 1.1869470666034208,
+   "sfrd_raw": 1.602378539914618,
+   "dev_raw_pct": -34.862660979080566,
+   "in_band": false,
+   "provenance": "half-level (no provenance)"
+  },
+  {
+   "name": "Z10 1 (spectral-only)",
+   "ratio": 1.0,
+   "sfrd_raw": 1.35,
+   "dev_raw_pct": -45.1219512195122,
+   "in_band": false,
+   "provenance": "constant coefficient (killed in R1 D5)"
+  }
+ ],
+ "in_band": [],
+ "near_25": [
+  "Z2  4^+l = (1+z)^+1",
+  "Z3  (t/T_ring)^-1",
+  "Z6  E(z)^2"
+ ],
+ "k_raw": 1.7506153887665308,
+ "k_corr": 2.2955184720373767,
+ "assumption": "CSFRD +-10% band is an ASSUMED tolerance (paper quotes the factor without error)",
+ "verdict": "no closed z-law matches; strict 0/10, loose 3/10 non-unique",
+ "pass": "6/6"
+}

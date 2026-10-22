@@ -1,0 +1,39 @@
+==============================================================================
+O253/06  R3: closed z-laws vs required n_struct evolution
+==============================================================================
+z = 0.4088433389 ; 1+z = 1.408843339 ; l = log4(1+z) = 0.2472555976
+E(z) = H(z)/H0 = 1.252532313 ; t0/T_ring = 0.1627453302 ; t(z)/T_ring = 0.109577094
+[PASS] H1 z(4.5 Gyr) = 0.4088433 (reproduces scripts/01 C1)  z = 0.4088433389
+
+required n_struct evolution: raw 1.8222222 / corr 2.1964286
+CSFRD anchor 2.46 ; assumed +-10% band [2.214, 2.706]
+
+ cand | z-law ratio | SFRD(raw) | dev(raw) | SFRD(corr) | dev(corr) | band? | provenance
+ Z1  4^-l = (1+z)^-1        | 0.709802   | 0.95823   |   -61.0% | 0.79498    |   -67.7% | no    | O76 / O173-P1 (the only DERIVED z-law)
+ Z2  4^+l = (1+z)^+1        | 1.40884    | 1.9019    |   -22.7% | 1.5779     |   -35.9% | no    | P1 inverted (no provenance, control)
+ Z3  (t/T_ring)^-1          | 1.48521    | 2.005     |   -18.5% | 1.6634     |   -32.4% | no    | O121 ring phase (no provenance)
+ Z4  (t/T_ring)^+1          | 0.673304   | 0.90896   |   -63.1% | 0.7541     |   -69.3% | no    | O121 ring phase (no provenance)
+ Z5  E(z)                   | 1.25253    | 1.6909    |   -31.3% | 1.4028     |   -43.0% | no    | O215 background expansion
+ Z6  E(z)^2                 | 1.56884    | 2.1179    |   -13.9% | 1.7571     |   -28.6% | no    | O215 background expansion
+ Z7  1+l                    | 1.24726    | 1.6838    |   -31.6% | 1.3969     |   -43.2% | no    | level-count (no provenance)
+ Z8  1/(1+l)                | 0.80176    | 1.0824    |   -56.0% | 0.89797    |   -63.5% | no    | level-count (no provenance)
+ Z9  4^(l/2) = (1+z)^(1/2)  | 1.18695    | 1.6024    |   -34.9% | 1.3294     |   -46.0% | no    | half-level (no provenance)
+ Z10 1 (spectral-only)      | 1.0        | 1.35      |   -45.1% | 1.12       |   -54.5% | no    | constant coefficient (killed in R1 D5)
+
+[BAND] strict +-10%: 0 candidate(s) inside -> NONE
+[NEAR] +-25%:      3 candidate(s) -> Z2  4^+l = (1+z)^+1, Z3  (t/T_ring)^-1, Z6  E(z)^2
+[PASS] H2 strict band: zero candidates reproduce the CSFRD drop  0 inside
+[PASS] H3 loose band: >=2 candidates survive => non-unique if tolerance relaxed  3 candidates within 25%
+[PASS] H4 the only DERIVED z-law (Z1, P1) points the WRONG way (SFRD would fall less than HI)  Z1 SFRD factor 0.95823 < HI factor 1.35
+
+[EXP] required power-law exponent k = 1.75062 (raw) / 2.29552 (corr)
+      note: ANY k can be written as a ratio of two counts from a ~40-number pool
+      (e.g. L4/B = 7/4 = 1.750 vs k_raw = 1.7506) -> density, not identity
+      nearest half-integer exponent |delta k| = 0.24938 -> NOT a closed 4^(m*l) exponent (m integer) nor a sqrt-level (m/2)
+[PASS] H5 required k is not a closed 4^(k*l) exponent (k half-integer)  k_raw = 1.75062 ; nearest half-integer delta = 0.24938
+[PASS] H6 count-ratio 'hit' L4/B = 7/4 = 1.75 is a density decoy (0.03% from k_raw), not an identity  |L4/B - k_raw| = 0.0006154 ; any k is writable as a ratio of two counts
+
+VERDICT: no closed IDCM z-dependence supplies 1.822/2.196.
+         strict +-10% band -> 0/10 candidates; loose +-25% -> 3 (non-unique).
+
+RESULT: 6/6 PASS
