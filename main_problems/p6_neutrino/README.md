@@ -14,7 +14,7 @@ Z₃=3² 係見到 8.99≈9 先後驗除以 9 — 未過 IDCM 四硬測（零參
 
 **2026-10-20 攻堅判決**：上游 O49/O66 已閉合 M_comp（3.6890e13 GeV，
 vs 校準 0.051%）＋ 閉合零參數質量公式（m₃=γ₆²A、m₁=(γ₄+Δcosπ/4)²A、m₂=(γ₄+Δcosπ/5)²A；
-盲測 Δm² dev 0.44%/0.012%）、撤銷 Z₃/φ-power/φ^(1/8)（禁區）。
+盲測 Δm² dev 0.44%/0.012%（v=246.0 版；**v_SM 版: 0.80%/0.37% 見 docs/12**）、撤銷 Z₃/φ-power/φ^(1/8)（禁區）。
 本次修正 O49 script 11 嘅 δ_CP（應 211.717° 非 72.6°）。**真剩餘 4 項**：束縛態機制、
 「點解 1/L₉」、m_ββ 相位、Σm vs DESI（等數據）。詳見 `docs/02_closure_status.md`。
 ⚠️ **數據審核**：docs/01 原始 prompt 列 φ-power/Z₃/M_comp 3.93e13/ratio 0.637/0.880 全部係已否證歷史，勿引用。
@@ -46,14 +46,14 @@ vs 校準 0.051%）＋ 閉合零參數質量公式（m₃=γ₆²A、m₁=(γ₄
 | 1 | hop 強度 t=Δ/2 機制 | 🟢 **gaplessness 閉合**（docs/09；充分 Hamiltonian 留新 O） |
 | 2 | 1/76 log10 修正機制 | 🔴（譜積路已排除 docs/08；需 log10 operator 理論 → 新 O） |
 | 3 | m_ββ Majorana 相位 | 🟡 [6.108, 22.169] meV 帶（需 dim-5 算符相位理論） |
-| 4 | Σm vs DESI | 🟡 0.09714 硬預言 vs ΛCDM<0.072（等 DESI LRG/ELG + KATRIN/LEGEND） |
+| 4 | Σm vs DESI | 🟡 0.0973116 硬預言 vs ΛCDM<0.072（v_SM 版；v=246.0 版 0.09714 保留。等 DESI LRG/ELG + KATRIN/LEGEND） |
 
 ## 依賴
 
-IDCM-v10.0 → K_Chain (γ_n) ＋ 12D WDVV d_tensor（`main_problems/p15_early_derivations/data/d_tensor_positive.npy`，需 symlink 先跑得）
+IDCM-v10.0 → K_Chain (γ_n) ＋ 12D WDVV d_tensor（`main_problems/p15_early_derivations/data/d_tensor_positive.npy`，scripts 已改路徑直讀）
 → CY₃(36,98) M_comp → 上游 O49（生成鏈）＋ O66（M_comp 第一性原理）＋ O123（δ_CP=211.717°）。
 
 ## 來源
 
 - 原 `open_problems_fresh/neutrino_p6_mode/` 相關 scripts（2026-08-15）；遷 `main_problems/p6_neutrino/`（2026-10-20）
-- ⚠️ 腳本內部路徑（`data/d_tensor_positive.npy`、`open_problems_fresh/neutrino_p6_results.txt`）未更新 — 內容修正待指示
+- ⚠️ 腳本內部路徑（`data/d_tensor_positive.npy`、`open_problems_fresh/neutrino_p6_results.txt`）已於 2026-10-21 修正直讀（scripts/01-05 全部可跑；內容公式零改）

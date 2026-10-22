@@ -123,6 +123,16 @@ M_comp(φ法) = 4.5965×10¹⁶ GeV → m_ν = **4.30×10⁻⁵** eV（唔係聲
 
 > 調律者裁決：**新 O 只含 #2；#3、#4 繼續留喺 P6**（唔開新 O）。
 
+## 11. v_SM 錨統一（2026-10-21，append-only）
+
+> 調律者裁定：**v_SM（246.2196 GeV）及 v（246.0 GeV）皆保留**——文檔兩版數字並存，原文唔刪。
+
+- §8「盲測 dev 0.44%/0.012%」係 **v=246.0 版**；v_SM 版為 **dev 0.80%/0.37%**（仍 <1% 過閘）。
+- v_SM 版閉合鏈：A=1.64337 eV/γ²、m₁/m₂/m₃=0.0209452/0.0226848/0.0536815 eV、Σm=0.0973116 eV（v=246.0 版 0.09714 保留）。
+- 全量審計發現 scripts/01-05 一直 FileNotFoundError（舊審核靠 symlink 冇真執行）——按調律者授權改 scripts 路徑 8 處（公式零改）；重跑 01-09 exit=0，09=32/32 PASS。
+- 詳見 docs/11（審計報告）＋ docs/12（v_SM 基準附註＋呈報精度原則：m 6 位有效、dev 2 位）。
+- scripts/03/04/05/09 已改 v_SM 重跑；docs/02/05/07/10/README 已加更正段（原文保留）。
+
 - ✅ **#2 1/76 log10 修正機制** → 已開 **O257**（`open_problems_fresh/o257_mcomp_log10_mechanism`，state=registered 只開不推）。承接後 O257 嘅前置 = P6/O66/O212/O179；禁區（譜積路已否證、O49 docs/03 後驗凑合、Z₃=9/φ-power）已寫入其 problem record。
 - 🟡 **#3 m_ββ Majorana 相位** → **繼續留喺 P6**（曾開 O258 後根據「新O只含#2」即時撤回，2026-10-21 retracted；register 已加 O258_RETRACT_FIX 翻譯層，基線 REF-MISSING 5/HARD DRIFT 47 不變）。重點仍係 6.321 meV 候選無結構必要性、6.108 唔排除 CP。
 - 🟡 **#4 Σm vs DESI** → **繼續留喺 P6**（等 DESI LRG/ELG + KATRIN/LEGEND 數據，維持 partial 唔 close）。
