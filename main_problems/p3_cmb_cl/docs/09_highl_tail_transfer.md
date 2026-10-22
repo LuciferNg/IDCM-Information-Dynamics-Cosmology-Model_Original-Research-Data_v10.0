@@ -227,3 +227,17 @@ C_ℓ 高ℓ尾 (ℓ>1409):
   **ACT DR6 `o9_high_ell_peaks/data/act_dr6_cmb_sacc.fits`（sacc, cov 127×127=TT45+TE40+EE42）**
 - register: P3/high-l-tail-transfer 維持 open（**第二輪攻堅後結論: 冇 IDCM 特有閉式，
   「lensed Silk 型」係 ΛCDM 現實；O214 前向承托仍然係唯一全譜閉合**）
+
+---
+
+## ⚠️ §更正 (2026-10-22 審計, append-only)
+
+審計器 `scripts/AUDIT_A_r1r12.py` 由第一原理重算（零 import 原 script），判決:
+本檔 §4「λ_obs = 533±3」及配套 Δχ² 表**係方法 artifact**:
+  · `scripts/12` 嘅 `Amax()` 用 diag σ 計 A，但 `chi2_full()` 用全身 cov χ²（metric 不一致）
+  · 同 metric joint 最佳化（A 同 χ² 皆 full-cov）→ **λ = 507.0**, χ² = 557.6（比 scripts/12 嘅 629.5 低 71.9）
+  · 連鎖: 537 Δχ² +1.7 → 真值 **+48.4**（唔再 NS）；484 +257 → **+32.9**（唔再排除）
+  · R8「527/533/537 全部 Δχ²<4」→ 全部 >4
+範圍: 本文最終結論（§5 R10 分段 λ 推翻 λ 身份、λ₁=306-308、§4 已標「被推翻」）**唔依賴 533**，主結論不動。
+定性結論不動: 純指數形式勝出、R5/R9 盲測、R10 分段 λ、R11 λ₁、R12 CAMB 全部經重算 PASS。
+詳見 `docs/13_audit_r1r15.md` §3.1。

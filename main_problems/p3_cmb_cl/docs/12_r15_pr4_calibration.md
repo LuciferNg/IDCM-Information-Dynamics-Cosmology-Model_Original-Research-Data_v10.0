@@ -150,3 +150,24 @@ PR4→ACT bins (16): 354.7 | 592.8 | 1195.9
 - logs/23_pr4_highl_calibration.out
 - 相關: docs/11_r14_lambda_ladder.md（R14 結論作廢註記已加）
 ```
+
+
+---
+
+## ⚠️ §更正 (2026-10-22 審計, append-only)
+
+本檔 §T1 及 §3「高ℓ段只有 143/217 系 cross 有數據（100GHz 全 NaN）⟹ co-add 段間組合不一致」
+**係誤讀 NaN 語義**:
+  · `scripts/23` 嘅 `lam_fit()` 在斜率 b ≥ 0 時回 NaN —— 唔係「冇數據」
+  · 實測: 100GHz 系 9 個 cross 喺 ℓ 1700-2000 **全部 301/301 點齊全**
+  · SNR 中位 0.43 / 1.99 / 1.69 / 2.05 / 2.00 / 2.54 / 2.29 / 2.74 / 2.61（noise 主導）
+    對照 143/217 系同段 SNR 9.5-15.9
+  · 真原因 = 100GHz beam 最大 → 高ℓ 訊號弱 → noise 主導 → D 曲線非單調衰減 → λ 不可定義
+
+**R15 主結論不受影響**（已重算逐值命中）:
+  · PR4/PR3 ratio 0.892 / 1.165 / 1.750 / 2.615（用 median D，非 λ）
+  · bin 後 λ 偏離 8% / 35% / 164%（H1 binning artifact 否證）
+  · 100Ax100B λ = 828、auto noise bias 8.1× —— 全部重現
+
+「co-add 段間組合不一致」嘅推論失效（各段 co-add 由同一組 cross，差別在 SNR 權重）。
+詳見 `docs/13_audit_r1r15.md` §3.3。

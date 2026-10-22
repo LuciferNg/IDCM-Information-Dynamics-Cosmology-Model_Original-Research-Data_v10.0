@@ -54,7 +54,10 @@ def check(name, cond, detail=""):
         FAIL += 1
         print(f"  [FAIL] {name} {detail}")
 
-DATA = '/home/wsl/.hermes/cache/scratch/planck_2020/hillipop/planck_2020/hillipop/data'
+# PR4 HiLLiPoP data — 持久位置 (2026-10-22 由 agent scratch 鏡射, sha 已核)
+PERSIST = '/home/wsl/data/planck_2020_hillipop'
+SCRATCH = '/home/wsl/.hermes/cache/scratch/planck_2020/hillipop/planck_2020/hillipop/data'
+DATA = PERSIST if __import__('os').path.isdir(PERSIST) else SCRATCH
 BAND = (1452, 1476)          # O256 S5 微帶
 LSEG = (1427, 1451)          # 左側 (對稱 25ℓ)
 RSEG = (1477, 1501)          # 右側 (對稱 25ℓ)

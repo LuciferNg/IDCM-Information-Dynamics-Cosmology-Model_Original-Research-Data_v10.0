@@ -143,3 +143,22 @@ O256 handoff 殘餘已閉環：**1ℓ 格檢驗否定 S5 微帶預言**。IDCM �
         (dl_PR4_v4.2_*.fits 36 檔 + binning_v4.2.fits; 886MB tar 已解壓)
 - 承接源: open_problems_fresh/o256_cl_continuum_envelope/docs/03_microband_verdict.md
 ```
+
+
+---
+
+## ⚠️ §更正 (2026-10-22 審計, append-only)
+
+本檔 §2.1「36 檔 IVW co-add → 假 bump +4.94% (z=25.9σ)」經審計判定為 **ghost derivation**:
+  · `scripts/21` 只有註釋（第 76-79 行），**冇對應 co-add code**
+  · 審計器 `AUDIT_B` 用 4 種 co-add 法重算全 36 檔: IVW **+0.57%** / simple_mean −0.11% /
+    IVW(30 cross 雙向) +0.59% / IVW(auto only) +0.53% —— **冇任何方法得 +4.94%**
+  · 該數字無可重現來源（inline 計算未落碟）
+
+**定性結論不受影響**（已重算 PASS）:
+  · auto-spectra noise bias 真實存在: 100Ax100A @ℓ=1464 D = 6471.4 μK² vs cross co-add 796.4 → **8.1×**
+  · 必須過濾 auto-spectra 嘅操作結論成立
+  · 15 cross 微帶 +0.59% (z=1.8)、solo +2.25% (z=2.36σ)、S5 +5% 被拒 3.2σ — 全部重現
+
+數據位置亦更新: PR4 fits 已由 agent scratch 鏡射到 `/home/wsl/data/planck_2020_hillipop/`（38 檔, 875MB, sha256 核 SAME）。
+詳見 `docs/13_audit_r1r15.md` §3.2 / §3.4。

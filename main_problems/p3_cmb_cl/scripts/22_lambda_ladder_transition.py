@@ -43,7 +43,10 @@ def check(name, cond, detail=""):
         FAIL += 1
         print(f"  [FAIL] {name} {detail}")
 
-DATA = '/home/wsl/.hermes/cache/scratch/planck_2020/hillipop/planck_2020/hillipop/data'
+# PR4 HiLLiPoP data — 持久位置 (2026-10-22 由 agent scratch 鏡射, sha 已核)
+PERSIST = '/home/wsl/data/planck_2020_hillipop'
+SCRATCH = '/home/wsl/.hermes/cache/scratch/planck_2020/hillipop/planck_2020/hillipop/data'
+DATA = PERSIST if __import__('os').path.isdir(PERSIST) else SCRATCH
 LNHI = math.log((1 + math.sqrt(5)) / 2)          # ln φ = 0.4812118...
 LAM_H = 148.5 / LNHI                              # 半週期 (峰-谷) / lnφ
 LAM_F = 306.0 / LNHI                              # 全間隙 (峰-峰) / lnφ

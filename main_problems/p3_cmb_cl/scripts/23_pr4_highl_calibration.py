@@ -49,7 +49,10 @@ def check(name, cond, detail=""):
         print(f"  [FAIL] {name} {detail}")
 
 BASE = '/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh'
-DATA = '/home/wsl/.hermes/cache/scratch/planck_2020/hillipop/planck_2020/hillipop/data'
+# PR4 HiLLiPoP data — 持久位置 (2026-10-22 由 agent scratch 鏡射, sha 已核)
+PERSIST = '/home/wsl/data/planck_2020_hillipop'
+SCRATCH = '/home/wsl/.hermes/cache/scratch/planck_2020/hillipop/planck_2020/hillipop/data'
+DATA = PERSIST if __import__('os').path.isdir(PERSIST) else SCRATCH
 SEGS = [(1418, 1700), (1700, 2000), (2000, 2400)]
 P3_BINNED = [308, 410, 420]
 
