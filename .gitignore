@@ -62,3 +62,6 @@ open_problems_fresh/o53_cy3_reality/data/polytopes-4d/
 # never commit the bytes, the generator is the source of truth.
 # ---------------------------------------------------------------------------
 /dag/
+# 備份檔唔上傳 (2026-10-18)
+*.bak_*
+*.pre_*
