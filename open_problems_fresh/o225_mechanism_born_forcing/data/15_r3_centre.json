@@ -1,0 +1,147 @@
+{
+ "rules": "r3-centre-v1",
+ "identity_index": 75,
+ "centre_index": 0,
+ "trajectory_len": 11533,
+ "synthetic": {
+  "8": {
+   "equivariant": true,
+   "ii_ok": true,
+   "viol_ok": 0,
+   "lam_ok": true,
+   "sigma": {
+    "viol": 0,
+    "lam_const": true,
+    "ii_broken": true,
+    "equiv": true
+   },
+   "tflip": {
+    "viol": 6,
+    "lam_const": false,
+    "ii_broken": true,
+    "equiv": true
+   }
+  },
+  "12": {
+   "equivariant": true,
+   "ii_ok": true,
+   "viol_ok": 0,
+   "lam_ok": true,
+   "sigma": {
+    "viol": 0,
+    "lam_const": true,
+    "ii_broken": true,
+    "equiv": true
+   },
+   "tflip": {
+    "viol": 10,
+    "lam_const": false,
+    "ii_broken": true,
+    "equiv": true
+   }
+  },
+  "16": {
+   "equivariant": true,
+   "ii_ok": true,
+   "viol_ok": 0,
+   "lam_ok": true,
+   "sigma": {
+    "viol": 0,
+    "lam_const": true,
+    "ii_broken": true,
+    "equiv": true
+   },
+   "tflip": {
+    "viol": 12,
+    "lam_const": false,
+    "ii_broken": true,
+    "equiv": true
+   }
+  }
+ },
+ "quotient": {
+  "order": 60,
+  "conjugacy_class_sizes": [
+   1,
+   12,
+   12,
+   15,
+   20
+  ]
+ },
+ "counters_s0_0": {
+  "hits": 124,
+  "stale": 124,
+  "agree": 0,
+  "stale_agree": 59,
+  "overrides": 65
+ },
+ "claims": [
+  {
+   "tag": "R3-P1",
+   "name": "前置 (ii)：K[-s][a] = K[s][a]（全部 120×62 = 7440 對）",
+   "ok": true,
+   "detail": "comparisons = 7440 ; violations = 0 ; zc = 0 ; e_id = 75"
+  },
+  {
+   "tag": "R3-P2",
+   "name": "前置 (i)：中心性 MUL[s][zc]=MUL[zc][s] 與等變 MUL[-s][h] = -MUL[s][h]（全 s,h）",
+   "ok": true,
+   "detail": "checks = 14400 ; violations = 0"
+  },
+  {
+   "tag": "R3-P3",
+   "name": "軌跡等變實測：s_t(-s0) = -s_t(s0) 逐位成立（全 120 s0，含 pop 回溯）",
+   "ok": true,
+   "detail": "trajectory = 11533 步/態 ; 總比較 = 1383960 ; deviations = 0"
+  },
+  {
+   "tag": "R3-P4",
+   "name": "定理後果：hits/stale/agree/stale_agree/overrides 五量中心不變（120/120 × 5）",
+   "ok": true,
+   "detail": "violations = 0 ; s0=0: {'hits': 124, 'stale': 124, 'agree': 0, 'stale_agree': 59, 'overrides': 65}"
+  },
+  {
+   "tag": "R3-P5",
+   "name": "伴隨量中心不變：ledger_len/miss 直方圖/top 分布/entries_per_ctx/ctx 值衝突/reads",
+   "ok": true,
+   "detail": "violations = 0"
+  },
+  {
+   "tag": "R3-P6a",
+   "name": "凍結 K 之逐欄比率 λ_a = K[-s][a]·K[s][a] 與 s 無關且 λ_a ≡ +1（即 (ii) 恰成立）",
+   "ok": true,
+   "detail": "λ 值集 = [1] ; 逐欄恆定 = True"
+  },
+  {
+   "tag": "R3-P6b",
+   "name": "★ 刀刃 1（σ·K，中心奇縮放）：(ii) 已被破壞但 λ_a ≡ -1 恆定 ⟹ 依 (ii') 預測不變**仍成立**（原合約「破 (ii) 必失效」在此被偽證）",
+   "ok": true,
+   "detail": "sigma centre-odd = True ; (ii) broken = True ; λ 恆定 = True ; 失效態數 = 0"
+  },
+  {
+   "tag": "R3-P6c",
+   "name": "★ 刀刃 2（T-翻轉：30 個中心類各翻一元素 ⟹ 比率隨 s 變化）⟹ 中心不變必須失效",
+   "ok": true,
+   "detail": "T 大小 = 30 ; 比率恆定 = False ; 失效態數 = 116（例 s0=0: 51 vs 72）"
+  },
+  {
+   "tag": "R3-P7",
+   "name": "尖銳性 C2：非等變更新（奇索引再推一步）⟹ 不變必須失效",
+   "ok": true,
+   "detail": "軌跡等變被破 = True ; overrides 中心不變失效態數 = 58（例 s0=0）"
+  },
+  {
+   "tag": "R3-P8a",
+   "name": "普適性：Z_8/Z_12/Z_16 —— (ii) 成立⟹不變成立；σ 型（λ 恆定）⟹仍成立；T 型（比率隨 s 變）⟹失效",
+   "ok": true,
+   "detail": "Z_8 {'equivariant': True, 'ii_ok': True, 'viol_ok': 0, 'lam_ok': True, 'sigma': {'viol': 0, 'lam_const': True, 'ii_broken': True, 'equiv': True}, 'tflip': {'viol': 6, 'lam_const': False, 'ii_broken': True, 'equiv': True}} | Z_12 {'equivariant': True, 'ii_ok': True, 'viol_ok': 0, 'lam_ok': True, 'sigma': {'viol': 0, 'lam_const': True, 'ii_broken': True, 'equiv': True}, 'tflip': {'viol': 10, 'lam_const': False, 'ii_broken': True, 'equiv': True}} | Z_16 {'equivariant': True, 'ii_ok': True, 'viol_ok': 0, 'lam_ok': True, 'sigma': {'viol': 0, 'lam_const': True, 'ii_broken': True, 'equiv': True}, 'tflip': {'viol': 12, 'lam_const': False, 'ii_broken': True, 'equiv': True}}"
+  },
+  {
+   "tag": "R3-P8b",
+   "name": "商結構：2I/{±1} 階 60、共軛類大小多重集 = [1,12,12,15,20]（A₅ 簽名）；overrides 為商上之函數（26 值），但唔由商共軛類決定",
+   "ok": true,
+   "detail": "quotient order = 60 ; class sizes = [1, 12, 12, 15, 20] ; overrides well-defined on classes = True ; distinct values = 26 ; 每商共軛類內相異值數 = [1]"
+  }
+ ]
+}

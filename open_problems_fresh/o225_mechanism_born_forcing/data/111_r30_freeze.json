@@ -1,0 +1,16 @@
+{
+ "rules": "r30-z10-selection-mechanism-v1",
+ "contract": "docs/64_r30_contract.md",
+ "sha256": "30cc8c063d028649470f90648a21f6e9951a133947fa0c302ee9c38ee7a9643f",
+ "frozen_at": "2026-10-01 23:15:14",
+ "claims_declared": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P5",
+  "Q1",
+  "Q2",
+  "Q3"
+ ]
+}

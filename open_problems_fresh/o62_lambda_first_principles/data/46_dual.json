@@ -1,0 +1,19 @@
+{
+  "test": "O62 九期 46: Dual",
+  "P": {
+    "v": 6,
+    "pts": 48,
+    "int": 1,
+    "facets": 7
+  },
+  "P_dual": {
+    "v": 7,
+    "pts": 85,
+    "int": 1,
+    "facets": 6
+  },
+  "reflexive": true,
+  "l_star": 1,
+  "passed": 0,
+  "failed": 0
+}

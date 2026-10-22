@@ -1,0 +1,769 @@
+{
+ "zoo": [
+  {
+   "name": "D2|(1, 1, 1)",
+   "group": "D2",
+   "u0": [
+    1,
+    1,
+    1
+   ],
+   "m": 4,
+   "N": 6,
+   "group_order": 4,
+   "n_lines": 3,
+   "ties": 0,
+   "n_types": 3,
+   "shapes": {
+    "2x2": 3
+   },
+   "k_min": 2,
+   "greedy": 1,
+   "LP": "3/2",
+   "nu": 1,
+   "gap": 1
+  },
+  {
+   "name": "D2|(1, 1, 0)",
+   "group": "D2",
+   "u0": [
+    1,
+    1,
+    0
+   ],
+   "m": 4,
+   "N": 6,
+   "group_order": 4,
+   "n_lines": 3,
+   "ties": 8,
+   "n_types": 2,
+   "shapes": {
+    "2x2": 2
+   },
+   "k_min": 2,
+   "greedy": 2,
+   "LP": "2",
+   "nu": 2,
+   "gap": 0
+  },
+  {
+   "name": "D2|(1, 0, 0)",
+   "group": "D2",
+   "u0": [
+    1,
+    0,
+    0
+   ],
+   "m": 2,
+   "N": 6,
+   "group_order": 4,
+   "n_lines": 3,
+   "ties": 8,
+   "n_types": 1,
+   "shapes": {
+    "1x1": 1
+   },
+   "k_min": 1,
+   "greedy": 1,
+   "LP": "1",
+   "nu": 1,
+   "gap": 0
+  },
+  {
+   "name": "D3|(1, 1, 1)",
+   "group": "D3",
+   "u0": [
+    1,
+    1,
+    1
+   ],
+   "m": 4,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 0,
+   "n_types": 7,
+   "shapes": {
+    "1x3": 4,
+    "2x2": 3
+   },
+   "k_min": 2,
+   "greedy": 1,
+   "LP": "3/2",
+   "nu": 1,
+   "gap": 1
+  },
+  {
+   "name": "D3|(1, 1, 0)",
+   "group": "D3",
+   "u0": [
+    1,
+    1,
+    0
+   ],
+   "m": 12,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 72,
+   "n_types": 12,
+   "shapes": {
+    "6x6": 12
+   },
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 1
+  },
+  {
+   "name": "D3|(1, 0, 0)",
+   "group": "D3",
+   "u0": [
+    1,
+    0,
+    0
+   ],
+   "m": 6,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 4,
+   "shapes": {
+    "3x3": 4
+   },
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu": 2,
+   "gap": 1
+  },
+  {
+   "name": "D3|(0, 0, 1)",
+   "group": "D3",
+   "u0": [
+    0,
+    0,
+    1
+   ],
+   "m": 6,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 4,
+   "shapes": {
+    "3x3": 4
+   },
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu": 2,
+   "gap": 1
+  },
+  {
+   "name": "D3|(1, 2, 0)",
+   "group": "D3",
+   "u0": [
+    1,
+    2,
+    0
+   ],
+   "m": 12,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 10,
+   "shapes": {
+    "6x6": 10
+   },
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 1
+  },
+  {
+   "name": "D3|(1, 1, 2)",
+   "group": "D3",
+   "u0": [
+    1,
+    1,
+    2
+   ],
+   "m": 12,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 11,
+   "shapes": {
+    "4x8": 4,
+    "5x7": 4,
+    "6x6": 3
+   },
+   "k_min": 5,
+   "greedy": 4,
+   "LP": "4",
+   "nu": 4,
+   "gap": 1
+  },
+  {
+   "name": "D3|(2, 1, 0)",
+   "group": "D3",
+   "u0": [
+    2,
+    1,
+    0
+   ],
+   "m": 12,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 10,
+   "shapes": {
+    "6x6": 10
+   },
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 1
+  },
+  {
+   "name": "D4|(1, 1, 1)",
+   "group": "D4",
+   "u0": [
+    1,
+    1,
+    1
+   ],
+   "m": 8,
+   "N": 10,
+   "group_order": 8,
+   "n_lines": 5,
+   "ties": 16,
+   "n_types": 3,
+   "shapes": {
+    "4x4": 3
+   },
+   "k_min": 3,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 0
+  },
+  {
+   "name": "D4|(1, 1, 0)",
+   "group": "D4",
+   "u0": [
+    1,
+    1,
+    0
+   ],
+   "m": 4,
+   "N": 10,
+   "group_order": 8,
+   "n_lines": 5,
+   "ties": 16,
+   "n_types": 2,
+   "shapes": {
+    "2x2": 2
+   },
+   "k_min": 2,
+   "greedy": 2,
+   "LP": "2",
+   "nu": 2,
+   "gap": 0
+  },
+  {
+   "name": "D4|(0, 0, 1)",
+   "group": "D4",
+   "u0": [
+    0,
+    0,
+    1
+   ],
+   "m": 2,
+   "N": 10,
+   "group_order": 8,
+   "n_lines": 5,
+   "ties": 16,
+   "n_types": 1,
+   "shapes": {
+    "1x1": 1
+   },
+   "k_min": 1,
+   "greedy": 1,
+   "LP": "1",
+   "nu": 1,
+   "gap": 0
+  },
+  {
+   "name": "D4|(1, 2, 0)",
+   "group": "D4",
+   "u0": [
+    1,
+    2,
+    0
+   ],
+   "m": 8,
+   "N": 10,
+   "group_order": 8,
+   "n_lines": 5,
+   "ties": 16,
+   "n_types": 4,
+   "shapes": {
+    "4x4": 4
+   },
+   "k_min": 4,
+   "greedy": 4,
+   "LP": "4",
+   "nu": 4,
+   "gap": 0
+  },
+  {
+   "name": "D4|(1, 2, 3)",
+   "group": "D4",
+   "u0": [
+    1,
+    2,
+    3
+   ],
+   "m": 8,
+   "N": 10,
+   "group_order": 8,
+   "n_lines": 5,
+   "ties": 0,
+   "n_types": 5,
+   "shapes": {
+    "4x4": 5
+   },
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "5/2",
+   "nu": 2,
+   "gap": 1
+  },
+  {
+   "name": "D4|(1, -1, 1)",
+   "group": "D4",
+   "u0": [
+    1,
+    -1,
+    1
+   ],
+   "m": 8,
+   "N": 10,
+   "group_order": 8,
+   "n_lines": 5,
+   "ties": 16,
+   "n_types": 3,
+   "shapes": {
+    "4x4": 3
+   },
+   "k_min": 3,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 0
+  },
+  {
+   "name": "D4|(2, 1, 0)",
+   "group": "D4",
+   "u0": [
+    2,
+    1,
+    0
+   ],
+   "m": 8,
+   "N": 10,
+   "group_order": 8,
+   "n_lines": 5,
+   "ties": 16,
+   "n_types": 4,
+   "shapes": {
+    "4x4": 4
+   },
+   "k_min": 4,
+   "greedy": 4,
+   "LP": "4",
+   "nu": 4,
+   "gap": 0
+  },
+  {
+   "name": "T|(1, 1, 0)",
+   "group": "T",
+   "u0": [
+    1,
+    1,
+    0
+   ],
+   "m": 12,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 72,
+   "n_types": 12,
+   "shapes": {
+    "6x6": 12
+   },
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 1
+  },
+  {
+   "name": "T|(1, 0, 0)",
+   "group": "T",
+   "u0": [
+    1,
+    0,
+    0
+   ],
+   "m": 6,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 4,
+   "shapes": {
+    "3x3": 4
+   },
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu": 2,
+   "gap": 1
+  },
+  {
+   "name": "T|(1, 2, 0)",
+   "group": "T",
+   "u0": [
+    1,
+    2,
+    0
+   ],
+   "m": 12,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 10,
+   "shapes": {
+    "6x6": 10
+   },
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 1
+  },
+  {
+   "name": "T|(1, 1, 2)",
+   "group": "T",
+   "u0": [
+    1,
+    1,
+    2
+   ],
+   "m": 12,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 11,
+   "shapes": {
+    "4x8": 4,
+    "5x7": 4,
+    "6x6": 3
+   },
+   "k_min": 5,
+   "greedy": 3,
+   "LP": "4",
+   "nu": null,
+   "gap": null
+  },
+  {
+   "name": "T|(2, 1, 0)",
+   "group": "T",
+   "u0": [
+    2,
+    1,
+    0
+   ],
+   "m": 12,
+   "N": 14,
+   "group_order": 12,
+   "n_lines": 7,
+   "ties": 24,
+   "n_types": 10,
+   "shapes": {
+    "6x6": 10
+   },
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 1
+  },
+  {
+   "name": "S4|(1, 1, 1)",
+   "group": "S4",
+   "u0": [
+    1,
+    1,
+    1
+   ],
+   "m": 8,
+   "N": 26,
+   "group_order": 24,
+   "n_lines": 13,
+   "ties": 48,
+   "n_types": 7,
+   "shapes": {
+    "4x4": 7
+   },
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu": 2,
+   "gap": 1
+  },
+  {
+   "name": "S4|(1, 1, 0)",
+   "group": "S4",
+   "u0": [
+    1,
+    1,
+    0
+   ],
+   "m": 12,
+   "N": 26,
+   "group_order": 24,
+   "n_lines": 13,
+   "ties": 96,
+   "n_types": 12,
+   "shapes": {
+    "6x6": 12
+   },
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu": 3,
+   "gap": 1
+  },
+  {
+   "name": "S4|(1, 0, 0)",
+   "group": "S4",
+   "u0": [
+    1,
+    0,
+    0
+   ],
+   "m": 6,
+   "N": 26,
+   "group_order": 24,
+   "n_lines": 13,
+   "ties": 48,
+   "n_types": 4,
+   "shapes": {
+    "3x3": 4
+   },
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu": 2,
+   "gap": 1
+  },
+  {
+   "name": "S4|(1, 2, 0)",
+   "group": "S4",
+   "u0": [
+    1,
+    2,
+    0
+   ],
+   "m": 24,
+   "N": 26,
+   "group_order": 24,
+   "n_lines": 13,
+   "ties": 48,
+   "n_types": 16,
+   "shapes": {
+    "12x12": 16
+   },
+   "k_min": 6,
+   "greedy": 5,
+   "LP": "5",
+   "nu": 5,
+   "gap": 1
+  },
+  {
+   "name": "S4|(1, 1, 2)",
+   "group": "S4",
+   "u0": [
+    1,
+    1,
+    2
+   ],
+   "m": 24,
+   "N": 26,
+   "group_order": 24,
+   "n_lines": 13,
+   "ties": 96,
+   "n_types": 19,
+   "shapes": {
+    "12x12": 19
+   },
+   "k_min": 6,
+   "greedy": 4,
+   "LP": "4",
+   "nu": 4,
+   "gap": 2
+  },
+  {
+   "name": "S4|(1, 2, 3)",
+   "group": "S4",
+   "u0": [
+    1,
+    2,
+    3
+   ],
+   "m": 24,
+   "N": 26,
+   "group_order": 24,
+   "n_lines": 13,
+   "ties": 48,
+   "n_types": 17,
+   "shapes": {
+    "12x12": 17
+   },
+   "k_min": 6,
+   "greedy": 4,
+   "LP": "4",
+   "nu": 4,
+   "gap": 2
+  },
+  {
+   "name": "S4|(1, -1, 1)",
+   "group": "S4",
+   "u0": [
+    1,
+    -1,
+    1
+   ],
+   "m": 8,
+   "N": 26,
+   "group_order": 24,
+   "n_lines": 13,
+   "ties": 48,
+   "n_types": 7,
+   "shapes": {
+    "4x4": 7
+   },
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu": 2,
+   "gap": 1
+  },
+  {
+   "name": "S4|(2, 1, 0)",
+   "group": "S4",
+   "u0": [
+    2,
+    1,
+    0
+   ],
+   "m": 24,
+   "N": 26,
+   "group_order": 24,
+   "n_lines": 13,
+   "ties": 48,
+   "n_types": 16,
+   "shapes": {
+    "12x12": 16
+   },
+   "k_min": 6,
+   "greedy": 4,
+   "LP": "5",
+   "nu": null,
+   "gap": null
+  }
+ ],
+ "skipped": [],
+ "gap_by_m": {
+  "2": [
+   0
+  ],
+  "4": [
+   0,
+   1
+  ],
+  "6": [
+   1
+  ],
+  "8": [
+   0,
+   1
+  ],
+  "12": [
+   1
+  ],
+  "24": [
+   1,
+   2
+  ]
+ },
+ "counterexamples": {
+  "4": [
+   0,
+   1
+  ],
+  "8": [
+   0,
+   1
+  ],
+  "24": [
+   1,
+   2
+  ]
+ },
+ "gap_values_seen": [
+  0,
+  1,
+  2
+ ],
+ "claims": [
+  {
+   "tag": "P3R-1",
+   "name": "regression through this code path: the six R2 machines reproduce R6s exact packing values nu = {2,3,5,1,2,1} and LP* = {5/2, 3, 5, 3/2, 2, 1}",
+   "ok": true,
+   "detail": "M_2I: nu=2 LP*=5/2 gap=2 ; M_face: nu=3 LP*=3 gap=2 ; M_edge: nu=5 LP*=5 gap=2 ; M_T: nu=1 LP*=3/2 gap=1 ; M_O: nu=2 LP*=2 gap=1 ; M_D4: nu=1 LP*=1 gap=0"
+  },
+  {
+   "tag": "P3a-1",
+   "name": "zoo computed exactly: k_min by pruned DFS and nu exact whenever greedy = floor(LP*) (IP integer sandwich)",
+   "ok": true,
+   "detail": "entries=30 complete=28"
+  },
+  {
+   "tag": "P3b-1",
+   "name": "BLIND PREDICTION: the gap is NOT a function of m -- the zoo contains machines with the SAME number of distinct rows m but DIFFERENT gaps",
+   "ok": true,
+   "detail": "gap by m = {'2': [0], '4': [0, 1], '6': [1], '8': [0, 1], '12': [1], '24': [1, 2]} ; counterexamples at m = [4, 8, 24]"
+  },
+  {
+   "tag": "P3b-2",
+   "name": "recorded gap spectrum: which gap values actually occur in the zoo",
+   "ok": true,
+   "detail": "gap values seen = [0, 1, 2] ; distribution = {0: 8, 1: 18, 2: 2}"
+  }
+ ],
+ "elapsed_s": 4.4092841148376465
+}

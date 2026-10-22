@@ -1,0 +1,19 @@
+================================================================================================================
+O228 scripts/10 -- R6: exact rational LP certificate (set-cover relaxation of k_min)
+================================================================================================================
+  M_2I    LP* = 5/2          (2.500000)  nu=2  k_min=4   lambda_min=22  support=10  tight=30   pivots=29
+  M_face  LP* = 3            (3.000000)  nu=3  k_min=5   lambda_min=14  support=6   tight=90   pivots=35
+  M_edge  LP* = 5            (5.000000)  nu=5  k_min=7   lambda_min=12  support=10  tight=80   pivots=108
+  M_T     LP* = 3/2          (1.500000)  nu=1  k_min=2   lambda_min=8   support=3   tight=6    pivots=5
+  M_O     LP* = 2            (2.000000)  nu=2  k_min=3   lambda_min=12  support=4   tight=12   pivots=5
+  M_D4    LP* = 1            (1.000000)  nu=1  k_min=1   lambda_min=10  support=1   tight=1    pivots=1
+[PASS] L1-1  -- M_2I: nu=2 <= LP*=5/2 <= k_min=4 ; M_face: nu=3 <= LP*=3 <= k_min=5 ; M_edge: nu=5 <= LP*=5 <= k_min=7 ; M_T: nu=1 <= LP*=3/2 <= k_min=2 ; M_O: nu=2 <= LP*=2 <= k_min=3 ; M_D4: nu=1 <= LP*=1 <= k_min=1
+[PASS] L2-1  -- M_2I: sum_x=5/2 sum_y=5/2 opt=5/2 ; M_face: sum_x=3 sum_y=3 opt=3 ; M_edge: sum_x=5 sum_y=5 opt=5 ; M_T: sum_x=3/2 sum_y=3/2 opt=3/2 ; M_O: sum_x=2 sum_y=2 opt=2 ; M_D4: sum_x=1 sum_y=1 opt=1
+[PASS] L3-1  -- LP*(M_edge) = 5 = 5.000000 ; k_min = 7
+[PASS] L3-2  -- LP* = 5 ; gap to k_min = 2
+[PASS] L4-1  -- lambda_min = 12 (max = 62) ; uniform bound 62/lambda_min = 31/6 = 5.1667
+[PASS] L5-1  -- support = 10 columns vs k_min = 7
+================================================================================================================
+RESULT: 6/6 PASS  (0 FAIL)   elapsed 3.3 s
+================================================================================================================
+exit=0

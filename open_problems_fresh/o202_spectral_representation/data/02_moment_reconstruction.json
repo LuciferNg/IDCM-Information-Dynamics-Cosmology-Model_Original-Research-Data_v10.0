@@ -1,0 +1,24 @@
+{
+  "quadrature_degree": 87,
+  "first_break_order": 88,
+  "break_magnitude": -88.0,
+  "N": 88,
+  "N_d": 44,
+  "break_total": {
+    "first_break_n": 176,
+    "magnitude": 176,
+    "closed_form": "176·Σ_t C(2n,n−176t)"
+  },
+  "break_odd": {
+    "first_break_n": 88,
+    "magnitude": -88,
+    "closed_form": "88·Σ_t (−1)^t C(2n,n−88t)"
+  },
+  "measure": "dμ = 44 · dγ/(π√(γ(4−γ)))  on [0,4]  (44×arcsine)",
+  "measure_axis": "γ (eigenvalue) — 唔係 ℓ",
+  "uniqueness": "全階矩唯一 (Carleman); 截斷 (階<=87) 無限多解 => arcsine 係典範代表",
+  "N_eff_required": 13.635458449056138,
+  "N_eff_hits": 30,
+  "N_eff_null_mean": 42.4,
+  "verdict": "路線 5 結果: ★ 測度存在性 C1 喺 γ-軸成立 — 44×arcsine on [0,4], 且 44 個奇模態係其精確求積法則 (階 <= 87 = 2N_d−1; 首破缺階 88 = 2N_d, 破缺量精確 −88)。總和 sector 精確階 175, 首破缺階 176 = 2N, 破缺量 +176。但 ℓ-軸冇被誘導測度 (三條候選橋全部只畀計數測度); 所需 N_eff = 13.6355 無結構身份 (命中/null < 1.5) => C3 🔴"
+}

@@ -1,0 +1,18 @@
+======================================================================================================================
+O222 scripts/31 -- INDEPENDENT audit of the G1+G8 machine (does not import scripts/29 or scripts/30)
+======================================================================================================================
+[PASS] A7   this audit never loads the enforcer or the machine (the only frozen modules it loads are 09 / 12 / 18)  --  checked after all loads (see the final A7b claim)
+[PASS] A0   the audited impl and all 3 frozen upstream pins still match the freeze record  --  impl 840d0d4ed792 (gate OPEN) ; stale pins = []
+[PASS] A1   G1a re-verified independently: the frozen C1 correlation TABLE (data/09) is reproduced from the write-rule transition term by term, and the rule is literal in both frozen sources  --  C1 entries mismatching = 0/3844 ; rule literal in both frozen sources = True ; machine reported 7440 behavioural checks with 0 bad
+[PASS] A2   G1b re-derived through the norm identity 2 - 2<a,b> (independent algebra) and the distance classes checked against the 2I orbits  --  identity mismatches = 0 ; distance values = 3 ; orbit sizes = {12: 1, 20: 1, 30: 1} ; classes == orbits: True
+[PASS] A2a  the norm identity and the machine agree on all 7440 squared distances  --  identity mismatches = 0 ; orbits = {12: 1, 20: 1, 30: 1}
+[PASS] A2b  the three distance classes ARE the three 2I orbits (the D5 lock distance is an orbit invariant)  --  classes [12, 20, 30] vs orbits [12, 20, 30]
+[PASS] A3   G8a ledger rebuilt by an independent stack machine: per-ctx counts and the aggregate growth agree with the machine and with I7 s own per-pair outputs  --  per-ctx = [122], stack len = 7564, I7 aggregate = 7564, conflicting ctx = 62
+[PASS] A3b  the per-pair miss histogram reproduces from the independent stack machine  --  histogram = {2: 124, 3: 3720}
+[PASS] A4   G8b reach depth 1 re-derived from the frozen SOURCE: every ledger subscript is L[-1] (no other access exists in the two frozen machines)  --  subscripts found = ['-1']
+[PASS] A5   G8c K rebuilt from the geometry and its row multiplicities recounted  --  geometry mismatches = 0 ; distinct rows = 12 ; multiplicities = {10: 12}
+[PASS] A6   cross-checks: hits = #pairs with misses = 2, ledger = 2N(N-1) = 62*122, uniform over all 120 start states  --  pairs with 2 misses = 124 ; ledger = 7564 ; per-ctx = 122 ; distance split = {'2 + 0*sqrt5': 30, '3 + 0*sqrt5': 20, '5/2 + 1/2*sqrt5': 12}
+[PASS] A7b  A7 verified at runtime: the loaded module set excludes the enforcer and the machine  --  loaded = ['09_a2_rollback.py', '12_b5_budget.py', '18_d6_mapping.py']
+----------------------------------------------------------------------------------------------------------------------
+AUDIT: 12/12 PASS   audited impl = 840d0d4ed792
+----------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,109 @@
+================================================================================
+O121 close-out 審計器 (A–K) — idcm-closeout v3.8.0
+================================================================================
+
+[A] 檔案集合完整
+  · docs=19 scripts=20(chain 19) data=19 logs=20
+  ✅ docs 02–19 + SCRIPT_CHAIN (19 份) = 19
+  ✅ scripts chain 01–18 + audit_independent (19) = 19
+  ✅ docs 命名齊 02–18 + SCRIPT_CHAIN 
+  ✅ data chain 01–18 (18 JSON) 
+  ✅ logs ≥ 18 (每 chain script 一支) = 20
+  ✅ 01_problem_record.md 在 ROOT (慣例) 
+  ✅ docs/01_problem_record.md 不存在 (非 docs-only 形態) 
+
+[B] 腳本集對稱 (磁碟 ↔ 記錄)
+  ✅ 磁碟每個鏈腳本都在記錄中出現 (兩側差集空) 未記錄: []
+  ✅ 記錄所列腳本都在磁碟 (無幽靈) 幽靈: []
+  ✅ 記錄逐個列完整檔名 (§10-A#57) 完整檔名提及 25 次
+  ✅ §4.9⑥ driver of record 存在 
+  ✅ driver 預設 dry-run (含 --execute 閘) 
+
+[C] 逆向綁定 (headline 數字 → producer script)
+  ✅ '8.8748' ← 12_tau_rec_derivation.py 存在 
+  ✅ '1048576' ← 12_tau_rec_derivation.py 存在 
+  ✅ '61.5' ← 01_tpipe_dag_spectrum.py 存在 
+  ✅ '2.7054' ← 13_g8_three_items.py 存在 
+  ✅ '6712.8' ← 16_tau_ref_volume_audit.py 存在 
+  ✅ '8.7594' ← 16_tau_ref_volume_audit.py 存在 
+  ✅ '10349' ← 17_reeval_corrected.py 存在 
+  ✅ '7.90' ← 15_prediction_register.py 存在 
+  ✅ '291.5' ← 18_three_final.py 存在 
+  ✅ '26.5' ← 18_three_final.py 存在 
+  ✅ 18 支 script 全部磁碟存在 ⟹ 無未落碟 headline 
+
+[D] 路徑衛生 (§4.9③): /tmp 寫入模式必須 0
+  ✅ scripts/*.py 內 /tmp 寫入模式 = 0 命中: []
+  · /tmp 字面量總命中 1 (皆唯讀或註解)
+
+[E] 日誌完整性: 每個 chain script 有正典 log 帶 RESULT:
+  ✅ 每個 chain script 有 logs/<name>.out 缺: []
+  ✅ 每支 log 有 ^RESULT: 行 缺: []
+  · 全鏈 RESULT PASS 加總 = 195
+  ✅ 總 PASS = 88(01–10) + 88(11–18 各支) 之一致值 = 195
+
+[F] 未閉合項掃描 (§4.1): 每個殘餘 🔴/🟡 有書面判定
+  · 🔴/🟡 殘餘行 45 (含判定摘要表行、狀態行、自指行)
+  ✅ 未被判定覆蓋之殘餘 = 0 []
+  · 排除後真殘餘 26, 已帶判定 26
+
+[G] 宣告輸出 vs 實際 data (§4.2)
+  ✅ data/*.json 全部有 producer (無孤兒) 孤兒: []
+  ✅ script 宣告之輸出檔全部存在 缺: []
+
+[H] 時序完整性 + append-only 證明 (T3)
+  ✅ 01_problem_record.md 舊行改動全部屬 live field (非 backfill) 非 live 改動 0: []
+  · 01_problem_record.md: 171 → 346 行; 改動 2 區塊 / 6 行, 全部 live field
+  ✅ 01_problem_record.md 無舊推導內容被刪 
+  · 01_problem_record.md: 前綴 md5 不同 (109b49af vs e5f26524) — 因中間插入新節+狀態行更新, 非污染
+  ✅ SESSION_START.md 舊行改動全部屬 live field (非 backfill) 非 live 改動 0: []
+  · SESSION_START.md: 187 → 458 行; 改動 0 區塊 / 0 行, 全部 live field
+  ✅ SESSION_START.md 無舊推導內容被刪 
+  · SESSION_START.md: 前綴 md5 不同 (cd9568e2 vs c06c07fe) — 因中間插入新節+狀態行更新, 非污染
+  ✅ 01_problem_record.md 無 'N|' 行號污染 = 0
+  ✅ SESSION_START.md 無 'N|' 行號污染 = 0
+  ✅ final_result.md 無 'N|' 行號污染 = 0
+
+[I] 登記面覆蓋 (§4.10)
+  · register O121* 事件 18
+  · kind 分佈: {'registered': 2, 'note': 11, 'closed': 1, 'handed_off': 4}
+  ✅ O121 有 closed 事件 
+  ✅ O121/return-rate 有 open 註冊 
+  ✅ 每個殘餘已交接有 handoff 事件 (≥4) = 4
+  ✅ 每輪 note 事件 ≥5 = 11
+  ✅ 每個 ref 恰一條路徑 (無多路徑串連) = 0
+  ✅ O121* 之 ref 路徑全部存在 缺: []
+
+[J] 數值獨立重算 (第一性原理, 零 import)
+  ✅ Σγ = 90 = 2(N_d+1) = 90.000000
+  ✅ E_sync = (Σγ+K_tree)/2 = 61.5 = 61.5
+  ✅ E_proj = 28.5 = 28.5
+  ✅ E_sync/E_proj = 41/19 EXACT (Ω_Λ/Ω_m) = 2.1578947368
+  ✅ Ω_Λ = 61.5/90 = 0.683333 
+  ✅ η = φ⁻²¹ = 4.085635e-5 = 4.085635e-05
+  ✅ (N_d−μ²)/2 = 21 
+  ✅ 21 用 L₅=11 (B·L₅=44), 非 L=53/8 
+  ✅ 583/2 = N_d × (53/8) = 291.5 = 291.5
+  ✅ B·L = 4×53/8 = 26.5 (樹容量) 
+  ✅ F₉ = 34 = F₈(21) + F₇(13) 
+  ✅ T_ring = 2π/ω_ring = 8.4637e10 yr = 8.463654e+10
+  ✅ τ_pred = 2²⁰·T_ring = 8.8748e16 yr = 8.87478e+16
+  ✅ M_BH = ρ_BH × V_comov = 5.88e18 M☉ = 5.8800e+18
+  ✅ τ_ref(修正) = M_BH/Ṁ_UHECR = 8.7594e14 yr = 8.75939e+14
+  ✅ τ_pred/τ_ref = ×101.3 (下界鬆) = 101.3
+  ✅ V_world = 4π/3 R_world³ ≈ 2.95e11 Mpc³ = 2.951e+11
+  ✅ V_comov/V_world = 40.678 (體積錯 factor) = 40.669
+  ✅ 舊 τ_ref 過大 81.36× ≈ 2×40.678 = 1.0003
+  ✅ M_crit = (3√3/4)ℓc²/G = 7.90e4 kg = 7.8997e+04
+  ✅ E_27(a=ℓ) = 7.18e15 eV ≪ 5e18 (naive 映射失敗) = 7.179e+15
+  ✅ N_d = B × L₅ = 4×11 = 44 
+
+[K] 水位表一致性 (T0)
+  ✅ 水位節存在 
+  · 水位表行數 34
+  ✅ 水位表覆蓋 docs+scripts+data+logs (≥18 行) = 34
+  ✅ 水位含 scripts 01–18 
+
+================================================================================
+RESULT: 68 PASS, 0 FAIL  🟢
+================================================================================

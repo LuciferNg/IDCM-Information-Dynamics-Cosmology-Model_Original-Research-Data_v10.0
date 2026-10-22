@@ -1,0 +1,19 @@
+{
+  "id": "O114-1b",
+  "name": "SM Quantum Number Assignment",
+  "su4_decomposition": "4 = (2, 1) \u2295 (1, 2) under SU(2)_L \u00d7 SU(2)_R",
+  "fermion_content_per_generation": {
+    "q^r": "u_L: (3, 2, 1/6), T\u2083(L)=+\u00bd, Q=2/3",
+    "q^g": "d_L: (3, 2, 1/6), T\u2083(L)=-\u00bd, Q=-1/3",
+    "q^b": "u_R: (3, 1, 2/3), T\u2083(R)=+\u00bd, Q=2/3",
+    "l": "e_R: (1, 1, -1), T\u2083(R)=-\u00bd, Q=-1"
+  },
+  "missing_from_12": [
+    "\u03bd_L",
+    "\u03bd_R",
+    "d_R"
+  ],
+  "orthogonality_verified": true,
+  "status": "\ud83d\udfe2 COMPLETE",
+  "timestamp": "2026-08-29"
+}

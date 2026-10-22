@@ -1,0 +1,103 @@
+{
+ "results": [
+  {
+   "id": "R6",
+   "result": "G9/G10 維數數字全部 = T̂/G2 多項式 (19/19)",
+   "operator": "G1⊗G2",
+   "function": "F4 維數/多項式",
+   "status": "PASS",
+   "detail": "12=γ₄₄×N_gen; 11=L₅; 36=[2N_gen]²; 98=2L₄²; 124=2(h²¹−h¹¹); 60=F₅·γ₄₄·N_gen; 66=dim·rank/2; 77=66+11; 132=dim·rank; 143=dim²−1; 30=N_d−2L₄; 32=B(F₅+N_gen); 84=F₈·γ₄₄; 192=γ₄₄(N_d+γ₄₄); 137=N_gen·N_d+F₅; 264=N_d·2N_gen; 528=N_d·γ₄₄·N_gen; 24=γ₄₄·2N_gen; 46=N_d+γ₂₂"
+  },
+  {
+   "id": "R7a",
+   "result": "1.5 = mid(F₂,F₃) = (1+2)/2 — k=2 numerator dual (O149 §6.2)",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫/dual",
+   "status": "PASS",
+   "detail": "k=2 numerator (42,43) 嘅 Z₂ dual = (1,2)"
+  },
+  {
+   "id": "R7b",
+   "result": "2.5 = mid(F₃,F₄) = (2+3)/2 — k=3 numerator dual (O149 §6.2)",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫/dual",
+   "status": "PASS",
+   "detail": "k=3 numerator (41,42) 嘅 Z₂ dual = (2,3)"
+  },
+  {
+   "id": "R7c",
+   "result": "3.5 = mid(N_gen, B) = (3+4)/2",
+   "operator": "G2⊗G6",
+   "function": "F11 縫/世代-分支",
+   "status": "PASS",
+   "detail": "世代 3 與分支 4 之間嘅縫"
+  },
+  {
+   "id": "R7d",
+   "result": "5.5 = mid(5,6) — O149 §7.1 分子 mean (5,6) = 5.5 (Δ=F₅=5, 0.5)",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫/分子 mean",
+   "status": "PASS",
+   "detail": "O149 家族結構表 (5,6) | 5.5 | F₅=5 | 0.5"
+  },
+  {
+   "id": "R7e",
+   "result": "23.5 = mid(F₈, 2F₇) = (21+26)/2 [候選]",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫/候選",
+   "status": "PASS",
+   "detail": "21 = F₈, 26 = 2F₇ — 縫 23.5"
+  },
+  {
+   "id": "R7f",
+   "result": "27.5 = mid(2F₇, L₇) = (26+29)/2 [候選]",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫/候選",
+   "status": "PASS",
+   "detail": "26 = 2F₇, 29 = L₇ — 縫 27.5"
+  },
+  {
+   "id": "R8a",
+   "result": "ε_exact = 19/123 = (L₆+1)/L₁₀",
+   "operator": "G1 T̂",
+   "function": "F2 跡比率",
+   "status": "PASS",
+   "detail": "19 = L₆+1 (O151 S17 註冊), 123 = L₁₀"
+  },
+  {
+   "id": "R8b",
+   "result": "f_unproj = 41/60 = L₁₀/(4(N_d+1)) = 123/180",
+   "operator": "G1⊗G2",
+   "function": "F7 比率",
+   "status": "PASS",
+   "detail": "f_unproj = Tr(T̂¹⁰)/(4(N_d+1)) — 投影核心分數 = T̂ 跡 ÷ 世界符號位數×4"
+  },
+  {
+   "id": "R8c",
+   "result": "E_min = L₁₀/(4N_d); f_unproj/E_min = (N_d+1)/N_d 倒數 = 44/45",
+   "operator": "G1⊗G2",
+   "function": "F7 比率",
+   "status": "PASS",
+   "detail": "O148 S4: f_unproj/E_min = N_d/(N_d+1) = 44/45"
+  },
+  {
+   "id": "R8d",
+   "result": "ε × E_min = 19/176 = (L₆+1)/(4N_d)",
+   "operator": "G1⊗G2",
+   "function": "F7 比率",
+   "status": "PASS",
+   "detail": "ε·E_min = (L₆+1)/(4N_d) — 兩個 Lucas 跡比率複合"
+  },
+  {
+   "id": "R8e",
+   "result": "ε = 4·41/123 − 4·f_unproj 關係: ε ≈ φ⁻¹/4 係 φ-近似 (δ₃)",
+   "operator": "G1",
+   "function": "F7 比率/陷阱窗",
+   "status": "PASS",
+   "detail": "φ⁻¹/4 = 0.154508 vs 19/123 = 0.154472 — 差 δ₃ = 0.023% (O148 判決: φ 形式係近似)"
+  }
+ ],
+ "n_pass": 12,
+ "n_fail": 0,
+ "total": 12
+}

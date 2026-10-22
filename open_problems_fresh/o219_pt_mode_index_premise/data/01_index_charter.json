@@ -1,0 +1,70 @@
+{
+ "note": "index-space registry rebuilt from coordinates (O219 scripts/01)",
+ "files": {
+  "Delta": "o53_cy3_reality/data/polytopes/cy36_98_sage_export.json",
+  "Delta_star": "o137_cy3_topological_resonance/data/dual_polytope_points.json",
+  "triangulation": "o137_cy3_topological_resonance/data/dual_triangulation_data.json",
+  "phi": "o137_cy3_topological_resonance/data/gkz_period_data.json",
+  "kappa": "o53_cy3_reality/data/polytopes/cy36_98_intersection_full.json"
+ },
+ "Delta": {
+  "n_points": 48,
+  "bare_label_range": "0..47",
+  "origin_label": 0,
+  "vertices": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   7
+  ],
+  "n_facets": 7,
+  "facet_interior_labels": "37..47",
+  "non_facet_labels": "0..36",
+  "non_facet_count": 37,
+  "meaning": "origin + 36 prime toric divisors (h11)"
+ },
+ "Delta_star": {
+  "n_points": 85,
+  "bare_label_range": "0..84",
+  "origin_label": 0,
+  "n_extreme_points": 7,
+  "extreme_point_labels": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "facet_interior_labels": "73..84",
+  "non_facet_labels": "0..72",
+  "non_facet_count": 73,
+  "meaning": "origin + 72 rays"
+ },
+ "phi": {
+  "n_entries": 73,
+  "sum": 1800,
+  "total_polytope_volume": 360,
+  "index_space": "Delta* non-facet labels 0..72 (identity mapping, NOT compacted)",
+  "index_convention": "phi[i] <-> Delta* label i, i = 0..72",
+  "charges_q": "q[i] = phi[0] - phi[i+1], i = 0..71 (charge index = label - 1)",
+  "verified": "sum of simplex 4-volumes x vertices reproduces all 73 entries"
+ },
+ "kappa": {
+  "shape": "36^3",
+  "index_space": "Delta non-facet labels 0..35 (sub-tensor of 0..36)",
+  "origin_index": 0,
+  "K000": -360,
+  "note": "cytools intersection_numbers() keys 0..36 with 0 = origin (script 03)"
+ },
+ "chain_modes": {
+  "44_chain": "n = 1..44",
+  "88_ring": "n = 1..88",
+  "176": "n = 1..176",
+  "note": "phi=9 layer as a SET is order-free; its labels are not"
+ },
+ "forbidden": "chain mode n <-> polytope label n (no structural map; label order is an artefact)"
+}

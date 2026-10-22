@@ -1,0 +1,10 @@
+{
+  "ell_cut": 0.8056,
+  "z_cut": 2.055,
+  "chi2_sn_orig": 2096.0,
+  "chi2_sn_sat": 2072.9,
+  "chi2_desi_orig": 12.82,
+  "chi2_desi_sat": 158.11,
+  "pass": 1,
+  "fail": 1
+}

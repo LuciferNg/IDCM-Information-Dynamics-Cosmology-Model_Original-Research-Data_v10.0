@@ -1,0 +1,216 @@
+{
+ "windows": {
+  "raw_full": {
+   "pos": 512,
+   "neg": -512,
+   "argpos": [
+    0,
+    60,
+    0,
+    53,
+    43,
+    22,
+    13,
+    28
+   ],
+   "argneg": [
+    0,
+    60,
+    0,
+    53,
+    43,
+    22,
+    30,
+    15
+   ],
+   "absmax": 512
+  },
+  "party": {
+   "pos": 512,
+   "neg": -512,
+   "argpos": [
+    0,
+    60,
+    0,
+    53,
+    43,
+    22,
+    13,
+    28
+   ],
+   "argneg": [
+    0,
+    60,
+    0,
+    53,
+    43,
+    22,
+    30,
+    15
+   ],
+   "absmax": 512
+  },
+  "eight": {
+   "pos": 512,
+   "neg": -512,
+   "argpos": [
+    0,
+    60,
+    32,
+    59,
+    23,
+    44,
+    14,
+    31
+   ],
+   "argneg": [
+    0,
+    60,
+    32,
+    59,
+    23,
+    44,
+    29,
+    12
+   ],
+   "absmax": 512
+  },
+  "anti_v3": {
+   "pos": 512,
+   "neg": -512,
+   "argpos": [
+    0,
+    60,
+    32,
+    59,
+    23,
+    44,
+    14,
+    31
+   ],
+   "argneg": [
+    0,
+    60,
+    32,
+    59,
+    23,
+    44,
+    29,
+    12
+   ],
+   "absmax": 512
+  },
+  "anti_str": {
+   "pos": 512,
+   "neg": -512,
+   "argpos": [
+    0,
+    60,
+    32,
+    59,
+    23,
+    44,
+    14,
+    31
+   ],
+   "argneg": [
+    0,
+    60,
+    32,
+    59,
+    23,
+    44,
+    29,
+    12
+   ],
+   "absmax": 512
+  }
+ },
+ "units": "common denominator 120",
+ "lhv_bound_num": 480,
+ "round3_pool_values": {
+  "raw": 480,
+  "party": 480,
+  "eight": 320,
+  "eight_anti": 224
+ },
+ "methods": {
+  "reduction": "top-K extension argument with K = 1 + pair-constraint exclusions (K=2 for d != d', K=3 additionally for non-antipodal), K-grid enumerated exhaustively",
+  "verification": "full 62^4 materialised enumeration at every produced winner group and on 18 declared groups",
+  "arithmetic": "exact integers, units 1/120; numpy = integer accelerator",
+  "outer_groups": 14776336,
+  "windows": [
+   "raw_full",
+   "party",
+   "eight",
+   "anti_v3",
+   "anti_str"
+  ]
+ },
+ "verdicts": {
+  "raw_full": "max 512/120, min -512/120",
+  "party": "max 512/120, min -512/120",
+  "eight": "max 512/120, min -512/120",
+  "anti_v3": "max 512/120, min -512/120",
+  "anti_str": "max 512/120, min -512/120"
+ },
+ "script": "16_windows_global",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "COVERAGE: every party-1 ordered pair is processed by exactly one shard (3844 pairs, no duplicate, no omission), and the outer tuple count sums to 62^6 = 56,800,235,584",
+   "ok": true,
+   "detail": "pairs = 3844 (distinct 3844, expected 3844) ; outer tuples = 56800235584 (expected 56800235584) ; shards = 12"
+  },
+  {
+   "tag": "C2",
+   "name": "PARTY WINDOW: the party-window global extremes are computed directly (not by the round-4 sandwich) and reproduce round 4's raw-window global 512/120 exactly",
+   "ok": true,
+   "detail": "party window: max 512/120 at [0, 60, 0, 53, 43, 22, 13, 28] ; min -512/120 at [0, 60, 0, 53, 43, 22, 30, 15] ; round-4 raw global 512/120"
+  },
+  {
+   "tag": "C3",
+   "name": "EXACT GLOBAL EXTREMES OF THE EIGHT (all eight pairwise distinct) WINDOW: computed over all 62^6 outer groups with the exact integer machinery, achieved configuration recorded",
+   "ok": true,
+   "detail": "eight: max 512/120 at [0, 60, 32, 59, 23, 44, 14, 31] ; min -512/120 at [0, 60, 32, 59, 23, 44, 29, 12] ; |M4|max 512/120"
+  },
+  {
+   "tag": "C4",
+   "name": "EXACT GLOBAL EXTREMES OF THE ANTI_V3 (round-3 eight_anti semantics) WINDOW: computed over all 62^6 outer groups with the exact integer machinery, achieved configuration recorded",
+   "ok": true,
+   "detail": "anti_v3: max 512/120 at [0, 60, 32, 59, 23, 44, 14, 31] ; min -512/120 at [0, 60, 32, 59, 23, 44, 29, 12] ; |M4|max 512/120"
+  },
+  {
+   "tag": "C5",
+   "name": "EXACT GLOBAL EXTREMES OF THE ANTI_STRICT (all eight pairwise non-antipodal) WINDOW: computed over all 62^6 outer groups with the exact integer machinery, achieved configuration recorded",
+   "ok": true,
+   "detail": "anti_str: max 512/120 at [0, 60, 32, 59, 23, 44, 14, 31] ; min -512/120 at [0, 60, 32, 59, 23, 44, 29, 12] ; |M4|max 512/120"
+  },
+  {
+   "tag": "C6",
+   "name": "EXACT GLOBAL EXTREMES OF THE RAW_FULL (no constraint at all, d = d' allowed) WINDOW: computed over all 62^6 outer groups with the exact integer machinery, achieved configuration recorded",
+   "ok": true,
+   "detail": "raw_full: max 512/120 at [0, 60, 0, 53, 43, 22, 13, 28] ; min -512/120 at [0, 60, 0, 53, 43, 22, 30, 15] ; |M4|max 512/120"
+  },
+  {
+   "tag": "C7",
+   "name": "WINDOW CHAIN: raw_full >= party >= eight >= anti_v3 >= anti_strict >= the round-3 pool values (480/320/224), every entry an exact number, so the round-4 brackets [320,512] and [224,512] are replaced by exact values",
+   "ok": true,
+   "detail": "chain: raw_full 512 >= party 512 >= eight 512 >= anti_v3 512 >= anti_str 512 ; round-3 pool = {'raw': 480, 'party': 480, 'eight': 320, 'eight_anti': 224}"
+  },
+  {
+   "tag": "C8",
+   "name": "WINNER VERIFICATION BY FOUR INDEPENDENT PATHS: for every window and both extreme sides the achieved configuration agrees with (i) the direct 8-term Mermin evaluation from the frozen s-index rule, (ii) an explicit window-membership check, (iii) the unfactorised four-term F/G expression, and (iv) a FULL 62^4 materialised enumeration of that group (no reduction at all) whose window extremes must equal the sharded global values",
+   "ok": true,
+   "detail": "raw_full/pos: value 512, direct8 512, member True, unfactorised 512, full62^4 (max 512 min -512) -> OK ; raw_full/neg: value -512, direct8 -512, member True, unfactorised -512, full62^4 (max 512 min -512) -> OK ; party/pos: value 512, direct8 512, member True, unfactorised 512, full62^4 (max 512 min -512) -> OK ; party/neg: value -512, direct8 -512, member True, unfactorised -512, full62^4 (max 512 min -512) -> OK ; eight/pos: value 512, direct8 512, member True, unfactorised 512, full62^4 (max 512 min -512) -> OK ; eight/neg: value -512, direct8 -512, member True, unfactorised -512, full62^4 (max 512 min -512) -> OK ; anti_v3/pos: value 512, direct8 512, member True, unfactorised 512, full62^4 (max 512 min -512) -> OK ; anti_v3/neg: value -512, direct8 -512, member True, unfactorised -512, full62^4 (max 512 min -512) -> OK ; anti_str/pos: value 512, direct8 512, member True, unfactorised 512, full62^4 (max 512 min -512) -> OK ; anti_str/neg: value -512, direct8 -512, member True, unfactorised -512, full62^4 (max 512 min -512) -> OK"
+  },
+  {
+   "tag": "C9",
+   "name": "REDUCTION vs FULL ON DECLARED GROUPS: for 18 declared groups (including the all-equal and antipodal-partner patterns) the top-K reduced path and the fully materialised 62^4 enumeration return identical window extremes for all five windows and both sides -- the reduction is tested, not trusted",
+   "ok": true,
+   "detail": "declared groups = 18 ; mismatches = none"
+  }
+ ],
+ "n_pass": 9,
+ "n_claims": 9
+}

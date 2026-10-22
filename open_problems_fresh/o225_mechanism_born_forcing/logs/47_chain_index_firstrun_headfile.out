@@ -1,0 +1,13 @@
+================================================================================================================
+O225 scripts/47 -- SCRIPT-CHAIN INTEGRITY CHECK
+================================================================================================================
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/47_chain_index.py", line 178, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/47_chain_index.py", line 61, in main
+    nums = sorted(int(re.match(r'(\d+)', s).group(1)) for s in stems)
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/47_chain_index.py", line 61, in <genexpr>
+    nums = sorted(int(re.match(r'(\d+)', s).group(1)) for s in stems)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'

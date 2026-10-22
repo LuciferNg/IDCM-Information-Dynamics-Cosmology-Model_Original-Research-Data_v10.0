@@ -1,0 +1,10 @@
+authentic antipodal ordered pairs = 62 | K-column variant = 112
+C1 raw            max|S| = 4            = 4.000000  argmax=(59, 60, 1, 60)
+C1 distinct       max|S| = 4            = 4.000000  argmax=(59, 60, 1, 60)
+C1 distinct_anti  max|S| = 4            = 4.000000  argmax=(59, 60, 1, 60)
+C1 all4           max|S| = 2            = 2.000000  argmax=(0, 1, 32, 18)
+C2 raw            max|S| = 4            = 4.000000  argmax=(59, 60, 10, 59)
+C2 distinct       max|S| = 4            = 4.000000  argmax=(59, 60, 10, 59)
+C2 distinct_anti  max|S| = 4            = 4.000000  argmax=(59, 60, 10, 59)
+C2 all4           max|S| = 3            = 3.000000  argmax=(59, 60, 1, 61)
+classical bound 2 ; Tsirelson 2sqrt2 = 2.828427

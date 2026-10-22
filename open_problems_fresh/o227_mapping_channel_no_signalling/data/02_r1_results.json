@@ -1,0 +1,2754 @@
+{
+ "rules_version": "o227-r1-contract-v1",
+ "cells": {
+  "R0": {
+   "verdict": "✅",
+   "value": {
+    "group_order": 120,
+    "inverses": 120,
+    "assoc_violations": 0,
+    "h_injective": true,
+    "half_b": "scripts/03_r1_audit.py"
+   },
+   "note": "R0 = (a) MCH core coherence AND (b) AUD from-scratch rebuild; the combined verdict is recorded in docs/02 after the audit runs"
+  },
+  "P1a": {
+   "verdict": "✅",
+   "value": {
+    "orbit_sizes": [
+     12,
+     20,
+     30
+    ],
+    "type_invariant": true,
+    "permutations": 120,
+    "distinct_lines": 31,
+    "antipodal_pairs": 31
+   },
+   "note": "2I acts on the 62 axes; a diagnostic shows the 62 labels are a double cover of 31 lines"
+  },
+  "P1b": {
+   "verdict": "✅",
+   "value": {
+    "bijective_axes": 62,
+    "of": 62
+   },
+   "note": "s -> MUL[s][h(a)] is a permutation of 2I: deterministic and reversible"
+  },
+  "P1c": {
+   "verdict": "🟡",
+   "value": {
+    "provenance_law_text": true,
+    "dimensions_available": false,
+    "source": "o210_causal_tensor_algebra/{final_result.md, docs/01, docs/02, data/02}"
+   },
+   "note": "composition law present as a typed object; upstream carries no dimensions => provenance only, no dimensional cross-check (G6)"
+  },
+  "P2a": {
+   "verdict": "✅",
+   "value": {
+    "reproducible_pairs": 3844,
+    "of": 3844,
+    "replay_miss_pattern_matches": true,
+    "lex_pairs": 15,
+    "block_pairs": 18
+   },
+   "note": "frozen read operator reproducible on all 3844 pairs; an independent replay reproduces the machine own read counts exactly in both orders"
+  },
+  "P2b": {
+   "verdict": "✅",
+   "value": {
+    "history_sensitive_settings": 62,
+    "of": 62,
+    "example": [
+     "V00",
+     [
+      -1,
+      1
+     ]
+    ]
+   },
+   "note": "the outcome is not a function of the setting alone (contextual force)"
+  },
+  "P2c": {
+   "verdict": "✅",
+   "value": {
+    "lex": {
+     "pairs": 15,
+     "reads_per_pair": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+     ],
+     "ledger_growth_per_pair": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total_growth": 28,
+     "pushes": 43,
+     "memo_hit_pairs": 2,
+     "overrides": 0,
+     "override_example": null
+    },
+    "block": {
+     "pairs": 18,
+     "reads_per_pair": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3,
+      2
+     ],
+     "ledger_growth_per_pair": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1
+     ],
+     "total_growth": 24,
+     "pushes": 42,
+     "memo_hit_pairs": 12,
+     "overrides": 2,
+     "override_example": {
+      "pair": [
+       "V02",
+       "V00"
+      ],
+      "stored": 1,
+      "current_state_would_give": -1
+     }
+    }
+   },
+   "note": "per pair the ledger grows by misses-1 >= 1: the rollback restores the state but not the record"
+  },
+  "P3a": {
+   "verdict": "✅",
+   "value": {
+    "memo_hit_pairs": 14,
+    "pushes": 85,
+    "read_attempts": 99,
+    "static_rule_ok": true
+   },
+   "note": "a memo hit performs no write (pushes = reads - hits) and the frozen source uses top-only reads, append-only pushes and pop only in the rollback"
+  },
+  "P3b": {
+   "verdict": "✅",
+   "value": {
+    "overrides": 2,
+    "example": {
+     "pair": [
+      "V02",
+      "V00"
+     ],
+     "stored": 1,
+     "current_state_would_give": -1
+    }
+   },
+   "note": "the record outranks the current state: a stored entry is never recomputed"
+  },
+  "P3c": {
+   "verdict": "🔴",
+   "value": {
+    "accessible_depth": 1,
+    "redundancy": 1
+   },
+   "note": "read inspects the ledger top only => a single-copy record, no environmental redundancy"
+  },
+  "P2d": {
+   "verdict": "🔴",
+   "value": {
+    "C1_values": [
+     "-1",
+     "-2/3",
+     "-1/3",
+     "-4/15",
+     "-1/5",
+     "-2/15",
+     "-1/15",
+     "0",
+     "1/15",
+     "2/15",
+     "1/5",
+     "4/15",
+     "1/3",
+     "2/3",
+     "1"
+    ],
+    "C1_row_sums": [
+     "-10/3",
+     "-14/3",
+     "-2",
+     "-2/15",
+     "-2/3",
+     "-22/15",
+     "-28/15",
+     "-4/3",
+     "-8",
+     "-8/15",
+     "-8/3",
+     "10/3",
+     "16/3",
+     "2",
+     "32/15",
+     "38/15",
+     "4",
+     "52/15",
+     "58/15",
+     "8/3"
+    ],
+    "C2_row_sums": [
+     "-1",
+     "-1/3",
+     "-1/5",
+     "-11/3",
+     "-11/5",
+     "-13/15",
+     "-13/3",
+     "-17/15",
+     "-2/5",
+     "-23/15",
+     "-26/15",
+     "-3/5",
+     "-37/15",
+     "-4/3",
+     "-4/5",
+     "-5",
+     "-5/3",
+     "-7",
+     "-7/15",
+     "-7/5",
+     "-8/5",
+     "-9/5",
+     "10/3",
+     "11/5",
+     "12/5",
+     "13/3",
+     "13/5",
+     "16/5",
+     "17/3",
+     "19/5",
+     "21/5",
+     "3",
+     "31/15",
+     "37/15",
+     "4/3",
+     "43/15",
+     "47/15",
+     "5/3",
+     "53/15",
+     "59/15",
+     "7/3",
+     "8/3"
+    ]
+   },
+   "note": "signed correlations with non-unit row sums: no Born-type non-negative normalised weights (G7)"
+  },
+  "P4a": {
+   "verdict": "✅",
+   "value": {
+    "rank_C1": 61,
+    "rank_C2": 62,
+    "rank_C1rev": 61,
+    "rank1_means": "C = u (x) v factorisable"
+   },
+   "note": "algorithmic-free exact ranks; rank 1 would mean factorisable"
+  },
+  "P4b": {
+   "verdict": "🔴",
+   "value": {
+    "own_sweep": {
+     "lex": {
+      "E1_all4": "0",
+      "E2_all4": "0",
+      "argmax_E1": null,
+      "argmax_E2": null,
+      "window_pairs": 15
+     },
+     "block": {
+      "E1_all4": "16/15",
+      "E2_all4": "13/15",
+      "argmax_E1": [
+       "V00",
+       "V02",
+       "V03",
+       "V01"
+      ],
+      "argmax_E2": [
+       "V01",
+       "V00",
+       "V03",
+       "V02"
+      ],
+      "window_pairs": 18
+     }
+    },
+    "cited_B3R2": {
+     "E1": "16/15",
+     "E2": "13/15",
+     "source": "data/15_b3r2_results.json (cited)"
+    },
+    "own_vs_cited_match": true
+   },
+   "note": "budget-feasible all4 CHSH below 2 in both E1 and E2; NOTE the lex window value 0 is DEGENERATE (no all4 tuple fits the first 15 lex pairs: the four pairs need two distinct first settings, which lex cannot supply within the window) -- the block order is the one B3R2 used and the one compared against the cited values"
+  },
+  "P4c": {
+   "verdict": "✅",
+   "value": {
+    "balanced_axes": 62,
+    "of": 62,
+    "column_sums": [
+     0
+    ],
+    "conditional_marginal_violations": 0,
+    "of_conditional": 3844,
+    "null_random_axis_families": {
+     "families": 100,
+     "mean_balanced_axes": 62.0,
+     "sd_squared": "0",
+     "max_balanced_axes_in_null": 62,
+     "role": "THEOREM CHECK (cannot fail): the balance is decided by the antipodally closed reference orbit, so every axis family balances"
+    },
+    "null_random_reference_directions": {
+     "families": 100,
+     "mean_balanced_axes": 60.32,
+     "sd_squared": "10236/625",
+     "max": 62,
+     "z_vs_observed_62_squared": "147/853",
+     "role": "THEOREM CHECK (cannot fail): the read is sgn(<R(s)^-1 u_a, v>) so the sum runs over the antipodally closed orbit of u_a and cancels for every v; the residual ~1.7 columns per family come from the non-equivariant tie-break on exact zero dot products"
+    },
+    "null_relabelled_h_lemma": "200/200 group elements h: sum_s K[MUL[s][h]][b] == column_sum[b] for every b (so the conditional statement is a corollary of bijectivity + balance, and the permutation null is degenerate by theorem)",
+    "null_random_pm1_tables": {
+     "tables": 100,
+     "mean_balanced_axes": 4.31,
+     "sd_squared": "34939/10000",
+     "z_vs_observed_62_squared": "33281361/34939",
+     "role": "DISCRIMINATING NULL (a table that is not a sign-of-inner-product read balances only by accident)"
+    },
+    "balance_theorem": "sum_s sgn(<u_a, R(s) v>) = sum over the orbit of u_a of sgn(<w,v>) with multiplicity; every icosahedral axis orbit is antipodally closed, so the 120 terms cancel in antipodal pairs for EVERY reference v -- the balance is a theorem, not a numerical coincidence, and the axis/reference nulls cannot falsify it",
+    "null_disclosure": "10^7 samples are not the right instrument for zero-degree-of-freedom identities; the balance statistic is enumerated in full (62 axes) over 100 random axis families (6200 axes) plus 200 relabelled h elements"
+   },
+   "note": "each local outcome is +-1 with equal weight and the conditional marginal is 1/2 exactly, independent of the remote setting.  Nulls: the balance is a THEOREM for this read form (axis orbit antipodally closed) so perturbing axes (62.00/62) or the reference (60.32/62) cannot break it; the discriminating null is a read table outside that form (random +-1): only 4.31/62 columns balance, z^2 = 952.6 (5 sigma needs z^2 >= 25)"
+  },
+  "B4a": {
+   "verdict": "✅",
+   "value": {
+    "pair_histogram_mismatches": 0,
+    "of_pairs": 3844,
+    "diagonal_pairs": 62,
+    "four_read_joints_exhibited": 60,
+    "of_samples": 60,
+    "value_level_dependence_on_remote_setting": "215760/234484 (a,a2,b) triples",
+    "per_lambda_difference_rate_mean_of_200_samples": "1444/25 / 120",
+    "boundary": "the joint exists (lambda = s0 alone generates every 4-read outcome), so Fine applies; BUT the strict Bell-LHV form (second outcome = f(lambda, b) only) FAILS at the value level: the reconcile read depends on the first setting although every marginal stays 1/2"
+   },
+   "note": "explicit LHV: lambda = s0 uniform over 120; machine simulation of the frozen protocol equals the closed-form lambda counts on all 3844 pairs, and 60 pre-registered 4-read tuples give a 16-atom joint whose pair marginals equal the measured pair distribution"
+  },
+  "B4b": {
+   "verdict": "✅",
+   "value": {
+    "commutator_subgroup_order": 120,
+    "perfect": true,
+    "nontrivial_normal_subgroup_orders": [
+     1,
+     2,
+     120
+    ],
+    "direct_product_factorisations": 0
+   },
+   "note": "no G-invariant bipartition / no H_A (x) H_B local-action model: 2I is perfect and admits no non-trivial direct-product decomposition"
+  },
+  "B4c": {
+   "verdict": "✅",
+   "value": {
+    "pairs_with_explicit_separable_decomposition": 3844,
+    "of": 3844,
+    "product_components_per_pair": 120,
+    "S_ent": "0 EXACT for every factorisation",
+    "joint_rank_histogram": {
+     "1": 184,
+     "2": 3660
+    },
+    "max_classical_mutual_information_bits": 1.0,
+    "argmax": [
+     "V00",
+     "V00"
+    ]
+   },
+   "note": "the state is a probability vector on a simplex: rho = (1/120) sum_lambda delta_lambda (x) delta_lambda is an explicit separable decomposition, so the entanglement entropy vanishes for every factorisation; the honest replacement is the classical mutual information, which is non-zero (rank-2 joints) -- correlation without entanglement"
+  },
+  "B4d": {
+   "verdict": "🔴",
+   "value": {
+    "class_counts_k": [
+     1,
+     2,
+     4,
+     16,
+     26,
+     34,
+     48,
+     52,
+     54,
+     57,
+     58,
+     58,
+     58,
+     59,
+     59,
+     59
+    ],
+    "entropy_bits_k": [
+     0.0,
+     1.0,
+     2.0,
+     4.0,
+     4.700439718141092,
+     5.087462841250339,
+     5.584962500721156,
+     5.700439718141092,
+     5.754887502163468,
+     5.832890014164741,
+     5.857980995127572,
+     5.857980995127572,
+     5.857980995127572,
+     5.882643049361842,
+     5.882643049361842,
+     5.882643049361842
+    ],
+    "monotone_nondecreasing": true,
+    "pairs_where_the_record_is_restored": 0,
+    "of_pairs": 15,
+    "saturation_bits": 5.882643049361842
+   },
+   "note": "RED as an entanglement-entropy replacement (monotone non-decreasing, never restored by the rollback: it is an arrow-of-time / staleness functional, not a state functional); GREEN as the ledger-staleness clock"
+  },
+  "B4e": {
+   "verdict": "✅",
+   "value": {
+    "E1_single_state_function_read": true,
+    "E2_pair_local_memo": true,
+    "E3_no_second_randomness_source": true,
+    "randomness_tokens_found": [],
+    "time_time_occurrences": 6,
+    "budget_identity_44_reads": "123/2",
+    "escape_routes": {
+     "sign_sensitive_read": "B5b witness (#behaviours = 120 > 60)",
+     "direct_product_factorisation": "blocked by B4b",
+     "second_randomness_source": "breaks E3"
+    }
+   },
+   "note": "the frozen machine lies in the extension class E, so R_indep = 1 is a theorem inside E; the escape routes are named and each carries a measurable witness.  NO claim of absolute impossibility is made (contract section 0)"
+  },
+  "B5a": {
+   "verdict": "✅",
+   "value": {
+    "rows_with_K_s_equals_K_neg": 120,
+    "of_rows": 120,
+    "distinct_behaviours": 60,
+    "class_sizes": [
+     2
+    ],
+    "every_class_is_s_minus_s": true,
+    "quotient_order_spectrum": {
+     "1": 1,
+     "2": 15,
+     "3": 20,
+     "5": 24
+    },
+    "A5_spectrum": {
+     "1": 1,
+     "2": 15,
+     "3": 20,
+     "5": 24
+    },
+    "cap_bits": 5.906890595608519,
+    "upstream_B78": {
+     "distinct": 60,
+     "class_sizes": [
+      2
+     ]
+    }
+   },
+   "note": "the 2:1 collapse is DERIVED: K is invariant under s -> -s while the transition is sign-equivariant, so the read factors through the rotation R(q) and the kernel is the centre Z2 = ker(2I -> SO(3)); 60 = |I| = |A5|; cap = log2 60 = 5.906891 bits"
+  },
+  "B5b": {
+   "verdict": "✅",
+   "value": {
+    "schedule_negation_equivariant": true,
+    "sign_blind_draws_covered_by_the_theorem": 200,
+    "of_draws": 200,
+    "draws_scanned_in_full": 20,
+    "scanned_within_cap": 20,
+    "scanned_max_behaviours": 60,
+    "sign_sensitive_behaviours": 120,
+    "sufficiency_iff": "cap = log2 60 <=> the read factors through R(q) (sign-blind)"
+   },
+   "note": "sufficiency: the value-source schedule is table-free and negation-equivariant, so every sign-blind table gives behaviour(-s0) = behaviour(s0) => <= 60 behaviours for all 200 drawn tables (20 of them scanned in full, all within cap); necessity: a sign-sensitive quaternion-level read separates all 120 states, so the cap is exactly the double cover"
+  },
+  "B5c": {
+   "verdict": "🔴",
+   "value": {
+    "common_stabiliser": [
+     0,
+     21,
+     30,
+     36,
+     43,
+     75,
+     99,
+     106,
+     108,
+     117
+    ],
+    "common_stabiliser_order": 10,
+    "elements_are_group": true,
+    "pre_registered_claim": "N = centre {+-1} => 120/|N| = 60",
+    "measured": "N has order 10 (= 2 x 5: the preimage of the reference-axis stabiliser), so 120/|N| = 12 = the number of DISTINCT read rows of K",
+    "distinct_read_rows_of_K": 12,
+    "corrected_cap_identity": "cap = 120/|Z2(2I)| = 120/2 = 60, established operationally by the 60 behaviour classes (B5a) and the sign-blind theorem (B5b), NOT by this stabiliser",
+    "predicted_cap_bits": 6.906890595608519,
+    "prediction_for_O224": "adding the sign-sensitive (complex-phase) layer raises the cap to log2 120 = 6.906891 bits"
+   },
+   "note": "PRE-REGISTERED CLAIM REFUTED and kept as such: the read family common stabiliser is NOT the centre (order 10, not 2).  What is true: the cap identity uses the CENTRE (the kernel of the trajectory action, B5a/B5b), while the read-table right-invariance gives the extra structural fact that K has only 12 distinct rows"
+  },
+  "S4a": {
+   "verdict": "✅",
+   "value": {
+    "read_steps_checked": 99,
+    "unconditional_marginal_violations": 0,
+    "remote_setting_independence_violations": 0,
+    "ablation_violations": 0,
+    "rounds_checked": 15,
+    "per_lambda_trajectory_vs_frozen_machine": "1800/1800 states and tops identical",
+    "counterexamples": []
+   },
+   "note": "sequential no-signalling on the budget-feasible prefix: every read step has marginal 1/2 over the 120 initial states, the local read distribution is independent of the same-round remote setting, and the reconcile read keeps marginal 1/2 for every local setting"
+  },
+  "S4a-orig": {
+   "verdict": "🔴",
+   "value": {
+    "history_classes": 644,
+    "unbalanced": 634,
+    "of_classes": 644
+   },
+   "note": "preserved pre-registered FAIL: the value-history conditional marginal is not 1/2 (category error in the original predicate, corrected pre-freeze in amendment A1)"
+  },
+  "S4b": {
+   "verdict": "✅",
+   "value": {
+    "three_party_tensor_entries": 238328,
+    "tensor_denominator": 120,
+    "marginal_zero_triples": 3844,
+    "of_triples": 3844,
+    "triple_joints_exhibited": 60,
+    "of_samples": 60,
+    "atom_support_size_range": [
+     4,
+     8
+    ],
+    "atom_support_note": "the 8 corners are not all populated for every triple (the shared axis ties two of the values); the substantive conditions are the total weight 120, the pair marginal and the third-read balance",
+    "closed_form_vs_replay_samples": "200/200",
+    "coincidence_cases_covered": "a==b, b==c, c==b (memo hits) exercised in the tensor",
+    "S6": [
+     "V00",
+     "V01",
+     "V02",
+     "V03",
+     "V04",
+     "V05"
+    ],
+    "domain_size": 46656,
+    "calibrated_independent_LHV_bound": 2,
+    "max_M_chained": "22/15",
+    "argmax": [
+     "V03",
+     "V05",
+     "V04",
+     "V02",
+     "V01",
+     "V00"
+    ],
+    "over_independent_bound": 0,
+    "boundary": "the standard Mermin bound 2 assumes the four products share ONE lambda assignment; the chained functional does not (see B4a value-level dependence), so the measured value is reported as a boundary diagnostic, not as a violation"
+   },
+   "note": "multipartite verdict rests on the well-posed parts: every three-party marginal is exactly 1/2 over the full 62^3 domain and the triple joint is generated by lambda = s0 (8 atoms exhibited).  The Mermin functional on the chained tensor is reported with both bounds"
+  },
+  "S4c": {
+   "verdict": "✅",
+   "value": {
+    "claim": "no channel for multipartite non-classical correlations",
+    "boundary": "within this protocol every multi-party correlation is reproducible from lambda = s0, hence classical (Fine); NOT a claim that IDCM has no multi-body correlations",
+    "B6_upgrade": "from UNVERIFIED to established by construction"
+   },
+   "note": "B6 is upgraded from the charter UNVERIFIED flag to established, with the explicit boundary statement"
+  }
+ },
+ "claims": [
+  {
+   "tag": "R0",
+   "name": "half (a) fixed core coherence: MUL is a group of order 120, h injective, K in {+-1}",
+   "ok": true,
+   "detail": "identity=True inverses=120/120 assoc_violations=0 h_injective=True K_entries_ok=True ; half (b) from-scratch rebuild is delivered by scripts/03_r1_audit.py"
+  },
+  {
+   "tag": "P1a",
+   "name": "orbits of the 2I action on the 62 axes = {12,20,30}, type-invariant",
+   "ok": true,
+   "detail": "sizes=[12, 20, 30] type_invariant=True permutations=120"
+  },
+  {
+   "tag": "P1b",
+   "name": "state transition bijective on all 62 axes",
+   "ok": true,
+   "detail": "62/62"
+  },
+  {
+   "tag": "P1c",
+   "name": "composition law provenance present and upstream carries no dimensions",
+   "ok": true,
+   "detail": "law_text=True dimensions=False"
+  },
+  {
+   "tag": "P2a",
+   "name": "repeat idempotence / reproducibility 3844/3844 and validated replay",
+   "ok": true,
+   "detail": "reproducible=3844/3844 replay_law=True"
+  },
+  {
+   "tag": "P2b",
+   "name": "history sensitivity witness exists",
+   "ok": true,
+   "detail": "62/62 settings"
+  },
+  {
+   "tag": "P2c",
+   "name": "irreversibility: every pair strictly grows the record",
+   "ok": true,
+   "detail": "total growth = {'lex': 28, 'block': 24}"
+  },
+  {
+   "tag": "P3a",
+   "name": "append-only + hit consistency, static rule checked on the frozen source",
+   "ok": true,
+   "detail": "read attempts=99 = pushes 85 + memo hits 14 ; static=True"
+  },
+  {
+   "tag": "P3b",
+   "name": "record-dominates-state witness exists",
+   "ok": true,
+   "detail": "overrides = 2"
+  },
+  {
+   "tag": "P3c",
+   "name": "accessible depth = 1 (no environmental redundancy)",
+   "ok": true,
+   "detail": "depth 1 => the QM decoherence-redundancy requirement is absent"
+  },
+  {
+   "tag": "P2d",
+   "name": "no Born-type probability structure (signed table, row sums != 1)",
+   "ok": true,
+   "detail": "value set size 15 ; row sums of C1 = ['-10/3', '-14/3', '-2', '-2/15']"
+  },
+  {
+   "tag": "P4a",
+   "name": "non-factorisability: exact ranks of C1/C2/C1rev all > 1",
+   "ok": true,
+   "detail": "ranks = 61 / 62 / 61"
+  },
+  {
+   "tag": "P4b",
+   "name": "own budget-window all4 CHSH reproduces the cited below-2 values",
+   "ok": true,
+   "detail": "own block window: E1=16/15 E2=13/15 ; cited B3R2: E1=16/15 E2=13/15 ; lex: E1=0 E2=0"
+  },
+  {
+   "tag": "P4c",
+   "name": "no-signalling: 62/62 balanced marginals and 3844/3844 conditional marginals",
+   "ok": true,
+   "detail": "axis violations=0 conditional violations=0 ; balance theorem confirmed (axes 62.00/62, reference 60.32/62) ; discriminating null random tables: 4.31/62 balanced (z^2 = 952.6) ; h-lemma 200/200 ; z is reported squared because the gate forbids math.sqrt in the machine"
+  },
+  {
+   "tag": "B4a",
+   "name": "explicit lambda = s0 LHV reproduces the machine pairs and 4-read joints",
+   "ok": true,
+   "detail": "histogram mismatches=0/3844 (diagonal pairs handled: 62) ; 4-read joints with exact pair marginals=60/60 ; value-level remote dependence=215760/234484 (a,a2,b) triples"
+  },
+  {
+   "tag": "B4b",
+   "name": "no invariant bipartition: [2I,2I] = 2I and no non-trivial direct product",
+   "ok": true,
+   "detail": "commutator order=120 ; normal subgroup orders=[1, 2, 120] ; factorisations=0"
+  },
+  {
+   "tag": "B4c",
+   "name": "entanglement entropy is identically 0 (explicit separable decomposition) but the classical mutual information is non-zero",
+   "ok": true,
+   "detail": "separable on 3844/3844 pairs ; max I(X:Y) = 1.000000 bits at ('V00', 'V00')"
+  },
+  {
+   "tag": "B4d",
+   "name": "ledger entropy is monotone and never decreased by the rollback => it cannot play the entanglement-entropy role (it is a time-arrow functional)",
+   "ok": true,
+   "detail": "class counts = [1, 2, 4, 16, 26, 34, 48, 52, 54, 57, 58, 58, 58, 59, 59, 59] ; restored pairs = 0 ; saturation = 5.882643 bits"
+  },
+  {
+   "tag": "B4e",
+   "name": "finality inside the declared class E: membership verified and the escape routes are named with witnesses",
+   "ok": true,
+   "detail": "E1=True E2=True E3=True ; time.time() occurrences = 6, of which in the decision path = 0 ; budget identity 44 reads = 123/2"
+  },
+  {
+   "tag": "B5a",
+   "name": "B5 mechanism derived: K sign-invariant, 60 behaviour classes all {s,-s}, quotient spectrum = A5",
+   "ok": true,
+   "detail": "sign-invariant rows=120/120 ; classes=60 ; spectrum={1: 1, 3: 20, 5: 24, 2: 15} ; cap=5.906891 bits"
+  },
+  {
+   "tag": "B5b",
+   "name": "B5 sufficiency/necessity: sign-blind <= 60 (theorem + 200 premiss checks, 20 full scans), sign-sensitive >= 61",
+   "ok": true,
+   "detail": "schedule equivariance violations = 0 ; draws with verified premisses = 200/200 ; full scans within cap = 20/20 (max 60) ; sign-sensitive behaviours = 120"
+  },
+  {
+   "tag": "B5c",
+   "name": "PRE-REGISTERED identity: common stabiliser = centre {+-1} and 60 = 120/|N|",
+   "ok": false,
+   "detail": "stabiliser order = 10 ; distinct read rows = 12 ; centre order = 2 ; cap = log2(120/2) = 5.906891 bits"
+  },
+  {
+   "tag": "S4a",
+   "name": "sequential no-signalling: per-step marginals 1/2 and remote-setting independence",
+   "ok": true,
+   "detail": "steps=99 violations: unconditional=0 remote-independence=0 ablation=0"
+  },
+  {
+   "tag": "S4a-orig",
+   "name": "ORIGINAL pre-registered form (conditioning on the value history) is REFUTED: kept as FAIL with the measured numbers",
+   "ok": false,
+   "detail": "k = 0..14 ; history classes = 644 ; unbalanced classes = 634 -- conditioning on the full local value history makes the next outcome nearly deterministic (a category error: the QM conditional given past outcomes is not 1/2 either); corrected form = S4a"
+  },
+  {
+   "tag": "S4b",
+   "name": "multipartite: 62^3 marginal no-signalling + explicit lambda joints (the Mermin value is a disclosed diagnostic, its standard bound does not apply to the chained tensor)",
+   "ok": true,
+   "detail": "marginals zero on 3844/3844 ; triple joints 60/60 ; closed form vs replay 200/200 ; max chained M = 22/15 (independent-LHV calibration 2) ; S6^6 = 46656 tuples"
+  },
+  {
+   "tag": "S4c",
+   "name": "B6 multipartite channel: classical by construction on this protocol",
+   "ok": true,
+   "detail": "follows from the S4b lambda model plus Fine"
+  }
+ ],
+ "extra": {
+  "prefixes": {
+   "lex": {
+    "pairs": [
+     [
+      "V00",
+      "V00"
+     ],
+     [
+      "V00",
+      "V01"
+     ],
+     [
+      "V00",
+      "V02"
+     ],
+     [
+      "V00",
+      "V03"
+     ],
+     [
+      "V00",
+      "V04"
+     ],
+     [
+      "V00",
+      "V05"
+     ],
+     [
+      "V00",
+      "V06"
+     ],
+     [
+      "V00",
+      "V07"
+     ],
+     [
+      "V00",
+      "V08"
+     ],
+     [
+      "V00",
+      "V09"
+     ],
+     [
+      "V00",
+      "V10"
+     ],
+     [
+      "V00",
+      "V11"
+     ],
+     [
+      "V00",
+      "F00"
+     ],
+     [
+      "V00",
+      "F01"
+     ],
+     [
+      "V00",
+      "F02"
+     ]
+    ],
+    "pairs_idx": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      0,
+      6
+     ],
+     [
+      0,
+      7
+     ],
+     [
+      0,
+      8
+     ],
+     [
+      0,
+      9
+     ],
+     [
+      0,
+      10
+     ],
+     [
+      0,
+      11
+     ],
+     [
+      0,
+      12
+     ],
+     [
+      0,
+      13
+     ],
+     [
+      0,
+      14
+     ]
+    ],
+    "trail": [
+     {
+      "pair": [
+       0,
+       0
+      ],
+      "misses": 2,
+      "budget_after": "2583/44"
+     },
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "misses": 2,
+      "budget_after": "615/11"
+     },
+     {
+      "pair": [
+       0,
+       2
+      ],
+      "misses": 3,
+      "budget_after": "4551/88"
+     },
+     {
+      "pair": [
+       0,
+       3
+      ],
+      "misses": 3,
+      "budget_after": "2091/44"
+     },
+     {
+      "pair": [
+       0,
+       4
+      ],
+      "misses": 3,
+      "budget_after": "3813/88"
+     },
+     {
+      "pair": [
+       0,
+       5
+      ],
+      "misses": 3,
+      "budget_after": "861/22"
+     },
+     {
+      "pair": [
+       0,
+       6
+      ],
+      "misses": 3,
+      "budget_after": "3075/88"
+     },
+     {
+      "pair": [
+       0,
+       7
+      ],
+      "misses": 3,
+      "budget_after": "123/4"
+     },
+     {
+      "pair": [
+       0,
+       8
+      ],
+      "misses": 3,
+      "budget_after": "2337/88"
+     },
+     {
+      "pair": [
+       0,
+       9
+      ],
+      "misses": 3,
+      "budget_after": "246/11"
+     },
+     {
+      "pair": [
+       0,
+       10
+      ],
+      "misses": 3,
+      "budget_after": "1599/88"
+     },
+     {
+      "pair": [
+       0,
+       11
+      ],
+      "misses": 3,
+      "budget_after": "615/44"
+     },
+     {
+      "pair": [
+       0,
+       12
+      ],
+      "misses": 3,
+      "budget_after": "861/88"
+     },
+     {
+      "pair": [
+       0,
+       13
+      ],
+      "misses": 3,
+      "budget_after": "123/22"
+     },
+     {
+      "pair": [
+       0,
+       14
+      ],
+      "misses": 3,
+      "budget_after": "123/88"
+     }
+    ],
+    "reads_used": 43,
+    "budget_left": "123/88",
+    "miss_values": [
+     2,
+     3
+    ],
+    "replay_matches": true,
+    "pairs_count": 15
+   },
+   "block": {
+    "pairs": [
+     [
+      "V00",
+      "V00"
+     ],
+     [
+      "V00",
+      "V01"
+     ],
+     [
+      "V01",
+      "V00"
+     ],
+     [
+      "V01",
+      "V01"
+     ],
+     [
+      "V00",
+      "V02"
+     ],
+     [
+      "V02",
+      "V00"
+     ],
+     [
+      "V01",
+      "V02"
+     ],
+     [
+      "V02",
+      "V01"
+     ],
+     [
+      "V02",
+      "V02"
+     ],
+     [
+      "V00",
+      "V03"
+     ],
+     [
+      "V03",
+      "V00"
+     ],
+     [
+      "V01",
+      "V03"
+     ],
+     [
+      "V03",
+      "V01"
+     ],
+     [
+      "V02",
+      "V03"
+     ],
+     [
+      "V03",
+      "V02"
+     ],
+     [
+      "V03",
+      "V03"
+     ],
+     [
+      "V00",
+      "V04"
+     ],
+     [
+      "V04",
+      "V00"
+     ]
+    ],
+    "pairs_idx": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      4,
+      0
+     ]
+    ],
+    "trail": [
+     {
+      "pair": [
+       0,
+       0
+      ],
+      "misses": 2,
+      "budget_after": "2583/44"
+     },
+     {
+      "pair": [
+       0,
+       1
+      ],
+      "misses": 2,
+      "budget_after": "615/11"
+     },
+     {
+      "pair": [
+       1,
+       0
+      ],
+      "misses": 2,
+      "budget_after": "2337/44"
+     },
+     {
+      "pair": [
+       1,
+       1
+      ],
+      "misses": 2,
+      "budget_after": "1107/22"
+     },
+     {
+      "pair": [
+       0,
+       2
+      ],
+      "misses": 3,
+      "budget_after": "369/8"
+     },
+     {
+      "pair": [
+       2,
+       0
+      ],
+      "misses": 2,
+      "budget_after": "3813/88"
+     },
+     {
+      "pair": [
+       1,
+       2
+      ],
+      "misses": 3,
+      "budget_after": "861/22"
+     },
+     {
+      "pair": [
+       2,
+       1
+      ],
+      "misses": 2,
+      "budget_after": "1599/44"
+     },
+     {
+      "pair": [
+       2,
+       2
+      ],
+      "misses": 2,
+      "budget_after": "369/11"
+     },
+     {
+      "pair": [
+       0,
+       3
+      ],
+      "misses": 3,
+      "budget_after": "2583/88"
+     },
+     {
+      "pair": [
+       3,
+       0
+      ],
+      "misses": 2,
+      "budget_after": "2337/88"
+     },
+     {
+      "pair": [
+       1,
+       3
+      ],
+      "misses": 3,
+      "budget_after": "246/11"
+     },
+     {
+      "pair": [
+       3,
+       1
+      ],
+      "misses": 2,
+      "budget_after": "861/44"
+     },
+     {
+      "pair": [
+       2,
+       3
+      ],
+      "misses": 3,
+      "budget_after": "123/8"
+     },
+     {
+      "pair": [
+       3,
+       2
+      ],
+      "misses": 2,
+      "budget_after": "1107/88"
+     },
+     {
+      "pair": [
+       3,
+       3
+      ],
+      "misses": 2,
+      "budget_after": "861/88"
+     },
+     {
+      "pair": [
+       0,
+       4
+      ],
+      "misses": 3,
+      "budget_after": "123/22"
+     },
+     {
+      "pair": [
+       4,
+       0
+      ],
+      "misses": 2,
+      "budget_after": "123/44"
+     }
+    ],
+    "reads_used": 42,
+    "budget_left": "123/44",
+    "miss_values": [
+     2,
+     3
+    ],
+    "replay_matches": true,
+    "pairs_count": 18
+   }
+  },
+  "p4b": {
+   "lex": {
+    "E1_all4": "0",
+    "E2_all4": "0",
+    "argmax_E1": null,
+    "argmax_E2": null,
+    "window_pairs": 15
+   },
+   "block": {
+    "E1_all4": "16/15",
+    "E2_all4": "13/15",
+    "argmax_E1": [
+     "V00",
+     "V02",
+     "V03",
+     "V01"
+    ],
+    "argmax_E2": [
+     "V01",
+     "V00",
+     "V03",
+     "V02"
+    ],
+    "window_pairs": 18
+   }
+  },
+  "b4a_detail": [
+   {
+    "tuple": [
+     "E20",
+     "F16",
+     "F14",
+     "V07"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F02",
+     "F01",
+     "F17",
+     "F09"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "V05",
+     "V10",
+     "E03",
+     "E21"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E09",
+     "F10",
+     "F06",
+     "F00"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F05",
+     "F19",
+     "E18",
+     "F11"
+    ],
+    "atoms": 8,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E17",
+     "E08",
+     "F14",
+     "E24"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E26",
+     "V11",
+     "E09",
+     "F18"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F02",
+     "E06",
+     "V09",
+     "E19"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F02",
+     "V04",
+     "E21",
+     "F15"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E05",
+     "F09",
+     "F18",
+     "E27"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F11",
+     "F02",
+     "E24",
+     "E28"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E01",
+     "F05",
+     "E18",
+     "E04"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E23",
+     "V09",
+     "E08",
+     "V07"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E29",
+     "F03",
+     "V11",
+     "F16"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F18",
+     "E17",
+     "E19",
+     "V01"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F00",
+     "E10",
+     "V00",
+     "F02"
+    ],
+    "atoms": 12,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E08",
+     "F11",
+     "V08",
+     "V00"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E03",
+     "E10",
+     "V08",
+     "E09"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E00",
+     "V03",
+     "F19",
+     "E01"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F09",
+     "V01",
+     "F03",
+     "F19"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F16",
+     "E12",
+     "E13",
+     "F11"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E05",
+     "E20",
+     "E28",
+     "V08"
+    ],
+    "atoms": 10,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E19",
+     "E01",
+     "F18",
+     "F05"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E15",
+     "F14",
+     "F18",
+     "F00"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "V07",
+     "E03",
+     "V04",
+     "F07"
+    ],
+    "atoms": 8,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F13",
+     "V01",
+     "E18",
+     "F17"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E12",
+     "F05",
+     "E13",
+     "E01"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E07",
+     "F18",
+     "F14",
+     "E28"
+    ],
+    "atoms": 12,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E13",
+     "E02",
+     "E09",
+     "V07"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "V11",
+     "V06",
+     "F17",
+     "F12"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "V10",
+     "E24",
+     "V02",
+     "F00"
+    ],
+    "atoms": 13,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F16",
+     "E28",
+     "F04",
+     "E21"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F01",
+     "E28",
+     "E10",
+     "E18"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E22",
+     "E19",
+     "F08",
+     "F05"
+    ],
+    "atoms": 12,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E25",
+     "F08",
+     "F03",
+     "V04"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E21",
+     "E12",
+     "E27",
+     "E05"
+    ],
+    "atoms": 12,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E16",
+     "V00",
+     "E27",
+     "E10"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E13",
+     "F13",
+     "V05",
+     "F03"
+    ],
+    "atoms": 13,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "V04",
+     "F04",
+     "F01",
+     "E13"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E05",
+     "F03",
+     "E03",
+     "V07"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E20",
+     "F13",
+     "F09",
+     "V05"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E21",
+     "F00",
+     "F05",
+     "V02"
+    ],
+    "atoms": 13,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E20",
+     "V10",
+     "E28",
+     "V00"
+    ],
+    "atoms": 12,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F00",
+     "E10",
+     "F04",
+     "V05"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F07",
+     "E15",
+     "V04",
+     "E25"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E14",
+     "F00",
+     "E12",
+     "V09"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F09",
+     "E28",
+     "E21",
+     "F01"
+    ],
+    "atoms": 8,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E06",
+     "F07",
+     "E09",
+     "F19"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "V05",
+     "E04",
+     "V07",
+     "E13"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E11",
+     "E20",
+     "V11",
+     "V09"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F16",
+     "E23",
+     "V04",
+     "F18"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F16",
+     "F01",
+     "V07",
+     "E14"
+    ],
+    "atoms": 12,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "F06",
+     "E20",
+     "E00",
+     "F01"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E22",
+     "V10",
+     "F08",
+     "E15"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E22",
+     "E21",
+     "V00",
+     "F03"
+    ],
+    "atoms": 16,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E19",
+     "V11",
+     "E20",
+     "E23"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E00",
+     "E09",
+     "F04",
+     "V04"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "E06",
+     "E03",
+     "F07",
+     "E02"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "V11",
+     "F17",
+     "F19",
+     "V03"
+    ],
+    "atoms": 14,
+    "weight_total": 120
+   },
+   {
+    "tuple": [
+     "V10",
+     "F11",
+     "E14",
+     "E27"
+    ],
+    "atoms": 15,
+    "weight_total": 120
+   }
+  ],
+  "b4d_class_counts": [
+   1,
+   2,
+   4,
+   16,
+   26,
+   34,
+   48,
+   52,
+   54,
+   57,
+   58,
+   58,
+   58,
+   59,
+   59,
+   59
+  ],
+  "b5a": {
+   "classes": 60,
+   "class_sizes": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "spectrum": {
+    "1": 1,
+    "3": 20,
+    "5": 24,
+    "2": 15
+   }
+  },
+  "b5b": {
+   "scanned_max": 60,
+   "sign_sensitive": 120,
+   "scanned": 20,
+   "premises_verified": 200
+  },
+  "b5c": {
+   "stabiliser": [
+    0,
+    21,
+    30,
+    36,
+    43,
+    75,
+    99,
+    106,
+    108,
+    117
+   ],
+   "order": 10,
+   "distinct_rows": 12
+  },
+  "s4b_joints": [
+   {
+    "triple": [
+     "V02",
+     "F13",
+     "E02"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E03",
+     "F07",
+     "F06"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E28",
+     "E20",
+     "V01"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F09",
+     "E27",
+     "F01"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E04",
+     "F07",
+     "E16"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "V11",
+     "F04",
+     "E17"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "V07",
+     "E09",
+     "E22"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F00",
+     "E29",
+     "E16"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F14",
+     "E19",
+     "V11"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "V01",
+     "F19",
+     "E07"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E05",
+     "E29",
+     "E01"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E12",
+     "F14",
+     "F11"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F09",
+     "E10",
+     "V08"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E11",
+     "E07",
+     "E22"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F11",
+     "E13",
+     "E15"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "V10",
+     "V07",
+     "V03"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "V09",
+     "F04",
+     "F14"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F05",
+     "V01",
+     "V06"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E18",
+     "V05",
+     "F06"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F17",
+     "F01",
+     "F03"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E26",
+     "V07",
+     "E25"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F14",
+     "V00",
+     "F18"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F00",
+     "V10",
+     "E22"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F13",
+     "E06",
+     "E05"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E08",
+     "V09",
+     "V08"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "V05",
+     "F12",
+     "V01"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "V09",
+     "F18",
+     "E25"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F08",
+     "E07",
+     "V03"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F11",
+     "E04",
+     "F18"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F05",
+     "F16",
+     "E17"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F06",
+     "E29",
+     "F05"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F06",
+     "V06",
+     "F08"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E05",
+     "E24",
+     "V06"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E24",
+     "F00",
+     "E06"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F12",
+     "E29",
+     "F14"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E24",
+     "F10",
+     "V09"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F16",
+     "E23",
+     "V06"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E22",
+     "V08",
+     "E17"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F16",
+     "E16",
+     "E04"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F16",
+     "V05",
+     "E20"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E12",
+     "E22",
+     "V06"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F06",
+     "F00",
+     "F14"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F18",
+     "F19",
+     "E16"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E21",
+     "V05",
+     "F00"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F02",
+     "F00",
+     "E17"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F10",
+     "E05",
+     "E24"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E18",
+     "E17",
+     "F14"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F07",
+     "E25",
+     "V06"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E24",
+     "F05",
+     "F14"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "F03",
+     "F16",
+     "F12"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E04",
+     "F00",
+     "E13"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E02",
+     "E15",
+     "F05"
+    ],
+    "atoms": 6,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E09",
+     "V00",
+     "F17"
+    ],
+    "atoms": 6,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E15",
+     "V03",
+     "F04"
+    ],
+    "atoms": 4,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E13",
+     "F09",
+     "E15"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E15",
+     "E02",
+     "E13"
+    ],
+    "atoms": 6,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "V06",
+     "V00",
+     "E26"
+    ],
+    "atoms": 4,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E01",
+     "E03",
+     "V02"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E02",
+     "F15",
+     "F16"
+    ],
+    "atoms": 8,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   },
+   {
+    "triple": [
+     "E28",
+     "V10",
+     "E03"
+    ],
+    "atoms": 4,
+    "reuse_violations": 0,
+    "third_read_plus1": 60
+   }
+  ],
+  "s4b": {
+   "S6": [
+    "V00",
+    "V01",
+    "V02",
+    "V03",
+    "V04",
+    "V05"
+   ],
+   "calibrated_independent_bound": 2,
+   "max_M_chained": "22/15",
+   "argmax": [
+    "V03",
+    "V05",
+    "V04",
+    "V02",
+    "V01",
+    "V00"
+   ],
+   "over": 0
+  }
+ },
+ "cell_order": [
+  "R0",
+  "P1a",
+  "P1b",
+  "P1c",
+  "P2a",
+  "P2b",
+  "P2c",
+  "P2d",
+  "P3a",
+  "P3b",
+  "P3c",
+  "P4a",
+  "P4b",
+  "P4c",
+  "B4a",
+  "B4b",
+  "B4c",
+  "B4d",
+  "B4e",
+  "B5a",
+  "B5b",
+  "B5c",
+  "S4a",
+  "S4a-orig",
+  "S4b",
+  "S4c"
+ ],
+ "n_pass": 24,
+ "n_total": 26,
+ "elapsed_s": 476.0518112182617,
+ "finished_at": "2026-10-02T04:17:53+0800"
+}

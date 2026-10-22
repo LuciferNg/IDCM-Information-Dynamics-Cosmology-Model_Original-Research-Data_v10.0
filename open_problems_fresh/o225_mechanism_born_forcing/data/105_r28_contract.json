@@ -1,0 +1,39 @@
+{
+ "rules": "r28-crit2-misc1-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "合約含關鍵定義（四判準、9 variant、秩、Q₈、Aut/GeoAut）",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 齊備（F1–F5／G1–G5 = 10 條）",
+   "ok": true,
+   "detail": "缺 = 無"
+  },
+  {
+   "tag": "C3",
+   "name": "判決規則聲明在場",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C4",
+   "name": "負對照：禁止以抽樣代替全族（「每個 variant 必須完整重算」在場）",
+   "ok": true,
+   "detail": "抽樣替代之禁止條款 = 在場"
+  },
+  {
+   "tag": "C5",
+   "name": "凍結指紋已寫入（sha256 = 合約內容）",
+   "ok": true,
+   "detail": "sha256 = 58ef8468d7daa797…"
+  }
+ ],
+ "gate": "OPEN",
+ "n_pass": 5,
+ "n_total": 5,
+ "contract_sha256": "58ef8468d7daa7978508863d8aa9028902ba1591e25d0fc6ff7745638da87742"
+}

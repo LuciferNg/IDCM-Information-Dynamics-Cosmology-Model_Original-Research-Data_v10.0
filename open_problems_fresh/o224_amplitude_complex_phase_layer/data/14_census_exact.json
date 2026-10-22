@@ -1,0 +1,84 @@
+{
+ "domain": 46080,
+ "existence_count": 11318,
+ "census_rule_count": 1734,
+ "probe_rule_count": 1794,
+ "round4_census_field": 880,
+ "witnesses": {
+  "existence": {
+   "six": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    6
+   ],
+   "d_dp": [
+    14,
+    29
+   ],
+   "value": 96
+  },
+  "census_rule": {
+   "six": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    6
+   ],
+   "d_dp": [
+    29,
+    14
+   ],
+   "value": 96
+  },
+  "probe_rule": {
+   "six": [
+    0,
+    1,
+    2,
+    5,
+    7,
+    3
+   ],
+   "d_dp": [
+    24,
+    19
+   ],
+   "value": 128
+  }
+ },
+ "verdict": "the exact existence count is the rule-independent statement of the round-4 eight_anti precision finding; the census rule 880 is a certified lower bound and the probe rule 392 is a weaker sub-count (both reproduce here)",
+ "script": "14_census_exact",
+ "claims": [
+  {
+   "tag": "Q1",
+   "name": "DOMAIN: the admissible-six-tuple domain (six pairwise distinct vertex axes, no antipodal pair among the six) has 46,080 elements, matching the round-4 census field census_v3.six_tuples exactly, so the three counts below are computed over one and the same domain",
+   "ok": true,
+   "detail": "this script = 46080 ; round-4 census = 46080"
+  },
+  {
+   "tag": "Q2",
+   "name": "EXACT EXISTENCE COUNT: the number of admissible six-tuples that admit ANY admissible antipodal (d,d') pair attaining the exact v3 maximum (max over d in A0 of F[d] + best G[d'] with d' != d, then an explicit equality search over all admissible antipodal pairs) is reported; it must be at least max(880, 392) because every census-rule and probe-rule instance is a certified attained antipodal maximum",
+   "ok": true,
+   "detail": "exact existence count = 11318 of 46080 (24.5616%) ; certified lower bounds: census rule = 880, probe rule = 1794 ; domain = 46080"
+  },
+  {
+   "tag": "Q3",
+   "name": "RULE DEPENDENCE: the census rule (top-2 x top-2, index-order tie break) and the probe rule (best d over A0, d' over the top-2 of G) each reproduce their own round-4 counts (880 and 392), which shows that \"the realising pair is antipodal\" is selection-rule dependent: both are genuine sub-counts of the exact existence count, and only the existence count is rule independent",
+   "ok": false,
+   "detail": "census rule = 1734 (round-4 field 880) ; probe rule = 1794 (scratch probe 392) ; exact existence = 11318"
+  },
+  {
+   "tag": "Q4",
+   "name": "WITNESSES: one witness six-tuple (with its antipodal pair and value) is kept for each of the three counts, so the existence count, the census rule and the probe rule are separately checkable",
+   "ok": true,
+   "detail": "existence witness = {\"six\": [0, 1, 2, 4, 8, 6], \"d_dp\": [14, 29], \"value\": 96} ; census-rule witness = {\"six\": [0, 1, 2, 4, 8, 6], \"d_dp\": [29, 14], \"value\": 96} ; probe-rule witness = {\"six\": [0, 1, 2, 5, 7, 3], \"d_dp\": [24, 19], \"value\": 128}"
+  }
+ ],
+ "n_pass": 3,
+ "n_claims": 4
+}

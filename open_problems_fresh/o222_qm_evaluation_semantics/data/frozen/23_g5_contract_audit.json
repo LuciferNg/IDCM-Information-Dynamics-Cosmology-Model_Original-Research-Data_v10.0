@@ -1,0 +1,77 @@
+{
+ "rules_version": "g5-contract-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "frozen upstream impls match their freeze records (B5 / B3R2 / D6 / G4)",
+   "ok": true,
+   "detail": "B3R2=14e17e7cdff2 ; B5=f2cb54fa5df0 ; D6=a681ae8cf6bc ; G4=efa6aaded922"
+  },
+  {
+   "tag": "C2",
+   "name": "frozen objects rebuilt: |2I| = 120, 62 axes, h bijective, and the anti structural lemma (31 antipodal pairs, exactly one anti column per row)",
+   "ok": true,
+   "detail": "anti True entries = 62 (31 pairs), per-row min/max = 1/1"
+  },
+  {
+   "tag": "C3",
+   "name": "contract declares the six cells and the five theorems",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C4",
+   "name": "register: O222/G5 registered with its six pre-numbered sub-questions before any number",
+   "ok": true,
+   "detail": "sub-questions = True"
+  },
+  {
+   "tag": "C5",
+   "name": "upstream gates healthy: D6 / B3R2 / G4 gates OPEN or all-PASS, docs/15 + data/21 present",
+   "ok": true,
+   "detail": "D6=OPEN G4=OPEN B3R2=14 claims"
+  },
+  {
+   "tag": "C6",
+   "name": "impl AST gate: no trig / no float literal / no numpy-scipy-math / NO random module (the sampler must be a hand-written LCG)",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "tag": "C7",
+   "name": "cell parity (both directions): the impl computes exactly the six registered cells",
+   "ok": true,
+   "detail": "impl cells = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
+  },
+  {
+   "tag": "C8",
+   "name": "frozen semantics IMPORTED, not re-implemented (no local criterion/sampler/machine defs)",
+   "ok": true,
+   "detail": "local defs = ['load', 'isqrt_int', 'ai', 'cols_of', 'rows_of', 'crit_and_counts', 'brute', 'walk_ok', 'main', 'trail_closed', '_pop', '_combinations', '__init__', 'next', 'below', 'rz', 'enum_circuits', 'sample_circuits', 'rec', 'dfs']"
+  },
+  {
+   "tag": "C9",
+   "name": "contract<->impl string parity: criterion, prefix rule, LCG constants, fallback caps",
+   "ok": true,
+   "detail": "missing in one side = []"
+  },
+  {
+   "tag": "C10",
+   "name": "the impl states the pre-registered sample size and the degenerate small-n prefixes",
+   "ok": true,
+   "detail": "sampler + small-n rules present in both"
+  },
+  {
+   "tag": "C11",
+   "name": "the impl carries no assertion of a target value (no hard-coded proportions or rz(n))",
+   "ok": true,
+   "detail": "no target-value assertions"
+  },
+  {
+   "tag": "C12",
+   "name": "the impl reads its prefixes and its anti matrix from the frozen modules (no local geometry)",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

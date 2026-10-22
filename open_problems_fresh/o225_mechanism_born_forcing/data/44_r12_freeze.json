@@ -1,0 +1,41 @@
+{
+ "rules": "r12-law-closure-v1",
+ "contract": "docs/24_r12_contract.md",
+ "contract_sha256": "b7cf8f84feb2adc747ba48cf796b67a8ad014b13db321ce273c53e33bce9cf99",
+ "frozen_at": "first run of scripts/41",
+ "n_pass": 5,
+ "n_total": 5,
+ "gate": "OPEN",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "凍結合約 sha256 與記錄一致",
+   "ok": true,
+   "detail": "sha = b7cf8f84feb2adc7…"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 完整（18 個：X1–X6／Y1–Y5／Z1–Z3／Q1–Q4）",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C3",
+   "name": "陽性對照：合約載明 Z1 之完整判準（含證成條件「含單位元」）",
+   "ok": true,
+   "detail": "命中 = True"
+  },
+  {
+   "tag": "C4",
+   "name": "陰性對照：篡改後之合約（弱化為「可能成群」）必須被 C3 判據拒絕",
+   "ok": true,
+   "detail": "篡改版仍含完整判準 = False"
+  },
+  {
+   "tag": "C5",
+   "name": "GATE 條件：合約未被改動、tag 完整、陰陽對照成立",
+   "ok": true,
+   "detail": "GATE = OPEN"
+  }
+ ]
+}

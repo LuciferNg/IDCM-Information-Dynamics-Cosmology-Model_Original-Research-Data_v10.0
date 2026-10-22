@@ -1,0 +1,98 @@
+==============================================================================
+  O129/01 -- sigma_sync nature verdict
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. lambda_sync: v9.0 vs v10.0 -- same geometric object?
+------------------------------------------------------------------------------
+  [PASS] A1 lambda_sync formula: 2*pi*R/88 == pi*R/44 (algebraic identity, dev < 1e-30)  -- dev = 0.00e+00
+  [PASS] A2 R_world(v10 registered 4129.94) == c/H0 = 4129.9416 Mpc (dev < 1e-5, 6 s.f. rounding)  -- dev = 3.78e-07  (v9 lambda_sync 294.877138 vs v10 294.877026 Mpc)
+  [PASS] A3 BAO = lambda_sync/2 = 147.4385 Mpc (= r_d proxy)  -- lambda_sync/2 = 147.4385
+
+------------------------------------------------------------------------------
+  B. sigma_sync definition -- operator vs position (structural)
+------------------------------------------------------------------------------
+
+  v9.0 sigma_sync/01_derive_sigma_sync.py defines:
+
+      sigma_sync^2(R_n) = INT xi(s) * W(s; R_n) ds ,   R_n = lambda_sync/(2n)
+
+  i.e. a HARMONIC-SCALE VARIANCE OPERATOR (a width / amplitude quantity),
+  explicitly introduced to REPLACE sigma_8 (8 h^-1 Mpc scale).
+
+  The v9.0 'sync dip POSITION'  z_c = F4/F5 = 3/5 = 0.6  is a DIFFERENT object,
+  living in:
+      open_problems_fresh/runtime_isa/15_sync_dip_derivation.md
+      sync_bump_analysis/01_sync_bump_observer_relative.md
+      sync_bump_analysis/03_sync_dip_to_bump_evolution.md
+
+  [CLAIM] B1 sigma_sync = harmonic-scale VARIANCE OPERATOR at R_n = lambda_sync/(2n), NOT a position
+  [CLAIM] B2 the dip POSITION z_c = 0.6 lives in a different v9.0 object (runtime_isa/15 + sync_bump_analysis/)
+  [CLAIM] => O126 section D (retraction of z_c = 0.6) does NOT, by itself, kill the sigma_sync operator
+
+------------------------------------------------------------------------------
+  C. recompute sigma_sync(R_n) from BOSS DR12 xi(s)  (v9.0 reproduction)
+------------------------------------------------------------------------------
+  BOSS DR12 xi(s): 36 points, s in [2.5, 177.5] h^-1 Mpc
+  n    R_n(h^-1Mpc)   sigma_sync   v9.0 value   dev       
+  ----------------------------------------------------------
+  2    101.6          0.0662       0.0662       -0.04%
+  3    67.7           0.1157       0.1157       +0.03%
+  4    50.8           0.1732       0.1732       -0.02%
+  5    40.6           0.2339       0.2339       -0.01%
+  8    25.4           0.4164       0.4164       -0.00%
+  10   20.3           0.5280       0.5280       -0.01%
+  [PASS] C1 R_n = lambda_sync/(2n) reproduces v9.0 table R column  -- e.g. n=2 -> 101.6 h^-1 Mpc (v9.0 101.6)
+  [PASS] C2 sigma_sync(R_n) recomputation reproduces v9.0 table (max dev < 2%)  -- max dev = 0.040%
+  [PASS] C3 sigma_sync monotonic increasing as R_n shrinks (n up)  -- n=2..20: 0.0662 -> 0.9924
+  [CLAIM] C4 sigma_sync values are MEASURED from BOSS DR12 xi(s) -- v9.0 gave ZERO first-principles content
+
+------------------------------------------------------------------------------
+  D. sigma_8 (8 h^-1 Mpc) vs the sigma_sync ladder  lambda_sync/(2n)
+------------------------------------------------------------------------------
+  8 h^-1 Mpc = 11.021 Mpc
+  nearest sigma_sync rung: n = lambda_sync/(2*R8) = 13.3782
+  [PASS] D1 8 h^-1 Mpc is OFF the sigma_sync ladder (n = 13.378, non-integer)  -- distance to nearest rung = 0.3782
+  k(8 h^-1 Mpc) = 2*pi/R8 = 0.5701 Mpc^-1
+  harmonic spacing dk = 2*pi/lambda_sync = 0.02131 Mpc^-1
+  ratio k8/dk = 26.8 harmonic spacings
+  [PASS] D2 sigma_8 scale sits many harmonic spacings above the ladder fundamental  -- k8/dk = 26.8
+  [CLAIM] D3 sigma_sync is the ON-LADDER replacement for sigma_8 (which is off-ladder, sub-grid)
+
+------------------------------------------------------------------------------
+  E. v10.0-native owner of the sigma8 / amplitude question (cross-reference)
+------------------------------------------------------------------------------
+
+  In v10.0 the sigma8 / spectral-amplitude question is already owned by:
+
+    O100  (C_l -> P(k), inverse projection operator M)   -- docs/03 sigma8_verdict
+    O133  (P(k) chain spectrum, migrated from v9.0 pk_chain_spectrum/)
+          -> sigma8 = 0.7482 vs BOSS 0.783 (dev -4.4%)
+    O128  (sigma8 normalization, migrated from v9.0 sigma8_norm/)  -- UNSTARTED
+    O99   docs/11: sigma_8 pure first-principles = NOT possible
+          (genuine sub-grid gap; only calibration via BOSS xi(s) works)
+
+  [CLAIM] E1 sigma_sync's role (IDCM-native variance normalization) is ALREADY owned by O100/O133/O128
+  [CLAIM] E2 v9.0 sigma_sync = the 'route E' (empirical calibration) later formalised as O100/O133
+
+==============================================================================
+  VERDICT (section D of O126 vs O129's sigma_sync)
+==============================================================================
+
+  (1) O129's sigma_sync is the v9.0 HARMONIC-SCALE VARIANCE OPERATOR
+      sigma_sync^2(R_n) = INT xi(s) W(s;R_n) ds at R_n = lambda_sync/(2n).
+      It is a WIDTH / AMPLITUDE quantity -- NOT a dip position.
+
+  (2) The dip POSITION z_c = F4/F5 = 0.6 is a SEPARATE v9.0 object
+      (runtime_isa/15 + sync_bump_analysis/), retracted by O126 section D.
+
+  (3) => O126's retraction of z_c = 0.6 does NOT kill the sigma_sync operator.
+      But v9.0's sigma_sync is a DATA MEASUREMENT (BOSS xi(s)), with no
+      first-principles derivation -- so O129's original proposition
+      ("derive sigma_sync from first principles") was NEVER fulfilled.
+
+  (4) The operator's geometry (lambda_sync) is IDENTICAL in v9.0 and v10.0 (A1),
+      so the operator migrates cleanly; its v10.0-native home is O100/O133/O128.
+
+  PASS: 8/8   (+ 7 structural claims, not counted)
+  Saved -> data/01_sigma_sync_nature.json

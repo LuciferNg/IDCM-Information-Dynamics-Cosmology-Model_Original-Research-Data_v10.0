@@ -1,0 +1,16 @@
+================================================================================================================
+O225 scripts/22 -- R5 INDEPENDENT AUDIT
+================================================================================================================
+[FAIL] A1   獨立普查：31 對（元組比較）；vertex/face/edge 之 n_tie 集合  --  pairs=31 ; vertex=[5] face=[3] edge=[6]
+[PASS] A2   獨立軌道計法：單一 tie 元素在 H_r 下之軌跡 = 全 tie 集（大小 5）  --  |H_r|=20 ; |orbit|=5 ; orbit == tie set ? True
+[PASS] A4   獨立幾何核：每頂點軸之 tie 五線族 —— 36°:72° = 5:5，無第三種值（兩條精確平方等式）  --  tie 集大小 = [5, 5, 5, 5, 5, 5] ; 全符 = True
+[FAIL] A3   獨立全域計數：Σ = 30；每個 edge 軸重數 = 1；face/vertex 不被 tie  --  Σ=60 ; edge 重數=[4]
+[PASS] A5   第二套 replay 實作：hits/Σmisses/逐對記錄 三變體相同；overrides 抽樣 8 態與 21 之輸出逐值一致  --  hits 同=True ; misses 同=True ; recs 同=True ; 對 21 逐值一致=True ; overrides(m)=[65, 69, 64, 58] overrides(p)=[63, 70, 62, 63]
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/22_r5_audit.py", line 284, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/22_r5_audit.py", line 263, in main
+    if res['p'][s]['overrides'] != res['p'][MUL[s][z]]['overrides']:
+                                   ~~~~~~~~^^^^^^^^^^^
+KeyError: 75

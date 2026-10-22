@@ -1,0 +1,14 @@
+====================================================================================================================
+O225 scripts/32 -- R8 INDEPENDENT AUDIT   (r8-group-identity-v1)
+====================================================================================================================
+[PASS] E1   ★ 獨立核 Part C：tie 條目每態 = 10、d(s,ā) + d(s,a) = 1、Σ_a d = 5（並解釋 600 = 1200/2）  --  tie 值集 = [10] ; 偏離 = 0 ; Σ_a d 值集 = [5] ; 全體 = 600
+[PASS] E2   ★ 獨立協定 pass：f_tf／f_ft／f_tt 逐態與 31 相同；Z10 與零態集一致（零態亦 = R6 之零態集）  --  Z10 = [9, 15, 21, 31, 57, 67, 77, 87, 111, 117] ; 零態 = [9, 15, 40, 77, 87, 100] ; 與 R6 同 = True ; 逐態 f 同 = True
+[FAIL] E3a  矩陣-態索引對照為單射（120 個不同旋轉矩陣 ⟹ 120 態）  --  相異矩陣 = 60
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/32_r8_audit.py", line 304, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/32_r8_audit.py", line 212, in main
+    e_idx = [g for g in range(n) if mcols(g) == BAS][0]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

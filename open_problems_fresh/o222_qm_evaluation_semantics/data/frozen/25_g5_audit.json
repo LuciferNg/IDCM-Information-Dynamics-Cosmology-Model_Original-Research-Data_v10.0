@@ -1,0 +1,68 @@
+{
+ "claims": [
+  {
+   "tag": "A0",
+   "name": "frozen impl hash matches the on-disk file and the first-run log is preserved",
+   "ok": true,
+   "detail": "impl=fb9072e4b22e"
+  },
+  {
+   "tag": "A1",
+   "name": "anti rebuilt independently in Q(sqrt5): 62 True entries = 31 pairs, exactly one per row",
+   "ok": true,
+   "detail": "per-row min/max = 1/1"
+  },
+  {
+   "tag": "A2",
+   "name": "the audit's own direct 4-tuple search agrees with the frozen criterion on ALL 6892 pair sets (small family: 78 constructible; known prefixes: ['block', 'euler_rectangle']) -- total 80 vs the machine's 6892/6892",
+   "ok": true,
+   "detail": "mismatches = 0"
+  },
+  {
+   "tag": "A3",
+   "name": "the sufficient-condition positives (k = 6..20) and the tight-bound instance (k - c = 4) both verified by the audit's own search",
+   "ok": true,
+   "detail": "Q = [0, 1, 11, 10, 30, 31]"
+  },
+  {
+   "tag": "A4",
+   "name": "rz(n) recomputed column-major: rz(3) = 6, rz(4) = 9, rz(5) = 12 (machine: 6, 9, 12); rz(4) also by brute force over all 2^16 matrices = 9",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "A5",
+   "name": "n = 4 / n = 5 Eulerian class redone independently: 256 / 972000 circuits (BEST via reduced-Laplacian determinants: 256 / 972000), constructible 0 / 184704 (machine: 0 / 184704)",
+   "ok": true,
+   "detail": "enumerated in 10.2 s"
+  },
+  {
+   "tag": "A6",
+   "name": "cross-check on 400 UNIFORMLY RANDOM 21-edge (loop-free) pair sets, seed 777: constructible 12 (the Eulerian sample gave 1/1000 -- both are rare; the two questions differ)",
+   "ok": true,
+   "detail": "rarity is robust to the sampling distribution"
+  },
+  {
+   "tag": "A7",
+   "name": "verdict table integrity: 6 cells, each with a verdict and a value, and the sampled cell is marked 🟡 rather than reported as exact",
+   "ok": true,
+   "detail": "table = ✅✅✅✅✅🟡"
+  }
+ ],
+ "n4": {
+  "circ": 256,
+  "constr": 0,
+  "nodes": 1751,
+  "capped": false
+ },
+ "n5": {
+  "circ": 972000,
+  "constr": 184704,
+  "nodes": 7740621,
+  "capped": false
+ },
+ "random21": {
+  "m": 400,
+  "constructible": 12
+ }
+}

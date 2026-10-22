@@ -1,0 +1,5 @@
+O172 - Step 4: mechanism + verdict
+[trace] all factors -> closed O: PASS
+[1] y_t = 0.99188099 (0.78% off 1): PASS
+[2] 71 in both scale and mass closures: PASS
+[3] honest verdict: mechanism GREEN, prediction YELLOW: PASS

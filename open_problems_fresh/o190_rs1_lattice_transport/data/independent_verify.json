@@ -1,0 +1,376 @@
+{
+  "problem": "O190 full independent verification",
+  "script": "scripts/04_independent_verify.py",
+  "date": "2026-09-13T21:57:12.936870",
+  "result": "72/72 PASS",
+  "checks": [
+    {
+      "name": "A1a Σγ_even = 90 (世界)",
+      "pass": true,
+      "detail": "90.000000000000"
+    },
+    {
+      "name": "A1b Σγ_odd = 88 (觀察者)",
+      "pass": true,
+      "detail": "88.000000000000"
+    },
+    {
+      "name": "A1c Σγ = 178 = 2F₁₁",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A1d E−O = 2 = μ²",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A2a γ_n = csc(πn/88) = cosh(η_n), v/c = cos = tanh(η_n) (n=1..44)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A3a η₁ = 4.0257 (docs/01 4.026)",
+      "pass": true,
+      "detail": "4.0256"
+    },
+    {
+      "name": "A3b η₂ = 3.3322 (docs/01 3.332)",
+      "pass": true,
+      "detail": "3.3322"
+    },
+    {
+      "name": "A3c η₃ = 2.9261 (docs/01 2.926)",
+      "pass": true,
+      "detail": "2.9262"
+    },
+    {
+      "name": "A3d η₂₂ = 0.8814",
+      "pass": true,
+      "detail": "0.8814"
+    },
+    {
+      "name": "A3e η₄₄ = 0.0000",
+      "pass": true,
+      "detail": "0.0000"
+    },
+    {
+      "name": "A3f Δη 非均勻: Δη₁/Δη₇ = 5.132 ≈ 5:1 (docs/01「~5:1」/audit 5.13, 舍入內)",
+      "pass": true,
+      "detail": "Δη₁=0.6935 Δη₇=0.1351"
+    },
+    {
+      "name": "A4 mass shell csc²−cot² = 1 (n=1..44)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A5a γ₁ = csc(π/88) = 28.017",
+      "pass": true,
+      "detail": "28.0172"
+    },
+    {
+      "name": "A5b γ₂₂ = csc(π/4) = √2 = 1.414",
+      "pass": true,
+      "detail": "1.414214"
+    },
+    {
+      "name": "A5c γ₄₄ = csc(π/2) = 1",
+      "pass": true,
+      "detail": "1.000000"
+    },
+    {
+      "name": "A6a γ₁(N): 28.0→112.0→448.2",
+      "pass": true,
+      "detail": "28.0→112.0→448.2"
+    },
+    {
+      "name": "A6b v₁/c → 1 單調 (cos(π/88) < cos(π/352) < 1)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A7a 176-Laplacian: γ_k + γ_{88−k} = 4 EXACT (k=1..43, O159 A4 權威)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A7b 44鏈: γ_n + γ_{44−n} = 4 EXACT (docs/01 row 4 修正後歸屬正確)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A7c csc 階梯冇 EXACT pairing (n=1: 29.0179, n=7: 5.0756, n=10: 3.9288, n=22: 2.8284)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A7d 88鏈慣例: γ₂₂ = 2 (self-dual), γ₄₄ = 4 (Nyquist)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A7e 176慣例: γ₄₄ = 2 (self-dual), γ₈₈ = 4 (Nyquist)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A8a Bessel J₁ 零點 4dp 全命中 (docs/01 KK 塔)",
+      "pass": true,
+      "detail": "max dev = 0.00004"
+    },
+    {
+      "name": "A8b J₁(x_n) ≈ 0 (|J₁| < 1e-6, 冪級數獨立驗證)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A8c RS1 KK 高 n 漸近線性: x_n − π(n+1/4) → 0 (docs/01「高 n 線性」)",
+      "pass": true,
+      "detail": "n=2: |Δ|=0.0530 → n=7: |Δ|=0.0165 (誤差遞減 = 漸近收斂)"
+    },
+    {
+      "name": "A9a N_ℓ = 44·4^ℓ (ℓ=0..3: 44/176/704/2816)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A9b γ_max(ℓ) 4×精細化: csc(π/88)→csc(π/352) = ×4.00",
+      "pass": true,
+      "detail": "3.9992"
+    },
+    {
+      "name": "A10a 誠實修正記錄: csc naive 和 (奇k)=148.35 / (偶k)=109.52 (記錄正確)",
+      "pass": true,
+      "detail": "奇k=148.35 偶k=109.52"
+    },
+    {
+      "name": "A10b naive 和 ≠ 權威 90/88 (陷阱實錘)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B1 穩定方程 N+1 = F_{L₅} = 89 ⟹ N = 88 (docs/02 摘要 = docs/04)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B2 Σγ = 2F_{L₅} = 178 (雙路由 A 基礎)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B3 Wilson 相位 (F_{L₅}/2)π = 44.5π (雙路由 B 基礎)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B4 秩鎖定 m = L₅ = R = 11 (O95 su(12) rank)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B5 攻堅 2/3 仍 🟡 (docs/02 未聲稱閉合)",
+      "pass": true,
+      "detail": "定性項, 冇數值可核"
+    },
+    {
+      "name": "C1 η₁/η₂₂/η₄₄ = 4.0257/0.8814/0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C2 Δη ratio 5.13 (audit V15)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C3 γ₂₂ = √2 (csc 階梯, audit V08)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C4 γ_max = 28.017",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C5 Bessel 4dp 命中 + J₁<1e-6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C6 Tr(D)−Tr(N) = 176−174 = 2 (audit V33)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C7 K_tree 34 層 = M+1 (M=33)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C8 data/audit.json 聲稱 36/36 PASS 且結構完整",
+      "pass": true,
+      "detail": "total=36 pass=36 fail=0"
+    },
+    {
+      "name": "D1a Σγ = 2N+2 (所有 N)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1b Σodd = N, Σeven = N+2 (所有 N)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1c E−O = 2 N 獨立 (λ 尺度盲核心)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1d γ_{N/2} = 2 N 獨立",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1e Q = N/2, BC-cost = 2, mean(odd) = 2 (N 獨立)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1f 解析閉式: E−O = 2 (Σ(−1)^k cos(kπ/N) = −1 對偶數 N)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1g pinned D 譜 = {4sin²(kπ/178)} (N=88, 分母 2N+2)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D2 Wilson holonomy = i ⟺ N ≡ 0 (mod 4)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D2b 88 ≡ 0 (mod 4) 且 (88+1)/2 = 44.5 = F₁₁/2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D3a 候選族 {4, 12, 20, 88, 232} (docs/04 C 節)",
+      "pass": true,
+      "detail": "[(5, 4), (7, 12), (8, 20), (11, 88), (13, 232)]"
+    },
+    {
+      "name": "D3b 秩鎖定 m = L₅ = 11 ⟹ N = F₁₁−1 = 88 唯一 (族內唯一命中 R)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D3c F₁₁ ≡ 1 (mod 4) ⟹ Wilson mod-4 自動滿足",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D3d 雙路由: Σγ = 2F₁₁ ⟺ 2N+2 = 178 ⟺ N = 88; 相位 (F₁₁/2)π ⟺ N = 88",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D4a ξ = 1/ln(2+√3) = 0.7593 (O159 關聯長度)",
+      "pass": true,
+      "detail": "0.7593"
+    },
+    {
+      "name": "D4b GW S_min(N): N=88 唔係極小 (7 個自然 vev 比, Thomas 獨立解)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D4c GW 式 N* = ξ·ln(r): 全 ≤ 6.1; 要 88 需 r = e^{88/ξ} = e^115.9 ≈ 10^50 數量級",
+      "pass": true,
+      "detail": "e^(88/ξ) = e^115.89 ≈ 2.14e+50 (docs/04「3×10^50」數量級正確)"
+    },
+    {
+      "name": "D4d S_min(90/88): 4→88→120 單調飽和 (1.487981→1.497755→1.497755)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D5a E(88) = ½Σ√(γ_k+2) = 86.792972 (docs/04)",
+      "pass": true,
+      "detail": "86.792972"
+    },
+    {
+      "name": "D5b ε_bulk = 0.983343 (docs/04)",
+      "pass": true,
+      "detail": "0.983343"
+    },
+    {
+      "name": "D5c E_cas(88) = E(88) − ε_bulk·88 = +0.258819 (docs/04)",
+      "pass": true,
+      "detail": "0.258819"
+    },
+    {
+      "name": "D5d E_cas(N) 平滑 (|d²| 細), 冇 N=88 尖點",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D6a 88 = 2·B·R = 2·L₃·L₅ = 2·4·11",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D6b 33 = N_gen·R = 3·11 (K_tree 深度, 同一秩)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D6c F₁₁ − 1 = 2·L₃·L₅ (Lucas-Fibonacci 影子)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D6d {88, 33} = {2B, N_gen}·R",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D7a csc pairing n=1 = 29.02 (docs/04 §七)",
+      "pass": true,
+      "detail": "29.0179"
+    },
+    {
+      "name": "D7b csc pairing n=10 = 3.93",
+      "pass": true,
+      "detail": "3.9288"
+    },
+    {
+      "name": "D7c csc pairing n=22 = 2.83",
+      "pass": true,
+      "detail": "2.8284"
+    },
+    {
+      "name": "E1 時序索引: 09-13 開題 → 20:22 核對 → 20:28 攻堅 1 (chronological, 冇回溯)",
+      "pass": true,
+      "detail": "見 01_problem_record.md §四 (3 rows)"
+    },
+    {
+      "name": "E2 本 entry 檔案清單 (無指示下冇寫入其他資料夾)",
+      "pass": true,
+      "detail": "['01_problem_record.md', 'SESSION_START.md', 'data', 'docs', 'final_result.md', 'scripts']"
+    }
+  ],
+  "scope": [
+    "docs/01 comparison chain",
+    "docs/02 attack path summary",
+    "docs/03 sibling audit headline claims",
+    "docs/04 attack1 chain",
+    "01_problem_record timeline + corrections"
+  ],
+  "method": "no imports of project scripts; constants from first principles (Fibonacci/Lucas recurrence, Bessel J1 power series + Newton, Thomas solver)"
+}

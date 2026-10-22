@@ -1,0 +1,26 @@
+{
+  "test": "O62 八期 29: Chow Ring",
+  "sr_pairs": 912,
+  "sr_triples": 6690,
+  "co_36": 450,
+  "z_distinct": 331,
+  "z_two": 220,
+  "z_all": 3,
+  "zero_diag": [
+    3,
+    7,
+    14
+  ],
+  "row2_nnz": [
+    [
+      1,
+      -1.0
+    ],
+    [
+      21,
+      1.0
+    ]
+  ],
+  "passed": 1,
+  "failed": 1
+}

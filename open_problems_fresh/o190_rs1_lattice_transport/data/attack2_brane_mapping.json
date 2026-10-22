@@ -1,0 +1,109 @@
+{
+  "problem": "O190 attack2 second-brane mapping",
+  "script": "scripts/05_attack2_brane_mapping.py",
+  "date": "2026-09-13T21:57:13.066799",
+  "result": "20/20 PASS",
+  "checks": [
+    {
+      "name": "A1 E−O = 90−88 = 2 (sector 隙 = 張力)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A2 λ = (E−O)/2 = 1 (O161 乘子 = 半張力)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A3 μ² = 2λ (四重身份: E−O = γ₄₄ = BC-cost = 2λ)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A4 轉移成本 ΔS' = 2λδ = μ²δ (質量 = sector-locking 價格)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A5 零佔據分離 (Δ=0) + 非零張力 (E−O=2): 「重合 brane + 張力」讀法",
+      "pass": true,
+      "detail": "Σeven occ = Σodd occ = 44; tension = 2"
+    },
+    {
+      "name": "B1 質量量子 μ² = E−O (由 sector 隙直接決定)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B2 U(1) 電荷 Q = Σ_even k − Σ_odd k = 44 = N_d (由 sector 不對稱決定)",
+      "pass": true,
+      "detail": "Qe=1980 Qo=1936 Q=44"
+    },
+    {
+      "name": "B3 觀察者預算 Σγ_odd = 88 (測量容量 = odd sector)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B4 世界預算 Σγ_even = 90",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B5 冷斑 A = 88×61/40 = 134.2 μK (O41, dev=0; 用觀察者預算 88)",
+      "pass": true,
+      "detail": "A = 134.2 μK"
+    },
+    {
+      "name": "B6 f_unproj = 61.5/90 = 41/60 (世界標度, O148)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B7 E_min = 61.5/88 = 123/176 (觀察者標度, O148 Landauer)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B8 k=44 (γ₄₄ = 2 = μ²) ∈ even sector (世界 hold 自對偶錨)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B9 off-shell 傳播子 split: G'(even) = 1/(γ+3) < G < G'(odd) = 1/(γ+1)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B10 mean(G') > mean(G) (Jensen 凸性, O161; 乘子層新結構)",
+      "pass": true,
+      "detail": "mean(G')=0.32990 vs mean(G)=0.28678"
+    },
+    {
+      "name": "B11 判決判準證據: ≥9 個可觀測量由 sector 邊界決定 (質量/電荷/預算/冷斑/真空/錨/傳播子)",
+      "pass": true,
+      "detail": "B1,B2,B3,B4,B5,B6,B7,B8,B9 = 9 項"
+    },
+    {
+      "name": "C1 O144: SM = 世界弦結構 (44-site K_Chain) → SM 喺世界側, 觀察者唔係 SM 居住地",
+      "pass": true,
+      "detail": "o144_boson_identity: 玻色子 = 世界弦上嘅結構 (citation)"
+    },
+    {
+      "name": "C2 O121/O86: 重力喺度規層 (BH 熵/GR 耦合), 唔係 chain parity",
+      "pass": true,
+      "detail": "O121 black hole entropy; O86 GR coupling (citation)"
+    },
+    {
+      "name": "C3 世界 (even) 有自對偶錨 γ₄₄ = μ² = 2; 觀察者 (odd) 冇 (T18 hold 規則)",
+      "pass": true,
+      "detail": "O159 D2: k=44 ∈ even sector"
+    },
+    {
+      "name": "C4 RS1 分 matter/gravity (兩 brane); IDCM 分 structure/observation (兩 sector) — 軸唔同",
+      "pass": true,
+      "detail": "RS1: SM brane / gravity brane; IDCM: world / observer"
+    }
+  ],
+  "verdict": "判 3 — 雙 sector 本身就係兩 brane (代數); 判決判準 YES (≥9 可觀測量由 sector 邊界決定); 觀察者↔TeV brane 排除 (O144: SM=世界弦); RS1 分 matter/gravity, IDCM 分 structure/observation"
+}

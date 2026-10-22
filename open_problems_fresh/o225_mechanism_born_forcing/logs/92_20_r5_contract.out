@@ -1,0 +1,13 @@
+================================================================================================================
+O225 scripts/20 -- R5 CONTRACT ENFORCER   (rules: r5-tie-global-v1)
+================================================================================================================
+[PASS] C1   合約 doc 含 Q1–Q9 全部判據標籤  --  missing = []
+[PASS] C2   合約 doc 含關鍵定義詞  --  missing = [] ; chars = 2613
+[PASS] C3   scripts/21,22 通過禁字集掃描（無禁模組、無 float 字面值）  --  issues = []
+[PASS] C4   scripts/21,22 皆 from fractions import Fraction  --  {'scripts/21_r5_tie_global.py': {'imports': 7, 'float_literals': 0, 'has_fractions': True}, 'scripts/22_r5_audit.py': {'imports': 7, 'float_literals': 0, 'has_fractions': True}}
+[PASS] C5   陽性對照：人造違規源必須被拒  --  ['pos: forbidden import math (line 1)', 'pos: forbidden from-import scipy (line 3)', 'pos: float literal 2.25 (line 2)']
+[PASS] C6   陰性對照：合法精確算術源必須通過  --  []
+[PASS] C7   上游 O222 凍結輸入（含 scripts/30、18_d6_mapping）＋合約 doc SHA-256 落盤，GATE = OPEN  --  contract sha = 84f9afabe38db26b…
+================================================================================================================
+RESULT: 7/7 PASS
+================================================================================================================

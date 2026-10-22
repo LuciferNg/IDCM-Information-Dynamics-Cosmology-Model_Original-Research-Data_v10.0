@@ -1,0 +1,20 @@
+{
+  "hodge": [
+    98,
+    36
+  ],
+  "M_points": 48,
+  "M_vertices": 6,
+  "N_points": 85,
+  "N_vertices": 7,
+  "chi": 124,
+  "N_points_parsed": 85,
+  "GLZ_sym": 1,
+  "VPM_sym": 1,
+  "normal_form": [],
+  "kchain_checks": {
+    "M_points = N_d + B (48 = 44+4)": true,
+    "chi = -124": false,
+    "h21 = 98, h11 = 36": true
+  }
+}

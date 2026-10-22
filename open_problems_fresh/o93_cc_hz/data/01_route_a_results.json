@@ -1,0 +1,13 @@
+{
+  "route": "A",
+  "n_total": 36,
+  "n_high_quality": 27,
+  "chi2_idcm_total": 1828.07,
+  "chi2_lcdm_total": 21.8,
+  "chi2_idcm_highq": 1735.94,
+  "chi2_lcdm_highq": 18.83,
+  "delta_chi2": -1806.27,
+  "pass": 6,
+  "fail": 2,
+  "status": "\ud83d\udfe1"
+}

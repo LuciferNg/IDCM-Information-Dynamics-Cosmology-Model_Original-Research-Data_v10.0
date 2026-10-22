@@ -1,0 +1,12 @@
+{
+  "test": "正電子 W-field 通道 + 對產生映射",
+  "Gamma_n_prop": "M₀·γ_n (rate ∝ 27.9009·4sin²(πn/88))",
+  "f_10GeV": 0.11437398936440173,
+  "f_300GeV": 0.06165063509461097,
+  "E_pair_formula": "2ħ·max(ω_a, ω_b)",
+  "pair_threshold_ee": 1.022,
+  "pair_threshold_pp": 1876.544,
+  "CY3_boost_factor": 16.814367995297644,
+  "CPT_consistent": true,
+  "conclusion": "正電子 W-field 通道方向一致 (上升); 和頻=對產生反物質側 E_pair=2ħ·max(ω); CY₃ 投影放大因子 ~17× 需閉合"
+}

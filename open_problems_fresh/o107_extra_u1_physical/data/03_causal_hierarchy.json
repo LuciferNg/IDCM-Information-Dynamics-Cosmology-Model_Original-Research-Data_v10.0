@@ -1,0 +1,30 @@
+{
+  "id": "O107-03",
+  "name": "Causal Hierarchy Determination",
+  "causal_chain": "0,1 \u2192 \u03c6 \u2192 Lucas \u2192 B,L\u2085 \u2192 N_gen \u2192 12 \u2192 SU(12) \u2192 tensor \u2192 6 extra U(1)",
+  "root_causes": [
+    "\u03c6",
+    "B=4",
+    "L\u2085=11",
+    "N_gen=3",
+    "12=B\u00d7N_gen",
+    "11=rank(SU(12))",
+    "5=rank(SU(4)\u00d7SU(3))"
+  ],
+  "primary_derived": [
+    "6=11-5",
+    "12=(4,3)",
+    "6 extra U(1) \u22a5 tensor",
+    "6 \u591a\u91cd\u8eab\u4efd"
+  ],
+  "secondary_consequences": [
+    "B-L/Y/T\u2083 \u2282 tensor",
+    "\u7d14\u6c34\u5e73\u5c0d\u7a31\u6027",
+    "anomaly-free",
+    "Z'@M_GUT",
+    "decoupled",
+    "264\u2192V_\u039b"
+  ],
+  "counterfactual_verified": true,
+  "timestamp": "2026-09-08"
+}

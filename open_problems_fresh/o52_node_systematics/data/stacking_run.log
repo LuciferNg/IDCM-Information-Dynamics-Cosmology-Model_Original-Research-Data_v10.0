@@ -1,0 +1,35 @@
+R3 mask: 45/60 unmasked
+
+=== 堆疊 radial profile @ 3.0° (nside=128) ===
+annulus        obs(60)  obs(um45)  rand_mean  rand_std   z(60)   z(um)
+  random stacks 50/1000 done (9s)
+  random stacks 100/1000 done (18s)
+  random stacks 150/1000 done (26s)
+  random stacks 200/1000 done (35s)
+  random stacks 250/1000 done (43s)
+  random stacks 300/1000 done (52s)
+  random stacks 350/1000 done (60s)
+  random stacks 400/1000 done (69s)
+  random stacks 450/1000 done (77s)
+  random stacks 500/1000 done (86s)
+  random stacks 550/1000 done (94s)
+  random stacks 600/1000 done (103s)
+  random stacks 650/1000 done (111s)
+  random stacks 700/1000 done (120s)
+  random stacks 750/1000 done (129s)
+  random stacks 800/1000 done (137s)
+  random stacks 850/1000 done (146s)
+  random stacks 900/1000 done (154s)
+  random stacks 950/1000 done (163s)
+  random stacks 1000/1000 done (171s)
+   0-2 °        -1.29      -2.23      -0.05      5.90   -0.21   -0.37
+   2-4 °        -1.08      -1.91      -0.07      5.16   -0.20   -0.36
+   4-6 °        -0.74      -1.64      -0.02      4.53   -0.16   -0.36
+   6-8 °        -0.27      -0.73       0.03      3.99   -0.08   -0.19
+   8-10°         0.68       0.34       0.01      3.59   +0.19   +0.09
+  10-12°        -0.10      -0.56      -0.02      3.26   -0.02   -0.17
+  12-14°        -1.17      -1.64      -0.04      2.95   -0.39   -0.54
+
+最內圈 (0-2°): z=-0.21, p(≤)=0.4110 (🔴)
+
+Saved: data/o52_stacking.json (171s)

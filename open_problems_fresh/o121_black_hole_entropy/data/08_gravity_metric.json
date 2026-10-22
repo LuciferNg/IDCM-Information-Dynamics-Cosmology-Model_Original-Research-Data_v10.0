@@ -1,0 +1,22 @@
+{
+  "title": "引力效應 = 度規層 (sync 集中 → 度規彎曲)",
+  "framework": {
+    "metric_from_corr": "g_μν = ∂_μ∂_ν C(x,y)|_{x→y} (v9.0)",
+    "conformal_factor": "Ω(x)² = ⟨|W(x)|²⟩/⟨|W₀|²⟩",
+    "G": "1/M_Pl²"
+  },
+  "time_dilation": {
+    "g00_sun": 0.9999957539057978,
+    "factor_per_s": 2.1230538620464756e-06,
+    "standard": 2.12e-06
+  },
+  "schwarzschild": {
+    "R_s_sun_m": 2954.007736491099,
+    "g00_at_Rs": 0.0
+  },
+  "lensing": {
+    "theta_arcsec": 1.7516395958595952,
+    "standard": 1.75
+  },
+  "verdict": "引力效應 = 度規層: sync 能量集中→相關函數→度規彎曲→時間變慢/R_s/透鏡; 微觀接收端截斷+宏觀度規彎曲係同一件事兩面"
+}

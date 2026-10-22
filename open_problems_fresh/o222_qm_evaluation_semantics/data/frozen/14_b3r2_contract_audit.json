@@ -1,0 +1,83 @@
+{
+ "rules_version": "b3r2-contract-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "group rebuilt: |2I| = 120 (closed under multiplication)",
+   "ok": true,
+   "detail": "|2I| = 120"
+  },
+  {
+   "tag": "C2",
+   "name": "62 frozen lattice axes reproduced verbatim (12 V / 20 F / 30 E)",
+   "ok": true,
+   "detail": "types = ['edge', 'face', 'vertex']"
+  },
+  {
+   "tag": "C3",
+   "name": "A2 h-table bijective (62/62)",
+   "ok": true,
+   "detail": "distinct = 62"
+  },
+  {
+   "tag": "C4",
+   "name": "frozen upstream: A2 20/20 (all4 = 2 / 3) and B5 8/8 (15 pairs / 43 reads)",
+   "ok": true,
+   "detail": "A2 all4 = 2/3 ; B5 pairs/reads = 15/43"
+  },
+  {
+   "tag": "C5",
+   "name": "budget identities I1-I4 exact: reads = 44 = N_d ; cost = 123/88 = 2 x E_min ; 44 reads consume the whole budget ; tau_deco = 2 passes",
+   "ok": true,
+   "detail": "reads = 44 ; cost = 123/88 ; 44*cost = 123/2"
+  },
+  {
+   "tag": "C6",
+   "name": "all five pre-registered order rules are bijections on 3844 pairs (every prefix well-defined)",
+   "ok": true,
+   "detail": "{\"lex\": true, \"diag\": true, \"antidiag\": true, \"block\": true, \"stride\": true}"
+  },
+  {
+   "tag": "C7",
+   "name": "contract states the coverage criterion (cov_a / cov_b >= 2) and lists all five rule IDs",
+   "ok": true,
+   "detail": "doc rule IDs = ['lex', 'diag', 'antidiag', 'block', 'stride']"
+  },
+  {
+   "tag": "C8",
+   "name": "impl AST gate: no trig / no float literal / no numpy-scipy-math / no random",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "tag": "C9",
+   "name": "order-rule parity: the impl implements exactly the five pre-registered IDs",
+   "ok": true,
+   "detail": "impl IDs = ['lex', 'diag', 'antidiag', 'block', 'stride']"
+  },
+  {
+   "tag": "C10",
+   "name": "impl declares full enumeration AND separates \"not constructible\" from \"|S| = 0\"",
+   "ok": true,
+   "detail": "full=True"
+  },
+  {
+   "tag": "C11",
+   "name": "machine semantics are imported, not re-implemented (no local read(G, ctx) fork)",
+   "ok": true,
+   "detail": "local read() defs = []"
+  },
+  {
+   "tag": "C12",
+   "name": "provenance: B5 contract carries the read cost ; A2 results carry all4 ; closeout carries 12,517,800",
+   "ok": true,
+   "detail": "per-file = [True, True, True]"
+  },
+  {
+   "tag": "C13",
+   "name": "register: O222/B3R2 registered (pre-number registration discipline)",
+   "ok": true,
+   "detail": "found=True"
+  }
+ ]
+}

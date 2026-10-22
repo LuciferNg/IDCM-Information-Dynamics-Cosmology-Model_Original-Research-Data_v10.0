@@ -1,0 +1,8 @@
+4-element separating frames: 12645  (witnesses [['V00', 'V01', 'V04', 'F09'], ['V00', 'V01', 'V04', 'F10'], ['V00', 'V01', 'V04', 'E17'], ['V00', 'V01', 'V05', 'F08'], ['V00', 'V01', 'V05', 'F11']])
+family mixtures: {'FVVV': 160, 'EVVV': 80, 'FFVV': 240, 'EFVV': 1040, 'EEVV': 460, 'FFFV': 480, 'EFFV': 1520, 'EEFV': 2480, 'EEEV': 920, 'EFFF': 800, 'EEFF': 1860, 'EEEF': 1980, 'EEEE': 625}
+5-subsets with rank 6: 0  -- proved by the dimension argument (5 vectors span <= 5)
+first 6-subset with rank 6: ['V00', 'V01', 'V02', 'V03', 'V04', 'V05']
+  -> does it also separate? True
+Pr-1 (count < 5000): REFUTED (12645)
+Pr-2 (no single-family min frame): REFUTED
+Pr-3 (min size for rank 6 = 6): HOLDS

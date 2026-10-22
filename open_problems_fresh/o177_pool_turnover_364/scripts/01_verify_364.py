@@ -103,12 +103,12 @@ ck("C1 t_turn = T_ring/364 = 232.5 Myr 雙路一致",
 R_pred = 364 * E_strain / (T_ring * mp.mpf('1e9'))
 dev_R = abs(R_rel / R_pred - 1)
 print(f"  R_rel(pred) = 364·E_strain/T_ring = {mp.nstr(R_pred, 8)} M☉/yr")
-ck("C2 預言 R_rel = 6729.6 vs 觀測 6730.86 (dev 0.019%)",
+ck("C2 預言 R_rel = 6729.6 vs 觀測 6730.86 (dev 0.015%)",
    dev_R < mp.mpf('1e-3'), f"dev = {mp.nstr(dev_R*100, 4)}%")
 R_mass_pred = R_pred * eta
 dev_m = abs(rate_mass / R_mass_pred - 1)
 print(f"  rate_mass(pred) = {mp.nstr(R_mass_pred, 8)} M☉/yr")
-ck("C3 預言 rate_mass = 0.27495 vs 觀測 0.274998 (dev 0.019%)",
+ck("C3 預言 rate_mass = 0.27495 vs 觀測 0.274998 (dev 0.015%)",
    dev_m < mp.mpf('1e-3'), f"dev = {mp.nstr(dev_m*100, 4)}%")
 # 穩態: 再生率 = 釋放率 (Noether ΣJ=0, O161)
 ck("C4 穩態 R_reg = R_rel — Noether ΣJ=0 強逼 (J88=+44, J87=−44, O161)",

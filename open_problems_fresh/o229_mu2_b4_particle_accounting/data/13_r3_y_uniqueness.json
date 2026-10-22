@@ -1,0 +1,83 @@
+{
+ "script": "13_r3_y_uniqueness",
+ "pass": 14,
+ "fail": 2,
+ "total": 16,
+ "verdicts": {
+  "A1_su3lit_zero": true,
+  "A2_dim": 2,
+  "A2_predicted": 1,
+  "A2_kept_FAIL": true,
+  "A3_normalization_unique": false,
+  "A3_with_Ynu0": [
+   1,
+   1
+  ],
+  "A3_kept_FAIL": true,
+  "A4_per_gen": "16/3",
+  "A4_three_gen": 16,
+  "general_cone_dim": 2,
+  "contract_notation_defect": "docs/14 §A R3-① A2 '∝ (1,1/2)' 應為 (1,1)"
+ },
+ "anomaly_polys": {
+  "SU3_3": "0",
+  "SU3_2_U1": "0",
+  "SU3_2_U1b": "2*beta/3",
+  "SU2_2_U1": "0",
+  "U1_3": "0",
+  "grav_U1": "0",
+  "grav_BmL": "0",
+  "BmL_3": "0",
+  "BmL_2_U1": "0"
+ },
+ "mix_sums": {
+  "T3R_3": "0",
+  "T3R_2_BmL": "0",
+  "T3R_BmL_2": "0",
+  "BmL_3": "0"
+ },
+ "states": [
+  {
+   "n": "Q_L",
+   "dim": 6,
+   "Y": "1/6",
+   "T3R": "0",
+   "BmL": "1/3"
+  },
+  {
+   "n": "u^c",
+   "dim": 3,
+   "Y": "-2/3",
+   "T3R": "-1/2",
+   "BmL": "-1/3"
+  },
+  {
+   "n": "d^c",
+   "dim": 3,
+   "Y": "1/3",
+   "T3R": "1/2",
+   "BmL": "-1/3"
+  },
+  {
+   "n": "L_L",
+   "dim": 2,
+   "Y": "-1/2",
+   "T3R": "0",
+   "BmL": "-1"
+  },
+  {
+   "n": "e^c",
+   "dim": 1,
+   "Y": "1",
+   "T3R": "1/2",
+   "BmL": "1"
+  },
+  {
+   "n": "nu^c",
+   "dim": 1,
+   "Y": "0",
+   "T3R": "-1/2",
+   "BmL": "1"
+  }
+ ]
+}

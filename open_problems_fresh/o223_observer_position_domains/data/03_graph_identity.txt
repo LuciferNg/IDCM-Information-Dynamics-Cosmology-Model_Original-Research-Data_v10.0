@@ -1,0 +1,44 @@
+==========================================================================
+O223 / 03 -- odd-face bijection, couplings, orbit, strain
+==========================================================================
+[L] edge-length spectrum
+    group A (60 edges): 26.091319 .. 26.091405
+    group B (60 edges): 26.166309 .. 26.166418
+    gap to next: 26.1664 -> 31.6786  (gap = 5.5122)
+  [OK] L1 exactly two edge-length families (60 + 60), clean gap
+[M] face set from the geometric rotation system
+    F = 62   sizes = {3: 20, 4: 30, 5: 12}   chi = 2
+  [OK] M1 F = 62 (20 triangles + 30 quads + 12 pentagons)
+  [OK] M2 chi = 2 -> planar embedding, genus 0 (RH skeleton)
+  [OK] M3 exactly 20 triangles / 30 quads / 12 pentagons
+  [OK] M4 every vertex lies in exactly 1 triangle (RH vertex figure)
+[N] frustration set vs odd faces
+    |frustration| = 32   odd faces = 32
+  [OK] N1 32 frustrated edges = 20 triangles + 12 pentagons
+    frustrated edges per odd face: {1: 32}
+  [OK] N2 every odd face contains exactly 1 frustrated edge
+  [OK] N3 the 32 frustrated edges are 32 distinct odd faces (bijection)
+[O] colour vs temperature coupling
+    Pearson r(colour,T) = -0.244   gap = -22.3 uK   sign agreement 37/60
+  [OK] O1 |r| < 0.35 (colour does NOT determine the temperature sign)
+  [OK] O2 cold-labelled mean < hot-labelled mean (set-level tendency)
+[P] anchor-pair structure of the frustration orbit
+    distinct patterns = 30   group sizes = {2: 30}
+  [OK] P1 30 distinct frustration patterns
+  [OK] P2 every pattern realised by exactly 2 anchors
+  [OK] P3 the 2 anchors of each pattern are the graph-diameter pair
+[Q] strain of the node set vs the ideal RH orbit (1,1,phi^3)
+    ideal RH orbit size = 60
+    ideal RH shells from a vertex: [np.float64(25.879), np.float64(36.923), np.float64(42.484), np.float64(50.418), np.float64(61.645), np.float64(67.997)]
+    DATA   shells from node 0   : [np.float64(26.091), np.float64(26.166), np.float64(31.679), np.float64(42.109), np.float64(42.971), np.float64(48.615)]
+    ideal RH edge = 25.8786 deg ; data edges = 26.0914 / 26.1664 deg
+    nearest-shell shift = 0.2120 deg (0.819%)
+  [OK] Q1 the data node set deviates from the ideal RH orbit (strain > 0.1 deg)   shift = 0.2120 deg
+  [OK] Q2 the ideal RH has a single edge length (4 equal nearest neighbours)   spread = 0.000000 deg
+    relative strain of edges: A +0.822%, B +1.112%
+    diameter pair (0,57): d = 174.6599 deg  -> chirality angle = 180 - d = 5.3401 deg
+  [OK] Q3 chirality angle 180 - d(0,57) = 5.3401 deg (matches O213 R5 improper 5.3402)   5.3401 deg
+--------------------------------------------------------------------------
+RESULT: 16/16 PASS
+--------------------------------------------------------------------------
+wrote data/03_graph_identity.json

@@ -1,0 +1,60 @@
+================================================================================================================
+O227 scripts/02 -- R1 machine (rules: o227-r1-contract-v1)
+================================================================================================================
+[PASS] R0        half (a) fixed core coherence: MUL is a group of order 120, h injective, K in {+-1}  --  identity=True inverses=120/120 assoc_violations=0 h_injective=True K_entries_ok=True ; half (b) from-scratch rebuild is delivered by scripts/03_r1_audit.py
+[CELL] R0        ✅  {"group_order": 120, "inverses": 120, "assoc_violations": 0, "h_injective": true, "half_b": "scripts/03_r1_audit.py"}
+[CELL] P1a       ✅  {"orbit_sizes": [12, 20, 30], "type_invariant": true, "permutations": 120, "distinct_lines": 31, "antipodal_pairs": 31}
+[PASS] P1a       orbits of the 2I action on the 62 axes = {12,20,30}, type-invariant  --  sizes=[12, 20, 30] type_invariant=True permutations=120
+[CELL] P1b       ✅  {"bijective_axes": 62, "of": 62}
+[PASS] P1b       state transition bijective on all 62 axes  --  62/62
+[CELL] P1c       🟡  {"provenance_law_text": true, "dimensions_available": false, "source": "o210_causal_tensor_algebra/{final_result.md, docs/01, docs/02, data/02}"}
+[PASS] P1c       composition law provenance present and upstream carries no dimensions  --  law_text=True dimensions=False
+prefix lex   : 15 pairs, reads 43, miss values [2, 3], replay matches True
+prefix block : 18 pairs, reads 42, miss values [2, 3], replay matches True
+[CELL] P2a       ✅  {"reproducible_pairs": 3844, "of": 3844, "replay_miss_pattern_matches": true, "lex_pairs": 15, "block_pairs": 18}
+[PASS] P2a       repeat idempotence / reproducibility 3844/3844 and validated replay  --  reproducible=3844/3844 replay_law=True
+[CELL] P2b       ✅  {"history_sensitive_settings": 62, "of": 62, "example": ["V00", [-1, 1]]}
+[PASS] P2b       history sensitivity witness exists  --  62/62 settings
+[CELL] P2c       ✅  {"lex": {"pairs": 15, "reads_per_pair": [2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], "ledger_growth_per_pair": [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 
+[PASS] P2c       irreversibility: every pair strictly grows the record  --  total growth = {'lex': 28, 'block': 24}
+[CELL] P3a       ✅  {"memo_hit_pairs": 14, "pushes": 85, "read_attempts": 99, "static_rule_ok": true}
+[PASS] P3a       append-only + hit consistency, static rule checked on the frozen source  --  read attempts=99 = pushes 85 + memo hits 14 ; static=True
+[CELL] P3b       ✅  {"overrides": 2, "example": {"pair": ["V02", "V00"], "stored": 1, "current_state_would_give": -1}}
+[PASS] P3b       record-dominates-state witness exists  --  overrides = 2
+[CELL] P3c       🔴  {"accessible_depth": 1, "redundancy": 1}
+[PASS] P3c       accessible depth = 1 (no environmental redundancy)  --  depth 1 => the QM decoherence-redundancy requirement is absent
+[CELL] P2d       🔴  {"C1_values": ["-1", "-2/3", "-1/3", "-4/15", "-1/5", "-2/15", "-1/15", "0", "1/15", "2/15", "1/5", "4/15", "1/3", "2/3", "1"], "C1_row_sums": ["-10/3
+[PASS] P2d       no Born-type probability structure (signed table, row sums != 1)  --  value set size 15 ; row sums of C1 = ['-10/3', '-14/3', '-2', '-2/15']
+[CELL] P4a       ✅  {"rank_C1": 61, "rank_C2": 62, "rank_C1rev": 61, "rank1_means": "C = u (x) v factorisable"}
+[PASS] P4a       non-factorisability: exact ranks of C1/C2/C1rev all > 1  --  ranks = 61 / 62 / 61
+[CELL] P4b       🔴  {"own_sweep": {"lex": {"E1_all4": "0", "E2_all4": "0", "argmax_E1": null, "argmax_E2": null, "window_pairs": 15}, "block": {"E1_all4": "16/15", "E2_al
+[PASS] P4b       own budget-window all4 CHSH reproduces the cited below-2 values  --  own block window: E1=16/15 E2=13/15 ; cited B3R2: E1=16/15 E2=13/15 ; lex: E1=0 E2=0
+[CELL] P4c       ✅  {"balanced_axes": 62, "of": 62, "column_sums": [0], "conditional_marginal_violations": 0, "of_conditional": 3844, "null_random_axis_families": {"famil
+[PASS] P4c       no-signalling: 62/62 balanced marginals and 3844/3844 conditional marginals  --  axis violations=0 conditional violations=0 ; balance theorem confirmed (axes 62.00/62, reference 60.32/62) ; discriminating null random tables: 4.31/62 balanced (z^2 = 952.6) ; h-lemma 200/200 ; z is reported squared because the gate forbids math.sqrt in the machine
+[CELL] B4a       ✅  {"pair_histogram_mismatches": 0, "of_pairs": 3844, "diagonal_pairs": 62, "four_read_joints_exhibited": 60, "of_samples": 60, "value_level_dependence_o
+[PASS] B4a       explicit lambda = s0 LHV reproduces the machine pairs and 4-read joints  --  histogram mismatches=0/3844 (diagonal pairs handled: 62) ; 4-read joints with exact pair marginals=60/60 ; value-level remote dependence=215760/234484 (a,a2,b) triples
+[CELL] B4b       ✅  {"commutator_subgroup_order": 120, "perfect": true, "nontrivial_normal_subgroup_orders": [1, 2, 120], "direct_product_factorisations": 0}
+[PASS] B4b       no invariant bipartition: [2I,2I] = 2I and no non-trivial direct product  --  commutator order=120 ; normal subgroup orders=[1, 2, 120] ; factorisations=0
+[CELL] B4c       ✅  {"pairs_with_explicit_separable_decomposition": 3844, "of": 3844, "product_components_per_pair": 120, "S_ent": "0 EXACT for every factorisation", "joi
+[PASS] B4c       entanglement entropy is identically 0 (explicit separable decomposition) but the classical mutual information is non-zero  --  separable on 3844/3844 pairs ; max I(X:Y) = 1.000000 bits at ('V00', 'V00')
+[CELL] B4d       🔴  {"class_counts_k": [1, 2, 4, 16, 26, 34, 48, 52, 54, 57, 58, 58, 58, 59, 59, 59], "entropy_bits_k": [0.0, 1.0, 2.0, 4.0, 4.700439718141092, 5.08746284
+[PASS] B4d       ledger entropy is monotone and never decreased by the rollback => it cannot play the entanglement-entropy role (it is a time-arrow functional)  --  class counts = [1, 2, 4, 16, 26, 34, 48, 52, 54, 57, 58, 58, 58, 59, 59, 59] ; restored pairs = 0 ; saturation = 5.882643 bits
+[CELL] B4e       ✅  {"E1_single_state_function_read": true, "E2_pair_local_memo": true, "E3_no_second_randomness_source": true, "randomness_tokens_found": [], "time_time_
+[PASS] B4e       finality inside the declared class E: membership verified and the escape routes are named with witnesses  --  E1=True E2=True E3=True ; time.time() occurrences = 6, of which in the decision path = 0 ; budget identity 44 reads = 123/2
+[CELL] B5a       ✅  {"rows_with_K_s_equals_K_neg": 120, "of_rows": 120, "distinct_behaviours": 60, "class_sizes": [2], "every_class_is_s_minus_s": true, "quotient_order_s
+[PASS] B5a       B5 mechanism derived: K sign-invariant, 60 behaviour classes all {s,-s}, quotient spectrum = A5  --  sign-invariant rows=120/120 ; classes=60 ; spectrum={1: 1, 3: 20, 5: 24, 2: 15} ; cap=5.906891 bits
+[CELL] B5b       ✅  {"schedule_negation_equivariant": true, "sign_blind_draws_covered_by_the_theorem": 200, "of_draws": 200, "draws_scanned_in_full": 20, "scanned_within_
+[PASS] B5b       B5 sufficiency/necessity: sign-blind <= 60 (theorem + 200 premiss checks, 20 full scans), sign-sensitive >= 61  --  schedule equivariance violations = 0 ; draws with verified premisses = 200/200 ; full scans within cap = 20/20 (max 60) ; sign-sensitive behaviours = 120
+[CELL] B5c       🔴  {"common_stabiliser": [0, 21, 30, 36, 43, 75, 99, 106, 108, 117], "common_stabiliser_order": 10, "elements_are_group": true, "pre_registered_claim": "
+[FAIL] B5c       PRE-REGISTERED identity: common stabiliser = centre {+-1} and 60 = 120/|N|  --  stabiliser order = 10 ; distinct read rows = 12 ; centre order = 2 ; cap = log2(120/2) = 5.906891 bits
+[CELL] S4a       ✅  {"read_steps_checked": 99, "unconditional_marginal_violations": 0, "remote_setting_independence_violations": 0, "ablation_violations": 0, "rounds_chec
+[PASS] S4a       sequential no-signalling: per-step marginals 1/2 and remote-setting independence  --  steps=99 violations: unconditional=0 remote-independence=0 ablation=0
+[FAIL] S4a-orig  ORIGINAL pre-registered form (conditioning on the value history) is REFUTED: kept as FAIL with the measured numbers  --  k = 0..14 ; history classes = 644 ; unbalanced classes = 634 -- conditioning on the full local value history makes the next outcome nearly deterministic (a category error: the QM conditional given past outcomes is not 1/2 either); corrected form = S4a
+[CELL] S4a-orig  🔴  {"history_classes": 644, "unbalanced": 634, "of_classes": 644}
+[CELL] S4b       ✅  {"three_party_tensor_entries": 238328, "tensor_denominator": 120, "marginal_zero_triples": 3844, "of_triples": 3844, "triple_joints_exhibited": 60, "o
+[PASS] S4b       multipartite: 62^3 marginal no-signalling + explicit lambda joints (the Mermin value is a disclosed diagnostic, its standard bound does not apply to the chained tensor)  --  marginals zero on 3844/3844 ; triple joints 60/60 ; closed form vs replay 200/200 ; max chained M = 22/15 (independent-LHV calibration 2) ; S6^6 = 46656 tuples
+[CELL] S4c       ✅  {"claim": "no channel for multipartite non-classical correlations", "boundary": "within this protocol every multi-party correlation is reproducible fr
+[PASS] S4c       B6 multipartite channel: classical by construction on this protocol  --  follows from the S4b lambda model plus Fine
+----------------------------------------------------------------------------------------------------------------
+MACHINE: 24/26 PASS (2 FAIL -- S4a-orig is the preserved pre-registered FAIL)
+================================================================================================================

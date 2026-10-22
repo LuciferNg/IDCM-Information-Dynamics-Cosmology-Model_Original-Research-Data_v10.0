@@ -1,0 +1,13 @@
+================================================================================================================
+O228 scripts/15 -- R7 (1): short certificates for max pat(k=6) = 26
+================================================================================================================
+L1/L2 verified: {'checked_subsets': 3000, 'odd_code_map': True, 'no_self_twin_class': True, 'class_size_multiset_twin_invariant': True, 'loss2_iff_two_uncovered_pairs': True}
+[PASS] P1L-1  -- {'checked_subsets': 3000, 'odd_code_map': True, 'no_self_twin_class': True, 'class_size_multiset_twin_invariant': True, 'loss2_iff_two_uncovered_pairs': True}
+certificates: 135 missing-separator + 30 restricted-packing (min size 8) + 0 fractional-packing (min value None) ; unresolved = 60
+[FAIL] P1C-1  -- 135 + 30 + 0 = 165 groups, unresolved = 60, min packing = 8, min fractional weight = None
+[FAIL] P1C-2  -- R5 best = 26 ; excluded 28 by 165 certificates
+[PASS] P1C0-1-c  -- scripts/14 log P1C0-1 FAIL is kept as the record
+================================================================================================================
+RESULT: 2/4 PASS  (2 FAIL)   elapsed 51.1 s
+================================================================================================================
+exit=1

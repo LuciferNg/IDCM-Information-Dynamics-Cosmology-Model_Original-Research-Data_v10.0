@@ -1,0 +1,18 @@
+========================================================================================================
+O225 scripts/15 -- R3: centre-invariance theorem (r3-centre-v1)
+========================================================================================================
+  [machine] N=120 nctx=62 identity=75 centre=0 | G[centre]=(Fraction(-1, 1), Fraction(0, 1))
+[PASS] R3-P1 前置 (ii)：K[-s][a] = K[s][a]（全部 120×62 = 7440 對）  --  comparisons = 7440 ; violations = 0 ; zc = 0 ; e_id = 75
+[PASS] R3-P2 前置 (i)：中心性 MUL[s][zc]=MUL[zc][s] 與等變 MUL[-s][h] = -MUL[s][h]（全 s,h）  --  checks = 14400 ; violations = 0
+[PASS] R3-P3 軌跡等變實測：s_t(-s0) = -s_t(s0) 逐位成立（全 120 s0，含 pop 回溯）  --  trajectory = 11533 步/態 ; 總比較 = 1383960 ; deviations = 0
+[PASS] R3-P4 定理後果：hits/stale/agree/stale_agree/overrides 五量中心不變（120/120 × 5）  --  violations = 0 ; s0=0: {'hits': 124, 'stale': 124, 'agree': 0, 'stale_agree': 59, 'overrides': 65}
+[PASS] R3-P5 伴隨量中心不變：ledger_len/miss 直方圖/top 分布/entries_per_ctx/ctx 值衝突/reads  --  violations = 0
+[PASS] R3-P6a 凍結 K 之逐欄比率 λ_a = K[-s][a]·K[s][a] 與 s 無關且 λ_a ≡ +1（即 (ii) 恰成立）  --  λ 值集 = [1] ; 逐欄恆定 = True
+[PASS] R3-P6b ★ 刀刃 1（σ·K，中心奇縮放）：(ii) 已被破壞但 λ_a ≡ -1 恆定 ⟹ 依 (ii') 預測不變**仍成立**（原合約「破 (ii) 必失效」在此被偽證）  --  sigma centre-odd = True ; (ii) broken = True ; λ 恆定 = True ; 失效態數 = 0
+[PASS] R3-P6c ★ 刀刃 2（T-翻轉：30 個中心類各翻一元素 ⟹ 比率隨 s 變化）⟹ 中心不變必須失效  --  T 大小 = 30 ; 比率恆定 = False ; 失效態數 = 116（例 s0=0: 51 vs 72）
+[PASS] R3-P7 尖銳性 C2：非等變更新（奇索引再推一步）⟹ 不變必須失效  --  軌跡等變被破 = True ; overrides 中心不變失效態數 = 58（例 s0=0）
+[PASS] R3-P8a 普適性：Z_8/Z_12/Z_16 —— (ii) 成立⟹不變成立；σ 型（λ 恆定）⟹仍成立；T 型（比率隨 s 變）⟹失效  --  Z_8 {'equivariant': True, 'ii_ok': True, 'viol_ok': 0, 'lam_ok': True, 'sigma': {'viol': 0, 'lam_const': True, 'ii_broken': True, 'equiv': True}, 'tflip': {'viol': 6, 'lam_const': False, 'ii_broken': True, 'equiv': True}} | Z_12 {'equivariant': True, 'ii_ok': True, 'viol_ok': 0, 'lam_ok': True, 'sigma': {'viol': 0, 'lam_const': True, 'ii_broken': True, 'equiv': True}, 'tflip': {'viol': 10, 'lam_const': False, 'ii_broken': True, 'equiv': True}} | Z_16 {'equivariant': True, 'ii_ok': True, 'viol_ok': 0, 'lam_ok': True, 'sigma': {'viol': 0, 'lam_const': True, 'ii_broken': True, 'equiv': True}, 'tflip': {'viol': 12, 'lam_const': False, 'ii_broken': True, 'equiv': True}}
+[PASS] R3-P8b 商結構：2I/{±1} 階 60、共軛類大小多重集 = [1,12,12,15,20]（A₅ 簽名）；overrides 為商上之函數（26 值），但唔由商共軛類決定  --  quotient order = 60 ; class sizes = [1, 12, 12, 15, 20] ; overrides well-defined on classes = True ; distinct values = 26 ; 每商共軛類內相異值數 = [1]
+========================================================================================================
+RESULT: 11/11 PASS
+========================================================================================================

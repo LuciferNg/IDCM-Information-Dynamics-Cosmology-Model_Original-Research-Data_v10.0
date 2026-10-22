@@ -53,3 +53,38 @@ Level F (docs/07): 湧現測試 — x_{n+1}=1/(1+x_n) 全域吸引子 1/φ=0.618
 
 **狀態**: [ ] 未重驗
 > 只加註, 未改本 O 結論檔 (01_problem_record.md / docs/ / final_result.md); 重驗後由本 O 自行寫入。
+
+---
+
+## 📌 2026-09-20 — O81 session 通知: O81 已閉合 (本 O 之「待對接」引用需同步)
+
+> **性質**: 狀態更新指引。**本節只加註, 未改本 O 任何原文/結論檔。**
+
+### 事實
+
+本 O 兩處把 O81 列為待對接:
+
+```
+docs/03_scale_selection.md L101: | 宇宙「自動往最優」嘅 first principle | 🟡 假設, 有待 O73/O81 對接 |
+docs/04_idcm_realization.md L87: | 「最小耗散 = 宇宙『選擇』原理」first principle | 🟡 效率假設 (可對接 O73/O81) |
+```
+
+O81 已於 2026-08-26 完成、2026-09-19 核對 → **🟢 已閉合**。
+
+### 對本 O 之相關性
+
+O81 提供之**四層次統一 Lagrangian** (UV 自由晶格 → SSB → 耦合 → IR sine-Gordon)
+係「宇宙往最優」假設之**可對接結構**:
+
+```
+L_unified = L_chain + L_SSB + L_int + L_phase_eff + L_cos      自由參數 0
+IR 層: J_eff = ⟨W⟩² = 61.5;  E_J = 2⟨W⟩² = 123;  32 阻挫邊 = 20Δ + 12⬠
+```
+
+即「最小耗散/往最優」若要落地, 對接點係 **IR 層之阻挫極小化** (32 阻挫邊飽和)。
+
+### 要求
+
+1. 更新本 O 之「有待 O73/O81 對接」→「O81 已閉合 (2026-08-26); 對接點 = IR 層阻挫極小化」
+2. 若本 O 要進一步對接, 先讀 `o81_eom_unification/final_result.md` + `docs/01_problem_record.md §八`
+3. **唔需要**改動本 O 任何推導內容

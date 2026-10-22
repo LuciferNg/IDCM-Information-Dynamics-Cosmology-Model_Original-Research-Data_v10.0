@@ -1,0 +1,21 @@
+O35 — Step 5: 自由度審計 (Overfit 檢查)
+===================================================================
+
+[1] k 結構性審計:
+  m_u/m_d: sin(9,43) x phi^(19/24) k_exact=0.7917
+  m_s/m_d: sin(40,15) x phi^(160/33) k_exact=4.8485
+  m_c/m_b: sin(7,27) x phi^(10/528) k_exact=0.0189
+  m_c/m_s: sin(30,16) x phi^(53/12) k_exact=4.4167
+  m_b/m_s: sin(14,18) x phi^(92/11) k_exact=8.3636
+  m_t/m_c: sin(19,11) x phi^(101/11) k_exact=9.1818
+  m_mu/m_tau: sin(1,44) x phi^(35/33) k_exact=1.0606
+  m_t/m_b: sin(25,13) x phi^(79/12) k_exact=6.5833
+
+[2] 已知閉合重驗證: PASS (t/b 0.0049%)
+[3] 自由度審計: PASS (8/8 結構匹配)
+[4] sin 配對結構性: 記錄於上
+[5] 獨立預測: OPEN
+
+⚠️ 全譜搜索 fit ≠ 結構閉合
+🟢 已閉合: m_t/m_b, m_μ/m_e
+🔴 未閉合: m_u/m_d, m_s/m_d, m_c/m_b 選擇規則

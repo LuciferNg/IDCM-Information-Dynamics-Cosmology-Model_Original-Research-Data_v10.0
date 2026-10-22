@@ -1,0 +1,6 @@
+O34 Verification Audit Results
+===================================================================
+PASS = 107/107, FAIL = 0
+E_kchain = 4.06026459 meV (dev 0.00345%)
+corr = 1 - CY3/45^2 = 0.9338271605
+Status: ALL PASS

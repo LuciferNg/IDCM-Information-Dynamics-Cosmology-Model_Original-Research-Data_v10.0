@@ -137,3 +137,12 @@ O118 (裁定唔做阻抗模型)。
 | 2026-09-28 | `00_download_desi_dr1.sh` | — DESI DR1 clustering VAC 下載 (14 檔, sha256 OK) | `data/desi/*.h5` |
 | 2026-09-28 | `07_desi_dr1_test.py` | 11/11 — DESI DR1 7 tracer 相關 χ²; δ=0 p=0.030 🟡; window 假設否證 | `data/desi/07_*` |
 | 2026-09-28 | — | 有用層推進完成 + 處置裁定 (不合併) | `docs/03`, `SESSION_START.md`, `final_result.md` |
+| 2026-09-28 | `08_desi_dr2_test.py` | 19/19 — DESI DR2 官方 Zenodo 16644577 補充 multipoles (8 tracer, [62.04,150.02], 23 bin, Δs≈4, size+md5 已驗) | `data/08_*`, `data/desi/dr2/*` |
+| 2026-09-28 | **全線單位修正** | ⚠️ `λ_sync` 406.2227 → **198.63 h⁻¹Mpc**（v9.0 `_core.py` 用除，應為乘；錯 1.897×）⟹ 03–08 全部重算，**83/83 PASS**；所有巡天所有 tracer 皆 null | **`docs/04_unit_correction.md`**, `data/0*_stdout.txt` |
+
+> ⚠️ **2026-09-28 修正註**：上表 §7.2 第 1、2、5 項（及 §7.3 首 6 行的 p 值）係在**錯尺度**
+> λ_sync = 406.2227 h⁻¹Mpc 下計算，**全部作廢**。正確值 198.63 h⁻¹Mpc：
+> 節點 s_n = 66.2/49.7/39.7…（非 135.4/101.6/81.2…）、n_max(5)=5.823、n_max(4)=6.565、
+> 門檻 n=22→0.3925、n=44→0.1003 h⁻¹Mpc；BOSS p=**0.935**、eBOSS p=**0.432**、
+> DESI DR1 δ=0 p=**1.000**（原 p=0.030 🟡 作廢）、DESI DR2 p_global=**1.000**（原 raw Δχ²=12.83 作廢）。
+> 詳見 `docs/04_unit_correction.md`（O132/O31 已獨立記錄同一 bug）。

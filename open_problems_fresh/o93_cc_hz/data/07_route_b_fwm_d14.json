@@ -1,0 +1,14 @@
+{
+  "route": "B_fwm_d14",
+  "chi2_fwm": 1.783,
+  "chi2_kd14": 0.8723,
+  "chi2_fwm_d14": 1.5057,
+  "chi2_lcdm": 0.6055,
+  "best_fwm_p": 0.05,
+  "best_fwm_alpha": 0.9,
+  "best_kd14_lam": 0.2,
+  "best_kd14_alpha": 0.4,
+  "pass": 0,
+  "fail": 0,
+  "status": "\ud83d\udfe1"
+}

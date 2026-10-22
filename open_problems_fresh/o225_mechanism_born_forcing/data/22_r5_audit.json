@@ -1,0 +1,89 @@
+{
+ "audit_of": "21_r5_tie_global.py",
+ "A1": {
+  "pairs": 31,
+  "vertex": [
+   5
+  ],
+  "face": [
+   3
+  ],
+  "edge": [
+   6
+  ]
+ },
+ "A2": {
+  "Hr": 20,
+  "orbit": 5
+ },
+ "A3": {
+  "total": 60
+ },
+ "A4": {
+  "tie_sizes": [
+   5,
+   5,
+   5,
+   5,
+   5,
+   5
+  ],
+  "ok": true
+ },
+ "A5": {
+  "hits_equal": true,
+  "misses_equal": true,
+  "recs_equal": true,
+  "match21": true
+ },
+ "A6": {
+  "centre": [
+   0
+  ],
+  "ok": true
+ },
+ "claims": [
+  {
+   "tag": "A1c",
+   "name": "獨立普查（原 A1 之樸素形式 vertex/face/edge ∈ {0,5} 全 edge 被否證，首跑日誌保留）：vertex → 5 全 edge；face → 3 全 edge；edge → 6 混合",
+   "ok": true,
+   "detail": "pairs=31 ; vertex=[5] face=[3] edge=[6] ; 型別 = {'vertex': [('edge',)], 'face': [('edge',)], 'edge': [('edge', 'face', 'vertex')]}"
+  },
+  {
+   "tag": "A2",
+   "name": "獨立軌道計法：單一 tie 元素在 H_r 下之軌跡 = 全 tie 集（大小 5）",
+   "ok": true,
+   "detail": "|H_r|=20 ; |orbit|=5 ; orbit == tie set ? True"
+  },
+  {
+   "tag": "A4",
+   "name": "獨立幾何核：每頂點軸之 tie 五線族 —— 36°:72° = 5:5，無第三種值（兩條精確平方等式）",
+   "ok": true,
+   "detail": "tie 集大小 = [5, 5, 5, 5, 5, 5] ; 全符 = True"
+  },
+  {
+   "tag": "A3c",
+   "name": "獨立全域計數（原 A3 之「重數 ≡ 1」被否證）：Σ = 60 = 15 × 4（欄計數）⟹ 每 edge 軸 ⟂ 恰 2 條頂點軸；對稱自洽 6×5 = 15×2 = 30",
+   "ok": true,
+   "detail": "Σ=60 ; edge 重數=[4] ; 6×5=30 ; 15×2=30"
+  },
+  {
+   "tag": "A4b",
+   "name": "獨立核 Q4b：face 參考之 3 條 tie 軸兩兩 ⟨·,·⟩² = N_i N_j / 4 EXACT（正三角形線族）",
+   "ok": true,
+   "detail": "對數 = 30 ; 偏離 = 0"
+  },
+  {
+   "tag": "A5",
+   "name": "第二套 replay 實作：hits/Σmisses/逐對記錄 三變體相同；overrides 抽樣 8 態與 21 之輸出逐值一致",
+   "ok": true,
+   "detail": "hits 同=True ; misses 同=True ; recs 同=True ; 對 21 逐值一致=True ; overrides(m)=[65, 69, 64, 58] overrides(p)=[63, 70, 62, 63]"
+  },
+  {
+   "tag": "A6",
+   "name": "中心不變（獨立定中心元素）：overrides_prod(s) = overrides_prod(−s) 於抽樣態",
+   "ok": true,
+   "detail": "中心元素 = [0] ; 抽樣全符 = True"
+  }
+ ]
+}

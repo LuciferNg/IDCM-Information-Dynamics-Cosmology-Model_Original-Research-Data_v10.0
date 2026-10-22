@@ -1,0 +1,9 @@
+{
+  "sum_inv_gamma": 322.75,
+  "closed_form": 322.75,
+  "slope_ols": 3.5925616571497994,
+  "slope_orthogonal": 3.843659472581122,
+  "slope_weighted": 3.6854840503119597,
+  "literature": 3.71,
+  "deep_mond_n": 8
+}

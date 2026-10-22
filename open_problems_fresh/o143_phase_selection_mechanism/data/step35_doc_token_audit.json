@@ -1,0 +1,462 @@
+{
+  "n_pass": 76,
+  "n_total": 76,
+  "checks": [
+    {
+      "doc": "final_result.md",
+      "name": "含 \"120\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"2.8e-17\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"3.02\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"193.45\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"−37.85\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"5-design\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"5.6e-17\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"0.002\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"44.3\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"159/159\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"35/35\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"H = 0\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"−56\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 \"−0.3819\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "含 \"120\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "含 \"單一軌道\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "含 \"2.8e-17\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "含 \"5-design\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "含 \"193.45\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "含 \"O150\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "含 \"推導時序索引\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "含 \"6a.\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "含 \"6b.\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "含 \"18\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "含 \"159/159\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "含 \"35/35\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "含 \"120\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "含 \"2.8e-17\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "含 \"193.45\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "含 \"5-design\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "含 \"ℓ=3\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "含 \"docs/01-11\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "含 \"120\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "含 \"單一軌道\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "含 \"0.0\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "含 \"2.78e-17\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "含 \"13\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "含 \"4.7699e-01\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "含 \"20\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/07",
+      "name": "含 \"5-design\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/07",
+      "name": "含 \"1.16e-1\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/07",
+      "name": "含 \"2.41e-1\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/07",
+      "name": "含 \"0.46\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/07",
+      "name": "含 \"0.708\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/07",
+      "name": "含 \"193.45\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/07",
+      "name": "含 \"−37.85\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/12",
+      "name": "含 \"0.2723\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/12",
+      "name": "含 \"0.961\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/12",
+      "name": "含 \"26.091\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/12",
+      "name": "含 \"22.58\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/12",
+      "name": "含 \"0.846\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/12",
+      "name": "含 \"k=1\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/12",
+      "name": "含 \"rank 3\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/12",
+      "name": "含 \"96.1\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "stale \"4-design\" 出現 0 次 (上限 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "stale \"241.00\" 出現 0 次 (上限 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "stale \"2.79°\" 出現 0 次 (上限 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "stale \"t≤4\" 出現 0 次 (上限 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "stale \"4-design\" 出現 0 次 (上限 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "stale \"241.00\" 出現 0 次 (上限 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "stale \"241.00\" 出現 0 次 (上限 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "\"241.00\" 只喺更正註 (出現 0 次, 上限 1)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "狀態 = 已閉合 (09-21 修正)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "狀態 = 已閉合 (09-21 修正)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "狀態 = 已閉合 (09-21 修正)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "狀態 = 已閉合 (09-21 修正)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 159/159",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "含 35/35",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "含 159/159",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "01_problem_record.md",
+      "name": "含 35/35",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "無殘留 stale 4-design",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "final_result.md",
+      "name": "真軸 = (193.45°, −37.85°)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "SESSION_START.md",
+      "name": "真軸 = (193.45°, −37.85°)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "README(O143行)",
+      "name": "真軸 = (193.45°, −37.85°)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/07",
+      "name": "真軸 = (193.45°, −37.85°)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "doc": "docs/08",
+      "name": "真軸 = (193.45°, −37.85°)",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+states=120 canonical words=120 injective=True
+Pr-1 (canonical map injective): HOLDS
+length-1 relations: 0   length-2 relations: 62
+Pr-2 (length-2 = 20): REFUTED (62)
+Pr-3 (no length-1): HOLDS
+length-2 relation families: Counter({('E', 'E'): 30, ('F', 'F'): 20, ('V', 'V'): 12})
+Pr-4 real test: 120 multi-word states of length<=2 tested, 1 where the lex-first word is NOT cost-minimal
+Pr-4 (lex-first is budget-minimal): REFUTED (1)
+canonical length distribution: Counter({1: 62, 2: 57, 0: 1})
+multiplicity: 57 states with >1 shortest word; max 41

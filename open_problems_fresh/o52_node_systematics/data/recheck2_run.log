@@ -1,0 +1,18 @@
+======================================================================
+O52 INDEPENDENT RE-DERIVATION (fresh fits sampling)
+======================================================================
+R3 mask: 45/60 unmasked  (record: 45)
+
+3.0° node mean = -1.522 vs sky 0.204 → z=-0.27  (record: -1.522, -0.27)
+high-lat 31 mean = -4.245 → z=-0.51  (record: -4.25, -0.51)
+unmasked 45 mean = -2.615 → z=-0.39  (record: -2.62, -0.39)
+remove 0,9: mean = 2.832 → z=+0.46  (record: +2.83, +0.46)
+cold/hot = 29/31  2σ = 4/2  (record: 29/31, 4/2)
+
+======================================================================
+STACKING INNER ANNULUS (0-2°) vs 500 random stacks (seed=888)
+======================================================================
+obs inner 0-2° = -1.286 vs random -0.018±5.696 → z=-0.22, p=0.412
+  (record: -1.29, rand -0.05±5.90, z=-0.21, p=0.411)
+
+✅ O52 independent re-derivation complete

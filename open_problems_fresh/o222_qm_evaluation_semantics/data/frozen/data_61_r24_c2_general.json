@@ -1,0 +1,167 @@
+{
+ "full": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11408,
+  "pops": 3844,
+  "hits": 124,
+  "net_ledger": 7564,
+  "first_hit": 62,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "lex": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11408,
+  "pops": 3844,
+  "hits": 124,
+  "net_ledger": 7564,
+  "first_hit": 62,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "diag": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11408,
+  "pops": 3844,
+  "hits": 124,
+  "net_ledger": 7564,
+  "first_hit": 62,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "antidiag": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11409,
+  "pops": 3844,
+  "hits": 123,
+  "net_ledger": 7565,
+  "first_hit": 61,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "block": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 9578,
+  "pops": 3844,
+  "hits": 1954,
+  "net_ledger": 5734,
+  "first_hit": 1892,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "stride": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11408,
+  "pops": 3844,
+  "hits": 124,
+  "net_ledger": 7564,
+  "first_hit": 62,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "subset_4": {
+  "pairs": 16,
+  "reads": 48,
+  "misses": 40,
+  "pops": 16,
+  "hits": 8,
+  "net_ledger": 24,
+  "first_hit": 4,
+  "diag_pairs": 4,
+  "diag_misses": 8
+ },
+ "subset_8": {
+  "pairs": 64,
+  "reads": 192,
+  "misses": 176,
+  "pops": 64,
+  "hits": 16,
+  "net_ledger": 112,
+  "first_hit": 8,
+  "diag_pairs": 8,
+  "diag_misses": 16
+ },
+ "subset_12": {
+  "pairs": 144,
+  "reads": 432,
+  "misses": 408,
+  "pops": 144,
+  "hits": 24,
+  "net_ledger": 264,
+  "first_hit": 12,
+  "diag_pairs": 12,
+  "diag_misses": 24
+ },
+ "subset_16": {
+  "pairs": 256,
+  "reads": 768,
+  "misses": 736,
+  "pops": 256,
+  "hits": 32,
+  "net_ledger": 480,
+  "first_hit": 16,
+  "diag_pairs": 16,
+  "diag_misses": 32
+ },
+ "subset_31": {
+  "pairs": 961,
+  "reads": 2883,
+  "misses": 2821,
+  "pops": 961,
+  "hits": 62,
+  "net_ledger": 1860,
+  "first_hit": 31,
+  "diag_pairs": 31,
+  "diag_misses": 62
+ },
+ "subset_62": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11408,
+  "pops": 3844,
+  "hits": 124,
+  "net_ledger": 7564,
+  "first_hit": 62,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "shuffle_0": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11408,
+  "pops": 3844,
+  "hits": 124,
+  "net_ledger": 7564,
+  "first_hit": 62,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "shuffle_1": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11408,
+  "pops": 3844,
+  "hits": 124,
+  "net_ledger": 7564,
+  "first_hit": 62,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ },
+ "shuffle_2": {
+  "pairs": 3844,
+  "reads": 11532,
+  "misses": 11408,
+  "pops": 3844,
+  "hits": 124,
+  "net_ledger": 7564,
+  "first_hit": 62,
+  "diag_pairs": 62,
+  "diag_misses": 124
+ }
+}

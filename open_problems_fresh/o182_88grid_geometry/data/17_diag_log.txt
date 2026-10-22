@@ -1,0 +1,14 @@
+E88=88 E32=32
+
+1. 中點相異性: 120 中點 min 角距 = 13.192999°, 88 中點 = 13.192999°
+   88 中點 ↔ 32 中點 min 角距 = 13.192999° (若 ~0 = 有重合!)
+   全部 120 中點 min 角距 = 13.192999°
+
+2. 幾何 sym_group(M88): 4 個元素
+   det=+1 dev(M88)=2.11e-08 dev(V60)=2.58e-08 inI=True inRefl·I=False E88→E88=True E88→E32=False
+   det=-1 dev(M88)=1.49e-08 dev(V60)=2.58e-08 inI=False inRefl·I=False E88→E88=True E88→E32=False
+   det=-1 dev(M88)=2.11e-08 dev(V60)=2.58e-08 inI=False inRefl·I=True E88→E88=True E88→E32=False
+   det=+1 dev(M88)=1.49e-08 dev(V60)=2.58e-08 inI=False inRefl·I=False E88→E88=True E88→E32=False
+
+3. Ih 120 元素:
+   Ih 中保持 M88 = 2, 保持 V60 = 24

@@ -65,8 +65,15 @@ print("=" * 78)
 
 R_WORLD_v10 = 4129.94
 H_DIM = 0.7259
-LAM_SYNC = math.pi * R_WORLD_v10 / 44.0
-LAM_HINV = LAM_SYNC / H_DIM
+LAM_SYNC = math.pi * R_WORLD_v10 / 44.0           # 294.877026 Mpc -- PHYSICAL Mpc
+# --- UNITS: corrected 2026-09-28 (see docs/04_unit_correction.md) -------------
+# The survey xi(s) axis is in h^-1 Mpc with that survey's fiducial h, so
+#     lambda_sync[h^-1 Mpc] = lambda_sync[Mpc] * h_fid   (NOT / h)
+# v9.0 _core.py wrote LAMBDA_SYNC/H_DIM (divide!) -> 406.22, 1/h^2 = 1.897x too
+# long; the migration carried it verbatim.  Proof of the axis unit: the BAO bump
+# in the released DESI DR2 best-fit theory curve sits at s = 102.0 h^-1 Mpc.
+H_FID = 0.6736                                    # DESI/BOSS/eBOSS fiducial h
+LAM_HINV = LAM_SYNC * H_FID                       # 198.63 h^-1 Mpc
 PHI = (1 + math.sqrt(5)) / 2
 
 z = zipfile.ZipFile(os.path.join(DATA, "ross_dr12_corrfunc.zip"))
@@ -165,8 +172,8 @@ check("C1  resolution limit n_max = %.2f < 9 (most claimed harmonics are sub-bin
 check("C2  only %d of the %d scanned harmonics are actually resolvable by BOSS binning"
       % (n_res, len(ns)), n_res <= 8, "resolvable n = %s"
       % [int(n) for n in ns if LAM_HINV / (n * (n + 1)) >= ds_bin])
-claim("C  => the K_Chain ladder is resolvable only for n <= 8 in BOSS DR12 (5 h^-1 Mpc bins); "
-      "the toolbox's n=9..20 'detections' are sub-bin aliases of a smooth trend")
+claim("C  => the K_Chain ladder is resolvable only for n <= %.1f in BOSS DR12 (5 h^-1 Mpc bins); "
+      "the toolbox's n=9..20 'detections' are sub-bin aliases of a smooth trend" % nmax)
 
 json_out["C_bin_spacing"] = ds_bin
 json_out["C_n_max"] = nmax

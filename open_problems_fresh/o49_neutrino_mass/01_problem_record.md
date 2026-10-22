@@ -2,7 +2,7 @@
 
 > **創建日期**: 2026-08-21
 > **狀態**: 🟡 核心閉合（M_comp ✅ / m₃ ✅ / Majorana ✅ / NO ✅；世代質量比 🔴 數值閉合冇生成鏈 — 見「O66 交叉閉合終審」+「生成鏈審計」）
-> **來源**: v10.0 README「中微子質量：p6 模式嘅 eigenvalue 同 V_cycle 需推導」→ 新系列獨立 O49
+> **來源**: v10.0 README「中微子質量：P6 模式嘅 eigenvalue 同 V_cycle 需推導」→ 新系列獨立 O49
 > **前置**: neutrino_p6_mode.md (🟢 已閉合), main_problems/p15_early_derivations/docs/neutrino_mass_spectrum.md
 > **結果**: docs/01_derivation_report.md, RESULT.md
 
@@ -10,7 +10,7 @@
 
 ## 問題陳述
 
-中微子質量 = W-field p6 模式 (n=6 諧波)，非 Seesaw:
+中微子質量 = W-field P6 模式 (n=6 諧波)，非 Seesaw:
 
 $$m_\nu = \frac{(\gamma_6 \times v)^2}{M_{comp}}$$
 
@@ -22,7 +22,7 @@ $$m_\nu = \frac{(\gamma_6 \times v)^2}{M_{comp}}$$
 **未推導**:
 1. **絕對質量標度**: m_ν 嘅絕對值（而家只有質量差 Δm²，冇絕對質量）
 2. **M_comp 結構來源**: 3.95e13 GeV 點嚟?（唔可以淨係反推）
-3. **V_cycle 機制**: p6 模式嘅 eigenvalue 同 V_cycle 需推導
+3. **V_cycle 機制**: P6 模式嘅 eigenvalue 同 V_cycle 需推導
 4. **質量等級**: 正態 vs 反態 (m₁<m₂<m₃ vs m₃<m₂<m₁)
 
 ## 已知結構
@@ -38,7 +38,7 @@ $$m_\nu = \frac{(\gamma_6 \times v)^2}{M_{comp}}$$
 
 1. M_comp 由結構推導（唔係反推）— 幾何緊化能標同 CY₃(36,98) 有冇關係?
 2. 絕對質量從 K_Chain 質量譜 (m_n 級聯, O34/O35 已閉合) 延伸
-3. 質量等級由 p6 模式符號決定?
+3. 質量等級由 P6 模式符號決定?
 
 ## 判定標準
 

@@ -1,7 +1,7 @@
 # O206 docs/27 — Σm_ν 生死測試：DESI 2024 初步裁決
 
 > **日期**: 2026-09-22（本 O 第九輪續）
-> **預言**: CSSG-v3 form-blind `Σm_ν = 0.0973 eV`（O57 p6；NH: m₁=0.02095, m₂=0.02269, m₃=0.0536 eV）
+> **預言**: CSSG-v3 form-blind `Σm_ν = 0.0973 eV`（O57 P6；NH: m₁=0.02095, m₂=0.02269, m₃=0.0536 eV）
 > **數據**: DESI 2024 VI/VII + ACT DR6 × DESI DR2（Lu Feng et al. 2026-03）
 
 ---

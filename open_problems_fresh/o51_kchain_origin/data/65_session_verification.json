@@ -1,0 +1,16 @@
+{
+  "T_sync_gyr": 84.6349,
+  "tau_gyr": 13.4701,
+  "lambda_sync_mpc": 294.877,
+  "rd_idcm_mpc": 147.4385,
+  "N": 131,
+  "psi_131": -3.14078,
+  "psi_err": 0.0,
+  "t_true_gyr": 11100.64,
+  "bao_dev_pct": 0.237,
+  "chi2_idcm_dof": 2.05,
+  "chi2_lcdm_dof": 1.68,
+  "nano_orders": 9.4,
+  "pass": 16,
+  "fail": 0
+}

@@ -1,9 +1,9 @@
-# IDCM v10.0 — 中微子質量：W-field p6 模式
+# IDCM v10.0 — 中微子質量：W-field P6 模式
 
 ## 概述
 
 中微子質量唔係來自 Seesaw 機制，而係直接來自 K_Chain 嘅 W-field 高階 harmonic 模式。
-**中微子 = W-field 嘅 p6 模式**（n=6 諧波）。
+**中微子 = W-field 嘅 P6 模式**（n=6 諧波）。
 
 質量公式：
 $$m_\nu = \frac{(\gamma_6 \times v)^2}{M_{comp}}$$
@@ -21,7 +21,7 @@ $$m_\nu = \frac{(\gamma_6 \times v)^2}{M_{Pl}} = 1.62 \times 10^{-7} \text{ eV}$
 
 比 PDG 嘅 ~0.05 eV 細 6 個數量級。
 
-**原因：** M_Pl 係 4D 宏觀引力尺度。中微子作為 W-field 嘅 p6 模式，屬於 CY₃ 內部幾何，suppression scale 應該係內部幾何嘅緊化能標。
+**原因：** M_Pl 係 4D 宏觀引力尺度。中微子作為 W-field 嘅 P6 模式，屬於 CY₃ 內部幾何，suppression scale 應該係內部幾何嘅緊化能標。
 
 ### 1.2 M_comp 反推
 
@@ -111,7 +111,7 @@ $$\Delta m^2_{21}(\text{corrected}) = \frac{\Delta m^2_{21}(\text{raw})}{Z_3^2} 
 
 ## 四、同 Seesaw 機制嘅區別
 
-| 特性 | Seesaw 機制 | IDCM p6 模式 |
+| 特性 | Seesaw 機制 | IDCM P6 模式 |
 |:----|:-----------|:-------------|
 | 右旋中微子 N_R | 需要 | **唔需要** ✅ |
 | M_R 質量 | 10¹⁰-10¹⁵ GeV | **無** ✅ |
@@ -127,7 +127,7 @@ $$\Delta m^2_{21}(\text{corrected}) = \frac{\Delta m^2_{21}(\text{raw})}{Z_3^2} 
 
 ```
 01. K_Chain 44 模式: γ_n = 4sin²(πn/88)
-02. 中微子 = p6 模式 (n=6): γ_6 = 0.180736
+02. 中微子 = P6 模式 (n=6): γ_6 = 0.180736
 03. 嘗試 M_Pl suppression: m_ν = 1.6e-7 eV ❌ 太細
 04. 發現 M_Pl 係 4D 宏觀尺度, 唔啱內部幾何
 05. 引入幾何緊化能標 M_comp
@@ -148,7 +148,7 @@ $$\Delta m^2_{21}(\text{corrected}) = \frac{\Delta m^2_{21}(\text{raw})}{Z_3^2} 
 
 | 檔案 | 說明 |
 |:----|:------|
-| `neutrino_p6_derivation.py` | 初始 p6 模式質量推導 |
+| `neutrino_p6_derivation.py` | 初始 P6 模式質量推導 |
 | `neutrino_kchain_harmonic.py` | K_Chain 44 模式 harmonic 分析 |
 | `neutrino_geometric_seesaw.py` | 幾何 seesaw 公式 (M_Pl) |
 | `neutrino_compactification.py` | 幾何緊化能標 M_comp |

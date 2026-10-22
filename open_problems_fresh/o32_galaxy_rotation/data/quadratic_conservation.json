@@ -1,0 +1,6 @@
+{
+  "derivation": "g_bar = \u03bc\u00b7g_obs = g_obs\u00b2/(g_obs+a\u2080) \u2192 g_obs\u00b2 = g_bar(g_obs+a\u2080)",
+  "uniqueness": "\u03bc = x/(x+\u03ba), \u03ba=1 by scale invariance \u2192 \u03bc = x/(1+x)",
+  "rotation_form": "V\u00b2(V\u00b2-V_bar\u00b2) = GM\u00b7a\u2080",
+  "curve": "v = u\u00b2/(u+1), u=g_obs/a\u2080, v=g_bar/a\u2080"
+}

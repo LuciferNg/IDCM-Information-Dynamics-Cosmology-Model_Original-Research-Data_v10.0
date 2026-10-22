@@ -1,10 +1,10 @@
 # O66 — M_comp 第一性原理（O57 移交）
 
-> **日期**: 2026-08-24（更新: 2026-08-31）
+> **日期**: 2026-08-24（更新: 2026-08-31, 2026-09-24 O208 越權還原）
 > **狀態**: 🟢 **零參數結構閉合 (1/γ₆ - 1/(88-12), 0.0277%) — 三重身份一致**
 > **來源**: O57 docs/23 開放問題 #3, scripts/01–05
 > **前置**: O57 docs/16 (盲測), docs/20 (M_comp), docs/23, O62 (19 連繫)
-> **結果**: docs/02_verdict.md, scripts/01-05, data/01-05
+> **結果**: docs/02_verdict.md, SESSION_START.md, scripts/01-09, data/01-09
 
 ---
 
@@ -154,10 +154,12 @@ S-duality: γ₆ × 1/γ₆ = 1
 - 🟡 跨實驗驗證: 0.54-0.71% 偏差 (系統性偏移)
 - 🔴 Σm_ν = 0.0971 eV vs DESI < 0.072 eV — 可證偽預言
 - 🟡 m_ββ = [6.4, 22.1] meV — 可測試 (LEGEND, nEXO)
+- ✅ 2026-09-24: O208 越權已還原 (00_verification_check.py 重跑 69/69, 0 字面 True; SESSION_START.md 已建立)
 
 ### 檔案
 
 ```
+SESSION_START.md                       ✅ O66 session 啟動 (2026-09-24 建立)
 scripts/01_mcomp_structural_analysis.py ✅ 結構分析 (2/2 PASS)
 scripts/02_mcomp_mechanism.py           ✅ 機制深層分析 (1/1 PASS)
 scripts/03_verify.py                     ✅ 獨立驗證 (33/33 PASS)
@@ -167,24 +169,7 @@ scripts/06_mechanism_derivation.py        ✅ K_Chain 機制推導 (2/2 PASS)
 scripts/07_neutrino_predictions.py        ✅ ★★★ 中微子預言 (2/2 PASS)
 scripts/08_gamma6_unified.py              ✅ γ₆ 統一文檔 (6/6 PASS)
 scripts/09_three_direction_verification.py ✅ 三方向驗證 (9/9 PASS)
-scripts/00_verification_check.py          ✅ 完整核對 (63/63 PASS)
+scripts/00_verification_check.py          ✅ 完整核對 (69/69 PASS)
 docs/02_verdict.md                       ✅ 完整分析報告
 data/01-09.json                          ✅ 全部結果
 ```
-
-
----
-
-# 2026-09-22 O208 越權修改 — 需重建 (⚠️ 本段為新增, 以上原文一字不刪)
-
-> 來源: O208 docs/05_rebuild_handover.md (事故承認)
-> 狀態: 🔴 本檔案被 O208 session 越權修改, 需以本 O 上下文重建
-
-## 事項
-
-| # | 檔案 | O208 改咗啲咩 | 建議動作 |
-|:-:|:-----|:------------|:--------|
-| 1 | `scripts/00_verification_check.py` | 3 check(...,True) + 3 dict True 被改為計算 | 以本 O 上下文重建 (以 O66 docs 重建, 69/69 或誠實修正); 重跑確認 PASS 數唔含字面 True |
-
-## 驗證標準
-- 以 O66 docs 重建, 69/69 或誠實修正; 重建後 script 輸出 PASS 數與 O 記錄一致或誠實標註

@@ -1,0 +1,18 @@
+{
+  "zeroE_match": 9,
+  "zeroE_total": 12,
+  "nonE_match": 28,
+  "nonE_total": 48,
+  "fisher_p": 0.3404219881195024,
+  "fisher_odds_ratio": 2.142857142857143,
+  "bootstrap_p_ge75": 0.23575,
+  "hypergeometric_p_ge9": 0.235796299930412,
+  "logistic_beta_zeroE": 0.9279573207253567,
+  "logistic_ci_zeroE": [
+    -0.5059514010832092,
+    34.740974220718385
+  ],
+  "high_lat_match": 3,
+  "high_lat_total": 4,
+  "significant": false
+}

@@ -1,0 +1,6 @@
+================================================================================================================
+O228 scripts/14 -- R7 (1): COMPLETE enumeration of pat(k=6) for M_edge
+================================================================================================================
+collapse: 62 columns -> 62 lines ; pair masks agree = False ; distinct pair masks = 60
+[FAIL] P1C0-1  -- {'n_columns': 62, 'n_lines': 62, 'partner_defined': False, 'negatives_present': False, 'pair_masks_agree': False, 'n_distinct_pair_masks': 60}
+[PASS] P1T-1  -- {'checked_subsets': 2000, 'odd_code_map': True, 'no_self_twin_class': True, 'class_size_multiset_twin_invariant': True}

@@ -1,0 +1,41 @@
+{
+  "title": "T_pipe† 譜 + 17 = F_proj 三重身份",
+  "n_star": 27,
+  "f_proj": 0.7719601959627264,
+  "kernel_modes": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "kernel_count": 17,
+  "E_proj": 28.5,
+  "E_sync": 61.49999999999999,
+  "SumGamma": 90.0,
+  "Omega_Lambda": 0.6832815729997476,
+  "E_sync_theory": 61.49534156997728,
+  "triple_identity": {
+    "A_dim_ker_Nd_minus_n_star": 17,
+    "B_F_proj_L5_plus_C42": 17,
+    "C_dim_ker_L6_minus_1": 17,
+    "O138_err_3Ngen_B_2": 15
+  },
+  "E_capture_geq28": 60.88453690585779,
+  "E_bottleneck_sync": 0.6154630941421971,
+  "S_world88_even": 90.0,
+  "S_observer88_odd": 88.0,
+  "verdict": "T_pipe† sync sector = 黑洞事件視界; dim=17=F_proj(三重身份); E_sync=61.5=L10/2(觀察者預算)"
+}

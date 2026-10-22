@@ -1,0 +1,68 @@
+{
+  "affine_bridge": "r_k = 2pi*R_world*(1 - gamma_k/4)  EXACT",
+  "measure_invariance": "cos^2 核將 arcsine 送到 arcsine (仿射不變, 測度保持)",
+  "l_scale_structural": 1452,
+  "l_scale_origin": "44*33 = N_d*K_tree (rung law 飽和)",
+  "l_max_obs": 2508,
+  "frac_var_above_1452_pct": 1.3589567345951536,
+  "E1": "rho(l) ~ 1/sqrt(l(1452-l))",
+  "peak_height_test": {
+    "rms_abs_ln_ratio": 1.5738318058693266,
+    "verdict": "FAIL"
+  },
+  "continuum_KS": {
+    "KS": 0.4796129927865898,
+    "at_l": 364,
+    "verdict": "FAIL"
+  },
+  "free_scale_KS": {
+    "min_KS": 0.18980428540419847,
+    "best_scale": 300,
+    "verdict": "FAIL"
+  },
+  "structural_scale_rank": "8/10",
+  "envelope_family": {
+    "E1 arcsine (投影核誘導)": {
+      "KS": 0.47320837358536466,
+      "rms_peak": 1.5738318058693266,
+      "trend": "上升"
+    },
+    "E2 rung 1/D_m (等模態/rung)": {
+      "KS": 0.6666260252786949,
+      "rms_peak": 2.357629250018522,
+      "trend": "上升"
+    },
+    "E3 rung D_m (寬度權重)": {
+      "KS": 0.4531468201128844,
+      "rms_peak": 0.6566884698205459,
+      "trend": "下降"
+    },
+    "E4 uniform": {
+      "KS": 0.5497824094694835,
+      "rms_peak": 1.4362527204212614,
+      "trend": "平坦"
+    },
+    "E5 1/l (標度不變)": {
+      "KS": 0.28898199882534736,
+      "rms_peak": 0.22006410545716543,
+      "trend": "下降"
+    },
+    "E6 HZ 1/(l(l+1))": {
+      "KS": 0.7649110004036861,
+      "rms_peak": 1.4431334865858518,
+      "trend": "下降"
+    }
+  },
+  "envelope_family_best_KS": 0.28898199882534736,
+  "envelope_family_best": "E5 1/l (標度不變)",
+  "low_ell_concentration": {
+    "frac_l_le_44_pct": 20.93874879572498,
+    "l_axis_unit": 44,
+    "obstruction": "觀測方差高度集中於 l <= 44 = l-軸單位 => 解像度不足"
+  },
+  "amplitude_required": 954307.8293375844,
+  "TGT": 899.9734740014884,
+  "amp_ratio": 1060.3732853308588,
+  "S_peaks_pct": 0.32489350702924535,
+  "verdict": "路線 6 攻堅 (R6 包絡): 由投影核逼出 arcsine 形狀 (零參數, 精確仿射橋 r_k = 2piR(1-gamma_k/4)) 並由 rung law 逼出標度 1452 = N_d*K_tree。但全部檢驗失敗: (i) 峰高檢驗 RMS |ln ratio| = 1.574 (arcsine 預言上升, O9 峰高下降); (ii) 零參數 KS = 0.4796 @ l=364; (iii) 自由標度 min KS = 0.1898 @ s*=300; (iv) 6 個零參數包絡候選整族排除 (最佳 KS = 0.2890); (v) 結構張力: l > 1452 佔觀測方差 1.36%; (vi) 所需振幅 A/TGT = 1060.4。=> R6 仍然 🔴, 但已由『完全缺失』升級為『唯一自然候選族已建立並整族證偽』"
+}

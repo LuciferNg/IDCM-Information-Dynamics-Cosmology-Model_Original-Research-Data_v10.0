@@ -1,0 +1,146 @@
+{
+  "script": "21_shadow_audit",
+  "date": "2026-09-28",
+  "thesis": "r or 2r should be found as a shadow in large-scale observations",
+  "verdict": "shadows exist but only as ratios/anchored; spatial reading excluded by Planck Omega_K",
+  "R_world_Mpc": 4129.94,
+  "r_d_idcm": 147.4386,
+  "L_ring_Mpc": 25949.1936,
+  "Omega_K_if_spatial": 1.161314274763284,
+  "Planck_Omega_K": "0.001±0.002",
+  "sigma_exclusion": 580.157137381642,
+  "R_curv_required_Mpc": 62940.997624816875,
+  "r_d_dev_pct_Plik": 0.23699775647562718,
+  "H0_pred": 67.40711161743475,
+  "H0_sigma": 0.08724373599028408,
+  "omega_ring": 72.59002745802603,
+  "omega_shoes_sigma": -0.4326659057442071,
+  "chi_star_Mpc": 13867.531984632871,
+  "chi_0_Mpc": 14022.442018221955,
+  "ell1_comb": 3.357802733904156,
+  "comb_pvalue": 0.575,
+  "checks": [
+    {
+      "name": "A1 ★★ [OBS] 裸數 28.0113 唔可對觀測（無量綱）；'影子' 必為 (i) 空間長度 / (ii) 比值 / (iii) 頻率 三者之一",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A2 ★★ [SI] r 之三條觀測化路徑: (i) 空間曲率半徑 R_world → Ω_K；(ii) 比值 R_world/r_d = 88/π；(iii) 頻率 ω_ring = c/R_world → H₀ 類",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A3 [OBS] r_d 之觀測值: Planck 2018 表1 r_drag = 147.09 ± 0.26 (Plik) / 147.18 ± 0.29 (Combined)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B1 [OBS] 哈勃半徑 c/H₀ = 4450.6006 Mpc（H₀ = 67.36 ± 0.54）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B2 ★★★ [SI] 若宇宙 = 半徑 R_world 之 3-球 ⟹ |Ω_K| = (c/(H₀R_world))² = 1.161314275",
+      "pass": true,
+      "detail": "R_world/c/H₀ = 0.927951"
+    },
+    {
+      "name": "B3 ★★★ [OBS] vs Planck 2018 Ω_K = 0.001 ± 0.002 ⟹ 偏差 = 580σ ⟹ **空間化被排除**",
+      "pass": true,
+      "detail": "580σ"
+    },
+    {
+      "name": "B4 ★★★ [OBS] Planck 反推: |Ω_K| ≤ 0.005 (2.5σ) ⟹ 曲率半徑 R_curv ≥ 62940.998 Mpc = 15.24 × R_world ⟹ R_world 細 15 倍",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B5 ★★★ [SI] ⟹ **r 唔可以係空間（曲率）半徑**；『宇宙 = 176 格圓環』只可指內部/相位（beat）空間之閉環",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C1 ★★★ [OBS] r_d 影子: IDCM 零參數 147.4386 vs Planck r_drag 147.09 ⟹ +0.237% (+1.34σ)；vs Combined 147.18 ⟹ +0.176% (+0.89σ)",
+      "pass": true,
+      "detail": "零 c 零新常數 (R_world = r_d·88·421/(420π), O171)"
+    },
+    {
+      "name": "C2 ★★★ [OBS] H₀ 影子: (1−π/44)·c/R_world = 67.407112 vs Planck 67.36 ± 0.54 ⟹ +0.087σ",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C3 ★★ [OBS] 頻率影子: ω_ring = c/R_world = 72.590027 vs SH0ES 2022 H₀ = 73.04 ± 1.04 ⟹ -0.43σ",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C4 ★★★ [SI+OBS] 結構比值 R_world/(c/H₀) = 1 − π/44 = 0.928600167；實測 0.9279511575 ⟹ dev -0.0699%",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1 ★ [OBS] 自行積分（Planck base-ΛCDM）: χ_* = 13867.5 Mpc ; χ_0 = 14022.4 Mpc",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D2 ★★★ [SI] 若周界 L 為空間尺度 ⟹ 基模 ℓ₁ = 2πχ_*/L = 3.3578（⚠️ 與 B5 矛盾：B5 已排除空間化）",
+      "pass": true,
+      "detail": "ℓ₁ = 3.358"
+    },
+    {
+      "name": "D3 ★★★ [OBS] ℓ=2 之 D_ℓ = 225.9（已知低四極；ΛCDM 期望 ~1000）—— 低ℓ反常係真",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D4 ★★★ [OBS] 低多極梳狀檢定（ℓ ≤ 30，去趨勢 + 相位 null 400）: p = 0.575 ⟹ 🔴 無信號（低多極影子不成立）",
+      "pass": true,
+      "detail": "p = 0.575"
+    },
+    {
+      "name": "E1 ★★ [SI] R_world/r_d = 88/π = 28.0112535 —— **呢個就係『28.0113 之影子』：無量綱、單位無關**",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E2 ★★ [OBS] 但 R_world/χ_0 = 0.2945、L/χ_0 = 1.8505、2R_world/χ_* = 0.5956 —— 皆非整數/簡單結構數 ⟹ 視界類長度對唔上",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E3 ★★ [SI] r_d 零參數值 (147.4386) 與 Planck r_drag 之差 +0.237% 係**觀測容許內**；但佢係『用 r_d 錨定 R_world』之回代 ⟹ 屬一致性而非獨立預言",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F1 🟢 **影子確實存在**（調律者命題方向正確），形式 = 比值/錨定型三條: r_d (+1.34σ)、H₀ = (1−π/44)c/R_world (+0.09σ)、ω_ring vs SH0ES (-0.43σ)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F2 🔴 但**空間型影子**（r 作為宇宙曲率半徑）被 Planck Ω_K 排除 580σ ⟹ r 必為內部（相位/beat）尺度",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F3 🟡 獨立性審計: R_world 絕對值由 1 dof 錨定（O213 R9）⟹ F1 三條**非獨立預言**；要增量證據須用唔經 r_d/H₀ 校準之量 ⟹ 低多極梳狀（D4）係其中一條，結果 p = 0.575",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F4 ★★ 可證偽預言（零參數）: 若環為空間尺度 ⟹ 低ℓ 梳狀 ℓ_n = n×3.36；Planck TT 實測 p = 0.575 ⟹ 不通過（🔴）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F5 ★ 總結: 『大尺度應該搵到 r/2r 之影子』⟹ 正確形式係 **R_world/r_d = 88/π** 同 **R_world/(c/H₀) = 1−π/44**；並非某個公式直接出現 28.0113",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 24,
+  "n_total": 24
+}

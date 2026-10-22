@@ -1,7 +1,7 @@
 # O206 docs/44 — Reopen 交接收錄（2026-10-11）
 
 > **日期**: 2026-10-11（調律者指示 Reopen O206，處理明確交接）
-> **源**: register 檢查（55 events 涉 O206）；O237 docs/14+17、p9 kchain A3
+> **源**: register 檢查（55 events 涉 O206）；O237 docs/14+17、P9 kchain A3
 > **性質**: ✅ 明確交接收錄（非新推導）
 
 ## §1 背景
@@ -11,7 +11,7 @@ O206 於 2026-10-07 closeout（verdict=partial）。2026-10-11 調律者指示 R
 
 Register 檢查發現 3 條 incoming 交接冇 O206 側收據文件：
 ① O237/U5 體驗層 → O206 本體論（有載體）
-② p9 kchain −ω_n ↔ 反粒子扇區（有載體 + 10-09 register note 已收，但文件未落）
+② P9 kchain −ω_n ↔ 反粒子扇區（有載體 + 10-09 register note 已收，但文件未落）
 ③ O134/O229-R4② （幽靈——無載體，交調律者裁決）
 
 ## §2 ✅ 收錄 ① O237/U5 體驗層 → O206 本體論（接納）
@@ -29,7 +29,7 @@ O237 docs/17: 🔴 體驗層（意識點解「經驗」到質量）→ O206 本�
 U5 體驗層問題——體驗層 = 觀察者側投影嘅「讀數機制」，屬本 O 本體論延伸範圍，
 非 O237 質量路線圖（S0–S9 止於 perception 形式化）。測量機制 O206↔O212 接駁仍然 open。
 
-## §3 ✅ 收錄 ② p9 kchain −ω_n ↔ 反粒子扇區（接納，文件補落）
+## §3 ✅ 收錄 ② P9 kchain −ω_n ↔ 反粒子扇區（接納，文件補落）
 
 **源**: `main_problems/p9_kchain_number_field/23_beat_harmonic_bridge.md` A3
 
@@ -77,7 +77,7 @@ O206 交接項目現時全部有歸宿（收錄 2 項 + 改道 2 項）。
 
 ```
 O206 = reopened（2026-10-11, register state=open）
-明確交接收錄: O237/U5 ✅（本文件 §2）+ p9 kchain A3 ✅（§3）
+明確交接收錄: O237/U5 ✅（本文件 §2）+ P9 kchain A3 ✅（§3）
 幽靈交接: O134 / O229-R4② — 調律者已裁決 = 非 O206 承接（§4.1）
 待處理: O237/U5 測量機制 O206↔O212 接駁（🟡 仍 open）
 ```
@@ -88,5 +88,5 @@ O206 = reopened（2026-10-11, register state=open）
 
 - 本文件 §3 收錄段寫「反粒子 = Object−Frame 脫相位嘅負頻譜側」——**錯誤命名，撤回**
 - **IDCM 88-site 物理譜冇負頻率**（γ_n、ω_n 全非負，n=1..88）
-- ±ω_n 只係 p9 A3 嘅 Galois closure（代數閉合）——數域鏡像，非物理譜成員
+- ±ω_n 只係 P9 A3 嘅 Galois closure（代數閉合）——數域鏡像，非物理譜成員
 - 反粒子對稱嘅正確基礎 = γ_n = γ_{88−n}（譜內鏡像，詳見 docs/45 §七）

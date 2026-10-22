@@ -1,0 +1,14 @@
+E4 built 3.8 s, |E4|max 120
+merged 8 partials, wrote 12 shard artefacts
+  shard 00: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 01: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 02: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 03: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 04: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 05: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 08: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 09: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 10: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 11: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512

@@ -1,0 +1,32 @@
+{
+ "controls": {
+  "C1_rank2_targets": [
+   [
+    "order",
+    132
+   ],
+   [
+    "order",
+    19
+   ]
+  ],
+  "C2_random_targets": [
+   [
+    false,
+    12
+   ],
+   [
+    false,
+    12
+   ]
+  ],
+  "decider_valid": true
+ },
+ "verdict": "🔴 rank-2 impossible (search exhausted)",
+ "classes": 12,
+ "columns": 62,
+ "nodes": 22,
+ "search_exhausted": true,
+ "statement": "🔴 窮盡而無共同圓序 ⟹ **秩 2 實現不可能** ⟹ `sign_rank(K) ≥ 3`；配合已認證上界 3 ⟹ **sign_rank(K) = 3 EXACT**",
+ "rows_deduplicated_from": 120
+}

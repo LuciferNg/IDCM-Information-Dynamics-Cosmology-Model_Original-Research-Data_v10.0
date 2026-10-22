@@ -1,0 +1,88 @@
+{
+ "n_events_total": 1628,
+ "n_events_o210": 12,
+ "chain_gaps": [],
+ "bad_ref": [],
+ "ghosts": [],
+ "hard_drift": 127,
+ "baseline": 78,
+ "readme_emoji": "🟢",
+ "events": [
+  {
+   "ts": "2026-09-21T03:08:44+08:00",
+   "kind": "registered",
+   "ref": null,
+   "note": "O115 `docs/02_architecture_gap_analysis.md` §三 缺陷 4"
+  },
+  {
+   "ts": "2026-10-03T10:37:37+08:00",
+   "kind": "closed",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/final_result.md",
+   "note": "代數層閉合 (scripts 129/129, 90 條目). 入站交接已處理: (A) O88 類型可構造性判定 (B) O222 8/13 更正+重算; append-only 更正 3 處; 詳見 docs/05_inbound_ha"
+  },
+  {
+   "ts": "2026-10-03T10:57:51+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/06_escape_period_theorem.md",
+   "note": "O210 閉合後攻堅 (用戶指示「繼續推」): docs/06 定理 O210-T1 (模B定則) + scripts/04 (27/27) + docs/05 入站交接; O88 §G#4 結案 (非結構強逼); append-only "
+  },
+  {
+   "ts": "2026-10-03T11:07:09+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/07_operator_layer_selection.md",
+   "note": "O210 續攻 2 (延續「繼續推」): docs/07 定理 O210-T2 (no-go) + O88 §4 三條件判定 + ℤ₄ 候選橋判定 (🟡) + T1↔O206 Z₂ 交叉核; scripts/05 (19/19) 新增; a"
+  },
+  {
+   "ts": "2026-10-03T11:17:31+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/08_branch_charge_no_go.md",
+   "note": "O210 續攻 4: docs/08（分支荷/定理 T3/條件 ③）+ docs/09（K_tree 雙計數/裁定修正）; scripts/06 12/12 + 07 13/13; **自我修正 2 處**（C9 過嚴 / 66 裁定過寬,"
+  },
+  {
+   "ts": "2026-10-03T11:30:42+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/10_z4_bridge.md",
+   "note": "O210 續攻 5（只處理1 = ℤ₄ 橋定義化）: 新定理（鏈側 ℤ₄ 扇區）Σγ^(c) = N_d + (μ², −sec(π/88), 0, +sec(π/88))；s2 = 44 = N_d 與 s0 = 46 = N_d+μ² "
+  },
+  {
+   "ts": "2026-10-03T11:40:05+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/11_common_measure_no_go.md",
+   "note": "O210 續攻 6（只處理1之延續 = 共同測度）: **唔存在**（canonical 範疇, 雙約定皆阻塞）。四層窮舉（scripts/09 = 19/19）: 純量/置換敗（缺陷支撐 4 vs 2）; **仿射 × 24 置換 = 0"
+  },
+  {
+   "ts": "2026-10-03T11:59:55+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/09_ktree_two_counts.md#L1",
+   "note": "O210 續攻 3 鏈記錄補登（原事件只落 O126 pid，本 O 鏈缺口）: C9 K_tree 身份分離 — 雙計數 (node)=34=F₉ / (mode)=33=N_gen·L₅；Σλ=66=2E=tr L；後續續攻 4 收口（"
+  },
+  {
+   "ts": "2026-10-03T12:00:30+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/12_full_chain_closeout.md#L1",
+   "note": "O210 R8 全鏈收尾（硬規則1 session鏈 + §4.9/§4.10）: 12 劇本 + 12 正典 log + MANIFEST + docs/12–13；獨立審計 scripts/10、provenance 11（5 sess"
+  },
+  {
+   "ts": "2026-10-03T12:01:48+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/01_problem_record.md#L61",
+   "note": "O210 誠實清單入 register: 重寫率 88.9%=80/90；4🔴 T0 主動排除（283.0821/44.5/M* 斜率/O206 殘餘）；6🟡 有量綱錨（M₀/R_world/V_EW/sin²θ_W/v_geom/Ω_b）"
+  },
+  {
+   "ts": "2026-10-03T12:09:05+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/13_script_chain.md#L1",
+   "note": "O210 R8 追補（第 11 條事件）: 新增 scripts/13_manifest.py（MANIFEST 產生器，鏈上必須最後一支）⟹ 最終 13 劇本/13 log 全 RESULT: PASS；data/MANIFEST.jso"
+  },
+  {
+   "ts": "2026-10-06T17:53:56+08:00",
+   "kind": "note",
+   "ref": "open_problems_fresh/o210_causal_tensor_algebra/docs/14_inbound_handoff_20261006.md#L1",
+   "note": "O210 R9 交接處理輪(2026-10-06): 入站3條最終核對 — O222(8/13更正)✅10-03已回、O88(算子層歸屬)✅10-03已回(T1/T2/T3)、O233 R17(common measure blocker)"
+  }
+ ],
+ "stats": {
+  "PASS": 7,
+  "FAIL": 0
+ }
+}

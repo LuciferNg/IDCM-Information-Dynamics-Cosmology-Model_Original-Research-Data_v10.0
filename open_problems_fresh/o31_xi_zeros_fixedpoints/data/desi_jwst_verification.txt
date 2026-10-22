@@ -1,0 +1,8 @@
+O31 DESI DR2 + JWST Verification
+
+BAO IDCM = 147.394 Mpc, ΛCDM = 147.050 Mpc
+Deviation = 0.234%
+DESI DM/rd error: 1.3-3.5% → cannot distinguish
+DESI wCDM: w0 = -0.918 ± 0.088
+P(k) harmonics: 8/8 confirmed
+JWST CEERS+JADES: fields do not overlap

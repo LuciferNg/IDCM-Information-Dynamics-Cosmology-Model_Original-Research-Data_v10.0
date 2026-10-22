@@ -1,0 +1,54 @@
+{
+  "integrity_check": {
+    "pass": 59,
+    "warn": 0,
+    "fail": 0,
+    "total": 59
+  },
+  "data_files": {
+    "jades_dr4": {
+      "status": "\u2705",
+      "sources": 5190,
+      "size_MB": 90
+    },
+    "ceers_dr1": {
+      "status": "\u2705",
+      "sources": 87345,
+      "size_MB": 195
+    },
+    "desi_dr1": {
+      "status": "\u2705",
+      "papers": 1
+    },
+    "desi_dr2": {
+      "status": "\u2705",
+      "papers": 1
+    },
+    "planck": {
+      "status": "\u2705",
+      "papers": 1
+    },
+    "silverrush": {
+      "status": "\u26a0\ufe0f",
+      "papers": 3,
+      "note": "\u90e8\u5206\u8ad6\u6587\u9700\u78ba\u8a8d arXiv ID"
+    },
+    "hera_lofar_mwa": {
+      "status": "\u2705",
+      "papers": 3
+    },
+    "candels_3dhst": {
+      "status": "\u26a0\ufe0f",
+      "note": "3D-HST \u76ee\u9304\u9700\u76f4\u63a5\u5f9e Yale \u4e0b\u8f09"
+    },
+    "spitzer": {
+      "status": "\u26a0\ufe0f",
+      "note": "S-CANDELS \u76ee\u9304\u9700\u5f9e IRSA \u4e0b\u8f09"
+    }
+  },
+  "scripts": 13,
+  "documents": 6,
+  "json_results": 12,
+  "tests_passed": "33/33",
+  "total_size_MB": 313
+}

@@ -1,0 +1,119 @@
+{
+  "families": {
+    "R88": {
+      "cells": 7744,
+      "exact": 2,
+      "exact_raw": 2,
+      "obs": 19,
+      "trap_targets": 33,
+      "novel": 88
+    },
+    "O88": {
+      "cells": 7744,
+      "exact": 0,
+      "exact_raw": 0,
+      "obs": 17,
+      "trap_targets": 28,
+      "novel": 88
+    },
+    "BEAT": {
+      "cells": 7744,
+      "exact": 0,
+      "exact_raw": 0,
+      "obs": 13,
+      "trap_targets": 12,
+      "novel": 0
+    },
+    "GT_prod": {
+      "cells": 2904,
+      "exact": 2,
+      "exact_raw": 2,
+      "obs": 16,
+      "trap_targets": 19,
+      "novel": 0
+    },
+    "GT_div": {
+      "cells": 2904,
+      "exact": 1,
+      "exact_raw": 1,
+      "obs": 19,
+      "trap_targets": 21,
+      "novel": 1
+    },
+    "OT_prod": {
+      "cells": 2904,
+      "exact": 1,
+      "exact_raw": 1,
+      "obs": 14,
+      "trap_targets": 18,
+      "novel": 0
+    },
+    "OT_div": {
+      "cells": 2904,
+      "exact": 0,
+      "exact_raw": 0,
+      "obs": 17,
+      "trap_targets": 26,
+      "novel": 1
+    },
+    "FULL_wr": {
+      "cells": 255552,
+      "exact": 1,
+      "exact_raw": 88,
+      "obs": 19,
+      "trap_targets": 63,
+      "novel": 0
+    },
+    "FULL_gr": {
+      "cells": 255552,
+      "exact": 2,
+      "exact_raw": 89,
+      "obs": 21,
+      "trap_targets": 68,
+      "novel": 1
+    },
+    "FULL_gd": {
+      "cells": 255552,
+      "exact": 1,
+      "exact_raw": 88,
+      "obs": 20,
+      "trap_targets": 68,
+      "novel": 1
+    },
+    "FULL_bt": {
+      "cells": 255552,
+      "exact": 0,
+      "exact_raw": 0,
+      "obs": 17,
+      "trap_targets": 21,
+      "novel": 0
+    },
+    "SUM_plus": {
+      "cells": 255552,
+      "exact": 2,
+      "exact_raw": 89,
+      "obs": 15,
+      "trap_targets": 24,
+      "novel": 1
+    },
+    "SUM_minus": {
+      "cells": 255552,
+      "exact": 3,
+      "exact_raw": 90,
+      "obs": 15,
+      "trap_targets": 21,
+      "novel": 0
+    },
+    "_44chain": {
+      "R44": 2,
+      "O44": 0,
+      "BEAT44": 0,
+      "G44T": 2,
+      "O44T": 1
+    }
+  },
+  "total_exact": 15,
+  "total_obs": 222,
+  "total_novel": 181,
+  "total_trap_targets": 422
+}

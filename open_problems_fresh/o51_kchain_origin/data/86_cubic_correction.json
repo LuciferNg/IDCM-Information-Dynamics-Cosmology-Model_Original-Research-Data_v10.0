@@ -1,0 +1,22 @@
+{
+  "desi_7pt_chi2_orig": 42.23,
+  "desi_7pt_chi2_lin": 18.09,
+  "desi_7pt_chi2_cubic": 17.72,
+  "improvement_lin_pct": 57.2,
+  "improvement_cubic_pct": 58.0,
+  "C1": -0.169733,
+  "C3_structural": -0.048693,
+  "C3_optimal": -0.243467,
+  "C3_optimal_scale": 5.0,
+  "beta1": 0.06141,
+  "beta3": 0.017617,
+  "kurtosis_gd": 0.284759,
+  "skewness_gd": -0.944033,
+  "var_gd": 27.204137,
+  "mean_gd": 20.96932,
+  "H0_orig": 72.6064,
+  "H0_lin": 72.5942,
+  "H0_cub": 72.5933,
+  "pass": 2,
+  "fail": 0
+}

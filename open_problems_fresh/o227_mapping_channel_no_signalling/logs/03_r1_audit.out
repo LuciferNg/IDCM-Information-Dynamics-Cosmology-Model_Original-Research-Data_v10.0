@@ -1,0 +1,11 @@
+================================================================================================================
+O227 scripts/03 -- R1 audit (rules: o227-r1-contract-v1)
+================================================================================================================
+[PASS] A1   own 2I rebuild is a group of order 120 whose element-order spectrum is the known spectrum of the binary icosahedral group  --  order=120 closed=True inverses=120/120 assoc_violations=0 spectrum={2: 1, 3: 20, 5: 24, 4: 30, 1: 1, 6: 20, 10: 24}
+[PASS] R0   half (b) from-scratch rebuild: MUL/hx identical to the frozen tables and the own read table K reproduces the frozen K entry by entry  --  MUL identical=14400/14400 ; hx identical=True ; K mismatches=0/7440 ; H3 tie-rule entries=1200
+[PASS] A2   second independent route: SO(3) matrix rotation equals the sandwich rotation; the frozen correlation table C1 is reproduced from the own read table  --  rotation route: direct matches=120/120, transposed matches=40/120 (handedness disclosed), mismatches=0 ; C1 mismatches=0/3844 ; conditional-marginal violations=0/3844
+[PASS] A3   independent re-derivation of the headline numbers agrees with the machine report  --  compared 13 values ; mismatches = none ; 2 DISCLOSED divergence(s) (E1_all4 block, E2_all4 block, machine side anchored / nontrivial factors only) ; pre-registered common stabiliser order 2 is REFUTED by both independent builds (measured 10, the preimage of the reference-axis stabiliser) -- see docs/02 §6
+[PASS] A4   artefacts pinned; upstream pins unchanged; zero undeclared writes outside O227 (and no new bytecode under the frozen O222)  --  pin rows=11 all present in the gate=True ; undeclared writes outside O227 (round start = the contract mtime) = none ; O222 files touched during the round = none ; new O222 __pycache__ entries = none ; other-O activity declared out of scope = 24 file(s)
+----------------------------------------------------------------------------------------------------------------
+AUDIT: 5/5 PASS ; artefacts hashed = 14 ; upstream pins = 11
+================================================================================================================

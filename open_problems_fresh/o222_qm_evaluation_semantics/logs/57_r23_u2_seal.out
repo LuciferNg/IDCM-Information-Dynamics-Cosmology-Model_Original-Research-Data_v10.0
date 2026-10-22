@@ -1,0 +1,9 @@
+(b) reproduction  sgn(G_frozen . Kc^T) == Kc : mismatches 0/744
+(c) all-120 rows: sgn(K^T G120 K) vs certified vsign : mismatches 0/3844
+{
+ "reproduction_mismatches": 0,
+ "reproduction_total": 744,
+ "all120_mismatches": 0,
+ "all120_total": 3844,
+ "verdict": "canonical construction confirmed (frozen Gram): V-side determined; rank-3 = rank of the frozen Gram"
+}

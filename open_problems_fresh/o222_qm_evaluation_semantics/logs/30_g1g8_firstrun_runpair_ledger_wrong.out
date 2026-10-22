@@ -1,0 +1,20 @@
+======================================================================================================================
+O222 scripts/30 -- G1+G8 (docs/20 g1g8-contract-v1): can the gap maps be DERIVED from frozen records?
+======================================================================================================================
+[FAIL] G1a-part frozen write rule composed over every one of the 461280 (a,b,s0) steps  --  s_final == MUL[MUL[s0][h(a)]][h(b)] on 446400/461280 ; mismatches = 14880
+[FAIL] G8a-part ledger reconstruction self-consistent: reads = 922560, writes = 907680, misses identity holds on 0/461280 steps, value-level hits 7440 with 7440 inconsistencies  --  conflict ctx = 62
+[FAIL] G1a  ctx -> s exists by reading the frozen write rule: s_coord(ctx) = idx[h(ctx)] (62/62 contexts, injective: 62 distinct h values, 0 behavioural mismatches)
+[PASS] G1b  D5 trigger computed exactly: |N(s)-s|^2 > 0 on 7440/7440, = 0 on 0, ctx-only = True (value set: 3 exact elements)
+[PASS] G1c  route 1 (value-level consistency) re-verified as TOTAL (7440 hits, 0 inconsistencies, matching D6); route 2 (O210 projection) is provenance-only (2/4 files present, no explicit f) => 🟡
+[FAIL] G8a  ledger quantified over the full pass: 922560 reads, 907680 writes, entries per ctx in [14640, 14640], 62 contexts carry CONFLICTING values (stale copies exist)
+[FAIL] G8b  consistency-based redundancy: R_consistent = 1 while R_naive reaches 14640 entries for a single context, and 62 contexts hold conflicting values => copies are stale, not redundant
+[PASS] G8c  multiplicity candidates: 12 distinct K rows over 120 states (multiplicities {10: 12}) and the orbits {12,20,30} are all UNOBSERVABLE; ledger fragments = 1 => R >= 2 fails (🔴)  --  ledger entries per ctx: max = 14640 ; R_consistent = 1 ; R >= 2 fails
+----------------------------------------------------------------------------------------------------------------------
+  G1a  🟡  {'definition': 's_coord(ctx) = idx[h(ctx)] read off the frozen write rule', 'frozen_rule': 'read (miss) => s := MUL[s][hx[ctx]]  (scripts/12 rd(), scr
+  G1b  ✅  {'pairs': 7440, 'positive': 7440, 'zero': 0, 'zero_contexts': [], 'trigger_fires_per_context': True, 'squared_norm_value_set': ['2 + 0*sqrt5', '5/2 + 
+  G1c  🟡  {'route_1_value_level_consistency': {'status': '✅ TOTAL: 7440 memo hits, 7440 value inconsistencies (trigger empty, matching the D6 record)', 'note': 
+  G8a  🟡  {'passes': 120, 'pairs_per_pass': 3844, 'reads': 922560, 'writes': 907680, 'entries_per_ctx_min': 14640, 'entries_per_ctx_max': 14640, 'entries_per_ct
+  G8b  🟡  {'R_consistent': 1, 'reason': 'only the ledger TOP is readable (L[-1][0] == ctx)', 'cited_from': 'docs/13_d6_results.md P3c (reach depth = 1) and P3b 
+  G8c  🔴  {'distinct_K_rows': 12, 'states': 120, 'multiplicity_histogram': {'10': 12}, 'orbit_sizes_cited': [12, 20, 30], 'ledger_fragments': 1, 'observable': F
+----------------------------------------------------------------------------------------------------------------------
+elapsed 5.6 s ; written data/30_g1g8_results.json

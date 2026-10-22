@@ -1,0 +1,81 @@
+==============================================================================
+O86 scripts/10 — phi_n-electron 耦合歸一化閉合 (O207 交回 路線③)
+==============================================================================
+
+--- PART A. v_SM 結構來源 (O37 section8 -> O40 scripts/01b) ---
+  M0 (O86 常數)      = 27.900915 MeV
+  M0 (O38/O40 公式)  = 27.9009145112 MeV
+  M0 公式 vs 常數 dev = 1.75185e-6 %
+  v_eff = M0*sqrt(2)  = 39.4578523956 MeV
+  sum gamma_n (n=1..44)     = 90.0
+  sum gamma_n (n even 1..44)= 46.0
+  sum gamma_n (n odd  1..44)= 44.0
+  factor 88*71*(1-4/(90*35)) = 6240.06603175
+  v_SM_pred = v_eff*factor    = 246219.60442 MeV
+  v_SM_PDG  = 246.2196 GeV    = 246219.6 MeV
+  dev = 1.7949629e-6 %
+  [PASS] A1  88 = 2*N_d
+  [PASS] A2  71 = 2*N_d - 17
+  [PASS] A3  90 = sum gamma_n (n=1..44)   got 90.0
+  [PASS] A4  35 = M_tree + mu^2 = 33 + 2
+  [PASS] A5  v_eff = M0*sqrt(2) 結構
+  [PASS] A6  v_SM = v_eff*88*71*(1-4/(90*35)) 結構閉合 (dev<1e-6)   dev=1.7949629e-6 %
+  [PASS] A7  M0 公式 (O40) vs O86 常數 一致 (dev<0.2%)   dev=1.7519e-6 %
+
+--- PART B. lambda_WH 維度分析 (路線③ 核心) ---
+  lambda_WH = mu^2/123 = 0.0162601626016
+  質量維度: [lambda_WH] = 0  (四次 portal 耦合, 無量綱)
+  歸一化所需: [Lambda] = 1  (質量標度)
+  [PASS] B1  lambda_WH = 2/123 數值
+  [PASS] B2  lambda_WH == lambda_self (身份, N6)
+  [PASS] B3  維度 no-go: [lambda_WH]=0 != 1 => 任何 lambda_WH 冪次都產生唔到質量標度   結構論證 (無量綱不能供給質量標度)
+
+--- PART C. W<->H<->fermion 鏈存在性 ---
+  [present] L_WH   = lambda_WH|W|^2|H|^2  (W<->H portal)
+  [present] L_Yuk  = -sum_f y_f psibar psi H (H<->fermion)
+  [PASS] C1  L_total 含 W<->H portal (lambda_WH|W|^2|H|^2)
+  [PASS] C2  L_total 含 H<->fermion Yukawa
+  [PASS] C3  => W<->H<->fermion 鏈存在 (portal + Yukawa 同現於 L_total)
+
+--- PART D. y_n = sqrt(2)*m_n/v_SM 之 M0 相消 ---
+  m_7 = M0*omega_7 = 13.8001553018 MeV   (omega_7=0.494613001108)
+  y_7 = sqrt(2)*m_7/v_SM = 7.92640652506e-5
+  y_7 closed = omega_7/(88*71*(1-4/(90*35))) = 7.92640652506e-5
+  [PASS] D1  y_7 = sqrt(2)*m_7/v_SM (結構值 v_SM_pred)
+  [PASS] D2  y_7 = omega_7/factor (M0 相消, 純結構數)
+  [PASS] D3  M0 相消檢驗: y_7(M0) = y_7(3*M0)
+  [PASS] D4  y_7 命中 O207 值 7.93e-5 (dev<0.5%)   dev=0.04531 %
+
+--- PART E. 歸一化候選枚舉 ---
+  Lambda = v_SM  (EW VEV, 結構推導)                = 246219.6       g_7 = 5.6048159e-5 存活 (< eps_S)
+  Lambda = <W>   (W 凝聚, M0*sqrt(61.5))         = 218.8043762    g_7 = 0.063070746  被排除 (> eps_S)
+  Lambda = v_eff (IDCM 有效 VEV, M0*sqrt(2))     = 39.4578524     g_7 = 0.34974421   被排除 (> eps_S)
+  Lambda = M0    (K_chain 標度)                  = 27.900915      g_7 = 0.494613     被排除 (> eps_S)
+  [PASS] E1  Lambda=v_SM: g_7 < eps_S (存活, 邊緣)
+  [PASS] E2  Lambda=<W> : g_7 > eps_S (被排除)
+  [PASS] E3  Lambda=M0  : g_7 > eps_S (被排除)
+  [PASS] E4  所有結構標度皆 propto M0 => 比值 M0-無關 (純數)
+
+==============================================================================
+PART F. 裁定
+==============================================================================
+  (1) lambda_WH = 2/123 值本身: 維度 no-go — 無量綱 quartic 唔可以提供
+      歸一化所需既質量標度 Lambda。故「lambda_WH 作為歸一化依據」
+      按字面陳述 = 結構不可能 (FAIL)。
+  (2) 但 W<->H<->fermion 鏈存在 (C1+C2), 且歸一化標度 v_SM 有結構來源
+      (A6: v_SM = v_eff*88*71*(1-4/(90*35)), dev=1.7949629e-6 %)。
+  (3) => y_n = sqrt(2)*m_n/v_SM = omega_n/(88*71*(1-4/(90*35))) 係純結構數
+      (M0 相消, 零自由參數); y_7 = 7.9264065e-5。
+  (4) 殘餘 🟡: (a) v_SM 閉合係 post-hoc (O40 自標 '結構閉合 ✅, 預言 ❌');
+      (b) 場身份 — phi_n 係 W 玻色模態, 套用費米子 Yukawa 形式 (sqrt(2)m/v)
+      仍屬類比; 且所有結構標度皆 propto M0, 選 v_SM 而非 <W>/M0 靠 Yukawa 結構。
+
+  裁定: 路線③ 部分成立 — 標度 🟢 結構 (v_SM 已推導, 比值 M0-無關);
+        場身份 🟡 類比。O207 之 🟡 總狀態正確, 但原因由「標度未知」
+        精確化為「場身份類比」。m_7 存活 (y_7 < eps_S) 屬結構性命題,
+        但邊緣 (1.3x) 且依賴場身份假設。
+
+  PASS 21 / 21
+==============================================================================
+
+  -> data/10_vew_normalization_output.txt

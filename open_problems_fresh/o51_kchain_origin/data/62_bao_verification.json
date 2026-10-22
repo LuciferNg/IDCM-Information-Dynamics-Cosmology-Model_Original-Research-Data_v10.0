@@ -1,0 +1,27 @@
+{
+  "lambda_sync_mpc": 294.877,
+  "lambda_sync_h_inv_mpc": 198.3638,
+  "bao_peak_idcm_mpc": 147.4385,
+  "bao_peak_idcm_h_inv": 99.1819,
+  "r_drag_lcdm_mpc": 147.09,
+  "dev_pct": 0.237,
+  "eBOSS_peak_bin": {
+    "s": 97.5,
+    "xi": 0.871928,
+    "err": 0.073554
+  },
+  "detected_harmonics": [
+    3,
+    5,
+    6,
+    7,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "pass": 1,
+  "fail": 0
+}

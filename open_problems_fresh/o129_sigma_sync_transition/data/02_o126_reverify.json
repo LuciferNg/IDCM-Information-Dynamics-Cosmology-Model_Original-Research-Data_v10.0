@@ -1,0 +1,40 @@
+{
+  "script": "O129/02_o126_section_d_reverify.py",
+  "date": "2026-09-27",
+  "D1": {
+    "z_c": "3/5",
+    "phi_inv": 0.6180339887498949,
+    "gap_abs": 0.01803398874989485,
+    "gap_rel_pct": 3.0056647916491412
+  },
+  "D2": {
+    "ell_of_0.6": 0.33903595255631885,
+    "rungs": [
+      0,
+      3,
+      15,
+      63
+    ],
+    "z_eff": 0.7213475204444817
+  },
+  "D3": {
+    "Omega_Lambda": "41/60",
+    "value": 0.6833333333333333,
+    "planck_pull_sigma": -0.994
+  },
+  "D4": {
+    "chi2_old_7pt": 18.092,
+    "chi2_old_per_dof": 2.5846,
+    "chi2_new_7pt": 1.7154,
+    "chi2_new_per_dof": 0.2451,
+    "LRG1_pull_old": -3.053,
+    "LRG1_pull_new": -0.934
+  },
+  "D5": {
+    "verdict": "no signal at discrete rungs (O76)"
+  },
+  "verdict": "O126 section D retraction STANDS (5/5 confirmed)",
+  "pass": 18,
+  "fail": 0,
+  "claims": 4
+}

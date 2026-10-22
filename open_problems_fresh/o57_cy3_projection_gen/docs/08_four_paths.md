@@ -45,12 +45,12 @@ Lucas 高階能階: V_n = Lₙφ+Lₙ₋₁
 → Lucas 階梯自然預言 Λ ~ 10^-120!
 ```
 
-### 中微子質量 🔴 超上限 → 🟢 修正：p6 機制（scripts/59）
+### 中微子質量 🔴 超上限 → 🟢 修正：P6 機制（scripts/59）
 
 ```
 八期 55 用 M₀·e^{-V1} 估 ν = 10 keV（錯框架！）
 
-修正: 中微子 = W-field p6 模式 (main_problems/p15_early_derivations/docs/neutrino_p6_mode.md)
+修正: 中微子 = W-field P6 模式 (main_problems/p15_early_derivations/docs/neutrino_p6_mode.md)
   m_ν = (γ₆×v)²/M_comp
   γ₆ = 4sin²(6π/88) = 0.1807
   v = 246 GeV, M_comp = 3.69e13 GeV (Z₅ orbifold)
@@ -59,7 +59,7 @@ Lucas 高階能階: V_n = Lₙφ+Lₙ₋₁
 ✅ m_τ/m_μ = m_μ/m_e = φ (0.000%)
 ✅ ν_τ = 0.0536, ν_μ = 0.0331, ν_e = 0.0205 eV
 
-→ 中微子係 p6 模式 + φ-power 世代，唔係 seesaw!
+→ 中微子係 P6 模式 + φ-power 世代，唔係 seesaw!
 ```
 
 ## 四、路徑 1: 9 費米子 χ²（scripts/56）🔴
@@ -103,7 +103,7 @@ V2−V3 間距 ↔ lepton gen3/gen1: Δln = 0.318
 | 2: 3-form | 3×12 block 結構 | 🟡 混合角 ~1° 唔似 CKM |
 | 3: 隨穿 | 3 簡併本徵值 | ✅ 世代區隔線索 |
 | 4a: Λ | **L₁₀φ+L₉ = 275 ≈ 276 (0.5%)** | 🟢 **新閉合!** |
-| 4b: 中微子 | 🔴 Σm_ν=30keV → **🟢 p6 修正: Δm²₃₁=2.450e-3 (0.66%), m_ν=φ-power** | 🟢 **p6 閉合** |
+| 4b: 中微子 | 🔴 Σm_ν=30keV → **🟢 P6 修正: Δm²₃₁=2.450e-3 (0.66%), m_ν=φ-power** | 🟢 **P6 閉合** |
 
 ## 七、檔案
 
@@ -113,5 +113,5 @@ scripts/55_predictions.py  ✅ 🟢 Λ 預言 + 🔴 ν 上限 (0/1)
 scripts/56_chi2_9fermion.py ✅ 誠實 χ² 失敗 (0/0)
 scripts/57_3form.py        ✅ 3×12 block 結構 (0/0)
 scripts/58_3x3_structure.py ✅ 世代比匹配 (0/0)
-scripts/59_neutrino_p6.py  ✅ 🟢 中微子 p6 修正 (3/3)
+scripts/59_neutrino_p6.py  ✅ 🟢 中微子 P6 修正 (3/3)
 ```

@@ -1,0 +1,160 @@
+=== range [0,480) start 2026-10-01T04:13:29+08:00
+E4 built 3.8 s, |E4|max 120
+range [0,480): 2411.8 s (40.20 min); partial saved as r5_part_000000_000480.npz
+  shard 00 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 01 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 02 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 03 partial: raw_full 512/-512 | party 512/-512 | eight 480/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 04 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 05 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06 partial: raw_full 512/-512 | party 512/-512 | eight 512/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 08 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 09 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 10 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 11 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+=== range [0,480) exit=0 end 2026-10-01T04:53:45+08:00
+=== range [480,960) start 2026-10-01T04:53:45+08:00
+E4 built 3.9 s, |E4|max 120
+range [480,960): 2434.7 s (40.58 min); partial saved as r5_part_000480_000960.npz
+  shard 00 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 01 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 02 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 03 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 04 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 05 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 08 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 09 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 10 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 11 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+=== range [480,960) exit=0 end 2026-10-01T05:34:24+08:00
+=== range [960,1440) start 2026-10-01T05:34:24+08:00
+E4 built 3.9 s, |E4|max 120
+range [960,1440): 2425.5 s (40.43 min); partial saved as r5_part_000960_001440.npz
+  shard 00 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 01 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 02 partial: raw_full 512/-512 | party 512/-512 | eight 480/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 03 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 04 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 05 partial: raw_full 512/-512 | party 512/-512 | eight 512/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 08 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 09 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 10 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 11 partial: raw_full 512/-512 | party 512/-512 | eight 480/-512 | anti_v3 480/-480 | anti_str 480/-480
+=== range [960,1440) exit=0 end 2026-10-01T06:14:54+08:00
+=== range [1440,1920) start 2026-10-01T06:14:54+08:00
+E4 built 3.9 s, |E4|max 120
+range [1440,1920): 2416.1 s (40.27 min); partial saved as r5_part_001440_001920.npz
+  shard 00 partial: raw_full 512/-512 | party 512/-512 | eight 480/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 01 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 02 partial: raw_full 512/-512 | party 512/-512 | eight 512/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 03 partial: raw_full 512/-512 | party 512/-512 | eight 512/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 04 partial: raw_full 512/-512 | party 512/-512 | eight 480/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 05 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 08 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 09 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 10 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 11 partial: raw_full 512/-512 | party 512/-512 | eight 512/-480 | anti_v3 480/-480 | anti_str 480/-480
+=== range [1440,1920) exit=0 end 2026-10-01T06:55:15+08:00
+=== range [1920,2400) start 2026-10-01T06:55:15+08:00
+E4 built 4.0 s, |E4|max 120
+range [1920,2400): 2420.3 s (40.34 min); partial saved as r5_part_001920_002400.npz
+  shard 00 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 01 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 02 partial: raw_full 512/-512 | party 512/-512 | eight 512/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 03 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 04 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 05 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 08 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 09 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 10 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 11 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+=== range [1920,2400) exit=0 end 2026-10-01T07:35:39+08:00
+=== range [2400,2880) start 2026-10-01T07:35:39+08:00
+E4 built 3.9 s, |E4|max 120
+range [2400,2880): 2439.4 s (40.66 min); partial saved as r5_part_002400_002880.npz
+  shard 00 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 01 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 02 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 03 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 04 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 05 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 08 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 09 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 10 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 11 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+=== range [2400,2880) exit=0 end 2026-10-01T08:16:23+08:00
+=== range [2880,3360) start 2026-10-01T08:16:23+08:00
+E4 built 3.9 s, |E4|max 120
+range [2880,3360): 2407.0 s (40.12 min); partial saved as r5_part_002880_003360.npz
+  shard 00 partial: raw_full 512/-512 | party 512/-512 | eight 480/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 01 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 02 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 03 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 04 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 05 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 08 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 09 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 10 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 11 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+=== range [2880,3360) exit=0 end 2026-10-01T08:56:34+08:00
+=== range [3360,3844) start 2026-10-01T08:56:34+08:00
+E4 built 4.0 s, |E4|max 120
+range [3360,3844): 2462.2 s (41.04 min); partial saved as r5_part_003360_003844.npz
+  shard 00 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 01 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 02 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 03 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 04 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 05 partial: raw_full 512/-512 | party 512/-512 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 06 partial: raw_full 480/-480 | party 480/-480 | eight 480/-480 | anti_v3 480/-480 | anti_str 480/-480
+  shard 07 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 480/-480 | anti_str 480/-480
+  shard 08 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 09 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 10 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 11 partial: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+=== range [3360,3844) exit=0 end 2026-10-01T09:37:41+08:00
+=== merge 2026-10-01T09:37:41+08:00
+E4 built 3.8 s, |E4|max 120
+merged 8 partials, wrote 12 shard artefacts
+  shard 00: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 01: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 02: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 03: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 04: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 05: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 06: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 07: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 08: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 09: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 10: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+  shard 11: raw_full 512/-512 | party 512/-512 | eight 512/-512 | anti_v3 512/-512 | anti_str 512/-512
+=== merge exit=0 2026-10-01T09:37:45+08:00
+=== aggregate 2026-10-01T09:37:45+08:00
+============================================================================================================
+O224 scripts/16 (round 5) -- exact global extremes of all Bell windows
+============================================================================================================
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o224_amplitude_complex_phase_layer/scripts/16_windows_global.py", line 585, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o224_amplitude_complex_phase_layer/scripts/16_windows_global.py", line 332, in main
+    return aggregate(nax, ids, anti, terms4)
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o224_amplitude_complex_phase_layer/scripts/16_windows_global.py", line 440, in aggregate
+    assert all(s['n_shards'] == ns for s in shards) and len(shards) == ns, (len(shards), ns)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (13, 12)
+=== aggregate exit=1 2026-10-01T09:37:47+08:00
+=== DONE 2026-10-01T09:37:47+08:00

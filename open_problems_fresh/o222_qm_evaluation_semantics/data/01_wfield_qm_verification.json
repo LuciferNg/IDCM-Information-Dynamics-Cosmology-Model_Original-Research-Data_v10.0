@@ -1,0 +1,151 @@
+{
+ "pass": 21,
+ "fail": 0,
+ "claims": 3,
+ "checks": [
+  {
+   "tag": "[44-mode]",
+   "name": "A1 gamma_n = omega_n^2 exact; omega_44 = 2 (Nyquist)",
+   "ok": true,
+   "detail": "max dev = 0.0 ; omega_44 = 2.0"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A2a sum_{n=1..44} gamma_n = 2(N_d+1) = 90",
+   "ok": true,
+   "detail": "sum = 90.0"
+  },
+  {
+   "tag": "[176-L]",
+   "name": "A2b sum_{k=1..88} gam_k = 178 = 2F_11 ; odd = 88 = 2N_d ; even = 90",
+   "ok": true,
+   "detail": "total = 178.0 ; odd = 88.0 ; even = 90.0"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A3a [CORRECTED] prod_{n=1..44} omega_n = 2 sqrt(N_d) = 2 sqrt(44)",
+   "ok": true,
+   "detail": "prod omega = 13.26649916142159939645973 ; 2 sqrt(44) = 13.26649916142159939645973"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A3b prod_{n=1..44} gamma_n = (prod omega)^2 = 4 N_d = 176 EXACT (spectral product)",
+   "ok": true,
+   "detail": "prod gamma = 176.0 ; 4N_d = 176"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A4 sum_n G_n(0) = sum 1/gamma_n = 1291/4 = 322.75 EXACT",
+   "ok": true,
+   "detail": "sum = 322.75 ; exact = 322.75"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A4b pitfall: omitting n=44 (Nyquist) gives 322.5 (O204 note)",
+   "ok": true,
+   "detail": "partial = 322.5 ; exact = 322.5"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A5 sum_n omega_n = 1 + cot(pi/176) (O215 cited)",
+   "ok": true,
+   "detail": "sum = 57.0165898558709402353523 ; target = 57.0165898558709402353523 ; rel dev = 3.0e-51"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A6 Z_0(beta->0) = beta^-44 / prod omega = beta^-44 / (2 sqrt(N_d)); mode count = dim H = 44",
+   "ok": true,
+   "detail": "Z0(0.001) = 7.5377553478092482747e+130 ; limit = 7.5377836144440905662e+130 ; rel dev = 3.75e-6"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A7a UV cutoff scales: a = R_world/88 ; lambda_min = R_world/44",
+   "ok": true,
+   "detail": "a = 46.93113636 Mpc (46.93) ; lambda_min = 93.86227273 Mpc (93.86)"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A7b omega_max = omega_44 = 2 (Nyquist); no UV divergence (finite spectrum)",
+   "ok": true,
+   "detail": "omega_max = 2.0"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "B1 Born p_n = gamma_n/90 ; sum_n p_n = 1 EXACT",
+   "ok": true,
+   "detail": "sum p = 1.0 ; p_7 = 0.0027182446762832085508 (gamma_7/sum)"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "B2a B(n) = L10/(2N_d) = 123/88 ; dE_read = N_d*B = 61.5 = <W>^2",
+   "ok": true,
+   "detail": "B = 1.3977272727272727273 ; dE = 61.5 ; <W>^2 = 61.5"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "B2b dim H forced: 61.5/B(n) = 44 EXACT ; E_min = 123/176",
+   "ok": true,
+   "detail": "61.5/B = 44.0 ; E_min = 0.69886363636363636364"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "B3a Gamma = N_d*f_ring = 1/(2*tick) ; vs O138 registered 1.647400e-17",
+   "ok": true,
+   "detail": "Gamma = 1.64743364606e-17 ; 1/(2tick) = 1.64743364606e-17 ; rel dev vs reg = 2.04e-5"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "B3b tick = T_44 = T_sync/(2N_d) = 0.96176 Gyr ; tau_deco = T_ring/N_d = 2*tick = 1.923521 Gyr",
+   "ok": true,
+   "detail": "tick = 0.9617613636 Gyr ; tau_deco = 1.923522727 Gyr"
+  },
+  {
+   "tag": "[scale-free]",
+   "name": "B4a 44 zeros s_n = 1/(n+1/2) and 44 poles p_n = 1/n strictly interleave",
+   "ok": true,
+   "detail": "pattern head = pzpzpzpzpzpz ..."
+  },
+  {
+   "tag": "[scale-free]",
+   "name": "B4b N'(zero) = 0 (super-attracting) ; N(p+eps) = p+2eps (N'(pole) = 2, repelling)",
+   "ok": true,
+   "detail": "max |N(z+eps)-z| = 2.28e-16 ; max rel dev at pole = 5.93e-15"
+  },
+  {
+   "tag": "[scale-free]",
+   "name": "B4c 199 interior convex combinations: exactly 1 IS the pole 1/2 (a fixed point); other 198 residual > 0",
+   "ok": true,
+   "detail": "pole hit at alpha = 0.375 (s = 1/2, algebraic alpha = 3/8 = 0.375) ; 198/198 positive ; min residual = 0.00132672 at alpha = 0.37"
+  },
+  {
+   "tag": "[scale-free]",
+   "name": "B4d O138's cited 9.387 reproduced by their float64 FD(h=1e-7) at LAM=406.1; exact analytic value is O(1e-2) -> cited magnitude = numerical artifact, positivity survives",
+   "ok": true,
+   "detail": "float64 FD = 9.387387 (O138: 9.387) ; exact = 0.023115948"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "B5 v_g(k) = c cos(pi k/88): v_g(44) = 0 ; v_g(22) = cos(pi/4) = 1/sqrt(2)",
+   "ok": true,
+   "detail": "v_1/c = 0.99936282565699169131 ; v_22/c = 0.7071067811865475244 ; v_44/c = 0"
+  },
+  {
+   "tag": "[claim]",
+   "name": "C1 O221: 'IDCM = QM 之離散實現, 非導出 QM'",
+   "ok": null,
+   "detail": "quoted, not re-derived here"
+  },
+  {
+   "tag": "[claim]",
+   "name": "C2 'Lazy Load' not formalised in v10.0 corpus",
+   "ok": null,
+   "detail": "grep -i lazy = 0 hits (2026-09-29)"
+  },
+  {
+   "tag": "[claim]",
+   "name": "C3 Bell inequality / CHSH / Tsirelson untouched in corpus",
+   "ok": null,
+   "detail": "0 hits (see docs/01)"
+  }
+ ]
+}

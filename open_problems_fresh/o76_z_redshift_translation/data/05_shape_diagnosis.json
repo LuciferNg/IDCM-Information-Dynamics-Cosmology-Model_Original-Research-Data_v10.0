@@ -1,0 +1,9 @@
+{
+  "C_fit_sn": 0.6524,
+  "chi2_C_fixed": 2096.0,
+  "chi2_C_fit": 2035.5,
+  "chi2_desi_fixed": 12.82,
+  "chi2_desi_fit": 149.74,
+  "pass": 0,
+  "fail": 0
+}

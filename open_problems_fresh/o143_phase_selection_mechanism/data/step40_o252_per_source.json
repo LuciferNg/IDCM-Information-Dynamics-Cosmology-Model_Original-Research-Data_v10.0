@@ -1,0 +1,71 @@
+{
+ "P_structure": "60x88 Gaussian window, H_88 -> 60 nodes, no per-source dim",
+ "node_NN_deg": {
+  "min": 26.09131943022442,
+  "median": 26.091340245045508,
+  "max": 26.091382349365222
+ },
+ "sky_covering_radius_deg": 22.583777933671936,
+ "sources": [
+  {
+   "id": "A",
+   "field": "GOODS-N",
+   "nearest_node_dist_deg": 52.0,
+   "nearest_node_idx": 1,
+   "k_class": 17
+  },
+  {
+   "id": "C",
+   "field": "GOODS-N",
+   "nearest_node_dist_deg": 52.0,
+   "nearest_node_idx": 1,
+   "k_class": 17
+  },
+  {
+   "id": "I",
+   "field": "GOODS-N",
+   "nearest_node_dist_deg": 52.0,
+   "nearest_node_idx": 1,
+   "k_class": 17
+  },
+  {
+   "id": "J",
+   "field": "GOODS-N",
+   "nearest_node_dist_deg": 52.0,
+   "nearest_node_idx": 1,
+   "k_class": 17
+  },
+  {
+   "id": "E",
+   "field": "EGS",
+   "nearest_node_dist_deg": 5.0,
+   "nearest_node_idx": 1,
+   "k_class": 17
+  },
+  {
+   "id": "K",
+   "field": "EGS",
+   "nearest_node_dist_deg": 5.0,
+   "nearest_node_idx": 1,
+   "k_class": 17
+  }
+ ],
+ "signature_corr": {
+  "A-C": 0.999999,
+  "A-I": 0.999994,
+  "A-J": 1.0,
+  "A-E": 0.644684,
+  "A-K": 0.645225,
+  "C-I": 0.999997,
+  "C-J": 0.999998,
+  "C-E": 0.644318,
+  "C-K": 0.644856,
+  "I-J": 0.999996,
+  "I-E": 0.645082,
+  "I-K": 0.645613,
+  "J-E": 0.645026,
+  "J-K": 0.645565,
+  "E-K": 0.999992
+ },
+ "verdict": "per_source_column_density_NOT_derivable: no per-source dim in P; node lattice resolution ~26 deg; node amplitudes GRF-null; max identity = R3 k-class"
+}

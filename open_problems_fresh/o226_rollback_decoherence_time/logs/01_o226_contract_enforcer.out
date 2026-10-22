@@ -1,0 +1,31 @@
+========================================================================================================
+O226 scripts/01 -- contract enforcer (rules: o226-r1-contract-v1)
+========================================================================================================
+[PASS] C1   frozen contract sha256 matches the pinned value  --  sha256 = f8d7d8fe6790cfdb1f905271a1e4e2e2cea2732311c5d3b6cc7d1f31a28b476d
+[PASS] C2   all required sections and pre-registration tags literally present  --  required = 32 ; missing = []
+[PASS] C3   every declared frozen input pin exists on disk (read-only)  --  pins = 7 ; absent = []
+[PASS] C4   AST scan: no float/math/random/numpy in the engines (machine = 0 float literals)  --  02:imports=[] names=[] float_lits=0 | 03:imports=[] names=[] float_lits=0 | 04:imports=[] names=[] float_lits=0 | 05:imports=[] names=[] float_lits=0 | 06:imports=[] names=[] float_lits=0
+[PASS] C5   engines 02-06 never import/exec upstream code: the only permitted dynamic load is the local frozen machine scripts/02_o226_ledger_machine.py  --  offenders = []
+[PASS] C6   R2 contract docs/06_o226_r2_contract.md is frozen: sha256 matches the pinned value  --  sha256 = 784e6a2beaaf1025ea9a04bc27c9d9a574d1343f49877db5f684c72a2e81258b
+[PASS] C7   R2 contract carries every pre-registration tag and judgement item literally  --  required = 19 ; missing = []
+[PASS] C4b  R2 AST scan (scripts 08-09 obey the same exact-arithmetic ban; the R2 machine = 0 float literals) -- additive check, C4 untouched  --  08:08_o226_class_machine.py imports=[] names=[] float_lits=0 | 09:09_o226_class_audit.py imports=[] names=[] float_lits=0
+[PASS] C5b  R2 engines: 08 may load only the local R1 machine, 09 must be self-contained (no dynamic load at all); no upstream code, no sys.path mutation  --  offenders = []
+[PASS] C8   R3 contract docs/09_o226_r3_contract.md is frozen: sha256 matches the pinned value  --  sha256 = 77cfc7754e2c0ccce47d961b5c30538ee4cc48f5685c39b8d418c5a503308828
+[PASS] C9   R3 contract carries every pre-registration tag, judgement item and hypothesis tag literally  --  required = 22 ; missing = []
+[PASS] C4c  R3 AST scan (scripts 10-11 obey the same exact-arithmetic ban; the R3 machine = 0 float literals) -- additive check  --  10:10_o226_value_closed_form.py imports=[] names=[] float_lits=0 | 11:11_o226_value_audit.py imports=[] names=[] float_lits=0
+[PASS] C5c  R3 engines: 10 may load only the local R1 machine, 11 must be self-contained (no dynamic load at all); no upstream code, no sys.path mutation  --  offenders = []
+[PASS] C10  R4 contract docs/12_o226_r4_contract.md is frozen: sha256 matches the pinned value  --  sha256 = 59b325b3dedfef85f60871bf633570fc707586130a565fbf52d068efbc7d2e5a
+[PASS] C11  R4 contract carries every pre-registration tag, judgement item and item tag literally  --  required = 22 ; missing = []
+[PASS] C4d  R4 AST scan (scripts 12-13 obey the same exact-arithmetic ban; the R4 machine = 0 float literals) -- additive check  --  12:12_o226_w_closed_form.py imports=[] names=[] float_lits=0 | 13:13_o226_w_audit.py imports=[] names=[] float_lits=0
+[PASS] C5d  R4 engines: 12 may load only the local R1 machine, 13 must be self-contained (no dynamic load at all); no upstream code, no sys.path mutation  --  offenders = []
+[PASS] C12  R5 contract docs/15_o226_r5_contract.md is frozen: sha256 matches the pinned value  --  sha256 = 84c9b2ec50d238beb70a6c7f2fbfaf044cd405978c5f0f2567ab179449f1f865
+[PASS] C13  R5 contract carries every pre-registration tag, judgement item and item tag literally  --  required = 17 ; missing = []
+[PASS] C4e  R5 AST scan (scripts 14-15 obey the same exact-arithmetic ban; the R5 machine = 0 float literals) -- additive check  --  14:14_o226_orbit_factorisation.py imports=[] names=[] float_lits=0 | 15:15_o226_orbit_audit.py imports=[] names=[] float_lits=0
+[PASS] C5e  R5 engines: 14 may load only the local R1 machine, 15 must be self-contained (no dynamic load at all); no upstream code, no sys.path mutation  --  offenders = []
+[PASS] C14  chain completeness: every chain round carries its contract doc, its verdict/handoff doc, its data file and all of its scripts; and every .py in scripts/ is listed by the chain record (nothing missing, no unrecorded script)  --  missing = [] ; on disk but unlisted = [] ; listed but absent = []
+[PASS] C15  chain coverage: every chain script has its canonical journal (logs/<...>.out carrying a RESULT line; the _probe_* diagnostics have none by design) and every data/*.json has at least one producing script  --  journals missing/empty = [] ; data with no producer = []
+[PASS] C4f  closeout AST scan: 16 and 17 obey the exact-arithmetic ban (0 float literals, no banned imports/names) and never address a parent-relative path; only 16 (the chain re-runner) may import subprocess, 17 stays read-only -- additive check  --  16_o226_closeout_audit.py imports=[] names=[] float_lits=0 "../"=0 subprocess=True | 17_o226_closeout_verify.py imports=[] names=[] float_lits=0 "../"=0 subprocess=False
+[PASS] C5f  closeout load restrictions: 16/17 perform no non-permitted dynamic load and no sys.path mutation (they re-read frozen data only) -- additive check  --  offenders = []
+========================================================================================================
+RESULT: 25/25 PASS   GATE = OPEN
+========================================================================================================

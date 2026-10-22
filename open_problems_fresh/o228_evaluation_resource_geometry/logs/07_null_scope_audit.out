@@ -1,0 +1,14 @@
+==============================================================================================================
+O228 scripts/07 -- R4: scope audit of the exact null (distinct 4-subsets vs with-replacement)
+==============================================================================================================
+   m= 6 nbis= 10  Mobius=195  brute=195  match=True  (0.0 s)
+   m= 8 nbis= 35  Mobius=22050  brute=22050  match=True  (0.1 s)
+[PASS] J1   the C17 Mobius code path (re-implemented independently) reproduces brute force for the number of separating 4-subsets among ALL bisections of m points, at m = 6 and 8  --  m=6 195==195; m=8 22050==22050
+[PASS] J1b  at m = 10 the Mobius formula agrees with an independent distinct-4-subset MC (3e6 draws) within 5 sigma  --  Mobius p = 1436400/10009125 = 0.143509 ; MC(3000000) = 0.143514 ; |dev| = 5.29e-06 ; 5 sigma = 1.01e-03
+[PASS] J4   the exact reduction of the C17 null is 6240/180251 in lowest terms (Mobius F_4 = 6240, C(462,4) = 180251*? -> see detail)  --  Mobius F_4(m=12) = 64864800 ; C(462,4) = 1873709145 ; p0 = 6240/180251 = 0.03461839 ; recorded 6240/180251 = 0.03461839
+[PASS] J2   a 1e7-draw MC of DISTINCT 4-subsets (uniform, Mersenne Twister) lies within 5 sigma of the exact p0 = 6240/180251  --  10000000 draws -> 0.03459700 ; exact = 0.03461839 ; |dev| = 2.14e-05 ; 5 sigma = 2.89e-04
+[PASS] J3   the with-replacement draw is a DIFFERENT quantity from the distinct-4-subset fraction: reported side by side (> 3 sigma apart), so the first H1 run compared two different scopes  --  distinct = 0.034597 ; with-replacement = 0.034154 ; difference = -0.000443 = 5.7 sigma
+==============================================================================================================
+RESULT: 5/5 PASS   elapsed 32.8 s
+==============================================================================================================
+exit=0

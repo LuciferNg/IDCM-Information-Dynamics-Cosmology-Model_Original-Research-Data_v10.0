@@ -1,0 +1,77 @@
+{
+ "rules_version": "d6-contract-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "group rebuilt: |2I| = 120 (closed)",
+   "ok": true,
+   "detail": "|2I| = 120"
+  },
+  {
+   "tag": "C2",
+   "name": "62 frozen axes reproduced verbatim; h-table bijective (62/62)",
+   "ok": true,
+   "detail": "types = ['edge', 'face', 'vertex']"
+  },
+  {
+   "tag": "C3",
+   "name": "contract declares all 13 predicate cells",
+   "ok": true,
+   "detail": "declared = ['P1a', 'P1b', 'P1c', 'P2a', 'P2b', 'P2c', 'P2d', 'P3a', 'P3b', 'P3c', 'P4a', 'P4b', 'P4c']"
+  },
+  {
+   "tag": "C4",
+   "name": "provenance: O210 carries the composition law T = K_chain (x) K_tree",
+   "ok": true,
+   "detail": "found in o210_causal_tensor_algebra"
+  },
+  {
+   "tag": "C5",
+   "name": "G6 witness: O210 carries NO dimensions for K_chain / K_tree (P1c stays provenance-only)",
+   "ok": true,
+   "detail": "dimension expressions found = False"
+  },
+  {
+   "tag": "C6",
+   "name": "frozen ledger rules: top-only access, append-only push, pop used only for the rollback",
+   "ok": true,
+   "detail": "top_only=True append=True pop=True"
+  },
+  {
+   "tag": "C7",
+   "name": "frozen read operator is a pure function of (state, setting) with locality scope read(G, ctx)",
+   "ok": true,
+   "detail": "read(G, ctx) present"
+  },
+  {
+   "tag": "C8",
+   "name": "register: O222/D6 registered before any number (pre-number discipline)",
+   "ok": true,
+   "detail": "found=True"
+  },
+  {
+   "tag": "C9",
+   "name": "cited B3R2 values verifiable: budget-feasible all4 = 16/15 (E1) / 13/15 (E2); unrestricted = 2 / 3",
+   "ok": true,
+   "detail": "B3R2 14/14=True ; A2 20/20=True"
+  },
+  {
+   "tag": "C10",
+   "name": "impl AST gate: no trig / no float literal / no numpy-scipy-math / no random",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "tag": "C11",
+   "name": "cell parity: the impl computes exactly the 13 pre-registered cells",
+   "ok": true,
+   "detail": "impl cells = ['P1a', 'P1b', 'P1c', 'P2a', 'P2b', 'P2c', 'P2d', 'P3a', 'P3b', 'P3c', 'P4a', 'P4b', 'P4c']"
+  },
+  {
+   "tag": "C12",
+   "name": "frozen semantics are IMPORTED, not re-implemented (no local read / run_pair)",
+   "ok": true,
+   "detail": "local defs = ['load', 'mul5', 'canon', 'rank_q', 'replay_protocol', 'main', 'find', 'union', 'seq_of', 'observe']"
+  }
+ ]
+}

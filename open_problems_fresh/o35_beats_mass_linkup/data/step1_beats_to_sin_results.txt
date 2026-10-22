@@ -1,0 +1,9 @@
+O35 Step 1 — 拍頻 → sin 比值 link-up
+日期: 2026-08-19
+
+[1] 和差化積恆等式: PASS (max dev 5.55e-16)
+[2] 拍頻結構 cos×sin: PASS
+[3] O34 質量比重現: PASS
+[4] beats 振幅比結構 (倒數/鏈式/週期): PASS
+[5] 拍頻資訊載於半整數模式: PASS
+總計: 5/5 PASS

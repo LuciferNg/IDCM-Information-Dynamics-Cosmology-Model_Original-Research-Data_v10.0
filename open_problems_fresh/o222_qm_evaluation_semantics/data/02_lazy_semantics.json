@@ -1,0 +1,67 @@
+{
+ "pass": 8,
+ "fail": 0,
+ "claims": 2,
+ "checks": [
+  {
+   "tag": "[D1-sem]",
+   "name": "A1 force is a pure single-valued map (1000x same triple -> identical value)",
+   "ok": true,
+   "detail": "value = 7 ; memo writes = 1"
+  },
+  {
+   "tag": "[D1-sem]",
+   "name": "A2 memo hit == cold recompute (two independent memo tables agree)",
+   "ok": true,
+   "detail": "cold = warm = mode 7"
+  },
+  {
+   "tag": "[D1-sem]",
+   "name": "A3 changed ctx = NEW thunk (distinct keys); old memo entry untouched",
+   "ok": true,
+   "detail": "keys differ = True ; |memo| = 2"
+  },
+  {
+   "tag": "[D1-sem]",
+   "name": "A4 no back-door: 10000 interleaved forces, forward vs reverse -> identical value set",
+   "ok": true,
+   "detail": "|values| = 44 (expect 44) ; memo entries = 44"
+  },
+  {
+   "tag": "[44-mode]",
+   "name": "A5 expanded form sum_n c_n|n> with c_n = gamma_n/90: sum c_n = 1 and sum c_n^2 matches Born weights",
+   "ok": true,
+   "detail": "sum c = 1.0 ; sum c^2 = 0.033580246913580246914"
+  },
+  {
+   "tag": "[O138]",
+   "name": "A6 collapse thunk: mixed state -> EXACT single outcome in finite steps (200 cap) with quadratic error law",
+   "ok": true,
+   "detail": "steps = 7 (exact hit) ; e_{k-1}/e_{k-2}^2 = 0.0002294 ; e tail = 0.00132, 4.02e-10, 3.71e-23, 0.0"
+  },
+  {
+   "tag": "[D1-sem]",
+   "name": "A7 [mechanical] wave-like read resolves NO node (support = all 44, 1 component) vs particle-like read pins 1 node",
+   "ok": true,
+   "detail": "support(marg) = 44 nodes (1 component) ; support(eig) = 1 node"
+  },
+  {
+   "tag": "[D1-sem]",
+   "name": "A8 negative control: multi-valued force -> value set size > 1 for one triple (hence ruling (a))",
+   "ok": true,
+   "detail": "5 distinct values for a single (gen,sigma,ctx) -- so A1/A4 would REJECT it"
+  },
+  {
+   "tag": "[C1]",
+   "name": "C1-DEF (frozen)",
+   "ok": null,
+   "detail": "Read ctx is WAVE-like iff Aut(ctx) is preserved (|Stab_I(ctx)| >= 2, memo support connected); PARTICLE-like iff |Stab_I(ctx)| = 1 (full Aut breaking, memo support splits). ell_read is NOT a premise -- it is the DERIVED index: the smallest rank r at which a lattice-aligned ctx admits |Stab| = 1."
+  },
+  {
+   "tag": "[C1]",
+   "name": "C1-CROSSCHECK",
+   "ok": null,
+   "detail": "O143/O223 claim ell <= 2 protected / ell = 3 first breaking. scripts/03 computes the stabilizer ladder by brute force from lattice primitives and reports agreement or a flagged discrepancy (no retrofitting)."
+  }
+ ]
+}

@@ -1,0 +1,183 @@
+{
+  "T1_phi_identity": {
+    "BxL5": 44.00000000000001,
+    "L8_minus_L2": 44,
+    "match": true,
+    "conclusion": "44 = L₈−L₂ = 47−3 係 φ 代數必然"
+  },
+  "T2_minimal_odd_lucas": {
+    "odd_lucas": {
+      "1": 1,
+      "3": 4,
+      "5": 11,
+      "7": 29,
+      "9": 76,
+      "11": 199
+    },
+    "smallest_integer_odd_lucas": {
+      "3": 4,
+      "5": 11
+    },
+    "L1_trivial": true,
+    "conclusion": "L₁=1 係拓撲退化解 (B≥2, rank≥11 硬性), 最小非退化奇 Lucas 對 = (L₃, L₅)"
+  },
+  "T3_kchain_gt_ktree": {
+    "K_tree": 33,
+    "candidates": [
+      {
+        "Lm": 4,
+        "Ln": 11,
+        "product": 44
+      },
+      {
+        "Lm": 1,
+        "Ln": 76,
+        "product": 76
+      },
+      {
+        "Lm": 4,
+        "Ln": 29,
+        "product": 116
+      },
+      {
+        "Lm": 11,
+        "Ln": 11,
+        "product": 121
+      },
+      {
+        "Lm": 1,
+        "Ln": 199,
+        "product": 199
+      },
+      {
+        "Lm": 4,
+        "Ln": 76,
+        "product": 304
+      },
+      {
+        "Lm": 11,
+        "Ln": 29,
+        "product": 319
+      },
+      {
+        "Lm": 4,
+        "Ln": 199,
+        "product": 796
+      },
+      {
+        "Lm": 11,
+        "Ln": 76,
+        "product": 836
+      },
+      {
+        "Lm": 29,
+        "Ln": 29,
+        "product": 841
+      },
+      {
+        "Lm": 11,
+        "Ln": 199,
+        "product": 2189
+      },
+      {
+        "Lm": 29,
+        "Ln": 76,
+        "product": 2204
+      },
+      {
+        "Lm": 29,
+        "Ln": 199,
+        "product": 5771
+      },
+      {
+        "Lm": 76,
+        "Ln": 76,
+        "product": 5776
+      },
+      {
+        "Lm": 76,
+        "Ln": 199,
+        "product": 15124
+      },
+      {
+        "Lm": 199,
+        "Ln": 199,
+        "product": 39601
+      }
+    ],
+    "smallest_gt_33": 44,
+    "conclusion": "44 係最小 > K_Tree(33) 嘅 Lucas 乘積"
+  },
+  "T4_su12_cy3_lock": {
+    "su12_rank": 11,
+    "su12_rank_Lucas": 5,
+    "B_variants": {
+      "B=3": "h11=38≠36 ❌",
+      "B=4": "h11=36=36 ✅",
+      "B=5": "h11=34≠36 ❌"
+    },
+    "conclusion": "su(12) rank=11=L₅, CY₃ 鎖定 B=4=L₃ → Nd=44"
+  },
+  "T5_integer_constraint": {
+    "Nd_candidates": [
+      {
+        "B": 2,
+        "L": 18,
+        "Nd": 36
+      },
+      {
+        "B": 3,
+        "L": 11,
+        "Nd": 33
+      },
+      {
+        "B": 3,
+        "L": 18,
+        "Nd": 54
+      },
+      {
+        "B": 4,
+        "L": 11,
+        "Nd": 44
+      },
+      {
+        "B": 4,
+        "L": 18,
+        "Nd": 72
+      },
+      {
+        "B": 5,
+        "L": 7,
+        "Nd": 35
+      },
+      {
+        "B": 5,
+        "L": 11,
+        "Nd": 55
+      },
+      {
+        "B": 5,
+        "L": 18,
+        "Nd": 90
+      },
+      {
+        "B": 7,
+        "L": 7,
+        "Nd": 49
+      },
+      {
+        "B": 7,
+        "L": 11,
+        "Nd": 77
+      },
+      {
+        "B": 7,
+        "L": 18,
+        "Nd": 126
+      }
+    ],
+    "conclusion": "只有 B=4, L=11 畀出 Nd=44"
+  },
+  "status": "🟢 44 唯一性五層獨立閉合 — T2+T3 雙重鎖定封死所有漏洞",
+  "remaining_gap": "su(12) 本身嘅來源 (Z₃ orbifold 起源, O59 延伸)"
+}

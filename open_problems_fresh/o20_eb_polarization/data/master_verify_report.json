@@ -1,0 +1,427 @@
+{
+  "test_results": [
+    {
+      "name": "F\u2086 = 8",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "L\u2084 = 7",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "B = 4 (MERA \u5206\u652f\u56e0\u5b50)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "F\u2088 = 21",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "F\u2085 = 5",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "\u534a\u7bc0\u9ede\u57fa\u7dda = 44/2 = 22",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=1: n_int = 8",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=2: n_int = 15",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=3: n_int = 22",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=4: n_int = 29",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=5: n_int = 36",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=6: n_int = 43",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=7: n_int = 50",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "n_int \u5e8f\u5217\u5b8c\u6574 (7/7)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "n_int \u7b49\u5dee\u6578\u5217\u516c\u5dee 7",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "CAMB raw EE \u5cf0\u6578 = 7",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=1: CAMB raw EE \u2113=395",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=2: CAMB raw EE \u2113=688",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=3: CAMB raw EE \u2113=991",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=4: CAMB raw EE \u2113=1300",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=5: CAMB raw EE \u2113=1610",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=6: CAMB raw EE \u2113=1924",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=7: CAMB raw EE \u2113=2238",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=1: \u03c6 = 43",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=1: \u0394 = 21 = F\u2088=21",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=2: \u03c6 = 28",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=2: \u0394 = 6 = 22\u2212B\u00b2=6",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=3: \u03c6 = 23",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=3: \u0394 = 1 = B\u2070=1",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=4: \u03c6 = 24",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=4: \u0394 = 2 = \u221aB=2",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=5: \u03c6 = 26",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=5: \u0394 = 4 = B=4",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=6: \u03c6 = 32",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=6: \u0394 = 10 = 2F\u2085=10",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=7: \u03c6 = 38",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=7: \u0394 = 16 = B\u00b2=16",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=1: \u2113_E = 395 vs CAMB 395 (dev=0)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=2: \u2113_E = 688 vs CAMB 688 (dev=0)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=3: \u2113_E = 991 vs CAMB 991 (dev=0)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=4: \u2113_E = 1300 vs CAMB 1300 (dev=0)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=5: \u2113_E = 1610 vs CAMB 1610 (dev=0)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=6: \u2113_E = 1924 vs CAMB 1924 (dev=0)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=7: \u2113_E = 2238 vs CAMB 2238 (dev=0)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=1: \u2113_E = 395 (CAMB=395, dev=+0.0000%)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=2: \u2113_E = 688 (CAMB=688, dev=+0.0000%)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=3: \u2113_E = 991 (CAMB=991, dev=+0.0000%)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=4: \u2113_E = 1300 (CAMB=1300, dev=+0.0000%)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=5: \u2113_E = 1610 (CAMB=1610, dev=+0.0000%)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=6: \u2113_E = 1924 (CAMB=1924, dev=+0.0000%)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "k=7: \u2113_E = 2238 (CAMB=2238, dev=+0.0000%)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5cf0\u6578 = 12",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 1: (310,468) \u9593\u8ddd=158",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 1: \u4e2d\u9ede=389 vs EE base=352 (\u0394=37)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 2: (596,749) \u9593\u8ddd=153",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 2: \u4e2d\u9ede=672 vs EE base=660 (\u0394=12)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 3: (914,1072) \u9593\u8ddd=158",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 3: \u4e2d\u9ede=993 vs EE base=968 (\u0394=25)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 4: (1220,1370) \u9593\u8ddd=150",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 4: \u4e2d\u9ede=1295 vs EE base=1276 (\u0394=19)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 5: (1537,1692) \u9593\u8ddd=155",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 5: \u4e2d\u9ede=1614 vs EE base=1584 (\u0394=30)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "TE \u5c0d 6: \u4e2d\u9ede=2158 vs EE base=1892 (\u0394=266)",
+      "status": "\ud83d\udd34",
+      "condition": false
+    },
+    {
+      "name": "TE \u6210\u5c0d\u7d50\u69cb\u78ba\u8a8d (\u22655 \u5c0d)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "BB \u5cf0\u6578 = 2",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "BB \u4e3b\u5cf0 \u2113=887 (\u2248887)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "BB \u6b21\u5cf0 \u2113=1145 (\u22481145)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "BB\u2081 = 44\u00d720+7",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "BB\u2082 = 44\u00d726+1",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "Planck EE \u5cf0\u6578 = 5",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "Planck EE k=1: \u2113=392 (expected~392)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "Planck EE k=2: \u2113=698 (expected~698)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "Planck EE k=3: \u2113=1013 (expected~1013)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "Planck EE k=4: \u2113=1310 (expected~1310)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "Planck EE k=5: \u2113=1682 (expected~1682)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "SPT EE150 \u5cf0\u6578 = 6",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "SPT EE k=1: \u2113=674 (expected~674)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "SPT EE k=2: \u2113=974 (expected~974)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "SPT EE k=3: \u2113=1324 (expected~1324)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "SPT EE k=4: \u2113=1624 (expected~1624)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "SPT EE k=5: \u2113=1924 (expected~1924)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "SPT EE k=6: \u2113=2224 (expected~2224)",
+      "status": "\u2705",
+      "condition": true
+    },
+    {
+      "name": "\u6587\u6a94\u95dc\u9375\u6578\u5b57\u8986\u84cb\u7387: 30/30",
+      "status": "\u2705",
+      "condition": true
+    }
+  ],
+  "pass_count": 82,
+  "fail_count": 1,
+  "total_tests": 83,
+  "doc_coverage": {
+    "pass": 30,
+    "total": 30
+  },
+  "status": "\ud83d\udd34 1 FAILURES"
+}

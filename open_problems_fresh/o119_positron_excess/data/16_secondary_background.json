@@ -1,0 +1,14 @@
+{
+ "f_sec_params": {
+  "A": 0.055,
+  "delta": 0.33,
+  "c": 0.005
+ },
+ "density_baseline_q": {
+  "f_sec A = 0.055": 0.98484,
+  "f_sec δ = 0.33": 0.997395,
+  "f_sec c = 0.005": 0.767635
+ },
+ "obs_secondary_level_ge10GeV": 0.053530000211591,
+ "verdict": "f_sec 三參數皆 CR 散裂/傳播量 (框架外); 密度基準 q_obs>5% 無唯一結構"
+}

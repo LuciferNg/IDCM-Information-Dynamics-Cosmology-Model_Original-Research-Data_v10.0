@@ -1,0 +1,23 @@
+{
+  "session": "2026-09-03 O116 DM abundance audit",
+  "S_gamma": 90.0,
+  "E_vis": 12,
+  "E_dm": 78,
+  "ratio_78_12": 6.5,
+  "Omega_b": 0.042229123600033634,
+  "Omega_DM": 0.2744893034002186,
+  "Omega_m": 0.3167184270002522,
+  "Omega_Lambda": 0.6832815729997478,
+  "K2": 0.02923814494919008,
+  "ratio_cy3": 6.503,
+  "ratio_linear_65": 5.9955,
+  "old_Omega_7": 0.223,
+  "closure_chain": "v9.0 66 (6.5030, 0.05%) → v10.0 O14 (13/2 = F7/L0)",
+  "warnings": [
+    "65_verify_abundance.py 自報 5.9955 (Δ=7.8%) 非閉合 — docs/02 標為 PASS 是結構檢查通過, 須註明",
+    "docs/03 拒絕 F7/L0 post-hoc 標籤, docs/01/02 使用 F7/L0 — 內部張力需協調",
+    "Ω_7 = 0.223 是 v6.0 freeze-in 舊值, 已由 Ω_DM = 0.27449 (幾何) 取代"
+  ],
+  "passed": 37,
+  "failed": 0
+}

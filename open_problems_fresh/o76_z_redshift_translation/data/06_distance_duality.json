@@ -1,0 +1,7 @@
+{
+  "DL_relation": "D_L = (1+z)\u00b7D_A (IDCM \u8ddd\u96e2\u5c0d\u5076)",
+  "note": "\u5187\u81a8\u8139 \u2192 \u5149\u5b50\u6578\u5b88\u6046 \u2192 \u5187 (1+z)\u00b3 \u56e0\u5b50",
+  "base_shape": "Milne z/(1+z) \u00d7 \u6295\u5f71\u4f38\u9577",
+  "pass": 0,
+  "fail": 0
+}

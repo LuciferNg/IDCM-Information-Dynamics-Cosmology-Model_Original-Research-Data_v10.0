@@ -1,0 +1,12 @@
+{
+  "test": "反物質存在 + 局部反投影機制",
+  "antimatter_observed": true,
+  "pair_threshold_e": 1.022,
+  "pair_threshold_p": 1876.54,
+  "pair_threshold_He4": 7454.76,
+  "pbar_p_ams": 0.00016,
+  "eplus_10GeV": 0.1,
+  "eplus_300GeV": 0.2,
+  "nBbar_nB_limit": 1e-09,
+  "conclusion": "反物質=局部反投影 (T_pipe† 局部觸發); 宏觀 n_B̄/n_B<1e-9 保持; 正電子異常方向一致 (機制開放)"
+}

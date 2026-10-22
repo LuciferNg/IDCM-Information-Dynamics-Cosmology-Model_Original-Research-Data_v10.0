@@ -1,0 +1,158 @@
+{
+ "rules": "o225-closeout2-docs-v1",
+ "n_pass": 8,
+ "n_total": 8,
+ "claims": [
+  {
+   "tag": "D1",
+   "desc": "狀態行三檔同步（SESSION_START／01_problem_record／final_result 同記 R1–R23）",
+   "ok": true,
+   "detail": "三檔 = {'SESSION_START.md': 'R1–R23', '01_problem_record.md': 'R1–R23', 'final_result.md': 'R1–R23'}"
+  },
+  {
+   "tag": "D2",
+   "desc": "markdown 圍欄平衡（docs 全部 + 三檔 root + README）",
+   "ok": true,
+   "detail": "不平衡 = []"
+  },
+  {
+   "tag": "D3",
+   "desc": "U+FFFD 損壞字元 = 0",
+   "ok": true,
+   "detail": "含壞字 = []"
+  },
+  {
+   "tag": "D4",
+   "desc": "未閉合項掃描（三級）：① 已帶書面判定 ② 3-gram 對映 docs/49 清冊 ③ 依 §六-c 接手表收口；未覆蓋必須 = 0",
+   "ok": true,
+   "detail": "殘餘 20 行；① 已帶書面判定 = 12；② 3-gram 對映清冊 = 6；③ 依 §六-c 接手表收口 = 2；未覆蓋 = []"
+  },
+  {
+   "tag": "D5",
+   "desc": "輪次覆蓋 R1–R23：每輪有（docs 合約＋結果）∧（scripts 三件套）∧（problem_record 專節）",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "D6",
+   "desc": "docs↔data 數字錨：R13–R23 之（閘／機器／審計）N/M 皆在結果檔原文且與 JSON 一致",
+   "ok": true,
+   "detail": "不匹配 = []"
+  },
+  {
+   "tag": "D7",
+   "desc": "problem_record 之 registry metadata 塊完整（10 欄）",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "D8",
+   "desc": "時序索引無重複行號；problem_record 無重複章節標題",
+   "ok": true,
+   "detail": "重複行 = []；重複節 = []"
+  }
+ ],
+ "residual": [
+  [
+   "SESSION_START.md",
+   23,
+   "1. 讀 `01_problem_record.md` §二（已確立）與 §三（🔴 判決項）"
+  ],
+  [
+   "SESSION_START.md",
+   25,
+   "3. 逐判決項給 **✅（附顯式構造）** 或 **🔴（附不可能性證明）** —— 唔接受「未明」"
+  ],
+  [
+   "SESSION_START.md",
+   61,
+   "🟡 READ 命中：1 處由 **agent scratch / cache** 讀入（唔係 repo 內絕）。（append 2026-10-09：本行歷史標記已收尾 —— O225 結構層五項閉合見 docs/71_r33_result"
+  ],
+  [
+   "01_problem_record.md",
+   453,
+   "§一 ★★ 核心結果：`Σf_tf = Σf_ft = 0` 之機制 = **逐 (a,g) 鍵之 x-和消失**（A5ac） ｜ **★★ 判決（A5ac，PASS）：對全部 62 個 (a,g) 鍵，`S_TF(a,g) = 0` 且 "
+  ],
+  [
+   "01_problem_record.md",
+   789,
+   "| 1 | **MECH-1** 非單項族（41/42）「雙項式符號一致」之**導出** | 🔴 主線 | R23 | Y4 已給 `A_0 = −(u_0u_1x_0+(u_1²+u_2²)x_1)/u_2`（精確）；單項族已由 Y1/Y"
+  ],
+  [
+   "01_problem_record.md",
+   793,
+   "| 3 | **Z10-1** `Z10` 之**選擇律** | 🔴 主線 | R10 | 已排除 值局部／排列不變／子群陪集／單鍵（R16 G4、R17 L6、R18 O2、R21 V1–V3）；已得判準（R19 Q7-c、R20 `{每"
+  ],
+  [
+   "01_problem_record.md",
+   795,
+   "| 4 | **Z10-2** `W_a ≡ ∅` 之根因 | 🔴 主線 | R15 | R15 ①③ 已歸約（`W_a = ∅ ⟺ dind 於 T_a 恆定`）；機制面未成 | `docs/31`/`32` | 以 R19/R23 之判"
+  ],
+  [
+   "01_problem_record.md",
+   797,
+   "| 5 | **STT-1** `S_TT ≡ 0` 之機制 ＋ `S_TT = ±8` 四類結構 ＋ 補集 20 之刻畫 | 🔴 主線 | R9/R11/R14 | 已排除 ε-全保型；補集律收口（≅ `Dic₅`）；`±8` 之來源（`"
+  ],
+  [
+   "01_problem_record.md",
+   799,
+   "| 6 | **CRIT-1** 跨族（非仿射）全稱充要性 | 🟡 | R10 | 已得結構式恆等式 ＋ 充分定理（E1-c 256 表全符）；非仿射族只 144/256 ⟹ 一般族之 orbit 分類未成 | `docs/21` | 對非"
+  ],
+  [
+   "01_problem_record.md",
+   801,
+   "| 7 | **CRIT-2** 判準獨立性之**反事實版本** | 🔴（原始判決項） | `§三`（R0） | R10 之非仿射族 256 表為**部分**觸及；「改架構下四判準是否真獨立」之**響應矩陣未成** | `docs/00`/"
+  ],
+  [
+   "01_problem_record.md",
+   803,
+   "| 8 | **MISC-1** 大小 4 `τ` 集之額外對 `±h` 刻畫 ＋ orbit 型別混合細目 | 🔴 | R12 | `τ = {±g_a} ∪ {±h}`（`h g_a h⁻¹ = g_a⁻¹`）已立；orbit 組成已量"
+  ],
+  [
+   "01_problem_record.md",
+   809,
+   "> **R27 後增量（append-only，見 `docs/59`）**：**CRIT-1** 🟡→✅（二層非仿射族：`⟨M,S⟩ ≅ Z₂×Z₂`、orbit 72 個、`R ≡ 0` orbit-不變、無混合 orbit ⟹ 逐 o"
+  ],
+  [
+   "01_problem_record.md",
+   813,
+   "> **R28 後增量（append-only，見 `docs/61`）**：**CRIT-2** ✅（以否定答案閉合：四判準不獨立，`rank_GF(2) = 3`；`C2`（R17 赤道對式）零判別力、`C1 ≡ C3inv`（R16 "
+  ],
+  [
+   "01_problem_record.md",
+   817,
+   "> **R29 後增量（append-only，見 `docs/63`）**：**MECH-2** ✅ closed（不等價定讞＋修式；`Λ` 奇偶律、Z10 選擇律、支撐 16 欄全不變）；**MECH-1** 🟡 維持部分閉合但否定面增"
+  ],
+  [
+   "01_problem_record.md",
+   919,
+   "- **R33**（四十六）：O225 R33 結果 —— `r33-closure-batch-v1`（五項 🟡 收口批：**5/5 全閉合**）"
+  ],
+  [
+   "final_result.md",
+   18,
+   "O222（凍結機器 ＋ no-go 邊界憲章 `docs/45`）→ **O225（R1–R23，close-out 第二輪完成）** → 餘下 🔴/⚠️ **9 項**（清冊：`docs/49_o225_closeout_r1-r23.m"
+  ],
+  [
+   "final_result.md",
+   34,
+   "Z10 與 S_TT 得量測律（`|KV(Z10)| = 4`、承載列全屬 edge、非零 g 集 100 與欄無關）。新 🔴 四項見 `docs/23_r11_results.md` §四。"
+  ],
+  [
+   "final_result.md",
+   100,
+   "R21 後 🔴 2 項（收窄）見 `docs/44_r21_results.md` §四。"
+  ],
+  [
+   "final_result.md",
+   107,
+   "R22 後 🔴 2 項見 `docs/46_r22_results.md` §四。"
+  ],
+  [
+   "final_result.md",
+   118,
+   "★ 遺留 🔴/⚠️ 9 項 ＋ 跨 O 1 項 → 清冊 `docs/49_o225_closeout_r1-r23.md` §六（register 同步）。"
+  ]
+ ],
+ "uncovered": []
+}

@@ -1,0 +1,33 @@
+O47 — R_H ↔ Ω_Λ Structural Derivation
+=====================================================================
+Date: 2026-08-31
+Status: 🟡 Structural closure (2/3 directions closed, 1 partial)
+
+Direction 1: R_H ∝ 1/Ω_Λ?
+  → 🔴 Denied: No direct proportion. R_H = N_d·a (ring geometry),
+    Ω_Λ = 4/(φ⁴-1) (energy partition), independent structural quantities.
+
+Direction 2: Ω_Λ = 61.5/90 geometric relation with R_H = 44·dx?
+  → 🟢 Closed: 88-site ring projection model.
+    Unprojected arc = R_H × (Σγ_odd − B·L)/Σγ_even
+    Projected arc = R_H × (2 + B·L)/Σγ_even
+    All zero-parameter, structural constants from O34.
+
+Direction 3: D_app(ℓ)→R_H limit (ℓ→∞) and Ω_Λ closure?
+  → 🟡 Partial: R_H = pipeline saturation distance,
+    residual energy = Ω_Λ (never projected).
+    Needs exact D_app(ℓ) function form for full closure.
+
+Key Algebraic Relations:
+  R_H = N_d · a = 44 · a
+  Ω_Λ = 4/(φ⁴-1) = 4/(3φ+1)
+  R_H · Ω_Λ = 44 · a · 4/(3φ+1) (numerical product, not structural proportion)
+  δ = 41/60 − Ω_Λ = (L₁₀φ − L₁₁)/(60(3φ+1)) (O33 exact closure)
+
+88-Site Ring Projection Model:
+  Σγ_even = 90 (world), Σγ_odd = 88 (observer)
+  Matter = 2 + B·L = 28.5 (projected energy)
+  Vacuum = 88 − 4L = 61.5 = ⟨W⟩² (unprojected energy)
+  R_H = N_d·a = 4129.94 Mpc (ring circumference)
+  Unprojected arc = R_H × 61.5/90 = R_H × 41/60
+  Projected arc = R_H × 28.5/90 = R_H × 19/60

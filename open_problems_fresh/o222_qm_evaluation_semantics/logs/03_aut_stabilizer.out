@@ -1,0 +1,35 @@
+==============================================================================================================
+O222 R1 Part B -- C1 = Aut breaking / stabilizer order   (exact Q(sqrt5), zero float)
+==============================================================================================================
+[PASS] [2I-120]        2I = <2T, q0> closes to exactly 120 UNIT quaternions, inverse-closed   |2I| = 120 ; all unit = True
+[PASS] [I-60]          I = 2I/{+-1}: exactly 60 distinct rotations (map 2-to-1)               |I| = 60 ; |2I|/|I| = 2
+[PASS] [I_h-120]       I_h = <I,-Id>: exactly 120 elements (full achiral group)               |I_h| = 120
+[PASS] [exact-Q(sqrt5)] axes DERIVED from element orders: 6 five-fold / 10 three-fold / 15 two-fold LINES |L5|=6 |L3|=10 |L2|=15
+[PASS] [rank-1]        oriented axes = full group orbits: 12 vertices / 20 face centres / 30 edge midpoints (one common scale each) |V|=12 |FC|=20 |EM|=30
+[PASS] [rank-1]        the 12 derived axes form a genuine icosahedron INTRINSICALLY: single radius, 30 min-distance edges, degree 5, 20 triangle faces radii=1 edges=30 degrees=[5] faces=20
+[PASS] [exact-Q(sqrt5)] derived vertex lines == cyclic perms of (0,+-1,+-psi) ; SWAP (x,y,z)->(x,z,y) carries them onto the textbook (0,+-1,+-phi) lines |L5|=6 == |DER|=6 ; SWAP(L5) == |TEXT|=6
+[PASS] [rank-1]        vertex axis: |orbit| = 12, |Stab_I| = 5 ; orbit x stab = |G| (orbit-stabilizer) orbit=12 stab=5 product=60
+[PASS] [rank-1]        edge axis: 30 x 2 ; face axis: 20 x 3                                  edge 30x2 ; face 20x3
+[PASS] [negative-control] rank-1 NON-lattice direction: |Stab_I| = 1 (smooth read breaks Aut at once) generic dir orbit=60 stab=1
+[PASS] [I-60]          every rotation maps the oriented axis set EXACTLY onto +-itself (raw index + sign match) |distinct (index,sign) actions| = 60
+
+--- rank ladder (lattice-primary symmetric traceless tensors) ---
+[PASS] [exact-Q(sqrt5)] permutation/parity shortcut == direct 60-element tensor action (sampled) ranks 2 and 3 agree on samples
+   rank 0 : min|Stab_I| = 60  (GeoAut 60)   min|Stab_Ih| = 120 (Aut 120)   cands = 1    witness = scalar
+   rank 1 : min|Stab_I| = 2   (GeoAut 60)   min|Stab_Ih| = 4   (Aut 120)   cands = 62   witness = edge axis
+   rank 2 : min|Stab_I| = 4   (GeoAut 60)   min|Stab_Ih| = 8   (Aut 120)   cands = 66   witness = (0, 1)
+   rank 3 : min|Stab_I| = 1   (GeoAut 60)   min|Stab_Ih| = 1   (Aut 120)   cands = 220  witness = (0, 1, 10)
+[PASS] [rank-0]        r=0 invariant read: |Stab_I| = 60 -> resolution 1 -> WAVE-like (resolves no node) |Stab| = 60 ; resolution = 1
+[PASS] [rank-1]        r=1 lattice-primary (vertex/edge/face): min|Stab_I| = 2 -> PROTECTED (wave-like) per-kind (stab_I, stab_Ih) = {'vertex': [(5, 10)], 'edge': [(2, 4)], 'face': [(3, 6)]}
+[PASS] [rank-2]        r=2 lattice-primary quadrupoles: min|Stab_I| >= 2 -> PROTECTED (wave-like) min|Stab_I| = 4 (witness (0, 1))
+[PASS] [rank-3]        r=3 lattice-primary octupoles: min|Stab_I| = 1 -> FIRST FULL Aut BREAKING (particle-like) min|Stab_I| = 1 (witness (0, 1, 10))
+[PASS] [derived]       DERIVED ell_thresh = smallest rank whose lattice-primary ctx has trivial stabilizer ell_thresh(derived) = 3   [O143/O223 claimed: ell<=2 protected / ell=3 first breaking]
+[PASS] [memo-topology] resolution = |G|/|Stab| is NOT monotone in rank (1, 30, 15, 60); full resolution (=|G|, 拓樸分裂) occurs first at r = 3 resolution per rank = {0: 1, 1: 30, 2: 15, 3: 60} (edge-axis r=1 read beats every r=2 quadrupole)
+[CLAIM] [finding]       non-monotonic ladder                                                   rank-1 edge-axis reads (|Stab_I| = 2) break Aut more than any rank-2 quadrupole (min |Stab_I| = 4): the criterion is a threshold, NOT a monotone ladder in read depth. Recorded as a structural finding, not smoothed over.
+[CLAIM] [crosscheck]    O143 / O223                                                            ell<=2 protected + ell=3 first breaking: REPRODUCED from the stabilizer ladder (r_break = 3) with ell now DERIVED, not posited. 'ell prime = 5 unique channel' is not a rank statement -- it needs the G-representation content; flagged for docs/02, not retrofitted.
+[CLAIM] [interpretation] physical naming                                                        WAVE/PARTICLE = candidate mapping only; frozen content = the stabilizer / memo-topology criterion. No claim that QM is derived.
+
+==============================================================================================================
+RESULT: 18/18 PASS  (0 FAIL, 3 claims excluded)
+==============================================================================================================
+saved: data/03_aut_stabilizer.json

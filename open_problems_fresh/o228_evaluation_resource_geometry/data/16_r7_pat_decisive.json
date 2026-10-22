@@ -1,0 +1,2507 @@
+{
+ "lemmas": {
+  "checked_subsets": 3000,
+  "odd_code_map": true,
+  "no_self_twin_class": true,
+  "class_size_multiset_twin_invariant": true,
+  "loss2_iff_two_uncovered_pairs": true
+ },
+ "cases": {
+  "n_groups": 225,
+  "missing_separator": 135,
+  "exhaustive_no_cover": 90,
+  "unresolved": 0,
+  "max_nodes": 450455,
+  "budget": 20000000,
+  "packing_sizes": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8
+  ],
+  "LP_min": "5",
+  "LP_max": "8",
+  "LP_hist": {
+   "5": 30,
+   "6": 30,
+   "8": 30
+  },
+  "LP_ge7_groups": 30,
+  "LP_lt7_groups": 60,
+  "per_group": [
+   {
+    "group": [
+     0,
+     134
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     1,
+     109
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     2,
+     83
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     3,
+     56
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     4,
+     431
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 344182,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     5,
+     433
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 319107,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     6,
+     413
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     7,
+     389
+    ],
+    "type": "missing_separator",
+    "witness_pair": 5,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     8,
+     424
+    ],
+    "type": "missing_separator",
+    "witness_pair": 22,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     9,
+     368
+    ],
+    "type": "missing_separator",
+    "witness_pair": 17,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     10,
+     379
+    ],
+    "type": "missing_separator",
+    "witness_pair": 16,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     11,
+     419
+    ],
+    "type": "missing_separator",
+    "witness_pair": 23,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     12,
+     406
+    ],
+    "type": "missing_separator",
+    "witness_pair": 15,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     13,
+     398
+    ],
+    "type": "missing_separator",
+    "witness_pair": 14,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     14,
+     434
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 328545,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     15,
+     428
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 330863,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     16,
+     263
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 15103,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     17,
+     281
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13727,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     18,
+     224
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     19,
+     329
+    ],
+    "type": "missing_separator",
+    "witness_pair": 15,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     20,
+     314
+    ],
+    "type": "missing_separator",
+    "witness_pair": 14,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     21,
+     203
+    ],
+    "type": "missing_separator",
+    "witness_pair": 5,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     22,
+     298
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13569,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     23,
+     244
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 15403,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     24,
+     356
+    ],
+    "type": "missing_separator",
+    "witness_pair": 13,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     25,
+     158
+    ],
+    "type": "missing_separator",
+    "witness_pair": 5,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     26,
+     181
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     27,
+     343
+    ],
+    "type": "missing_separator",
+    "witness_pair": 12,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     28,
+     28
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     29,
+     84
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     30,
+     58
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 260,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     31,
+     31
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     32,
+     131
+    ],
+    "type": "missing_separator",
+    "witness_pair": 43,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     33,
+     132
+    ],
+    "type": "missing_separator",
+    "witness_pair": 50,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     34,
+     127
+    ],
+    "type": "missing_separator",
+    "witness_pair": 40,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     35,
+     124
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13471,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     36,
+     129
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 318046,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     37,
+     122
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     38,
+     123
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 317391,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     39,
+     128
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     40,
+     126
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13471,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     41,
+     125
+    ],
+    "type": "missing_separator",
+    "witness_pair": 35,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     42,
+     133
+    ],
+    "type": "missing_separator",
+    "witness_pair": 33,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     43,
+     130
+    ],
+    "type": "missing_separator",
+    "witness_pair": 44,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     44,
+     115
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 377869,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     45,
+     116
+    ],
+    "type": "missing_separator",
+    "witness_pair": 33,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     46,
+     113
+    ],
+    "type": "missing_separator",
+    "witness_pair": 47,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     47,
+     119
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 15867,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     48,
+     118
+    ],
+    "type": "missing_separator",
+    "witness_pair": 49,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     49,
+     112
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 16121,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     50,
+     117
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 398896,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     51,
+     114
+    ],
+    "type": "missing_separator",
+    "witness_pair": 32,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     52,
+     121
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     53,
+     110
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     54,
+     111
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     55,
+     120
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     57,
+     57
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     59,
+     106
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13471,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     60,
+     107
+    ],
+    "type": "missing_separator",
+    "witness_pair": 70,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     61,
+     102
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 444689,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     62,
+     99
+    ],
+    "type": "missing_separator",
+    "witness_pair": 63,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     63,
+     104
+    ],
+    "type": "missing_separator",
+    "witness_pair": 65,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     64,
+     97
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     65,
+     98
+    ],
+    "type": "missing_separator",
+    "witness_pair": 67,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     66,
+     103
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     67,
+     101
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 422941,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     68,
+     100
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     69,
+     108
+    ],
+    "type": "missing_separator",
+    "witness_pair": 59,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     70,
+     105
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13471,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     71,
+     90
+    ],
+    "type": "missing_separator",
+    "witness_pair": 74,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     72,
+     91
+    ],
+    "type": "missing_separator",
+    "witness_pair": 73,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     73,
+     88
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 318044,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     74,
+     94
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 318133,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     75,
+     93
+    ],
+    "type": "missing_separator",
+    "witness_pair": 72,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     76,
+     87
+    ],
+    "type": "missing_separator",
+    "witness_pair": 71,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     77,
+     92
+    ],
+    "type": "missing_separator",
+    "witness_pair": 71,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     78,
+     89
+    ],
+    "type": "missing_separator",
+    "witness_pair": 73,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     79,
+     96
+    ],
+    "type": "missing_separator",
+    "witness_pair": 81,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     80,
+     85
+    ],
+    "type": "missing_separator",
+    "witness_pair": 82,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     81,
+     86
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 17749,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     82,
+     95
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 15611,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     135,
+     429
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     136,
+     410
+    ],
+    "type": "missing_separator",
+    "witness_pair": 148,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     137,
+     386
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     138,
+     421
+    ],
+    "type": "missing_separator",
+    "witness_pair": 32,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     139,
+     365
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     140,
+     376
+    ],
+    "type": "missing_separator",
+    "witness_pair": 149,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     141,
+     416
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     142,
+     403
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     143,
+     395
+    ],
+    "type": "missing_separator",
+    "witness_pair": 147,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     144,
+     430
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13531,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     145,
+     425
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 409613,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     146,
+     260
+    ],
+    "type": "missing_separator",
+    "witness_pair": 145,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     147,
+     278
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 14717,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     148,
+     221
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 450455,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     149,
+     326
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 21473,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     150,
+     311
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     151,
+     200
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     152,
+     295
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     153,
+     241
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 340693,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     154,
+     353
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     155,
+     155
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     156,
+     178
+    ],
+    "type": "missing_separator",
+    "witness_pair": 136,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     157,
+     340
+    ],
+    "type": "missing_separator",
+    "witness_pair": 59,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     159,
+     411
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     160,
+     387
+    ],
+    "type": "missing_separator",
+    "witness_pair": 174,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     161,
+     422
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     162,
+     366
+    ],
+    "type": "missing_separator",
+    "witness_pair": 173,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     163,
+     377
+    ],
+    "type": "missing_separator",
+    "witness_pair": 33,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     164,
+     417
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     165,
+     404
+    ],
+    "type": "missing_separator",
+    "witness_pair": 169,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     166,
+     396
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     167,
+     432
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 338722,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     168,
+     426
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13511,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     169,
+     261
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13601,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     170,
+     279
+    ],
+    "type": "missing_separator",
+    "witness_pair": 167,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     171,
+     222
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     172,
+     327
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     173,
+     312
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13927,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     174,
+     201
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 344812,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     175,
+     296
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 368084,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     176,
+     242
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     177,
+     354
+    ],
+    "type": "missing_separator",
+    "witness_pair": 70,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     179,
+     179
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     180,
+     341
+    ],
+    "type": "missing_separator",
+    "witness_pair": 33,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     182,
+     382
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     183,
+     408
+    ],
+    "type": "missing_separator",
+    "witness_pair": 202,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     184,
+     361
+    ],
+    "type": "missing_separator",
+    "witness_pair": 186,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     185,
+     372
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     186,
+     407
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 355243,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     187,
+     399
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 16867,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     188,
+     391
+    ],
+    "type": "missing_separator",
+    "witness_pair": 184,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     189,
+     412
+    ],
+    "type": "missing_separator",
+    "witness_pair": 198,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     190,
+     409
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     191,
+     256
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     192,
+     274
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     193,
+     217
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 318229,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     194,
+     322
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     195,
+     307
+    ],
+    "type": "missing_separator",
+    "witness_pair": 40,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     196,
+     196
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     197,
+     291
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     198,
+     237
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13511,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     199,
+     349
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     202,
+     336
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13607,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     204,
+     384
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 319517,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     205,
+     358
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 173,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     206,
+     369
+    ],
+    "type": "missing_separator",
+    "witness_pair": 204,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     207,
+     383
+    ],
+    "type": "missing_separator",
+    "witness_pair": 220,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     208,
+     381
+    ],
+    "type": "missing_separator",
+    "witness_pair": 204,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     209,
+     380
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 27021,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     210,
+     388
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     211,
+     385
+    ],
+    "type": "missing_separator",
+    "witness_pair": 218,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     212,
+     253
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     213,
+     271
+    ],
+    "type": "missing_separator",
+    "witness_pair": 65,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     214,
+     214
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     215,
+     319
+    ],
+    "type": "missing_separator",
+    "witness_pair": 35,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     216,
+     304
+    ],
+    "type": "missing_separator",
+    "witness_pair": 67,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     218,
+     288
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13511,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     219,
+     234
+    ],
+    "type": "missing_separator",
+    "witness_pair": 63,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     220,
+     346
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 21861,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     223,
+     333
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     225,
+     363
+    ],
+    "type": "missing_separator",
+    "witness_pair": 145,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     226,
+     374
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 422471,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     227,
+     414
+    ],
+    "type": "missing_separator",
+    "witness_pair": 22,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     228,
+     401
+    ],
+    "type": "missing_separator",
+    "witness_pair": 226,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     229,
+     393
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 173,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     230,
+     423
+    ],
+    "type": "missing_separator",
+    "witness_pair": 198,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     231,
+     420
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     232,
+     258
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     233,
+     276
+    ],
+    "type": "missing_separator",
+    "witness_pair": 65,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     235,
+     324
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     236,
+     309
+    ],
+    "type": "missing_separator",
+    "witness_pair": 67,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     238,
+     293
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13511,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     239,
+     239
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     240,
+     351
+    ],
+    "type": "missing_separator",
+    "witness_pair": 145,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     243,
+     338
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 15019,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     245,
+     357
+    ],
+    "type": "missing_separator",
+    "witness_pair": 16,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     246,
+     362
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 319463,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     247,
+     360
+    ],
+    "type": "missing_separator",
+    "witness_pair": 169,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     248,
+     359
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 354287,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     249,
+     367
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     250,
+     364
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     251,
+     251
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     252,
+     269
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13511,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     254,
+     317
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     255,
+     302
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13511,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     257,
+     286
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     259,
+     344
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 336041,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     262,
+     331
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     264,
+     373
+    ],
+    "type": "missing_separator",
+    "witness_pair": 167,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     265,
+     371
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 320707,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     266,
+     370
+    ],
+    "type": "missing_separator",
+    "witness_pair": 147,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     267,
+     378
+    ],
+    "type": "missing_separator",
+    "witness_pair": 33,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     268,
+     375
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     270,
+     270
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     272,
+     318
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13511,
+    "budget": 20000000,
+    "best_packing": 6,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     273,
+     303
+    ],
+    "type": "missing_separator",
+    "witness_pair": 67,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     275,
+     287
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     277,
+     345
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     280,
+     332
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 370510,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     282,
+     400
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     283,
+     392
+    ],
+    "type": "missing_separator",
+    "witness_pair": 246,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     284,
+     418
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     285,
+     415
+    ],
+    "type": "missing_separator",
+    "witness_pair": 218,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     289,
+     323
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     290,
+     308
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 89,
+    "budget": 20000000,
+    "best_packing": 8,
+    "LP_restricted": "8"
+   },
+   {
+    "group": [
+     292,
+     292
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     294,
+     350
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 13517,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "6"
+   },
+   {
+    "group": [
+     297,
+     337
+    ],
+    "type": "missing_separator",
+    "witness_pair": 167,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     299,
+     390
+    ],
+    "type": "missing_separator",
+    "witness_pair": 14,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     300,
+     405
+    ],
+    "type": "missing_separator",
+    "witness_pair": 12,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     301,
+     402
+    ],
+    "type": "missing_separator",
+    "witness_pair": 305,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     305,
+     321
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 318229,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     306,
+     306
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     310,
+     348
+    ],
+    "type": "missing_separator",
+    "witness_pair": 14,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     313,
+     335
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 384455,
+    "budget": 20000000,
+    "best_packing": 5,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     315,
+     397
+    ],
+    "type": "missing_separator",
+    "witness_pair": 305,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     316,
+     394
+    ],
+    "type": "missing_separator",
+    "witness_pair": 13,
+    "n_missing_pairs": 18,
+    "verified": true
+   },
+   {
+    "group": [
+     320,
+     320
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     325,
+     347
+    ],
+    "type": "exhaustive_no_cover",
+    "nodes": 399035,
+    "budget": 20000000,
+    "best_packing": 4,
+    "LP_restricted": "5"
+   },
+   {
+    "group": [
+     328,
+     334
+    ],
+    "type": "missing_separator",
+    "witness_pair": 14,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     330,
+     427
+    ],
+    "type": "missing_separator",
+    "witness_pair": 14,
+    "n_missing_pairs": 4,
+    "verified": true
+   },
+   {
+    "group": [
+     339,
+     355
+    ],
+    "type": "missing_separator",
+    "witness_pair": 301,
+    "n_missing_pairs": 10,
+    "verified": true
+   },
+   {
+    "group": [
+     342,
+     342
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   },
+   {
+    "group": [
+     352,
+     352
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "n_missing_pairs": 434,
+    "verified": true
+   }
+  ],
+  "unresolved_detail": [],
+  "twin_separating_sets_identical": true
+ },
+ "claims": [
+  {
+   "tag": "P1L-1",
+   "name": "L1/L2 (verified on 3000 random 6-subsets; L1 is also a two-line structural proof): the code map is ODD, no class contains an antipodal pair, class sizes come in twin pairs; and loss = m - pat = 2 holds IFF the uncovered pairs are exactly one twin pair",
+   "ok": true,
+   "detail": "{'checked_subsets': 3000, 'odd_code_map': True, 'no_self_twin_class': True, 'class_size_multiset_twin_invariant': True, 'loss2_iff_two_uncovered_pairs': True}"
+  },
+  {
+   "tag": "P1C-1",
+   "name": "ALL 225 twin-pair groups are refuted, each with an independently re-verified certificate: 135 by a witness pair having no separator among the 50 allowed columns, and 90 by a COMPLETE most-constrained-pair search that exhausts without finding a 6-cover (node counts far below the 20000000 budget, so no incompleteness). Hence no 6-subset leaves exactly one twin pair unseparated: loss != 2 and pat != 28",
+   "ok": true,
+   "detail": "135 + 90 = 225 groups ; max nodes = 450455 ; unresolved = 0"
+  },
+  {
+   "tag": "P1C-2",
+   "name": "INTERVAL CLOSED: R5 gives pat <= 28 (from F_6 = 0 and even parity) and constructs pat = 26 (R5 best sampled value 26); P1C-1 excludes 28  =>  max pat(k=6, M_edge) = 26 EXACTLY, not an interval",
+   "ok": true,
+   "detail": "R5 best = 26 ; 28 excluded by 225 certificates"
+  },
+  {
+   "tag": "P1C-3",
+   "name": "RECORD (continuity with R6): the exact rational LP restricted to the 50 allowed columns is TOO WEAK here as well -- its optimum lies in [5, 8], i.e. <= 6, so an LP certificate of the R6 style cannot close any of these cases; the completeness comes from the exhaustive search, not from duality",
+   "ok": false,
+   "detail": "LP values in [5, 8]"
+  },
+  {
+   "tag": "P1C-3-c",
+   "name": "CORRECTION (same run, original FAIL kept): the exact rational LP restricted to the 50 allowed columns is decisive for SOME groups (values up to 8 >= 7, which already lower-bound any integral cover by 7) but too weak for others (values down to 5 <= 6). So an LP-only route closes part of the cases yet cannot close all 225, whereas the exhaustive search does; the R6-style duality is thus a PARTIAL tool here, not a decisive one",
+   "ok": true,
+   "detail": "LP histogram {'5': 30, '6': 30, '8': 30} over the 90 pre-check-passing groups ; LP >= 7 for 30 of them, < 7 for 60"
+  },
+  {
+   "tag": "P1C0-1-c",
+   "name": "REFUTATION OF MY OWN EARLIER CONSTRUCTION (kept as record, scripts/14): the \"collapse lemma\" -- that u and -u induce the same partition so the 62 columns may be replaced by 31 lines -- is FALSE: on a tie row tau gives BOTH the same value, so -u is not the sign negation of u. Script 14 verified this with a FAIL (partner_defined = False, only 60 distinct pair masks) and degenerated to C(62,6); it was killed. All conclusions above use the full 62 columns",
+   "ok": true,
+   "detail": "scripts/14 log P1C0-1 FAIL kept as the record ; scripts/11 and 15 logs likewise"
+  },
+  {
+   "tag": "P1S-1",
+   "name": "METHOD SUBSTITUTION RECORD (not hidden): scripts/11 (quotient DFS, node-budget exhaustion), scripts/14 (refuted collapse lemma) and scripts/15 (packing/LP certificates: 165/225) are all kept on disk with their logs; this script closes the remaining 60 groups by exhaustive search. No threshold was ever relaxed; the decisive certificates are exact and budget-free",
+   "ok": true,
+   "detail": "four scripts, four logs, one point value: max pat(k=6) = 26"
+  }
+ ],
+ "elapsed_s": 85.0560872554779
+}

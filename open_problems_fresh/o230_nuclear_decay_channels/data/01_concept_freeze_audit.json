@@ -1,0 +1,171 @@
+{
+  "round": "R1",
+  "date": "2026-10-08",
+  "convention": "44-mode / 88-link / 88-L (labelled per check)",
+  "concept_freeze": {
+    "version": "o230-r1-2026-10-08",
+    "corpus_status": "v10.0 open_problems_fresh/ grep: 核衰變=0, beta decay=0, nuclear decay=0, 中子衰變=0, alpha decay=0 (概念層從未形式化)",
+    "def_channel": "核衰變通道 = 一個初核態 |i> 經算子 T_hat 躍遷到末核態 |f> + 放出粒子集合 S 之過程; 以量子數 ledgers (Q, T3L, T3R, B-L) 同模標籤 n 標定。",
+    "def_decay_operator": "T_hat = (g2/sqrt2) * J^+_mu ⊗ l_mu  (帶電流), 其中 J^+_mu = psi_bar_u g^mu P_L psi_d (idcm 費曼規則: 費米子-規範頂點 = -i g T^a g^mu P_L, O85 171/171)。",
+    "def_rate_law": "Gamma = |<f|T_hat|i>|^2 * rho_ps  (離散費米黃金律: rho_ps = 鏈模密度, 非連續積分 d^3p)。",
+    "def_selection": "通道選擇 = (i) 電荷守恆 Q = T3L + Y; (ii) 模守恆 sum n = 0 (mod 88)。",
+    "frozen": true,
+    "change_policy": "任何定義修改 = 新 doc + 明寫『移動球門』; 唔准一路做一路改定義。"
+  },
+  "checks": [
+    {
+      "name": "B1 [44-mode] gam_44 = 4 = B (EXACT)",
+      "pass": true,
+      "value": "4.0",
+      "note": "mode chain endpoint"
+    },
+    {
+      "name": "B2 [44-mode] sum_{1..44} gam_n = 90",
+      "pass": true,
+      "value": "90.0",
+      "note": "= 2 N_d + mu^2 = 88 + 2"
+    },
+    {
+      "name": "B3 [44-mode] gam_n + gam_{44-n} = 4 = B (all n=1..43)",
+      "pass": true,
+      "value": "complementary pairing -> Dirac",
+      "note": ""
+    },
+    {
+      "name": "B4 N_d = B * L5 = 44",
+      "pass": true,
+      "value": "44",
+      "note": ""
+    },
+    {
+      "name": "B5 [44-mode] mu^2 = 2 = SumEven - SumOdd",
+      "pass": true,
+      "value": "even=46.0 odd=44.0 mu2=2.0",
+      "note": ""
+    },
+    {
+      "name": "B6 g2 = sqrt(4pi/30) ; e = g2 sin(theta_W)",
+      "pass": true,
+      "value": "g2=0.647208637519 e=0.304102487304",
+      "note": ""
+    },
+    {
+      "name": "B7 alpha^-1 = 3 N_d + F5 = 137 (EXACT)",
+      "pass": true,
+      "value": 137,
+      "note": ""
+    },
+    {
+      "name": "B8 [88-link] Sum_m exp(2pi i K m/88) = 88 delta_{K,0 mod 88}",
+      "pass": true,
+      "value": "K=0:88.0 K=1:1.0933262e-49 K=44:3.6520238e-49 K=88:88.0",
+      "note": "模守恆『導出』非『外加』"
+    },
+    {
+      "name": "C1 Y = T3R + (B-L)/2 及 Q = T3L + Y (all Weyl states)",
+      "pass": true,
+      "value": "8 anomaly basis",
+      "note": ""
+    },
+    {
+      "name": "C2 Q(u)=+2/3, Q(d)=-1/3, Q(e-)=-1, Q(nu)=0",
+      "pass": true,
+      "value": "['2/3', '-1/3', '-1', '0']",
+      "note": ""
+    },
+    {
+      "name": "C3 beta_minus: Q 守恆 & B-L 守恆",
+      "pass": true,
+      "value": "Q -1/3->-1/3 BL 1/3->1/3 dT3L_had=1",
+      "note": ""
+    },
+    {
+      "name": "C3 beta_plus: Q 守恆 & B-L 守恆",
+      "pass": true,
+      "value": "Q 2/3->2/3 BL 1/3->1/3 dT3L_had=-1",
+      "note": ""
+    },
+    {
+      "name": "C3 electron_capture: Q 守恆 & B-L 守恆",
+      "pass": true,
+      "value": "Q -1/3->-1/3 BL -2/3->-2/3 dT3L_had=-1",
+      "note": ""
+    },
+    {
+      "name": "C4 帶電流方向: beta- dT3L_had=+1 ; beta+/EC dT3L_had=-1",
+      "pass": true,
+      "value": "1/-1/-1",
+      "note": ""
+    }
+  ],
+  "pass": 14,
+  "total": 14,
+  "claims": [
+    "本 O 之概念詞 (核衰變通道算子身份) 在 v10 corpus 0 命中 -> 定義自建並凍結於 data/01_concept_freeze.json",
+    "費米子-規範頂點 = -i g T^a g^mu P_L (O85 171/171); beta 衰變 = 此頂點之帶電分支 T^+ = (s1+i s2)/2, 零新參數, 零新結構",
+    "[BLOCKED-RATE] Gamma = |M|^2 rho_ps 之數值 — 需核子/強子束縛態波函數 <f|J^+|i>  <-- O124 §G / O144 §4.3 上游阻塞",
+    "[BLOCKED-PHASE_SPACE] 離散相空間 rho_ps 之連續極限 (-> Sargent E^5 律) — 需 O221 連續極限  <-- O221",
+    "[BLOCKED-ALPHA] alpha 穿隧通道 — 完全空白 (corpus 0 命中)  <-- 本 O, 未開始",
+    "[BLOCKED-NUCLEAR_WF] 核束縛態本身未導出  <-- 上游"
+  ],
+  "blocked": [
+    {
+      "item": "RATE",
+      "detail": "Gamma = |M|^2 rho_ps 之數值 — 需核子/強子束縛態波函數 <f|J^+|i>",
+      "source": "O124 §G / O144 §4.3 上游阻塞"
+    },
+    {
+      "item": "PHASE_SPACE",
+      "detail": "離散相空間 rho_ps 之連續極限 (-> Sargent E^5 律) — 需 O221 連續極限",
+      "source": "O221"
+    },
+    {
+      "item": "ALPHA",
+      "detail": "alpha 穿隧通道 — 完全空白 (corpus 0 命中)",
+      "source": "本 O, 未開始"
+    },
+    {
+      "item": "NUCLEAR_WF",
+      "detail": "核束縛態本身未導出",
+      "source": "上游"
+    }
+  ],
+  "channel_ledgers": {
+    "beta_minus": {
+      "init": "beta_minus",
+      "Q_in": "-1/3",
+      "Q_out": "-1/3",
+      "BL_in": "1/3",
+      "BL_out": "1/3",
+      "dT3L_had": "1"
+    },
+    "beta_plus": {
+      "init": "beta_plus",
+      "Q_in": "2/3",
+      "Q_out": "2/3",
+      "BL_in": "1/3",
+      "BL_out": "1/3",
+      "dT3L_had": "-1"
+    },
+    "electron_capture": {
+      "init": "electron_capture",
+      "Q_in": "-1/3",
+      "Q_out": "-1/3",
+      "BL_in": "-2/3",
+      "BL_out": "-2/3",
+      "dT3L_had": "-1"
+    }
+  },
+  "inputs": {
+    "N_d": 44,
+    "B": 4,
+    "N_gen": 3,
+    "L5": 11,
+    "L4": 7,
+    "F5": 5,
+    "M0_MeV": "27.900915",
+    "sin2thetaW": "0.220775733",
+    "e_idcm": "0.304102487304023",
+    "alpha_inv": 137
+  }
+}

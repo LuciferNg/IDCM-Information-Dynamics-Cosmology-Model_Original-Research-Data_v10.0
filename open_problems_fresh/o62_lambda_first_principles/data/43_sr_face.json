@@ -1,0 +1,22 @@
+{
+  "test": "O62 九期 43: SR face",
+  "n_faces": {
+    "1d": 216,
+    "2d": 468,
+    "3d": 432
+  },
+  "sr_1d": 912,
+  "sage_vs_1d": {
+    "inter": 450,
+    "sage_only": 25,
+    "1d_only": 462
+  },
+  "cytools_sr": 912,
+  "sage_vs_cyt": {
+    "inter": 449,
+    "sage_only": 26,
+    "cyt_only": 463
+  },
+  "passed": 0,
+  "failed": 0
+}

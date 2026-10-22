@@ -1,0 +1,254 @@
+{
+ "n_refining_partitions": 539389,
+ "beta_spectrum": {
+  "3": 284550,
+  "5": 131515,
+  "6": 19305,
+  "7": 26303,
+  "8": 46900,
+  "9": 810,
+  "10": 13220,
+  "11": 6725,
+  "12": 2055,
+  "13": 2245,
+  "14": 450,
+  "15": 585,
+  "16": 2360,
+  "17": 135,
+  "18": 1135,
+  "19": 300,
+  "21": 150,
+  "22": 120,
+  "24": 195,
+  "26": 135,
+  "27": 75,
+  "29": 75,
+  "38": 15,
+  "40": 30,
+  "62": 1
+ },
+ "separating_typesets_by_size": {
+  "4": 55,
+  "5": 1248,
+  "6": 5028,
+  "7": 9660,
+  "8": 12195,
+  "9": 11290,
+  "10": 7993,
+  "11": 4368,
+  "12": 1820,
+  "13": 560,
+  "14": 120,
+  "15": 16,
+  "16": 1
+ },
+ "F_brute": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 12645,
+  "5": 1051351,
+  "6": 23083292
+ },
+ "F_closed_form": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 12645,
+  "5": 1051351,
+  "6": 23083292,
+  "7": 283782566,
+  "8": 2471290760
+ },
+ "distinct_column_vectors": 32,
+ "negated_vectors_not_present": 0,
+ "n_rank6_bases": 13016132,
+ "F4_family_mixtures": {
+  "EEEE": 625,
+  "EEEF": 1980,
+  "EEEV": 920,
+  "EEFF": 1860,
+  "EEFV": 2480,
+  "EEVV": 460,
+  "EFFF": 800,
+  "EFFV": 1520,
+  "EFVV": 1040,
+  "EVVV": 80,
+  "FFFV": 480,
+  "FFVV": 240,
+  "FVVV": 160
+ },
+ "null_all_bisections": {
+  "F4": 64864800,
+  "C462_4": 1873709145,
+  "p0": "6240/180251",
+  "p0_float": 0.03461839324053681,
+  "mc_draws": 200000,
+  "mc_hits": 6967,
+  "mc_float": 0.034835,
+  "machine_rate": "2529/111569",
+  "machine_rate_float": 0.022667586874490227
+ },
+ "equivariant_variant": {
+  "n_types": 46,
+  "mult_histogram": {
+   "1": 30,
+   "2": 16
+  },
+  "F4": 1000,
+  "shapes": [
+   [
+    4,
+    8
+   ],
+   [
+    6,
+    6
+   ]
+  ]
+ },
+ "sub_arrangements": {
+  "V": {
+   "n": 12,
+   "F": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 192,
+    "6": 544,
+    "7": 672
+   },
+   "k_min": 5
+  },
+  "F": {
+   "n": 20,
+   "F": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 5184,
+    "6": 25440,
+    "7": 65760
+   },
+   "k_min": 5
+  },
+  "E": {
+   "n": 30,
+   "F": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 625,
+    "5": 24535,
+    "6": 237545,
+    "7": 1246590
+   },
+   "k_min": 4
+  },
+  "V+F": {
+   "n": 32,
+   "F": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 880,
+    "5": 41696,
+    "6": 422952,
+    "7": 2302136
+   },
+   "k_min": 4
+  },
+  "V+E": {
+   "n": 42,
+   "F": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 2085,
+    "5": 129557,
+    "6": 1869459,
+    "7": 15001452
+   },
+   "k_min": 4
+  },
+  "F+E": {
+   "n": 50,
+   "F": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 5265,
+    "5": 383049,
+    "6": 6538590,
+    "7": 61781400
+   },
+   "k_min": 4
+  },
+  "all": {
+   "n": 62,
+   "F": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 12645,
+    "5": 1051351,
+    "6": 23083292,
+    "7": 283782566
+   },
+   "k_min": 4
+  }
+ },
+ "claims": [
+  {
+   "tag": "C12",
+   "name": "partition-lattice Mobius form (beta(pi) = #{a : pi <= pi_a}) reproduces the type-set form for k = 1..8",
+   "ok": true,
+   "detail": "Mobius = [0, 0, 0, 12645, 1051351, 23083292, 283782566, 2471290760] ; type-set = [0, 0, 0, 12645, 1051351, 23083292, 283782566, 2471290760]"
+  },
+  {
+   "tag": "C13",
+   "name": "type-set closed form F_k = sum over SEPARATING type-sets of e_k(T); no separating type-set of size <= 3 exists",
+   "ok": true,
+   "detail": "separating type-sets by size = {'4': 55, '5': 1248, '6': 5028, '7': 9660, '8': 12195, '9': 11290, '10': 7993, '11': 4368, '12': 1820, '13': 560, '14': 120, '15': 16, '16': 1} ; F_4 = 12645"
+  },
+  {
+   "tag": "C14",
+   "name": "the closed form agrees with the independent brute-force count for k = 1..6 (including the NEW values F_5 and F_6)",
+   "ok": true,
+   "detail": "closed form F_1..F_6 = [0, 0, 0, 12645, 1051351, 23083292] ; brute force = [0, 0, 0, 12645, 1051351, 23083292]"
+  },
+  {
+   "tag": "C15",
+   "name": "rank_Q(K) = 6 with V00-V05 an explicit basis; 5 columns can never span it (dimension), so 6 is minimal",
+   "ok": true,
+   "detail": "rank(K) = 6 ; rank(V00..V05) = 6 ; max rank over a deterministic 5-window sample (stride 7) = 5 (<= 5 = dimension bound) ; distinct column vectors = 32 ; exact number of rank-6 bases = 13016132"
+  },
+  {
+   "tag": "C16",
+   "name": "family-mixture decomposition of F_4 sums to 12645 with the single-family EEEE count = 625",
+   "ok": true,
+   "detail": "mixtures = {'EEEE': 625, 'EEEF': 1980, 'EEEV': 920, 'EEFF': 1860, 'EEFV': 2480, 'EEVV': 460, 'EFFF': 800, 'EFFV': 1520, 'EFVV': 1040, 'EVVV': 80, 'FFFV': 480, 'FFVV': 240, 'FVVV': 160}"
+  },
+  {
+   "tag": "C17-c",
+   "name": "CORRECTED exact null: the size-multiset Mobius sum equals the MC estimate, and the reduction is regression-tested on the pts=4/6 analogues (the first run of C17 FAILED on a wrong partition-count formula; that FAIL is preserved in logs/02_r1_firstrun_C17_FAIL_excerpt.out)",
+   "ok": true,
+   "detail": "p0(exact) = 0.034618 (0.2 s) ; MC(200000 draws) = 0.034835 ; machine F_4/C(62,4) = 0.022668 ; small-analogue regression = True"
+  },
+  {
+   "tag": "C18",
+   "name": "convention dependence: under the equivariant tie-break (tie -> +1) the census AND F_4 change",
+   "ok": true,
+   "detail": "frozen: 16 types / hist {3:10,5:5,7:1} / F_4 = 12645 ; equivariant: 46 types / hist {1: 30, 2: 16} / F_4 = 1000 / shapes [(4, 8), (6, 6)]"
+  },
+  {
+   "tag": "C19",
+   "name": "sub-arrangement table: E alone already admits 4-frames while V alone and F alone need 5; the 625 E-frames are reproduced",
+   "ok": true,
+   "detail": "k_min = {'V': 5, 'F': 5, 'E': 4, 'V+F': 4, 'V+E': 4, 'F+E': 4, 'all': 4} ; F_4(E) = 625"
+  }
+ ],
+ "elapsed_s": 224.30443716049194
+}

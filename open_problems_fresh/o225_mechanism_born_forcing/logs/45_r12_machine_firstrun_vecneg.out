@@ -1,0 +1,26 @@
+======================================================================================================================
+O225 scripts/45 -- R12 MACHINE   (rules: r12-law-closure-v1)
+======================================================================================================================
+[INFO] 前置核：事件 124 條、sha 相符 = True、鍵 = 62
+[PASS] X1      τ 候選集中心不變（τ ⟹ −τ）  --  成立之鍵 = 16/16
+[PASS] X2      τ 候選集大小 ∈ {2,4} 且恰為 1 或 2 個中心對  --  大小值集 = [2, 4] ; 皆成中心對 = True
+[PASS] X3      ★ τ 與該鍵之 g_a 同階  --  同階之鍵 = 16/16 ; (階(g_a), 階(τ)) 樣本 = [(4, [4]), (4, [4]), (4, [4]), (4, [4])]
+[PASS] X4      ★ τ 落於 C(g_a)／{g_a}／{g_a⁻¹} 之一（全鍵一致者）  --  全鍵命中 = ['中央化子', 'g_a', 'g_a⁻¹'] ; 分佈 = {'中央化子': 16, 'g_a': 16, 'g_a⁻¹': 16}
+[PASS] X5      τ 集只依軸線（16 鍵中 partner 亦在 16 鍵者，其 τ 集相同）  --  可配對之鍵 = 12 ; τ 集相同 = 12
+[PASS] X6      46 空集鍵之 g_a 階分佈 vs 16 非空鍵（報）  --  空集鍵之階值集 = [3, 4, 5] ; 非空鍵之階值集 = [4]
+[INFO] Y 前置核：f 與 R8 凍結全同 = True ; Z10 = [9, 15, 21, 31, 57, 67, 77, 87, 111, 117]
+[PASS] Y1      ★ Z10 之 KV = 2 對反極且相鄰（精確：5·(v₁·v₂)² = |v₁|²|v₂|²）  --  |KV(Z10)| = 4 ; v₁·v₂ = (Fraction(-1, 2), Fraction(1, 2)) ; |v₁|² = (Fraction(5, 2), Fraction(-1, 2)) ; |v₂|² = (Fraction(5, 2), Fraction(-1, 2))
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/45_r12_machine.py", line 309, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/45_r12_machine.py", line 235, in main
+    and all(neg(x) in set(kvz) for x in kvz),
+        ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/45_r12_machine.py", line 235, in <genexpr>
+    and all(neg(x) in set(kvz) for x in kvz),
+            ~~~^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/45_r12_machine.py", line 51, in neg
+    return (-x[0], -x[1])
+            ^^^^^
+TypeError: bad operand type for unary -: 'tuple'

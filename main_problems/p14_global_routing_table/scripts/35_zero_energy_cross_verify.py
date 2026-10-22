@@ -76,14 +76,15 @@ L("  一、載入 3 張地圖 (O2 已驗證讀法)")
 L("━" * 84)
 
 maps = {}
-m_sm = hp.read_map('/tmp/smica2.fits', field=0)
+MAP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'planck_pr3')
+m_sm = hp.read_map(os.path.join(MAP_DIR, 'smica2.fits'), field=0)
 nside = hp.get_nside(m_sm)
 maps['SMICA'] = m_sm
 
-m_nilc = hp.read_map('/tmp/nilc.fits', field=0, nest=True)
+m_nilc = hp.read_map(os.path.join(MAP_DIR, 'nilc.fits'), field=0, nest=True)
 maps['NILC'] = hp.reorder(m_nilc, n2r=True)
 
-m_cmd = hp.read_map('/tmp/commander.fits', field=0, nest=True)
+m_cmd = hp.read_map(os.path.join(MAP_DIR, 'commander.fits'), field=0, nest=True)
 maps['Commander'] = hp.reorder(m_cmd, n2r=True)
 
 for name, m in maps.items():

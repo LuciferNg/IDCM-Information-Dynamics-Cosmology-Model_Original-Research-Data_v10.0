@@ -1,0 +1,107 @@
+{
+ "rows": [
+  {
+   "transform": "identity",
+   "fp_violations": 0,
+   "vsign_mismatches": 0
+  },
+  {
+   "transform": "diag(2,1,1)",
+   "fp_violations": 103,
+   "vsign_mismatches": 630
+  },
+  {
+   "transform": "diag(3,5,7)",
+   "fp_violations": 84,
+   "vsign_mismatches": 436
+  },
+  {
+   "transform": "shear",
+   "fp_violations": 80,
+   "vsign_mismatches": 518
+  },
+  {
+   "transform": "rot-ish",
+   "fp_violations": 82,
+   "vsign_mismatches": 442
+  },
+  {
+   "transform": "rand#0",
+   "fp_violations": 139,
+   "vsign_mismatches": 812
+  },
+  {
+   "transform": "rand#1",
+   "fp_violations": 88,
+   "vsign_mismatches": 430
+  },
+  {
+   "transform": "rand#2",
+   "fp_violations": 126,
+   "vsign_mismatches": 752
+  },
+  {
+   "transform": "rand#3",
+   "fp_violations": 106,
+   "vsign_mismatches": 586
+  },
+  {
+   "transform": "rand#4",
+   "fp_violations": 70,
+   "vsign_mismatches": 440
+  },
+  {
+   "transform": "rand#5",
+   "fp_violations": 156,
+   "vsign_mismatches": 864
+  },
+  {
+   "transform": "rand#6",
+   "fp_violations": 132,
+   "vsign_mismatches": 708
+  },
+  {
+   "transform": "rand#7",
+   "fp_violations": 169,
+   "vsign_mismatches": 870
+  },
+  {
+   "transform": "rand#8",
+   "fp_violations": 171,
+   "vsign_mismatches": 874
+  },
+  {
+   "transform": "rand#9",
+   "fp_violations": 171,
+   "vsign_mismatches": 794
+  },
+  {
+   "transform": "rand#10",
+   "fp_violations": 112,
+   "vsign_mismatches": 598
+  },
+  {
+   "transform": "rand#11",
+   "fp_violations": 108,
+   "vsign_mismatches": 556
+  },
+  {
+   "transform": "rand#12",
+   "fp_violations": 114,
+   "vsign_mismatches": 518
+  },
+  {
+   "transform": "rand#13",
+   "fp_violations": 103,
+   "vsign_mismatches": 562
+  },
+  {
+   "transform": "rand#14",
+   "fp_violations": 74,
+   "vsign_mismatches": 386
+  }
+ ],
+ "fp_satisfied_count": 1,
+ "total": 20,
+ "sharp_criterion_holds": true
+}

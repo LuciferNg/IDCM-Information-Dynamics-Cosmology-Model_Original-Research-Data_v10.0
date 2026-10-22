@@ -1,0 +1,21 @@
+======================================================================================================================
+O222 scripts/29 -- G1+G8 enforcer (g1g8-contract-v1)   impl = scripts/30_g1g8_gaps.py
+======================================================================================================================
+[PASS] U    frozen upstream scripts/09_a2_rollback.py pinned  --  sha256 d8037bb16f69
+[PASS] U    frozen upstream scripts/12_b5_budget.py pinned  --  sha256 f2cb54fa5df0
+[PASS] U3   upstream GATE released by the C2+G7 round  --  logs/26_c2g7_contract.out contains GATE = OPEN
+[PASS] A1   machine imports no banned module  --  imports = ['collections', 'fractions', 'hashlib', 'importlib', 'io', 'json', 'os', 'sys', 'time']
+[PASS] A2   machine declares no banned identifier  --  hits = []
+[PASS] A3   machine contains no non-integer float literal  --  literals = []
+[PASS] A4   no eval/exec/compile in the machine
+[PASS] A5   no random sampling anywhere in the machine
+[PASS] C1   all 6 frozen ASCII anchors appear in BOTH the contract and the machine  --  missing = []
+[PASS] C2   the machine declares the six frozen cells G1a..G8c in order
+[PASS] C3   the machine loads the two frozen interfaces and reads the single frozen order
+[PASS] C4   the machine writes its own result record
+[PASS] C5   the machine never imports the enforcer or the audit
+[FAIL] C6   the machine contains no hand-rolled replacement of the frozen machine
+----------------------------------------------------------------------------------------------------------------------
+RESULT: 13/14 PASS
+GATE = REFUSED   impl frozen at 22ab5e0fdc61
+----------------------------------------------------------------------------------------------------------------------

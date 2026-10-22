@@ -1,0 +1,10 @@
+{
+ "p_CR_fit": 2.775427790881039,
+ "sigma": 0.0017439464457817255,
+ "n_points": 72,
+ "DSA_r_B4_p_inj": 2.0,
+ "delta_propagation": 0.775427790881039,
+ "q_obs_delta": 0.99105,
+ "q_obs_pcr": 0.93655,
+ "verdict": "p_CR = DSA(普適 2) + δ(無結構); 唔可由 IDCM 推導"
+}

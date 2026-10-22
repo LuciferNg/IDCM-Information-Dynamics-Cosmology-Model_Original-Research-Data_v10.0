@@ -1,0 +1,1067 @@
+{
+ "rules_version": "b3r2-contract-v1",
+ "order_ids": [
+  "lex",
+  "diag",
+  "antidiag",
+  "block",
+  "stride"
+ ],
+ "baseline": {
+  "E1_raw": {
+   "value": "4",
+   "argmax": [
+    "E27",
+    "E28",
+    "V01",
+    "E28"
+   ],
+   "domain": 14776336
+  },
+  "E1_distinct": {
+   "value": "4",
+   "argmax": [
+    "E27",
+    "E28",
+    "V01",
+    "E28"
+   ],
+   "domain": 14303524
+  },
+  "E1_distinct_anti": {
+   "value": "4",
+   "argmax": [
+    "E27",
+    "E28",
+    "V01",
+    "E28"
+   ],
+   "domain": 13388280
+  },
+  "E1_all4": {
+   "value": "2",
+   "argmax": [
+    "V00",
+    "V01",
+    "E00",
+    "F06"
+   ],
+   "domain": 12517800
+  },
+  "E2_raw": {
+   "value": "4",
+   "argmax": [
+    "E27",
+    "E28",
+    "V10",
+    "E27"
+   ],
+   "domain": 14776336
+  },
+  "E2_distinct": {
+   "value": "4",
+   "argmax": [
+    "E27",
+    "E28",
+    "V10",
+    "E27"
+   ],
+   "domain": 14303524
+  },
+  "E2_distinct_anti": {
+   "value": "4",
+   "argmax": [
+    "E27",
+    "E28",
+    "V10",
+    "E27"
+   ],
+   "domain": 13388280
+  },
+  "E2_all4": {
+   "value": "3",
+   "argmax": [
+    "E27",
+    "E28",
+    "V01",
+    "E29"
+   ],
+   "domain": 12517800
+  }
+ },
+ "per_order": {
+  "lex": {
+   "prefix_len": 15,
+   "reads_used": 43,
+   "budget_left": "123/88",
+   "terminal_pair": [
+    0,
+    15
+   ],
+   "cov_a": 1,
+   "cov_b": 15,
+   "per_pair_misses": [
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "feasible": {
+    "E1_raw": {
+     "value": "2",
+     "argmax": [
+      "V00",
+      "V00",
+      "V00",
+      "V00"
+     ],
+     "diag_hits": [
+      "i=a",
+      "i=a2",
+      "j=a",
+      "j=a2",
+      "j=i"
+     ]
+    },
+    "E1_distinct": null,
+    "E1_distinct_anti": null,
+    "E1_all4": null,
+    "E2_raw": {
+     "value": "2",
+     "argmax": [
+      "V00",
+      "V00",
+      "V00",
+      "V00"
+     ],
+     "diag_hits": [
+      "i=a",
+      "i=a2",
+      "j=a",
+      "j=a2",
+      "j=i"
+     ]
+    },
+    "E2_distinct": null,
+    "E2_distinct_anti": null,
+    "E2_all4": null
+   },
+   "domains": {
+    "E1_raw": 225,
+    "E1_distinct": 0,
+    "E1_distinct_anti": 0,
+    "E1_all4": 0,
+    "E2_raw": 225,
+    "E2_distinct": 0,
+    "E2_distinct_anti": 0,
+    "E2_all4": 0
+   },
+   "constructible_distinct": false,
+   "constructible_distinct_anti": false,
+   "constructible_all4": false
+  },
+  "diag": {
+   "prefix_len": 22,
+   "reads_used": 44,
+   "budget_left": "0",
+   "terminal_pair": [
+    22,
+    22
+   ],
+   "cov_a": 22,
+   "cov_b": 22,
+   "per_pair_misses": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "feasible": {
+    "E1_raw": {
+     "value": "2",
+     "argmax": [
+      "V00",
+      "V00",
+      "V00",
+      "V00"
+     ],
+     "diag_hits": [
+      "i=a",
+      "i=a2",
+      "j=a",
+      "j=a2",
+      "j=i"
+     ]
+    },
+    "E1_distinct": null,
+    "E1_distinct_anti": null,
+    "E1_all4": null,
+    "E2_raw": {
+     "value": "2",
+     "argmax": [
+      "V00",
+      "V00",
+      "V00",
+      "V00"
+     ],
+     "diag_hits": [
+      "i=a",
+      "i=a2",
+      "j=a",
+      "j=a2",
+      "j=i"
+     ]
+    },
+    "E2_distinct": null,
+    "E2_distinct_anti": null,
+    "E2_all4": null
+   },
+   "domains": {
+    "E1_raw": 22,
+    "E1_distinct": 0,
+    "E1_distinct_anti": 0,
+    "E1_all4": 0,
+    "E2_raw": 22,
+    "E2_distinct": 0,
+    "E2_distinct_anti": 0,
+    "E2_all4": 0
+   },
+   "constructible_distinct": false,
+   "constructible_distinct_anti": false,
+   "constructible_all4": false
+  },
+  "antidiag": {
+   "prefix_len": 15,
+   "reads_used": 44,
+   "budget_left": "0",
+   "terminal_pair": [
+    15,
+    47
+   ],
+   "cov_a": 15,
+   "cov_b": 15,
+   "per_pair_misses": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "feasible": {
+    "E1_raw": {
+     "value": "2",
+     "argmax": [
+      "V00",
+      "V00",
+      "V00",
+      "V00"
+     ],
+     "diag_hits": [
+      "i=a",
+      "i=a2",
+      "j=a",
+      "j=a2",
+      "j=i"
+     ]
+    },
+    "E1_distinct": null,
+    "E1_distinct_anti": null,
+    "E1_all4": null,
+    "E2_raw": {
+     "value": "2",
+     "argmax": [
+      "V00",
+      "V00",
+      "V00",
+      "V00"
+     ],
+     "diag_hits": [
+      "i=a",
+      "i=a2",
+      "j=a",
+      "j=a2",
+      "j=i"
+     ]
+    },
+    "E2_distinct": null,
+    "E2_distinct_anti": null,
+    "E2_all4": null
+   },
+   "domains": {
+    "E1_raw": 15,
+    "E1_distinct": 0,
+    "E1_distinct_anti": 0,
+    "E1_all4": 0,
+    "E2_raw": 15,
+    "E2_distinct": 0,
+    "E2_distinct_anti": 0,
+    "E2_all4": 0
+   },
+   "constructible_distinct": false,
+   "constructible_distinct_anti": false,
+   "constructible_all4": false
+  },
+  "block": {
+   "prefix_len": 18,
+   "reads_used": 42,
+   "budget_left": "123/44",
+   "terminal_pair": [
+    1,
+    4
+   ],
+   "cov_a": 5,
+   "cov_b": 5,
+   "per_pair_misses": [
+    2,
+    2,
+    2,
+    2,
+    3,
+    2,
+    3,
+    2,
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    2,
+    2,
+    3,
+    2
+   ],
+   "feasible": {
+    "E1_raw": {
+     "value": "32/15",
+     "argmax": [
+      "V00",
+      "V02",
+      "V00",
+      "V02"
+     ],
+     "diag_hits": [
+      "i=a",
+      "j=a2"
+     ]
+    },
+    "E1_distinct": {
+     "value": "32/15",
+     "argmax": [
+      "V00",
+      "V02",
+      "V00",
+      "V02"
+     ],
+     "diag_hits": [
+      "i=a",
+      "j=a2"
+     ]
+    },
+    "E1_distinct_anti": {
+     "value": "32/15",
+     "argmax": [
+      "V00",
+      "V02",
+      "V00",
+      "V02"
+     ],
+     "diag_hits": [
+      "i=a",
+      "j=a2"
+     ]
+    },
+    "E1_all4": {
+     "value": "16/15",
+     "argmax": [
+      "V00",
+      "V02",
+      "V03",
+      "V01"
+     ],
+     "diag_hits": []
+    },
+    "E2_raw": {
+     "value": "11/5",
+     "argmax": [
+      "V00",
+      "V01",
+      "V00",
+      "V01"
+     ],
+     "diag_hits": [
+      "i=a",
+      "j=a2"
+     ]
+    },
+    "E2_distinct": {
+     "value": "11/5",
+     "argmax": [
+      "V00",
+      "V01",
+      "V00",
+      "V01"
+     ],
+     "diag_hits": [
+      "i=a",
+      "j=a2"
+     ]
+    },
+    "E2_distinct_anti": {
+     "value": "11/5",
+     "argmax": [
+      "V00",
+      "V01",
+      "V00",
+      "V01"
+     ],
+     "diag_hits": [
+      "i=a",
+      "j=a2"
+     ]
+    },
+    "E2_all4": {
+     "value": "13/15",
+     "argmax": [
+      "V01",
+      "V00",
+      "V03",
+      "V02"
+     ],
+     "diag_hits": []
+    }
+   },
+   "domains": {
+    "E1_raw": 274,
+    "E1_distinct": 144,
+    "E1_distinct_anti": 144,
+    "E1_all4": 24,
+    "E2_raw": 274,
+    "E2_distinct": 144,
+    "E2_distinct_anti": 144,
+    "E2_all4": 24
+   },
+   "constructible_distinct": true,
+   "constructible_distinct_anti": true,
+   "constructible_all4": true
+  },
+  "stride": {
+   "prefix_len": 15,
+   "reads_used": 44,
+   "budget_left": "0",
+   "terminal_pair": [
+    25,
+    15
+   ],
+   "cov_a": 15,
+   "cov_b": 15,
+   "per_pair_misses": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "feasible": {
+    "E1_raw": {
+     "value": "2",
+     "argmax": [
+      "V00",
+      "V00",
+      "V00",
+      "V00"
+     ],
+     "diag_hits": [
+      "i=a",
+      "i=a2",
+      "j=a",
+      "j=a2",
+      "j=i"
+     ]
+    },
+    "E1_distinct": null,
+    "E1_distinct_anti": null,
+    "E1_all4": null,
+    "E2_raw": {
+     "value": "2",
+     "argmax": [
+      "V00",
+      "V00",
+      "V00",
+      "V00"
+     ],
+     "diag_hits": [
+      "i=a",
+      "i=a2",
+      "j=a",
+      "j=a2",
+      "j=i"
+     ]
+    },
+    "E2_distinct": null,
+    "E2_distinct_anti": null,
+    "E2_all4": null
+   },
+   "domains": {
+    "E1_raw": 15,
+    "E1_distinct": 0,
+    "E1_distinct_anti": 0,
+    "E1_all4": 0,
+    "E2_raw": 15,
+    "E2_distinct": 0,
+    "E2_distinct_anti": 0,
+    "E2_all4": 0
+   },
+   "constructible_distinct": false,
+   "constructible_distinct_anti": false,
+   "constructible_all4": false
+  }
+ },
+ "nulls": {
+  "lex": {
+   "n_draws": 100,
+   "prefix_len_min": 15,
+   "prefix_len_max": 15,
+   "E1_distinct": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E1_distinct_anti": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E1_all4": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_distinct": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_distinct_anti": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_all4": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   }
+  },
+  "diag": {
+   "n_draws": 100,
+   "prefix_len_min": 22,
+   "prefix_len_max": 22,
+   "E1_distinct": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E1_distinct_anti": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E1_all4": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_distinct": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_distinct_anti": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_all4": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   }
+  },
+  "antidiag": {
+   "n_draws": 100,
+   "prefix_len_min": 15,
+   "prefix_len_max": 15,
+   "E1_distinct": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E1_distinct_anti": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E1_all4": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_distinct": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_distinct_anti": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_all4": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   }
+  },
+  "block": {
+   "n_draws": 100,
+   "prefix_len_min": 18,
+   "prefix_len_max": 18,
+   "E1_distinct": {
+    "constructible_draws": 100,
+    "n": 100,
+    "min": "2",
+    "median": "38/15",
+    "max": "10/3",
+    "ge_observed": 96,
+    "p_permille": 960,
+    "observed": "32/15"
+   },
+   "E1_distinct_anti": {
+    "constructible_draws": 100,
+    "n": 100,
+    "min": "2",
+    "median": "38/15",
+    "max": "10/3",
+    "ge_observed": 96,
+    "p_permille": 960,
+    "observed": "32/15"
+   },
+   "E1_all4": {
+    "constructible_draws": 100,
+    "n": 100,
+    "min": "2/15",
+    "median": "14/15",
+    "max": "2",
+    "ge_observed": 48,
+    "p_permille": 480,
+    "observed": "16/15"
+   },
+   "E2_distinct": {
+    "constructible_draws": 100,
+    "n": 100,
+    "min": "2",
+    "median": "38/15",
+    "max": "10/3",
+    "ge_observed": 97,
+    "p_permille": 970,
+    "observed": "11/5"
+   },
+   "E2_distinct_anti": {
+    "constructible_draws": 100,
+    "n": 100,
+    "min": "2",
+    "median": "38/15",
+    "max": "10/3",
+    "ge_observed": 96,
+    "p_permille": 960,
+    "observed": "11/5"
+   },
+   "E2_all4": {
+    "constructible_draws": 100,
+    "n": 100,
+    "min": "2/15",
+    "median": "14/15",
+    "max": "11/5",
+    "ge_observed": 52,
+    "p_permille": 520,
+    "observed": "13/15"
+   }
+  },
+  "stride": {
+   "n_draws": 100,
+   "prefix_len_min": 15,
+   "prefix_len_max": 15,
+   "E1_distinct": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E1_distinct_anti": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E1_all4": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_distinct": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_distinct_anti": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   },
+   "E2_all4": {
+    "constructible_draws": 0,
+    "n": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "ge_observed": 0,
+    "p_permille": null,
+    "observed": null
+   }
+  }
+ },
+ "exceedances": [
+  {
+   "order": "block",
+   "stat": "E1_distinct",
+   "value": "32/15",
+   "argmax": [
+    "V00",
+    "V02",
+    "V00",
+    "V02"
+   ],
+   "diag_hits": [
+    "i=a",
+    "j=a2"
+   ],
+   "null_n": 100,
+   "null_min": "2",
+   "null_median": "38/15",
+   "null_max": "10/3",
+   "p_permille": 960
+  },
+  {
+   "order": "block",
+   "stat": "E1_distinct_anti",
+   "value": "32/15",
+   "argmax": [
+    "V00",
+    "V02",
+    "V00",
+    "V02"
+   ],
+   "diag_hits": [
+    "i=a",
+    "j=a2"
+   ],
+   "null_n": 100,
+   "null_min": "2",
+   "null_median": "38/15",
+   "null_max": "10/3",
+   "p_permille": 960
+  },
+  {
+   "order": "block",
+   "stat": "E2_distinct",
+   "value": "11/5",
+   "argmax": [
+    "V00",
+    "V01",
+    "V00",
+    "V01"
+   ],
+   "diag_hits": [
+    "i=a",
+    "j=a2"
+   ],
+   "null_n": 100,
+   "null_min": "2",
+   "null_median": "38/15",
+   "null_max": "10/3",
+   "p_permille": 970
+  },
+  {
+   "order": "block",
+   "stat": "E2_distinct_anti",
+   "value": "11/5",
+   "argmax": [
+    "V00",
+    "V01",
+    "V00",
+    "V01"
+   ],
+   "diag_hits": [
+    "i=a",
+    "j=a2"
+   ],
+   "null_n": 100,
+   "null_min": "2",
+   "null_median": "38/15",
+   "null_max": "10/3",
+   "p_permille": 960
+  }
+ ],
+ "claims": [
+  {
+   "tag": "A0",
+   "name": "unrestricted baseline: FULL 62^4 enumeration reproduces the recorded eight |S|max values AND argmaxes",
+   "ok": true,
+   "detail": "values=True argmaxes=True"
+  },
+  {
+   "tag": "A0b",
+   "name": "domain counts independently re-derived: raw 14,776,336 ; distinct 14,303,524 ; distinct_anti 13,388,280 ; all4 12,517,800 (the closeout-corrected values)",
+   "ok": true,
+   "detail": "{\"raw\": 14776336, \"distinct\": 14303524, \"distinct_anti\": 13388280, \"all4\": 12517800}"
+  },
+  {
+   "tag": "A1",
+   "name": "lex baseline reproduces B5 exactly (15 pairs / 43 reads / cov_a = 1 ; no constrained class constructible ; raw = 2 = the trivial bound)",
+   "ok": true,
+   "detail": "{\"prefix_len\": 15, \"reads_used\": 43, \"cov_a\": 1, \"cov_b\": 15}"
+  },
+  {
+   "tag": "A2",
+   "name": "at least one order makes a CONSTRAINED statistic constructible inside the same 44-read budget (amendment A1 criterion: computed)",
+   "ok": true,
+   "detail": "constrained-constructible = ['block'] ; all4-constructible = ['block']"
+  },
+  {
+   "tag": "A3",
+   "name": "the ARTIFACT-FREE statistic (all4 = six pairwise-distinct settings) never exceeds the LHV bound 2 inside the 44-read budget",
+   "ok": true,
+   "detail": "max budget-feasible all4 |S| = 16/15 ; max over ALL constrained classes = 11/5"
+  },
+  {
+   "tag": "B1",
+   "name": "marginal balance Sigma_s K[s][a] = 0 on all 62 axes (marginal = 1/2 EXACT -> no-signalling)",
+   "ok": true,
+   "detail": "62/62 balanced = True"
+  },
+  {
+   "tag": "B2",
+   "name": "order-effect diagnostic Delta_order = 160/120 (A2 verbatim)",
+   "ok": true,
+   "detail": "max |C1 - C1_rev| = 160/120"
+  },
+  {
+   "tag": "B3",
+   "name": "ablation (independent draws) is exactly 0 in the frozen A2 record",
+   "ok": true,
+   "detail": "recorded ablation_abs_sum = 0"
+  },
+  {
+   "tag": "C1",
+   "name": "null lex: E1_all4 constructible in 0/100 draws, range [None..None]",
+   "ok": true,
+   "detail": "{\"constructible_draws\": 0, \"n\": 0, \"min\": null, \"median\": null, \"max\": null, \"ge_observed\": 0, \"p_permille\": null, \"observed\": null}"
+  },
+  {
+   "tag": "C1",
+   "name": "null diag: E1_all4 constructible in 0/100 draws, range [None..None]",
+   "ok": true,
+   "detail": "{\"constructible_draws\": 0, \"n\": 0, \"min\": null, \"median\": null, \"max\": null, \"ge_observed\": 0, \"p_permille\": null, \"observed\": null}"
+  },
+  {
+   "tag": "C1",
+   "name": "null antidiag: E1_all4 constructible in 0/100 draws, range [None..None]",
+   "ok": true,
+   "detail": "{\"constructible_draws\": 0, \"n\": 0, \"min\": null, \"median\": null, \"max\": null, \"ge_observed\": 0, \"p_permille\": null, \"observed\": null}"
+  },
+  {
+   "tag": "C1",
+   "name": "null block: E1_all4 constructible in 100/100 draws, range [2/15..2]",
+   "ok": true,
+   "detail": "{\"constructible_draws\": 100, \"n\": 100, \"min\": \"2/15\", \"median\": \"14/15\", \"max\": \"2\", \"ge_observed\": 48, \"p_permille\": 480, \"observed\": \"16/15\"}"
+  },
+  {
+   "tag": "C1",
+   "name": "null stride: E1_all4 constructible in 0/100 draws, range [None..None]",
+   "ok": true,
+   "detail": "{\"constructible_draws\": 0, \"n\": 0, \"min\": null, \"median\": null, \"max\": null, \"ge_observed\": 0, \"p_permille\": null, \"observed\": null}"
+  },
+  {
+   "tag": "A4",
+   "name": "every budget-feasible |S| > 2 is either diagonal-contaminated or not significant against the random-axis null (p > 50 permille)",
+   "ok": true,
+   "detail": "exceedances = 4 ; unexplained = []"
+  }
+ ],
+ "null_seed_base": 911,
+ "null_seed_step": 7,
+ "elapsed_s": 17.75059223175049
+}

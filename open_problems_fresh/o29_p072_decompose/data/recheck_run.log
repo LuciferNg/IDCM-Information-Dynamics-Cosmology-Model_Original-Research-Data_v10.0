@@ -1,0 +1,52 @@
+======================================================================
+1. COLD-SPOT FAMILY (nearest node 0) — deterministic
+======================================================================
+  [0] LIT: The Cold Spot (Vielva 2004)   d=0.00°
+  [2] LIT: CS sub-spot A (Cruz 2005 T4)  d=3.65°
+  [3] LIT: CS sub-spot B (Cruz 2005 T4)  d=1.14°
+  [4] LIT: CS sub-spot C (Cruz 2005 T4)  d=3.21°
+  [5] LIT: CS sub-spot D (Cruz 2005 T4)  d=3.46°
+  [7] SMICA-c2                           d=0.75°
+
+======================================================================
+2. FRESH-SEED ROTATION TESTS (10000 rot, seed=777)
+======================================================================
+  baseline-34:  obs=8.848°  z=-1.57σ  p=0.0641   (record: 0.072/0.066)
+  minus-family: obs=9.953°  z=-0.27σ  p=0.3805   (record: 0.365/0.385)
+  minus-node9:  obs=8.691°  z=-1.76σ  p=0.0411   (record: 0.051/0.042)
+
+======================================================================
+3. NODE9 SPOTS vs REST (permutation, seed=778)
+======================================================================
+  node9 spots: 11.36° ± 1.02° (n=2)
+  rest:        8.69° ± 4.48° (n=32)
+  diff = +2.66°  P(node9 closer) = 0.7882  (record: +2.66°, 0.7925)
+
+======================================================================
+4. NODE47
+======================================================================
+  spots nearest node47: []  (record: 0)
+  nearest catalogue spot: SMICA-h10 at 23.18°  (record: 23.18°)
+
+======================================================================
+5. BOOTSTRAP (seed=779, 500 draws × 1000 rot)
+======================================================================
+  frac p<0.05 = 0.220  (record: 0.222)
+  frac p<0.10 = 0.442  (record: 0.443)
+  p mean = 0.164  (record: 0.163)
+
+======================================================================
+6. DETERMINISTIC LEVERAGE (no MC noise)
+======================================================================
+  top-5 leverage (removal makes mean NEARER = spot is signal):
+    ++0.245°  SMICA-c2                         (node 0, d=0.75°)
+    ++0.234°  SMICA-h2                         (node 53, d=1.11°)
+    ++0.234°  LIT: CS sub-spot B (Cruz 2005 T4) (node 0, d=1.14°)
+    ++0.207°  SMICA-h12                        (node 54, d=2.03°)
+    ++0.171°  LIT: CS sub-spot C (Cruz 2005 T4) (node 0, d=3.21°)
+  bottom-3 (removal makes mean FARTHER = anti-signal):
+    -0.205°  SMICA-h8                         (node 3, d=15.61°)
+    -0.235°  SMICA-h3                         (node 52, d=16.61°)
+    -0.271°  SMICA-h14                        (node 17, d=17.80°)
+
+✅ O29 independent re-derivation complete

@@ -1,0 +1,7 @@
+(a) K entries: +1 3720 / -1 3720 ; rows with row-sum != 1: 120/120 ; value set size 2
+Pr-1: HOLDS
+(b) computed 120 runs of length 11532
+(b) cross-run agreement: min 3577/11532 max 1 mean 59/119  (distinct values 855)
+Pr-2 (agreement < 1 for all distinct pairs): REFUTED
+(d) 4-frame separating base rate = 12645/557845 = 2529/111569 = 2.2668% (p ~ 2529/111569)
+Pr-3: HOLDS

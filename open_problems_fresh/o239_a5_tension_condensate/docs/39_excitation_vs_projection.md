@@ -3,7 +3,7 @@
 > **日期**: 2026-10-12（調律者: 「等等，e是否和v是否都是激發態而非投影」）
 > **Script**: `47_excitation_vs_projection.py`（2/2）· **logs**: `logs/47.txt`、
 > **data**: `data/47_excitation_vs_projection.json`
-> **RAG**: `neutrino_mass_spectrum.md`（p15）、`o49_neutrino_mass/scripts/04`
+> **RAG**: `neutrino_mass_spectrum.md`（P15）、`o49_neutrino_mass/scripts/04`
 > **一句話**: **★IDCM 內部其實有兩套質量公式結構——ν(O49) 係「激發態」式
 > m=(γ₆v)²/M_comp（有 VEV v=246 參與, seesaw 型）; e(O239/O54) 係「投影」式
 > m=M₀|Δm|^φ²（冇 v, 純譜投影）。scripts/47 檢定: e 用激發式全 88 mode 掃

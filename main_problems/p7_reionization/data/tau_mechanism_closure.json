@@ -1,0 +1,17 @@
+{
+  "tau_canonical": 0.054135591164775114,
+  "tau_formula": "tau = kappa/(1+epsilon) = 1/(16+4*phi_inv)",
+  "planck_2018": 0.054,
+  "planck_err": 0.007,
+  "error_pct": 0.25109474958355016,
+  "sigma": 0.019370166396445298,
+  "geometric_series": "1/(1+eps) = sum(-eps)^n",
+  "mechanism": "photon transmission through K_Chain pipeline: scatter prob kappa per site, loss eps per site, closed geometric series",
+  "identity": "16*eps^2 = phi^-2, so tau = kappa/(1+sqrt(kappa*phi^-2))",
+  "truncated_versions": {
+    "A_kappa(1-eps)": 0.05284321892578289,
+    "B_kappa(1-eps)(1+eps2)": 0.05410473852295148,
+    "C_kappa(1-eps)(1+eps2-eps3)": 0.05390982302582041
+  },
+  "status": "CLOSED"
+}

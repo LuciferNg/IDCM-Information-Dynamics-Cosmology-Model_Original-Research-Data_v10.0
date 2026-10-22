@@ -1,0 +1,130 @@
+{
+  "verdict": "ALL PASS",
+  "all_pass": true,
+  "total_checks": 29,
+  "passed": 29,
+  "results": {
+    "L1a_Nd_eq_L3_L5": {
+      "pass": true,
+      "detail": "Nd = 4×11 = 44"
+    },
+    "L1b_B_eq_L3": {
+      "pass": true,
+      "detail": "B = L₃ = 4"
+    },
+    "L1c_rank_eq_L5": {
+      "pass": true,
+      "detail": "rank = L₅ = 11"
+    },
+    "L1d_Nd_B_rank": {
+      "pass": true,
+      "detail": "Nd = B × rank = 4×11 = 44"
+    },
+    "L1e_rank_odd_lucas": {
+      "pass": true,
+      "detail": "rank = 11 ∈ odd Lucas = [1, 4, 11]"
+    },
+    "L1f_B_odd_lucas": {
+      "pass": true,
+      "detail": "B = 4 ∈ odd Lucas"
+    },
+    "L1g_phi_identity": {
+      "pass": true,
+      "detail": "L₃×L₅ = 4×11 = 44, L₈-L₂ = 47-3 = 44"
+    },
+    "L2a_N_eq_rank_plus_1": {
+      "pass": true,
+      "detail": "N = rank + 1 = 11 + 1 = 12"
+    },
+    "L2b_SU_fundamental": {
+      "pass": true,
+      "detail": "SU(12) fundamental = 12"
+    },
+    "L2c_SU_rank": {
+      "pass": true,
+      "detail": "SU(12) rank = 11 = input rank"
+    },
+    "L2d_only_SU12_matches": {
+      "pass": true,
+      "detail": "Only SU(12) has fundamental=12 among rank-11 groups: ['SU(12)']"
+    },
+    "L2e_SU12_adjoint": {
+      "pass": true,
+      "detail": "dim(SU(12)) = 12²-1 = 143"
+    },
+    "L2f_SU12_Lambda2": {
+      "pass": true,
+      "detail": "Λ²(12) = C(12,2) = 66"
+    },
+    "L2g_positive_roots": {
+      "pass": true,
+      "detail": "|Φ⁺| = 66"
+    },
+    "L3a_Ngen_from_L5": {
+      "pass": true,
+      "detail": "N_gen = (L₅-2)/3 = (11-2)/3 = 3"
+    },
+    "L3b_L5_eq_3Ngen_plus_2": {
+      "pass": true,
+      "detail": "L₅ = 11, 3N_gen+2 = 3×3+2 = 11"
+    },
+    "L3c_tensor_product": {
+      "pass": true,
+      "detail": "B×N_gen = 4×3 = 12"
+    },
+    "L3d_fundamental_equals_tensor": {
+      "pass": true,
+      "detail": "fundamental = B×N_gen = 12 = N = 12"
+    },
+    "L3e_SU4_dim": {
+      "pass": true,
+      "detail": "dim(SU(4)) = 15"
+    },
+    "L3f_SU3_dim": {
+      "pass": true,
+      "detail": "dim(SU(3)) = 8"
+    },
+    "L3g_12_decomposition": {
+      "pass": true,
+      "detail": "12 = (4,3) = (3,3)_{1/3}⊕(1,3)_{-1} under SU(3)_c×U(1)"
+    },
+    "L4a_h11_eq_3x12": {
+      "pass": true,
+      "detail": "h¹¹ = 36 = 3 × 12"
+    },
+    "L4b_12_eq_h11_over_3": {
+      "pass": true,
+      "detail": "12 = h¹¹/3 = 36/3"
+    },
+    "L4c_h11_eq_Ktree_plus_Ngen": {
+      "pass": true,
+      "detail": "h¹¹ = 36 = K_tree + N_gen = 33 + 3"
+    },
+    "L4d_Ktree_eq_Ngen_x_L5": {
+      "pass": true,
+      "detail": "K_tree = N_gen × L₅ = 3 × 11 = 33"
+    },
+    "L4e_h21_minus_h11": {
+      "pass": true,
+      "detail": "h²¹ - h¹¹ = 98 - 36 = 62"
+    },
+    "L4f_62_eq_Nd_plus_L6": {
+      "pass": true,
+      "detail": "h²¹ - h¹¹ = 62 = Nd + L₆ = 44 + 18"
+    },
+    "L4g_euler_char": {
+      "pass": true,
+      "detail": "χ = 2(h¹¹-h²¹) = 2(36-98) = -124"
+    },
+    "L4h_h11_is_consequence": {
+      "pass": true,
+      "detail": "h¹¹ = 36 = 3×12 = 3×(B×N_gen) = 3×(L₅+1) — CY₃ 幾何反映 K_Chain 結構，非原因"
+    }
+  },
+  "causal_chain": {
+    "L1": "K_Chain φ代数 → rank=11",
+    "L2": "rank=11 → SU(12) 唯一匹配",
+    "L3": "B×N_gen = 12 → fundamental=12",
+    "L4": "h¹¹/3 = 12 作為 CY₃ 幾何驗證 (非原因)"
+  }
+}

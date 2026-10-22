@@ -1,0 +1,11 @@
+{
+  "route": "B_core",
+  "rms_chi2": 1.2338,
+  "octave_chi2": 8.2919,
+  "energy_chi2": 118.3253,
+  "magic_d14_best_k": 2.0,
+  "magic_d14_best_chi2": 170.7938,
+  "pass": 0,
+  "fail": 0,
+  "status": "\ud83d\udfe1"
+}

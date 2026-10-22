@@ -1,0 +1,5 @@
+# O4_renew D03: 冷斑定位
+node0_ICRS=48.2999,-20.4373
+node0_Gal=209.0000,-57.0000
+smica_coldest_Gal=317.88,-5.79 temp=-184.0
+node0_temp=-134.2

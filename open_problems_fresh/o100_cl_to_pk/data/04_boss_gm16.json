@@ -1,0 +1,49 @@
+{
+  "data": {
+    "CMASS": {
+      "n": 55,
+      "kmin": 0.001539,
+      "kmax": 0.316659,
+      "zeff": 0.57
+    },
+    "LOWZ": {
+      "n": 53,
+      "kmin": 0.002342,
+      "kmax": 0.31766,
+      "zeff": 0.32
+    }
+  },
+  "wiggle_extrema_sig003": {
+    "CMASS": [],
+    "LOWZ": []
+  },
+  "idcm_line_hits": [],
+  "sigma8": {
+    "CMASS": 1.1540743870405885,
+    "LOWZ": 1.2124683556986338,
+    "CMASS_matter": 0.002035890018721167,
+    "LOWZ_matter": 0.002067411264768012
+  },
+  "checks": [
+    {
+      "label": "\u7dda\u8b5c\u4f4d\u7f6e: k\u22640.30 \u7bc4\u570d\u5167\u7dda\u6578 = wiggle \u6975\u503c\u6578",
+      "ok": false,
+      "detail": "0/3 \u547d\u4e2d"
+    },
+    {
+      "label": "\u5f62\u72c0: CMASS \u6b98\u5dee rms(log) < 0.3 (\u224830% \u5167)",
+      "ok": false,
+      "detail": "rms=2.596"
+    },
+    {
+      "label": "\u5f62\u72c0: LOWZ \u6b98\u5dee rms(log) < 0.3 (\u224830% \u5167)",
+      "ok": false,
+      "detail": "rms=2.651"
+    },
+    {
+      "label": "\u03c38: CMASS/LOWZ \u5168\u7bc4\u570d (\u9664\u4ee5 b\u00b2) \u542b 0.748\u00b10.05",
+      "ok": false,
+      "detail": "CMASS=0.002 LOWZ=0.002"
+    }
+  ]
+}

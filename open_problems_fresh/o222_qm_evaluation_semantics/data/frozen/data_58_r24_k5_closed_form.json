@@ -1,0 +1,9 @@
+{
+ "cyclo176_degree": 80,
+ "cyclo176_height": 1,
+ "identity_zeta89": "zeta^89 = -zeta verified exactly",
+ "identity_main": "(zeta-zeta^-1)(G+1)+(zeta^55-zeta^-55)==0 verified exactly in Z[zeta_176]",
+ "G_value": -26.8845369058578,
+ "residual_closed_form": "55/2 - 1 - sin(5pi/8)/sin(pi/88) = 53/2 - sqrt(2+sqrt(2))/(2 sin(pi/88))",
+ "residual_value": 0.6154630941421999
+}

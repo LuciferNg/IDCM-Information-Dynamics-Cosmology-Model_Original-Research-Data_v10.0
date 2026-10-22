@@ -1,0 +1,8 @@
+================================================================================================================
+O228 scripts/11 -- R7 (1): exact point value of max pat(k=6) for M_edge
+================================================================================================================
+negation map: complete=True
+[PASS] P1T-1  -- {'checked_subsets': 2000, 'odd_code_map': True, 'no_self_twin_class': True, 'class_size_multiset_twin_invariant': True}
+pair groups up to twin symmetry: 225
+   ... 25/225 groups, hits=0, budget-hits=25, nodes=75000025, 29.2 s
+   ... 50/225 groups, hits=0, budget-hits=50, nodes=150000050, 58.7 s

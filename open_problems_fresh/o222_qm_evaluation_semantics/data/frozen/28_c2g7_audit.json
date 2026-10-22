@@ -1,0 +1,82 @@
+{
+ "claims": [
+  {
+   "tag": "A0",
+   "name": "frozen impl hash matches the on-disk file and the first-run log is preserved",
+   "ok": true,
+   "detail": "impl=d8d7443603de  first-run log keeps the pre-amendment C3 = 🟡"
+  },
+  {
+   "tag": "A1a",
+   "name": "group-axiom route: all 400 sampled pair maps are bijections (and every left translation is) => the uniform state measure is invariant without running the DP",
+   "ok": true,
+   "detail": "non-bijective = 0"
+  },
+  {
+   "tag": "A1b",
+   "name": "p_k = uniform: the record reports dev_L1 = 0 at ALL 3844 steps with value set ['1/120']; by A1a this zero is FORCED (a bijection cannot move mass between states), so it is a proof, not a fit",
+   "ok": true,
+   "detail": "steps=3844 uniform=3844"
+  },
+  {
+   "tag": "A1c",
+   "name": "audit-side expectation under the uniform measure reproduces the frozen C2 table on its own sample of pairs (60 checked)",
+   "ok": true,
+   "detail": "mismatches = 0"
+  },
+  {
+   "tag": "A2",
+   "name": "outcome marginals: sum_s K[s][a] = 0 for all 62 settings, computed here from the frozen K",
+   "ok": true,
+   "detail": "column sums = [0]"
+  },
+  {
+   "tag": "A3",
+   "name": "the recorded 16-atom witness independently reproduces normalisation, the four marginals = 1/2 and the four frozen table values (both tables)",
+   "ok": true,
+   "detail": "C1: support=4 min_p=0 marginals=['1/2', '1/2', '1/2', '1/2'] correlators match=True | C2: support=4 min_p=0 marginals=['1/2', '1/2', '1/2', '1/2'] correlators match=True"
+  },
+  {
+   "tag": "A4",
+   "name": "the |S| > 2 tuple (table C2) violates the atom-wise bound 2, hence admits NO joint measure; measured antipodal count = 0 and the machine also reports infeasible",
+   "ok": true,
+   "detail": "argmax = (59, 60, 1, 61)  S = 3  values = ['1', '-1', '1', '0']  antipodal = 0  (the frozen anti filter is already applied inside the all4 domain, so the earlier \"antipodal contamination\" attribution does not apply here)"
+  },
+  {
+   "tag": "A5a",
+   "name": "rank_R(K): modular rank over GF(7)/GF(13)/GF(17) = 6/6/6 and a 6-row spanning set contains every one of the 120 rows (so rank_R(K) = 6 exactly)",
+   "ok": true,
+   "detail": "rank >= 6 from the modular lower bound and rank <= 6 from a rational spanning set of 6 rows covering all 120 ; machine rank = 6"
+  },
+  {
+   "tag": "A5b",
+   "name": "sign-rank = 1 test: 6000 row pairs are neither equal nor complementary (so sign_rank > 1); reversed-greedy fooling set of size 6 is a lower bound",
+   "ok": true,
+   "detail": "machine: 6000 neither, fooling >= 4 ; audit: 6000 neither, fooling >= 6"
+  },
+  {
+   "tag": "A6",
+   "name": "observables commute identically (0/226920 non-zero), the commutator subgroup is the whole group (120/120) and 3720/3844 translation pairs do not commute",
+   "ok": true,
+   "detail": "audit: 3720 non-commuting translation pairs (machine 3720)"
+  },
+  {
+   "tag": "A8",
+   "name": "mechanism: the diagonal of C2 is saturated (memo hits: 62/62 entries = +1) and there are 41 further off-diagonal entries with |value| = 1; the |S| = 3 tuple uses 3 saturated entries while C1 on the SAME tuple gives (S = 2) -- so the driver is memo saturation, not antipodal pairs",
+   "ok": true,
+   "detail": "C2 values ['1', '-1', '1', '0'] -> S = 3 ; C1 values ['1', '-1', '1', '-1'] -> S = 2 ; budget-window values (B3R2/D6) stay < 2"
+  },
+  {
+   "tag": "A7",
+   "name": "record integrity: 7 cells in order, no cell sampled (samples_used = 0, nodes_used = 0), C5 is the only 🔴 and C7 the only 🟡",
+   "ok": true,
+   "detail": "diff 0 vs 0"
+  }
+ ],
+ "rank_mod": {
+  "gf7": 6,
+  "gf13": 6,
+  "gf17": 6
+ },
+ "fooling_set_reversed": 6
+}

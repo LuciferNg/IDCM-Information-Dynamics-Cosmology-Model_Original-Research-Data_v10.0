@@ -1,0 +1,129 @@
+{
+  "method": "exact SMHW harmonic-space (Antoine & Vandergheynst 1999)",
+  "raw_map": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o26_node57_region/data/smica_iqu_2048.fits",
+  "nside": 1024,
+  "lmax": 3072,
+  "A_IDCM": 134.2,
+  "node0_gal": [
+    208.99998777401427,
+    -57.00000607903302
+  ],
+  "node0_icrs": [
+    48.2999,
+    -20.4373
+  ],
+  "scales": [
+    1.0,
+    2.0,
+    3.0,
+    4.17,
+    5.0,
+    7.0,
+    10.0
+  ],
+  "smhw": {
+    "1.0": {
+      "T_wavelet": -14.157946705555021,
+      "rank": 1,
+      "kurtosis": 0.09206922140429263,
+      "T_pixel": -269.0663677640259,
+      "dev_pct": 94.73812099846991
+    },
+    "2.0": {
+      "T_wavelet": -25.254339858271443,
+      "rank": 1,
+      "kurtosis": 0.13472164939881548,
+      "T_pixel": -269.0663677640259,
+      "dev_pct": 90.614085265231
+    },
+    "3.0": {
+      "T_wavelet": -30.024244164324283,
+      "rank": 1,
+      "kurtosis": 0.12596473274768893,
+      "T_pixel": -269.0663677640259,
+      "dev_pct": 88.84132401465506
+    },
+    "4.17": {
+      "T_wavelet": -31.17380220990937,
+      "rank": 2,
+      "kurtosis": 0.10993131064909711,
+      "T_pixel": -269.0663677640259,
+      "dev_pct": 88.41408442498131
+    },
+    "5.0": {
+      "T_wavelet": -30.27918338478587,
+      "rank": 2,
+      "kurtosis": 0.10820152329331156,
+      "T_pixel": -269.0663677640259,
+      "dev_pct": 88.74657444688849
+    },
+    "7.0": {
+      "T_wavelet": -23.34850390823573,
+      "rank": 6,
+      "kurtosis": 0.1154285552004084,
+      "T_pixel": -269.0663677640259,
+      "dev_pct": 91.32239971042661
+    },
+    "10.0": {
+      "T_wavelet": -11.199891941514098,
+      "rank": 18,
+      "kurtosis": 0.10064705246391492,
+      "T_pixel": -269.0663677640259,
+      "dev_pct": 95.83749837090879
+    }
+  },
+  "model_prediction": {
+    "1.0": {
+      "predicted": -9.259409104066597,
+      "observed": -14.157946705555021,
+      "ratio": 0.6540079078298529
+    },
+    "2.0": {
+      "predicted": -10.852098978049886,
+      "observed": -25.254339858271443,
+      "ratio": 0.4297122411020198
+    },
+    "3.0": {
+      "predicted": -9.384588925282177,
+      "observed": -30.024244164324283,
+      "ratio": 0.3125670332921563
+    },
+    "4.17": {
+      "predicted": -7.511911613746559,
+      "observed": -31.17380220990937,
+      "ratio": 0.2409687327572352
+    },
+    "5.0": {
+      "predicted": -6.454262846105303,
+      "observed": -30.27918338478587,
+      "ratio": 0.21315841857704534
+    },
+    "7.0": {
+      "predicted": -4.668130653642666,
+      "observed": -23.34850390823573,
+      "ratio": 0.1999327525219324
+    },
+    "10.0": {
+      "predicted": -3.1177049395273304,
+      "observed": -11.199891941514098,
+      "ratio": 0.27836919818584
+    }
+  },
+  "model_gauss_dip": {
+    "A": 134.2,
+    "sigma_deg": 1.7707006369426752,
+    "note": "R8 smooth kernel \u03c3=4.17/2.355"
+  },
+  "gaussian_kurtosis_expected": {
+    "sigma": 0.0013810679320049757,
+    "N_pix": 12582912
+  },
+  "summary": {
+    "R_struct": 4.17,
+    "T_wavelet_4_17": -31.17380220990937,
+    "T_pixel_4_17": -269.0663677640259,
+    "rank_4_17": 2,
+    "kurtosis_4_17": 0.10993131064909711,
+    "note_smhw_vs_pixel": "SMHW wavelet coefficient (~31 \u03bcK @ R=4.17\u00b0) \u2260 pixel temperature (\u2212134 \u03bcK). SMHW is a band-pass filter; the coefficient reflects the temperature fluctuation at scale R, not the total temperature. The two quantities are complementary."
+  }
+}

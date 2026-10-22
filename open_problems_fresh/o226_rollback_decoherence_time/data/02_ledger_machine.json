@@ -1,0 +1,214 @@
+{
+ "rules_version": "o226-r1-contract-v1",
+ "n2I": 120,
+ "order_spectrum": {
+  "2": 1,
+  "3": 20,
+  "5": 24,
+  "4": 30,
+  "1": 1,
+  "6": 20,
+  "10": 24
+ },
+ "axis_types": {
+  "vertex": 12,
+  "face": 20,
+  "edge": 30
+ },
+ "pass_account": {
+  "read_ops": 11532,
+  "hits": 124,
+  "misses": 11408,
+  "pops": 3844,
+  "max_depth": 3,
+  "final_top_ctx": 61,
+  "hits_without_carry": [
+   62
+  ]
+ },
+ "budget_pass": {
+  "feasible_pairs": 15,
+  "charged_reads_completed": 44,
+  "terminal_pair": [
+   0,
+   15
+  ],
+  "sigma": "123/2",
+  "reads_that_exhaust": 44
+ },
+ "redundancy_mismatches": 0,
+ "pop_cost_variants": [
+  {
+   "popcost": "0",
+   "completed_pairs": 15,
+   "charged_reads": 44,
+   "spent": "123/2",
+   "budget_left": "0",
+   "terminal": [
+    0,
+    15
+   ],
+   "exact": true
+  },
+  {
+   "popcost": "123/7744",
+   "completed_pairs": 15,
+   "charged_reads": 44,
+   "spent": "478101/7744",
+   "budget_left": "-1845/7744",
+   "terminal": [
+    0,
+    15
+   ],
+   "exact": false
+  },
+  {
+   "popcost": "41/880",
+   "completed_pairs": 15,
+   "charged_reads": 44,
+   "spent": "10947/176",
+   "budget_left": "-123/176",
+   "terminal": [
+    0,
+    15
+   ],
+   "exact": false
+  },
+  {
+   "popcost": "123/704",
+   "completed_pairs": 14,
+   "charged_reads": 42,
+   "spent": "43173/704",
+   "budget_left": "123/704",
+   "terminal": [
+    0,
+    14
+   ],
+   "exact": false
+  },
+  {
+   "popcost": "123/176",
+   "completed_pairs": 13,
+   "charged_reads": 38,
+   "spent": "10947/176",
+   "budget_left": "-123/176",
+   "terminal": [
+    0,
+    13
+   ],
+   "exact": false
+  },
+  {
+   "popcost": "123/88",
+   "completed_pairs": 11,
+   "charged_reads": 33,
+   "spent": "5535/88",
+   "budget_left": "-123/88",
+   "terminal": [
+    0,
+    11
+   ],
+   "exact": false
+  }
+ ],
+ "carry_zero_pairs": 62,
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "|2I| = 120 and the order spectrum equals {1:1, 2:1, 3:20, 4:30, 5:24, 6:20, 10:24}",
+   "ok": true,
+   "detail": "{2: 1, 3: 20, 5: 24, 4: 30, 1: 1, 6: 20, 10: 24}"
+  },
+  {
+   "tag": "A2",
+   "name": "axis set F1: 62 axes, type counts vertex/face/edge = 12/20/30, each type of constant Q(sqrt5) norm (only the per-type scale matters, the read uses the sign of the dot)",
+   "ok": true,
+   "detail": "types = {'vertex': 12, 'face': 20, 'edge': 30} ; per-type distinct norms = {'vertex': 1, 'face': 1, 'edge': 1}"
+  },
+  {
+   "tag": "A3",
+   "name": "h table F2 is bijective (62 distinct) and inverse-closed",
+   "ok": true,
+   "detail": "h bijective = True"
+  },
+  {
+   "tag": "A4",
+   "name": "icosahedral axis count: 62 = 12 vertex + 20 face + 30 edge (the axis set of I_h)",
+   "ok": true,
+   "detail": "62 = 12 + 20 + 30"
+  },
+  {
+   "tag": "B1",
+   "name": "machine reproduces the F3 frozen correlation table C1 for all 3844 pairs",
+   "ok": true,
+   "detail": "mismatches = 0 / 3844 (den 120)"
+  },
+  {
+   "tag": "B2",
+   "name": "literal machine == closed form for every pair x state (empty ledger)",
+   "ok": true,
+   "detail": "mismatches = 0 / 3844"
+  },
+  {
+   "tag": "C1",
+   "name": "one full pass (all 120 initial states identical): read-ops = 3N^2 = 11532, hits = 2N = 124, misses = 3N^2 - 2N = 11408, pops = N^2 = 3844",
+   "ok": true,
+   "detail": "read-ops = 11532 ; hits = 124 ; misses = 11408 ; pops = 3844 ; distinct states outcomes = 1"
+  },
+  {
+   "tag": "C2",
+   "name": "the pass account is state-independent (1 distinct outcome over 120 initial states)",
+   "ok": true,
+   "detail": "distinct outcome tuples = 1"
+  },
+  {
+   "tag": "C3",
+   "name": "ledger depth stays <= 3 (1 carry + 2 pushes); pop depth = 1 (one entry per pop)",
+   "ok": true,
+   "detail": "max ledger depth observed = 3"
+  },
+  {
+   "tag": "C4",
+   "name": "without the carry marker hits = N = 62 (diagonal only) => the 2N of F4 comes from N diagonal + N carry hits",
+   "ok": true,
+   "detail": "hits without carry = [62]"
+  },
+  {
+   "tag": "D1",
+   "name": "budget-feasible pass = frozen-order prefix of 15 completed pairs, 43 charges inside them, then the first read of pair (0,15) is the 44th charge and the second is refused",
+   "ok": true,
+   "detail": "completed pairs = 15 ; charged reads = 44 ; terminal pair = (0, 15) ; identical outcomes over 120 states = 120"
+  },
+  {
+   "tag": "D2",
+   "name": "the pass charges exactly 44 = N_d reads and terminates with B_rem = 0 EXACT (no overshoot, no remainder)",
+   "ok": true,
+   "detail": "Sigma = 123/2 = 44 x (123/88) ; B_rem = 0 ; 44 = B/c"
+  },
+  {
+   "tag": "D3",
+   "name": "the 15 feasible pairs carry 15 pops, so 43 = 44 - 1 charges are read charges of completed pairs and the 44th is the refused pair opening read",
+   "ok": true,
+   "detail": "pops inside the feasible prefix = 15 ; 44th charge = 123/88"
+  },
+  {
+   "tag": "E1",
+   "name": "Pr-1.4: the 4-operation pair equals the 2-operation pair in (x_a, x_b, s_final, top) for all 3844 pairs x 120 states  => the pop plus the reconcile read are redundant",
+   "ok": true,
+   "detail": "mismatches = 0 / 461280"
+  },
+  {
+   "tag": "F1",
+   "name": "pop cost eps > 0 leaves B_rem = -15*eps at the terminal (no exact exhaustion) and shortens the feasible prefix once eps >= c/8  =>  eps = 0 is FORCED by the recorded zero remainder (contract I4 charges reads only, now derived rather than assumed)",
+   "ok": true,
+   "detail": "eps=0 -> pairs 15 reads 44 B_rem 0 | eps=123/7744 -> pairs 15 reads 44 B_rem -1845/7744 | eps=41/880 -> pairs 15 reads 44 B_rem -123/176 | eps=123/704 -> pairs 14 reads 42 B_rem 123/704 | eps=123/176 -> pairs 13 reads 38 B_rem -123/176 | eps=123/88 -> pairs 11 reads 33 B_rem -123/88"
+  },
+  {
+   "tag": "F2",
+   "name": "carry semantics disclosed: the carried entry stores the placeholder value 0, so the first read of exactly N = 62 pairs (those with prev-b == a) returns 0, not the recorded sign",
+   "ok": true,
+   "detail": "pairs whose first read hits the carried entry = 62 = N"
+  }
+ ],
+ "elapsed_s": 6.119346380233765
+}

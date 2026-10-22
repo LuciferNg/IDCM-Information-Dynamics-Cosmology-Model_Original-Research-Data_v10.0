@@ -1,0 +1,190 @@
+{
+  "script": "01_spin_holonomy_theorem",
+  "date": "2026-09-28",
+  "convention": "176-chain γ_k=4sin²(kπ/176); mode index 1-based; Σγ_odd=88/Σγ_even=90",
+  "theorem": "W = Π_{k=1..n} U_k = i^{n+1}; ord(W)=4 ⟺ n even",
+  "n_chain": 88,
+  "total_phase_over_pi": "44.5",
+  "W": "(8.1933796013712414659e-60 + 1.0j)",
+  "winding": "22.25",
+  "s_min": "1/2",
+  "checks": [
+    {
+      "name": "A1 γ_k = |1 − U_k|² ∀k=1..88 (link 變數 = 譜之導出量, 非假設)",
+      "pass": true,
+      "detail": "max dev = 6.223e-61"
+    },
+    {
+      "name": "A2 ★ |1−U|² = γ_k 之單位模解被強迫為 arg U_k = ±2θ_k（cos x = 1−γ_k/2；k<88: 2 解；k=88: 1 切點）",
+      "pass": true,
+      "detail": "解數 = {1: 2, 7: 2, 21: 2, 44: 2, 88: 1}; arccos(1−γ_k/2) 與 2θ_k 最大偏差 = 7.5843e-61"
+    },
+    {
+      "name": "A3a 鏡像和 γ_k + γ_{88−k} = 4 = B ∀k",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A3b μ² = γ₄₄ = 2 (中心模自對偶)",
+      "pass": true,
+      "detail": "γ₄₄ = 2.0"
+    },
+    {
+      "name": "A3c Σγ_odd = 88 = 2N_d 且 Σγ_even = 90 = B(N_d+1)/2 (O211)",
+      "pass": true,
+      "detail": "Σodd = 88.0, Σeven = 90.0"
+    },
+    {
+      "name": "B1 Σ_{k=1..88} 2θ_k = 44.5π = (F₁₁/2)π = 89π/2",
+      "pass": true,
+      "detail": "Σ2θ = 44.5π"
+    },
+    {
+      "name": "B2 ★ W = Π_{k=1..88} U_k = e^{i·44.5π} = i 精確",
+      "pass": true,
+      "detail": "W = (8.193379601e-60 + 1.0j)"
+    },
+    {
+      "name": "B3 W = i^{89}; 89 = n+1 = 2N_d+1 = F₁₁（奇）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B4 偶鏈 (n = 2..16): W = i^{n+1} ∈ {±i}, 階恰 4（全成立）",
+      "pass": true,
+      "detail": "n = [2, 4, 6, 8, 10, 12, 14, 16]"
+    },
+    {
+      "name": "B5 奇鏈 (n = 3..17): W = i^{n+1} ∈ {±1}, 階 ≤ 2 ⟹ 冇 spinor（全成立）",
+      "pass": true,
+      "detail": "n = [3, 5, 7, 9, 11, 13, 15, 17]"
+    },
+    {
+      "name": "B6 ★★ 定理: ord(W) = 4 ⟺ n 為偶 ⟹ 偶鏈 ⟹ 自旋必然; 88 = 2N_d 為偶 ✓",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B7 ★ 兩符號約定 W± = Π e^{±i2θ_k} = i^{±89} 皆階 4 ⟹ 自旋結論與定向約定無關",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C1 W² = −1 = J²（2π 旋轉 ⟹ 費米子翻號）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C2 W³ = −i, W⁴ = +1（720° 返原態）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C3 4 次回歸 = 352 links = B·Σγ_odd = 2B·N_d = 4×88 = 2×176",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C4 步數↔角度刻度 (O160 表) 自洽: 176 步 = 360°, 352 步 = 720°, 88 步 = 180°, 44 步 = 90°",
+      "pass": true,
+      "detail": "步數 = 角度 × 44/90（O160 翻譯層，呢個係刻度一致性檢查，非推導）"
+    },
+    {
+      "name": "D1 e^{2πis} = W² = −1 ⟹ 2s ≡ 1 (mod 2) ⟹ s ∈ ½+ℤ（4s ≡ 2 mod 4）",
+      "pass": true,
+      "detail": "s = ¼·[-6, -2, 2, 6] = {±1/2, ±3/2} (= ½+ℤ 樣本)"
+    },
+    {
+      "name": "D2 整數自旋被排除: e^{2πi·1} = +1 ≠ −1（W² = −1 係硬性約束）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D3 88-grid helicity ĥ (fixed-point-free 對合, O125 §5): 譜恰 2 個本徵值 ⟹ 2S+1 = 2 ⟹ S = 1/2",
+      "pass": true,
+      "detail": "ĥ² = 1, tr ĥ = 0, 譜 = {+1×44, −1×44}"
+    },
+    {
+      "name": "D4 2 = log₂B = μ² = γ₄₄ (O151/O211: 極化態數 = log₂分支數)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D5 高半整數 (3/2, 5/2…) 需 2S+1 ≥ 4 態 ⟹ 被 ĥ 譜 (2 態) 排除",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E1 站點空間 Wilson loop e^{i·88·2θ_k} = e^{ikπ} = (−1)^k（扇區 Z₂ 電荷）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E2 扇區計數: even k (週期 J²=+1) = 44 = odd k (反週期 J²=−1) = N_d",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E3 ★ 6 個費米子候選全部滿足 nL ≡ N_d (mod 2N_d) ⟹ w = nL/88 ∈ ℤ+½ (O137 條件重算)",
+      "pass": true,
+      "detail": "w = {'e': '0.5', 'μ': '3.5', 'τ': '2.5', 's': '3.5', 'c': '8.5', 'b': '1.5'}"
+    },
+    {
+      "name": "E4 純玻色子模式 = {n ≡ 0 (mod 8)} = {8,16,24,32,40}（永不可能係費米子）",
+      "pass": true,
+      "detail": "純玻色 = [8, 16, 24, 32, 40]"
+    },
+    {
+      "name": "E5 ★★ spin–statistics: 交換 = 2π 相對傳輸 ⟹ e^{2πiw} = −1 (w ∈ ½+ℤ) / +1 (w ∈ ℤ)",
+      "pass": true,
+      "detail": "半整數繞數 ⟹ 反對稱 ⟹ Pauli（推論，非公設）"
+    },
+    {
+      "name": "E6 ★ 反證明: 奇鏈輸送 W = ±1 ⟹ 2π 傳輸無翻號 ⟹ 費米子扇區消失（spin 必須有偶鏈）",
+      "pass": true,
+      "detail": "n = 89: W = (-1.0 + 1.0759132e-59j) (階 2, 非 4)"
+    },
+    {
+      "name": "F1 總相位 = 44.5π；繞數 = 44.5/2 = 22.25 = F₁₁/4 = 89/4",
+      "pass": true,
+      "detail": "winding = 22.25"
+    },
+    {
+      "name": "F2 繞數 mod 1 = 1/4 ∉ ½ℤ ⟹ Z₄ 生成元類（quarter-integer）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F3 44.5π mod 2π = π/2 = 錨相位（非平凡：≠ 0）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F4 F₁₁ = 89 = 2N_d + 1 為奇 ⟹ e^{iπ(2N_d+1)/2} = ±i（唔可能係 ±1）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F5 ★ 宇宙整體 transport W = i ≠ ±1 ⟹ 宇宙本身 spinorial（冇粒子都要）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "G1 ★ 模指數任意置換 ⟹ W 不變（W 只依賴索引集合 Σk = n(n+1)/2，純組合）",
+      "pass": true,
+      "detail": "200 隨機置換全不變"
+    },
+    {
+      "name": "G2 ★ 鏈長 ±2 擾動（86/90/4/44/176/352）全維持 W ∈ {±i} 階 4 ⟹ 自旋結構對鏈長穩健",
+      "pass": true,
+      "detail": "對偶鏈全 spinorial"
+    },
+    {
+      "name": "G3 ★ 唯一失效模式 = 鏈長改為奇 ⟹ 立即冇 spinor（B5/E6）⟹ 自旋係「偶鏈」之守恆量",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 35,
+  "n_total": 35
+}

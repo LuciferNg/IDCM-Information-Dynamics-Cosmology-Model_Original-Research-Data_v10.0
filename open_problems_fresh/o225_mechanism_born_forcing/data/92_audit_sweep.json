@@ -1,0 +1,1326 @@
+{
+ "01_recon_invariants": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.3,
+  "res": [
+   15,
+   15
+  ],
+  "fails": [],
+  "pass_tags": 15,
+  "traceback": false,
+  "bytes": 2426
+ },
+ "02_r1_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   null,
+   null
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 1290
+ },
+ "03_r1_barrier": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 465.9,
+  "res": [
+   19,
+   19
+  ],
+  "fails": [],
+  "pass_tags": 17,
+  "traceback": false,
+  "bytes": 8205
+ },
+ "04_r1_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 1.3,
+  "res": [
+   11,
+   11
+  ],
+  "fails": [],
+  "pass_tags": 11,
+  "traceback": false,
+  "bytes": 1680
+ },
+ "05_r1_null_analysis": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 23.0,
+  "res": [
+   2,
+   4
+  ],
+  "fails": [
+   "Q1",
+   "Q4"
+  ],
+  "pass_tags": 2,
+  "traceback": false,
+  "bytes": 716
+ },
+ "06_r1_axis_sign_structure": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 1.3,
+  "res": [
+   2,
+   4
+  ],
+  "fails": [
+   "S1",
+   "S2"
+  ],
+  "pass_tags": 2,
+  "traceback": false,
+  "bytes": 940
+ },
+ "07_r1_tie_mechanism": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 1.3,
+  "res": [
+   6,
+   6
+  ],
+  "fails": [],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 809
+ },
+ "10_r2_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   null,
+   null
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 1051
+ },
+ "11_r2_g1_table": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.5,
+  "res": [
+   14,
+   16
+  ],
+  "fails": [
+   "P5pre",
+   "P7"
+  ],
+  "pass_tags": 14,
+  "traceback": false,
+  "bytes": 2931
+ },
+ "12_r2_dyn17": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 9.9,
+  "res": [
+   7,
+   9
+  ],
+  "fails": [
+   "P11",
+   "P14"
+  ],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 2955
+ },
+ "13_r2_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.3,
+  "res": [
+   11,
+   11
+  ],
+  "fails": [],
+  "pass_tags": 11,
+  "traceback": false,
+  "bytes": 2480
+ },
+ "14_r3_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   null,
+   null
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 1056
+ },
+ "15_r3_centre_theorem": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 8.4,
+  "res": [
+   11,
+   11
+  ],
+  "fails": [],
+  "pass_tags": 11,
+  "traceback": false,
+  "bytes": 2740
+ },
+ "16_r3_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 3.3,
+  "res": [
+   8,
+   8
+  ],
+  "fails": [],
+  "pass_tags": 8,
+  "traceback": false,
+  "bytes": 1750
+ },
+ "17_r4_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   7,
+   7
+  ],
+  "fails": [],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1623
+ },
+ "18_r4_tie_parity": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 40.1,
+  "res": [
+   14,
+   14
+  ],
+  "fails": [],
+  "pass_tags": 14,
+  "traceback": false,
+  "bytes": 2827
+ },
+ "19_r4_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 10.6,
+  "res": [
+   6,
+   6
+  ],
+  "fails": [],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 1175
+ },
+ "20_r5_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   7,
+   7
+  ],
+  "fails": [],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1270
+ },
+ "21_r5_tie_global": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 12.3,
+  "res": [
+   12,
+   14
+  ],
+  "fails": [
+   "Q1",
+   "Q3"
+  ],
+  "pass_tags": 12,
+  "traceback": false,
+  "bytes": 3083
+ },
+ "22_r5_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.7,
+  "res": [
+   7,
+   7
+  ],
+  "fails": [],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1527
+ },
+ "23_r6_contract": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 0.1,
+  "res": [
+   7,
+   8
+  ],
+  "fails": [
+   "C8"
+  ],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1533
+ },
+ "24_r6_mechanism": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 17.8,
+  "res": [
+   9,
+   10
+  ],
+  "fails": [
+   "A6"
+  ],
+  "pass_tags": 9,
+  "traceback": false,
+  "bytes": 2137
+ },
+ "25_r6_geometry": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.0,
+  "res": [
+   11,
+   12
+  ],
+  "fails": [
+   "C3"
+  ],
+  "pass_tags": 11,
+  "traceback": false,
+  "bytes": 3209
+ },
+ "26_r6_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 3.5,
+  "res": [
+   6,
+   6
+  ],
+  "fails": [],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 1411
+ },
+ "27_r7_contract": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   7,
+   8
+  ],
+  "fails": [
+   "C8"
+  ],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1440
+ },
+ "28_r7_mechanism2": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 8.8,
+  "res": [
+   6,
+   11
+  ],
+  "fails": [
+   "A3",
+   "A5",
+   "A4b",
+   "A6",
+   "A7"
+  ],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 4341
+ },
+ "29_r7_audit": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 5.7,
+  "res": [
+   5,
+   7
+  ],
+  "fails": [
+   "D3",
+   "D4"
+  ],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 1426
+ },
+ "30_r8_contract": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   7,
+   8
+  ],
+  "fails": [
+   "C8"
+  ],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1430
+ },
+ "31_r8_group": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 5.6,
+  "res": [
+   7,
+   11
+  ],
+  "fails": [
+   "A1",
+   "A3",
+   "B1",
+   "D1"
+  ],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 4981
+ },
+ "32_r8_audit": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 11.0,
+  "res": [
+   7,
+   8
+  ],
+  "fails": [
+   "E3a"
+  ],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1564
+ },
+ "33_r9_contract": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 0.1,
+  "res": [
+   7,
+   10
+  ],
+  "fails": [
+   "C2",
+   "C8",
+   "C8c"
+  ],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1674
+ },
+ "34_r9_pairing": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 4.2,
+  "res": [
+   12,
+   23
+  ],
+  "fails": [
+   "A2",
+   "A5a",
+   "A5b",
+   "A5c",
+   "A5d",
+   "B1a",
+   "B1b",
+   "B2a",
+   "B2b",
+   "B4",
+   "B3"
+  ],
+  "pass_tags": 12,
+  "traceback": false,
+  "bytes": 4459
+ },
+ "35_r9_audit": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 2.7,
+  "res": [
+   6,
+   8
+  ],
+  "fails": [
+   "E2",
+   "E6"
+  ],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 1705
+ },
+ "36_closeout_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.7,
+  "res": [
+   32,
+   32
+  ],
+  "fails": [],
+  "pass_tags": 32,
+  "traceback": false,
+  "bytes": 3812
+ },
+ "37_closeout_docs": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 0.1,
+  "res": [
+   9,
+   10
+  ],
+  "fails": [
+   "CO1"
+  ],
+  "pass_tags": 9,
+  "traceback": true,
+  "bytes": 2178
+ },
+ "38_r10_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   6,
+   6
+  ],
+  "fails": [],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 868
+ },
+ "39_r10_universal": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 5.7,
+  "res": [
+   19,
+   21
+  ],
+  "fails": [
+   "D3",
+   "E1"
+  ],
+  "pass_tags": 19,
+  "traceback": false,
+  "bytes": 3227
+ },
+ "40_r10_audit": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 10.4,
+  "res": [
+   17,
+   18
+  ],
+  "fails": [
+   "E1"
+  ],
+  "pass_tags": 17,
+  "traceback": false,
+  "bytes": 2103
+ },
+ "41_r11_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 717
+ },
+ "42_r11_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 8.1,
+  "res": [
+   20,
+   29
+  ],
+  "fails": [
+   "T3",
+   "U1",
+   "V1",
+   "V3",
+   "V4",
+   "W1",
+   "W2",
+   "W3",
+   "W5"
+  ],
+  "pass_tags": 20,
+  "traceback": false,
+  "bytes": 4548
+ },
+ "43_r11_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 6.9,
+  "res": [
+   11,
+   11
+  ],
+  "fails": [],
+  "pass_tags": 11,
+  "traceback": false,
+  "bytes": 1860
+ },
+ "44_r12_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 722
+ },
+ "45_r12_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.1,
+  "res": [
+   17,
+   24
+  ],
+  "fails": [
+   "Y2",
+   "Y3",
+   "Y5",
+   "Q1",
+   "Q3",
+   "X7-c（量測律）",
+   "Z2g（預註冊子猜測）"
+  ],
+  "pass_tags": 17,
+  "traceback": false,
+  "bytes": 3875
+ },
+ "46_r12_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.7,
+  "res": [
+   8,
+   8
+  ],
+  "fails": [],
+  "pass_tags": 8,
+  "traceback": false,
+  "bytes": 1408
+ },
+ "47_chain_index": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 0.1,
+  "res": [
+   6,
+   8
+  ],
+  "fails": [
+   "C2",
+   "C5"
+  ],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 1159
+ },
+ "48_r13_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 727
+ },
+ "49_r13_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.3,
+  "res": [
+   23,
+   38
+  ],
+  "fails": [
+   "A3",
+   "B1",
+   "B2",
+   "B3",
+   "B4",
+   "C2",
+   "C3",
+   "C4",
+   "B4-c（量測律）",
+   "B6（新預註冊）",
+   "C6（新預註冊）",
+   "C7（新預註冊）",
+   "C8（新預註冊）",
+   "C9（新預註冊）",
+   "C9-c（新預註冊）"
+  ],
+  "pass_tags": 23,
+  "traceback": false,
+  "bytes": 6264
+ },
+ "50_r13_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.6,
+  "res": [
+   10,
+   10
+  ],
+  "fails": [],
+  "pass_tags": 10,
+  "traceback": false,
+  "bytes": 1568
+ },
+ "51_r14_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 728
+ },
+ "52_r14_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.1,
+  "res": [
+   6,
+   14
+  ],
+  "fails": [
+   "E1",
+   "E2",
+   "F2",
+   "F3",
+   "G3",
+   "E4",
+   "E5",
+   "E6"
+  ],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 8173
+ },
+ "53_r14_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 3.4,
+  "res": [
+   8,
+   8
+  ],
+  "fails": [],
+  "pass_tags": 8,
+  "traceback": false,
+  "bytes": 1704
+ },
+ "54_r15_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 724
+ },
+ "55_r15_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.1,
+  "res": [
+   13,
+   18
+  ],
+  "fails": [
+   "G1",
+   "G2",
+   "G3",
+   "E5",
+   "E6"
+  ],
+  "pass_tags": 13,
+  "traceback": false,
+  "bytes": 4103
+ },
+ "56_r15_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.5,
+  "res": [
+   6,
+   6
+  ],
+  "fails": [],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 1410
+ },
+ "57_r16_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 712
+ },
+ "58_r16_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.5,
+  "res": [
+   9,
+   12
+  ],
+  "fails": [
+   "F4",
+   "G3",
+   "G4"
+  ],
+  "pass_tags": 9,
+  "traceback": false,
+  "bytes": 4450
+ },
+ "59_r16_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.5,
+  "res": [
+   7,
+   7
+  ],
+  "fails": [],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1328
+ },
+ "60_r17_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 718
+ },
+ "61_r17_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.7,
+  "res": [
+   11,
+   18
+  ],
+  "fails": [
+   "K3b",
+   "K1",
+   "K2",
+   "K4",
+   "L2",
+   "L3",
+   "K6"
+  ],
+  "pass_tags": 11,
+  "traceback": false,
+  "bytes": 7642
+ },
+ "62_r17_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 3.8,
+  "res": [
+   7,
+   7
+  ],
+  "fails": [],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1442
+ },
+ "63_r18_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 720
+ },
+ "64_r18_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.1,
+  "res": [
+   9,
+   14
+  ],
+  "fails": [
+   "N2",
+   "N3",
+   "N5",
+   "O2",
+   "O6-c"
+  ],
+  "pass_tags": 9,
+  "traceback": false,
+  "bytes": 5703
+ },
+ "65_r18_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 3.1,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 1241
+ },
+ "66_r19_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 712
+ },
+ "67_r19_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.1,
+  "res": [
+   12,
+   14
+  ],
+  "fails": [
+   "Q6",
+   "P5-c"
+  ],
+  "pass_tags": 12,
+  "traceback": false,
+  "bytes": 11214
+ },
+ "68_r19_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 3.1,
+  "res": [
+   7,
+   7
+  ],
+  "fails": [],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 1264
+ },
+ "69_r20_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 710
+ },
+ "70_r20_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.1,
+  "res": [
+   8,
+   11
+  ],
+  "fails": [
+   "S1",
+   "T1",
+   "T2"
+  ],
+  "pass_tags": 8,
+  "traceback": false,
+  "bytes": 5286
+ },
+ "71_r20_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 3.0,
+  "res": [
+   6,
+   6
+  ],
+  "fails": [],
+  "pass_tags": 6,
+  "traceback": false,
+  "bytes": 2403
+ },
+ "72_r21_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 712
+ },
+ "73_r21_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.3,
+  "res": [
+   3,
+   12
+  ],
+  "fails": [
+   "U1",
+   "U3",
+   "U4",
+   "U5",
+   "U6",
+   "U3-a",
+   "V1",
+   "V2",
+   "V3"
+  ],
+  "pass_tags": 3,
+  "traceback": false,
+  "bytes": 9633
+ },
+ "74_r21_audit": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.4,
+  "res": [
+   3,
+   4
+  ],
+  "fails": [
+   "B4"
+  ],
+  "pass_tags": 3,
+  "traceback": false,
+  "bytes": 1955
+ },
+ "75_r22_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 715
+ },
+ "76_r22_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.3,
+  "res": [
+   7,
+   10
+  ],
+  "fails": [
+   "W3",
+   "W3-c",
+   "X2"
+  ],
+  "pass_tags": 7,
+  "traceback": false,
+  "bytes": 3834
+ },
+ "77_r22_audit": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.2,
+  "res": [
+   3,
+   4
+  ],
+  "fails": [
+   "A1"
+  ],
+  "pass_tags": 3,
+  "traceback": false,
+  "bytes": 1256
+ },
+ "78_r23_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 712
+ },
+ "79_r23_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 4.1,
+  "res": [
+   10,
+   13
+  ],
+  "fails": [
+   "Y3",
+   "Z2",
+   "Z4"
+  ],
+  "pass_tags": 10,
+  "traceback": false,
+  "bytes": 6069
+ },
+ "80_r23_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 3.3,
+  "res": [
+   4,
+   4
+  ],
+  "fails": [],
+  "pass_tags": 4,
+  "traceback": false,
+  "bytes": 1291
+ },
+ "83_r24_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 719
+ },
+ "84_r24_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 4.6,
+  "res": [
+   10,
+   11
+  ],
+  "fails": [
+   "Q2"
+  ],
+  "pass_tags": 10,
+  "traceback": false,
+  "bytes": 4091
+ },
+ "85_r24_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.5,
+  "res": [
+   4,
+   4
+  ],
+  "fails": [],
+  "pass_tags": 4,
+  "traceback": false,
+  "bytes": 1198
+ },
+ "86_r25_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 730
+ },
+ "87_r25_machine": {
+  "exit": 1,
+  "timeout": false,
+  "sec": 3.4,
+  "res": [
+   10,
+   14
+  ],
+  "fails": [
+   "R1",
+   "R2",
+   "R3",
+   "R4"
+  ],
+  "pass_tags": 10,
+  "traceback": false,
+  "bytes": 4092
+ },
+ "88_r25_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.4,
+  "res": [
+   4,
+   4
+  ],
+  "fails": [],
+  "pass_tags": 4,
+  "traceback": false,
+  "bytes": 1121
+ },
+ "89_r26_contract": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.0,
+  "res": [
+   5,
+   5
+  ],
+  "fails": [],
+  "pass_tags": 5,
+  "traceback": false,
+  "bytes": 441
+ },
+ "90_r26_machine": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.6,
+  "res": [
+   11,
+   17
+  ],
+  "fails": [
+   "T2",
+   "T2-c",
+   "T3",
+   "T3-c",
+   "U1",
+   "V4"
+  ],
+  "pass_tags": 11,
+  "traceback": false,
+  "bytes": 2734
+ },
+ "91_r26_audit": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 2.5,
+  "res": [
+   4,
+   4
+  ],
+  "fails": [],
+  "pass_tags": 4,
+  "traceback": false,
+  "bytes": 776
+ },
+ "95_doc_binding": {
+  "exit": 0,
+  "timeout": false,
+  "sec": 0.1,
+  "res": [
+   null,
+   null
+  ],
+  "fails": [],
+  "pass_tags": 0,
+  "traceback": false,
+  "bytes": 954
+ }
+}

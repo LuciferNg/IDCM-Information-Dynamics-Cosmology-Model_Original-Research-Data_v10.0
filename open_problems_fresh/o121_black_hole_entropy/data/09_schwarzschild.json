@@ -1,0 +1,25 @@
+{
+  "title": "Schwarzschild 解從 IDCM 度規機制完整推導",
+  "chain": [
+    "g=∂∂C (相關函數)",
+    "R=holonomy",
+    "S_EH 熱核展開",
+    "G_μν+Λg_μν=8πG·T_μν 配分函數變分",
+    "球對稱真空解"
+  ],
+  "G_IDCM": 6.674302097883063e-11,
+  "Lambda_IDCM": 0.6832815729997476,
+  "R_s_m": 2954.007736491099,
+  "photon_sphere_RS": 1.5,
+  "ISCO_RS": 3.0,
+  "Kretschmann": "48G²M²/c⁴r⁶",
+  "Omega2_equals_g00": true,
+  "time_dilation_sun": 2.1230538620464756e-06,
+  "T_H": 6.168677824358303e-08,
+  "S_BH": 1.0494297066288976e+77,
+  "open": [
+    "強場 ⟨|W(r)|²⟩ 精確解",
+    "奇點替換結構"
+  ],
+  "verdict": "Schwarzschild−de Sitter 解從 v9.0 度規機制完整推導: G/Λ 都係 IDCM 參數, 測地線/熱力學全數值閉合"
+}

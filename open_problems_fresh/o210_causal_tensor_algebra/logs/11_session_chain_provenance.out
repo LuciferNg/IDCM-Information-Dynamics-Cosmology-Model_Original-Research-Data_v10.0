@@ -1,0 +1,33 @@
+messages 欄位: ['id', 'session_id', 'role', 'content', 'tool_call_id', 'tool_calls', 'tool_name', 'timestamp', 'token_count', 'finish_reason', 'reasoning', 'reasoning_content', 'reasoning_details', 'codex_reasoning_items', 'codex_message_items', 'platform_message_id', 'observed', 'active', 'compacted', 'effect_disposition', 'api_content', 'display_kind', 'display_metadata', '_compressed_summary', 'display_identity', 'display_order']
+
+對話框 chat_id=7500748185 thread_id=85379 之 session 鏈: 7 個
+   20260924_011343_a98f9145  started_at=1790183623.7848184  end=compression  msgs=154
+   20261003_103703_b90756  started_at=1790995023.3431323  end=compression  msgs=131
+   20261003_110519_e9a304  started_at=1790996719.3414042  end=compression  msgs=128
+   20261003_112524_9d1f21  started_at=1790997924.5824454  end=compression  msgs=106
+   20261003_114134_7a8fdb  started_at=1790998894.6629658  end=compression  msgs=124
+   20261003_120139_6a7684  started_at=1791000099.985402  end=compression  msgs=195
+   20261006_174904_b5e5d2  started_at=1791280144.0347788  end=None  msgs=90
+  PASS  鏈上全部 session 共用同一 session_key（同一對話框）   [dev = 0]
+鏈上訊息總數 = 928
+  PASS  鏈訊息數 ≥ 200（覆蓋壓縮前全部輪次）   [dev = 0]
+
+寫入 ledger 條目 = 264（真寫入目標；write_file/patch/shell）
+   通道分佈: {'o-dir(abs)': 202, 'o-dir(rel)': 19, 'readme-status-index': 18, 'tmp-transient': 5, 'register': 10, 'scratch-transient': 10}   （o-dir = 本 O；register = §0.2 欽准跨 O；readme-status-index = 跨 O 狀態索引/register 鏡像）
+  PASS  ② 寫入 ledger 越界（非本 O、非 register、非 README 狀態索引） = 0   [dev = 0]
+   （真越界樣本: []）
+   ★ 申報之暫態通道: tmp-transient = 5（開發探測；輸出已落 scripts/10）；scratch-transient = 10（append 草稿，用完即刪）
+   inline execute_code 內含寫入/暫存路徑者 = 0
+
+§4.9⑤ 本 O 相關 execute_code payload = 1（含路徑別名）
+   其中「數字見於文檔但唔落碟」者 = 0
+  PASS  ⑤ inline 推導：幽靈數字（文檔有、劇本無） = 0   [dev = 0]
+
+本 O 檔案 52 件；鏈上被提及者 52 件
+   鏈上零提及 = 0：[]
+  PASS  ④ 檔案 provenance：零提及（= 非本鏈產物或未被引用）≤ 8   [dev = 0]
+
+====================================================================================
+O210 全鏈 provenance — PASS 5 / FAIL 0
+====================================================================================
+RESULT: PASS

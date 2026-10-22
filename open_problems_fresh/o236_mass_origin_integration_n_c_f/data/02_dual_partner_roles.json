@@ -1,0 +1,59 @@
+{
+ "R": "R2",
+ "title": "對偶 partner 空槽角色",
+ "M": 88,
+ "pairs": {
+  "e": 1,
+  "u": 2,
+  "d": 3,
+  "s": 4,
+  "mu": 5,
+  "c": 7,
+  "tau": 9,
+  "b": 11,
+  "t": 13
+ },
+ "partners": {
+  "e": 87,
+  "u": 86,
+  "d": 85,
+  "s": 84,
+  "mu": 83,
+  "c": 81,
+  "tau": 79,
+  "b": 77,
+  "t": 75
+ },
+ "all_partners": [
+  75,
+  77,
+  79,
+  81,
+  83,
+  84,
+  85,
+  86,
+  87
+ ],
+ "phase_swap_theorem": true,
+ "M_mod4_required": 0,
+ "ref_ok_84_92": {
+  "84": true,
+  "85": false,
+  "86": false,
+  "87": false,
+  "88": true,
+  "89": false,
+  "90": false,
+  "91": false,
+  "92": true
+ },
+ "mirror_complement_sum": 4,
+ "occupation_reflection_odd": true,
+ "neutrino": {
+  "mode": 6,
+  "framework": "O49/O57 (mode 6 condensate + 2 gap-bound)"
+ },
+ "falsifiable": "mirror-half neutral particle must be in 75..87",
+ "cheat": "internal ring structure only; zero new constants"
+}

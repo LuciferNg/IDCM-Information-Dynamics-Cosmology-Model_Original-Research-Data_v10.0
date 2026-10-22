@@ -1,0 +1,19 @@
+{
+  "C_DM": -0.1697331557,
+  "C_DH": -0.2263108742,
+  "C_delay": 0.0614100326,
+  "chi2_dm": 9.65,
+  "chi2_dh": 7.41,
+  "joint_chi2": 17.07,
+  "sum_mnu_prediction": 0.08711,
+  "first_principles_checklist": {
+    "C_DM_from_spectral_operator": true,
+    "C_DH_from_action_overlap": true,
+    "zero_desi_data": true,
+    "zero_free_parameters": true,
+    "blind_prediction": true,
+    "T5_phase_coherence": "partial",
+    "dh_chi2_acceptable": true,
+    "ap_test_pass": true
+  }
+}

@@ -1,0 +1,14 @@
+================================================================================================================
+O225 scripts/30 -- R8 CONTRACT ENFORCER   (rules: r8-group-identity-v1)
+================================================================================================================
+[PASS] C1   合約 doc 含 A1-A3 / B1-B2 / C1-C3 / D1-D3 全部標籤  --  missing = []
+[PASS] C2   合約 doc 含關鍵定義與推導約束詞  --  missing = [] ; chars = 2637
+[PASS] C3   scripts/31,32 通過禁字集掃描（無禁模組、無 float 字面值）  --  issues = []
+[PASS] C4   scripts/31,32 皆 from fractions import Fraction  --  {'scripts/31_r8_group.py': {'imports': 7, 'float_literals': 0, 'has_fractions': True}, 'scripts/32_r8_audit.py': {'imports': 7, 'float_literals': 0, 'has_fractions': True}}
+[PASS] C5   陽性對照：人造違規源必須被拒  --  ['pos: forbidden import numpy (line 1)', 'pos: forbidden import random (line 2)', 'pos: float literal 0.035 (line 3)']
+[PASS] C6   陰性對照：合法精確算術源必須通過  --  []
+[PASS] C7   上游 O222 凍結輸入 + 合約 doc SHA-256 落盤，GATE = OPEN  --  contract sha = 8c696acaa758ac7d…
+[FAIL] C8   見數前註冊核：R8 於 register 之 note 數 ≥ 10 且未含任何結果 note（結果 note 尚未寫入）  --  pre-note = 22 ; 結果 note = 1
+================================================================================================================
+RESULT: 7/8 PASS   |  GATE OPEN  |  contract sha256 = 8c696acaa758ac7d…
+================================================================================================================

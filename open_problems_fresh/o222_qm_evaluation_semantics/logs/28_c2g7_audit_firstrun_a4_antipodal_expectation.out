@@ -1,0 +1,10 @@
+======================================================================================================================
+O222 scripts/28 -- INDEPENDENT audit of the C2+G7 round (does not import scripts/27)
+======================================================================================================================
+[PASS] A0   frozen impl hash matches the on-disk file and the first-run log is preserved  --  impl=d8d7443603de  first-run log keeps the pre-amendment C3 = 🟡
+[PASS] A1a  group-axiom route: all 400 sampled pair maps are bijections (and every left translation is) => the uniform state measure is invariant without running the DP  --  non-bijective = 0
+[PASS] A1b  p_k = uniform: the record reports dev_L1 = 0 at ALL 3844 steps with value set ['1/120']; by A1a this zero is FORCED (a bijection cannot move mass between states), so it is a proof, not a fit  --  steps=3844 uniform=3844
+[PASS] A1c  audit-side expectation under the uniform measure reproduces the frozen C2 table on its own sample of pairs (60 checked)  --  mismatches = 0
+[PASS] A2   outcome marginals: sum_s K[s][a] = 0 for all 62 settings, computed here from the frozen K  --  column sums = [0]
+[PASS] A3   the recorded 16-atom witness independently reproduces normalisation, the four marginals = 1/2 and the four frozen table values (both tables)  --  C1: support=4 min_p=0 marginals=['1/2', '1/2', '1/2', '1/2'] correlators match=True | C2: support=4 min_p=0 marginals=['1/2', '1/2', '1/2', '1/2'] correlators match=True
+[FAIL] A4   the |S| > 2 tuple (table C2) violates the atom-wise bound 2, hence admits NO joint measure; 0 of its 4 pairs are antipodal (structurally excluded by the anti filter)  --  argmax = (59, 60, 1, 61)  S = 3  antipodal pairs = 0

@@ -91,3 +91,83 @@
 
 **狀態**: [ ] 未重驗
 > 只加註, 未改本 O 結論檔 (01_problem_record.md / docs/ / final_result.md); 重驗後由本 O 自行寫入。
+---
+
+# 2026-09-24 外部要求 — 宇微同構（Cosmos-Microcosm Isomorphism）檢定
+> **append-only**：本段為新增，以上原文一字不刪。
+
+> **來源**: 調律者要求檢討 Gemini「宇微同構」檢驗建議（4 路線 + A₅ chiral icosahedral 群論內核）。
+> **裁決**: **唔開 O216** — 4 路線全部已有專屬 O；按「同一項目缺口唔開新 O」寫入各自 O 嘅 SESSION_START。
+> **本 session 範圍**: 只加要求落本文件，**唔處理**呢啲分散問題；由本 O 下個 session 自行解決。
+> **收口**: 待各 O 全數解決後，再由原 session 以**集合 + 證偽**統一裁決。
+
+## 修正點（上游）
+
+Gemini 主張「宏觀宇宙與微觀粒子共用同一套 A₅ chiral icosahedral 群論內核」，列 4 條檢驗路線：
+
+| 路線 | Gemini 主張 | 已有專屬 O |
+|:--|:--|:--|
+| ① | 宇宙雙折射 β ↔ 微觀 δ_CP 群論代數映射 | O26-G1/O43-C（β）+ O123（δ_CP） |
+| ② | 質量階層/混合角由 A₅ Molien 級數 + Casimir 特徵值生成 | O136/O137 + O65 |
+| ③ | CMB 特定 ℓ 階（6,10,12…）非隨機相位鎖定 / f_NL | O143/O150 + O72 P5 |
+| ④ | Σm_ν 絕對值（~0.06 eV 或理論下限） | O71 + O57 |
+
+**Gemini 3 處硬傷（已核）**：
+- **E1 範疇錯誤**：A₅ irrep 維數 = {1,3,3,4,5}，**唔係** {6,10,12}；ℓ=6,10,12 係 **invariant-harmonic degree**，且佢**漏咗 ℓ=15,16**（早於 18,20）。
+- **E2 誤判判決點**：全球 β 非零唔區分 IDCM vs axion-like field（O26-G1 已明寫「唔係判決性」）。
+- **E3 未收窄對稱性**：O143 已裁定幾何點集只係**手性 I（60 等距）**，唔係 I_h（120 自動同構）。
+
+## 問題（本 O 專屬切片）
+
+**本 O 切片 = 宇微同構線 B 之根（尺度階梯存在性）+ 路線③ f_NL**。
+
+- 上游狀態（本 O 已判，`docs/08_verdict.md`）：**K_Tree 作為「尺度階梯」嘅存在性：🟡 未證明**（φ 階梯形式 + L = 53/8 未證）；`docs/05_complexity_record` 之「宏觀 GR + 微觀 QM = 同一結構兩層投影」目前係**組織語言，唔係已證同構**。
+- **要求（本 O 下個 session 處理）**：
+  1. 補「φ 階梯形式 + L = 53/8 第一原理」— 呢個係線 B 之根。
+  2. 路線③ f_NL 部分：本 O `docs/06_predictions.md:59-66,114` P5 非高斯性 **🔴 未推導** — IDCM 零預言可比，需**否證或補推導**。
+  3. 注意「宏觀↔微觀 = 同一棵樹嘅唔同層」目前係**語言級**陳述，需提升至算子級（交 O150/O197）。
+
+**狀態**: [ ] 未處理
+> 只加註，未改本 O 結論檔（01_problem_record.md / docs/ / final_result.md）；處理後由本 O 自行寫入。
+> 全鏈收口（集合 + 證偽）由 2026-09-24 session 統一裁決，本 O 只需完成自己嘅切片。
+
+
+---
+
+## ★ 全樹路徑衛生審計註記（2026-10-02，append-only）
+
+> 由 skill `script-chain-reproducibility` 全鏈核對器（`path_hygiene_scan.py`）全樹掃描建立——
+> **2026-10-02 首次**。**本節唔改動上方任何內容。**
+>
+> ⚠️ 本節係**工具層審計**（產物路徑衛生），**唔屬本 O 推導**；亦冇對本 O 任何結論作出判定。
+> 完整報告：`path_hygiene_audit_20261002/REPORT.md`
+
+### 〇. 一句話
+
+本目錄命中 **4 個 ghost-tree call site**。
+
+### 一. 命中清單
+
+#### ⚠️ ghost tree 依赖
+
+| # | 檔案:行 | 讀取目標（ghost tree 內）|
+|:--|:--|:--|
+| 1 | `o72_kchain_ktree_reality/scripts/10_docs_content_check.py:49` | `open_problems_fresh/o72_kchain_ktree_reality/docs/02_lcdm_challenges.md` |
+| 2 | `o72_kchain_ktree_reality/scripts/10_docs_content_check.py:58` | `open_problems_fresh/o72_kchain_ktree_reality/docs/07_self_refutation.md` |
+| 3 | `o72_kchain_ktree_reality/scripts/10_docs_content_check.py:69` | `open_problems_fresh/o72_kchain_ktree_reality/docs/10_O73_cross_impact.md` |
+| 4 | `o72_kchain_ktree_reality/scripts/22_final_verification.py:26` | `open_problems_fresh/o72_kchain_ktree_reality/docs/01_problem_record.md` |
+
+### 二. 處置（別 O 執行；本節只記移交）
+
+```
+⚠️ ghost tree 依赖：4 個 call site 讀 `/home/wsl/Projects/IDCM/IDCM-v10.0/`。
+   ① 把所需檔搬入本 O `data/`（或記明「唯讀外部輸入」）
+   ② `BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))` ＋ 相對路徑
+   ③ 風險（已量化）：ghost tree 係 2026-09-08 副本（全樹 288K）。全樹 301 個 call site 分類：
+      ① 69 個目標仍存在（讀嘅係**陳舊副本**）；② 231 個目標已失踪但同相對路徑在 repo 存在
+      （⟹ **改一行即可，零資料損失**）；③ 1 個 repo 內完全冇。逐 O 對照表 → 同報告目錄 `ghost_dispatch.md`
+```
+
+> ⚠️ 依據 `idcm-closeout` §8.1：跨 O 問題**只登記移交，唔准就地修**。本節由**外部審計**寫入，
+> 本 O 之 session **有權刪去或改寫本節**（上方內容不受影響）——但如果決定保留，
+> 請在 GATE / 下輪 round doc 裏明文記下「已接納 / 已處理」。

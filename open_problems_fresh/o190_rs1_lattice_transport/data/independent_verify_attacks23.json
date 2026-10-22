@@ -1,0 +1,184 @@
+{
+  "problem": "O190 full audit v2 (attacks 2/3 independent verification)",
+  "script": "scripts/07_independent_verify2.py",
+  "date": "2026-09-13T22:00:23.049290",
+  "result": "35/35 PASS",
+  "checks": [
+    {
+      "name": "F1 E−O = 2 (sector 隙 = brane 張力, docs/06 §一/§二 B1)",
+      "pass": true,
+      "detail": "Σeven=90.000000 Σodd=88.000000"
+    },
+    {
+      "name": "F2 λ = (E−O)/2 = 1 (乘子 = 半張力, docs/06 §一)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F3 μ² = 2λ = 2 (四重身份, docs/06 §一: E−O = μ² = 2λ = BC-cost)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F4 γ₄₄ = 2 ∈ even sector (自對偶錨, k=44 even; docs/06 §一/§二 B8)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F5 Q = Σ_even k − Σ_odd k = 44 = N_d (sector 不對稱 = U(1) 電荷, docs/06 §二 B2)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F6 預算: Σγ_odd = 88 (觀察者) / Σγ_even = 90 (世界) (docs/06 §二 B3/B4)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F7 冷斑 A = 88×61/40 = 134.2 μK (O41, docs/06 §二 B5)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F8 f_unproj = 61.5/90 = 41/60 (世界標度, docs/06 §二 B6)",
+      "pass": true,
+      "detail": "0.683333"
+    },
+    {
+      "name": "F9 E_min = 61.5/88 = 123/176 (觀察者標度, docs/06 §二 B7)",
+      "pass": true,
+      "detail": "0.698864"
+    },
+    {
+      "name": "F10 off-shell split ∀k: G'(even) = 1/(γ+3) < G = 1/(γ+2) < G'(odd) = 1/(γ+1)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F11 mean(G') > mean(G0) (Jensen 凸性, docs/06 §二 B10)",
+      "pass": true,
+      "detail": "0.32990 vs 0.28678"
+    },
+    {
+      "name": "F12 Z₂ 等分: even/odd 各 44 模 (docs/06 §一 「各 44 模」)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F13 docs/06 §二 表 ≥9 可觀測量聲稱兌現 (B1-B8 + B9/B10 = 9 項)",
+      "pass": true,
+      "detail": "9 行"
+    },
+    {
+      "name": "F14 docs/06 JSON 存在",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "G1 ℓ₅ = 1121 (O100: m=5, docs/07 §一)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "G2 峰位 ℓ/44 2dp 值與文檔一致 (5.02/11.98/18.52/23.02/25.48/30.39/31.82)",
+      "pass": true,
+      "detail": "5.02, 11.98, 18.52, 23.02, 25.48, 30.39, 31.82"
+    },
+    {
+      "name": "G3 量子結構: 每峰 |ℓ − 44×round(ℓ/44)| < 44 (44 = N_d 量子)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "G4 sin²θ₁₂ = γ₂/(γ₂+γ₃) = 0.308 (docs/07 §二, O65)",
+      "pass": true,
+      "detail": "0.3078"
+    },
+    {
+      "name": "G5 sin²θ₂₃ = γ₇/(γ₇+γ₆) = 0.575 (docs/07 §二, O65)",
+      "pass": true,
+      "detail": "0.5761"
+    },
+    {
+      "name": "G6 μ/e = 206.705 vs PDG 206.7683, dev = 0.031% (docs/07 §二, O142 系)",
+      "pass": true,
+      "detail": "dev = 0.0306%"
+    },
+    {
+      "name": "G7 γ_n = csc(πn/88) = cosh(η_n), η_n = ln cot(πn/176) EXACT (n=1,7,22,44)",
+      "pass": true,
+      "detail": "身份: (cotθ+tanθ)/2 = csc(2θ), 2θ = πn/88"
+    },
+    {
+      "name": "G8 階梯有界 [1, γ₁ = 28.017] (倒轉塔, docs/07 §三)",
+      "pass": true,
+      "detail": "γ₁ = 28.0172"
+    },
+    {
+      "name": "G9 Z' 文檔值一致: M_GUT = 6.22×10¹⁶ GeV, θ_ZZ' < 5.96×10⁻²¹ rad (O107, docs/07 §三)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "G10 偶峰 A_{2k}/A₁ = ((k+1)/(4k−1))² 算術 (k=1: 4/9, k=2: 9/49, docs/07 §一)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "G11 奇峰 A₅/A₇ = 3/2 (docs/07 §一)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "G12 docs/07 JSON 存在",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "H1 §二 攻堅 2 → docs/06, scripts/05 (20/20) 引用一致",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "H2 §二 攻堅 3 → docs/07, scripts/06 (13/13) 引用一致",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "H3 時序索引 6 行 (開題+5 timed) 且時間單調 (20:22→20:28→20:47→21:18→21:18)",
+      "pass": true,
+      "detail": "rows: 20:22, 20:28, 20:47, 21:18, 21:18, 21:45 (表 7 行)"
+    },
+    {
+      "name": "H4 §五 修正記錄含 P3 σ<1fb 修正 entry (O107 權威值)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "H5 SESSION_START 狀態 = 已閉合 + 攻堅 2/3 摘要",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "H6 final_result ≤20 行 (RESULT_TEMPLATE) + 🟢 已閉合 + 依賴行",
+      "pass": true,
+      "detail": "20 行"
+    },
+    {
+      "name": "H7 docs/06+07 引用 O107 值與 §五 修正 entry 一致 (6.22×10¹⁶/5.96×10⁻²¹)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "H8 無回溯污染: docs/03 (20:22) 零 docs/06/07 引用; docs/01 各唯一 1 次 = P3 fix row pointer",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "H9 檔案樹完整 (21 個預期檔案)",
+      "pass": true,
+      "detail": "missing: []"
+    }
+  ],
+  "coverage": "F: docs/06 attack2 (14 checks); G: docs/07 attack3 (12 checks); H: cross-doc/timeline/template/regression (9 checks)"
+}

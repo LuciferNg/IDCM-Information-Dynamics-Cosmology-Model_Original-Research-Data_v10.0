@@ -1,0 +1,7 @@
+O31 Vacuum Energy Analytic Continuation
+
+sum_gamma = 90.000000000000000
+f_IDCM(0) = 0.132478387258588
+ratio = f_IDCM(0)/sum_gamma = 1.471982080650983e-03
+E_kchain (from ρ_Λ) = 4.060125e-12 GeV
+E_kchain = 0.00 eV

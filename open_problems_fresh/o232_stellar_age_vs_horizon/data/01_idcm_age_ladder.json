@@ -1,0 +1,115 @@
+{
+  "script": "01_idcm_age_ladder.py",
+  "dps": 40,
+  "idcm": {
+    "tau_Gyr": 13.470062705508573,
+    "T_ring_Gyr": 84.63490007803918,
+    "t_true_Gyr": 11100.64197292864,
+    "R_world_Mpc": 4129.9399998876925,
+    "omega_ring": 72.59002746,
+    "omega_cmb": 67.40711161926778
+  },
+  "paper_2607_00764": {
+    "A_star": 13.73,
+    "A_star_hi": 13.91,
+    "A_star_lo": 13.58,
+    "A_star_CMB": 13.6,
+    "A_U_CMB": 13.8,
+    "A_star_ETS": 12.71,
+    "A_U_ETS": 12.91,
+    "H0_local": 73.17,
+    "H0_local_sigma": 0.86
+  },
+  "tension": {
+    "A_star_minus_tau_Gyr": 0.2599372944914272,
+    "A_star_minus_tau_sigma_star": 1.5753775423722862,
+    "tau_vs_AU_CMB_pct": -2.390849960082806
+  },
+  "density_preflight": {
+    "pool_frozen_size": 28,
+    "N_search_frozen": 10,
+    "hits_frozen_0p1pct": [],
+    "hits_frozen_0p01pct": [],
+    "null_expected_0p1pct": 0.2,
+    "post_hoc_wide_pool": {
+      "size": 38,
+      "N_search": 25,
+      "hits_0p1pct": [
+        "42/41",
+        "43/42"
+      ],
+      "hits_0p01pct": [],
+      "flag": "POST-HOC, 禁宣稱結構"
+    }
+  },
+  "checks": [
+    {
+      "name": "C1 τ = 1/ω_ring 重現 O213 報值 13.470063",
+      "pass": true,
+      "detail": "dev 2.186e-6%"
+    },
+    {
+      "name": "C2 R_world/c 恆等 τ (同一 dof)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C3 T_ring = 2πτ 重現 84.6349",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C4 t_true = 131·T_ring+τ 重現 11,100.642",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C5 ω_cmb 重現 67.407086",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C6 τ 低於最老恆星 0.26 Gyr (< 1.6σ)",
+      "pass": true,
+      "detail": "1.5754σ"
+    },
+    {
+      "name": "C7 τ 高於 ETS 宇宙齡 (>4%) ⟹ ETS 被排除之測試不殺 IDCM",
+      "pass": true,
+      "detail": "+4.338%"
+    },
+    {
+      "name": "C8 τ 低於 ΛCDM CMB 宇宙齡 2.4% (核心張力)",
+      "pass": true,
+      "detail": "−2.391%"
+    },
+    {
+      "name": "C9 ω_ring 與 H₀_local 一致 (<1σ)",
+      "pass": true,
+      "detail": "0.674σ"
+    },
+    {
+      "name": "C10 ω_ring 與 SH0ES 一致 (<1σ)",
+      "pass": true,
+      "detail": "0.433σ"
+    },
+    {
+      "name": "C11 凍結池已枚舉 (N_search≥1)",
+      "pass": true,
+      "detail": "N=10"
+    },
+    {
+      "name": "C12 凍結池 @0.1% 命中唔顯著多於 null",
+      "pass": true,
+      "detail": "hits=0, null=0.2"
+    },
+    {
+      "name": "C13 post-hoc 寬池命中已記錄並標 🔴 (禁宣稱結構)",
+      "pass": true,
+      "detail": "hits=['42/41', '43/42'] (post-hoc)"
+    }
+  ],
+  "pass": 13,
+  "total": 13,
+  "verdict": "🟡 IDCM τ 非硬天花板; 0.26 Gyr / 2.4% 缺口待結構解釋"
+}

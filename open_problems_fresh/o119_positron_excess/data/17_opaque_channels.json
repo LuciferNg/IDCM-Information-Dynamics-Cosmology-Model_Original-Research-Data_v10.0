@@ -1,0 +1,32 @@
+{
+ "p_CR": 2.775,
+ "C1_baseline_2body": {
+  "slope": -2.7750000000000004,
+  "transparent": true
+ },
+ "C2_powerlaw_xsec": {
+  "transparent": "semi",
+  "shift": "p -> p-s"
+ },
+ "C3_breit_wigner": {
+  "transparent": false,
+  "owner": "QCD"
+ },
+ "C4_three_body": {
+  "transparent": true
+ },
+ "C5_mode_comb": {
+  "ripple_rms": 1.2232244868130652e-15,
+  "ripple_max": 0.029475471155623906,
+  "idcm_specific": true
+ },
+ "C6_cr_cutoff": {
+  "transparent": false,
+  "owner": "CR acceleration"
+ },
+ "C7_diffusion_delta": {
+  "transparent": false,
+  "owner": "CR propagation"
+ },
+ "verdict": "6 個非透明機制中 5 個屬框架外; 僅 C2 (截面冪律 s) 待第一性推導"
+}

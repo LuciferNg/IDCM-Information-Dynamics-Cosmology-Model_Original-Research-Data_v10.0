@@ -1,0 +1,13 @@
+{
+ "mismatch_vsign": 1644,
+ "total": 3844,
+ "pct": 42.77,
+ "min_margin": -29625.581299350324,
+ "median_margin": -27231.17727954976,
+ "max_margin": -24659.997166543042,
+ "reproduces_K_on_12_classes": [
+  480,
+  744
+ ],
+ "float_only": true
+}

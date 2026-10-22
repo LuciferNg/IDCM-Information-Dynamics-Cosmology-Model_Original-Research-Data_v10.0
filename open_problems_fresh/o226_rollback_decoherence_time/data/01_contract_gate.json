@@ -1,0 +1,157 @@
+{
+ "rules_version": "o226-r1-contract-v1",
+ "contract_sha256": "f8d7d8fe6790cfdb1f905271a1e4e2e2cea2732311c5d3b6cc7d1f31a28b476d",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "frozen contract sha256 matches the pinned value",
+   "ok": true,
+   "detail": "sha256 = f8d7d8fe6790cfdb1f905271a1e4e2e2cea2732311c5d3b6cc7d1f31a28b476d"
+  },
+  {
+   "tag": "C2",
+   "name": "all required sections and pre-registration tags literally present",
+   "ok": true,
+   "detail": "required = 32 ; missing = []"
+  },
+  {
+   "tag": "C3",
+   "name": "every declared frozen input pin exists on disk (read-only)",
+   "ok": true,
+   "detail": "pins = 7 ; absent = []"
+  },
+  {
+   "tag": "C4",
+   "name": "AST scan: no float/math/random/numpy in the engines (machine = 0 float literals)",
+   "ok": true,
+   "detail": "02:imports=[] names=[] float_lits=0 | 03:imports=[] names=[] float_lits=0 | 04:imports=[] names=[] float_lits=0 | 05:imports=[] names=[] float_lits=0 | 06:imports=[] names=[] float_lits=0"
+  },
+  {
+   "tag": "C5",
+   "name": "engines 02-06 never import/exec upstream code: the only permitted dynamic load is the local frozen machine scripts/02_o226_ledger_machine.py",
+   "ok": true,
+   "detail": "offenders = []"
+  },
+  {
+   "tag": "C6",
+   "name": "R2 contract docs/06_o226_r2_contract.md is frozen: sha256 matches the pinned value",
+   "ok": true,
+   "detail": "sha256 = 784e6a2beaaf1025ea9a04bc27c9d9a574d1343f49877db5f684c72a2e81258b"
+  },
+  {
+   "tag": "C7",
+   "name": "R2 contract carries every pre-registration tag and judgement item literally",
+   "ok": true,
+   "detail": "required = 19 ; missing = []"
+  },
+  {
+   "tag": "C4b",
+   "name": "R2 AST scan (scripts 08-09 obey the same exact-arithmetic ban; the R2 machine = 0 float literals) -- additive check, C4 untouched",
+   "ok": true,
+   "detail": "08:08_o226_class_machine.py imports=[] names=[] float_lits=0 | 09:09_o226_class_audit.py imports=[] names=[] float_lits=0"
+  },
+  {
+   "tag": "C5b",
+   "name": "R2 engines: 08 may load only the local R1 machine, 09 must be self-contained (no dynamic load at all); no upstream code, no sys.path mutation",
+   "ok": true,
+   "detail": "offenders = []"
+  },
+  {
+   "tag": "C8",
+   "name": "R3 contract docs/09_o226_r3_contract.md is frozen: sha256 matches the pinned value",
+   "ok": true,
+   "detail": "sha256 = 77cfc7754e2c0ccce47d961b5c30538ee4cc48f5685c39b8d418c5a503308828"
+  },
+  {
+   "tag": "C9",
+   "name": "R3 contract carries every pre-registration tag, judgement item and hypothesis tag literally",
+   "ok": true,
+   "detail": "required = 22 ; missing = []"
+  },
+  {
+   "tag": "C4c",
+   "name": "R3 AST scan (scripts 10-11 obey the same exact-arithmetic ban; the R3 machine = 0 float literals) -- additive check",
+   "ok": true,
+   "detail": "10:10_o226_value_closed_form.py imports=[] names=[] float_lits=0 | 11:11_o226_value_audit.py imports=[] names=[] float_lits=0"
+  },
+  {
+   "tag": "C5c",
+   "name": "R3 engines: 10 may load only the local R1 machine, 11 must be self-contained (no dynamic load at all); no upstream code, no sys.path mutation",
+   "ok": true,
+   "detail": "offenders = []"
+  },
+  {
+   "tag": "C10",
+   "name": "R4 contract docs/12_o226_r4_contract.md is frozen: sha256 matches the pinned value",
+   "ok": true,
+   "detail": "sha256 = 59b325b3dedfef85f60871bf633570fc707586130a565fbf52d068efbc7d2e5a"
+  },
+  {
+   "tag": "C11",
+   "name": "R4 contract carries every pre-registration tag, judgement item and item tag literally",
+   "ok": true,
+   "detail": "required = 22 ; missing = []"
+  },
+  {
+   "tag": "C4d",
+   "name": "R4 AST scan (scripts 12-13 obey the same exact-arithmetic ban; the R4 machine = 0 float literals) -- additive check",
+   "ok": true,
+   "detail": "12:12_o226_w_closed_form.py imports=[] names=[] float_lits=0 | 13:13_o226_w_audit.py imports=[] names=[] float_lits=0"
+  },
+  {
+   "tag": "C5d",
+   "name": "R4 engines: 12 may load only the local R1 machine, 13 must be self-contained (no dynamic load at all); no upstream code, no sys.path mutation",
+   "ok": true,
+   "detail": "offenders = []"
+  },
+  {
+   "tag": "C12",
+   "name": "R5 contract docs/15_o226_r5_contract.md is frozen: sha256 matches the pinned value",
+   "ok": true,
+   "detail": "sha256 = 84c9b2ec50d238beb70a6c7f2fbfaf044cd405978c5f0f2567ab179449f1f865"
+  },
+  {
+   "tag": "C13",
+   "name": "R5 contract carries every pre-registration tag, judgement item and item tag literally",
+   "ok": true,
+   "detail": "required = 17 ; missing = []"
+  },
+  {
+   "tag": "C4e",
+   "name": "R5 AST scan (scripts 14-15 obey the same exact-arithmetic ban; the R5 machine = 0 float literals) -- additive check",
+   "ok": true,
+   "detail": "14:14_o226_orbit_factorisation.py imports=[] names=[] float_lits=0 | 15:15_o226_orbit_audit.py imports=[] names=[] float_lits=0"
+  },
+  {
+   "tag": "C5e",
+   "name": "R5 engines: 14 may load only the local R1 machine, 15 must be self-contained (no dynamic load at all); no upstream code, no sys.path mutation",
+   "ok": true,
+   "detail": "offenders = []"
+  },
+  {
+   "tag": "C14",
+   "name": "chain completeness: every chain round carries its contract doc, its verdict/handoff doc, its data file and all of its scripts; and every .py in scripts/ is listed by the chain record (nothing missing, no unrecorded script)",
+   "ok": true,
+   "detail": "missing = [] ; on disk but unlisted = [] ; listed but absent = []"
+  },
+  {
+   "tag": "C15",
+   "name": "chain coverage: every chain script has its canonical journal (logs/<...>.out carrying a RESULT line; the _probe_* diagnostics have none by design) and every data/*.json has at least one producing script",
+   "ok": true,
+   "detail": "journals missing/empty = [] ; data with no producer = []"
+  },
+  {
+   "tag": "C4f",
+   "name": "closeout AST scan: 16 and 17 obey the exact-arithmetic ban (0 float literals, no banned imports/names) and never address a parent-relative path; only 16 (the chain re-runner) may import subprocess, 17 stays read-only -- additive check",
+   "ok": true,
+   "detail": "16_o226_closeout_audit.py imports=[] names=[] float_lits=0 \"../\"=0 subprocess=True | 17_o226_closeout_verify.py imports=[] names=[] float_lits=0 \"../\"=0 subprocess=False"
+  },
+  {
+   "tag": "C5f",
+   "name": "closeout load restrictions: 16/17 perform no non-permitted dynamic load and no sys.path mutation (they re-read frozen data only) -- additive check",
+   "ok": true,
+   "detail": "offenders = []"
+  }
+ ],
+ "gate": "OPEN"
+}

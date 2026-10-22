@@ -1,0 +1,15 @@
+{
+  "C3_structural": -0.048693,
+  "C3_optimal": -1.889306,
+  "optimal_scale": 38.8,
+  "chi2_original": 42.23,
+  "chi2_linear": 18.09,
+  "chi2_cubic_structural": 17.72,
+  "chi2_cubic_optimal": 10.86,
+  "C1": -0.169733,
+  "beta1": 0.06141,
+  "beta3": 0.017617,
+  "kurtosis_gd": 0.284759,
+  "beta2sq_beta3_ratio": 3.1,
+  "C3_C1_ratio": 0.2869
+}

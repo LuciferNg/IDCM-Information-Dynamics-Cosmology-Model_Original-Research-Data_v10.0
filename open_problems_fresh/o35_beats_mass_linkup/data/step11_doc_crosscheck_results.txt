@@ -1,0 +1,16 @@
+O35 — 文檔獨立核對 (scripts/13, 2026-09-12)
+mpmath 60 dps, 由零重算, 唔 import O35 scripts
+
+AUDIT RESULT: 110/110 核對通過
+
+⚠️ 發現清單:
+  F1. A1: 和差化積 5 對 max dev doc=1.93e-50 vs 重算=7.78e-62
+  F2. A6: 恒等變換 60-dps dev 重算=1.56e-61 — 兩組記錄 (1.00e-59 vs 2.0e-60) 均為方法依賴殘差, 非內容錯誤
+  F3. C1: 和差化積 8 對 max dev doc=2.6e-50 vs 重算=1.56e-61
+  F4. E2: final_result 恒等變換 dev=2.0e-60 與 docs/01+data (1.00e-59) 不一致 — 精度表示層, 非內容錯誤
+
+和差化積 5 對 max dev: 7.779e-62
+和差化積 8 對 max dev: 1.556e-61
+tan×cos 60-dps max dev: 1.556e-61
+float64 和差化積 max dev: 5.55e-16
+float64 tan×cos max dev: 7.11e-15

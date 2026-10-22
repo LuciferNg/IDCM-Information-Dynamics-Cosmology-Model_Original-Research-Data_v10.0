@@ -1,0 +1,67 @@
+{
+  "rd_idcm": 147.4385,
+  "rd_planck": 147.09,
+  "chi2_idcm": 14.625,
+  "chi2_idcm_dof": 2.089,
+  "chi2_lcdm": 8.382,
+  "chi2_lcdm_dof": 1.676,
+  "n_points": 7,
+  "rows": [
+    {
+      "sample": "LRG1",
+      "z": 0.51,
+      "obs": 13.62,
+      "idcm": 12.937,
+      "dev_pct": 5.01,
+      "sigma": 2.731
+    },
+    {
+      "sample": "LRG2",
+      "z": 0.706,
+      "obs": 16.85,
+      "idcm": 17.113,
+      "dev_pct": -1.56,
+      "sigma": -0.822
+    },
+    {
+      "sample": "LRG3+ELG",
+      "z": 0.93,
+      "obs": 21.71,
+      "idcm": 21.411,
+      "dev_pct": 1.38,
+      "sigma": 1.068
+    },
+    {
+      "sample": "ELG2",
+      "z": 1.317,
+      "obs": 27.79,
+      "idcm": 27.851,
+      "dev_pct": -0.22,
+      "sigma": -0.088
+    },
+    {
+      "sample": "LyA",
+      "z": 2.33,
+      "obs": 39.71,
+      "idcm": 40.622,
+      "dev_pct": -2.3,
+      "sigma": -0.97
+    },
+    {
+      "sample": "BGS",
+      "z": 0.295,
+      "obs": 7.93,
+      "idcm": 7.684,
+      "dev_pct": 3.1,
+      "sigma": 1.64
+    },
+    {
+      "sample": "QSO",
+      "z": 1.491,
+      "obs": 26.07,
+      "idcm": 26.946,
+      "dev_pct": -3.36,
+      "sigma": -1.307
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "test": "O111 攻堅 8: 高級閉合方向",
+  "delta": 0.0821292325802574,
+  "modular_candidates": {
+    "CF_1195": "strong modular signal",
+    "natural_tau": "i/44, 44i (88-site chain)"
+  },
+  "best_2term_PSLQ": [],
+  "best_3term_PSLQ": []
+}

@@ -110,3 +110,26 @@ o54_antimatter_abundance/
 
 ## 驗證標準
 - 以 O54 docs/01-03 重建; 重建後 script 輸出 PASS 數與 O 記錄一致或誠實標註
+
+---
+
+# 2026-08-23 還原記錄 (本 session)
+
+> **動作**: 讀取 SESSION_START + docs/01-03 還原 O208 越權污染
+
+## 污染清單 + 還原結果
+
+| # | 檔案 | 污染內容 | 還原動作 | 結果 |
+|:-:|:-----|:--------|:--------|:----:|
+| 1 | `scripts/06_antiparticle_origin.py` | 5 個 dict True 被改為「🟡 結構聲稱」字串 (O208) | 還原 True 值; 保留 spectrum_semi_positive 計算 (加容差 -1e-10 修正 float64 誤差) | ✅ |
+| 2 | `data/06_antiparticle_origin.json` | 缺失 (O208 污染後冇生成) | 重跑 scripts/06 重新生成 | ✅ |
+| 3 | `scripts/31-40` (10 個) | O208 越權加嘅 φ8/φ12/3×44 分析 | 刪除 (備份到 /home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o54_restore_backup/) | ✅ |
+| 4 | `data/32-40` (9 個) | O208 越權加嘅 | 刪除 (同上備份) | ✅ |
+| 5 | `docs/07-11` (5 個) | O208 越權加嘅 φ 扇區報告 | 刪除 (同上備份) | ✅ |
+| 6 | `01_problem_record.md` | 狀態行被改 (C_e/C_μ/C_τ φ 公式 + docs/01-10 + 14/14) | 還原權威版本 (L₆/F₅, Nd−E_proj, Nd−L₄ + docs/01-06) | ✅ |
+
+## 最終狀態
+- scripts: 01-28 + 99_verify.py (29 個) ✅
+- data: 01-28 (28 個) ✅
+- docs: 01-06 (6 個) ✅
+- **99_verify.py: 121/121 PASS 恢復** ✅

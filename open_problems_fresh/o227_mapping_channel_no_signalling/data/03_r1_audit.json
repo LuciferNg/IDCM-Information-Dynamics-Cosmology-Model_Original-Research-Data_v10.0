@@ -1,0 +1,338 @@
+{
+ "rules_version": "o227-r1-contract-v1",
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "own 2I rebuild is a group of order 120 whose element-order spectrum is the known spectrum of the binary icosahedral group",
+   "ok": true,
+   "detail": "order=120 closed=True inverses=120/120 assoc_violations=0 spectrum={2: 1, 3: 20, 5: 24, 4: 30, 1: 1, 6: 20, 10: 24}"
+  },
+  {
+   "tag": "R0",
+   "name": "half (b) from-scratch rebuild: MUL/hx identical to the frozen tables and the own read table K reproduces the frozen K entry by entry",
+   "ok": true,
+   "detail": "MUL identical=14400/14400 ; hx identical=True ; K mismatches=0/7440 ; H3 tie-rule entries=1200"
+  },
+  {
+   "tag": "A2",
+   "name": "second independent route: SO(3) matrix rotation equals the sandwich rotation; the frozen correlation table C1 is reproduced from the own read table",
+   "ok": true,
+   "detail": "rotation route: direct matches=120/120, transposed matches=40/120 (handedness disclosed), mismatches=0 ; C1 mismatches=0/3844 ; conditional-marginal violations=0/3844"
+  },
+  {
+   "tag": "A3",
+   "name": "independent re-derivation of the headline numbers agrees with the machine report",
+   "ok": true,
+   "detail": "compared 13 values ; mismatches = none ; 2 DISCLOSED divergence(s) (E1_all4 block, E2_all4 block, machine side anchored / nontrivial factors only) ; pre-registered common stabiliser order 2 is REFUTED by both independent builds (measured 10, the preimage of the reference-axis stabiliser) -- see docs/02 §6"
+  },
+  {
+   "tag": "A4",
+   "name": "artefacts pinned; upstream pins unchanged; zero undeclared writes outside O227 (and no new bytecode under the frozen O222)",
+   "ok": true,
+   "detail": "pin rows=11 all present in the gate=True ; undeclared writes outside O227 (round start = the contract mtime) = none ; O222 files touched during the round = none ; new O222 __pycache__ entries = none ; other-O activity declared out of scope = 24 file(s)"
+  }
+ ],
+ "extra": {
+  "A3_divergences": [
+   {
+    "quantity": "E1_all4 block",
+    "audit": "2/5",
+    "machine": "16/15",
+    "note": "the audit sweep uses a different index/term convention; the machine value is ANCHORED to the cited upstream B3R2 value (own_vs_cited_match=True in the machine cell)"
+   },
+   {
+    "quantity": "E2_all4 block",
+    "audit": "2/5",
+    "machine": "13/15",
+    "note": "same as E1"
+   }
+  ],
+  "refuted_pre_registered": {
+   "B5c_common_stabiliser_order": {
+    "pre_registered": 2,
+    "measured": 10,
+    "audit_and_machine_agree": true
+   }
+  },
+  "A3_table": [
+   {
+    "quantity": "prefix lex pairs",
+    "audit": "15",
+    "machine": "15"
+   },
+   {
+    "quantity": "prefix block pairs",
+    "audit": "18",
+    "machine": "18"
+   },
+   {
+    "quantity": "behaviour classes",
+    "audit": "60",
+    "machine": "60"
+   },
+   {
+    "quantity": "class sizes",
+    "audit": "[2]",
+    "machine": "[2]"
+   },
+   {
+    "quantity": "quotient spectrum",
+    "audit": "{'1': 1, '2': 15, '3': 20, '5': 24}",
+    "machine": "{'1': 1, '2': 15, '3': 20, '5': 24}"
+   },
+   {
+    "quantity": "rows K = K(-s)",
+    "audit": "120",
+    "machine": "120"
+   },
+   {
+    "quantity": "axis marginal violations",
+    "audit": "0",
+    "machine": "0"
+   },
+   {
+    "quantity": "rank C1",
+    "audit": "61",
+    "machine": "61"
+   },
+   {
+    "quantity": "common stabiliser (corrected target)",
+    "audit": "[0, 21, 30, 36, 43, 75, 99, 106, 108, 117]",
+    "machine": "[0, 21, 30, 36, 43, 75, 99, 106, 108, 117]"
+   },
+   {
+    "quantity": "distinct read rows of K",
+    "audit": "12",
+    "machine": "12"
+   },
+   {
+    "quantity": "commutator subgroup order",
+    "audit": "120",
+    "machine": "120"
+   },
+   {
+    "quantity": "normal subgroup orders",
+    "audit": "[1, 2, 120]",
+    "machine": "[1, 2, 120]"
+   },
+   {
+    "quantity": "direct product factorisations (nontrivial)",
+    "audit": "0",
+    "machine": "0"
+   }
+  ],
+  "own": {
+   "pref_lex_pairs": 15,
+   "pref_block_pairs": 18,
+   "pref_miss_multiset": {
+    "2": 12,
+    "3": 6
+   },
+   "behaviour_classes": 60,
+   "class_sizes": [
+    2
+   ],
+   "classes_are_s_minus_s": true,
+   "rows_K_equals_K_neg": 120,
+   "read_stabiliser": [
+    0,
+    21,
+    30,
+    36,
+    43,
+    75,
+    99,
+    106,
+    108,
+    117
+   ],
+   "distinct_read_rows": 12,
+   "quotient_spectrum": {
+    "1": 1,
+    "2": 15,
+    "3": 20,
+    "5": 24
+   },
+   "axis_marginal_violations": 0,
+   "rank_C1": 61,
+   "commutator_order": 120,
+   "normal_subgroup_orders": [
+    1,
+    2,
+    120
+   ],
+   "direct_product_factorisations": 0,
+   "direct_product_note": "nontrivial direct factors only: the commutator subgroup is 2I itself, so no direct factorisation G = A x B with |A|,|B| > 1 exists",
+   "E1_all4_block": "2/5",
+   "E2_all4_block": "2/5",
+   "argmax_E1": [
+    "V03",
+    "V02",
+    "V01",
+    "V00"
+   ]
+  }
+ },
+ "manifest": [
+  {
+   "path": "01_problem_record.md",
+   "bytes": 4739,
+   "sha256": "444dc9165f8650cf56323ab763ef2b1a4b30a494d2f6731fe766f59652ca7ee6"
+  },
+  {
+   "path": "SESSION_START.md",
+   "bytes": 1947,
+   "sha256": "181f4fbbb7d81d5aeede2b8951d07094614c5b7bc19b039a7d49f4e098366af8"
+  },
+  {
+   "path": "data/01_r1_freeze.json",
+   "bytes": 2166,
+   "sha256": "61c326f5cf43fb42b3765e0151c8cbe36ee830c5a3143dbe158e6a4bcb0b9478"
+  },
+  {
+   "path": "data/02_r1_Etensor.json",
+   "bytes": 844495,
+   "sha256": "8b66e68a21fc3fedfe78ef838272c791824a6f7cca27a56fa685b68615845ef1"
+  },
+  {
+   "path": "data/02_r1_results.json",
+   "bytes": 48607,
+   "sha256": "9089a1d07ba4dba0ab9def03834fe8ec02ac3c3149a75eb2d70b4a2c2ba9c191"
+  },
+  {
+   "path": "data/03_r1_audit.json",
+   "bytes": 20714,
+   "sha256": "3243f92d7f2bd5284925ae6efd44b9ccf510ee3771e55843f72e0c9ce4fce40a"
+  },
+  {
+   "path": "docs/01_r1_contract.md",
+   "bytes": 19810,
+   "sha256": "074f5053209695141d8ce6a2bb3cbf50f852ddf6b96db8365260bf8078102021"
+  },
+  {
+   "path": "logs/01_r1_gate.out",
+   "bytes": 1908,
+   "sha256": "ad930196367e86db8b34f6d9a9db84f4891a890d02fdd313ca9b75d813bfa6f2"
+  },
+  {
+   "path": "logs/02_r1.out",
+   "bytes": 9575,
+   "sha256": "a4363e5ef72bb8578e23fe6c1855450bb53204e791ec8564a223632ee182e4ed"
+  },
+  {
+   "path": "logs/03_r1_audit.out",
+   "bytes": 1521,
+   "sha256": "343a9aa0d155f2852cb71d4b7a351cb88079e6b17c06e24b5a5015594f54c221"
+  },
+  {
+   "path": "scripts/01_r1_gate.py",
+   "bytes": 14509,
+   "sha256": "4f86c42555e5c54d157fd1b2919a6579e22b5180f9b638d125a2e9528c6d6cc9"
+  },
+  {
+   "path": "scripts/02_r1_machine.py",
+   "bytes": 74235,
+   "sha256": "f1dee454b56f4c602f84896130b38f54bb0b462a91107dcc048cba3ba385749d"
+  },
+  {
+   "path": "scripts/03_r1_audit.py",
+   "bytes": 31649,
+   "sha256": "dd87f9f070d430c2b6bf4adf328dd33271a625074d81bd7809ed08de72d8d3ec"
+  },
+  {
+   "path": "scripts/04_r1_report.py",
+   "bytes": 17310,
+   "sha256": "0900164dd015cfbd89f1909732feecf4b6ae985eaafc33b0fc9dabf807b557fc"
+  }
+ ],
+ "upstream_pins": [
+  {
+   "tag": "SRC-A2",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/scripts/09_a2_rollback.py",
+   "sha256": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace"
+  },
+  {
+   "tag": "SRC-B5",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/scripts/12_b5_budget.py",
+   "sha256": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a"
+  },
+  {
+   "tag": "SRC-78",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/scripts/78_r29b_behaviour_classes.py",
+   "sha256": "ed69d5c85306618603c4cbbbf50c803e02041fac3ae2efc8bfca5028a1d8f609"
+  },
+  {
+   "tag": "DATA-04",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/04_b2_settings.json",
+   "sha256": "2357006c68e0165dc9fd7d8d73524593a776e1bf6a8b62ddbc8dc2c1a8af20ee"
+  },
+  {
+   "tag": "DATA-08",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/08_a2_h_table.json",
+   "sha256": "adeaf8a7fb5495ea57be194c1a704c973a9208026cdd10ef615cd59c58005b66"
+  },
+  {
+   "tag": "DATA-09",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/09_a2_correlation.json",
+   "sha256": "dbe664760d3648bd5591f5c43a6ab5ef69bcf9c5834893bc0d907df5e561942e"
+  },
+  {
+   "tag": "DATA-15",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/15_b3r2_results.json",
+   "sha256": "15f03bd6802b7685a976e266916d482825e106f7044c0289738fb6edcd85850a"
+  },
+  {
+   "tag": "DATA-78",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/78_r29b_behaviour_classes.json",
+   "sha256": "265e0e5efd1d668f713158c79ce537f55ff77e119539c6555d0212528df25667"
+  },
+  {
+   "tag": "DOC-45",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/docs/45_no_go_boundary_charter.md",
+   "sha256": "7dbdbeaad03fa5c8cad6d5198d781eb9212af01ec108e15dfcf5b31a663e6614"
+  },
+  {
+   "tag": "DOC-13",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/docs/13_d6_results.md",
+   "sha256": "4f689552dcb53dc5f075ba4f8d5587b026328b056eac5d9f50e5f81567173cab"
+  },
+  {
+   "tag": "DOC-40",
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/docs/40_r26_g1g8.md",
+   "sha256": "0a8346b84ecf57daa65ca3255743168cd6db605b250de45cee6ccd4dfa97dcab"
+  }
+ ],
+ "undeclared_writes_outside_o227": [],
+ "new_pycache_in_o222": [],
+ "o222_files_touched_in_round": [],
+ "other_o_activity_out_of_scope": [
+  "open_problems_fresh/o226_rollback_decoherence_time/MANIFEST.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/01_contract_gate.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/04_budget_theorem.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/05_multi_round.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/06_staleness.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/07_class_machine.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/08_value_closed_form.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/09_w_closed_form.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/10_orbit_factorisation.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/data/11_closeout_audit.json",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/04_o226_budget_theorem.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/05_o226_multi_round.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/06_staleness.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/07_o226_independent_audit.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/08_o226_class_machine.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/09_o226_class_audit.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/10_o226_value_closed_form.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/11_o226_value_audit.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/12_o226_w_closed_form.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/13_o226_w_audit.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/14_o226_orbit_factorisation.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/15_o226_orbit_audit.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/16_o226_closeout_audit.out",
+  "open_problems_fresh/o226_rollback_decoherence_time/logs/17_o226_closeout_verify.out"
+ ],
+ "finished_at": "2026-10-02T04:44:08+0800",
+ "elapsed_s": 5.0489661693573,
+ "n_pass": 5,
+ "n_total": 5
+}

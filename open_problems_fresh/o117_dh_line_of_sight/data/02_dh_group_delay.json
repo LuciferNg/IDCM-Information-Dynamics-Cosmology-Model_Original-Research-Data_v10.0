@@ -1,0 +1,13 @@
+{
+  "dh_v9_chi2": 9.75,
+  "dh_v9_gd_chi2": 7.55,
+  "dh_opt_gd_chi2": 7.41,
+  "dh_bare_gd_chi2": 466.32,
+  "dm_gd_chi2": 12.81,
+  "joint_chi2": 20.22,
+  "dof": 11,
+  "best_C_DH": -0.224,
+  "C_DM": -0.16973,
+  "pass": 4,
+  "fail": 0
+}

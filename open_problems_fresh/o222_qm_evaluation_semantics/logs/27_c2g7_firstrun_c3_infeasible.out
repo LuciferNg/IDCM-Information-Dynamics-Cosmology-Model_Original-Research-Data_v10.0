@@ -1,0 +1,20 @@
+======================================================================================================================
+O222 scripts/27 -- C2+G7 (docs/18 c2g7-contract-v1): does the frozen machine carry a Born-type measure?
+======================================================================================================================
+[PASS] C1   state measure: p_k = uniform at every step (dev_L1 = 0), C2 reproduced exactly  --  steps=3844 uniform=3844 maxdev=0 p=[Fraction(1, 120)] C2 mismatches=0
+[PASS] C2   outcome measure: sum_s K[s][a] = 0 for all 62 settings (=> P(+1) = 1/2 EXACT)  --  colsum set = [0] ; 60/60 for all columns
+[FAIL] C3   explicit 16-atom rational joint measure for the clean quartet (both tables)  --  C1: 2; C2: 2
+[PASS] C4   no joint measure when |S| > 2 (atom-wise bound + exact feasibility on those tuples)  --  gt2 tables = ['C2']
+[PASS] C5   K is not a rank-1 sign structure: 6000 row pairs neither equal nor complementary, rank = 6  --  fooling-set lower bound = 4 (<= sign-rank)
+[PASS] C6   observables commute identically (226920 checks, 0 non-zero) while the dynamics is non-commutative ([G,G] = 120/120, 3720/3844 translation pairs do not commute)
+[PASS] C7   the naive Hilbert-origin test has ZERO discriminating power (exactly demonstrated)  --  phi = sqrt(p) works for every p
+----------------------------------------------------------------------------------------------------------------------
+  C1  ✅  {'steps': 3844, 'uniform_steps': 3844, 'max_L1_dev_from_uniform': '0', 'dev_argmax_k': None, 'p_value_set': ['1/120'], 'support': 120, 'max_p': '1/120
+  C2  ✅  {'colsum_set': [0], 'plus_minus_per_column': '60/60 for all 62', 'P_plus_minus': '1/2 EXACT for all 62 settings', 'cited_from': 'docs/13_d6_results.md
+  C3  🟡  {'C1': {'max_abs_S_all4': '2', 'argmax_all4': (0, 1, 32, 58), 'used_all4_tuple': True, 'no_gt2_instance': True, 'joint_measure_found': False}, 'C2': {
+  C4  ✅  {'C1': {'max_abs_S_all4': '2', 'argmax_all4': (0, 1, 32, 58), 'atomwise_max_x1y1-x1y2+x2y1+x2y2': 2, 'atomwise_bound_ok': True, 'joint_measure_exists_
+  C5  🔴  {'rank_R_K': 6, 'rows': 120, 'cols': 62, 'distinct_rows': 12, 'pairs_equal_or_complementary': 1140, 'pairs_neither': 6000, 'sign_rank_eq_1_iff_all_row
+  C6  ✅  {'observable_commutator_checks': 226920, 'observable_nonzero_commutators': 0, 'observables': 'all diag(K[.][a]): they commute identically (zero off-di
+  C7  🟡  {'claim': 'any non-negative normalised p is the diagonal of a rank-1 PSD matrix: take psi = phi = sqrt(p) (or sqrt(p) sqrt(p)^T)', 'demonstration': 'p
+----------------------------------------------------------------------------------------------------------------------
+elapsed 9.4 s ; written data/27_c2g7_results.json

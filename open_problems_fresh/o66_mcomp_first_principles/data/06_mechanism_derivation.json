@@ -1,0 +1,17 @@
+{
+  "test": "O66 06: K_Chain 機制推導",
+  "mechanism_1": "K_Chain propagator G₆ = 22/γ₆",
+  "mechanism_2": "Effective action ΔS = ½ ln(1/γ₆)",
+  "mechanism_3": "Spectral determinant ratio = 1/γ₆",
+  "unified_picture": "M_comp = M_pl × exp(-ln(10)/γ₆ + ln(10)/76)",
+  "m_nu3_pred_eV": 0.05358624557236194,
+  "dm31_pred_eV2": 0.00287148571454148,
+  "dm31_deviation_pct": 17.973940613865235,
+  "D_needed_for_PDG": 0.8476448229130968,
+  "D_gamma6_gamma7": 0.7387774538959401,
+  "D_gamma6_gamma7_sq": 0.5457921263849679,
+  "D_1_minus_gamma6": 0.8192639907090368,
+  "D_1_minus_gamma6_over_2": 0.9096319953545184,
+  "passed": 2,
+  "failed": 0
+}

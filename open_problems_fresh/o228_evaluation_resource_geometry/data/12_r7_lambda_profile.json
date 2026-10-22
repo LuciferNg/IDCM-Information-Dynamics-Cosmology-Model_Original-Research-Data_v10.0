@@ -1,0 +1,303 @@
+{
+ "n_columns": 62,
+ "n_axis_names": 62,
+ "axis_name_sample": [
+  "V00",
+  "V01",
+  "V02",
+  "V03",
+  "V04",
+  "V05"
+ ],
+ "n_lines_true": 31,
+ "partner_is_involution": true,
+ "line_names_sample": [
+  "E00",
+  "E01",
+  "E02",
+  "E03",
+  "E04",
+  "E05"
+ ],
+ "profiles": {
+  "M_2I": {
+   "by_shell": {
+    "-5/2+1/2*sqrt5": {
+     "n_pairs": 6,
+     "lambda": [
+      62
+     ]
+    },
+    "1/2+-1/2*sqrt5": {
+     "n_pairs": 30,
+     "lambda": [
+      38,
+      40
+     ]
+    },
+    "-1/2+1/2*sqrt5": {
+     "n_pairs": 30,
+     "lambda": [
+      22,
+      24
+     ]
+    }
+   },
+   "hardest_shell_detail": {
+    "shell": "-1/2+1/2*sqrt5",
+    "pair": [
+     0,
+     3
+    ],
+    "n_columns": 22,
+    "n_lines": 15,
+    "lines": [
+     "E02",
+     "E03",
+     "E06",
+     "E08",
+     "E09",
+     "E11",
+     "E12",
+     "E13",
+     "E14",
+     "F01",
+     "F03",
+     "F07",
+     "F09",
+     "V02",
+     "V05"
+    ],
+    "line_types": [
+     "E",
+     "F",
+     "V"
+    ],
+    "lambda": 22,
+    "dot": "-1/2+1/2*sqrt5",
+    "complement_law_ok": true,
+    "complement_law_violations": [],
+    "pairs_with_double_perpendicular_column": 60,
+    "antipodal_pairs_excluded": 6
+   },
+   "lambda_min": 22,
+   "lambda_max": 62,
+   "n_pairs": 66
+  },
+  "M_face": {
+   "by_shell": {
+    "-3+0*sqrt5": {
+     "n_pairs": 10,
+     "lambda": [
+      62
+     ]
+    },
+    "0+1*sqrt5": {
+     "n_pairs": 30,
+     "lambda": [
+      14,
+      16
+     ]
+    },
+    "0+-1*sqrt5": {
+     "n_pairs": 30,
+     "lambda": [
+      46,
+      48
+     ]
+    },
+    "-1+0*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      38
+     ]
+    },
+    "1+0*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      24
+     ]
+    }
+   },
+   "hardest_shell_detail": {
+    "shell": "0+1*sqrt5",
+    "pair": [
+     0,
+     13
+    ],
+    "n_columns": 14,
+    "n_lines": 9,
+    "lines": [
+     "E03",
+     "E04",
+     "E06",
+     "E09",
+     "E13",
+     "F03",
+     "F06",
+     "V02",
+     "V04"
+    ],
+    "line_types": [
+     "E",
+     "F",
+     "V"
+    ],
+    "lambda": 14,
+    "dot": "0+1*sqrt5",
+    "complement_law_ok": true,
+    "complement_law_violations": [],
+    "pairs_with_double_perpendicular_column": 60,
+    "antipodal_pairs_excluded": 10
+   },
+   "lambda_min": 14,
+   "lambda_max": 62,
+   "n_pairs": 190
+  },
+  "M_edge": {
+   "by_shell": {
+    "-1+0*sqrt5": {
+     "n_pairs": 15,
+     "lambda": [
+      62
+     ]
+    },
+    "1/4+1/4*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      12,
+      14
+     ]
+    },
+    "-1/4+-1/4*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      48,
+      50
+     ]
+    },
+    "-1/2+0*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      40,
+      42
+     ]
+    },
+    "1/2+0*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      20,
+      22
+     ]
+    },
+    "1/4+-1/4*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      36,
+      38
+     ]
+    },
+    "-1/4+1/4*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      24,
+      26
+     ]
+    },
+    "0+0*sqrt5": {
+     "n_pairs": 60,
+     "lambda": [
+      30,
+      32
+     ]
+    }
+   },
+   "hardest_shell_detail": {
+    "shell": "1/4+1/4*sqrt5",
+    "pair": [
+     0,
+     5
+    ],
+    "n_columns": 12,
+    "n_lines": 11,
+    "lines": [
+     "E02",
+     "E10",
+     "E12",
+     "E13",
+     "E14",
+     "F00",
+     "F07",
+     "F08",
+     "F09",
+     "V03",
+     "V05"
+    ],
+    "line_types": [
+     "E",
+     "F",
+     "V"
+    ],
+    "lambda": 12,
+    "dot": "1/4+1/4*sqrt5",
+    "complement_law_ok": true,
+    "complement_law_violations": [],
+    "pairs_with_double_perpendicular_column": 420,
+    "antipodal_pairs_excluded": 15
+   },
+   "lambda_min": 12,
+   "lambda_max": 62,
+   "n_pairs": 435
+  }
+ },
+ "algebra": {
+  "checks": 30182,
+  "mismatches": 0,
+  "tie_entries_skipped": 12660
+ },
+ "claims": [
+  {
+   "tag": "P2a-1",
+   "name": "lambda(p) is EVEN for every row pair of all three icosahedral machines (a line separates with both its columns or with neither), and for M_edge the hardest pair has lambda = 12 = 6 lines x 2",
+   "ok": false,
+   "detail": "M_edge hardest shell 1/4+1/4*sqrt5: lambda=12, lines=11 ['E02', 'E10', 'E12', 'E13', 'E14', 'F00', 'F07', 'F08', 'F09', 'V03', 'V05']"
+  },
+  {
+   "tag": "P2a-3",
+   "name": "TIE MECHANISM LEMMA (verified on every (pair, line) of all three machines): for the two columns u, -u of one line, (a) if u is perpendicular to exactly one member of the pair then EXACTLY ONE of the two columns separates it (tau gives the same value to both tie entries); (b) otherwise the two columns agree. This explains why lambda need not be 2 x (number of lines)",
+   "ok": true,
+   "detail": "checks=21421 violations=0 []"
+  },
+  {
+   "tag": "P2a-1-c",
+   "name": "CORRECTION (original FAIL kept as registered, no relaxation): lambda_min(M_edge) = 12 columns but they span 11 LINES, not 6 -- the \"even = 2 per line\" reading is refuted by the tie mechanism lemma (P2a-3): tie lines contribute a single separating column. The value lambda_min = 12 (R6) stands; only its line decomposition changes",
+   "ok": true,
+   "detail": "hardest pair [0, 5]: lambda=12 over 11 lines ['E02', 'E10', 'E12', 'E13', 'E14', 'F00', 'F07', 'F08', 'F09', 'V03', 'V05'] (types ['E', 'F', 'V'])"
+  },
+  {
+   "tag": "P2a-2",
+   "name": "EXPLORATORY (found this round, not pre-registered): the CROSS complement law lambda(r, -r`) + lambda(r, r`) = N holds for every row pair of every icosahedral machine that has no column perpendicular to both rows -- each column splits between the pair and its cross image, so their separating sets are complementary (sum = N). Note the ANTIPODAL image pair (r, r`) -> (-r, -r`) instead keeps lambda unchanged",
+   "ok": true,
+   "detail": "violations = [[], [], []] ; pairs containing a double-perpendicular column = {'M_2I': 60, 'M_face': 60, 'M_edge': 420} ; antipodal pairs excluded = {'M_2I': 6, 'M_face': 10, 'M_edge': 15}"
+  },
+  {
+   "tag": "P2b-1",
+   "name": "BLIND PREDICTION: lambda decreases monotonically as the pair gets closer (|dot| larger), and the 6 separating lines of the hardest pair are ALL E-type (2-fold axes)",
+   "ok": false,
+   "detail": "monotone=False ; hardest line types=['E', 'F', 'V']"
+  },
+  {
+   "tag": "P2b-1-c",
+   "name": "CORRECTION (same run, no relaxation of the original): (i) lambda is NOT a function of |dot| -- each shell splits into TWO orbits whose lambdas are complementary (sum = N), so the notion of a single \"hardest shell\" is wrong; the correct statement is that the global minimum lambda = 12 is attained on the 36-degree shell; (ii) the 6 separating lines are NOT all E-type but a mix of V/F/E",
+   "ok": true,
+   "detail": "lambda per shell = {'-1+0*sqrt5': {'n_pairs': 15, 'lambda': [62]}, '1/4+1/4*sqrt5': {'n_pairs': 60, 'lambda': [12, 14]}, '-1/4+-1/4*sqrt5': {'n_pairs': 60, 'lambda': [48, 50]}, '-1/2+0*sqrt5': {'n_pairs': 60, 'lambda': [40, 42]}, '1/2+0*sqrt5': {'n_pairs': 60, 'lambda': [20, 22]}, '1/4+-1/4*sqrt5': {'n_pairs': 60, 'lambda': [36, 38]}, '-1/4+1/4*sqrt5': {'n_pairs': 60, 'lambda': [24, 26]}, '0+0*sqrt5': {'n_pairs': 60, 'lambda': [30, 32]}} ; hardest pair = {'shell': '1/4+1/4*sqrt5', 'pair': [0, 5], 'n_columns': 12, 'n_lines': 11, 'lines': ['E02', 'E10', 'E12', 'E13', 'E14', 'F00', 'F07', 'F08', 'F09', 'V03', 'V05'], 'line_types': ['E', 'F', 'V'], 'lambda': 12, 'dot': '1/4+1/4*sqrt5', 'complement_law_ok': True, 'complement_law_violations': [], 'pairs_with_double_perpendicular_column': 420, 'antipodal_pairs_excluded': 15}"
+  },
+  {
+   "tag": "P2c-1",
+   "name": "exact algebraic characterisation verified for every (pair, column) of all three machines: <u,r><u,r`> = (<u,r+r`>^2 - <u,r-r`>^2)/4 and u separates the pair  <=>  <u,r+r`>^2 < <u,r-r`>^2, i.e. u points closer to the DIFFERENCE direction than to the SUM (bisector) direction (tie entries, where the dot is exactly 0, are excluded: they are resolved by the frozen tau rule, not by the dot)",
+   "ok": true,
+   "detail": "checks=30182 mismatches=0 ties_skipped=12660"
+  }
+ ],
+ "elapsed_s": 10.905672788619995
+}

@@ -1,0 +1,255 @@
+{
+  "pentagon_icosahedron_mapping": [
+    {
+      "pentagon": 0,
+      "icosahedron": 9,
+      "error": 1.862714183604302e-05
+    },
+    {
+      "pentagon": 1,
+      "icosahedron": 3,
+      "error": 1.866623346736378e-05
+    },
+    {
+      "pentagon": 2,
+      "icosahedron": 8,
+      "error": 2.2426798989897964e-05
+    },
+    {
+      "pentagon": 3,
+      "icosahedron": 4,
+      "error": 1.4688877218970437e-05
+    },
+    {
+      "pentagon": 4,
+      "icosahedron": 10,
+      "error": 1.4713668590566475e-05
+    },
+    {
+      "pentagon": 5,
+      "icosahedron": 7,
+      "error": 1.4713668590566475e-05
+    },
+    {
+      "pentagon": 6,
+      "icosahedron": 5,
+      "error": 2.2426798989897964e-05
+    },
+    {
+      "pentagon": 7,
+      "icosahedron": 0,
+      "error": 1.8646697895850028e-05
+    },
+    {
+      "pentagon": 8,
+      "icosahedron": 2,
+      "error": 2.2426798989897964e-05
+    },
+    {
+      "pentagon": 9,
+      "icosahedron": 1,
+      "error": 1.4738418260860163e-05
+    },
+    {
+      "pentagon": 10,
+      "icosahedron": 6,
+      "error": 1.862714183604302e-05
+    },
+    {
+      "pentagon": 11,
+      "icosahedron": 11,
+      "error": 2.2426798989897964e-05
+    }
+  ],
+  "rotation_residual_max": 3.913576954121841e-07,
+  "delta_e0_distribution_derived": {
+    "2_pentagons_2_each": [
+      0,
+      7
+    ],
+    "0_pentagons_0_each": [
+      4,
+      9
+    ],
+    "1_pentagons_1_each": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      10,
+      11
+    ],
+    "derivation": "8\u00d73-node + 2\u00d74-node seam components force distribution"
+  },
+  "pentagon_adjacency_edges": 30,
+  "pentagon_data": [
+    {
+      "idx": 0,
+      "vertices": [
+        4,
+        6,
+        12,
+        19,
+        24
+      ],
+      "delta_e0_nodes": [
+        12,
+        19
+      ],
+      "n_delta_e0": 2
+    },
+    {
+      "idx": 1,
+      "vertices": [
+        3,
+        5,
+        23,
+        34,
+        44
+      ],
+      "delta_e0_nodes": [
+        23
+      ],
+      "n_delta_e0": 1
+    },
+    {
+      "idx": 2,
+      "vertices": [
+        14,
+        18,
+        25,
+        41,
+        55
+      ],
+      "delta_e0_nodes": [
+        25
+      ],
+      "n_delta_e0": 1
+    },
+    {
+      "idx": 3,
+      "vertices": [
+        8,
+        11,
+        16,
+        32,
+        49
+      ],
+      "delta_e0_nodes": [
+        32
+      ],
+      "n_delta_e0": 1
+    },
+    {
+      "idx": 4,
+      "vertices": [
+        0,
+        9,
+        20,
+        27,
+        33
+      ],
+      "delta_e0_nodes": [],
+      "n_delta_e0": 0
+    },
+    {
+      "idx": 5,
+      "vertices": [
+        21,
+        22,
+        26,
+        48,
+        56
+      ],
+      "delta_e0_nodes": [
+        22
+      ],
+      "n_delta_e0": 1
+    },
+    {
+      "idx": 6,
+      "vertices": [
+        7,
+        10,
+        31,
+        42,
+        52
+      ],
+      "delta_e0_nodes": [
+        10
+      ],
+      "n_delta_e0": 1
+    },
+    {
+      "idx": 7,
+      "vertices": [
+        45,
+        46,
+        47,
+        51,
+        53
+      ],
+      "delta_e0_nodes": [
+        45,
+        46
+      ],
+      "n_delta_e0": 2
+    },
+    {
+      "idx": 8,
+      "vertices": [
+        37,
+        38,
+        39,
+        43,
+        59
+      ],
+      "delta_e0_nodes": [
+        37
+      ],
+      "n_delta_e0": 1
+    },
+    {
+      "idx": 9,
+      "vertices": [
+        29,
+        30,
+        35,
+        54,
+        57
+      ],
+      "delta_e0_nodes": [],
+      "n_delta_e0": 0
+    },
+    {
+      "idx": 10,
+      "vertices": [
+        13,
+        17,
+        40,
+        50,
+        58
+      ],
+      "delta_e0_nodes": [
+        40
+      ],
+      "n_delta_e0": 1
+    },
+    {
+      "idx": 11,
+      "vertices": [
+        1,
+        2,
+        15,
+        28,
+        36
+      ],
+      "delta_e0_nodes": [
+        28
+      ],
+      "n_delta_e0": 1
+    }
+  ]
+}

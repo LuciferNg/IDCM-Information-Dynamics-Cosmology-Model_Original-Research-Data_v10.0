@@ -1,0 +1,9 @@
+# SUPERSEDED / VOID -- do not cite as evidence.
+# This is the FIRST J6 attempt (proc_16f5dee08afd). Its numpy reference loop enumerated the FULL
+# (b,bp) 62^2 domain per pair, which is exactly the 62^4 work the JIT engine exists to avoid, so it
+# was terminated by the operator (SIGTERM, exit=143) after 6.5 min. No values from this run were used.
+# The corrected J6 uses a COMMON RESTRICTED domain (b,bp < 2) for BOTH engines; see
+# logs/18_j6_bmax2_pairs0_24.out
+
+E4 built 3.8 s, |E4|max 120
+jit range [0,24): 119.3 s

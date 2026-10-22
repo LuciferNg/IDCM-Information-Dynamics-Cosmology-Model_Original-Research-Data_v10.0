@@ -1,0 +1,13 @@
+{
+  "test": "O62 十期 67: SR 閉合",
+  "pairs": 450,
+  "triples": 34,
+  "pairs_035": 421,
+  "triples_all_zero": true,
+  "sage_eq_noedge_anomaly": true,
+  "anomaly_n": 25,
+  "two_same_pair_zero": 0,
+  "tri_cover": 0,
+  "passed": 8,
+  "failed": 0
+}

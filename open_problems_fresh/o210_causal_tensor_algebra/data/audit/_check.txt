@@ -1,0 +1,94 @@
+register rows=424 (O-series 230, theme 194)  dirs=230  README rows=165
+seed state source: cli=15  inferred=33  manual=195  problem_record=26  readme=136  session_start=19
+
+[DUPLICATE-DIR] 1
+   O4 has 2 directories: ['/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o4_fib_motivation', '/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o4_renew']
+
+[COLLISION-STALE] 3
+   O1 registered as collision but now has 1 dir(s)
+   O17 registered as collision but now has 1 dir(s)
+   O143 registered as collision but now has 1 dir(s)
+
+[UNREGISTERED-DIR] 0
+
+[README-ONLY] 1
+   O198 has README row but no register row
+
+[STATUS-DRIFT] 0
+
+[PID-NO-FOLDER] 0
+
+[REF-MISSING] 113
+   O107 ref -> open_problems_fresh/o85_su12_breaking/docs/06_chain_contamination_ledger.md does not exist
+   O137 ref -> open_problems_fresh/o85_su12_breaking/docs/09_eigenvalue_assignment.md does not exist
+   O137 ref -> open_problems_fresh/o206_per_mode_frequency/docs/33_round10_conflict_adjudication.md does not exist
+   O144 ref -> open_problems_fresh/o85_su12_breaking/docs/03_sm_feynman_rules.md does not exist
+   O144 ref -> o144_boson_identity/docs/23 does not exist
+   O144 ref -> open_problems_fresh/o85_su12_breaking/docs/17_o88_framework_audit.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/33_round10_conflict_adjudication.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/36_round11_unified_generator.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/37_round11b_cf_sawtooth.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/38_round11c_sawtooth_z2.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/39_round11d_z2_three_tests.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/40_round12_joint_power_parity.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/41_round13_flow_identity.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/42_round14_lepton_slot.md does not exist
+   O206 ref -> open_problems_fresh/o206_per_mode_frequency/docs/43_round15_charge_residue_corrected.md does not exist
+   ... +98 more
+
+[REF-LINE-OOR] 0
+
+[ALIAS-DANGLING] 0
+
+[BLOCK-DRIFT] 9
+   open_problems_fresh/o188_lattice_quantum_gravity/01_problem_record.md: block=open register=registered
+   open_problems_fresh/o188_lattice_quantum_gravity/SESSION_START.md: block=open register=registered
+   open_problems_fresh/o189_cellular_automata_correspondence/01_problem_record.md: block=open register=registered
+   open_problems_fresh/o189_cellular_automata_correspondence/SESSION_START.md: block=open register=registered
+   open_problems_fresh/o225_mechanism_born_forcing/01_problem_record.md: block=registered register=partial
+   open_problems_fresh/o227_mapping_channel_no_signalling/01_problem_record.md: block=closed register=partial
+   open_problems_fresh/o228_evaluation_resource_geometry/01_problem_record.md: block=registered register=partial
+   open_problems_fresh/o231_super_ym_idcm_qft/01_problem_record.md: block=open register=registered
+   open_problems_fresh/o231_super_ym_idcm_qft/SESSION_START.md: block=open register=registered
+
+[BLOCK-UNREGISTERED] 0
+
+[NO-BLOCK] 549
+   open_problems_fresh/o100_cl_to_pk/01_problem_record.md
+   open_problems_fresh/o100_cl_to_pk/SESSION_START.md
+   open_problems_fresh/o101_1plus11_spectrum/SESSION_START.md
+   open_problems_fresh/o103_ngen3_mechanism/SESSION_START.md
+   open_problems_fresh/o104_i_star_d_app_bridge/SESSION_START.md
+   open_problems_fresh/o105_pi144_structure/SESSION_START.md
+   open_problems_fresh/o106_i_star_decomposition/SESSION_START.md
+   open_problems_fresh/o107_extra_u1_physical/SESSION_START.md
+   open_problems_fresh/o107_extra_u1_physical/final_result.md
+   open_problems_fresh/o108_vl_mass_spectrum/SESSION_START.md
+   open_problems_fresh/o109_lambda2_fermion/SESSION_START.md
+   open_problems_fresh/o10_peak_amplitudes/01_problem_record.md
+   open_problems_fresh/o10_peak_amplitudes/SESSION_START.md
+   open_problems_fresh/o10_peak_amplitudes/final_result.md
+   open_problems_fresh/o110_system_integration/SESSION_START.md
+   ... +534 more
+
+[SEED-DISAGREE] 45
+   O45 README=open markdown=closed
+   O46 README=open markdown=closed
+   O47 README=open markdown=closed
+   O48 README=open markdown=closed
+   O49 README=open markdown=partial
+   O50 README=open markdown=closed
+   O52 README=closed markdown=partial
+   O61 README=closed markdown=open
+   O72 README=closed markdown=open
+   O76 README=open markdown=closed
+   O77 README=open markdown=closed
+   O78 README=open markdown=closed
+   O81 README=open markdown=closed
+   O100 README=closed markdown=partial
+   O109 README=open markdown=closed
+   ... +30 more
+
+[INFO-DB-ONLY] 0
+
+HARD DRIFT: 127

@@ -1,0 +1,8 @@
+{
+  "test": "O70 03: Curve Counts",
+  "adjacency_155": 155,
+  "total_curves": 185,
+  "curve_basis_32": 32,
+  "formula_155": "2×73+9",
+  "formula_185": "155+30 = 2×73+9+2L₅+2B"
+}

@@ -1,0 +1,21 @@
+================================================================================================================
+O222 scripts/14 -- Contract B3R2 v1 enforcer (B3 round 2: order-fair allocation in 44 reads)
+================================================================================================================
+[PASS] C1     group rebuilt: |2I| = 120 (closed under multiplication)  --  |2I| = 120
+[PASS] C2     62 frozen lattice axes reproduced verbatim (12 V / 20 F / 30 E)  --  types = ['edge', 'face', 'vertex']
+[PASS] C3     A2 h-table bijective (62/62)  --  distinct = 62
+[PASS] C4     frozen upstream: A2 20/20 (all4 = 2 / 3) and B5 8/8 (15 pairs / 43 reads)  --  A2 all4 = 2/3 ; B5 pairs/reads = 15/43
+[PASS] C5     budget identities I1-I4 exact: reads = 44 = N_d ; cost = 123/88 = 2 x E_min ; 44 reads consume the whole budget ; tau_deco = 2 passes  --  reads = 44 ; cost = 123/88 ; 44*cost = 123/2
+[PASS] C6     all five pre-registered order rules are bijections on 3844 pairs (every prefix well-defined)  --  {"lex": true, "diag": true, "antidiag": true, "block": true, "stride": true}
+[PASS] C7     contract states the coverage criterion (cov_a / cov_b >= 2) and lists all five rule IDs  --  doc rule IDs = ['lex', 'diag', 'antidiag', 'block', 'stride']
+[FAIL] C8     impl AST gate  --  no implementation supplied yet
+[FAIL] C9     order-rule parity  --  no implementation supplied yet
+[FAIL] C10    full-enumeration + constructibility declaration  --  no implementation supplied yet
+[FAIL] C11    machine semantics imported  --  no implementation supplied yet
+[PASS] C12    provenance: B5 contract carries the read cost ; A2 results carry all4 ; closeout carries 12,517,800  --  per-file = [True, True, True]
+[PASS] C13    register: O222/B3R2 registered (pre-number registration discipline)  --  found=True
+
+GATE = CLOSED (no implementation; rerun with --freeze-impl scripts/15_b3r2_orderfair.py)
+================================================================================================================
+RESULT: 9/13 PASS  (4 FAIL)
+================================================================================================================

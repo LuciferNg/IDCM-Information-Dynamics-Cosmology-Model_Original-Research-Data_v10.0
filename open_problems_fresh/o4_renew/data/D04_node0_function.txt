@@ -1,0 +1,4 @@
+# O4_renew D04: node 0 功能定位
+nbrs=[9, 20, 41, 50] k=0 color=1
+betweenness=90.5000 closeness=0.2458 eigenvector=0.1291
+antipode=57

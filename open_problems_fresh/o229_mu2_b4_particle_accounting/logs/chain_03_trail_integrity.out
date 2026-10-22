@@ -1,0 +1,6 @@
+[PASS] C1   編號連續性：缺號 = 宣告式 []、無重號  --  缺號 = [] ; 劇本數 = 25
+[PASS] C2   每劇本皆有 ≥1 執行日誌（依編號前綴）  --  無 log 之劇本 = 無 ; logs/ = 41
+[PASS] C3   docs 對映：docs/*.md ≥ 1 且主記錄引用 scripts/ ≥ 1  --  docs = 32 ; scripts/ 引用 = 33
+[FAIL] C4   MANIFEST 存在  --  找不到 /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o229_mu2_b4_particle_accounting/data/MANIFEST.json
+[PASS] C5   版本控制狀態（git ls-files 該目錄）—— 0 ⟹ 完整性由 MANIFEST(sha)+register 承載，報告要明講  --  tracked 檔數 = 0
+RESULT: 4/5 PASS  |  o229_mu2_b4_particle_accounting 痕跡完整性核對

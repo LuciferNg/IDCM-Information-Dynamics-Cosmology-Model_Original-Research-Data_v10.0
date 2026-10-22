@@ -158,7 +158,7 @@ NN in a snapshot observation is equal to the product of bandwidth and
 integration time and typically ranges from 10310^{3} (1 s, 1 kHz) to 10610^{6} (10
 s, 100 kHz) in radio astronomical applications. Likewise, the source signal
 covariance 𝚺s=diag⁡(𝝈s){\\mbox{\\boldmath{$\\Sigma$}}}\_{s}=\\mathrm{diag}({\\mbox{\\boldmath{$\\sigma$}}}\_{s}) where 𝝈s=\[σs​12,σs​22,⋯,σs​q2\]T{\\mbox{\\boldmath{$\\sigma$}}}\_{s}=\[\\sigma\_{s1}^{2},\\sigma\_{s2}^{2},\\cdots,\\sigma\_{sq}^{2}\]^{T} and the noise covariance matrix is
-𝚺n=diag⁡(𝝈n){\\mbox{\\boldmath{$\\Sigma$}}}\_{n}=\\mathrm{diag}({\\mbox{\\boldmath{$\\sigma$}}}\_{n}) where 𝝈n=\[σn​12,σn​22,⋯,σn​p2\]T{\\mbox{\\boldmath{$\\sigma$}}}\_{n}=\[\\sigma\_{n1}^{2},\\sigma\_{n2}^{2},\\cdots,\\sigma\_{np}^{2}\]^{T}. Then the model for the covariance
+𝚺n=diag⁡(𝝈n){\\mbox{\\boldmath{$\\Sigma$}}}\_{n}=\\mathrm{diag}({\\mbox{\\boldmath{$\\sigma$}}}\_{n}) where 𝝈n=\[σn​12,σn​22,⋯,σn​P2\]T{\\mbox{\\boldmath{$\\sigma$}}}\_{n}=\[\\sigma\_{n1}^{2},\\sigma\_{n2}^{2},\\cdots,\\sigma\_{np}^{2}\]^{T}. Then the model for the covariance
 matrix for a snapshot observation 𝐑\\mathbf{R} based on ( [5](https://ar5iv.labs.arxiv.org/html/1003.2307#S2.E5 "In II Data model ‣ Fundamental Imaging Limits of Radio Telescope Arrays")) is
 
 |     |     |     |     |
@@ -522,7 +522,7 @@ In this case the condition number of 𝐌\\mathbf{M} is
 
 |     |     |     |     |
 | --- | --- | --- | --- |
-|  | κ=λm​a​xλm​i​n=p1=p,\\kappa=\\frac{\\lambda\_{max}}{\\lambda\_{min}}=\\frac{p}{1}=p, |  | (43) |
+|  | κ=λm​a​xλm​i​n=P1=p,\\kappa=\\frac{\\lambda\_{max}}{\\lambda\_{min}}=\\frac{p}{1}=p, |  | (43) |
 
 thus 𝐌\\mathbf{M} is invertible. The deconvolution
 problem is therefore well-posed and has a unique solution.
@@ -533,7 +533,7 @@ If the image plane is undersampled with n<2​p−1n<2p-1 samples, then
 | --- | --- | --- | --- |
 |  | 𝝀=\[p−n−12,⋯,p−1,p,p−1,⋯,p−n−12\]T{\\mbox{\\boldmath{$\\lambda$}}}=\\left\[p-\\frac{n-1}{2},\\cdots,p-1,p,p-1,\\cdots,p-\\frac{n-1}{2}\\right\]^{T} |  | (44) |
 
-and κ=2​p2​p−(n−1)\\kappa=\\frac{2p}{2p-(n-1)}. The deconvolution problem in itself is
+and κ=2​P2​p−(n−1)\\kappa=\\frac{2p}{2p-(n-1)}. The deconvolution problem in itself is
 thus well-posed and has a unique solution. However, from Fourier theory we
 know that aliasing effects may occur due to undersampling.
 
@@ -604,7 +604,7 @@ powers, i.e., of a parameter vector
 
 |     |     |     |     |     |
 | --- | --- | --- | --- | --- |
-|  | 𝜽\\theta | =\\displaystyle= | \[γ1,⋯,γp,ϕ2,⋯,ϕp,σ22,⋯,σq2,σn​12,⋯,σn​p2,\\displaystyle\[\\gamma\_{1},\\cdots,\\gamma\_{p},\\phi\_{2},\\cdots,\\phi\_{p},\\sigma\_{2}^{2},\\cdots,\\sigma\_{q}^{2},\\sigma\_{n1}^{2},\\cdots,\\sigma\_{np}^{2}, |  |\
+|  | 𝜽\\theta | =\\displaystyle= | \[γ1,⋯,γp,ϕ2,⋯,ϕp,σ22,⋯,σq2,σn​12,⋯,σn​P2,\\displaystyle\[\\gamma\_{1},\\cdots,\\gamma\_{p},\\phi\_{2},\\cdots,\\phi\_{p},\\sigma\_{2}^{2},\\cdots,\\sigma\_{q}^{2},\\sigma\_{n1}^{2},\\cdots,\\sigma\_{np}^{2}, |  |\
 |  |  |  | l2,⋯,lq,m2,⋯,mq\]T.\\displaystyle\ l\_{2},\\cdots,l\_{q},m\_{2},\\cdots,m\_{q}\]^{T}. |  |
 
 In this parameter vector, ϕ1\\phi\_{1} and σ12\\sigma\_{1}^{2} are omitted because they
@@ -725,7 +725,7 @@ false structures.
 If the instrumental parameters are extracted from separate calibration data,
 the minimum variance on these estimated values is given by the CRB on the
 instrumental parameters in the calibration experiment, 𝐂θ\\mathbf{C}\_{\\theta},
-where now 𝜽=\[γ1,⋯,γp,ϕ2,⋯,ϕp,σn​12,⋯,σn​p2\]T{\\mbox{\\boldmath{$\\theta$}}}=\[\\gamma\_{1},\\cdots,\\gamma\_{p},\\phi\_{2},\\cdots,\\phi\_{p},\\sigma\_{n1}^{2},\\cdots,\\sigma\_{np}^{2}\]^{T}. With this choice for 𝜽\\theta the
+where now 𝜽=\[γ1,⋯,γp,ϕ2,⋯,ϕp,σn​12,⋯,σn​P2\]T{\\mbox{\\boldmath{$\\theta$}}}=\[\\gamma\_{1},\\cdots,\\gamma\_{p},\\phi\_{2},\\cdots,\\phi\_{p},\\sigma\_{n1}^{2},\\cdots,\\sigma\_{np}^{2}\]^{T}. With this choice for 𝜽\\theta the
 results for 𝐅γ\\mathbf{F}\_{\\gamma}, 𝐅ϕ\\mathbf{F}\_{\\phi} and 𝐅σn\\mathbf{F}\_{\\sigma\_{n}}
 derived earlier in ( [51](https://ar5iv.labs.arxiv.org/html/1003.2307#S4.E51 "In IV-A Noise in self calibrated images ‣ IV Effective noise ‣ Fundamental Imaging Limits of Radio Telescope Arrays")), ( [52](https://ar5iv.labs.arxiv.org/html/1003.2307#S4.E52 "In IV-A Noise in self calibrated images ‣ IV Effective noise ‣ Fundamental Imaging Limits of Radio Telescope Arrays")) and ( [54](https://ar5iv.labs.arxiv.org/html/1003.2307#S4.E54 "In IV-A Noise in self calibrated images ‣ IV Effective noise ‣ Fundamental Imaging Limits of Radio Telescope Arrays"))
 can be used assuming that the calibration measurement adheres to the same data
@@ -944,13 +944,13 @@ source). The self calibration problem is therefore constrained by
 
 |     |     |     |     |
 | --- | --- | --- | --- |
-|  | p2≥2​p−1+p+3​q−1=3​p+3​q−2p^{2}\\geq 2p-1+p+3q-1=3p+3q-2 |  | (78) |
+|  | P2≥2​p−1+p+3​q−1=3​p+3​q−2p^{2}\\geq 2p-1+p+3q-1=3p+3q-2 |  | (78) |
 
 implying that
 
 |     |     |     |     |
 | --- | --- | --- | --- |
-|  | q≤p2−3​p+23.q\\leq\\frac{p^{2}-3p+2}{3}. |  | (79) |
+|  | q≤P2−3​p+23.q\\leq\\frac{p^{2}-3p+2}{3}. |  | (79) |
 
 The spatial Nyquist sampling with the 8×88\\times 8 URA allows an image grid of
 15×15=22515\\times 15=225 image values. This resolution was confirmed by the

@@ -1,0 +1,13 @@
+{
+  "M_c": 1892400000000.0,
+  "alpha_idcm": 1.3333333333333333,
+  "M_star_SDSS": 45708818961.48752,
+  "alpha_SDSS": -1.18,
+  "phi_star_SDSS": 0.0036,
+  "M_star_GAMA": 45708818961.48752,
+  "alpha_GAMA": -1.19,
+  "phi_star_GAMA": 0.00333,
+  "V_max": 409.8,
+  "comparison_notes": "M_c matches DM halo M*, not stellar M*",
+  "stellar_to_baryon_ratio": 41.40120097162132
+}

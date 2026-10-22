@@ -9,7 +9,7 @@
 
 ## §1 問題重述
 
-PMNS 混合矩陣 = 中微子味本徵結構。中微子 = W-field p6 模式激發態 (n=6)。
+PMNS 混合矩陣 = 中微子味本徵結構。中微子 = W-field P6 模式激發態 (n=6)。
 09-07 早段審計已排除: chain-beat 公式 (1e-8 全類 null), Q(√5)/有理結構因數 (98% null),
 C₅ anchor, CY₃ 幾何 (O50: d_tensor vs κ_ijk r<0.1 已死)。→ 結構家必須係 W-field 內生。
 
@@ -20,7 +20,7 @@ C₅ anchor, CY₃ 幾何 (O50: d_tensor vs κ_ijk r<0.1 已死)。→ 結構家
 | β = φ⁻¹ | 0.618034 | W-field meta-axiom |
 | ε = φ⁻¹/4 | 0.154508 | W-field pipeline gap (meta-axiom) |
 | K_tree | 33 | O59: 33+3 = K_tree+N_gen |
-| γ₆ = 4sin²(6π/88) | 0.180736 | 中微子模式 (p6) |
+| γ₆ = 4sin²(6π/88) | 0.180736 | 中微子模式 (P6) |
 | γ₇ = 4sin²(7π/88) | 0.244642 | μ 模式 (O69) |
 | ω_n = √γ_n | — | W-field 耦合 g_n = κ·ω_n (O36/O37) |
 | m₁:m₂:m₃ | φ⁻²:φ⁻¹:1 | O49 中微子質量譜 |

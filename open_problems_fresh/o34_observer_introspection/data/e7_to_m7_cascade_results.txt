@@ -1,0 +1,13 @@
+O34 — E_kchain to m_7 Cascade
+===================================================================
+E_kchain = 4.0602 meV
+m_7 = 13.8000 MeV
+M0 = m_7/sqrt(gamma_7) = 27.9006 MeV
+ratio m_7/E_kchain = 3.3988e+09
+log_phi(m_7/E_kchain) = 45.6071
+step factor (7-step) = 22.9942
+phi^45 = 2.5377e+09
+m_7/E_kchain / phi^45 = 1.339320
+phi^(1/phi) = 1.346361
+best candidate: phi^47 * gamma_7^+0.5 = 13.3424 MeV, err 3.3156%
+Status: 🔴 級聯算符未閉合 (exploration only)

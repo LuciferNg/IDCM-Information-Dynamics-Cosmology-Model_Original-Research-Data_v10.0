@@ -1,0 +1,69 @@
+{
+  "01_decomposition": {
+    "exit_code": 0,
+    "pass": 23,
+    "total": 23,
+    "fail_lines": 0,
+    "stored_data": [
+      23,
+      23
+    ],
+    "data_consistent": true,
+    "status": "PASS"
+  },
+  "02_constitution": {
+    "exit_code": 0,
+    "pass": 21,
+    "total": 21,
+    "fail_lines": 0,
+    "stored_data": [
+      21,
+      21
+    ],
+    "data_consistent": true,
+    "status": "PASS"
+  },
+  "03_behavior": {
+    "exit_code": 0,
+    "pass": 22,
+    "total": 22,
+    "fail_lines": 0,
+    "stored_data": [
+      22,
+      22
+    ],
+    "data_consistent": true,
+    "status": "PASS"
+  },
+  "04_principle": {
+    "exit_code": 0,
+    "pass": 35,
+    "total": 35,
+    "fail_lines": 0,
+    "stored_data": [
+      35,
+      35
+    ],
+    "data_consistent": true,
+    "status": "PASS"
+  },
+  "05_audit": {
+    "exit_code": 0,
+    "pass": 18,
+    "total": 18,
+    "fail_lines": 0,
+    "stored_data": [
+      18,
+      18
+    ],
+    "data_consistent": true,
+    "status": "PASS"
+  },
+  "_summary": {
+    "total_pass": 119,
+    "total_checks": 119,
+    "all_scripts_clean": true,
+    "date": "2026-09-18",
+    "o": "O204"
+  }
+}

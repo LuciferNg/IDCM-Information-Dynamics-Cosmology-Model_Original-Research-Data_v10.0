@@ -1,0 +1,10 @@
+{
+  "version": "o230-r1-2026-10-08",
+  "corpus_status": "v10.0 open_problems_fresh/ grep: 核衰變=0, beta decay=0, nuclear decay=0, 中子衰變=0, alpha decay=0 (概念層從未形式化)",
+  "def_channel": "核衰變通道 = 一個初核態 |i> 經算子 T_hat 躍遷到末核態 |f> + 放出粒子集合 S 之過程; 以量子數 ledgers (Q, T3L, T3R, B-L) 同模標籤 n 標定。",
+  "def_decay_operator": "T_hat = (g2/sqrt2) * J^+_mu ⊗ l_mu  (帶電流), 其中 J^+_mu = psi_bar_u g^mu P_L psi_d (idcm 費曼規則: 費米子-規範頂點 = -i g T^a g^mu P_L, O85 171/171)。",
+  "def_rate_law": "Gamma = |<f|T_hat|i>|^2 * rho_ps  (離散費米黃金律: rho_ps = 鏈模密度, 非連續積分 d^3p)。",
+  "def_selection": "通道選擇 = (i) 電荷守恆 Q = T3L + Y; (ii) 模守恆 sum n = 0 (mod 88)。",
+  "frozen": true,
+  "change_policy": "任何定義修改 = 新 doc + 明寫『移動球門』; 唔准一路做一路改定義。"
+}

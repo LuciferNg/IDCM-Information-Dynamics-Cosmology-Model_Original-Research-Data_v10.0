@@ -1,0 +1,849 @@
+{
+ "rules": "o225-closeout2-t1-v1",
+ "n_pass": 9,
+ "n_total": 9,
+ "claims": [
+  {
+   "tag": "C1",
+   "desc": "全鏈重跑 vs **歷史首記錄**：非預期漂移 = 0；契約閘之「見數前註冊（C8 型）」一次性判據之漂移屬記錄在案（該判據要求「無結果 note」，事後必 FAIL）",
+   "ok": true,
+   "detail": "歷史對照 = 119 項；漂移 = [('23_r6_contract.py', '8/8', '7/8', 'gate-register'), ('27_r7_contract.py', '8/8', '7/8', 'gate-register'), ('30_r8_contract.py', '8/8', '7/8', 'gate-register'), ('33_r9_contract.py', '8/10', '7/10', 'gate-register')] ; 同輪 before→after 漂移 = [] ; 無 RESULT = 3 支"
+  },
+  {
+   "tag": "C2",
+   "desc": "重跑後之 log 無 `Traceback`（首跑 implbug 日誌除外）",
+   "ok": true,
+   "detail": "含 Traceback = []"
+  },
+  {
+   "tag": "D1",
+   "desc": "全部 freeze JSON 所 pin 之合約 sha256 皆對應到 docs/ 內某一檔（0 失配）",
+   "ok": true,
+   "detail": "pin 數 = 23 ; 失配 = []"
+  },
+  {
+   "tag": "E1",
+   "desc": "磁碟上全部檔（doc/script/data/log/root）皆入 MANIFEST（排除 untracked-by-design）",
+   "ok": true,
+   "detail": "未收錄 = 0 件；首 8 = []"
+  },
+  {
+   "tag": "F1",
+   "desc": "AST：全 scripts/ 無禁用模組 import（math／random／numpy／scipy／statistics／cmath／secrets／decimal／mpmath／sympy）",
+   "ok": true,
+   "detail": "違規 = []"
+  },
+  {
+   "tag": "F2",
+   "desc": "審計器未經 importlib 載入本 o 自身推導 script（跨腳本 import = 0）",
+   "ok": true,
+   "detail": "可疑 = []"
+  },
+  {
+   "tag": "G1",
+   "desc": "close-out 第二輪之文檔標記齊備（docs/49、§三十三、清冊、final_result）",
+   "ok": true,
+   "detail": "逐項 = {'docs/49_o225_closeout_r1-r23.md': True, '§三十三 in record': True, '清冊 9 項 in docs/49': True, 'final_result R23': True, 'final_result closeout': True}"
+  },
+  {
+   "tag": "H1",
+   "desc": "三檔狀態行同步（R1–R23）",
+   "ok": true,
+   "detail": "三檔 = {'SESSION_START.md': 'R1–R23', '01_problem_record.md': 'R1–R23', 'final_result.md': 'R1–R23'}"
+  },
+  {
+   "tag": "H2",
+   "desc": "重跑日誌時效斷言（reuse 模式之前置）：重跑窗內日誌 ≥ 70 支",
+   "ok": true,
+   "detail": "窗內 = 83/83（參考 T = 2026-10-01 20:36:26）"
+  }
+ ],
+ "pinned": {
+  "docs/49_o225_closeout_r1-r23.md": "b47677226b9984292579f694c8412bfadbbc4ae64423a7890d0ef023b4dce76f",
+  "docs/48_r23_results.md": "f78124257af56df9e77a5977d9f64710142fa2c142cb9ef0a38fcaa8d3ca6d85",
+  "data/37_closeout_docs.json": "eec4833059327ff03e9de2017f511fb6f53a302047af6658b87c0469d34cd003",
+  "data/MANIFEST.json": "1214d17610c6c1722b7e307f38ed89e371f58f2130a4d922de3aefcee16667a7"
+ },
+ "rerun_seconds": 0.004170417785644531,
+ "drift": [],
+ "unmatched_sha": [],
+ "missing_in_manifest": [],
+ "before": {
+  "01_recon_invariants.py": [
+   "15",
+   "15"
+  ],
+  "02_r1_contract.py": null,
+  "03_r1_barrier.py": [
+   "19",
+   "19"
+  ],
+  "04_r1_audit.py": [
+   "11",
+   "11"
+  ],
+  "05_r1_null_analysis.py": [
+   "2",
+   "4"
+  ],
+  "06_r1_axis_sign_structure.py": [
+   "2",
+   "4"
+  ],
+  "07_r1_tie_mechanism.py": [
+   "6",
+   "6"
+  ],
+  "10_r2_contract.py": null,
+  "11_r2_g1_table.py": [
+   "14",
+   "16"
+  ],
+  "12_r2_dyn17.py": [
+   "7",
+   "9"
+  ],
+  "13_r2_audit.py": [
+   "11",
+   "11"
+  ],
+  "14_r3_contract.py": null,
+  "15_r3_centre_theorem.py": [
+   "11",
+   "11"
+  ],
+  "16_r3_audit.py": [
+   "8",
+   "8"
+  ],
+  "17_r4_contract.py": [
+   "7",
+   "7"
+  ],
+  "18_r4_tie_parity.py": [
+   "14",
+   "14"
+  ],
+  "19_r4_audit.py": [
+   "6",
+   "6"
+  ],
+  "20_r5_contract.py": [
+   "7",
+   "7"
+  ],
+  "21_r5_tie_global.py": [
+   "12",
+   "14"
+  ],
+  "22_r5_audit.py": [
+   "7",
+   "7"
+  ],
+  "23_r6_contract.py": [
+   "7",
+   "8"
+  ],
+  "24_r6_mechanism.py": [
+   "9",
+   "10"
+  ],
+  "25_r6_geometry.py": [
+   "11",
+   "12"
+  ],
+  "26_r6_audit.py": [
+   "6",
+   "6"
+  ],
+  "27_r7_contract.py": [
+   "7",
+   "8"
+  ],
+  "28_r7_mechanism2.py": [
+   "6",
+   "11"
+  ],
+  "29_r7_audit.py": [
+   "5",
+   "7"
+  ],
+  "30_r8_contract.py": [
+   "7",
+   "8"
+  ],
+  "31_r8_group.py": [
+   "7",
+   "11"
+  ],
+  "32_r8_audit.py": [
+   "7",
+   "8"
+  ],
+  "33_r9_contract.py": [
+   "7",
+   "10"
+  ],
+  "34_r9_pairing.py": [
+   "12",
+   "23"
+  ],
+  "35_r9_audit.py": [
+   "6",
+   "8"
+  ],
+  "36_closeout_audit.py": [
+   "32",
+   "32"
+  ],
+  "37_closeout_docs.py": [
+   "10",
+   "10"
+  ],
+  "38_r10_contract.py": [
+   "6",
+   "6"
+  ],
+  "39_r10_universal.py": [
+   "19",
+   "21"
+  ],
+  "40_r10_audit.py": [
+   "17",
+   "18"
+  ],
+  "41_r11_contract.py": [
+   "5",
+   "5"
+  ],
+  "42_r11_machine.py": [
+   "20",
+   "29"
+  ],
+  "43_r11_audit.py": [
+   "11",
+   "11"
+  ],
+  "44_r12_contract.py": [
+   "5",
+   "5"
+  ],
+  "45_r12_machine.py": [
+   "17",
+   "24"
+  ],
+  "46_r12_audit.py": [
+   "8",
+   "8"
+  ],
+  "47_chain_index.py": [
+   "8",
+   "8"
+  ],
+  "48_r13_contract.py": [
+   "5",
+   "5"
+  ],
+  "49_r13_machine.py": [
+   "23",
+   "38"
+  ],
+  "50_r13_audit.py": [
+   "10",
+   "10"
+  ],
+  "51_r14_contract.py": [
+   "5",
+   "5"
+  ],
+  "52_r14_machine.py": [
+   "6",
+   "14"
+  ],
+  "53_r14_audit.py": [
+   "8",
+   "8"
+  ],
+  "54_r15_contract.py": [
+   "5",
+   "5"
+  ],
+  "55_r15_machine.py": [
+   "13",
+   "18"
+  ],
+  "56_r15_audit.py": [
+   "6",
+   "6"
+  ],
+  "57_r16_contract.py": [
+   "5",
+   "5"
+  ],
+  "58_r16_machine.py": [
+   "9",
+   "12"
+  ],
+  "59_r16_audit.py": [
+   "7",
+   "7"
+  ],
+  "60_r17_contract.py": [
+   "5",
+   "5"
+  ],
+  "61_r17_machine.py": [
+   "11",
+   "18"
+  ],
+  "62_r17_audit.py": [
+   "7",
+   "7"
+  ],
+  "63_r18_contract.py": [
+   "5",
+   "5"
+  ],
+  "64_r18_machine.py": [
+   "9",
+   "14"
+  ],
+  "65_r18_audit.py": [
+   "5",
+   "5"
+  ],
+  "66_r19_contract.py": [
+   "5",
+   "5"
+  ],
+  "67_r19_machine.py": [
+   "12",
+   "14"
+  ],
+  "68_r19_audit.py": [
+   "7",
+   "7"
+  ],
+  "69_r20_contract.py": [
+   "5",
+   "5"
+  ],
+  "70_r20_machine.py": [
+   "8",
+   "11"
+  ],
+  "71_r20_audit.py": [
+   "6",
+   "6"
+  ],
+  "72_r21_contract.py": [
+   "5",
+   "5"
+  ],
+  "73_r21_machine.py": [
+   "3",
+   "12"
+  ],
+  "74_r21_audit.py": [
+   "3",
+   "4"
+  ],
+  "75_r22_contract.py": [
+   "5",
+   "5"
+  ],
+  "76_r22_machine.py": [
+   "7",
+   "10"
+  ],
+  "77_r22_audit.py": [
+   "3",
+   "4"
+  ],
+  "78_r23_contract.py": [
+   "5",
+   "5"
+  ],
+  "79_r23_machine.py": [
+   "10",
+   "13"
+  ],
+  "80_r23_audit.py": [
+   "4",
+   "4"
+  ],
+  "81_o225_closeout2_audit.py": null,
+  "82_o225_closeout2_docs.py": [
+   "8",
+   "8"
+  ],
+  "83_r24_contract.py": [
+   "5",
+   "5"
+  ],
+  "84_r24_machine.py": [
+   "10",
+   "11"
+  ],
+  "85_r24_audit.py": [
+   "4",
+   "4"
+  ]
+ },
+ "after": {
+  "01_recon_invariants.py": [
+   "15",
+   "15"
+  ],
+  "02_r1_contract.py": null,
+  "03_r1_barrier.py": [
+   "19",
+   "19"
+  ],
+  "04_r1_audit.py": [
+   "11",
+   "11"
+  ],
+  "05_r1_null_analysis.py": [
+   "2",
+   "4"
+  ],
+  "06_r1_axis_sign_structure.py": [
+   "2",
+   "4"
+  ],
+  "07_r1_tie_mechanism.py": [
+   "6",
+   "6"
+  ],
+  "10_r2_contract.py": null,
+  "11_r2_g1_table.py": [
+   "14",
+   "16"
+  ],
+  "12_r2_dyn17.py": [
+   "7",
+   "9"
+  ],
+  "13_r2_audit.py": [
+   "11",
+   "11"
+  ],
+  "14_r3_contract.py": null,
+  "15_r3_centre_theorem.py": [
+   "11",
+   "11"
+  ],
+  "16_r3_audit.py": [
+   "8",
+   "8"
+  ],
+  "17_r4_contract.py": [
+   "7",
+   "7"
+  ],
+  "18_r4_tie_parity.py": [
+   "14",
+   "14"
+  ],
+  "19_r4_audit.py": [
+   "6",
+   "6"
+  ],
+  "20_r5_contract.py": [
+   "7",
+   "7"
+  ],
+  "21_r5_tie_global.py": [
+   "12",
+   "14"
+  ],
+  "22_r5_audit.py": [
+   "7",
+   "7"
+  ],
+  "23_r6_contract.py": [
+   "7",
+   "8"
+  ],
+  "24_r6_mechanism.py": [
+   "9",
+   "10"
+  ],
+  "25_r6_geometry.py": [
+   "11",
+   "12"
+  ],
+  "26_r6_audit.py": [
+   "6",
+   "6"
+  ],
+  "27_r7_contract.py": [
+   "7",
+   "8"
+  ],
+  "28_r7_mechanism2.py": [
+   "6",
+   "11"
+  ],
+  "29_r7_audit.py": [
+   "5",
+   "7"
+  ],
+  "30_r8_contract.py": [
+   "7",
+   "8"
+  ],
+  "31_r8_group.py": [
+   "7",
+   "11"
+  ],
+  "32_r8_audit.py": [
+   "7",
+   "8"
+  ],
+  "33_r9_contract.py": [
+   "7",
+   "10"
+  ],
+  "34_r9_pairing.py": [
+   "12",
+   "23"
+  ],
+  "35_r9_audit.py": [
+   "6",
+   "8"
+  ],
+  "36_closeout_audit.py": [
+   "32",
+   "32"
+  ],
+  "37_closeout_docs.py": [
+   "10",
+   "10"
+  ],
+  "38_r10_contract.py": [
+   "6",
+   "6"
+  ],
+  "39_r10_universal.py": [
+   "19",
+   "21"
+  ],
+  "40_r10_audit.py": [
+   "17",
+   "18"
+  ],
+  "41_r11_contract.py": [
+   "5",
+   "5"
+  ],
+  "42_r11_machine.py": [
+   "20",
+   "29"
+  ],
+  "43_r11_audit.py": [
+   "11",
+   "11"
+  ],
+  "44_r12_contract.py": [
+   "5",
+   "5"
+  ],
+  "45_r12_machine.py": [
+   "17",
+   "24"
+  ],
+  "46_r12_audit.py": [
+   "8",
+   "8"
+  ],
+  "47_chain_index.py": [
+   "8",
+   "8"
+  ],
+  "48_r13_contract.py": [
+   "5",
+   "5"
+  ],
+  "49_r13_machine.py": [
+   "23",
+   "38"
+  ],
+  "50_r13_audit.py": [
+   "10",
+   "10"
+  ],
+  "51_r14_contract.py": [
+   "5",
+   "5"
+  ],
+  "52_r14_machine.py": [
+   "6",
+   "14"
+  ],
+  "53_r14_audit.py": [
+   "8",
+   "8"
+  ],
+  "54_r15_contract.py": [
+   "5",
+   "5"
+  ],
+  "55_r15_machine.py": [
+   "13",
+   "18"
+  ],
+  "56_r15_audit.py": [
+   "6",
+   "6"
+  ],
+  "57_r16_contract.py": [
+   "5",
+   "5"
+  ],
+  "58_r16_machine.py": [
+   "9",
+   "12"
+  ],
+  "59_r16_audit.py": [
+   "7",
+   "7"
+  ],
+  "60_r17_contract.py": [
+   "5",
+   "5"
+  ],
+  "61_r17_machine.py": [
+   "11",
+   "18"
+  ],
+  "62_r17_audit.py": [
+   "7",
+   "7"
+  ],
+  "63_r18_contract.py": [
+   "5",
+   "5"
+  ],
+  "64_r18_machine.py": [
+   "9",
+   "14"
+  ],
+  "65_r18_audit.py": [
+   "5",
+   "5"
+  ],
+  "66_r19_contract.py": [
+   "5",
+   "5"
+  ],
+  "67_r19_machine.py": [
+   "12",
+   "14"
+  ],
+  "68_r19_audit.py": [
+   "7",
+   "7"
+  ],
+  "69_r20_contract.py": [
+   "5",
+   "5"
+  ],
+  "70_r20_machine.py": [
+   "8",
+   "11"
+  ],
+  "71_r20_audit.py": [
+   "6",
+   "6"
+  ],
+  "72_r21_contract.py": [
+   "5",
+   "5"
+  ],
+  "73_r21_machine.py": [
+   "3",
+   "12"
+  ],
+  "74_r21_audit.py": [
+   "3",
+   "4"
+  ],
+  "75_r22_contract.py": [
+   "5",
+   "5"
+  ],
+  "76_r22_machine.py": [
+   "7",
+   "10"
+  ],
+  "77_r22_audit.py": [
+   "3",
+   "4"
+  ],
+  "78_r23_contract.py": [
+   "5",
+   "5"
+  ],
+  "79_r23_machine.py": [
+   "10",
+   "13"
+  ],
+  "80_r23_audit.py": [
+   "4",
+   "4"
+  ],
+  "82_o225_closeout2_docs.py": [
+   "8",
+   "8"
+  ],
+  "83_r24_contract.py": [
+   "5",
+   "5"
+  ],
+  "84_r24_machine.py": [
+   "10",
+   "11"
+  ],
+  "85_r24_audit.py": [
+   "4",
+   "4"
+  ]
+ },
+ "exits": {
+  "01_recon_invariants.py": -1,
+  "02_r1_contract.py": -1,
+  "03_r1_barrier.py": -1,
+  "04_r1_audit.py": -1,
+  "05_r1_null_analysis.py": -1,
+  "06_r1_axis_sign_structure.py": -1,
+  "07_r1_tie_mechanism.py": -1,
+  "10_r2_contract.py": -1,
+  "11_r2_g1_table.py": -1,
+  "12_r2_dyn17.py": -1,
+  "13_r2_audit.py": -1,
+  "14_r3_contract.py": -1,
+  "15_r3_centre_theorem.py": -1,
+  "16_r3_audit.py": -1,
+  "17_r4_contract.py": -1,
+  "18_r4_tie_parity.py": -1,
+  "19_r4_audit.py": -1,
+  "20_r5_contract.py": -1,
+  "21_r5_tie_global.py": -1,
+  "22_r5_audit.py": -1,
+  "23_r6_contract.py": -1,
+  "24_r6_mechanism.py": -1,
+  "25_r6_geometry.py": -1,
+  "26_r6_audit.py": -1,
+  "27_r7_contract.py": -1,
+  "28_r7_mechanism2.py": -1,
+  "29_r7_audit.py": -1,
+  "30_r8_contract.py": -1,
+  "31_r8_group.py": -1,
+  "32_r8_audit.py": -1,
+  "33_r9_contract.py": -1,
+  "34_r9_pairing.py": -1,
+  "35_r9_audit.py": -1,
+  "36_closeout_audit.py": -1,
+  "37_closeout_docs.py": -1,
+  "38_r10_contract.py": -1,
+  "39_r10_universal.py": -1,
+  "40_r10_audit.py": -1,
+  "41_r11_contract.py": -1,
+  "42_r11_machine.py": -1,
+  "43_r11_audit.py": -1,
+  "44_r12_contract.py": -1,
+  "45_r12_machine.py": -1,
+  "46_r12_audit.py": -1,
+  "47_chain_index.py": -1,
+  "48_r13_contract.py": -1,
+  "49_r13_machine.py": -1,
+  "50_r13_audit.py": -1,
+  "51_r14_contract.py": -1,
+  "52_r14_machine.py": -1,
+  "53_r14_audit.py": -1,
+  "54_r15_contract.py": -1,
+  "55_r15_machine.py": -1,
+  "56_r15_audit.py": -1,
+  "57_r16_contract.py": -1,
+  "58_r16_machine.py": -1,
+  "59_r16_audit.py": -1,
+  "60_r17_contract.py": -1,
+  "61_r17_machine.py": -1,
+  "62_r17_audit.py": -1,
+  "63_r18_contract.py": -1,
+  "64_r18_machine.py": -1,
+  "65_r18_audit.py": -1,
+  "66_r19_contract.py": -1,
+  "67_r19_machine.py": -1,
+  "68_r19_audit.py": -1,
+  "69_r20_contract.py": -1,
+  "70_r20_machine.py": -1,
+  "71_r20_audit.py": -1,
+  "72_r21_contract.py": -1,
+  "73_r21_machine.py": -1,
+  "74_r21_audit.py": -1,
+  "75_r22_contract.py": -1,
+  "76_r22_machine.py": -1,
+  "77_r22_audit.py": -1,
+  "78_r23_contract.py": -1,
+  "79_r23_machine.py": -1,
+  "80_r23_audit.py": -1,
+  "82_o225_closeout2_docs.py": -1,
+  "83_r24_contract.py": -1,
+  "84_r24_machine.py": -1,
+  "85_r24_audit.py": -1
+ },
+ "mode": "reuse",
+ "gate_register_drift": [
+  [
+   "23_r6_contract.py",
+   "8/8",
+   "7/8"
+  ],
+  [
+   "27_r7_contract.py",
+   "8/8",
+   "7/8"
+  ],
+  [
+   "30_r8_contract.py",
+   "8/8",
+   "7/8"
+  ],
+  [
+   "33_r9_contract.py",
+   "8/10",
+   "7/10"
+  ]
+ ],
+ "unexpected_drift": [],
+ "hist_drift": [
+  [
+   "23_r6_contract.py",
+   "8/8",
+   "7/8",
+   "gate-register"
+  ],
+  [
+   "27_r7_contract.py",
+   "8/8",
+   "7/8",
+   "gate-register"
+  ],
+  [
+   "30_r8_contract.py",
+   "8/8",
+   "7/8",
+   "gate-register"
+  ],
+  [
+   "33_r9_contract.py",
+   "8/10",
+   "7/10",
+   "gate-register"
+  ]
+ ],
+ "hist_size": 119
+}

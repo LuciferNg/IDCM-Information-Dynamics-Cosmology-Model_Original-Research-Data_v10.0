@@ -1,0 +1,6 @@
+depth reached: 2 | states: 120
+states with >1 shortest word: 57  (max multiplicity 41)
+first few: [(99, 2, 41), (96, 2, 41), (98, 2, 41), (103, 2, 41), (102, 2, 41), (97, 2, 41)]
+multiplicity by depth: [(0, 41), (1, 41), (2, 41)]
+Pr-1 (>1 somewhere): HOLDS
+Pr-2 (canonical lex-first exists for all): HOLDS

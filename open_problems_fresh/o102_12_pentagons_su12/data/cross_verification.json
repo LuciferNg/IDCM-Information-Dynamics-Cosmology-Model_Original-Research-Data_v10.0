@@ -1,0 +1,40 @@
+{
+  "geometry": {
+    "nodes": 60,
+    "triangles": 20,
+    "squares": 30,
+    "pentagons": 12,
+    "faces_total": 62
+  },
+  "delta_e0_distribution": {
+    "0": 2,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 0,
+    "5": 1,
+    "6": 1,
+    "7": 2,
+    "8": 1,
+    "9": 0,
+    "10": 1,
+    "11": 1
+  },
+  "pentagon_adjacency_edges": 30,
+  "pentagon_adjacency_degree_all_5": true,
+  "pentagon_centres_icosahedron_match": true,
+  "coldest_pentagon_all_scales": 5,
+  "hottest_pentagon_all_scales": 7,
+  "cross_map_correlation": {
+    "smica_nilc": 0.9992262721061707,
+    "smica_commander": 0.9975601434707642
+  },
+  "seam_components": {
+    "size_2": 10,
+    "size_3": 8,
+    "size_4": 2
+  },
+  "frustration_edges": 32,
+  "passed": 29,
+  "failed": 0
+}

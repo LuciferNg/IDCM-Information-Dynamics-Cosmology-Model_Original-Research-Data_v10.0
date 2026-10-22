@@ -1,0 +1,31 @@
+{
+  "F7_selection": {
+    "N": 44,
+    "F7": 13,
+    "L7": 29,
+    "unique_k": 7,
+    "identity": "N = F_k+L_k+2 = 2(F_8+1) = 44"
+  },
+  "deg_86": {
+    "N88": 88,
+    "pairs": 43,
+    "effective": 86,
+    "zero_mode": "n=0",
+    "nyquist": "n=44",
+    "formula": "2N-2 = 2(44)-2 = 86"
+  },
+  "epsilon": {
+    "formula": "F7/(2N-2)",
+    "value": 0.1511627906976744,
+    "decimal": 0.1511627906976744
+  },
+  "dT_pred_uK": 134.44588743046717,
+  "dT_obs_uK": 134.2,
+  "deviation_pct": 0.18322461286672598,
+  "position": {
+    "lon": 209,
+    "lat": -57,
+    "lon_formula": "180+L7",
+    "lat_formula": "-(N+F7)"
+  }
+}

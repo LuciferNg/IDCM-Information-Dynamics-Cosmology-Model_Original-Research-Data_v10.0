@@ -1,0 +1,21 @@
+{
+  "test": "O62 八期 27: Co-simplex 完整",
+  "n_cosimp": 904,
+  "zero": 554,
+  "nnz": 350,
+  "distinct": 450,
+  "two_same": 418,
+  "all_same": 36,
+  "d_zero": 331,
+  "d_nnz": 119,
+  "t_zero": 220,
+  "t_nnz": 198,
+  "a_zero": 3,
+  "a_nnz": 33,
+  "viol": 0,
+  "nnz_total": 350,
+  "div0_zero": 187,
+  "div0_nnz": 58,
+  "passed": 5,
+  "failed": 0
+}

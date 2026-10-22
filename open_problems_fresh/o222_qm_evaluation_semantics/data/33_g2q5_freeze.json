@@ -1,0 +1,67 @@
+{
+ "contract": "g2q5-contract-v1",
+ "pins": {
+  "J1": {
+   "path": "open_problems_fresh/o206_per_mode_frequency/final_result.md",
+   "sha256": "4fd2b54cbd202df06e5b67fbf98c22295d6e665d93b6888dc02ed7e48b3feae0"
+  },
+  "J10": {
+   "path": "open_problems_fresh/o193_power_sum_domain/docs/04_moment_domain_cutoff.md",
+   "sha256": "582e9db2c71b3be3cf8ddf751153e74b22a821865f686616591f16bf4abeed39"
+  },
+  "J11": {
+   "path": "open_problems_fresh/little_red_dots/data/k_chain_modes.json",
+   "sha256": "050851fdda9ed99e8ab1d2f40ff36f02738491b8694b5edab82f03f39b7ffcef"
+  },
+  "J12": {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/01_wfield_qm_verification.json",
+   "sha256": "de0bbfe0260adff29fa9f718d7c3920a07c2e9ff46d922804d5f8aca0a4cfc27"
+  },
+  "J13": {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/docs/07_b5_contract.md",
+   "sha256": "662df4c48a7b3219ecf5bd6dc1d96496cffe829da2eaa59050b1150465d66f1e"
+  },
+  "J14": {
+   "path": "open_problems_fresh/o206_per_mode_frequency/merged_o221/docs/01_problem_record.md",
+   "sha256": "29737f9cfa69d929073070950beff2cee5ed76cf03166de7c1efa24673ebe648"
+  },
+  "J2": {
+   "path": "open_problems_fresh/o206_per_mode_frequency/RESULT.md",
+   "sha256": "7d872304454b7546036d7fa68b734dfcf4ccfba23d514f9a56570dc54ba91d1d"
+  },
+  "J3": {
+   "path": "open_problems_fresh/o206_per_mode_frequency/docs/01_problem_record.md",
+   "sha256": "e7d48e1f9e716a036ed8d670a8c02aff4731d9194b8b89140202d8b3f54aece6"
+  },
+  "J4": {
+   "path": "open_problems_fresh/o206_per_mode_frequency/docs/02_f1_existence_audit.md",
+   "sha256": "58298be13bbf76e6a3859fefcc55065c445b90d4b65cc943c97afe4b8634f23e"
+  },
+  "J5": {
+   "path": "open_problems_fresh/o206_per_mode_frequency/docs/08_round1_verdict.md",
+   "sha256": "b7cb2a43ced7b6f8f8f31db32ca0d66fa0d7ae67bd900a7b8f5196da952b48a3"
+  },
+  "J6": {
+   "path": "open_problems_fresh/o121_black_hole_entropy/data/01_tpipe_dag_spectrum.json",
+   "sha256": "f64edfbe4cef6672485233c469d58c6a2376facf2ccae4ad93e8944177d7e203"
+  },
+  "J7": {
+   "path": "open_problems_fresh/o210_causal_tensor_algebra/docs/02_operations_closure.md",
+   "sha256": "7eeeae61d4e8e4f02a609d287f345d575b1968b7a1d1403a3cfd5d80c3c2f69b"
+  },
+  "J8": {
+   "path": "open_problems_fresh/o210_causal_tensor_algebra/data/02_type_registry.json",
+   "sha256": "558be30c27cbd2ed26bd41307ff888caf93ff60462af64e5015981ef20fa15c7"
+  },
+  "J9": {
+   "path": "open_problems_fresh/o33_projection_mechanism/final_result.md",
+   "sha256": "375ac00a4d0b83818ce1fc340842a0a88b4fe3e57d83e5bad32e8cd9c4c398a2"
+  }
+ },
+ "gate": "OPEN",
+ "frozen_at": "2026-09-30T11:15:51+0800",
+ "impl": {
+  "path": "scripts/34_g2q5_provenance.py",
+  "sha256": "84789a1a8314f61cac18beb5a935e0e3143522a687bde0112f4a66037129a990"
+ }
+}

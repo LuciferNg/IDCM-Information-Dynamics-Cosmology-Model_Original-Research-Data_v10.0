@@ -1,0 +1,92 @@
+{
+  "problem": "O121/G8 三項深化",
+  "②_mechanism": {
+    "K_tree_ladder_ratio": 1.618033988749895,
+    "K_tree_levels": 34,
+    "F9": 34,
+    "n_eff_modes": 42,
+    "n_rungs": 21.0,
+    "F8": 21,
+    "F7": 13,
+    "RG_invariant": 88.0,
+    "db_dl": 4.190476190476191,
+    "eta": 4.0856349008447376e-05,
+    "derived": {
+      "ladder_ratio_phi": "K_tree 定義 (前提)",
+      "rungs_21": "block-spin 42/2 = F₈"
+    },
+    "not_derived": [
+      "K_tree 係 φ-階梯 (框架前提)",
+      "為何遍歷 21 級而非 34"
+    ]
+  },
+  "①_tension": {
+    "t_H": 13800000000.0,
+    "tau_pred": 8.874784590563531e+16,
+    "tau_ref": 7.124681933842239e+16,
+    "Mdot_o175": 17408.357403599315,
+    "Mdot_structural": 66.25512923718898,
+    "ratio": 262.7473163817785,
+    "ratio_formula": "phi^-21 * tau_pred/t_H",
+    "o175_exceeds_uhECR": true,
+    "f_return": 0.8028005481302433,
+    "verdict": "張力解除: O175 時標錯配 (t_H vs τ_rec)"
+  },
+  "③_criterion": {
+    "rows": [
+      {
+        "candidate": "2²⁰·T_ring",
+        "value": 1048576,
+        "dev": 0.2456394086040956,
+        "has_derivation": true,
+        "note": "Poincaré 構型復現 (O7 2^20 ⊗ docs/07 凍結)"
+      },
+      {
+        "candidate": "7⁷·T_ring",
+        "value": 823543,
+        "dev": -0.021685013313252788,
+        "has_derivation": false,
+        "note": "無 (L₄^{L₄} 無機制)"
+      },
+      {
+        "candidate": "88³·T_ring",
+        "value": 681472,
+        "dev": -0.19045602888083435,
+        "has_derivation": false,
+        "note": "無"
+      },
+      {
+        "candidate": "29⁴·T_ring",
+        "value": 707281,
+        "dev": -0.1597966322356097,
+        "has_derivation": false,
+        "note": "無 (L₇⁴)"
+      },
+      {
+        "candidate": "90³·T_ring",
+        "value": 729000,
+        "dev": -0.1339958869243758,
+        "has_derivation": false,
+        "note": "無 (Σγ³)"
+      },
+      {
+        "candidate": "(41/19)¹⁸·T_ring",
+        "value": 1029306.2356901421,
+        "dev": 0.2227481944061056,
+        "has_derivation": false,
+        "note": "部分: 比值結構, 但指數 18=L₆ 無推導"
+      },
+      {
+        "candidate": "N_d·φ²¹·T_ring",
+        "value": 1076944.00179768,
+        "dev": 0.27933873128794695,
+        "has_derivation": false,
+        "note": "部分: φ-階梯 ✓, 但 N_d 前置因子無推導"
+      }
+    ],
+    "n_with_derivation": 1,
+    "best_fit": "7⁷·T_ring",
+    "criterion": "每因子須有推導 (證成先於吻合)"
+  },
+  "verdict": "②機制部分閉合 ①張力解除 ③判別準則確立"
+}

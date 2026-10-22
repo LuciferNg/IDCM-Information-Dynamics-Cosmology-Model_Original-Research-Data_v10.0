@@ -1,0 +1,75 @@
+{
+  "problem": "O190 attack3 falsifiability surface",
+  "script": "scripts/06_attack3_falsifiability.py",
+  "date": "2026-09-13T21:57:13.169902",
+  "result": "13/13 PASS",
+  "checks": [
+    {
+      "name": "A1 ℓ₅ = 1121 (O100: ℓ_m = 44(M−C(9−m,2)) + frac, m=5)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A2 峰位全部 ≈ 44×有理 + frac (44 = N_d 量子, C_ℓ 峰 = 半整數 88-chain 諧和, O100)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A3 O100/O83: 峰位 RMS 0.83% 閉合 (宇宙學面 = γ 階梯嘅可測面)",
+      "pass": true,
+      "detail": "o9_high_ell_peaks + o83 correlator (citation)"
+    },
+    {
+      "name": "A4 偶峰 A_{2k}/A₁ = ((k+1)/(4k−1))²; 奇峰 A₅/A₇ = 3/2 (O83 閉合)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B1 sin²θ₁₂ = γ₂/(γ₂+γ₃) = 0.308 (O65, PMNS 1.7%)",
+      "pass": true,
+      "detail": "0.3081"
+    },
+    {
+      "name": "B2 sin²θ₂₃ = γ₇/(γ₇+γ₆) = 0.575 (O65, PMNS 0.5%)",
+      "pass": true,
+      "detail": "0.5751"
+    },
+    {
+      "name": "B3 μ/e 閉合值 206.705 vs PDG 206.7683: dev = 0.031% (O142 系, 已閉合)",
+      "pass": true,
+      "detail": "dev = 0.0306%"
+    },
+    {
+      "name": "C1 γ_n = csc(πn/88) = cosh(η_n) (rapidity 身份, O190 docs/01): 階梯係運動學標籤",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C2 γ 階梯有界 [1, 28.017] (倒轉塔), 冇 KK 線性增長 → 冇共振塔",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C3 Z' ~ M_GUT = 6.22×10¹⁶ GeV, θ_ZZ' < 5.96×10⁻²¹ rad → 不可觀測 (O107)",
+      "pass": true,
+      "detail": "Z'=6.22e+16 GeV θ=5.96e-21 rad"
+    },
+    {
+      "name": "C4 結構必然: 88 mode = 88 離散 boost (唔係 88 種新粒子) —「冇新粒子」係結構後果",
+      "pass": true,
+      "detail": "docs/01: IDCM 量化 rapidity, RS1 量化質量 (命名對應唔算解釋)"
+    },
+    {
+      "name": "C5 LHC KK/radion/Z' 搜索全 null → 同「冇新粒子」預言一致 (m_KK ≳ 3–5 TeV 文獻)",
+      "pass": true,
+      "detail": "ATLAS/CMS 文獻排除 m_KK ≲ 3-5 TeV (外部文獻, 引用)"
+    },
+    {
+      "name": "C6 誠實註記: 「冇新粒子」係單向測試 (發現共振即證偽; 冇發現只一致)",
+      "pass": true,
+      "detail": "任何 KK/radion/Z'/extra-dimension 發現 → 證偽 IDCM 結構聲稱 (階梯=運動學)"
+    }
+  ],
+  "verdict": "判 1 (feature) — 「冇新粒子」係結構必然嘅盲測: γ 階梯 = 運動學 (cosh η), 唔係粒子譜; 任何 KK/radion/Z'/extra-dimension 發現即證偽; LHC null 全一致; 正面量度面 = 宇宙學/譜比例 (C_ℓ 峰位 O100 RMS 0.83%, γ-ratio O65/O142 已閉合)",
+  "honest_note": "absence 只一致唔確認 (單向測試); P3 σ<1fb 標籤喺 corpus 無源 (docs/01 需修正 → O107 權威值)"
+}

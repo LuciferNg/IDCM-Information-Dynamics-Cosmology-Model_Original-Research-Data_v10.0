@@ -1,0 +1,63 @@
+{
+  "B": 4,
+  "Nd": 44,
+  "L5": 11,
+  "gamma6": 0.18073600929096323,
+  "F_proj": 17,
+  "glsm_charges": 32,
+  "lepton_factor": 8,
+  "quark_factor": 16,
+  "lepton_factor_binary": "2B",
+  "quark_factor_binary": "B\u00b2",
+  "checks": [
+    {
+      "check": "2B = 8 = 2\u00b3",
+      "pass": true
+    },
+    {
+      "check": "B\u00b2 = 16 = 2\u2074",
+      "pass": true
+    },
+    {
+      "check": "PMNS sin\u00b2\u03b8\u2081\u2083 = \u03b3\u2086/2B",
+      "pass": true
+    },
+    {
+      "check": "CKM \u03bb\u00b3 = \u03b3\u2086/B\u00b2",
+      "pass": true
+    },
+    {
+      "check": "sin\u00b2\u03b8\u2081\u2083/\u03bb\u00b3 = 2B/B\u00b2 = 2",
+      "pass": true
+    },
+    {
+      "check": "SU(12) fundamental 12 = (4, 3)",
+      "pass": true
+    },
+    {
+      "check": "\u8f15\u5b50 SU(4) singlet \u2192 1 \u500b B \u56e0\u5b50",
+      "pass": true
+    },
+    {
+      "check": "\u5938\u514b SU(4) triplet \u2192 2 \u500b B \u56e0\u5b50",
+      "pass": true
+    },
+    {
+      "check": "GLSM 32 U(1) = 2B\u00b2",
+      "pass": true
+    },
+    {
+      "check": "F_proj = 17 = B\u00b2 + 1",
+      "pass": true
+    },
+    {
+      "check": "Z\u2082 mirror: \u03b3_k + \u03b3_{88-k} = 4",
+      "pass": true
+    },
+    {
+      "check": "44-site \u03a3\u03b3 = 90",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

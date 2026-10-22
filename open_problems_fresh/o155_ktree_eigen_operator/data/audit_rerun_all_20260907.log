@@ -1,0 +1,56 @@
+== scripts/01_tree_boundary_derivation.py
+   sinθ₁₃ = 0.149000 vs ε·32/33 = 0.149826 (0.55%)
+== scripts/02_tree5_origin.py
+   → 兩個 δ 共享 tree 5-step 結構
+== scripts/03_t_operator_algebra.py
+RESULT: 16/16 PASS
+== scripts/04_projector_boundary.py
+RESULT: 16/16 PASS
+== scripts/05_tree_laplacian.py
+RESULT: 12/12 PASS
+== scripts/06_ap_ladder.py
+RESULT: 18/18 PASS
+== scripts/07_channel_duality.py
+RESULT: 9/9 PASS
+== scripts/08_delta_operator.py
+RESULT: 14/14 PASS
+== scripts/09_doc_crosscheck.py
+RESULT: 28/28 PASS
+== scripts/10_pythagorean_operator.py
+RESULT: 23/23 PASS
+== scripts/11_home_mechanism.py
+RESULT: 18/18 PASS
+== scripts/12_delta_audit.py
+RESULT: 10/10 PASS
+== scripts/13_channel_duality.py
+RESULT: 16/16 PASS
+== scripts/14_cy3_observer_projection.py
+RESULT: 24/24 PASS
+== scripts/15_zero_closure_ses.py
+RESULT: 18/18 PASS
+== scripts/16_circle_dual_observation.py
+RESULT: 26/26 PASS
+== scripts/17_three_axioms.py
+RESULT: 27/27 PASS
+== scripts/18_projector_operator.py
+RESULT: 20/20 PASS
+== scripts/19_mu2_switch_operator.py
+RESULT: 18/18 PASS
+== scripts/20_qsqrt5_bridge.py
+RESULT: 37/37 PASS
+== scripts/21_mode_selection_rule.py
+RESULT: 19/19 PASS
+== scripts/22_hold_rule.py
+RESULT: 16/16 PASS
+== scripts/23_fib_index_selection.py
+RESULT: 20/20 PASS
+== scripts/24_minimality_criterion.py
+RESULT: 21/21 PASS
+== scripts/25_ktree_5.py
+RESULT: 22/22 PASS
+== scripts/26_prime_distribution.py
+==============================================================
+== scripts/27_what_is_88.py
+==============================================================
+== scripts/28_identity_hub.py
+==============================================================

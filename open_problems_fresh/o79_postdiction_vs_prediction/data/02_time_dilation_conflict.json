@@ -1,0 +1,10 @@
+{
+  "date": "2026-08-25",
+  "o72_claim": "IDCM time dilation 唔跟 (1+z)",
+  "o76_claim": "IDCM time dilation = (1+z) 同 ΛCDM 一樣",
+  "o72_mtime": "2026-08-25 19:05",
+  "o76_mtime": "2026-08-25 18:06",
+  "verdict": "O76 修正 O72 (機制 B: W-field 能量損失 → Δt ∝ (1+z))",
+  "pass": 13,
+  "fail": 0
+}

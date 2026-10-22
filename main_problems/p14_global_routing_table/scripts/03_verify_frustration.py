@@ -15,7 +15,7 @@ adj = build_graph(vecs, thresh)
 frust_file = load_frustration_edges()
 
 # 從 anchored_coloring.txt 讀取顏色
-COLOR_PATH = "../../main_problems/p4_cmb_cold_spot/data/anchored_coloring.txt"
+COLOR_PATH = "../../p4_cmb_cold_spot/data/anchored_coloring.txt"
 colors = {}
 with open(COLOR_PATH) as f:
     for line in f:

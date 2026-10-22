@@ -1,0 +1,11 @@
+================================================================================================================
+O222 scripts/21 -- G4: read order derived from the frozen structure (rules g4-contract-v1)
+================================================================================================================
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/21_g4_eulerian.py", line 357, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/21_g4_eulerian.py", line 247, in main
+    'EC_62_digits': len(str(EC62)),
+                        ~~~^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit

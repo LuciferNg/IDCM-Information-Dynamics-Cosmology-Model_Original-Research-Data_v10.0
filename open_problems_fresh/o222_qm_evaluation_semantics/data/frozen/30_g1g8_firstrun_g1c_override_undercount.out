@@ -1,0 +1,19 @@
+======================================================================================================================
+O222 scripts/30 -- G1+G8 (docs/20 g1g8-contract-v1 + A1): can the gap maps be DERIVED from frozen records?
+======================================================================================================================
+[PASS] G8a-replay the explicit ledger replay reproduces the frozen D6 protocol (I7) pair by pair  --  pairs compared = 3844 ; mismatches = 0
+[PASS] G1a  ctx -> s exists by reading the frozen write rule: s_coord(ctx) = idx[h(ctx)] (62/62 contexts, injective: 62 distinct h values; 7440/7440 behavioural checks, 0 mismatches)
+[PASS] G1b  D5 trigger computed exactly: |N(s)-s|^2 > 0 on 7440/7440, = 0 on 0, ctx-only = True (value set: 3 exact elements)
+[PASS] G1c  route 1 (value-level consistency) re-verified as TOTAL (124 hits, 0 stored-value overrides, 0 inconsistencies, matching D6); route 2 (O210 projection) is provenance-only (2/4 files present, no explicit f) => 🟡
+[PASS] G8a  ledger quantified on the D6 machine s OWN ledger over the full pass: 7564 entries in total, ledger entries per ctx in [122, 122], 62 contexts carry CONFLICTING values (stale copies exist)
+[PASS] G8b  consistency-based redundancy: R_consistent = 1 while R_naive reaches 122 entries for a single context, and 62 contexts hold conflicting values => copies are stale, not redundant
+[PASS] G8c  multiplicity candidates: 12 distinct K rows over 120 states (multiplicities {10: 12}) and the orbits {12,20,30} are all UNOBSERVABLE; ledger fragments = 1 => R >= 2 fails (🔴)  --  ledger entries per ctx: max = 122 ; R_consistent = 1 ; R >= 2 fails
+----------------------------------------------------------------------------------------------------------------------
+  G1a  ✅  {'definition': 's_coord(ctx) = idx[h(ctx)] read off the frozen write rule', 'frozen_rule': 'read (miss) => s := MUL[s][hx[ctx]]  (scripts/12 rd(), scr
+  G1b  ✅  {'pairs': 7440, 'positive': 7440, 'zero': 0, 'zero_contexts': [], 'trigger_fires_per_context': True, 'squared_norm_value_set': ['2 + 0*sqrt5', '5/2 + 
+  G1c  🟡  {'route_1_value_level_consistency': {'status': '✅ TOTAL: 124 memo hits in the frozen pass, 0 of them returning a value the current state would not giv
+  G8a  ✅  {'passes': 120, 'pairs_per_pass': 3844, 'reads_per_pass': 11532, 'ledger_len_after_full_pass': 7564, 'entries_per_ctx_min': 122, 'entries_per_ctx_max'
+  G8b  ✅  {'R_consistent': 1, 'reason': 'only the ledger TOP is readable (L[-1][0] == ctx)', 'cited_from': 'docs/13_d6_results.md P3c (reach depth = 1) and P3b 
+  G8c  🔴  {'distinct_K_rows': 12, 'states': 120, 'multiplicity_histogram': {'10': 12}, 'orbit_sizes_cited': [12, 20, 30], 'ledger_fragments': 1, 'observable': F
+----------------------------------------------------------------------------------------------------------------------
+elapsed 5.8 s ; written data/30_g1g8_results.json

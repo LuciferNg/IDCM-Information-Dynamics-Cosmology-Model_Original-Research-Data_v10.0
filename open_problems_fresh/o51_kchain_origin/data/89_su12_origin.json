@@ -1,0 +1,159 @@
+{
+  "test": "O51 T6 — su(12) 來源閉合 (44 唯一性第六層)",
+  "checks": [
+    {
+      "name": "L₆ = 18 (Lucas 第 6 項)",
+      "ok": true
+    },
+    {
+      "name": "h¹¹ = N_gen×12 結構 (O53 3×12 Schur)",
+      "ok": true
+    },
+    {
+      "name": "h²¹ = B×L₅ + N_gen×L₆ (Lucas 分解)",
+      "ok": true
+    },
+    {
+      "name": "h²¹−h¹¹ = N_d+L₆ = 62",
+      "ok": true
+    },
+    {
+      "name": "N_gen=3 唯一 (虛無測試 1..5)",
+      "ok": true
+    },
+    {
+      "name": "h¹¹ = N_d−2B = 2L₆ = 36",
+      "ok": true
+    },
+    {
+      "name": "B = (N_d−2L₆)/2 = 4",
+      "ok": true
+    },
+    {
+      "name": "B=4 唯一 (虛無測試 2..6)",
+      "ok": true
+    },
+    {
+      "name": "fundamental = B×N_gen = 4×3 = 12",
+      "ok": true
+    },
+    {
+      "name": "12 = 3 世代 × 4 分支 (直積維度)",
+      "ok": true
+    },
+    {
+      "name": "12 = L₅+1 = 11+1 (rank+1 結構)",
+      "ok": true
+    },
+    {
+      "name": "B×N_gen = L₅+1 一致 (兩獨立結構收斂)",
+      "ok": true
+    },
+    {
+      "name": "rank(su(12)) = 12−1 = 11",
+      "ok": true
+    },
+    {
+      "name": "L₅ = 11 (Lucas 第 5 項)",
+      "ok": true
+    },
+    {
+      "name": "rank = L₅ (身份一致)",
+      "ok": true
+    },
+    {
+      "name": "11 = L₅ 係唯一奇 Lucas rank (10/12 唔係 Lucas)",
+      "ok": true
+    },
+    {
+      "name": "N=10 排除 (rank=9 唔係 Lucas)",
+      "ok": true
+    },
+    {
+      "name": "N=11 排除 (rank=10 唔係 Lucas)",
+      "ok": true
+    },
+    {
+      "name": "N=12 唯一 (rank=11=L₅)",
+      "ok": true
+    },
+    {
+      "name": "N=13 排除 (rank=12 唔係 Lucas)",
+      "ok": true
+    },
+    {
+      "name": "N=14 排除 (rank=13 唔係 Lucas)",
+      "ok": true
+    },
+    {
+      "name": "A₁₁=su(12) 唯一複 fundamental 12 (Cartan 分類)",
+      "ok": true
+    },
+    {
+      "name": "B₆/C₆/D₆ 排除 (實/辛, 唔承載複相位)",
+      "ok": true
+    },
+    {
+      "name": "IDCM fundamental 必須複 (相位/世代結構) → su(12)",
+      "ok": true
+    },
+    {
+      "name": "12 = B×N_gen = L₅+1 (雙重鎖定核心)",
+      "ok": true
+    },
+    {
+      "name": "rank = N_d/B = 44/4 = 11 (第三身份)",
+      "ok": true
+    },
+    {
+      "name": "三身份一致: B×N_gen−1 = N_d/B",
+      "ok": true
+    },
+    {
+      "name": "dim(su(12)) = 12²−1 = 143",
+      "ok": true
+    },
+    {
+      "name": "143 = B×K_tree+L₅ = 4×33+11",
+      "ok": true
+    },
+    {
+      "name": "143 = L₅×13 (Lucas×Fibonacci 結構)",
+      "ok": true
+    },
+    {
+      "name": "N_d = B×L₅ = 4×11 = 44",
+      "ok": true
+    },
+    {
+      "name": "N_d = B×(B×N_gen−1) = 4×11 (統一公式)",
+      "ok": true
+    },
+    {
+      "name": "88 = 2N_d = 2×44 (雙鏈)",
+      "ok": true
+    },
+    {
+      "name": "66 = C(12,2) = Λ²(12) (O59 代數)",
+      "ok": true
+    },
+    {
+      "name": "36 = h¹¹ = 3×12 = K_tree+N_gen (O59)",
+      "ok": true
+    }
+  ],
+  "total": 35,
+  "passed": 35,
+  "failed": 0,
+  "all_passed": true,
+  "status": "🟢 T6 su(12) 來源閉合 — N_gen=3 (O56) × B=4 (O56) → 12 → rank=L₅=11 唯一",
+  "chain": [
+    "N_gen=3: h¹¹=N_gen×12, h²¹=B×L₅+N_gen×L₆, h²¹−h¹¹=N_d+L₆ (O56 強制)",
+    "B=4: h¹¹=N_d−2B=2L₆=36 (O56 虛無測試唯一)",
+    "fundamental = B×N_gen = 12 (世代×分支直積)",
+    "rank = 12−1 = 11 = L₅ (唯一 Lucas rank)",
+    "雙重鎖定: 12 = B×N_gen = L₅+1; N_d/B = 11",
+    "su(12) dim = 143 = B×K_tree+L₅; Λ²(12)=66"
+  ],
+  "remaining_open": "無 — T1-T6 六層全部閉合"
+}

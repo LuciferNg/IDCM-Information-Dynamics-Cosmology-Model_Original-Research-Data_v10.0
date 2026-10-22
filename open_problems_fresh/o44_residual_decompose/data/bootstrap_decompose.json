@@ -1,0 +1,341 @@
+{
+  "high_rotation": {
+    "baseline-34": {
+      "n": 34,
+      "obs": 8.848173214534754,
+      "p": 0.0567,
+      "z": -1.604188173018718,
+      "rot_mean": 10.121360847433708,
+      "rot_std": 0.7936647672093883
+    },
+    "minus-cold-family": {
+      "n": 29,
+      "obs": 9.952657795122034,
+      "p": 0.3798,
+      "z": -0.2552095007457594,
+      "rot_mean": 10.14524653140899,
+      "rot_std": 0.7546299637128839
+    },
+    "minus-subspot-B": {
+      "n": 33,
+      "obs": 9.081687990992899,
+      "p": 0.0927,
+      "z": -1.3565258564056895,
+      "rot_mean": 10.111215305917616,
+      "rot_std": 0.758944114528416
+    },
+    "minus-h2": {
+      "n": 33,
+      "obs": 9.082650877444859,
+      "p": 0.1014,
+      "z": -1.290863169098874,
+      "rot_mean": 10.10347200347998,
+      "rot_std": 0.7908050601116279
+    },
+    "minus-node9-spots": {
+      "n": 32,
+      "obs": 8.691447254830036,
+      "p": 0.0399,
+      "z": -1.7583783377029316,
+      "rot_mean": 10.088530289187288,
+      "rot_std": 0.7945292571008009
+    },
+    "minus-cold-family+node9": {
+      "n": 27,
+      "obs": 9.848722182182167,
+      "p": 0.3332,
+      "z": -0.3996342385717431,
+      "rot_mean": 10.142003003080365,
+      "rot_std": 0.7338731084362488
+    }
+  },
+  "bootstrap": {
+    "frac_p_lt_005": 0.222,
+    "frac_p_lt_010": 0.443,
+    "p_mean": 0.16320999999999997,
+    "p_std": 0.14753278584775656,
+    "p_median": 0.116,
+    "obs_mean": 8.877996134101428,
+    "obs_std": 0.7541916265108727
+  },
+  "leverage": [
+    {
+      "removed": 7,
+      "name": "SMICA-c2",
+      "kind": "cold",
+      "node": 0,
+      "nearest": 0.7493996538454828,
+      "d_obs": 0.24541738062695018
+    },
+    {
+      "removed": 22,
+      "name": "SMICA-h2",
+      "kind": "hot",
+      "node": 53,
+      "nearest": 1.110410338501356,
+      "d_obs": 0.23447766291010552
+    },
+    {
+      "removed": 3,
+      "name": "LIT: CS sub-spot B (Cruz 2005 T4)",
+      "kind": "lit",
+      "node": 0,
+      "nearest": 1.1421855914159709,
+      "d_obs": 0.23351477645814533
+    },
+    {
+      "removed": 32,
+      "name": "SMICA-h12",
+      "kind": "hot",
+      "node": 54,
+      "nearest": 2.027741457217539,
+      "d_obs": 0.2066797502217348
+    },
+    {
+      "removed": 4,
+      "name": "LIT: CS sub-spot C (Cruz 2005 T4)",
+      "kind": "lit",
+      "node": 0,
+      "nearest": 3.206411074171859,
+      "d_obs": 0.17096248910190326
+    },
+    {
+      "removed": 5,
+      "name": "LIT: CS sub-spot D (Cruz 2005 T4)",
+      "kind": "lit",
+      "node": 0,
+      "nearest": 3.4579837900944224,
+      "d_obs": 0.16333907346789012
+    },
+    {
+      "removed": 2,
+      "name": "LIT: CS sub-spot A (Cruz 2005 T4)",
+      "kind": "lit",
+      "node": 0,
+      "nearest": 3.6548331261148213,
+      "d_obs": 0.15737394207333288
+    },
+    {
+      "removed": 17,
+      "name": "SMICA-c12",
+      "kind": "cold",
+      "node": 10,
+      "nearest": 5.9261556573938625,
+      "d_obs": 0.08854598658002999
+    },
+    {
+      "removed": 29,
+      "name": "SMICA-h9",
+      "kind": "hot",
+      "node": 1,
+      "nearest": 7.05997448882542,
+      "d_obs": 0.0541878401730127
+    },
+    {
+      "removed": 33,
+      "name": "SMICA-h13",
+      "kind": "hot",
+      "node": 55,
+      "nearest": 7.082074680429858,
+      "d_obs": 0.05351813739711986
+    },
+    {
+      "removed": 13,
+      "name": "SMICA-c8",
+      "kind": "cold",
+      "node": 4,
+      "nearest": 7.533098639890689,
+      "d_obs": 0.039850744686184214
+    },
+    {
+      "removed": 18,
+      "name": "SMICA-c13",
+      "kind": "cold",
+      "node": 32,
+      "nearest": 7.613536696888005,
+      "d_obs": 0.037413227807480354
+    },
+    {
+      "removed": 6,
+      "name": "SMICA-c1",
+      "kind": "cold",
+      "node": 27,
+      "nearest": 8.089652833768705,
+      "d_obs": 0.022985466083820683
+    },
+    {
+      "removed": 31,
+      "name": "SMICA-h11",
+      "kind": "hot",
+      "node": 54,
+      "nearest": 8.176218322465278,
+      "d_obs": 0.020362269456651205
+    },
+    {
+      "removed": 24,
+      "name": "SMICA-h4",
+      "kind": "hot",
+      "node": 55,
+      "nearest": 8.282949538861295,
+      "d_obs": 0.017127990171923457
+    },
+    {
+      "removed": 9,
+      "name": "SMICA-c4",
+      "kind": "cold",
+      "node": 8,
+      "nearest": 8.30788519940174,
+      "d_obs": 0.016372364094939584
+    },
+    {
+      "removed": 26,
+      "name": "SMICA-h6",
+      "kind": "hot",
+      "node": 31,
+      "nearest": 8.430835907547978,
+      "d_obs": 0.012646585060206661
+    },
+    {
+      "removed": 21,
+      "name": "SMICA-h1",
+      "kind": "hot",
+      "node": 20,
+      "nearest": 9.032989986433725,
+      "d_obs": -0.0056005082393610905
+    },
+    {
+      "removed": 10,
+      "name": "SMICA-c5",
+      "kind": "cold",
+      "node": 1,
+      "nearest": 9.091970446775878,
+      "d_obs": -0.0073877949163971834
+    },
+    {
+      "removed": 19,
+      "name": "SMICA-c14",
+      "kind": "cold",
+      "node": 36,
+      "nearest": 9.162022672342056,
+      "d_obs": -0.009510589630522759
+    },
+    {
+      "removed": 12,
+      "name": "SMICA-c7",
+      "kind": "cold",
+      "node": 51,
+      "nearest": 9.540784590857509,
+      "d_obs": -0.020988223524931016
+    },
+    {
+      "removed": 1,
+      "name": "LIT: Planck gp10 cold spot",
+      "kind": "lit",
+      "node": 21,
+      "nearest": 10.053710828927946,
+      "d_obs": -0.03653144286039911
+    },
+    {
+      "removed": 8,
+      "name": "SMICA-c3",
+      "kind": "cold",
+      "node": 9,
+      "nearest": 10.337949748144846,
+      "d_obs": -0.04514474344273012
+    },
+    {
+      "removed": 20,
+      "name": "SMICA-c15",
+      "kind": "cold",
+      "node": 8,
+      "nearest": 11.513539571035327,
+      "d_obs": -0.08076867746971317
+    },
+    {
+      "removed": 11,
+      "name": "SMICA-c6",
+      "kind": "cold",
+      "node": 51,
+      "nearest": 11.674606869444855,
+      "d_obs": -0.08564950469424559
+    },
+    {
+      "removed": 25,
+      "name": "SMICA-h5",
+      "kind": "hot",
+      "node": 41,
+      "nearest": 12.331732786176051,
+      "d_obs": -0.10556241126185739
+    },
+    {
+      "removed": 16,
+      "name": "SMICA-c11",
+      "kind": "cold",
+      "node": 9,
+      "nearest": 12.373627391475605,
+      "d_obs": -0.10683194475578084
+    },
+    {
+      "removed": 15,
+      "name": "SMICA-c10",
+      "kind": "cold",
+      "node": 39,
+      "nearest": 12.393302535221071,
+      "d_obs": -0.10742816123291732
+    },
+    {
+      "removed": 30,
+      "name": "SMICA-h10",
+      "kind": "hot",
+      "node": 53,
+      "nearest": 12.686146418865517,
+      "d_obs": -0.11630221831305221
+    },
+    {
+      "removed": 14,
+      "name": "SMICA-c9",
+      "kind": "cold",
+      "node": 7,
+      "nearest": 14.069581941681644,
+      "d_obs": -0.1582245068832382
+    },
+    {
+      "removed": 27,
+      "name": "SMICA-h7",
+      "kind": "hot",
+      "node": 32,
+      "nearest": 14.703760562515553,
+      "d_obs": -0.17744204084790205
+    },
+    {
+      "removed": 28,
+      "name": "SMICA-h8",
+      "kind": "hot",
+      "node": 3,
+      "nearest": 15.611336869698192,
+      "d_obs": -0.20494435318677162
+    },
+    {
+      "removed": 23,
+      "name": "SMICA-h3",
+      "kind": "hot",
+      "node": 52,
+      "nearest": 16.613916614611476,
+      "d_obs": -0.23532555757808105
+    },
+    {
+      "removed": 34,
+      "name": "SMICA-h14",
+      "kind": "hot",
+      "node": 17,
+      "nearest": 17.79556246314018,
+      "d_obs": -0.27113300753349634
+    }
+  ],
+  "node9_direct": {
+    "d_node9": 11.355788569810244,
+    "d_rest": 8.691447254830036,
+    "diff": 2.6643413149802075,
+    "p_closer": 0.7925
+  }
+}

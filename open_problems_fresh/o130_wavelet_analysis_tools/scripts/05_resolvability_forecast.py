@@ -3,14 +3,19 @@
 """
 O130/05 -- resolvability law, window leakage, and survey forecast
 =================================================================
-This is the CONSTRUCTIVE continuation of the O130 migration verdict.  The
-migrated (P) structure is the K_Chain ladder
+CONSTRUCTIVE continuation of the O130 migration verdict.  The migrated (P)
+structure is the K_Chain ladder
 
-    peaks at  s_n = lambda_sync/n ,   lambda_sync = pi*R_world/44 = 406.2227 h^-1 Mpc
+    peaks at  s_n = lambda_sync/n ,  lambda_sync = pi*R_world/44 = 198.63 h^-1 Mpc
 
-Script 03 showed that BOSS DR12 can only resolve n <= 8.53.  Here we derive the
-general law, the underlying mechanism (finite-window spectral leakage), and a
-zero-parameter survey forecast.
+⚠️ 2026-09-28 UNITS CORRECTION: lambda_sync = 294.877026 Mpc (PHYSICAL Mpc).
+The survey xi(s) axis is in h^-1 Mpc, so lambda_sync[h^-1 Mpc] = 294.877*h_fid
+= 198.63.  v9.0 `_core.py` wrote LAMBDA_SYNC/H (divide!), giving 406.22, which
+is 1/h^2 = 1.897x too long, and the migration carried it verbatim -- every
+number in the earlier revision of this script was therefore computed at the
+wrong scale.  See docs/04_unit_correction.md; the empirical proof of the axis
+unit is that the BAO bump of the released DESI DR2 best-fit theory curve sits
+at s = 102.0 h^-1 Mpc = r_d(147.09 Mpc) * h_fid.
 
   A  sampling law: harmonic spacing Delta_s_n = lambda/[n(n+1)] vs bin width
   B  window (Rayleigh) resolution + explicit leakage matrix of the ring basis
@@ -54,10 +59,16 @@ print("=" * 78)
 print("  O130/05 -- resolvability law, leakage, survey forecast")
 print("=" * 78)
 
-LAM = math.pi * 4129.94 / 44 / 0.7259
+# --- UNITS: corrected 2026-09-28 (see docs/04_unit_correction.md) -------------
+# lambda_sync = 2*pi*R_H/88 = 294.877026 Mpc (PHYSICAL Mpc); the survey s-axis is
+# in h^-1 Mpc => lambda_sync[h^-1 Mpc] = lambda_sync[Mpc] * h_fid.
+# v9.0 _core.py wrote LAMBDA_SYNC / H (divide!) = 406.22 -> 1.897x too long.
+LAM_MPC = 294.877026
+H_FID = 0.6736
+LAM = LAM_MPC * H_FID                            # 198.63 h^-1 Mpc
 N_d = 44
 F_proj = 17
-json_out = {"lam_hinv_Mpc": LAM}
+json_out = {"lam_hinv_Mpc": LAM, "lam_Mpc": LAM_MPC, "h_fid": H_FID}
 
 # ------------------------------------------------------------------
 print("\n" + "-" * 78)
@@ -76,15 +87,28 @@ def n_max(ds_bin):
 for ds in (5, 4, 3, 2, 1, 0.5):
     print("     Delta_s_bin = %-6.3f  ->  n_max = %6.3f" % (ds, n_max(ds)))
 
-check("A1  n_max(5 h^-1 Mpc) = 8.527 (BOSS DR12, script 03)",
-      abs(n_max(5.0) - 8.527) < 0.01, "%.3f" % n_max(5.0))
-check("A2  n_max(4 h^-1 Mpc) = 9.590 (DESI DR1/DR2 galaxy+QSO+Ly-alpha)",
-      abs(n_max(4.0) - 9.590) < 0.01, "%.3f" % n_max(4.0))
+check("A1  n_max(5 h^-1 Mpc) = 5.823 (BOSS DR12 / eBOSS DR16 binning)",
+      abs(n_max(5.0) - 5.823) < 0.01, "%.3f" % n_max(5.0))
+check("A2  n_max(4 h^-1 Mpc) = 6.565 (DESI DR1/DR2 galaxy+QSO)",
+      abs(n_max(4.0) - 6.565) < 0.01, "%.3f" % n_max(4.0))
 check("A3  law is monotone: finer bins -> more resolvable modes",
       n_max(0.5) > n_max(1.0) > n_max(2.0) > n_max(4.0) > n_max(5.0),
       "%.2f > %.2f > %.2f > %.2f > %.2f"
       % (n_max(0.5), n_max(1.0), n_max(2.0), n_max(4.0), n_max(5.0)))
+
+print("\n   where the ladder actually lives (j = 1 peaks, n = 3..9):")
+nodes = [(n, LAM / n) for n in range(3, 10)]
+print("     " + ", ".join("n=%d: %.1f" % (n, s) for n, s in nodes))
+in_dr2 = [n for n, s in nodes if 62.04 <= s <= 150.02]
+print("     DESI DR2 BAO-fit window [62.0, 150.0] contains only n = %s of the j=1 nodes"
+      % (in_dr2 or "none"))
+check("A4  the DESI DR2 BAO-fit window [62,150] contains only ONE of the seven j=1 "
+      "nodes (n = 3 at 66.2 h^-1 Mpc) -- the ladder's j=1 structure lives at "
+      "22-66 h^-1 Mpc, i.e. mostly BELOW that window", len(in_dr2) == 1,
+      "in-window j=1 nodes: %s" % (in_dr2 or "none"))
+
 json_out["n_max_by_bin"] = {str(d): n_max(d) for d in (5, 4, 3, 2, 1, 0.5, 0.205)}
+json_out["ladder_nodes_j1"] = {str(n): LAM / n for n in range(3, 10)}
 
 # ------------------------------------------------------------------
 print("\n" + "-" * 78)
@@ -97,12 +121,13 @@ print("   of length T requires T >= 2*pi/Delta_k = lambda/Delta_n.")
 print("   =>  mode resolution  Delta_n_res = lambda / T   (Rayleigh)")
 
 for T, name in ((175.0, "BOSS DR12 range"), (240.0, "eBOSS DR16 range"),
-                (200.0, "DESI Ly-alpha range"), (406.22, "T = lambda_sync")):
+                (200.0, "DESI Ly-alpha range"), (LAM, "T = lambda_sync")):
     print("     T = %-6.1f h^-1 Mpc (%-18s) ->  Delta_n_res = %.3f" % (T, name, LAM / T))
 
 dres_boss = LAM / 175.0
-check("B1  BOSS DR12 mode resolution Delta_n_res = %.3f > 1 (adjacent modes NOT separable)"
-      % dres_boss, dres_boss > 1.0, "needs T >= lambda_sync = %.1f h^-1 Mpc" % LAM)
+check("B1  BOSS DR12 mode resolution Delta_n_res = %.3f is MARGINAL (1.0 < dres < 1.5): "
+      "adjacent modes are only just separable over the BOSS window" % dres_boss,
+      1.0 < dres_boss < 1.5, "needs T >= lambda_sync = %.1f h^-1 Mpc for dres < 1" % LAM)
 
 # explicit leakage (normalised Gram) over the BOSS window
 s0, s1 = 2.5, 177.5
@@ -133,21 +158,23 @@ for i, m in enumerate(BAND):
 offdiag = np.array([L[i, j] for i in range(len(BAND)) for j in range(len(BAND)) if i != j])
 adj = np.array([L[i, j] for i in range(len(BAND)) for j in range(len(BAND))
                 if abs(BAND[i] - BAND[j]) == 1])
-check("B2  adjacent-mode leakage present but modest (max %.2f for Delta_n=1)"
-      % float(adj.max()), float(adj.max()) >= 0.15,
+check("B2  adjacent-mode leakage is MODEST at the corrected scale (max %.3f for Delta_n = 1, "
+      "power %.1f%%) -- lambda_sync = 198.63 h^-1 Mpc makes the BOSS window marginal for "
+      "adjacent modes, so mode positions are broadened but not scrambled"
+      % (float(adj.max()), 100 * float(adj.max()) ** 2),
+      float(adj.max()) < 0.2,
       "adjacent |<m|n>| max = %.3f, median = %.3f ; global max = %.3f"
       % (float(adj.max()), float(np.median(adj)), float(offdiag.max())))
-print("   -> adjacent-mode leakage is only ~%.2f (power %.2f), so the ladder POSITIONS are not"
-      % (float(adj.max()), float(adj.max()) ** 2))
-print("      badly scrambled; the decisive obstructions are the bin-Nyquist cutoff (A) and the")
-print("      broadband degeneracy (script 04), with Rayleigh mixing (Delta_n_res = %.2f) third." % dres_boss)
-claim("B  => the '19 harmonics' are not 19 independent measurements.  Ranked obstructions: "
-      "(1) bin Nyquist n_max = 8.53 - harmonics 9..20 are literally sub-bin; "
-      "(2) broadband degeneracy (script 04: p = 0.50); "
-      "(3) window Rayleigh resolution Delta_n_res = 2.32 > 1, adjacent-mode leakage ~0.2.")
+claim("B  => with the corrected scale the '19 harmonics' are NOT independent measurements "
+      "(bin Nyquist in A), but the window is NOT the main obstruction any more: the Rayleigh "
+      "resolution over the BOSS window is only Delta_n_res = %.2f (marginal) and adjacent-mode "
+      "leakage is ~%.2f.  Ranked obstructions: (1) bin Nyquist n_max = %.2f; "
+      "(2) broadband degeneracy (script 04); (3) window Rayleigh %.2f."
+      % (dres_boss, float(adj.max()), n_max(5.0), dres_boss))
 
 json_out["delta_n_res_BOSS"] = dres_boss
 json_out["leakage_median_offdiag"] = float(np.median(offdiag))
+json_out["leakage_adjacent_max"] = float(adj.max())
 
 # ------------------------------------------------------------------
 print("\n" + "-" * 78)
@@ -173,22 +200,28 @@ for lab, n in th:
     print("   %-28s %5.1f   %.4f" % (lab, n, LAM / (n * (n + 1))))
 
 req_85 = LAM / (8.5 * 9.5)
-print("\n   NOTE: BOSS DR12 uses 5.0 h^-1 Mpc and lambda/(8.5*9.5) = %.4f (dev %.2f%%) - i.e."
-      % (req_85, 100 * abs(req_85 - 5.0) / 5.0))
-print("   BOSS's binning sits almost exactly at the threshold for resolving up to n = F_proj/2.")
-print("   This is POST-HOC (the bin width is an instrumental choice), so it is recorded as a")
-print("   coincidence, NOT a prediction.")
+dev85 = 100 * abs(req_85 - 5.0) / 5.0
+print("\n   NOTE: BOSS DR12 uses 5.0 h^-1 Mpc and lambda/(8.5*9.5) = %.4f (dev %.2f%%)."
+      % (req_85, dev85))
+print("   The earlier revision of this script reported dev 0.61%% here and recorded it as a")
+print("   'coincidence' + possible prediction -- that was an ARTEFACT of the units error")
+print("   (lambda_used = 406.22 instead of 198.63).  At the corrected scale the BOSS bin")
+print("   width is ~2x COARSER than the n = F_proj/2 threshold, so the coincidence is DEAD.")
+check("C0  the BOSS 5 h^-1 Mpc bin is NOT at the n = F_proj/2 threshold "
+      "(dev %.1f%% > 10%%) -- the previously reported 0.61%% 'coincidence' was a units "
+      "artefact and is retracted" % dev85, dev85 > 10.0, "req_85 = %.4f vs bin 5.0" % req_85)
 
 check("C1  required bin for n = N_d/2 = 22 is %.4f h^-1 Mpc (finer than any current survey)"
       % (LAM / (22 * 23)), LAM / (22 * 23) < 1.0, "%.4f" % (LAM / (22 * 23)))
 check("C2  required bin for n = N_d = 44 (ring Nyquist) is %.4f h^-1 Mpc"
       % (LAM / (44 * 45)), LAM / (44 * 45) < 0.3, "%.4f" % (LAM / (44 * 45)))
 claim("C  => zero-parameter forecast: no existing or planned galaxy survey binning can resolve "
-      "the ladder beyond n ~ 10 (DESI 4 h^-1 Mpc -> n_max = 9.59).  Resolving n = N_d/2 = 22 "
-      "needs Delta_s <= 0.803 h^-1 Mpc; n = N_d = 44 needs <= 0.205 h^-1 Mpc.")
+      "the ladder beyond n = %.2f (BOSS/eBOSS 5 h^-1 Mpc -> %.2f; DESI 4 h^-1 Mpc -> %.2f).  "
+      "Resolving n = N_d/2 = 22 needs Delta_s <= %.4f h^-1 Mpc; n = N_d = 44 needs <= %.4f."
+      % (n_max(4.0), n_max(5.0), n_max(4.0), LAM / (22 * 23), LAM / (44 * 45)))
 
 json_out["thresholds"] = {lab: LAM / (n * (n + 1)) for lab, n in th}
-json_out["boss_bin_vs_Fproj_half_dev_pct"] = 100 * abs(req_85 - 5.0) / 5.0
+json_out["boss_bin_vs_Fproj_half_dev_pct"] = dev85
 
 # ------------------------------------------------------------------
 print("\n" + "-" * 78)
@@ -220,9 +253,12 @@ print("\n" + "-" * 78)
 print("  E. verdict + forecast")
 print("-" * 78)
 claim("E  => the migrated K_Chain ladder is a well-defined, zero-parameter prediction whose "
-      "detectability is fully determined by (bin width, window length).  It is NOT detectable "
-      "in BOSS DR12, NOT detectable in DESI DR2, and would require sub-h^-1 Mpc binning plus a "
-      "window of order lambda_sync = 406 h^-1 Mpc to test at all.")
+      "detectability is fully determined by (bin width, window length).  At the corrected "
+      "scale lambda_sync = %.1f h^-1 Mpc (= %.1f Mpc physical), its j=1 nodes sit at "
+      "22-66 h^-1 Mpc: BOSS/eBOSS/DESI DR1 can reach n <= %.2f / %.2f and the DESI DR2 "
+      "BAO-fit window [62,150] covers only the n = 3 node.  Sub-h^-1 Mpc binning plus a "
+      "window of order lambda_sync is required to test the high-n ladder at all."
+      % (LAM, LAM_MPC, n_max(5.0), n_max(4.0)))
 
 print("\n" + "=" * 78)
 print("  RESULT: %d/%d PASS   (+%d structural claims)" % (PASS, PASS + FAIL, len(CLAIMS)))

@@ -1,0 +1,14 @@
+================================================================================================================
+O222 scripts/41 -- R20 closure machine (M1..M6), exact arithmetic
+contract: docs/27_r20_contract.md (r20-contract-v1)
+================================================================================================================
+[load] K = 120x62  (pin P1: scripts/12_b5_budget.load_machine)
+[M1] 🔴  2I-J_5 rank = 5 ; counterexample det = 0 ; rank_R(K) = 6
+[M2] L_max = 2  (rank_R(K) = 6 ; distinct rows 12 / cols 32)  arrangement excludes: []
+[M3] certified candidates 600/600 ; best certified rank = 3
+[M4] ✅  deg = 20, monic = True, P(G) = 0: True, orbit distinct: True, [X^19] = 40
+[M5] 🔴  matching = [] ; (min A, min M, min B) = (26, 26, 0) ; s0=0 [A,M,B] = [33, 32, 0, 65]
+[M6] ✅  total reads per order = [43, 44, 44, 42, 44] ; unique min = 42 at index [3]
+----------------------------------------------------------------------------------------------------------------
+CELLS = {'M1': '🔴', 'M2': '✅', 'M3': '✅', 'M4': '✅', 'M5': '🔴', 'M6': '✅'} ; pass = 4/6 ; sign_rank(K) ∈ [2, 3]
+wrote data/41_r20_results.json

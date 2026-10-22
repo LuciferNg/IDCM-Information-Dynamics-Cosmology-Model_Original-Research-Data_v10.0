@@ -1,0 +1,592 @@
+{
+ "zoo_exact": [
+  {
+   "name": "D2|(1, 1, 1)",
+   "m": 4,
+   "N": 6,
+   "ties": 0,
+   "k_min": 2,
+   "greedy": 1,
+   "LP": "3/2",
+   "nu_exact": 1,
+   "gap_exact": 1,
+   "nodes": 6
+  },
+  {
+   "name": "D2|(1, 1, 0)",
+   "m": 4,
+   "N": 6,
+   "ties": 8,
+   "k_min": 2,
+   "greedy": 2,
+   "LP": "2",
+   "nu_exact": 2,
+   "gap_exact": 0,
+   "nodes": 6
+  },
+  {
+   "name": "D2|(1, 0, 0)",
+   "m": 2,
+   "N": 6,
+   "ties": 8,
+   "k_min": 1,
+   "greedy": 1,
+   "LP": "1",
+   "nu_exact": 1,
+   "gap_exact": 0,
+   "nodes": 2
+  },
+  {
+   "name": "D3|(1, 1, 1)",
+   "m": 4,
+   "N": 14,
+   "ties": 0,
+   "k_min": 2,
+   "greedy": 1,
+   "LP": "3/2",
+   "nu_exact": 1,
+   "gap_exact": 1,
+   "nodes": 6
+  },
+  {
+   "name": "D3|(1, 1, 0)",
+   "m": 12,
+   "N": 14,
+   "ties": 72,
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 1,
+   "nodes": 81
+  },
+  {
+   "name": "D3|(1, 0, 0)",
+   "m": 6,
+   "N": 14,
+   "ties": 24,
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu_exact": 2,
+   "gap_exact": 1,
+   "nodes": 17
+  },
+  {
+   "name": "D3|(0, 0, 1)",
+   "m": 6,
+   "N": 14,
+   "ties": 24,
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu_exact": 2,
+   "gap_exact": 1,
+   "nodes": 17
+  },
+  {
+   "name": "D3|(1, 2, 0)",
+   "m": 12,
+   "N": 14,
+   "ties": 24,
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 1,
+   "nodes": 90
+  },
+  {
+   "name": "D3|(1, 1, 2)",
+   "m": 12,
+   "N": 14,
+   "ties": 24,
+   "k_min": 5,
+   "greedy": 4,
+   "LP": "4",
+   "nu_exact": 3,
+   "gap_exact": 2,
+   "nodes": 182
+  },
+  {
+   "name": "D3|(2, 1, 0)",
+   "m": 12,
+   "N": 14,
+   "ties": 24,
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 1,
+   "nodes": 112
+  },
+  {
+   "name": "D4|(1, 1, 1)",
+   "m": 8,
+   "N": 10,
+   "ties": 16,
+   "k_min": 3,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 0,
+   "nodes": 112
+  },
+  {
+   "name": "D4|(1, 1, 0)",
+   "m": 4,
+   "N": 10,
+   "ties": 16,
+   "k_min": 2,
+   "greedy": 2,
+   "LP": "2",
+   "nu_exact": 2,
+   "gap_exact": 0,
+   "nodes": 6
+  },
+  {
+   "name": "D4|(0, 0, 1)",
+   "m": 2,
+   "N": 10,
+   "ties": 16,
+   "k_min": 1,
+   "greedy": 1,
+   "LP": "1",
+   "nu_exact": 1,
+   "gap_exact": 0,
+   "nodes": 2
+  },
+  {
+   "name": "D4|(1, 2, 0)",
+   "m": 8,
+   "N": 10,
+   "ties": 16,
+   "k_min": 4,
+   "greedy": 4,
+   "LP": "4",
+   "nu_exact": 4,
+   "gap_exact": 0,
+   "nodes": 56
+  },
+  {
+   "name": "D4|(1, 2, 3)",
+   "m": 8,
+   "N": 10,
+   "ties": 0,
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "5/2",
+   "nu_exact": 2,
+   "gap_exact": 1,
+   "nodes": 53
+  },
+  {
+   "name": "D4|(1, -1, 1)",
+   "m": 8,
+   "N": 10,
+   "ties": 16,
+   "k_min": 3,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 0,
+   "nodes": 110
+  },
+  {
+   "name": "D4|(2, 1, 0)",
+   "m": 8,
+   "N": 10,
+   "ties": 16,
+   "k_min": 4,
+   "greedy": 4,
+   "LP": "4",
+   "nu_exact": 4,
+   "gap_exact": 0,
+   "nodes": 56
+  },
+  {
+   "name": "T|(1, 1, 0)",
+   "m": 12,
+   "N": 14,
+   "ties": 72,
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 1,
+   "nodes": 102
+  },
+  {
+   "name": "T|(1, 0, 0)",
+   "m": 6,
+   "N": 14,
+   "ties": 24,
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu_exact": 2,
+   "gap_exact": 1,
+   "nodes": 17
+  },
+  {
+   "name": "T|(1, 2, 0)",
+   "m": 12,
+   "N": 14,
+   "ties": 24,
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 1,
+   "nodes": 109
+  },
+  {
+   "name": "T|(1, 1, 2)",
+   "m": 12,
+   "N": 14,
+   "ties": 24,
+   "k_min": 5,
+   "greedy": 3,
+   "LP": "4",
+   "nu_exact": 3,
+   "gap_exact": 2,
+   "nodes": 179
+  },
+  {
+   "name": "T|(2, 1, 0)",
+   "m": 12,
+   "N": 14,
+   "ties": 24,
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 1,
+   "nodes": 117
+  },
+  {
+   "name": "S4|(1, 1, 1)",
+   "m": 8,
+   "N": 26,
+   "ties": 48,
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu_exact": 2,
+   "gap_exact": 1,
+   "nodes": 33
+  },
+  {
+   "name": "S4|(1, 1, 0)",
+   "m": 12,
+   "N": 26,
+   "ties": 96,
+   "k_min": 4,
+   "greedy": 3,
+   "LP": "3",
+   "nu_exact": 3,
+   "gap_exact": 1,
+   "nodes": 102
+  },
+  {
+   "name": "S4|(1, 0, 0)",
+   "m": 6,
+   "N": 26,
+   "ties": 48,
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu_exact": 2,
+   "gap_exact": 1,
+   "nodes": 17
+  },
+  {
+   "name": "S4|(1, 2, 0)",
+   "m": 24,
+   "N": 26,
+   "ties": 48,
+   "k_min": 6,
+   "greedy": 5,
+   "LP": "5",
+   "nu_exact": 5,
+   "gap_exact": 1,
+   "nodes": 2993
+  },
+  {
+   "name": "S4|(1, 1, 2)",
+   "m": 24,
+   "N": 26,
+   "ties": 96,
+   "k_min": 6,
+   "greedy": 4,
+   "LP": "4",
+   "nu_exact": 4,
+   "gap_exact": 2,
+   "nodes": 1055
+  },
+  {
+   "name": "S4|(1, 2, 3)",
+   "m": 24,
+   "N": 26,
+   "ties": 48,
+   "k_min": 6,
+   "greedy": 4,
+   "LP": "4",
+   "nu_exact": 4,
+   "gap_exact": 2,
+   "nodes": 1446
+  },
+  {
+   "name": "S4|(1, -1, 1)",
+   "m": 8,
+   "N": 26,
+   "ties": 48,
+   "k_min": 3,
+   "greedy": 2,
+   "LP": "2",
+   "nu_exact": 2,
+   "gap_exact": 1,
+   "nodes": 33
+  },
+  {
+   "name": "S4|(2, 1, 0)",
+   "m": 24,
+   "N": 26,
+   "ties": 48,
+   "k_min": 6,
+   "greedy": 4,
+   "LP": "5",
+   "nu_exact": 5,
+   "gap_exact": 1,
+   "nodes": 3014
+  }
+ ],
+ "previously_undecided": [
+  "T|(1, 1, 2): greedy=3 LP*=4 -> nu=3 (predicted floor(LP*)=4)",
+  "S4|(2, 1, 0): greedy=4 LP*=5 -> nu=5 (predicted floor(LP*)=5)"
+ ],
+ "certificate_cost": {
+  "N": 62,
+  "k": 6,
+  "F_6": 0,
+  "nodes_visited": 19352397,
+  "total_subsets": 61474519,
+  "percent": 31.480355299729958,
+  "seconds": 5.42
+ },
+ "sharpness": [
+  {
+   "machine": "M_2I",
+   "k": 1,
+   "max_pat": 2,
+   "cap": 2,
+   "attains": true
+  },
+  {
+   "machine": "M_2I",
+   "k": 2,
+   "max_pat": 4,
+   "cap": 4,
+   "attains": true
+  },
+  {
+   "machine": "M_2I",
+   "k": 3,
+   "max_pat": 8,
+   "cap": 8,
+   "attains": true
+  },
+  {
+   "machine": "M_2I",
+   "k": 4,
+   "max_pat": 12,
+   "cap": 14,
+   "attains": false
+  },
+  {
+   "machine": "M_face",
+   "k": 1,
+   "max_pat": 2,
+   "cap": 2,
+   "attains": true
+  },
+  {
+   "machine": "M_face",
+   "k": 2,
+   "max_pat": 4,
+   "cap": 4,
+   "attains": true
+  },
+  {
+   "machine": "M_face",
+   "k": 3,
+   "max_pat": 8,
+   "cap": 8,
+   "attains": true
+  },
+  {
+   "machine": "M_face",
+   "k": 4,
+   "max_pat": 14,
+   "cap": 14,
+   "attains": true
+  },
+  {
+   "machine": "M_edge",
+   "k": 1,
+   "max_pat": 2,
+   "cap": 2,
+   "attains": true
+  },
+  {
+   "machine": "M_edge",
+   "k": 2,
+   "max_pat": 4,
+   "cap": 4,
+   "attains": true
+  },
+  {
+   "machine": "M_edge",
+   "k": 3,
+   "max_pat": 8,
+   "cap": 8,
+   "attains": true
+  },
+  {
+   "machine": "M_edge",
+   "k": 4,
+   "max_pat": 14,
+   "cap": 14,
+   "attains": true
+  },
+  {
+   "machine": "M_T",
+   "k": 1,
+   "max_pat": 2,
+   "cap": 2,
+   "attains": true
+  },
+  {
+   "machine": "M_T",
+   "k": 2,
+   "max_pat": 4,
+   "cap": 4,
+   "attains": true
+  },
+  {
+   "machine": "M_T",
+   "k": 3,
+   "max_pat": 4,
+   "cap": 8,
+   "attains": false
+  },
+  {
+   "machine": "M_T",
+   "k": 4,
+   "max_pat": 4,
+   "cap": 14,
+   "attains": false
+  },
+  {
+   "machine": "M_O",
+   "k": 1,
+   "max_pat": 2,
+   "cap": 2,
+   "attains": true
+  },
+  {
+   "machine": "M_O",
+   "k": 2,
+   "max_pat": 4,
+   "cap": 4,
+   "attains": true
+  },
+  {
+   "machine": "M_O",
+   "k": 3,
+   "max_pat": 6,
+   "cap": 8,
+   "attains": false
+  },
+  {
+   "machine": "M_O",
+   "k": 4,
+   "max_pat": 6,
+   "cap": 14,
+   "attains": false
+  },
+  {
+   "machine": "M_D4",
+   "k": 1,
+   "max_pat": 2,
+   "cap": 2,
+   "attains": true
+  },
+  {
+   "machine": "M_D4",
+   "k": 2,
+   "max_pat": 2,
+   "cap": 4,
+   "attains": false
+  },
+  {
+   "machine": "M_D4",
+   "k": 3,
+   "max_pat": 2,
+   "cap": 8,
+   "attains": false
+  },
+  {
+   "machine": "M_D4",
+   "k": 4,
+   "max_pat": 2,
+   "cap": 14,
+   "attains": false
+  }
+ ],
+ "claims": [
+  {
+   "tag": "P7-1",
+   "name": "EXACT PACKING for every zoo machine via maximum-clique branch and bound: all gaps k_min - nu become exact values (no interval left)",
+   "ok": true,
+   "detail": "exact for 30/30 entries ; gaps = [0, 1, 2]"
+  },
+  {
+   "tag": "P7-2",
+   "name": "BLIND: the two previously undecided zoo entries have nu = floor(LP*) (the LP is tight in both)",
+   "ok": false,
+   "detail": "T|(1, 1, 2): greedy=3 LP*=4 -> nu=3 (predicted floor(LP*)=4) ; S4|(2, 1, 0): greedy=4 LP*=5 -> nu=5 (predicted floor(LP*)=5)"
+  },
+  {
+   "tag": "P7-2-c",
+   "name": "CORRECTION (same run, original FAIL kept): only ONE of the two had nu = floor(LP*). The other, T|(1, 1, 2), has nu = greedy = 3 < LP* = 4 : a GENUINE INTEGRALITY GAP of 1 in the packing/covering LP (contrast R6, where nu = floor(LP*) held for all six R2 machines). Both zoo gaps are now exact: {'T|(1, 1, 2)': 2, 'S4|(2, 1, 0)': 1}",
+   "ok": true,
+   "detail": "exact nu: [('T|(1, 1, 2)', 3), ('S4|(2, 1, 0)', 5)] ; exact gaps: {'T|(1, 1, 2)': 2, 'S4|(2, 1, 0)': 1}"
+  },
+  {
+   "tag": "P7-3",
+   "name": "BLIND: the pruned DFS visits < 1% of the C(62,6) subsets while deciding F_6 = 0",
+   "ok": false,
+   "detail": "nodes = 19352397 / 61474519 = 31.4804% in 5.42 s"
+  },
+  {
+   "tag": "P7-3-c",
+   "name": "CORRECTION (same run, original FAIL kept): the pruning removes about 68% of the subsets -- the DFS still VISITS 19352397 of C(62,6) = 61474519 (31.48%) in 5.42 s. So the verification cost of the only available certificate for k_min = 7 is ~2x10^7 node visits, not the <1% a naive \"massive pruning\" intuition suggests: the certificate is cheap in SECONDS but far from hand-checkable, quantifying R8s verdict",
+   "ok": true,
+   "detail": "19352397/61474519 = 31.4804% ; 5.42 s"
+  },
+  {
+   "tag": "P7-4",
+   "name": "BLIND: max pat(k) <= cap(k) for k <= 4 on all six machines (re-verifies R5 exhaustively) AND at least one case attains the bound",
+   "ok": true,
+   "detail": "equality cases = ['M_2I k=1', 'M_2I k=2', 'M_2I k=3', 'M_face k=1', 'M_face k=2', 'M_face k=3', 'M_face k=4', 'M_edge k=1', 'M_edge k=2', 'M_edge k=3', 'M_edge k=4', 'M_T k=1', 'M_T k=2', 'M_O k=1', 'M_O k=2', 'M_D4 k=1']"
+  },
+  {
+   "tag": "P7-5",
+   "name": "RECORD: class-1 (counting) verdict -- the bound is SHARP in the information-bound regime (k <= 4, equality attained) but VACUOUS where it is needed: for M_edge at k = 6, cap(6) = 32 >= m = 30, while the true value is max pat(6) = 26 (R7), a gap of 6",
+   "ok": true,
+   "detail": "equality cases ['M_2I k=1', 'M_2I k=2', 'M_2I k=3', 'M_face k=1', 'M_face k=2', 'M_face k=3', 'M_face k=4', 'M_edge k=1', 'M_edge k=2', 'M_edge k=3', 'M_edge k=4', 'M_T k=1', 'M_T k=2', 'M_O k=1', 'M_O k=2', 'M_D4 k=1'] ; cap(6)=32 vs max pat(6)=26"
+  }
+ ],
+ "elapsed_s": 18.967264890670776
+}

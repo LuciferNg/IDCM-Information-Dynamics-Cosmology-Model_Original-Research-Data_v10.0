@@ -1,0 +1,62 @@
+identity     det=   1 | fixed-point violations=   0 | vsign mismatches=   0
+diag(2,1,1)  det=   2 | fixed-point violations= 103 | vsign mismatches= 630
+diag(3,5,7)  det= 105 | fixed-point violations=  84 | vsign mismatches= 436
+shear        det=   1 | fixed-point violations=  80 | vsign mismatches= 518
+rot-ish      det=   5 | fixed-point violations=  82 | vsign mismatches= 442
+
+SUMMARY: draws with fixed point SATISFIED: 1/20 ; among those, vsign mismatches are all 0? True
+draws with fixed point VIOLATED: 19 ; their vsign mismatches: [630, 436, 518, 442, 812, 430, 752, 586, 440, 864, 708, 870, 874, 794, 598, 556, 518, 562, 386]
+{
+ "rows": [
+  {
+   "transform": "identity",
+   "fp_violations": 0,
+   "vsign_mismatches": 0
+  },
+  {
+   "transform": "diag(2,1,1)",
+   "fp_violations": 103,
+   "vsign_mismatches": 630
+  },
+  {
+   "transform": "diag(3,5,7)",
+   "fp_violations": 84,
+   "vsign_mismatches": 436
+  },
+  {
+   "transform": "shear",
+   "fp_violations": 80,
+   "vsign_mismatches": 518
+  },
+  {
+   "transform": "rot-ish",
+   "fp_violations": 82,
+   "vsign_mismatches": 442
+  },
+  {
+   "transform": "rand#0",
+   "fp_violations": 139,
+   "vsign_mismatches": 812
+  },
+  {
+   "transform": "rand#1",
+   "fp_violations": 88,
+   "vsign_mismatches": 430
+  },
+  {
+   "transform": "rand#2",
+   "fp_violations": 126,
+   "vsign_mismatches": 752
+  },
+  {
+   "transform": "rand#3",
+   "fp_violations": 106,
+   "vsign_mismatches": 586
+  },
+  {
+   "transform": "rand#4",
+   "fp_violations": 70,
+   "vsign_mismatches": 440
+  },
+  {
+   "transf

@@ -1,0 +1,13 @@
+[🔴] K1   sign_rank(K) = rank_R(K) = 6 EXACT：精確有理秩證書（120 列全為 6 條 pivot 列之有理組合，pivot 欄 [0, 1, 2, 3, 4, 5]）＋ 顯式 fooling set（4 對）⟹ 上界 = 下界
+      rank_R = 6（pivot 欄 6 個）；fooling set = [(0, 0), (1, 1), (2, 3), (8, 2)]（size 4，全行全列相異 = True）；sign(K) = K = True ⟹ sign_rank <= rank_R <= 6 且 >= 6
+[🔴] K1b  amplitude 尖銳化：sign_rank = rank_R ⟹ **無 rank 空隙** ⟹ 複（amplitude）模型無 rank 優勢 ⟹ amplitude 缺口**唔係** rank 現象（推論格）
+      推論：任何 rank-r 因式分解 r >= sign_rank = 6，而實數 K 本身已達 6 ⟹ 量子上界 = 實數上界 = 6
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/37_r19_closure.py", line 320, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/37_r19_closure.py", line 187, in main
+    d6rec = d6.replay_protocol(order0, Km, MUL, hx, budget)
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/18_d6_mapping.py", line 119, in replay_protocol
+    raise RuntimeError('terminal')
+RuntimeError: terminal

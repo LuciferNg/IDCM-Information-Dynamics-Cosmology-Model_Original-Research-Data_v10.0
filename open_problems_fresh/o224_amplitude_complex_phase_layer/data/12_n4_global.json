@@ -1,0 +1,285 @@
+{
+ "lhv_bound": 4,
+ "terms": 8,
+ "shards": 12,
+ "outer_tuples": 56800235584,
+ "outer_expected": 56800235584,
+ "raw_global": {
+  "max_num": 512,
+  "min_num": -512,
+  "absmax_num": 512,
+  "max_argmax": [
+   0,
+   60,
+   0,
+   53,
+   43,
+   22,
+   13,
+   28
+  ],
+  "max_argmax_ids": [
+   "V00",
+   "E28",
+   "V00",
+   "E21",
+   "E11",
+   "F10",
+   "F01",
+   "F16"
+  ],
+  "min_argmax": [
+   0,
+   60,
+   0,
+   53,
+   43,
+   22,
+   30,
+   15
+  ],
+  "min_argmax_ids": [
+   "V00",
+   "E28",
+   "V00",
+   "E21",
+   "E11",
+   "F10",
+   "F18",
+   "F03"
+  ],
+  "brute8_at_max": 512,
+  "brute8_at_min": -512,
+  "fourD_of_winning_group": [
+   512,
+   -512
+  ],
+  "fourD_separable_identity_rows": [
+   [
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    480,
+    480,
+    -480,
+    -480,
+    true
+   ],
+   [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    208,
+    208,
+    -208,
+    -208,
+    true
+   ],
+   [
+    [
+     11,
+     22,
+     33,
+     44
+    ],
+    384,
+    384,
+    -384,
+    -384,
+    true
+   ],
+   [
+    [
+     30,
+     31,
+     32,
+     33
+    ],
+    272,
+    272,
+    -272,
+    -272,
+    true
+   ],
+   [
+    [
+     0,
+     60,
+     0,
+     53
+    ],
+    512,
+    512,
+    -512,
+    -512,
+    true
+   ]
+  ],
+  "fourD_rows_ok": 5
+ },
+ "round3_cross": {
+  "pool_values": {
+   "raw": 480,
+   "party": 480,
+   "eight": 320,
+   "eight_anti": 224
+  },
+  "certificate_num": 768,
+  "interval_round3": [
+   480,
+   768
+  ]
+ },
+ "census_v3": {
+  "six_tuples": 46080,
+  "antipodal_realised": 880,
+  "witness": {
+   "six": [
+    0,
+    1,
+    2,
+    5,
+    7,
+    3
+   ],
+   "d_dp": [
+    24,
+    19
+   ],
+   "value": 128
+  },
+  "pool_frame": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ]
+ },
+ "coverage_ok": true,
+ "acc_ok": true,
+ "factorisation_ok": 4,
+ "factorisation_rows": [
+  [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   true
+  ],
+  [
+   [
+    11,
+    22,
+    33,
+    44,
+    55,
+    60
+   ],
+   true
+  ],
+  [
+   [
+    7,
+    7,
+    9,
+    9,
+    13,
+    13
+   ],
+   true
+  ],
+  [
+   [
+    61,
+    60,
+    59,
+    58,
+    57,
+    56
+   ],
+   true
+  ]
+ ],
+ "timing": {
+  "e4_build_s": 2.5405426025390625,
+  "census_s": 2.2839972972869873,
+  "shard_solve_s": [
+   654.5622227191925,
+   1720.412692785263,
+   1726.4951887130737,
+   1727.4411766529083,
+   1733.1832132339478,
+   1729.272140264511,
+   1746.2735764980316,
+   1732.9284250736237,
+   1734.5971755981445,
+   1709.2797541618347,
+   1723.1492166519165,
+   1742.9006021022797
+  ]
+ },
+ "verdicts": {
+  "G1": "the n = 4 global question (raw window) is CLOSED exactly: the round-3 interval [480,768]/120 collapses to a single number",
+  "G3": "all windowed n = 4 statements are bracketed; violation is possible only if the raw global exceeds 480/120",
+  "G4": "round-3 eight_anti is a v3-semantics number (antipodal (d,d') pairs permitted); the strict variant is <= it"
+ },
+ "script": "12_n4_global",
+ "claims": [
+  {
+   "tag": "G1",
+   "name": "RAW-WINDOW GLOBAL MAXIMUM OF THE n = 4 MERMIN EXPRESSION, CLOSED EXACTLY: the whole 62^6 outer space is enumerated (sharded, exactly, integer arithmetic) with the proven (d,d') separability, giving the exact maximum and minimum of M4 over all 62^8 setting tuples with no constraint; the achieved configuration is verified by direct 8-term enumeration in exact Python ints and by a full 4-D enumeration over (c,c',d,d') for its party-1 pair. The round-3 interval [480, 768]/120 therefore collapses to a single exact number, and the round-3 residual \"the n = 4 global maximum is not established\" is closed",
+   "ok": true,
+   "detail": "global max M4 = 512/120 = 4.266667 at ('V00', 'E28', 'V00', 'E21', 'E11', 'F10', 'F01', 'F16') ; global min M4 = -512/120 = -4.266667 at ('V00', 'E28', 'V00', 'E21', 'E11', 'F10', 'F18', 'F03') ; |M4|max = 512/120 = 4.266667 ; LHV bound = 480 = 480/120 ; round-3 certificate = 768/120 ; round-3 attained = 480/120 ; brute-force (8 terms) at argmax = 512 ; 4-D enumeration of the winning group = (512, -512) ; separable-identity rows verified = 5/5"
+  },
+  {
+   "tag": "G2",
+   "name": "COVERAGE OF THE OUTER SPACE: the union of the shards covers every party-1 ordered pair exactly once and the enumerated outer count equals 62^6 = 56,800,235,584, so the reported extremum is global rather than partial; each shard additionally self-checks |E4|max = 120/120 and validates the numpy integer accelerator against exact evaluation on declared tuples",
+   "ok": true,
+   "detail": "shards = 12 (each 321 pairs) ; pairs covered = 3844/3844 ; outer tuples counted = 56800235584 ; expected = 56800235584 ; accelerator mismatches = 0 required ; covered pairs = True"
+  },
+  {
+   "tag": "G3",
+   "name": "WINDOW COROLLARY (bounding every legitimate n = 4 statement): the raw window is the weakest constraint set, so every windowed global -- party, eight, eight_anti_v3, eight_anti_strict, on ANY axis set -- is bounded above by this round's raw global; combined with the round-3 pool values read from the frozen artefact, this brackets all four legitimate windows from above. If the raw global does not exceed the LHV bound 480/120, then no windowed configuration anywhere in the 62^8 space can violate the n = 4 Mermin inequality, which is exactly the (c)/B6 question at n = 4",
+   "ok": true,
+   "detail": "raw global = 512/120 ; round-3 pool values = {'raw': 480, 'party': 480, 'eight': 320, 'eight_anti': 224} ; implied upper bounds: party <= 512, eight <= 512, eight_anti_v3 <= 512, strict <= eight_anti_v3 ; LHV bound = 480/120 ; violation possible = True"
+  },
+  {
+   "tag": "G4",
+   "name": "PRECISION FINDING ON THE ROUND-3 eight_anti WINDOW (recorded, not patched): the semantics actually implemented in round 3 -- d and d' excluded from the six and from the antipodes of the six, with d != d' -- still permits an ANTIPODAL (d,d') pair, whereas round 3's claim text said \"no antipodal pair\". The exact census inside the declared pool counts the admissible six-tuples whose v3 maximum is realised by such a pair, and a witness is recorded; the strict semantics (no antipodal pair among all eight) is a subset, so the v3 value upper-bounds it. Round 3's eight_anti number 224/120 is therefore a v3 number, and the strict number is <= it",
+   "ok": true,
+   "detail": "pool census: admissible six-tuples (c,c') evaluated = 46080 ; realised by an antipodal (d,d') pair = 880 (1.910%) ; witness = {'six': (0, 1, 2, 5, 7, 3), 'd_dp': (24, 19), 'value': 128} ; round-3 pool eight_anti value = 224/120"
+  },
+  {
+   "tag": "G5",
+   "name": "GRID: every reported numerator is divisible by 8 (the 1/15 grid), as it must be since M4 is a sum of 8 E4 numerators each divisible by 8",
+   "ok": true,
+   "detail": "max numerator 512 % 8 = 0 ; min numerator -512 % 8 = 0"
+  },
+  {
+   "tag": "G6",
+   "name": "SELF-CHECKS: |E4|max = 120/120 as in round 3, the accelerator agrees with exact evaluation on declared tuples in every shard, and the A/R/U/V factorisation of F and G reproduces the round-3 direct-indexing expressions exactly on declared six-tuples (the identity the whole round-4 pass rests on)",
+   "ok": true,
+   "detail": "per-shard |E4|max = [120, 120, 120] ; accelerator mismatches = [0, 0, 0] ; factorisation rows ok = 4/4 ; rows = [((0, 1, 2, 3, 4, 5), True), ((11, 22, 33, 44, 55, 60), True), ((7, 7, 9, 9, 13, 13), True), ((61, 60, 59, 58, 57, 56), True)]"
+  }
+ ],
+ "n_pass": 6,
+ "n_claims": 6
+}

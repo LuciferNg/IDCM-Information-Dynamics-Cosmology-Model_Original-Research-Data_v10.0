@@ -1,0 +1,11 @@
+# PDG 2024 質量數據
+# particle, mass_mev, err_mev, source
+e,0.510998950,0.000000015,PDG 2024
+mu,105.6583755,0.0000023,PDG 2024
+tau,1776.86,0.12,PDG 2024
+u,2.16,0.49,PDG 2024 MS-bar 2GeV
+d,4.67,0.48,PDG 2024 MS-bar 2GeV
+s,93.4,8.6,PDG 2024 MS-bar 2GeV
+c,1270,20,PDG 2024 MS-bar
+b,4180,30,PDG 2024 MS-bar
+t,172570,520,PDG 2024 pole mass

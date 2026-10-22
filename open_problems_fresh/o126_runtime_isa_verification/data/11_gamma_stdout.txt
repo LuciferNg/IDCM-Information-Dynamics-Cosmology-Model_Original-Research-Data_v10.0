@@ -1,0 +1,39 @@
+==============================================================================
+O126 docs/05 §C -- Gamma (退相干速率) 跨 O 收口
+==============================================================================
+
+--- [C1] O126 tick (docs/04 Gap 1) ---
+  [PASS] C1a T_sync = 2π T_H = 2π(R_world/c) = 84.6351 Gyr   84.6351 Gyr
+  [PASS] C1b tick = T_44 = T_sync/88 = 0.961762 Gyr   0.961763 Gyr
+  [PASS] C1c T_sync = 88·tick = 2N_d·tick   88 = 2N_d
+
+--- [C2] O138 Gamma (已閉合) ---
+  [PASS] C2a Gamma = N_d/T_ring = 44/84.6351 = 0.519879 Gyr⁻¹   0.519879 Gyr⁻¹
+  [PASS] C2b τ_deco = T_ring/N_d = 1.923521 Gyr (對齊 O138 記載值)   1.923526 Gyr
+  [PASS] C2c Gamma 換 s⁻¹ ≈ 1.6474e-17 s⁻¹ (對齊 O138 記載值, dev ~2e-5 來自 T_ring 有效位數)   1.647431e-17 s⁻¹ (dev 1.88e-05)
+
+--- [C3] O138 Gamma ↔ O126 tick 精確一致 ---
+  [PASS] C3a Gamma = N_d/T_sync = 1/(2·tick) EXACT   Gamma = 1/(2 tick)
+  [PASS] C3b τ_deco = 2·tick = μ²·tick EXACT (μ² = 2)   τ = 2 tick
+  [PASS] C3c Gamma = f_44/2 EXACT (Nyquist 之半, 同 O138 一致)   f_44 = 1/tick
+  [PASS] C3d 44 reads/T_sync = 44/(88 tick) = 1/(2 tick) = Gamma ⟹ 讀數時鐘 = 退相干時鐘   讀 = 塌縮
+
+--- [C4] 物理讀法 ---
+  [PASS] C4a τ_deco = 2 tick = 一個「寫+讀」對嘅時間 (docs/05 §B)   τ = (寫,讀) 對時長
+  [PASS] C4b 每 T_sync: 44 次讀 = 44 次塌縮 (O41 全譜掃描)   44 塌縮/週期
+  [PASS] C4c λ_sync = c·tick ⟺ Γ = c/(2λ_sync):  1/(2Γ) = tick EXACT   λ_sync/c = tick = 0.961763 Gyr
+
+==============================================================================
+總計: 13/13 PASS
+==============================================================================
+
+裁決 §C: 🔴 → 🟢 (跨 O 收口; O138 已閉合, O126 提供時間量子)
+  ★ O138 已閉合: Gamma = N_d/T_ring = f_44/2 = c/(2λ_sync) = 1.647400e-17 s⁻¹
+  ★ O126 精確一致: Gamma = 1/(2·tick) EXACT;  τ_deco = 2·tick = μ²·tick
+     (tick = T_44 = T_sync/88 = 0.961762 Gyr, docs/04 Gap 1)
+  ★ 結構讀法: τ_deco = 一個「(寫, 讀) 對」嘅時長 (docs/05 §B: 對 = (2n−1, 2n))
+     ⟹ 退相干 = 完成一次「寫自身 + 讀世界」嘅循環
+  ★ O126 之貢獻: O138 用 T_ring 定義 Gamma; O126 由 Nyquist 定出 tick, 令
+     Gamma 有「每 tick」嘅離散意義 —— Gamma = 1/(μ² tick), 唔再係連續速率
+  ⚠️ 唔可宣稱 O126 「重推」Gamma; 正確: O126 令 O138 之 Gamma 離散化 + 交叉驗證
+

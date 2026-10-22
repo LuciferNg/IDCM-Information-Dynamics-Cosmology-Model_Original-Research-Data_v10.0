@@ -1,0 +1,26 @@
+{
+ "rules_version": "b5-contract-v1",
+ "doc": {
+  "path": "docs/07_b5_contract.md",
+  "sha256": "662df4c48a7b3219ecf5bd6dc1d96496cffe829da2eaa59050b1150465d66f1e"
+ },
+ "enforcer_sha256": "c1868cb86bfd64e8b8340a37258039428a452314221e24b4eb0dcd24cf255271",
+ "impl": {
+  "path": "scripts/12_b5_budget.py",
+  "sha256": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a"
+ },
+ "frozen_at": "2026-09-29T22:55:58+0800",
+ "inputs": {
+  "budget": "123/2",
+  "per_mode_budget": "123/88",
+  "E_min": "123/176",
+  "per_read_cost": "123/88",
+  "reads_per_pass": "88",
+  "pairs_per_pass": "44",
+  "overrun_factor": "961/11",
+  "reads_per_tick": 44,
+  "tick_Gyr": "4808807/5000000",
+  "tau_deco_Gyr": "4808807/2500000"
+ },
+ "gate": "OPEN"
+}

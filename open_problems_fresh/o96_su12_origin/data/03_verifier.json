@@ -1,0 +1,181 @@
+{
+  "verdict": "SU(12) NECESSITY CLOSED",
+  "all_pass": true,
+  "total_checks": 41,
+  "passed": 41,
+  "results": {
+    "L1a_44_phi_identity": {
+      "pass": true,
+      "detail": "44 = L₃×L₅ = 4×11 = 44, L₈-L₂ = 47-3 = 44"
+    },
+    "L1b_B_eq_L3": {
+      "pass": true,
+      "detail": "B = 4 = L₃"
+    },
+    "L1c_rank_eq_L5": {
+      "pass": true,
+      "detail": "rank = 11 = L₅"
+    },
+    "L1d_Nd_BxRank": {
+      "pass": true,
+      "detail": "Nd = B × rank = 4×11 = 44"
+    },
+    "L1e_rank_odd_lucas": {
+      "pass": true,
+      "detail": "rank = 11 = L₅ (odd Lucas)"
+    },
+    "L2a_N_eq_rank_plus_1": {
+      "pass": true,
+      "detail": "N = rank+1 = 11+1 = 12"
+    },
+    "L2b_SU12_fundamental": {
+      "pass": true,
+      "detail": "SU(12) fundamental = 12"
+    },
+    "L2c_SU12_rank": {
+      "pass": true,
+      "detail": "SU(12) rank = 11 = 11"
+    },
+    "L2d_SU12_adjoint": {
+      "pass": true,
+      "detail": "dim(SU(12)) = 12²-1 = 143"
+    },
+    "L2e_SU12_Lambda2": {
+      "pass": true,
+      "detail": "Λ²(12) = C(12,2) = 66"
+    },
+    "L2f_only_SU12": {
+      "pass": true,
+      "detail": "Only SU(12): ['SU(12)']"
+    },
+    "L2g_66_eq_2Ktree": {
+      "pass": true,
+      "detail": "66 = Λ²(12) = C(12,2) = 66 = 2×K_tree = 2×33"
+    },
+    "L2h_143_eq_BKtree_plus_L5": {
+      "pass": true,
+      "detail": "143 = dim(SU(12)) = 143 = B×K_tree + L₅ = 4×33+11 = 143"
+    },
+    "L3a_L5_eq_3Ngen_plus_2": {
+      "pass": true,
+      "detail": "L₅ = 11, 3N_gen+2 = 3×3+2 = 11"
+    },
+    "L3b_BxNgen_eq_12": {
+      "pass": true,
+      "detail": "B×N_gen = 4×3 = 12"
+    },
+    "L3c_fundamental_eq_tensor": {
+      "pass": true,
+      "detail": "fundamental = B×N_gen = 12 = N = 12"
+    },
+    "L3d_Lambda2_decomp": {
+      "pass": true,
+      "detail": "Λ²(12) = (6,6)⊕(10,3̄) = 36+30 = 66 under SU(4)×SU(3)"
+    },
+    "L3e_36_eq_h11": {
+      "pass": true,
+      "detail": "36 = (6,6) = h11 = K_tree + N_gen = 33+3"
+    },
+    "L3f_30_eq_Nd_minus_2L4": {
+      "pass": true,
+      "detail": "30 = (10,3̄) = Nd − 2L₄ = 44 − 14"
+    },
+    "L3g_adjoint_decomp": {
+      "pass": true,
+      "detail": "143 = (15,1)⊕(1,8)⊕(15,8) = 15+8+120 = 143 under SU(4)×SU(3)"
+    },
+    "L4a_h11_eq_3x12": {
+      "pass": true,
+      "detail": "h¹¹ = 36 = 3 × 12 = 3×12"
+    },
+    "L4b_12_eq_h11_over_3": {
+      "pass": true,
+      "detail": "12 = h¹¹/N_gen = 36/3"
+    },
+    "L4c_h11_eq_Ktree_plus_Ngen": {
+      "pass": true,
+      "detail": "h¹¹ = 36 = K_tree + N_gen = 33 + 3"
+    },
+    "L4d_Ktree_eq_Ngen_x_L5": {
+      "pass": true,
+      "detail": "K_tree = N_gen × L₅ = 3 × 11 = 33"
+    },
+    "L4e_h21_minus_h11": {
+      "pass": true,
+      "detail": "h²¹ - h¹¹ = 98 - 36 = 62"
+    },
+    "L4f_62_eq_Nd_plus_L6": {
+      "pass": true,
+      "detail": "h²¹ - h¹¹ = 62 = Nd + L₆ = 44 + 18 = 62"
+    },
+    "L4g_chi_124": {
+      "pass": true,
+      "detail": "χ = 2(h¹¹-h²¹) = 2(36-98) = -124"
+    },
+    "L4h_h11_is_consequence": {
+      "pass": true,
+      "detail": "h¹¹ = 36 = 3×12 = 3×(B×N_gen) — CY₃ 幾何反映 K_Chain 結構，非原因"
+    },
+    "L5_SU(5)": {
+      "pass": true,
+      "detail": "SU(5): rank=4(❌), fund=5(❌), Λ²=10(❌), adj=24(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_SU(10)": {
+      "pass": true,
+      "detail": "SU(10): rank=9(❌), fund=10(❌), Λ²=45(❌), adj=99(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_SU(11)": {
+      "pass": true,
+      "detail": "SU(11): rank=10(❌), fund=11(❌), Λ²=55(❌), adj=120(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_SU(12)": {
+      "pass": true,
+      "detail": "SU(12): rank=11(✅), fund=12(✅), Λ²=66(✅), adj=143(✅), 4×3=✅ → ✅ SU(12)唯一"
+    },
+    "L5_SU(13)": {
+      "pass": true,
+      "detail": "SU(13): rank=12(❌), fund=13(❌), Λ²=78(❌), adj=168(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_SO(10)": {
+      "pass": true,
+      "detail": "SO(10): rank=5(❌), fund=10(❌), Λ²=45(❌), adj=45(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_SO(22)": {
+      "pass": true,
+      "detail": "SO(22): rank=11(✅), fund=22(❌), Λ²=231(❌), adj=231(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_Sp(22)": {
+      "pass": true,
+      "detail": "Sp(22): rank=11(✅), fund=22(❌), Λ²=231(❌), adj=253(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_E₆": {
+      "pass": true,
+      "detail": "E₆: rank=6(❌), fund=27(❌), Λ²=351(❌), adj=78(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_E₇": {
+      "pass": true,
+      "detail": "E₇: rank=7(❌), fund=56(❌), Λ²=1540(❌), adj=133(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_E₈": {
+      "pass": true,
+      "detail": "E₈: rank=8(❌), fund=248(❌), Λ²=30628(❌), adj=248(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_F₄": {
+      "pass": true,
+      "detail": "F₄: rank=4(❌), fund=26(❌), Λ²=324(❌), adj=52(❌), 4×3=❌ → ❌ 排除"
+    },
+    "L5_G₂": {
+      "pass": true,
+      "detail": "G₂: rank=2(❌), fund=7(❌), Λ²=21(❌), adj=14(❌), 4×3=❌ → ❌ 排除"
+    }
+  },
+  "six_layers": {
+    "L1": "K_Chain φ代数 → rank=11",
+    "L2": "rank=11 → SU(12) 唯一匹配",
+    "L3": "B×N_gen = 12 → fundamental=12",
+    "L4": "h¹¹/3 = 12 作為 CY₃ 幾何驗證 (非原因)",
+    "L5": "排除法 — SU(5)/SO(10)/E₆ 全部 FAIL",
+    "L6": "綜合判決 — SU(12) 必然性閉合"
+  },
+  "causal_chain": "K_Chain → B=4, L₅=11 → rank=11 → N=12 → SU(12) [rank-driven] and B×N_gen=4×3=12 → fundamental=12 → SU(12) [tensor product] → two independent paths converge to SU(12)"
+}

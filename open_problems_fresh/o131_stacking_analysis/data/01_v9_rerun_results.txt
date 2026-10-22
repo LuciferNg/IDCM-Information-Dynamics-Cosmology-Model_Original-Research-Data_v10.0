@@ -1,0 +1,11 @@
+O131/01 — v9.0 stacked waveform 忠實重跑 (path-fixed)
+H0_IDCM=72.59 R_H=4129.941562 Mpc lambda_sync=294.877138 Mpc lambda_sync_hinv=406.222810 h-1Mpc h=0.7259
+BOSS n_pts=36 s=[2.50,177.50]
+eBOSS n_pts=49 s=[7.50,247.50]
+harmonic_stacked_n=[4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+mean_stacked_xi=-0.308835
+stacked_SN=-119.8881
+reflection_stacked_n=10
+mean_ref_stacked_xi=+0.022169
+ref_stacked_SN=+0.4669
+RESULT=9/9 PASS

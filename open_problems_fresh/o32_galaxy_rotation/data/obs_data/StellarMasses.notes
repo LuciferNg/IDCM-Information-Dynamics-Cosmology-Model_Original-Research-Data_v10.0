@@ -1,0 +1,273 @@
+StellarMasses
+2016-11-16
+Edward Taylor <entaylor@swin.edu.au>
+
+This DMU provides stellar masses, restframe photometry, and other
+ancillary stellar population parameters from stellar population fits
+to multiband SEDs for all GAMA DR3 galaxies in the equatorial survey
+regions with 0 < z < 0.65 and nQ > 1 from <a href="/dr3/schema/table.php?name=TilingCat">TilingCat</a>. The fits are
+constrained to the restframe wavelength range between 3000 and 11000
+Angstrom (approximately u through Y). Maximum redshifts for target
+selection are also given, for use in 1/Vmax-style incompleteness
+corrections.
+
+Two tables are provided by this DMU. The table StellarMasses contains
+the results of performing the fits to the photometry of <a href="/dr3/schema/table.php?name=ApMatchedCat">ApMatchedCat</a>,
+whereas StellarMassesLambdar contains the results of using the
+photometry of <a href="/dr3/schema/table.php?name=LambdarCat">LambdarCat</a> as input.
+
+VERY IMPORTANT NOTE:
+The values in these tables are based on aperture (AUTO or LAMBDAR)
+photometry, which may miss a significant fraction of a galaxy's
+light. Make sure you understand the need for and meaning of the
+quantity 'fluxscale', which is described in the section 'BASED ON
+MATCHED APERTURE PHOTOMETRY' below.
+
+______________________________________________________________________________
+
+DMU dependencies:
+	TilingCat               - heliocentric redshifts, quality flags, etc.
+	ApMatchedCat            - matched aperture SED photometry
+	LambdarCat  		- matched aperture SED photometry
+	SersicCatSDSS           - total r-band Sersic magnitudes
+	GalacticExtinction      - foreground dust values
+	DistancesFrames         - flow corrected redshifts for distances
+______________________________________________________________________________
+
+
+
+STELLAR POPULATION SYNTHESIS MODELLING: ______________________________________
+
+The data provided by this table have been derived through stellar
+population synthesis modelling of broadband photometry. In the fits,
+each photometric point is weighted so that the fits are effectively to
+the fixed restframe wavelength range 3000 to 11000 Angstrom for all
+galaxies at all redshifts. The modelling is done using the Bruzual &
+Charlot (2003) stellar evolution models, assuming a Chabrier (2003)
+stellar initial mass function (IMF) and the Calzetti et al. (2000)
+dust curve. The SPS models used in the fitting are defined via four
+parameters: e-folding time for the (exponentially declining) star
+formation history, time since formation (i.e. age), stellar
+metallicity, and dust attenuation (Section 3.1 of Taylor et al.
+2011). The SPS grid spans the range 0 < z < 0.65; objects with 
+z > 0.65 have not been fit. (Talk to Edward Taylor if you need/would
+like mass estimates for these galaxies.) The values of all derived
+parameters given in the table, including the formal uncertainties,
+have been derived in a Bayesian way (Sections 3.2-3.4 of Taylor et
+al. 2011).
+
+DISTANCES AND COSMOLOGY: _____________________________________________________
+
+All values are derived for the concordance (Omega_m, Omega_L, h) =
+(0.3, 0.7, 0.7) cosmology. Stellar population parameters including
+ages, dust extinctions, and mass-to-light ratios are cosmology
+independent, inasmuch as they pertain to the stellar populations at
+the time of observation. Restframe luminosities and thus the total
+stellar mass do depend on distance, and so on h^-2. These can be
+scaled in the usual way, such that a higher value of h implies a lower
+distance, and thus a lower luminosity/mass (see below). Note that
+distances have been computed using the flow-corrected redshifts
+'Z_TONRY' given in DistancesFrames. These values have been derived
+using the Tonry et al. (2000) flow model for very low redshifts, and
+then tapering to a CMB-centric frame for z > 0.03, as described by
+Baldry et al. (2012), and are reproduced in this catalogue.
+
+BASED ON MATCHED APERTURE PHOTOMETRY: ________________________________________
+
+The results given in table StellarMasses have been derived from
+matched aperture photometry, i.e. the r-defined AUTO photometry from
+ApMatchedCat (Hill et al. 2011; Liske et al. 2015; Driver et
+al. 2015). In StellarMassesLambdar results are also given for the
+photometry from LambdarCat derived using the code LAMBDAR (Wright
+et al. 2016). This code attempts to derive consistent and deblended
+photometry across all bands. (Note that the convention in both of
+these photometry catalogues is to refer to the SDSS z-band and the
+VISTA Z-band filters as 'z' and 'X', respectively. This convention is
+perpetuated in this DMU). Neither the AUTO nor the LAMBDAR photometry
+purports to necessarily represent the total flux in any particular
+band.
+
+AN APERTURE CORRECTION IS THEREFORE REQUIRED for integrated quantities
+(i.e. stellar mass or luminosity), in order to account for mass/flux
+that falls beyond the finite AUTO aperture used for the SEDs. The
+column 'fluxscale' is provided for this purpose. The quantity
+'fluxscale' is the (linear) ratio between the r-band (AUTO/LAMBDAR)
+aperture flux and the total r-band flux inferred from fitting a Sersic
+profile (truncated at 10 Re, i.e. 'GAL_MAG_10RE_R', taken from
+<a href="/dr3/schema/table.php?name=SersicCatSDSS">SersicCatSDSS</a>).
+
+THIS CORRECTION IS NOT APPLIED BY DEFAULT for two reasons. First, not
+all objects have a Sersic-fit magnitude owing to failures in either
+the SExtractor detection/segmentation or the GALFIT Sersic fitting
+procedures (see Kelvin et al. 2012). These objects can be identified
+as those with 'fluxscale' = -9999. Second, particularly for the
+fainter galaxies with higher (but unquantified) uncertainties in the
+Sersic-fit magnitudes, the flux scaling implied by the Sersic
+magnitudes is not necessarily physically sensible. For many galaxies,
+the Sersic magnitude is less than the aperture magnitude, which is
+logically inconsistent. Further, for some galaxies, the implied flux
+scaling leads to masses that are unrealistically high (log M* >> 13).
+
+THE USER IS THEREFORE TRUSTED TO APPLY THESE CORRECTIONS, but with the
+understanding that some care is required. The recommended mass to use
+is thus:
+   log10 M*,total = logmstar + log10(fluxscale) - 2 log10(h/0.7), 
+and the recommended absolute magnitude in the X-band is:
+   M_X,total = absmag_X - 2.5 log10(fluxscale) + 5 log10(h/0.7).
+
+Users should check to ensure that this makes sense (e.g. check that
+'fluxscale' is greater than or equal to unity, if only approximately,
+and that the magnitude of the correction is not a factor of many) for
+their specific object(s) of interest. Note, too, that this correction
+introduces an additional source of uncertainty in the total
+luminosities and masses that is not quantified in these tables.
+
+GOODNESS OF FIT STATISTIC: ___________________________________________________
+
+StellarMasses includes the Posterior Predictive P-value (PPP) as a
+goodness of fit statistic, which can be roughly thought of as a
+Bayesian analogue to the frequentist reduced chi-squared. The PPP is a
+useful tool for checking whether or to what extent the model is
+consistent with the data. Given the observed data and the posterior
+PDF on the properties of the model, the PPP quantifies the fraction of
+future observations that would be predicted to be as discrepant as the
+observed data. As an example, a PPP < 0.01 could be taken to imply
+that the current data invalidate even the 'most likely' model at 99%
+confidence.
+
+Whether and how best to use this information is probably application
+specific, and is left to the user to decide. In general terms, a PPP~0
+generally indicates a likely catastrophic failure of the SED fit, but
+can also indicate, for example, just one bad photometric point.
+Individual SED fits with PPP < 0.2 should be treated with some
+suspicion. A PPP of ~0.5 implies a perfect fit. A PPP of ~1 implies an
+improbably good fit - either the observational uncertainties have been
+overestimated, or the data are being overfit.
+
+DIFFERENT MASS ESTIMATORS: ___________________________________________________
+
+There are three different masses given in the catalogues:
+
+  * logmstar -- this is the total mass of all luminous material, at
+      the time of observation.
+  * logmremnants -- this is the total mass of all non- or sub-luminous
+      stellar remnants (e.g. white dwarfs), at the time of observation.
+  * logmintsfh -- this is the total mass of all stars formed, obtained
+      by integrating over the implied SFH, up to the time of
+      observation.
+
+Note that the difference between the combined mass of stars and
+remnants on the one hand, and the integral of the SFH on the other, is
+mass lost in stellar winds or other ejecta. In this sense, embedded in
+the values of logmintsfh is the assumption that none of this 'lost'
+mass is 'recycled' back into new generations of stars.
+
+It is envisaged that most users will want to use the 'logmstar's,
+which are the most directly comparable to what is most often used in
+the literature. Some recent studies also include stellar remnants in
+their stellar masses, but this is not currently - or not yet - the
+norm. Finally, the integral of the implied SFH gives the total mass of
+all stars formed, from the earliest times up to the epoch of
+observation. In most cases, 'logmintsfh' is the most directly
+comparable to the stellar masses that are output by simulations.
+
+RESTFRAME PHOTOMETRY AND COLOURS: ____________________________________________
+
+All of the photometry provided by this DMU has been inferred from
+the SPS fits as an attribute of the SP models. All restframe
+photometry uses AB zeropoints and is k-corrected to redshift 0, with
+no evolution corrections. The table contains restframe (g - i) and 
+(u - r) colours (in the columns 'gminusi' and 'uminusi', respectively)
+as well as restframe photometry in individual bands (e.g. 'absmag_g'
+and 'absmag_i'). Because in the fitting process, ugriz fluxes are
+highly correlated with one another, the formal uncertainties on
+'gminusi' or 'uminusr' cannot in general be derived from the
+'delrfphot'. It is thus preferable to use, e.g., 'gminusi' and the
+associated uncertainty 'delgminusi' rather than 'absmag_g' -
+'absmag_i'.
+
+Further, note that the fact that the fits are constrained to the
+restframe wavelength range 3000-11000 Angstrom means that the
+restframe photometry in the J and K bands are extrapolations of the
+fit-to data.
+
+INTRINSIC VERSUS EFFECTIVE RESTFRAME PHOTOMETRY: _____________________________
+
+The quantities 'absmag_X' should be understood as *effective*
+restframe absolute magnitudes in the X-band; that is, the absolute
+magnitudes corresponding to the light the observer actually sees from
+the galaxy, without correction for extinction within the galaxy
+itself. In contrast, the quantities 'absmag_X_stars' give *intrinsic*
+absolute magnitudes in the X-band, which should be understood to be
+the total light emitted by stars; that is, corrected for internal dust
+extinction according to 'extBV'. In both cases, these values are
+derived from the SPS fits as properties of the stellar populations in
+a similar way to ages, metallicities, mass-to-light ratios,
+etc. (i.e. a la Equation 5 of Taylor et al. 2011).
+
+MAXIMAL DETECTION/SELECTION REDSHIFTS FOR INCOMPLETENESS CORRECTIONS: ________
+
+In order to facilitate the derivation of completeness-corrected number
+densities, limiting redshifts have been derived for four r-band
+selection limits: r < 17.8 (i.e. SDSS main sample target selection); r
+< 19.0 (DR2 and DR3 limits in G09 and G12); r < 19.4 (G09 and G15
+SURVEY_CLASS >= 6 target selection for GAMA I and DR2 limit in G15);
+and r < 19.8 (G12 SURVEY_CLASS >= 6 target selection for GAMA I, as
+well as the final SURVEY_CLASS >= 4 limit for GAMA II and for DR3 in
+G15). All three of these selections are phrased in terms of r-band
+Petrosian magnitudes, as given in the SDSS DR7 catalogues, AFTER
+correction for foreground (Galactic) extinction, and quoted as
+'R_PETRO' in TilingCat. The limiting redshifts are the maximum
+redshift at which any given galaxy would satisfy the r-band selection
+in question. These values have been derived in the course of the SPS
+fits, using the single best fitting template to estimate how the
+r-band magnitude varies with redshift/distance. Note that these
+limiting redshifts should be understood as being flow-corrected, not
+heliocentric (see Section 3.5 of Taylor et al. 2011). Users should
+bear this in mind when selecting or binning galaxies by redshift.
+
+As an example for how to use these values for GAMA I, imagining that
+the user is considering galaxies with z < z_limit, the effective
+survey volume for each individual object can be calculated as:
+
+  V_max ~ 96 * comovingVolume(min(zmax_19p4, zlimit)) 
+	+ 48 * comovingVolume(min(zmax_19p8, zlimit)).
+
+For GAMA II, the expression is rather simpler:
+
+  V_max ~ 180 * comovingVolume(min(zmax_19p8, zlimit)).
+
+Talk to, for example, Edward Taylor, Ivan Baldry, or Peder Norberg if
+you are worried about how to do this.
+
+SUMMARY PLOTS: _______________________________________________________________
+
+This DMU also provides a summary plot for each object (column
+URL_PNG), which shows the object's full SED as well as the fit. This
+plot is part of the information displayed by the <a href="/dr3/tools/sov.php">Single Object Viewer</a>.
+
+KNOWN ISSUES: ________________________________________________________________
+
+* There are a number of very low redshift objects that are given
+  unphysically low values for 'logmstar', e.g. 'logmstar' << 6. These
+  are almost all stars, and can largely be excluded by considering 
+  z > 0.003.
+
+* There are a very few objects for which the fitting procedure has
+  failed. For these objects, all SP parameters are given as -99,
+  i.e. as missing data.
+
+* There are a number of objects that are given one or more of the
+  'zmax' >= 0.65. This corresponds to the maximum redshift covered by
+  the SPL grid. This is true for many of the galaxies where the fits
+  have failed (see above), but also for galaxies with reasonable SP
+  parameters. For these "okay" galaxies, this should be interpreted as
+  a lower limit to the values of the 'zmax'. In other words, the
+  implication is that GAMA is volume limited for such objects for 
+  z <= 0.65.
+
+* There are a number of objects with Z ~ 0.05, which corresponds to
+  the maximum metallicity contained in the SPS grids. The mass
+  estimates for these objects are unlikely to be significantly
+  compromised, but the age and dust extinction values may be biased.
+

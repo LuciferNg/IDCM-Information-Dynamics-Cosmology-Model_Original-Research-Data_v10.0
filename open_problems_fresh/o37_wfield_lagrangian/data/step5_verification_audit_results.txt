@@ -1,0 +1,16 @@
+O37 — Step 5: 獨立驗證 Audit
+======================================================================
+
+  L1a ⟨W⟩=M₀: PASS
+  L1b V''>0 穩定: PASS
+  L1c V_min=−κM₀⁴/2: PASS
+  L2a c_n ∝ A_n: PASS
+  L2b A_n ∝ ω_n: PASS
+  L3a ΔE_n ∝ sin: PASS
+  L3b 質量比 6/6: PASS
+  L4 Σγ=90: PASS
+  L5 三合一: PASS
+  X1 Σc²=1: PASS
+  X2 λ=1/32, QG=1/256: PASS
+
+總計: 11/11 PASS

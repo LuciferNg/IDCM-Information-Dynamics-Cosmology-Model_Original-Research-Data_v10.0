@@ -1,0 +1,4 @@
+02 exit=0
+03 exit=1
+logs/02_r1_closed_form.out:RESULT: 8/8 PASS  (0 FAIL)   elapsed 224.3 s
+logs/03_r1_audit.out:RESULT: 11/12 PASS  (1 FAIL)

@@ -55,7 +55,7 @@ O173 final_result 寫「每 T_ring 圈消耗 ~36% 池」— **算術張力** (O1
 
 ```
 R_rel(pred) = 364·E_strain/T_ring = 6,729.87 M☉/yr
-觀測 R_rel  = 6,730.86 M☉/yr   → dev 0.019%  (C2 PASS)
+觀測 R_rel  = 6,730.86 M☉/yr   → dev 0.015%  (C2 PASS)
 
 池週轉時標: t_turn = T_ring/364 = 232.5 Myr
 雙路一致:   E_strain/R_rel = 232.48 Myr vs T_ring/364 = 232.51 Myr (C1 PASS)
@@ -79,6 +79,6 @@ R_rel(pred) = 364·E_strain/T_ring = 6,729.87 M☉/yr
 
 - 算子身份 364 = B·L₄·F₇: 🟢 (o160 T21 註冊 + 7 等價形式)
 - 家族位置 364 = 8(N_d+1)+B: 🟢 (物理封頂帶成員)
-- 零參數預言 R_rel = 364·E_strain/T_ring: 🟢 (dev 0.019%)
+- 零參數預言 R_rel = 364·E_strain/T_ring: 🟢 (dev 0.015%)
 - 週轉時標 t_turn = T_ring/364 = 232.5 Myr: 🟢 (雙路一致)
 - O175 🟡 「池/圈 = 364 身份需結構側推導」→ **閉合**

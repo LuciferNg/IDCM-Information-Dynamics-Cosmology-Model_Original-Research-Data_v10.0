@@ -1,0 +1,80 @@
+{
+  "proof_steps": {
+    "S1": "44 = 11 SM + 24 VL + 9 unused (N_gen\u00b2)",
+    "S2": "11 SM modes absorb chirality from 12\u229512\u0304",
+    "S3": "24 VL = 12 (from 12) + 12 (from 12\u0304) = SU(4) \u00d7 SU(3) decomposition",
+    "S4": "9 unused = N_gen\u00b2 = 3\u00b2 = high-frequency cutoff",
+    "S5": "12 low-\u03b3_n (from 12, right-handed partners) + 12 high-\u03b3_n (from 12\u0304, left-handed partners)"
+  },
+  "vl_12_low": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "vl_12_high": [
+    16,
+    17,
+    20,
+    21,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32
+  ],
+  "unused": [
+    34,
+    35,
+    36,
+    37,
+    39,
+    40,
+    42,
+    43,
+    44
+  ],
+  "gen_assignment": {
+    "gen1": [
+      2,
+      3,
+      4,
+      5,
+      16,
+      17,
+      20,
+      21
+    ],
+    "gen2": [
+      6,
+      7,
+      9,
+      11,
+      23,
+      25,
+      26,
+      27
+    ],
+    "gen3": [
+      12,
+      13,
+      14,
+      15,
+      28,
+      29,
+      31,
+      32
+    ]
+  }
+}

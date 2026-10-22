@@ -1,0 +1,146 @@
+==============================================================================
+  O130/08 -- DESI DR2 official BAO multipoles: ladder test + DR1 replication
+==============================================================================
+
+------------------------------------------------------------------------------
+  A. load DR2 multipoles (official figure-5 release) + power statement
+------------------------------------------------------------------------------
+   BGS      N=23  s=62.04..150.02  ds=3.998  med sigma_0=7.17e-04  med |xi_0|/sigma=2.4
+   LRG1     N=23  s=62.04..150.02  ds=3.998  med sigma_0=6.80e-04  med |xi_0|/sigma=1.8
+   LRG2     N=23  s=62.04..150.02  ds=3.998  med sigma_0=5.74e-04  med |xi_0|/sigma=3.9
+   LRG3     N=23  s=62.04..150.02  ds=3.998  med sigma_0=4.23e-04  med |xi_0|/sigma=4.4
+   LRG+ELG  N=23  s=62.04..150.02  ds=3.998  med sigma_0=2.37e-04  med |xi_0|/sigma=6.0
+   ELGlo    N=23  s=62.04..150.02  ds=3.998  med sigma_0=2.08e-04  med |xi_0|/sigma=5.9
+   ELG      N=23  s=62.04..150.02  ds=3.998  med sigma_0=1.69e-04  med |xi_0|/sigma=6.7
+   QSO      N=23  s=62.04..150.02  ds=3.998  med sigma_0=3.68e-04  med |xi_0|/sigma=3.1
+  [PASS] A1  all 8 official DESI DR2 tracers loaded from the figure-5 release  -- 8 tracers x 23 s-bins
+  [PASS] A2  DESI DR2 binning ds = 4.00 h^-1 Mpc -> bin-Nyquist n_max = 6.57 (same as DR1)
+   fit window [62.04, 150.02] contains 8 distinct structural node positions:
+     66.2(n=3), 132.4(n=3), 99.3(n=4), 149.0(n=4), 79.5(n=5), 119.2(n=5), 66.2(n=6), 99.3(n=6), 85.1(n=7), 74.5(n=8), 66.2(n=9)
+  [PASS] A3  the DR2 fit window contains >= 4 distinct structural ladder nodes (the test has power)  -- 8 distinct positions
+  [CLAIM] A  => the DR2 fit window starts at s = 62 h^-1 Mpc (BAO-fit range): the bin-Nyquist crowding at small s is NOT the obstruction here, the window start is. Errors are diagonal only (no covariance in this release).
+
+------------------------------------------------------------------------------
+  B. matched-filter test at the STRUCTURAL lambda_sync (delta = 0), raw
+------------------------------------------------------------------------------
+   tracer    N   chi2_bb  chi2/dof  dchi2(delta=0)   amplitude   dchi2 on DESI theory
+   BGS       23      3.1      0.19           +0.00   -9.447e-04      +0.15
+   LRG1      23      5.2      0.32           +0.19   +3.739e-02      +0.26
+   LRG2      23      3.0      0.19           +0.39   +4.566e-02      +1.12
+   LRG3      23     17.4      1.09           +0.06   +1.326e-02      +3.57
+   LRG+ELG   23     15.7      0.98           +0.18   +1.282e-02      +1.38
+   ELGlo     23      8.7      0.54           +0.08   +7.751e-03      +0.03
+   ELG       23     17.2      1.08           +0.04   -4.264e-03      +5.20
+   QSO       23      8.8      0.55           +0.01   -5.482e-03      +0.00
+  [PASS] B1  the diagonal DR2 errors are not UNDER-estimated (no tracer with chi2/dof > 1.5) -- the test is calibrated or conservative, never anti-conservative  -- chi2/dof 0.19 - 1.09 (conservative values expected: marginal errors on correlated bins); the null uses the same sigma so the error scale cancels in p
+   tracers with raw dchi2(delta=0) >= 10: none
+  [PASS] B2  NO tracer shows a large raw dchi2(delta=0) at the corrected structural lambda_sync -- range +0.00 to +0.39 over 8 tracers (1 dof each): there is nothing for the DESI best-fit curve to absorb  -- raw dchi2(delta=0) range: +0.00 - +0.39
+  [CLAIM] B  => at the corrected scale (lambda_sync = 198.6 h^-1 Mpc) the raw Delta-chi^2 at delta = 0 is at most +0.39 (LRG2) over all 8 DR2 tracers -- the ladder column finds nothing.  (The uniform-sign +10..+20 raw excess of the pre-correction revision came from the pre-correction lambda_sync = 406.22 h^-1 Mpc, which placed the n = 4 node at 101.6 h^-1 Mpc -- exactly on the BAO bump at 102.0.)
+
+------------------------------------------------------------------------------
+  C. trial-corrected statistic, argmax diagnostic, and local MC null
+------------------------------------------------------------------------------
+   tracer   D_obs   argmax(knots,delta)  p_local   p_delta0  p_delta0(adq)
+   BGS        +1.97   knots=4 delta=-0.10    0.927     0.757     0.717
+   LRG1       +1.46   knots=4 delta=-0.10    0.987     0.930     0.763
+   LRG2       +4.06   knots=4 delta=-0.10    0.907     0.917     0.633
+   LRG3       +7.63   knots=4 delta=+0.10    0.950     0.740     0.540
+   LRG+ELG    +5.37   knots=4 delta=+0.10    0.983     0.817     0.790
+   ELGlo      +2.49   knots=5 delta=-0.10    0.963     0.843     0.830
+   ELG        +3.89   knots=4 delta=+0.10    0.957     0.547     0.393
+   QSO        +4.33   knots=4 delta=+0.10    0.750     0.677     0.777
+   -> smallest local p = 0.750 (QSO, argmax knots=4 delta=+0.10)
+  [PASS] C1  the DR2 tracer with the smallest local p peaks at a NON-structural lambda shift (|delta| > 0)  -- QSO: argmax delta = +0.10 (structural = 0)
+   -> tracers whose trial-corrected argmax picks the over-stiff knots = 4: 7/8
+  [PASS] C2  the trial-corrected argmax picks the over-stiff knots = 4 for (almost) every tracer -- the systematic signature of broadband under-fitting, not of a ladder  -- 7/8 tracers choose knots = 4
+   -> tracers with p_delta0 <= 0.02 (either knot set): none
+  [PASS] C3  no DR2 tracer reaches p_delta0 <= 0.02 under either broadband choice  -- flagged: none
+
+------------------------------------------------------------------------------
+  D. GLOBAL look-elsewhere over 8 tracers (joint null)
+------------------------------------------------------------------------------
+   D_global(observed) = +7.63 (best tracer LRG3)  joint null mean +23.03 max +45.80
+   -> p_global (8 tracers x 3 knots x 9 shifts) = 1.000
+   D0_global(observed) = +2.82 (best tracer LRG3)  joint null mean +9.71 max +27.80
+   -> p_delta0_global (8 tracers x 3 knots, delta = 0) = 1.000
+   -> p_delta0_global with the adequate knots (5,6) = 0.987
+   (null treats tracers as independent; DESI tracers share footprint and the
+    z=0.8-1.1 samples share galaxies -> the true null is broader (optimistic test))
+  [PASS] D1  GLOBAL p-value (trial-corrected, 8 tracers) > 0.01  -- p_global = 1.000
+  [PASS] D2  GLOBAL delta=0 p-value over 8 tracers x 3 knot counts > 0.01  -- p = 1.000
+  [PASS] D3  GLOBAL delta=0 p-value with the adequate knots (5,6) > 0.01  -- p = 0.987
+  [CLAIM] D  => the whole DR2 ensemble (best tracer, best knot count, best lambda shift) is consistent with the no-ladder null (p_global = 1.000); the decisive STRUCTURAL test (delta = 0, corrected over 8 tracers) gives p = 1.000 (knots 4-6) and 0.987 (adequate knots 5-6).
+
+------------------------------------------------------------------------------
+  E. DR1 vs DR2 SAME-WINDOW replication (headline)
+------------------------------------------------------------------------------
+  [PASS] E1  DR1 same-window reload reproduces the DR2 window size (23 bins)  -- N per tracer: [23]
+   tracer     DR1 N   D0(DR1, same window)  amp(DR1)     D0(DR2)   amp(DR2)
+   BGS        23                  +0.58   +5.06e-02      +0.00   -9.45e-04
+   LRG1       23                  +0.16   +1.84e-02      +0.19   +3.74e-02
+   LRG2       23                  +0.38   +1.17e-02      +0.39   +4.57e-02
+   LRG3       23                  +1.08   +4.40e-04      +0.06   +1.33e-02
+   LRG+ELG    23                  +0.37   +1.20e-02      +0.18   +1.28e-02
+   ELG        23                  +0.60   +3.53e-03      +0.04   -4.26e-03
+   QSO        23                  +0.19   +1.44e-02      +0.01   -5.48e-03
+   DR1 LRG3 restricted to the DR2 window: D0 = +1.08 -> p_local(delta=0) = 0.923
+   DR2 LRG_0.8_1.1 (same window, larger data): D0 = +2.82 -> p_delta0 = 0.740
+  [PASS] E2  at the corrected scale there is no DR1 edge to replicate: both the DR1 same-window test and the DR2 test are null (min p > 0.05)  -- DR1 same-window p = 0.923 vs DR2 p = 0.740
+  [PASS] E3  the larger DR2 sample does not systematically raise the structural D0 (|D0(DR2) - D0(DR1 same window)| <= 5)  -- D0(DR1) = +1.08 (p = 0.923) -> D0(DR2) = +2.82 (p = 0.740)
+   DR1 LRG3 in the WIDE window (script 07, s >= 40, official RascalC): p_delta0 = 0.950
+  [PASS] E4  at the corrected scale the DR1 LRG3 verdict is WINDOW-INDEPENDENT: the wide window (s >= 42, script 07) and the DR2 window give the same null (|p_wide - p_narrow| < 0.10)  -- wide window p = 0.950 -> DR2 window p = 0.923
+  [CLAIM] E  => replication verdict at the CORRECTED scale: DR1 LRG3 gives p = 0.950 in the wide window and p = 0.923 in the DR2 window; DR2's larger LRG z0.8-1.1 sample gives p = 0.740 (D0 = +2.82).  All are null.  NOTE: the 'window-dependent LRG3 edge' of the pre-correction revision (p = 0.013 wide vs 0.92 narrow) does NOT survive the units fix -- it was produced by lambda_sync = 406.22 h^-1 Mpc, which put the n = 4 node (101.6) exactly on the BAO bump (102.0).
+
+------------------------------------------------------------------------------
+  F. DECISIVE CONTROL -- ladder on top of the DESI best-fit theory curve
+------------------------------------------------------------------------------
+   BGS       chi2(theory)=     2.9   dchi2(adding ladder)=  +0.15   amp=-4.84e-03
+   LRG1      chi2(theory)=     2.3   dchi2(adding ladder)=  +0.26   amp=+6.09e-03
+   LRG2      chi2(theory)=     2.7   dchi2(adding ladder)=  +1.12   amp=-1.08e-02
+   LRG3      chi2(theory)=    10.7   dchi2(adding ladder)=  +3.57   amp=+1.40e-02
+   LRG+ELG   chi2(theory)=     4.2   dchi2(adding ladder)=  +1.38   amp=+4.92e-03
+   ELGlo     chi2(theory)=     4.0   dchi2(adding ladder)=  +0.03   amp=-6.29e-04
+   ELG       chi2(theory)=    22.3   dchi2(adding ladder)=  +5.20   amp=-6.95e-03
+   QSO       chi2(theory)=     9.9   dchi2(adding ladder)=  +0.00   amp=-1.81e-04
+  [PASS] F1  DESI best-fit theory curves load on the same s-grid for all 8 tracers  -- 8/8 theory curves aligned
+  [PASS] F2  the largest single-tracer improvement on the DESI best-fit curve (+5.20, ELG) is NOT significant after the look-elsewhere correction over 8 tracers (p_single = 0.0226 -> Bonferroni p = 0.18 > 0.01)  -- p_single = 0.0226, 8 tracers -> p_corr = 0.181
+   amplitudes: spline broadband -> 5 positive / 3 negative, median |a| = 1.03e-02
+              DESI theory curve -> 3 positive / 5 negative, median |a| = 5.51e-03
+  [PASS] F3  against the DESI best-fit curve the fitted amplitudes are smaller than in the spline-broadband test (median |a| 1.03e-02 -> 5.51e-03) and NOT uniformly signed (3 positive / 5 negative)  -- median |a| down by 1.9x ; spline test sign pattern 5+/3-
+  [CLAIM] F  => against the DESI best-fit model itself (which already contains the BAO wiggle) the structural ladder adds at most dchi2 = +5.20 for any single tracer (not significant after the 8-tracer correction) and the median fitted amplitude drops ~1.9x.  There is no residual ladder in the DR2 data at the corrected scale.  NOTE: this control is CONSERVATIVE for IDCM by construction -- the LCDM+BAO model already contains a bump at ~102 h^-1 Mpc and IDCM identifies that scale with lambda_sync/2 (the n = 2 node), so the control removes part of the structure the ladder predicts; it tests 'ladder beyond LCDM BAO', not the ladder itself.
+
+------------------------------------------------------------------------------
+  G. adequate-broadband statistic (knots 5-6 only, no over-stiff option)
+------------------------------------------------------------------------------
+   tracer   D0(adq, obs)  p_delta0(adq)   D0(3 knots, obs)  p_delta0(3 knots)
+   BGS             +0.13          0.717              +0.74              0.757
+   LRG1            +0.19          0.763              +0.43              0.930
+   LRG2            +0.39          0.633              +0.78              0.917
+   LRG3            +0.53          0.540              +2.82              0.740
+   LRG+ELG         +0.18          0.790              +2.28              0.817
+   ELGlo           +0.11          0.830              +0.64              0.843
+   ELG             +1.07          0.393              +2.62              0.547
+   QSO             +0.15          0.777              +1.33              0.677
+  [PASS] G1  removing the over-stiff knots = 4 option shrinks the typical structural Delta-chi^2 (median) by a factor >= 2  -- median D0: 1.06 (knots 4-6) -> 0.19 (knots 5-6)
+  [CLAIM] G  => the trial-corrected statistic is dominated by the over-stiff knots = 4 broadband; with an adequate broadband the typical structural Delta-chi^2 falls from 1.06 to 0.19.  Both are consistent with the no-ladder null (D3: p = 0.987 on the adequate knots).
+
+------------------------------------------------------------------------------
+  H. robustness: structural band restricted to RESOLVABLE modes only
+------------------------------------------------------------------------------
+   ds = 3.998 h^-1 Mpc -> n_max = 6.57 -> resolvable band [3, 4, 5, 6] (aliased dropped: [7, 8, 9])
+   tracer     D0(res band)  p_delta0(res band)
+   BGS             +2.06           0.500
+   LRG1            +4.36           0.323
+   LRG2            +2.13           0.760
+   LRG3           +13.91           0.200
+   LRG+ELG        +12.36           0.203
+   ELGlo           +6.14           0.200
+   ELG            +10.99           0.100
+   QSO             +1.65           0.793
+  [PASS] H1  with the sub-bin aliased modes dropped (resolvable band n = [3, 4, 5, 6]) the DR2 structural test is STILL null (global p = 0.423 > 0.01)  -- global D0 = +13.91 (resolvable band), p = 0.423
+  [CLAIM] H  => robustness: with the ladder template restricted to the modes the 4 h^-1 Mpc binning can resolve (n = [3, 4, 5, 6]), the DR2 verdict is UNCHANGED -- global p = 0.423 (median per-tracer p = 0.263), even though the individual dchi2 rise (the low-n modes carry the spline's residual broadband shape).  The null is not an artefact of sub-bin aliasing.
+
+==============================================================================
+  RESULT: 20/20 PASS   (+7 structural claims)
+==============================================================================
+  -> data/desi/dr2/08_desi_dr2_test.json written

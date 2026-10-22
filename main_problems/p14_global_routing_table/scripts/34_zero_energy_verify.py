@@ -75,7 +75,7 @@ L("━" * 84)
 L("  一、SMICA 溫度提取 (4.17° 平滑 + 減偶極)")
 L("━" * 84)
 
-m = hp.read_map('/tmp/smica2.fits', field=0)
+m = hp.read_map(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'planck_pr3', 'smica2.fits'), field=0)
 nside = hp.get_nside(m)
 
 fwhm_deg = 4.17

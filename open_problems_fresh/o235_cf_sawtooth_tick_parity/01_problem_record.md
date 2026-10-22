@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O235
 title:   C_f 鋸齒 Z₂ 嘅 tick-宇稱/時間處理假説 (88-chain checkerboard/staggered 對偶)
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O235
 created: 2026-10-07
@@ -13,7 +13,7 @@ prereq:  O233（鋸齒閉合）
 source:  O233 鋸齒閉合 (輕子/夸克分離) + 2026-10-07 調律者: ODD/EVEN 自然需要時間處理 → T1 就地診斷 (O234 scripts/06)
 -->
 
-> **狀態**: 📄 **已註冊 — 未開始**（2026-10-07 開 O；T2–T4 留待下一 session）
+> **狀態**: 🟡 **部分閉合 (2026-10-07 closeout, verdict=partial)**：tick 算子譜半徑=2=μ² EXACT + tick=T_ring/88=λ_sync/c EXACT + tick 相位 ℤ₄ 機制層閉合（deficit 類選取⟹輕子 ≡1 第二條獨立機制鏈, B−L 零輸入）；T4 嚴格式判死（C_f ∉ 兩步不動點, R=0.68）⟹ 值層時性假説死, pattern 層存活 = O233 鋸齒 tick 重讀; **統計層維持 O233 1/56/0.1204 不變**
 > **建立**: 2026-10-07
 > **前置**: O233（鋸齒 Z₂ = 輕子/夸克分離，已閉合 partial）
 > **位置**: `open_problems_fresh/o235_cf_sawtooth_tick_parity/`
@@ -103,6 +103,13 @@ checkerboard/leapfrog 時間處理結構（二部圖偶/奇 sub-lattice 交替�
 | # | 日期 | 事件 | 產物 |
 |:-:|:-----|:-----|:-----|
 | 1 | 2026-10-07 | 開 O; T1 診斷承接自 O234 就地推 (scripts/06 → 本 O scripts/01) | scripts/01 |
+| 2 | 2026-10-07 | T1 重新建立: docs/01 + logs/01 重跑複現 (10 checks 全對); O233 handoff intake 收妥, register 基線 O235 零漂移 | docs/01, logs/01 |
+| 3 | 2026-10-07 | T2 閉合(恆等層): H_cb 譜半徑 = 2 = μ² EXACT; tick Δt = T_ring/88 = λ_sync/c = (π/44)τ EXACT; leapfrog U2 譜 + P 反交換; 21/21 PASS | scripts/02, docs/02, logs/02 |
+| 4 | 2026-10-07 | T3 機制層閉合: tick 相位 ℤ₄ (Ŝ=i^k) + 類層 world/observer + deficit 向量 (μ²,−sec,0,+sec) EXACT; 輕子 3/3 落 deficit 類 s1 (預註冊 R4 命中, B−L 獨立); 20/20 PASS | scripts/03, docs/03, logs/03 |
+| 5 | 2026-10-07 | T4 判死: 兩步映射 G, Fix=span{1,(−1)^r}; C_f ∉ Fix (R_raw=0.68>0.1) ⟹ 嚴格式死, pattern 層存活 (=O233 鋸齒 tick 重讀); 10/10 PASS | scripts/04, docs/04, logs/04 |
+| 6 | 2026-10-07 | closeout: verdict=partial (機制層正 + 嚴格式負 + 統計門檻未過) | final_result.md |
+| 7 | 2026-10-07 | block 同步 (register check BLOCK-DRIFT 修正): state registered→partial, verdict -→partial | 01_problem_record.md, SESSION_START.md |
+| 8 | 2026-10-07 | T5 質量來源路線整合 (調律者「要推就在o235推」): s1↔s3 相位對偶槽 (輕子³+t ↔ 重夸克³) + 輕子=odd-flow∩s1 雙重篩 + C_f 代際塊量化; 14/14 PASS; 預言 P1-P5 註冊 | scripts/05, docs/05, logs/05 |
 
 ## 八、相關文件
 

@@ -1,0 +1,18 @@
+# O228 / R5 -- logs/09_r5_kmin_law.out 之 SyntaxError 實錄（逐字轉錄）
+
+**來源說明（誠實標示）**：此段係第四跑（`proc_5c446f139aeb`）之 stdout/stderr 內容，逐字轉錄自
+該次工具回傳；當時 `logs/09_r5_kmin_law.out` 於修正後被正常跑覆寫，故未能整檔保存。
+（其餘崩潰／中途版皆有整檔保存：`09_r5_firstrun_CRASH_excerpt.out`、
+`09_r5_secondrun_CRASH_excerpt.out`、`09_r5_firstfullrun_4FAIL_excerpt.out`。）
+
+**成因**：`K4-4` 之 claim 字串用單引號包裹，而內容含 `{r,r'}` —— 內層撇號提早關閉字串。
+
+```
+  File ".../scripts/09_r5_kmin_law.py", line 659
+    claim('K4-4', 'ANTIPODAL-TWIN LEMMA: whenever the row set is closed under negation, the pair {r,r'} and its '
+                                                                                                      ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+exit=1
+```
+
+**修正**：改寫為 `(r, r-prime)` / `(-r, -r-prime)`（並已記入 skill `o-series-research-workflow` 之教訓：claim 字串內避免裸撇號）。

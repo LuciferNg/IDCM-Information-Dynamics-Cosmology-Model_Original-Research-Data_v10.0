@@ -1,0 +1,32 @@
+{
+  "planck_obs": {
+    "2": 168,
+    "3": 605,
+    "4": 1026,
+    "5": 840,
+    "6": 1010,
+    "7": 880,
+    "8": 950,
+    "9": 860,
+    "10": 900
+  },
+  "planck_lcdm": {
+    "2": 1200,
+    "3": 800,
+    "4": 1100,
+    "5": 900,
+    "6": 1050,
+    "7": 900,
+    "8": 950,
+    "9": 880,
+    "10": 920
+  },
+  "triangle_angle": 60.0,
+  "spherical_triangle_angle": 61.76065758995632,
+  "spherical_excess": 5.281972769868958,
+  "dodeca_face_angle": 63.435,
+  "quad_oct_corr": -1.4467990808967708e-17,
+  "a5_edge": 26.0913,
+  "cold_spot_scale_ell": 44,
+  "conclusion": "Low-\u2113 anomalies and cold spot are same A\u2085 lattice at different scales"
+}

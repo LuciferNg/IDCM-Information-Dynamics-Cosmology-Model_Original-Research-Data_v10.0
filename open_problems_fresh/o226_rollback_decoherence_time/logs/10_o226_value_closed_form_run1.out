@@ -1,0 +1,24 @@
+========================================================================================================
+O226 scripts/10 -- R3 value-set closed form / contradiction resolution (rules: o226-r3-contract-v1)
+========================================================================================================
+[PASS] V1      the 12 class representatives map to 12 images v_i = rho(rep_i)u_0 with a COMMON squared length (so cos(v_i,v_j) is an exact Q(sqrt5) ratio)  --  classes = 12 ; distinct |v|^2 = 1 ; type of v_0 = vertex
+[PASS] V2      Pr-6.2: the pairwise cosines of the 12 images take exactly 4 values with multiplicities {1:12, -1:12, +1/sqrt5:60, -1/sqrt5:60}  --  distinct cos = 4 ; multiplicities = [12, 12, 60, 60]
+[FAIL] V3      H1 (Pr-6.1 first half): D is a function of cos(v_i,v_j) ONLY -- i.e. every cos class carries a single D value  --  D value set per cos class = {'+1': [0], 'other': [22, 24], '-1': [62]} ; D multiplicities = [(0, 12), (22, 40), (24, 20), (38, 20), (40, 40), (62, 12)]
+[FAIL] V4      Pr-6.3 / I19: the C5-transitivity necessary condition for H1 -- for a fixed i the 5 neighbours (cos = +1/sqrt5) must all give the SAME D; the pre-registered prediction is that they do NOT  --  per-i D values over the cos = +1/sqrt5 neighbours = [[22, 24], [22, 24], [22], [22, 24], [22, 24], [22, 24], [22, 24], [22, 24], [22, 24], [22], [22, 24], [22, 24]]
+[FAIL] V5      Pr-6.4a: the hemisphere identity D(i,j) = 62 - 2*|S_i n S_j| holds for all 144 pairs, with |S_i| = 31 for every i (no axis is orthogonal to a vertex axis)  --  distinct |S_i| = [26] ; identity = False
+[FAIL] V6      Pr-6.4b: the hemisphere-intersection counts s = |S_i n S_j| take the value set {0,11,12,19,20,31}, and D = 62 - 2s gives {0,22,24,38,40,62}  --  s value set = [0, 7, 15, 26] ; D value set = [10, 32, 48, 62]
+[FAIL] V7      Pr-6.4c: the type decomposition s = a+b+c takes exactly the 6 triples {(0,0,0), (2,4,5), (2,4,6), (4,6,9), (4,6,10), (6,10,15)} with multiplicities {12,40,20,20,40,12} (order matching the sorted triples)  --  triples -> multiplicity = [((0, 0, 0), 12), ((2, 4, 1), 60), ((4, 6, 5), 60), ((6, 10, 10), 12)]
+[PASS] V8      Pr-6.5 (pre-registered direction): s is NOT a uniform fraction of the three orbits (a/6 = b/10 = c/15 fails) -- no "uniform fraction" closed form  --  triples with a/6 = b/10 = c/15 = []
+[PASS] V9      DIAGNOSTIC: is the frozen axis set F1 invariant under 2I (as a set of pointed vectors, up to positive scale)?  --  group elements that send some axis out of the set = 0 ; first offenders = []
+[FAIL] V10     H2: conjugacy class of rep_i^-1 rep_j -- D must collapse onto it with a single value per class  --  classes = 8 ; colliding = 5 ; value sets = [(0,), (22,), (22, 24), (22, 24, 38, 40), (22, 38, 40, 62), (24,)]
+[FAIL] V11     H3: double coset HxH (R2 refutation re-checked) -- D must collapse onto it with a single value per class  --  classes = 4 ; colliding = 2 ; value sets = [(0,), (22, 24), (38, 40), (62,)]
+[FAIL] V12     H4 (the resolution): D(i,j) is a function of the PAIR (v_i, v_j) alone -- the identity D = #{u : sgn(u.v_i) != sgn(u.v_j)} is verified against the class-level table for all 144 pairs  --  identical over 144 pairs = False
+[PASS] V13     T8 / Pr-6.6: the vertex-type choice of the reference axis is an UPSTREAM FROZEN input (u_0 = the first entry of F1); this round derives no internal selection principle  --  u_0 type = vertex ; changing the type gives 20 / 30 classes (R2 U20b) -- the choice is not re-derived here
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o226_rollback_decoherence_time/scripts/10_o226_value_closed_form.py", line 269, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o226_rollback_decoherence_time/scripts/10_o226_value_closed_form.py", line 229, in main
+    pairs_per_class = [len({min(t, idx[m.qkey(tuple(m.neg(c) for c in q))]) for t in cl}) for cl in classes]
+                                                                      ^
+TypeError: 'int' object is not iterable

@@ -1,0 +1,6 @@
+{
+ "rules": "r33-closure-batch-v1",
+ "contract": "docs/70_r33_contract.md",
+ "sha256": "3d07804b5f28520294d1c11fc4117bb1149e7789982805e0c09de2eee7efd7ca",
+ "frozen_at": "2026-10-09 13:09:16"
+}

@@ -1,0 +1,13 @@
+{
+  "fwhm": 10.0,
+  "n_real": 10000,
+  "T_node9_uK": -90.34311369759962,
+  "T_node0_uK": -68.8333748257719,
+  "T_cold_mean_uK": -80.27601090596733,
+  "T_cold_std_uK": 15.476631586674557,
+  "z_node9": -0.6504711787738173,
+  "p_T_coldest_le_node9": 0.2325,
+  "p_node9_is_coldest": 0.004,
+  "p_hop1_is_coldest": 0.0161,
+  "node9_rank": 1
+}

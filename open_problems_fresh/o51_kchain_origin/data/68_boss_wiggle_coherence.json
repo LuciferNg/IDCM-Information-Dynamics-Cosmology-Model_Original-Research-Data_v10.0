@@ -1,0 +1,10 @@
+{
+  "rd_idcm": 147.4385,
+  "dk_idcm": 0.06335,
+  "r2_fixed": 0.0083,
+  "A_fixed": 0.0069,
+  "phi_fixed": 0.539,
+  "frac_explained": 0.0084,
+  "pass": 0,
+  "fail": 3
+}

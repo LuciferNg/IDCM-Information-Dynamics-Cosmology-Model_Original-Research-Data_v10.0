@@ -1,0 +1,7 @@
+newmtl facecold
+Kd 0.25 0.45 0.90
+Ka 0.1 0.1 0.1
+
+newmtl facehot
+Kd 0.90 0.35 0.25
+Ka 0.1 0.1 0.1

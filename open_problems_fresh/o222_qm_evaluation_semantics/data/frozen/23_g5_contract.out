@@ -1,0 +1,21 @@
+================================================================================================================
+O222 scripts/23 -- Contract G5 v1 enforcer (rectangle criterion: exact / necessary / sufficient)
+================================================================================================================
+[PASS] C1    frozen upstream impls match their freeze records (B5 / B3R2 / D6 / G4)  --  B3R2=14e17e7cdff2 ; B5=f2cb54fa5df0 ; D6=a681ae8cf6bc ; G4=efa6aaded922
+[PASS] C2    frozen objects rebuilt: |2I| = 120, 62 axes, h bijective, and the anti structural lemma (31 antipodal pairs, exactly one anti column per row)  --  anti True entries = 62 (31 pairs), per-row min/max = 1/1
+[PASS] C3    contract declares the six cells and the five theorems
+[PASS] C4    register: O222/G5 registered with its six pre-numbered sub-questions before any number  --  sub-questions = True
+[PASS] C5    upstream gates healthy: D6 / B3R2 / G4 gates OPEN or all-PASS, docs/15 + data/21 present  --  D6=OPEN G4=OPEN B3R2=14 claims
+[PASS] C6    impl AST gate: no trig / no float literal / no numpy-scipy-math / NO random module (the sampler must be a hand-written LCG)  --  clean
+[PASS] C7    cell parity (both directions): the impl computes exactly the six registered cells  --  impl cells = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6']
+[PASS] C8    frozen semantics IMPORTED, not re-implemented (no local criterion/sampler/machine defs)  --  local defs = ['load', 'isqrt_int', 'ai', 'cols_of', 'rows_of', 'crit_and_counts', 'brute', 'walk_ok', 'main', 'trail_closed', '_pop', '_combinations', '__init__', 'next', 'below', 'rz', 'enum_circuits', 'sample_circuits', 'rec', 'dfs']
+[PASS] C9    contract<->impl string parity: criterion, prefix rule, LCG constants, fallback caps  --  missing in one side = []
+[PASS] C10   the impl states the pre-registered sample size and the degenerate small-n prefixes  --  sampler + small-n rules present in both
+[PASS] C11   the impl carries no assertion of a target value (no hard-coded proportions or rz(n))  --  no target-value assertions
+[PASS] C12   the impl reads its prefixes and its anti matrix from the frozen modules (no local geometry)
+
+frozen impl scripts/24_g5_criterion.py = fb9072e4b22e03deacceb37c7c40f5bcf2ea6ae65b8ccae927a4786a7847cad9
+GATE = OPEN   (data/23_g5_freeze.json)
+================================================================================================================
+RESULT: 12/12 PASS  (0 FAIL)
+================================================================================================================

@@ -1,0 +1,153 @@
+{
+ "script": "101_audit_index",
+ "layers": [
+  {
+   "layer": "A",
+   "engine": "scripts/92_audit_sweep.py",
+   "data": "92_audit_sweep.json",
+   "verdict": "88 支重跑",
+   "desc": "逐支重跑（88 支）"
+  },
+  {
+   "layer": "A2",
+   "engine": "scripts/97_drift_audit.py",
+   "data": "97_drift_audit.json",
+   "verdict": "{\"match_log\": 83, \"match_gate\": 3, \"drift_",
+   "desc": "三方對帳（凍結 JSON↔重跑↔歷史日誌）"
+  },
+  {
+   "layer": "B",
+   "engine": "scripts/95_doc_binding.py",
+   "data": "95_doc_binding.json",
+   "verdict": "bound 128 / unbound 0",
+   "desc": "宣稱↔證據綁定"
+  },
+  {
+   "layer": "C/D",
+   "engine": "scripts/93_audit_blind.py",
+   "data": "93_audit_blind.json",
+   "verdict": "12/12",
+   "desc": "獨立重算＋精確 null"
+  },
+  {
+   "layer": "Q1",
+   "engine": "scripts/98_round_claim_check.py",
+   "data": "98_round_claim_check.json",
+   "verdict": "{\"gate_ok\": 3, \"match\": 77, \"diverge\": 5, ",
+   "desc": "逐輪文檔聲稱↔重跑"
+  },
+  {
+   "layer": "Q3",
+   "engine": "scripts/99_gap_blind.py",
+   "data": "99_gap_blind.json",
+   "verdict": "11/11",
+   "desc": "缺口補完（Λ/Z10、f 三重、三支和）"
+  },
+  {
+   "layer": "Q3",
+   "engine": "scripts/100_register_sync.py",
+   "data": "100_register_sync.json",
+   "verdict": "5/5",
+   "desc": "register↔problem_record 同步"
+  },
+  {
+   "layer": "R27",
+   "engine": "scripts/103_r27_machine.py",
+   "data": "103_r27_machine.json",
+   "verdict": "7/10",
+   "desc": "CRIT-1 orbit 分類／三層族"
+  },
+  {
+   "layer": "R27",
+   "engine": "scripts/104_r27_audit.py",
+   "data": "104_r27_audit.json",
+   "verdict": "5/6",
+   "desc": "R27 獨立審計"
+  },
+  {
+   "layer": "R28",
+   "engine": "scripts/106_r28_machine.py",
+   "data": "106_r28_machine.json",
+   "verdict": "8/13",
+   "desc": "CRIT-2 響應矩陣／MISC-1 τ-orbit"
+  },
+  {
+   "layer": "R28",
+   "engine": "scripts/107_r28_audit.py",
+   "data": "107_r28_audit.json",
+   "verdict": "9/9",
+   "desc": "R28 獨立審計"
+  },
+  {
+   "layer": "R29",
+   "engine": "scripts/109_r29_machine.py",
+   "data": "109_r29_machine.json",
+   "verdict": "6/11",
+   "desc": "MECH-1 殘餘／MECH-2 收口"
+  },
+  {
+   "layer": "R29",
+   "engine": "scripts/110_r29_audit.py",
+   "data": "110_r29_audit.json",
+   "verdict": "4/5",
+   "desc": "R29 獨立審計"
+  },
+  {
+   "layer": "R30",
+   "engine": "scripts/112_r30_machine.py",
+   "data": "112_r30_machine.json",
+   "verdict": "5/11",
+   "desc": "Z10-1 選擇律／Z10-2 根因"
+  },
+  {
+   "layer": "R30",
+   "engine": "scripts/113_r30_audit.py",
+   "data": "113_r30_audit.json",
+   "verdict": "4/4",
+   "desc": "R30 獨立審計"
+  },
+  {
+   "layer": "R31",
+   "engine": "scripts/115_r31_machine.py",
+   "data": "115_r31_machine.json",
+   "verdict": "6/10",
+   "desc": "STT-1 機制／四類／補集"
+  },
+  {
+   "layer": "R31",
+   "engine": "scripts/116_r31_audit.py",
+   "data": "116_r31_audit.json",
+   "verdict": "4/5",
+   "desc": "R31 獨立審計"
+  },
+  {
+   "layer": "R32",
+   "engine": "scripts/118_r32_machine.py",
+   "data": "118_r32_machine.json",
+   "verdict": "4/7",
+   "desc": "CRIT-3 充要／MISC-2 混合"
+  },
+  {
+   "layer": "R32",
+   "engine": "scripts/119_r32_audit.py",
+   "data": "119_r32_audit.json",
+   "verdict": "4/4",
+   "desc": "R32 獨立審計"
+  },
+  {
+   "layer": "R33",
+   "engine": "scripts/121_r33_machine.py",
+   "data": "121_r33_machine.json",
+   "verdict": "7/7",
+   "desc": "收口批：五項閉合"
+  },
+  {
+   "layer": "R33",
+   "engine": "scripts/122_r33_audit.py",
+   "data": "122_r33_audit.json",
+   "verdict": "4/4",
+   "desc": "R33 獨立審計"
+  }
+ ],
+ "note": "o225-blind-audit-v1 之單一入口索引；細節見各層 JSON 與 docs/57"
+}

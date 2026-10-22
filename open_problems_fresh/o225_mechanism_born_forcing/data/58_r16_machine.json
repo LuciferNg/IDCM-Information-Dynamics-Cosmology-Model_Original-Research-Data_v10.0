@@ -1,0 +1,769 @@
+{
+ "rules": "r16-value-reduction-v1",
+ "n_pass": 9,
+ "n_total": 12,
+ "claims": [
+  {
+   "tag": "F1",
+   "name": "■ dind(·,a) 只依 KV_s（於每條 KV-fibre 恆定）—— 因 ε、γ 皆只依 (KV_s, a)",
+   "ok": true,
+   "detail": "非恆定之（欄, 值）數 = 0 ; fibre 大小 = [10]"
+  },
+  {
+   "tag": "F2",
+   "name": "■ W_a ≡ ∅ ⟺ dind 於 T_a（等價於於 V(a)）恆定（30 edge 欄）",
+   "ok": true,
+   "detail": "一致 = 30/30 ; 非承載之 dind 集 = [(0,), (1,)] ; 承載之 dind 集 = [(0, 1)]"
+  },
+  {
+   "tag": "F3",
+   "name": "★ V(a) = {v ∈ 12 值 : ⟨U_a, v⟩ = 0}，|V(a)| = 4（30 edge 欄）",
+   "ok": true,
+   "detail": "成立 = 30/30 ; |V| 值集 = [4] ; 正交值數值集 = [4]"
+  },
+  {
+   "tag": "F4",
+   "name": "★ 8 非承載欄之恆定值 c(a)（猜測全 = 0）；22 承載欄之值分佈",
+   "ok": false,
+   "detail": "非承載 c(a) = {39: 0, 40: 1, 41: 0, 42: 1, 51: 0, 52: 1, 53: 0, 54: 1} ; 承載欄之 dind 集 = ['[0, 1]']"
+  },
+  {
+   "tag": "F5",
+   "name": "★★ 承載 ⟺ dind 於 V(a)（4 值）非恆定",
+   "ok": true,
+   "detail": "全 30 欄之一致 = True"
+  },
+  {
+   "tag": "F6",
+   "name": "★ 逐欄報 (欄, V(a) 之 4 值, 各值之 dind, 承載?)（量測）",
+   "ok": true,
+   "detail": "樣本（前 6 欄） = [(32, 2, True), (33, 2, True), (34, 2, True), (35, 2, True), (36, 2, True), (37, 2, True)]"
+  },
+  {
+   "tag": "G1",
+   "name": "■ f_tf／f_ft 之加項只依 (KV_{s·sw}, KV_{s·sr}, a)（值表法重算逐態相同）",
+   "ok": true,
+   "detail": "不符之（態, 類）數 = 0"
+  },
+  {
+   "tag": "G2",
+   "name": "★ Λ = f_tf + f_ft 之水平集：Λ⁻¹(0) = Z10（10 態、5 中心對）",
+   "ok": true,
+   "detail": "Λ 水平 = {-2: 10, 1: 6, -3: 8, 5: 8, 14: 2, -1: 18, 3: 2, -4: 2, -7: 8, 0: 10, 2: 12, 9: 4, -9: 4, 4: 6, -6: 6, 10: 2, 7: 2, -5: 4, 8: 2, -10: 2, 12: 2}"
+  },
+  {
+   "tag": "G3",
+   "name": "★ Z10 之 KV 多重度 = (2,2,2,4)，且重數 4 之值 = U[0]（Z10 ∩ KV⁻¹(U[0]) = 4 態）",
+   "ok": false,
+   "detail": "多重度 = [2, 2, 2, 4] ; KV⁻¹(U[0]) ∩ Z10 = [21, 117]（2 態）"
+  },
+  {
+   "tag": "G4",
+   "name": "★（候選）Λ 於 KV-fibre 上恆定（值局部）",
+   "ok": false,
+   "detail": "Λ 非恆定之 fibre = [((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1))), ((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1))), ((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1))), ((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1))), ((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2))), ((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2))), ((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2))), ((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2))), ((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1))), ((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1))), ((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1))), ((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))]（12/12）⟹ 非值局部"
+  },
+  {
+   "tag": "G5",
+   "name": "★ Z10 之 5 對之逐對不變量清單（階型／KV／f／f_tt）（量測）",
+   "ok": true,
+   "detail": "{9: {'階型': (3, 6), 'KV': '((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))', 'f': (2, -2), 'f_tt': 0, 'pair': 87}, 15: {'階型': (3, 6), 'KV': '((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))', 'f': (4, -4), 'f_tt': 0, 'pair': 77}, 21: {'階型': (5, 10), 'KV': '((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))', 'f': (-2, 2), 'f_tt': 3, 'pair': 117}, 31: {'階型': (5, 10), 'KV': '((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))', 'f': (2, -2), 'f_tt': 1, 'pair': 111}, 57: {'階型': (4, 4), 'KV': '((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))', 'f': (2, -2), 'f_tt': 1, 'pair': 67}}"
+  },
+  {
+   "tag": "G6",
+   "name": "★ 重數 4 之 KV 值之身分（量測）：= KV_9（並報 U[0] ∈ T 及其 Z10 重數）",
+   "ok": true,
+   "detail": "重數4之值 = ['((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))'] ; U[0] = ((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1))) ; U[0] ∈ T = True ; Z10∩KV⁻¹(U[0]) = [21, 117]"
+  }
+ ],
+ "keys": [
+  [
+   0,
+   30
+  ],
+  [
+   1,
+   29
+  ],
+  [
+   2,
+   32
+  ],
+  [
+   3,
+   31
+  ],
+  [
+   4,
+   28
+  ],
+  [
+   5,
+   27
+  ],
+  [
+   6,
+   26
+  ],
+  [
+   7,
+   25
+  ],
+  [
+   8,
+   24
+  ],
+  [
+   9,
+   23
+  ],
+  [
+   10,
+   22
+  ],
+  [
+   11,
+   21
+  ],
+  [
+   12,
+   16
+  ],
+  [
+   13,
+   15
+  ],
+  [
+   14,
+   14
+  ],
+  [
+   15,
+   13
+  ],
+  [
+   16,
+   20
+  ],
+  [
+   17,
+   19
+  ],
+  [
+   18,
+   18
+  ],
+  [
+   19,
+   17
+  ],
+  [
+   20,
+   12
+  ],
+  [
+   21,
+   11
+  ],
+  [
+   22,
+   10
+  ],
+  [
+   23,
+   9
+  ],
+  [
+   24,
+   8
+  ],
+  [
+   25,
+   7
+  ],
+  [
+   26,
+   6
+  ],
+  [
+   27,
+   5
+  ],
+  [
+   28,
+   4
+  ],
+  [
+   29,
+   3
+  ],
+  [
+   30,
+   2
+  ],
+  [
+   31,
+   1
+  ],
+  [
+   32,
+   62
+  ],
+  [
+   33,
+   66
+  ],
+  [
+   34,
+   65
+  ],
+  [
+   35,
+   64
+  ],
+  [
+   36,
+   63
+  ],
+  [
+   37,
+   74
+  ],
+  [
+   38,
+   73
+  ],
+  [
+   39,
+   72
+  ],
+  [
+   40,
+   71
+  ],
+  [
+   41,
+   70
+  ],
+  [
+   42,
+   69
+  ],
+  [
+   43,
+   68
+  ],
+  [
+   44,
+   67
+  ],
+  [
+   45,
+   61
+  ],
+  [
+   46,
+   60
+  ],
+  [
+   47,
+   59
+  ],
+  [
+   48,
+   58
+  ],
+  [
+   49,
+   57
+  ],
+  [
+   50,
+   56
+  ],
+  [
+   51,
+   55
+  ],
+  [
+   52,
+   54
+  ],
+  [
+   53,
+   53
+  ],
+  [
+   54,
+   52
+  ],
+  [
+   55,
+   51
+  ],
+  [
+   56,
+   50
+  ],
+  [
+   57,
+   49
+  ],
+  [
+   58,
+   48
+  ],
+  [
+   59,
+   47
+  ],
+  [
+   60,
+   46
+  ],
+  [
+   61,
+   45
+  ]
+ ],
+ "F": {
+  "V": {
+   "32": [
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))"
+   ],
+   "33": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "34": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "35": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "36": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "37": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))"
+   ],
+   "38": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))"
+   ],
+   "39": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))"
+   ],
+   "40": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))"
+   ],
+   "41": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "42": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "43": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "44": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "45": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))"
+   ],
+   "46": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "47": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "48": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))"
+   ],
+   "49": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "50": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "51": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "52": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "53": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))"
+   ],
+   "54": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))"
+   ],
+   "55": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))"
+   ],
+   "56": [
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))"
+   ],
+   "57": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "58": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "59": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "60": [
+    "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "((Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)))",
+    "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+   ],
+   "61": [
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))",
+    "((Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))"
+   ]
+  },
+  "dconst": {
+   "32": [
+    0,
+    1
+   ],
+   "33": [
+    0,
+    1
+   ],
+   "34": [
+    0,
+    1
+   ],
+   "35": [
+    0,
+    1
+   ],
+   "36": [
+    0,
+    1
+   ],
+   "37": [
+    0,
+    1
+   ],
+   "38": [
+    0,
+    1
+   ],
+   "39": [
+    0
+   ],
+   "40": [
+    1
+   ],
+   "41": [
+    0
+   ],
+   "42": [
+    1
+   ],
+   "43": [
+    0,
+    1
+   ],
+   "44": [
+    0,
+    1
+   ],
+   "45": [
+    0,
+    1
+   ],
+   "46": [
+    0,
+    1
+   ],
+   "47": [
+    0,
+    1
+   ],
+   "48": [
+    0,
+    1
+   ],
+   "49": [
+    0,
+    1
+   ],
+   "50": [
+    0,
+    1
+   ],
+   "51": [
+    0
+   ],
+   "52": [
+    1
+   ],
+   "53": [
+    0
+   ],
+   "54": [
+    1
+   ],
+   "55": [
+    0,
+    1
+   ],
+   "56": [
+    0,
+    1
+   ],
+   "57": [
+    0,
+    1
+   ],
+   "58": [
+    0,
+    1
+   ],
+   "59": [
+    0,
+    1
+   ],
+   "60": [
+    0,
+    1
+   ],
+   "61": [
+    0,
+    1
+   ]
+  },
+  "cval": {
+   "39": 0,
+   "40": 1,
+   "41": 0,
+   "42": 1,
+   "51": 0,
+   "52": 1,
+   "53": 0,
+   "54": 1
+  }
+ },
+ "G": {
+  "LV": {
+   "-2": 10,
+   "1": 6,
+   "-3": 8,
+   "5": 8,
+   "14": 2,
+   "-1": 18,
+   "3": 2,
+   "-4": 2,
+   "-7": 8,
+   "0": 10,
+   "2": 12,
+   "9": 4,
+   "-9": 4,
+   "4": 6,
+   "-6": 6,
+   "10": 2,
+   "7": 2,
+   "-5": 4,
+   "8": 2,
+   "-10": 2,
+   "12": 2
+  },
+  "zoom": {
+   "9": {
+    "階型": [
+     3,
+     6
+    ],
+    "KV": "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "f": [
+     2,
+     -2
+    ],
+    "f_tt": 0,
+    "pair": 87
+   },
+   "15": {
+    "階型": [
+     3,
+     6
+    ],
+    "KV": "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+    "f": [
+     4,
+     -4
+    ],
+    "f_tt": 0,
+    "pair": 77
+   },
+   "21": {
+    "階型": [
+     5,
+     10
+    ],
+    "KV": "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "f": [
+     -2,
+     2
+    ],
+    "f_tt": 3,
+    "pair": 117
+   },
+   "31": {
+    "階型": [
+     5,
+     10
+    ],
+    "KV": "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "f": [
+     2,
+     -2
+    ],
+    "f_tt": 1,
+    "pair": 111
+   },
+   "57": {
+    "階型": [
+     4,
+     4
+    ],
+    "KV": "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+    "f": [
+     2,
+     -2
+    ],
+    "f_tt": 1,
+    "pair": 67
+   }
+  },
+  "mult": {
+   "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))": 4,
+   "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))": 2,
+   "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))": 2,
+   "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))": 2
+  }
+ },
+ "nec8": [
+  39,
+  40,
+  41,
+  42,
+  51,
+  52,
+  53,
+  54
+ ],
+ "nz22": [
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61
+ ]
+}

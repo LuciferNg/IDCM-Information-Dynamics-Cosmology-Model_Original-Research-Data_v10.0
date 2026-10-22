@@ -1,0 +1,7 @@
+CALIBRATION cells: ['6', '1', '1', '6000', '12'] (record: 6, 1, 1, 6000, 12)
+perturbations: 247
+cells that respond to at least one perturbation: [(1, 247), (2, 247), (4, 247), (5, 247)]
+rank over Q of the response matrix (4 responsive cells x 247 perturbations) = 1
+Pr-1 (rank >= 3): REFUTED (rank=1)
+Pr-2 (c2 not proportional to c3): REFUTED/undefined prop=None
+per-cell number of perturbations that move it: {1: 182, 2: 182, 3: 0, 4: 182, 5: 182}

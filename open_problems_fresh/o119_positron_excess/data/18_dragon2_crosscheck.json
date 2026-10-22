@@ -1,0 +1,12 @@
+{
+ "dragon2_points": 77,
+ "secondary_fraction_slope_1to10GeV": -0.8975293031070294,
+ "f_sec_DR_1GeV": 0.12262430727886463,
+ "f_sec_DR_10GeV": 0.02031772168955523,
+ "f_sec_DR_100GeV": 0.02569611232001732,
+ "excess_median": 0.04347580432956527,
+ "excess_peak_GeV": 261.79947679444,
+ "excess_peak_sigma": 12.463633459738901,
+ "E_scale_ratio_vs_mdeltaW": 18766.314956054623,
+ "verdict": "DRAGON2 純次級分數 1→10 GeV 下降 (斜率 -0.898, 谷底 0.020@10GeV); AMS-02 有正超出 (中位 +0.043, 峰 +0.124@262GeV, 12.5σ) -> 次級唔解釋正電子超出; 超出標度 ~262 GeV vs W-field 13.95 MeV (比 1.9e4)"
+}

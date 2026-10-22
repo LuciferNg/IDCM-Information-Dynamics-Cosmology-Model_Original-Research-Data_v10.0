@@ -1,0 +1,13 @@
+{
+  "rd_idcm": 147.438513,
+  "r_drag": 147.09,
+  "dev_raw": 0.2369,
+  "L7F7_Nd": 421,
+  "inv_421": 0.0023752969121140144,
+  "rd_corrected": 147.088303,
+  "dev_corrected": 0.0012,
+  "best_candidate": "1/(L\u2087\u00d7F\u2087 + N_d) = 1/421",
+  "fibonacci_14": 377,
+  "pass": 1,
+  "fail": 0
+}

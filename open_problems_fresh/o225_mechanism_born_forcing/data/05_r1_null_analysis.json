@@ -1,0 +1,1883 @@
+{
+ "rules": "r1-null-analysis-v1",
+ "N": 200,
+ "rows": [
+  {
+   "draw": 0,
+   "n_distinct": 16,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 1,
+   "n_distinct": 19,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 2,
+   "n_distinct": 8,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 3,
+   "n_distinct": 14,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 4,
+   "n_distinct": 8,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 5,
+   "n_distinct": 10,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 6,
+   "n_distinct": 12,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 7,
+   "n_distinct": 10,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 8,
+   "n_distinct": 9,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 9,
+   "n_distinct": 11,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 10,
+   "n_distinct": 16,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 11,
+   "n_distinct": 9,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 12,
+   "n_distinct": 9,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 13,
+   "n_distinct": 18,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 14,
+   "n_distinct": 10,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 15,
+   "n_distinct": 12,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 16,
+   "n_distinct": 8,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 17,
+   "n_distinct": 19,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 18,
+   "n_distinct": 16,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 19,
+   "n_distinct": 10,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 20,
+   "n_distinct": 9,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 21,
+   "n_distinct": 10,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 22,
+   "n_distinct": 7,
+   "Delta": 12,
+   "m_min": 6,
+   "A": 0,
+   "R_min": -6,
+   "R_max": 6
+  },
+  {
+   "draw": 23,
+   "n_distinct": 8,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 24,
+   "n_distinct": 23,
+   "Delta": 64,
+   "m_min": 32,
+   "A": 0,
+   "R_min": -32,
+   "R_max": 32
+  },
+  {
+   "draw": 25,
+   "n_distinct": 11,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 26,
+   "n_distinct": 12,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 27,
+   "n_distinct": 18,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 28,
+   "n_distinct": 10,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 29,
+   "n_distinct": 6,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 30,
+   "n_distinct": 16,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 31,
+   "n_distinct": 17,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 32,
+   "n_distinct": 6,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 33,
+   "n_distinct": 7,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 34,
+   "n_distinct": 6,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 35,
+   "n_distinct": 9,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 36,
+   "n_distinct": 20,
+   "Delta": 60,
+   "m_min": 30,
+   "A": 0,
+   "R_min": -30,
+   "R_max": 30
+  },
+  {
+   "draw": 37,
+   "n_distinct": 11,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 38,
+   "n_distinct": 10,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 39,
+   "n_distinct": 9,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 40,
+   "n_distinct": 10,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 41,
+   "n_distinct": 9,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 42,
+   "n_distinct": 11,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 43,
+   "n_distinct": 22,
+   "Delta": 64,
+   "m_min": 32,
+   "A": 0,
+   "R_min": -32,
+   "R_max": 32
+  },
+  {
+   "draw": 44,
+   "n_distinct": 12,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 45,
+   "n_distinct": 8,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 46,
+   "n_distinct": 12,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 47,
+   "n_distinct": 8,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 48,
+   "n_distinct": 14,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 49,
+   "n_distinct": 1,
+   "Delta": 0,
+   "m_min": 0,
+   "A": 0,
+   "R_min": 0,
+   "R_max": 0
+  },
+  {
+   "draw": 50,
+   "n_distinct": 5,
+   "Delta": 8,
+   "m_min": 4,
+   "A": 0,
+   "R_min": -4,
+   "R_max": 4
+  },
+  {
+   "draw": 51,
+   "n_distinct": 10,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 52,
+   "n_distinct": 16,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 53,
+   "n_distinct": 7,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 54,
+   "n_distinct": 11,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 55,
+   "n_distinct": 9,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 56,
+   "n_distinct": 17,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 57,
+   "n_distinct": 13,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 58,
+   "n_distinct": 11,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 59,
+   "n_distinct": 13,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 60,
+   "n_distinct": 8,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 61,
+   "n_distinct": 9,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 62,
+   "n_distinct": 10,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 63,
+   "n_distinct": 12,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 64,
+   "n_distinct": 7,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 65,
+   "n_distinct": 10,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 66,
+   "n_distinct": 8,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 67,
+   "n_distinct": 10,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 68,
+   "n_distinct": 9,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 69,
+   "n_distinct": 20,
+   "Delta": 60,
+   "m_min": 30,
+   "A": 0,
+   "R_min": -30,
+   "R_max": 30
+  },
+  {
+   "draw": 70,
+   "n_distinct": 11,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 71,
+   "n_distinct": 13,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 72,
+   "n_distinct": 18,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 73,
+   "n_distinct": 18,
+   "Delta": 68,
+   "m_min": 34,
+   "A": 0,
+   "R_min": -34,
+   "R_max": 34
+  },
+  {
+   "draw": 74,
+   "n_distinct": 14,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 75,
+   "n_distinct": 12,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 76,
+   "n_distinct": 10,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 77,
+   "n_distinct": 16,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 78,
+   "n_distinct": 12,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 79,
+   "n_distinct": 6,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 80,
+   "n_distinct": 17,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 81,
+   "n_distinct": 18,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 82,
+   "n_distinct": 15,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 83,
+   "n_distinct": 9,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 84,
+   "n_distinct": 20,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 85,
+   "n_distinct": 6,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 86,
+   "n_distinct": 8,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 87,
+   "n_distinct": 6,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 88,
+   "n_distinct": 20,
+   "Delta": 60,
+   "m_min": 30,
+   "A": 0,
+   "R_min": -30,
+   "R_max": 30
+  },
+  {
+   "draw": 89,
+   "n_distinct": 11,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 90,
+   "n_distinct": 22,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 91,
+   "n_distinct": 14,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 92,
+   "n_distinct": 8,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 93,
+   "n_distinct": 17,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 94,
+   "n_distinct": 12,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 95,
+   "n_distinct": 16,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 96,
+   "n_distinct": 12,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 97,
+   "n_distinct": 8,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 98,
+   "n_distinct": 10,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 99,
+   "n_distinct": 8,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 100,
+   "n_distinct": 20,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 101,
+   "n_distinct": 11,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 102,
+   "n_distinct": 10,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 103,
+   "n_distinct": 12,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 104,
+   "n_distinct": 10,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 105,
+   "n_distinct": 8,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 106,
+   "n_distinct": 11,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 107,
+   "n_distinct": 11,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 108,
+   "n_distinct": 20,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 109,
+   "n_distinct": 9,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 110,
+   "n_distinct": 11,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 111,
+   "n_distinct": 18,
+   "Delta": 60,
+   "m_min": 30,
+   "A": 0,
+   "R_min": -30,
+   "R_max": 30
+  },
+  {
+   "draw": 112,
+   "n_distinct": 8,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 113,
+   "n_distinct": 5,
+   "Delta": 12,
+   "m_min": 6,
+   "A": 0,
+   "R_min": -6,
+   "R_max": 6
+  },
+  {
+   "draw": 114,
+   "n_distinct": 8,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 115,
+   "n_distinct": 18,
+   "Delta": 64,
+   "m_min": 32,
+   "A": 0,
+   "R_min": -32,
+   "R_max": 32
+  },
+  {
+   "draw": 116,
+   "n_distinct": 15,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 117,
+   "n_distinct": 10,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 118,
+   "n_distinct": 7,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 119,
+   "n_distinct": 18,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 120,
+   "n_distinct": 7,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 121,
+   "n_distinct": 16,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 122,
+   "n_distinct": 22,
+   "Delta": 68,
+   "m_min": 34,
+   "A": 0,
+   "R_min": -34,
+   "R_max": 34
+  },
+  {
+   "draw": 123,
+   "n_distinct": 17,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 124,
+   "n_distinct": 18,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 125,
+   "n_distinct": 5,
+   "Delta": 8,
+   "m_min": 4,
+   "A": 0,
+   "R_min": -4,
+   "R_max": 4
+  },
+  {
+   "draw": 126,
+   "n_distinct": 15,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 127,
+   "n_distinct": 17,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 128,
+   "n_distinct": 1,
+   "Delta": 0,
+   "m_min": 0,
+   "A": 0,
+   "R_min": 0,
+   "R_max": 0
+  },
+  {
+   "draw": 129,
+   "n_distinct": 16,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 130,
+   "n_distinct": 6,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 131,
+   "n_distinct": 10,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 132,
+   "n_distinct": 10,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 133,
+   "n_distinct": 22,
+   "Delta": 64,
+   "m_min": 32,
+   "A": 0,
+   "R_min": -32,
+   "R_max": 32
+  },
+  {
+   "draw": 134,
+   "n_distinct": 14,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 135,
+   "n_distinct": 18,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 136,
+   "n_distinct": 13,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 137,
+   "n_distinct": 20,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 138,
+   "n_distinct": 11,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 139,
+   "n_distinct": 12,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 140,
+   "n_distinct": 18,
+   "Delta": 64,
+   "m_min": 32,
+   "A": 0,
+   "R_min": -32,
+   "R_max": 32
+  },
+  {
+   "draw": 141,
+   "n_distinct": 11,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 142,
+   "n_distinct": 16,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 143,
+   "n_distinct": 10,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 144,
+   "n_distinct": 12,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 145,
+   "n_distinct": 18,
+   "Delta": 64,
+   "m_min": 32,
+   "A": 0,
+   "R_min": -32,
+   "R_max": 32
+  },
+  {
+   "draw": 146,
+   "n_distinct": 16,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 147,
+   "n_distinct": 22,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 148,
+   "n_distinct": 8,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 149,
+   "n_distinct": 13,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 150,
+   "n_distinct": 14,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 151,
+   "n_distinct": 8,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 152,
+   "n_distinct": 15,
+   "Delta": 68,
+   "m_min": 34,
+   "A": 0,
+   "R_min": -34,
+   "R_max": 34
+  },
+  {
+   "draw": 153,
+   "n_distinct": 13,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 154,
+   "n_distinct": 7,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 155,
+   "n_distinct": 11,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 156,
+   "n_distinct": 9,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 157,
+   "n_distinct": 7,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 158,
+   "n_distinct": 10,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 159,
+   "n_distinct": 18,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 160,
+   "n_distinct": 11,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 161,
+   "n_distinct": 8,
+   "Delta": 44,
+   "m_min": 22,
+   "A": 0,
+   "R_min": -22,
+   "R_max": 22
+  },
+  {
+   "draw": 162,
+   "n_distinct": 10,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 163,
+   "n_distinct": 12,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 164,
+   "n_distinct": 20,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 165,
+   "n_distinct": 9,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 166,
+   "n_distinct": 11,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 167,
+   "n_distinct": 18,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 168,
+   "n_distinct": 15,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 169,
+   "n_distinct": 16,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 170,
+   "n_distinct": 14,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 171,
+   "n_distinct": 18,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 172,
+   "n_distinct": 6,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 173,
+   "n_distinct": 6,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 174,
+   "n_distinct": 12,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 175,
+   "n_distinct": 7,
+   "Delta": 16,
+   "m_min": 8,
+   "A": 0,
+   "R_min": -8,
+   "R_max": 8
+  },
+  {
+   "draw": 176,
+   "n_distinct": 13,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 177,
+   "n_distinct": 17,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 178,
+   "n_distinct": 14,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 179,
+   "n_distinct": 8,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 180,
+   "n_distinct": 12,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 181,
+   "n_distinct": 8,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 182,
+   "n_distinct": 10,
+   "Delta": 32,
+   "m_min": 16,
+   "A": 0,
+   "R_min": -16,
+   "R_max": 16
+  },
+  {
+   "draw": 183,
+   "n_distinct": 16,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 184,
+   "n_distinct": 9,
+   "Delta": 28,
+   "m_min": 14,
+   "A": 0,
+   "R_min": -14,
+   "R_max": 14
+  },
+  {
+   "draw": 185,
+   "n_distinct": 11,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 186,
+   "n_distinct": 10,
+   "Delta": 40,
+   "m_min": 20,
+   "A": 0,
+   "R_min": -20,
+   "R_max": 20
+  },
+  {
+   "draw": 187,
+   "n_distinct": 10,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 188,
+   "n_distinct": 16,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 189,
+   "n_distinct": 12,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 190,
+   "n_distinct": 10,
+   "Delta": 36,
+   "m_min": 18,
+   "A": 0,
+   "R_min": -18,
+   "R_max": 18
+  },
+  {
+   "draw": 191,
+   "n_distinct": 22,
+   "Delta": 56,
+   "m_min": 28,
+   "A": 0,
+   "R_min": -28,
+   "R_max": 28
+  },
+  {
+   "draw": 192,
+   "n_distinct": 10,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 193,
+   "n_distinct": 15,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 194,
+   "n_distinct": 1,
+   "Delta": 0,
+   "m_min": 0,
+   "A": 0,
+   "R_min": 0,
+   "R_max": 0
+  },
+  {
+   "draw": 195,
+   "n_distinct": 19,
+   "Delta": 52,
+   "m_min": 26,
+   "A": 0,
+   "R_min": -26,
+   "R_max": 26
+  },
+  {
+   "draw": 196,
+   "n_distinct": 9,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  },
+  {
+   "draw": 197,
+   "n_distinct": 13,
+   "Delta": 48,
+   "m_min": 24,
+   "A": 0,
+   "R_min": -24,
+   "R_max": 24
+  },
+  {
+   "draw": 198,
+   "n_distinct": 10,
+   "Delta": 24,
+   "m_min": 12,
+   "A": 0,
+   "R_min": -12,
+   "R_max": 12
+  },
+  {
+   "draw": 199,
+   "n_distinct": 5,
+   "Delta": 20,
+   "m_min": 10,
+   "A": 0,
+   "R_min": -10,
+   "R_max": 10
+  }
+ ],
+ "const_cases": [
+  {
+   "draw": 49,
+   "R_value": 0,
+   "n_distinct_axes": 44,
+   "closed_under_negation": false,
+   "min_multiplicity": 1,
+   "max_multiplicity": 3,
+   "axis_multiplicities_top": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "draw": 128,
+   "R_value": 0,
+   "n_distinct_axes": 45,
+   "closed_under_negation": false,
+   "min_multiplicity": 1,
+   "max_multiplicity": 3,
+   "axis_multiplicities_top": [
+    3,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "draw": 194,
+   "R_value": 0,
+   "n_distinct_axes": 37,
+   "closed_under_negation": false,
+   "min_multiplicity": 1,
+   "max_multiplicity": 4,
+   "axis_multiplicities_top": [
+    4,
+    3,
+    3,
+    3
+   ]
+  }
+ ],
+ "delta_stats": {
+  "min": 0,
+  "median": 36,
+  "max": 68,
+  "n_equal_20": 18,
+  "n_less_than_20": 16
+ },
+ "claims": [
+  {
+   "tag": "Q1",
+   "name": "隨機軸機器（200 抽）之 Delta 分佈：min = 0，median = 36，max = 68（凍結 K 之 Delta = 20）",
+   "ok": false,
+   "detail": "min=0 median=36 max=68 ; #Delta=20 : 18"
+  },
+  {
+   "tag": "Q2",
+   "name": "隨機軸機器命中「恰兩值且 = {-10,+10}」之次數 = 0；兩值個案數 = 0（皆非 {-10,+10}）",
+   "ok": true,
+   "detail": "two-valued draws = 0 ; their (min,max) = []"
+  },
+  {
+   "tag": "Q3",
+   "name": "★ 「R 恆常」個案數 = 3/200（P4 之 ⟺ 另一側）",
+   "ok": true,
+   "detail": "constant-R draws = [(49, 0, 44, False, 1, 3), (128, 0, 45, False, 1, 3), (194, 0, 37, False, 1, 4)]"
+  },
+  {
+   "tag": "Q4",
+   "name": "★ 陽性對照：對每個 R 恆常個案，W = 1/n + beta·K（beta = ±1/n）皆 非負＋歸一＋態敏感（P4 充分性之 out-of-sample 實例）",
+   "ok": false,
+   "detail": "draw 49: nonneg+normalized+sensitive = False | draw 128: nonneg+normalized+sensitive = False | draw 194: nonneg+normalized+sensitive = False"
+  }
+ ]
+}

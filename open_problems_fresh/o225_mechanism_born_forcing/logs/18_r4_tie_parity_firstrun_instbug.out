@@ -1,0 +1,20 @@
+================================================================================================================
+O225 scripts/18 -- R4 MACHINE: algebraic origin of the tie parity   (rules: r4-tie-parity-v1)
+================================================================================================================
+[PASS] P1     ★ 62 軸恰成 31 對精確負（U[ā] = −U[a]），型別分解 15 edge + 10 face + 6 vertex  --  paired = 62/62 ; pairs = 31 ; types = {'vertex': 6, 'face': 10, 'edge': 15}
+[PASS] P2     ★ 非 tie 條目 K[s][ā] = −K[s][a]（對消）；tie 條目 K[s][ā] = +K[s][a]（相加）（因凍結 tie 分支只依 r_s，唔依 U[a]）  --  off-tie antisymmetry = True ; tie same-sign = True ; ties/row = [5] ; τ 值域 = [-1, 1]
+[PASS] P3a    ★ R(s) = 2·τ(s)·n_tie(s) 逐 row 精確（R1 障礙之代數機制）  --  R 值域 = [-10, 10] ; n_tie ≡ [5]
+[PASS] P3b    ★ R1 重導：n_tie ≡ 5 ⟹ R = ±10、Δ = 20、m_min = ceil(Δ/2) = 10 = 2×5  --  n_tie = [5] ; R = [-10, 10] ; Δ = 20 ; m_min = 10 (A = 0)
+[PASS] P4a    ★★ 乘積層讀出 Λ(conj(r)·u) = Λ(⟨u,r⟩, u×r) 在全部 7440 條目上 == M-b（0 例外）  --  matches = 7440 / 7440
+[PASS] P4b    ★ 同規則在全部非 tie 條目上 == 機器 K（0 例外）  --  matches = 6240 / 6240
+[PASS] P4c    ★ 在 tie 條目上只部分一致 ⟹ 機器 tie 分支非「單一物件之首非零分量」函數  --  matches = 600 / 1200（機器讀 r、乘積層讀 u×r）
+[PASS] P5     ★ u-宇稱充要：R ≡ 0 ⟺ 該規則在 tie 上 u-奇（候選族 6 個逐個驗）  --  r (機器型): R=[-10, 10] u_odd=True; u: R=[0] u_odd=True; u×r: R=[0] u_odd=True; u+r: R=[-10, -6, 0, 6, 10] u_odd=True; u−r: R=[-10, -6, 0, 6, 10] u_odd=True; conj(r)·u = (⟨u,r⟩, u×r): R=[0] u_odd=True
+[PASS] P6     ★ 商：ax(s)（r_s 之二十面體軸線）恰 6 值、每值 20 態；tie 集合係 ax 之函數（6 個相異 tie 集）⟹ 障礙之表住喺 6 條軸上  --  states/axis = [20, 20, 20, 20, 20, 20] ; distinct tie sets = 6 ; tie types per axis = {0: {'edge': 10}, 4: {'edge': 10}, 3: {'edge': 10}, 5: {'edge': 10}, 2: {'edge': 10}, 1: {'edge': 10}}
+[PASS] P7a    ★ 子表 edge(30)/face(20)/vertex(12)：各表之 n_tie 與 R、u-奇規則下 R ≡ 0  --  edge: n=30 n_tie=[5] R=[-10, 10] m_min=10 u-odd R=[0]; face: n=20 n_tie=[0] R=[0] m_min=0 u-odd R=[0]; vertex: n=12 n_tie=[0] R=[0] m_min=0 u-odd R=[0]
+[FAIL] P7b    ★ 200 旋轉機器：u-偶規則 ⟹ |R| = 2·n_tie（每 row 一致）；u-奇規則 ⟹ R ≡ 0（逐個驗）  --  u-even ok = 0/200 ; u-odd ok = 200/200 ; n_tie 值域 = [600] ; 例外 = [('even', 0, [-10, 10], 600), ('even', 1, [-10, 10], 600), ('even', 2, [-10, 10], 600)]
+[PASS] P8a    ★ tie 位分解（障礙位）：候選族中 R ≡ 0 ⟺ u-奇；u-偶（含機器之 r-only）⟹ |R| = 2n_tie > 0  --  機器型 = {'R_range': [-10, 10], 'R_zero': False, 'u_odd': True}
+[PASS] P8b    ★ R-中性位：兩個「乘積層且非 tie 一致」候選（+u×r 與 −u×r）皆 R ≡ 0，但 tie 值不同 ⟹ 「乘積層 + 非 tie 一致」唔足以唯一固定 tie 位（本輪預註冊之唯一性被否證，誠實報）  --  R(+cross) = [0] ; R(−cross) = [0] ; tie 值相異條目 = 1200
+[PASS] P8c    判決：障礙完全由「讀出物件」之宇稱位決定（乘積層 vs r-only）；餘下之向量部符號位係 R-中性約定 ⟹ M-b 之「1 bit」= 讀出約定，唔係新增物理輸入  --  見 P5/P8a/P8b
+================================================================================================================
+RESULT: 13/14 PASS
+================================================================================================================

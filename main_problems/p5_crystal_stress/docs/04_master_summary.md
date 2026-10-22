@@ -97,7 +97,7 @@
 - **S(i)**：加權 BC × (frust+1)/(hop+1)，cost=2 打破對稱，BC vs Frust r=-0.75
 - **f(hop)**：波動方程干涉核 [1 + 0.3636·cos(π·hop/4)]，C 偏差 0.2%
 - **hop=4 波節**：質量低 53.3%（可證偽預測，等 Euclid 驗證）
-- 詳細推導：`../../little_red_dots/records/04_mass_scaling_framework.md`
+- 詳細推導：`../../p11_little_red_dots/records/04_mass_scaling_framework.md`
 
 **拍頻 Δω=0.00368**：真實 Zeeman 分裂但 T_beat=3330× 宇宙年齡 → 靜態效應，不可觀測 ✅
 
@@ -113,7 +113,7 @@
 
 **關鍵發現：** COSMOS 場 = 單一 hop=4 節點 → 「同節點同質量」預測驗證 (σ=0.43 dex ≈ Eddington 散佈)；N(z) 峰值與 Balmer break 顏色選擇窗口 (z≈5.6-9.5) 重合但光度限制子樣本斜率更正 → 未定案。
 
-詳細：`../../little_red_dots/records/05_lrd_cosmosweb_quantitative.md`
+詳細：`../../p11_little_red_dots/records/05_lrd_cosmosweb_quantitative.md`
 
 ### 🆕 小紅點 — 三大開放問題閉合 (2026-09-09 第二輪)
 
@@ -125,7 +125,7 @@
 | 紅化機制 (塵埃 vs 結構) | 🟢 | **雙分量**：塵埃 (Av≈3.5 常數) 解釋顏色水平 2.16 mag；結構分量解釋 z-斜率 **+2.12/log₄(1+z)** (p=1e-13) — 塵埃修正後斜率仍在；黑體候選定量 REFUTED |
 | Schindler 5e8 矛盾 | 🟡 | J1007 最近節點 10 (hop=4, S=0.061), M_base=2.50e6；**×(1+δ=30)^1.5 = 4.31e8 vs 5e8 (0.86)** — δ 用論文實測值，零自由參數 |
 
-**詳細：** `../../little_red_dots/records/06_three_closures.md`
+**詳細：** `../../p11_little_red_dots/records/06_three_closures.md`
 
 ### 🆕 小紅點 — 標度定律 + 閉合形式 + Free-fall 凝聚 (2026-09-09 第三輪)
 
@@ -139,7 +139,7 @@
 
 **本地 LRD 低 z 外推支持** 🟢 (定性): (LRDs)² Survey Paper II (arXiv:2605.21574) — **27 個 LRD @ z=0.2-0.9** (DESI DR1); Lin+2025 (2507.10659) — 3 個 @ z=0.1-0.2 (SDSS)。LRD 唔係早期宇宙獨有 → 支持 1/(1+z) 無衰減預測。
 
-**詳細：** `../../little_red_dots/records/07_scaling_estrain_freefall.md`
+**詳細：** `../../p11_little_red_dots/records/07_scaling_estrain_freefall.md`
 
 ### 🆕 小紅點 — 環境測量 + 候選審計 (2026-09-09 第四輪)
 
@@ -154,7 +154,7 @@
 | **#13 候選撤銷** ✅ | log₁₀(M/M_Pl)=44.243≈44 — **只有 base-10 撞, 人為 → 撤銷** (無效才是正確) |
 | **88/21 框架** 🔴 | p≈3=N_gen (γ³ 模態權重, 世代積) 自洽; break 幾何 → 88/21 常數來源仍開放 |
 
-**詳細：** `../../little_red_dots/records/08_environment_delta_audit.md`
+**詳細：** `../../p11_little_red_dots/records/08_environment_delta_audit.md`
 
 ### 🆕 投影方向審計 (2026-09-09 第五輪)
 
@@ -173,7 +173,7 @@
 
 **正反比閉環**：t_nz × t_branch = 4^{-ℓ}·4^ℓ = 1; m_eta × m_accum = φ⁻²¹·φ²¹ = 1 — 宇宙投影係維度升降閉環。
 
-**詳細：** `../../little_red_dots/records/09_projection_audit.md`
+**詳細：** `../../p11_little_red_dots/records/09_projection_audit.md`
 
 ### 🆕 投影延伸 — 互補性 + 比值譜 + LH 鏈 (2026-09-09 第六輪)
 
@@ -187,7 +187,7 @@
 
 **理論框架**：陡峭化 = **離散 RG 流** — β-function dβ/dℓ = 176/42（每層固定步長），β 係跑動耦合，ℓ 係能量尺度；凝聚 η 同陡峭化共享 (N_d−μ²)。
 
-**詳細：** `../../little_red_dots/records/10_projection_extensions.md`
+**詳細：** `../../p11_little_red_dots/records/10_projection_extensions.md`
 
 ### 🆕 RG 流完整推導 (2026-09-09 第七輪)
 
@@ -203,7 +203,7 @@
 
 **誠實分層**：代數部分 🟢（全部恆等）；結構論證 🟢（候選/有效計數）；類比性 🟡（√4 normalize）；未推 🔴（點解 β = 比值形式）。
 
-**詳細：** `../../little_red_dots/records/11_rg_flow.md`
+**詳細：** `../../p11_little_red_dots/records/11_rg_flow.md`
 
 ### 🆕 RG 延伸 — λ_Edd 誠實修正 + β 壓縮比公設 (2026-09-09 第八輪)
 
@@ -216,7 +216,7 @@
 | **判別檢驗** | 截斷 +0.22σ / 無截斷 −0.16σ / 無分支 −1.89σ — **判別力不足**（需 ±0.15 斜率誤差） | 🟡 |
 | **算術修正** | dβ/dℓ×M₄/M₀ = 1.9556 → dev **2.2%**（record 10 原寫 0.9% 係算術錯誤） | ⚠️ |
 
-**詳細：** `../../little_red_dots/records/12_rg_extensions.md`
+**詳細：** `../../p11_little_red_dots/records/12_rg_extensions.md`
 
 ---
 
@@ -277,26 +277,19 @@
 ## 檔案結構
 
 ```
-crystal_stress/                       (約 60 文件)
-├── records/
-│   ├── 01_problem_record.md          # 主記錄（問題定義 + 發現）
+p5_crystal_stress/                    (root: main_problems/p5_crystal_stress/)
+├── 01_problem_record.md              # 主記錄（問題定義 + 發現）— root (2026-10-17 遷移)
+├── README.md                         # 對外導引
+├── SESSION_START.md                  # 起手式 + 交接
+├── final_result.md                   # 結論摘要
+├── docs/
 │   ├── 04_master_summary.md          # 本文檔（總結 + 驗證 45/45）
-│   └── 06_gemini_insight_analysis.md # Gemini 5 洞察分析
-├── scripts/
-│   └── 00_master_verification.py     # 綜合驗證 (45/45 PASS)
-├── uhecrs/
-│   ├── records/
-│   │   ├── 03_uhecrs_record.md       # UHECR 詳細
-│   │   └── 05_psz1_vacuum_result.md  # 星系團真空 3.43σ
-│   ├── scripts/ (21)                 # 01-21: GZK/各向異性/偏振/LSS/星系團/盲測/聯合檢驗
-│   └── data/ (18 json/csv)           # Auger 目錄 + 各項結果
-└── little_red_dots/                    # ⚠️ 2026-09-13 已獨立 → main_problems/p11_little_red_dots/
-    ├── records/
-    │   ├── 02_lrd_record.md          # LRD 詳細
-    │   ├── 03_lrd_mass_trap.md       # 質量標度陷阱示範
-    │   └── 04_mass_scaling_framework.md # 路由框架 + 干涉核
-    ├── scripts/ (10)                 # N(z)/質量標度/位置/路由/波方程/驗證
-    └── data/ (6)                     # COSMOS-Web 目錄 + 各項結果
+│   ├── 06_gemini_insight_analysis.md # Gemini 5 洞察分析
+│   └── 07_o169_correction_reverify.md # O169 伸長律修正重驗
+├── scripts/                          # 00/01 歷史 + 02, 10-16 重驗
+├── data/                             # 4 星系團目錄 + 6 reverify json
+├── uhecrs/ → 已分拆 → main_problems/p12_uhecrs/    (2026-09-27)
+└── little_red_dots/ → 已獨立 → main_problems/p11_little_red_dots/  (2026-09-13)
 ```
 
 ---
@@ -363,3 +356,18 @@ crystal_stress/                       (約 60 文件)
 - §檔案結構圖: 驗證數 24/24 → 45/45（本文件 L283/L286）
 
 *重驗 · IDCM v10.0 · 2026-09-27*
+
+### 補充註記 2026-10-17（路線 2+3 執行 — 詳見 docs/08）
+- **路線 3 盲測** 已執行第一輪（script 18）: 4 個 E>150 EeV 事件 P0/P1/P2 方向全中
+  （median d_node=7.73°<9.6°; 8° 內 3/4=75% vs null 31.4%），惟 N=4<20 否證門檻
+  未適用 → 預註冊維持，等 AugerPrime N≥20。
+- **功效表修正** 落實: 雙比例 N=20→3.07σ, N=50→4.86σ, N_for_5σ=53（≈5.3yr @10/yr）;
+  單比例 N=20→4.20σ, N=50→6.64σ, N_for_5σ=29（≈2.9yr）。
+- **路線 2 DESI 第 5 重**（script 17）: DESI DR2（光譜）無官方星系團 VAC →
+  採 CluMPR 2024（DESI-Legacy DR9 光度, Zenodo, 298,487 團）作獨立第 5 族；
+  ⚠️ 標籤更正: 數據唔係 DESI DR2 光譜。
+  **結果**: 節點核心真空單調衰減 (2.5° z=6.04σ, 4.5° z=4.93σ, 8.5° 轉正);
+  clamp p=2.0e-4 → **Fisher5 = 4.69σ** (Fisher4 重現 3.431σ)。
+  **Phase C 內層**: r<2.0° z=7.72σ (最強), 1.5°→5.83σ, 1.0°→4.14σ。
+- **路線 1 已預註冊** (edge-band mask 凍結, docs/09/script 19): 32 邊等長 26.09°,
+  band=8.73% 天空。**路線 4 已預註冊** (docs/09): 歸屬 P5, 等 Euclid DR1 (2026-11-12)。

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "pass": 15,
+    "fail": 0,
+    "total": 15,
+    "pass_rate": "100.0%"
+  },
+  "tau": {
+    "structural": 0.05284321892578289,
+    "eps2_corrected": 0.05410473852295148,
+    "eps3_corrected": 0.05390982302582042,
+    "planck_2018": 0.054,
+    "planck_err": 0.007,
+    "best_error_pct": 0.1939602276879171
+  },
+  "gp_analysis": {
+    "mode_7_activation_z": 6.210511096081662,
+    "mode_6_activation_z": 4.326963028851634,
+    "gp_trough_z": 6.0
+  },
+  "21cm": {
+    "delta_k": 0.021307600743284,
+    "lambda_sync": 294.88,
+    "bao": 147.44
+  },
+  "lae": {
+    "prediction": "N(z) \u221d 1/(1+z)",
+    "mechanism": "K_Tree projection area narrowing"
+  }
+}

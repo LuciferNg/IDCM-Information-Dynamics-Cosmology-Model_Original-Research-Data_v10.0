@@ -1,0 +1,12 @@
+s0 : hits overrides stale agree #visited #(s,ctx) #ctx
+    0 :  124   65  124    0  120 4728  62
+    1 :  124   69  124    0  120 4728  62
+    2 :  124   56  124    0  120 4728  62
+    3 :  124   68  124    0  120 4728  62
+    4 :  124   61  124    0  120 4728  62
+    5 :  124   54  124    0  120 4728  62
+...
+IDENTITY CHECK  overrides == stale ?  False
+SECOND IDENTITY overrides == hits - agree ?  False
+distinct hits: [124] | distinct overrides: [52, 54, 56, 57, 58, 59] .. [77, 79, 80] | distinct stale: [124] .. [124]
+s0=0 row: [(0, 124, 65, 124, 0, 120, 4728, 62)]

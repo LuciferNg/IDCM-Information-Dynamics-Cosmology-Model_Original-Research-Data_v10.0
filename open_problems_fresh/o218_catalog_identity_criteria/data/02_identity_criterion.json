@@ -1,0 +1,533 @@
+{
+ "results": [
+  {
+   "name": "Σγ = B(N_d+1)/2",
+   "class": "identity",
+   "verdict": "IDENTITY_OK",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {
+    "N_search": 1.0,
+    "note": "純代數恆等式 ⟹ N_search = 1, 唔受密度檢定 (O208 例外/O200 ①)"
+   },
+   "notes": [
+    "T2: 兩邊皆 IDCM (無外部框架成分)"
+   ]
+  },
+  {
+   "name": "44 = 45",
+   "class": "pool_match",
+   "verdict": "FALSE",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "FAIL",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   },
+   "dev": 0.022222222222222223,
+   "density": {},
+   "notes": [
+    "等式不成立: dev = 0.02222 > tol = 1e-09",
+    "T2: 兩邊皆 IDCM (無外部框架成分)",
+    "G4: dev = 0.0222 喺窗外",
+    "G5: 冇密度基準 ⟹ 未閉合 (O208)"
+   ]
+  },
+  {
+   "name": "b_spec × 1.000237",
+   "class": "pool_match",
+   "verdict": "FITTED",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "FAIL",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {},
+   "notes": [
+    "擬合常數: ['1.00023700000000']",
+    "T2: 兩邊皆 IDCM (無外部框架成分)",
+    "G4: dev = 0 喺窗外",
+    "G5: 冇密度基準 ⟹ 未閉合 (O208)"
+   ]
+  },
+  {
+   "name": "b₁ = 2·N_gen·f_unproj [41 共有]",
+   "class": "pool_match",
+   "verdict": "TAUTOLOGY",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "FAIL",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {},
+   "notes": [
+    "T2: 兩邊皆 IDCM (無外部框架成分)",
+    "G4: dev = 0 喺窗外",
+    "G5: 冇密度基準 ⟹ 未閉合 (O208)"
+   ]
+  },
+  {
+   "name": "b₁_SM × 30 = L₁₀",
+   "class": "pool_match",
+   "verdict": "COINCIDENCE",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "FAIL",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {},
+   "notes": [
+    "深度 1 衍生葉 (需報表示數): [30]",
+    "T2: 跨框架 (IDCM ↔ EXTERNAL) 且無共同推導來源",
+    "G4: dev = 0 喺窗外",
+    "G5: 冇密度基準 ⟹ 未閉合 (O208)"
+   ]
+  },
+  {
+   "name": "123 = Tr(T̂¹⁰) = L₁₀",
+   "class": "identity",
+   "verdict": "IDENTITY_OK",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {
+    "N_search": 1.0,
+    "note": "純代數恆等式 ⟹ N_search = 1, 唔受密度檢定 (O208 例外/O200 ①)"
+   },
+   "notes": [
+    "T2: 兩邊皆 IDCM (無外部框架成分)"
+   ]
+  },
+  {
+   "name": "「47」目錄身份 (L₈)",
+   "class": "pool_match",
+   "verdict": "NONUNIQUE",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "FAIL",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {},
+   "notes": [
+    "T2: 兩邊皆 IDCM (無外部框架成分)",
+    "G4: dev = 0 喺窗外",
+    "G5: 冇密度基準 ⟹ 未閉合 (O208)"
+   ]
+  },
+  {
+   "name": "C_old = −0.1697 (最近池命中)",
+   "class": "pool_match",
+   "verdict": "TRAP",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "FAIL",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   },
+   "dev": 0.000142,
+   "density": {},
+   "notes": [
+    "T2: 兩邊皆 IDCM (無外部框架成分)",
+    "G4: dev 落陷阱窗 (1e-5,1e-3) ⟹ φ 陷阱/巧合",
+    "G5: 冇密度基準 ⟹ 未閉合 (O208)"
+   ]
+  },
+  {
+   "name": "C_old (0.63% 擬合值)",
+   "class": "prediction_residual",
+   "verdict": "MATCH_OK",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "PASS (σ 內, O208 例外 2)",
+    "G6_field": "N/A"
+   },
+   "dev": 0.000142,
+   "density": {
+    "N_search": 1.0,
+    "note": "觀測量測量誤差內 (|obs−pred| ≤ σ_obs) ⟹ 報 σ 替代分位數 (O208 例外 2)",
+    "dev_in_sigma": 0.02253968253968254
+   },
+   "notes": [
+    "T2: 預言/觀測對比類 (O208 例外 4) — 唔屬跨框架巧合判",
+    "G4: 目標精度 0.0063 ≳ 窗寬 ⟹ 窗律 n/a (O201 §2)"
+   ]
+  },
+  {
+   "name": "b_spec = √5/2",
+   "class": "pool_match",
+   "verdict": "FIELD",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "FAIL",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "FAIL"
+   },
+   "dev": 0.000966,
+   "density": {},
+   "notes": [
+    "T2: 兩邊皆 IDCM (無外部框架成分)",
+    "G4: dev 落陷阱窗 (1e-5,1e-3) ⟹ φ 陷阱/巧合",
+    "G5: 冇密度基準 ⟹ 未閉合 (O208)",
+    "G6: gcd(5,176) = 1 ⟹ 交集 = Q (結構上唔可能相等)"
+   ]
+  },
+  {
+   "name": "(1/45)·(9/10) = 0.02",
+   "class": "prediction_residual",
+   "verdict": "MULTIPLIER",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "FAIL",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "PASS (σ 內, O208 例外 2)",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {
+    "N_search_farey": 11.679446968236833,
+    "window_width": 4.0000000000000004e-11,
+    "q_max": 980100.0,
+    "note": "觀測量測量誤差內 (|obs−pred| ≤ σ_obs) ⟹ 報 σ 替代分位數 (O208 例外 2)",
+    "discriminating": 0.0,
+    "N_search": 1.0,
+    "dev_in_sigma": 0.0
+   },
+   "notes": [
+    "T2: 預言/觀測對比類 (O208 例外 4) — 唔屬跨框架巧合判",
+    "T5 兩級測試: 主體偏差 0.1111 ≫ 目標精度 0.0001, 全式 0 ⟹ 乘性修正承載匹配",
+    "G4: dev = 0 喺窗外"
+   ]
+  },
+  {
+   "name": "(1/45)·(9/10) = 0.02 [只報密度]",
+   "class": "prediction_residual",
+   "verdict": "DENSITY",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "FAIL",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {
+    "N_search_farey": 11.679446968236833,
+    "window_width": 4.0000000000000004e-11,
+    "q_max": 980100.0,
+    "note": "Farey: N ≈ (3/π²)·q_max²·2·tol·T = 11.68",
+    "discriminating": 0.0
+   },
+   "notes": [
+    "T2: 預言/觀測對比類 (O208 例外 4) — 唔屬跨框架巧合判",
+    "G4: dev = 0 喺窗外",
+    "G5 Farey: N_search = 11.68 (≫ 1 ⟹ 零判別力)"
+   ]
+  },
+  {
+   "name": "identity 類",
+   "class": "identity",
+   "verdict": "IDENTITY_OK",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {
+    "N_search": 1.0,
+    "note": "純代數恆等式 ⟹ N_search = 1, 唔受密度檢定 (O208 例外/O200 ①)"
+   },
+   "notes": [
+    "T2: 兩邊皆 IDCM (無外部框架成分)"
+   ]
+  },
+  {
+   "name": "pool_match 類 (無密度)",
+   "class": "pool_match",
+   "verdict": "FORMAL_OK",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   },
+   "dev": 0.0,
+   "density": {},
+   "notes": [
+    "T2: 兩邊皆 IDCM (無外部框架成分)",
+    "G4: dev = 0 喺窗外",
+    "G5: 冇密度基準 ⟹ 未閉合 (O208)"
+   ]
+  },
+  {
+   "name": "prediction 類 (觀測 σ 內)",
+   "class": "prediction_residual",
+   "verdict": "MATCH_OK",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "PASS (σ 內, O208 例外 2)",
+    "G6_field": "N/A"
+   },
+   "dev": 0.00037,
+   "density": {
+    "N_search": 1.0,
+    "note": "觀測量測量誤差內 (|obs−pred| ≤ σ_obs) ⟹ 報 σ 替代分位數 (O208 例外 2)",
+    "dev_in_sigma": 0.037
+   },
+   "notes": [
+    "T2: 預言/觀測對比類 (O208 例外 4) — 唔屬跨框架巧合判",
+    "G4: 目標精度 0.01 ≳ 窗寬 ⟹ 窗律 n/a (O201 §2)"
+   ]
+  }
+ ],
+ "checks": [
+  [
+   "C1 gate 鍵齊全 (12 個)",
+   true,
+   "缺: []"
+  ],
+  [
+   "C1b 判級 code ∈ V",
+   true,
+   "IDENTITY_OK"
+  ],
+  [
+   "C2 判 🟢 IDENTITY_OK (N_search = 1, 唔受密度檢定)",
+   true,
+   "IDENTITY_OK, N_search = 1"
+  ],
+  [
+   "C3 判 🔴 FALSE (等式唔成立)",
+   true,
+   "dev = 0.02222"
+  ],
+  [
+   "C4 判 🔴 FITTED (含擬合常數)",
+   true,
+   "FITTED"
+  ],
+  [
+   "C5 判 🔴 TAUTOLOGY (等式對共有量 x41 恆等)",
+   true,
+   "TAUTOLOGY"
+  ],
+  [
+   "C5b T1 測試本身正確: 化簡 (x/10 − 6x/60) = 0",
+   true,
+   "差 = 0"
+  ],
+  [
+   "C6 判 🔴 COINCIDENCE (IDCM ↔ EXTERNAL 無共同推導)",
+   true,
+   "COINCIDENCE"
+  ],
+  [
+   "C6b 對照組判 🟢 (同一框架 ⟹ T2 唔觸發)",
+   true,
+   "IDENTITY_OK"
+  ],
+  [
+   "C7 判 🔴 NONUNIQUE (R = 6 ≥ 2)",
+   true,
+   "R = 6"
+  ],
+  [
+   "C8 判 🔴 TRAP (目標精度 1e-4 優於窗寬 ⟹ 窗律綁定)",
+   true,
+   "TRAP"
+  ],
+  [
+   "C8b 窗律前置條件正確 (精度差過窗寬 ⟹ 唔誤殺)",
+   true,
+   "目標精度 0.0063 ≳ 窗寬 ⟹ 窗律 n/a (O201 §2)"
+  ],
+  [
+   "C9 判 🔴 FIELD (gcd(5,176) = 1 ⟹ 結構上唔可能相等)",
+   true,
+   "FIELD"
+  ],
+  [
+   "C10 判 🔴 MULTIPLIER (T5 兩級測試: 主體 11.1% 偏差, 乘性修正承載匹配)",
+   true,
+   "MULTIPLIER"
+  ],
+  [
+   "C10b 無兩級資訊時由 Farey 密度判 🔴 DENSITY",
+   true,
+   "DENSITY"
+  ],
+  [
+   "C10c Farey N_search ≫ 1 (2 因子商積, q_max = 990²)",
+   true,
+   "N = 11.68"
+  ],
+  [
+   "C11 identity → 🟢 (N_search = 1)",
+   true,
+   ""
+  ],
+  [
+   "C11b pool_match 無密度基準 → 🟡 (未閉合, 缺密度)",
+   true,
+   "FORMAL_OK"
+  ],
+  [
+   "C11c prediction_residual 用 σ 判 (唔用密度)",
+   true,
+   "MATCH_OK"
+  ],
+  [
+   "C12 兩次判決完全一致",
+   true,
+   ""
+  ],
+  [
+   "C12b 只改非唯一參數 ⟹ 判級由 NONUNIQUE 變 (判準有牙)",
+   true,
+   "NONUNIQUE → FORMAL_OK"
+  ],
+  [
+   "C13 交換後判級相同",
+   true,
+   "COINCIDENCE vs COINCIDENCE"
+  ]
+ ]
+}

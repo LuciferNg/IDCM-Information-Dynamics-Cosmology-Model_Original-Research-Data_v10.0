@@ -1,0 +1,14 @@
+========================================================================================================
+O226 scripts/15 -- R5 INDEPENDENT audit (self-contained)
+========================================================================================================
+[PASS] A0   rebuild: |2I| = 120, the kernel still has 12 classes of size 10  --  classes = 12
+[FAIL] A1   the pointed stabiliser {t : rho(t)u_0 = lambda u_0, lambda > 0} has order 10  --  |H| = 20
+[PASS] A2   the 62 axes pair into 31 unoriented axes (V6/F10/E15)  --  axes = 31
+[PASS] A3   the H-orbits on the 31 axes are V: 1+5, F: 5+5, E: 5+5+5 (effective order 5)  --  orbit table = {'V': [1, 5], 'F': [5, 5], 'E': [5, 5, 5]}
+[PASS] A4   W reproduces the R4 table by direct orbit-class summation: per class the type sums are V/F/E = 4/6/5 (near), 2/4/1 (far), 6/10/10 (diagonal), 0/0/0 (antipodal)  --  direct orbit-class sums verified against the R4/W table
+[PASS] A5   value-blindness re-tested with an independently written stack machine: the full-pass account (read-ops / hits / pops) is identical for the frozen, the equivariant and the perpendicular-equals-minus-one kernels  --  accounts = {'frozen': (11408, 124, 3844), 'equivariant': (11408, 124, 3844), 'neg': (11408, 124, 3844)} (expected (11408, 124, 3844) = (3N^2-2N, 2N, N^2))
+[PASS] A6   the upstream F3 fidelity is a SHARP discriminator: only the frozen tie-break gives 0 mismatches; the equivariant (perpendicular = +1) and the perpendicular = -1 conventions both break it  --  mismatches of 3844: {'frozen': 0, 'equivariant': 2038, 'neg': 2038}
+[PASS] A7   concurrence with the R5 machine JSON (orbit tables and the fidelity mismatches)  --  orbit table identical = True ; machine fidelity = {'frozen': 0, 'equivariant': 2038}
+========================================================================================================
+RESULT: 7/8 PASS (independent R5 audit)   elapsed 1.9 s
+========================================================================================================

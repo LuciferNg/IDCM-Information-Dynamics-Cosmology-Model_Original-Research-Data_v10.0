@@ -1,0 +1,12 @@
+==============================================================================================================
+O222 scripts/33 -- R19 UNCLOSED-STRUCTURE CONTRACT ENFORCER (docs/25 r19-contract-v1)
+==============================================================================================================
+[PASS] C1    L1-L9 pins readable and hashed (9/9)  --  all 9 pinned
+[PASS] C2    read-only discipline: L1-L8 are this O frozen artefacts and L9 is the upstream LRD table; no pin is writable by the machine  --  own pins = ['L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7', 'L8']
+[PASS] C3    exact-arithmetic gate: no trig/exp/log CALLS, no non-integer float literals, no math modules  --  calls=none mods=none floats=none
+[PASS] C3b   no variable may shadow a transcendental name (pi/log/cos/... incl. perm-style renames) and no write/remove/subprocess call may appear  --  shadowed=none write-ish=none
+[PASS] C4    cell list is exactly ['K1', 'K1b', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']  --  found = ['K1', 'K1b', 'K2', 'K3', 'K4', 'K5', 'K6', 'K7']
+[PASS] C5    the machine loads only the four frozen interfaces L1-L4 (no other script)  --  loaded = ['fractions'] ; extra = none
+--------------------------------------------------------------------------------------------------------------
+GATE = OPEN   impl scripts/37_r19_closure.py = 8ff1df0d9981506eac384d9b   (0.0s)
+--------------------------------------------------------------------------------------------------------------

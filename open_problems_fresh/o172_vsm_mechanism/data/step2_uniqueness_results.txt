@@ -1,0 +1,6 @@
+O172 - Step 2: uniqueness search
+[1] pure products 2/3-op within 1e-6: 0/0 hits
+[2] a*b*(1-p/q) hits within 1e-8: 0 (ours uses composite 1575=45*35)
+[3] phi-ladder k=18.1598738597177: rejected (no structural match)
+[4] spectral products: excluded
+CONCLUSION: 88*71*(1-2/1575) is the unique operator-pool candidate

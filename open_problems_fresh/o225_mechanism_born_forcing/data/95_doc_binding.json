@@ -1,0 +1,1586 @@
+{
+ "script": "95_doc_binding",
+ "rows": [
+  {
+   "script": "01",
+   "res": [
+    15,
+    15
+   ],
+   "log": "01_recon_invariants.out",
+   "bound_in": [
+    "01_r1_contract.md",
+    "02_r1_results.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "03",
+   "res": [
+    19,
+    19
+   ],
+   "log": "03_r1_barrier.out",
+   "bound_in": [
+    "02_r1_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "04",
+   "res": [
+    11,
+    11
+   ],
+   "log": "04_r1_audit.out",
+   "bound_in": [
+    "04_r2_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "04",
+   "res": [
+    11,
+    11
+   ],
+   "log": "04_r1_audit.out",
+   "bound_in": [
+    "04_r2_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "05",
+   "res": [
+    2,
+    4
+   ],
+   "log": "05_r1_null_analysis.out",
+   "bound_in": [
+    "02_r1_results.md",
+    "11_r6_contract.md",
+    "12_r6_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "06",
+   "res": [
+    2,
+    4
+   ],
+   "log": "06_r1_axis_sign_structure.out",
+   "bound_in": [
+    "11_r6_contract.md",
+    "12_r6_results.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "07",
+   "res": [
+    6,
+    6
+   ],
+   "log": "07_r1_tie_mechanism.out",
+   "bound_in": [
+    "14_r7_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "07",
+   "res": [
+    6,
+    6
+   ],
+   "log": "07_r1_tie_mechanism.out",
+   "bound_in": [
+    "14_r7_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "11",
+   "res": [
+    14,
+    16
+   ],
+   "log": "11_r2_g1_table.out",
+   "bound_in": [
+    "04_r2_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "11",
+   "res": [
+    14,
+    16
+   ],
+   "log": "11_r2_g1_table.out",
+   "bound_in": [
+    "04_r2_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "12",
+   "res": [
+    7,
+    9
+   ],
+   "log": "12_r2_dyn17.out",
+   "bound_in": [
+    "04_r2_results.md",
+    "18_r9_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "13",
+   "res": [
+    11,
+    11
+   ],
+   "log": "13_r2_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "13",
+   "res": [
+    11,
+    11
+   ],
+   "log": "13_r2_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "15",
+   "res": [
+    11,
+    11
+   ],
+   "log": "15_r3_centre.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "15",
+   "res": [
+    11,
+    11
+   ],
+   "log": "15_r3_centre.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "15",
+   "res": [
+    11,
+    11
+   ],
+   "log": "15_r3_centre.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "16",
+   "res": [
+    8,
+    8
+   ],
+   "log": "16_r3_audit.out",
+   "bound_in": [
+    "16_r8_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "16",
+   "res": [
+    8,
+    8
+   ],
+   "log": "16_r3_audit.out",
+   "bound_in": [
+    "16_r8_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "17",
+   "res": [
+    7,
+    7
+   ],
+   "log": "17_r4_contract.out",
+   "bound_in": [
+    "36_r17_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "18",
+   "res": [
+    14,
+    14
+   ],
+   "log": "18_r4_tie_parity.out",
+   "bound_in": [
+    "08_r4_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "18",
+   "res": [
+    14,
+    14
+   ],
+   "log": "18_r4_tie_parity.out",
+   "bound_in": [
+    "08_r4_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "19",
+   "res": [
+    6,
+    6
+   ],
+   "log": "19_r4_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "19",
+   "res": [
+    6,
+    6
+   ],
+   "log": "19_r4_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "20",
+   "res": [
+    7,
+    7
+   ],
+   "log": "20_r5_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "21",
+   "res": [
+    12,
+    14
+   ],
+   "log": "21_r5_tie_global.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "21",
+   "res": [
+    12,
+    14
+   ],
+   "log": "21_r5_tie_global.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "22",
+   "res": [
+    7,
+    7
+   ],
+   "log": "22_r5_audit.out",
+   "bound_in": [
+    "46_r22_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "22",
+   "res": [
+    7,
+    7
+   ],
+   "log": "22_r5_audit.out",
+   "bound_in": [
+    "46_r22_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "23",
+   "res": [
+    7,
+    8
+   ],
+   "log": "23_r6_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "24",
+   "res": [
+    9,
+    10
+   ],
+   "log": "24_r6_mechanism.out",
+   "bound_in": [
+    "12_r6_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "25",
+   "res": [
+    11,
+    12
+   ],
+   "log": "25_r6_geometry.out",
+   "bound_in": [
+    "04_r2_results.md",
+    "12_r6_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "25",
+   "res": [
+    11,
+    12
+   ],
+   "log": "25_r6_geometry.out",
+   "bound_in": [
+    "04_r2_results.md",
+    "12_r6_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "25",
+   "res": [
+    11,
+    12
+   ],
+   "log": "25_r6_geometry.out",
+   "bound_in": [
+    "04_r2_results.md",
+    "12_r6_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "26",
+   "res": [
+    6,
+    6
+   ],
+   "log": "26_r6_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "27",
+   "res": [
+    7,
+    8
+   ],
+   "log": "27_r7_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "27",
+   "res": [
+    7,
+    8
+   ],
+   "log": "27_r7_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "28",
+   "res": [
+    6,
+    11
+   ],
+   "log": "28_r7_mechanism2.out",
+   "bound_in": [
+    "14_r7_results.md",
+    "16_r8_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "28",
+   "res": [
+    6,
+    11
+   ],
+   "log": "28_r7_mechanism2.out",
+   "bound_in": [
+    "14_r7_results.md",
+    "16_r8_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "28",
+   "res": [
+    6,
+    11
+   ],
+   "log": "28_r7_mechanism2.out",
+   "bound_in": [
+    "14_r7_results.md",
+    "16_r8_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "29",
+   "res": [
+    5,
+    7
+   ],
+   "log": "29_r7_audit.out",
+   "bound_in": [
+    "14_r7_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "30",
+   "res": [
+    7,
+    8
+   ],
+   "log": "30_r8_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "31",
+   "res": [
+    7,
+    11
+   ],
+   "log": "31_r8_group.out",
+   "bound_in": [
+    "16_r8_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "32",
+   "res": [
+    7,
+    8
+   ],
+   "log": "32_r8_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "32",
+   "res": [
+    7,
+    8
+   ],
+   "log": "32_r8_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "32",
+   "res": [
+    7,
+    8
+   ],
+   "log": "32_r8_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "33",
+   "res": [
+    7,
+    10
+   ],
+   "log": "33_r9_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "33",
+   "res": [
+    7,
+    10
+   ],
+   "log": "33_r9_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "33",
+   "res": [
+    7,
+    10
+   ],
+   "log": "33_r9_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "34",
+   "res": [
+    12,
+    23
+   ],
+   "log": "34_r9_pairing.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "34",
+   "res": [
+    12,
+    23
+   ],
+   "log": "34_r9_pairing.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "34",
+   "res": [
+    12,
+    23
+   ],
+   "log": "34_r9_pairing.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "35",
+   "res": [
+    6,
+    8
+   ],
+   "log": "35_r9_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "35",
+   "res": [
+    6,
+    8
+   ],
+   "log": "35_r9_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "35",
+   "res": [
+    6,
+    8
+   ],
+   "log": "35_r9_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "35",
+   "res": [
+    6,
+    8
+   ],
+   "log": "35_r9_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "36",
+   "res": [
+    32,
+    32
+   ],
+   "log": "36_closeout_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "36",
+   "res": [
+    32,
+    32
+   ],
+   "log": "36_closeout_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "36",
+   "res": [
+    32,
+    32
+   ],
+   "log": "36_closeout_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "37",
+   "res": [
+    10,
+    10
+   ],
+   "log": "37_closeout_docs.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "37",
+   "res": [
+    10,
+    10
+   ],
+   "log": "37_closeout_docs.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "37",
+   "res": [
+    10,
+    10
+   ],
+   "log": "37_closeout_docs.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "37",
+   "res": [
+    10,
+    10
+   ],
+   "log": "37_closeout_docs.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "37",
+   "res": [
+    10,
+    10
+   ],
+   "log": "37_closeout_docs.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "37",
+   "res": [
+    10,
+    10
+   ],
+   "log": "37_closeout_docs.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "37",
+   "res": [
+    10,
+    10
+   ],
+   "log": "37_closeout_docs.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "38",
+   "res": [
+    6,
+    6
+   ],
+   "log": "38_r10_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "39",
+   "res": [
+    19,
+    21
+   ],
+   "log": "39_r10_universal.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "39",
+   "res": [
+    19,
+    21
+   ],
+   "log": "39_r10_universal.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "40",
+   "res": [
+    17,
+    18
+   ],
+   "log": "40_r10_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "40",
+   "res": [
+    17,
+    18
+   ],
+   "log": "40_r10_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "41",
+   "res": [
+    5,
+    5
+   ],
+   "log": "41_r11_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "42",
+   "res": [
+    20,
+    29
+   ],
+   "log": "42_r11_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "42",
+   "res": [
+    20,
+    29
+   ],
+   "log": "42_r11_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "42",
+   "res": [
+    20,
+    29
+   ],
+   "log": "42_r11_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "43",
+   "res": [
+    11,
+    11
+   ],
+   "log": "43_r11_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "44",
+   "res": [
+    5,
+    5
+   ],
+   "log": "44_r12_contract.out",
+   "bound_in": [
+    "44_r21_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "45",
+   "res": [
+    17,
+    24
+   ],
+   "log": "45_r12_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "45",
+   "res": [
+    17,
+    24
+   ],
+   "log": "45_r12_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "46",
+   "res": [
+    8,
+    8
+   ],
+   "log": "46_r12_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "47",
+   "res": [
+    8,
+    8
+   ],
+   "log": "47_chain_index.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "47",
+   "res": [
+    8,
+    8
+   ],
+   "log": "47_chain_index.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "47",
+   "res": [
+    8,
+    8
+   ],
+   "log": "47_chain_index.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "48",
+   "res": [
+    5,
+    5
+   ],
+   "log": "48_r13_contract.out",
+   "bound_in": [
+    "48_r23_results.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "49",
+   "res": [
+    23,
+    38
+   ],
+   "log": "49_r13_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "50",
+   "res": [
+    10,
+    10
+   ],
+   "log": "50_r13_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "51",
+   "res": [
+    5,
+    5
+   ],
+   "log": "51_r14_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md",
+    "51_r24_results.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "52",
+   "res": [
+    6,
+    14
+   ],
+   "log": "52_r14_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "53",
+   "res": [
+    8,
+    8
+   ],
+   "log": "53_r14_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md",
+    "53_r25_results.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "54",
+   "res": [
+    5,
+    5
+   ],
+   "log": "54_r15_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "55",
+   "res": [
+    13,
+    18
+   ],
+   "log": "55_r15_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "56",
+   "res": [
+    6,
+    6
+   ],
+   "log": "56_r15_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "57",
+   "res": [
+    5,
+    5
+   ],
+   "log": "57_r16_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "58",
+   "res": [
+    9,
+    12
+   ],
+   "log": "58_r16_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "59",
+   "res": [
+    7,
+    7
+   ],
+   "log": "59_r16_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "60",
+   "res": [
+    5,
+    5
+   ],
+   "log": "60_r17_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "61",
+   "res": [
+    11,
+    18
+   ],
+   "log": "61_r17_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "62",
+   "res": [
+    7,
+    7
+   ],
+   "log": "62_r17_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "63",
+   "res": [
+    5,
+    5
+   ],
+   "log": "63_r18_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "64",
+   "res": [
+    9,
+    14
+   ],
+   "log": "64_r18_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "65",
+   "res": [
+    5,
+    5
+   ],
+   "log": "65_r18_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "65",
+   "res": [
+    5,
+    5
+   ],
+   "log": "65_r18_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "66",
+   "res": [
+    5,
+    5
+   ],
+   "log": "66_r19_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "67",
+   "res": [
+    12,
+    14
+   ],
+   "log": "67_r19_machine.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "68",
+   "res": [
+    7,
+    7
+   ],
+   "log": "68_r19_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "68",
+   "res": [
+    7,
+    7
+   ],
+   "log": "68_r19_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "69",
+   "res": [
+    5,
+    5
+   ],
+   "log": "69_r20_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "70",
+   "res": [
+    8,
+    11
+   ],
+   "log": "70_r20_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "71",
+   "res": [
+    6,
+    6
+   ],
+   "log": "71_r20_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "72",
+   "res": [
+    5,
+    5
+   ],
+   "log": "72_r21_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "73",
+   "res": [
+    3,
+    12
+   ],
+   "log": "73_r21_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "74",
+   "res": [
+    3,
+    4
+   ],
+   "log": "74_r21_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "75",
+   "res": [
+    5,
+    5
+   ],
+   "log": "75_r22_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "76",
+   "res": [
+    7,
+    10
+   ],
+   "log": "76_r22_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "77",
+   "res": [
+    3,
+    4
+   ],
+   "log": "77_r22_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "78",
+   "res": [
+    5,
+    5
+   ],
+   "log": "78_r23_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "79",
+   "res": [
+    10,
+    13
+   ],
+   "log": "79_r23_machine.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "80",
+   "res": [
+    4,
+    4
+   ],
+   "log": "80_r23_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "81",
+   "res": [
+    9,
+    9
+   ],
+   "log": "81_o225_closeout2_audit.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "82",
+   "res": [
+    8,
+    8
+   ],
+   "log": "82_o225_closeout2_docs.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "83",
+   "res": [
+    5,
+    5
+   ],
+   "log": "83_r24_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "84",
+   "res": [
+    10,
+    11
+   ],
+   "log": "84_r24_machine.out",
+   "bound_in": [
+    "04_r2_results.md",
+    "51_r24_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "85",
+   "res": [
+    4,
+    4
+   ],
+   "log": "85_r24_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "86",
+   "res": [
+    5,
+    5
+   ],
+   "log": "86_r25_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "87",
+   "res": [
+    10,
+    14
+   ],
+   "log": "87_r25_machine.out",
+   "bound_in": [
+    "53_r25_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "88",
+   "res": [
+    4,
+    4
+   ],
+   "log": "88_r25_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "89",
+   "res": [
+    5,
+    5
+   ],
+   "log": "89_r26_contract.out",
+   "bound_in": [
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  },
+  {
+   "script": "90",
+   "res": [
+    11,
+    17
+   ],
+   "log": "90_r26_machine.out",
+   "bound_in": [
+    "56_r26_results.md"
+   ],
+   "exact_round_doc": false
+  },
+  {
+   "script": "91",
+   "res": [
+    4,
+    4
+   ],
+   "log": "91_r26_audit.out",
+   "bound_in": [
+    "19_closeout_r1-r9.md",
+    "49_o225_closeout_r1-r23.md"
+   ],
+   "exact_round_doc": true
+  }
+ ],
+ "n_bound": 128,
+ "n_unbound": 0
+}

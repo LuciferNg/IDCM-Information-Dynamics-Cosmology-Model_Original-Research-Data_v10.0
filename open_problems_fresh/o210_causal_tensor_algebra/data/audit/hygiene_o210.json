@@ -1,0 +1,152 @@
+{
+ "repo_root": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat",
+ "roots": [
+  "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra"
+ ],
+ "findings": [
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/02_type_registry.py",
+   "line": 162,
+   "call": "open",
+   "mode": "w",
+   "path": "data/02_type_registry.json",
+   "kind": "IN_REPO",
+   "role": "WRITE",
+   "exempt": null,
+   "exempt_reason": null,
+   "snippet": "with open(\"data/02_type_registry.json\", \"w\", encoding=\"utf-8\") as f:"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/10_audit_independent.py",
+   "line": 264,
+   "call": "literal",
+   "mode": null,
+   "path": "BH_AGENT_WORKSPACE",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "環境變數讀取（唯讀）",
+   "snippet": "ws = os.environ.get('BH_AGENT_WORKSPACE', '')  # path-hygiene: exempt 環境變數讀取（唯讀）"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/10_audit_independent.py",
+   "line": 259,
+   "call": "literal",
+   "mode": null,
+   "path": "/tmp/",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "檢測器正則字面（唯讀掃描，非 I/O）",
+   "snippet": "for m in re.finditer(r\"(open\\s*\\(\\s*['\\\"](/tmp/|/var/tmp/|/dev/shm/)[^'\\\"]*['\\\"]\\s*,\\s*['\\\"][wax])|(makedirs\\s*\\(\\s*['\\\"]/(tmp|var/tmp)/)\", src):  # p"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/10_audit_independent.py",
+   "line": 259,
+   "call": "literal",
+   "mode": null,
+   "path": "/var/tmp/",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "檢測器正則字面（唯讀掃描，非 I/O）",
+   "snippet": "for m in re.finditer(r\"(open\\s*\\(\\s*['\\\"](/tmp/|/var/tmp/|/dev/shm/)[^'\\\"]*['\\\"]\\s*,\\s*['\\\"][wax])|(makedirs\\s*\\(\\s*['\\\"]/(tmp|var/tmp)/)\", src):  # p"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/10_audit_independent.py",
+   "line": 259,
+   "call": "literal",
+   "mode": null,
+   "path": "/dev/shm/",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "檢測器正則字面（唯讀掃描，非 I/O）",
+   "snippet": "for m in re.finditer(r\"(open\\s*\\(\\s*['\\\"](/tmp/|/var/tmp/|/dev/shm/)[^'\\\"]*['\\\"]\\s*,\\s*['\\\"][wax])|(makedirs\\s*\\(\\s*['\\\"]/(tmp|var/tmp)/)\", src):  # p"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/11_session_chain_provenance.py",
+   "line": 98,
+   "call": "literal",
+   "mode": null,
+   "path": ".hermes/cache/scratch",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "分類字面（唯讀判定）",
+   "snippet": "elif '.hermes/cache/scratch' in p:   # path-hygiene: exempt 分類字面（唯讀判定）"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/11_session_chain_provenance.py",
+   "line": 100,
+   "call": "literal",
+   "mode": null,
+   "path": "/tmp/",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "分類字面（唯讀判定）",
+   "snippet": "elif p.startswith('/tmp/'):   # path-hygiene: exempt 分類字面（唯讀判定）"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/11_session_chain_provenance.py",
+   "line": 156,
+   "call": "literal",
+   "mode": null,
+   "path": "/tmp/",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "檢測器正則字面（唯讀掃描）",
+   "snippet": "if re.search(r'(open\\([^)]*[\\'\"][wa]|/tmp/|makedirs|shutil\\.copy)', code):   # path-hygiene: exempt 檢測器正則字面（唯讀掃描）"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/11_session_chain_provenance.py",
+   "line": 127,
+   "call": "literal",
+   "mode": null,
+   "path": "/tmp/",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "分類字面（唯讀判定）",
+   "snippet": "elif t.startswith('/tmp/') and 'o210' in t:   # path-hygiene: exempt 分類字面（唯讀判定）"
+  },
+  {
+   "file": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra/scripts/11_session_chain_provenance.py",
+   "line": 129,
+   "call": "literal",
+   "mode": null,
+   "path": ".hermes/cache/scratch",
+   "kind": "EPHEMERAL",
+   "role": "LITERAL",
+   "exempt": "exempt",
+   "exempt_reason": "分類字面（唯讀判定）",
+   "snippet": "elif '.hermes/cache/scratch' in t:   # path-hygiene: exempt 分類字面（唯讀判定）"
+  }
+ ],
+ "parse_errors": [],
+ "buckets": {
+  "WRITE": 0,
+  "WRITE_EXEMPT": 0,
+  "READ": 0,
+  "LITERAL": 0,
+  "LITERAL_EXEMPT": 9,
+  "ABS_OUTSIDE": 0,
+  "OUTSIDE_REL": 0
+ },
+ "summary": {
+  "files_scanned": 14,
+  "max_files": 4000,
+  "truncated": false,
+  "parse_errors": 0,
+  "WRITE": 0,
+  "WRITE_EXEMPT": 0,
+  "READ": 0,
+  "READ_unexempt": 0,
+  "LITERAL": 0,
+  "LITERAL_EXEMPT": 9,
+  "ABS_OUTSIDE": 0,
+  "OUTSIDE_REL": 0
+ }
+}

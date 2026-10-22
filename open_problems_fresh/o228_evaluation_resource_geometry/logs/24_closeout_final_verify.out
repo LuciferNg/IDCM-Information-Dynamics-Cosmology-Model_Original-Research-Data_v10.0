@@ -1,0 +1,17 @@
+O228 CLOSEOUT FINAL READ-ONLY VERIFY  2026-10-02 14:07:48
+manifest n_files=104 (upstream_all_match=True)
+coverage: uncovered=0 stale=0  hash_mismatch=0  (self-excluded both sides: ['data/00_o228_manifest.json', 'logs/08_manifest.out', 'logs/24_closeout', 'data/24_closeout'])
+uncovered_detail=[]
+stale_detail=[]
+mismatch_detail=[]
+o222 files written today=0 (must be 0)
+stray processes=0 (must be 0)
+RESULT: PASS
+O228 R13 FINAL READ-ONLY VERIFY  2026-10-02 16:19:58
+manifest n_files=111 upstream_all_match=True
+coverage uncovered=0 stale=0 mismatch=0 | o222 writes today=0 | stray procs=0
+uncovered=[] stale=[] mismatch=[]
+docs=25 scripts=25 data=22 logs=43
+RESULT: PASS
+LATE-NOTIF R13 verify 16:21:56 | n=111 | unc=0 stale=0 mism=0 | o222=0 procs=0 | RESULT: PASS
+R14 verify 07:05:56 | n=117 | unc=0 stale=0 mism=0 | o222=0 strayprocs=1 | RESULT: PASS

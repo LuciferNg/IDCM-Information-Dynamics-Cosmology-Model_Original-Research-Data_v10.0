@@ -1,0 +1,13 @@
+O37 — Step 1: W-field 類型檢驗
+======================================================================
+
+[1] 耦合形式→scalar: PASS
+[2] Proca 凝聚破壞 Lorentz: PASS
+[3] K_Chain 冇流: PASS
+[4] Dirac 凝聚冇機制: PASS
+[5] Yukawa 譜形衝突 (最佳 c=-0.000000→0): PASS
+[6] 維度一致性: PASS
+[7] Real scalar 判決: PASS
+
+★ W-field = real scalar field
+線性耦合+凝聚+無指標 → scalar; Proca 破壞 Lorentz; Yukawa 譜形衝突

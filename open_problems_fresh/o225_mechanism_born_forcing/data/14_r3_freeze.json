@@ -1,0 +1,62 @@
+{
+ "rules": "r3-centre-v1",
+ "contract": {
+  "path": "docs/05_r3_contract.md",
+  "sha256": "b45fcae75340a6623f9e87b71b1ad2bf06154a4c96e6ecfd2c5b24de0c9577ad",
+  "bytes": 6031
+ },
+ "impls": [
+  {
+   "path": "scripts/15_r3_centre_theorem.py",
+   "sha256": "7de0854e9f200f31525662e00e1253f9bd7c000759620e0e6b403cff8e0b2985",
+   "bytes": 16507
+  }
+ ],
+ "enforcer": {
+  "path": "scripts/14_r3_contract.py",
+  "sha256": "bd002f4446e8e6a119ae73746c85ed0deac6aef27e61eb76a64854a4e9a1017e"
+ },
+ "forbidden_modules": [
+  "cmath",
+  "decimal",
+  "math",
+  "numpy",
+  "random",
+  "scipy",
+  "secrets",
+  "statistics"
+ ],
+ "checks": [
+  {
+   "tag": "C1",
+   "name": "合約檔存在（docs/05_r3_contract.md）",
+   "ok": true,
+   "detail": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/docs/05_r3_contract.md"
+  },
+  {
+   "tag": "C2",
+   "name": "機器存在（scripts/15_r3_centre_theorem.py）",
+   "ok": true,
+   "detail": "missing = 0"
+  },
+  {
+   "tag": "C3",
+   "name": "機器無禁字集命中",
+   "ok": true,
+   "detail": "violations = 0"
+  },
+  {
+   "tag": "C4",
+   "name": "陽性對照必須被拒（scanner 已受測）",
+   "ok": true,
+   "detail": "detected = ['positive-control: import math (line 2)', 'positive-control: float literal 0.5 (line 4)', 'positive-control: math.sin (line 4)']"
+  },
+  {
+   "tag": "C5",
+   "name": "合約含全部預註冊標籤（R3-P1..R3-P5、R3-P6a/b/c、R3-P7、R3-P8a/b、定理/尖銳性/普適性/商結構）",
+   "ok": true,
+   "detail": "missing = 0"
+  }
+ ],
+ "GATE": "OPEN"
+}

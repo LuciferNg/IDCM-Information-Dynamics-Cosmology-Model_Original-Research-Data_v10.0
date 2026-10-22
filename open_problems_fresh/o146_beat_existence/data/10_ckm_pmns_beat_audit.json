@@ -1,0 +1,20 @@
+{
+  "ratio_density": {
+    "n": 831713,
+    "median_spacing": 2.621380378153848e-06
+  },
+  "random_vs_real_dmin": {
+    "random_median": 1.2617709893580908e-06,
+    "real_median": 4.5970234802128473e-07
+  },
+  "mode_pair_stats": {
+    "num_rank_median_pct": 16.807610993657505,
+    "den_rank_median_pct": 75.5813953488372,
+    "num_lt_den": 10,
+    "n_formulas": 11,
+    "d1_count": 4,
+    "d1_expected": 1.0,
+    "hypergeometric_p": 0.014897422058402374
+  },
+  "vg_identity": true
+}

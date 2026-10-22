@@ -1,0 +1,9 @@
+O204 Script 09 — 中微子 cross-check: 31/31 PASS
+N1 gamma-power law: m^2 ~ gamma^(2 n_ins), n_ins = 1/2 (boson) / 1 (dim4) / 2 (dim5)
+N2 m1=0.020907935 m2=0.022644454 m3=0.05358595 eV; dm21 dev<1%, dm31 dev<0.1%
+N3 interpolated gamma_eff = convex combination (weight cos(pi/n)) - T2 consistent
+N4 dm2 ratio = 32.187311 (k=2 consequence)
+N5 pairing law gamma_n + gamma_(44-n) = 2 mu2 holds for n=4,5,6
+N6 Sum m_nu = 0.097138339 eV
+N7 same gamma spectrum + same M0; neutrino mode n = 6 = 2 N_gen
+N8 Sum m_nu = 0.0971383 vs DESI LambdaCDM 0.064 => 1.52x tension (U8)

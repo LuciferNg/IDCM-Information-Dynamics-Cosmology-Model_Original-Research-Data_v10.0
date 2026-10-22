@@ -1,0 +1,14 @@
+O31 E_kchain First-Principles Derivation
+
+f_IDCM(0) = 0.132478387258588
+E_kchain (from ρ_Λ) = 0.004060 eV = 4.060 meV
+Best candidate match: E_H (from H₀=72.59)
+
+Candidate scales:
+  m_0 (from m_7=13.8MeV): E=2.790060e+07 eV, ρ_vac/ρ_Λ=2.23e+39
+  m_0 (from m_ν=0.05eV): E=1.176109e-01 eV, ρ_vac/ρ_Λ=7.04e+05
+  E_kchain (from ρ_Λ): E=4.060125e-03 eV, ρ_vac/ρ_Λ=1.00e+00
+  E_sync (from T_sync=84.64Gyr): E=1.548339e-33 eV, ρ_vac/ρ_Λ=2.11e-122
+  E_H (from H₀=72.59): E=1.548432e-36 eV, ρ_vac/ρ_Λ=2.12e-134
+  E_lattice (a=λ_sync/44): E=4.669985e-34 eV, ρ_vac/ρ_Λ=1.75e-124
+  E_geo (幾何平均修正): E=4.566398e-03 eV, ρ_vac/ρ_Λ=1.60e+00

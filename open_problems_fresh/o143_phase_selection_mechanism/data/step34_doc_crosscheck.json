@@ -1,0 +1,683 @@
+{
+  "n_pass": 91,
+  "n_total": 91,
+  "checks": [
+    {
+      "doc": "docs/06,08",
+      "name": "節點數",
+      "got": 60,
+      "want": 60,
+      "ok": true
+    },
+    {
+      "doc": "docs/06,08",
+      "name": "邊數",
+      "got": 120,
+      "want": 120,
+      "ok": true
+    },
+    {
+      "doc": "docs/06,08",
+      "name": "4-正則",
+      "got": [
+        4
+      ],
+      "want": [
+        4
+      ],
+      "ok": true
+    },
+    {
+      "doc": "docs/02,03",
+      "name": "k=0 節點數",
+      "got": 8,
+      "want": 8,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,03",
+      "name": "k=1 節點數",
+      "got": 40,
+      "want": 40,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,03",
+      "name": "k=2 節點數",
+      "got": 12,
+      "want": 12,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "k=2 集合",
+      "got": [
+        10,
+        12,
+        19,
+        22,
+        23,
+        25,
+        28,
+        32,
+        37,
+        40,
+        45,
+        46
+      ],
+      "want": [
+        10,
+        12,
+        19,
+        22,
+        23,
+        25,
+        28,
+        32,
+        37,
+        40,
+        45,
+        46
+      ],
+      "ok": true
+    },
+    {
+      "doc": "docs/02,03",
+      "name": "阻挫邊數 = 32",
+      "got": 32,
+      "want": 32,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "sigma k=0",
+      "got": 84.97363230886744,
+      "want": 85.0,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "sigma k=1",
+      "got": 41.501349399842596,
+      "want": 41.5,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "sigma k=2",
+      "got": 24.969124146721935,
+      "want": 25.0,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "mean|cos| k=0",
+      "got": 0.4831654860620965,
+      "want": 0.4832,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "mean|cos| k=1",
+      "got": 0.22684968043054451,
+      "want": 0.2268,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "mean|cos| k=2",
+      "got": 0.14191611300704013,
+      "want": 0.1419,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "corr(k,|T|) Pearson",
+      "got": -0.3819115568925749,
+      "want": -0.3819,
+      "ok": true
+    },
+    {
+      "doc": "docs/02 L32",
+      "name": "node0 T 觀測 (μK)",
+      "got": -134.18925830767634,
+      "want": -134.19,
+      "ok": true
+    },
+    {
+      "doc": "NN_results",
+      "name": "node0 投影模型預測 (μK)",
+      "got": -117.5,
+      "want": -117.5,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "node47 T (μK)",
+      "got": -123.39670157033868,
+      "want": -123.4,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "node9 T (μK)",
+      "got": -106.99234194174035,
+      "want": -107.0,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "node20 |T| (μK)",
+      "got": 35.4097510940236,
+      "want": 35.4,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,08",
+      "name": "|T9|/|T20|",
+      "got": 3.0215502407131676,
+      "want": 3.02,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "node9-node0 角距",
+      "got": 26.16641811053062,
+      "want": 26.17,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "node20-node0 角距",
+      "got": 26.16639405357641,
+      "want": 26.17,
+      "ok": true
+    },
+    {
+      "doc": "docs/02",
+      "name": "node9 鄰居數",
+      "got": 4,
+      "want": 4,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,08",
+      "name": "node9 k",
+      "got": 0,
+      "want": 0,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,08",
+      "name": "node20 k",
+      "got": 0,
+      "want": 0,
+      "ok": true
+    },
+    {
+      "doc": "docs/07,08",
+      "name": "A5 |b| 範圍 [−76.81, 76.46]",
+      "got": [
+        -76.81,
+        76.46
+      ],
+      "want": [
+        -76.81,
+        76.46
+      ],
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "|b|<20 節點數",
+      "got": 22,
+      "want": 22,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "精確 I_h 座標節點數",
+      "got": 60,
+      "want": 60,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "精確座標邊長散佈",
+      "got": 0.0,
+      "want": 0.0,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "精確座標邊長",
+      "got": 0.4478379595890265,
+      "want": 0.447838,
+      "ok": true
+    },
+    {
+      "doc": "docs/06,07",
+      "name": "t=1 偏差 (精確座標)",
+      "got": 3.7007434154171884e-18,
+      "want": "<= 1e-15",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "t=2 偏差 (精確座標)",
+      "got": 5.551115123125783e-17,
+      "want": "<= 1e-15",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "t=3 偏差 (精確座標)",
+      "got": 3.7007434154171884e-18,
+      "want": "<= 1e-15",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "t=4 偏差 (精確座標)",
+      "got": 2.220446049250313e-16,
+      "want": "<= 1e-15",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "t=5 偏差 (精確座標)",
+      "got": 5.551115123125783e-18,
+      "want": "<= 1e-15",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "t=6 偏差 (精確座標, 應失敗)",
+      "got": 0.0017671695131239798,
+      "want": 0.00177,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "a5 t=1 偏差 (實際採樣)",
+      "got": 5.2822329843493775e-17,
+      "want": "<= 1e-15",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "a5 t=2 偏差 (噪聲級)",
+      "got": 8.410189133052174e-08,
+      "want": "<= 1e-06",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "M_ll-I dev l=0",
+      "got": 2.220446049250313e-16,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "M_ll-I dev l=1",
+      "got": 6.661338147750939e-16,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "M_ll-I dev l=2",
+      "got": 5.551115123125783e-16,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "M_33-I dev",
+      "got": 0.11597049929875969,
+      "want": 0.116,
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "leak l'=0 -> 3 (應為零)",
+      "got": 9.291527334731402e-17,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "leak l'=1 -> 3 (應為零)",
+      "got": 4.777376810443996e-16,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "leak l'=2 -> 3 (應為零)",
+      "got": 4.0738699161417305e-16,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "leak l'=4 -> 3 (應為零)",
+      "got": 8.614064813718831e-16,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "leak l'=5 -> 3",
+      "got": 0.2408569251347755,
+      "want": 0.241,
+      "ok": true
+    },
+    {
+      "doc": "docs/06,07",
+      "name": "ell=3 功率 (a5 座標)",
+      "got": 9458.308196604652,
+      "want": 9458,
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "移除 l<=2 後保留率",
+      "got": 100.00003396744336,
+      "want": 100.0,
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "l'=5 洩漏佔 ell=3 功率 %",
+      "got": 0.4586303851243549,
+      "want": 0.46,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "ell=3 佔 ell=1-6 功率 %",
+      "got": 44.14882490305516,
+      "want": 44.3,
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "真軸 l",
+      "got": 193.45,
+      "want": 193.45,
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "真軸 b",
+      "got": -37.85,
+      "want": -37.85,
+      "ok": true
+    },
+    {
+      "doc": "docs/07",
+      "name": "軸 |b| = 37.85",
+      "got": 37.85,
+      "want": 37.85,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "軸 vs 冷斑 node0",
+      "got": 21.732025370101717,
+      "want": 21.73,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "軸 vs 銀河北極",
+      "got": 52.150824328300295,
+      "want": 52.15,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "軸 vs CMB 偶極 (ICRS)",
+      "got": 73.5688515907349,
+      "want": 73.57,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "|Aut(G)|",
+      "got": 120,
+      "want": 120,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "軌道數 (頂點傳遞)",
+      "got": 1,
+      "want": 1,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "軌道大小",
+      "got": 60,
+      "want": 60,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "使 9->20 嘅自同構數",
+      "got": 2,
+      "want": 2,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "g 保持 k=2 集合",
+      "got": true,
+      "want": true,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "g 保持著色",
+      "got": true,
+      "want": true,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "||P L P^T - L||",
+      "got": 0.0,
+      "want": 0.0,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "||P psi0 - psi0||",
+      "got": 0.0,
+      "want": 0.0,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "相異特徵值數",
+      "got": 13,
+      "want": 13,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "最大多重度",
+      "got": 8,
+      "want": 8,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "譜簽名 |sig9-sig20|",
+      "got": 0.4769881780958955,
+      "want": 0.477,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "|T9-T20| tau=0.5",
+      "got": 2.7809732887839817e-17,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "|T9-T20| tau=7.5",
+      "got": 4.2327252813834093e-16,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "|T9-T20| tau=12.0",
+      "got": 7.653650303270526e-16,
+      "want": "<= 1e-14",
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "hop(node9)",
+      "got": 2,
+      "want": 2,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "hop(node20)",
+      "got": 2,
+      "want": 2,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "Sigma 鄰居 k (9)",
+      "got": 3,
+      "want": 3,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "Sigma 鄰居 k (20)",
+      "got": 3,
+      "want": 3,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "三角形數 (全圖常數)",
+      "got": [
+        1
+      ],
+      "want": [
+        1
+      ],
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "三角形面數 = 20",
+      "got": 20,
+      "want": 20,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "三角面數 (Z2)",
+      "got": 20,
+      "want": 20,
+      "ok": true
+    },
+    {
+      "doc": "docs/08",
+      "name": "和樂 = -1 數",
+      "got": 0,
+      "want": 0,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,03",
+      "name": "面數 三角形",
+      "got": 20,
+      "want": 20,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,03",
+      "name": "面數 五邊形",
+      "got": 12,
+      "want": 12,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,03",
+      "name": "面數 正方形",
+      "got": 30,
+      "want": 30,
+      "ok": true
+    },
+    {
+      "doc": "docs/02,03",
+      "name": "總面數",
+      "got": 62,
+      "want": 62,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "著色基態 H",
+      "got": -56,
+      "want": -56,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "觀測 H",
+      "got": 0,
+      "want": 0,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "隨機 H 均值",
+      "got": -2.296,
+      "want": -2.0,
+      "ok": true
+    },
+    {
+      "doc": "docs/06",
+      "name": "隨機 H 標準差",
+      "got": 10.736497752991895,
+      "want": 10.8,
+      "ok": true
+    },
+    {
+      "doc": "docs/03",
+      "name": "著色 sign 一致數",
+      "got": 37,
+      "want": 37,
+      "ok": true
+    },
+    {
+      "doc": "docs/03",
+      "name": "一致率 %",
+      "got": 61.666666666666664,
+      "want": 61.7,
+      "ok": true
+    },
+    {
+      "doc": "docs/03",
+      "name": "color[0] 錨定 = 1",
+      "got": 1,
+      "want": 1,
+      "ok": true
+    }
+  ]
+}

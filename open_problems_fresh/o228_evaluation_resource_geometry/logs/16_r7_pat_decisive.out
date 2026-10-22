@@ -1,0 +1,18 @@
+================================================================================================================
+O228 scripts/16 -- R7 (1) decisive: all 225 cases of pat(k=6) closed  =>  max pat = 26 exactly
+================================================================================================================
+L1/L2: {'checked_subsets': 3000, 'odd_code_map': True, 'no_self_twin_class': True, 'class_size_multiset_twin_invariant': True, 'loss2_iff_two_uncovered_pairs': True}
+[PASS] P1L-1  -- {'checked_subsets': 3000, 'odd_code_map': True, 'no_self_twin_class': True, 'class_size_multiset_twin_invariant': True, 'loss2_iff_two_uncovered_pairs': True}
+twin separating sets identical for every pair: True
+cases: T1 witness = 135 ; T2 exhaustive no-cover = 90 ; unresolved = 0 ; max nodes = 450455 (budget 20000000)
+bonus records: restricted packing sizes [4, 5, 6, 8] ; exact LP values in [5, 8]
+[PASS] P1C-1  -- 135 + 90 = 225 groups ; max nodes = 450455 ; unresolved = 0
+[PASS] P1C-2  -- R5 best = 26 ; 28 excluded by 225 certificates
+[FAIL] P1C-3  -- LP values in [5, 8]
+[PASS] P1C-3-c  -- LP histogram {'5': 30, '6': 30, '8': 30} over the 90 pre-check-passing groups ; LP >= 7 for 30 of them, < 7 for 60
+[PASS] P1C0-1-c  -- scripts/14 log P1C0-1 FAIL kept as the record ; scripts/11 and 15 logs likewise
+[PASS] P1S-1  -- four scripts, four logs, one point value: max pat(k=6) = 26
+================================================================================================================
+RESULT: 6/7 PASS  (1 FAIL)   elapsed 85.1 s
+================================================================================================================
+exit=1

@@ -1,0 +1,30 @@
+[PASS] A1    o222 four frozen inputs: sha256 identical to the R1 literals  --  4/4 match
+[PASS] A2    o222 untouched today (find -newermt count)  --  count=0
+[PASS] B1    K shape = 120 x 62 and values in {+1,-1}  --  shape=120x62 values=[-1, 1]
+[FAIL] B2    distinct full column vectors of K  --  got 32 (R11 records 60 for the 30-row machine)
+[PASS] B3    rank_Q(K) = 6 (independent rational RREF)  --  rank=6 pivots=6
+[PASS] C1    M_edge rebuilt: rows=30 cols=62 pairs=435; every pair separated by >=1 column  --  rows=30 cols=62 pairs=435
+[PASS] C2    R10 explicit 7-cover [0,1,4,9,10,15,23] separates all 435 pairs (independent)
+[PASS] C3    root-LP support from data/10 = 10 columns; x* = 1/2 on it is a fractional cover (LP* >= 5)  --  support=[3, 4, 6, 8, 9, 13, 15, 18, 19, 32] sum=5
+[PASS] C4    R12 support S is 9-redundant: S minus ANY one column still covers all 435 pairs  --  10/10
+[PASS] C5    F_6(M_edge) = 0 by independent DFS (=> k_min >= 7)  --  frames=0 nodes=38704793 abort=False 8.4s
+[PASS] C6    F_7(M_edge) = 8584 by independent DFS (=> k_min = 7)  --  frames=8584 nodes=304315585 abort=False 65.9s
+[PASS] E1    per-column degrees: min 812 / max 1306, all 62 columns used  --  min=812 max=1306 ncols=62 distinct=30
+[PASS] E2    all 8584 frames inclusion-minimal  --  non-minimal=0
+[PASS] E3    independently counted F_7 equals data/22 enumeration.frames  --  8584 vs 8584
+[PASS] E4    pairwise mutual-exclusion count = 17,659,238 (47.9%)  --  got 17659238 vs 17659238 (3.1s)
+[FAIL] E5    distinct frame types = 6960  --  got 8584 vs 6960
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/24_closeout_audit.py", line 299, in <module>
+    _, _, cols = build_from(rws, axl, nm)
+                 ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/24_closeout_audit.py", line 117, in build_from
+    cols.append(col_vec(ax, rows))
+                ~~~~~~~^^^^^^^^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/24_closeout_audit.py", line 96, in col_vec
+    d = m.add(m.add(m.mul(u[0], r[0]), m.mul(u[1], r[1])), m.mul(u[2], r[2]))
+                    ~~~~~^^^^^^^^^^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/09_a2_rollback.py", line 62, in mul
+    return (x[0] * y[0] + 5 * x[1] * y[1], x[0] * y[1] + x[1] * y[0])
+            ~^^^
+TypeError: 'int' object is not subscriptable

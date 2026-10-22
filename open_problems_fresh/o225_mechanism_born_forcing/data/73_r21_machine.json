@@ -1,0 +1,108 @@
+{
+ "rules": "r19-arithmetic-form-v1",
+ "n_pass": 3,
+ "n_total": 12,
+ "claims": [
+  {
+   "tag": "U1",
+   "name": "★★（等價刻畫）非承載 ⟺ V(a) 之 4 值皆與 U_0 之 dot = ±φ⁻¹（V(a) ⊂ N(U_0)∪−N(U_0)）",
+   "ok": false,
+   "detail": "反例 = [32, 35, 36, 37, 38, 45, 48, 55, 56, 57, 58, 61] ; 逐線 (L, 性質) = [(32, True), (33, False), (34, False), (35, True), (36, True), (37, True), (38, True), (39, True), (40, True), (41, True), (42, True), (43, False), (44, False), (45, True), (46, False)] ; nec = [39, 40, 41, 42, 51, 52, 53, 54]"
+  },
+  {
+   "tag": "U2",
+   "name": "★（量測）每 B10 線之邊 {v,w}：存在群元素固定 U_0 且交換 v,w（鏡射 σ_{vw}），其對 V(a) 之置換交換二對",
+   "ok": true,
+   "detail": "逐線 (L, 前 2 個 σ, σ 對 V 之置換) = [(39, [21, 117], [1, 5, 6, 10]), (40, [30, 108], [1, 4, 7, 10]), (41, [30, 108], [2, 3, 8, 9]), (42, [21, 117], [2, 3, 8, 9]), (45, [21, 117], [1, 4, 7, 10])]"
+  },
+  {
+   "tag": "U3",
+   "name": "★★（推導）frame 恒等式：x ⊥ U_a ⟹ x = αU_0 + βv + γw，α = ⟨x,U_0⟩（U_0-係數 = 其 dot），β = (⟨x,v⟩−αφ⁻³)/(2φ⁻²)，γ = −αφ⁻¹−β（逐分量精確重建）",
+   "ok": false,
+   "detail": "反例 = [(41, 1, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))', '(Fraction(-1, 2), Fraction(1, 2))'), (41, 4, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))'), (41, 7, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))'), (41, 10, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))', '(Fraction(1, 2), Fraction(-1, 2))'), (42, 1, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))', '(Fraction(-1, 2), Fraction(1, 2))'), (42, 5, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))'), (42, 6, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))'), (42, 10, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))', '(Fraction(1, 2), Fraction(-1, 2))'), (45, 2, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))'), (45, 3, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))', '(Fraction(1, 2), Fraction(-1, 2))'), (45, 8, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))', '(Fraction(-1, 2), Fraction(1, 2))'), (45, 9, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))')] ; 逐線 (L, [(值索引, α, β, γ, 重建✓)]) = [(39, [(2, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))', True), (4, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))', '(Fraction(1, 2), Fraction(-1, 2))', True), (7, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))', '(Fraction(-1, 2), Fraction(1, 2))', True), (9, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))', True)]), (40, [(3, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))', True), (5, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 1), Fraction(0, 1))', '(Fraction(1, 2), Fraction(-1, 2))', True), (6, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))', '(Fraction(-1, 2), Fraction(1, 2))', True), (8, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 1), Fraction(0, 1))', True)])]"
+  },
+  {
+   "tag": "U4",
+   "name": "★★（推導）叉積閉式：U_a×x = ½[−φ⁻¹T + (1+φ⁻¹)C]、U_a×y = ½[−φ⁻¹T − (1+φ⁻¹)C]（T = v×U_0+w×U_0，C = v×w）——每線恰一對各命中之值",
+   "ok": false,
+   "detail": "反例 = [(39, ['((Fraction(-1, 4), Fraction(1, 4)), (Fraction(0, 1), Fraction(-1, 2)), (Fraction(3, 4), Fraction(-1, 4)))', '((Fraction(-5, 4), Fraction(1, 4)), (Fraction(1, 2), Fraction(0, 1)), (Fraction(1, 4), Fraction(1, 4)))', '((Fraction(5, 4), Fraction(-1, 4)), (Fraction(-1, 2), Fraction(0, 1)), (Fraction(-1, 4), Fraction(-1, 4)))', '((Fraction(1, 4), Fraction(-1, 4)), (Fraction(0, 1), Fraction(1, 2)), (Fraction(-3, 4), Fraction(1, 4)))']), (40, ['((Fraction(1, 4), Fraction(-1, 4)), (Fraction(0, 1), Fraction(1, 2)), (Fraction(3, 4), Fraction(-1, 4)))', '((Fraction(5, 4), Fraction(-1, 4)), (Fraction(-1, 2), Fraction(0, 1)), (Fraction(1, 4), Fraction(1, 4)))', '((Fraction(-5, 4), Fraction(1, 4)), (Fraction(1, 2), Fraction(0, 1)), (Fraction(-1, 4), Fraction(-1, 4)))', '((Fraction(-1, 4), Fraction(1, 4)), (Fraction(0, 1), Fraction(-1, 2)), (Fraction(-3, 4), Fraction(1, 4)))']), (41, ['((Fraction(-1, 2), Fraction(0, 1)), (Fraction(1, 4), Fraction(1, 4)), (Fraction(-5, 4), Fraction(1, 4)))', '((Fraction(0, 1), Fraction(-1, 2)), (Fraction(-3, 4), Fraction(1, 4)), (Fraction(1, 4), Fraction(-1, 4)))', '((Fraction(0, 1), Fraction(1, 2)), (Fraction(3, 4), Fraction(-1, 4)), (Fraction(-1, 4), Fraction(1, 4)))', '((Fraction(1, 2), Fraction(0, 1)), (Fraction(-1, 4), Fraction(-1, 4)), (Fraction(5, 4), Fraction(-1, 4)))']), (42, ['((Fraction(1, 2), Fraction(0, 1)), (Fraction(-1, 4), Fraction(-1, 4)), (Fraction(-5, 4), Fraction(1, 4)))', '((Fraction(0, 1), Fraction(1, 2)), (Fraction(3, 4), Fraction(-1, 4)), (Fraction(1, 4), Fraction(-1, 4)))', '((Fraction(0, 1), Fraction(-1, 2)), (Fraction(-3, 4), Fraction(1, 4)), (Fraction(-1, 4), Fraction(1, 4)))', '((Fraction(-1, 2), Fraction(0, 1)), (Fraction(1, 4), Fraction(1, 4)), (Fraction(5, 4), Fraction(-1, 4)))']), (45, ['((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))', '((Fraction(-1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))', '((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))', '((Fraction(-1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))'])] ; 逐線 (L, +C 命中值, −C 命中值) = [(39, [], []), (40, [], []), (41, [], []), (42, [], []), (45, [], [])]"
+  },
+  {
+   "tag": "U5",
+   "name": "★★（最後一步）5 個 B10 線中 lidx(U_a×x) = lidx(U_a×y) 者恰為 4 條非座標線",
+   "ok": false,
+   "detail": "逐線 (L, lidx(×v), lidx(×w), 零分量數) = [(39, 0, 0, 0), (40, 0, 0, 0), (41, 0, 0, 0), (42, 0, 0, 0), (45, 0, 0, 2)] ; 非座標線 = [39, 40, 41, 42]"
+  },
+  {
+   "tag": "U6",
+   "name": "★★（機制）非承載 ⟺ V(a) ⊂ N(U_0)∪−N(U_0)；非座標情形二對之 leading index 相同 ⟹ 判準退化為乘積相同 ⟹ dind 於 V(a) 恆定",
+   "ok": false,
+   "detail": "U1 反例 = [32, 35, 36, 37, 38, 45, 48, 55, 56, 57, 58, 61] ; 非座標 = [39, 40, 41, 42]"
+  },
+  {
+   "tag": "U3-a",
+   "name": "★★（推導）frame 恆等式（唯一性驗證）：α := U_0-係數（3×3 Gram 解）恆 = ⟨x,U_0⟩（perp + Gram ⟹ 恆等）",
+   "ok": false,
+   "detail": "反例 = [(41, 1, '(Fraction(1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))'), (41, 4, '(Fraction(-1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))'), (41, 7, '(Fraction(1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))'), (41, 10, '(Fraction(-1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))'), (42, 1, '(Fraction(1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))'), (42, 5, '(Fraction(-1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))'), (42, 6, '(Fraction(1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))'), (42, 10, '(Fraction(-1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))'), (45, 2, '(Fraction(-1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))'), (45, 3, '(Fraction(-1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))'), (45, 8, '(Fraction(1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))'), (45, 9, '(Fraction(1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))')] ; 逐值 (L, 值索引, ⟨x,U_0⟩, ✓) = [(39, 2, '(Fraction(1, 2), Fraction(-1, 2))', True), (39, 4, '(Fraction(1, 2), Fraction(-1, 2))', True), (39, 7, '(Fraction(-1, 2), Fraction(1, 2))', True), (39, 9, '(Fraction(-1, 2), Fraction(1, 2))', True), (40, 3, '(Fraction(1, 2), Fraction(-1, 2))', True), (40, 5, '(Fraction(1, 2), Fraction(-1, 2))', True)]"
+  },
+  {
+   "tag": "U5-c",
+   "name": "★★（最後一步）B10 線之二對代表之 dind 位相同 ⟺ 非座標軸（39/40/41/42 皆 0 或皆 1；45 為 {0,1}）",
+   "ok": true,
+   "detail": "逐線 (L, 位之集合, 零分量數) = [(39, [0], 0), (40, [1], 0), (41, [0], 0), (42, [1], 0), (45, [0, 1], 2)]"
+  },
+  {
+   "tag": "V1",
+   "name": "★★（量測律）於 Z10 之 10 態：全部 62 欄每欄之貢獻鍵數 ≤ 1",
+   "ok": false,
+   "detail": "違反之（欄,態）數 = 36 ; 首 5 = [(32, 15), (32, 57), (32, 67), (32, 77), (36, 21)]"
+  },
+  {
+   "tag": "V2",
+   "name": "★★（推導）a ≠ 61（鍵重數皆 2）⟹ N_a = Σ_{貢獻鍵} ±1 ⟹ abs(N_a) ≤ 1 ⟺ 至多一鍵貢獻",
+   "ok": false,
+   "detail": "違反之（欄,態）數 = 608"
+  },
+  {
+   "tag": "V3",
+   "name": "★★（機制）於 Z10：每欄滿足「恰一端在 T_a」型（tw ⊕ tr）之事件數 ≤ 1",
+   "ok": false,
+   "detail": "逐欄（欄, Z10 上最大 tie-型數）= [(32, 2), (35, 2), (36, 2), (37, 2), (38, 2), (39, 2), (40, 2), (41, 2), (42, 2), (48, 2), (51, 2), (52, 2), (53, 2), (55, 2), (56, 2), (57, 2), (58, 2)]"
+  },
+  {
+   "tag": "V4",
+   "name": "★（量測）Z10 之逐欄貢獻鍵數集合分佈；且 Z10 之 5 對之逐欄貢獻向量相同",
+   "ok": true,
+   "detail": "逐欄 = [(0, [0]), (1, [0]), (2, [0]), (3, [0]), (4, [0]), (5, [0]), (6, [0]), (7, [0]), (8, [0]), (9, [0]), (10, [0]), (11, [0]), (12, [0]), (13, [0]), (14, [0]), (15, [0]), (16, [0]), (17, [0]), (18, [0]), (19, [0]), (20, [0]), (21, [0]), (22, [0]), (23, [0]), (24, [0]), (25, [0]), (26, [0]), (27, [0]), (28, [0]), (29, [0]), (30, [0]), (31, [0]), (32, [0, 2]), (33, [0]), (34, [0]), (35, [0]), (36, [0, 2]), (37, [0, 2]), (38, [0, 2]), (39, [0]), (40, [0, 2]), (41, [0]), (42, [0, 2]), (43, [0]), (44, [0]), (45, [0]), (46, [0]), (47, [0]), (48, [0, 2]), (49, [0]), (50, [0]), (51, [0]), (52, [0, 2]), (53, [0]), (54, [0]), (55, [0, 2]), (56, [0, 2]), (57, [0, 2]), (58, [0]), (59, [0]), (60, [0]), (61, [0])] ; 對稱 = True"
+  }
+ ],
+ "nec8": [
+  39,
+  40,
+  41,
+  42,
+  51,
+  52,
+  53,
+  54
+ ],
+ "B10": [
+  39,
+  40,
+  41,
+  42,
+  45,
+  48,
+  51,
+  52,
+  53,
+  54
+ ],
+ "B10L": [
+  39,
+  40,
+  41,
+  42,
+  45
+ ]
+}

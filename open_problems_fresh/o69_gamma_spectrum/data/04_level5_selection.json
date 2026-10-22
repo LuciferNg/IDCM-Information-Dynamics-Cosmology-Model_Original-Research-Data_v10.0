@@ -1,0 +1,73 @@
+{
+  "level5_modes": {
+    "17": {
+      "branch": 1,
+      "gamma": 1.301071640801803
+    },
+    "18": {
+      "branch": 2,
+      "gamma": 1.43653488631714
+    },
+    "19": {
+      "branch": 3,
+      "gamma": 1.5748694208940461
+    },
+    "20": {
+      "branch": 4,
+      "gamma": 1.7153703234534299
+    }
+  },
+  "selected": {
+    "n": 20,
+    "branch": 4,
+    "reason": "F\u2085\u00d7B, U(1) remnant, first available Branch 4 level"
+  },
+  "branch4_exclusion": {
+    "level1": "SU(4)\u2192SU(3): Branch 4 excluded",
+    "level2": "SU(3)\u2192SU(2): Branch 1,4 excluded",
+    "level5": "SU(2)\u2192U(1): Only Branch 4 remains"
+  },
+  "checks": [
+    {
+      "check": "Level 5 \u6a21\u5f0f: 17(B1),18(B2),19(B3),20(B4)",
+      "pass": true
+    },
+    {
+      "check": "\u9078\u4e2d n=20 = Branch 4",
+      "pass": true
+    },
+    {
+      "check": "Level 1: Branch 4 \u6392\u9664 (SU(4)\u2192SU(3))",
+      "pass": true
+    },
+    {
+      "check": "Level 2: Branch 1,4 \u6392\u9664 (SU(3)\u2192SU(2))",
+      "pass": true
+    },
+    {
+      "check": "Level 5 = Branch 4 \u9996\u6b21\u53ef\u7528 Level",
+      "pass": true
+    },
+    {
+      "check": "n=20 = F\u2085\u00d7B = 5\u00d74",
+      "pass": true
+    },
+    {
+      "check": "n=20 = N_d - 2\u00d7B\u00d7N_gen = 44-24",
+      "pass": true
+    },
+    {
+      "check": "\u03b3\u2082\u2080 > \u03b3\u2081\u2089 > \u03b3\u2081\u2088 > \u03b3\u2081\u2087 (\u55ae\u8abf\u905e\u589e)",
+      "pass": true
+    },
+    {
+      "check": "\u03c4 \u4fc2\u6700\u91cd\u8f15\u5b50 \u2192 \u6700\u6df1\u53ef\u7528 Level",
+      "pass": true
+    },
+    {
+      "check": "Level 5 = tau \u6700\u5c0f\u6240\u9700\u6df1\u5ea6",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

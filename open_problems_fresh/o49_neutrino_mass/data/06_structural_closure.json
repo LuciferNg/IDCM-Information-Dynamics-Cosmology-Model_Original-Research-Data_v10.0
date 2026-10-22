@@ -1,0 +1,25 @@
+{
+  "test": "O49 06: O66 交叉閉合 + 結構缺口終審",
+  "M_comp_O66": 36889796677471.16,
+  "m3_eV": 0.05358624557236194,
+  "m1_eV": 0.020916159172789824,
+  "m2_eV": 0.022644772344660034,
+  "sum_nu_eV": 0.0971471770898118,
+  "dm31_self_consistent": true,
+  "dm21_self_consistent": true,
+  "dm_ratio_2B2": 32.32403718459495,
+  "dm_ratio_dev_pct": 1.0126162018592177,
+  "phi_power_conflict_pct": 46.25062504118295,
+  "status": "M_comp ✅ O66 propagator 閉合; φ-power/Z₃² 撤銷; 世代結構 🔴 開放; Σm_ν 🔴 DESI 張力",
+  "passed": 12,
+  "failed": 0,
+  "generation_structure": {
+    "phi_power_rejected": true,
+    "m2_m1_NO": 1.0826448659904535,
+    "m2_m1_phi": 1.618033988749895,
+    "dm_ratio_2B2": 32.32403718459495,
+    "m1_m3": 0.39032701301204253,
+    "m1_m3_phi_minus2": 0.38196601125010515,
+    "status": "比結構 2B² ✅; 質量比無獨立結構 🔴 (φ-power 推翻)"
+  }
+}

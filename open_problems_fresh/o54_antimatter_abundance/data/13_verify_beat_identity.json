@@ -1,0 +1,11 @@
+{
+  "test": "sympy 拍頻恆等式數學驗證",
+  "trig_identity": true,
+  "C44_2": 946,
+  "diff_unique": 946,
+  "sum_unique": 946,
+  "sum_gt_diff": true,
+  "E_pair": "2ħ·max(ω)",
+  "np_ratio": 0.14261761295541645,
+  "conclusion": "三角恆等式精確; 946 差頻/和頻全唯一 (無簡併); 和頻>差頻 恆真; E_pair=2ħ·max(ω); n/p=γ₇/γ₂₀=0.14262 (0.17%)"
+}

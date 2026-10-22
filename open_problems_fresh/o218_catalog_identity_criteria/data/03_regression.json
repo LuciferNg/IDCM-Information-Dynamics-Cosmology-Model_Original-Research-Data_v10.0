@@ -1,0 +1,532 @@
+{
+ "rows": [
+  {
+   "case": "b₁×30 = 123 = L₁₀",
+   "source": "o151/docs/12_b1_123_coincidence_verdict.md §4",
+   "nature": "跨框架巧合",
+   "group": "dead",
+   "verdict": "COINCIDENCE",
+   "expect": "COINCIDENCE",
+   "dev": 0.0,
+   "note": "",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "FAIL",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "b₁ = 2N_gen×f_unproj",
+   "source": "o151/docs/12 §3",
+   "nature": "重言式",
+   "group": "dead",
+   "verdict": "TAUTOLOGY",
+   "expect": "TAUTOLOGY",
+   "dev": 0.0,
+   "note": "",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "FAIL",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "MSSM 33 = N_gen×L₅",
+   "source": "o151/docs/12 §5",
+   "nature": "跨框架巧合",
+   "group": "dead",
+   "verdict": "COINCIDENCE",
+   "expect": "COINCIDENCE",
+   "dev": 0.0,
+   "note": "",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "FAIL",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "C_energy 1/45 (2.222%) vs 觀測 2.000%",
+   "source": "o199/docs/02_audit_20260921.md",
+   "nature": "預言殘差 (11.1% 偏差)",
+   "group": "dead",
+   "verdict": "FALSE",
+   "expect": "FALSE",
+   "dev": 0.1,
+   "note": "dev = 0.1111",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "FAIL",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "(1/45)·(9/10) = 0.02 (複合救援式)",
+   "source": "o199/docs/02 §3 表",
+   "nature": "兩級測試 (乘性修正承載)",
+   "group": "dead",
+   "verdict": "MULTIPLIER",
+   "expect": "MULTIPLIER",
+   "dev": 0.0,
+   "note": "主體偏差 0.1111",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "FAIL",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "PASS (σ 內, O208 例外 2)",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "log₂(S_dS) ≈ 406",
+   "source": "o151/docs/05_holographic_bound.md §4",
+   "nature": "陷阱窗",
+   "group": "dead",
+   "verdict": "TRAP",
+   "expect": "TRAP",
+   "dev": 0.00059,
+   "note": "",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "FAIL",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "C_old = −0.1697",
+   "source": "o201/docs/03_identity_criterion.md §二",
+   "nature": "陷阱窗 (已證偽係數)",
+   "group": "dead",
+   "verdict": "TRAP",
+   "expect": "TRAP",
+   "dev": 0.000142,
+   "note": "",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "FAIL",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "b_spec vs √5/2",
+   "source": "o201/docs/03 §二 + docs/04",
+   "nature": "數域分離",
+   "group": "dead",
+   "verdict": "FIELD",
+   "expect": "FIELD",
+   "dev": 0.000966,
+   "note": "",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "FAIL",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "FAIL"
+   }
+  },
+  {
+   "case": "「47」目錄身份",
+   "source": "o137/docs/36_gap_attack_round19.md §8.5",
+   "nature": "目錄表示非唯一",
+   "group": "dead",
+   "verdict": "NONUNIQUE",
+   "expect": "NONUNIQUE",
+   "dev": 0.0,
+   "note": "R = 6",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "FAIL",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "Σγ = 90 = B(N_d+1)/2",
+   "source": "o211_geometry_generation (Σγ 閉式)",
+   "nature": "代數恆等式",
+   "group": "alive",
+   "verdict": "IDENTITY_OK",
+   "expect": "IDENTITY_OK",
+   "dev": 0.0,
+   "note": "|差| = 0.0",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "γ⁽⁸⁸⁾_n + γ⁽⁸⁸⁾_{44−n} = 4 = B",
+   "source": "o169 docs/02:21 + o211 docs/01 C7",
+   "nature": "符號恆等式",
+   "group": "alive",
+   "verdict": "IDENTITY_OK",
+   "expect": "IDENTITY_OK",
+   "dev": 0.0,
+   "note": "sympy 差 = 0",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "γ⁽¹⁷⁶⁾_{44±j} = 4 = B",
+   "source": "o124 scripts/13 A1 (o160 docs/06 §4)",
+   "nature": "符號恆等式",
+   "group": "alive",
+   "verdict": "IDENTITY_OK",
+   "expect": "IDENTITY_OK",
+   "dev": 0.0,
+   "note": "sympy 差 = 0",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "γ⁽¹⁷⁶⁾_n + γ⁽¹⁷⁶⁾_{44−n} ≠ 4 (錯配對)",
+   "source": "o124 docs/09 §A3 (負結果)",
+   "nature": "負結果 (鏈條件性)",
+   "group": "dead",
+   "verdict": "FALSE",
+   "expect": "FALSE",
+   "dev": null,
+   "note": "最近接 dev = 2.0701",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "FAIL",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "MISSING",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "Σγ_odd = 44 = N_d",
+   "source": "o169 B1 (Z₂ 反對稱)",
+   "nature": "代數恆等式",
+   "group": "alive",
+   "verdict": "IDENTITY_OK",
+   "expect": "IDENTITY_OK",
+   "dev": 0.0,
+   "note": "|差| = 0.0",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "946 = C(44,2)",
+   "source": "o213 world_dynamics R5",
+   "nature": "組合恆等式",
+   "group": "alive",
+   "verdict": "IDENTITY_OK",
+   "expect": "IDENTITY_OK",
+   "dev": 0.0,
+   "note": "|差| = 0.0",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "123 = L₁₀ = E_J",
+   "source": "o124 §b₀ / o81 U3",
+   "nature": "算子恆等式",
+   "group": "alive",
+   "verdict": "IDENTITY_OK",
+   "expect": "IDENTITY_OK",
+   "dev": 0.0,
+   "note": "",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "b_spec vs DESI free fit",
+   "source": "o169 docs/02 + docs/09",
+   "nature": "預言殘差 (σ 內)",
+   "group": "alive",
+   "verdict": "MATCH_OK",
+   "expect": "MATCH_OK",
+   "dev": 0.002189803547844578,
+   "note": "pull = 0.100σ",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "PASS",
+    "G5_exact_cert": "MISSING",
+    "G5_density": "PASS (σ 內, O208 例外 2)",
+    "G6_field": "N/A"
+   }
+  },
+  {
+   "case": "G_ss = 72 (4g 色代數)",
+   "source": "o124/QCD 扇區",
+   "nature": "色代數恆等式",
+   "group": "alive",
+   "verdict": "IDENTITY_OK",
+   "expect": "IDENTITY_OK",
+   "dev": 0.0,
+   "note": "|差| = 0.0",
+   "gates": {
+    "G1_G2_leaf_audit": "PASS",
+    "G3_zero_free_param": "PASS",
+    "G0_equality_holds": "PASS",
+    "T1_tautology": "PASS",
+    "T2_cross_framework": "PASS",
+    "T3_free_multiplier": "PASS",
+    "T5_two_level": "N/A",
+    "U_nonunique": "PASS",
+    "G4_trap_window": "N/A (EXACT)",
+    "G5_exact_cert": "PASS",
+    "G5_density": "PASS (N_search=1)",
+    "G6_field": "N/A"
+   }
+  }
+ ],
+ "n_dead": 10,
+ "n_dead_ok": 10,
+ "n_alive": 8,
+ "n_alive_ok": 8,
+ "checks": [
+  [
+   "b₁×30 = 123 = L₁₀",
+   true,
+   "COINCIDENCE (期望 COINCIDENCE)"
+  ],
+  [
+   "b₁ = 2N_gen×f_unproj",
+   true,
+   "TAUTOLOGY (期望 TAUTOLOGY)"
+  ],
+  [
+   "MSSM 33 = N_gen×L₅",
+   true,
+   "COINCIDENCE (期望 COINCIDENCE)"
+  ],
+  [
+   "C_energy 1/45 (2.222%) vs 觀測 2.000%",
+   true,
+   "FALSE (期望 FALSE)"
+  ],
+  [
+   "(1/45)·(9/10) = 0.02 (複合救援式)",
+   true,
+   "MULTIPLIER (期望 MULTIPLIER)"
+  ],
+  [
+   "log₂(S_dS) ≈ 406",
+   true,
+   "TRAP (期望 TRAP)"
+  ],
+  [
+   "C_old = −0.1697",
+   true,
+   "TRAP (期望 TRAP)"
+  ],
+  [
+   "b_spec vs √5/2",
+   true,
+   "FIELD (期望 FIELD)"
+  ],
+  [
+   "「47」目錄身份",
+   true,
+   "NONUNIQUE (期望 NONUNIQUE)"
+  ],
+  [
+   "Σγ = 90 = B(N_d+1)/2",
+   true,
+   "IDENTITY_OK (期望 IDENTITY_OK)"
+  ],
+  [
+   "γ⁽⁸⁸⁾_n + γ⁽⁸⁸⁾_{44−n} = 4 = B",
+   true,
+   "IDENTITY_OK (期望 IDENTITY_OK)"
+  ],
+  [
+   "γ⁽¹⁷⁶⁾_{44±j} = 4 = B",
+   true,
+   "IDENTITY_OK (期望 IDENTITY_OK)"
+  ],
+  [
+   "γ⁽¹⁷⁶⁾_n + γ⁽¹⁷⁶⁾_{44−n} ≠ 4 (錯配對)",
+   true,
+   "FALSE (期望 FALSE)"
+  ],
+  [
+   "Σγ_odd = 44 = N_d",
+   true,
+   "IDENTITY_OK (期望 IDENTITY_OK)"
+  ],
+  [
+   "946 = C(44,2)",
+   true,
+   "IDENTITY_OK (期望 IDENTITY_OK)"
+  ],
+  [
+   "123 = L₁₀ = E_J",
+   true,
+   "IDENTITY_OK (期望 IDENTITY_OK)"
+  ],
+  [
+   "b_spec vs DESI free fit",
+   true,
+   "MATCH_OK (期望 MATCH_OK)"
+  ],
+  [
+   "G_ss = 72 (4g 色代數)",
+   true,
+   "IDENTITY_OK (期望 IDENTITY_OK)"
+  ]
+ ]
+}

@@ -1,0 +1,13 @@
+candidates = 200
+total fixed-point violations over all candidates = 0 | worst per candidate = 0
+total vsign mismatches (closed form vs candidate) = 702 | worst = 60
+distinct vsign patterns among candidates = 1 (1 => all identical, N1 rigidity)
+{
+ "candidates": 200,
+ "total_fp_violations": 0,
+ "worst_fp": 0,
+ "total_vsign_mismatches": 702,
+ "worst_vsign": 60,
+ "distinct_vsign_patterns": 1,
+ "verdict": "closed form Kc^T Uc reproduces K and the certified vsign for every candidate => V-side canonical"
+}

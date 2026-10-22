@@ -1,0 +1,18 @@
+{
+  "test": "拍頻差頻/和頻分解 — 反物質定義",
+  "n_pairs": 946,
+  "diff_range": [
+    0.0006371743430083621,
+    0.9643076661610196
+  ],
+  "sum_range": [
+    0.10703151703821279,
+    1.9993628256569917
+  ],
+  "sum_geq_diff": false,
+  "min_extra_energy": 0.07138466767796091,
+  "np_ratio_matter": 0.14261761295541642,
+  "np_ratio_antimatter_CPT": 0.14261761295541642,
+  "pair_energy_formula": "2ħω_a",
+  "conclusion": "物質=差頻(拍頻投影), 反物質=和頻(同一乘積對偶分量); 和頻需 ΔE=2min(ω) 激發=pair production 閾值; CPT 自動 (質量比不變)"
+}

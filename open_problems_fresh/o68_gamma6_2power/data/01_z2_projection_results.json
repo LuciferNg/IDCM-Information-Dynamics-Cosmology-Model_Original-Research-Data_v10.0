@@ -1,0 +1,74 @@
+{
+  "gamma6": 0.18073600929096323,
+  "B": 4,
+  "phi": 1.618033988749895,
+  "Nd": 44,
+  "glsm_charges": 32,
+  "sr_ideal": 484,
+  "odd_beats": 484,
+  "z2_fixed_beats": 21,
+  "checks": [
+    {
+      "check": "88-site Z\u2082 \u5c0d\u5076\u6027 \u03b3_k+\u03b3_{88-k}=4",
+      "pass": true
+    },
+    {
+      "check": "Beat parity \u5206\u89e3 even+odd=946",
+      "pass": true
+    },
+    {
+      "check": "Z\u2082 fixed beats = 21 = F\u2088",
+      "pass": true
+    },
+    {
+      "check": "sr_ideal 484 = odd beats 484",
+      "pass": true
+    },
+    {
+      "check": "GLSM 32 U(1) = 2B\u00b2 = 2\u2075",
+      "pass": true
+    },
+    {
+      "check": "B = 4 = 2\u00b2",
+      "pass": true
+    },
+    {
+      "check": "2B = 8 = 2\u00b3",
+      "pass": true
+    },
+    {
+      "check": "B\u00b2 = 16 = 2\u2074",
+      "pass": true
+    },
+    {
+      "check": "PMNS sin\u00b2\u03b8\u2081\u2083 = \u03b3\u2086/8 < 3%",
+      "pass": true
+    },
+    {
+      "check": "CKM \u03bb\u00b3 = \u03b3\u2086/16 < 1%",
+      "pass": true
+    },
+    {
+      "check": "sin\u00b2\u03b8\u2081\u2083/\u03bb\u00b3 = 2",
+      "pass": true
+    },
+    {
+      "check": "SU(12) = SU(4)\u00d7SU(3)",
+      "pass": true
+    },
+    {
+      "check": "\u8f15\u5b50: (1,3) \u2192 2B \u56e0\u5b50",
+      "pass": true
+    },
+    {
+      "check": "\u5938\u514b: (3,3) \u2192 B\u00b2 \u56e0\u5b50",
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "pmns_theta13": 0.022592001161370404,
+  "pmns_theta13_err_pct": 2.551071998957797,
+  "ckm_lambda": 0.22437522530206586,
+  "ckm_lambda_err_pct": 0.2776776435262887,
+  "ratio_theta13_over_lambda3": 2.0
+}

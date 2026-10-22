@@ -1,0 +1,22 @@
+{
+  "step2": {
+    "cold_spot_phase": "\u03c0",
+    "tau_if_n44_dominant": 0.4809,
+    "tau_observer": 13.4701,
+    "conclusion": "cold_spot_is_multi_mode_superposition"
+  },
+  "step3": {
+    "forward_model": "\u03b4T = \u03a3 A_n\u00b7cos(\u03b8_n - k_n\u00b7r)",
+    "needed": [
+      "A5_node_coords",
+      "K_Chain_spatial_orientation"
+    ],
+    "status": "\ud83d\udd34 incomplete"
+  },
+  "step4": {
+    "model": "N=0_simplified",
+    "min_tau_candidate": 4.2317,
+    "normalization": "\ud83d\udd34 unknown",
+    "conclusion": "need_more_constraints"
+  }
+}

@@ -1,0 +1,35 @@
+{
+ "rules_version": "g5-contract-v1",
+ "doc": {
+  "path": "docs/16_g5_contract.md",
+  "sha256": "e06478e536672a446b82237f30946402f24f7887049610d03e880a1fb45a1618"
+ },
+ "enforcer_sha256": "fa8a0377ba84fb29ee8b2c0fb776676964910af6cdb43bf276d9dd1a97059dca",
+ "impl": {
+  "path": "scripts/24_g5_criterion.py",
+  "sha256": "fb9072e4b22e03deacceb37c7c40f5bcf2ea6ae65b8ccae927a4786a7847cad9"
+ },
+ "upstream": {
+  "B5": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a",
+  "B3R2": "14e17e7cdff25b04cda70fe93010827505cec6f8b2059cc435f3f8775d9c375d",
+  "D6": "a681ae8cf6bcfd69b50a9a3c776f8c43011c3b6c52149bc1f1f565abbe797cf7",
+  "G4": "efa6aaded922a959eb9a7a5a711b8a99f72051e401b4ef4a83ecd73ab8b3deba"
+ },
+ "frozen_at": "2026-09-30T10:02:12+0800",
+ "cells": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P5",
+  "P6"
+ ],
+ "objects": {
+  "criterion": "scripts/15_b3r2_orderfair.py::feasible_chsh(all4)",
+  "anti": "scripts/15_b3r2_orderfair.py::build_anti",
+  "machine": "scripts/12_b5_budget.py",
+  "eulerian": "scripts/21_g4_eulerian.py",
+  "settings": "data/04_b2_settings.json"
+ },
+ "gate": "OPEN"
+}

@@ -1,0 +1,8 @@
+# O4_renew C01: 觀測數據驗證
+nside=2048 npix=50331648
+node0_gal_l=209.00 node0_gal_b=-57.00
+FWHM0.5: node0=-203.1
+FWHM1.0: node0=-174.4
+FWHM3.0: node0=-145.0
+FWHM4.17: node0=-134.2
+FWHM5.0: node0=-124.6

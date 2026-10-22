@@ -1,0 +1,12 @@
+{
+  "chi2_diagonal": 161.67,
+  "lrg1_1d_sigma": -3.05,
+  "lrg1_2d_chi2": 9.32,
+  "lya_baseline_sigma": 1.64,
+  "lya_alternative_sigma": 0.62,
+  "lya_baseline_2d_chi2": 182.35,
+  "lya_alternative_2d_chi2": 171.94,
+  "bgs_1d_sigma": -2.15,
+  "pass": 0,
+  "fail": 0
+}

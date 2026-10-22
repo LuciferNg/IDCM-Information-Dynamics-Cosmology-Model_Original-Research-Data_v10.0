@@ -1,0 +1,7 @@
+O86 scripts/05 FINAL VERIFICATION (REBUILD 2026-09-25)
+==============================================================================
+數值檢查: 23/23 PASS
+結構聲稱: 8 項 (唔計入 PASS)
+零字面 True; 零自我比較
+現行值: E(l)=l+1.11911398; lambda_sync=294.8770; Nyquist=0.963228;
+        Omega_L=41/60; Lambda_eff=8piM_Pl^2exp(-V_L); kappa^2=M0; lambda_WH=lambda_self

@@ -1,0 +1,9 @@
+O47 — Core Insight Verification
+===================================================================
+88-Site Dual Chain: Σγ_even = 90, Σγ_odd = 88
+Energy Partition: Matter = 28.5, Vacuum = 61.5
+Ring Projection: R_H = 4129.94, Unproj arc = 2822.1257, Proj arc = 1307.8143
+Omega_L exact = 0.6832815730, delta = 0.0000517603
+l_max candidate = 14.708063, D_app candidate = 6.316667
+All checks: PASS
+Insight verified: R_H and Omega_L are dual projections of the same 88-site dual chain ✅

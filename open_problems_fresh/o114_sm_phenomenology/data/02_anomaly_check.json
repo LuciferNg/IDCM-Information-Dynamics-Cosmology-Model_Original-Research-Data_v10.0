@@ -1,0 +1,27 @@
+{
+  "id": "O114-2",
+  "name": "Horizontal U(1) Anomaly Check",
+  "anomaly_results": {
+    "linear_Tr_H": "ALL ZERO \u2705 (12\u229512\u0304 auto-cancel)",
+    "cubic_Tr_H3": "ALL ZERO \u2705 (12\u229512\u0304 auto-cancel)",
+    "mixed_cubic_Tr_HiHjHk": "ALL ZERO \u2705 (20 terms)",
+    "SU3_sq_mixed": "ALL ZERO \u2705 (color sum zero)",
+    "SU2_sq_mixed": "ALL ZERO \u2705 (tensor orthogonality)",
+    "U1Y_sq_mixed": "ALL ZERO \u2705 (tensor orthogonality)"
+  },
+  "verdict": "\ud83d\udfe2 ALL ANOMALY-FREE \u2014 6 horizontal symmetries anomaly-free in 3\u00d7(12\u229512\u0304)",
+  "partial_sums_12": {
+    "H_1": 0.0,
+    "H_2": -0.00019999999999995022,
+    "H_3": -0.00029999999999996696,
+    "H_4": 0.0,
+    "H_5": 0.0,
+    "H_6": 0.0
+  },
+  "open_issues": [
+    "Partial sums on 12 determine Yukawa selection rules",
+    "Need O114-3 for exact breaking pattern",
+    "Generation charge profile connects to CKM/PMNS"
+  ],
+  "timestamp": "2026-08-29"
+}

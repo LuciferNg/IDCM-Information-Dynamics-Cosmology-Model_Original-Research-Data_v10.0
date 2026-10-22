@@ -1,0 +1,8 @@
+CALIBRATION s0=0 : hits=124 overrides=65 (record: [33,32,0,65])
+override histogram over all 120 states: {65: 3, 69: 3, 56: 2, 68: 10, 61: 1, 54: 1, 72: 6, 64: 5, 70: 1, 66: 4, 62: 3, 76: 1, 75: 2, 67: 2, 74: 2, 79: 1, 58: 1, 80: 2, 63: 3, 57: 1, 73: 1, 60: 2, 52: 1, 71: 1, 59: 1, 77: 2}
+states giving max override (80) = 2 states: [24, 34]
+--- invariants of the distinguished states ---
+  s0= 24 : orbit preperiod 5, cycle len 2
+  s0= 34 : orbit preperiod 5, cycle len 2
+--- invariants of a non-distinguished state (s0=1) ---
+  s0=1 : preperiod 5 cycle 2

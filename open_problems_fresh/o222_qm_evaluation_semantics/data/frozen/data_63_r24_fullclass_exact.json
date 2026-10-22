@@ -1,0 +1,51 @@
+{
+ "control_4_5": {
+  "brute": [
+   0,
+   256
+  ],
+  "counting": [
+   0,
+   256
+  ],
+  "match": true
+ },
+ "control_5_9": {
+  "brute": [
+   184704,
+   972000
+  ],
+  "counting_numerator": [
+   184704,
+   958176
+  ],
+  "match": false,
+  "note": "numerator matches the frozen record exactly; total short by 13824 = 1.42% at 54 unbalanced-residual prefixes (all in the non-constructible bucket)"
+ },
+ "exact_6_9": {
+  "constructible": 19734119424,
+  "ec6": 247669456896,
+  "pct": 7.967926150977366
+ },
+ "exact_6_10": {
+  "constructible": 44054323200,
+  "internal_total": 247576144896,
+  "ec6": 247669456896,
+  "pct": 17.787547868084133,
+  "internal_deficit": 93312000
+ },
+ "sample_6_21": {
+  "constructible": 20000,
+  "circuits": 20000,
+  "pct": 100.0,
+  "K": 20000,
+  "note": "PROVED exact 100% for n=6 (covering bound 108<180)"
+ },
+ "sample_7_21": {
+  "constructible": 20000,
+  "circuits": 20000,
+  "pct": 100.0,
+  "K": 20000,
+  "note": "bound exactly saturated (420=420) -> empirical only"
+ }
+}

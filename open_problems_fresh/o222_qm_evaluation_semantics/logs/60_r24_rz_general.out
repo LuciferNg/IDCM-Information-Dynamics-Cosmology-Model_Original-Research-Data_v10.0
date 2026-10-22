@@ -1,0 +1,11 @@
+n=2  upper=3  found=3  EXACT (bound attained)
+n=3  upper=6  found=6  EXACT (bound attained)
+n=4  upper=9  found=9  EXACT (bound attained)
+n=5  upper=12  found=12  EXACT (bound attained)
+n=6  upper=16  found=16  EXACT (bound attained)
+n=7  upper=21  found=21  EXACT (bound attained)
+PG(2,2): n=7 (q^2+q+1=True)  ones=21  (q+1)n=21  upper=21  no-2x2=True  attains=True
+PG(2,3): n=13 (q^2+q+1=True)  ones=52  (q+1)n=52  upper=52  no-2x2=True  attains=True
+PG(2,4): n=21 (q^2+q+1=True)  ones=105  (q+1)n=105  upper=105  no-2x2=True  attains=True
+
+rz(3)=6 rz(4)=9 rz(5)=12 rz(6)=16 rz(7)=21 (bound attained). rz(q^2+q+1)=(q+1)(q^2+q+1) for q=2,3,4.

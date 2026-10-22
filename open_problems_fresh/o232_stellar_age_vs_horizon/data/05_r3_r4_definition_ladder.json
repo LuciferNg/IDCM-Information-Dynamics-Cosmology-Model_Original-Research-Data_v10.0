@@ -1,0 +1,18 @@
+{
+  "script": "05_r3_r4_definition_ladder.py",
+  "tau_Gyr": 13.470062705508573,
+  "t_render_44_43_retracted": 13.783319977729702,
+  "dev_44_43_vs_planck_pct": 0.026691972657558672,
+  "delta_13p8_minus_tau_Gyr": 0.3299372944914272,
+  "tau_plus_tf17_Planck_Gyr": 13.695647907215239,
+  "tau_plus_tf17_v9_Gyr": 13.681062705508573,
+  "Astar_minus_that_ratio": 0.9974980267454654,
+  "checks": [
+    "C1 τ = 1/ω_ring = 13.470063 Gyr (O51/O213 引用值重現)::PASS",
+    "C2 t_render = τ×44/43 ≈ 13.7833, dev vs Planck 13.787 < 0.05% (O51 撤回聲明重現)::PASS",
+    "C3 44/43 係 post-hoc 校準偽影 (O51, 調律者揪出) — 本 O 不重推, 標 🔴::PASS",
+    "C4 '13.8−τ = 0.33' 冇結構身份 (凍結池無 0.33 線索; 勿作閉合)::PASS",
+    "C5 τ+t_f(z17,Planck) ≈ 13.696 距 A_★=13.73 僅 0.2σ — 係『讀法』非閉合 (t_f 繼承 v9 撤回狀態)::PASS",
+    "R4 翻譯規則: 只允許 OBS↔OBS 直接比較; AGE vs DISTANCE 相減 = category error (R1 已示範)::PASS"
+  ]
+}

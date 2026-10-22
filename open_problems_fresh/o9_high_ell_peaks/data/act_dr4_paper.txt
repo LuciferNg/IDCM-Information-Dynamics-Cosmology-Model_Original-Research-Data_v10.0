@@ -1,0 +1,4057 @@
+Draft version November 18, 2021
+Preprint typeset using LATEX style emulateapj v. 12/16/11
+
+arXiv:2007.07288v2 [astro-ph.CO] 3 Dec 2020
+
+THE ATACAMA COSMOLOGY TELESCOPE: DR4 MAPS AND COSMOLOGICAL PARAMETERS
+Simone Aiola1,2 , Erminia Calabrese3 , Loı̈c Maurin4,5 , Sigurd Naess1 , Benjamin L. Schmitt6 ,
+Maximilian H. Abitbol7 , Graeme E. Addison8 , Peter A. R. Ade3 , David Alonso7 , Mandana Amiri9 ,
+Stefania Amodeo10 , Elio Angile6 , Jason E. Austermann11 , Taylor Baildon12 , Nick Battaglia10 ,
+James A. Beall11 , Rachel Bean10 , Daniel T. Becker11 , J Richard Bond13 , Sarah Marie Bruno2 ,
+Victoria Calafut10 , Luis E. Campusano14 , Felipe Carrero15 , Grace E. Chesmore16 , Hsiao-mei Cho17,11 ,
+Steve K. Choi18,10,2 , Susan E. Clark19 , Nicholas F. Cothard20 , Devin Crichton21 , Kevin T. Crowley22,2 ,
+Omar Darwish23 , Rahul Datta8 , Edward V. Denison11 , Mark J. Devlin6 , Cody J. Duell18 , Shannon M. Duff11 ,
+Adriaan J. Duivenvoorden2 , Jo Dunkley2,24 , Rolando Dünner5 , Thomas Essinger-Hileman25 , Max Fankhanel15 ,
+Simone Ferraro26 , Anna E. Fox11 , Brittany Fuzia27 , Patricio A. Gallardo18 , Vera Gluscevic28 ,
+Joseph E. Golec16 , Emily Grace2 , Megan Gralla29 , Yilun Guan30 , Kirsten Hall8 , Mark Halpern9 ,
+Dongwon Han31 , Peter Hargrave3 , Matthew Hasselfield1,32,33 , Jakob M. Helton24 , Shawn Henderson17 ,
+Brandon Hensley24 , J. Colin Hill34,1 , Gene C. Hilton11 , Matt Hilton21 , Adam D. Hincks35 , Renée Hložek36,35 ,
+Shuay-Pwu Patty Ho2 , Johannes Hubmayr11 , Kevin M. Huffenberger27 , John P. Hughes37 , Leopoldo Infante5 ,
+Kent Irwin38 , Rebecca Jackson16 , Jeff Klein6 , Kenda Knowles21 , Brian Koopman39 , Arthur Kosowsky30 ,
+Victoria Lakey27 , Dale Li17,11 , Yaqiong Li2 , Zack Li24 , Martine Lokken35,13 , Thibaut Louis40 , Marius Lungu2,6 ,
+Amanda MacInnis31 , Mathew Madhavacheril41 , Felipe Maldonado27 , Maya Mallaby-Kay42 , Danica Marsden6 ,
+Jeff McMahon43,42,16,44,12 , Felipe Menanteau45,46 , Kavilan Moodley21 , Tim Morton28 , Toshiya Namikawa23 ,
+Federico Nati47,6 , Laura Newburgh39 , John P. Nibarger11 , Andrina Nicola24 , Michael D. Niemack18,10 ,
+Michael R. Nolta13 , John Orlowski-Sherer6 , Lyman A. Page2 , Christine G. Pappas11 , Bruce Partridge48 ,
+Phumlani Phakathi21 , Giampaolo Pisano3 , Heather Prince24 , Roberto Puddu5 , Frank J. Qu23 , Jesus Rivera37 ,
+Naomi Robertson49 , Felipe Rojas5,15 , Maria Salatino38,50 , Emmanuel Schaan26 , Alessandro Schillaci51 ,
+Neelima Sehgal31 , Blake D. Sherwin23 , Carlos Sierra16 , Jon Sievers52 , Cristobal Sifon53 , Precious Sikhosana21 ,
+Sara Simon12 , David N. Spergel1,24 , Suzanne T. Staggs2 , Jason Stevens18 , Emilie Storer2 ,
+Dhaneshwar D. Sunder21 , Eric R. Switzer25 , Ben Thorne55 , Robert Thornton56,6 , Hy Trac57 , Jesse Treu58 ,
+Carole Tucker3 , Leila R. Vale11 , Alexander Van Engelen59 , Jeff Van Lanen11 , Eve M. Vavagiakis18 ,
+Kasey Wagoner2 , Yuhan Wang2 , Jonathan T. Ward6 , Edward J. Wollack25 , Zhilei Xu6 , Fernando Zago52 ,
+Ningfeng Zhu6
+Draft version November 18, 2021
+
+ABSTRACT
+We present new arcminute-resolution maps of the Cosmic Microwave Background temperature and
+polarization anisotropy from the Atacama Cosmology Telescope, using data taken from 2013–2016
+at 98 and 150 GHz. The maps cover more than 17,000 deg2 , the deepest 600 deg2 with noise levels
+below 10µK–arcmin. We use the power spectrum derived from almost 6,000 deg2 of these maps to
+constrain cosmology. The ACT data enable a measurement of the angular scale of features in both
+the divergence-like polarization and the temperature anisotropy, tracing both the velocity and density
+at last-scattering. From these one can derive the distance to the last-scattering surface and thus infer
+the local expansion rate, H0 . By combining ACT data with large-scale information from WMAP we
+measure H0 = 67.6±1.1 km/s/Mpc, at 68% confidence, in excellent agreement with the independentlymeasured Planck satellite estimate (from ACT alone we find H0 = 67.9 ± 1.5 km/s/Mpc). The ΛCDM
+model provides a good fit to the ACT data, and we find no evidence for deviations: both the spatial
+curvature, and the departure from the standard lensing signal in the spectrum, are zero to within 1σ;
+the number of relativistic species, the primordial Helium fraction, and the running of the spectral index
+are consistent with ΛCDM predictions to within 1.5–2.2σ. We compare ACT, WMAP, and Planck at
+the parameter level and find good consistency; we investigate how the constraints on the correlated
+spectral index and baryon density parameters readjust when adding CMB large-scale information that
+ACT does not measure. The DR4 products presented here will be publicly released on the NASA
+Legacy Archive for Microwave Background Data Analysis.
+
+1 Center for Computational Astrophysics, Flatiron Institute,
+162 5th Avenue, New York, NY 10010 USA
+2 Joseph Henry Laboratories of Physics, Jadwin Hall, Princeton University, Princeton, NJ, USA 08544
+3 School of Physics and Astronomy, Cardiff University, The
+Parade, Cardiff, Wales, UK CF24 3AA
+4 Université Paris-Saclay, CNRS, Institut d’astrophysique spatiale, 91405, Orsay, France.
+5 Instituto de Astrofı́sica and Centro de Astro-Ingenierı́a, Facultad de Fı̀sica, Pontificia Universidad Católica de Chile, Av.
+Vicuña Mackenna 4860, 7820436 Macul, Santiago, Chile
+6 Department of Physics and Astronomy, University of Penn-
+
+sylvania, 209 South 33rd Street, Philadelphia, PA, USA 19104
+7 Department of Physics, University of Oxford, Keble Road,
+Oxford, UK OX1 3RH
+8 Dept. of Physics and Astronomy, The Johns Hopkins University, 3400 N. Charles St., Baltimore, MD, USA 21218-2686
+9 Department of Physics and Astronomy, University of British
+Columbia, Vancouver, BC, Canada V6T 1Z4
+10 Department of Astronomy, Cornell University, Ithaca, NY
+14853, USA
+11 NIST Quantum Devices Group, 325 Broadway Mailcode
+817.03, Boulder, CO, USA 80305
+12 Department of Physics, University of Michigan, Ann Arbor,
+
+2
+1. INTRODUCTION
+
+The cosmic microwave background (CMB) provides
+the tightest constraints on our model of the universe of
+any current data source. Successive microwave background measurements, including WMAP, Planck, the
+South Pole Telescope (SPT), and the Atacama Cosmology Telescope (ACT), have produced increasingly precise
+and detailed maps of the microwave sky in both temperaUSA 48103
+13 Canadian Institute for Theoretical Astrophysics, University
+of Toronto, Toronto, ON, Canada M5S 3H8
+14 Universidad de Chile, Dept Astronomı́a Casilla 36-D, Santiago, Chile
+15 Sociedad Radiosky Asesorı́as de Ingenierı́a Limitada,
+Camino a Toconao 145-A, Ayllu de Solor, San Pedro de Atacama, Chile
+16 Department of Physics, University of Chicago, Chicago, IL
+60637, USA
+17 SLAC National Accelerator Laboratory 2575 Sand Hill
+Road Menlo Park, California 94025, USA
+18 Department of Physics, Cornell University, Ithaca, NY,
+USA 14853
+19 Institute for Advanced Study, 1 Einstein Dr, Princeton, NJ
+08540
+20 Department of Applied and Engineering Physics, Cornell
+University, Ithaca, NY, USA 14853
+21 Astrophysics Research Centre, School of Mathematics,
+Statistics and Computer Science, University of KwaZulu-Natal,
+Durban 4001, South Africa
+22 Department of Physics, University of California, Berkeley,
+CA, USA 94720
+23 DAMTP, Centre for Mathematical Sciences, University of
+Cambridge, Wilberforce Road, Cambridge CB3 OWA, UK
+24 Department of Astrophysical Sciences, Peyton Hall, Princeton University, Princeton, NJ USA 08544
+25 NASA/Goddard Space Flight Center, Greenbelt, MD, USA
+20771
+26 Berkeley Center for Cosmological Physics, LBL and Department of Physics, University of California, Berkeley, CA, USA
+94720
+27 Department of Physics, Florida State University, Tallahassee FL, USA 32306
+28 University of Southern California. Department of Physics
+and Astronomy, 825 Bloom Walk ACB 439. Los Angeles, CA
+90089-0484
+29 Department of Astronomy/Steward Observatory, University of Arizona, 933 North Cherry Avenue, Tucson, AZ 857210065
+30 Department of Physics and Astronomy, University of Pittsburgh, Pittsburgh, PA, USA 15260
+31 Physics and Astronomy Department, Stony Brook University, Stony Brook, NY USA 11794
+32 Department of Astronomy and Astrophysics, The Pennsylvania State University, University Park, PA 16802, USA
+33 Institute for Gravitation and the Cosmos, The Pennsylvania State University, University Park, PA 16802, USA
+34 Department of Physics, Columbia University, New York,
+NY, USA
+35 David A. Dunlap Department of Astronomy and Astrophysics, University of Toronto, 50 St George Street, Toronto
+ON, M5S 3H4, Canada
+36 Dunlap Institute for Astronomy and Astrophysics, University of Toronto, 50 St. George St., Toronto, ON M5S 3H4,
+Canada
+37 Department of Physics and Astronomy, Rutgers, The State
+University of New Jersey, Piscataway, NJ USA 08854-8019
+38 Department of Physics, Stanford University, Stanford, CA,
+USA 94305-4085
+39 Department of Physics, Yale University, 217 Prospect St,
+New Haven, CT 06511
+40 Université Paris-Saclay, CNRS/IN2P3, IJCLab, 91405 Orsay, France
+41 Centre for the Universe, Perimeter Institute for Theoretical
+Physics, Waterloo, ON, N2L 2Y5, Canada
+42 Department of Astronomy and Astrophysics, University of
+Chicago, 5640 S. Ellis Ave., Chicago, IL 60637, USA
+
+ture and linear polarization (Bennett et al. 2013; Planck
+Collaboration I 2018; Henning et al. 2018; Louis et al.
+2017). The result has been a remarkably simple standard model of cosmology described by only six parameters quantifying the composition of the universe, the
+initial conditions of structure formation, and the reionization history, most of which are now determined at the
+percent level (Spergel et al. 2003; Planck Collaboration
+VI 2018).
+Despite the simplicity of this model, known as ΛCDM,
+and the consistency with many other cosmological probes
+(e.g., Cooke et al. 2016; Alam et al. 2017; Abbott et al.
+2018b; Hikage et al. 2019), there are some tensions between its inferred parameter values and those estimated
+from low-redshift observations, most notably for the local expansion rate, H0 . While H0 measured from Type
+Ia supernovae distances calibrated using tip-of-the-redgiant-branch (TRGB) stars is consistent with the Planck
+estimate (Freedman et al. 2019), the rate measured from
+distances calibrated using Cepheid variable stars (Riess
+et al. 2019), or by using time delays from the H0LiCOW
+strong gravitational lenses (Wong et al. 2019, but see
+recent updates from Birrer et al. 2020 which give different results), is significantly higher than that estimated
+from Planck. Riess et al. (2019) estimates that the deviation is at the 3–5σ level. Determining whether or not a
+new component of the stardard model or new process is
+43 Kavli Institute for Cosmological Physics, University of
+Chicago, 5640 S. Ellis Ave., Chicago, IL 60637, USA
+44 Enrico Fermi Institute, University of Chicago, Chicago, IL
+60637, USA
+45 National Center for Supercomputing Applications (NCSA),
+University of Illinois at Urbana-Champaign, 1205 W. Clark St.,
+Urbana, IL, USA, 61801
+46 Department of Astronomy, University of Illinois at UrbanaChampaign, W. Green Street, Urbana, IL, USA, 61801
+47 Department of Physics, University of Milano - Bicocca, Piazza della Scienza, 3 - 20126, Milano (MI), Italy
+48 Department of Physics and Astronomy, Haverford College,
+Haverford, PA, USA 19041
+49 Institute of Astronomy, Madingley Road, Cambridge CB3
+0HA, UK
+50 Kavli Institute for Particle Astrophysics and Cosmology,
+382 Via Pueblo Mall Stanford, CA 94305-4060, USA
+51 Department of Physics, California Institute of Technology,
+Pasadena, California 91125, USA
+52 Physics Department, McGill University, Montreal, QC H3A
+0G4, Canada
+53 Instituto de Fı́sica, Pontificia Universidad Católica de Valparaı́so, Casilla 4059, Valparaı́so, Chile
+54 Fermi National Accelerator Laboratory, MS209, P.O. Box
+500, Batavia, IL 60510
+55 One Shields Avenue, Physics Department, Davis, CA 95616,
+USA
+56 Department of Physics , West Chester University of Pennsylvania, West Chester, PA, USA 19383
+57 McWilliams Center for Cosmology, Carnegie Mellon University, Department of Physics, 5000 Forbes Ave., Pittsburgh
+PA, USA, 15213
+58 Domain Associates, LLC
+59 School of Earth and Space Exploration, Arizona State University, Tempe, AZ, USA 85287
+60 Department of High Energy Physics, Argonne National
+Laboratory, 9700 S Cass Ave, Lemont, IL USA 60439
+61 Department of Astronomy, University of Chicago, Chicago,
+IL USA
+62 Astrophysics and Cosmology Research Unit, School of
+Chemistry and Physics, University of KwaZulu-Natal, Durban
+4001, South Africa
+63 Kavli Institute for Cosmology Cambridge, Madingley Road,
+Cambridge CB3 0HA, UK
+
+3
+needed to explain all the current observations is of great
+interest, with new models being explored that could, for
+example, reduce the sound horizon in order to fit Planck
+CMB data with an increased local Hubble expansion rate
+(e.g., Cyr-Racine & Sigurdson 2014; Poulin et al. 2019;
+Knox & Millea 2020). One of ACT’s goals is to make
+a second, experimentally-independent, measurement of
+the inferred Hubble constant with a precision comparable to Planck to help assess the robustness of the current
+estimate from the high-redshift CMB data.
+The Planck satellite’s full-sky maps in many frequency
+bands set the current standard for cosmological precision
+(Planck Collaboration VI 2018). The Planck temperature map does nearly as well as possible in measuring
+the angular power spectrum of temperature anisotropies:
+cosmic variance dominates measurement uncertainty at
+angular multipoles from ` = 2 to ` = 1600. In polarization Planck’s measurements are signal dominated up to
+` = 900 in the E-mode polarization power spectrum, and
+up to ` = 1150 in the cross-correlation between temperature and E-mode polarization (Planck Collaboration XI
+2016). Both SPT and ACT have been extending the
+reach of Planck by making new high resolution, high
+sensitivity temperature and E-mode polarization measurements (Naess et al. 2014; Louis et al. 2017; Henning
+et al. 2018). From its site in northern Chile, ACT has
+now mapped roughly half the sky. The gain in information beyond Planck is in new temperature measurements that constrain damping tail physics at ` > 1500
+as well as secondary signals, and improved E-mode polarization measurements that directly map the velocity
+of the photon-baryon fluid at recombination, providing a
+second view of the physics at last scattering.
+In this paper we present new maps made with ACT
+observations at 98 GHz and 150 GHz during 2013–2016.
+They incorporate data used to make the maps presented
+in Naess et al. (2014) (N14, hereafter) and Louis et al.
+(2017) (L17, hereafter), and additionally include data
+taken during nighttime observations in 2015 and 2016.
+Previous analyses used only 650 deg2 of sky; this analysis produces maps covering 17,000 deg2 . We present the
+cosmological parameters derived from these new temperature and polarization sky maps from ACT, using the
+information contained in their angular power spectra. A
+companion paper, Choi et al. (2020) (C20, hereafter), details our methods for estimating and validating the angular power spectra and shows the power spectrum results,
+together with such technical considerations as noise characterization and a wide range of robustness tests both at
+the power spectrum and likelihood level. It also describes
+the procedure to extract foreground-marginalized CMBonly spectra starting from the frequency spectra and likelihood. The data products presented in this paper and in
+C20 comprise ACT’s fourth data release, DR4, and will
+be available on the NASA Legacy Archive for Microwave
+Background Data Analysis.
+This paper (elsewhere referred to as A20) is organized
+as follows. In §2 and 3 we describe the observations and
+low-level data processing, including ancillary data products such as beams. §4 presents our current methods for
+making maximum-likelihood maps. The resulting ACT
+DR4 maps are unveiled in §5. These maps are then employed in C20 to extract CMB power spectra. §6 of this
+paper describes our cosmological CMB-only likelihood
+
+function and the methods we use to apply it to the power
+spectra from C20. In §7, we show cosmological constraints from ACT data alone and from ACT combined
+with WMAP; these measurements of the CMB sky are
+independent from the Planck measurements. We explore
+extensions to the ΛCDM model in §8. The concluding §9
+discusses the improvements we can expect from the substantially larger ACT data sets collected in 2017–2020.
+2. OVERVIEW OF NIGHTTIME OBSERVATIONS
+
+ACT is a 6-meter off-axis Gregorian telescope, located
+at an elevation of 5190 m on Cerro Toco in the Atacama
+Desert in Chile. In 2013 the ACTPol receiver was first
+deployed, upgrading ACT to a polarization sensitive instrument. Each year from 2013–2015 a new polarization
+array (PA) was deployed. The receiver holds up to three
+PAs, each contained in an optics tube and accompanied
+by a set of three mm-wave silicon optics, a set of corrugated feedhorns, and multiplexing readout for the detectors. The instrument is described in detail in Thornton
+et al. (2016).
+In this paper we analyse data taken by ACT with the
+ACTPol camera at nighttime, defined to be between 2300
+and 1100 UTC. The observations in 2013 (s13, hereafter),
+initially presented in N14, consist of 648 hours, after data
+cuts, divided between three deep regions D1, D5, and D6
+surveyed with one detector array, PA1, at 150 GHz. In
+2014 (s14, hereafter), observations conducted with two
+150 GHz detector arrays, PA1 and PA2, over a larger
+region called D56 amount to 391 hours after cuts, and
+were initially presented in L17. In 2015 (s15, hereafter)
+a third dichroic detector array, PA3, operating at 98 and
+150 GHz was added. A total of 1271 post-cut hours were
+spent surveying the D56 region, a wider region called BN
+overlapping with the Baryon Oscillation Spectroscopic
+Survey (BOSS) (Albareti et al. 2017), and a deep region
+in the southern equatorial sky called D8. Finally, observations in 2016 (s16, hereafter) consisted of 710 hours after cuts, spread over a wide region covering roughly 40%
+of the sky, which we call AA (for AdvACT survey). As
+mentioned above, we restrict this analysis to only data
+taken with the ACTPol camera, meaning that for s16
+observations we only consider data from PA2 and PA3.
+Data taken with the dichroic PA4 detector array of the
+AdvACT camera, at 150 and 220 GHz, which replaced
+PA1 in 2016, will be part of a later analysis together with
+data taken from 2017 onwards in the AA region. We also
+neglect the small amount of test data taken with a spinning half-wave plate installed in front of the PA2 and
+PA3 arrays.
+Table 1 summarizes the ACT s13–s16 observations considered in this work, including the number of detectors
+used to make the sky maps, detector array sensitivities,
+and the number of hours of data used in the maps. A
+detailed list of region names and areas can be found in
+§5.1. More details regarding scan parameters and survey
+strategy are presented in De Bernardis et al. (2016) and
+reviewed in C20 in the context of null tests.
+Figure 1 shows a Mollweide projection of the ACT
+DR4 region footprints in Galactic coordinates. The new
+ACT observation strategy allows us to independently
+map roughly 50% of the clean sky used for the WMAP
+(Bennett et al. 2013) and Planck (Planck Collaboration
+V 2018) cosmological analyses at higher resolution and
+
+BN
+
+D1
+
+Dec
+=
+
++22
+
+4
+
+Dec
+
+D6
+
+=-60
+
+AA
+D56 D5
+
+D8
+
+Fig. 1.— Mollweide projection of the ACT DR4 footprints in
+Galactic coordinates. The D1, D5, and D6 regions were observed
+in season s13, D56 in seasons s14 and s15, D8 and BN in s15. The
+AA region was observed in s16 and covers roughly 40% of the sky.
+D1 overlaps with BN, D5 and D6 overlap with D56, and all regions
+overlap with AA. Two constant-declination lines are shown in black
+roughly indicating the observable sky from Chile. The grey region
+between Dec = [−60, +22] was not observed, although accessible,
+to maximize overlap with current optical surveys. The grid spacing
+in both Galactic longitude and latitude is 30◦ .
+
+sensitivity, especially in polarization. In addition, we
+provide CMB data overlapping with on-going and future
+optical surveys, such as BOSS, DESI, DES, HSC, KiDS,
+and Rubin Observatory (Albareti et al. 2017; Dey et al.
+2019; Abbott et al. 2018; Aihara et al. 2019; de Jong,
+Jelte T. A. et al. 2017; Ivezić et al. 2019).
+3. DATA SELECTION AND CHARACTERIZATION
+3.1. Data selection
+
+The data selection follows the same philosophy used
+for L17, and a detailed description can be found in
+Dünner et al. (2013). Each 10-minute section of the timeordered data from a single detector array (this data unit
+is called TOD) is analyzed in frequency space to characterize and assess its quality. In the low frequency band
+(∼ [0.01−0.1] Hz), the signal is expected to be dominated
+by the atmosphere, which to good approximation is common for the whole array. The full correlation matrix is
+computed in the low-frequency band, and detectors that
+do not correlate well with the dominant mode are excluded. The response to changes in the focal plane temperature is the most important contaminant and must be
+handled carefully as it can reach comparable amplitude
+to the atmospheric signal for some TODs. Some detectors, called “dark detectors,” are deliberately not optically coupled and used to estimate and deproject thermal
+fluctuations. Additional cuts have been included with respect to L17. In the high frequency regime (∼ [10 − 20]
+Hz), noise properties are computed and detectors are excluded based on their white noise level and if significant
+amounts of skewness and kurtosis are detected.
+We mask the brightest sources beforehand in order to
+avoid triggering the glitch-finder or biasing the high frequency noise analysis. Given the much larger survey area
+compared to L17, we mask 632 sources which are brighter
+than 2 mK (roughly 180 mJy at 150 GHz). This threshold is well below the noise level in the TODs.
+Following Dünner et al. (2013), eight quality criteria
+are computed and detectors are excluded if they do not
+meet the requirement for any of the criteria. A detector
+can be flagged for a short period of time or excluded for
+
+the entire TOD. If more than 40% of the samples for a
+single detector are flagged, the detector is excluded. If
+more than 40% of the detectors are excluded for a given
+TOD, the whole array is discarded.
+The effective number of detectors being mapped varies
+from 60% to 80% depending on the array and season.
+Table 1 shows the median number of detectors used in
+the map-making stage.
+3.2. Relative detector calibration
+
+The data are calibrated into physical units using the
+equation
+DAQ
+atm
+dpW
+× Rt,i × fi × gt,i
+,
+t,i = dt,i
+
+(1)
+
+where i is a detector index within a single array and frequency band, t is an index over 10-minute observations,
+DAQ
+are the time-ordered data in physical (pico
+dpW
+t,i and dt,i
+watts, pW) and data acquisition units, respectively, Rt,i
+is the responsivity of the detector measured from a bias
+step operation, fi is a stable optical flatfield factor of oratm
+der unity, and gt,i
+is an atmospheric correction factor
+of order unity.
+Bias step operations are performed at least every hour,
+and involve a brief modulation of the detector bias voltage while monitoring the detector current. These calibration operations are analyzed to extract each detector’s power–resistance relationship and time constant
+(see next section). The factors Rt,i have units of pW
+per data acquisition unit. The calibration model always
+uses the most recent applicable bias step measurement
+(Grace et al. 2014).
+atm
+The factors fi and gt,i
+are corrections computed based
+on each detector’s response to the atmospheric common
+atm
+mode. Initially, the factors fi and gt,i
+are fixed to unity.
+The common mode for each observation is computed as a
+simple mean over detectors, and each detector is then calibrated against the common mode, in the low-frequency
+atm
+regime, to obtain correction factors gt,i
+. The shape of
+atm
+gt,i at this stage is dominated by a time-invariant contribution due to the optical efficiency of the detectors.
+This static component is factored out into the flatfield
+factors fi , with mean fi forced to unity. The process of
+atm
+computing a common mode and measuring gt,i
+is then
+iterated once, using the non-trivial flatfield from the first
+iteration. This iteration is performed so that the factors
+atm
+gt,i
+will be (typically) more tightly distributed around a
+value of unity, which is useful for identifying calibration
+problems in individual detectors or observations. In the
+atm
+150 GHz data, the fi and iterated gt,i
+factors are included in the calibration of data that goes into the map.
+In the 98 GHz data, the flatfield factors fi are included
+atm
+in the model, but we continue to fix gt,i
+= 1. This
+atm
+is appropriate because the inferred corrections gt,i
+are
+more tightly distributed around unity than is the case
+at 150 GHz, except in cases of very good atmospheric
+atm
+conditions where the measurements of gt,i
+themselves
+become quite noisy.
+We note that this process only corrects for relative
+differences in detector calibration. The effects of atmospheric opacity are included in the absolute calibration
+to planets described in §3.5.
+
+5
+TABLE 1
+Summary of s13–s16 observations, camera, and instrument performance considered in this work
+Season
+Regions
+
+D1
+
+s13
+D5
+
+D6
+
+s14
+D56
+
+D56
+
+s15
+BN
+
+D8
+
+PA1 150 GHz
+Median Ndet (a)
+√
+Array Sensitivity(b) [µK s]
+tobs (c) [hrs]
+
+493
+16.7
+114
+
+475
+20.2
+256
+
+487
+17.6
+278
+
+456
+20.2
+380
+
+299
+24.7
+521
+
+269
+29.1
+498
+
+284
+27.9
+121
+
+753
+13.3
+402
+
+617
+16.5
+527
+
+689
+17.6
+621
+
+717
+17.1
+172
+
+671
+16.5
+912
+
+PA3 98 GHz
+Median Ndet
+√
+Array Sensitivity [µK s]
+tobs [hrs]
+
+386
+15.5
+649
+
+387
+16.7
+829
+
+386
+16.2
+181
+
+384
+15.9
+704
+
+PA3 150 GHz
+Median Ndet
+√
+Array Sensitivity [µK s]
+tobs [hrs]
+
+369
+21.1
+491
+
+397
+22.5
+715
+
+396
+21.6
+152
+
+399
+20.6
+515
+
+PA2 150 GHz
+Median Ndet
+√
+Array Sensitivity [µK s]
+tobs [hrs]
+
+s16
+AA
+
+Notes: (a) Median number of detectors considered for map-making. We do not account for the fraction of samples masked within the
+single detector time-stream. In 2015 the addition of the third detector array, PA3, led to an increase of the bath temperature, which
+caused the number of working detectors in PA1 and PA2 to drop. In general, a small loss of detectors is expected from season to season
+due to cryogenic cycles deteriorating the quality of the connections between detectors and readout elements. (b) The array sensitivity
+is estimated on a single 10-minute chunk of time-ordered data (TOD) from the map-maker noise model and inverse-variance averaged
+within the dataset. Variations across seasons for the same array and region are due to fluctuations in atmospheric loading and number of
+mapped detectors. Variations across regions within the same season and array are due to differences in the elevations of the scans (and
+thus atmospheric loading). These numbers can be compared with the ones estimated from planet observation presented in C20. (c) Total
+amount of data mapped, measured in hours of exposure. This number is computed by summing the duration of each data chunk that
+passed TOD-level cuts. It does not consider the fraction of samples within the TOD that were flagged (thus not used), which would lead
+to only a small correction to the number provided.
+
+In L17, detectors for which a responsivity could not be
+extracted from the most recent bias step measurement
+were excluded. We are now using the average responsivity of the array in such cases, with a correction from
+the atmospheric correlation. This allowed us to recover
+about 20% of detectors for s14 with respect to L17, with
+a negligible impact on the quality of the relative calibration, evaluated using planet observations.
+3.3. Detector time constants
+
+Our method for characterizing the detector time constants is summarized in Thornton et al. (2016). Time
+constants are measured using both planet observations
+and bias steps. Time constants computed from planet
+scans, operating using the same optical coupling as the
+CMB scans, are used as baseline values. From these measurements we find time constants in the range of [1.0–5.4]
+milliseconds (ms) with a median value of 1.8 ms. While
+there are only O(100) planet scans throughout the season, bias steps, as an alternative, can be acquired more
+often, as frequently as per CMB scan. There is still a difference between bias step time constant and planet scan
+time constant, due to the fact that the planet measurements are a more direct probe of the relevant optical response speed compared with the bias step method. Thus
+a conversion factor is applied to the bias step results to
+account for this. Details are described in Grace et al.
+(2014).
+
+3.4. Polarization angles
+
+Following the same procedure used in N14 and L17, we
+compute the polarization angles of the detectors in PA1,
+PA2, and PA3 using a detailed optical model of the telescope mirrors and lenses in the optical design software
+CODE V1 (Koopman et al. 2016; Thornton et al. 2016).
+The angles of individual detectors are lithographically
+defined during fabrication. We propagate the position
+of the detector array, as assembled in the telescope, to
+the sky using a ray trace and compare to observed detector positions derived from planet observations. This
+determines the physical angle of the detectors within the
+telescope. The optical chain also introduces a polarization rotation of up to ∼1.7◦ near the edge of the focal
+plane, furthest from the primary optical axis, which is
+computed in CODE V using a polarization sensitive ray
+trace. This combined with the physical angle of the detectors in the telescope gives us the final polarization
+angle calibration. We later test for any additional global
+angle offset using the EB power spectrum (see C20 for
+details regarding this test).
+3.5. Calibration with planets
+We obtain the absolute calibration of the instrument
+using measurements of Uranus. This calibration factor converts the data from physical units (pW) to CMB
+1
+https://www.synopsys.com/optical-solutions/
+codev.html
+
+6
+brightness temperature units2 (µK) and is applied after
+the relative detector calibration. The factor is allowed to
+vary between TODs in order to capture temporal fluctuations in atmospheric transmission but is the same for all
+detectors on an array in the same frequency band. The
+calibration procedure is essentially unchanged with respect to Hasselfield et al. (2013) and Dünner et al. (2013);
+here we provide a brief summary.
+The absolute calibration factor applied to each TOD
+in frequency band ν is modelled as
+τ w
+ν
+gν (w, θ) = cν exp
+.
+(2)
+sin θ
+Here, w and θ denote the average precipitable water vapor level (PWV) and elevation of the array center, respectively, during the observation. The values for cν and
+τν are obtained by fitting the model to measurements
+of the absolute calibration taken at different values of
+w/ sin θ. The individual measurements of absolute calibration are given by:
+gi =
+
+Tν
+,
+Aν,i
+
+(3)
+
+where Tν denotes the brightness temperature of Uranus
+in µK and Aν,i is the observed amplitude of the planet
+in pW. The index i runs over Uranus observations. The
+temperature Tν is obtained by modeling the planet as a
+disk with uniform brightness temperature that is scaled
+by the ratio of the solid angles of the planet, ΩU , and the
+instrumental beam, ΩB,ν :
+Tν = TU (ν)
+
+ΩU
+.
+ΩB,ν
+
+(4)
+
+The assumed frequency dependence of Uranus’ brightness temperature TU (ν) is described in Hasselfield et al.
+(2013). The amplitudes Aν,i in Eq. (3) are determined
+as the peak amplitude of Uranus in planet maps that
+are made using the maximum likelihood map-making approach described in that same paper.
+The parameters cν and τν in Eq. (2) are fitted per observing season, detector array, and frequency band. Season s15 and s16 form an exception as they use a shared
+value for τν to improve the model fit. In addition, two
+separate values of cν are fitted for s15: one before and
+one after the telescope was refocused mid season. Finally,
+it should be noted that a correction to the absolute calibration is applied at a later stage in the analysis. This
+O(10%) correction is determined from the angular crosscorrelation between the final ACT maps and the Planck
+HFI maps and is determined per sky region, with overall
+uncertainty of O(1%); see C20 for further details on this
+correction.
+3.6. Pointing corrections
+
+ACT has a blind pointing accuracy of about 10 for the
+nighttime observations considered here. This is comparable to our beam Full-Width at Half Maximum (FWHM)
+2 Unless otherwise noted, the units µK refer to CMB differential
+temperature units, where the spectral radiance of a region with
+temperature ∆T is Sν = (∂Bν (T )/∂T )|TCMB ∆T , with Bν (T ) the
+spectral radiance of a blackbody and TCMB = 2.725 K the mean
+temperature of the CMB.
+
+of 1.40 at 150 GHz, so if left uncorrected it would significantly broaden our effective beam. As in L17 we correct
+our array pointing3 by comparing the observed positions
+of bright point sources to their known catalog positions
+for each TOD. However, due to our larger data volume,
+for this analysis we now perform the fit in map-space instead of in the time domain. The fits are performed by
+building the measured map signal, r = AT N −1 d, and an
+approximation for the inverse of its covariance, C −1 , for a
+20×20 arcminutes thumbnail around each bright source,
+where d is the TOD data vector, N is the noise matrix
+estimated from the data, and A the pointing matrix (see
+§4 for more information about this notation). We then
+minimize
+X
+χ2 =
+(ri − Ci−1 m(x, y, ai ))T Ci (ri − Ci−1 m(x, y, ai )),
+i
+
+(5)
+where i is the index of the source and m(x, y, ai ) is a
+point source model with a pointing offset of (x, y) and a
+peak amplitude of ai . The resulting fit is 10–100 times
+faster than a TOD-level fit, at the cost of slightly lower
+accuracy thus increasing the residual pointing jitter compared to L17 results (see §3.7).
+Our median single-TOD point source sensitivity is
+30 mJy, so only point sources with a flux of >
+∼ 150 mJy
+contribute usefully to the fit. The likelihood of covering a bright point source in a single TOD is proportional
+to the sky area covered by the scan. The typical scan
+length4 of 20 deg means that about half of the s13–s16
+TODs do not cover a bright source that can be used for
+pointing measurement. We interpolate the missing pointing measurements by fitting a Gaussian process model to
+the available ones. After applying these pointing corrections we measure a residual per-map pointing jitter and
+include it as a component in our final beam model (see
+§3.7 for the details on this procedure).
+3.7. Beams
+
+We use nighttime observations of Uranus to characterize the instrument’s optical response function, or beam.
+For each observing season and detector array, we recover both the azimuthally-averaged radial beam profiles and the corresponding `-dependent window functions, the latter of which enter directly into the power
+spectrum analysis. While the pipeline by which beams
+are processed is similar to that employed in earlier ACT
+data releases such as N14 and L17, and is more generally
+based on methods described in Hasselfield et al. (2013),
+there are a number of important changes that warrant
+further discussion.
+First, the method by which planet maps are made has
+been significantly improved by changing how large-scale
+correlated noise is treated in the time-domain prior to
+mapping. Instead of modeling and subtracting only a
+single detector common mode from the data (as was done
+3 Detector positions with respect to the array center are well
+measured in the field with planet observations. This method would
+not improve those estimates as point sources are too weak to give
+a reasonable per-detector measurement.
+4 The ACT s13–s16 dataset is dominated by scans targeting
+regions with an extent of 10–20 deg in the declination direction.
+The s16 AA region uses much longer scans, but they constitute
+only a small part of the data volume.
+
+7
+for earlier datasets), the new map-making algorithm estimates and removes correlated detector modes within a
+120 radius of the planet’s position in the same manner
+as the gap-filling technique described in §4.3. This not
+only results in visibly cleaner maps dominated by mostly
+white noise, but it also considerably improves the effective signal-to-noise in the outer region (or wing) of the
+beam. The new mapping method does, however, induce
+a non-negligible transfer function in the form of a unique,
+but constant, offset in each map. This offset is estimated
+and removed prior to any subsequent beam analysis.
+There has also been a change in the model used to fit
+the wing of the beam. For a diffraction-limited optical
+system, the wing is expected to decay radially as a power
+law with an exponent of −3, thus motivating a model of
+the form:
+a
+Bw (θ) =
++ b,
+(6)
+sin3 θ
+where the amplitude a and mapping transfer-function offset b are fit parameters. This model does not, however,
+account for the effects of scattering due to the surface
+roughness of the telescope’s primary mirror. For an imperfect parabolic reflector with RMS surface deviations
+, the antenna gain is given by Eq. (9) in Ruze (1966);
+this may be recast in terms of a unit-normalized beam
+Bn (θ) and corresponding solid angle Ω:
+Bn (θ) =
+S(θ) =
+
+Ω
+4π
+
+
+
+2πc
+λ
+
+2
+
+Ω
+¯2
+B0 (θ)e−δ + S(θ),
+Ω0
+¯2 X
+
+e−δ
+
+n
+
+(7)
+
+n
+2
+δ¯2
+e−(πc sin θ/λ) /n , (8)
+n · n!
+
+where B0 (θ) is the unit-normalized beam for an ideal
+reflector, δˆ2 = (4π/λ)2 is the phase variance, λ is the
+effective wavelength of light, c is the surface-error correlation length, and we have used the relation G(θ) =
+(4π/Ω)Bn (θ). While the first term in Eq. (7) is expected to decay according to the same power law as a
+diffraction-limited system, the same does not hold true
+for S(θ). Using photogrammetry measurements of the
+telescope’s primary mirror, we find that  = 20 µm and
+c = 28 cm, values for which the contribution of scattering to the wing cannot be neglected (especially at shorter
+wavelengths). Our new model is thus a modified version
+of Eq. (6) in which the scattering term S(θ) has been
+added.
+Finally, there have been a number of modifications to
+how errors are estimated at various points in the beam
+analysis pipeline. When fitting the radial profiles, the
+covariance of the non-linear scaling parameter `max (as
+defined in Hasselfield et al. 2013) with the core linear
+fit coefficients and wing amplitude is now incorporated
+in the overall model uncertainty. This is accomplished
+by using the solution from our original fitting method as
+the starting point for an MCMC sampling of the full posterior parameter distribution. The resulting chains are
+thinned (to reduce computational load) and transformed
+in the same manner as the radial fit parameters in order
+to recover the full `-space beam transform covariance.
+An independent ‘scattering’ mode is subsequently added
+to this covariance to account for additional uncertainty in
+our new wing model due to possible geometric modeling
+
+errors5 and temporal fluctuations in the mirror surface
+RMS parameter  in Eq. (8).
+Lastly, as in L17, the covariant errors are further adjusted for uncertainty in the pointing variance corrections. Unlike previous analyses, however, the contribution of position-dependent pointing variance to this uncertainty is now estimated by marginalizing over it as a
+parameter (σp ) in the likelihood:
+L(µp , σp | d, σ) = A(σ, σp ) e−
+
+PN
+i
+
+(di −µp )2 /2(σi2 +σp2 )
+
+, (9)
+
+where µp is the overall pointing variance, A(σ, σp ) =
+2
+2 −1/2
+ΠN
+is a normalization factor, and {d, σ}
+i [2(σi + σp )]
+are pointing variance fits and corresponding errors for N
+bright point sources in the maps. Note that by properly including the position dependence in the likelihood,
+we expect this method to yield improved estimates of
+both the total uncertainty and the pointing variance itself. Compared to L17, we find that overall pointing
+variance has increased (e.g., from 9.9 (8.4) to 12.1 (22.5)
+arcsec2 in D56 PA1 (PA2)); this may be due to both the
+aforementioned changes as well as lower accuracy TODlevel pointing corrections (see §3.6).
+The mean instantaneous `-space window functions for
+each season and array, as well as their corresponding errors, are shown in Fig. 2. Additional corrections due
+to map-based pointing variance (see Eq. (9)) and RJto-CMB spectral conversions are applied as in L17. A
+detailed treatment of how the broad passband modifies
+the effective beam depending on source spectral type may
+be found in Madhavacheril et al. (2019) in the context
+of component separation. We release both the mean instantaneous and map-effective (i.e., corrected) beam radial profiles and transforms as part of the current set of
+data products.
+3.8. Polarized Beam Leakage and Sidelobes
+
+We detect the presence of temperature-to-polarization
+(T-to-P) leakage in both the core of the main beam as
+well as its sidelobes. Although relatively small in magnitude, the leakage is significant enough that we must
+account for it at various steps in the analysis pipeline.
+For the main beam, we use the same set of Uranus observations from §3.7 to measure a polarization response
+in both Q and U Stokes parameters for each detector array and observing season. Since we do not expect Uranus
+to be polarized across our observing bands,6 we interpret
+these responses as leakages.
+In order to extract the `-space T -to-P leakage functions, we first convert each set of polarization maps to
+{Qr , Ur } (the third defined basis in Ludwig 1973) via local map-space linear combinations of Q and U . The new
+basis has the convenient property that its azimuthally
+averaged radial profiles have a direct correspondence to
+5 We only measure the positions of panel edges in the telescope’s
+segmented primary mirror and must therefore model / interpolate
+the deformed surface in order to estimate the true RMS deviation.
+6 Measurements of Uranus at visible and near-infrared wavelengths have shown evidence of radial polarization patterns in the
+limbs, but a disk-integrated polarization of less than 0.05% (Schmid
+et al. 2006); while no equivalent data exists to our knowledge, the
+relevant scattering effects in the planetary atmosphere are expected
+to be much weaker at millimeter wavelengths, resulting in net polarization levels substantially lower than this bound.
+
+8
+1.0
+
+B`2 (Normalized)
+
+0.8
+
+0.6
+
+S13 PA1 150 GHz
+Ω = 198.3 ± 3.8 nsr
+
+S16 PA2 150 GHz
+Ω = 182.7 ± 4.7 nsr
+
+S14 PA1 150 GHz
+Ω = 195.3 ± 3.3 nsr
+
+S15 PA3 150 GHz
+Ω = 265.9 ± 5.4 nsr
+
+S15 PA1 150 GHz
+Ω = 193.3 ± 8.6 nsr
+
+S16 PA3 150 GHz
+Ω = 234.3 ± 8.4 nsr
+
+S14 PA2 150 GHz
+Ω = 180.4 ± 3.2 nsr
+
+S15 PA3 98 GHz
+Ω = 478.3 ± 20.6 nsr
+
+S15 PA2 150 GHz
+Ω = 185.0 ± 4.7 nsr
+
+S16 PA3 98 GHz
+Ω = 452.1 ± 20.7 nsr
+
+0.4
+
+0.2
+
+δB`2 /B`2 (%)
+
+0.0
+10.0
+1.0
+0.1
+0
+
+2000
+
+4000
+
+6000
+Multipole Moment `
+
+8000
+
+10000
+
+12000
+
+Fig. 2.— Window functions for the mean instantaneous beam of each array and band in each season. The window functions used for
+interpretation of the survey maps are slightly modified to account for residual pointing variance in the observations contributing to each
+map. The window function errors shown in the bottom panel are strongly correlated between multipoles.
+
+the E and B harmonic transforms. In the flat-sky approximation, this takes the form of a second-order Hankel
+transform:
+Z
+{E(`), B(`)} = −2π {Qr (θ), Ur (θ)}J2 (`θ) θ dθ. (10)
+Since Q and U are formed by taking linear combinations
+of the individual detector beams within an array, we use
+the same framework to model radial profiles in Qr and
+Ur as we do in temperature. This permits, with the
+exception of Eq. (10), the use of identical pipelines for
+processing the core beam response in both temperature
+and polarization. The resulting leakages and their associated covariances are then incorporated in the overall
+power spectrum analysis as described in C20.
+In L17 we described polarized sidelobes of the main
+beam in the PA1 and PA2 arrays. The sidelobes, although weak in amplitude, were strong enough to cause
+noticeable T-to-P leakage (predominantly with E-mode
+structure). Although L17 did not include any data from
+PA3 detector array, we commented there that polarized
+sidelobes were not detected in PA3. However, with a
+more careful analysis using additional observations of
+Saturn, we confirm the presence of weak polarized sidelobes in the 150 GHz detectors of PA3. These sidelobes
+are observed to be approximately one tenth as strong as
+the ones in PA1 and PA2. Maps of the sidelobes are
+shown in Fig. 3, along with the temperature to polarization leakage function.
+For the present work, we apply the same sidelobe mitigation technique as was applied in L17, for all 150 GHz
+
+detectors. This involves modeling the sidelobes as a sum
+of copies of the main beam lobe, and then using that
+model to deproject the sidelobe signal from the timeordered data prior to map-making.
+The PA3 sidelobes have the same general features as
+the ones in PA1 and PA2; they consist of a small group
+of compact lobes, with approximate four-fold symmetry,
+strongly polarized perpendicular to the radius from the
+beam center. For any individual detector, a sidelobe will
+only map to the sky in cases where the main beam is
+within the array field of view. To explain this latter
+behavior more explicitly, imagine a fixed pointing of the
+boresight and consider the function n̂(~x) that gives the
+position on the sky of the camera’s peak response, for
+a detector located at position ~x in the focal plane. The
+signal in detector i originates mainly from the sky near
+n̂(~xi ), but also contains contributions from each compact
+sidelobe j at n̂(~xi + ~sj ). However, sidelobe j is observed
+for detector i only in cases where ~xi + ~sj is within the
+physical bounds of the focal plane. This is consistent
+with an optical effect originating inside the camera rather
+than due to optical elements outside the cryostat.
+The PA3 sidelobes are located at radii of approximately 30 to 40 arcminutes, leading to two significant
+differences relative to PA1 and PA2. First, the broader
+stride of the polarized sidelobes means that the angular
+scale of strongest T-to-P leakage is pushed to a lower
+multipole: ` ≈ 300 for PA3 as compared with 500 for
+PA1 and PA2. Second, because sidelobes only map to
+the sky when the main beam is also in the array field
+of view, the larger radii of the sidelobes leads to fewer
+
+9
+
+0.10
+
+Y (arcmin)
+
+40
+
+0.05
+
+20
+
+0.00
+
+0
+
+0.05
+
+20
+
+0.10
+
+PA3 150 GHz
+
+0.15
+
+40
+
+b T P (10 3)
+
+40
+0.4
+0.3
+0.2
+0.1
+0.0
+0.1
+0.2
+0.3
+
+20 0 20
+X (arcmin)
+
+0.20
+
+40
+
+TE leakage
+TB leakage
+
+PA3 150 GHz
+0
+
+1000
+
+2000
+
+3000
+
+4000
+
+Fig. 3.— Weak polarized sidelobes in the PA3 150 GHz detectors.
+(Top panel) Map of the polarized sidelobes, obtained by stacking
+20 observations of Saturn. The main lobe of the beam is at the
+origin and is masked in this image. The grayscale is linear in units
+of 1/1000 of the main beam peak, with positive (negative) numbers indicating polarization parallel (perpendicular) to the radial
+direction. The sidelobes consist of four groups of compact features,
+at 30 to 40 arcminutes from the main beam. (Bottom panel) The
+effect of unmitigated sidelobes on CMB spectrum measurements,
+→E and bT →B . The sideexpressed as transfer beam functions bT
+`
+`
+lobes are strongly polarized in a direction perpendicular to the line
+connecting them to the main beam; this results in leakage that is
+primarily from temperature into E-mode polarization. Note that
+these sidelobes are projected out of the data prior to mapping the
+CMB, so the net leakage in the resulting spectra will be strongly
+suppressed relative to what is shown here.
+
+detectors suffering from each sidelobe.
+We do not detect sidelobes in PA3 98 GHz, even though
+we would have sufficient signal to detect them if they had
+similar amplitude and positions in this band. Preliminary lab and modeling work on similar systems suggest
+that the sidelobes arise from a diffraction effect induced
+by grids that make up the various optical filters. In such
+a case, one would expect sidelobes to occur at larger radius for lower frequencies. Sidelobes in 98 GHz would
+appear starting at a distance of approximately 47 arcminutes from the main beam. Since this is roughly the
+size of the focal plane, the sidelobes would map to the
+sky for only a small fraction of detectors, at the edges of
+the focal plane.
+
+4. MAP-MAKING
+
+As done for previous ACT data releases and described
+in Dünner et al. (2013), N14, and L17, we adopt the
+maximum-likelihood map-making method to reduce several terabytes of TODs into high signal-to-noise sky
+maps. In summary, this is achieved by solving the mapping equation
+(AT N −1 A)m = AT N −1 d,
+
+(11)
+
+where A is the generalized pointing matrix projecting
+the data from map to time domain, N is the detectordetector noise covariance matrix, which is defined in
+Fourier space and measured from the data, d is the conditioned and slightly filtered time-ordered data, and m
+is a set of I, Q, and U Stokes parameter maps of the
+sky. In other words, by solving Eq. (11) we find the
+maximum-likelihood solution of Npix · NStokes degrees of
+freedom.7 The slight filtering applied to the time-ordered
+data due to ground removal (see §4.4) is not handled in
+a maximum-likelihood framework. The details of the filtering and the resulting transfer function are discussed
+in the following sections.
+The dataset described in §2 is processed in separate
+bundles in order to produce four (or two for s16) independent split maps for each season, array, frequency, and
+region with uniform noise properties (see §5 for a detailed
+description of the map-based products that are released
+with this work). The splitting of observations into independent bundles is the result of an optimization process
+to minimize the noise bias in the power spectrum. TODs
+are grouped into single-day blocks. The distribution of
+such blocks among the 2 or 4 splits is computed by optimizing for (i) even distribution of the data among the
+splits and (ii) uniformity of hit counts across the sky
+for each split. One important constraint imposed on this
+procedure is that observations from different arrays taken
+on the same day belong to the same split (e.g., s14-pa1split0 connected to s14-pa2-split0) to confine cross-split
+correlations due to atmospheric noise to a single pair.
+For this analysis, the Enki map-maker,8 which was
+developed and tested for N14 and L17 and easily scaled
+to handle large high-resolution maps, is used to produce
+the nominal maps. All previous ACT data releases employed the Ninkasi map-maker.9 These two software
+codes have been compared and shown to lead to consistent results at the power spectrum level when used to
+map data in the D56 region. In the following sections we
+describe improvements in the data processing between
+this analysis and L17.
+4.1. Pixelization
+
+We continue to produce sky maps in equatorial cylindrical projection. We adopt the plate carrée (CAR) pixelization, as opposed to the CEA pixelization which was
+used in previous releases. For CAR, pixels are equally
+spaced in latitude, and have the same number of pixels
+per latitude ring. Although the pixels are no longer equal
+7 The concept of degrees of freedom is further used in §4.5.
+
+8 GitHub repository: https://github.com/amaurea/enlib
+
+9
+
+GitHub repositories:
+https://github.com/sievers/
+ninkasi_c and https://github.com/sievers/ninkasi_
+octave
+
+10
+area, CAR avoids the elongation of pixels at extreme declinations and thus requires fewer total pixels to achieve
+the necessary resolution across the full declination range
+of our maps. At the equator, the resolution continues
+to be 0.5 arcminutes for both 98 and 150 GHz. Exact
+weights for spherical harmonic transforms are provided
+in the libsharp library10 (Reinecke & Seljebotn 2013)
+for the CAR pixelization.
+4.2. Sidelobes and cuts
+
+As in L17, we estimate the contamination from the
+Moon being observed through the telescope sidelobes
+by mapping the data in Moon-centered coordinates. In
+this case, the data are bundled such that single-season,
+single-array, and single-frequency contamination maps
+are produced. Although the sky signal gradually averages away in such maps, we decide to not subtract the
+measured contamination, but rather to fully cut contaminated data. In L17, TODs that were partially contaminated were excluded from the map-making run. In this
+new analysis, individual samples that map onto a region
+of the corresponding moon-centered map with a polarization signal > 200 µK are cut. The recovered data were
+shown to not bias the signal power spectra when compared to previous results.
+4.3. Gap-filling and cuts
+
+Although the contaminated samples (see also §3.1) are
+not used to find the maximum-likelihood solution map,
+m, in Eq. (11), estimating the noise model, N , requires
+continuity of the detector data. In this analysis, we adopt
+a new method to fill in the missing data samples for noise
+estimation purposes. We compute the detector-detector
+covariance matrix from the non-cut samples and we then
+use it to predict the value of the cut ones. This new
+method improved the estimation of the map-maker noise
+model and reduced the noise power spectra by roughly
+a factor of 1.5 in the 1000 < ` < 2000 region, while still
+leading to unbiased signal spectra.
+In addition, we use this filling method for glitch-like
+(short) cut regions. The original data from longer cut
+regions is kept to estimate the noise model, but still excluded when solving for the signal map.
+4.4. Ground subtraction
+To characterize spurious emission from the ground and
+other scan-synchronous signals we adopt a similar analysis as in L17. Each of the original data splits (4 or 2 splits
+per season, array, frequency and sky region) are further split to separate observations at different elevations.
+For each detector, we then solve for a one-dimensional
+maximum-likelihood map with a one arcminute resolution along the azimuth coordinate. Any signal that
+changes while performing constant elevation scans, such
+as the CMB, will average away over many observations.
+These single-detector maps, called azimuth pickup
+maps, are used as a template (with scaling equal to unity)
+to subtract the contamination signal before mapping the
+data in the usual sky coordinates. In L17, the azimuth
+10
+We use the pixell library (https://github.com/
+simonsobs/pixell) for manipulating CAR maps and performing curved sky Fourier operations.
+
+pickup maps were used to define data cuts (similarly to
+the treatment of sidelobes) for the D56 region, but the
+same procedure would cause large gradients in the hit
+counts for BN and AA, thus degrading the uniformity
+of the map’s noise properties. Because we now use the
+full information of the azimuth pickup maps, rather than
+simply defining a threshold-based binary mask, we do not
+perform any scan-synchronous cleaning based on polynomial fitting as adopted in previous ACT data releases. In
+addition, we are able to capture and remove ground contamination on smaller scales. An aggressive polynominal
+fitting could achieve similar performance, but it would
+heavily bias the maps.
+As mentioned above, it is important to verify that the
+CMB signal is sufficiently suppressed in the pickup maps.
+Any residual CMB signal will be removed from the TODs
+and bias the sky maps. To characterize the transfer function induced by this new ground subtraction, as well as
+testing for possible convergence issues and noise bias, we
+inject a simulated I, Q, U map into the TODs and perform an end-to-end mapping run (including estimating
+the pickup maps). For C20, the power spectra of the input map and the processed map are compared to quantify
+the bias as function of the angular scale, showing a small
+0.3% bias for ` > 350 (see C20 for more details).
+4.5. Point source treatment
+
+Small errors in our data model, such as residual pointing jitter, gain errors, intrinsic variability of point sources
+or the implicit assumption that the sky is pixelized, can
+introduce bias in the maximum-likelihood sky maps. For
+ACT, these biases result in O(10−4 ) of the signal leaking by a noise correlation length (≈ 1 deg) away from
+high-contrast regions, typically manifesting as a faint Xlike pattern around strong point sources. We previously
+handled this by subtracting a point source model from
+the time-ordered data before making the maps, and then
+optionally adding them back again in pixel space. However, this procedure only eliminates one of the sources
+of model error: the assumption that the sky is pixelized.
+Due to having more bright point sources, with the addition of the BN and AA regions, a new detector array with
+a less symmetric beam (PA3), and a faster but slightly
+less accurate pointing model, we chose a more thorough
+approach this time.
+For point sources with a peak amplitude brighter than
+10 mK (roughly 800 mJy at 150 GHz), we add to the
+maximum-likelihood solution in Eq. (11) an extra degree
+of freedom for each TOD sample where the contribution
+from the source is brighter than 100 µK, which typically
+is true for samples mapping 5 arcminutes around the
+source. By having a degree of freedom for each data
+point, no explicit model is fit to these point sources, and
+thus the uncertainties associated to the beam model,
+the amplitude of the source as function of time, and
+the pointing model do not introduce any error into our
+treatment. This procedure is applied to 64 (86) sources
+at 98 (150) GHz, corresponding to roughly 0.01% of the
+sky. In theory, the extra degrees of freedom come at
+the cost of worse handling of correlated noise in such regions. However, since the noise is approximately white
+on their length scale there is in practice no impact on our
+map noise properties. See Næss (2019) for a more thorough discussion of model errors and biases in maximum-
+
+11
+TABLE 2
+Summary of region sizes and map inverse-variance averaged white-noise levels in µK–arcmin
+Season
+Array and Frequency
+D1 (131 deg2 )
+D5 (157 deg2 )
+D6 (135 deg2 )
+D56 (834 deg2 )
+D8 (248 deg2 )
+BN (3157 deg2 )
+AA (17044 deg2 )
+
+s13
+PA1150
+18.6
+16.4
+12.6
+
+s14
+PA1150 PA2150
+
+32.3
+
+PA1150
+
+20.5
+
+33.3
+42.0
+76.8
+
+s15
+PA2150 PA398
+
+21.9
+21.5
+41.3
+
+18.4
+20.0
+33.9
+
+PA3150
+
+PA2
+
+s16
+PA398
+
+PA3150
+
+72.9
+
+78.7
+
+118.5
+
+28.6
+29.0
+49.1
+
+Notes: The region areas include pixels that (i) have been observed in all seasons and by all arrays of interest and (ii) have an inverse-variance
+−2 >
+−2
+weight σpix
+∼ 0.1σ pix in each dataset (single-array, single-season, single-frequency) separately. These areas are somewhat bigger (depending
+on the region) than those reported in C20 and use to compute power spectra. The inverse-variance weighted map noise levels are computed
+within the areas defined above and reported in units of µK–arcmin. Combined map noise levels for each region are provided in the text in
+§5. Sub-regions of these areas are selected for the power spectrum analysis in C20.
+
+likelihood map-making, and the section on source subsampling in particular for the method used here.
+For dimmer point sources, but still detected with a signal to noise ratio SNR>5 in each per-season, per-array
+map, we perform the point-source model subtraction at
+the TOD level, as mentioned above and described in L17
+and Dünner et al. (2013). This method only removes the
+season-averaged point sources signal. Although this approximation is sufficient to guarantee an unbiased mapmaking procedure, further map-space refinements are
+adopted as described in §5.1, Naess et al. (2020), and
+Madhavacheril et al. (2019).
+4.6. Noise iterations
+
+Because of the wide sky area covered over four different seasons, especially s16, and the increased large-scale
+sensitivity due to integration time, we require stricter
+control of the biases induced by the map-making procedure. The estimation of the noise covariance matrix, N ,
+using the data d introduces a small bias at intermediate and large scales. This bias is iteratively removed, as
+described in Dünner et al. (2013), by multi-pass mapmaking where corrections to the map estimate mi from
+pass i are computed by running noise estimation and
+mapping on modified time-ordered data d − Ami . In this
+new analysis as a precaution measure, we perform three
+iterations to correct for such a bias as opposed to two as
+performed in L17.
+5. DR4 MAP PRODUCTS
+
+ACT DR4 maps provide the first signal-dominated
+arcminute-resolution E-mode fluctuation maps over
+thousands of deg2 and additional small-scale temperature anisotropies over 40% of the sky. The products are
+described in this section and will be publicly released on
+the NASA Legacy Archive Microwave Background Data
+Analysis (LAMBDA) website.11 iPython notebooks developed to produce tables and figures in this section can
+be found on the ACT GitHub.12
+5.1. Products and definitions
+The map-making procedure, described in §4, requires
+roughly 8.3 core-years on a modern high-performance
+11 https://lambda.gsfc.nasa.gov/product/act/
+12 https://github.com/ACTCollaboration/act_dr4_sm
+
+computing cluster to reduce 11.3 TB of time-ordered
+data into roughly 300 GB of science-quality sky maps.
+The resulting maps have observed-pixel counts ranging
+roughly from 1.9 million (for D1) to 278 million13 (for
+AA).
+The released maps can be grouped into 20 different
+sets, one for each region, season, array, and frequency
+combination (see Table 2 for details). Each set contains
+4 (2 for AA) separately-processed independent splits and
+one map-based co-add for a total of 94 data units. For
+each unit we release 4 FITS files that fully describe the
+data and its properties:
+• Source-free maps: I (or T ), Q, and U Stokes components of the sky in units of microkelvin. The
+polarization components are defined by the IAU
+convention14 (Hamaker & Bregman 1996). Although the signal from point sources is removed
+at the TOD level to avoid biases in the maximumlikelihood maps (see §4.5), a second more accurate
+map-space point source subtraction is adopted to
+reduce artifacts that could be induced by maplevel Fourier filtering often used in cosmological
+analyses (e.g., C20; Darwish et al. 2020; Madhavacheril et al. 2019; ?). Optimally co-added
+single-frequency maps (Naess et al. 2020), made
+from nighttime ACT data from 2013 to 2017, are
+used to measure the positions of point sources. For
+each source detected with a SNR>5, a symmetric beam-shaped profile at the measured location
+is used as map-space template. The amplitude of
+the template is fit for in each split map both in temperature and polarization. This procedure better
+captures small variations in the sources amplitudes
+in each split (see Naess et al. 2020 for more details).
+• Source maps: I (or T ), Q, and U Stokes components of the point-source signal subtracted following the procedure described above in units of microkelvin. The simple sum of the source-free and
+source maps represent the observed sky.
+13 Each map has an extra 30-40% overhead of unobserved (zero)
+pixels due to the scan-strategy and due to RA-Dec region center
+offsets between different detector arrays.
+14 This is explicitly specified in the FITS header by the keyword
+POLCCONV=IAU. The ACT DR3 maps were released following the
+COSMO convention (Górski et al. 2005a).
+
+12
+
+Fig. 4.— ACT DR4 survey depth and sky coverage maps for 98 GHz (top panel) and 150 GHz (bottom panel) in Equatorial coordinates.
+Lines at constant map-noise are plotted ranging from 7.5 µK–arcmin(red) to 101 µK–arcmin(blue). The Planck 353 GHz intensity map is
+shown in the background. The x-axis (y-axis) shows the RA (Dec) coordinates in degree.
+
+• Inverse-variance map: temperature–temperature
+(or II) component of the 3 × 3 per-pixel inverse covariance matrix in units of µK−2 . The 3 × 3 matrix
+is computed by projecting the diagonal component
+of the map-maker noise model onto the sky (thus
+dominated by the high-frequency part of the noise
+spectrum). Although the inverse-variance map is
+roughly proportional to a hit count map, it further takes into account the variability in detector
+performances and is thus better suited for mapbased weighting and map co-addition procedures.
+Because of our scan-strategy and large number of
+detectors, the off-diagonal elements (IQ, IU , and
+QU ) are negligible. In addition, the QQ and U U elements are each well approximated as having half
+the inverse variance of II. For these reasons we
+only release the II component of the full 3x3 covariance matrix. This product is used in C20 to
+exclude noisy regions and to weight the spectra.
+• Cross-linking maps: T -, Q-, U -like components
+used to describe the cross-linking properties of a
+dataset. These components are computed by projecting the time-domain vector, d = const, onto the
+sky using a projection matrix constructed by artificially setting all detector angles to zero (i.e parallel
+to the azimuthal motion of the telescope). The T like component is the usual inverse-variance map
+(see above). For a small-throw perfectly azimuthal
+scan over a setting (rising) region of the sky around
+Dec = 0, the resulting footprint in equatorial coordinates is a nearly-straight scan tilted by roughly
++45 (−45) degrees with respect to the equator. In
+such configuration the observed pixels in the Q, U like maps will have Q ∼ 0 and U ∼ +I for the
+setting scan and Q ∼ 0 and U ∼ −I for the rising
+
+scan. In other words, the Q component of the crosslinking map mainly encodes the local angle between
+the scanning direction and north, while the U component mainly encodes the balance between rising
+and setting scans. These maps are used in C20
+to select regions with uniform cross-linking, which
+translates into uniform noise properties.
+Although the time-ordered data are calibrated before
+entering the map-making step, an additional calibration
+factor is estimated for each map via a spectrum-level
+comparison with the Planck temperature maps (see §3.5),
+as described in C20. The released maps have been recalibrated, but no correction for polarization efficiency has
+been applied. Similarly, the power spectra of these maps
+entering the likelihood analysis have been corrected for
+the calibration factors and the covariance matrix includes
+calibration uncertainties. Polarization efficiency is then
+applied correcting the model within the likelihood code
+(see C20).
+5.2. Sky maps
+
+Figure 4 shows the s13–s16 survey area and the temperature map noise levels for both the 98 and 150 GHz
+channels. Although observations at 98 GHz only started
+in 2015, the spatial distribution of the noise is similar between the two frequencies, with the exception of the D1,
+D5, and D6 regions observed only in s13.15 The Planck
+353 GHz intensity map is also shown, highlighting that
+with the AA survey we have observed a considerable fraction of the Galactic plane. The Galactic center is part of
+the survey but sparsely sampled in time.
+15 D5 was also observed in s16 and mapped together with the
+AA wide scans for simplicity.
+
+White Noise RMS [ K-acrmin]
+
+13
+
+102
+
+s15-s16 98 GHz
+s13-s16 150 GHz
+s13-s16 98+150 GHz
+Planck 100 GHz
+Planck 143 GHz
+
+101
+102
+
+103
+Cumulative Area [deg2]
+
+104
+
+Fig. 5.— Map noise cumulative distribution function for
+98 and 150 GHz and their combination. Two horizontal lines show
+the Planck full-sky averaged white-noise level for the 100 GHz and
+143 GHz channels.
+
+More quantitatively, Fig. 5 shows the cumulative distribution function of the map white noise. The information about the spatial distribution of the different regions
+is lost in this representation; however it is a useful tool
+for forecasting studies. When combining 98 and 150 GHz
+data, roughly 600 deg2 of the sky have been observed at
+a noise level ≤ 10 µK–arcmin. Approximately 4000 deg2
+of the s13–s16 150 GHz survey have a noise level that is
+lower than the full-mission whole-sky average 143 GHz
+Planck channel. The corresponding number for ACT
+98 GHz compared to Planck 100 GHz is 9000 deg2 . It is
+worth noting that (i) some of the deepest regions in the
+Planck survey are observed by ACT, (ii) at large angular
+separations the ACT temperature noise strongly departs
+from a white spectrum due to atmospheric correlations;
+much less so for the polarization channels, and (iii) the
+comparison does not account for differences in the beam
+size, which significantly increase the Planck uncertainties
+at small scales compared to ACT. A comparison of the
+ACT and Planck uncertainties at the power spectrum
+level is presented in C20.
+The list of effective region sizes, computed by excluding noisy parts at the edge of each region, and inversevariance averaged white noise levels are presented in Table 2. D56 is the best cross-linked region with a mapnoise level16 of 11.5 (18.4) µK–arcmin at 150 (98) GHz
+over 834 deg2 . Figures 6 and 7 show a slightly-filtered
+cutout of the D56 region observed at 98 and 150 GHz,
+respectively. The top three panels show the measurement of the three Stokes parameters T , Q, and U (from
+top to bottom) highlighting scales between 1 degree to
+a few arcminutes. The temperature fields look identical,
+as expected from a high signal-to-noise measurement of
+a low-foreground part of the sky. The Q and U measurements are also clearly signal dominated and highly
+correlated between frequencies with with plus-like and
+cross-like patterns for Q and U that are characteristic
+of E-mode polarization. The two bottom panels show a
+16 We ignore the contribution of the D5 and D6 regions.
+
+combination of the Q and U fields into E and B fields.
+The E field is clearly signal dominated, at a signal-tonoise much higher than previously reported in L17 and
+with the addition of the 98 GHz channel. The B field
+map is clearly noise dominated, thus providing a proxy
+to understand the noise properties of the dataset. The
+D5 (in the top-right corner) and the D6 (in the bottomleft corner) regions are now barely visible in the co-added
+map compared to L17. This shows that the s15 data
+have greatly improved the overall depth of the D56 region. In addition, a localized 45◦ -tilted quadrupole is
+clearly visible at RA = 1.56 and Dec = −6.39, with a
+corresponding 0◦ -tilted quadrupole in the E map, showing the polarized emission of the bright active galactic
+nucleus (AGN) PKS0003-066.
+The BN region has an extent of 3157 deg2 with a noise
+level of 29.2 (33.9) µK–arcminat 150 (98) GHz, respectively. The degree of cross-linking of this region is bimodal: roughly 1800 deg2 , between right ascensions of
+170 and 235 (or −125) deg, have been observed both during rising and setting, i.e. with the sky at two different
+orientations with respect to the constant-elevation scans
+(see Fig. 4). This subset of BN is used in C20, Madhavacheril et al. (2019), Namikawa et al. (2020) and Darwish et al. (2020). The remaining 40% of the region was
+observed only during rising scans, and is currently used
+for point-source and cluster searches. Figures 8 and 9
+show a slightly-filtered cutout of the T , E, and B fields
+measured in the BN region at 98 and 150 GHz, respectively. Both frequencies show a signal-dominated measurement of the E field.
+The AA region covers roughly 17,000 deg2 of the
+sky reaching a noise level of 62.1 (78.7) µK–arcmin at
+150 (98) GHz. The degree of cross-linking varies substantially across the observed area. Constant-elevation scans
+from the ACT site project to arcs on the equatorial sky,
+and near declination −35◦ , these arcs tend to run nearly
+parallel to lines of constant RA, making it difficult to
+achieve strong cross-linking. Some variety in trajectory
+is achieved by observing at different elevations, but the
+net result is that mid-latitudes have somewhat different noise properties than the higher and lower latitudes
+where the cross-linking angle is closer to 90 degrees. In
+general, it is possible to define stripes at constant declination in the AA maps that have uniform noise properties
+(modulo differences due to exposure time). This feature
+has been used in the power spectrum analysis presented
+in C20.
+The D8 region has comparable map noise levels to the
+D56 region but over a smaller region of 248 deg2 of the
+sky. Given its location on the sky, the degree of crosslinking is very low.
+Figure 10 illustrates some of the high-resolution information in the s13–s16 ACT temperature and polarization
+measurements. The left-hand panel shows the emission
+of the five highest signal-to-noise point sources detected
+at 150 GHz ordered (top to bottom) by decreasing unpolarized flux. The size difference, especially visible in the
+temperature thumbnails, is due to the different resolution
+at 98 and 150 GHz (see §3.7 for details). The polarization signal, in Q and U , is also clearly correlated between
+frequencies. The polarized flux from bright AGNs was
+previously measured using the ACT DR3 150 GHz data
+
+14
+
+Fig. 6.— Rectangular cutout of the s13–s16 98 GHz maps in the D56 region. The selected area covers 630 deg2 of the sky. To visually
+<
+highlight the wide range of measured angular scales, modes with |`| <
+The top panel shows
+∼ 150 and |`x | ∼ 5 have been filtered out.
+temperature fluctuations in a range of ±250 µK. The remaining four black-and-white panels show (top to bottom) Q, U , E-mode, and
+B-mode polarization measurements in a range of ±30 µK. The x-axis (y-axis) shows the RA (Dec) coordinates in degree.
+
+15
+
+Fig. 7.— Rectangular cutout of the s13–s16 150 GHz maps in the D56 region. The selected area covers 630 deg2 of the sky. To
+<
+visually highlight the wide range of measured angular scales, modes with |`| <
+∼ 150 and |`x | ∼ 5 have been filtered out. The top panel shows
+temperature fluctuations in a range of ±250 µK. The remaining four black-and-white panels show (top to bottom) Q, U , E-mode, and
+B-mode polarization measurements in a range of ±30 µK. The x-axis (y-axis) shows the RA (Dec) coordinates in degree.
+
+16
+
+Fig. 8.— Rectangular cutout of the s13–s16 98 GHz maps in the BN region. The selected area covers 1230 deg2 of the sky. To visually
+<
+highlight the wide range of measured angular scales, modes with |`| <
+The top panel shows
+∼ 150 and |`x | ∼ 5 have been filtered out.
+temperature fluctuations in a range of ±250 µK. The remaining two black-and-white panels show (top to bottom) E-mode and B-mode
+polarization measurements in a range of ±30 µK. The x-axis (y-axis) shows the RA (Dec) coordinates in degree.
+
+and showed to be on average roughly 3% of the unpolarized flux (Datta et al. 2019). The right-hand panel
+shows the five highest signal-to-noise SZ-detected clusters which, as expected from the tSZ effect, produce a
+temperature decrement both at 98 and 150 GHz. A detailed analysis of SZ-selected clusters will be presented
+in Hilton et al. (2020).
+In summary, the combination of the ACT DR4 map
+products provides the first signal-dominated arcminuteresolution temperature and E-mode fluctuation maps
+over 4000 deg2 of the sky. They also add substantial
+small-scale temperature information over 40% of the sky,
+complementing existing Planck measurements.
+
+5.3. Point source masks
+Although interesting from the astrophysical point of
+view, the presence of bright point sources in the maps
+is a source of bias for many cosmological analyses. For
+this reason we release a set of point source masks as part
+of the DR4 data products. Each of the 16 per-region,
+single-season, single-array maps at 150 GHz is matched
+filtered using a radially-symmetric beam as signal template17 and a 2D correlated noise model measured from
+the same map. We then look for positive temperature
+fluctuations with a detection threshold of SNR ≥ 2 (2.8
+for AA). At 150 GHz, each region of the full s13–s16
+17 Each map is paired with the corresponding jitter-corrected
+beam (see §3.7).
+
+17
+
+Fig. 9.— Rectangular cutout of the s13–s16 150 GHz maps in the BN region. The selected area covers 1230 deg2 of the sky. To
+<
+visually highlight the wide range of measured angular scales, modes with |`| <
+∼ 150 and |`x | ∼ 5 have been filtered out. The top panel shows
+temperature fluctuations in a range of ±250 µK. The remaining two black-and-white panels show (top to bottom) E-mode and B-mode
+polarization measurements in a range of ±30 µK. The x-axis (y-axis) shows the RA (Dec) coordinates in degree.
+
+survey is observed by at least 2 independent datasets
+(maps). We use this feature to clean the single-map catalogs from random noise fluctuations by cross-matching
+all the 16 catalogs and requiring a source to be observed
+at least twice. A final catalog of source positions, SNR,
+and fluxes is then formed by inverse-variance weighting
+the individual matches.18
+The catalog is effectively complete for sources detected
+at a combined SNR≥ 5, but because of the varying map
+depth, the corresponding flux limit is a function of sky
+position. To take full advantage of the deep regions and
+to keep the number of masks at a minimum, we produce
+18 The weighting is done by assuming independent errors. This
+is a good approximation at arcminute scales where the noise is
+greater than the residual CMB signal.
+
+two sets of masks: (i) one set with all sources with flux
+≥ 100 mJy over the whole AA footprint including BN,
+and (ii) another set with all sources with a flux ≥ 15 mJy
+only covering the D1, D56, and D8 regions. Both sets are
+produced for 5, 8, 10, 35 arcmin hole radii. The first set
+contains 1215 holes over roughly 17,000 deg2 , the second
+one 1012 holes over roughly 1,200 deg2 .
+A visual inspection of the DR4 maps shows the presence of a few extended astrophysical objects19 . In some
+cases the center of the objects is detected by the point
+source finder, but the extended structures may not be
+fully masked. In addition, some objects are too faint to
+be robustly detected. We therefore additionally include
+19 A description of such objects can be found in Naess et al.
+(2020).
+
+18
+T 98 GHz
+
+Q 98 GHz
+
+U 98 GHz
+
+T 150 GHz
+
+Q 150 GHz
+
+U 150 GHz
+
+T 98 GHz
+
+3C273
+
+ACT-CL J2327.4-0204
+
+3C274
+
+ACT-CL J0019.6+0336
+
+HB89
+
+ACT-CL J1401.0+0252
+
+PKS0003-066
+
+ACT-CL J0034.4+0225
+
+RA = 1.56
+Dec = -6.39
+
+RA = -149.74
+Dec = 2.87
+SNR = 22
+
+OJ2887
+
+ACT-CL J1311.5-0120
+
+T 150 GHz
+
+RA = -8.13
+Dec = -2.08
+SNR = 34
+
+RA = -172.72
+Dec = 2.05
+
+RA = 4.91
+Dec = 3.61
+SNR = 23
+
+RA = -172.30
+Dec = 12.39
+
+RA = 8.61
+Dec = 2.42
+SNR = 23
+
+RA = 164.62
+Dec = 1.57
+
+RA = -162.12
+Dec = -1.34
+SNR = 21
+
+RA = 133.70
+Dec = 20.11
+
+Fig. 10.— Sample of compact arcminute-scale objects detected in the ACT DR4 maps. All thumbnails are extracted by reprojecting a
+subset of the s13–s16 single-frequency map onto the plane tangent to the source coordinates to remove declination-dependent distortions.
+Each thumbnail has an extent of 15 × 15 arcminutes and a resolution of 0.1 arcmin. (Left panel) Top-five highest signal-to-noise point
+sources detected in temperature at 150 GHz, ordered (top to bottom) by decreasing peak temperature. The colors (white to black) cover
+a range of [0, 5] × 104 µK in temperature and ±1.5 × 103 µK in polarization. No correction for the T-to-P leakage from the main-beam
+was applied. (Right panel) Top-five highest signal-to-noise SZ-selected galaxy clusters detected in a combination of the 98 and 150 GHz
+temperature maps, ordered (top to bottom) by decreasing signal-to-noise ratio. The colors (white to black) cover a range of [−500, 250] µK.
+An offset computed for each thumbnail (excluding the central source) is removed.
+
+an extended-source mask. Using the HyperLeda catalog
+(Makarov et al. 2014), we select 414 objects with a mean
+surface brightness <25 mag in the optical B-band and
+with a linear extent d>40 .20 Extended objects identified
+by this procedure include members of the Virgo cluster.
+We then mask a radius d/2 + 2 arcmin at the source location. Both versions of the masks are used as input in
+the C20 power spectrum analysis.
+
+wide bandpowers as
+−2lnLACT = −2lnLACT,d − 2lnLACT,w ,
+
+(12)
+
+with
+d/w T
+
+−2lnLACT,d/w = (Cth
+b − Cb
+
+d/w
+
+th
+) Σ−1
+d/w (Cb − Cb
+
+),
+(13)
+
+d/w
+
+6. LIKELIHOOD AND PARAMETER ESTIMATION
+METHODS
+
+6.1. ACT DR4 power spectra and likelihood
+
+C20 describes the estimation of the power spectra of
+the DR4 maps and their covariance matrix. Table 3
+summarizes the regions, maps and frequencies that are
+used, and the number of individual cross-spectra that enter each region’s power spectrum. As described in C20,
+the spectra for regions which have sources masked to a
+15 mJy level are co-added into a ‘deep’ product, with the
+‘wide’ product composed of spectra from regions masked
+to a 100 mJy level. The foreground-marginalized CMB
+bandpowers (in TT, TE, EE) are then estimated from
+the multi-frequency spectra, including data from ACT–
+MBAC DR2 (Das et al. 2014), for these two subsets of
+the data. The resultant DR4 coadded spectra are shown
+in Fig. 24 of C20 and in §7 of this paper.
+The likelihood of the derived CMB-only ACT bandpowers can be well described by a simple Gaussian distribution, summing the contribution from the deep and
+20 We pick as linear extent the maximum between the RA and
+Dec angular extent provided in the catalog.
+
+are the deep
+where Cbth is the binned CMB theory, Cb
+and wide CMB bandpowers and Σd/w are their covariance matrices. Although the deep and wide spectra
+are both estimates of the same underlying cleaned CMB
+power spectrum, their bandpower window functions that
+bin the theory are different (see C20), and so are kept
+separate in the likelihood.
+The covariance of the CMB bandpowers already accounts for foreground uncertainty, and includes calibration and beam uncertainty. Only one nuisance parameter, yp , is included in the likelihood to marginalize
+over an overall polarization efficiency. It scales C TE =
+C th,TE ×yp and C EE = C th,EE ×yp2 and we allow it to vary
+in a flat symmetric range centred at yp = 1.21 This parameter is different from the frequency-dependent polarization efficiencies of C20, the frequency-dependent yp s
+have been combined in the CMB-only extraction step to
+retain the single overall polarization efficiency used here.
+The difference in efficiency amplitude across frequencies
+21 We choose to work with symmetric ranges as this acts as an
+overall polarization calibration for the CMB bandpowers; we tested
+with the full multi-frequency likelihood that restricting polarization efficiencies to be less than unity does not impact cosmological
+results.
+
+19
+TABLE 3
+Regions, areas, maps and frequencies that are used in the DR4 power spectra (described in C20), and the number of
+individual cross-spectra that enter each region’s power spectrum.
+Region
+Deepc
+
+D1
+D5
+D6
+D56
+
+Area
+(deg2 )
+23
+20
+20
+340
+
+Wide
+
+BN
+AA-w0
+AA-w1
+AA-w3
+AA-w4
+AA-w5
+
+1400
+570
+1170
+880
+1070
+210
+
+Mapsa
+s13 PA1
+s13 PA1
+s13 PA1
+s14 PA12, s15 PA123
+s15 PA123
+s16 PA23
+s16 PA23
+s16 PA23
+s16 PA23
+s16 PA23
+
+nmaps
+98 GHz 150 GHz
+0 1
+0 1
+0 1
+1 5
+1
+1
+1
+1
+1
+1
+
+3
+2
+2
+2
+2
+2
+
+98 × 98
+NT T b NT E
+0 0
+0 0
+0 0
+1 1
+1
+1
+1
+1
+1
+1
+
+1
+1
+1
+1
+1
+1
+
+98 × 150
+NT T NT E
+0 0
+0 0
+0 0
+5 10
+3
+2
+2
+2
+2
+2
+
+6
+4
+4
+4
+4
+4
+
+150 × 150
+NT T NT E
+1 1
+1 1
+1 1
+15 25
+6
+3
+3
+3
+3
+3
+
+9
+4
+4
+4
+4
+4
+
+a The maps are labeled by season of observation (s13, s14, s15 or s16) and by detector array (PA1, PA2, PA3). When multiple arrays
+
+are used, PA123 indicates PA1+PA2+PA3, for example. Only PA3 has detectors at 98 GHz. The number of maps is nmaps .
+b The number of TT cross-spectra, N
+T T , is equal to NEE .
+c The ‘deep’ regions have a point source mask with a 15 mJy threshold; the ‘wide’ regions have a 100 mJy threshold mask.
+
+has also been accounted for in that step and therefore we
+here expect yp = 1.
+We provide both Fortran–90 and Python versions of
+the likelihood software, actpollite dr4, with the
+DR4 data release on LAMBDA. The lite likelihood product has been tested and validated against the full multifrequency analysis for ΛCDM and all extended models considered here; small differences in cosmological
+constraints are due to the additional information from
+MBAC incorporated in the lite likelihood.
+6.2. Additional CMB data
+6.2.1. Large-scale polarization
+
+While our primary goal is to make a measurement
+of cosmological parameters that is independent of the
+Planck data, ACT by itself cannot constrain the optical depth to reionization, τ . There is also evidence
+that the WMAP estimate of the large-scale polarization
+has dust contamination (Planck Collaboration XV 2014).
+We choose to include an estimate of τ obtained in recent
+analyses combining Planck and WMAP large-scale polarization measurements. We use as a baseline a Gaussian prior of τ = 0.065 ± 0.015, a conservative choice
+based on Planck-HFI, Planck-LFI (Planck Collaboration
+V 2018; Pagano et al. 2019) and Planck-LFI combined
+with WMAP estimates (Natale et al. 2020).22
+6.2.2. WMAP data
+
+ACT has a minimum multipole of 600 in TT, and 350 in
+TE and EE, and so lacks data around the first two acoustic peaks in TT and first full peak in TE/EE. Therefore
+in our nominal results (see §7) we include the full power
+22 For reference, the optical depth estimated from the full ΛCDM
+cosmological analysis of Planck-HFI in the legacy release results
+is τ = 0.054 ± 0.007 (Planck Collaboration VI 2018); using
+only low multipole data τ = 0.0566+0.0053
+−0.0062 from improved HFI
+maps (Pagano et al. 2019) and τ = 0.051 ± 0.006 from joint processing of LFI and HFI maps (Planck Collaboration 2020). The
+combination of WMAP and Planck-LFI incling also TE data yields
+τ = 0.069 ± 0.012 in Natale et al. (2020). The change in τ due to
+the prior we use here causes a 1.6σ shift in mean and 60% widening
+of error in the correlated spectrum amplitude parameter and has
+very little impact on other ΛCDM parameters.
+
+spectrum information from WMAP using the public 9year observations (Bennett et al. 2013) on large and intermediate scales (2 < ` < 1200) in temperature and at
+intermediate scales in TE (24 < ` < 800) using the public WMAP 9-year likelihood software. We do not use the
+2 < ` < 23 polarization likelihood23 which is replaced by
+the τ prior.
+ACT and WMAP only overlap on angular scales that
+are noise dominated in at least one of the two experiments and therefore we ignore correlations between the
+two datasets. We tested and confirmed this hypothesis
+with the same calculations described for Planck in the
+next subsection. The likelihood can then be well approximated as −2lnLACT − 2lnLWMAP .
+6.2.3. Use of Planck data
+
+A goal of this paper is to give an estimate of the cosmological parameters using measurements that are independent of Planck. However, we also study the consistency
+of the ACT and Planck data, and the impact of combining the two datasets. For Planck we use the latest 2018
+TT/TE/EE high-` plik lite likelihood (Planck Collaboration V 2018) (30 < ` < 2508 in TT; 30 < ` < 1996
+in TE/EE) in combination with the commander lowmultipole likelihood in temperature (2 < ` < 29). In all
+cases we impose the same τ prior used for ACT.24
+To combine ACT with Planck we neglect the covariance between the two datasets and simply multiply the
+likelihoods. For this to be valid we truncate the multipole
+range used for ACT, to keep the effect of double counting
+information below a chosen threshold. To choose these
+cuts we compute the Fisher-forecasted ΛCDM parameter errors derived by truncating ACT spectra below some
+minimum multipole range. We compute the ratio of errors when ignoring the ACT-Planck covariance, to those
+where the full off-diagonal covariance is included.25 We
+23 Setting to false the use WMAP lowl pol flag.
+24 We note that because of this prior all Planck-derived results
+
+reported here will be slightly different from the Planck legacy results in Planck Collaboration VI (2018).
+25 The off-diagonal covariance was estimated assuming that the
+CMB information contained in the ACT regions is a subset of that
+in Planck, ignoring differences due to data filtering or source masking.
+
+6.3. Parameter estimation methods
+
+0.125
+0.120
+0.110
+1.044
+
+7. ΛCDM AND THE HUBBLE CONSTANT
+
+0.800
+
+7.1. ΛCDM from ACT alone
+
+0.775
+
+The results were also reproduced with different codes for
+theory predictions and sampling, i.e., using CLASS+Cobaya,
+CAMB+Cobaya and CAMB+CosmoSIS (Lesgourgues 2011; Lewis
+et al. 2000; Zuntz et al. 2015; Torrado & Lewis 2020).
+
++W
+MAP
+
++Pl
+anc
+k
+
+ACT
+
+ACT
+
+k
+Plan
+c
+
+AP
+
+ch 2
+
+0.115
+
+1.042
+
+26
+
+bh 2
+
+0.022
+
+To sample cosmological parameters we use the publicly
+available CosmoMC software (Lewis & Bridle 2002)26 and
+estimate the basic six ΛCDM cosmological parameters:
+the baryon and cold dark matter densities, Ωb h2 and
+Ωc h2 , an approximation to the angular scale of the acoustic horizon at decoupling, θMC , the reionization optical
+depth, τ , the amplitude and the scalar spectral index of
+primordial adiabatic density perturbations, As and ns ,
+both defined at a pivot scale k0 = 0.05 Mpc−1 . From
+these we derive and present constraints on the Hubble
+constant, H0 in km/s/Mpc, and on the amplitude of
+matter fluctuations on scales of 8 h−1 Mpc, σ8 . We assume a single family of massive neutrinos with a total
+mass of 0.06 eV and impose Big Bang Nucleosynthesis
+consistency relations to calculate the primordial Helium
+abundance.
+We also explore a set of extended models beyond
+ΛCDM that have a single parameter extension. A set
+of these are sensitive to the primary CMB temperature
+and polarization anisotropies: the effective number of relativistic species, Neff , the primordial Helium abundance
+YHE , and the running of the spectral index dns /dlnk.
+We also explore models that affect the degree of lensing
+in
+P the power spectra: the total sum of neutrino masses
+mν , and the spatial curvature Ωk .
+MCMC chains are run with theory predictions computed using `max = 6000 and stopped once the CosmoMC
+Gelman-Rubin convergence parameter, R − 1, reaches
+values smaller than 0.01.
+
+We find that the ACT data are well fit by the ΛCDM
+model (as shown in C20), and our constraints on the six
+basic and two derived ΛCDM parameters are reported in
+Table 4 and shown in Fig. 11 and Fig. 12, compared to
+constraints from WMAP and from Planck. The polarization efficiency is tightly constrained around unity.
+The residuals of the ACT data with respect to the
+best-fit ΛCDM model are shown in Fig. 13 for the TT,
+TE and EE spectra, together with the WMAP data in
+TT and TE at larger scales not measured by ACT. This
+best-fitting model has a χ2 for ACT of 279 for 254 (260
+
+WM
+
++D2
+0.023
+
+ACT
+
+ACT
+
+then select the minimum multipole for which this ratio is
+below 1.05, i.e., where the impact of neglecting the ACTPlanck covariance is less than a 5% underestimation of
+errors. We find that multipoles below 1800 in TT should
+not be included for the ACT data in this case, but no
+cut in TE/EE is required. This ` range cut was found
+to also be valid for single-parameter ΛCDM extensions.
+To account for this we introduce a flag in the ACT likelihood to select the TT spectra at ` > 1800 when combining with Planck, and then set the joint likelihood to be
+−2lnLACT − 2lnLPlanck . In future analyses we expect to
+include the cross-correlation between ACT and Planck
+in a joint likelihood, to exploit the full angular range of
+both datasets.
+
+20
+
+20
+
+MC
+
+1.040
+1.038
+3.10
+
+logA
+
+3.05
+3.00
+0.08
+0.06
+0.04
+1.02
+
+ns
+
+1.00
+0.98
+0.96
+72
+70
+
+H0
+
+68
+66
+0.850
+0.825
+
+8
+
+Fig. 11.— Comparison of ΛCDM parameters (mean and 1σ error) estimated from different datasets (different colors): ACT alone
+(aslo shown in C20), ACT with the D220 prior, WMAP, Planck,
+ACT+WMAP and the combination of a subset of ACT data with
+Planck, ACT+Planck. The light blue horizontal band highlights
+the 1σ measurement in our nominal case for ACT+WMAP. Before
+including information from the first acoustic peak, ACT prefers
+a best-fit value with higher ns and lower Ωb h2 than WMAP and
+Planck, at 2.3–2.7σ significance. We see excellent consistency between ACT+WMAP and Planck.
+
+bandpowers minus 6 freely-varying parameters) degrees
+of freedom corresponding to a PTE=0.13. The model
+provides a good fit to the TT, TE and EE spectra.
+The estimated ΛCDM parameters from ACT are
+broadly consistent with both the WMAP and Planck
+
+21
+TABLE 4
+ΛCDM parameters with marginalized mean and 68% confidence level from ACT, ACT+WMAP, ACT+Plancka and Planckb .
+The best-fit parameters from our baseline result are shown in Column 4.
+Parameter
+Basic:
+100Ωb h2
+100Ωc h2
+104 θMC
+τ
+ns
+ln(1010 As )
+Nuisance:
+yp
+Derived:
+H0 [km/s/Mpc]
+σ8
+Additional derivedc :
+ΩΛ
+t0
+S8
+104 θ∗
+∗
+DA
+rdrag
+
+ACT
+
+ACT+WMAP
+
+ACT+WMAP
+best-fit
+
+ACT+Planck
+
+Planck
+
+2.153 ± 0.030
+11.78 ± 0.38
+104.225 ± 0.071
+0.065 ± 0.014
+1.008 ± 0.015
+3.050 ± 0.030
+
+2.239 ± 0.021
+12.00 ± 0.26
+104.170 ± 0.067
+0.061 ± 0.012
+0.9729 ± 0.0061
+3.064 ± 0.024
+
+2.223
+12.12
+104.180
+0.061
+0.9714
+3.068
+
+2.237 ± 0.013
+11.97 ± 0.13
+104.110 ± 0.029
+0.072 ± 0.012
+0.9691 ± 0.0041
+3.086 ± 0.024
+
+2.241 ± 0.015
+11.97 ± 0.14
+104.094 ± 0.031
+0.076 ± 0.013
+0.9668 ± 0.0044
+3.087 ± 0.026
+
+1.0008 ± 0.0047
+
+1.0033 ± 0.0042
+
+1.0028
+
+1.0019 ± 0.0046
+
+−−
+
+67.9 ± 1.5
+0.824 ± 0.016
+
+67.6 ± 1.1
+0.822 ± 0.012
+
+67.1
+0.828
+
+67.53 ± 0.56
+0.8287 ± 0.0099
+
+67.51 ± 0.61
+0.8279 ± 0.011
+
+0.696 ± 0.022
+13.832 ± 0.047
+0.830 ± 0.043
+104.252 ± 0.071
+13.972 ± 0.091
+148.6 ± 1.0
+
+0.687 ± 0.016
+13.772 ± 0.039
+0.840 ± 0.030
+104.189 ± 0.067
+13.860 ± 0.058
+147.06 ± 0.63
+
+0.680
+13.786
+0.855
+104.199
+13.839
+146.89
+
+0.6871 ± 0.0078
+13.791 ± 0.021
+0.846 ± 0.016
+104.128 ± 0.029
+13.879 ± 0.027
+147.18 ± 0.29
+
+0.6867 ± 0.0084
+13.791 ± 0.025
+0.846 ± 0.017
+104.112 ± 0.031
+13.878 ± 0.028
+147.14 ± 0.30
+
+a The ACT+Planck combination discards ACT temperature data at ` < 1800 to avoid double counting of information.
+b Parameters estimated from Planck data alone (using TTTEEE and the same prior on τ used for ACT) are reported for comparison;
+
+the official Planck results (e.g., Table 2 of Planck Collaboration VI 2018 for TT,TE,EE+lowE) have a stronger constraint on τ and
+correlated parameters, including As and σ8 .
+p
+c Dark Energy density, Ω , the age of the Universe in Gyr, t , a combination of σ and the matter density, S = σ
+0
+8
+8
+8 Ωm /0.3, the
+Λ
+∗ , and the sound horizon at
+acoustic scale at the CMB last-scattering, θ∗ , the angular diameter distance to last-scattering in Gpc, DA
+the end of the baryonic-drag epoch in Mpc, rdrag .
+
+constraints, and the ACT data by themselves now put
+tighter constraints on all the ΛCDM parameters than
+the WMAP data do, significantly so for the peak angle,
+θMC , from which parameters including the Hubble constant are derived. We find excellent consistency in the
+estimated Hubble constant between ACT and Planck,
+to be discussed further in §7.3. ACT measures many
+more acoustic peaks than WMAP and its current power
+spectrum signal-to-noise ratio is about 1/3 of Planck’s
+(see §A). The ACT DR4 significant improvement in constraining power compared to earlier ACT analyses (Sievers et al. 2013; Louis et al. 2017) comes from measuring
+the CMB peaks to higher precision in both temperature
+and polarization due to the increased sky area and higher
+sensitivity (see §A). As shown in C20, TT and TE now
+carry similar weight in constraining ΛCDM parameters.
+We find that the dominant difference between parameters estimated from ACT compared to WMAP and
+Planck lies in the spectral index, ns , and the baryon
+density, Ωb h2 . In the absence of data constraining the
+Sachs-Wolfe plateau and the first acoustic peak, there is
+a strong anti-correlation between these two parameters,
+as shown in Fig. 14. This was also noted in Planck
+Collaboration V (2018) and Planck Collaboration VI
+(2018) when constraining cosmology from Planck data
+using only the smaller angular scales. A lower value of
+the baryon density, which damps the small-scale power
+spectrum, can be partially compensated by a higher value
+of ns , which tilts the spectrum to restore the small-scale
+power. Within that degeneracy direction, the ACT data
+prefer a model that has a lower value of the baryon density, and higher spectral index, than WMAP or Planck.
+Figure 15 shows the best-fitting spectra for each
+dataset: the ΛCDM solution obtained from ACT by itself
+
+has a large enough tilt that it underestimates the amplitude of the first peak in TT compared to either WMAP
+or Planck. The amplitude of temperature fluctuations at
+` = 220 (D220, hereafter) inferred from the ACT best-fit
+model is 2.4σ lower than the WMAP measurement.
+Since these large scales have been well measured, and
+consistently, by both WMAP and Planck, it is natural to include this information as a prior. If we simply impose a weak prior on the amplitude of the first
+peak, choosing a conservative Gaussian prior that doubles the WMAP uncertainty on the amplitude D220,
+with D220= 5750.6 ± 71.1 µK2 ,27 we find that this truncates the Ωb h2 –ns degeneracy and brings the parameters
+estimated from ACT in closer agreement with WMAP
+and Planck, as shown in the top panel of Fig. 14 with
+the ACT+D220 contours.
+A stronger prior is to include the full WMAP information. Before doing so we quantify the consistency of
+ΛCDM parameters estimated individually from ACT and
+WMAP data. As in e.g., Addison et al. (2016) we use
+a quadratic estimator to test whether the parameter differences are consistent with zero, computing
+χ2 = (mean1 −mean2 )T (Cov1 +Cov2 )−1 (mean1 −mean2 ),
+(14)
+where meani and Covi are the mean and covariance of
+parameters estimated from each experiment, i. To account for the common information coming from the τ
+prior we compute the statistic in a 5-dimensional parameter space using Ωb h2 , Ωc h2 , θMC , ns and As exp(−2τ ),
+and we determine significance assuming that the param27 This is the value from the re-estimate of WMAP results obtained with the τ prior used here. We note that D220 from Planck
+yields the same result.
+
+22
+
+Ωc h 2
+
+WMAP
+Planck
+ACT
+
+0.120
+
+1.044
+
+1.038
+
+ln(1010As)
+
+100θMC
+
+0.105
+
+3.1
+
+3.0
+
+ns
+
+1.05
+1.00
+0.95
+
+τ
+
+0.12
+0.08
+0.04
+
+H0
+
+72
+66
+
+σ8
+
+0.88
+
+0.80
+
+0.72
+0.0210 0.0225 0.0240 0.105
+
+Ωb h 2
+
+0.120
+
+Ωc h 2
+
+1.038 1.044
+
+100θMC
+
+3.0
+
+3.1
+
+ln(1010As)
+
+0.95
+
+1.00
+
+ns
+
+1.05
+
+0.04 0.08 0.12
+
+τ
+
+66
+
+H0
+
+72
+
+0.72
+
+0.80
+
+σ8
+
+0.88
+
+Fig. 12.— Constraints on the six basic and two derived ΛCDM parameters from ACT, WMAP and Planck using a common τ prior.
+The diagonal shows the 1-dimensional posterior distributions and the contours show the 68% and 95% confidence regions. Parameters from
+ACT are consistent with WMAP (Planck) to within 2.3 (2.7)σ; the largest difference is in the Ωb h2 -ns plane. The Hubble constant agrees
+to within 1σ.
+
+eter posteriors are Gaussian. We find that the ACT and
+WMAP ΛCDM parameters agree at the 2.3σ significance
+level. Repeating the same test for ACT and Planck cosmologies, we find a slightly larger difference, at the 2.4σ
+level, or at the 2.7σ level if we remove common modes
+between the two datasets (i.e., by excluding ACT TT at
+` < 1800).
+The WMAP and Planck best-fit models prefer a somewhat higher (lower) amplitude of the spectrum in TE
+(EE) compared to ACT, in addition to the higher first
+
+peak in TT as shown in Fig. 15. This difference cannot
+be explained by calibration or by our current model for
+instrumental beam leakage. The bottom panel of Fig. 14
+shows that an artificial 5% change in the TE calibration,
+relative to the TT calibration, could shift the ACT constraints towards the WMAP and Planck measurements.
+However, at present we have no reason to introduce such
+a correction, and such a calibration of the polarization
+would be inconsistent with the EE data. We also note
+that a similar shift is not generated by any of the ΛCDM
+
+23
+6000
+
+ACT+WMAP ΛCDM best fit
+ACT ΛCDM best fit
+WMAP
+ACT DR4
+
+D`TT [µK2]
+
+4000
+2000
+
+∆D`TT [µK2]
+
+0
+80
+0
+residuals to ACT best fit
+residuals to ACT+WMAP best fit
+
+−80
+
+D`TE [µK2]
+
+100
+0
+
+−100
+
+∆D`TE [µK2]
+
+−200
+10
+0
+−10
+
+D`EE [µK2]
+
+40
+20
+
+∆D`EE [µK2]
+
+0
+2
+0
+−2
+0
+
+500
+
+1000
+
+1500
+
+2000
+
+2500
+
+3000
+
+3500
+
+4000
+
+4500
+
+`
+Fig. 13.— Panel 1, 3, 5: ACT CMB TT, TE and EE power spectra for co-added deep and wide spectra complemented by WMAP large
+scale TT and TE measurements, together with the best-fitting ΛCDM theoretical model fit to either ACT or ACT+WMAP data. Panel
+2, 4, 6: residuals with respect to the best-fitting models, with χ2 = 279 (288) for ACT (ACT+WMAP). The addition of WMAP data
+pushes the best-fit model towards a lower (higher) value of ns (Ωb h2 ) than for ACT-alone, which produces overall negative TE residuals
+for ACT in the range 1200 < ` < 1700, raising the TE χ2 by 9. This feature may be a statistical fluctuation.
+
+model extensions considered here.
+The mild tension between the datasets may simply be
+a statistical fluctuation, or could be an unaccounted-for
+systematic effect in the ACT data, or a hint of a preferred
+model beyond ΛCDM. We expect to be able to draw
+stronger conclusions from additional data from ACT that
+has already been collected.
+7.1.1. The smoothing of the acoustic peaks
+
+In the analysis of the Planck data, an unexpected feature was a preference for an excess amount of gravita-
+
+tional lensing in the power spectrum compared to the
+amount expected for the given cosmological model, quantified by the parameter AL (Calabrese et al. 2008). Here
+AL = 1 if the degree of lensing matches the model prediction; AL = 0 would correspond to no lensing. The
+effect of lensing is to smooth the features of the acoustic
+peaks, and add small-scale power. This lensing parameter was found by Planck to be higher than what would be
+expected at the 2.8σ level (AL = 1.180 ± 0.065) (Planck
+Collaboration VI 2018), and higher than what was found
+using their reconstructed lensing signal. The significance
+
+24
+6000
+
+1.08
+
+1.02
+
+D`TT [µK2]
+
+ACT+D220
+ACT
+WMAP
+Planck
+Planck >1000
+
+WMAP ΛCDM best fit
+Planck ΛCDM best fit
+ACT ΛCDM best fit
+ACT DR4
+
+4000
+2000
+
+ns
+
+∆D`TT [µK2]
+
+0
+
+0.96
+
+WMAP-ACT fit
+Planck-ACT fit
+ACT data - ACT fit
+
+250
+0
+
+D`TE [µK2]
+
+100
+
+0.90
+
+0
+
+0.021
+
+0.022
+
+bh 2
+
+0.023
+
+0.024
+
+ACT
+ACT with TE*1.05
+ACT with TE/1.05
+WMAP
+Planck
+
+−200
+10
+0
+−10
+
+D`EE [µK2]
+
+40
+
+ns
+
+∆D`EE [µK2]
+
+1.05
+
+∆D`TE [µK2]
+
+−100
+
+1.00
+
+20
+
+0
+2.5
+0.0
+−2.5
+
+350
+
+1000
+
+2000
+
+4000
+
+`
+
+0.95
+0.020
+
+0.021
+
+0.022
+bh 2
+
+0.023
+
+0.024
+
+Fig. 14.— Top panel: The direction of the correlation between
+Ωb h2 and ns changes when TT large-scale information is included
+(68% and 95% confidence levels shown): for WMAP and Planck
+a larger ns increases the 2nd to 1st peak height ratio, which can
+be compensated by increasing the baryon density. For ACT,
+and Planck limited to ` > 1000, the increase in ns boosts the
+small-scale power, now compensated by decreasing the baryon
+density. Including a prior on the first peak height (D220, grey
+contours with hatches) brings the ACT, WMAP and Planck
+best-fit models into close agreement. Bottom panel: The ACT
+constraints move along the Ωb h2 − ns degeneracy line if an
+artificial 5% calibration factor is applied just to the TE data.
+
+of this excess was reduced with the addition of lensing
+potential data or, to a lesser extent, with different likelihood versions (Efstathiou & Gratton 2019).
+With the new ACT power spectra data, we find no
+deviation from the standard lensing effect predicted for
+a ΛCDM model, with
+AL = 1.01 ± 0.11
+
+ACT,
+
+(15)
+
+consistent with unity to within 1σ. The marginalized
+distribution for AL is shown in Fig. 16, together with
+the constraints from the TT, TE and EE spectra alone.
+These each give consistent results, with the main con-
+
+Fig. 15.— Comparison of the ACT, WMAP and Planck bestfitting cosmological model spectra and residuals, plotted against
+the ACT data. The models have consistent peak positions. The
+ACT-alone model under-estimates the first TT peak amplitude
+by 2.4σ, and has on average a lower (higher) TE (EE) best-fit
+spectrum than WMAP and Planck, at less than 3σ level; also seen
+in Fig. 13.
+
+straining power from both TT and TE.
+This result is consistent with a companion paper (?)
+that studies the degree of lensing in the power spectrum
+for a subset of the ACT data, in the D56 region; by
+‘delensing’ the spectrum to remove some of the impact
+of lensing directly from the maps, they find no deviation
+from the expected lensing signal.
+Baseline results: ΛCDM from ACT and WMAP
+With high confidence in the large scale measurements
+where WMAP and Planck are signal-dominated and
+agree well, we take the approach of supplementing the
+ACT data with the WMAP data for our baseline results.
+As an independent dataset to Planck we can assess how
+the preferred cosmological model compares.
+We report constraints from ACT+WMAP in Table 4
+and Figs. 11 and 17. We find that ACT+WMAP together provide stringent new constraints on the cosmological parameters and are in excellent agreement
+with the Planck legacy results (Planck Collaboration VI
+2018). Each individual parameter differs by no more than
+1.1σ, and similar degeneracy directions are seen between
+pairs of parameters. The scalar spectral index is less
+7.2.
+
+25
+surement:
+
+ACT TT
+ACT TE
+ACT EE
+ACT
+ACT+WMAP
+Planck
+
+0.0
+
+H0 = 67.5 ± 0.6 km/s/Mpc Planck .30
+
+(17)
+
+We also find a 2.2% precision measurement of H0 from
+ACT alone:
+H0 = 67.9 ± 1.5 km/s/Mpc
+
+0.5
+
+1.0
+
+AL
+
+1.5
+
+2.0
+
+Fig. 16.— Constraints on the peak smearing amplitude, AL ,
+as measured by ACT, by the individual TT, TE and EE spectra
+from ACT, and ACT combined with WMAP. The ACT data are
+consistent with standard gravitational lensing: the parameter AL
+artificially scales the lensing potential relative to the standard
+AL = 1 model prediction (shown as a vertical line). The Planck
+measurement is shown for comparison.
+
+than unity at more than 4σ significance, consistent with
+the Planck detection of a departure from scale invariance of the primordial fluctuations. As shown in the appendix §A, these two independently-measured datasets
+do not have the same balance of statistical power among
+different parts of the data: Planck has comparatively
+more weight from the TT spectrum, while ACT has most
+weight from the TE spectrum, and comparatively more
+constraining power from the EE spectrum.
+The best-fitting ACT+WMAP ΛCDM model has
+χ2ACT =288,28 with residuals shown in Fig. 13. The worsening of the ACT χ2 relative to ACT-alone (∆χ2 = 9:
++2 in TT, +9 in TE and -2 in EE) comes, as described
+above, from the TT at large scales and the TE at intermediate multipoles (800 < ` < 2000, see Fig. 13). As
+mentioned above, the significance of this effect is not yet
+large enough to draw conclusions about whether it is a
+statistical fluctuation, or a hint of a systematic effect, or
+potentially a preference for a different model.
+7.3. The Hubble constant
+
+By combining ACT and WMAP we obtain a CMBderived estimate of the Hubble constant, within the
+ΛCDM model, that is derived from the same sky seen
+by Planck but is independently measured.29 We find
+
+ACT ,
+
+(18)
+
+or H0 = 68.2 ± 1.5 km/s/Mpc with the D220 prior, and
+note that the ACT-derived estimate is stable to a number
+of analysis choices (see C20). Given that TE provides
+significant constraining power for H0 (see §A) we also
+note that our estimate is stable to tests run on TE; for
+example, applying an artificial 5% calibration factor to
+TE moves the H0 mean by only 0.15σ.
+Without the ACT data, the WMAP-derived estimate has an uncertainty twice as large (H0 = 70.0 ±
+2.2 km/s/Mpc, Bennett et al. 2013; Hinshaw et al. 2013).
+This agreement between two independently-measured
+CMB datasets at a more comparable precision level,
+adds weight to the robustness of the CMB-inferred measurement. This new estimate of the Hubble constant,
+like Planck, is inconsistent with the z < 1 SH0 ES
+Cepheids/supernovae based measurement (Riess et al.
+2019) at > 4σ within the ΛCDM model (see Fig. 18).
+It also disagrees at 3σ with the H0liCOW estimate
+from strong lenses (Wong et al. 2019) but agrees with
+the more recent TDCOSMO/H0LiCOW revised estimate including more flexible lens mass profile modeling
+and use of stellar kinematics data (Birrer et al. 2020).
+Like Planck, it is consistent with the TRGB-based measurement (Freedman et al. 2019), as well as with estimates derived from Baryon Acoustic Oscillations from
+galaxy clustering in combination with other non-CMB
+probes including Big Bang Nucleosynthesis and lensing
+(e.g., Aubourg et al. 2015; Addison et al. 2018; Abbott
+et al. 2018a; Cuceu et al. 2019).
+ACT’s measurement of H0 comes from measuring the
+angular scale of the peaks in the temperature and polarization power spectra, coupled with the peak heights
+which constrain the cold dark matter density and baryon
+density. An explanation for how this constraint works is
+given in Knox & Millea (2020). To summarize, the peak
+scale is set by the ratio of the sound horizon, rs∗ , to the
+angular diameter distance to the last-scattering surface,
+∗
+∗
+DA
+, with θ∗ = rs∗ /DA
+. The sound horizon is given by
+the integral of the sound speed, cs (t), over time before
+last scattering, t∗ , with
+Z t∗
+dt
+rs∗ =
+cs (t).
+(19)
+a(t)
+0
+
+This 1.6% inference of the local expansion rate of the
+universe is remarkably consistent with the Planck mea-
+
+It is set by the baryon and cold dark matter densities
+which affect the sound speed and the scale factor a(t)
+before recombination, and are measured via the relative
+peak heights in the power spectra. Figure 19 shows how
+the sound horizon is anti-correlated with the total matter
+density.31
+
+28 If we allocate to ACT the same degrees of freedom as for the
+ACT-alone fit, i.e., assuming ACT and WMAP both contribute
+to constraining all the varying parameters, this corresponds to a
+PTE=0.07. If we instead assume that half of the ΛCDM parameters are constrained by WMAP the ACT PTE is 0.09.
+29 The only information retained from Planck is the conservative
+estimate of τ .
+
+30 This is our estimate using the same τ prior as ACT; Planck
+Collaboration VI 2018 finds 67.3±0.6 using their ‘lowE’ likelilhood
+to constrain τ .
+31 Following Knox & Millea 2020 we show r
+∗
+drag rather than rs ,
+i.e., the sound horizon at the time of the baryon-drag epoch rather
+than the sound horizon at the time of CMB last-scattering. The
+two horizons differ by about 3 Mpc and exhibit the same trend.
+
+H0 = 67.6 ± 1.1 km/s/Mpc
+
+ACT + WMAP.
+
+(16)
+
+26
+ACT+WMAP
+Planck
+ACT+Planck
+
+Ωc h 2
+
+0.128
+
+0.120
+
+0.112
+
+100θMC
+
+1.044
+
+1.042
+
+ln(1010As)
+
+1.040
+
+3.12
+3.04
+
+ns
+
+0.98
+
+0.96
+
+τ
+
+0.12
+0.08
+0.04
+
+H0
+
+72
+69
+66
+
+σ8
+
+0.84
+
+0.80
+
+0.0216 0.0222 0.0228
+
+Ωb h 2
+
+0.112
+
+0.120
+
+Ωc h 2
+
+0.128 1.040
+
+1.042
+
+100θMC
+
+1.044
+
+3.04
+
+3.12
+
+ln(1010As)
+
+0.96
+
+0.98
+
+ns
+
+0.04
+
+0.08
+
+τ
+
+0.12
+
+66
+
+69
+
+H0
+
+72
+
+0.80
+
+σ8
+
+0.84
+
+Fig. 17.— Parameter constraints as in Fig. 12 for ACT+WMAP versus Planck ΛCDM and derived parameters. There is close agreement
+between these two independently-measured CMB datasets, including the inferred Hubble constant. ACT+Planck constraints are also
+shown for comparison.
+
+By measuring the peak scale, θ∗ , and given the sound
+horizon, one then finds the angular diameter distance
+to last scattering. In a flat universe, this is given as a
+function of redshift, z, by
+Z z∗
+c
+dz 0
+∗
+DA
+(z) =
+,
+(20)
+H0 (1 + z) 0 E(z 0 )
+where E(z) = (Ωr (1 + z)4 + Ωm (1 + z)3 + ΩΛ )0.5 is a
+function of radiation, matter and dark energy densities,
+and c is the speed of light. For given densities, this then
+allows an estimate of the Hubble constant: a universe
+
+with a smaller distance to the surface of last scatter will
+have a larger Hubble constant today. Since the densities
+are not perfectly measured we see this interplay in
+the parameter correlations, highlighted in Fig. 19: a
+lower matter density would increase the distance to
+recombination, so can be compensated with a higher
+Hubble constant to decrease the distance. An example
+is given in the Appendix B to show how a ΛCDM
+universe with H0 = 74 km/s/Mpc gives a poor fit to
+the data: the matter density is reduced to better fit the
+peak angles, but the peak heights cannot be sufficiently
+
+27
+adjusted by varying the other parameters.
+
+CMB
+
+CMB (This work)
+
+SNIa
+8. EXTENSIONS TO ΛCDM
+
+SNIa-TRGB (Freedman 2019)
+SNIa-Cepheids (Riess 2019)
+ACT DR4+WMAP (Baseline)
+ACT DR4
+Planck PR3 (Planck VI 2018)
+ACT DR2+WMAP (Calabrese 2017)
+WMAP (Hinshaw 2013)
+
+66
+
+68
+
+70
+
+72
+
+H0 [km/s/Mpc]
+
+Pre-ACT DR4
+74
+76
+
+Fig. 18.— The Hubble constant estimated from ACT and
+ACT+WMAP (this work) is in excellent agreement with the measurement from Planck (Planck Collaboration VI 2018). The constraints are compared to the WMAP-alone estimate (Hinshaw et al.
+2013) and combination of WMAP with previous ACT temperature
+data (Calabrese et al. 2017) to show the additional information
+coming from ACT DR4. Within the ΛCDM model these measurements agree with local measures using distances calibrated with
+TRGB stars (Freedman et al. 2019), but disagree with those calibrated using Cepheid variable stars (Riess et al. 2019).
+
+0.38
+76
+
+0.36
+
+SH0ES
+
+0.34
+
+72
+
+m
+
+H0
+
+0.32
+0.30
+
+68
+
+0.28
+0.26
+
+ACT
+ACT+WMAP
+Planck
+
+64
+145.0
+
+147.5
+
+rdrag
+
+150.0
+
+152.5
+
+0.24
+
+Fig. 19.— Correlation between the Hubble constant and the
+sound horizon at the baryon-drag epoch, H0 − rdrag , showing
+the CMB-SH0 ES discrepancy (as in Knox & Millea 2020). Colored contours are the CMB 68 and 95% constraints from ACT,
+ACT+WMAP and Planck; the horizontal band is the Cepheidsbased measurement from Riess et al. (2019). To reach the higher
+H0 measured by SH0 ES, the CMB needs a lower value of the matter
+density, Ωm , which increases the sound horizon, as demonstrated
+for ACT-alone.
+
+The new ACT data provide us with the opportunity
+to explore a number of physically-motivated single parameter extensions beyond the basic ΛCDM model. In
+doing so we look in particular for models that might reduce the mild 2.3σ offset between the ACT and WMAP
+data, and the slightly stronger 2.7σ difference between
+the ACT and Planck best-fitting models.
+A summary of the constraints on all of the extended
+model parameters is reported in Table 5 and shown in
+Fig. 20. We do not find any significant deviations from
+ΛCDM, and highlight our main findings below. Figure 20
+also shows how the basic six parameters move during exploration of extended models due to parameter degeneracies. We note that the Hubble constant is never driven
+to very high values.
+Like for ΛCDM, our nominal ACT constraints are estimated using the CMB-only foreground-marginalized likelihood, described in C20. Recall that when extracting this CMB-only power we make use of the earlier
+ACT MBAC data which includes 220 GHz observations
+and thus helps anchor the foreground model and reduces the associated uncertainties at high multipoles.
+Slightly different results would be obtained using the
+multi-frequency likelihood which does not include that
+MBAC data (an example of this is shown for the effective number of relativistic species, Neff , in Fig. 22).
+8.1. Lensing-dependent parameters
+The usual assumption in ΛCDM is that the geometry of the universe is flat, with no curvature. With the
+ACT data we find this to be a good assumption, with no
+evidence for spatial curvature from CMB alone:
+
+Ωk = −0.001+0.014
+−0.010
+
+ACT + WMAP
+
+(21)
+
+as shown in Fig. 21. This constraint on the curvature
+comes from the lensing information in the ACT power
+spectra: without lensing the curvature and the distance
+to the CMB, given by a combination of Ωc h2 , Ωb h2 , and
+H0 , are degenerate. The fact that ACT sees no evidence
+for an excess, or lack of, lensing compared to the ΛCDM
+model, is reflected in the lack of preference for non-zero
+curvature. The Planck power spectrum data alone prefer a non-flat model at the 2–3σ significance (Planck Collaboration VI 2018) (see also Handley 2019; Di Valentino
+et al. 2019); this is connected to the deviation from unity
+of the expected lensing signal (AL ) and its significance
+is reduced with different sky fractions and Planck likelihood choices (Efstathiou & Gratton 2020). Our new
+measurement from ACT, coupled with the reconstructed
+lensing signal from Planck, lends additional support to
+the explanation that the preferred non-zero curvature in
+the Planck power spectrum is a statistical fluctuation.
+A tighter constraint on the curvature comes from combining the CMB data with measurements of the baryon
+acoustic oscillations scale from galaxy surveys (as done in
+e.g., Planck Collaboration VI 2018); since this measurement is dominated by the BAO data we do not repeat
+the constraint here.
+ACT is also sensitive to the sum of the neutrino masses
+primarily through the degree of lensing in the power spec-
+
+28
+TABLE 5
+Beyond ΛCDM parameters with 68% confidence level or 95% upper limits from ACT, ACT+WMAP, and ACT+Planck.
+Parameter
+
+ACT
+
+ACT+WMAP
+
+ACT+Planck
+
+Plancka
+
+Ωk
+Σmν [eV]
+Neff
+dns /dlnk
+YHE
+
+−0.003+0.022
+−0.014
+
++0.014
+−0.001−0.010
+
+−0.018+0.013
+−0.010
+
+< 3.1
+2.42 ± 0.41
+0.069 ± 0.029
+0.211 ± 0.031
+
+< 1.2
+2.46 ± 0.26
+0.0128 ± 0.0081
+0.220 ± 0.018
+
+< 0.54
+2.74 ± 0.17
+0.0023 ± 0.0063
+0.232 ± 0.011
+
+−0.037+0.020
+−0.014
+< 0.37
+2.97 ± 0.19
+−0.0067 ± 0.0067
+0.243 ± 0.013
+
+a Planck alone results (TTTEEE with the same τ prior) are reported for reference.
+
+0.023
+0.022
+0.021
+1.0450
+
+MC
+
+0.075
+0.050
+0.025
+70
+60
+50
+1.2
+1.1
+1.0
+0.9
+3
+
+H0
+
+2
+
+Neff
+
+AL
+
+0.00
+
+C DM
++Y
+HE
+
+C DM
++dn
+s /dl
+nk
+
+m
+C DM
++
+
+C DM
++N
+ef
+
+k
+
+C DM
++
+
+0.10
+3.1
+
+ch 2
+
+3.0
+
+logA
+
+1.00
+0.95
+0.90
+0.8
+
+ns
+
+0.6
+0.02
+0.00
+0.02
+
+8
+
+k
+
+2
+
+0.10
+0.05
+
+C DM
++A
+L
+
+C DM
+0.12
+bh 2
+
+1.0425
+1.0400
+
+ACT+Planck
+f
+
+ACT+WMAP
+
+C DM
++Y
+HE
+
+C DM
++dn
+s /dl
+nk
+
+m
+C DM
++
+
+C DM
++N
+ef
+
+k
+
+C DM
++
+
+C DM
++A
+L
+
+C DM
+
+f
+
+ACT
+
+dns/dlnK
+
+1
+0
+0.25
+0.20
+0.15
+
+m
+YHE
+
+Fig. 20.— Constraints on the six ΛCDM and extended parameters, for single parameter beyond-ΛCDM models. The dashed horizontal
+lines are centered on our nominal ACT+WMAP ΛCDM results and on the standard model value for the extended parameters. Different
+colors span different models; circles, squares and diamonds compare ACT with ACT+WMAP and ACT+Planck.
+
+trum. The higher the neutrino mass, the more the amplitude of structure will be suppressed, and the smaller
+the lensing signal will be. The limit P
+on the neutrino
+mass sum from ACT and WMAP is
+mν < 1.2 eV
+at 95% confidence. This upper limit is higher than
+Planck from the power spectrum alone, and is also connected to ACT’s inferred lensing signal being slightly
+lower than Planck’s. When combining with other external datasets (for example lensing potential measurements from Planck (Planck Collaboration VIII 2018) and
+baryon acoustic oscillations from BOSS DR12 consensus, 6dFGS and SDSS MGS datasets (Alam et al. 2017;
+Beutler et al. 2011; Ross et al. 2015)) to break degeneracies, in particular with the cold dark matter density, we
+find consistent constraints to Planck (see Fig. 21) with
+ACT+WMAP
+combined with external datasets giving
+P
+mν < 0.27 eV at 95% confidence.
+8.2. Primordial parameters
+Here we investigate the running of the spectral index,
+the effective number of relativistic species, and the primordial Helium abundance. The high-ns region allowed
+by the ACT data tilts the spectrum so that the ACT
+
+data by themselves show a mild preference for having
+less damping in the small-scale power spectrum than in
+the ΛCDM model. Since the dominant effect of all three
+of these extension parameters is to affect the degree of
+damping, this is reflected in the ACT data alone preferring a number of species Neff that is less than 3.046, a
+running of the spectral index dns /dlnk that is greater
+than zero at the ∼2.4σ level, or a primordial Helium
+abundance, YHE , that is less than the Big Bang Nucleosynthesis prediction of 0.247 (Pisanti et al. 2008; Pitrou
+et al. 2018).
+The constraints are illustrated for Neff in Fig. 22. Neff
+has a strong degeneracy with ns which will be limited if
+the large-scale data are included. We also find some impact from the degrees of freedom in our foreground modeling and the best-fit model moves depending on whether
+the MBAC data is used to constrain the foreground parameters. Although not directly correlated to foreground
+parameters, we find that the Neff constraint is affected
+by other degeneracies in the multi-dimensional parameter space: by tightly anchoring the foreground parameters, MBAC is contributing to better measuring the amplitude of the spectrum and the calibration/polarization
+
+29
+
+ACT
+ACT+WMAP
+ACT+Planck
+ACT+WMAP+ext
+
+ACT
+ACT+WMAP
+Planck
+ACT+Planck
+
+0.10
+
+0.08
+
+0.06
+
+0.04
+
+0.02
+
+0.00
+
+0.02
+
+0.04
+
+0.0
+
+0.5
+
+1.0
+
+k
+
+1.5
+
+2.0
+
+2.5
+
+m [eV]
+
+3.0
+
+3.5
+
+4.0
+
+4.5
+
+Fig. 21.— Constraints on the CMB-derived curvature parameter (left) and the sum of neutrino masses (right). These limits are driven by
+the lensing information in the power spectrum, as well as the primary CMB signal for neutrino mass. With the new ACT data we find no
+evidence of deviation from flatness, supporting the interpretation that the Planck primary CMB constraint (shown in purple for reference)
+is a statistical fluctuation. The neutrino mass is poorly constrainedP
+from ACT alone without the large-scale information. ACT+WMAP
+combined with external datasets (Planck lensing and BAO) gives
+mν < 0.27 eV at 95% confidence compared to < 0.19 eV at 95%
+confidence from Planck with the same data combination and same τ prior. The standard model value for a flat Universe and the expected
+neutrino mass in an inverted hierarchy are shown with vertical grey lines.
+
+ACT, no MBAC
+ACT
+ACT+WMAP
+ACT+Planck
+
+1.0
+
+1.5
+
+ACT
+ACT+WMAP
+ACT+Planck
+
+2.0
+
+2.5
+
+Neff
+
+3.0
+
+3.5
+
+4.0
+
+4.5
+
+0.05
+
+0.00
+
+0.05
+
+0.10
+
+dns/dlnk
+
+0.15
+
+0.20
+
+Fig. 22.— Constraints on the effective number of neutrino species (left) and the running of the spectral index (right). Increasing Neff
+enhances the damping and shifts the peak positions; the ACT data prefer Neff lower than the standard 3.046, with less damping, but is
+still consistent with the standard model. The ACT data also prefer a positive running of the index at 2.4σ, but including large scales from
+WMAP removes a preference for a scale-dependent index. The standard model values are shown with vertical grey lines.
+
+efficiency parameters which are correlated with Neff .
+For all three primordial models, combining with
+WMAP or Planck results in a distribution that moves
+to a parameter space more consistent with ΛCDM predictions, at the 1.5–2.2σ level for ACT+WMAP. We
+do not find evidence that any of these extensions significantly improve the goodness of fit of the combined
+ACT+WMAP dataset. The data strongly disfavor a
+model with excess neutrinos, with Neff = 4 ruled out
+at 6σ, and Neff = 3.5 disfavored at 4σ. Neff is correlated
+with the Hubble constant, since an enhanced Neff will
+increase the expansion rate, reducing the sound horizon.
+To hold fixed the CMB peak positions one can decrease
+the angular diameter distance to the CMB by increasing the Hubble constant. Allowing Neff to vary has the
+effect of lowering both Neff and the inferred Hubble con-
+
+stant along the Neff −H0 degeneracy line compared to the
+ΛCDM values, in the opposite direction from the possible
+tension.
+8.3. Alternative models
+
+Are any of the tensions in the cosmological data due to
+a missing component of the model or a new process? A
+series of forthcoming papers will investigate some more
+extended models.
+A process that decreases the sound horizon can resolve
+the tension with the Cepheid-derived Hubble constant.
+Two examples are introducing a self-interaction between
+neutrinos that delays free-streaming until shortly before
+recombination (Cyr-Racine & Sigurdson 2014; Kreisch
+et al. 2019), or introducing a period of early dark energy soon before recombination (Poulin et al. 2019; Hill
+
+30
+et al. 2020). These models have distinct signatures in the
+small-scale CMB.
+We know little about the physics of the dark sector.
+CMB observations can constrain the cold dark matter interactions with baryons (Gluscevic & Boddy 2018). The
+signature is at small scales, beyond the resolution probed
+by Planck. In testing for deviations from fluctuations
+predicted by inflationary models, we can search not only
+for a running of the index, but also a model-independent
+deviation from a power law (e.g., Hlozek et al. 2012).
+9. SUMMARY AND OUTLOOK
+
+ACT has measured the temperature and polarization
+of almost half the sky at arcminute resolution. The data
+taken during 2013–2016 have been presented and analysed here as ACT DR4. ACT has over four times the
+data comprising DR4 from three more seasons of observations (2017–2019) which are in the process of analysis.
+During the 2020 season we are further expanding the frequency range taking more data with a lower-frequency
+channel. ACT is now producing maps over large areas
+of the sky, and we have developed optimal techniques for
+combining them with the Planck maps in order to produce definitive sky maps with an extended angular range
+compared to Planck alone.
+By fitting the ΛCDM parameters to the ACT DR4
+deepest 15% of the sky we have demonstrated that the
+standard cosmological model remains consistent with observations. Our measurement of the Hubble constant
+from ACT combined with WMAP agrees with that of
+Planck. We find no departures from Euclidean geometry
+and recover the expected amount of gravitational lensing in the power spectrum. The best-fit parameters from
+ACT-alone differ from those of Planck-alone by 2–3σ.
+This could be due to a statistical fluctuation, unknown
+systematic effects in our data or something new (noting
+that ACT and Planck measurements cover significantly
+different ranges of angular scales), and will be further
+explored with data already in-hand from ACT observations between 2017 and 2019. As we analyze more data,
+our cosmological constraints from polarization will improve to the point where they become competitive with,
+and more powerful than, temperature, giving additional
+consistency checks on the standard cosmological model.
+Looking forward, ACT will continue to observe half the
+sky through 2021.
+10. ACKNOWLEDGMENTS
+
+This work was supported by the U.S. National Science Foundation through awards AST-0408698, AST0965625, and AST-1440226 for the ACT project, as
+well as awards PHY-0355328, PHY-0855887 and PHY1214379. Funding was also provided by Princeton University, the University of Pennsylvania, and a Canada
+Foundation for Innovation (CFI) award to UBC. ACT
+operates in the Parque Astronómico Atacama in northern Chile under the auspices of the Comisión Nacional
+de Investigación (CONICYT). Computations were performed on the Niagara supercomputer at the SciNet HPC
+Consortium and on the Simons-Popeye cluster of the
+Flatiron Institute. SciNet is funded by the CFI under the auspices of Compute Canada, the Government
+of Ontario, the Ontario Research Fund—Research Excellence, and the University of Toronto. Cosmological
+
+analyses were performed on the Hawk high-performance
+computing cluster at the Advanced Research Computing
+at Cardiff (ARCCA). We would like to thank the Scientific Computing Core (SCC) team at the Flatiron Institute, especially Nick Carriero, for their support. Flatiron
+Institute is supported by the Simons Foundation. Additional computations were performed on Hippo at the
+University of KwaZulu-Natal, on Tiger as part of Princeton Research Computing resources at Princeton University, on Feynman at Princeton University, and on Cori at
+NERSC. The development of multichroic detectors and
+lenses was supported by NASA grants NNX13AE56G
+and NNX14AB58G. Detector research at NIST was supported by the NIST Innovations in Measurement Science
+program. We thank Bert Harrop for his extensive efforts
+on the assembly of the detector arrays. The shops at
+Penn and Princeton have time and again built beautiful
+instrumentation on which ACT depends. We also thank
+Toby Marriage for numerous contributions.
+SKC acknowledges support from the Cornell Presidential Postdoctoral Fellowship. RD thanks CONICYT
+for grant BASAL CATA AFB-170002. ZL, ES and JD
+are supported through NSF grant AST-1814971. KM
+and MHi acknowledge support from the National Research Foundation of South Africa. MDN acknowledges support from NSF award AST-1454881. DH,
+AM, and NS acknowledge support from NSF grant numbers AST-1513618 and AST-1907657. EC acknowledges support from the STFC Ernest Rutherford Fellowship ST/M004856/2 and STFC Consolidated Grant
+ST/S00033X/1, and from the Horizon 2020 ERC Starting Grant (Grant agreement No 849169). NB acknowledges support from NSF grant AST-1910021. ML was
+supported by a Dicke Fellowship. LP gratefully acknowledges support from the Mishrahi and Wilkinson funds.
+RH acknowledges support as an Azrieli Global Scholar
+in CIfAR’s Gravity & the Extreme Universe Program
+and as an Alfred. P. Sloan Research Fellow. RH is also
+supported by Canada’s NSERC Discovery Grants program and the Dunlap Institute, which was established
+with an endowment by the David Dunlap family and the
+University of Toronto. We thank our many colleagues
+from ALMA, APEX, CLASS, and Polarbear/Simons Array who have helped us at critical junctures. Colleagues
+at AstroNorte and RadioSky provide logistical support
+and keep operations in Chile running smoothly.
+Lastly, we gratefully acknowledge the many publicly available software packages that were essential
+for parts of this analysis. They include CosmoMC
+(Lewis 2013; Lewis & Bridle 2002), CAMB (Lewis et al.
+2000), healpy (Zonca et al. 2019), HEALPix (Górski
+et al. 2005b), the SLATEC32 Fortran subroutine
+DRC3JJ.F9, the SOFA library (IAU SOFA Board 2019),
+libsharp (Reinecke & Seljebotn 2013), and pixell33 .
+This research made use of Astropy34 , a communitydeveloped core Python package for Astronomy (Astropy
+Collaboration et al. 2013; Price-Whelan et al. 2018). We
+also acknowledge use of the matplotlib (Hunter 2007)
+package and the Python Image Library for producing
+32 http://www.netlib.org/slatec/guide
+33 https://github.com/simonsobs/pixell
+34 http://www.astropy.org
+
+31
+plots in this paper.
+REFERENCES
+Abbott, T. M. C., et al. 2018a, Mon. Not. Roy. Astron. Soc., 480,
+3879
+—. 2018b, Phys. Rev., D98, 043526
+Abbott, T. M. C., Abdalla, F. B., Allam, S., et al. 2018, ApJS,
+239, 18
+Addison, G., Huang, Y., Watts, D., et al. 2016, Astrophys. J.,
+818, 132
+Addison, G., Watts, D., Bennett, C., et al. 2018, Astrophys. J.,
+853, 119
+Aihara, H., AlSayyad, Y., Ando, M., et al. 2019, PASJ, 71, 114
+Alam, S., Ata, M., Bailey, S., et al. 2017, MNRAS, 470, 2617
+Albareti, F. D., Allende Prieto, C., Almeida, A., et al. 2017,
+ApJS, 233, 25
+Astropy Collaboration, Robitaille, T. P., Tollerud, E. J., et al.
+2013, A&A, 558, A33
+Aubourg, E., et al. 2015, Phys. Rev. D, 92, 123516
+Bennett, C. L., Larson, D., Weiland, J. L., et al. 2013, ApJS, 208,
+20
+Beutler, F., Blake, C., Colless, M., et al. 2011, Monthly Notices of
+the Royal Astronomical Society, 416, 3017–3032
+Birrer, S., et al. 2020, arXiv:2007.02941 [astro-ph.CO]
+Calabrese, E., Slosar, A., Melchiorri, A., Smoot, G. F., & Zahn,
+O. 2008, Phys. Rev. D, 77, 123531
+Calabrese, E., et al. 2017, Phys. Rev. D, 95, 063525
+Choi, S. K., et al. 2020, arXiv:2007.07289 [astro-ph.CO]
+Cooke, R. J., Pettini, M., Nollett, K. M., & Jorgenson, R. 2016,
+ApJ, 830, 148
+Cuceu, A., Farr, J., Lemos, P., & Font-Ribera, A. 2019, JCAP,
+10, 044
+Cyr-Racine, F.-Y., & Sigurdson, K. 2014, Phys. Rev. D, 90,
+123533
+Darwish, O., Madhavacheril, M. S., Sherwin, B., et al. 2020,
+arXiv e-prints, arXiv:2004.01139
+Das, S., et al. 2014, JCAP, 04, 014
+Datta, R., Aiola, S., Choi, S. K., et al. 2019, MNRAS, 486, 5239
+De Bernardis, F., Stevens, J. R., Hasselfield, M., et al. 2016, in
+Proc. SPIE, Vol. 9910, Observatory Operations: Strategies,
+Processes, and Systems VI, 991014
+de Jong, Jelte T. A., Kleijn, Gijs A. Verdoes, Erben, Thomas,
+et al. 2017, A&A, 604, A134
+Dey, A., Schlegel, D. J., Lang, D., et al. 2019, AJ, 157, 168
+Di Valentino, E., Melchiorri, A., & Silk, J. 2019, Nature
+Astronomy, 484
+Dünner, R., Hasselfield, M., Marriage, T. A., et al. 2013, ApJ,
+762, 10
+Efstathiou, G., & Gratton, S. 2019, arXiv:1910.00483 [astro-ph.CO]
+—. 2020, Monthly Notices of the Royal Astronomical Society:
+Letters, 496, L91–L95
+Freedman, W. L., Madore, B. F., Hatt, D., et al. 2019, ApJ, 882,
+34
+Galli, S., Benabed, K., Bouchet, F., et al. 2014, Phys. Rev. D, 90,
+063504
+Gluscevic, V., & Boddy, K. K. 2018, Phys. Rev. Lett., 121, 081301
+Górski, K. M., Hivon, E., Banday, A. J., et al. 2005a, ApJ, 622,
+759
+—. 2005b, ApJ, 622, 759
+Grace, E., Beall, J., Bond, J. R., et al. 2014, Society of
+Photo-Optical Instrumentation Engineers (SPIE) Conference
+Series, Vol. 9153, ACTPol: on-sky performance and
+characterization, 915310
+Hamaker, J. P., & Bregman, J. D. 1996, A&AS, 117, 161
+Handley, W. 2019, Curvature tension: evidence for a closed
+universe, arXiv:1908.09139 [astro-ph.CO]
+Hasselfield, M., Moodley, K., Bond, J. R., et al. 2013, The
+Astrophysical Journal Supplement Series, 209, 17
+Henning, J. W., Sayre, J. T., Reichardt, C. L., et al. 2018, ApJ,
+852, 97
+Hikage, C., et al. 2019, Publ. Astron. Soc. Jap., 71, Publications
+of the Astronomical Society of Japan, Volume 71, Issue 2, April
+2019, 43, https://doi.org/10.1093/pasj/psz010
+Hill, J. C., McDonough, E., Toomey, M. W., & Alexander, S.
+2020, arXiv:2003.07355 [astro-ph.CO]
+
+Hilton, M., et al. 2020, arXiv:2009.11043 [astro-ph.CO]
+Hinshaw, G., Larson, D., Komatsu, E., et al. 2013, The
+Astrophysical Journal Supplement Series, 208, 19
+Hlozek, R., Dunkley, J., Addison, G., et al. 2012, The
+Astrophysical Journal, 749, 90
+Hunter, J. D. 2007, Computing in Science & Engineering, 9, 90
+IAU SOFA Board. 2019, IAU SOFA Software Collection
+Ivezić, Ž., Kahn, S. M., Tyson, J. A., et al. 2019, ApJ, 873, 111
+Knox, L., & Millea, M. 2020, Phys. Rev. D, 101, 043533
+Koopman, B., Austermann, J., Cho, H.-M., et al. 2016, in Proc.
+SPIE, ed. W. S. Holland & J. Zmuidzinas, 99142T
+Kreisch, C. D., Cyr-Racine, F.-Y., & Doré, O. 2019,
+arXiv:1902.00534 [astro-ph.CO]
+Lesgourgues, J. 2011, arXiv e-prints, arXiv:1104.2932
+Lewis, A. 2013, Phys. Rev. D, 87, 103529
+Lewis, A., & Bridle, S. 2002, Phys. Rev. D, 66, 103511
+Lewis, A., Challinor, A., & Lasenby, A. 2000, ApJ, 538, 473
+Louis, T., Grace, E., Hasselfield, M., et al. 2017, Journal of
+Cosmology and Astroparticle Physics, 2017, 031
+Ludwig, A. C. 1973, IEEE Transactions on Antennas and
+Propagation, 21, 116
+Madhavacheril, M. S., et al. 2019, arXiv:1911.05717 [astro-ph.CO]
+Makarov, D., Prugniel, P., Terekhova, N., Courtois, H., &
+Vauglin, I. 2014, A&A, 570, A13
+Naess, S., Hasselfield, M., McMahon, J., et al. 2014, Journal of
+Cosmology and Astroparticle Physics, 2014, 007
+Naess, S., et al. 2020, arXiv:2007.07290 [astro-ph.IM]
+Næss, S. K. 2019, JCAP, 2019, 060
+Namikawa, T., et al. 2020, Phys. Rev. D, 101, 083527
+Natale, U., Pagano, L., Lattanzi, M., et al. 2020, arXiv:2005.05600
+[astro-ph.CO]
+Pagano, L., Delouis, J. M., Mottet, S., Puget, J. L., & Vibert, L.
+2019, arXiv e-prints, arXiv:1908.09856
+Pisanti, O., Cirillo, A., Esposito, S., et al. 2008, Comput. Phys.
+Commun., 178, 956
+Pitrou, C., Coc, A., Uzan, J.-P., & Vangioni, E. 2018, Phys.
+Rept., 754, 1
+Planck Collaboration. 2020, arXiv e-prints, arXiv:2007.04997
+Planck Collaboration I. 2018, A&A, submitted, arXiv:1807.06205
+Planck Collaboration V. 2018, A&A, submitted, arXiv:1907.12875
+Planck Collaboration VI. 2018, A&A, submitted, arXiv:1807.06209
+Planck Collaboration VIII. 2018, A&A, in press, arXiv:1807.06210
+Planck Collaboration XI. 2016, A&A, 594, A11
+Planck Collaboration XV. 2014, A&A, 571, A15
+Poulin, V., Smith, T. L., Karwal, T., & Kamionkowski, M. 2019,
+Phys. Rev. Lett., 122, 221301
+Price-Whelan, A. M., Sipőcz, B. M., Günther, H. M., et al. 2018,
+AJ, 156, 123
+Reinecke, M., & Seljebotn, D. S. 2013, A&A, 554, A112
+Riess, A. G., Casertano, S., Yuan, W., Macri, L. M., & Scolnic,
+D. 2019, ApJ, 876, 85
+Ross, A. J., Samushia, L., Howlett, C., et al. 2015, Monthly
+Notices of the Royal Astronomical Society, 449, 835–847
+Ruze, J. 1966, IEEE Proceedings, 54, 633
+Schmid, H. M., Joos, F., & Tschan, D. 2006, A&A, 452, 657
+Sievers, J. L., Hlozek, R. A., Nolta, M. R., et al. 2013, JCAP,
+2013, 060
+Spergel, D. N., Verde, L., Peiris, H. V., et al. 2003, ApJS, 148, 175
+Thornton, R. J., Ade, P. A. R., Aiola, S., et al. 2016, The
+Astrophysical Journal Supplement Series, 227, 21
+Thornton, R. J., Ade, P. A. R., Aiola, S., et al. 2016, ApJS, 227,
+21
+Torrado, J., & Lewis, A. 2020, arXiv:2005.05290 [astro-ph.IM]
+Wong, K. C., Suyu, S. H., Chen, G. C. F., et al. 2019, arXiv
+e-prints, arXiv:1907.04869
+Zonca, A., Singer, L., Lenz, D., et al. 2019, Journal of Open
+Source Software, 4, 1298
+Zuntz, J., Paterno, M., Jennings, E., et al. 2015, Astronomy and
+Computing, 12, 45
+
+32
+
+APPENDIX
+A. THE CONSTRAINING POWER OF ACT DR4
+
+In this Appendix we report signal-to-noise (S/N) estimates for the ACT, WMAP and Planck spectra, supplementing
+Fig. 20 in C20 that compares the ACT DR4 power spectrum error bars with those from Planck and WMAP. To
+assess the overall significance of the data we compute the χ2 of the TT, TE and EE spectra compared to null (i.e.,
+how significant the measurement is when compared to no signal) and define S/N as its square root, given in Table 6.
+We estimate this for both Planck and ACT using their CMB-only likelihoods which account for the uncertainty due
+to foregrounds, calibration, polarization efficiency and beams. The equivalent for WMAP is estimated from the full
+WMAP likelihood.
+TABLE 6
+Signal-to-noise estimates for ACT, WMAP and Planck CMB spectra.
+S/N
+TT
+
+WMAP
+TE EE
+
+273
+
+23
+
+12
+
+TT
+
+TE
+
+Planck
+EE TT+TE+EE
+
+TT
+
+TE
+
+ACT
+EE TT+TE+EE
+
+606
+
+182
+
+236
+
+175
+
+76
+
+112
+
+646
+
+185
+
+We find that: (i) the S/N for all measurements is greatest in TT; (ii) Planck has overall greater constraining power
+than ACT in TE and EE (even if limited to the same ` range, i.e. ` > 300); (iii) ACT has roughly comparable
+constraining power in EE and TE and comparable to WMAP in TT; (iv) ACT’s current overall constraining power is
+about 1/3 that of Planck’s.
+What is not captured in the above is the constraining power of each spectrum as a function of multipole. We explore
+this by taking two ΛCDM cosmological models with the most different inferred Hubble constants that fit the WMAP
+data to within 2σ of the best-fitting model. We then take the difference between these two models, and in Fig. 23
+show the difference normalized by the error on the spectra measured by Planck and ACT. This then gives a relative
+measure of the S/N for estimating the Hubble constant, the parameter that we are particularly interested in, as a
+function of multipole.
+
+2.0
+
+Planck TE
+ACT TE
+
+2.0
+
+1.5
+
+| D |/ (D )
+
+| D |/ (D )
+
+2.5
+
+Planck TT
+ACT TT
+
+1.0
+0.5
+
+1.5
+1.0
+0.5
+0.0
+
+0.0
+500
+
+1000
+
+1500
+
+2000
+
+Multipole
+
+2500
+
+3000
+
+3500
+
+4000
+
+500
+
+1500
+
+2000
+
+Multipole
+
+2500
+
+3000
+
+3500
+
+4000
+
+Planck EE
+ACT EE
+
+1.75
+1.50
+
+| D |/ (D )
+
+1000
+
+1.25
+1.00
+0.75
+0.50
+0.25
+0.00
+500
+
+1000
+
+1500
+
+2000
+
+Multipole
+
+2500
+
+3000
+
+3500
+
+4000
+
+Fig. 23.— ACT and Planck signal-to-noise contributing to the estimate of the Hubble constant as function of multipole. The relative
+constraining power of each experiment is shown with the difference between two theoretical models with widely-spaced Hubble constants
+(63 and 76 km/s/Mpc, both consistent with the WMAP data to within 2σ) normalized by the power spectrum error bar. This highlights
+the new information in the ACT DR4 data and their complementary with Planck: the largest contribution from ACT comes from the TE
+spectrum in the range 1000 < ` < 2500 and the small scales in TT at ` > 2000 and EE at ` > 1000 provide additional information.
+
+33
+In comparing Planck to ACT, we find that the Planck data have the most constraining power at angular scales
+` < 1800, with the ACT data constraining at smaller scales. In TE, the transition is at ` ∼ 1000, and in EE at ` ∼ 600.
+Figure 23 also shows the relative importance of TT, TE and EE. Despite the TT S/N itself being higher than TE and
+EE, it is the TE that has higher S/N for ACT in terms of determining the Hubble constant, and other cosmological
+parameters. This is consistent with the ΛCDM parameter constraints reported in C20, and with previous studies in
+e.g., Galli et al. (2014).
+B. HOW THE ACT DATA DISFAVOR A HUBBLE CONSTANT H0 = 74 KM/S/MPC WITHIN ΛCDM.
+
+The latest Cepheid-based estimate of the Hubble constant gives H0 = 74.03 ± 1.42 km/s/Mpc (Riess et al. 2019).
+Here we show how such a high value of H0 would compare with our data and our nominal ΛCDM fit. Figure 24
+compares the ACT+WMAP best-fitting ΛCDM model and its residuals compared to the ACT data, to the equivalent
+for a ΛCDM fit where H0 has been fixed to H0 = 74 km/s/Mpc.
+As described in § 7.3, such a model will have a lower matter density to fit the well-measured peak scale. This high-H0
+model also has a higher tilt and baryon density, attempting to compensate for effects of the changed matter density,
+resulting in a theory model that has more power in the first peaks and less power at small-scales than the best-fitting
+model. Overall this high-H0 fit degrades the ACT fit by ∆χ2 = 55 (48 in TT, 16 in TE, 7 in EE), with excess power
+in the residuals at TT and EE ` > 1000.
+6000
+
+D`TT [µK2]
+
+ACT+WMAP ΛCDM best fit
+H0 = 74 ACT+WMAP best fit
+
+4000
+
+ACT DR4
+
+2000
+
+∆D`TT [µK2]
+
+0
+80
+0
+residuals to H0 = 74 fit
+
+−80
+
+residuals to ACT+WMAP best fit
+
+D`TE [µK2]
+
+100
+0
+
+−100
+
+∆D`TE [µK2]
+
+−200
+10
+0
+−10
+
+D`EE [µK2]
+
+40
+
+∆D`EE [µK2]
+
+20
+
+0
+2.5
+0.0
+−2.5
+0
+
+500
+
+1000
+
+1500
+
+2000
+
+2500
+
+3000
+
+3500
+
+4000
+
+4500
+
+`
+Fig. 24.— Comparison between the ACT+WMAP best-fit ΛCDM model and the ACT+WMAP best-fit model with H0 fixed to
+74 km/s/Mpc. The residuals show significant degradation of the fit to the ACT data.
+
+

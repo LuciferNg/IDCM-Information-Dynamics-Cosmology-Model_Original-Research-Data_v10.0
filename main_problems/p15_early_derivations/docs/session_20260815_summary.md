@@ -75,7 +75,7 @@ $$M_{comp} = \frac{M_{Pl}}{2 \times h^{11} \times h^{21} \times N_d} = 3.93 \tim
 
 ## 五、中微子類型：Majorana
 
-- W-field p6 mode 係實數模式 → 自伴
+- W-field P6 mode 係實數模式 → 自伴
 - 無需右旋中微子（無 Seesaw）
 - 0 自由參數，純幾何推導
 

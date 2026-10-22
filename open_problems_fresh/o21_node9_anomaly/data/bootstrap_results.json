@@ -1,0 +1,31 @@
+{
+  "n_real": 10000,
+  "fwhm_deg": 4.17,
+  "nside": 64,
+  "T_node9_obs_uK": -106.9923,
+  "T_2nd_mean_uK": -86.08801077490116,
+  "T_2nd_std_uK": 14.353048766827962,
+  "z_node9": -1.456435462924906,
+  "p_T_2nd_le_obs": 0.0818,
+  "p_joint_hop1_color0": 0.0063,
+  "p_hop1_given_T": 0.07701711491442542,
+  "count_2nd_cold_le_obs": 818,
+  "count_2nd_cold_hop1_color0": 63,
+  "frac_hop1": 0.06666666666666667,
+  "frac_hop1_color0": 0.06666666666666667,
+  "hop1_nodes": [
+    9,
+    20,
+    41,
+    50
+  ],
+  "hop1_color0_nodes": [
+    9,
+    20,
+    41,
+    50
+  ],
+  "coldest_index_mode": 39,
+  "T_2nd_percentile": 0.9182,
+  "timestamp": "2026-08-20 20:59:27"
+}

@@ -1,0 +1,26 @@
+================================================================================================================
+O222 scripts/15 -- B3R2: order-fair allocation inside the 44-read budget (rules: b3r2-contract-v1)
+================================================================================================================
+[FAIL] A0 unrestricted baseline = recorded eight values  {"E1": {"raw": "4", "distinct": "4", "distinct_anti": "4", "all4": "4"}, "E2": {"raw": "4", "distinct": "4", "distinct_anti": "4", "all4": "4"}}
+  lex       pairs=15  reads=43  cov_a=1  cov_b=15 constructible=False  {"E1_raw": "2", "E1_distinct": "NOT CONSTRUCTIBLE", "E1_distinct_anti": "NOT CONSTRUCTIBLE", "E1_all4": "NOT CONSTRUCTIBLE", "E2_raw": "2", "E2_distinct": "NOT CONSTRUCTIBLE", "E2_distinct_anti": "NOT CONSTRUCTIBLE", "E2_all4": "NOT CONSTRUCTIBLE"}
+            misses=[2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  terminal=[0, 15]
+  diag      pairs=22  reads=44  cov_a=22 cov_b=22 constructible=True   {"E1_raw": "2", "E1_distinct": "NOT CONSTRUCTIBLE", "E1_distinct_anti": "NOT CONSTRUCTIBLE", "E1_all4": "NOT CONSTRUCTIBLE", "E2_raw": "2", "E2_distinct": "NOT CONSTRUCTIBLE", "E2_distinct_anti": "NOT CONSTRUCTIBLE", "E2_all4": "NOT CONSTRUCTIBLE"}
+            misses=[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]  terminal=[22, 22]
+  antidiag  pairs=15  reads=44  cov_a=15 cov_b=15 constructible=True   {"E1_raw": "2", "E1_distinct": "NOT CONSTRUCTIBLE", "E1_distinct_anti": "NOT CONSTRUCTIBLE", "E1_all4": "NOT CONSTRUCTIBLE", "E2_raw": "2", "E2_distinct": "NOT CONSTRUCTIBLE", "E2_distinct_anti": "NOT CONSTRUCTIBLE", "E2_all4": "NOT CONSTRUCTIBLE"}
+            misses=[2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  terminal=[15, 47]
+  block     pairs=18  reads=42  cov_a=5  cov_b=5  constructible=True   {"E1_raw": "32/15", "E1_distinct": "32/15", "E1_distinct_anti": "32/15", "E1_all4": "16/15", "E2_raw": "11/5", "E2_distinct": "11/5", "E2_distinct_anti": "11/5", "E2_all4": "13/15"}
+            misses=[2, 2, 2, 2, 3, 2, 3, 2, 2, 3, 2, 3, 2, 3, 2, 2, 3, 2]  terminal=[1, 4]
+  stride    pairs=15  reads=44  cov_a=15 cov_b=15 constructible=True   {"E1_raw": "2", "E1_distinct": "NOT CONSTRUCTIBLE", "E1_distinct_anti": "NOT CONSTRUCTIBLE", "E1_all4": "NOT CONSTRUCTIBLE", "E2_raw": "2", "E2_distinct": "NOT CONSTRUCTIBLE", "E2_distinct_anti": "NOT CONSTRUCTIBLE", "E2_all4": "NOT CONSTRUCTIBLE"}
+            misses=[2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  terminal=[25, 15]
+[PASS] A1 lex baseline reproduces B5 (15/43, cov_a=1)
+[PASS] A2 constructible orders = ['diag', 'antidiag', 'block', 'stride']
+[PASS] B1 marginal balance (Sigma_s K[s][a] = 0, 62/62 -> no-signalling)
+[PASS] B2 Delta_order = 160/120 (A2 recorded 160/120)
+  null lex       constr=0  /100  E1_all4 [None..None] med=None  E2_all4 [None..None] med=None
+  null diag      constr=100/100  E1_all4 [None..None] med=None  E2_all4 [None..None] med=None
+  null antidiag  constr=100/100  E1_all4 [None..None] med=None  E2_all4 [None..None] med=None
+  null block     constr=100/100  E1_all4 [2/15..2] med=14/15  E2_all4 [2/15..11/5] med=14/15
+  null stride    constr=100/100  E1_all4 [None..None] med=None  E2_all4 [None..None] med=None
+================================================================================================================
+RESULT: 4/5 PASS  (1 FAIL)  [3.1 s]
+================================================================================================================

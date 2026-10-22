@@ -1,0 +1,33 @@
+{
+  "tau_planck": 0.054,
+  "tau_planck_err": 0.007,
+  "formulas": {
+    "tau_v1 (\u57fa\u672c\u7d50\u69cb)": {
+      "value": 0.0,
+      "error_pct": 100.0,
+      "status": "\u274c"
+    },
+    "tau_v2 (\u963b\u6297\u6bd4)": {
+      "value": 0.0,
+      "error_pct": 100.0,
+      "status": "\u274c"
+    },
+    "tau_v3 (\u99d0\u6ce2\u7bc0\u9ede)": {
+      "value": 0.014416553595658075,
+      "error_pct": 73.30267852655912,
+      "status": "\u274c"
+    },
+    "tau_v4 (\u5269\u9918\u901a\u9053)": {
+      "value": 0.0015664972824796113,
+      "error_pct": 97.09907910651924,
+      "status": "\u274c"
+    }
+  },
+  "mode_counts": {
+    "forward": 44,
+    "backward": 0
+  },
+  "impedance_ratio": 0.0,
+  "best_tau": 0.014416553595658075,
+  "best_formula": "tau_v3 (\u99d0\u6ce2\u7bc0\u9ede)"
+}

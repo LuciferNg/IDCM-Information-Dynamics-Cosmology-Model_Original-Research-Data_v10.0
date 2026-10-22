@@ -1,0 +1,97 @@
+# O225 — 機制層 Born 權重／概率結構之強制（Mechanism-Level Born Forcing）
+
+<!-- registry
+pid:     O225
+title:   機制層 Born 權重／概率結構之強制（Mechanism-Level Born Forcing）
+state:   registered
+verdict: -
+flags:   -
+owner:   O225
+created: 2026-09-30
+updated: 2026-09-30
+prereq:  O222
+dir:     open_problems_fresh/o225_mechanism_born_forcing/
+source:  O222 完整性 closeout 分流（調律者指令 2026-09-30：「開新o，把剩下開題分開幾個o解決，保留o222開放作為最終裁決及整合」）
+-->
+
+> **狀態**: 📄 **已註冊 — 目標已定（依 O222 no-go 邊界憲章 `docs/45`）**
+> **建立/更新**: 2026-09-30 / 重建 2026-10-01｜**位置**: `open_problems_fresh/o225_mechanism_born_forcing/`
+> **前置**: **O222 保留開放作最終裁決及整合**；本 o 承接憲章判決項：**B3 · 機制層 Born 權重缺席**
+> **目標權威來源**: `open_problems_fresh/o222_qm_evaluation_semantics/docs/45_no_go_boundary_charter.md`
+
+---
+
+> ⚠️ **重建說明（2026-10-01）**
+> 本檔 = **O222→O225 交接內容之完整重建版**（只含 §一–§七）。
+> 舊檔（含 §九–§三十六 逐輪 append 之 session 工作記錄）受「`open(path,"w").write(open(path).read()+…)` **先截斷後讀**」事故影響；首次事故與還原記錄見 `docs/54_doc_loss_incident_and_recovery.md`（register 有載）。
+> **舊檔全文已原樣備份**：`01_problem_record.md.pre_rebuild_2026-10-01.bak`（同目錄；非 `.md`，不入 machine-block 掃描）。
+> 逐輪推導細節仍在 `docs/03`–`docs/56`（**未動**）；**R1–R26 之檔案重建由 O225 session 自理**。
+> 本檔未新增任何推導；除 §一–§七 與本說明外無其他內容。
+
+## 一、問題陳述
+**判定 B3**：機制層（context 條件）非負歸一權重之缺席，其**充要障礙**係咩？現行觀察 = K 表值帶號（±1）＋ 120/120 列之列和 ≠ 1；本 o 要證明此係**充要條件**（或給出更深條件），並掃描**最小修改族**（容許複值讀出／非決定性讀出／多副本）會否使其出現。
+★ **層分離鐵律（不得混為一談）**：**模譜層 Born 存在且強制 ✅**（O138）／態層均勻 1/120 ✅／結果層 1/2 ✅／joint 16 原子 ✅ —— 邊界**只**在 context 條件層；「IDCM 無 Born 律」係**錯誤**表述。
+
+## 二、已確立嘅結構（引用自 O222，逐項附出處）
+```
+🟢 K = ±1 完全平衡（+1: 3720／−1: 3720）、值集 size = 2、**120/120 列之列和 ≠ 1**（全量，R29/scripts/77）
+🟢 層分離：模譜層（O138）Born ✅／態層 1/120（3844/3844 步）／結果層 1/2（62/62）／joint 16 原子結構 ✅
+🟢 判準獨立性：7 判準之響應矩陣秩（Q 上精確）= 1 ⟹ 只能由改架構之反事實取得獨立性
+🟢 G1 語義：override = D5 觸發之值級翻轉；hits = 2N = 124（全 120 初始態恆定）；override ∈ [52,80]（26 值）；s0 = 0 → 65
+🟢 17 於全部精確不變量中 NOWHERE（numerology 否證）
+🔴 障礙定理之充要性；最小修改族之行為；動態側 17；判準獨立性之反事實版本
+```
+
+## 三、未確立（🔴 開放問題 = 本 o 之判決項）
+```
+🔴 障礙定理：{K 之符號/列結構} ⟹ {無非負歸一權重} 之**充要**條件（現只係逐值觀察）
+🔴 最小修改族：定義「非決定性/複值讀出」之一參數族，判其是否產生 Born 型權重（含不可能性證明）
+🔴 動態側 17：全量枚舉動態可達不變量，機械判定 17 之出現/不出現（含其結構意義）
+🔴 判準獨立性之反事實版本：改架構（非微擾）下四判準是否真獨立
+🔴 G1 語義之完整表：全 120 初始態之 override 表 ＋ 其不變量刻畫
+```
+
+## 四、攻擊路線
+```
+1. 障礙定理：由 K 之符號/列結構導出非負歸一權重不存在之充要條件（中成本）
+2. 最小修改空間：一參數族掃描 ＋ 判其是否產生 Born（低成本→中）
+3. 動態 17 全枚舉：機械判定（中成本）
+4. 反事實獨立性：改架構之四判準響應矩陣（中成本）
+```
+
+## 五、驗證標準
+```
+✅ 障礙定理為**充要**（附反例掃描證明必要性、構造證明充分性）
+✅ 最小修改族之判決為二值（可產生／不可產生）＋ 附最小性論證
+✅ 零新參數（除明確標示之「最小修改」族外，且該族須事先凍結）
+✅ 與 docs/45 §2 B3、docs/43 §二(a) 數字完全一致
+```
+
+**四道硬測試**（閉合宣稱必過）：① 自由度成本（零參數）② Monte-Carlo null（10⁷ 樣本，5σ）③ 可證偽＋樣本外盲測 ④ 結構剛性（擾動測試）
+
+## 六、O222 交接依據（**只讀，唔喺 O222 寫任何檔**）
+### 6.1 承接清單（O222 未閉合開放項 → 本 o）
+`O222/C2G7`（判準獨立性）／`O222/Q4`（Born 層）／`O222/Q5`（惰性邊界動態側）／`O222/K3`／`O222/G2c`／`O222/D6`（Born 部分）
+＋ 憲章判決項 **B3 · 機制層 Born 權重缺席**（`docs/45` §2 B3、§5 分流）
+（O222 保留開放作**最終裁決及整合**）
+
+### 6.2 register handoff 事件（原文 verbatim）
+```
+[1] ts 2026-09-30T21:18:54+08:00  pid O222 → target O225  ref open_problems_fresh/README.md
+    note: O222 分流交接：O222/C2G7（判準獨立性）、O222/Q4（Born 層）、O222/Q5、O222/K3、O222/G2c、O222/D6（Born 部分）（O222 保留開放作最終裁決及整合；本交接只經 register，無在其他 O 寫檔）
+          ｜[REPAIR 2026-09-30: ref 由越界路徑改為 master README（原值見 register.jsonl.pre_repair_20260930T212215）]
+[2] ts 2026-09-30T21:20:06+08:00  pid O222 → target O225  ref open_problems_fresh/README.md
+    note: O222 分流交接（ref 更正為存在路徑）：本 o 承接 O222 之相關開放項目；O222 保留開放作最終裁決及整合
+          ｜[REPAIR 2026-09-30: ref 由越界路徑改為 master README（原值見 register.jsonl.pre_repair_20260930T212215）]
+[3] ts 2026-09-30T21:21:32+08:00  pid O222 → target O225  ref open_problems_fresh/README.md
+    note: O222 分流交接：本 o 承接 O222 之相關開放項目（詳細承接清單見該 o 之 01_problem_record.md §六）；O222 保留開放作最終裁決及整合
+```
+
+### 6.3 唯讀依據（證據文檔／基礎設施）
+- 憲章：`o222_qm_evaluation_semantics/docs/45_no_go_boundary_charter.md`（B1–B6 ＋ §3 正面清單 ＋ §4 唔屬域）
+- 證據文檔：`docs/13`（P2d）、`docs/19`（C2G7 七判準）、`docs/35`（QM 六項）、`docs/38`（R24）、`docs/39`（R25 amplitude）、`docs/40`（R26 G1/G8）、`docs/41`（R27）、`docs/42`（R28）、`docs/43`（R29 RT1＋邊界＋P1–P7）、`docs/44`（完整性 closeout）
+- 可重跑基礎設施（唯讀）：`o222.../scripts/12_b5_budget.py`（`load_machine()`）、`scripts/07_artifact_integrity.py`、`scripts/32_closeout3_audit.py`；`data/frozen/MANIFEST.json`（350 件）
+- register：O222 ↔ 本 o 之 handoff（見 6.2；O222 側 ref 全部 in-scope）
+
+## 七、紀律（沿用 O222 全套）
+合約＋強制先於任何數字｜預註冊先於運算｜全量無優化（零剪枝、精確算術）｜零參數／零擬合（禁後驗湊算子、禁 φ-power fitting）｜「無效才是正確」｜每輪 docs/＋scripts/＋data/＋logs/＋MANIFEST＋register（append-only）｜四道硬測試全過方可宣稱閉合｜**唔准**在其他 O 目錄寫檔（跨 O 只經 register）

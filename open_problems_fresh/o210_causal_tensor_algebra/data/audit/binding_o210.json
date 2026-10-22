@@ -1,0 +1,115 @@
+{
+ "o_dir": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o210_causal_tensor_algebra",
+ "counts": {
+  "BOUND_SRC": 71,
+  "BOUND_LOG": 16,
+  "UNBOUND": 0,
+  "DATA_ONLY": 7,
+  "ELSEWHERE": 17
+ },
+ "per_doc": {
+  "docs/01_type_system.md": {
+   "BOUND_SRC": 1
+  },
+  "docs/02_operations_closure.md": {
+   "BOUND_SRC": 2,
+   "DATA_ONLY": 1
+  },
+  "docs/03_normalization_charter.md": {
+   "BOUND_SRC": 10,
+   "DATA_ONLY": 1,
+   "BOUND_LOG": 2,
+   "ELSEWHERE": 4
+  },
+  "docs/04_rewrite_report.md": {
+   "BOUND_SRC": 10
+  },
+  "docs/05_inbound_handoff.md": {
+   "BOUND_SRC": 6,
+   "BOUND_LOG": 2,
+   "ELSEWHERE": 2
+  },
+  "docs/06_escape_period_theorem.md": {
+   "BOUND_SRC": 1
+  },
+  "docs/08_branch_charge_no_go.md": {
+   "BOUND_LOG": 2
+  },
+  "docs/10_z4_bridge.md": {
+   "BOUND_LOG": 2
+  },
+  "docs/11_common_measure_no_go.md": {
+   "BOUND_SRC": 9
+  },
+  "docs/12_full_chain_closeout.md": {
+   "BOUND_SRC": 12,
+   "DATA_ONLY": 5
+  },
+  "docs/13_script_chain.md": {
+   "BOUND_LOG": 1
+  },
+  "docs/14_inbound_handoff_20261006.md": {
+   "BOUND_SRC": 2,
+   "ELSEWHERE": 1
+  },
+  "final_result.md": {
+   "BOUND_SRC": 5,
+   "BOUND_LOG": 2,
+   "ELSEWHERE": 2
+  },
+  "01_problem_record.md": {
+   "BOUND_SRC": 13,
+   "BOUND_LOG": 5,
+   "ELSEWHERE": 8
+  }
+ },
+ "gaps": [
+  {
+   "doc": "docs/02_operations_closure.md",
+   "line": 55,
+   "value": "76123199",
+   "verdict": "DATA_ONLY"
+  },
+  {
+   "doc": "docs/03_normalization_charter.md",
+   "line": 69,
+   "value": "134.2",
+   "verdict": "DATA_ONLY"
+  },
+  {
+   "doc": "docs/12_full_chain_closeout.md",
+   "line": 69,
+   "value": "76123199",
+   "verdict": "DATA_ONLY"
+  },
+  {
+   "doc": "docs/12_full_chain_closeout.md",
+   "line": 143,
+   "value": "55893",
+   "verdict": "DATA_ONLY"
+  },
+  {
+   "doc": "docs/12_full_chain_closeout.md",
+   "line": 143,
+   "value": "56315",
+   "verdict": "DATA_ONLY"
+  },
+  {
+   "doc": "docs/12_full_chain_closeout.md",
+   "line": 143,
+   "value": "92110",
+   "verdict": "DATA_ONLY"
+  },
+  {
+   "doc": "docs/12_full_chain_closeout.md",
+   "line": 143,
+   "value": "95644",
+   "verdict": "DATA_ONLY"
+  }
+ ],
+ "min_sig": 4,
+ "scripts": 13,
+ "logs": 13,
+ "data": 8,
+ "docs": 16
+}

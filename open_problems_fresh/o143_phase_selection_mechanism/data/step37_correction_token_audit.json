@@ -1,0 +1,93 @@
+{
+ "n_pass": 17,
+ "n_total": 17,
+ "results": [
+  {
+   "tag": "A1",
+   "desc": "31.8% (basis-free 佔比)",
+   "result": "PASS"
+  },
+  {
+   "tag": "A2",
+   "desc": "GRF null p = 0.078 / 0.088",
+   "result": "PASS"
+  },
+  {
+   "tag": "A3",
+   "desc": "置換 null p = 0.003 標為作廢",
+   "result": "PASS"
+  },
+  {
+   "tag": "A4",
+   "desc": "a5_nodes = 手性 I-軌道",
+   "result": "PASS"
+  },
+  {
+   "tag": "A5",
+   "desc": "rhombicosidodecahedron 唔同構型",
+   "result": "PASS"
+  },
+  {
+   "tag": "A6",
+   "desc": "兩類邊長 26.0914 / 26.1664",
+   "result": "PASS"
+  },
+  {
+   "tag": "A7",
+   "desc": "精確邊長 25.8786",
+   "result": "PASS"
+  },
+  {
+   "tag": "A8",
+   "desc": "圖 I_h (120) vs 幾何點集 I (60)",
+   "result": "PASS"
+  },
+  {
+   "tag": "A9",
+   "desc": "全天空 ℓ=3 軸 82.49 / 17.21",
+   "result": "PASS"
+  },
+  {
+   "tag": "A10",
+   "desc": "夾角 63.2°",
+   "result": "PASS"
+  },
+  {
+   "tag": "A11",
+   "desc": "5-design = 群軌道自動",
+   "result": "PASS"
+  },
+  {
+   "tag": "A12",
+   "desc": "node9 look-elsewhere p = 0.086",
+   "result": "PASS"
+  },
+  {
+   "tag": "A13",
+   "desc": "頂點傳遞定理保留",
+   "result": "PASS"
+  },
+  {
+   "tag": "A14",
+   "desc": "R3 結構定理保留",
+   "result": "PASS"
+  },
+  {
+   "tag": "A15",
+   "desc": "狀態 🟢 已閉合",
+   "result": "PASS"
+  },
+  {
+   "tag": "A16",
+   "desc": "時序索引含第 19 項 (實得 21)",
+   "result": "PASS"
+  },
+  {
+   "tag": "A17",
+   "desc": "docs/10 被引用",
+   "result": "PASS"
+  }
+ ],
+ "index_entries": 6,
+ "index_max": 21
+}

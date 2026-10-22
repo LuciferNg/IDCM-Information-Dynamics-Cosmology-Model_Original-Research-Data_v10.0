@@ -132,20 +132,3 @@ scripts/06_verify_geometric_derivation.py   ✅ 幾何代數解構 (48/48 PASS)
 docs/01_closure.md                          ✅ 完整推導文檔
 data/01-06.json                             ✅ 全部結果
 ```
-
-
----
-
-# 2026-09-22 O208 越權修改 — 需重建 (⚠️ 本段為新增, 以上原文一字不刪)
-
-> 來源: O208 docs/05_rebuild_handover.md (事故承認)
-> 狀態: 🔴 本檔案被 O208 session 越權修改, 需以本 O 上下文重建
-
-## 事項
-
-| # | 檔案 | O208 改咗啲咩 | 建議動作 |
-|:-:|:-----|:------------|:--------|
-| 1 | `scripts/06_verify_geometric_derivation.py` | 3 check(...,True) + 5 dict True 被改為計算 | 以本 O 上下文重建 (以 O69 docs 重建, 48/48 或誠實修正); 重跑確認 PASS 數唔含字面 True |
-
-## 驗證標準
-- 以 O69 docs 重建, 48/48 或誠實修正; 重建後 script 輸出 PASS 數與 O 記錄一致或誠實標註

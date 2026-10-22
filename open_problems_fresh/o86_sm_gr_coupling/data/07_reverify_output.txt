@@ -1,0 +1,90 @@
+==============================================================================
+O86 CROSS-VERSION RE-VERIFICATION -- 2026-09-20
+==============================================================================
+
+--- S1: FLRW PROJECTION  a(l) = D_app(l)/R_world ---
+    (old = falsified O76 form; current = O169)
+
+    l       z        a_old     a_new     D_old       D_new      H_old     H_new
+    ------------------------------------------------------------------------------------
+    0.000   0.0000   0.000000  0.000000  0.0         0.0        --        --
+    0.100   0.1487  0.146588  0.157814  605.4       651.8       73.6352   68.3973  
+    0.500   1.0000  0.809017  0.809557  3341.2      3343.4      89.7262   89.6664  
+    1.000   3.0000  1.629323  1.589335  6729.0      6563.9      133.6568  137.0196 
+    1.500   7.0000  2.367413  2.291725  9777.3      9464.7      214.6352  221.7239 
+    2.000  15.0000  3.031402  2.924169  12519.5     12076.6     359.1904  372.3623 
+    2.085  17.0009  3.138559  3.026117  12962.1     12497.7     393.2055  407.8158 
+  [PASS] S1a a(l) reproduces the doc table at l = 1 (1.629323)
+           old form reproduced
+  [PASS] S1b the E-factor ratio E_new/E_old -> ~1.12 as l -> 0 (not a small perturbation)
+           E_old = 1.001353378467665 , E_new = 1.12011398 , ratio = 1.1186000907232871
+  [PASS] S1c the two forms CROSS: new is larger at l = 0.1, smaller for l >= 1
+           ratio new/old : l=0.1 -> 1.076581267517281 , l=1.5 -> 0.9680292638405409
+
+--- S2: NYQUIST SATURATION  D(l_Nyq)/(pi*R_world) ---
+  [PASS] S2a old form gives 0.999019 (this is what script 01 reported)
+           reproduced: 0.9990192671425971
+  [PASS] S2b current form gives 0.963228 -- NOT half-ring saturation
+           O169/O76 value 0.9632 reproduced: 0.9632287076857056
+  [PASS] S2c the O86 green claim "Nyquist = half ring (0.9990)" does NOT survive
+           gap 3.57905594568916 % -- 0.9990 was tuned out by delta = -0.1697
+
+--- S3: VACUUM ENERGY ---
+  [PASS] S3a Omega_Lambda current = <W>^2/Sigma_gamma = 41/60
+           0.6833333333333333
+  [PASS] S3b Omega_Lambda revoked = 4/(phi^4-1) differs by 0.0076 %
+           rel diff 0.0075746829637606304 % -- cannot be distinguished numerically, only by formula identity
+  [PASS] S3c both forms sit inside the Planck 1-sigma band (0.6847 +- 0.0073)
+           old dev 0.20716036223928205 %, new dev 0.1996007984031936 %
+
+--- S4: lambda_sync + H_CMB ---
+  [PASS] S4a O86 value 93.8623 Mpc = R_world/44 = 44-site spacing a, NOT lambda_sync
+           a = R_world/N_d = 93.86227272727272
+  [PASS] S4b canonical lambda_sync = L_ring/88 = 294.8770 Mpc
+           294.8770264492416
+  [PASS] S4c lambda_sync/R_world = pi/44 only for the canonical value
+           1/44 = 0.0227272 (a/R) vs pi/44 = 0.0713999 (lambda_sync/R)
+  [PASS] S4d H_CMB = omega_ring*(1-pi/44) = 67.4071 UNAFFECTED by the lambda_sync mislabel
+           the geometric factor pi/44 is a ratio -- correct regardless of the value assigned to lambda_sync
+
+--- S5: LAGRANGIAN FORM-INVARIANCE UNDER THE ELONGATION REPLACEMENT ---
+
+    coefficient set of docs/02 section 4.2, evaluated under BOTH forms:
+  [PASS] S5a 14 of 15 coefficient-table entries are IDENTICAL under both forms
+           entries that change: ['a(l=1)']
+  [PASS] S5b the ONLY entry that changes is the projection factor a(l) itself
+           a_old(1) = 1.6293228581248422  ->  a_new(1) = 1.589335485
+  [PASS] S5c no coupling constant (GR / W-field / SM / cross) contains the elongation factor
+           the Lagrangian operator content is form-invariant
+
+    VERDICT: the elongation replacement touches ONLY the background geometry
+    a(l) that g_{mu nu} represents -- NOT the operator/coefficient structure of
+    L_total.  So the O86 Lagrangian assembly survives; its NUMERIC projection
+    claims (a(l) table, Nyquist saturation, D_app route to distances) do not.
+
+--- S6: AUDIT OF scripts/05 (rebuilt 2026-09-25) ---
+    historical: the original 2026-08-25 scripts/05 declared 34/34 with 17 literal
+    True (no condition evaluated) -- recorded in docs/03_reverification_record.md 3#10;
+    O208 rewrote it (2026-09-22) but kept withdrawn upstream values; O86 rebuilt it
+    from docs/01-08 with corrected values. This section audits the rebuild.
+  [PASS] S6a rebuilt scripts/05 declares 23 numeric checks
+           parsed 23 chk() calls
+  [PASS] S6b rebuilt scripts/05 has ZERO literal-True conditions
+           literal True 0 / 23 checks
+  [PASS] S6c rebuilt scripts/05 embeds the CORRECTED upstream values
+           lambda_sync / Nyquist / Omega_L / Lambda_eff present
+
+==============================================================================
+RESULT: 19/19 PASS
+==============================================================================
+
+CORRECTED O86 NUMBERS (to be used going forward):
+  lambda_sync      = 294.8770 Mpc      (was 93.8623 = R_world/44 = a)
+  Omega_Lambda     = 41/60 = 0.6833333  (was 4/(phi^4-1) = 0.6832816)
+  E(l)             = l + 1.11911398     (was 1 + 2 phi^-1 l)
+  C (delta coeff)  = -0.23606798        (was -0.1697)
+  D_A(l_Nyq)/piR   = 0.963228           (was 0.999019)
+  H_CMB            = 67.4071            (unchanged)
+  omega_ring       = 72.590027          (unchanged)
+  M0, mu^2, lambda, <W>^2, kappa^2, y_f, lambda_WH, zeta, V_Lambda -- unchanged
+

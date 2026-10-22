@@ -1,0 +1,542 @@
+{
+  "integers": [
+    {
+      "value": 2,
+      "name": "μ²",
+      "meaning": "自對偶 = E−O = log₂B = γ₄₄/2 (Nyquist 補償缺對盈餘)",
+      "source": "O151/O153"
+    },
+    {
+      "value": 3,
+      "name": "N_gen",
+      "meaning": "世代數 = 最小生成集",
+      "source": "O152"
+    },
+    {
+      "value": 4,
+      "name": "B",
+      "meaning": "分支因子 = γ₄₄ Nyquist = φ³−φ⁻³ (metric)",
+      "source": "O157"
+    },
+    {
+      "value": 5,
+      "name": "F₅",
+      "meaning": "AP 步 = δ 因子 = 5-AP 生成器",
+      "source": "O155"
+    },
+    {
+      "value": 6,
+      "name": "2N_gen",
+      "meaning": "= 2×3 世代倍數 (O151 容量階梯乘數)",
+      "source": "O151"
+    },
+    {
+      "value": 7,
+      "name": "L₄",
+      "meaning": "Lucas-4",
+      "source": "O142"
+    },
+    {
+      "value": 8,
+      "name": "2B",
+      "meaning": "純玻色子索引 (O137 集合)",
+      "source": "O137/O154"
+    },
+    {
+      "value": 11,
+      "name": "L₅",
+      "meaning": "AP 步長 = N_d/4 = 階梯單位",
+      "source": "O145/O158"
+    },
+    {
+      "value": 12,
+      "name": "B·N_gen",
+      "meaning": "dim(G_SM)/4? = L₅+1 = 世代格基",
+      "source": "O155"
+    },
+    {
+      "value": 13,
+      "name": "F₇",
+      "meaning": "Ω_DM/Ω_b 分子 (13/2)",
+      "source": "O151"
+    },
+    {
+      "value": 16,
+      "name": "B²",
+      "meaning": "SO(10) spinor = 每代 SM 費米子",
+      "source": "O151"
+    },
+    {
+      "value": 17,
+      "name": "F_proj",
+      "meaning": "投影維度 = L₆−1 = 質子候選 A 分子",
+      "source": "O142/O158"
+    },
+    {
+      "value": 19,
+      "name": "f_proj",
+      "meaning": "投影分子 = N_d/2−N_gen = B²+N_gen",
+      "source": "O148/O158"
+    },
+    {
+      "value": 21,
+      "name": "F₈",
+      "meaning": "AP 終止 = C(L₄,2) = K_tree−dim(G_SM)",
+      "source": "O155/O158"
+    },
+    {
+      "value": 22,
+      "name": "N_d/2",
+      "meaning": "半鏈 = 2L₅ = Z₂ 軌道數",
+      "source": "O151"
+    },
+    {
+      "value": 29,
+      "name": "L₇",
+      "meaning": "Lucas-7 = ΣD6/2",
+      "source": "O142/O155"
+    },
+    {
+      "value": 30,
+      "name": "Tr(χ)",
+      "meaning": "特徵和 = N_d−2L₄ = K_tree−N_gen = Σγ_even/3",
+      "source": "O158"
+    },
+    {
+      "value": 32,
+      "name": "2B²",
+      "meaning": "純玻色子索引 = X₄H₄₀ 籠",
+      "source": "O154"
+    },
+    {
+      "value": 33,
+      "name": "K_tree",
+      "meaning": "樹深度 = F₄·L₅ = F₉−1 = 6+11+16",
+      "source": "O155"
+    },
+    {
+      "value": 36,
+      "name": "h¹¹",
+      "meaning": "CY₃ Hodge (36,98)",
+      "source": "O53"
+    },
+    {
+      "value": 38,
+      "name": "N_d−2N_gen",
+      "meaning": "×41 聚類成員 (H/W 分子)",
+      "source": "O158"
+    },
+    {
+      "value": 40,
+      "name": "N_d−B",
+      "meaning": "純玻色子索引 (H 原子數)",
+      "source": "O154"
+    },
+    {
+      "value": 41,
+      "name": "f_unproj",
+      "meaning": "投影分母 = N_d−N_gen = 19+2L₅",
+      "source": "O148/O158"
+    },
+    {
+      "value": 42,
+      "name": "N_d⁻",
+      "meaning": "觀察者側維度 = 2N−134 = K_tree+F₇",
+      "source": "O153/O155"
+    },
+    {
+      "value": 43,
+      "name": "boundary",
+      "meaning": "邊界 mode (43/45 括住 k=44)",
+      "source": "O155"
+    },
+    {
+      "value": 44,
+      "name": "N_d",
+      "meaning": "世界維度 (88-site 對偶鏈一半)",
+      "source": "O95"
+    },
+    {
+      "value": 45,
+      "name": "N_d+1",
+      "meaning": "世界模式指數質心 = Σγ_even/2 = 180/B",
+      "source": "O158"
+    },
+    {
+      "value": 46,
+      "name": "N_d⁺",
+      "meaning": "世界自我維度 = 42+B = 33+13",
+      "source": "O153/O155"
+    },
+    {
+      "value": 47,
+      "name": "L₈",
+      "meaning": "質子候選 B = N_d+N_gen = K_tree+2L₄",
+      "source": "O158"
+    },
+    {
+      "value": 55,
+      "name": "F₁₀",
+      "meaning": "θ₂₃ home 尺度 = 33²+44² 斜邊 = C(L₅,2)",
+      "source": "O156"
+    },
+    {
+      "value": 60,
+      "name": "B·N_gen·F₅",
+      "meaning": "2Tr(χ) = D=60 操作身份",
+      "source": "O158"
+    },
+    {
+      "value": 66,
+      "name": "2K_tree",
+      "meaning": "Σλ = dim Λ²(12) = 36+30",
+      "source": "O155/O59"
+    },
+    {
+      "value": 68,
+      "name": "2F₉",
+      "meaning": "Dirichlet 分母 (2(K_tree+1))",
+      "source": "O155"
+    },
+    {
+      "value": 77,
+      "name": "L₄·L₅",
+      "meaning": "= 7×11, K_tree+44",
+      "source": "O142"
+    },
+    {
+      "value": 88,
+      "name": "Σγ_odd",
+      "meaning": "觀察者預算 = 容量 C_obs = 22×B",
+      "source": "O151"
+    },
+    {
+      "value": 90,
+      "name": "Σγ_even",
+      "meaning": "世界預算 = 44-mode Σγ",
+      "source": "O34"
+    },
+    {
+      "value": 92,
+      "name": "Σγ_even+μ²",
+      "meaning": "家族第三級 = 2N_d⁺",
+      "source": "O153"
+    },
+    {
+      "value": 123,
+      "name": "L₁₀",
+      "meaning": "= 3·41 = 176−53 = 2N+2μ²−1?",
+      "source": "O142"
+    },
+    {
+      "value": 126,
+      "name": "2N_gen·F₈",
+      "meaning": "跨維度乘積",
+      "source": "O155"
+    },
+    {
+      "value": 134,
+      "name": "h¹¹+h²¹",
+      "meaning": "CY₃ 總模數 = 66+68 = 4K_tree+2",
+      "source": "O155"
+    },
+    {
+      "value": 137,
+      "name": "α⁻¹(0)",
+      "meaning": "3N_d+F₅ (唯一大質數, 加法閉合)",
+      "source": "O142/O155"
+    },
+    {
+      "value": 143,
+      "name": "dim SU(12)",
+      "meaning": "= 66+77 = L₅×F₇",
+      "source": "O145"
+    },
+    {
+      "value": 176,
+      "name": "2N_d",
+      "meaning": "= L₅·B² = 鏈容量+勢差",
+      "source": "O145/O153"
+    },
+    {
+      "value": 178,
+      "name": "2F₁₁",
+      "meaning": "Σγ 總 = 90+88",
+      "source": "O34"
+    },
+    {
+      "value": 180,
+      "name": "B(N_d+1)",
+      "meaning": "= 2N+2μ² = 134+46",
+      "source": "O153"
+    },
+    {
+      "value": 264,
+      "name": "6U(1)×N_d",
+      "meaning": "extra U(1) 水平對稱容量",
+      "source": "O107/O147"
+    },
+    {
+      "value": 528,
+      "name": "N_d×dim(G_SM)",
+      "meaning": "= C(33,2) 容量",
+      "source": "O151"
+    },
+    {
+      "value": 5940,
+      "name": "ΣΓ",
+      "meaning": "= B·N_gen³·F₅·L₅ = 90×66 張量總跡",
+      "source": "O157"
+    }
+  ],
+  "halfints": [
+    {
+      "value": 0.5,
+      "name": "log₄2",
+      "meaning": "半質心差 (世界/觀察者質心差/2)",
+      "source": "O158"
+    },
+    {
+      "value": 28.5,
+      "name": "E_PROJ",
+      "meaning": "57/2 = (N_d+F₇)/2 未被投影能量",
+      "source": "v2core"
+    },
+    {
+      "value": 30.75,
+      "name": "L₁₀/4",
+      "meaning": "N_d·E_min quarter-integer",
+      "source": "O152"
+    },
+    {
+      "value": 43.5,
+      "name": "3L₇/2",
+      "meaning": "beat 零點縫",
+      "source": "O152"
+    },
+    {
+      "value": 61.5,
+      "name": "L₁₀/2",
+      "meaning": "E_SYNC 同步能量 = 123/2",
+      "source": "v2core/O41"
+    },
+    {
+      "value": 291.5,
+      "name": "N_d·L",
+      "meaning": "μ-ladder 指數 = L₅·53/2",
+      "source": "O157"
+    }
+  ],
+  "rationals": [
+    {
+      "value": 0.030303030303030304,
+      "frac": "1/33",
+      "name": "p_B",
+      "meaning": "邊界密度 = ⟨ψ₀|P_B|ψ₀⟩ 零模機率",
+      "source": "O155"
+    },
+    {
+      "value": 6.5,
+      "frac": "13/2",
+      "name": "Ω_DM/Ω_b",
+      "meaning": "暗物質/重子比",
+      "source": "O151"
+    },
+    {
+      "value": 0.15447154471544716,
+      "frac": "19/123",
+      "name": "ε_exact",
+      "meaning": "= (19/41)/3 真空能投影",
+      "source": "O153"
+    },
+    {
+      "value": 0.4634146341463415,
+      "frac": "19/41",
+      "name": "ε",
+      "meaning": "Ω_m/Ω_Λ = f_proj/f_unproj = (Tr(χ)−L₅)/(Tr(χ)+L₅)",
+      "source": "O148"
+    },
+    {
+      "value": 0.31666666666666665,
+      "frac": "19/60",
+      "name": "f_proj/60",
+      "meaning": "投影能量份額",
+      "source": "O148"
+    },
+    {
+      "value": 0.9696969696969697,
+      "frac": "32/33",
+      "name": "p_I",
+      "meaning": "內部密度 = 1−p_B",
+      "source": "O155"
+    },
+    {
+      "value": 0.75,
+      "frac": "33/44",
+      "name": "K_tree/N_d",
+      "meaning": "= 3/4 樹/鏈維度比",
+      "source": "O155"
+    },
+    {
+      "value": 1.3333333333333333,
+      "frac": "4/3",
+      "name": "B/N_gen",
+      "meaning": "維度比 4:3 (Pythagorean 3-4-5)",
+      "source": "O156"
+    },
+    {
+      "value": 0.6833333333333333,
+      "frac": "41/60",
+      "name": "f_unproj/60",
+      "meaning": "未被投影能量份額",
+      "source": "O148"
+    },
+    {
+      "value": 1.0227272727272727,
+      "frac": "45/44",
+      "name": "90/88",
+      "meaning": "世界/觀察者預算比",
+      "source": "O34"
+    },
+    {
+      "value": 6.625,
+      "frac": "53/8",
+      "name": "L",
+      "meaning": "= (2N−L₁₀)/F₆ 勢參數",
+      "source": "O77/O157"
+    },
+    {
+      "value": 1.525,
+      "frac": "61/40",
+      "name": "A_fac",
+      "meaning": "冷斑幅度 88×61/40 = 134.2μK",
+      "source": "O41/O42"
+    },
+    {
+      "value": 2.6666666666666665,
+      "frac": "8/3",
+      "name": "λ_SC",
+      "meaning": "C_obs/M = 88/33 超導耦合",
+      "source": "O154"
+    },
+    {
+      "value": 0.9777777777777777,
+      "frac": "88/90",
+      "name": "44/45",
+      "meaning": "觀察者/世界預算比 (倒數)",
+      "source": "O34"
+    }
+  ],
+  "obs": [
+    {
+      "value": 0.8813589,
+      "name": "m_W/m_Z",
+      "err": 1.5e-05
+    },
+    {
+      "value": 1.5584394,
+      "name": "m_H/m_W",
+      "err": 0.0022
+    },
+    {
+      "value": 1.3735401,
+      "name": "m_H/m_Z",
+      "err": 0.002
+    },
+    {
+      "value": 0.42558,
+      "name": "m_τ/m_b",
+      "err": 0.0055
+    },
+    {
+      "value": 206.7683,
+      "name": "m_μ/m_e",
+      "err": 2e-06
+    },
+    {
+      "value": 41.3,
+      "name": "m_t/m_b",
+      "err": 0.1
+    },
+    {
+      "value": 13.7,
+      "name": "m_c/m_s",
+      "err": 0.09
+    },
+    {
+      "value": 3.287,
+      "name": "m_b/m_c",
+      "err": 0.07
+    },
+    {
+      "value": 19.5,
+      "name": "m_s/m_d",
+      "err": 0.12
+    },
+    {
+      "value": 0.45,
+      "name": "m_u/m_d",
+      "err": 0.33
+    },
+    {
+      "value": 0.57301,
+      "name": "sin²θ₂₃",
+      "err": 0.00035
+    },
+    {
+      "value": 0.304,
+      "name": "sin²θ₁₂",
+      "err": 0.008
+    },
+    {
+      "value": 0.02219,
+      "name": "sin²θ₁₃",
+      "err": 0.014
+    },
+    {
+      "value": 0.0329,
+      "name": "J_PMNS",
+      "err": 0.02
+    },
+    {
+      "value": 0.2243,
+      "name": "|V_us|",
+      "err": 0.005
+    },
+    {
+      "value": 0.0422,
+      "name": "|V_cb|",
+      "err": 0.012
+    },
+    {
+      "value": 0.00369,
+      "name": "|V_ub|",
+      "err": 0.035
+    },
+    {
+      "value": 0.0087,
+      "name": "|V_td|",
+      "err": 0.06
+    },
+    {
+      "value": 3.08e-05,
+      "name": "J_CKM",
+      "err": 0.04
+    },
+    {
+      "value": 137.036,
+      "name": "α⁻¹(0)",
+      "err": 0.0001
+    },
+    {
+      "value": 6.5,
+      "name": "Ω_DM/Ω_b",
+      "err": 0.08
+    },
+    {
+      "value": 0.4633,
+      "name": "Ω_m/Ω_Λ",
+      "err": 0.05
+    }
+  ]
+}

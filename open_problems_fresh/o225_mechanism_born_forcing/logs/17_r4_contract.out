@@ -1,0 +1,13 @@
+================================================================================================================
+O225 scripts/17 -- R4 CONTRACT ENFORCER   (rules: r4-tie-parity-v1)
+================================================================================================================
+[PASS] C1     合約 doc 含 P1–P8 全部判據標籤  --  missing = [] ; 凍結日期行存在 = True
+[PASS] C2     合約 doc 含關鍵定義詞  --  missing = [] ; chars = 3183
+[PASS] C3     scripts/18,19 通過禁字集掃描（無禁模組、無 float 字面值）  --  issues = [] ; stats = {'scripts/18_r4_tie_parity.py': {'imports': 7, 'float_literals': 0, 'divisions': 2, 'has_fractions': True}, 'scripts/19_r4_audit.py': {'imports': 7, 'float_literals': 0, 'divisions': 0, 'has_fractions': True}}
+[PASS] C4     scripts/18,19 皆以 Fraction 精確算術為主（from fractions import Fraction）  --  {'scripts/18_r4_tie_parity.py': {'imports': 7, 'float_literals': 0, 'divisions': 2, 'has_fractions': True}, 'scripts/19_r4_audit.py': {'imports': 7, 'float_literals': 0, 'divisions': 0, 'has_fractions': True}}
+[PASS] C5     陽性對照：人造違規源必須被拒（3 類違規全部命中）  --  detected = 3 ; ['positive_control: forbidden import math (line 1)', 'positive_control: forbidden from-import numpy (line 3)', 'positive_control: float literal 1.5 (line 2)']
+[PASS] C6     陰性對照：合法精確算術源必須通過  --  issues = []
+[PASS] C7     上游 O222 凍結輸入 + 合約 doc 之 SHA-256 摘錄已落盤，GATE = OPEN  --  contract sha = 4d04261cb8851d41…
+================================================================================================================
+RESULT: 7/7 PASS
+================================================================================================================

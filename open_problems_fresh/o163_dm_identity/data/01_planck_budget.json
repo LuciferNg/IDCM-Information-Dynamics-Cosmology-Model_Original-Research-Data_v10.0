@@ -1,0 +1,38 @@
+{
+  "source": "Planck 2018, arXiv:1807.06209, Table 2",
+  "retrieved": "2026-09-09",
+  "TT_TE_EE_lowE": {
+    "Omega_m": 0.3153,
+    "Omega_m_err": 0.0073,
+    "Omega_Lambda": 0.6847,
+    "Omega_Lambda_err": 0.0073,
+    "Omega_b_h2": 0.02237,
+    "Omega_b_h2_err": 0.00015,
+    "Omega_c_h2": 0.1200,
+    "Omega_c_h2_err": 0.0012,
+    "h": 0.6736,
+    "h_err": 0.0054
+  },
+  "TT_TE_EE_lowE_BAO": {
+    "Omega_m": 0.3111,
+    "Omega_m_err": 0.0056,
+    "Omega_Lambda": 0.6889,
+    "Omega_Lambda_err": 0.0056
+  },
+  "derived": {
+    "Omega_b": 0.04931,
+    "Omega_DM": 0.2645,
+    "Omega_DM_over_Omega_b": 5.365
+  },
+  "idcm_comparison": {
+    "Omega_m_idcm": 0.3166666667,
+    "Omega_m_dev": 0.00433,
+    "Omega_Lambda_idcm": 0.6833333333,
+    "Omega_Lambda_dev": -0.00200,
+    "Omega_b_h2_idcm": 0.02224,
+    "Omega_b_h2_dev": -0.0058,
+    "Omega_DM_h2_idcm": 0.14464,
+    "Omega_DM_h2_dev": 0.205,
+    "h_idcm": 0.7259
+  }
+}

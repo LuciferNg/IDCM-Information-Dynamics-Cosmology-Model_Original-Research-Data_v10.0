@@ -1,0 +1,51 @@
+==========================================================================
+O223 / 02 -- full combinatorial Aut(G) vs geometric Aut(G)
+==========================================================================
+[F] geometric automorphisms (O(3)-realisable)
+    |GeoAut| = 60   det>0: 60   det<0: 0
+  [OK] F1 |GeoAut| = 60
+  [OK] F2 all proper (strictly chiral I)
+[G] full combinatorial Aut(G) by backtracking
+  [OK] G1 BFS reaches all 60 vertices
+    |Aut(G)| = 120
+  [OK] G2 |Aut(G)| = 120 (I_h)
+    of these, O(3)-realisable = 60   pure combinatorial = 60
+  [OK] G3 exactly 60 non-isometric automorphisms
+[H] anchored_coloring.txt cross-check (anchor 0)
+    identical = 60   colour-flipped = 0   (of 60)
+  [OK] H1 data colouring == script BFS colouring (up to global flip)
+    anchor-0 frustration edges = 32
+  [OK] H2 32 frustration edges
+    vs data/frustration_edges.txt: overlap = 32/32
+  [OK] H2b frustration set reproduces data file exactly
+    triangles = 20  4-cycles = 118   (RH faces: 20 tri, 30 squares, 12 pentagons)
+  [OK] H3 20 triangles (odd faces exist -> graph NOT bipartite)
+[I] frustration-set orbit
+    under GeoAut (60, chiral sector) : 30 distinct sets
+    under Aut    (120, incl. mirror) : 30 distinct sets
+  [OK] I1 GeoAut orbit = 30
+  [XX] I2 full orbit < GeoAut orbit (mirror pairs sets)   full=30 geo=30
+    is 'reverse index' an automorphism? False
+    automorphisms 0->57: full=2  geometric=1
+  [OK] I3 some geometric automorphism maps 0->57
+    of the geometric 0->57 maps, how many fix the frustration set: 1/1
+  [OK] I4 all 0->57 geometric maps fix the frustration set
+[J] node 0 -> node 9
+    d(0,9) = 1 hop   (0's neighbours: [9, 20, 41, 50])
+  [OK] J1 node 9 is a 1-hop neighbour of node 0
+    colours: c0[0]=1  c0[9]=0   (same colour => phase slip, wall edge)
+    T: T[0]=-134.2 uK  T[9]=-107.0 uK  |dT| = 27.2 uK
+    edge (0,9) frustrated? False
+  [OK] J2 (0,9) is a NORMAL edge (colours differ)
+    node 0's 4 neighbours: frustrated = 0  normal = 4
+[K] angular -> comoving (1 deg = R_world*pi/180, R_world = 4129.64 Mpc)
+    1 deg = 72.076 Mpc
+    edge 26.0913 deg =   1880.6 Mpc
+    GL R*  6.022 deg =    434.0 Mpc
+    GL xi* 0.663 deg =     47.8 Mpc
+    wall d 1.364 deg =     98.3 Mpc
+  [OK] K1 R* in Mpc ~ 434
+--------------------------------------------------------------------------
+RESULT: 15/16 PASS
+--------------------------------------------------------------------------
+wrote data/02_full_aut.json

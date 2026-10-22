@@ -1,0 +1,22 @@
+======================================================================================================================
+O222 scripts/26 -- C2+G7 enforcer (c2g7-contract-v1)   impl = scripts/27_c2g7_measure.py
+======================================================================================================================
+[PASS] U    frozen upstream scripts/09_a2_rollback.py pinned  --  sha256 d8037bb16f69
+[PASS] U    frozen upstream scripts/12_b5_budget.py pinned  --  sha256 f2cb54fa5df0
+[PASS] U    frozen upstream scripts/15_b3r2_orderfair.py pinned  --  sha256 14e17e7cdff2
+[PASS] U4   upstream GATE released by the G5 round  --  logs/23_g5_contract.out contains GATE = OPEN
+[PASS] I2   correlation record structure (denominator 120, 62x62 tables, C1/C2/C1rev)  --  sha256 dbe664760d36
+[PASS] A1   machine imports no banned module  --  imports = ['bisect', 'fractions', 'hashlib', 'importlib', 'io', 'itertools', 'json', 'os', 'sys', 'time']
+[PASS] A2   machine declares no banned identifier  --  hits = []
+[PASS] A3   machine contains no non-integer float literal  --  literals = []
+[PASS] A4   no eval/exec/compile in the machine
+[PASS] A5   no random sampling anywhere in the machine
+[PASS] C1   all 9 frozen ASCII anchors appear in BOTH the contract and the machine  --  missing = []
+[PASS] C2   the machine declares the seven frozen cells C1..C7 in order
+[PASS] C3   the machine loads the two frozen interfaces (scripts/12 machine, scripts/15 anti)
+[PASS] C4   the machine writes its own append-only result record
+[PASS] C5   the machine never imports the enforcer or the audit
+----------------------------------------------------------------------------------------------------------------------
+RESULT: 15/15 PASS
+GATE = OPEN   impl frozen at d8d7443603de
+----------------------------------------------------------------------------------------------------------------------

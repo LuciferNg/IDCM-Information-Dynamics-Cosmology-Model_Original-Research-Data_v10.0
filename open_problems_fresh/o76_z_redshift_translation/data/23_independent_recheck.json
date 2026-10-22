@@ -1,0 +1,11 @@
+{
+  "n_p": 0.142618,
+  "alpha_fit": -0.13772,
+  "chi2_idcm": 2006.8,
+  "chi2_lcdm": 2002.1,
+  "delta_chi2": 4.7,
+  "chi2_desi": 12.82,
+  "nyquist_ratio": 0.999,
+  "pass": 17,
+  "fail": 0
+}

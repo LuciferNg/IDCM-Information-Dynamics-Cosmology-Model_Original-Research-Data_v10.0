@@ -1,0 +1,28 @@
+============================================================================
+O223 / 08 -- multi-scale / multi-component node-field verification
+============================================================================
+[I] colouring(anchor 0): cold class n = 30 ; frustration histogram = {np.int64(0): np.int64(8), np.int64(1): np.int64(40), np.int64(2): np.int64(12)}
+
+[M] extracting node fields (10 maps):
+     map                     T[node0]    r_col  dT_anch   p_perm    f2|T|    f1|T|
+     smica2_smooth0.5         -203.25  -0.2474   -45.02   0.0062    42.45    76.74
+     smica2_smooth1.0         -173.17  -0.2668   -36.69   0.0035    31.71    59.80
+     smica2_smooth1.5         -160.82  -0.2757   -32.26   0.0020    28.02    50.28
+     smica2_smooth2.0         -154.13  -0.2742   -29.47   0.0026    26.23    44.45
+     smica2_smooth3.0         -144.83  -0.2587   -25.39   0.0039    21.57    38.44
+     smica2_smooth4.0         -135.92  -0.2453   -22.68   0.0076    19.19    36.32
+     smica2_smooth4.17        -134.16  -0.2434   -22.30   0.0080    18.99    36.17
+     smica2_smooth10.0         -68.82  -0.1806   -12.49   0.0505    21.58    28.77
+     commander_smooth4.17     -133.29  -0.2388   -21.98   0.0077    18.34    36.22
+     nilc2_smooth4.17         -134.06  -0.2424   -22.12   0.0069    20.20    35.99
+
+[M2] r(colour, T): mean -0.2473  |r| max 0.2757  (all 10 maps)
+  [OK] M2 colour stays a weak predictor at every scale/component
+[M3] frust=2 vs rest: mean|T| 24.83 vs 44.32 uK ; smaller in 10/10 maps
+  [OK] M3 Delta E = 0 nodes are quieter in >= 8/10 maps
+[M4] anchored dT: mean -27.04 uK ; negative in 10/10 maps
+  [OK] M4 the anchored contrast keeps its sign across scales
+
+----------------------------------------------------------------------------
+RESULT: 3/3 PASS
+----------------------------------------------------------------------------

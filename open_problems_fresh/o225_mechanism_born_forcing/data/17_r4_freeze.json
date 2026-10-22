@@ -1,0 +1,101 @@
+{
+ "rules": "r4-tie-parity-v1",
+ "date": "2026-10-01",
+ "contract_doc": "docs/07_r4_contract.md",
+ "contract_sha256": "4d04261cb8851d416d9c989819cb26c8079721f219ddd7378617d1e09978e30e",
+ "o222_frozen": {
+  "scripts/09_a2_rollback.py": {
+   "sha256": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace",
+   "bytes": 28535
+  },
+  "scripts/12_b5_budget.py": {
+   "sha256": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a",
+   "bytes": 17795
+  },
+  "data/04_b2_settings.json": {
+   "sha256": "2357006c68e0165dc9fd7d8d73524593a776e1bf6a8b62ddbc8dc2c1a8af20ee",
+   "bytes": 151254
+  },
+  "data/08_a2_h_table.json": {
+   "sha256": "adeaf8a7fb5495ea57be194c1a704c973a9208026cdd10ef615cd59c58005b66",
+   "bytes": 11114
+  }
+ },
+ "gate": "OPEN",
+ "enforced": {
+  "files": [
+   "scripts/18_r4_tie_parity.py",
+   "scripts/19_r4_audit.py"
+  ],
+  "forbidden_modules": [
+   "math",
+   "random",
+   "numpy",
+   "scipy",
+   "statistics",
+   "cmath",
+   "decimal",
+   "secrets",
+   "mpmath"
+  ],
+  "float_literals_allowed": false,
+  "stats": {
+   "scripts/18_r4_tie_parity.py": {
+    "imports": 7,
+    "float_literals": 0,
+    "divisions": 2,
+    "has_fractions": true
+   },
+   "scripts/19_r4_audit.py": {
+    "imports": 7,
+    "float_literals": 0,
+    "divisions": 0,
+    "has_fractions": true
+   }
+  }
+ },
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "合約 doc 含 P1–P8 全部判據標籤",
+   "ok": true,
+   "detail": "missing = [] ; 凍結日期行存在 = True"
+  },
+  {
+   "tag": "C2",
+   "name": "合約 doc 含關鍵定義詞",
+   "ok": true,
+   "detail": "missing = [] ; chars = 3183"
+  },
+  {
+   "tag": "C3",
+   "name": "scripts/18,19 通過禁字集掃描（無禁模組、無 float 字面值）",
+   "ok": true,
+   "detail": "issues = [] ; stats = {'scripts/18_r4_tie_parity.py': {'imports': 7, 'float_literals': 0, 'divisions': 2, 'has_fractions': True}, 'scripts/19_r4_audit.py': {'imports': 7, 'float_literals': 0, 'divisions': 0, 'has_fractions': True}}"
+  },
+  {
+   "tag": "C4",
+   "name": "scripts/18,19 皆以 Fraction 精確算術為主（from fractions import Fraction）",
+   "ok": true,
+   "detail": "{'scripts/18_r4_tie_parity.py': {'imports': 7, 'float_literals': 0, 'divisions': 2, 'has_fractions': True}, 'scripts/19_r4_audit.py': {'imports': 7, 'float_literals': 0, 'divisions': 0, 'has_fractions': True}}"
+  },
+  {
+   "tag": "C5",
+   "name": "陽性對照：人造違規源必須被拒（3 類違規全部命中）",
+   "ok": true,
+   "detail": "detected = 3 ; ['positive_control: forbidden import math (line 1)', 'positive_control: forbidden from-import numpy (line 3)', 'positive_control: float literal 1.5 (line 2)']"
+  },
+  {
+   "tag": "C6",
+   "name": "陰性對照：合法精確算術源必須通過",
+   "ok": true,
+   "detail": "issues = []"
+  },
+  {
+   "tag": "C7",
+   "name": "上游 O222 凍結輸入 + 合約 doc 之 SHA-256 摘錄已落盤，GATE = OPEN",
+   "ok": true,
+   "detail": "contract sha = 4d04261cb8851d41…"
+  }
+ ]
+}

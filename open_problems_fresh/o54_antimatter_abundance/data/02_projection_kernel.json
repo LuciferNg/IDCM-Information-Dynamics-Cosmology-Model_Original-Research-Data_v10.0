@@ -1,0 +1,31 @@
+{
+  "test": "投影算符 kernel 分析",
+  "n_star": 27,
+  "f_proj": 0.7719601959627264,
+  "E_proj_check": 28.500000000000004,
+  "E_proj_target": 28.5,
+  "kernel_modes": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "kernel_count": 17,
+  "kernel_energy": 60.8845369058578,
+  "E_sync_check": 61.5,
+  "conservation_sum": 90.0,
+  "conclusion": "ker(T_pipe) = 高頻 sync 真空 (60.8845), 唔係反物質; 反投影=黑洞通道; 反物質需 CP 相位分辨 (檢查 3)"
+}

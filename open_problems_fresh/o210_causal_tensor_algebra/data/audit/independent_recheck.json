@@ -1,0 +1,34 @@
+{
+ "A_sectors": [
+  "46.0",
+  "42.999362419406996229",
+  "44.0",
+  "45.000637580593003771"
+ ],
+ "stats": {
+  "PASS": 69,
+  "FAIL": 0
+ },
+ "scripts_on_disk": [
+  "01_closure_verify",
+  "02_type_registry",
+  "03_inbound_recompute",
+  "04_escape_period_derivation",
+  "05_operator_layer_selection",
+  "06_branch_charge_definition",
+  "07_ktree_two_counts",
+  "08_z4_bridge_definition",
+  "09_common_measure",
+  "10_audit_independent",
+  "11_session_chain_provenance",
+  "12_register_coverage",
+  "13_manifest"
+ ],
+ "logs": 13,
+ "unbound_final_result": [
+  "1507",
+  "29.1155",
+  "6155",
+  "618"
+ ]
+}

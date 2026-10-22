@@ -1,0 +1,48 @@
+================================================================================================================
+O228 scripts/19 -- R8 route 3: delocalisation of the k_min = 7 obstruction
+================================================================================================================
+M_edge: 30 rows, 62 columns, 435 pairs
+   F_6(R of 30 rows) = 0   (4.60 s)
+[PASS] P5-1  -- F_6 = 0 in 4.60 s
+   F_6(R of 29 rows) = 0   (4.63 s)
+   F_6(R of 28 rows) = 0   (4.57 s)
+   F_6(R of 27 rows) = 0   (4.55 s)
+   F_6(R of 26 rows) = 0   (4.51 s)
+   F_6(R of 25 rows) = 0   (4.77 s)
+   F_6(R of 24 rows) = 0   (4.65 s)
+   F_6(R of 23 rows) = 5   (4.73 s)
+minimal critical prefix size k* = 24
+   F_6(R of 23 rows) = 5   (4.58 s)
+   F_6(R of 23 rows) = 5   (4.59 s)
+   F_6(R of 23 rows) = 5   (4.53 s)
+   F_6(R of 23 rows) = 5   (4.54 s)
+   F_6(R of 23 rows) = 5   (4.54 s)
+   F_6(R of 23 rows) = 5   (4.50 s)
+   F_6(R of 23 rows) = 5   (4.50 s)
+   F_6(R of 23 rows) = 5   (4.52 s)
+   F_6(R of 23 rows) = 5   (4.53 s)
+   F_6(R of 23 rows) = 5   (4.51 s)
+   F_6(R of 23 rows) = 5   (4.53 s)
+   F_6(R of 23 rows) = 5   (4.69 s)
+   F_6(R of 23 rows) = 5   (4.55 s)
+   F_6(R of 23 rows) = 5   (4.57 s)
+   F_6(R of 23 rows) = 5   (4.54 s)
+   F_6(R of 23 rows) = 5   (4.55 s)
+   F_6(R of 23 rows) = 5   (4.57 s)
+   F_6(R of 23 rows) = 5   (4.54 s)
+   F_6(R of 23 rows) = 5   (4.57 s)
+   F_6(R of 23 rows) = 5   (4.56 s)
+   F_6(R of 23 rows) = 5   (4.56 s)
+   F_6(R of 23 rows) = 5   (4.57 s)
+   F_6(R of 23 rows) = 5   (4.58 s)
+removal-minimality: True (24 single removals tested)
+[FAIL] P4-1  -- minimal critical PREFIX = 24 ; scripts/18 ddmin + single-removal could not go below 24 either
+[PASS] P4-2  -- every single removal from the 24-row critical prefix restores F_6 > 0: True (24 tested)
+[FAIL] P4-3  -- NO: see P4-6 (monotonicity no-go) and scripts/18 (greedy packing 5, exact LP 5)
+[PASS] P4-4  -- cap(6) = 32 ; minimal critical prefix = 24
+[PASS] P4-5  -- k* = 24 ; ddmin stall 24 ; every F_6 evaluation recorded with its timing
+[PASS] P4-6  -- scripts/18: greedy packing 5, exact LP 5, need 7
+================================================================================================================
+RESULT: 5/7 PASS  (2 FAIL)   elapsed 143.9 s
+================================================================================================================
+exit=1

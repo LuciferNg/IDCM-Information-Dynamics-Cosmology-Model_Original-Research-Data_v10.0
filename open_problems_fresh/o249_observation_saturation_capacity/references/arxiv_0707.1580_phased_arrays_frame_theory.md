@@ -769,7 +769,7 @@ Comparing with ( [18](https://ar5iv.labs.arxiv.org/html/0707.1580#S2.Ex2 "In 2 B
 
 |     |     |     |     |
 | --- | --- | --- | --- |
-|  | ∑pAp​Ωp/λ2=∑pσp2≤M​.\\sum\_{p}A\_{p}\\,\\Omega\_{p}/\\lambda^{2}=\\sum\_{p}\\sigma\_{p}^{2}\\,\\leq\\,M\\mbox{.} |  | (34) |
+|  | ∑pAp​Ωp/λ2=∑pσP2≤M​.\\sum\_{p}A\_{p}\\,\\Omega\_{p}/\\lambda^{2}=\\sum\_{p}\\sigma\_{p}^{2}\\,\\leq\\,M\\mbox{.} |  | (34) |
 
 The total throughput is determined by the number of singular values
 significantly greater than some threshold, usually determined by the

@@ -1,0 +1,7 @@
+distinct row types: 12
+row-type pairs to separate: 66
+MINIMUM separating frame size = 4  (one witness: ['V02', 'F00', 'V00', 'V04'])
+PR-1 (min frame < 62): HOLDS (redundant)
+=> maximum axes deletable while KEEPING a separating set: 58 (delete 58)
+rank of K restricted to the minimal frame = 4 (base 6)
+PR-2 (>=50% deletable keeping rank 6&separation): HOLDS

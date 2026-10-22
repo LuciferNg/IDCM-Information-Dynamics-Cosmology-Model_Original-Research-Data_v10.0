@@ -1,0 +1,22 @@
+{
+  "forward_model": "N_obs(z) \u221d n_true(z) \u00d7 \u222b\u03a6dL \u00d7 \u0394V \u00d7 P_conf",
+  "n_true": "1/(1+z)",
+  "distance": "D_app(ell) = (44-44/4^ell)(R_H/44)(1+2*phi^-1*ell)",
+  "schechter": {
+    "L_star": 1e+43,
+    "alpha": -1.7,
+    "f_lim": 1e-17
+  },
+  "slope_true": -1.0,
+  "slope_geom_volume": -0.03440973289437432,
+  "slope_full_lum": -0.8608357946056931,
+  "slope_with_confirmation": {
+    "beta": 1.5,
+    "slope_z3": -2.3608357946056984,
+    "slope_z5": -2.4028002516808464
+  },
+  "beta_for_ceers": 2.5,
+  "slope_beta25": -3.3608357946056953,
+  "conclusion": "obs slope = -1 (structural) + selection effects; IDCM not falsified",
+  "status": "CLOSED"
+}

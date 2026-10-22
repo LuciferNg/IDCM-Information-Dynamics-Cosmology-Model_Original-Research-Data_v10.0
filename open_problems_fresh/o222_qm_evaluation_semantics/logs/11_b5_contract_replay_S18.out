@@ -1,0 +1,18 @@
+================================================================================================================
+O222 scripts/11 -- Contract B5 v1 enforcer (D5 rollback layer / resource bound)
+================================================================================================================
+[PASS] C1     group rebuilt: |2I| = 120, closed under multiplication  --  |2I| = 120
+[PASS] C2     62 frozen lattice axes reproduced verbatim (12 V / 20 F / 30 E)  --  types = ['edge', 'face', 'vertex']
+[PASS] C3     A2 h-table present and bijective (62/62)  --  distinct h entries = 62
+[PASS] C4     A2 frozen results present with 20/20 PASS (B5 builds on A2)  --  claims = 20, all-ok = True
+[PASS] C5     budget identities exact: 88 reads at the E_min floor; 44 reads at the TRUE read cost (B(n) = 2 x E_min); 7688/44 = 1922/11; a 44-read pass = 1 tick; tau_deco = 2 ticks  --  floor reads = 88 ; reads at cost = 44 ; overrun = 1922/11 ; pass duration = 1 tick
+[PASS] C6     provenance: O41 carries 61.5 / 123/176 ; O126 carries tick/tau_deco ; O222 inv. carries the tick + tau_deco row ; O206 carries omega_n = mu^2  --  per-file = [True, True, True, True]
+[PASS] C7     tau_deco identity: 88 reads at 44 reads/tick = 2 ticks = 1.9235228 Gyr (registered 1.9235227)  --  2*tick = 1.9235228 Gyr
+[FAIL] C8     impl AST gate  --  no implementation supplied yet
+[FAIL] C9     factor-table locality  --  no implementation supplied yet
+[FAIL] C10    full-enumeration requirement  --  no implementation supplied yet
+
+GATE = CLOSED (no implementation supplied; rerun with --freeze-impl scripts/12_b5_budget.py)
+================================================================================================================
+RESULT: 7/10 PASS  (3 FAIL)
+================================================================================================================

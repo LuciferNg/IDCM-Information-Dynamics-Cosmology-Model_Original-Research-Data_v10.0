@@ -1,0 +1,201 @@
+{
+  "script": "23_euler_identity_audit",
+  "date": "2026-09-28",
+  "thesis": "identity of e, i, pi in Euler identity under IDCM operator reading",
+  "verdict": "i = lattice operator U_{N_d} (ord 4 = B); -1 = half-circuit U_{2N_d} (double cover, s=1/2); pi = radian unit (22/7 substitution invisible below all observational sigma); e = log chart (0 occurrences in predictions)",
+  "U_Nd_is_i": true,
+  "gamma_Nd": 2.0,
+  "U_2Nd_is_minus1": true,
+  "gamma_2Nd": 4.0,
+  "pi_dev_22_7": 0.000402499434770682,
+  "worst_pi_substitution_shift": 0.0008051095256361755,
+  "pi_pred_rows": [
+    {
+      "name": "88/π（環半徑格數）",
+      "value": 28.01126998417358,
+      "rel_shift": 0.00040233749415669685,
+      "obs_sigma_rel": null
+    },
+    {
+      "name": "ε_ring = 1 − (88/π)sin(π/88)",
+      "value": 0.0002124004710638274,
+      "rel_shift": 0.0008051095256361755,
+      "obs_sigma_rel": null
+    },
+    {
+      "name": "r_d = πR_world/88",
+      "value": 147.4386,
+      "rel_shift": 0.000402499434770682,
+      "obs_sigma_rel": 0.0018
+    },
+    {
+      "name": "H₀ = (1 − π/44)c/R_world",
+      "value": 67.40707194480038,
+      "rel_shift": 3.094808019874313e-05,
+      "obs_sigma_rel": 0.008
+    },
+    {
+      "name": "ω_ring = c/R_world",
+      "value": 2.352481191501824e-12,
+      "rel_shift": 0.0,
+      "obs_sigma_rel": null
+    },
+    {
+      "name": "γ₄₄ = 4sin²(π/4)（直角；語義單位）",
+      "value": 2.0,
+      "rel_shift": 0.0006322445915532736,
+      "obs_sigma_rel": null
+    }
+  ],
+  "integer_rigidity_gamma1_176_to_177": 0.011266332489193008,
+  "n_e_exp_occurrences": 55,
+  "checks": [
+    {
+      "name": "A1 ★★★ [176-L] U_{N_d} = U₄₄ = e^{2iθ₄₄} = e^{iπ/2} = **i** EXACT（|U₄₄ − i| = 7.04e-42）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A2 ★★★ [176-L] γ_{N_d} = |1 − U₄₄|² = |1 − i|² = 2 = **μ²** EXACT（實測 2.0）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A3 ★★★ [176-L] ord(i) = 4 = **B**；⟨i⟩ ≅ Z₄（U 之四相：1, i, −1, −i 分別落站 0, 44, 88, 132）；W = Π U_k = i^{n+1}, n = 88 ⟹ W = i⁸⁹ = i",
+      "pass": true,
+      "detail": "站點 = (0, N_d, 2N_d, 3N_d) = (0, 44, 88, 132)"
+    },
+    {
+      "name": "A4 ★★★ [代數] `i` 之定義 = x² + 1 = 0 之根（algebraic, deg 2 over ℚ）⟹ **i 唔需要 e 或 π 去定義** ⟹ i 之結構身份獨立於任何 chart",
+      "pass": true,
+      "detail": "minpoly(i) = x² + 1"
+    },
+    {
+      "name": "A5 ★★ [176-L] 兩個 Euler 特值之站點索引 = **N_d 與 2N_d**（44 與 88），即鏈長之半與全 ⟹ i 住「四分一鏈」，−1 住「半鏈」",
+      "pass": true,
+      "detail": "176/4 = 44 = N_d；176/2 = 88 = 2N_d"
+    },
+    {
+      "name": "B1 ★★★ [176-L] U_{2N_d} = U₈₈ = e^{2iθ₈₈} = **e^{iπ} = −1** EXACT（|U₈₈ + 1| = 1.41e-41）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B2 ★★★ [176-L] γ_{2N_d} = |1 − U₈₈|² = |1 − (−1)|² = **4 = 2μ² = B** EXACT（實測 4.0）⟹ 端點模",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B3 ★★★ [176-L] W² = U₈₈ = −1 ⟹ 雙覆蓋；`e^{2πis} = −1` ⟹ **s = 1/2 唯一**（O220 主定理）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B4 ★★★ [算子句] Euler 恆等式之鏈上寫法: **U_{2N_d} + I = 0**（半圈 transport + 恆等 = 空）⟺ e^{iπ} + 1 = 0",
+      "pass": true,
+      "detail": "U₈₈ + I = 0"
+    },
+    {
+      "name": "B5 ★★★ [176-L] 統計承重: 交換 = 互補弧 ⟹ 相位 e^{iπk} = (−1)^k ⟹ Pauli（O220 第六輪 R3b） ⟹ **Euler 恆等式係 O220 兩大定理（s = ½、Pauli）之引理，唔係類比**",
+      "pass": true,
+      "detail": "e^{3iπ} = −1"
+    },
+    {
+      "name": "C1 ★★ [代數] π ≈ 22/7 之相對差 = 0.000402499（= scripts/19 之 4.02499434771e−4 家族）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C2 ★★★ [IDCM] 含 π 之 IDCM 預言代入 22/7 後之最大相對位移 = **0.0008051**（最大者: ε_ring = 1 − (88/π)sin(π/88)）⟹ 全部 ≤ 0.09%",
+      "pass": true,
+      "detail": "worst = 8.051e-04"
+    },
+    {
+      "name": "C2a ★★★ [176-L] **周界 = 2πR_world = 176·r_d EXACT**（π 完全抵消！）⟹ 圓周長係「整數 176 × r_d」，π 只係「弧 = 半徑 × 角」之單位轉換; 反推 **π = 88·r_d/R_world** = 3.1415926536（即 π 之 IDCM 定義式 = 角度單位之定義）",
+      "pass": true,
+      "detail": "2πR_world = 25949.1936 Mpc = 176 r_d"
+    },
+    {
+      "name": "C2b ★★★ [判別性對照] ε_π = 88/(28π) − 1 代入 22/7 後位移 = **100%%**（因為 ε_π ≡ (22/7)/π − 1 本身）⟹ 呢條**係偽影自身**, 唔屬 IDCM 預言清單（scripts/19/20 已獨立確立）",
+      "pass": true,
+      "detail": "ε_π(22/7) = 0 EXACT"
+    },
+    {
+      "name": "C3 ★★★ [OBS] 可對觀測者之位移全部 ≪ 觀測 σ: r_d 0.0402% vs 0.18%（= 0.22 σ 內）；H₀ 0.00309% vs 0.80%（= 0.004 σ 內）⟹ **冇任何 IDCM 觀測量「量度到」π** ⟹ π 係單位, 非結構",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C4 ★★ [對照] 整數內容係 **rigid**: 176 → 177 ⟹ γ₁ 相對位移 = 1.127e-02（= 1/88 級）≫ π 之位移（4e−4）⟹ **檢定有判別力**: IDCM 只對整數（176/88/44）敏感, 對 π 不敏感",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C5 ★★★ [單位重寫] 以「圈」為單位: θ_k = k/352 turn ⟹ 全部整數結構（176, 88, 44, 4）**不變**，而 π **完全消失**；⟹ π 之唯一功能 = 弧度單位標籤",
+      "pass": true,
+      "detail": "θ_k = k·(π/176) 與 θ_k = k/352 turn 描述同一結構"
+    },
+    {
+      "name": "C6 ★★ [代數] π 係 transcendental；IDCM 冇任何無窮極限／級數裝置 ⟹ **π 係輸入單位**, 唔可導出（與 scripts/19 之 88/π 普查互相印證）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1 ★★ [群論] 「加 index = 乘 transport」⟺ U_k = A^k（A = U₁）⟹ **任何基底均可** ⟹ e 係 chart 選擇, 非結構",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D2 ★★★ [代數] log U_k = 2iθ_k (mod 2πi) ⟹ 加性化 ⟹ **e 之功能 = 令乘法群可加地讀取**",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D3 ★★ [AST 掃描] scripts/01–23: e/exp 出現 55 次 —— 全部係 e^{iθ}（U(1) 參數化）形式；名為 e 之變數賦值 = 2 個（RHS 為 Coxeter 指數選取 `ev[0] if ev else None`，非 Euler 數）；**RHS ≈ 2.71828…（Euler 數）之賦值 = 0 個**；另有 9 處係字串/註釋內之 Coxeter 數 e = 6 ⟹ e 唔作為結構常數存在於任何腳本",
+      "pass": true,
+      "detail": "賦值 = [('10_ngen_vs_dimension.py', 125, 'IfExp'), ('11_chain_from_icosahedral.py', 98, 'IfExp')]"
+    },
+    {
+      "name": "D4 ★★ [反測] IDCM 之預言值全部係 integer / algebraic / γ-多項式（γ_k, μ², 176, 89, 178, φ）；冇任何一個係 transcendental（除 π 自身作為單位）⟹ e 唔屬 IDCM 之輸出集",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E1 ★★★ Euler 恆等式之 IDCM 同構: **U_{2N_d} + I = 0** ⟺ e^{iπ} + 1 = 0（唯一非平凡內容 = U_{2N_d} = −1）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E2 ★★★ [數值足跡] Euler 之「−1」以 **4** 之形式進入 IDCM 計數族: γ_{2N_d} = |I − U_{2N_d}|² = |2I|² = 4 = B = 2μ²（= scripts/18 之「端點模」, ±μ² 家族 {2m ± 2} 之偏移源）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E3 ★★★ [統一] 兩族皆源自 Euler 兩特值: **±μ 家族**住四分之一角鄰域（站 22/44/66 = 45°/90°/135°, 即 i 之鄰域, γ = μ² ∓ μ）；**±μ² 家族**之偏移 = γ_{2N_d}/2 = 2。⟹ 身份家族之全部結構 = Euler 兩特值 (i, −1)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E4 ★★ [0 與 1] 0 = 空 transport（k = 0: γ₀ = 0, U₀ = 1）；1 = 恆等 transport（U^0 = I）⟹ 「+1 = 0」= 半圈 transport + 恆等 = 空（兩個單位元素之關係）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F1 ★★★ **i = 算子**（格點值 U_{N_d}；algebraic；階 4 = B）；**π = 單位**（弧度標籤；穿 22/7 檢定 0 命中）；**e = chart**（對數基底；預言中 0 次出現）⟹ 三者**唔同層級**, 恆等式把它們寫成同一行係「座標化」之產物",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F2 ★★★ Euler 恆等式之**唯一結構內容 = 雙覆蓋**（U_{2N_d} = −1 ⟹ W² = −1 ⟹ s = ½；e^{iπk} = (−1)^k ⟹ Pauli）⟹ 佢唔係 IDCM 之世界觀類比, 而係 O220 兩大定理之**引理**",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F3 ★★ [實用規則] 見 π ⟹ 讀成「角度單位」；見 i ⟹ 讀成「44 站 transport」；見 e ⟹ 讀成「log chart」；見整數 176/88/44 ⟹ 讀成「結構」。凡把 π 當結構常數之推導（如 88/π ≈ 28 之身份）必經 22/7 不可分辨陷阱（scripts/19）",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 29,
+  "n_total": 29
+}

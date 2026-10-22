@@ -1,0 +1,11 @@
+{
+  "test": "O70 01b: Corrected 155 Counting",
+  "sr_total": 484,
+  "sr_within_36": 475,
+  "sr_cross_uninvolved": 0,
+  "adjacency_36": 155,
+  "adjacency_1based_bug": 155,
+  "involved_count": 36,
+  "uninvolved_count": 12,
+  "cross_set_unique": 0
+}

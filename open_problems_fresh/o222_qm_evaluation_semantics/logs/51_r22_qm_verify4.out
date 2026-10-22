@@ -1,0 +1,39 @@
+len(G) = 120 | G[0] = ((Fraction(-1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1))) | type <class 'tuple'>
+sum_g w_g = computing
+sum_g w_g = 0 + 0 *sqrt5
+sum_g |chi_g|^2 = 120 + 0 *sqrt5   (expect 120 + 0*sqrt5 if irreducible)
+matrices: (62, 62) (62, 62) (62, 62) | denominator 120 | max|C1|=np.float64(1.0) max|C1rev|=np.float64(1.0) max|C2|=np.float64(1.0)
+float sweep max |S| = 4.000000000000 at (a,a',b,b') = (1, 60, 1, 59)
+EXACT max |S| = 4 = 4.000000000  at (60, 59, 61, 59)
+classical 2 | Tsirelson 2sqrt2 = 2.828427125 | recorded R19/K7 window max 16/15 = 1.066666667
+near-maximal exact values (top 5): [('4', (60, 59, 61, 59)), ('4', (60, 59, 54, 59)), ('4', (60, 59, 53, 59)), ('4', (60, 59, 10, 59)), ('4', (59, 60, 54, 60))]
+{
+ "Q4": {
+  "sum_chi2_real_part": "120",
+  "sum_chi2_sqrt5_part": "0",
+  "irreducible": true,
+  "sum_w_real": "0",
+  "sum_w_sqrt5": "0",
+  "fix": "field norm p^2-5q^2 replaced by arithmetic square (p+q sqrt5)^2"
+ },
+ "QV5": {
+  "convention": "S = C1[a][b] + C1rev[a][b'] + C2[a'][b] - C2[a'][b']  (C1/C1rev numerators over den=120; C2 rational strings)",
+  "float_sweep_max": 4.0,
+  "exact_max": "4",
+  "exact_max_float": 4.0,
+  "argmax": [
+   60,
+   59,
+   61,
+   59
+  ],
+  "denominator": 120,
+  "classical_bound": 2,
+  "tsirelson": "2*sqrt(2)",
+  "single_matrix_max": {
+   "C1": 1.0,
+   "C1rev": 1.0,
+   "C2": 1.0
+  }
+ }
+}

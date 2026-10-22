@@ -1,0 +1,14 @@
+================================================================================================================
+O222 scripts/25 -- INDEPENDENT audit of the G5 round (does not import scripts/24)
+================================================================================================================
+[PASS] A0    frozen impl hash matches the on-disk file and the first-run log is preserved  --  impl=fb9072e4b22e
+[PASS] A1    anti rebuilt independently in Q(sqrt5): 62 True entries = 31 pairs, exactly one per row  --  per-row min/max = 1/1
+[PASS] A2    the audit's own direct 4-tuple search agrees with the frozen criterion on ALL 6892 pair sets (small family: 78 constructible; known prefixes: ['block', 'euler_rectangle']) -- total 80 vs the machine's 6892/6892  --  mismatches = 0
+[PASS] A3    the sufficient-condition positives (k = 6..20) and the tight-bound instance (k - c = 4) both verified by the audit's own search  --  Q = [0, 1, 11, 10, 30, 31]
+[PASS] A4    rz(n) recomputed column-major: rz(3) = 6, rz(4) = 9, rz(5) = 12 (machine: 6, 9, 12); rz(4) also by brute force over all 2^16 matrices = 9
+[PASS] A5    n = 4 / n = 5 Eulerian class redone independently: 256 / 972000 circuits (BEST via reduced-Laplacian determinants: 256 / 972000), constructible 0 / 184704 (machine: 0 / 184704)  --  enumerated in 10.2 s
+[PASS] A6    cross-check on 400 UNIFORMLY RANDOM 21-edge (loop-free) pair sets, seed 777: constructible 12 (the Eulerian sample gave 1/1000 -- both are rare; the two questions differ)  --  rarity is robust to the sampling distribution
+[PASS] A7    verdict table integrity: 6 cells, each with a verdict and a value, and the sampled cell is marked 🟡 rather than reported as exact  --  table = ✅✅✅✅✅🟡
+================================================================================================================
+RESULT: 8/8 PASS  (0 FAIL)
+================================================================================================================

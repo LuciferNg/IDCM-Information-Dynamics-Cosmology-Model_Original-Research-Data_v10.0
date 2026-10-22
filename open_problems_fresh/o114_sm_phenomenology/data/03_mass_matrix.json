@@ -1,0 +1,28 @@
+{
+  "id": "O114-3",
+  "name": "Adjoint Higgs VEV \u2192 6\u00d76 Mass Matrix",
+  "mass_formula": "M\u00b2_{ij} = g\u00b2 Tr([E_i,\u27e8\u03a6\u27e9][E_j,\u27e8\u03a6\u27e9])",
+  "coupling": 0.517078,
+  "M_GUT": 6.2214e+16,
+  "scenarios": {
+    "uniform": {
+      "M_Z'": 6.221399999999999e+16,
+      "spectrum": "All 6 at M_GUT"
+    },
+    "gamma_cascade": {
+      "M_Z'_min": 213765.4657812882,
+      "M_Z'_max": 6.221399999999999e+16
+    },
+    "single_direction": {
+      "M_Z'_E1": 6.221399999999999e+16,
+      "others": "massless at tree level"
+    }
+  },
+  "verdict": "\ud83d\udfe2 Framework complete \u2014 Z' masses at M_GUT, unobservable",
+  "open_issues": [
+    "Exact (15,8) VEV direction needed for diagonalization",
+    "1-loop kinetic mixing from fermion loops",
+    "Mixing with tensor Cartan Z' states"
+  ],
+  "timestamp": "2026-08-29"
+}

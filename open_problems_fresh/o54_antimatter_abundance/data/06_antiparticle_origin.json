@@ -1,0 +1,13 @@
+{
+  "test": "反粒子自由度結構來源",
+  "spectrum_semi_positive": true,
+  "spectrum_min_eigval": -2.7379460733502814e-15,
+  "antiparticle_from_charge": true,
+  "charge_from_CY3_complex_structure": true,
+  "h21": 98,
+  "h21_formula": "Σγ+2B",
+  "C_operator_involution": true,
+  "macro_nBbar_limit": 1e-09,
+  "micro_antimatter_observed": true,
+  "conclusion": "反粒子=U(1)荷(CY₃複結構98=Σγ+2B相位共軛), 唔係頻率符號; 譜半正定相容; 反物質=局部反投影, 宏觀差額保持"
+}

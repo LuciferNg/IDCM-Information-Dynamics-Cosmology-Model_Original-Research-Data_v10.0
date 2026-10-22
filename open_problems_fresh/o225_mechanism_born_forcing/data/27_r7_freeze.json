@@ -1,0 +1,84 @@
+{
+ "rules": "r7-delta-as-parity-count-v1",
+ "contract_sha256": "5b12f537c5c4c9fbe2a5d396f9626363f976676d44de57f2c0873bc916292ea8",
+ "frozen_inputs": {
+  "scripts/09_a2_rollback.py": {
+   "sha256": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace",
+   "bytes": 28535
+  },
+  "scripts/12_b5_budget.py": {
+   "sha256": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a",
+   "bytes": 17795
+  },
+  "scripts/18_d6_mapping.py": {
+   "sha256": "a681ae8cf6bcfd69b50a9a3c776f8c43011c3b6c52149bc1f1f565abbe797cf7",
+   "bytes": 18596
+  },
+  "scripts/30_g1g8_gaps.py": {
+   "sha256": "840d0d4ed792617cfeb6ed2bb083f8851129ea133afe51d096c2ed03a76aac2a",
+   "bytes": 18439
+  },
+  "data/04_b2_settings.json": {
+   "sha256": "2357006c68e0165dc9fd7d8d73524593a776e1bf6a8b62ddbc8dc2c1a8af20ee",
+   "bytes": 151254
+  },
+  "data/08_a2_h_table.json": {
+   "sha256": "adeaf8a7fb5495ea57be194c1a704c973a9208026cdd10ef615cd59c58005b66",
+   "bytes": 11114
+  }
+ },
+ "labels_missing": [],
+ "pre_notes": 26,
+ "result_notes": 1,
+ "gate": "OPEN",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "合約 doc 含 A1/A2/A3/A5/A6/A7 + B1/B2/B3 全部標籤",
+   "ok": true,
+   "detail": "missing = []"
+  },
+  {
+   "tag": "C2",
+   "name": "合約 doc 含關鍵定義與推導約束詞",
+   "ok": true,
+   "detail": "missing = [] ; chars = 2440"
+  },
+  {
+   "tag": "C3",
+   "name": "scripts/28,29 通過禁字集掃描（無禁模組、無 float 字面值）",
+   "ok": true,
+   "detail": "issues = []"
+  },
+  {
+   "tag": "C4",
+   "name": "scripts/28,29 皆 from fractions import Fraction",
+   "ok": true,
+   "detail": "{'scripts/28_r7_mechanism2.py': {'imports': 7, 'float_literals': 0, 'has_fractions': True}, 'scripts/29_r7_audit.py': {'imports': 7, 'float_literals': 0, 'has_fractions': True}}"
+  },
+  {
+   "tag": "C5",
+   "name": "陽性對照：人造違規源必須被拒",
+   "ok": true,
+   "detail": "['pos: forbidden import numpy (line 1)', 'pos: forbidden import random (line 2)', 'pos: float literal 0.035 (line 3)']"
+  },
+  {
+   "tag": "C6",
+   "name": "陰性對照：合法精確算術源必須通過",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "tag": "C7",
+   "name": "上游 O222 凍結輸入 + 合約 doc SHA-256 落盤，GATE = OPEN",
+   "ok": true,
+   "detail": "contract sha = 5b12f537c5c4c9fb…"
+  },
+  {
+   "tag": "C8",
+   "name": "見數前註冊核：R7 於 register 之 note 數 ≥ 8 且未含任何結果 note（結果 note 尚未寫入）",
+   "ok": false,
+   "detail": "pre-note = 26 ; 結果 note = 1"
+  }
+ ]
+}

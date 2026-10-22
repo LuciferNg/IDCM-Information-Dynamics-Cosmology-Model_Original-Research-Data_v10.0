@@ -1,0 +1,300 @@
+{
+  "n_ok": 42,
+  "n_total": 42,
+  "per_script": {
+    "01_step1_projection.py": {
+      "exit": 0,
+      "seconds": 0.7,
+      "nlines": 28,
+      "tail": "✅ 結果已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open",
+      "warn": false
+    },
+    "02_step2_tpipe_eigen.py": {
+      "exit": 0,
+      "seconds": 0.1,
+      "nlines": 20,
+      "tail": "✅ 結果已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open",
+      "warn": false
+    },
+    "03_step3_induced_phase.py": {
+      "exit": 0,
+      "seconds": 0.4,
+      "nlines": 22,
+      "tail": "✅ 結果已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open",
+      "warn": false
+    },
+    "04_verify_derivation.py": {
+      "exit": 0,
+      "seconds": 0.1,
+      "nlines": 18,
+      "tail": "print line 81: node9 (第二冷) 喺未被投影: False  <- contradicts JSON key name",
+      "warn": false
+    },
+    "05_verify_gamma_labels.py": {
+      "exit": 0,
+      "seconds": 0.1,
+      "nlines": 14,
+      "tail": "=> theta_0 is SIGN-CONVENTION dependent, not a spectral invariant; '13",
+      "warn": false
+    },
+    "06_o182_verdict_test.py": {
+      "exit": 0,
+      "seconds": 0.4,
+      "nlines": 22,
+      "tail": "  A5 最近 5:  [ 0.    26.091 26.091 26.166 26.166]",
+      "warn": false
+    },
+    "07_structural_phase_test.py": {
+      "exit": 0,
+      "seconds": 0.1,
+      "nlines": 57,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "08_k_selection_test.py": {
+      "exit": 0,
+      "seconds": 0.1,
+      "nlines": 41,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "09_permutation_test.py": {
+      "exit": 0,
+      "seconds": 11.0,
+      "nlines": 21,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "10_robustness_test.py": {
+      "exit": 0,
+      "seconds": 14.2,
+      "nlines": 18,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "11_final_tests.py": {
+      "exit": 0,
+      "seconds": 2.5,
+      "nlines": 20,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "12_three_items.py": {
+      "exit": 0,
+      "seconds": 0.9,
+      "nlines": 58,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "13_refined_tests.py": {
+      "exit": 0,
+      "seconds": 0.9,
+      "nlines": 52,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "14_r3_identity.py": {
+      "exit": 0,
+      "seconds": 0.7,
+      "nlines": 43,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "15_verify_coloring_multiplicity.py": {
+      "exit": 0,
+      "seconds": 22.2,
+      "nlines": 25,
+      "tail": "  C5_fingerprints: ❌ 唔符",
+      "warn": false
+    },
+    "16_r3_coloring_dependence.py": {
+      "exit": 0,
+      "seconds": 0.1,
+      "nlines": 43,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "17_coloring_principle.py": {
+      "exit": 0,
+      "seconds": 0.2,
+      "nlines": 74,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "18_congruence_write_quad.py": {
+      "exit": 0,
+      "seconds": 0.8,
+      "nlines": 42,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "19_congruence_fixed.py": {
+      "exit": 0,
+      "seconds": 0.2,
+      "nlines": 25,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "20_design_strength.py": {
+      "exit": 0,
+      "seconds": 12.3,
+      "nlines": 23,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "21_exact_coords.py": {
+      "exit": 0,
+      "seconds": 0.2,
+      "nlines": 19,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "22_ising_multipole.py": {
+      "exit": 0,
+      "seconds": 6.1,
+      "nlines": 34,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "23_octupole.py": {
+      "exit": 0,
+      "seconds": 2.4,
+      "nlines": 32,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "24_l3_foreground_check.py": {
+      "exit": 0,
+      "seconds": 3.6,
+      "nlines": 24,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "25_verify_gemini_part1.py": {
+      "exit": 0,
+      "seconds": 0.8,
+      "nlines": 37,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "26_verify_gemini_part2.py": {
+      "exit": 0,
+      "seconds": 14.0,
+      "nlines": 36,
+      "tail": "  c /= stddev[None, :]",
+      "warn": false
+    },
+    "27_chirality_symmetry.py": {
+      "exit": 0,
+      "seconds": 0.4,
+      "nlines": 23,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "28_a5_design_foreground.py": {
+      "exit": 0,
+      "seconds": 4.9,
+      "nlines": 53,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "29_multifreq_l3.py": {
+      "exit": 0,
+      "seconds": 190.8,
+      "nlines": 23,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "30_multifreq_l3_fixed.py": {
+      "exit": 0,
+      "seconds": 376.2,
+      "nlines": 27,
+      "tail": "  msr = hp.smoothing(mr, fwhm=math.radians(4.17), verbose=False)",
+      "warn": false
+    },
+    "31_foreground_decisive.py": {
+      "exit": 0,
+      "seconds": 2.0,
+      "nlines": 27,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "32_axis_alignment.py": {
+      "exit": 0,
+      "seconds": 0.7,
+      "nlines": 13,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "33_axis_corrected.py": {
+      "exit": 0,
+      "seconds": 2.0,
+      "nlines": 24,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "34_invariants_axis_z2.py": {
+      "exit": 0,
+      "seconds": 9.6,
+      "nlines": 37,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "35_automorphism_theorem.py": {
+      "exit": 0,
+      "seconds": 1.5,
+      "nlines": 30,
+      "tail": "✅ 已存: /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_p",
+      "warn": false
+    },
+    "37_doc_crosscheck.py": {
+      "exit": 0,
+      "seconds": 1.6,
+      "nlines": 99,
+      "tail": "✅ 已存: data/step34_doc_crosscheck.json",
+      "warn": false
+    },
+    "38_doc_token_audit.py": {
+      "exit": 0,
+      "seconds": 0.0,
+      "nlines": 84,
+      "tail": "✅ 已存: data/step35_doc_token_audit.json",
+      "warn": false
+    },
+    "39_verify_o150_corrections.py": {
+      "exit": 0,
+      "seconds": 796.0,
+      "nlines": 85,
+      "tail": "  vals = hp.alm2map(alm3, 2048, verbose=False)",
+      "warn": false
+    },
+    "40_correction_token_audit.py": {
+      "exit": 0,
+      "seconds": 0.0,
+      "nlines": 6,
+      "tail": "→ data/step37_correction_token_audit.json",
+      "warn": false
+    },
+    "41_unclosed_problem_audit.py": {
+      "exit": 0,
+      "seconds": 0.0,
+      "nlines": 18,
+      "tail": "→ data/step38_unclosed_audit.json",
+      "warn": false
+    },
+    "42_handoff_o7_aliasing_m3.py": {
+      "exit": 0,
+      "seconds": 0.6,
+      "nlines": 44,
+      "tail": "✅ 已存: data/step39_o7_aliasing_m3.json",
+      "warn": false
+    },
+    "43_handoff_o252_per_source.py": {
+      "exit": 0,
+      "seconds": 0.7,
+      "nlines": 50,
+      "tail": "✅ 已存: data/step40_o252_per_source.json",
+      "warn": false
+    }
+  }
+}

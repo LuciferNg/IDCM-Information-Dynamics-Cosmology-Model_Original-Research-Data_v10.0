@@ -1,0 +1,49 @@
+/home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o29_p072_decompose/scripts/02_bootstrap_decompose.py:17: SyntaxWarning: invalid escape sequence '\ '
+  Δobs_i = mean_nearest(all) - mean_nearest(all \ {i})
+================================================================================
+1. HIGH-ROTATION CONFIRMATION (10,000 rotations, fresh seeds)
+================================================================================
+  baseline-34                n=34  obs=  8.85°  z= -1.56σ  p=0.0657
+  minus-cold-family          n=29  obs=  9.95°  z= -0.27σ  p=0.3854
+  minus-subspot-B            n=33  obs=  9.08°  z= -1.35σ  p=0.0935
+  minus-h2                   n=33  obs=  9.08°  z= -1.32σ  p=0.0976
+  minus-node9-spots          n=32  obs=  8.69°  z= -1.76σ  p=0.0424
+  minus-cold-family+node9    n=27  obs=  9.85°  z= -0.38σ  p=0.3396
+
+================================================================================
+2. BOOTSTRAP — resample 34 spots (with replacement), 2000 draws
+================================================================================
+  bootstrap p distribution: mean=0.163 ± 0.148, median=0.116
+  fraction of draws with p < 0.05: 0.222
+  fraction of draws with p < 0.10: 0.443
+  observed mean-nearest spread: 8.878 ± 0.754°
+
+================================================================================
+3. DETERMINISTIC LEVERAGE — Δobs per spot (no MC noise)
+================================================================================
+  baseline obs (34) = 8.848°; removing a spot with Δobs>0 makes the
+  mean NEARER (spot was far → its removal strengthens signal)
+    +Δobs +0.245°  SMICA-c2                       (node  0, d=0.75°)
+    +Δobs +0.234°  SMICA-h2                       (node 53, d=1.11°)
+    +Δobs +0.234°  LIT: CS sub-spot B (Cruz 2005 T4) (node  0, d=1.14°)
+    +Δobs +0.207°  SMICA-h12                      (node 54, d=2.03°)
+    +Δobs +0.171°  LIT: CS sub-spot C (Cruz 2005 T4) (node  0, d=3.21°)
+    +Δobs +0.163°  LIT: CS sub-spot D (Cruz 2005 T4) (node  0, d=3.46°)
+  ...
+    -0.116°  SMICA-h10                      (node 53, d=12.69°)
+    -0.158°  SMICA-c9                       (node  7, d=14.07°)
+    -0.177°  SMICA-h7                       (node 32, d=14.70°)
+    -0.205°  SMICA-h8                       (node  3, d=15.61°)
+    -0.235°  SMICA-h3                       (node 52, d=16.61°)
+    -0.271°  SMICA-h14                      (node 17, d=17.80°)
+
+================================================================================
+4. NODE-9 SPOT DISTANCES vs REST (direct permutation)
+================================================================================
+  node-9 spots (c3,c11): d = 11.36° ± 1.02°  (n=2)
+  other 32 spots:        d = 8.69° ± 4.48°  (n=32)
+  observed node9-vs-rest mean diff = +2.66°
+  P(node9 mean ≤ observed) [one-sided, closer] = 0.7925
+  P(node9 mean ≥ observed) [one-sided, farther] = 0.2075
+
+Saved: /home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o29_p072_decompose/data/bootstrap_decompose.json

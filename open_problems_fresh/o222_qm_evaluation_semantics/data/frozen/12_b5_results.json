@@ -1,0 +1,196 @@
+{
+ "rules_version": "b5-contract-v1",
+ "k_feasible_pairs": 15,
+ "terminal_pair": [
+  0,
+  15
+ ],
+ "reads_used_by_feasible_prefix": 43,
+ "per_pair_miss_histogram": {
+  "2": 2,
+  "3": 13
+ },
+ "E1_distinct": {
+  "unrestricted": {
+   "num": 60,
+   "den": 15,
+   "value": "4",
+   "argmax": [
+    "E27",
+    "E28",
+    "V01",
+    "E28"
+   ]
+  },
+  "budget_feasible": {
+   "num": 0,
+   "den": 15,
+   "value": "0",
+   "argmax": null,
+   "window_pairs": null
+  },
+  "tuples_visited": 14303524,
+  "secs": 3.4394028186798096
+ },
+ "E1_all4": {
+  "unrestricted": {
+   "num": 30,
+   "den": 15,
+   "value": "2",
+   "argmax": [
+    "V00",
+    "V01",
+    "E00",
+    "F06"
+   ]
+  },
+  "budget_feasible": {
+   "num": 0,
+   "den": 15,
+   "value": "0",
+   "argmax": null,
+   "window_pairs": null
+  },
+  "tuples_visited": 12517800,
+  "secs": 4.111454248428345
+ },
+ "E2_distinct": {
+  "unrestricted": {
+   "num": 60,
+   "den": 15,
+   "value": "4",
+   "argmax": [
+    "E27",
+    "E28",
+    "V10",
+    "E27"
+   ]
+  },
+  "budget_feasible": {
+   "num": 0,
+   "den": 15,
+   "value": "0",
+   "argmax": null,
+   "window_pairs": null
+  },
+  "tuples_visited": 14303524,
+  "secs": 3.3450706005096436
+ },
+ "E2_all4": {
+  "unrestricted": {
+   "num": 45,
+   "den": 15,
+   "value": "3",
+   "argmax": [
+    "E27",
+    "E28",
+    "V01",
+    "E29"
+   ]
+  },
+  "budget_feasible": {
+   "num": 0,
+   "den": 15,
+   "value": "0",
+   "argmax": null,
+   "window_pairs": null
+  },
+  "tuples_visited": 12517800,
+  "secs": 4.140632629394531
+ },
+ "nulls": [
+  {
+   "draw": 0,
+   "unrestricted": "2",
+   "budget_feasible": "0",
+   "visited": 12517800
+  },
+  {
+   "draw": 1,
+   "unrestricted": "2",
+   "budget_feasible": "0",
+   "visited": 12517800
+  },
+  {
+   "draw": 2,
+   "unrestricted": "2",
+   "budget_feasible": "0",
+   "visited": 12517800
+  },
+  {
+   "draw": 3,
+   "unrestricted": "2",
+   "budget_feasible": "0",
+   "visited": 12517800
+  },
+  {
+   "draw": 4,
+   "unrestricted": "2",
+   "budget_feasible": "0",
+   "visited": 12517800
+  },
+  {
+   "draw": 5,
+   "unrestricted": "2",
+   "budget_feasible": "0",
+   "visited": 12517800
+  }
+ ],
+ "null_summary": {
+  "unrestricted_median": "2",
+  "unrestricted_max": "2",
+  "budget_feasible_median": "0",
+  "budget_feasible_max": "0"
+ },
+ "claims": [
+  {
+   "tag": "P1",
+   "name": "max reads per pass = (123/2)/(123/88) = 44 EXACT  (read cost = B(n) = 2 x E_min)",
+   "ok": true,
+   "detail": "per-read cost = 123/88 = 2 x E_min ; 44 reads consume 123/2 = budget ; 44 = N_d"
+  },
+  {
+   "tag": "P2",
+   "name": "A2's specified pass (7688 reads) is budget-infeasible",
+   "ok": true,
+   "detail": "overrun factor = 7688/44 = 1922/11"
+  },
+  {
+   "tag": "P4",
+   "name": "a budget-exhausting pass (44 reads) = 1 tick ; tau_deco = 2 ticks = 2 such passes",
+   "ok": true,
+   "detail": "44/44 = 1 tick ; 2 ticks = 4808807/2500000 Gyr (registered 1.9235227; O126 sources carry 0.961762-3)"
+  },
+  {
+   "tag": "P3",
+   "name": "budget-feasible pass = the frozen-order prefix (cost computed, not assumed)",
+   "ok": true,
+   "detail": "feasible pairs = 15 (reads used = 43, misses/pair = [2, 3]) ; budget left = 123/88 ; pair refused by the terminal condition = (0, 15)"
+  },
+  {
+   "tag": "P5",
+   "name": "p_k stays exactly uniform and every pair map stays bijective under the budget bound",
+   "ok": true,
+   "detail": "non-bijective pairs = 0 ; max L1 dev from uniform = 0"
+  },
+  {
+   "tag": "P6",
+   "name": "the resource bound constrains the reachable |S| (full 62^4 sweep with the window)",
+   "ok": true,
+   "detail": "E2 all4: unrestricted 3 -> budget-feasible 0 (window <= 15 pairs)"
+  },
+  {
+   "tag": "P6b",
+   "name": "A2 reproduced: unrestricted E1/E2 all4 = 2/3 and distinct = 4/4 (sweep agrees with scripts/10)",
+   "ok": true,
+   "detail": "E1 all4 = 2 ; E2 all4 = 3"
+  },
+  {
+   "tag": "P7",
+   "name": "order asymmetry holds within the feasible prefix (Delta_order > 0)",
+   "ok": true,
+   "detail": "max |C1[a][b] - C1[b][a]| (prefix) = 2/5"
+  }
+ ],
+ "elapsed_s": 44.56024956703186
+}

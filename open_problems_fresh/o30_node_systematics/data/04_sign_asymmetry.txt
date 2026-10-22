@@ -1,0 +1,6 @@
+# O30-04: 冷/熱符號不對稱
+# 日期: 2026-08-21, 4.17° 平滑, 控制 1000
+# COLD_HOT_COUNT: 29/31 | binom_p=0.8974 | z=-0.093
+# COLD_ABS=35.172 HOT_ABS=30.484 RATIO=1.154 | welch_t=+0.554 p=0.5821
+# EXTREME: cold10_coldcolor=8/10 (p_ctrl=0.0360) hot10_coldcolor=4/10
+# HI(31): cold=17 hot=14 z=+0.734

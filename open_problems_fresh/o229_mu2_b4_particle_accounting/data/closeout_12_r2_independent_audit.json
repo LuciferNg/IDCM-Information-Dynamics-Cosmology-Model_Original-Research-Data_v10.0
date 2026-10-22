@@ -1,0 +1,58 @@
+{
+ "script": "12_r2_independent_audit",
+ "pass": 21,
+ "fail": 0,
+ "total": 21,
+ "contract_sha256": "cd2e8af286d3bceae947cb8355cbc1828d8e29e790617c37c3f3ed0cd1ccbd96",
+ "registered_sha256": "cd2e8af286d3bceae947cb8355cbc1828d8e29e790617c37c3f3ed0cd1ccbd96",
+ "independent": {
+  "L3": "4.0",
+  "F3": "2.0",
+  "xstar": "61.5",
+  "Vmin": "-61.5",
+  "qed_std_per_gen": "16/3",
+  "regimes": [
+   [
+    20
+   ],
+   [
+    6
+   ],
+   [
+    5
+   ],
+   [
+    6
+   ]
+  ]
+ },
+ "scripts_seen": [
+  "01_atom_identity",
+  "02_roles_graph",
+  "03_gap1_degeneracy",
+  "04_gap2_mu2_identity",
+  "05_gap3_completeness",
+  "06_gap4_rigidity",
+  "07_gap5_density",
+  "08_independent_audit",
+  "09_r2_index_identity_and_routes",
+  "10_r2_vmin_and_qed_sum",
+  "11_r2_two_param_rigidity",
+  "12_r2_independent_audit",
+  "13_r3_y_uniqueness",
+  "14_r3_spectrum_family",
+  "15_r3_polysemy_classification",
+  "16_r3_density_atom_pool",
+  "17_r3_independent_audit",
+  "18_r4_chain_family",
+  "19_r4_mu2_support",
+  "20_r4_hardtest_reaudit",
+  "21_r4_independent_audit",
+  "22_r5_endpoint_anatomy",
+  "23_r5_form_class",
+  "23_r5_form_class.pre_correction",
+  "24_r5_discrimination",
+  "24_r5_discrimination.pre_rerun",
+  "25_r5_independent_audit"
+ ]
+}

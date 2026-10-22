@@ -1,0 +1,28 @@
+# O228 R3 — 首跑 FAIL 原樣保留（`scripts/06_r3_hard_tests.py` 第一次完整運行，2026-10-02）
+
+> 用途：預註冊判準 H1／H2a／H2b 之首跑 FAIL **原樣保留**（鐵律：被偽證者不得改寫成 PASS）。
+> 內容 = 首跑 stdout 之逐字節錄（該次 stdout 已被重跑覆寫）。程式於 H2c 前因線配對缺陷 IndexError 中止。
+> 校正：H1 → Mersenne Twister；H2b → 幾何線配對（`U[2k+1] = −U[2k]` 精確驗證）；H2a/b/a-c/b-c 見 `logs/06_r3_hard_tests.out`。
+
+```
+M_2I reference: m=12 N=62 F_4 = 12645
+[FAIL] H1    section-five (2): the null MC at 1e7 draws lies within 5 sigma of the exact p0 = 6240/180251 (the exact value stays authoritative)  --  10000000 draws -> MC = 0.034112 ; exact = 0.034618 ; |dev| = 5.06e-04 ; 5 sigma = 2.89e-04 (8 s)
+[FAIL] H2a   section-five (4): the 62 single-column deletions give exactly 3 distinct F_4 values with multiplicities (12, 20, 30) (the V/F/E group orbits are transitive), each < 12645  --  values -> multiplicities = {'11726': 15, '11832': 25, '11890': 15, '11910': 7} ; family values (per column) = {'V': [11832, 11910], 'F': [11726, 11890], 'E': [11832]}
+[FAIL] H2b   section-five (4): the 31 single-line deletions give exactly 3 distinct F_4 values with multiplicities (6, 10, 15), each < 12645  --  values -> multiplicities = {'10807': 5, '11019': 10, '11135': 5, '11175': 1} ; family values (per line) = {'V': [11019, 11175], 'F': [10807, 11135], 'E': [11019]}
+Traceback (most recent call last):
+  File ".../scripts/06_r3_hard_tests.py", line 213, in main
+    a, b = lines[li]
+IndexError: list index out of range
+```
+
+## 三個缺陷與校正
+
+1. **H1**：以 R1 之 LCG 抽樣至 10⁷ draws 時偏離精確值 **8.7σ**（MC 0.034112 vs 精確 0.0346184）——
+   LCG 高位序列相關造成漂移（同一種子下 2×10⁵ 前綴均值 0.034835，尾段均值 0.034106 ⟹ 系統性漂移）。
+   校正：改用 **Mersenne Twister**（`random.Random`，宣告種子）。
+   **方法論後果**：R1 與 R1 審計之 MC 只作 sanity band（其精確值為 size-multiset 化簡給出，不受影響）。
+2. **H2b**：首跑以「符號夥伴」配對線，對 **edge 線無效**（edge 列兩列在 4 個平手位**同號**而非相反，
+   因 τ 在平手處讀「該列自身第一個非零分量」⟹ 非奇函數於平手位）⟹ 只得 21 條偽線。
+   校正：以幾何線配對（精確驗證 `U[2k+1] = −U[2k]`）。
+3. **H2a**：預註冊假設「V/F/E 群軌道遞移 ⟹ 3 個刪除值」被偽證：實測 **4 個值**（列）/ **4 個值**（線），
+   因凍結 τ **非 2I-等變**（座標依賴）⟹ 刪除譜細化軌道。此與 R1 C18「慣例敏感」同源。

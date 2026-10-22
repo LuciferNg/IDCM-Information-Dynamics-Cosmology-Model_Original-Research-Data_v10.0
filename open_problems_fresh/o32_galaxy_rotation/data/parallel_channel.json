@@ -1,0 +1,14 @@
+{
+  "identity": "Delta_g = a0*mu(x), mu = x/(1+x)",
+  "parallel": "mu = 1/(1+1/x): Newton channel || W-field channel",
+  "btfr_slope_all": 3.5925616571497994,
+  "btfr_slope_highV": {
+    ">1.7": 3.5875682155221664,
+    ">1.9": 3.7794715854418484,
+    ">2.1": 3.121500757434269
+  },
+  "intercept_idcm": 1.82681176445967,
+  "intercept_data4": 1.6750847457627118,
+  "ups_corr": -0.05551732784983137,
+  "a0_btfr_needed": 1.4008026057520872e-10
+}

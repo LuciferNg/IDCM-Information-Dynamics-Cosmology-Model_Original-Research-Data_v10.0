@@ -1,0 +1,18 @@
+{
+  "method_a_dh_chi2": 59.07,
+  "method_b_dh_chi2": 9.75,
+  "method_c_dh_chi2": 473.96,
+  "method_a_dm_chi2": 27.12,
+  "method_b_dm_chi2": 27.12,
+  "n_dh": 6,
+  "n_dm": 5,
+  "parameters": {
+    "R_H": 4129.94,
+    "rd_corrected": 147.08830297943166,
+    "phi_inv_3": 0.23606797749978975,
+    "ell_0": 0.5,
+    "sigma_phi": 0.17356047840765434
+  },
+  "pass": 7,
+  "fail": 1
+}

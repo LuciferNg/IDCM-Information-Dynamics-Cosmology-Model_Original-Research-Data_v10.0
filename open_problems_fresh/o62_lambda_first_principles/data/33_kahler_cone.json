@@ -1,0 +1,15 @@
+{
+  "test": "O62 八期 33: Kähler cone",
+  "vtx_idx": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+  ],
+  "n_interior": 42,
+  "batyrev_sum": 2,
+  "passed": 0,
+  "failed": 0
+}

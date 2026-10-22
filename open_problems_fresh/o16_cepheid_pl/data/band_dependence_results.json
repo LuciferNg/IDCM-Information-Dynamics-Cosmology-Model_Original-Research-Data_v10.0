@@ -1,0 +1,47 @@
+[
+  {
+    "band": "B",
+    "lambda": 440,
+    "S": -6.000000000000002,
+    "predicted": 2.3975,
+    "observed": 2.4,
+    "deviation_pct": 0.1,
+    "status": "\u2705"
+  },
+  {
+    "band": "V",
+    "lambda": 550,
+    "S": 0,
+    "predicted": 2.7725,
+    "observed": 2.76,
+    "deviation_pct": 0.45,
+    "status": "\u2705"
+  },
+  {
+    "band": "I",
+    "lambda": 800,
+    "S": 7,
+    "predicted": 3.0555,
+    "observed": 3.06,
+    "deviation_pct": 0.15,
+    "status": "\u2705"
+  },
+  {
+    "band": "H",
+    "lambda": 1650,
+    "S": 10,
+    "predicted": 3.243,
+    "observed": 3.25,
+    "deviation_pct": 0.21,
+    "status": "\u2705"
+  },
+  {
+    "band": "W (mid-IR)",
+    "lambda": 3500,
+    "S": 11,
+    "predicted": 3.3055,
+    "observed": 3.31,
+    "deviation_pct": 0.13,
+    "status": "\u2705"
+  }
+]

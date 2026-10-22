@@ -1,0 +1,66 @@
+==============================================================================
+O86 FINAL VERIFICATION (REBUILD 2026-09-25): SM x IDCM x GR
+==============================================================================
+
+--- STAGE 1: SPACETIME IDENTITY (1+1D ring -> FLRW projection) ---
+  [PASS] S1-1  omega_ring = c/R_world = 72.590027 km/s/Mpc   got 72.590027
+  [PASS] S1-2  T_ring = 2piR/c = 84.6348 Gyr   got 84.6348
+  [PASS] S1-3  T_ring*omega_ring = 2pi (T=2pi/omega, dev<0.05%)   got 84.6366 Gyr
+  [PASS] S1-4  s_max = piR_world = 12974.6 Mpc   got 12974.59
+  [PASS] S1-5  lambda_sync = L_ring/88 = piR/44 = 294.8770 Mpc   got 294.8770
+  [PASS] S1-6  H_CMB = omega_ring(1-pi/44) = 67.4071 (Planck 0.087sigma)   got 67.4071
+  [PASS] S1-7  l_nyq = log4(18) = 2.0849625   got 2.0849625
+  [PASS] S1-8  Nyquist D_A(l_nyq)/s_max = 0.963228 (非 0.9990)   got 0.963229
+
+--- STAGE 2: IDCM x GR COUPLING ---
+  [PASS] S2-1  exp(-V_L) = rho_L/M_Pl^4 (定義)
+  [PASS] S2-2  Lambda_eff = 8pi*M_Pl^2*exp(-V_L) (V_L 無量綱)
+  [PASS] S2-3  rho_L^(1/4) = 2.246 meV (真空標度)   got 2.2461 meV
+  [PASS] S2-4  Omega_L = 41/60 = 61.5/90 = 0.6833333
+  [PASS] S2-5  Omega_L vs Planck 0.6847 (dev < 1.5%)   dev 0.200%
+
+--- STAGE 3: IDCM x SM COUPLING ---
+  [PASS] S3-1  m_e = M0*g1*L6/F5 = 0.5118 MeV (obs 0.511, <0.5%)   got 0.5118
+  [PASS] S3-2  m_mu = M0*g7*15.5 = 105.80 MeV (obs 105.66, <0.5%)   got 105.799
+  [PASS] S3-3  m_tau = M0*g20*37 = 1770.8 MeV (obs 1776.86, <0.5%)   got 1770.83
+  [PASS] S3-4  y_e = sqrt(2)m_e/v = 2.94e-6   got 2.940e-06
+  [PASS] S3-5  y_mu = sqrt(2)m_mu/v = 6.08e-4   got 6.077e-04
+  [PASS] S3-6  y_tau = sqrt(2)m_tau/v = 1.02e-2   got 1.017e-02
+  [PASS] S3-7  kappa^2 = M0 (量綱 M^2; 非 kappa=sqrt(M0) 標籤)
+  [PASS] S3-8  lambda_WH = mu2/123 = lambda_self = 1/<W>^2 (三讀法一數)   = 0.0162601626
+  [PASS] S3-9  sum gamma_n (n=1..44) = 90   got 90.000000
+  [PASS] S3-10 <W>^2 = mu2/(2*lambda) = 61.5   got 61.500000
+
+--- STAGE 4: UNIFIED LAGRANGIAN (結構聲稱, 非數值驗證) ---
+  [claim] L_total = L_GR + L_W + L_SM + L_coupling (docs/02 §4.1 組裝)
+  [claim] L_GR: Einstein-Hilbert + Lambda_eff
+  [claim] L_W: Kinetic + SSB potential + interaction
+  [claim] L_coupling: Yukawa + WH portal + KS + WG + zeta*W*R
+  [claim] 全部係數結構閉合, 零自由參數 (係數數值見 s1/s2/s3)
+  [claim] 1+1D R=0 => 重力 emergent (docs/02 §2.5)
+  [claim] SM x IDCM x GR 耦合完整定義 (docs/02 §4)
+  [claim] 場論學家 Q10 閉合 (docs/02 §4)
+
+==============================================================================
+TOTAL (數值檢查): 23/23 PASS
+TOTAL (結構聲稱, 非驗證): 8 項 (見上)
+STAGE 1: 8/8
+STAGE 2: 5/5
+STAGE 3: 10/10
+
+關鍵數字:
+  omega_ring = 72.590027 km/s/Mpc
+  R_world    = 4129.94 Mpc
+  T_ring     = 84.6348 Gyr
+  lambda_sync= 294.8770 Mpc
+  H_CMB      = 67.4071 km/s/Mpc
+  Omega_L    = 0.6833333 (41/60)
+  rho_L^1/4  = 2.2461 meV
+  M0         = 27.900915 MeV
+  lambda_WH  = 0.0162601626 (= lambda_self)
+  m_e/m_mu/m_tau = 0.5118 / 105.799 / 1770.83 MeV
+==============================================================================
+O86: 結構層閉合 (見 docs/03 §5); 數值層已更新至現行上游值
+==============================================================================
+
+  -> data/05_final_verification_rebuild_20260925.txt

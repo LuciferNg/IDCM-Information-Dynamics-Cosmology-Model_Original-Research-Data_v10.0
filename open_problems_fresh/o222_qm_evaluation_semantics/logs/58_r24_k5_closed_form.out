@@ -1,0 +1,9 @@
+cyclo(176) degree = 80 height = 1
+cyclo(88)  degree = 40 height = 1
+(a) zeta^89 + zeta == 0 : True   (vector all zero: True )
+(b) (zeta-zeta^-1)(G+1) + (zeta^55-zeta^-55) == 0 : True
+G (numerical)      = -26.884536905857797
+G closed form      = -26.884536905857800   (-1 - sin(5pi/8)/sin(pi/88))
+sum_{n>=28} gamma  = 60.88453690585780  (recorded 60.88453690585779)
+residual           = 0.615463094142200  = 55/2 + G
+residual closed    = 0.615463094142200  (53/2 - sqrt(2+sqrt(2))/(2 sin(pi/88)))

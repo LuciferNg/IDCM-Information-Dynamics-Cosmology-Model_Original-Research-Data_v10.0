@@ -1,0 +1,1247 @@
+                                                                    Springer Nature 2021 LATEX template
+
+
+
+
+                                                    Evidence of a massive accretion event 1.8 billion
+                                                    years before the Gaia-Sausage-Enceladus merger
+
+                                                      Davide Massari1*, Chiara Zerbinati2 , Cristiano Fanelli1 , Amina
+                                                    Helmi3 , Edoardo Ceccarelli1,2,3 , Fernando Aguado-Agelet4,5 , Santi
+                                               Cassisi6,7 , Ewoud Wempe3,8 , Matteo Monelli6,9 , Andrea Bellini10 , Thomas
+arXiv:2601.18896v2 [astro-ph.GA] 17 Aug 2026
+
+
+
+
+                                                      Callingham3 , Hanneke C. Woudenberg3 , Roger Cohen11 , Carme
+                                                     Gallart12 , Elena Pancino13 , Sara Saracino13 , Maurizio Salaris1,14
+                                                                             and Alessio Mucciarelli2
+                                               1*
+                                                  Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, INAF, Via Gobetti 93/3,
+                                                                                   Bologna, I-40129, Italy.
+                                                   2
+                                                     Dipartimento di Fisica e Astronomia, Università degli Studi di Bologna, Via Piero
+                                                                            Gobetti 93/2, Bologna, I-40129, Italy.
+                                                 3
+                                                   Kapteyn Astronomical Institute, University of Groningen, Landleven 12, Groningen,
+                                                                                 9747 AD, The Netherlands .
+                                                 4
+                                                   Escola de Enxeñarı́a de Telecomunicación, Universidade de Vigo, Vigo, 36310, Spain.
+                                                    5
+                                                      Universidad de La Laguna, Avda. Astrofı́sico Fco. Sánchez, La Laguna, E-38205,
+                                                                                       Tenerife, Spain.
+                                                 6
+                                                   Osservatorio Astronomico di Abruzzo, INAF, Via M. Maggini, Teramo, 64100, Italy.
+                                                   7
+                                                     INFN - Sezione di Pisa, Universitá di Pisa, Largo Pontecorvo 3, Pisa, 56127, Italy.
+                                                  8
+                                                    LIRA, Observatoire de Paris, Université PSL, Sorbonne Université, Université Paris
+                                                             Cité, CY Cergy Paris Université, CNRS, Meudon, 92190, France.
+                                                   9
+                                                     Osservatorio Astronomico di Roma, INAF, Via Frascati 33, Monte Porzio Catone,
+                                                                                         00078, Italy.
+                                               10
+                                                  Space Telescope Science Institute, 3700 San Martin Drive, Baltimore, 21218, MD, USA.
+                                                 11
+                                                     Department of Physics and Astronomy, Rutgers the State University of New Jersey,
+                                                                    136 Frelinghuysen Road, Piscataway, 08854, NJ, USA.
+                                               12
+                                                  Instituto de Astrofı́sica de Canarias, Calle Vı́a Láctea s/n, La Laguna, E-38206, Spain.
+                                                  13
+                                                      Osservatorio Astrofisico di Arcetri, INAF, Largo E. Fermi 5, Firenze, 50125, Italy.
+                                               14
+                                                  Astrophysics Research Institute, Liverpool John Moores University, 146 Brownlow Hill,
+                                                                                   Liverpool, L3 5RF, UK.
+
+
+
+
+                                                        *Corresponding author(s). E-mail(s): davide.massari@inaf.it;
+                                                Contributing authors: chiara.zerbinati2@unibo.it ; cristiano.fanelli@inaf.it;
+                                                      ahelmi@astro.rug.nl; ceccarelli@astro.rug.nl ; faguado@uvigo.gal;
+                                                  santi.cassisi@inaf.it; ewoud.wempe@obspm.fr; matteo.monelli@inaf.it;
+                                                bellini@stsci.edu; t.m.callingham@astro.rug.nl ; woudenberg@astro.rug.nl ;
+                                                 rc1273@physics.rutgers.edu; carme.gallart@iac.es; elena.pancino@inaf.it;
+                                                sara.saracino@inaf.it; M.Salaris@ljmu.ac.uk; alessio.mucciarelli2@unibo.it;
+
+
+
+
+                                                                                            1
+                    Springer Nature 2021 LATEX template
+
+
+2    A massive merger
+
+    The merger history of the Galaxy has been traced back firmly to
+redshift 2 (10 Billion years ago). While evidence for the existence of
+at least one more significant merger before this time has been pre-
+sented, its interpretation is yet to be fully established. Here we show
+that the population of globular clusters around the Galaxy depicts
+three distinct age-metallicity sequences, one associated with the pro-
+genitor of the Milky Way, one with the merger with Gaia-Enceladus
+10 billion years ago, and a third intermediate sequence associated
+to at least one merger which we estimate took place about 1.8 bil-
+lion years before Gaia-Enceladus. This discovery has been possible
+thanks to exquisite Hubble Space Telescope data and sophisticated anal-
+ysis that enables very precise relative age determination of globular
+clusters. The newly identified sequence reveals that this merger took
+place with an object of stellar mass similar to that of Gaia-Enceladus
+(≃ 5 × 108 M⊙ ), and which deposited most of its mass in the inner 6
+kpc of the Milky Way. The identification of a third merger event in
+the inner Galaxy puts to rest earlier debates, and honoring previous
+works we name the progenitor system Low-energy-Kraken-Heracles,
+or LKH for short.
+    According to the currently favored cosmological framework, large galax-
+ies like the Milky Way (MW) have grown through time, at least in part, via
+mergers with smaller systems. Our knowledge of the history of events that con-
+tributed to the assembly of our Galaxy has greatly improved1 thanks to the
+advent of the Gaia mission2 and large spectroscopic surveys (e.g., APOGEE,3
+GALAH4 ). The most recent merger, still ongoing, is the one with the Sagittar-
+ius dwarf galaxy,5 which fell in about 6 billion years (Gyr) ago.6 Prior to this,
+the most significant merger experienced by the MW known was with the Gaia-
+Sausage-Enceladus (GSE) dwarf galaxy,7, 8 and ended about 10 Gyr ago.9, 10
+Due to the high mass ratio of this event (about 1:4-1:5) this led to the devel-
+opment of the thick disk as we see it today, both through dynamical heating
+and significant star formation.9, 11, 12 A few other accretion events have also
+taken place in between these two significant mergers (i.e. between 6 and 10
+Gyr ago), all involving smaller dwarf galaxies.13, 14, 15
+    Reconstructing what happened in the earliest phases of the MW’s life,
+more than 10 Gyr ago, is significantly more challenging. As we proceed back
+in time, the mass of our Galaxy must have been smaller and more comparable
+to that of the accreting building blocks.16 Because of this and the extremely
+short evolutionary timescales, the properties of the infant MW and those of the
+merging systems could be difficult to distinguish either dynamically or chemi-
+cally.17, 18, 19 The very short mixing timescales (driven in part by chaos in the
+inner Galaxy induced by the rotating bar) imply that some of the dynami-
+cal memory must have been erased.20 Furthermore, because of the intricacies
+of modeling chemical evolution, state-of-the-art cosmological hydrodynamical
+simulations currently provide limited guidance on all the chemical elements
+that could potentially be used to distinguish the early building blocks from
+one another.17, 19
+                     Springer Nature 2021 LATEX template
+
+
+                                                        A massive merger        3
+
+    The current understanding is that the earliest phases of the MW evolution
+are represented by dynamically hot,21, 22 chemically-unevolved23, 24 stellar pop-
+ulations, concentrated in the inner 3 kpc of the present-day Galaxy.25 These
+populations are likely a mix of stars born in the main progenitor (in-situ),
+and of stars born in building-blocks accreted early on, but the dispute about
+their origin is not settled yet. Attempts to observationally isolate the in-situ
+population from the accreted building blocks have yielded debated results so
+far, with cross-contamination being the major challenge. Using a compilation
+of literature age estimates, a group of globular clusters (GCs) at low orbital
+energy (the “Low-energy” group, hereafter), concentrated within 6 kpc from
+the Galactic centre, was identified and presumed to be related to an accretion
+event.26 Subsequently, these GCs were interpreted to be associated with the
+Kraken merger event,27 an entity that had been predicted28 using cosmological
+numerical simulations on the basis of the number of GCs with unknown origin
+along the branch of the age-metallicity relation populated by accreted systems.
+However, the accreted origin of these GCs has been contested on the basis
+of chemo-dynamical arguments.29, 30 Similarly, the search for accreted stars
+in the inner Galaxy led to the identification of a metal-poor and chemically-
+unevolved population, that was termed Heracles.31 However, also its origin is
+debated,21, 32 since the stars’ chemical properties are not exclusive of accreted
+populations and may be found in early in-situ populations as well (at least in
+the elements considered thus far and in the metal-poor regime). A more recent
+analysis24 including the study of the spatial distribution of the Heracles stars,
+nonetheless seems to provide further support to the presence of an accreted
+population.
+    The difficulty to untangle the in-situ population from that accreted in
+the earliest phases of the MW evolution,24, 33 suggests that more information
+is needed. Crucially, chronological information can be used to sequence the
+events that took place in the proto-Galaxy. While relative ages are difficult to
+determine accurately and precisely for individual stars, this is possible for star
+clusters.34, 35
+    Here we homogeneously analyze for the first time, a sample of 17 globular
+clusters (GCs) in the inner Galaxy, where the debris of the earliest accretion
+events should be located.36 These GCs have been observed with the Hubble
+Space Telescope (HST) in the F606W and F814W optical bands, and 15 of
+these have been dynamically associated with the “Low-energy” group in previ-
+ous works.26, 37 Using our recently developed highly sophisticated analysis, we
+are able to determine extremely precise relative GC ages with typical errors
+of a few hundred Myr34 (see the Methods Section 1 for details). The increase
+in precision is due to the minimization of systematic errors, driven in previous
+work by the heterogeneity of datasets and methodologies, as well as by a more
+sophisticated treatment of each cluster’s photometry.
+    With our analysis of these 17 GCs, this brings the total number of GCs
+with homogeneous age determination to 39.34, 38, 39, 40 Besides the Low-energy
+                                                      Springer Nature 2021 LATEX template
+
+
+4             A massive merger
+
+group, we expect41 this sample to also contain in-situ GCs and some asso-
+ciated to GSE. To robustly determine the most likely number of progenitors
+required to describe this chrono-dynamical data set, we fit a Bayesian model
+with multiple components (each representing a progenitor system) using the
+dynamic nested sampling package dynesty. We assume each progenitor to
+follow an age-metallicity relation (AMR), described using a simple chemical
+evolution model42 (see the Methods Section 2 for details). We also assume the
+associated GCs to be clustered in their Jacobi energy (EJ ), (average) vertical
+action Jz and (average) circularity η = Lz /Lz (E) (see the Methods section for
+a justification of this choice of dynamical quantities). To compute these, we
+have used a Galactic mass model including a rotating bar,20, 43 and computed
+the averages over 200 orbits. The distribution of clusters is taken to be a mix-
+ture of K Student-t distributions, where K is to be determined, and would
+correspond to the number of progenitors. This statistical approach allows us
+to identify distinct chrono-dynamical groups while properly accounting for
+observational uncertainties and model evidence. By adopting flat priors on the
+AMR characteristic parameters, we estimated the Bayesian evidence (log Z)
+for the different cases having K = 2, 3 and 4 separate progenitors. We find
+that the case with the highest evidence is the one that admits 3 progenitors.
+In comparison to it, the 2-progenitor case has ∆ log Z = 5.3, and is therefore
+decisively disfavored according to both the scales by Jeffreys and by Kass &
+Raftery. The 4-progenitors case instead has ∆ log Z = 2.2, and is thus strongly
+and moderately disfavoured, respectively, according to the two scales.
+
+                                                                                                                                                                              MW
+                                                                                                                              0.0                                             G-E
+     140000                                                            140000                                                                                                 LKH
+                                                                                                                              0.5
+     160000                                                            160000                                                 1.0
+                                                                                                                  Age (Gyr)
+
+
+
+
+                                                                                                                              1.5
+     180000                                                            180000
+EJ
+
+
+
+
+                                                                  EJ
+
+
+
+
+                                                                                                                              2.0
+     200000                                                            200000
+                                                                                                                              2.5
+
+     220000                                                            220000                                                 3.0
+
+                                                                                                                              3.5
+     240000                                                            240000
+               0   100   200   300        400   500   600   700                 1.0   0.5    0.0      0.5   1.0               4.0   1.8   1.6   1.4   1.2   1.0   0.8   0.6   0.4
+                                     Jz                                                     Circularity                                               [M/H]
+
+Fig. 1 Chrono-dynamical properties of our sample of 39 GCs. Left panel :
+distribution in the EJ vs JZ dynamical space of the 39 GCs with homogeneous age
+estimate (filled symbols, see the Methods Section). GCs are color-coded according to
+their association (with membership probability > 50%) with GSE (cyan symbols),
+the MW (black symbols) or the LKH (red symbols), as determined by our Bayesian
+chrono/dynamical analysis. Uncertainties are derived as the 16th- and the 84th-
+percentile of each parameter distribution computed over 200 orbits. Middle panel :
+same in the EJ vs circularity space. Right panel : distribution in the age-metallicity
+plane of the three populations of GCs. The relative age scale along the y-axis is
+defined by setting the age resulting from the isochrone fit of the oldest GC (tiso =
+14.48 Gyr) as zero.
+                     Springer Nature 2021 LATEX template
+
+
+                                                        A massive merger        5
+
+    Fig. 1 shows the distribution of the 39 GCs in our sample in the dynamical
+spaces (left and middle panels) and in the age-metallicity plane (right panel),
+colour-coded by their membership as determined by our statistical analysis
+in the most favoured case with 3 components. It is immediately evident that
+there is an intermediate population of GCs (red symbols) that follows an age-
+metallicity sequence that is well separated from that traced by GSE GCs (cyan
+symbols) and the in-situ GCs (black symbols). These 12 GCs (out of the 15 in
+our sample initially associated to the “low-energy” group) are confined within
+the inner 6 kpc from the Galactic centre. Hence, most of the “low-energy” GCs
+must have formed in an environment that is neither GSE, nor the Milky Way,
+and given their distinct dynamical properties, it follows that this population
+of GCs is necessarily part of an independent merger event.
+    While the above statistical analysis allows us to unveil the presence of three
+distinct populations of GCs (see the Methods section 3 for details), to more
+accurately constrain the properties of their progenitor systems, we fit the AMR
+of the three groups separately, using the GCs with a high-probability (p >
+50%) of membership. As before we use a simple chemical evolution model,42
+with parameters depending on the stellar mass of a galaxy,44 the time at
+which star formation started, and the time at which it ended, that we take to
+represent the galaxy’s accretion time (see Methods for details). Fig. 2 shows
+the individual fits of the three AMRs. From the comparison between GSE
+and the low-energy GCs, we find that the merger event identified here has a
+stellar mass consistent with that of GSE within the uncertainties. Moreover,
+its accretion time is ∼ 1.8 Gyr earlier than GSE. These relative measurements
+are robust, and are anchored to absolute values by taking as a reference for
+GSE7 a stellar mass of ∼ 5 × 108 M⊙ and an accretion time of taccr ≃ 10.5
+Gyr.45 It follows that we have unveiled a very significant merger event that
+took place ≃ 12.3 Gyr ago (at redshift z > 4), with a mass ratio that must
+have been higher than that of the GSE event,7, 9 i.e.> 0.2 − 0.3. The estimated
+stellar mass for these two progenitors is in agreement with the host stellar
+mass - GC metallicity relation,46 according to which a galaxy this massive
+(with absolute magnitude in B-band47 MB ≃ −17.5) should host a GC system
+of mean metallicity [M/H]≃ −1.4.
+    This early and massive merger has characteristics that could link it to
+the putative accreted Heracles stellar population, which is also restricted to
+the inner Galaxy.31 While this region of the Galaxy likely contains debris
+from all the mergers that took place in the early stages of formation of the
+Milky Way, our identification may be seen as the cleanest selection extending
+to low metallicity of the most massive contributor to the Heracles’ accreted
+sub-population. Nonetheless, we cannot rule out the presence of other (pre-
+sumably less massive) progenitors without GCs or whose GCs have been fully
+disrupted. Since the members of this progenitor stem mostly from the Low-
+energy group,26 later associated with the putative Kraken,27 we name the
+progenitor Low-energy-Kraken-Heracles, or LKH.
+                     Springer Nature 2021 LATEX template
+
+
+6     A massive merger
+
+
+
+
+Fig. 2 AMR models fit. Left-hand panel : fit to the GSE GCs. Middle panel : fit to
+LKH GCs. Right-hand panel : fit to the in-situ MW GCs. The individual GC members
+of the three samples are selected as described in the Methods Section. The red line
+corresponds to the fit with the Maximum A Posteriori (MAP) value, while the blue
+line represents the median fit.
+
+     This is the first time that a significant event occurred during the early evo-
+lution of the proto-Galaxy has been identified from the intricate sequence of
+mergers and in-situ star formation, and thereby settles the debates mentioned
+earlier. Moreover, our study establishes the AMR as currently the only tracer
+able to distinguish in the metal-poor regime ([Fe/H]≲ −1.6) the main pro-
+genitor of our Galaxy, namely the building block that evolved at the highest
+rate.
+     Our conclusions are strongly supported by cosmological simulations, which
+typically predict between 1 and 4 significant mergers in the history of a Milky
+Way-like galaxy.48 Furthermore, the three AMRs identified in our work are in
+fact remarkably well reproduced by several Milky Way analogs of the Auriga
+simulations,49 as shown in Fig. 3. In the three simulated galaxies represented
+in the figure (Au14, Au16 and Au20), the median AMR defined by the stars
+are shown for the main progenitor, a GSE-like merger (defined as the largest
+accretion event that occurred between 2.5 Gyr and 5 Gyr from the start of the
+simulation) and a LKH-like event (defined as the largest event in the first 2.5
+Gyr). The AMRs in the simulations follow a global trend that is in good agree-
+ment with what is observed, in particular showing a clear separation among
+the AMR of the three progenitors by a few hundreds Myr at any metallicity,
+that matches qualitatively the separation observed with the GCs analyzed in
+this paper. Future precise stellar ages for large samples of stars in the inner
+MW, particularly measurements coming from asteroseismology missions such
+as PLATO,50 or derived with CMD-fitting techniques using Gaia data will be
+key to unravel the series of events that took place in the first Gyr of the MW
+life with even finer detail.
+                       Springer Nature 2021 LATEX template
+
+
+                                                         A massive merger        7
+
+
+
+
+Fig. 3 AMR in simulated MW analogs. Median trend (solid lines) for the AMR
+of the main progenitor (black), a GSE-like merger (cyan) and a LKH-like event (red)
+in three MW analogs of the Auriga Level-4 simulations.
+
+
+
+1
+     Helmi, A. Streams, Substructures, and the Early History of the Milky Way.
+     ARA&A 58, 205–256 (2020).
+2
+     Gaia Collaboration et al. The Gaia mission. A&A 595, A1 (2016).
+3
+     Majewski, S. R. et al. The Apache Point Observatory Galactic Evolution
+     Experiment (APOGEE). AJ 154, 94 (2017).
+4
+     Buder, S. et al. The GALAH+ survey: Third data release. MNRAS 506,
+     150–201 (2021).
+5
+     Ibata, R. A., Gilmore, G. & Irwin, M. J.       A dwarf satellite galaxy in
+     Sagittarius. Nature 370, 194–196 (1994).
+6
+     Ruiz-Lara, T., Gallart, C., Bernard, E. J. & Cassisi, S. The recurrent impact
+     of the Sagittarius dwarf on the star formation history of the Milky Way.
+     Nature Astronomy 4, 965–973 (2020).
+7
+     Helmi, A. et al. The merger that led to the formation of the Milky Way’s
+     inner stellar halo and thick disk. Nature 563, 85–88 (2018).
+8
+     Belokurov, V., Erkal, D., Evans, N. W., Koposov, S. E. & Deason, A. J.
+     Co-formation of the disc and the stellar halo. MNRAS 478, 611–619 (2018).
+9
+     Gallart, C. et al. Uncovering the birth of the Milky Way through accurate
+     stellar ages with Gaia. Nature Astronomy 3, 932–939 (2019).
+10
+     Montalbán, J. et al. Chronologically dating the early assembly of the Milky
+     Way. Nature Astronomy 5, 640–647 (2021).
+11
+     Di Matteo, P. et al. The Milky Way has no in-situ halo other than the
+     heated thick disc. Composition of the stellar halo and age-dating the last
+                       Springer Nature 2021 LATEX template
+
+
+8       A massive merger
+
+     significant merger with Gaia DR2 and APOGEE. A&A 632, A4 (2019).
+12
+     Belokurov, V. et al. The biggest splash. MNRAS 494, 3880–3898 (2020).
+13
+     Myeong, G. C., Vasiliev, E., Iorio, G., Evans, N. W. & Belokurov, V. Evi-
+     dence for two early accretion events that built the Milky Way stellar halo.
+     MNRAS 488, 1235–1247 (2019).
+14
+     Naidu, R. P. et al. Evidence from the H3 Survey That the Stellar Halo Is
+     Entirely Comprised of Substructure. ApJ 901, 48 (2020).
+15
+     Ruiz-Lara, T., Helmi, A., Gallart, C., Surot, F. & Cassisi, S. Unveiling the
+     past evolution of the progenitor of the Helmi streams. A&A 668, L10 (2022).
+16
+     Horta, D. et al. The proto-galaxy of Milky Way-mass haloes in the FIRE
+     simulations. MNRAS 527, 9810–9825 (2024).
+17
+     Santistevan, I. B. et al. The formation times and building blocks of Milky
+     Way-mass galaxies in the FIRE simulations. MNRAS 497, 747–764 (2020).
+18
+     Orkney, M. D. A. et al. The impact of two massive early accretion events
+     in a Milky Way-like galaxy: repercussions for the buildup of the stellar disc
+     and halo. MNRAS 517, L138–L142 (2022).
+19
+     Garcı́a-Bethencourt, G., Brook, C. B., Grand, R. J. J. & Kawata, D. A high
+     fidelity Milky Way simulation with Kraken, Gaia-Enceladus, and Sequoia
+     analogues: clues to their accretion histories. MNRAS 526, 1190–1197 (2023).
+20
+     Woudenberg, H. C. & Helmi, A. The chaos induced by the Galactic bar
+     on the orbits of nearby halo stars. Astronomy & Astrophysics 700, A240
+     (2025).
+21
+     Belokurov, V. & Kravtsov, A. From dawn till disc: Milky Way’s turbulent
+     youth revealed by the APOGEE+Gaia data. MNRAS 514, 689–714 (2022).
+22
+     Chandra, V. et al. The Three-phase Evolution of the Milky Way. ApJ 972,
+     112 (2024).
+23
+     Malhan, K. & Rix, H.-W. Shiva and Shakti: Presumed Proto-Galactic
+     Fragments in the Inner Milky Way. ApJ 964, 104 (2024).
+24
+     Horta, D. & Schiavon, R. P. Modelling the density and mass of the Milky
+     Way’s proto-galaxy components with APOGEE-Gaia. MNRAS 537, 3730–
+     3745 (2025).
+25
+     Rix, H.-W. et al. The Poor Old Heart of the Milky Way. ApJ 941, 45
+     (2022).
+                       Springer Nature 2021 LATEX template
+
+
+                                                          A massive merger        9
+
+26
+     Massari, D., Koppelman, H. H. & Helmi, A. Origin of the system of globular
+     clusters in the Milky Way. A&A 630, L4 (2019).
+27
+     Kruijssen, J. M. D. et al. Kraken reveals itself - the merger history of the
+     Milky Way reconstructed with the E-MOSAICS simulations. MNRAS 498,
+     2472–2491 (2020).
+28
+     Kruijssen, J. M. D., Pfeffer, J. L., Reina-Campos, M., Crain, R. A. & Bas-
+     tian, N. The formation and assembly history of the Milky Way revealed by
+     its globular cluster population. MNRAS 486, 3180–3202 (2019).
+29
+     Belokurov, V. & Kravtsov, A. In-situ versus accreted Milky Way globular
+     clusters: a new classification method and implications for cluster formation.
+     MNRAS 528, 3198–3216 (2024).
+30
+     Chen, Y. & Gnedin, O. Y. Galaxy assembly revealed by globular clusters.
+     The Open Journal of Astrophysics 7, 23 (2024).
+31
+     Horta, D. et al. Evidence from APOGEE for the presence of a major building
+     block of the halo buried in the inner Galaxy. MNRAS 500, 1385–1403
+     (2021).
+32
+     Vasini, A., Spitoni, E. & Matteucci, F. Galactic archaeology with [Mg/Mn]
+     versus [Al/Fe] abundance ratios. Uncertainties and caveats. Astronomy &
+     Astrophysics 683, A121 (2024).
+33
+     Rix, H.-W. et al. The Extremely Metal-rich Knot of Stars at the Heart of
+     the Galaxy. ApJ 975, 293 (2024).
+34
+     Massari, D. et al. Cluster Ages to Reconstruct the Milky Way Assembly
+     (CARMA). I. The final word on the origin of NGC 6388 and NGC 6441.
+     A&A 680, A20 (2023).
+35
+     VandenBerg, D. A., Brogaard, K., Leaman, R. & Casagrande, L. The Ages of
+     55 Globular Clusters as Determined Using an Improved ∆ VĤB TO Method
+     along with Color-Magnitude Diagram Constraints, and Their Implications
+     for Broader Issues. ApJ 775, 134 (2013).
+36
+     Pfeffer, J. L. et al. Predicting accreted satellite galaxy masses and accretion
+     redshifts based on globular cluster orbits in the E-MOSAICS simulations.
+     MNRAS 499, 4863–4875 (2020).
+37
+     Callingham, T. M. et al. The chemo-dynamical groups of Galactic globular
+     clusters. MNRAS 513, 4107–4129 (2022).
+38
+     Aguado-Agelet, F. et al. Cluster Ages to Reconstruct the Milky Way Assem-
+     bly (CARMA): II. The age-metallicity relation of Gaia-Sausage-Enceladus
+                      Springer Nature 2021 LATEX template
+
+
+10       A massive merger
+
+     globular clusters. A&A 704, A255 (2025).
+39
+     Ceccarelli, E. et al. Cluster Ages to Reconstruct the Milky Way Assembly
+     (CARMA): III. NGC 288 as the first Splashed globular cluster. A&A 704,
+     A256 (2025).
+40
+     Massari, D. et al. The Hubble Missing Globular Cluster Survey: I. Survey
+     overview and the first precise age estimate for ESO452-11 and 2MASS-
+     GC01. A&A 698, A197 (2025).
+41
+     Massari, D. Origin of the System of Globular Clusters in the Milky Way -
+     Gaia eDR3 Edition. Research Notes of the American Astronomical Society
+     9, 64 (2025).
+42
+     Prantzos, N. The metallicity distribution of the halo and the satellites of
+     the Milky Way in the hierarchical merging paradigm. A&A 489, 525–532
+     (2008).
+43
+     McMillan, P. J. The mass distribution and gravitational potential of the
+     Milky Way. MNRAS 465, 76–94 (2017).
+44
+     Dekel, A. & Woo, J. Feedback and the fundamental line of low-luminosity
+     low-surface-brightness/dwarf galaxies. MNRAS 344, 1131–1144 (2003).
+45
+     Fernández-Alvar, E. et al. Chronology of our Galaxy from Gaia colour–
+     magnitude diagram fitting (ChronoGal): II. Unveiling the formation and
+     evolution of the kinematically selected thick and thin discs. A&A 704, A258
+     (2025).
+46
+     Brodie, J. P. & Strader, J. Extragalactic Globular Clusters and Galaxy
+     Formation. ARA&A 44, 193–267 (2006).
+47
+     Savaglio, S. et al. The Gemini Deep Deep Survey. VII. The Redshift
+     Evolution of the Mass-Metallicity Relation. ApJ 635, 260–279 (2005).
+48
+     Robertson, B., Bullock, J. S., Font, A. S., Johnston, K. V. & Hernquist, L.
+     Λ Cold Dark Matter, Stellar Feedback, and the Galactic Halo Abundance
+     Pattern. ApJ 632, 872–881 (2005).
+49
+     Grand, R. J. J. et al. Overview and public data release of the augmented
+     Auriga Project: cosmological simulations of dwarf and Milky Way-mass
+     galaxies. MNRAS 532, 1814–1831 (2024).
+50
+     Rauer, H. et al. The PLATO mission. Experimental Astronomy 59, 26
+     (2025).
+                    Springer Nature 2021 LATEX template
+
+
+                                                      A massive merger        11
+
+Methods
+
+1. Age estimates
+
+    The relative age of all the clusters analyzed in this work have been deter-
+mined with the strictly homogeneous method developed within the Cluster
+Ages to Reconstruct the Milky Way Assembly (CARMA) project.34, 38, 39, 51
+All the details have been extensively described in paper I of the series. Here
+we remark that the precision we achieve is due to the minimization of the
+sources of systematic errors, which in turn is achieved through the adoption,
+for all the CARMA GCs, of i) homogeneous HST photometry in the F606W
+and F814W bands, corrected for differential reddening52 and decontaminated
+from field stars via proper-motion-based membership;53 ii) the most up-to-
+date stellar evolution models from the Bag of Stellar Tracks and Isochrones
+(BaSTI) database54, 55 and iii) the same Markov chain Monte Carlo (MCMC)-
+based isochrone fitting techinque, which provides at the same time an estimate
+for age, global metallicity [M/H], distance and color-excess E(B-V) on the
+same homogeneous scale. We remark that our age estimates should not be
+interpreted on an absolute scale, because it is well known that every set of
+theoretical models has a different absolute scale based on the adopted input
+physics. In this sense, GC ages older than the age of the Universe should not
+raise concern. They should be interpreted bearing in mind that they could
+be inaccurate, but highly precise, which is what matters for all the results
+presented here.
+    The number of GCs for which we determine an age estimate in the CARMA
+framework for the first time here is 17, namely: 15 originally associated
+with the “low-energy” group and 2 dynamically interpreted as in-situ. The
+photometry for most of these GCs comes from the public database of the
+HUGS project.56, 53 The astro-photometric catalogs of NGC 6256, NGC 6401
+and NGC 6453 are taken from another source.57 Finally, the photometry of
+NGC 4372 has been obtained with the same codes and methods used for the
+other GCs,58 by working on the images from GO-15982 (PI: Reinhart).
+    The result of the isochrone fit is summarized in Table 1. An example of an
+individual fit is presented in Fig 4. As a sanity check, we compare the values of
+the free parameters that we obtained from the isochrone fit with existing lit-
+erature estimates. The comparison is shown in Fig. 5, and demonstrates that
+the mean difference (solid grey lines) is always consistent with zero within 1σ
+(dashed grey lines). Literature color-excesses E(B-V)ref and distance moduli
+DMref have been taken from the Harris catalog,59 but the same good con-
+sistency is found when considering distance estimates by other works.60 The
+global metallicity [M/H]ref has been computed starting from the [Fe/H] val-
+ues of the Harris catalog, transformed according to the equation:61 [M/H] =
+[Fe/H]+log(0.694 × 10[α/Fe] + 0.306), and using a relation38 between [Fe/H]
+and [α/Fe].
+                     Springer Nature 2021 LATEX template
+
+
+12     A massive merger
+
+    Significant effort has been devoted to the determination of the relative
+age of Milky Way GCs in the past.62, 63 To compare the uncertainty on our
+age estimates with previous works, we use the samples by Dotter et al.64
+and by VandenBerg et al.,35 as they determine GC relative ages using the
+photometry in the same F606W and F814W HST filters adopted here. Since
+the precision on the GC age depends on GC properties such as distance or
+reddening, we only compare GCs in common with the two works. Of the 17
+GCs for which we provide a CARMA age for the first time here, 12 are in
+common with the Dotter sample, and 12 (not strictly the same ones) with
+the VandenBerg sample. Our uncertainties are on average a factor of 3.5
+better than the former (a mean error of 0.26 Gyr vs 0.91 Gyr) and a factor
+1.6 better than the latter (a mean of 0.26 Gyr vs a mean of 0.43 Gyr). While
+some of the sources of errors affecting ours and these works estimates should
+in principle be similar, the most notable differences are the following: (i) our
+CMDs are always corrected for differential reddening and decontaminated
+from field stars using proper motions measurements; (ii) whenever a GCs is
+known to host stellar populations enriched in iron, helium (Y) or C+N+O
+(which affect also the photometry in optical bands, contrarily to the stan-
+dard multiple population phenomenon), we remove the chemically peculiar
+stars using HST UV photometry; (iii) we correct our theoretical models for
+temperature-dependent extinction; (iv) we do not fix the GCs metallicity,
+distance and reddening, but we leave them as free parameters of the fit.
+
+2. AMR models
+
+    The simple chemical evolution model42 enables inferring an age-metallicity
+relation under relatively straightforward assumptions. For a constant star-
+formation rate (SFR), the age t is related to the metallicity as
+
+                                                 10x
+                                                    
+                          t(x) = tf + ∆t · exp −                                (1)
+                                                  p
+
+where x = [M/H] is the metallicity, p is the effective chemical yield (in units
+of Z⊙ ), and ∆t = ti − tf denotes that star formation started ti Gyr ago and
+ended after a time interval ti − tf , with ti > tf . In the case of an exponentially
+declining SFR, i.e. ∝ exp(−βt), the age and metallicity are related through
+
+                              t(x) = ti − 10x /(β p)                            (2)
+
+when the star formation timescale is much longer (i.e. ti ≫ tf ). In the oppo-
+site case, it can be shown that Eq. 2 reduces to Eq. 1. For the MW, which
+is the progenitor that endured star formation the longest, we will adopt an
+exponentially declining SFR, hence Eq. 2. For the accreted systems instead,
+since both β and t are small, we adopt Eq. 1. We remark that in our analysis
+we adopt tf as the indicator for the merger accretion time. Although such an
+assumption is not novel,27 it has been shown that a delay of 0.5-1.5 Gyr might
+                     Springer Nature 2021 LATEX template
+
+
+                                                               A massive merger   13
+
+occur between the end of GC formation and the conclusion of an accretion
+event.65 However, this does not affect our reconstructed merger timeline, as
+it relies on the relative comparison between the tf values inferred for each
+different progenitor.
+
+   We assume the effective chemical yield p to be constant over time and to be
+proportional to the stellar mass of the progenitor44 according to the relation42
+                                                   0.4
+                                             M
+                           p = 0.005                       .                      (3)
+                                           106 M⊙
+
+The value of the coefficient in Eq.3, was determined to better represent the
+yield of the progenitor systems of the MW, where SNIa did not have the time
+to contribute significantly.42 As such, it is a factor 2 smaller than the original
+value describing present-day dwarf galaxies.44
+
+3. Statistical analysis and characterization of the progenitors
+
+    As described in the main paper, we determine the most likely number of
+progenitors in our dataset using chrono-dynamical information37 and employ-
+ing the dynamic nested sampling package dynesty. This is done in a step-wise
+procedure as follows:
+i) to anchor the AMR of the in-situ and GSE progenitors, we first selected
+a few clusters with homogeneous chemo-chrono-dynamical properties that in
+the literature are consistently and unambiguously associated with either of
+these progenitors. We assign NGC 5927, NGC 6304, NGC 6352, NGC 6388,
+NGC 6441, NGC 6496 (according to previous work34, 66 ), and NGC 6218,
+NGC 288, ESO452-11 and NGC 6362 (based on previous analysis39 ) to the in-
+situ component, whereas NGC 362 and NGC 1261 were assigned to the GSE
+component.39
+ii) We assume that each of the multiple components/progenitors follows an
+AMR and is clustered in the dynamical space described by the separable
+parameters (EJ , JZ , η). EJ is preferred to the more often used E, because
+the latter is not an integral of motion for many of the clusters in our sample
+because of the Galactic bar. Furthermore, we prefer to replace the traditional
+Lz by the circularity η because EJ is already related to Lz (EJ = E − Ωb Lz ).
+Furthermore, η contains information both on the eccentricity of the orbit as
+well as on its sense of rotation. Finally Jz is sensitive to complementary infor-
+mation (as is L⊥ ) on an orbit, and although, like η it is not fully conserved, it
+is an action and we do account for its variation in our analysis.
+    Concerning the AMR, we use flat priors on the progenitor mass M⋆ , ti , tf
+and (whenever necessary) β, enforcing the constraint ti − tf > 1 Gyr. We do
+not sample directly the yield parameter p but obtain it from M⋆ using Eq. 3,
+which therefore implies a non-flat prior on p. Each of the dynamical parameters
+are modeled as a one-dimensional Student-t likelihood (ν = 4) centered on the
+                    Springer Nature 2021 LATEX template
+
+
+14     A massive merger
+
+mean value of each component, and with a scale given by the sum in quadra-
+ture of the measurement uncertainties and the intrinsic dispersion. Clustering
+is implemented directly in the total likelihood through a K-component mix-
+ture.
+iii) We compute the Bayesian evidence for the cases with 2, 3 and 4
+components.
+    We find that the most likely case is that including three progenitors. We
+tested that this result is robust to the choice of the GCs anchored in step
+i). In fact, by reducing these to the six most metal-rich ones, the Bayesian
+evidence continues to favor K = 3 over K = 2 decisively (∆ log Z = 12.9),
+and over K = 4 more moderately (∆ log Z = 2.1). At the same time, our
+Bayesian mixture analysis provides the values for the AMR parameters, as well
+as the posterior membership probabilities for each component. This allows us
+to define the samples of GCs belonging to each progenitors as those having a
+probability membership > 50%:
+• in-situ component: other than those assigned initially, the analysis added
+  NGC 4372, NGC 6205, NGC 6397, NGC 6401, NGC 6656, and NGC 6752 ;
+• GSE component: already including NGC 362 and NGC 1261, further encom-
+  passes NGC 1851, NGC 2298, NGC 2808, NGC 6341, NGC 5897, NGC 6779,
+  NGC 6809, NGC 7089, and NGC 7099;
+• LKH, the third component is associated with: NGC 4833, NGC 5286,
+  NGC 5986, NGC 6093, NGC 6121, NGC 6144, NGC 6254, NGC 6256,
+  NGC 6453, NGC 6535, NGC 6541, and NGC 6681.
+    We note that there is significant overlap between the original low-energy
+group and LKH, as 91% of its GCs (10 out of 11) are in common.41 More-
+over, we tested that these associations are robust to the inclusion of a small
+(200 Myr) intrinsic spread to the individual AMRs. Additional or improved
+age measurements might cause some GCs associations to change, especially
+those of the GCs that are at the boundaries of the three populations in the
+chrono/dynamical space. We have, however, tested via bootstrapping, that
+the existence of the three AMR sequences is robust to such changes, as is the
+derivation of their properties.
+    We use this list of likely members of each progenitor to characterize these
+better. Although our Bayesian mixture model has fitted AMRs, it uses all
+clusters simultaneously and hence provides less strict constraints on their prop-
+erties. Therefore to characterize each progenitor in terms of stellar mass M⋆
+(through p) and accretion time ti , we MCMC fit each individual AMR using
+priors informed by the 5D nested-sampling posterior. For M⋆ we adopt log-
+normal priors, while for ti , tf , and (whenever applicable) β, we use wide flat
+priors. Specifically, for the mass of GSE we adopt ln M⋆ ∼ N (µ, σ 2 ) with
+(µ, σ) = (20, 1), corresponding to a median M⋆ ≈ 5 × 108 M⊙ and a 1σ scatter
+of almost a factor of three around the median. For LKH we assume the same
+prior motivated by the 5D nested-sampling posterior, which favors a mass of
+a similar order of magnitude. The star-formation times ti and tf are regulated
+                         Springer Nature 2021 LATEX template
+
+
+                                                            A massive merger          15
+
+by uniform priors within fixed bounds. In particular, we use ti ∈ [ti,min , tf,max ]
+and tf ∈ [tf,min , tf,max ], with (ti,min , tf,min , tf,max ) = (8, 8, 15) Gyr. When sam-
+pled (linear AMR), β is assigned a wide uniform prior within fixed bounds
+∈[0.01,2.00]. The likelihood function is assumed to be Gaussian in both
+metallicity and age, and is defined as:
+
+               N                            XN                              
+                           obs    true 2
+                                                 ln N tobs  model 2        2
+               X
+      ln L =         ln N zn   | zn   , σz,n +         n | tn    , σt,n + σint       (4)
+               n=1                            n=1
+
+
+where znobs and tobsn are the observed metallicities and ages, with measurement
+uncertainties σz,n and σt,n , respectively, and zntrue are latent ”true” metal-
+licities sampled in the MCMC. The model prediction tmodel  n      is given by the
+adopted AMR parametrization evaluated at zntrue and parameters (p, ti , tf )
+(or (p, ti , β) for the exponentially decaying SFR form). Here ln N (x | µ, σ 2 )
+denotes the full Gaussian log-density. The age variance includes an additional
+intrinsic-scatter term, added in quadrature to the observational uncertainty,
+for which we adopt a weakly informative prior.
+     For each dataset we run an MCMC sampler with nwalkers = 128, perform-
+ing nsteps = 20000 iterations and discarding the first 25% as burn-in. We
+initialize all the walkers with scattered starting points to ensure broad cov-
+erage of the parameter space. The mass scaling parameter of each walker is
+set by uniformly drawing a test mass along its previous range and mapping it
+to p, while the formation times ti and tf are offset from their lower bounds
+by small Gaussian perturbations. We assessed the MCMC convergence using
+the Gelman–Rubin (R̂) diagnostic, effective sample size (ESS), and autocor-
+relation analysis. All the parameters yielded R̂ values <1.01, an ESS > 106 ,
+and a first-lag autocorrelations ≤ |0.04|, proving good chain mixing and highly
+efficient sampling.
+     The results of the AMR model fit are summarized in Supplementary
+Table 2, and interpreted in the main paper. The corresponding corner plots
+are shown in Fig. 6, 8, 7.
+
+4. Historical accounting of accreted and in-situ populations in the
+inner Galaxy
+
+   With our findings, we unequivocally demonstrate that a population of
+accreted tracers exists in the inner galaxy. Such a population bears chrono-
+dynamical properties that set it apart from the in-situ population even in
+the metal-poor regime, and is at the same time distinct from other accreted
+components.
+   In this context, we are also in the position to clarify the confusion existing
+in the literature about the plethora of accreted substructures in the inner
+Galaxy, which can be summarized as follows. Kruijssen et al. 201928 used a
+sample of GCs selected as accreted based on their location in the AMR63, 67
+to postulate the presence of three different merger events in the MW halo.
+                    Springer Nature 2021 LATEX template
+
+
+16     A massive merger
+
+These were deemed to be Sagittarius, Canis Major and a yet unknown one,
+named Kraken. Now that we have a better understanding of the MW assembly
+history, we know that while Sagittarius was obviously a correct identification,
+Canis Major does not exist68 and the majority of the GCs associated to it are
+actually members of GSE. The remaining clusters were used as an argument
+to predict the existence of the third merger, Kraken. We now know26, 37 that
+the GCs tentatively associated with Kraken also include members of GSE,
+Sequoia,13 the Helmi Streams,69 and the MW. Therefore, the original definition
+of Kraken is an (implausible) ensemble gathering everything that is neither
+Sagittarius nor GSE. Furthermore, using the EAGLE simulations, a mass of
+M⋆ ∼ 2 × 109 M⊙ was estimated for the merger, significantly larger than
+what we have inferred here for LKH. The generous definition, coupled with the
+details of the comparison with the EAGLE cosmological simulations, might
+explain the discrepancy in the estimated masses.
+    Soon after Massari et al. 201926 identified a group of about 20 GCs with
+coherent dynamical properties and which were not associated with any known
+merger (they also associated GCs with GSE, Sagittarius, Sequoia and the
+Helmi streams). They proposed that this “Low-energy” group of GCs might
+have been the debris of an unknown accretion event. Kruijssen et al. 202027
+adjusted the definition of Kraken to match that of this “Low-energy” group.
+Since we demonstrate here that most of the “Low-energy” group GCs are
+effectively tracing LKH, it is not surprising that the revised estimated proper-
+ties27 for Kraken are similar to the ones we find here for LKH. Although the
+accreted origin of the “Low-energy” GCs, was supported later through other
+analyses,37 it has been challenged by other works29, 30 using chemo-dynamical
+arguments. These works have argued that the enhanced [Al/Fe] of the GCs
+favours an in-situ origin, since one might expect for stars from accreted galax-
+ies31 that [Al/Fe] < 0. Noteworthy is that even if one removes the effect of
+multiple populations which induce a scatter in [Al/Fe], the first generation of
+stars in globular clusters associated with GSE also have [Al/Fe] > 0, as do
+the (extra-galactic) metal-poor globular clusters in the LMC.70 This demon-
+strates that [Al/Fe] should not be used32 as an indicator of an accreted or
+in-situ origin for GCs.
+    Another structure that has been proposed to occupy the inner Galaxy
+is Heracles.31 The Heracles system is composed of stars with dynamical
+properties similar to the “Low-energy” group GCs, and with chemical prop-
+erties that confine them in the unevolved region of the [Mg/Mn] vs [Al/Fe]
+plane.71 This chemo-dynamical selection of Heracles stars, although effective
+for [Fe/H]> −1.6, is not able to distinguish the accreted from the in-situ com-
+ponent in the metal-poor regime, which is the one probed by GCs in this work.
+Based on our findings, the progenitor characterized here enters the definition
+of Heracles, as part of the accreted population of tracers now located in the
+inner halo (within ∼ 6 kpc). More precisely, the one described here is the clean-
+est definition of this merger event. As shown in many works,16, 72, 73 the early
+life of a galaxy like the Milky Way is characterized by many merger events,
+                    Springer Nature 2021 LATEX template
+
+
+                                                      A massive merger       17
+
+the majority of which of too low mass to host GCs. In this sense, by working
+with GCs as tracers, we are effectively filtering the progenitors to which we
+are sensitive in mass. As a result, our analysis is selecting a progenitor that
+is massive enough to host a system of GCs. The chemo-dynamically selected
+Heracles, instead, includes the entire population of early mergers experienced
+by the Milky Way.
+     This interpretation agrees with the fact that the mass of LKH is nominally
+slightly lower than the mass of the Heracles “composite population”, though
+still consistent within the uncertainties.31 In fact, a lower limit on its total
+stellar mass, estimated by only considering unevolved stars with -1.5<[Fe/H]<
+−1.0, is M⋆ ≃ 7.2 × 108 M⊙ .24 This is larger by about a factor of 1.5 compared
+to our estimate for LKH, but could be off by a larger factor given that the
+vast majority of LKH GCs have [M/H]< −1.4 ([Fe/H]≲ −1.7) and are not
+included in the mentioned Heracles selection.
+     Finally we note that if some of the LKH GCs (as well as those associated
+with the other progenitors) have been disrupted, this implies that the currently
+observed AMR is less-populated than it originally was, and that its original
+shape might have been slightly altered by this effect. However, this is unlikely
+to affect the clear separation of LKH’s AMR from that of the other two massive
+progenitors that populate the inner Galaxy,74 although it might have a small
+impact on the associations of individual GCs to the various sequences.
+     In summary, the results of this work enable identifying LKH as a clean
+version, extended to low metallicity, of Heracles. Since LKH’s constituents
+vastly match those associated with the Low-Energy group and Kraken, we
+can finally recognize LKH as a single massive structure accreted long ago,
+and that is now buried in the inner Galaxy.
+
+
+Data availability. Most of the GC photometric catalogs anal-
+ysed here are available through the HUGS project portal
+https://archive.stsci.edu/prepds/hugs/. Those that are not present
+in that repository, will be shared upon request to D. Massari or R.
+Cohen. GCs age estimates and dynamical associations are available at
+https://www.oas.inaf.it/en/research/m2-en/carma-en/.
+Code availability. The codes employed to perform the statistical analysis
+on the AMRs can be requested to C. Fanelli. The code used to perform the
+isochrone fit has been developed in the context of the CARMA34 and the
+Hubble-Missing Globular Cluster Survey40 projects, and will be released at the
+projects conclusion. Interested readers should contact D. Massari.
+Acknowledgments. The authors thank the referees for the thorough feed-
+back that helped to significantly improve the paper. This paper should be
+considered as one of the contributions to the CARMA series of papers. This
+work presents results from the European Space Agency (ESA) space mission
+Gaia. Gaia data are being processed by the Gaia Data Processing and Analysis
+                    Springer Nature 2021 LATEX template
+
+
+18     A massive merger
+
+Consortium (DPAC). Funding for the DPAC is provided by national insti-
+tutions, in particular the institutions participating in the Gaia MultiLateral
+Agreement (MLA). Based on observations with the NASA/ESA HST, obtained
+at the Space Telescope Science Institute, which is operated by AURA, Inc.,
+under NASA contract NAS 5-26555.
+Funding Statement. DM, SC, and EP acknowledge financial support
+from PRIN-MIUR-22: “CHRONOS: adjusting the clock(s) to unveil the
+CHRONO-chemo-dynamical Structure of the Galaxy” (PI: S. Cassisi). DM
+acknowledges financial support by the Italian Ministry of University and
+Research (grant FIS2023−01611, CUP C53C25000300001). CF acknowledges
+support by the PRIN INAF 2023 grant ObFu N2 RED (PI: C. Fanelli). CG and
+SC acknowledge support from the Agencia Estatal de Investigación del Min-
+isterio de Ciencia e Innovación (AEI-MCINN) under grant “At the forefront
+of Galactic Archaeology: evolution of the luminous and dark matter compo-
+nents of the Milky Way and Local Group dwarf galaxies in the Gaia era”
+with reference PID2020-118778GB-I00/10.13039/501100011033 and PID2023-
+150319NB-C21/C22/10.13039/501100011033. CG also acknowledge support
+from the Severo Ochoa program through CEX2019-000920-S. M.M. acknowl-
+edges support from the Agencia Estatal de Investigación del Ministerio de
+Ciencia e Innovación (MCIN/AEI) under the grant “RR Lyrae stars, a light-
+house to distant galaxies and early galaxy evolution” and the European
+Regional Development Fun (ERDF) with reference PID2021-127042OB-I00.
+AH, TC, EW, and HCW, acknowledge financial support from a Spinoza Award
+from NWO (SPI 78-411). Co-funded by the European Union (ERC-2022-AdG,
+”StarDance: the non-canonical evolution of stars in clusters”, Grant Agreement
+101093572, PI: E. Pancino).
+Author contributions. DM has coordinated the project and led the
+scientific interpretation. CZ performed the photometric analysis and the
+isochrone fitting. CF has led the statistical analysis of the results. AH criti-
+cally contributed to the interpretation of the results and to the writing of the
+manuscript. EC contributed to the photometric analysis. FAA developed the
+isochrone fitting code. AB produced the photometry of NGC4372. RC pro-
+vided the photometric catalogs of NGC 6401, NGC 6254 and NGC 6256. TC
+and EW provided the analysis of cosmological simulations and contributed
+to the statistical analysis. HCW performed the GC orbital integration in a
+barred gravitational potential. SC, MM, CG, EP, SS, MS and AM are core
+members of the CARMA project.
+
+
+Competing Interests Statement.          There are no competing interests.
+                       Springer Nature 2021 LATEX template
+
+
+                                                        A massive merger       19
+
+
+
+51
+     Niederhofer, F. et al. Cluster Ages to Reconstruct the Milky Way Assem-
+     bly (CARMA) IV. Chrono-dynamics of seven old star clusters in the Large
+     Magellanic Cloud and the peculiar origin of NGC 1841. A&A accepted,
+     10.48550/arXiv.2509.10144 (2025)
+52
+     Milone, A. et al. The ACS survey of Galactic globular clusters. XII.
+     Photometric binaries along the main sequence. A&A 540, A16 (2012)
+53
+     Nardiello, D. et al. The Hubble Space Telescope UV Legacy Survey of
+     Galactic Globular Clusters - XVII. Public Catalogue Release. MNRAS 481,
+     3382-3393 (2012)
+54
+     Pietrinferni, A. et al. The updated BaSTI stellar evolution models and
+     isochrones - IV. α-Depleted calculations. MNRAS 527, 2065-2070 (2024)
+55
+     Hidalgo, S.L. et al. The Updated BaSTI Stellar Evolution Models and
+     Isochrones. I. Solar-scaled Calculations. ApJ 856, 125 (2018)
+56
+     Piotto, G. et al. The Hubble Space Telescope UV Legacy Survey of Galactic
+     Globular Clusters. I. Overview of the Project and Detection of Multiple
+     Stellar Populations. AJ 149, 91 (2015)
+57
+     Cohen, R. E., Bellini, A., Casagrande, L., Brown, T. M., Correnti, M. &
+     Kalirai, J. S. Relative Ages of Nine Inner Milky Way Globular Clusters from
+     Proper Motion Cleaned Color-Magnitude Diagrams. AJ 162, 228 (2021)
+58
+     Bellini, A. et al. New Hubble Space Telescope WFC3/UVIS Observations
+     Augment the Stellar-population Complexity of ω Centauri. AJ 140, 631
+     (2010)
+59
+     Harris, W. E. A Catalog of Parameters for Globular Clusters in the Milky
+     Way. AJ 112, 1487 (1996)
+60
+     Baumgardt, H. & Vasiliev, E. Accurate distances to Galactic globular
+     clusters through a combination of Gaia EDR3, HST, and literature data.
+     MNRAS 505, 5957-5977 (2021)
+61
+     Salaris, M., Chieffi, A., & Straniero, O. The alpha -enhanced Isochrones and
+     Their Impact on the FITS to the Galactic Globular Cluster System. ApJ
+     414, 580 (1993)
+62
+     Chaboyer B., et al. An accurate relative age estimator for globular clusters.
+     MNRAS 283, 683 (1996)
+63
+     Marin-Franch, A., et al. The ACS Survey of Galactic Globular Clusters. VII.
+     Relative Ages. ApJ 694, 1498 (2009)
+                       Springer Nature 2021 LATEX template
+
+
+20       A massive merger
+
+64
+     Dotter A., et al. The ACS Survey of Galactic Globular Clusters. IX. Hor-
+     izontal Branch Morphology and the Second Parameter Phenomenon. ApJ
+     708, 698 (2010)
+65
+     Hughes, M. E., et al. Fossil stellar streams and their globular cluster
+     populations in the E-MOSAICS simulations. MNRAS 482, 2795 (2019)
+66
+     Carretta, E., Bragaglia, A. The in situ origin of the globular cluster NGC
+     6388 from abundances of Sc, V, and Zn of a large sample of stars. A&A 660,
+     1 (2022)
+67
+     Leaman, R., VandenBerg, D. A., & Mendel, J. T. The bifurcated age-
+     metallicity relation of Milky Way globular clusters and its implications for
+     the accretion history of the galaxy. MNRAS 436, 5195-5207 (2013)
+68
+     Momany, Y., et al. Outer structure of the Galactic warp and flare: explaining
+     the Canis Major over-density. A&A 451, 515 (2006)
+69
+     Helmi, A., et al. Debris streams in the solar neighbourhood as relicts from
+     the formation of the Milky Way. Nature 402, 53 (1999)
+70
+     Mucciarelli, A., et al. Looking Outside the Galaxy: The Discovery of Chemi-
+     cal Anomalies in Three Old Large Magellanic Cloud Clusters. ApJ 695, 134
+     (2009)
+71
+     Das, P., Hawkins, K., & Jofré, P. Ages and kinematics of chemically selected,
+     accreted Milky Way halo stars. MNRAS 493, 5195-5207 (2020)
+72
+     Wempe, E., et al. Constrained cosmological simulations of the Local Group
+     using Bayesian hierarchical field-level inference. A&A 691, 348 (2024)
+73
+     Callingham, T.M., & Helmi, A. Group accretion in Milky Way-like stellar
+     haloes. A&A 700, 175 (2025)
+74
+     Kruijssen, J.M.D., et al. The E-MOSAICS project: tracing galaxy forma-
+     tion and assembly with the age-metallicity distribution of globular clusters.
+     MNRAS 486, 3134 (2019)
+
+
+
+Additional information
+Supplementary information is available for this paper.
+Correspondence and requests for materials should be addressed to D.
+Massari.
+Author information Davide Massari, https:/orcid.org/0000-0001-8892-4301
+                       Springer Nature 2021 LATEX template
+
+
+                                                                 A massive merger        21
+
+Supplementary Information
+
+
+Table 1 Results of isochrone fitting: for each cluster, values of [M/H], E(B − V ), distance
+modulus and age are reported along with their associated upper and lower limits.
+
+
+
+               Cluster Name       [M/H]      E(B-V)       DM         Age
+                                              [mag]      [mag]       [Gyr]
+
+                  NGC4372     −1.71+0.03     +0.01      +0.01      +0.12
+                                   −0.04 0.48−0.01 13.74−0.01 14.48−0.12
+                  NGC4833     −1.62+0.04     +0.01      +0.02      +0.26
+                                   −0.06 0.33−0.01 14.09−0.02 13.43−0.23
+                  NGC5986     −1.37+0.05     +0.01      +0.01      +0.14
+                                   −0.05 0.29−0.01 15.08−0.01 13.61−0.13
+                  NGC6093     −1.59+0.03     +0.01      +0.01      +0.06
+                                   −0.02 0.21−0.01 15.05−0.01 13.72−0.05
+                  NGC6121     −1.01+0.07     +0.01      +0.01      +0.22
+                                   −0.05 0.43−0.01 11.44−0.02 12.24−0.30
+                  NGC6144     −1.57+0.05     +0.01      +0.01      +0.14
+                                   −0.03 0.44−0.01 14.49−0.01 14.09−0.31
+                  NGC6254     −1.34+0.06     +0.01      +0.01      +0.42
+                                   −0.08 0.26−0.01 13.57−0.01 13.71−0.19
+                  NGC6256     −1.36+0.12     +0.01      +0.02      +0.32
+                                   −0.08 1.11−0.01 14.46−0.01 13.31−0.29
+                  NGC6397     −1.73+0.13     +0.01      +0.02      +0.51
+                                   −0.10 0.17−0.01 11.99−0.02 14.17−0.35
+                  NGC6401     −1.02+0.04     +0.01      +0.02      +0.39
+                                   −0.03 0.93−0.01 14.29−0.02 13.66−0.53
+                  NGC6453     −1.44+0.05     +0.01      +0.01      +0.26
+                                   −0.06 0.64−0.01 15.09−0.01 13.54−0.20
+                  NGC6535     −1.53+0.05     +0.01      +0.02      +0.32
+                                   −0.07 0.42−0.01 13.99−0.02 13.55−0.27
+                  NGC6541     −1.44+0.03     +0.01      +0.01      +0.22
+                                   −0.04 0.11−0.01 14.40−0.01 13.31−0.35
+                  NGC6656     −1.58+0.03     +0.01      +0.01      +0.25
+                                   −0.03 0.36−0.01 12.61−0.01 14.40−0.24
+                  NGC6681     −1.39+0.05     +0.01      +0.01      +0.27
+                                   −0.07 0.10−0.01 14.84−0.01 13.78−0.18
+                  NGC6752     −1.40+0.01     +0.01      +0.01      +0.15
+                                   −0.01 0.06−0.01 13.05−0.01 14.30−0.39
+                  NGC6809     −1.73+0.10     +0.01      +0.01      +0.18
+                                   −0.03 0.19−0.01 13.63−0.01 13.30−0.17
+
+
+
+
+Table 2 Parameter estimates for LKH and GSE, with asymmetric 1σ errors.
+
+
+              System          p               ti           tf          M⋆
+                                            [Gyr]        [Gyr]       [108 M⊙ ]
+
+
+              LKH        0.066+0.028
+                              −0.019      14.52+0.27
+                                               −0.26   12.19+0.49
+                                                            −0.59    6.30+8.95
+                                                                         −3.60
+
+              GSE        0.058+0.022
+                              −0.015      14.32+0.31
+                                               −0.28   10.43+0.65
+                                                            −0.67    4.49+5.69
+                                                                         −2.36
+                                   Springer Nature 2021 LATEX template
+
+
+  22          A massive merger
+
+
+
+
+              Bestfit NGC4372                                        Bestfit NGC4372
+         14
+                                                                14
+         16
+                                                                16
+mF606W
+
+
+
+
+                                                       mF814W
+         18
+                                                                18
+         20
+                                                                20
+         22
+                                                                22
+                 0.5            1.0       1.5                           0.5            1.0       1.5
+                          mF606W-mF814W                                          mF606W-mF814W
+
+
+
+
+  Fig. 4 Results of the isochrone fit for NGC 4372. Top left panel: best fit model in
+  the (mF606W , mF606W − mF814W ) CMD. Top right panel: best fit model in the (mF814W ,
+  mF606W − mF814W ) CMD. Bottom left panel: posterior distributions for the output param-
+  eters and the best-fit solution, quoted in the labels, in the (mF606W , mF606W − mF814W )
+  CMD. Bottom right panel: posterior distributions for the output parameters and the best-
+  fit solution, quoted in the labels, in the (mF814W , mF606W − mF814W ) CMD.
+                                     Springer Nature 2021 LATEX template
+
+
+                                                                                                                  A massive merger                 23
+
+
+
+
+                                                                                                  0.3
+                    0.3
+                                                                                                  0.2
+                    0.2
+   DM-DMref [mag]
+
+
+
+
+                                                                                                  0.1
+                                                                               E(B-V)-E(B-V)ref
+                    0.1
+                    0.0                                                                           0.0
+                    0.1                                                                           0.1
+                    0.2
+                                                                                                  0.2
+                    0.3
+                                                                                                  0.3
+                      11   12   13                    14      15         16                          0.0   0.2   0.4     0.6     0.8   1.0   1.2
+                                DM [mag]                                                                                E(B-V)
+
+                                                      0.4
+                                                      0.3
+                                                      0.2
+                                     [M/H]-[M/H]ref
+
+
+
+
+                                                      0.1
+                                                      0.0
+                                                      0.1
+                                                      0.2
+                                                      0.3
+                                                      0.4
+                                                            1.8    1.6        1.4                   1.2    1.0    0.8
+                                                                              [M/H]
+Fig. 5 Comparison with the literature. Differences between the output of our
+isochrone fit and literature values for distance modulus, color-excess and global metallicity.
+The mean difference is shown with a solid grey line, whereas the 1σ dispersion around the
+mean is indicated with dashed grey lines.
+                       Springer Nature 2021 LATEX template
+
+
+24      A massive merger
+
+
+
+
+Fig. 6 Corner plot of the LKH AMR model MCMC fit. Corner plot of the joint
+posterior for the four global parameters, yield p, star formation initial time ti , accretion
+time tf , and derived mass M (in units of 108 M⊙ ), for the LKH GCs. Along the diagonal
+are the 1D histograms with dashed lines marking the 16th and 84th percentiles. Solid blue
+lines indicate the median and solid red lines the MAP, with titles giving the median ±
+uncertainties. Off-diagonal panels show the 2D posterior contours at the 16th, 50th and
+84th percentile levels, with overplotted blue and red lines denoting the medians and MAP
+estimates for each parameter pair.
+                         Springer Nature 2021 LATEX template
+
+
+                                                                  A massive merger             25
+
+
+
+
+Fig. 7 Corner plot of the MW AMR model MCMC fit. Corner plot of the joint
+posterior for the four global parameters, yield p, star formation initial time ti , coefficient of
+the exponential declination of the SFR β, and derived mass M (in units of 1011 M⊙ ), for the
+MW GCs. Along the diagonal are the 1D histograms with dashed lines marking the 16th
+and 84th percentiles. Solid blue lines indicate the median and solid red lines the MAP, with
+titles giving the median ± uncertainties. Off-diagonal panels show the 2D posterior contours
+at the 16th, 50th and 84th percentile levels, with overplotted blue and red lines denoting
+the medians and MAP estimates for each parameter pair.
+                       Springer Nature 2021 LATEX template
+
+
+26      A massive merger
+
+
+
+
+Fig. 8 Corner plot of the GSE AMR model MCMC fit. Corner plot of the joint
+posterior for the four global parameters, yield p, star formation initial time ti , accretion
+time tf , and derived mass M (in units of 108 M⊙ ), for the GSE GCs. Along the diagonal
+are the 1D histograms with dashed lines marking the 16th and 84th percentiles. Solid blue
+lines indicate the median and solid red lines the MAP, with titles giving the median ±
+uncertainties. Off-diagonal panels show the 2D posterior contours at the 16th, 50th and
+84th percentile levels, with overplotted blue and red lines denoting the medians and MAP
+estimates for each parameter pair.
+

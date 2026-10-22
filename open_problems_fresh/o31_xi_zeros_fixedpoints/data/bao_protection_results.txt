@@ -1,0 +1,8 @@
+O31 BAO Geometric Protection
+
+P(k) wiggle: 82 points, 8/8 matched
+Mean deviation: 1.73 ×10⁻³ h/Mpc
+Quadrupole zeros: 4
+Monopole zeros: 0
+RSD effect: N/A
+Verdict: BAO geometrically protected ✅

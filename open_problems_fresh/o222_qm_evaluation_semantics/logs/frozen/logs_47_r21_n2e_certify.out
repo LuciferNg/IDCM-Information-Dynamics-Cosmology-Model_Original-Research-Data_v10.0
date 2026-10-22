@@ -1,0 +1,1 @@
+{"U_side_pairs": 144, "U_side_bad": 0, "V_side_pairs": 3844, "V_side_bad": 0, "reproduction_pairs": 744, "reproduction_bad": 0, "zero_VM_rows": 0, "arithmetic": "no floats: integers for U/V/K; exact Q(sqrt5) (Fraction) for the frozen vectors", "verdict": "CERTIFIED"}

@@ -1,0 +1,8 @@
+{
+  "test": "O70 07: 185 Curves",
+  "total_curves": 185,
+  "curve_basis": 32,
+  "Q_rank": 32,
+  "Q_rank_full": true,
+  "jstar_zero_vol": 0
+}

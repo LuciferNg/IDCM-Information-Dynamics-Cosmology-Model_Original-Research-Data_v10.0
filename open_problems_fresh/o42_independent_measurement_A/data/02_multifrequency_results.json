@@ -1,0 +1,48 @@
+{
+  "A_IDCM": 134.2,
+  "fwhm": 4.17,
+  "results": {
+    "SMICA": {
+      "name": "SMICA",
+      "T_muK": -134.19,
+      "rank": 1,
+      "dev_pct": 0.008,
+      "note": "cache"
+    },
+    "NILC": {
+      "name": "NILC",
+      "T_muK": -134.09,
+      "rank": 1,
+      "dev_pct": 0.084,
+      "note": "cache"
+    },
+    "Commander": {
+      "name": "Commander",
+      "T_muK": -133.32,
+      "rank": 1,
+      "dev_pct": 0.654,
+      "note": "cache"
+    },
+    "SEVEM_final": {
+      "name": "SEVEM_final",
+      "T_muK": -134.47,
+      "rank": 1,
+      "dev_pct": 0.201,
+      "note": "ordering=AS-IS corr=0.703"
+    },
+    "SEVEM_143": {
+      "name": "SEVEM_143",
+      "T_muK": -134.87,
+      "rank": 1,
+      "dev_pct": 0.5,
+      "note": "ordering=AS-IS corr=0.654"
+    },
+    "SEVEM_217": {
+      "name": "SEVEM_217",
+      "T_muK": -131.85,
+      "rank": 2,
+      "dev_pct": 1.749,
+      "note": "ordering=AS-IS corr=0.378"
+    }
+  }
+}

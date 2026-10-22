@@ -1,0 +1,16 @@
+========================================================================================================
+O226 scripts/13 -- R4 INDEPENDENT audit (self-contained)
+========================================================================================================
+[PASS] A0   |2I| = 120 rebuilt independently  --  order = 120
+[PASS] A1   the frozen kernel still has 12 classes of size 10  --  classes = 12
+[PASS] A2   the 62 pointed axes pair into 31 unoriented axes with type counts V6 / F10 / E15  --  axes = 31 (V6 F10 E15)
+[PASS] A3   geo = 2W for all 144 pairs; W takes the four values {26,15,7,0} and geo {52,30,14,0}  --  W values = [0, 7, 15, 26] ; geo values = [0, 14, 30, 52]
+[PASS] A4   the W type table is (6,10,10) / (4,6,5) / (2,4,1) / (0,0,0) for cos = 1 / +1/sqrt5 / -1/sqrt5 / -1 (Pr-7.2 reproduced independently)  --  table = {(Fraction(1, 1), Fraction(0, 1)): {'vertex': [6], 'face': [10], 'edge': [10]}, (Fraction(0, 1), Fraction(-1, 5)): {'vertex': [2], 'face': [4], 'edge': [1]}, (Fraction(0, 1), Fraction(1, 5)): {'vertex': [4], 'face': [6], 'edge': [5]}, (Fraction(-1, 1), Fraction(0, 1)): {'vertex': [0], 'face': [0], 'edge': [0]}}
+[PASS] A5   W_V = 2*[i~j] + |N_i n N_j| for every off-diagonal pair (degrees 5, common neighbours 0/2) and W_V(i,i) = 6  --  degrees = [5] ; common-neighbour values = [0, 2]
+[PASS] A6   each reference image has exactly 5 perpendicular EDGE axes; a non-antipodal off-diagonal pair has 9 perpendicular-involved axes (5+5-1), while the diagonal and the antipodal pairs (where the two reference images share all 5 perpendicular axes) have 5  --  per-image = [5] ; per-pair (off-diag) = [5, 9]
+[PASS] A7   equivariant convention: A_eq = 2W + 10 for all pairs, hence D_eq = 52 - 2W with the value set {0,22,38,52} and multiplicities (12,60,60,12)  --  D_eq values = [0, 22, 38, 52] ; multiplicities = [(0, 12), (22, 60), (38, 60), (52, 12)]
+[PASS] A8   equivariant convention: still 12 classes of size 10 and the SAME partition as the frozen kernel  --  classes = 12 ; same partition = True
+[PASS] A9   concurrence with the R4 machine JSON (W table and D_eq multiplicities)  --  W table identical = True ; D_eq multiplicities = [(0, 12), (22, 60), (38, 60), (52, 12)]
+========================================================================================================
+RESULT: 10/10 PASS (independent R4 audit)   elapsed 2.1 s
+========================================================================================================

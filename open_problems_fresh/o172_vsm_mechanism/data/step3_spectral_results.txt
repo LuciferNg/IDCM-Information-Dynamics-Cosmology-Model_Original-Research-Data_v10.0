@@ -1,0 +1,5 @@
+O172 - Step 3: spectral identities
+[1] Sg=90, Sg2=272=B^2*F_proj (16*17): PASS
+[2] Sg^2-Sg2=7828=2N_d*F11-B (88*89-4): PASS
+[3] correction = 1-mu^2/((N_d+1)(K_tree+mu^2)): PASS
+[4] F_proj=17=n0(1): PASS

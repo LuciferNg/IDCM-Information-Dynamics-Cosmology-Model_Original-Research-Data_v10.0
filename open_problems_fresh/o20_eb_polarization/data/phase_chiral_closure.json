@@ -1,0 +1,61 @@
+{
+  "phi_formula": {
+    "description": "\u03c6(k) = 22 + \u0394_chiral(k)",
+    "base": 22,
+    "base_meaning": "44/2 = \u534a\u7bc0\u9ede\u57fa\u7dda",
+    "delta": {
+      "k=1": {
+        "value": 21,
+        "identity": "F\u2088",
+        "meaning": "\u62d3\u64b2\u908a\u754c\u9396\u5b9a"
+      },
+      "k=2": {
+        "value": 6,
+        "identity": "22-B\u00b2",
+        "meaning": "\u93c8-\u6a39\u8f49\u5411\u5340"
+      },
+      "k=3": {
+        "value": 1,
+        "identity": "B\u2070",
+        "meaning": "\u6700\u5c0f\u5e7e\u4f55\u76f8\u5e72\u7bc0\u9ede"
+      },
+      "k=4": {
+        "value": 2,
+        "identity": "\u221aB",
+        "meaning": "\u5206\u652f\u56e0\u5b50\u534a\u968e\u589e\u9577"
+      },
+      "k=5": {
+        "value": 4,
+        "identity": "B",
+        "meaning": "MERA \u5206\u652f\u56e0\u5b50"
+      },
+      "k=6": {
+        "value": 10,
+        "identity": "2F\u2085",
+        "meaning": "\u4e2d\u9ad8\u983b\u968e\u6b21\u5c0d\u7a31\u767c\u6563"
+      },
+      "k=7": {
+        "value": 16,
+        "identity": "B\u00b2",
+        "meaning": "MERA \u6a39\u72c0\u5c64\u7d1a\u98fd\u548c"
+      }
+    },
+    "closure": "7/7 \u2705",
+    "residuals": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "ee_full_formula": {
+    "\u2113_E(k) = 44 \u00d7 (F\u2086 + L\u2084\u00b7(k-1)) + (22 + \u0394_chiral(k))": true,
+    "F\u2086": 8,
+    "L\u2084": 7,
+    "B": 4,
+    "closure": "7/7 \u2705 (zero residual)"
+  }
+}

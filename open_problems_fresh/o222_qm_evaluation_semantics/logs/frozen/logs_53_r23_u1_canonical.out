@@ -1,0 +1,37 @@
+(a) algebra identity  Kc^T G Kc == VM^T VM : mismatches 0/3844
+    sgn(Q) vs certified vsign               : mismatches 0/3844
+(b) G -> sign(G):  vsign mismatches = 0/3844
+(c) G -> D sign(G) D, 20 random integer diagonals: worst mismatches = 590/3844 ; per-draw = [470, 0, 418, 264, 462, 396, 316, 372, 48, 0, 458, 540, 556, 0, 354, 590, 264, 264, 96, 90]
+    rank(G) = 3 (12 = full rank => G is a genuine Gram of 12 affinely-independent points)
+{
+ "algebra_identity_mismatches": 0,
+ "vsign_of_Q_mismatches": 0,
+ "signG_only_mismatches": 0,
+ "random_diagonal_draws": 20,
+ "worst_mismatches": 590,
+ "per_draw": [
+  470,
+  0,
+  418,
+  264,
+  462,
+  396,
+  316,
+  372,
+  48,
+  0,
+  458,
+  540,
+  556,
+  0,
+  354,
+  590,
+  264,
+  264,
+  96,
+  90
+ ],
+ "G_rank": 3,
+ "G_sign_pattern_is_frozen": true,
+ "verdict": "magnitude-dependent"
+}

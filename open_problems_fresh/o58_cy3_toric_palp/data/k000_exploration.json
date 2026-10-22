@@ -1,0 +1,52 @@
+{
+  "diag_nnz": 33,
+  "diag_values": [
+    -360.0,
+    -232.0,
+    -5.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    40.0
+  ],
+  "K000": 4.0,
+  "block_ratio": 0.34023668639053256,
+  "k000_across": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      "index 39 is out of bounds for axis 2 wit"
+    ],
+    [
+      2,
+      80
+    ],
+    [
+      3,
+      "index 39 is out of bounds for axis 2 wit"
+    ],
+    [
+      10,
+      "index 37 is out of bounds for axis 2 wit"
+    ],
+    [
+      20,
+      "index 39 is out of bounds for axis 2 wit"
+    ],
+    [
+      50,
+      "index 37 is out of bounds for axis 2 wit"
+    ],
+    [
+      89,
+      "index 38 is out of bounds for axis 2 wit"
+    ]
+  ]
+}

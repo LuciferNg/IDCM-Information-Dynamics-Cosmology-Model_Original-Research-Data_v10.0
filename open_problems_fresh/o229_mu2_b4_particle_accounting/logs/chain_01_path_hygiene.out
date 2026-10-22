@@ -1,0 +1,18 @@
+掃描 30 個檔案（.py/.sh，repo_root=/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat）
+
+--- 🔴 WRITE（推導產物散落 = 違規）---
+  = 0 項
+
+--- 🟡 WRITE_EXEMPT（明文豁免，唔算違規）---
+  = 0 項
+
+--- 🟢 READ（合法，但唯讀豁免要有明文）---
+  = 0 項 / 0 個相異路徑，未豁免 0
+
+--- ⚠️ LITERAL（ephemeral 字面量但模式無法靜態判定 → 必須人核）---
+  = 0 項 / 0 個相異路徑，未豁免 0
+
+--- ℹ️ 非 ephemeral 嘅 repo 外路徑（人工核：ghost tree / 絕對 BASE）---
+
+RESULT: files=30 WRITE=0 WRITE_EXEMPT=0 READ=0 READ_unexempt=0 LITERAL=0 LITERAL_EXEMPT=0 ABS_OUTSIDE=0 OUTSIDE_REL=0
+VERDICT: CLEAN

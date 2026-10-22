@@ -1,0 +1,4 @@
+O204 Script 03 — W-field 行為: 22/22 PASS
+c_W = 299792.3446 km/s (dev 3.78262e-5%)
+G6 裁決: V''(W0) = 4*mu2 = 8 (O73 docs/15 之 2*mu2=4 係錯)
+m_rho(L3) = 13.95045726 MeV = M0/2 ; m_theta = 0

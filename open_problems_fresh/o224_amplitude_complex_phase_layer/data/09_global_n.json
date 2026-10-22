@@ -1,0 +1,223 @@
+{
+ "E4": {
+  "off_grid": 0,
+  "absmax_num": 120,
+  "argmax": [
+   "V00",
+   "V00",
+   "V00",
+   "V00"
+  ],
+  "distinct_values": [
+   -120,
+   -80,
+   -56,
+   -48,
+   -40,
+   -32,
+   -24,
+   -16,
+   -8,
+   0,
+   8,
+   16,
+   24,
+   32,
+   40,
+   48,
+   56,
+   80,
+   120
+  ],
+  "build_s": 2.5363101959228516,
+  "masked_max_distinct": 120,
+  "masked_max_distinct_noanti": 120
+ },
+ "n4": {
+  "lhv_bound": 4,
+  "terms": 8,
+  "raw_pool_max_num": 480,
+  "raw_pool_argmax": [
+   "V00",
+   "V00",
+   "V00",
+   "V00",
+   "V00",
+   "V00",
+   "V11"
+  ],
+  "raw_window_degenerate": true,
+  "triangle_bound_num": 960,
+  "triangle_bound_sufficient": false,
+  "window_pool_max": {
+   "party": 480,
+   "eight": 320,
+   "eight_anti": 224
+  },
+  "window_pool_argmax": {
+   "party": [
+    "V00",
+    "V11",
+    "V00",
+    "V11",
+    "V00",
+    "V11",
+    "E25"
+   ],
+   "eight": [
+    "V02",
+    "V09",
+    "V00",
+    "V11",
+    "V03",
+    "V07",
+    "E08"
+   ],
+   "eight_anti": [
+    "V01",
+    "V03",
+    "V09",
+    "V00",
+    "V06",
+    "V04",
+    "E21"
+   ]
+  },
+  "window_pool_pos_neg": {
+   "party": [
+    480,
+    -480
+   ],
+   "eight": [
+    320,
+    -320
+   ],
+   "eight_anti": [
+    224,
+    -224
+   ]
+  },
+  "relax_certificate": {
+   "U_num": 768,
+   "L_num": -768,
+   "sup_abs_num": 768,
+   "argU": [
+    "V00",
+    "E11",
+    "V00",
+    "F18"
+   ],
+   "pool_outer_calibration": 640,
+   "dominance_ok": true,
+   "dominance_samples": [
+    [
+     0,
+     1,
+     2,
+     3,
+     256,
+     -256,
+     208,
+     -208
+    ],
+    [
+     5,
+     5,
+     9,
+     9,
+     192,
+     -192,
+     192,
+     -192
+    ],
+    [
+     11,
+     22,
+     33,
+     44,
+     480,
+     -480,
+     384,
+     -384
+    ],
+    [
+     7,
+     8,
+     9,
+     10,
+     288,
+     -288,
+     224,
+     -224
+    ]
+   ]
+  },
+  "global_interval_num": [
+   480,
+   768
+  ],
+  "global_max_established": false
+ },
+ "E3": {
+  "off_grid": 0,
+  "distinct_values": 7
+ },
+ "verdicts": {
+  "R6": "E4 grid holds on all 14.8M entries (exact global)",
+  "R7": "n = 4 raw window degenerate (max = LHV bound = 4); triangle route refuted in every window; strict windows below 4, party window saturating exactly at 4; rigorous global certificate gives a finite interval [4, U] for the global maximum, which remains OPEN (not closed)",
+  "R9": "E3 cross-check consistent with round 1"
+ },
+ "script": "09_global_n",
+ "claims": [
+  {
+   "tag": "R6",
+   "name": "E4 IN FULL: all 62^4 = 14,776,336 numerators computed exactly (integer arithmetic only) and every one of them is divisible by 8, so the 1/15 grid holds for the 4-party object on ALL entries, not merely on samples; the exact global maximum |E4| and the full value set are reported. The numpy integer accelerator is validated against exact Fraction arithmetic on 6 declared tuples",
+   "ok": true,
+   "detail": "off-grid numerators = 0 / 14776336 ; |E4|max = 120/120 ; argmax = ('V00', 'V00', 'V00', 'V00') ; distinct exact values = 19 ; value set = [-120, -80, -56, -48, -40, -32, -24, -16, -8, 0, 8, 16, 24, 32, 40, 48, 56, 80, 120] ; accelerator mismatches = 0 ; build time = 2.5 s"
+  },
+  {
+   "tag": "R7a",
+   "name": "SEPARABILITY OF THE FOURTH PARTY: for n = 4 the 8-term Mermin polynomial splits exactly into F(d) + G(d') (4 terms each), so its maximum over the fourth pair is max_d F + max_d' G (and its minimum min_d F + min_d' G), hence its maximum absolute value over the fourth pair is the larger of those two extremes; the split is verified against the term list AND against brute force over all 62^2 = 3844 pairs on 10 declared 6-tuples",
+   "ok": true,
+   "detail": "split reproduces the 8-term list = True ; brute-force agreement (two extremes vs exhaustive 62^2 search) = 10 / 10 ; sample (a, split, brute) = [(0, 144, 144), (11, 240, 240), (5, 128, 128), (31, 112, 112)]"
+  },
+  {
+   "tag": "R7b",
+   "name": "RAW WINDOW IS DEGENERATE FOR n = 4 (a finding, not a closure): the exact maximum of |M4| inside the declared pool with the fourth pair over all 62 axes is exactly 480/120 = 4.000000, i.e. it EQUALS the LHV bound of the polynomial, and its argmax has all six outer settings equal to one and the same axis -- so unlike n = 3 (whose raw maximum 22/15 was attained at a legitimate six-distinct tuple) the raw n = 4 statement carries no information and every legitimate statement must be windowed",
+   "ok": true,
+   "detail": "raw pool max = 480/120 ; argmax = ('V00', 'V00', 'V00', 'V00', 'V00', 'V00', 'V11') ; all six outer settings equal = True ; the coincident value is reproduced analytically: with every setting equal the 8 terms carry coefficients (+1,-1,-1,-1,+1,-1,-1,-1) times E4 = 1, giving -4 ; time = 144.7 s"
+  },
+  {
+   "tag": "R7c",
+   "name": "TRIANGLE-BOUND ROUTE REFUTED (recorded as a negative result, as pre-registered): the bound |M4| <= 8 * max|E4| equals 8 (960 in units of 1/120) because max|E4| = 120 = 1 exactly, and the masked maxima show this is NOT an artefact of coincident settings: max|E4| is still 120 over quadruples with four pairwise distinct settings and over quadruples with four distinct non-antipodal settings, so no window can rescue the bound. The round-2 hope that the triangle inequality would close the n = 4 question is therefore REFUTED, and the remaining rigorous routes are the 62^6-scale outer search with the (d,d') separation or a relaxation (both recorded as open)",
+   "ok": true,
+   "detail": "max|E4| = 120 ; max|E4| over all-distinct quadruples = 120 ; over all-distinct and non-antipodal = 120 ; bound 8*max = 960/120 = 8.000 vs LHV 4 ; shortfall = 480/120"
+  },
+  {
+   "tag": "R7d",
+   "name": "n = 4 IN THE THREE LEGITIMATE BELL WINDOWS (declared pool: the 12 vertex axes for the first three parties, all 62 axes for the fourth pair; exact, both extremes, with the within-pair distinctness, the eight-distinctness and the no-antipodal constraints enforced): in the two STRICT windows (all eight settings pairwise distinct; the same plus no antipodal pair) the maxima are strictly below the LHV bound 4; the PARTY window (only the four within-pair distinctness constraints) instead SATURATES the bound exactly at 4 = 480/120, attained at cross-party-coincident settings (a = b = c, a' = b' = c'), so none of the three windows shows any violation -- the strict windows with margin, the party window with zero margin",
+   "ok": true,
+   "detail": "party window max = 480/120 (argmax ('V00', 'V11', 'V00', 'V11', 'V00', 'V11', 'E25')) ; eight window max = 320/120 (argmax ('V02', 'V09', 'V00', 'V11', 'V03', 'V07', 'E08')) ; eight_anti window max = 224/120 (argmax ('V01', 'V03', 'V09', 'V00', 'V06', 'V04', 'E21')) ; LHV bound = 480 = 480/120 ; time = 142.5 s"
+  },
+  {
+   "tag": "R7f",
+   "name": "RIGOROUS GLOBAL CERTIFICATE BY RELAXATION (unconditional, over ALL 62^4 outer tuples, hence over all 62^8 setting tuples): splitting M4 = A(c,d) - B(c',d) + C(c',d') - D(c,d') and relaxing each bracket by its own extrema gives the rigorous two-sided bounds sup M4 <= U and inf M4 >= L over the whole space, so |M4| <= max(U, -L) EVERYWHERE. Combined with the exactly attained value 4 (R7b/R7d) this traps the global maximum of |M4| inside a finite interval. The relaxation is validated by dominance against exact brute force over (c,c',d,d') on declared configurations and by reproducing the pool-outer value; it is however NOT tight enough to close the question (the certificate exceeds the LHV bound 4), which is recorded as the honest outcome",
+   "ok": true,
+   "detail": "relaxed certificate over all 62^4 outer tuples: U = 768/120 = 6.4000 (at ('V00', 'E11', 'V00', 'F18')), L = -768/120 = -6.4000 ; sup|M4| <= 768/120 = 6.4000 ; exact attained value = 480/120 = 4.0 ; => global maximum in [4.0, 6.4000] ; pool-outer calibration = 640/120 (probe: 640) ; dominance check = [(0, 1, 2, 3, 256, -256, 208, -208), (5, 5, 9, 9, 192, -192, 192, -192)] ; times: pool 0.7 s, global 459.5 s"
+  },
+  {
+   "tag": "R7e",
+   "name": "HONEST STATUS OF THE n = 4 GLOBAL QUESTION: the exact global maximum of |M4| over all 62^8 = 7.5e14 tuples is NOT established. Established here: (i) the exact global maximum of |E4| over all 62^4 with its 1/15 grid (R6); (ii) the exact (d,d') separability (R7a), which reduces the global problem to a 62^6-scale outer search over the first three parties; (iii) the degeneracy of the raw window (R7b); (iv) the refutation of the triangle-bound route in every window (R7c); (v) the exact windowed maxima inside the declared pool (R7d: strict windows strictly below 4, party window saturating exactly at 4); (vi) a rigorous unconditional global certificate by relaxation (R7f). The residual is therefore NARROWED, NOT CLOSED: it is labelled OPEN with the global maximum trapped in the finite interval given by R7f, and the exact 62^6 outer search (or a better bounding structure) recorded as the remaining route",
+   "ok": true,
+   "detail": "routes recorded: (1) exact max over (a,a',b,b',c,c') of [max_d F + max_d' G] (62^6 outer, the separability of R7a); (2) sharper relaxations than the two-bracket version of R7f; unconditional interval for the global maximum: [4.0, certificate/120] from R7b/R7d and R7f"
+  },
+  {
+   "tag": "R9",
+   "name": "INTERNAL CROSS-CHECK: E3 is recomputed over all 62^3 with the same machinery (all numerators divisible by 8) and its distinct-value count reproduces the round-1 artefact data/04b_window.json, so the round-3 machinery is consistent with round 1 on the shared 3-party sector",
+   "ok": true,
+   "detail": "E3 off-grid = 0 ; distinct E3 values = 7 ; round-1 artefact = 7 ; E3 absmax = 48/120"
+  }
+ ],
+ "n_pass": 8,
+ "n_claims": 8
+}

@@ -1,0 +1,11 @@
+O47-D3 — D_app(ℓ) Pipeline Function Exploration
+===================================================================
+Gamma sum: 90.000000
+Target matter: 28.5
+l_max: 14.7085, D_app(l_max): 6.3183
+Scale factor: 653.6473
+Models: A=529.6362, B=1380.5732
+Coupled: 44.486231, DivB: 66.985982
+World: 45.513769, Diff: 1.014018
+Rel: 1.027538, Frac: 3.022222
+Status: 🟡 Exploration complete, need τ_n derivation

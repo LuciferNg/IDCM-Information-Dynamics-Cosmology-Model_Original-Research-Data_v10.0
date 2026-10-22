@@ -1,0 +1,13 @@
+{
+  "verifier": "O93/99",
+  "n_total": 36,
+  "n_hq": 27,
+  "chi2_route_A": 50.78,
+  "chi2_power_06": 1.3265,
+  "chi2_2_3": 1.5811,
+  "chi2_lcdm": 0.6055,
+  "pass": 13,
+  "fail": 2,
+  "warn": 1,
+  "status": "\ud83d\udfe1"
+}

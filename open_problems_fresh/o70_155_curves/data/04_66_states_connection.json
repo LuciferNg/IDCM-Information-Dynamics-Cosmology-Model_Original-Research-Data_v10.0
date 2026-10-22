@@ -1,0 +1,13 @@
+{
+  "test": "O70 04: 155 Curves ↔ 66 States",
+  "C_states": 30,
+  "K_states": 36,
+  "curves_rank": 30,
+  "null_directions": 6,
+  "missing_divisors": [
+    3,
+    4,
+    7,
+    8
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "rd_idcm_mpc": 147.4385,
+  "dk_idcm": 0.06335,
+  "boss_fft_period": 0.12951,
+  "boss_fft_dev_pct": 104.435,
+  "pass": 0,
+  "fail": 2
+}

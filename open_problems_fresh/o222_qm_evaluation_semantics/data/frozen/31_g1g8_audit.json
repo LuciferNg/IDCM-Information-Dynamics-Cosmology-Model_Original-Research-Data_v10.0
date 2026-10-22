@@ -1,0 +1,80 @@
+{
+ "claims": [
+  {
+   "tag": "A7",
+   "name": "this audit never loads the enforcer or the machine (the only frozen modules it loads are 09 / 12 / 18)",
+   "ok": true,
+   "detail": "checked after all loads (see the final A7b claim)"
+  },
+  {
+   "tag": "A0",
+   "name": "the audited impl and all 3 frozen upstream pins still match the freeze record",
+   "ok": true,
+   "detail": "impl 840d0d4ed792 (gate OPEN) ; stale pins = []"
+  },
+  {
+   "tag": "A1",
+   "name": "G1a re-verified independently: the frozen C1 correlation TABLE (data/09) is reproduced from the write-rule transition term by term, and the rule is literal in both frozen sources",
+   "ok": true,
+   "detail": "C1 entries mismatching = 0/3844 ; rule literal in both frozen sources = True ; machine reported 7440 behavioural checks with 0 bad"
+  },
+  {
+   "tag": "A2",
+   "name": "G1b re-derived through the norm identity 2 - 2<a,b> (independent algebra) and the distance classes checked against the 2I orbits",
+   "ok": true,
+   "detail": "identity mismatches = 0 ; distance values = 3 ; orbit sizes = {12: 1, 20: 1, 30: 1} ; classes == orbits: True"
+  },
+  {
+   "tag": "A2a",
+   "name": "the norm identity and the machine agree on all 7440 squared distances",
+   "ok": true,
+   "detail": "identity mismatches = 0 ; orbits = {12: 1, 20: 1, 30: 1}"
+  },
+  {
+   "tag": "A2b",
+   "name": "the three distance classes ARE the three 2I orbits (the D5 lock distance is an orbit invariant)",
+   "ok": true,
+   "detail": "classes [12, 20, 30] vs orbits [12, 20, 30]"
+  },
+  {
+   "tag": "A3",
+   "name": "G8a ledger rebuilt by an independent stack machine: per-ctx counts and the aggregate growth agree with the machine and with I7 s own per-pair outputs",
+   "ok": true,
+   "detail": "per-ctx = [122], stack len = 7564, I7 aggregate = 7564, conflicting ctx = 62"
+  },
+  {
+   "tag": "A3b",
+   "name": "the per-pair miss histogram reproduces from the independent stack machine",
+   "ok": true,
+   "detail": "histogram = {2: 124, 3: 3720}"
+  },
+  {
+   "tag": "A4",
+   "name": "G8b reach depth 1 re-derived from the frozen SOURCE: every ledger subscript is L[-1] (no other access exists in the two frozen machines)",
+   "ok": true,
+   "detail": "subscripts found = ['-1']"
+  },
+  {
+   "tag": "A5",
+   "name": "G8c K rebuilt from the geometry and its row multiplicities recounted",
+   "ok": true,
+   "detail": "geometry mismatches = 0 ; distinct rows = 12 ; multiplicities = {10: 12}"
+  },
+  {
+   "tag": "A6",
+   "name": "cross-checks: hits = #pairs with misses = 2, ledger = 2N(N-1) = 62*122, uniform over all 120 start states",
+   "ok": true,
+   "detail": "pairs with 2 misses = 124 ; ledger = 7564 ; per-ctx = 122 ; distance split = {'2 + 0*sqrt5': 30, '3 + 0*sqrt5': 20, '5/2 + 1/2*sqrt5': 12}"
+  },
+  {
+   "tag": "A7b",
+   "name": "A7 verified at runtime: the loaded module set excludes the enforcer and the machine",
+   "ok": true,
+   "detail": "loaded = ['09_a2_rollback.py', '12_b5_budget.py', '18_d6_mapping.py']"
+  }
+ ],
+ "n_pass": 12,
+ "n_total": 12,
+ "elapsed_s": 3.65,
+ "audited_impl": "840d0d4ed792617cfeb6ed2bb083f8851129ea133afe51d096c2ed03a76aac2a"
+}

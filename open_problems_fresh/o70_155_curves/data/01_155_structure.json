@@ -1,0 +1,21 @@
+{
+  "test": "O70 01: 155 Curves Structure",
+  "adjacency": 155,
+  "adj_formula": "2×73+9",
+  "73_identity": "Nd+L₇=44+29",
+  "73_identity_2": "L₆×4+1=18×4+1",
+  "9_identity": "N_gen²=3²",
+  "duplicate_pairs": {
+    "(1, 6)": 2,
+    "(6, 15)": 2,
+    "(6, 17)": 3,
+    "(10, 12)": 3,
+    "(12, 14)": 4
+  },
+  "nz_count": 52,
+  "nz_identity": "Nd+2B=52",
+  "rank": 30,
+  "rank_identity": "2L₅+2B=30",
+  "passed": 10,
+  "failed": 0
+}

@@ -1,0 +1,17 @@
+{
+ "injective": true,
+ "n1": 0,
+ "n2": 62,
+ "rel2_families": {
+  "VV": 12,
+  "FF": 20,
+  "EE": 30
+ },
+ "length_dist": {
+  "0": 1,
+  "1": 62,
+  "2": 57
+ },
+ "multi_states": 57,
+ "max_mult": 41
+}

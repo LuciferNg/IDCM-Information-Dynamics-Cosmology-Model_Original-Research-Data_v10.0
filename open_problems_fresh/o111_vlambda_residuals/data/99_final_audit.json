@@ -1,0 +1,31 @@
+{
+  "audit": "O111 Final Verification",
+  "date": "2026-08-29",
+  "passed": 50,
+  "failed": 0,
+  "total": 50,
+  "delta": 0.0821292325802574,
+  "eta_i_sqrt_88": 0.08578630085842728,
+  "delta_eta_ratio": 0.957370020136372,
+  "V_Lambda": 283.08212923258026,
+  "Y_signature": {
+    "pos": 18,
+    "neg": 14,
+    "kernel": 4
+  },
+  "G_signature": {
+    "pos": 15,
+    "neg": 17,
+    "kernel": 4
+  },
+  "sign_exchange": {
+    "G_pos_eq_Y_neg_plus_1": true,
+    "G_neg_eq_Y_pos_minus_1": true
+  },
+  "closure_theorem": {
+    "delta": 0.0821292325802574,
+    "eta_i_sqrt_88": 0.08578630085842728,
+    "ratio_45_47": 0.08213581997083463,
+    "err_pct": 0.008020762364730859
+  }
+}

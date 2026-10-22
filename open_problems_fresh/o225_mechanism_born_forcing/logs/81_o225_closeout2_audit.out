@@ -1,0 +1,18 @@
+<unknown>:358: SyntaxWarning: invalid escape sequence '\{'
+       info: A 唯讀釘選 = {'docs/49_o225_closeout_r1-r23.md': 'b47677226b', 'docs/48_r23_results.md': 'f78124257a', 'data/37_closeout_docs.json': 'eec4833059', 'data/MANIFEST.json': '1214d17610'}
+       info: 重跑窗參考 T = 20:36:26 ; 窗內日誌 = 83/83
+       info: 模式 = reuse（重用重跑日誌） ; 重跑日誌時效斷言 = True
+       info: B 重跑 82 支完成，用時 0.0 s
+       info: 歷史快照（重跑前首記錄）項數 = 119
+[PASS] C1   全鏈重跑 vs **歷史首記錄**：非預期漂移 = 0；契約閘之「見數前註冊（C8 型）」一次性判據之漂移屬記錄在案（該判據要求「無結果 note」，事後必 FAIL）  --  歷史對照 = 119 項；漂移 = [('23_r6_contract.py', '8/8', '7/8', 'gate-register'), ('27_r7_contract.py', '8/8', '7/8', 'gate-register'), ('30_r8_contract.py', '8/8', '7/8', 'gate-register'), ('33_r9_contract.py', '8/10', '7/10', 'gate-register')] ; 同輪 before→after 漂移 = [] ; 無 RESULT = 3 支
+[PASS] C2   重跑後之 log 無 `Traceback`（首跑 implbug 日誌除外）  --  含 Traceback = []
+       info: C 各輪尾次判決（抽樣）= {'79_r23_machine.py': ('10', '13'), '80_r23_audit.py': ('4', '4'), '82_o225_closeout2_docs.py': ('8', '8'), '83_r24_contract.py': ('5', '5'), '84_r24_machine.py': ('10', '11'), '85_r24_audit.py': ('4', '4')}
+[PASS] D1   全部 freeze JSON 所 pin 之合約 sha256 皆對應到 docs/ 內某一檔（0 失配）  --  pin 數 = 23 ; 失配 = []
+[PASS] E1   磁碟上全部檔（doc/script/data/log/root）皆入 MANIFEST（排除 untracked-by-design）  --  未收錄 = 0 件；首 8 = []
+[PASS] F1   AST：全 scripts/ 無禁用模組 import（math／random／numpy／scipy／statistics／cmath／secrets／decimal／mpmath／sympy）  --  違規 = []
+[PASS] F2   審計器未經 importlib 載入本 o 自身推導 script（跨腳本 import = 0）  --  可疑 = []
+[PASS] G1   close-out 第二輪之文檔標記齊備（docs/49、§三十三、清冊、final_result）  --  逐項 = {'docs/49_o225_closeout_r1-r23.md': True, '§三十三 in record': True, '清冊 9 項 in docs/49': True, 'final_result R23': True, 'final_result closeout': True}
+[PASS] H1   三檔狀態行同步（R1–R23）  --  三檔 = {'SESSION_START.md': 'R1–R23', '01_problem_record.md': 'R1–R23', 'final_result.md': 'R1–R23'}
+[PASS] H2   重跑日誌時效斷言（reuse 模式之前置）：重跑窗內日誌 ≥ 70 支  --  窗內 = 83/83（參考 T = 2026-10-01 20:36:26）
+======================================================================================================================
+RESULT: 9/9 PASS  |  O225 close-out 第二輪 T1 審計

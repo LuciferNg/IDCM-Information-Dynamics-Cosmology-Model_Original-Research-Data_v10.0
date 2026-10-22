@@ -1,0 +1,68 @@
+==============================================================================
+O219 / 01  Index reconstruction from coordinates (no index claim trusted)
+==============================================================================
+
+--- A. source integrity ---
+  [PASS] A1 Delta file md5 starts 63536d1776 (docs/36 s2 provenance claim)  -- md5=63536d177609bd6c12026e0aeccdf6ae
+  [PASS] A2 Delta = 48 pts / 6 vertices / h11 36 / h21 98 (file fields)  -- n_pts=48 n_vert=6 h11=36 h21=98
+  [PASS] A3 Delta* = 85 pts (file field == list length)  -- n_points_file=85 len=85
+  [PASS] A4 phi vector = 73 entries, sum 1800, phi[0] 360, phi[1] 176  -- len=73 sum=1800 phi0=360 phi1=176
+
+--- B. coordinate-only reconstruction of both label spaces ---
+  [PASS] B1 Delta vertices (rebuilt) = {1,2,3,4,5,7}  -- [1, 2, 3, 4, 5, 7]
+  [PASS] B2 facets(Delta*) = 6 (= number of Delta vertices)  -- facet sizes=[5, 8, 13, 34, 58, 77]
+  [PASS] B3 Delta* facet-interior labels = 73..84 (12 pts)  -- [73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84]
+  [PASS] B4 origin (label 0) is the only Delta* interior point  -- [0]
+  [PASS] B5 Delta* non-facet labels = 0..72 exactly (73 = origin + 72 rays)  -- n=73 labels 0..72
+  [PASS] B6 Delta* extreme points = 7 -> facets(Delta) = 7  -- vertices=[1, 2, 3, 4, 5, 6, 7]
+  [PASS] B7 Delta facet-interior labels = 37..47 (11 pts)  -- [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+  [PASS] B8 Delta non-facet labels = 0..36 exactly (37 = origin + 36 rays = h11)  -- n=37 labels 0..36 h11=36
+  [PASS] B9 origin is the only Delta interior point  -- [0]
+  [PASS] B10 triangulation label set = {0..72} == Delta* non-facet labels (phi index == Delta* label, labels NOT compacted)  -- n_used=73 max=72
+
+--- C. independent recomputation of the GKZ phi vector ---
+  [PASS] C1 SUM of simplex 4-volumes = 360 = Sigma(phi)/5 (saved simplicial complex tiles Delta*)  -- total vol=360  sum(phi)=1800
+  [PASS] C2 phi recomputed from saved simplices x exact volumes == saved vector (73/73)  -- mismatched=none
+  [PASS] C3 phi[1] = 176 = 2*88  -- phi[1]=176
+
+--- D. the phi=9 layer, rebuilt from coordinates ---
+  [PASS] D1 phi=9 labels = {33,37,41,44,45,47,48,50,51} (9 pts)  -- [33, 37, 41, 44, 45, 47, 48, 50, 51]
+  [PASS] D2 docs/14 coordinate table (9 rows) matches Delta* coords at those labels  -- {33: [-1, 0, 0, 1], 37: [-1, 0, 0, 5], 41: [-1, 0, 0, 9], 44: [-1, 0, 1, 0], 45: [-1, 0, 1, 1], 47: [-1, 0, 1, 3], 48: [-1, 0, 1, 4], 50: [-1, 0, 1, 6], 51: [-1, 0, 1, 7]}
+  [PASS] D3 coordinate law (x2=0 & x3=1 mod 4) or (x2=1 & x3 in {0,1,3,4,6,7}) selects exactly the 9 phi=9 points  -- law_set=[33, 37, 41, 44, 45, 47, 48, 50, 51]
+  [PASS] D3b on the FULL 85-point set the same law also selects 3 facet-interior pts -> needs the qualifier 'among the 73 phi-indexed points'  -- extra=[74, 78, 79]
+  [PASS] D4 G1 (x2=0) = 3 pts with x3 = {1,5,9} = 1+4k  -- [1, 5, 9]
+  [PASS] D5 G2 (x2=1) = 6 pts with x3 in {0,1,3,4,6,7} = (3k,3k+1)  -- [0, 1, 3, 4, 6, 7]
+
+--- E. docs/19 s2 numerical claims ---
+  [PASS] E1 Delta* pt[33] = (-1,0,0,1) with phi=9  -- pt=[-1, 0, 0, 1] phi=9
+  [PASS] E2 Delta* pt[11] = (-1,0,-1,3) with phi=18  -- pt=[-1, 0, -1, 3] phi=18
+  [PASS] E3 gamma_33 = 2+sqrt2, gamma_11 = 2-sqrt2, sum = 4  -- g33=3.414213562373 g11=0.585786437627 sum=4.000000000000
+  [PASS] E4 phi<=12 test: pt[33] in low (9), pt[11] not in low (18)  -- phi33=9 phi11=18
+  [PASS] E5 low-phi set = 44 pts (= N_d), high-phi set = 29 pts (= L_7)  -- low=44 high=29
+  [PASS] E6 low-phi label list == O137 data/sub_glsm_44_indices.json  -- [2, 5, 17, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 66, 70, 71, 72]
+  [PASS] E7 GKZ phi partition = 44 = 2 + 5 + 9 + 28 (phi = 6 / 8 / 9 / 12), the 'GKZ phi layer' identity registered in O137 docs/24 L162  -- phi=6:2 labels=[2, 31] | phi=8:5 labels=[5, 17, 25, 29, 72] | phi=12:28
+  [PASS] E8 the A5 9-mode set = first 13 integers minus the 4 even {6,8,10,12} (O137 docs/24 L260) -- pure mode-side arithmetic, no polytope index  -- [1, 2, 3, 4, 5, 7, 9, 11, 13]
+
+--- F. the actual premise: 'pt index = mode index' ---
+  [PASS] F1 A3 raw observation: phi=9 label set INTERSECT 9-mode set = EMPTY  -- labels9=[33, 37, 41, 44, 45, 47, 48, 50, 51] modes9=[1, 2, 3, 4, 5, 7, 9, 11, 13]
+  [PASS] F2 range check: 5 of the 9 phi=9 labels exceed the 44-chain mode range 1..44  -- [45, 47, 48, 50, 51]
+  [PASS] F3 same integer, different polytope: label 33 of Delta vs of Delta* differ  -- Delta[33]=[-11, -7, -3, -1]  Delta*[33]=[-1, 0, 0, 1]
+      index of the point (-1,0,0,1) under 4 enumerations: {'file': 33, 'lex': 19, 'norm_lex': 6, 'reversed': 51}
+  [PASS] F4 the labels 33 / 11 are NOT enumeration-invariant (they are artefacts of the data-file ordering)  -- {'file': {'pt33': 33, 'pt11': 11}, 'lex': {'pt33': 19, 'pt11': 4}, 'norm_lex': {'pt33': 6, 'pt11': 39}, 'reversed': {'pt33': 51, 'pt11': 73}}
+  [PASS] F5 label-map verdict: 33 allowed, 11 excluded (the docs/19 s2 mechanism)  -- {11: False, 33: True}
+  [PASS] F6 rank-map verdict on the same pair: BOTH allowed -> test is vacuous (all 44 rank-mapped modes are low-phi by construction)  -- mode33->label54 mode11->label32
+  [PASS] F7 label-map excludes 21 of the 44 modes, incl. the 2-adic candidates 1 and 7 (phi[1]=176, phi[7]=20)  -- allowed n<=44 = [2, 5, 17, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
+  [PASS] F8 density baseline: P(random 9 of 73 disjoint from the 9-mode set) = 0.2837  -- exact=27540584512/97082021465  (N_search=1, d_obs=0, median d=1)
+  [PASS] F9 density baseline: P(a random phi layer splits a given pair one-low-one-high) = 0.4855  -- exact=319/657
+
+--- G. kappa / divisor index space (docs/06 s1) ---
+  [PASS] G1 kappa saved shape = 36^3  -- [36, 36, 36]
+  [PASS] G2 K[0,0,0] = -360 (docs/06 'index 0 = pt 0 = origin' claim)  -- -360.0
+  [PASS] G3 kappa nonzero count (reported, no external claim)  -- nonzero=1341
+  [PASS] G4 the premise sentence exists verbatim in docs/06 s1 (quoted for the record)  -- CYTools divisor label = 1-36 (1-based) = pt index = mode index (1-based)
+
+--- H. verdict summary ---
+  RESULT: 44/44 PASS
+  SURVIVES : coordinate-anchored facts (B, C, D, E, G) -- all order-free
+  DIES     : 'pt index = mode index' as a derivation (F3..F7 + F8/F9 density)
+  wrote data/01_checks.json, data/01_index_charter.json

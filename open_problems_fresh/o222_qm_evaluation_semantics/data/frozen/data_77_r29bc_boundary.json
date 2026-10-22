@@ -1,0 +1,14 @@
+{
+ "signedness": {
+  "pos": 3720,
+  "neg": 3720,
+  "rows_bad": 120
+ },
+ "agreement": {
+  "min": "3577/11532",
+  "max": "1",
+  "mean": "59/119",
+  "distinct": 855
+ },
+ "base_rate": "2529/111569"
+}

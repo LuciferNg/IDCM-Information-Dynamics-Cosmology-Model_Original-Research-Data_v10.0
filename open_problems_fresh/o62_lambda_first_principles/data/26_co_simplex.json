@@ -1,0 +1,14 @@
+{
+  "test": "O62 八期 26: Co-simplex 正確",
+  "n_co36": 450,
+  "co_zero": 331,
+  "co_nnz": 119,
+  "violations": 0,
+  "nnz_distinct_total": 119,
+  "nnz_not_co": 0,
+  "two_same_nnz": 198,
+  "div0_zero": 144,
+  "div0_nnz": 30,
+  "passed": 2,
+  "failed": 3
+}

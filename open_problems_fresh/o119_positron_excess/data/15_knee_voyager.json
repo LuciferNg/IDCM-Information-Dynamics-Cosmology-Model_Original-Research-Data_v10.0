@@ -1,0 +1,12 @@
+{
+ "gamma_fit": -1.3106208836830109,
+ "sigma_gamma": 0.045619980544661494,
+ "chi2_dof_single": 1.1257552504266093,
+ "best_break_MeV": 8.5,
+ "delta_chi2_break": 4.365827166686005,
+ "chi2_break40": 7.880286752986265,
+ "n_points": 9,
+ "E22_mode_MeV": 39.45783118241548,
+ "knee_amplitude_frac": 0.017428165487667065,
+ "verdict": "Voyager 電子譜平滑 (單冪律 1.30); 40 MeV 拐點振幅 ~2% < 靈敏度 ~10% -> 不可檢定; O54 內部矛盾 (docs 40 MeV vs script 2 MeV)"
+}

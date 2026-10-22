@@ -1,0 +1,27 @@
+============================================================================
+T4: C_f 兩步映射不動點判死 (O235 tick-parity 假説 嚴格式測試)
+============================================================================
+
+[A] G = 同 parity 兩步平均 (8-rank ring BC)
+
+[B] pattern 層: sign 交替 (odd rank < 兩偶鄰居)
+
+[C] 判死: C_f ∈ Fix(G)?
+
+[D] 判死穩健性
+
+============================================================================
+RESULT: 10/10 PASS
+   [PASS] A1  spec(G) = {1×2, −1×2, 0×4} (閉式 cos(πk/2)) — maxdev=3.33e-16
+   [PASS] A2  Fix(G) = span{1, (−1)^r}, dim 2 (constant + 純交替) — const=Y, alt=Y, ker(G−I)=2
+   [PASS] A3  家族: Fix(G) dim 2 ∀ 2m-ring m=3..6 (常數 + 交替不變) — dims=[np.int64(2), np.int64(2), np.int64(2), np.int64(2)]
+   [PASS] B1  local alternation 8/8: 每個 odd-rank C_f < 兩偶鄰居 (value 值層排列 = 鋸齒) — 8/8
+   [PASS] B2  純 checkerboard 模 (−1)^r) 係 sign 結構嘅不動點: 偶 rank 全部 > 奇 rank — ⟨x,alt⟩/8=-36.2506
+   [PASS] C1  判死: θ=0.1 —— R_raw 同 R_log 都 > 0.1 ⟹ C_f ∉ Fix(G) (值層無不動點) — R_raw=0.6796, R_log=0.4301
+   [PASS] C2  每 parity 內振幅跨度 >10× (固定點要求 parity 內常數 ⟹ 大規模違反) — even 3.80..255.75 (67.3×), odd 3.59..159.64 (44.4×)
+   [PASS] C3  t=13 VEV 層排除 (C_f_t=7722.8, O233 R19) —— 判死喺 8 費米子族上執行 — excluded
+   [PASS] D1  ±10% 值擾動 200 次: 殘差保持 > 0.1 (判死結論穩健, 唔係邊界效應) — min_observed=0.6959
+   [PASS] D2  零參數 + MC N/A: 判死係確定性閾值測試; pattern 統計 = O233 原狀 (1/56, 0.1204) — deterministic + cited stats
+
+判決: 嚴格式 → ⚰️ 死
+       值層 C_f 唔係兩步映射不動點; pattern 層 (sign 交替) 存活 = O233 鋸齒重讀

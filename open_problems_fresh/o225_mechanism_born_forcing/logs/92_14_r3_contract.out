@@ -1,0 +1,11 @@
+================================================================================================
+O225 scripts/14 -- R3 contract enforcer (r3-centre-v1)
+================================================================================================
+[PASS] C1   合約檔存在（docs/05_r3_contract.md）  --  /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/docs/05_r3_contract.md
+[PASS] C2   機器存在（scripts/15_r3_centre_theorem.py）  --  missing = 0
+[PASS] C3   機器無禁字集命中  --  violations = 0
+[PASS] C4   陽性對照必須被拒（scanner 已受測）  --  detected = ['positive-control: import math (line 2)', 'positive-control: float literal 0.5 (line 4)', 'positive-control: math.sin (line 4)']
+[PASS] C5   合約含全部預註冊標籤（R3-P1..R3-P5、R3-P6a/b/c、R3-P7、R3-P8a/b、定理/尖銳性/普適性/商結構）  --  missing = 0
+================================================================================================
+GATE = OPEN   (contract sha256 = b45fcae75340a662...)
+================================================================================================

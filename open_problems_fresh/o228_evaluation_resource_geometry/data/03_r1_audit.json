@@ -1,0 +1,94 @@
+{
+ "contract_sha256": "33c93d69e4f8ffd7227b071e8074b8560f8009e6cb947e8163c7f25ab8b2d25a",
+ "o222_touched_after_contract": [],
+ "census_classes": {
+  "3": 10,
+  "5": 5,
+  "7": 1
+ },
+ "F_audit": {
+  "4": 12645,
+  "5": 1051351,
+  "6": 23083292
+ },
+ "null_audit": {
+  "exact": 0.03461839324053681,
+  "mc": 0.034203333333333336,
+  "draws": 1500000,
+  "rate_machine": 0.022667586874490227
+ },
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "the four frozen o222 inputs still carry the hashes pinned in the contract",
+   "ok": true,
+   "detail": "mismatched = []"
+  },
+  {
+   "tag": "A2",
+   "name": "no post-hoc criteria: the only claim tag absent from the frozen contract is the declared auxiliary check C2b (icosahedron degree check), which is flagged as non-pre-registered in the results doc",
+   "ok": true,
+   "detail": "tags = ['C1', 'C10', 'C11', 'C12', 'C13', 'C14', 'C15', 'C16', 'C17-c', 'C18', 'C19', 'C2', 'C2b', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9'] ; tags absent from the contract = ['C2b']"
+  },
+  {
+   "tag": "A3",
+   "name": "all claims in the run JSONs PASS, and the single historical FAIL (C17, first run) is preserved verbatim in logs/02_r1_firstrun_C17_FAIL_excerpt.out with its correction history",
+   "ok": true,
+   "detail": "claims = 20 ; non-PASS = [] ; FAIL excerpt preserved = True"
+  },
+  {
+   "tag": "A4",
+   "name": "no file inside the o222 tree was modified after the contract was frozen (read-only discipline)",
+   "ok": true,
+   "detail": "touched files = []"
+  },
+  {
+   "tag": "B1a",
+   "name": "distinct rows = 12 with multiplicity 10 (recomputed by dict-of-tuples)",
+   "ok": true,
+   "detail": "distinct rows = 12"
+  },
+  {
+   "tag": "B1b",
+   "name": "census recomputed by +/- sign-vector classes: 16 classes with histogram {3:10, 5:5, 7:1}",
+   "ok": true,
+   "detail": "classes = 16 ; histogram = {3: 10, 5: 5, 7: 1}"
+  },
+  {
+   "tag": "B2",
+   "name": "F_1..F_4 recomputed pair-major (a completely different enumeration)",
+   "ok": true,
+   "detail": "F_1..F_4 = [0, 0, 0, 12645] ; non-separating 4-subsets = 545200 = C(62,4) - 12645"
+  },
+  {
+   "tag": "B3",
+   "name": "F_4..F_6 recomputed by the type-set form using inclusion-exclusion for e_k(T) (02 used polynomial convolution)",
+   "ok": true,
+   "detail": "audit = {4: 12645, 5: 1051351, 6: 23083292} ; 02 = {'4': 12645, '5': 1051351, '6': 23083292}"
+  },
+  {
+   "tag": "B4",
+   "name": "the exact null p0 of 02 is confirmed by an independent MC with 1.5e6 draws (within 4 sigma)",
+   "ok": true,
+   "detail": "exact = 0.034618 ; audit MC(1500000) = 0.034203 ; 4 sigma = 0.000597"
+  },
+  {
+   "tag": "C1",
+   "name": "12645 = 45 x 281 (factorisation) and the mixture table sums to it",
+   "ok": true,
+   "detail": "factors = [3, 3, 5, 281] ; mixture sum = 12645 ; rate = 2529/111569"
+  },
+  {
+   "tag": "C2",
+   "name": "the E-only 4-frames are exactly 5^4 = 625 and k_min(E) = 4, k_min(V) = k_min(F) = 5",
+   "ok": true,
+   "detail": "E: k_min = 4 F_4 = 625 ; V: k_min = 5 ; F: k_min = 5"
+  },
+  {
+   "tag": "C3",
+   "name": "the equivariant tie-break changes the census (16 -> 46 types) and F_4 (12645 -> 1000): the resource geometry is convention-relative",
+   "ok": true,
+   "detail": "equivariant: 46 types / hist {'1': 30, '2': 16} / F_4 = 1000 / shapes [[4, 8], [6, 6]]"
+  }
+ ]
+}

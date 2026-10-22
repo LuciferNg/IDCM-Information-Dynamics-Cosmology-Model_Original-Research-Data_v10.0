@@ -1,0 +1,22 @@
+================================================================================================================
+O222 B2 CONTRACT ENFORCER (Contract v1) -- settings freeze / AST ban / structural no-signalling
+================================================================================================================
+[PASS] [contract]  group reconstruction matches R1: |2I| = 120, |I| = 60                      |2I|=120 |I|=60
+[PASS] [L-SET]     62 lattice-native axes (12 vertices / 20 faces / 30 edges), honest counts  |V|=12 |F|=20 |E|=30 (lines 6/10/15)
+[PASS] [L-SET]     3844 ordered pairs with EXACT cos^2 in Q(sqrt5) (no trig, no float)        pairs = 3844 ; sample cos^2(V00,V01) = (Fraction(1, 5), Fraction(0, 1))
+[PASS] [blind]     partition frozen: DEV = 144 (V x V), BLIND = 3700 (all the rest)           DEV=144 BLIND=3700 total=3844
+[PASS] [L-CAUSAL]  P1 structural: single-wing marginal = 1/2 EXACT for all 62 axes (central symmetry 6/6 + uniform multiplicity) balanced axes = 62/62 ; max tie count = 20
+[PASS] [L-CAUSAL]  P1 robustness: balance holds for every reference axis n-hat in the 12 vertices (H4) pos-counts (first 6) = [30, 30, 30, 30, 30, 30]
+[PASS] [L-CAUSAL]  P1b ties ASSIGNED by H3 (not excluded): 0 unbalanced over 12 refs x 62 axes x 60 rotations tie events = 7200 ; unbalanced = 0
+[PASS] [L-CAUSAL]  tie origin structural: edge axes orthogonal to exactly 4 vertex directions (x5 multiplicity = 20); vertex/face axes 0 edge = [4] ; vertex/face = [0]
+[PASS] [L-ZERO]    AST scanner SELF-TEST: rejects -cos kernel / magic 0.7071 constant / 0.5 float, accepts clean exact kernel pos=3 magic=3 float=2 neg=0
+[PASS] [L-CAUSAL]  locality checker SELF-TEST: rejects remote-setting leak in k_table, accepts factor-table C assembly leak-findings=2 clean-findings=0
+[CLAIM] [WAITING]   scripts/05_b2_correlation.py                                               not written yet - the contract gate is closed until 04 is run with --freeze-impl and the implementation hash is recorded in data/04_b2_freeze.json
+
+[PASS] [hash]      freeze attestation written (doc + enforcer + settings + partition)         doc=01d2fb03ead127ef
+[PASS] [hash]      settings sha256 recorded for the blind-commitment                          settings=2357006c68e0165d
+
+================================================================================================================
+RESULT: 12/12 PASS  (0 FAIL, 1 claims excluded)   GATE = CLOSED (05 not frozen)
+================================================================================================================
+saved: data/04_b2_settings.json | 04_b2_partition.json | 04_b2_freeze.json | 04_b2_contract_results.json

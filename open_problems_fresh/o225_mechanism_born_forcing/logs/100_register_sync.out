@@ -1,0 +1,10 @@
+================================================================================================================
+O225 scripts/101 -- register ↔ problem_record 同步核
+================================================================================================================
+[PASS] S1   每輪 R1–R26 於 register 皆有 O225/R* 條目（＋CLOSEOUT-2）  --  register 輪次 = 33 條；缺 = 無
+[PASS] S2   清冊九項於 register 齊備（MECH/Z10/STT 已閉；CRIT/MISC/PHYS 未閉）  --  register 非輪次項 = ['CLOSEOUT-2', 'CRIT-1', 'CRIT-2', 'CRIT-3', 'MECH-1', 'MECH-2', 'MISC-1', 'MISC-2', 'PHYS-1', 'STT-1', 'Z10-1', 'Z10-2']；缺 = 無
+[PASS] S3   記錄之輪次集合 ⊇ register 之輪次集合（無單邊缺漏）  --  記錄 = ['CLOSEOUT-2', 'CLOSEOUT-1', 'CHAIN', 'R1', 'R2', 'R3'] …（36）
+[PASS] S4   記錄 §三十七 清冊項 ↔ register 非輪次項互相覆蓋（CLOSEOUT-2 屬輪次不計）  --  記錄清冊 = ['CRIT-1', 'CRIT-2', 'CRIT-3', 'MECH-1', 'MECH-2', 'MISC-1', 'MISC-2', 'PHYS-1', 'STT-1', 'Z10-1', 'Z10-2']；register = ['CRIT-1', 'CRIT-2', 'CRIT-3', 'MECH-1', 'MECH-2', 'MISC-1', 'MISC-2', 'PHYS-1', 'STT-1', 'Z10-1', 'Z10-2']
+[PASS] S5   同步（反向）：register note 內之 n/m 皆見於記錄對應輪節  --  未見於記錄者 = 0 []
+
+RESULT: 5/5 PASS

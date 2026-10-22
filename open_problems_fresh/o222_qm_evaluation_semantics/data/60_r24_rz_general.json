@@ -1,0 +1,53 @@
+{
+ "upper": {
+  "2": 3,
+  "3": 6,
+  "4": 9,
+  "5": 12,
+  "6": 16,
+  "7": 21
+ },
+ "found": {
+  "2": 3,
+  "3": 6,
+  "4": 9,
+  "5": 12,
+  "6": 16,
+  "7": 21
+ },
+ "exact": {
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true,
+  "7": true
+ },
+ "PG2_2": {
+  "n": 7,
+  "is_q2q1": true,
+  "ones": 21,
+  "formula": 21,
+  "upper": 21,
+  "no_rect": true,
+  "attains": true
+ },
+ "PG2_3": {
+  "n": 13,
+  "is_q2q1": true,
+  "ones": 52,
+  "formula": 52,
+  "upper": 52,
+  "no_rect": true,
+  "attains": true
+ },
+ "PG2_4": {
+  "n": 21,
+  "is_q2q1": true,
+  "ones": 105,
+  "formula": 105,
+  "upper": 105,
+  "no_rect": true,
+  "attains": true
+ }
+}

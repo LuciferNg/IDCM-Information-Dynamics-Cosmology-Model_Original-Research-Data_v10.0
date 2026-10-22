@@ -1,0 +1,28 @@
+================================================================================================================
+O228 scripts/21 -- R10: non-convex (B&B) proof tree for k_min(edge) = 7
+================================================================================================================
+M_edge B&B: bound = None ; nodes = 163 ; 69.4 s
+[FAIL] P8-1  -- bound = None ; nodes = 163 (predicted <= 40)
+[FAIL] P8-2  -- depth = 24
+re-verification of every node: 0 mismatches
+[PASS] P8-3  -- 0 mismatches over 163 nodes
+explicit 7-cover: None (search nodes 1)
+[FAIL] P8-4  -- columns = None ; all 435 pairs covered = False
+  M_2I    k_min=4 -> tree bound None (295 nodes, depth 24)
+  M_face  k_min=5 -> tree bound None (186 nodes, depth 24)
+  M_edge  k_min=7 -> tree bound None (83 nodes, depth 24)
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/21_r10_branch_certificate.py", line 291, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/21_r10_branch_certificate.py", line 261, in main
+    b = prove(NPx, Sx, Rx, Cx, R2K[mm.name], tr, st)
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/21_r10_branch_certificate.py", line 135, in prove
+    b = prove(NP, S, Rmask & ~S[a], Cmask & ~(1 << a), target, child['children'], state)
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/21_r10_branch_certificate.py", line 135, in prove
+    b = prove(NP, S, Rmask & ~S[a], Cmask & ~(1 << a), target, child['children'], state)
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/21_r10_branch_certificate.py", line 135, in prove
+    b = prove(NP, S, Rmask & ~S[a], Cmask & ~(1 << a), target, child['children'], state)
+                              ~^^^
+IndexError: list index out of range
+exit=1

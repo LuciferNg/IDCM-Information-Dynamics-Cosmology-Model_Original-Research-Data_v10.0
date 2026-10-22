@@ -1,0 +1,23 @@
+================================================================================================================
+O228 scripts/20 -- R9: exact zoo IP, certificate cost, sharpness of the counting bound
+================================================================================================================
+  exact nu M_2I    m=12  N=62  nu=2 (80 nodes)
+  exact nu M_face  m=20  N=62  nu=3 (484 nodes)
+  exact nu M_edge  m=30  N=62  nu=5 (864 nodes)
+  exact nu M_T     m=4   N=14  nu=1 (6 nodes)
+  exact nu M_O     m=6   N=26  nu=2 (17 nodes)
+  exact nu M_D4    m=2   N=10  nu=1 (2 nodes)
+zoo: 30 entries, exact nu for 30 of them
+[PASS] P7-1  -- exact for 30/30 entries ; gaps = [0, 1, 2]
+[FAIL] P7-2  -- T|(1, 1, 2): greedy=3 LP*=4 -> nu=3 (predicted floor(LP*)=4) ; S4|(2, 1, 0): greedy=4 LP*=5 -> nu=5 (predicted floor(LP*)=5)
+[PASS] P7-2-c  -- exact nu: [('T|(1, 1, 2)', 3), ('S4|(2, 1, 0)', 5)] ; exact gaps: {'T|(1, 1, 2)': 2, 'S4|(2, 1, 0)': 1}
+certificate cost: F_6=0 ; nodes=19352397 of C(62,6)=61474519 (31.4804%) in 5.42 s
+[FAIL] P7-3  -- nodes = 19352397 / 61474519 = 31.4804% in 5.42 s
+sharpness: max pat(k<=4) <= cap(k) for all six machines: True ; equality attained at 16 cases: ['M_2I k=1', 'M_2I k=2', 'M_2I k=3', 'M_face k=1', 'M_face k=2', 'M_face k=3', 'M_face k=4', 'M_edge k=1', 'M_edge k=2', 'M_edge k=3', 'M_edge k=4', 'M_T k=1', 'M_T k=2', 'M_O k=1', 'M_O k=2', 'M_D4 k=1']
+[PASS] P7-3-c  -- 19352397/61474519 = 31.4804% ; 5.42 s
+[PASS] P7-4  -- equality cases = ['M_2I k=1', 'M_2I k=2', 'M_2I k=3', 'M_face k=1', 'M_face k=2', 'M_face k=3', 'M_face k=4', 'M_edge k=1', 'M_edge k=2', 'M_edge k=3', 'M_edge k=4', 'M_T k=1', 'M_T k=2', 'M_O k=1', 'M_O k=2', 'M_D4 k=1']
+[PASS] P7-5  -- equality cases ['M_2I k=1', 'M_2I k=2', 'M_2I k=3', 'M_face k=1', 'M_face k=2', 'M_face k=3', 'M_face k=4', 'M_edge k=1', 'M_edge k=2', 'M_edge k=3', 'M_edge k=4', 'M_T k=1', 'M_T k=2', 'M_O k=1', 'M_O k=2', 'M_D4 k=1'] ; cap(6)=32 vs max pat(6)=26
+================================================================================================================
+RESULT: 5/7 PASS  (2 FAIL)   elapsed 19.0 s
+================================================================================================================
+exit=1

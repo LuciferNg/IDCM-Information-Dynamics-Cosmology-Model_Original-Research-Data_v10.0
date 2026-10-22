@@ -1,0 +1,13 @@
+====================================================================================================
+O226 scripts/17 -- closeout post-manifest verify (read-only)
+====================================================================================================
+[PASS] M1  MANIFEST is complete and every listed sha256 matches the file on disk (artifacts = 80)  --  missing = [] ; ghost = [] ; hash mismatches = []
+[PASS] A1  append-only proof: after stripping the designated live-field lines, the pre-closeout content of each append-only history document (SESSION_START / 01_problem_record) is a byte-exact prefix of the new content  --  SESSION_START.md: 288 -> 350 lines, prefix-identical = True | 01_problem_record.md: 91 -> 172 lines, prefix-identical = True
+[PASS] D1  each live document now carries both the R1-R5 closeout token and an explicit closeout marker (status-line sync)  --  tokens = {'SESSION_START.md': True, '01_problem_record.md': True, 'RESULT.md': True}
+[PASS] U1  docs/19 carries the uncleared-item table with the four residual rows (and the 已閉合 對帳表)  --  residual rows = 4
+[PASS] R1  the register store carries the O226 closeout: a close record, a handoff to O222, and all five round records  --  rounds = ['O226/R1', 'O226/R2', 'O226/R3', 'O226/R4', 'O226/R5'] ; close = True ; handoff(O222) = True
+[INFO] S0 footprint (mtime > cut, outside the O dir) = 6 files: ['README.md', 'o227_mapping_channel_no_signalling/data/01_r1_freeze.json', 'o227_mapping_channel_no_signalling/docs/01_r1_contract.md', 'o227_mapping_channel_no_signalling/logs/02_r1.out', 'o227_mapping_channel_no_signalling/scripts/01_r1_gate.py', 'o227_mapping_channel_no_signalling/scripts/02_r1_machine.py'] ...
+[PASS] S1  scope (content-level): no file outside the O226 directory that was touched after the closeout start carries fresh O226 content, except the register store and the shared README row, which does carry the R1-R5 closeout token (mtime hits from parallel sessions are attributed, not treated as violations)  --  content leaks = [] ; README carries the R1-R5 token = True
+====================================================================================================
+RESULT: 6/6 PASS (closeout post-manifest verify, read-only)   elapsed 0.1 s
+====================================================================================================

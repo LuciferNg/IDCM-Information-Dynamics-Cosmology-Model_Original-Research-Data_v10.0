@@ -1,0 +1,32 @@
+{
+ "algebra_identity_mismatches": 0,
+ "vsign_of_Q_mismatches": 0,
+ "signG_only_mismatches": 0,
+ "random_diagonal_draws": 20,
+ "worst_mismatches": 590,
+ "per_draw": [
+  470,
+  0,
+  418,
+  264,
+  462,
+  396,
+  316,
+  372,
+  48,
+  0,
+  458,
+  540,
+  556,
+  0,
+  354,
+  590,
+  264,
+  264,
+  96,
+  90
+ ],
+ "G_rank": 3,
+ "G_sign_pattern_is_frozen": true,
+ "verdict": "magnitude-dependent"
+}

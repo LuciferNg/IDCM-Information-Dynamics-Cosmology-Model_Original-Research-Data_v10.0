@@ -1,0 +1,10 @@
+O34 — Direction B Generation Ladder Closure
+===================================================================
+k(e->mu) = 11.0795139979
+k(mu->tau) = 5.8652652018
+k(e->tau) = 16.9447791997
+k12 + k23 = 16.9447791997 (additivity 0.00e+00)
+k(e->mu) = 11 + 7/88 candidate: err 0.000284%
+m_mu/m_e = phi^(11+7/88): err 0.001514%
+t quark: m_t/m_b = 41.3301, needs phi^k correction
+Status: 🟡 k(e->mu) = 11+7/88 strong candidate

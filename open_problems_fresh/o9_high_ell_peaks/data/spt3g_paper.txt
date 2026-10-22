@@ -1,0 +1,1240 @@
+A family of projective two-weight linear codes
+Ziling Henga , Dexiang Lia , Jiao Dub,c , Fuling Chena
+a
+
+School of Science, Chang’an University, Xi’an 710064, China
+
+b School of Mathematics and Information Science, Henan Normal University, Xinxiang 453007, China
+
+arXiv:2103.13633v1 [cs.IT] 25 Mar 2021
+
+c Henan Engineering Laboratory for Big Data Statistical Analysis and Optimal Control, Henan Normal University, Xinxiang 453007, China
+
+Abstract
+Projective two-weight linear codes are closely related to finite projective spaces and strongly regular graphs. In this
+paper, a family of q-ary projective two-weight linear codes is presented, where q is a power of 2. The parameters of
+both the codes and their duals are excellent. As applications, the codes are used to derive strongly regular graphs with
+new parameters and secret sharing schemes with interesting access structures.
+Keywords: Linear code, strongly regular graph, secret sharing schemes
+2000 MSC: 94B05, 05E30, 15A03
+
+1. Introduction
+An [n, k, d] linear code C of length n over Fq is a k-dimensional linear subspace of Fnq with minimal Hamming
+distance d, where Fq denotes the finite field with q elements for a prime power q. There exist some bounds on the
+parameters n, k, d [13]. An [n, k, d] code is called (distance) optimal if no [n, k, d + 1] codes exists. An [n, k, d − 1]
+code iscalled almost (distance) optimal if [n, k, d] code is optimal. The dual code C ⊥ of a linear code C is defined as
+C ⊥ = c⊥ ∈ Fnq : hc⊥ , ci = 0 ∀ c ∈ C . Clearly, the dimension of C ⊥ is n − k if C has dimension k. A linear code C is
+said to be projective if the minimal distance of its dual is at least 3.
+Let Ai denote the number of codewords with weight i in a code C of length n. The sequence (1, A1 , A2 , · · · , An ) is
+called the weight distribution of C and the polynomial 1 + A1 z + A2 z2 + · · · + An zn is called the weight enumerator of
+C . Denote by t = ♯{Ai : Ai > 0, 1 ≤ i ≤ n}. Then a code with weight distribution (1, A1 , A2 , · · · , An ) is called a t-weight
+code. Weight distribution is an interesting research subject in coding theory as it not only contains the information
+of the capabilities of error detection and correction, but also allows the computation of the error probability of error
+detection and correction of a given code. Many linear codes with only a few weights were reported in the literature
+[1, 3, 4, 5, 6, 8, 14, 15, 16, 17, 18, 19, 20]. In particular, projective two-weight codes are very precious as they
+are closely related to finite projective spaces, strongly regular graphs and combinatorial designs [1, 2, 5]. However,
+projective two-weight codes are rare and only a few families are known [1, 3, 9].
+Let D = {d1, d2 , · · · , dn } ⊆ Fqm be a nonempty set. Let Trqm /q be the trace function from Fqm to Fq . Define a linear
+code of length n as
+
+CD = {(Trqm /q (bd1 ), Trqm /q (bd2 ), · · · , Trqm /q (bdn )) : b ∈ Fqm }.
+
+(1)
+
+The set D is called the defining set and the ordering of the elements in D doesn’t affect the parameters and weight
+distribution of CD . Recently, many good codes were obtained with different proper defining sets [3, 4, 8, 9, 11, 15, 16,
+17, 19, 20].
+Let s be a divisor of a positive integer m, Nqm /qs the norm function from F∗qm to F∗qs . In this paper, we study the
+q-ary linear code CD in (1) with the defining set
+
+D = x ∈ F∗qm : Trqs /q (Nqm /qs (x)) + c = 0 , c ∈ Fq .
+⋆ The research of this paper was supported in part by the National Natural Science Foundation of China under Grant 11901049 and 11971004, in
+part by the the Natural Science Basic Research Program of Shaanxi under Grant 2020JQ-343, and in part by the Young Talent Fund of University
+Association for Science and Technology in Shaanxi, China, under Grant 20200505.
+Email addresses: zilingheng@chd.edu.cn (Ziling Heng), lidexiang1015@163.com (Dexiang Li), jiaodudj@126.com (Jiao Du),
+chenfuling1109@163.com (Fuling Chen)
+
+1
+
+Known results on the code CD are summarized as follows:
+1. If q is an odd prime, c = 0 and m = 2s, the code CD is a two-weight code and its complete weight enumerator
+was given in [11].
+2. If c = 0 and s = 2, the code CD is a two-weight code and its weight enumerator was given in [9].
+3. If c ∈ F∗q , s = 2 and gcd(m/2, q − 1) = 1, the code CD is a two-weight code and its weight enumerator was given
+in [9].
+The objective of this paper is to investigate the weight distribution of CD for m = 2s, any prime power q and any c ∈ Fq .
+The parameters of its dual are also determined. It is interesting that CD is a projective two-weight code if m = 2s, q
+is even and c ∈ F∗q . As an application, strongly regular graphs with new parameters can be derived with the projective
+two-weight codes. As another application, all codes obtained in this paper can be used to construct secret sharing
+schemes with interesting access schemes.
+2. Preliminaries
+Let p be a prime and q = pe . Denote by ζ p the primitive p-th root of complex unity. For any a ∈ Fq , the function
+Trq/p (ax)
+
+ϕa (x) = ζ p
+, x ∈ Fq , is called an additive character of Fq . If a = 0, ϕ0 (x) = 1 for all x ∈ Fq and ϕ0 is called
+the trivial additive character of Fq . If a = 1, ϕ1 is said to be the canonical additive character of Fq . The orthogonality
+relation of additive characters (see [12]) is given by
+
+q for a = 0,
+∑ ϕ1 (ax) = 0 for a ∈ F∗q .
+x∈F
+q
+
+Let F∗q = Fq \ {0} and α be a primitive element of it. Define the multiplicative characters of Fq by ψ j (αk ) =
+jk
+
+ζq−1 for k = 0, 1, · · · , q − 1, where 0 ≤ j ≤ q − 2. In particular, ψ0 is called the trivial multiplicative character and
+η := ψ(q−1)/2 is referred to as the quadratic multiplicative character of Fq . The orthogonality relation of multiplicative
+characters (see [12]) is given by
+
+q − 1 for j = 0,
+ψ
+(x)
+=
+∑∗ j
+0 for j 6= 0.
+x∈F
+q
+
+For an additive character ϕ and a multiplicative character ψ of Fq , the Gauss sum G(ψ, ϕ) over Fq is defined by
+G(ψ, ϕ) = ∑ ψ(x)ϕ(x).
+x∈F∗q
+
+We call G(η, ϕ) the quadratic Gauss sum over Fq for nontrivial ϕ.
+Lemma 1. [12, Th. 5.15] Let q = pe with p odd. Let χ be the canonical additive character of Fq . Then
+G(η, ϕ)
+
+√
+p−1 2 √
+= (−1)e−1 ( −1)( 2 ) e q
+
+√
+for p ≡ 1 (mod 4),
+(−1)e−1 √q
+√
+=
+(−1)e−1 ( −1)e q for p ≡ 3 (mod 4).
+
+Lemma 2. [12, Th. 5.33] Let ϕ be a nontrivial additive character of Fq with q odd, and let f (x) = a2 x2 + a1 x + a0 ∈
+Fq [x] with a2 6= 0. Then
+∑ ϕ( f (c)) = ϕ(a0 − a21(4a2)−1 )η(a2 )G(η, ϕ).
+c∈Fq
+
+Lemma 3. [12, Cor. 5.35] Let ϕb be a nontrivial additive character of Fq with b ∈ F∗q , and let f (x) = a2 x2 + a1 x + a0 ∈
+Fq [x] with q even. Then
+
+χb (a0 )q if a2 = ba21 ,
+ϕ
+(
+f
+(c))
+=
+∑ b
+0
+otherwise.
+c∈F(q)
+
+2
+
+3. A class of q-ary two-weight linear codes
+Let s be a positive integer and m = 2s. Let q be a power of a prime p. In this section, we study the code CD in (1)
+with the defining set
+o
+n
+s
+D = x ∈ F∗qm : Trqs /q (xq +1 ) + c = 0 for c ∈ Fq .
+
+Denote by n = ♯D. The following lemma is useful for determining the length of CD .
+
+Lemma 4. [7, Lemma 7] For a ∈ F∗qs , b ∈ Fqm , c ∈ Fq and m = 2s, define an exponential sum by
+ 
+
+s
+∆(a, b, c) = ∑ ϕ(yc) ∑ ϕ y Trqs /q (axq +1 ) + Trqm /q (bx) ,
+x∈F∗qm
+
+y∈F∗q
+
+where ϕ is the canonical additive character of Fq . Then
+
+ qs +1 
+b
+s + 1)(1 − q)
+
+s
+(q
+if
+c
+=
+0,
+Tr
+= 0,
+
+q /q
+
+
+ qsa+1 
+
+
+qs + 1 − q
+6= 0,
+if c = 0, Trqs /q b a
+ s 
+ s 
+ s 
+∆(a, b, c) =
+s
+bq +1
+bq +1
+bq +1
+
+if
+c6=0, Trqs /q
+=
+6
+0,
+c6
+=
+Tr
+,
+or
+c6
+=
+0,
+Tr
+=0,
+s
+s
+q
++
+1
+
+q
+/q
+q
+/q
+a
+a
+
+
+ aqs +1 
+
+
+qs + 1 − qs+1
+if c = Trqs /q b a
+6= 0.
+Lemma 5. The length n of CD is given by
+ s
+(q + 1)(qs−1 − 1)
+n=
+qs−1 (qs + 1)
+
+if c = 0,
+if c ∈ F∗q .
+
+Proof. By the orthogonal relation of additive characters and Lemma 4,
+s
+
+ qm − 1 1
+Trq/p yTrqs /q (xq +1 )+yc
+qm − 1 1
+s
+1
++ ∑ ϕ(yc) ∑ ϕ yTrqs /q (xq +1 ) =
++ ∆(1, 0, c).
+ζp
+=
+n=
+∑
+∑
+q x∈F∗ y∈Fq
+q
+q y∈F∗
+q
+q
+x∈F∗
+
+
+
+
+
+qm
+
+qm
+
+q
+
+Then the desired conclusion follows from Lemma 4.
+Now we determine the value of the following exponential sums used to obtain the weight distribution of CD .
+Lemma 6. Let b ∈ F∗qm with m = 2s. Denote by
+Sc (b) =
+
+
+
+s
+
+
+
+∑∗ ∑∗ ∑∗ ϕ(zc)ϕ yTrqm /q(bx) + zTrqs /q(xq +1 ) , c ∈ Fq.
+
+x∈Fqm y∈Fq z∈Fq
+
+If c = 0 and q is any prime power, then
+S0 (b) =
+
+(
+
+−(q − 1)2(qs + 1)
+(q − 1)(qs − q + 1)
+
+s
+
+if Trqs /q (bq +1 ) = 0,
+s
+if Trqs /q (bq +1 ) 6= 0.
+
+If c ∈ F∗q and q is even, then
+Sc (b) =
+
+(
+
+(qs + 1)(q − 1)
+q − 1 − qs
+
+s
+
+if Trqs /q (bq +1 ) = 0,
+s
+if Trqs /q (bq +1 ) 6= 0.
+
+If c ∈ F∗q and q = pe is odd with η the quadratic character of F∗q ,
+Sc (b) =
+
+( s
+(q + 1)(q −1)
+
+s
+
+if Trqs /q (bq +1 ) = 0,
+p−1 2
+
+(q − 1) − qs 1 + (−1)( 2 ) e qη −cTrqs /q b
+3
+
+
+qs +1
+
+s
+
+if Trqs /q (bq +1 ) 6= 0.
+
+Proof. Recall that m = 2s. By the transitivity of trace functions, we have
+
+ 
+
+y
+qs +1
+Sc (b) = ∑ ∑ ϕ(zc) ∑ ϕ z Trqs /q (x
+) + Trqm /q
+bx
+z
+y∈F∗q z∈F∗q
+x∈F∗qm
+
+
+
+ 
+s
+y
+= ∑ ∑ ϕ(zc) ∑ ϕ z Trqs /q (xq +1 ) + Trqs /q Trqm /qs
+bx
+z
+y∈F∗q z∈F∗q
+x∈F∗qm
+
+ 
+s
+s 
+s
+ybx ybq xq
+.
+= ∑ ∑ ϕ(zc) ∑ ϕ z Trqs /q xq +1 +
++
+z
+z
+y∈F∗ z∈F∗
+x∈F∗
+qm
+
+q
+
+q
+
+Note that
+x
+
+qs +1
+
+
+s
+s
+s
+s qs +1
+y2 bq +1
+ybq
+ybx ybq xq
+−
++
+= x+
++
+z
+z
+z
+z2
+
+as y, z ∈ F∗q . Hence
+Sc (b) =
+
+∑ ∑ ϕ(zc) ∑∗ ϕ z Trqs /q
+
+y∈F∗q z∈F∗q
+
+x∈Fqm
+
+!!!
+
+s
+s qs +1
+y2 bq +1
+ybq
+−
+x+
+z
+z2
+
+!
+ 2 qs +1 
+
+
+s qs +1
+y b
+ybq
+= ∑ ∑ ϕ zc − Trqs /q
+∑ ϕ zTrqs /q x + z
+z
+y∈F∗q z∈F∗q
+x∈F∗qm
+ 2 qs +1 
+ 2 qs +1  
+
+y b
+y b
+= − ∑ ∑ ϕ zc − Trqs /q
+ϕ Trqs /q
+z
+z
+∗
+∗
+y∈F z∈F
+q
+
+q
+
+!!
+
+ 2 qs +1 
+
+s qs +1
+ybq
+y b
++ ∑ ∑ ϕ zc − Trqs /q
+∑ ϕ zTrqs /q x + z
+z
+x∈Fqm
+y∈F∗q z∈F∗q
+
+ 2 qs +1 
+
+
+s
+y b
+= − ∑ ∑ ϕ(zc) + ∑ ∑ ϕ zc − Trqs /q
+ϕ Trqs /q (zx′q +1 )
+∑
+z
+y∈F∗q z∈F∗q
+y∈F∗q z∈F∗q
+x′ ∈Fqm
+ 2 qs +1 
+
+ s 
+y b
+= − ∑ ∑ ϕ(zc) + ∑ ∑ ϕ zc − Trqs /q
+φ zx′q +1 ) ,
+∑
+z
+y∈F∗ z∈F∗
+y∈F∗ z∈F∗
+x′ ∈F m
+q
+
+q
+
+q
+
+q
+
+q
+
+qs
+
+where we used the substitution x + ybz 7→ x′ in the forth equality and φ denotes the canonical additive character of Fqs .
+Since
+ s 
+ s 
+
+∑ φ zx′q +1 ) = 1 + ∑ φ zx′q +1) = 1 + (qs + 1) ∑ φ zx′ = −qs
+x′ ∈F∗qm
+
+x′ ∈Fqm
+
+x′ ∈F∗qs
+
+for z ∈ F∗q , we have
+ 2 qs +1 
+y b
+Sc (b) = − ∑ ∑ ϕ(zc) − q ∑ ∑ ϕ zc − Trqs /q
+z
+y∈F∗q z∈F∗q
+y∈F∗q z∈F∗q
+ qs +1  
+
+b
+= − ∑ ∑ ϕ(zc) − qs ∑ ϕ(zc) ∑ ϕ −Trqs /q
+y2
+z
+∗
+∗
+∗
+∗
+y∈Fq z∈Fq
+z∈Fq
+y∈Fq
+ qs +1  
+
+b
+s
+s
+= − ∑ ∑ ϕ(zc) + q ∑ ϕ(zc) − q ∑ ϕ(zc) ∑ ϕ −Trqs /q
+y2 .
+z
+y∈F∗ z∈F∗
+z∈F∗
+z∈F∗
+y∈Fq
+
+
+s
+
+q
+
+q
+
+q
+
+q
+
+Now we determine the value of Sc (b) in the following two cases:
+4
+
+(2)
+
+1. Let q be even. By Lemma 3,
+ qs +1   (
+q
+b
+∑ ϕ −Trqs /q z y2 = 0
+y∈Fq
+
+
+By Equation (2), we then have
+
+
+− ∑
+Sc (b) =
+
+∑ ϕ(zc) + qs ∑ ϕ(zc) − qs+1 ∑ ϕ(zc)
+
+y∈F∗q z∈F∗q
+
+z∈F∗q
+
+z∈F∗q
+
+s
+
+z∈Fq
+
+∑∗ ϕ(zc) =
+
+z∈Fq
+
+(
+
+q−1
+−1
+
+s
+
+if Trqs /q (bq +1 ) = 0,
+if Trqs /q (bq +1 ) 6= 0.
+
+s
+
+− ∑ ∗ ∑ ∗ ϕ(zc) + q ∑ ∗ ϕ(zc)
+y∈Fq z∈Fq
+
+Since
+
+s
+
+if Trqs /q (bq +1 ) = 0,
+s
+if Trqs /q (bq +1 ) 6= 0.
+
+if c = 0,
+if c 6= 0.
+
+the value of Sc (b) follows.
+2. Let q be odd and η the quadratic character of F∗q . If c ∈ F∗q , by Lemmas 2 and 1,
+ qs +1  
+
+b
+s
+y2
+ϕ(zc)
+ϕ
+−Tr
+q /q
+∑∗
+∑
+z
+z∈Fq
+y∈Fq
+
+s
+q ∑z∈F∗ ϕ(zc)
+if Trqs /q (bq +1 ) = 0
+q
+
+
+
+=
+qs +1
+s
+G(η, ϕ) ∑z∈F∗ ϕ(zc)η −Trqs /q b z
+if Trqs /q (bq +1 ) 6= 0
+q
+(
+s
+−q
+if Trqs /q (bq +1 ) = 0
+
+=
+s
+s
+G(η, ϕ)η −cTrqs /q bq +1 ∑z∈F∗q ϕ(zc)η(cz) if Trqs /q (bq +1 ) 6= 0
+(
+s
+−q
+if Trqs /q (bq +1 ) = 0
+
+=
+s
+s
+if Trqs /q (bq +1 ) 6= 0
+G(η, ϕ)2 η −cTrqs /q bq +1
+(
+s
+−q
+if Trqs /q (bq +1 ) = 0,
+=
+
+p−1 2
+s
+s
+if Trqs /q (bq +1 ) 6= 0.
+(−1)( 2 ) e qη −cTrqs /q bq +1
+By Equation (2), we then obtain
+( s
+(q + 1)(q −1)
+
+p−1 2
+Sc (b) =
+s
+(q − 1) − qs 1 + (−1)( 2 ) e qη −cTrqs /q bq +1
+
+s
+
+if Trqs /q (bq +1 ) = 0,
+s
+
+if Trqs /q (bq +1 ) 6= 0.
+
+If c = 0, by Lemmas 2 and 1,
+
+ qs +1  
+
+b
+s
+ϕ(zc)
+ϕ
+−Tr
+=
+y2
+q /q
+∑∗
+∑
+z
+z∈F
+y∈Fq
+q
+
+=
+=
+
+(
+q(q − 1)
+
+s
+
+
+
+ qs +1 
+
+G(η, ϕ) ∑z∈F∗q η −Trqs /q b z
+(
+q(q − 1)
+ 
+s
+G(η, ϕ) ∑z∈F∗q η −Trqs /q bq +1 z
+(
+s
+q(q − 1) if Trqs /q (bq +1 ) = 0,
+s
+0
+if Trqs /q (bq +1 ) 6= 0,
+
+if Trqs /q (bq +1 ) = 0
+if Trqs /q (b
+
+qs +1
+
+) 6= 0
+
+s
+
+if Trqs /q (bq +1 ) = 0
+s
+if Trqs /q (bq +1 ) 6= 0
+
+where the second equation holds due to η(z) = η(1/z) and the third one holds due to the orthogonal relation of
+multiplicative characters. By Equation (2), we then obtain
+(
+s
+−(qs + 1)(q − 1)2
+if Trqs /q (bq +1 ) = 0,
+S0 (b) =
+s
+(q − 1)(qs − q + 1) if Trqs /q (bq +1 ) 6= 0.
+5
+
+The proof is completed.
+In the following, we study the weight enumerator of CD .
+Theorem 7. Let s be a positive integer and m = 2s. If c = 0, s > 1 and q is any prime power, then CD is a q-ary
+[(qs + 1)(qs−1 − 1), m, (q2s−2 − qs−1)(q − 1)] linear code with weight enumerator
+1 + (qs + 1)(qs − qs−1)z(q
+
+2s−2 −qs−1 )(q−1)
+
++ (qs + 1)(qs−1 − 1)zq
+
+2s−2 (q−1)
+
+.
+
+If c ∈ F∗q and q is even, then CD is a q-ary [qs−1 (qs + 1), m, q2s−2(q − 1)] linear code with weight enumerator
+1 + (qs + 1)(qs−1 − 1)zq
+
+2s−2 (q−1)
+
++ (qs + 1)(qs − qs−1)zq
+
+2s−2 (q−1)+qs−1
+
+.
+
+If c ∈ F∗q and q is odd, then CD is a q-ary [qs−1 (qs + 1), m, q2s−2(q − 1)] linear code with weight enumerator
+1+
+
+(qs + 1)(qs + qs−1 − 2) q2s−2 (q−1) qs−1 (q − 1)(qs + 1) q2s−2 (q−1)+2qs−1
+z
++
+z
+.
+2
+2
+
+Proof. For any codeword
+
+c(b) = Trqm /q (bd1 ), Trqm /q (bd2 ), · · · , Trqm /q (bdn ) ∈ CD
+
+with b ∈ F∗qm , by the orthogonal relation of additive characters, its Hamming weight
+wt(c(b))
+
+o
+n
+s
+= n − ♯ x ∈ F∗qm : Trqm /q (bx) = 0 and Trqs /q (xq +1 ) + c = 0
+s
+
+
+
+
+
+z Trqs /q (xq +1 )+c
+yTr m (bx)
+1
+ζp
+= n − 2 ∑ ∑ ζ p q /q
+∑
+q x∈F∗ y∈Fq
+z∈Fq
+qm
+
+
+
+1
+s
+= n − 2 ∑ ∑ ∑ ϕ(zc)ϕ yTrqm /q (bx) + zTrqs /q (xq +1 )
+q x∈F∗ y∈Fq z∈Fq
+qm
+
+m
+
+= n−
+
+
+
+ 1
+s
+q −1 1
+− 2 ∑ ∑ ϕ yTrqm /q (bx) − 2 ∑ ∑ ϕ(zc)ϕ zTrqs /q (xq +1 )
+2
+q
+q y∈F∗ x∈F∗
+q z∈F∗ x∈F∗
+q
+
+qm
+
+q
+
+qm
+
+
+s
+1
+− 2 ∑ ∑ ∑ ϕ(zc)ϕ yTrqm /q (bx) + zTrqs /q (xq +1 )
+q x∈F∗ y∈F∗ z∈F∗
+qm
+
+q
+
+
+
+q
+
+
+ 1
+ 1
+qm − 1 1
+qs +1
+m
+s
+ϕ
+yTr
+(bx)
+−
+ϕ(zc)ϕ
+zTr
+(x
+)
+− 2 Sc (b),
+−
+= n−
+q /q
+q /q
+∑∗ ∑∗
+∑∗ ∑∗
+q2
+q2 y∈F
+q2 z∈F
+q
+x∈F
+x∈F
+q
+
+qm
+
+q
+
+qm
+
+where Sc (b) was defined in Lemma 6. Let χ be the canonical additive character of Fqm . By the transitivity of trace
+functions,
+
+(3)
+∑ ∑ ϕ yTrqm/q (bx) = ∑ ∑ χ(ybx) = −(q − 1).
+y∈F∗q x∈F∗qm
+
+y∈F∗q x∈F∗qm
+
+By Lemma 4,
+ s
+
+
+(q + 1)(1 − q)
+qs +1
+s
+ϕ(zc)ϕ
+zTr
+(x
+)
+=
+∆(1,
+0,
+c)
+=
+q /q
+∑∗ ∑∗
+qs + 1
+z∈F
+q x∈Fqm
+
+if c = 0,
+if c ∈ F∗q .
+
+Now we discuss the Hamming weight in several cases as follows.
+1. Let c = 0. By Equations (3), (3), (4) and Lemmas 5 and 6, we directly have
+(
+s
+q2s−2 (q − 1)
+if Trqs /q (bq +1 ) = 0,
+wt(c(b)) =
+s
+(q2s−2 − qs−1)(q − 1) if Trqs /q (bq +1 ) 6= 0.
+6
+
+
+s
+s
+For b ∈ F∗qm , Trqs /q bq +1 = 0 ⇔ bq +1 ∈ ker(Trqs /q )\{0}. For fixed b′ ∈ ker(Trq/p )\{0}, there exist qs + 1
+s
+elements b such that bq +1 = b′ . Hence Aq2s−2 (q−1) = (qs + 1)(qs−1 − 1) and
+A(q2s−2 −qs−1 )(q−1) = q2s − 1 − Aq2s−2(q−1) = (qs + 1)(qs − qs−1).
+Then the weight distribution follows in this case.
+2. Let c ∈ F∗q and q be even.By Equations (3), (3), (4) and Lemmas 5 and 6, we directly have
+wt(c(b)) =
+
+(
+q2s−2 (q − 1)
+q2s−2 (q − 1) + qs−1
+
+s
+
+if Trqs /q (bq +1 ) = 0,
+s
+if Trqs /q (bq +1 ) 6= 0.
+
+Similarly to Case 1), we have Aq2s−2 (q−1) = (qs + 1)(qs−1 − 1) and Aq2s−2 (q−1)+qs−1 = (qs + 1)(qs − qs−1 ). Then
+the weight distribution follows in this case.
+3. Let c ∈ F∗q and q = pe be odd. By Equations (3), (3), (4) and Lemmas 5 and 6, we directly derive
+wt(c(b)) =
+
+(
+
+s
+
+if Trqs /q (bq +1 ) = 0,
+s
+if Trqs /q (bq +1 ) 6= 0.
+
+q2s−2 (q − 1)
+q2s−2 (q − 1) or q2s−2 (q − 1) + 2qs−1
+
+The dimension of CD is m as A0 = 1. Since 0 ∈ D, the minimal distance d ⊥ of the dual of CD can’t be 1. Then
+d ⊥ ≥ 2. By the first two Pless power moments, we have
+(
+Aq2s−2 (q−1) + Aq2s−2 (q−1)+2qs−1 = qm − 1,
+q2s−2 (q − 1)Aq2s−2(q−1) + (q2s−2(q − 1) + 2qs−1)Aq2s−2 (q−1)+2qs−1 = qm−1 (qn − n).
+s
+
+s
+
+Solving this equation system yields Aq2s−2 (q−1) = (q +1)(q 2+q
+the weight distribution follows in this case.
+
+s−1 −2)
+
+and Aq2s−2 (q−1)+2qs−1 = q
+
+s−1 (q−1)(qs +1)
+
+2
+
+. Then
+
+The proof is completed.
+Examples of the linear code CD are summarized in Table 1. Some of them are optimal or almost optimal and some
+of them have the same parameters as the best linear codes according to the Code Tables at https://www.codetables.de/.
+Table 1: Examples of CD in Theorem 7
+
+Length
+5
+27
+51
+5
+64
+9
+10
+30
+
+Dimension
+4
+6
+4
+2
+4
+2
+2
+4
+
+Minimal distance
+2
+12
+36
+4
+48
+8
+8
+18
+
+c
+0
+0
+0
+1
+1
+1
+1
+1
+
+m
+4
+6
+4
+2
+4
+2
+2
+4
+
+q
+2
+2
+4
+4
+4
+8
+9
+3
+
+Optimality
+Optimal
+Optimal
+Best known
+Optimal
+Optimal
+Optimal
+Almost Optimal
+Almost optimal
+
+⊥
+⊥
+⊥
+Denote by (1, A⊥
+1 , A2 , · · · , An ) the weight distribution of CD . There exists a relationship called Pless power mo⊥
+⊥
+⊥
+ments between (1, A1 , A2 , · · · , An ) and (1, A1 , A2 , · · · , An ) [10, Page 259]. Pless power moments are useful for determining the minimal distance of CD⊥ .
+
+Theorem 8. Let m = 2s. If q = 2, s ≥ 3 and c = 0, then CD⊥ is a [(qs + 1)(qs−1 − 1), (qs + 1)(qs−1 − 1) − m, 3] linear
+code. If q > 2, s > 1 and c = 0, then CD⊥ is a [(qs + 1)(qs−1 − 1), (qs + 1)(qs−1 − 1) − m, 2] linear code. If q is
+even and c ∈ F∗q , then CD⊥ is a [qs−1 (qs + 1), qs−1 (qs + 1) − m, 3] linear code. If q is odd and c ∈ F∗q , then CD⊥ is a
+[qs−1 (qs + 1), qs−1(qs + 1) − m, 2] linear code.
+
+7
+
+Proof. Since 0 6∈ D, the minimal distance d ⊥ of the dual satisfies d ⊥ ≥ 2. By the second Pless power moment,
+n
+
+∑ j2 A j = qm−2(q − 1)n(qn − n + 1) − 2qm−2A⊥2 .
+
+(4)
+
+j=0
+
+s
+
+s−1 −1)
+
+. Hence A⊥
+2 = 0 if and only if q = 2 as
+
+∑ j3 A j = 22s−3[n3 (n + 3) − 6A⊥3 ].
+
+(5)
+
+(q−1)(q−2)(q +1)(q
+1. If c = 0, by Theorem 7 and Equation (4), A⊥
+2 =
+2
+s > 1. Let q = 2, by the third Pless power moment,
+n
+
+j=0
+
+3s−4
+
+s
+
+s−2
+
+s+1
+
+2
+(2 −3)−2 (2 −3)+1
+By Theorem 7 and Equation (5), A⊥
+> 0 if s ≥ 3 and q = 2. Hence d ⊥ = 3 if
+3 =
+3
+q = 2, s ≥ 3 and d ⊥ = 2 if q > 2, s > 1.
+⊥
+2. If c ∈ F∗q and q is even, by Theorem 7 and Equation (4), we have A⊥
+2 = 0. Then d ≥ 3. By the third Pless power
+moment,
+n
+
+∑ j3 A j = q2s−3[(q − 1)n(q2n2 − 2qn2 + 3qn − q + n2 − 3n + 2) − 6A⊥3 ].
+
+(6)
+
+j=0
+
+qs−1 (qs +1)(q−1)(qs−1 (2q−3)+q2s−2 (q−1)2 +2−q)
+> 0 for c ∈ F∗q and even q. Then
+By Theorem 7 and Equation (6), A⊥
+3 =
+6
+d ⊥ = 3.
+qs−1 (q−1)(qs +1)
+3. If c ∈ F∗q and q is odd, by Theorem 7 and Equation (4), we have A⊥
+> 0. Then d ⊥ = 2.
+2 =
+2
+
+The proof is completed.
+
+4. Strongly regular graphs with new parameters
+A connected graph of N vertices is called strongly regular with parameters (N, K, λ, µ) if it is regular with valency
+K and if the number of vertices joined to two given vertices is λ or µ according as the two given vertices are adjacent
+or non-adjacent.
+Let G = [y1 , y2 , · · · , yn ] be the generator matrix of a [n, k] linear code C over Fq , where yi ∈ Fkq . Let V = Fkq ,
+O = {hyi i : i = 1, 2, · · · , n} and Ω = {v ∈ V : hvi ∈ O}. Define a graph G(Ω) with vertices the vectors of V and where
+two vertices are joint if and only if their difference is in Ω. In [1, Th. 3.2], it was proved that G(Ω) is strongly regular
+if and only if C is a projective two-weight code. Assume that the nonzero weights of C are w1 and w2 . By [1, Coro.
+3.7], the parameters of G(Ω) are
+N = qk , K = n(q − 1), λ = K 2 + 3K − q(w1 + w2 ) − Kq(w1 + w2 ) + q2w1 w2 , µ = K 2 + K − Kq(w1 + w2 ) + q2w1 w2 .
+
+By Theorems 7 and 8, if m = 2s, q is even and c ∈ F∗q , then CD is a projective [qs−1 (qs + 1), m, q2s−2(q − 1)] two-weight
+linear code with weight enumerator
+1 + (qs + 1)(qs−1 − 1)zq
+
+2s−2 (q−1)
+
++ (qs + 1)(qs − qs−1)zq
+
+2s−2 (q−1)+qs−1
+
+.
+
+Hence CD yields a strongly regular graph G(Ω) with the following parameters:
+
+N = q2s , K = qs−1 (qs + 1)(q − 1), λ = qs−1 2q − 3 + qs−1(q − 1)2 , µ = (q − 1)qs−1(qs − qs−1 + 1).
+
+Compared with known strongly regular graphs [1], G(Ω) has new parameters.
+5. Summary and concluding remarks
+
+The contributions of this paper are summarized as follows:
+• If m = 2s, the weight distribution of CD was determined in Theorem 7 for any prime power q and any c ∈ Fq ;
+• The parameters of the dual of CD was also determined in Theorem 8;
+• By Theorems 7 and 8, CD is a projective two-weight code if q is even and c ∈ F∗q . This class of projective
+two-weight codes yield strongly regular graphs with new parameters in Section 4.
+It is easy to prove that CD in Theorem 7 is minimal for s ≥ 3 as wmin /wmax > q−1
+q [18, Lemma 3], where wmin , wmax
+denote the maximum and minimum weights of CD , respectively. Hence the code CD in Theorem 7 can also be used
+to construct secret sharing schemes with interesting access structures [18]. As another application, the projective
+two-weight code CD for even q and c ∈ F∗q holds 1-design by the well-known Assmus-Mattson theorem [2].
+8
+
+References
+[1] R. Calderbank, W. M. Kanter, The geometry of two-weight codes, Bull. Lond. Math. Soc. 18 (1986), pp. 97–122.
+[2] C. Ding, Designs from Linear Codes, World Scientific, Singapore, 2018.
+[3] C. Ding, Linear codes from some 2-designs. IEEE Trans. Inf. Theory 60 (2015), pp. 3265–3275.
+[4] K. Ding, C. Ding, A class of two-weight and three-weight codes and their applications in secret sharing. IEEE
+Trans. Inf. Theory 61 (2015), pp. 5835–5842.
+[5] P. Delsarte, Weights of linear codes and strongly regular normed spaces, Discrete Math. 3 (1972), pp. 47–64.
+[6] Z. Heng, C. Ding, Z. Zhou, Minimal linear codes over finite fields, Finite Fields Appli. 54 (2018), pp. 176–196.
+[7] Z. Heng, Q. Wang, C. Ding, Two families of optimal linear codes and their subfield codes, IEEE Trans. Inf.
+Theory, 66(11) (2020), pp. 6872–6883.
+[8] Z. Heng, W. Wang, Y. Wang, Projective binary linear codes from special Boolean functions, Online at
+https://link.springer.com/article/10.1007/s00200-019-00412-z.
+[9] Z. Heng, Q. Yue, Evaluation of the Hamming weights of a class of linear codes based on Gauss sums, Des. Codes
+Cryptogr. 83(2) (2017), pp. 307–326.
+[10] W. C. Huffman and V. Pless, Fundamentals of Error-Correcting Codes. Cambridge, U.K.: Cambridge Univ. Press
+(2003).
+[11] C. Li, S. Bae, J. Ahn, S. Yang, Z. Yao, Complet eweight enumerators of some linear codes and their applications,
+Des. Codes Cryptogr. 81 (2016), pp. 153–168.
+[12] R. Lidl, H. Niederreiter, Finite Fields, Cambridge University Press, Cambridge, 1997.
+[13] F. J. MacWilliams, N. J. A. Sloane, The Theory of Error-Correcting Codes, North-Holland Publishing Company,
+1977.
+[14] S. Mesnager, A. Sınak, Several classes of minimal linear codes with few weights from weakly regular plateaued
+functions, IEEE Trans. Inf. Theory 66(4) (2019), pp. 2296–2310.
+[15] C. Tang, N. Li, Y. Qi, Z. Zhou, T. Helleseth, Linear codes with two or three weights from weakly regular bent
+functions, IEEE Trans. Inf. Theory 62 (2016), pp. 1166–1176.
+[16] C. Tang, Y. Qi, M. Huang, Two-weight and three-weight linear codes from square functions, IEEE Commun.
+Lett. 20 (2016), pp. 29–32.
+[17] S. Yang, C. Zhao, Z. Yao, A class of three-weight linear codes and their complete weight enumerators, Cryptogr.
+Commun. 9 (2017), pp. 133–149.
+[18] J. Yuan, C. Ding, Secret sharing schemes from three classes of linear codes, IEEE Trans. Inf. Theory 52 (2016),
+pp. 206–212.
+[19] D. Zheng, J. Bao, Four classes of linear codes from cyclotomic cosets, Des. Codes Cryptogr. 86 (2018), pp.
+1007–1022.
+[20] Z. Zhou, Three-weight ternary linear codes from a family of cyclic difference sets, Des. Codes Cryptogr. 86
+(2018), pp. 25133–2523.
+
+9
+
+

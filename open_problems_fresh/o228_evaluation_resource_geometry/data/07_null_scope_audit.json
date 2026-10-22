@@ -1,0 +1,89 @@
+{
+ "J1": {
+  "6": {
+   "mobius": 195,
+   "brute": 195,
+   "C_nbis_4": 210,
+   "nbis": 10,
+   "secs": 0.0
+  },
+  "8": {
+   "mobius": 22050,
+   "brute": 22050,
+   "C_nbis_4": 52360,
+   "nbis": 35,
+   "secs": 0.1
+  }
+ },
+ "J1b": {
+  "m": 10,
+  "mobius": 1436400,
+  "C_nbis_4": 10009125,
+  "p10": 0.14350904799370576,
+  "mc": 0.14351433333333333,
+  "draws": 3000000,
+  "sigma": 0.00020241393326353633,
+  "dev": 5.2853396275698294e-06
+ },
+ "J4": {
+  "mobius_F4_m12": 64864800,
+  "C462_4": 1873709145,
+  "p0": "6240/180251",
+  "recorded": "6240/180251",
+  "recorded_float": 0.03461839324053681,
+  "mobius_float": 0.03461839324053681,
+  "n_terms": 25,
+  "lowest_terms": [
+   6240,
+   180251
+  ]
+ },
+ "J2": {
+  "draws": 10000000,
+  "mc_distinct": 0.034597,
+  "hits": 345970,
+  "exact": 0.03461839324053681,
+  "sigma": 5.7809999212921946e-05,
+  "dev": 2.1393240536807245e-05,
+  "band_5sigma": 0.00028904999606460974
+ },
+ "J3": {
+  "draws": 10000000,
+  "mc_with_replacement": 0.0341543,
+  "mc_distinct": 0.034597,
+  "z_between_scopes": 5.695028215243876
+ },
+ "claims": [
+  {
+   "tag": "J1",
+   "name": "the C17 Mobius code path (re-implemented independently) reproduces brute force for the number of separating 4-subsets among ALL bisections of m points, at m = 6 and 8",
+   "ok": true,
+   "detail": "m=6 195==195; m=8 22050==22050"
+  },
+  {
+   "tag": "J1b",
+   "name": "at m = 10 the Mobius formula agrees with an independent distinct-4-subset MC (3e6 draws) within 5 sigma",
+   "ok": true,
+   "detail": "Mobius p = 1436400/10009125 = 0.143509 ; MC(3000000) = 0.143514 ; |dev| = 5.29e-06 ; 5 sigma = 1.01e-03"
+  },
+  {
+   "tag": "J4",
+   "name": "the exact reduction of the C17 null is 6240/180251 in lowest terms (Mobius F_4 = 6240, C(462,4) = 180251*? -> see detail)",
+   "ok": true,
+   "detail": "Mobius F_4(m=12) = 64864800 ; C(462,4) = 1873709145 ; p0 = 6240/180251 = 0.03461839 ; recorded 6240/180251 = 0.03461839"
+  },
+  {
+   "tag": "J2",
+   "name": "a 1e7-draw MC of DISTINCT 4-subsets (uniform, Mersenne Twister) lies within 5 sigma of the exact p0 = 6240/180251",
+   "ok": true,
+   "detail": "10000000 draws -> 0.03459700 ; exact = 0.03461839 ; |dev| = 2.14e-05 ; 5 sigma = 2.89e-04"
+  },
+  {
+   "tag": "J3",
+   "name": "the with-replacement draw is a DIFFERENT quantity from the distinct-4-subset fraction: reported side by side (> 3 sigma apart), so the first H1 run compared two different scopes",
+   "ok": true,
+   "detail": "distinct = 0.034597 ; with-replacement = 0.034154 ; difference = -0.000443 = 5.7 sigma"
+  }
+ ],
+ "elapsed_s": 32.8
+}

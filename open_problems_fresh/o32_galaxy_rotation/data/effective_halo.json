@@ -1,0 +1,7 @@
+{
+  "outer_slope": -2.000997334480547,
+  "central_rho_0.1kpc": 926534246.7166647,
+  "M_DM_Mbar_30kpc": 5.509203452281253,
+  "R_6.5": 32.39699113059453,
+  "potential_form": "ln(R) outer, BTFR V^4 = GMa0"
+}

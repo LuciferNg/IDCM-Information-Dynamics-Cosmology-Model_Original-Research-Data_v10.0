@@ -1,0 +1,81 @@
+{
+ "claims": [
+  {
+   "tag": "A0",
+   "name": "frozen impl hash matches the on-disk file and both first-run logs are preserved",
+   "ok": true,
+   "detail": "impl=efa6aaded922 logs=True"
+  },
+  {
+   "tag": "A1",
+   "name": "cost law holds on the whole table in an independent simulator (242172/242172) and on the strided frozen-machine subset (247/247)",
+   "ok": true,
+   "detail": "recorded 242172/242172"
+  },
+  {
+   "tag": "A2",
+   "name": "Eulerian circuit rebuilt independently (own Hierholzer): 3782 edges, valid, recorded head matched",
+   "ok": true,
+   "detail": "head = [['V00', 'V01'], ['V01', 'V00'], ['V00', 'V02']]"
+  },
+  {
+   "tag": "A3",
+   "name": "feasible prefix recomputed: 21 edges / 43 reads (recorded 21 / 43)",
+   "ok": true,
+   "detail": "budget left = 123/88"
+  },
+  {
+   "tag": "A4",
+   "name": "fairness of the canonical prefix recomputed: max|out - in| = 1 (<= 1 theorem; recorded 1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "A5",
+   "name": "n=3 toy reproduced independently: min total = 13, minimisers = 18, all Eulerian = True",
+   "ok": true,
+   "detail": "recorded min/count = 13/18"
+  },
+  {
+   "tag": "A6",
+   "name": "BEST verified with exact reduced-Laplacian determinants: t_w = n^(n-2) for n = 3, 4, 62",
+   "ok": true,
+   "detail": "det(62) has 108 digits, equals 62^60 = True"
+  },
+  {
+   "tag": "A7",
+   "name": "constructibility recomputed: canonical prefix rectangle = False (recorded False); auditor trail rectangle = True, own all4 max over 8 tuples = 13/15 (recorded 13/15)",
+   "ok": true,
+   "detail": "argmax = ['V01', 'V00', 'V03', 'V02']"
+  },
+  {
+   "tag": "A8",
+   "name": "verdict table integrity: 6 cells, each with a verdict and a value",
+   "ok": true,
+   "detail": "table = ✅✅✅✅✅✅"
+  }
+ ],
+ "det_rows": [
+  {
+   "n": 3,
+   "det_reduced_laplacian": 3,
+   "n^(n-2)": 3,
+   "agree": true
+  },
+  {
+   "n": 4,
+   "det_reduced_laplacian": 16,
+   "n^(n-2)": 16,
+   "agree": true
+  },
+  {
+   "n": 62,
+   "det_reduced_laplacian": 349543612162395953845740577347286517438941455193395301844668705169433181192075446190690551284287073236811776,
+   "n^(n-2)": 349543612162395953845740577347286517438941455193395301844668705169433181192075446190690551284287073236811776,
+   "agree": true
+  }
+ ],
+ "own_prefix_edges": 21,
+ "own_prefix_reads": 43,
+ "fairness": 1
+}

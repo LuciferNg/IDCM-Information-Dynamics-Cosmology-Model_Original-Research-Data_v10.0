@@ -1,0 +1,5 @@
+marginal P(+1) value set: {'1/2': 62}
+pairs: 3700 | violations with D = |P_a(+1)-P_b(+1)|: 0
+V set: {'0': 184, '1/15': 468, '2/15': 776, '1/5': 590, '4/15': 776, '1/3': 630, '2/3': 184, '1': 92}
+Pr-1 (D=0 everywhere, bound vacuous): HOLDS
+Pr-2 (implication): non-vacuous (V,D) requires path-biased marginals; frozen marginals are exactly 1/2 => none exists

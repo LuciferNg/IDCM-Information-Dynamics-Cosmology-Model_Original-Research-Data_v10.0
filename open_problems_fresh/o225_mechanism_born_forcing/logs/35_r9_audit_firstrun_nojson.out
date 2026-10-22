@@ -1,0 +1,11 @@
+======================================================================================================================
+O225 scripts/35 -- R9 INDEPENDENT AUDIT   (r9-protocol-pairing-v1)
+======================================================================================================================
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/35_r9_audit.py", line 257, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/35_r9_audit.py", line 141, in main
+    d34 = json.load(io.open(os.path.join(DATA, '34_r9_pairing.json'), encoding='utf-8'))
+                    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/data/34_r9_pairing.json'

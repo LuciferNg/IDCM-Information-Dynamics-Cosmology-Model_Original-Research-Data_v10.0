@@ -1,0 +1,101 @@
+{
+ "rules": "r27-crit1-orbit-v1",
+ "claims": [
+  {
+   "tag": "O1",
+   "name": "M、S 皆對合且互換 ⟹ ⟨M,S⟩ ≅ Z₂ × Z₂（256 表全檢）",
+   "ok": true,
+   "detail": "反例 = 0"
+  },
+  {
+   "tag": "O2",
+   "name": "orbit 數 = 64 且每個大小 = 4（無固定點）",
+   "ok": false,
+   "detail": "orbit 數 = 72；大小集 = [2, 4]"
+  },
+  {
+   "tag": "O3",
+   "name": "M 保持 R ≡ 0（R(tb) = [0] ⟺ R(M·tb) = [0]）",
+   "ok": true,
+   "detail": "反例 = 0"
+  },
+  {
+   "tag": "O4",
+   "name": "S 保持 R ≡ 0",
+   "ok": true,
+   "detail": "反例 = 0"
+  },
+  {
+   "tag": "P1",
+   "name": "精化判據在 orbit 上不變（每 orbit 4 元同值）",
+   "ok": true,
+   "detail": "違例 orbit = 0"
+  },
+  {
+   "tag": "P2",
+   "name": "R ≡ 0 之表數 = 16（＝判據真值數）",
+   "ok": true,
+   "detail": "R≡0 = 16；判據真 = 16"
+  },
+  {
+   "tag": "P3",
+   "name": "無 orbit 混合（不存在 orbit 內同時 R ≡ 0 與 R ≠ 0）⟹ 逐 orbit 判充要成立",
+   "ok": true,
+   "detail": "混合 orbit = 0"
+  },
+  {
+   "tag": "P4",
+   "name": "四類（tie_odd, double_odd）在 orbit 上均分（各 16 個 orbit）",
+   "ok": false,
+   "detail": "分佈 = {'(True, False)': 28, '(True, True)': 8, '(False, False)': 32, '(False, True)': 4}"
+  },
+  {
+   "tag": "Q1",
+   "name": "三層族「精化判準仍充要」（4096 表全符）；預期：否證",
+   "ok": false,
+   "detail": "相符 = 4064/4096；反例 = 32；例 = [(66, [0, 1, 0, 0]), (66, [0, 0, 1, 0]), (66, [1, 1, 0, 1])]"
+  },
+  {
+   "tag": "Q2",
+   "name": "type-子族（第三層只依軸型別，2048 表）之相符數",
+   "ok": true,
+   "detail": "相符 = 2032/2048；反例 = 16"
+  }
+ ],
+ "n_pass": 7,
+ "n_total": 10,
+ "n_orbits": 72,
+ "n_zero": 16,
+ "Q1": {
+  "ok": 4064,
+  "bad": 32,
+  "total": 4096
+ },
+ "Q2": {
+  "ok": 2032,
+  "bad": 16,
+  "total": 2048
+ },
+ "orbit_sizes": [
+  2,
+  4
+ ],
+ "zero_masks": [
+  7,
+  11,
+  21,
+  25,
+  38,
+  42,
+  52,
+  56,
+  135,
+  139,
+  149,
+  153,
+  166,
+  170,
+  180,
+  184
+ ]
+}

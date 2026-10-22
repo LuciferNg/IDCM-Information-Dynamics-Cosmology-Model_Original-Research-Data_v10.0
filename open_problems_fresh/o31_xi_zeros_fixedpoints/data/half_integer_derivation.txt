@@ -1,0 +1,7 @@
+O31 Half-Integer Offset In-Framework Derivation
+
+0.5 = log₄(2) = log_B(√B), B = 4 = φ³−φ⁻³
+2N = 88 = B^(1/2)·N (dual chain)
+4N = 176 = B·N (composite chain)
+Half-integer modes: denominator 176 = B·N
+Status: 🟢 derived from B=4, zero free parameters

@@ -1,0 +1,14 @@
+{
+  "test": "湮滅殘留 + 宇宙線數據對比",
+  "eta_B_idcm": 6.0622e-10,
+  "eta_B_planck": 6.12e-10,
+  "eta_B_dev": 0.62,
+  "pbar_p_obs": 0.00016,
+  "antihelium_limit": 1e-09,
+  "eplus_10GeV": 0.1,
+  "eplus_300GeV": 0.2,
+  "eplus_ratio": 2.0,
+  "annihilation_limit_nBbar_nB": 1e-09,
+  "prediction_nBbar_zero": true,
+  "conclusion": "IDCM n_B̄=0 預言與全部觀測一致 (η_B 0.62%, 湮滅 γ-ray, p̄/p 次級, 反氦); 正電子異常需 O36/O37 對接"
+}

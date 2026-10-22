@@ -1,0 +1,59 @@
+{
+  "A_IDCM": 134.2,
+  "literature": {
+    "granett2008": {
+      "ref": "Granett, Neyrinck & Szapudi 2008 (ApJ 683, L99)",
+      "method": "Stacked ISW around 50 supervoids (SDSS LRG)",
+      "amplitude_uK": -11.0,
+      "scale_deg": 3.5,
+      "note": "\u8d85\u7a7a\u6d1e\u5806\u758a\u51b7\u4fe1\u865f; \u039bCDM \u9810\u671f\u5e45\u5ea6\u9060\u7d30 (\u7570\u5e38\u504f\u5927)"
+    },
+    "planck2015_xxi": {
+      "ref": "Planck 2015 Results XXI (A&A 594, A21)",
+      "method": "ISW-LSS cross-correlation (NVSS/SDSS/WISE/lensing)",
+      "detection": "4\u03c3 (lensing+NVSS \u4e3b\u5c0e), ISW-only ~3\u03c3",
+      "note": "\u5168\u57df ISW \u63a2\u6e2c; \u5514\u4fc2\u51b7\u6591 specific; \u03a9\u039b>3\u03c3"
+    },
+    "planck2015_xxi_recon": {
+      "ref": "Planck 2015 XXI \u00a7A.2",
+      "method": "2MPZ ISW map \u91cd\u5efa",
+      "rms_uK": 0.56,
+      "note": "\u91cd\u5efa ISW map rms \u53ea\u6709 0.56 \u03bcK \u2014 \u6bd4\u51b7\u6591 134 \u03bcK \u7d30 240 \u500d"
+    },
+    "planck2015_xxiii": {
+      "ref": "Planck 2015 Results XXIII (\u51b7\u6591\u5206\u6790)",
+      "method": "\u51b7\u6591 specific ISW \u9650\u5236",
+      "amplitude_uK": 10.0,
+      "note": "Eridanus supervoid ISW \u6700\u591a\u89e3\u91cb ~10 \u03bcK (marginal); \u51b7\u6591\u7e3d\u5e45\u5ea6 ~150 \u03bcK"
+    },
+    "szapudi2015": {
+      "ref": "Szapudi et al. 2015 (Nature 506, 485)",
+      "method": "Eridanus supervoid detection (Pan-STARRS1)",
+      "note": "z\u22480.16, \u03b4\u2248\u221220%, \u534a\u5f91 ~80 Mpc; \u4f4d\u65bc\u51b7\u6591\u65b9\u5411"
+    },
+    "kovacs2022": {
+      "ref": "Kov\u00e1cs et al. 2022 (DES Y3 lensing)",
+      "method": "DES Y3 weak lensing + galaxy counts",
+      "note": "\u78ba\u8a8d z<0.2 \u8d85\u7a7a\u6d1e\u540c\u51b7\u6591\u5c0d\u9f4a; lensing \u4fe1\u865f\u6bd4 \u039bCDM \u6a21\u64ec\u7d30 (\u6f5b\u5728 tension)"
+    },
+    "nadathur2015": {
+      "ref": "Nadathur & Hotchkiss 2015 (PRD 91, 103511)",
+      "method": "\u7406\u8ad6\u5206\u6790",
+      "note": "\u039bCDM \u4e2d supervoid ISW \u7121\u6cd5\u89e3\u91cb\u51b7\u6591\u7e3d\u5e45\u5ea6"
+    }
+  },
+  "comparison": {
+    "IDCM": {
+      "A_total": 134.2,
+      "A_prim": 134.2,
+      "ISW_eridanus": 0.0,
+      "key": "\u5187\u6697\u80fd\u91cf \u2192 \u52e2\u9631\u975c\u614b \u2192 \u5187 ISW; \u51b7\u6591\u4fc2\u539f\u751f\u7d50\u69cb"
+    },
+    "LCDM": {
+      "A_total": 134.2,
+      "A_prim": "94\u2013124 (\u6263\u9664 ISW \u221210~\u221240)",
+      "ISW_eridanus": "-10 ~ -40 (\u6587\u737b\u4e0a\u9650 ~10 marginal)",
+      "key": "ISW \u7531 DE \u9a45\u52d5; Eridanus supervoid \u63d0\u4f9b\u90e8\u5206\u51b7\u537b"
+    }
+  }
+}

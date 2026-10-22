@@ -1,0 +1,36 @@
+{
+ "script": "89_r26_contract",
+ "tag": "r26-stt-mechanism-v1",
+ "contract": "docs/55_r26_contract.md",
+ "sha256": "2fc09b66184d7ae9a6bfe2cb97764d11a995e08d562251e90e01d1e917b02f9c",
+ "checks": [
+  {
+   "id": "C1",
+   "ok": true,
+   "msg": "合約凍結 sha256=2fc09b66184d7ae9 bytes=4463"
+  },
+  {
+   "id": "C2",
+   "ok": true,
+   "msg": "預註冊 tag 13/13；缺 = 無"
+  },
+  {
+   "id": "C3",
+   "ok": true,
+   "msg": "★★ = 7；極性宣告 = 6（需 ≥5）"
+  },
+  {
+   "id": "C4",
+   "ok": true,
+   "msg": "陰性（真形式在場）= 4/4；陽性（錯形式誤入）= 無"
+  },
+  {
+   "id": "C5",
+   "ok": true,
+   "msg": "GATE OPEN"
+  }
+ ],
+ "gate": "OPEN",
+ "pass": 5,
+ "total": 5
+}

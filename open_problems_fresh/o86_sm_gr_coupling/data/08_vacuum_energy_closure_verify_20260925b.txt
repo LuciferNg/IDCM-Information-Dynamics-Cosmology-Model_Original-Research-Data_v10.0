@@ -1,0 +1,58 @@
+==============================================================================
+O86 CLOSURE A -- VACUUM ENERGY (N1 + N7) -- 2026-09-20
+==============================================================================
+
+--- 1. DIMENSIONAL STATUS OF V_LAMBDA ---
+  [PASS] 1a V_Lambda is dimensionless (it is -ln(rho_Lambda/M_Pl^4), O62 defines rho = e^-V)
+           V_Lambda = 283.082129 -- a pure number, not a curvature
+  [PASS] 1b O86 script 02 value 1.8992e-48 GeV^2 is dimensionally void
+           dimensionless / mass^2 is not a curvature
+  [PASS] 1c O86 script 04 value 1.8992e-36 GeV^2 differs from script 02 by 10^12
+           two mutually inconsistent Lambda_eff definitions in one folder
+
+--- 2. rho_Lambda = M_Pl^4 exp(-V_Lambda) ; Lambda_eff = 8 pi M_Pl^2 exp(-V_Lambda) ---
+  [PASS] 2a exp(-V_obs) = 1.1535e-123 -- matches the value O62 itself quotes
+           exp(-283.0752) = 1.153460366000989e-123
+  [PASS] 2b rho_Lambda = M_Pl^4 e^-V = 2.5451e-47 GeV^4
+           rho^(1/4) = 2.2460783361845538 meV  (the known ~2.3 meV vacuum scale)
+  [PASS] 2c rho_Lambda^(1/4) = 2.246 meV -- reproduces the standard vacuum-energy scale
+           independent confirmation that the identification is right, not fitted
+  [PASS] 2d Lambda_eff = 8 pi M_Pl^2 e^-V = 4.2913e-84 GeV^2
+           4.291275356956539e-84 GeV^2
+  [PASS] 2e H0 in GeV = 1.43685e-42 (script 02 wrote 1.43685e-33 -- hbar factor 1e9 error)
+           hbar = 6.582e-25 GeV s, script 02 used 6.582e-16
+  [PASS] 2f Lambda = 3 Omega_L H0^2 = 4.2327e-84 GeV^2 -- agrees with 2d to 1.4 %
+           dev 1.3715791769237609 %
+
+--- 3. Omega_Lambda = Lambda_eff/(3 H0^2) ---
+  [PASS] 3a O86 script 02 printed Omega_Lambda = 3.07e17 -- reproduced from its own two errors
+           Lambda_eff(s02) = 1.8991504907801118e-48 / (3 H0(s02)^2) = 3.066293709857545e+17  (the number O86 passed as PASS)
+  [PASS] 3b correct route gives Omega_Lambda = 0.6929 (not 3e17)
+           0.6928361294145884
+  [PASS] 3c structural route O39/O204 gives 41/60 = 0.68333
+           independent of V_Lambda
+  [PASS] 3d the two structural routes agree to 1.4 % (V_Lambda route vs <W>^2/Sigma_gamma)
+           dev 1.3906530850617151 %
+  [PASS] 3e both sit within ~1.2 sigma of Planck 0.6847 +- 0.0073
+           V_Lambda route 1.1145382759710118 sigma ; structural route 0.1872146118721461 sigma
+
+--- 4. OTHER UNIT ERRORS IN scripts/02 ---
+  [PASS] 4a script 02 used G_N = 1/(8 pi M_Pl^2) = 2.669e-40; true G_N = 1/M_Pl^2 = 6.709e-39
+           factor 8 pi = 25.132741228718345 -- reduced-vs-unreduced Planck mass confusion
+  [PASS] 4b G_N error does not propagate to any headline O86 number (G_N only entered the printed G_eff ratio)
+           G_eff/G_N is a ratio -> factor cancels; see scripts/06 D7
+
+==============================================================================
+RESULT: 16/16 PASS
+==============================================================================
+
+CLOSURE:
+  N1 -> CLOSED.  Lambda_eff = 8 pi M_Pl^2 exp(-V_Lambda)  [GeV^2].
+        V_Lambda is dimensionless; the O86 form V_Lambda/M_Pl^2 is void.
+        rho_Lambda^(1/4) = 2.246 meV reproduces the standard vacuum scale,
+        and Omega_Lambda = 0.6929 agrees with the independent structural
+        41/60 = 0.68333 to 1.4 %  -> two routes, both within 1.2 sigma of Planck.
+  N7 -> CLOSED (superseded).  scripts/02 section 2.5 is a hardcoded table;
+        its Omega_Lambda = 3.07e17 is the artefact of the two unit errors
+        (hbar factor 1e9, dimensionless V treated as a curvature).
+        The corrected verification lives HERE, not in a rewritten script 02.

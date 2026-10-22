@@ -1,0 +1,65 @@
+{
+  "trigger": "O117 closure adjudication",
+  "date": "2026-09-26",
+  "AP_test": {
+    "as_scripts04_computed": 4.6452,
+    "dof": 5,
+    "status": "VOID -- old laws + O117 sigma",
+    "current_framework": 1.7056,
+    "current_chi2_per_dof": 0.3411,
+    "lyalpha_pull_o117_sigma": 1.309,
+    "lyalpha_pull_table6_sigma": 0.263
+  },
+  "inventory": [
+    {
+      "item": "* D_H != dD_A/dz (independent projections)",
+      "status": "SURVIVES",
+      "reason": "structural diagnostic; confirmed O169+O170"
+    },
+    {
+      "item": "AP test chi2 = 4.65/5",
+      "status": "VOID",
+      "reason": "uses falsified D_M + void DH + wrong Lyalpha sigma"
+    },
+    {
+      "item": "DM/rd error set correct",
+      "status": "INHERITED",
+      "reason": "from O169 law + DESI data; not O117's own"
+    },
+    {
+      "item": "DH(z) = R_H(1+dk0+dgd)/(1+z)",
+      "status": "VOID",
+      "reason": "superseded by O170 arch kernel"
+    },
+    {
+      "item": "C_DM = -C_delay*2*phi^-1*sqrt(5)",
+      "status": "VOID",
+      "reason": "falsified by O169"
+    },
+    {
+      "item": "C_DH = C_DM * 4/3",
+      "status": "VOID",
+      "reason": "4/3 excluded by 1-D scan"
+    },
+    {
+      "item": "delta_k0 Gaussian (sigma_phi = 0.5*log4 phi)",
+      "status": "VOID",
+      "reason": "O170 docs/04 F3: coincidence"
+    },
+    {
+      "item": "Blind prediction Sigma m_nu = 0.08711 eV",
+      "status": "VOID",
+      "reason": "computed from void C_DH framework"
+    },
+    {
+      "item": "T^5 phase coherence",
+      "status": "DEAD",
+      "reason": "assigned to O118; O118 closed premise-void"
+    }
+  ],
+  "survivors": 1,
+  "density_baseline": "N/A -- surviving claim is structural/no-go, not a numeric match",
+  "verdict": "CLOSE as diagnostic closure; all numeric content void; radial law = O170",
+  "pass": 4,
+  "fail": 0
+}

@@ -1,0 +1,6 @@
+per pass: pairs=3844 reads=11532 (=3N^2) hits=124 (=2N) pops/rollbacks=3844
+pop per pair = 1 (exactly one) ; ledger reachable depth = 1
+time mapping: 1 read = 1/44 tick ; whole pass = 2883/11 ticks ; one pop = 1/44 tick
+2 ticks = 88 reads ; the pass quantities {124, 238328, 11532, 3844} contain 88? False
+Pr-1 (rollback = depth 1, pass = 3844 pops): HOLDS
+Pr-2 (no machine time-quantity = 2 ticks): HOLDS -> identity is a category statement (no-go)

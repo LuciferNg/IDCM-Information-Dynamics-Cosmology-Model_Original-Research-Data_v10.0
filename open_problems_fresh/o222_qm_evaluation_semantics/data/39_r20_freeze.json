@@ -1,0 +1,113 @@
+{
+ "round": "R20",
+ "contract": "docs/27_r20_contract.md",
+ "contract_sha256": "d4c61aea12dc93eeb6a63e2c8fb3d7226cf7472dc294351c27f0e7d8e6b16bbc",
+ "machine": "scripts/41_r20_closure.py",
+ "impl_sha256": "0f8233988680fbe8ac329a106a08a6b125941865398ba141aa76f68c42bf7c0e",
+ "impl_sha256_now": "0f8233988680fbe8ac329a106a08a6b125941865398ba141aa76f68c42bf7c0e",
+ "superseded_impl_sha256": "12365910a26fa7e1e11fdc928db780f05d1cdd8a0d7b6be7f2c5e8f2603ef15f",
+ "pins": {
+  "P1": {
+   "path": "scripts/12_b5_budget.py",
+   "sha256": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a"
+  },
+  "P2": {
+   "path": "scripts/18_d6_mapping.py",
+   "sha256": "a681ae8cf6bcfd69b50a9a3c776f8c43011c3b6c52149bc1f1f565abbe797cf7"
+  },
+  "P3": {
+   "path": "scripts/09_a2_rollback.py",
+   "sha256": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace"
+  },
+  "P4": {
+   "path": "data/09_a2_correlation.json",
+   "sha256": "dbe664760d3648bd5591f5c43a6ab5ef69bcf9c5834893bc0d907df5e561942e"
+  },
+  "P5": {
+   "path": "data/15_b3r2_results.json",
+   "sha256": "15f03bd6802b7685a976e266916d482825e106f7044c0289738fb6edcd85850a"
+  },
+  "P6": {
+   "path": "data/21_g4_results.json",
+   "sha256": "e2840d91999c7868613ab681fc347be66f91a0b25baf06a04c431a3bbe9b792f"
+  },
+  "P7": {
+   "path": "data/27_c2g7_results.json",
+   "sha256": "a65431269c59dc22f5d5e09217523e78c4215828244b12739a7144d4b7d886ea"
+  },
+  "P8": {
+   "path": "data/30_g1g8_results.json",
+   "sha256": "b16fc2cd92a44e37d0afefad96fc57846591cd0f5c1fd77a21ec961aa7a15677"
+  },
+  "P9": {
+   "path": "data/34_g2q5_results.json",
+   "sha256": "c9061f4e0c45c9d3614a8d9a55bfb89afb331251ca6f0bc34ecf74f2e22c4206"
+  },
+  "P10": {
+   "path": "data/37_r19_results.json",
+   "sha256": "2ed42a7723cfa487c383723ad88e19bd602dc87145a39018b94d54e346b0d292"
+  },
+  "P11": {
+   "path": "../little_red_dots/data/k_chain_modes.json",
+   "sha256": "050851fdda9ed99e8ab1d2f40ff36f02738491b8694b5edab82f03f39b7ffcef"
+  }
+ },
+ "checks": [
+  {
+   "check": "C1a pins exist",
+   "pass": true,
+   "detail": "missing: none"
+  },
+  {
+   "check": "C1b pin hashes unchanged",
+   "pass": true,
+   "detail": "drifted: none"
+  },
+  {
+   "check": "C1c contract unchanged since freeze",
+   "pass": true,
+   "detail": "docs/27 sha256 compared"
+  },
+  {
+   "check": "C2a imports allowed",
+   "pass": true,
+   "detail": "imports=['fractions', 'importlib.util', 'json', 'os', 'sys'] ; offenders=[]"
+  },
+  {
+   "check": "C2b no non-integer float literals",
+   "pass": true,
+   "detail": "found: none"
+  },
+  {
+   "check": "C2c no math/numpy/scipy/random imports",
+   "pass": true,
+   "detail": "found: none"
+  },
+  {
+   "check": "C2d no banned identifier names",
+   "pass": true,
+   "detail": "found: none"
+  },
+  {
+   "check": "C3 cells M1..M6 present",
+   "pass": true,
+   "detail": "absent: none"
+  },
+  {
+   "check": "C4 no import of R19 machine/audit or discovery script",
+   "pass": true,
+   "detail": "found: none"
+  },
+  {
+   "check": "C5 writes confined to data/ and logs/",
+   "pass": true,
+   "detail": "offenders: none"
+  },
+  {
+   "check": "C6 impl hash matches freeze (RE-FREEZE: old hash kept as superseded_impl_sha256)",
+   "pass": true,
+   "detail": "old 12365910a26fa7e1 -> new 0f8233988680fbe8 ; old freeze preserved on disk"
+  }
+ ],
+ "gate": "OPEN"
+}

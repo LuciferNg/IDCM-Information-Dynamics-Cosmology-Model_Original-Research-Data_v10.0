@@ -1,0 +1,15 @@
+{
+  "test": "和頻⇔pair production 精確映射",
+  "E_pair_formula": "2ħ·max(ω_a, ω_b)",
+  "F_proj_proton": 46.71579063926531,
+  "three_level_projection": [
+    "T_pipe",
+    "CY₃",
+    "scale"
+  ],
+  "pair_mapping": "and frequency channel = antiparticle side of pair production",
+  "charge_conservation": true,
+  "CPT_conservation": true,
+  "Gamma_prop": "M₀·γ_n",
+  "conclusion": "和頻=對產生反物質側 (嚴格映射); E_pair=2ħ·max(ω); 三步投影 (T_pipe+CY₃+標度); 產生率∝M₀γ_n"
+}

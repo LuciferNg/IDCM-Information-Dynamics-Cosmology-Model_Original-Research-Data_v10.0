@@ -1,0 +1,195 @@
+{
+ "a3_divergences": [
+  {
+   "audit": "2/5",
+   "machine": "16/15",
+   "note": "the audit sweep uses a different index/term convention; the machine value is ANCHORED to the cited upstream B3R2 value (own_vs_cited_match=True in the machine cell)",
+   "quantity": "E1_all4 block"
+  },
+  {
+   "audit": "2/5",
+   "machine": "13/15",
+   "note": "same as E1",
+   "quantity": "E2_all4 block"
+  }
+ ],
+ "audit": {
+  "n_pass": 5,
+  "n_total": 5
+ },
+ "files": {
+  "01_problem_record.md": {
+   "bytes": 8983,
+   "sha256": "9bdaf196fc3327513cd54db278b60be989d4322adf5248f7d06ccaa65e9a5301"
+  },
+  "SESSION_START.md": {
+   "bytes": 5067,
+   "sha256": "40bc991056ea13b254d2e24d9b411c9aee2ca3a7a8e88978516a6d2ec3069e82"
+  },
+  "data/01_r1_freeze.json": {
+   "bytes": 2166,
+   "sha256": "61c326f5cf43fb42b3765e0151c8cbe36ee830c5a3143dbe158e6a4bcb0b9478"
+  },
+  "data/02_r1_Etensor.json": {
+   "bytes": 844495,
+   "sha256": "8b66e68a21fc3fedfe78ef838272c791824a6f7cca27a56fa685b68615845ef1"
+  },
+  "data/02_r1_results.json": {
+   "bytes": 48607,
+   "sha256": "9089a1d07ba4dba0ab9def03834fe8ec02ac3c3149a75eb2d70b4a2c2ba9c191"
+  },
+  "data/03_r1_audit.json": {
+   "bytes": 11355,
+   "sha256": "911bcc8db2cddd95ef7e6889278a1df14bd5541e8df88395cdbe5fc7c8213ea2"
+  },
+  "docs/01_r1_contract.md": {
+   "bytes": 19810,
+   "sha256": "074f5053209695141d8ce6a2bb3cbf50f852ddf6b96db8365260bf8078102021"
+  },
+  "docs/02_r1_results.md": {
+   "bytes": 22153,
+   "sha256": "6bedaf299cabeebe0154cc6ade6b29c7af973df10af05be3a9fd35f76e1e89db"
+  },
+  "final_result.md": {
+   "bytes": 3077,
+   "sha256": "b61bcc823f7df85ce38ca386befc1406307df10403d6c0b633839d88a2917d7c"
+  },
+  "logs/01_r1_gate.out": {
+   "bytes": 1908,
+   "sha256": "ad930196367e86db8b34f6d9a9db84f4891a890d02fdd313ca9b75d813bfa6f2"
+  },
+  "logs/02_r1.out": {
+   "bytes": 9575,
+   "sha256": "a4363e5ef72bb8578e23fe6c1855450bb53204e791ec8564a223632ee182e4ed"
+  },
+  "logs/03_r1_audit.out": {
+   "bytes": 2201,
+   "sha256": "42905407cc50229623a0b960ad0a85d93ea8d0a7741062c5ef20c6b5244f16ea"
+  },
+  "scripts/01_r1_gate.py": {
+   "bytes": 14509,
+   "sha256": "4f86c42555e5c54d157fd1b2919a6579e22b5180f9b638d125a2e9528c6d6cc9"
+  },
+  "scripts/02_r1_machine.py": {
+   "bytes": 74235,
+   "sha256": "f1dee454b56f4c602f84896130b38f54bb0b462a91107dcc048cba3ba385749d"
+  },
+  "scripts/03_r1_audit.py": {
+   "bytes": 31649,
+   "sha256": "dd87f9f070d430c2b6bf4adf328dd33271a625074d81bd7809ed08de72d8d3ec"
+  },
+  "scripts/04_r1_report.py": {
+   "bytes": 18428,
+   "sha256": "83656965c22e457688ee78049dbfdf4b19672420f0606d0f11d55a0ccc23d517"
+  }
+ },
+ "gate": "GATE: 10/10 PASS -> OPEN",
+ "machine": {
+  "elapsed_s": 476.0518112182617,
+  "n_mismatch": null,
+  "n_pass": 24,
+  "n_total": 26
+ },
+ "o": "O227",
+ "o222_readonly": {
+  "newest_mtime": "2026-10-01 15:55:06",
+  "o227_only_writes": true,
+  "round_start": "2026-10-02 03:00:34",
+  "touched_during_round": []
+ },
+ "refuted_pre_registered": {
+  "B5c_common_stabiliser_order": {
+   "audit_and_machine_agree": true,
+   "measured": 10,
+   "pre_registered": 2
+  }
+ },
+ "round": "R1",
+ "stamp": "2026-10-02 04:50:34+0800",
+ "status": "partial (see final_result.md)",
+ "upstream_pins": [
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/scripts/09_a2_rollback.py",
+   "sha256": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace",
+   "tag": "SRC-A2"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/scripts/12_b5_budget.py",
+   "sha256": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a",
+   "tag": "SRC-B5"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/scripts/78_r29b_behaviour_classes.py",
+   "sha256": "ed69d5c85306618603c4cbbbf50c803e02041fac3ae2efc8bfca5028a1d8f609",
+   "tag": "SRC-78"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/04_b2_settings.json",
+   "sha256": "2357006c68e0165dc9fd7d8d73524593a776e1bf6a8b62ddbc8dc2c1a8af20ee",
+   "tag": "DATA-04"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/08_a2_h_table.json",
+   "sha256": "adeaf8a7fb5495ea57be194c1a704c973a9208026cdd10ef615cd59c58005b66",
+   "tag": "DATA-08"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/09_a2_correlation.json",
+   "sha256": "dbe664760d3648bd5591f5c43a6ab5ef69bcf9c5834893bc0d907df5e561942e",
+   "tag": "DATA-09"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/15_b3r2_results.json",
+   "sha256": "15f03bd6802b7685a976e266916d482825e106f7044c0289738fb6edcd85850a",
+   "tag": "DATA-15"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/data/78_r29b_behaviour_classes.json",
+   "sha256": "265e0e5efd1d668f713158c79ce537f55ff77e119539c6555d0212528df25667",
+   "tag": "DATA-78"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/docs/45_no_go_boundary_charter.md",
+   "sha256": "7dbdbeaad03fa5c8cad6d5198d781eb9212af01ec108e15dfcf5b31a663e6614",
+   "tag": "DOC-45"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/docs/13_d6_results.md",
+   "sha256": "4f689552dcb53dc5f075ba4f8d5587b026328b056eac5d9f50e5f81567173cab",
+   "tag": "DOC-13"
+  },
+  {
+   "path": "open_problems_fresh/o222_qm_evaluation_semantics/docs/40_r26_g1g8.md",
+   "sha256": "0a8346b84ecf57daa65ca3255743168cd6db605b250de45cee6ccd4dfa97dcab",
+   "tag": "DOC-40"
+  }
+ ],
+ "verdicts": {
+  "B4a": "✅",
+  "B4b": "✅",
+  "B4c": "✅",
+  "B4d": "🔴",
+  "B4e": "✅",
+  "B5a": "✅",
+  "B5b": "✅",
+  "B5c": "🔴",
+  "P1a": "✅",
+  "P1b": "✅",
+  "P1c": "🟡",
+  "P2a": "✅",
+  "P2b": "✅",
+  "P2c": "✅",
+  "P2d": "🔴",
+  "P3a": "✅",
+  "P3b": "✅",
+  "P3c": "🔴",
+  "P4a": "✅",
+  "P4b": "🔴",
+  "P4c": "✅",
+  "R0": "✅",
+  "S4a": "✅",
+  "S4a-orig": "🔴",
+  "S4b": "✅",
+  "S4c": "✅"
+ }
+}

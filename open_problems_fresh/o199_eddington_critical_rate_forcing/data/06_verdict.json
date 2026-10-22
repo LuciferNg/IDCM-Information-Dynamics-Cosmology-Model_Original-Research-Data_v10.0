@@ -1,0 +1,82 @@
+{
+  "verdict": {
+    "question": "is L_crit/L_Edd = 0.02 geometrically forced in IDCM?",
+    "answer": "NO - not forced. Exact hits are dictionary hits (1/50 family); the framework's forced spectral identities sit at 1/45 = 2.222% and 1/44 = 2.273%, i.e. 11-14% away from the quoted value.",
+    "positive_structural_result": "scale invariance of the threshold IS structurally automatic: every IDCM threshold is a dimensionless ratio of structural integers, so no M_BH dependence is possible (dimension theorem, O73/O201).",
+    "registered_prediction": "the low-hard jet threshold should be C_energy = 1/(N_d+1) = 1/45 = 2.222% (Z2 sector capacity asymmetry), not 2.000%; separable with N ~ 600-800 TDEs at 3 sigma (s = 0.5); if a large sample converges on 2.000%, the C_energy identity is falsified as the threshold value.",
+    "hierarchy_candidate": "lambda_Edd(LRD, O176) / L_crit(jet) = 0.10/0.02 = 5 = F5 = B+1 = L4-mu^2 (EXACT, but both inputs are themselves candidates, so this is registered at candidate level).",
+    "residual_open": "no mechanism yet connects an accretion-rate threshold to a spectral-mode condition inside the 44/88 chain (the frustration subgraph is sub-critical, so there is no geometric percolation onset either)."
+  },
+  "checks": [
+    {
+      "name": "H1a every exact hit on 0.02 is a dictionary/integer form, none is a forced spectral ratio",
+      "pass": true,
+      "detail": "7 exact hits"
+    },
+    {
+      "name": "H1b the best forced spectral ratio misses 0.02 by more than 10%",
+      "pass": true,
+      "detail": "C_energy = mu^2/(2N_d+mu^2) = 1/45 dev = 11.11%"
+    },
+    {
+      "name": "H1c the denominator 50 admits >= 20 structural decompositions",
+      "pass": true,
+      "detail": "24 two-term ways"
+    },
+    {
+      "name": "H2a 0.02 is not an outlier of the null distribution (p > 0.01)",
+      "pass": true,
+      "detail": "p = 0.3708"
+    },
+    {
+      "name": "H2b observed count is within a factor 3 of the null median (no selection signal)",
+      "pass": true,
+      "detail": "ratio = 1.872"
+    },
+    {
+      "name": "H2c multiple independent expressions hit 0.02 at the 1% level (>5)",
+      "pass": true,
+      "detail": "21021 hits"
+    },
+    {
+      "name": "H3a the decisive test (2.000% vs 2.273%) is feasible: N < 1000",
+      "pass": true,
+      "detail": "N = 552"
+    },
+    {
+      "name": "H3b the 1/45 vs 1/44 refinement needs an unrealistically large sample",
+      "pass": true,
+      "detail": "N = 17822"
+    },
+    {
+      "name": "H4 no 2%-scale candidate survives re-expression in the other registered convention",
+      "pass": true,
+      "detail": "min dev after swap = 44.4%"
+    },
+    {
+      "name": "H4b no discrete mode-fraction m/N in the framework lands within 1% of 0.02",
+      "pass": true,
+      "detail": "0 mode fractions near target"
+    },
+    {
+      "name": "H4c the frustration subgraph has no percolation threshold (p_c = 15.00 > 1)",
+      "pass": true,
+      "detail": "<k> = 1.066667"
+    },
+    {
+      "name": "S-inv all framework candidates are pure dimensionless structural ratios (no mass scale enters => scale invariance is automatic, not a coincidence)",
+      "pass": true,
+      "detail": "8 forced candidates, all M-independent by construction"
+    },
+    {
+      "name": "S-band the forced spectral identities (1/45, 1/44) lie INSIDE the observational band W1",
+      "pass": true,
+      "detail": "1/45 = 0.022222 ; 1/44 = 0.022727 ; W1 = [0.01, 0.03]"
+    },
+    {
+      "name": "H5 the two Eddington-ratio scales differ by exactly F5 = 5 = B+1 = L4-mu^2",
+      "pass": true,
+      "detail": "ratio = 5.000000 ; F5 = 5"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "test": "差額符號嚴格推導",
+  "delta_ckm": 66.4,
+  "sin_delta": 0.9163627295622396,
+  "J_cp": 3.2267e-05,
+  "J_cp_sign": "+",
+  "E_proj": 28.5,
+  "E_sync": 61.5,
+  "eta_B": 6.0622e-10,
+  "eta_B_sign": "+",
+  "antiuniverse_prediction": "δ_CKM < 0 → 反物質主導",
+  "conclusion": "δ_CKM=66.40°>0 ⟹ J_CP>0 ⟹ T_pipe 差頻優先投影 ⟹ 物質主導; η_B = |η_B|×sign(δ_CKM); 反宇宙不可檢驗"
+}

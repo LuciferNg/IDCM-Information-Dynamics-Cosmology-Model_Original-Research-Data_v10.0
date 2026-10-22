@@ -1,0 +1,473 @@
+{
+ "rules": "r12-law-closure-v1",
+ "n_pass": 6,
+ "n_total": 14,
+ "claims": [
+  {
+   "tag": "E1",
+   "name": "★ nec ⟺ ∃ σ ∈ Inv(g_a) ∩ Stab_set(T_a)（30 edge 欄）",
+   "ok": false,
+   "detail": "一致 = 8/30 ; 非承載 8 = [39, 40, 41, 42, 51, 52, 53, 54]"
+  },
+  {
+   "tag": "E2",
+   "name": "★★ h ∈ τ(a) ⟺ h ∈ Inv(g_a) ∩ Stab_set(T_a)（兩集相等 ⟹ 根因候選）",
+   "ok": false,
+   "detail": "相等 = 0/16 ; 例外 = [((32, 62), [], [58, 59, 60, 61]), ((35, 64), [], [52, 56, 68, 72]), ((36, 63), [], [53, 57, 67, 71]), ((37, 74), [], [46, 54, 66, 70])]"
+  },
+  {
+   "tag": "E3",
+   "name": "★ |Stab_set(T_a)| 分佈：非承載 vs 承載",
+   "ok": true,
+   "detail": "（非承載?, |Stab|）→ 欄數 = {(False, 8): 22, (True, 8): 8}"
+  },
+  {
+   "tag": "F1",
+   "name": "★ {45,48} 為 B 中唯一之坐標軸線對",
+   "ok": true,
+   "detail": "B 內坐標軸欄 = [45, 48] ; 全 30 edge 之坐標軸欄 = [32, 45, 46, 47, 48, 61]"
+  },
+  {
+   "tag": "F2",
+   "name": "★ {45,48} 為 B 中唯一 ⟨U_a, ζ⟩ = 0（ζ = Dic₅ 之 5 階軸）者",
+   "ok": false,
+   "detail": "ζ = 0 ; B 內零欄 = [] ; 逐欄 dot = ['(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))']"
+  },
+  {
+   "tag": "F3",
+   "name": "★ 承載 ⟺ Stab_set(T_a) ∩ Inv(g_a) = ∅（30 edge 欄）",
+   "ok": false,
+   "detail": "無反演元之欄 = []（0）; 承載 = [32, 33, 34, 35, 36, 37, 38, 43, 44, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 61]"
+  },
+  {
+   "tag": "G1",
+   "name": "★★ T = {u, −u, v, w}：恰一對對反極 ＋ u,v,w 兩兩 dot = φ⁻¹",
+   "ok": true,
+   "detail": "T4 = ['((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))', '((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))', '((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))', '((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))'] ; 對反對 = [(0, 3)] ; dot 譜 = {'(Fraction(-1, 2), Fraction(1, 2))': 3, '(Fraction(1, 2), Fraction(-1, 2))': 2, '(Fraction(-5, 2), Fraction(1, 2))': 1}"
+  },
+  {
+   "tag": "G2",
+   "name": "★ |pre(T)| = 40；Z10 與 pre(T) 之差集（30 態）之階分佈（Z10 為 5 中心對）",
+   "ok": true,
+   "detail": "|pre| = 40 ; 差集階分佈 = {2: 1, 3: 2, 5: 6, 4: 12, 1: 1, 6: 2, 10: 6} ; Z10 階分佈 = {3: 2, 5: 2, 4: 2, 6: 2, 10: 2}"
+  },
+  {
+   "tag": "G3",
+   "name": "★ Z10 之候選判準：c(s) = |{a : tie(s,a) ∧ dind(s,a)=1}| 於 Z10 恆定且異於外界",
+   "ok": false,
+   "detail": "Z10 之 c 值集 = [5] ; 外界 c 值集 = [5]"
+  },
+  {
+   "tag": "E4",
+   "name": "★★ 非承載 ⟺ ∃ t（tie 保、dind 保、ε 反號、且所有 W_g 在 t 下封閉）⟹ S_TT ≡ 0",
+   "ok": false,
+   "detail": "命中欄 = [39, 40, 53, 54]（4）; 非承載 8 = [39, 40, 41, 42, 51, 52, 53, 54] ; 逐欄候選數 = {39: 2, 40: 2, 53: 2, 54: 2}"
+  },
+  {
+   "tag": "F4",
+   "name": "★ B10 之 5 線逐欄：坐標軸? / 承載? / 符號翻轉元數（E4 判準）",
+   "ok": true,
+   "detail": "逐欄 = [(39, {'coord': False, 'carry': False, 'nt': 2, 'orders': [4]}), (40, {'coord': False, 'carry': False, 'nt': 2, 'orders': [4]}), (41, {'coord': False, 'carry': False, 'nt': 0, 'orders': []}), (42, {'coord': False, 'carry': False, 'nt': 0, 'orders': []}), (45, {'coord': True, 'carry': True, 'nt': 0, 'orders': []}), (48, {'coord': True, 'carry': True, 'nt': 0, 'orders': []}), (51, {'coord': False, 'carry': False, 'nt': 0, 'orders': []}), (52, {'coord': False, 'carry': False, 'nt': 0, 'orders': []}), (53, {'coord': False, 'carry': False, 'nt': 2, 'orders': [4]}), (54, {'coord': False, 'carry': False, 'nt': 2, 'orders': [4]})]"
+  },
+  {
+   "tag": "E5",
+   "name": "★★ 第二型翻轉：nec ⟺ ∃t（tie 保、dind 反、ε 保、W 封閉）",
+   "ok": false,
+   "detail": "命中 = [32, 33, 34, 35, 36, 37, 38, 43, 44, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 61]（22）; 非承載 8 = [39, 40, 41, 42, 51, 52, 53, 54]"
+  },
+  {
+   "tag": "E6",
+   "name": "★★ 統一：nec8 ⟺ ∃t（tie 保、W 封閉，且 (dind,ε) 至少一項變號）",
+   "ok": false,
+   "detail": "E4 型欄 = [39, 40, 53, 54] ; E5 型欄 = [32, 33, 34, 35, 36, 37, 38, 43, 44, 45, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 61] ; E6 併 = [32, 33, 34, 35, 36, 37, 38, 39, 40, 43, 44, 45, 46, 47, 48, 49, 50, 53, 54, 55, 56, 57, 58, 59, 60, 61]（26）; 非承載 8 = [39, 40, 41, 42, 51, 52, 53, 54]"
+  },
+  {
+   "tag": "E7",
+   "name": "★ 兩型翻轉元之階／是否 ∈ Inv(g_a)（判據：全為階 4 且 ∈ Inv）",
+   "ok": true,
+   "detail": "逐欄 = {32: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, True, True), (4, True, False, False, True)], 33: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, True, True), (4, True, False, False, True)], 34: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, True, True), (4, True, False, False, True)], 35: [(4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True)], 36: [(4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True)], 37: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, False, True), (4, True, False, True, True)], 38: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, False, True), (4, True, False, True, True)], 39: [(4, False, True, True, True), (4, False, True, False, True), (4, False, True, True, True), (4, False, True, False, True)], 40: [(4, False, True, True, True), (4, False, True, False, True), (4, False, True, True, True), (4, False, True, False, True)], 41: [(4, False, True, False, True), (4, False, True, False, True), (4, False, True, False, True), (4, False, True, False, True)], 42: [(4, False, True, False, True), (4, False, True, False, True), (4, False, True, False, True), (4, False, True, False, True)], 43: [(4, True, False, True, True), (4, True, False, False, True), (4, True, False, True, True), (4, True, False, False, True)], 44: [(4, True, False, True, True), (4, True, False, False, True), (4, True, False, True, True), (4, True, False, False, True)], 45: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, True, True), (4, True, False, False, True)], 46: [(4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True)], 47: [(4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True)], 48: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, True, True), (4, True, False, False, True)], 49: [(4, True, False, True, True), (4, True, False, False, True), (4, True, False, True, True), (4, True, False, False, True)], 50: [(4, True, False, True, True), (4, True, False, False, True), (4, True, False, True, True), (4, True, False, False, True)], 51: [(4, False, True, False, True), (4, False, True, False, True), (4, False, True, False, True), (4, False, True, False, True)], 52: [(4, False, True, False, True), (4, False, True, False, True), (4, False, True, False, True), (4, False, True, False, True)], 53: [(4, False, True, True, True), (4, False, True, False, True), (4, False, True, True, True), (4, False, True, False, True)], 54: [(4, False, True, True, True), (4, False, True, False, True), (4, False, True, True, True), (4, False, True, False, True)], 55: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, False, True), (4, True, False, True, True)], 56: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, False, True), (4, True, False, True, True)], 57: [(4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True)], 58: [(4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True), (4, True, False, False, True)], 59: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, True, True), (4, True, False, False, True)], 60: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, True, True), (4, True, False, False, True)], 61: [(4, True, False, False, True), (4, True, False, True, True), (4, True, False, True, True), (4, True, False, False, True)]}"
+  }
+ ],
+ "E": {
+  "nec8": [
+   39,
+   40,
+   41,
+   42,
+   51,
+   52,
+   53,
+   54
+  ],
+  "nz22": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61
+  ],
+  "stab_sizes": {
+   "(False, 8)": 22,
+   "(True, 8)": 8
+  }
+ },
+ "F": {
+  "B10": [
+   39,
+   40,
+   41,
+   42,
+   45,
+   48,
+   51,
+   52,
+   53,
+   54
+  ],
+  "zeros": [],
+  "zeta": 0
+ },
+ "G": {
+  "T4": [
+   "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+   "((Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))",
+   "((Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))",
+   "((Fraction(1, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1), Fraction(0, 1)))"
+  ],
+  "dots": {
+   "(Fraction(-1, 2), Fraction(1, 2))": 3,
+   "(Fraction(1, 2), Fraction(-1, 2))": 2,
+   "(Fraction(-5, 2), Fraction(1, 2))": 1
+  },
+  "c_in": [
+   5
+  ]
+ },
+ "keys": [
+  [
+   0,
+   30
+  ],
+  [
+   1,
+   29
+  ],
+  [
+   2,
+   32
+  ],
+  [
+   3,
+   31
+  ],
+  [
+   4,
+   28
+  ],
+  [
+   5,
+   27
+  ],
+  [
+   6,
+   26
+  ],
+  [
+   7,
+   25
+  ],
+  [
+   8,
+   24
+  ],
+  [
+   9,
+   23
+  ],
+  [
+   10,
+   22
+  ],
+  [
+   11,
+   21
+  ],
+  [
+   12,
+   16
+  ],
+  [
+   13,
+   15
+  ],
+  [
+   14,
+   14
+  ],
+  [
+   15,
+   13
+  ],
+  [
+   16,
+   20
+  ],
+  [
+   17,
+   19
+  ],
+  [
+   18,
+   18
+  ],
+  [
+   19,
+   17
+  ],
+  [
+   20,
+   12
+  ],
+  [
+   21,
+   11
+  ],
+  [
+   22,
+   10
+  ],
+  [
+   23,
+   9
+  ],
+  [
+   24,
+   8
+  ],
+  [
+   25,
+   7
+  ],
+  [
+   26,
+   6
+  ],
+  [
+   27,
+   5
+  ],
+  [
+   28,
+   4
+  ],
+  [
+   29,
+   3
+  ],
+  [
+   30,
+   2
+  ],
+  [
+   31,
+   1
+  ],
+  [
+   32,
+   62
+  ],
+  [
+   33,
+   66
+  ],
+  [
+   34,
+   65
+  ],
+  [
+   35,
+   64
+  ],
+  [
+   36,
+   63
+  ],
+  [
+   37,
+   74
+  ],
+  [
+   38,
+   73
+  ],
+  [
+   39,
+   72
+  ],
+  [
+   40,
+   71
+  ],
+  [
+   41,
+   70
+  ],
+  [
+   42,
+   69
+  ],
+  [
+   43,
+   68
+  ],
+  [
+   44,
+   67
+  ],
+  [
+   45,
+   61
+  ],
+  [
+   46,
+   60
+  ],
+  [
+   47,
+   59
+  ],
+  [
+   48,
+   58
+  ],
+  [
+   49,
+   57
+  ],
+  [
+   50,
+   56
+  ],
+  [
+   51,
+   55
+  ],
+  [
+   52,
+   54
+  ],
+  [
+   53,
+   53
+  ],
+  [
+   54,
+   52
+  ],
+  [
+   55,
+   51
+  ],
+  [
+   56,
+   50
+  ],
+  [
+   57,
+   49
+  ],
+  [
+   58,
+   48
+  ],
+  [
+   59,
+   47
+  ],
+  [
+   60,
+   46
+  ],
+  [
+   61,
+   45
+  ]
+ ],
+ "E6": {
+  "E4set": [
+   39,
+   40,
+   53,
+   54
+  ],
+  "E5set": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61
+  ],
+  "E6set": [
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61
+  ]
+ }
+}

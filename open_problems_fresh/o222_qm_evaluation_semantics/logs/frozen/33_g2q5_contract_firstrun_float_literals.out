@@ -1,0 +1,9 @@
+O222 scripts/33 -- G2+Q5 CONTRACT ENFORCER (docs/23 g2q5-contract-v1 + A1)
+[PASS] C1    J1-J14 upstream pins readable and hashed (14/14)  --  all 14 pinned
+[PASS] C2    read-only discipline: 12 of 14 pins are other-O files (J12/J13 are this O, read-only); no pin is writable by the machine  --  own pins = ['J12', 'J13']
+[FAIL] C3    exact-arithmetic gate: no trig/exp/log CALLS, no non-integer float literals, no math modules  --  calls=none mods=none floats=['61.5@112', '1e-09@89', '1e-09@89', '1e-09@109', '1e-09@169', '1e-09@169', '1e-06@173', '61.5@109']
+[PASS] C3b   no variable may shadow a transcendental name (pi/log/cos/... incl. perm-style renames) and no write/remove/subprocess call may appear  --  shadowed=none write-ish=none
+[PASS] C4    cell list is exactly ['G2a', 'G2b', 'G2c', 'Q5a', 'Q5b', 'Q5c']  --  found = ['G2a', 'G2b', 'G2c', 'Q5a', 'Q5b', 'Q5c']
+[PASS] C5    the machine imports no upstream script and no sibling round machine  --  clean
+GATE = CLOSED   impl scripts/34_g2q5_provenance.py = fdba021b03641e34e9eb9d3c
+(per the iron rule the enforcer was NOT relaxed; the impl was fixed to use Fraction/integer powers of ten.)

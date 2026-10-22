@@ -10,9 +10,9 @@ PHI_INV = 1 / PHI
 EPS = PHI_INV / 4
 FIB = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
-NODES_PATH = "../../main_problems/p4_cmb_cold_spot/data/a5_nodes.txt"
-FRUST_PATH = "../../main_problems/p4_cmb_cold_spot/data/frustration_edges.txt"
-COLOR_PATH = "../../main_problems/p4_cmb_cold_spot/data/anchored_coloring.txt"
+NODES_PATH = "../../p4_cmb_cold_spot/data/a5_nodes.txt"
+FRUST_PATH = "../../p4_cmb_cold_spot/data/frustration_edges.txt"
+COLOR_PATH = "../../p4_cmb_cold_spot/data/anchored_coloring.txt"
 
 
 def load_nodes(path=NODES_PATH):

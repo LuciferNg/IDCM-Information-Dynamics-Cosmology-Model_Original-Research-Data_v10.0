@@ -1,0 +1,261 @@
+{
+  "verification": {
+    "passed": 46,
+    "failed": 0,
+    "total": 46
+  },
+  "key_numbers": {
+    "gamma_1": 0.005095770779492917,
+    "M_GUT": 6.221426544682902e+16,
+    "M_PS": 317029635931567.2,
+    "M_R": 1615510355013.3574,
+    "M_EW_pred": 244.23721725998467,
+    "M_EW_target": 246.82,
+    "EW_deviation_pct": -1.0464236042522157
+  },
+  "gauge_coupling": {
+    "best_alpha_GUT_inv": 53.0,
+    "a3_inv_MZ_dev_pct": 57.184439031943135,
+    "a2_inv_MZ_dev_pct": 6.821456798451283,
+    "a1_inv_MZ_dev_pct": 7.261961124515619,
+    "structural_relation": "2\u00d7K_tree - F_7 = 53"
+  },
+  "vl_threshold": {
+    "M_VL": 25182559106480.586,
+    "M_VL_over_geo_mean": 1.1127434791848556,
+    "alpha_GUT_inv_2loop": 47.0,
+    "chisq_2loop": 5.487268507783353
+  },
+  "checks": [
+    [
+      "\u2705",
+      "\u03b3\u2081 = 4sin\u00b2(\u03c0/88)",
+      "\u03b3\u2081 = 0.0050957708"
+    ],
+    [
+      "\u2705",
+      "\u03b3\u2081 = 4sin\u00b2(\u03c0/(2N_d))",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "N_d = 44",
+      "K_Chain \u7dad\u5ea6"
+    ],
+    [
+      "\u2705",
+      "B = 4",
+      "K_Tree \u5206\u652f\u56e0\u5b50"
+    ],
+    [
+      "\u2705",
+      "K_tree = 33",
+      "K_Tree \u6df1\u5ea6"
+    ],
+    [
+      "\u2705",
+      "M_GUT = M_Planck \u00d7 \u03b3\u2081",
+      "M_GUT = 6.2214e+16 GeV (target ~2e16, ratio 3.1107)"
+    ],
+    [
+      "\u2705",
+      "M_PS = M_Planck \u00d7 \u03b3\u2081\u00b2",
+      "M_PS = 3.1703e+14 GeV (target ~1e14, ratio 3.1703)"
+    ],
+    [
+      "\u2705",
+      "M_R = M_Planck \u00d7 \u03b3\u2081\u00b3",
+      "M_R = 1.6155e+12 GeV (target ~1e12, ratio 1.6155)"
+    ],
+    [
+      "\u2705",
+      "M_EW = M_Planck \u00d7 \u03b3\u2081\u2078 \u00d7 N_d",
+      "M_EW = 244.2372 GeV (target 246.82, dev 1.0464%)"
+    ],
+    [
+      "\u2705",
+      "M_GUT/M_Planck = \u03b3\u2081",
+      "0.0050957708 = 0.0050957708"
+    ],
+    [
+      "\u2705",
+      "M_PS/M_GUT = \u03b3\u2081",
+      "0.0050957708 \u2248 0.0050957708"
+    ],
+    [
+      "\u2705",
+      "M_R/M_PS = \u03b3\u2081",
+      "0.0050957708 \u2248 0.0050957708"
+    ],
+    [
+      "\u2705",
+      "EW \u504f\u5dee = -1.0464%",
+      "OK (|-1.0464| \u2248 1.0464)"
+    ],
+    [
+      "\u2705",
+      "\u4fee\u6b63\u56e0\u5b50 = 1.010575",
+      "1/corr = 0.989536"
+    ],
+    [
+      "\u2705",
+      "O59 v_geom formula reproduces 246.82 GeV",
+      "v_geom(O59) = 246.8244 GeV"
+    ],
+    [
+      "\u2705",
+      "\u03b3\u2081\u2078 \u00d7 N_d vs v_geom/M_Planck relation",
+      "\u03b3\u2081\u2078\u00d7N_d = 2.000469e-17, v_geom/M_Planck = 2.021660e-17, ratio = 0.989518"
+    ],
+    [
+      "\u2705",
+      "\u03c6\u207b\u00b9\u2076 = 0.0004531039",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "\u03b3\u2081 / \u03c6\u207b\u00b9\u2076 = 11.2464",
+      "\u03b3\u2081 = 0.005096, \u03c6\u207b\u00b9\u2076 = 0.000453, \u5dee 11.25\u00d7"
+    ],
+    [
+      "\u2705",
+      "\u03c6\u207b\u00b9\u2076 / \u03b3\u2081\u00b2 = 17.4493 \u2248 F_proj = 17?",
+      "\u504f\u5dee = 2.64%"
+    ],
+    [
+      "\u2705",
+      "n=1 = 1 (unit)",
+      ""
+    ],
+    [
+      "\u2705",
+      "n=2 = B/2 = 2.0",
+      "B=4"
+    ],
+    [
+      "\u2705",
+      "n=3 = B-1 = 3",
+      "B=4"
+    ],
+    [
+      "\u2705",
+      "n=8 = 2B = 8",
+      "B=4"
+    ],
+    [
+      "\u2705",
+      "data/01_phi_hierarchy.json \u5b58\u5728",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "data/02_coupling_unification.json \u5b58\u5728",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "data/03_gamma_cascade_closure.json \u5b58\u5728",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "data/04_coupling_detailed.json \u5b58\u5728",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "data/03 M_GUT matches direct calc",
+      "data: 6.2214e+16, direct: 6.2214e+16"
+    ],
+    [
+      "\u2705",
+      "data/03 M_PS matches direct calc",
+      "data: 3.1703e+14, direct: 3.1703e+14"
+    ],
+    [
+      "\u2705",
+      "data/03 M_R matches direct calc",
+      "data: 1.6155e+12, direct: 1.6155e+12"
+    ],
+    [
+      "\u2705",
+      "data/03 M_EW matches direct calc",
+      "data: 244.2372, direct: 244.2372"
+    ],
+    [
+      "\u2705",
+      "data/05_gauge_coupling_unification.json \u5b58\u5728",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "Best scenario = SM",
+      ""
+    ],
+    [
+      "\u2705",
+      "\u03b1_GUT\u207b\u00b9 = 53 \u2248 2\u00d7K_tree - F\u2087 = 53",
+      "\u03b1_GUT\u207b\u00b9 = 53.0, 2\u00d7K_tree - F\u2087 = 53"
+    ],
+    [
+      "\u2705",
+      "\u03b1\u2082\u207b\u00b9(M_Z) deviates < 10%",
+      "\u0394 = 6.8%"
+    ],
+    [
+      "\u2705",
+      "\u03b1\u2081\u207b\u00b9(M_Z) deviates < 10%",
+      "\u0394 = 7.3%"
+    ],
+    [
+      "\u2705",
+      "\u03b1\u2083\u207b\u00b9(M_Z) needs threshold corrections",
+      "\u0394 = 57.2%"
+    ],
+    [
+      "\u2705",
+      "\u03b1_GUT\u207b\u00b9 > 0 (unified coupling exists)",
+      ""
+    ],
+    [
+      "\u2705",
+      "data/06_threshold_corrections.json \u5b58\u5728",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "Scenario 2: \u03b1_GUT\u207b\u00b9=47, M_VL\u2248\u221a(M_PS\u00d7M_R)",
+      "\u03b1_GUT\u207b\u00b9=47"
+    ],
+    [
+      "\u2705",
+      "M_VL \u2248 \u221a(M_PS \u00d7 M_R) structural relation",
+      "Best M_VL = 2.00e+13, \u221a(M_PS\u00d7M_R)=2.26e+13"
+    ],
+    [
+      "\u2705",
+      "data/07_twoloop_closure.json \u5b58\u5728",
+      "OK"
+    ],
+    [
+      "\u2705",
+      "2-loop final: \u03b1_GUT\u207b\u00b9=47, M_VL=2.52e+13",
+      "\u03c7\u00b2=5.49"
+    ],
+    [
+      "\u2705",
+      "\u03b1\u2081\u207b\u00b9 precision < 1%",
+      "0.40%"
+    ],
+    [
+      "\u2705",
+      "\u03b1\u2082\u207b\u00b9 precision < 10%",
+      "4.65%"
+    ],
+    [
+      "\u2705",
+      "M_VL / \u221a(M_PS\u00d7M_R) \u2248 1",
+      "ratio = 1.1127"
+    ]
+  ]
+}

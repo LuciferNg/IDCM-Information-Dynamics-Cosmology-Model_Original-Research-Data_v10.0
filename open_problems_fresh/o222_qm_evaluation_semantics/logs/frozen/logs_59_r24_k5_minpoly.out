@@ -1,0 +1,7 @@
+K-basis size = 20
+rank(K-basis) = 20   (must be 20)
+distinct conjugates = 20
+minimal polynomial coefficients (ascending) integral? True
+P(X) = X^20 + 40 X^19 + ...  | [X^19] = 40 | Tr = -[X^19] = -40
+all coefficients: [1, -12, -508, -1568, 9285, 60000, 110244, 8472, -228830, -272248, -10956, 197720, 137098, 384, -37876, -15416, -19, 1508, 408, 40, 1]
+nonzero count = 21

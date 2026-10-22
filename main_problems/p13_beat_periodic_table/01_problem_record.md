@@ -1,12 +1,12 @@
 # Beat Periodic Table — 拍頻周期表 (946 無理數的分層結構)
 
 <!-- registry
-pid:     beat_periodic_table
-title:   拍頻周期表 — 946 無理數可分離三角表
+pid:     P13
+title:   P13 — 拍頻周期表 — 946 無理數可分離三角表
 state:   partial
 verdict: -
 flags:   -
-owner:   beat_periodic_table
+owner:   P13
 created: 2026-10-05
 updated: 2026-10-20
 prereq:  O35, O36, O51, O54

@@ -1,0 +1,33 @@
+O31 BOSS/eBOSS empirical verification v2
+
+eBOSS DR16: 49 points, s_max=247.5
+BOSS DR12: 36 points, s_max=177.5
+
+Empirical nulls (wiggle): 22
+  null[0]=10.300 (theory=10.281, diff=0.019)
+  null[1]=26.736 (theory=26.200, diff=0.536)
+  null[2]=50.491 (theory=47.776, diff=2.715)
+  null[3]=72.250 (theory=73.836, diff=-1.586)
+  null[4]=73.794 (theory=73.836, diff=-0.042)
+  null[5]=86.188 (theory=90.244, diff=-4.057)
+  null[6]=88.931 (theory=90.244, diff=-1.313)
+  null[7]=102.869 (theory=90.244, diff=12.624)
+  null[8]=111.458 (theory=116.029, diff=-4.571)
+  null[9]=113.453 (theory=116.029, diff=-2.575)
+  null[10]=126.791 (theory=116.029, diff=10.763)
+  null[11]=130.891 (theory=116.029, diff=14.862)
+  null[12]=132.924 (theory=116.029, diff=16.895)
+  null[13]=140.064 (theory=162.440, diff=-22.376)
+  null[14]=145.026 (theory=162.440, diff=-17.414)
+  null[15]=149.827 (theory=162.440, diff=-12.613)
+  null[16]=174.037 (theory=162.440, diff=11.597)
+  null[17]=202.094 (theory=162.440, diff=39.654)
+  null[18]=208.992 (theory=162.440, diff=46.552)
+  null[19]=226.487 (theory=270.733, diff=-44.247)
+  null[20]=235.545 (theory=270.733, diff=-35.188)
+  null[21]=241.314 (theory=270.733, diff=-29.419)
+
+Matched with theory: 43
+Mean deviation: 3.789 ± 3.162
+Extra fixed points: 26
+88 fixed-point theorem: NEEDS REVIEW

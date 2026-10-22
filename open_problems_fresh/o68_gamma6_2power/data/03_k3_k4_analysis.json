@@ -1,0 +1,43 @@
+{
+  "gamma6": 0.18073600929096323,
+  "gamma6_32": 0.005648000290342601,
+  "gamma6_64": 0.0028240001451713004,
+  "best_match_32": {
+    "name": "\u03b3\u2082/\u03b3\u2083\u2085",
+    "value": 0.005653054696954238,
+    "error_pct": 0.08949019744703525
+  },
+  "best_match_64": {
+    "name": "\u03b3\u2081/\u03b3\u2082\u2081",
+    "value": 0.0027436124617854687,
+    "error_pct": 2.8465892086898443
+  },
+  "conclusion": "k=3/k=4 \u5c0d\u61c9 Z\u2082 \u6295\u5f71\u6df1\u5ea6, \u5514\u4fc2\u76f4\u63a5\u89c0\u6e2c\u91cf\u3002\u958b\u653e\u5ef6\u4f38\u3002",
+  "checks": [
+    {
+      "check": "\u03b3\u2086/32 \u6700\u4f73 \u03b3-ratio: \u03b3\u2082/\u03b3\u2083\u2085 (0.09%)",
+      "pass": true
+    },
+    {
+      "check": "\u03b3\u2086/64 \u6700\u4f73 \u03b3-ratio: \u03b3\u2081/\u03b3\u2082\u2081 (2.85%)",
+      "pass": true
+    },
+    {
+      "check": "k=3 = 5 Z\u2082 \u6295\u5f71 = GLSM \u5168\u6df1\u5ea6",
+      "pass": true
+    },
+    {
+      "check": "k=4 = 6 Z\u2082 \u6295\u5f71 = \u8d85\u8d8a GLSM",
+      "pass": true
+    },
+    {
+      "check": "k=3/k=4 \u5187\u76f4\u63a5 SM \u89c0\u6e2c\u91cf\u5c0d\u61c9",
+      "pass": true
+    },
+    {
+      "check": "\u958b\u653e\u5ef6\u4f38, \u5514\u4fc2\u9589\u5408",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

@@ -8,15 +8,20 @@
    harmonic spacing   Delta_s_n = s_n - s_{n+1} = lambda/[n(n+1)]
    resolvable iff     Delta_s_n >= Delta_s_bin
    =>  n_max(Delta_s_bin) = (-1 + sqrt(1 + 4*lambda/Delta_s_bin)) / 2
-     Delta_s_bin = 5.000   ->  n_max =  8.527
-     Delta_s_bin = 4.000   ->  n_max =  9.590
-     Delta_s_bin = 3.000   ->  n_max = 11.147
-     Delta_s_bin = 2.000   ->  n_max = 13.760
-     Delta_s_bin = 1.000   ->  n_max = 19.661
-     Delta_s_bin = 0.500   ->  n_max = 28.008
-  [PASS] A1  n_max(5 h^-1 Mpc) = 8.527 (BOSS DR12, script 03)  -- 8.527
-  [PASS] A2  n_max(4 h^-1 Mpc) = 9.590 (DESI DR1/DR2 galaxy+QSO+Ly-alpha)  -- 9.590
-  [PASS] A3  law is monotone: finer bins -> more resolvable modes  -- 28.01 > 19.66 > 13.76 > 9.59 > 8.53
+     Delta_s_bin = 5.000   ->  n_max =  5.823
+     Delta_s_bin = 4.000   ->  n_max =  6.565
+     Delta_s_bin = 3.000   ->  n_max =  7.652
+     Delta_s_bin = 2.000   ->  n_max =  9.478
+     Delta_s_bin = 1.000   ->  n_max = 13.602
+     Delta_s_bin = 0.500   ->  n_max = 19.438
+  [PASS] A1  n_max(5 h^-1 Mpc) = 5.823 (BOSS DR12 / eBOSS DR16 binning)  -- 5.823
+  [PASS] A2  n_max(4 h^-1 Mpc) = 6.565 (DESI DR1/DR2 galaxy+QSO)  -- 6.565
+  [PASS] A3  law is monotone: finer bins -> more resolvable modes  -- 19.44 > 13.60 > 9.48 > 6.56 > 5.82
+
+   where the ladder actually lives (j = 1 peaks, n = 3..9):
+     n=3: 66.2, n=4: 49.7, n=5: 39.7, n=6: 33.1, n=7: 28.4, n=8: 24.8, n=9: 22.1
+     DESI DR2 BAO-fit window [62.0, 150.0] contains only n = [3] of the j=1 nodes
+  [PASS] A4  the DESI DR2 BAO-fit window [62,150] contains only ONE of the seven j=1 nodes (n = 3 at 66.2 h^-1 Mpc) -- the ladder's j=1 structure lives at 22-66 h^-1 Mpc, i.e. mostly BELOW that window  -- in-window j=1 nodes: [3]
 
 ------------------------------------------------------------------------------
   B. window (Rayleigh) resolution + leakage matrix of the ring basis
@@ -25,64 +30,63 @@
    frequency separation Delta_k = 2*pi*Delta_n/lambda; resolving them over a window
    of length T requires T >= 2*pi/Delta_k = lambda/Delta_n.
    =>  mode resolution  Delta_n_res = lambda / T   (Rayleigh)
-     T = 175.0  h^-1 Mpc (BOSS DR12 range   ) ->  Delta_n_res = 2.321
-     T = 240.0  h^-1 Mpc (eBOSS DR16 range  ) ->  Delta_n_res = 1.693
-     T = 200.0  h^-1 Mpc (DESI Ly-alpha range) ->  Delta_n_res = 2.031
-     T = 406.2  h^-1 Mpc (T = lambda_sync   ) ->  Delta_n_res = 1.000
-  [PASS] B1  BOSS DR12 mode resolution Delta_n_res = 2.321 > 1 (adjacent modes NOT separable)  -- needs T >= lambda_sync = 406.2 h^-1 Mpc
+     T = 175.0  h^-1 Mpc (BOSS DR12 range   ) ->  Delta_n_res = 1.135
+     T = 240.0  h^-1 Mpc (eBOSS DR16 range  ) ->  Delta_n_res = 0.828
+     T = 200.0  h^-1 Mpc (DESI Ly-alpha range) ->  Delta_n_res = 0.993
+     T = 198.6  h^-1 Mpc (T = lambda_sync   ) ->  Delta_n_res = 1.000
+  [PASS] B1  BOSS DR12 mode resolution Delta_n_res = 1.135 is MARGINAL (1.0 < dres < 1.5): adjacent modes are only just separable over the BOSS window  -- needs T >= lambda_sync = 198.6 h^-1 Mpc for dres < 1
 
    normalised leakage matrix |<m|n>| (rows m, cols n = 2..20), BOSS window [2.5,177.5]:
             2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17    18    19    20
-     2    1.00  0.18  0.20  0.10  0.12  0.02  0.04  0.04  0.00  0.07  0.02  0.07  0.00  0.04  0.02  0.02  0.05  0.00  0.05
-     3    0.18  1.00  0.13  0.16  0.07  0.09  0.01  0.04  0.03  0.01  0.05  0.00  0.05  0.01  0.03  0.03  0.02  0.04  0.01
-     4    0.20  0.13  1.00  0.10  0.13  0.05  0.09  0.01  0.05  0.02  0.03  0.03  0.02  0.04  0.01  0.04  0.02  0.03  0.03
-     5    0.10  0.16  0.10  1.00  0.08  0.13  0.06  0.10  0.03  0.07  0.00  0.04  0.03  0.02  0.04  0.01  0.05  0.01  0.04
-     6    0.12  0.07  0.13  0.08  1.00  0.09  0.14  0.08  0.12  0.05  0.09  0.01  0.04  0.03  0.01  0.05  0.01  0.06  0.00
-     7    0.02  0.09  0.05  0.13  0.09  1.00  0.11  0.16  0.10  0.14  0.06  0.09  0.01  0.04  0.04  0.00  0.06  0.02  0.06
-     8    0.04  0.01  0.09  0.06  0.14  0.11  1.00  0.12  0.17  0.11  0.14  0.06  0.08  0.00  0.02  0.05  0.01  0.07  0.02
-     9    0.04  0.04  0.01  0.10  0.08  0.16  0.12  1.00  0.13  0.18  0.10  0.13  0.05  0.07  0.01  0.01  0.06  0.01  0.07
-     10   0.00  0.03  0.05  0.03  0.12  0.10  0.17  0.13  1.00  0.13  0.17  0.09  0.12  0.03  0.06  0.02  0.01  0.05  0.01
-     11   0.07  0.01  0.02  0.07  0.05  0.14  0.11  0.18  0.13  1.00  0.12  0.16  0.08  0.11  0.03  0.06  0.02  0.02  0.05
-     12   0.02  0.05  0.03  0.00  0.09  0.06  0.14  0.10  0.17  0.12  1.00  0.11  0.15  0.08  0.11  0.03  0.06  0.01  0.02
-     13   0.07  0.00  0.03  0.04  0.01  0.09  0.06  0.13  0.09  0.16  0.11  1.00  0.10  0.14  0.08  0.11  0.04  0.07  0.00
-     14   0.00  0.05  0.02  0.03  0.04  0.01  0.08  0.05  0.12  0.08  0.15  0.10  1.00  0.11  0.15  0.09  0.12  0.05  0.08
-     15   0.04  0.01  0.04  0.02  0.03  0.04  0.00  0.07  0.03  0.11  0.08  0.14  0.11  1.00  0.11  0.16  0.09  0.13  0.05
-     16   0.02  0.03  0.01  0.04  0.01  0.04  0.02  0.01  0.06  0.03  0.11  0.08  0.15  0.11  1.00  0.12  0.16  0.10  0.13
-     17   0.02  0.03  0.04  0.01  0.05  0.00  0.05  0.01  0.02  0.06  0.03  0.11  0.09  0.16  0.12  1.00  0.13  0.17  0.10
-     18   0.05  0.02  0.02  0.05  0.01  0.06  0.01  0.06  0.01  0.02  0.06  0.04  0.12  0.09  0.16  0.13  1.00  0.13  0.16
-     19   0.00  0.04  0.03  0.01  0.06  0.02  0.07  0.01  0.05  0.02  0.01  0.07  0.05  0.13  0.10  0.17  0.13  1.00  0.12
-     20   0.05  0.01  0.03  0.04  0.00  0.06  0.02  0.07  0.01  0.05  0.02  0.00  0.08  0.05  0.13  0.10  0.16  0.12  1.00
-  [PASS] B2  adjacent-mode leakage present but modest (max 0.18 for Delta_n=1)  -- adjacent |<m|n>| max = 0.182, median = 0.121 ; global max = 0.203
-   -> adjacent-mode leakage is only ~0.18 (power 0.03), so the ladder POSITIONS are not
-      badly scrambled; the decisive obstructions are the bin-Nyquist cutoff (A) and the
-      broadband degeneracy (script 04), with Rayleigh mixing (Delta_n_res = 2.32) third.
-  [CLAIM] B  => the '19 harmonics' are not 19 independent measurements.  Ranked obstructions: (1) bin Nyquist n_max = 8.53 - harmonics 9..20 are literally sub-bin; (2) broadband degeneracy (script 04: p = 0.50); (3) window Rayleigh resolution Delta_n_res = 2.32 > 1, adjacent-mode leakage ~0.2.
+     2    1.00  0.13  0.09  0.06  0.03  0.01  0.01  0.01  0.02  0.03  0.03  0.03  0.03  0.02  0.02  0.02  0.02  0.02  0.02
+     3    0.13  1.00  0.11  0.10  0.08  0.05  0.03  0.02  0.01  0.01  0.01  0.02  0.03  0.03  0.03  0.03  0.02  0.02  0.01
+     4    0.09  0.11  1.00  0.13  0.12  0.10  0.06  0.03  0.00  0.01  0.00  0.01  0.02  0.04  0.04  0.04  0.03  0.01  0.00
+     5    0.06  0.10  0.13  1.00  0.15  0.13  0.09  0.05  0.01  0.01  0.01  0.00  0.02  0.04  0.04  0.04  0.03  0.02  0.00
+     6    0.03  0.08  0.12  0.15  1.00  0.15  0.11  0.07  0.03  0.01  0.00  0.00  0.01  0.02  0.03  0.04  0.03  0.02  0.01
+     7    0.01  0.05  0.10  0.13  0.15  1.00  0.13  0.10  0.07  0.04  0.02  0.01  0.00  0.01  0.02  0.02  0.03  0.03  0.02
+     8    0.01  0.03  0.06  0.09  0.11  0.13  1.00  0.13  0.11  0.08  0.05  0.02  0.01  0.00  0.00  0.01  0.02  0.03  0.03
+     9    0.01  0.02  0.03  0.05  0.07  0.10  0.13  1.00  0.14  0.12  0.09  0.05  0.02  0.00  0.01  0.01  0.01  0.02  0.03
+     10   0.02  0.01  0.00  0.01  0.03  0.07  0.11  0.14  1.00  0.14  0.12  0.08  0.04  0.01  0.01  0.01  0.00  0.02  0.03
+     11   0.03  0.01  0.01  0.01  0.01  0.04  0.08  0.12  0.14  1.00  0.14  0.11  0.07  0.03  0.01  0.00  0.00  0.00  0.02
+     12   0.03  0.01  0.00  0.01  0.00  0.02  0.05  0.09  0.12  0.14  1.00  0.13  0.10  0.07  0.04  0.01  0.00  0.00  0.00
+     13   0.03  0.02  0.01  0.00  0.00  0.01  0.02  0.05  0.08  0.11  0.13  1.00  0.13  0.11  0.08  0.04  0.02  0.00  0.01
+     14   0.03  0.03  0.02  0.02  0.01  0.00  0.01  0.02  0.04  0.07  0.10  0.13  1.00  0.13  0.11  0.08  0.04  0.01  0.01
+     15   0.02  0.03  0.04  0.04  0.02  0.01  0.00  0.00  0.01  0.03  0.07  0.11  0.13  1.00  0.14  0.11  0.07  0.03  0.00
+     16   0.02  0.03  0.04  0.04  0.03  0.02  0.00  0.01  0.01  0.01  0.04  0.08  0.11  0.14  1.00  0.13  0.10  0.07  0.03
+     17   0.02  0.03  0.04  0.04  0.04  0.02  0.01  0.01  0.01  0.00  0.01  0.04  0.08  0.11  0.13  1.00  0.12  0.10  0.07
+     18   0.02  0.02  0.03  0.03  0.03  0.03  0.02  0.01  0.00  0.00  0.00  0.02  0.04  0.07  0.10  0.12  1.00  0.13  0.10
+     19   0.02  0.02  0.01  0.02  0.02  0.03  0.03  0.02  0.02  0.00  0.00  0.00  0.01  0.03  0.07  0.10  0.13  1.00  0.13
+     20   0.02  0.01  0.00  0.00  0.01  0.02  0.03  0.03  0.03  0.02  0.00  0.01  0.01  0.00  0.03  0.07  0.10  0.13  1.00
+  [PASS] B2  adjacent-mode leakage is MODEST at the corrected scale (max 0.153 for Delta_n = 1, power 2.3%) -- lambda_sync = 198.63 h^-1 Mpc makes the BOSS window marginal for adjacent modes, so mode positions are broadened but not scrambled  -- adjacent |<m|n>| max = 0.153, median = 0.132 ; global max = 0.153
+  [CLAIM] B  => with the corrected scale the '19 harmonics' are NOT independent measurements (bin Nyquist in A), but the window is NOT the main obstruction any more: the Rayleigh resolution over the BOSS window is only Delta_n_res = 1.14 (marginal) and adjacent-mode leakage is ~0.15.  Ranked obstructions: (1) bin Nyquist n_max = 5.82; (2) broadband degeneracy (script 04); (3) window Rayleigh 1.14.
 
 ------------------------------------------------------------------------------
   C. survey table + structural thresholds
 ------------------------------------------------------------------------------
    survey                          Ds_bin   range    n_max   Dn_res
-   BOSS DR12 post-recon monopole     5.0    175.0     8.53     2.32
-   eBOSS DR16 LRG                    5.0    240.0     8.53     1.69
-   DESI DR1 galaxies+QSO             4.0    200.0     9.59     2.03
-   DESI DR2 galaxies+QSO             4.0    200.0     9.59     2.03
-   DESI Ly-alpha (model grid)        2.0    300.0    13.76     1.35
+   BOSS DR12 post-recon monopole     5.0    175.0     5.82     1.14
+   eBOSS DR16 LRG                    5.0    240.0     5.82     0.83
+   DESI DR1 galaxies+QSO             4.0    200.0     6.56     0.99
+   DESI DR2 galaxies+QSO             4.0    200.0     6.56     0.99
+   DESI Ly-alpha (model grid)        2.0    300.0     9.48     0.66
 
    structural thresholds (zero-parameter):
    target                        n      required Ds_bin (h^-1 Mpc)
-   n = F_proj/2 = 8.5             8.5   5.0306
-   n = L5 = 11                   11.0   3.0774
-   n = F6 = 8                     8.0   5.6420
-   n = N_d/2 = 22                22.0   0.8028
-   n = N_d = 44                  44.0   0.2052
+   n = F_proj/2 = 8.5             8.5   2.4598
+   n = L5 = 11                   11.0   1.5048
+   n = F6 = 8                     8.0   2.7587
+   n = N_d/2 = 22                22.0   0.3925
+   n = N_d = 44                  44.0   0.1003
 
-   NOTE: BOSS DR12 uses 5.0 h^-1 Mpc and lambda/(8.5*9.5) = 5.0306 (dev 0.61%) - i.e.
-   BOSS's binning sits almost exactly at the threshold for resolving up to n = F_proj/2.
-   This is POST-HOC (the bin width is an instrumental choice), so it is recorded as a
-   coincidence, NOT a prediction.
-  [PASS] C1  required bin for n = N_d/2 = 22 is 0.8028 h^-1 Mpc (finer than any current survey)  -- 0.8028
-  [PASS] C2  required bin for n = N_d = 44 (ring Nyquist) is 0.2052 h^-1 Mpc  -- 0.2052
-  [CLAIM] C  => zero-parameter forecast: no existing or planned galaxy survey binning can resolve the ladder beyond n ~ 10 (DESI 4 h^-1 Mpc -> n_max = 9.59).  Resolving n = N_d/2 = 22 needs Delta_s <= 0.803 h^-1 Mpc; n = N_d = 44 needs <= 0.205 h^-1 Mpc.
+   NOTE: BOSS DR12 uses 5.0 h^-1 Mpc and lambda/(8.5*9.5) = 2.4598 (dev 50.80%).
+   The earlier revision of this script reported dev 0.61%% here and recorded it as a
+   'coincidence' + possible prediction -- that was an ARTEFACT of the units error
+   (lambda_used = 406.22 instead of 198.63).  At the corrected scale the BOSS bin
+   width is ~2x COARSER than the n = F_proj/2 threshold, so the coincidence is DEAD.
+  [PASS] C0  the BOSS 5 h^-1 Mpc bin is NOT at the n = F_proj/2 threshold (dev 50.8% > 10%) -- the previously reported 0.61% 'coincidence' was a units artefact and is retracted  -- req_85 = 2.4598 vs bin 5.0
+  [PASS] C1  required bin for n = N_d/2 = 22 is 0.3925 h^-1 Mpc (finer than any current survey)  -- 0.3925
+  [PASS] C2  required bin for n = N_d = 44 (ring Nyquist) is 0.1003 h^-1 Mpc  -- 0.1003
+  [CLAIM] C  => zero-parameter forecast: no existing or planned galaxy survey binning can resolve the ladder beyond n = 6.56 (BOSS/eBOSS 5 h^-1 Mpc -> 5.82; DESI 4 h^-1 Mpc -> 6.56).  Resolving n = N_d/2 = 22 needs Delta_s <= 0.3925 h^-1 Mpc; n = N_d = 44 needs <= 0.1003.
 
 ------------------------------------------------------------------------------
   D. z = 17 = F_proj: v10.0-native form of the v9.0 'horizon aliasing'
@@ -97,9 +101,9 @@
 ------------------------------------------------------------------------------
   E. verdict + forecast
 ------------------------------------------------------------------------------
-  [CLAIM] E  => the migrated K_Chain ladder is a well-defined, zero-parameter prediction whose detectability is fully determined by (bin width, window length).  It is NOT detectable in BOSS DR12, NOT detectable in DESI DR2, and would require sub-h^-1 Mpc binning plus a window of order lambda_sync = 406 h^-1 Mpc to test at all.
+  [CLAIM] E  => the migrated K_Chain ladder is a well-defined, zero-parameter prediction whose detectability is fully determined by (bin width, window length).  At the corrected scale lambda_sync = 198.6 h^-1 Mpc (= 294.9 Mpc physical), its j=1 nodes sit at 22-66 h^-1 Mpc: BOSS/eBOSS/DESI DR1 can reach n <= 5.82 / 6.56 and the DESI DR2 BAO-fit window [62,150] covers only the n = 3 node.  Sub-h^-1 Mpc binning plus a window of order lambda_sync is required to test the high-n ladder at all.
 
 ==============================================================================
-  RESULT: 9/9 PASS   (+4 structural claims)
+  RESULT: 11/11 PASS   (+4 structural claims)
 ==============================================================================
   -> data/05_resolvability_forecast.json written

@@ -1,0 +1,738 @@
+{
+ "rules_version": "o226-r1-contract-v1",
+ "hits_closed_form": {
+  "lexicographic": 124,
+  "reversed": 124,
+  "null_draws": 10000,
+  "null_min": 96,
+  "null_median": 124,
+  "null_max": 152
+ },
+ "cost_family": [
+  {
+   "k": 1,
+   "m_star": 88,
+   "Sigma": "123/2",
+   "exact": true,
+   "divides": true
+  },
+  {
+   "k": 2,
+   "m_star": 44,
+   "Sigma": "123/2",
+   "exact": true,
+   "divides": true
+  },
+  {
+   "k": 3,
+   "m_star": 30,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 4,
+   "m_star": 22,
+   "Sigma": "123/2",
+   "exact": true,
+   "divides": true
+  },
+  {
+   "k": 5,
+   "m_star": 18,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 6,
+   "m_star": 15,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 7,
+   "m_star": 13,
+   "Sigma": "11193/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 8,
+   "m_star": 11,
+   "Sigma": "123/2",
+   "exact": true,
+   "divides": true
+  },
+  {
+   "k": 9,
+   "m_star": 10,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 10,
+   "m_star": 9,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 11,
+   "m_star": 8,
+   "Sigma": "123/2",
+   "exact": true,
+   "divides": true
+  },
+  {
+   "k": 12,
+   "m_star": 8,
+   "Sigma": "738/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 13,
+   "m_star": 7,
+   "Sigma": "11193/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 14,
+   "m_star": 7,
+   "Sigma": "6027/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 15,
+   "m_star": 6,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 16,
+   "m_star": 6,
+   "Sigma": "738/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 17,
+   "m_star": 6,
+   "Sigma": "6273/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 18,
+   "m_star": 5,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 19,
+   "m_star": 5,
+   "Sigma": "11685/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 20,
+   "m_star": 5,
+   "Sigma": "3075/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 21,
+   "m_star": 5,
+   "Sigma": "12915/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 22,
+   "m_star": 4,
+   "Sigma": "123/2",
+   "exact": true,
+   "divides": true
+  },
+  {
+   "k": 23,
+   "m_star": 4,
+   "Sigma": "2829/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 24,
+   "m_star": 4,
+   "Sigma": "738/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 25,
+   "m_star": 4,
+   "Sigma": "3075/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 26,
+   "m_star": 4,
+   "Sigma": "1599/22",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 27,
+   "m_star": 4,
+   "Sigma": "3321/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 28,
+   "m_star": 4,
+   "Sigma": "861/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 29,
+   "m_star": 4,
+   "Sigma": "3567/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 30,
+   "m_star": 3,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 31,
+   "m_star": 3,
+   "Sigma": "11439/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 32,
+   "m_star": 3,
+   "Sigma": "738/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 33,
+   "m_star": 3,
+   "Sigma": "1107/16",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 34,
+   "m_star": 3,
+   "Sigma": "6273/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 35,
+   "m_star": 3,
+   "Sigma": "12915/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 36,
+   "m_star": 3,
+   "Sigma": "3321/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 37,
+   "m_star": 3,
+   "Sigma": "13653/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 38,
+   "m_star": 3,
+   "Sigma": "7011/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 39,
+   "m_star": 3,
+   "Sigma": "14391/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 40,
+   "m_star": 3,
+   "Sigma": "1845/22",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 41,
+   "m_star": 3,
+   "Sigma": "15129/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 42,
+   "m_star": 3,
+   "Sigma": "7749/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 43,
+   "m_star": 3,
+   "Sigma": "15867/176",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 44,
+   "m_star": 2,
+   "Sigma": "123/2",
+   "exact": true,
+   "divides": true
+  },
+  {
+   "k": 45,
+   "m_star": 2,
+   "Sigma": "5535/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 46,
+   "m_star": 2,
+   "Sigma": "2829/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 47,
+   "m_star": 2,
+   "Sigma": "5781/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 48,
+   "m_star": 2,
+   "Sigma": "738/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 49,
+   "m_star": 2,
+   "Sigma": "6027/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 50,
+   "m_star": 2,
+   "Sigma": "3075/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 51,
+   "m_star": 2,
+   "Sigma": "6273/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 52,
+   "m_star": 2,
+   "Sigma": "1599/22",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 53,
+   "m_star": 2,
+   "Sigma": "6519/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 54,
+   "m_star": 2,
+   "Sigma": "3321/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 55,
+   "m_star": 2,
+   "Sigma": "615/8",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 56,
+   "m_star": 2,
+   "Sigma": "861/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 57,
+   "m_star": 2,
+   "Sigma": "7011/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 58,
+   "m_star": 2,
+   "Sigma": "3567/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 59,
+   "m_star": 2,
+   "Sigma": "7257/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 60,
+   "m_star": 2,
+   "Sigma": "1845/22",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 61,
+   "m_star": 2,
+   "Sigma": "7503/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 62,
+   "m_star": 2,
+   "Sigma": "3813/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 63,
+   "m_star": 2,
+   "Sigma": "7749/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 64,
+   "m_star": 2,
+   "Sigma": "984/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 65,
+   "m_star": 2,
+   "Sigma": "7995/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 66,
+   "m_star": 2,
+   "Sigma": "369/4",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 67,
+   "m_star": 2,
+   "Sigma": "8241/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 68,
+   "m_star": 2,
+   "Sigma": "2091/22",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 69,
+   "m_star": 2,
+   "Sigma": "8487/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 70,
+   "m_star": 2,
+   "Sigma": "4305/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 71,
+   "m_star": 2,
+   "Sigma": "8733/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 72,
+   "m_star": 2,
+   "Sigma": "1107/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 73,
+   "m_star": 2,
+   "Sigma": "8979/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 74,
+   "m_star": 2,
+   "Sigma": "4551/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 75,
+   "m_star": 2,
+   "Sigma": "9225/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 76,
+   "m_star": 2,
+   "Sigma": "2337/22",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 77,
+   "m_star": 2,
+   "Sigma": "861/8",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 78,
+   "m_star": 2,
+   "Sigma": "4797/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 79,
+   "m_star": 2,
+   "Sigma": "9717/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 80,
+   "m_star": 2,
+   "Sigma": "1230/11",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 81,
+   "m_star": 2,
+   "Sigma": "9963/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 82,
+   "m_star": 2,
+   "Sigma": "5043/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 83,
+   "m_star": 2,
+   "Sigma": "10209/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 84,
+   "m_star": 2,
+   "Sigma": "2583/22",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 85,
+   "m_star": 2,
+   "Sigma": "10455/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 86,
+   "m_star": 2,
+   "Sigma": "5289/44",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 87,
+   "m_star": 2,
+   "Sigma": "10701/88",
+   "exact": false,
+   "divides": false
+  },
+  {
+   "k": 88,
+   "m_star": 1,
+   "Sigma": "123/2",
+   "exact": true,
+   "divides": true
+  }
+ ],
+ "grid_points": 4800,
+ "feasible_prefix": [
+  15,
+  44,
+  [
+   0,
+   15
+  ],
+  "123/2",
+  "0"
+ ],
+ "blind_predictions": [
+  {
+   "case": "B' = 123 (2 ticks)",
+   "predicted_m": 88,
+   "observed_reads": 88,
+   "predicted_Sigma": "123",
+   "observed_Sigma": "123",
+   "budget_left": "0",
+   "completed": 30,
+   "overshoot": false
+  },
+  {
+   "case": "B'' = 123/4",
+   "predicted_m": 22,
+   "observed_reads": 22,
+   "predicted_Sigma": "123/4",
+   "observed_Sigma": "123/4",
+   "budget_left": "0",
+   "completed": 8,
+   "overshoot": false
+  },
+  {
+   "case": "c''' = 3 theta",
+   "predicted_m": 30,
+   "observed_reads": 30,
+   "predicted_Sigma": "11070/176",
+   "observed_Sigma": "5535/88",
+   "budget_left": "-123/88",
+   "completed": 10,
+   "overshoot": true
+  }
+ ],
+ "overrun": {
+  "A2": "1922/11",
+  "full_pass": "2883/11"
+ },
+ "claims": [
+  {
+   "tag": "Q1",
+   "name": "Pr-2.1: the read/write law is reproduced by the machine over all 120 initial states: read-ops = 3N^2 = 11532, hits = 2N = 124, misses = 3N^2 - 2N = 11408, pops = N^2 = 3844",
+   "ok": true,
+   "detail": "reads 11532 = 3N^2 ; hits 124 = 2N ; misses 11408 ; pops 3844 = N^2"
+  },
+  {
+   "tag": "Q2",
+   "name": "Pr-2.2: hits(order) = N + C(order) with C = #{k>=1 : b_{k-1} = a_k}; the frozen lexicographic order gives C = N hence 2N, while 10^4 random orders give C ~ 1 => \"2N\" is a property of the frozen order plus the carry, NOT a universal law",
+   "ok": false,
+   "detail": "lexicographic hits = 124 = 2N ; reversed = 124 ; random-order null (10^4 draws, splitmix64): min 96 median 124 max 152"
+  },
+  {
+   "tag": "Q2-c",
+   "name": "CORRECTED (the pre-registered \"random orders give C << N\" is REFUTED): C(lex) = C(rev) = N and the median/mean of C over 10^4 random orders is also ~ N  =>  hits = 2N is the generic value of the carry count for ANY order, so the number 124 = 2N carries no order-specific information; the content lives in the closed form N + C(order)",
+   "ok": true,
+   "detail": "C(lex) = 62 ; C(rev) = 62 ; mean hits over 10^4 random orders = 123.910 (N + C with E[C] ~ N, theoretical E[C] = (N^2-1)/N = 61.984)"
+  },
+  {
+   "tag": "Q3",
+   "name": "Pr-2.3: m* = floor((B - theta)/c) + 1, Sigma = m* c ; exact exhaustion (Sigma = B) iff c | B  -- verified over k = 1..88 with zero counterexamples (k = 2 gives 44 = N_d)",
+   "ok": true,
+   "detail": "k=1 -> m*=88 (88 = 2N_d, also exact) ; k=2 -> m*=44 (44 = N_d) ; exact set = [1, 2, 4, 8, 11, 22, 44, 88]"
+  },
+  {
+   "tag": "Q4",
+   "name": "Pr-2.3 (general form): over a grid of 120 x 40 budgets/costs in units of theta the equivalence \"Sigma = B  <=>  c | B\" holds with zero counterexamples",
+   "ok": true,
+   "detail": "grid points = 4800 ; counterexamples = 0"
+  },
+  {
+   "tag": "Q5",
+   "name": "Pr-2.4: the feasible prefix is 15 pairs / 44 charged reads with terminal pair (0,15) and Sigma = B = 61.5 EXACT, identical for all 120 initial states",
+   "ok": true,
+   "detail": "prefix = 15 pairs ; charges = 44 ; terminal = (0, 15) ; Sigma = 123/2 ; identical over = 120/120 states"
+  },
+  {
+   "tag": "Q6",
+   "name": "Pr-2.5 (blind, values pinned before the run): B'=123 -> m*=88, Sigma=123 ; B''=123/4 -> m*=22, Sigma=123/4 ; c'''=3 theta -> m*=30, Sigma=11070/176 > B (overshoot)",
+   "ok": false,
+   "detail": "B' = 123 (2 ticks): reads 88 vs 88, Sigma 123 vs 123 | B'' = 123/4: reads 22 vs 22, Sigma 123/4 vs 123/4 | c''' = 3 theta: reads 30 vs 30, Sigma 5535/88 vs 11070/176"
+  },
+  {
+   "tag": "Q6-c",
+   "name": "CORRECTED (comparator artifact, disclosed): comparing as rationals, the third blind prediction is exact -- 11070/176 = 5535/88 and both exceed B (the overrun is real)",
+   "ok": true,
+   "detail": "third case: observed 5535/88 = predicted 11070/176 = 62.897727 > B = 61.5"
+  },
+  {
+   "tag": "Q7",
+   "name": "Pr-2.6: overrun of the A2 protocol (2 reads/pair = 7688 reads) = 1922/11 and of a full pass (3N^2 = 11532) = 2883/11 -- both reproduce the upstream factors",
+   "ok": true,
+   "detail": "A2 = 1922/11 = 174.727273 ; full pass = 2883/11 = 262.090909"
+  },
+  {
+   "tag": "Q8",
+   "name": "rigidity: the read/write law is a pure order property -- 32 random axis sets reproduce exactly the same account (3N^2 / 2N / 3N^2-2N / N^2)",
+   "ok": true,
+   "detail": "distinct accounts over 32 random axis sets x 4 states = [(11532, 124, 11408, 3844)]"
+  }
+ ]
+}

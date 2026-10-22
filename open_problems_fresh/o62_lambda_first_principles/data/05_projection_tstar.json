@@ -1,0 +1,16 @@
+{
+  "test": "O62 一期 05: P̂ → t*",
+  "P_shape": [
+    134,
+    946
+  ],
+  "kahler_support": 21,
+  "corr_rownorm_gamma": -0.9946674464068935,
+  "rank": 122,
+  "trace": 2002.497767343737,
+  "entropy_full": 3.248904065410102,
+  "F_row_norm": -43.649664961556,
+  "F_gamma": 264.08212923258026,
+  "passed": 2,
+  "failed": 0
+}

@@ -1,0 +1,11 @@
+{
+  "lambda_sync": 294.877,
+  "rd_idcm": 147.4385,
+  "bao_obs": 102.5,
+  "bao_idcm": 99.18,
+  "bao_dev_pct": 3.35,
+  "bao_lit_dev_pct": 2.38,
+  "chi2_idcm_dof": 2.05,
+  "pass": 9,
+  "fail": 0
+}

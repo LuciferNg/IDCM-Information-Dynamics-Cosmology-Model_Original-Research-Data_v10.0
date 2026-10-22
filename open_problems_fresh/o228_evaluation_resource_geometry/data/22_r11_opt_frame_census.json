@@ -1,0 +1,263 @@
+{
+ "enumeration": {
+  "frames": 8584,
+  "nodes": 152157793,
+  "seconds": 67.94,
+  "complete": true,
+  "node_cap": 3000000000,
+  "wall": 1500.0
+ },
+ "degrees": {
+  "min": 812,
+  "max": 1306,
+  "distinct_values": [
+   812,
+   816,
+   824,
+   836,
+   844,
+   894,
+   898,
+   910,
+   918,
+   924,
+   938,
+   944,
+   946,
+   950,
+   964,
+   970,
+   1006,
+   1016,
+   1032,
+   1036,
+   1092,
+   1100,
+   1108,
+   1136,
+   1140,
+   1180,
+   1206,
+   1216,
+   1296,
+   1306
+  ],
+  "hist": {
+   "812": 9,
+   "816": 3,
+   "824": 2,
+   "836": 1,
+   "844": 2,
+   "894": 2,
+   "898": 2,
+   "910": 2,
+   "918": 2,
+   "924": 1,
+   "938": 2,
+   "944": 5,
+   "946": 2,
+   "950": 2,
+   "964": 1,
+   "970": 2,
+   "1006": 2,
+   "1016": 2,
+   "1032": 2,
+   "1036": 2,
+   "1092": 2,
+   "1100": 1,
+   "1108": 1,
+   "1136": 1,
+   "1140": 2,
+   "1180": 1,
+   "1206": 2,
+   "1216": 1,
+   "1296": 1,
+   "1306": 2
+  },
+  "never_in_any_frame": [],
+  "in_every_frame": [],
+  "union_size": 62
+ },
+ "minimality": {
+  "non_minimal_frames": 0
+ },
+ "pairwise": {
+  "hist": {
+   "0": 17659238,
+   "1": 11941654,
+   "2": 4855836,
+   "3": 1697976,
+   "4": 525780,
+   "5": 132174,
+   "6": 25578
+  },
+  "disjoint_pairs": 17659238,
+  "pairs_examined": 36838236,
+  "seconds": 3.6
+ },
+ "type_spectrum": {
+  "n_distinct_column_vectors": 60,
+  "n_distinct_frame_types": 6960,
+  "top": [
+   [
+    [
+     0,
+     1,
+     4,
+     9,
+     10,
+     15,
+     23
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     5,
+     8,
+     10,
+     14,
+     22
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     8,
+     9,
+     10,
+     12,
+     13
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     8,
+     9,
+     10,
+     14,
+     15
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     8,
+     10,
+     12,
+     13,
+     22
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     8,
+     10,
+     12,
+     13,
+     40
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     8,
+     10,
+     12,
+     40,
+     49
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     8,
+     10,
+     13,
+     22,
+     43
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     8,
+     10,
+     13,
+     40,
+     43
+    ],
+    3
+   ],
+   [
+    [
+     0,
+     1,
+     8,
+     10,
+     14,
+     15,
+     22
+    ],
+    3
+   ]
+  ]
+ },
+ "claims": [
+  {
+   "tag": "P10-1",
+   "name": "the complete enumeration reproduces F_7 = 8584 (cross-check against the R2 DFS count) [not blind: value known from R2]",
+   "ok": true,
+   "detail": "8584 frames found (complete=True); R2 reported F_7 = 8584"
+  },
+  {
+   "tag": "P10-2",
+   "name": "no column is forced: every column is absent from at least one optimal frame  [BLIND]",
+   "ok": true,
+   "detail": "columns present in all 8584 frames: 0"
+  },
+  {
+   "tag": "P10-3",
+   "name": "the union of all optimal frames is strictly smaller than 62: at least one column never occurs in an optimal frame  [BLIND]",
+   "ok": false,
+   "detail": "never-occurring columns: 0 []"
+  },
+  {
+   "tag": "P10-4",
+   "name": "every 7-frame is inclusion-minimal (removing any one of its columns breaks it) [not blind: follows from F_6 = 0]",
+   "ok": true,
+   "detail": "0 non-minimal frames"
+  },
+  {
+   "tag": "P10-5",
+   "name": "the per-column appearance-count distribution is non-uniform: at least 3 distinct values [BLIND]",
+   "ok": true,
+   "detail": "distinct count values = [812, 816, 824, 836, 844, 894, 898, 910, 918, 924, 938, 944, 946, 950, 964, 970, 1006, 1016, 1032, 1036, 1092, 1100, 1108, 1136, 1140, 1180, 1206, 1216, 1296, 1306]"
+  },
+  {
+   "tag": "P10-6",
+   "name": "RECORD: type spectrum of the optimal frames (frame multisets of R1 column-vector types)",
+   "ok": true,
+   "detail": "6960 distinct frame types over 60 distinct column vectors"
+  }
+ ],
+ "elapsed_s": 73.83671689033508
+}

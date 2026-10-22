@@ -1,0 +1,10 @@
+{
+  "test": "O62 十期 60: 兩同零驗證",
+  "anomaly_all_zero": false,
+  "noedge_nonzero": 0,
+  "noedge_zero": 421,
+  "normal": 184,
+  "normal_nz": 127,
+  "passed": 0,
+  "failed": 1
+}

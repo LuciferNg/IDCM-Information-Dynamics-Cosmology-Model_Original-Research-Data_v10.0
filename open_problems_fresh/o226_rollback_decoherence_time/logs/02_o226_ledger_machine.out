@@ -1,0 +1,22 @@
+========================================================================================================
+O226 scripts/02 -- frozen ledger machine + pass accounting (rules: o226-r1-contract-v1)
+========================================================================================================
+[PASS] A1   |2I| = 120 and the order spectrum equals {1:1, 2:1, 3:20, 4:30, 5:24, 6:20, 10:24}  --  {2: 1, 3: 20, 5: 24, 4: 30, 1: 1, 6: 20, 10: 24}
+[PASS] A2   axis set F1: 62 axes, type counts vertex/face/edge = 12/20/30, each type of constant Q(sqrt5) norm (only the per-type scale matters, the read uses the sign of the dot)  --  types = {'vertex': 12, 'face': 20, 'edge': 30} ; per-type distinct norms = {'vertex': 1, 'face': 1, 'edge': 1}
+[PASS] A3   h table F2 is bijective (62 distinct) and inverse-closed  --  h bijective = True
+[PASS] A4   icosahedral axis count: 62 = 12 vertex + 20 face + 30 edge (the axis set of I_h)  --  62 = 12 + 20 + 30
+[PASS] B1   machine reproduces the F3 frozen correlation table C1 for all 3844 pairs  --  mismatches = 0 / 3844 (den 120)
+[PASS] B2   literal machine == closed form for every pair x state (empty ledger)  --  mismatches = 0 / 3844
+[PASS] C1   one full pass (all 120 initial states identical): read-ops = 3N^2 = 11532, hits = 2N = 124, misses = 3N^2 - 2N = 11408, pops = N^2 = 3844  --  read-ops = 11532 ; hits = 124 ; misses = 11408 ; pops = 3844 ; distinct states outcomes = 1
+[PASS] C2   the pass account is state-independent (1 distinct outcome over 120 initial states)  --  distinct outcome tuples = 1
+[PASS] C3   ledger depth stays <= 3 (1 carry + 2 pushes); pop depth = 1 (one entry per pop)  --  max ledger depth observed = 3
+[PASS] C4   without the carry marker hits = N = 62 (diagonal only) => the 2N of F4 comes from N diagonal + N carry hits  --  hits without carry = [62]
+[PASS] D1   budget-feasible pass = frozen-order prefix of 15 completed pairs, 43 charges inside them, then the first read of pair (0,15) is the 44th charge and the second is refused  --  completed pairs = 15 ; charged reads = 44 ; terminal pair = (0, 15) ; identical outcomes over 120 states = 120
+[PASS] D2   the pass charges exactly 44 = N_d reads and terminates with B_rem = 0 EXACT (no overshoot, no remainder)  --  Sigma = 123/2 = 44 x (123/88) ; B_rem = 0 ; 44 = B/c
+[PASS] D3   the 15 feasible pairs carry 15 pops, so 43 = 44 - 1 charges are read charges of completed pairs and the 44th is the refused pair opening read  --  pops inside the feasible prefix = 15 ; 44th charge = 123/88
+[PASS] E1   Pr-1.4: the 4-operation pair equals the 2-operation pair in (x_a, x_b, s_final, top) for all 3844 pairs x 120 states  => the pop plus the reconcile read are redundant  --  mismatches = 0 / 461280
+[PASS] F1   pop cost eps > 0 leaves B_rem = -15*eps at the terminal (no exact exhaustion) and shortens the feasible prefix once eps >= c/8  =>  eps = 0 is FORCED by the recorded zero remainder (contract I4 charges reads only, now derived rather than assumed)  --  eps=0 -> pairs 15 reads 44 B_rem 0 | eps=123/7744 -> pairs 15 reads 44 B_rem -1845/7744 | eps=41/880 -> pairs 15 reads 44 B_rem -123/176 | eps=123/704 -> pairs 14 reads 42 B_rem 123/704 | eps=123/176 -> pairs 13 reads 38 B_rem -123/176 | eps=123/88 -> pairs 11 reads 33 B_rem -123/88
+[PASS] F2   carry semantics disclosed: the carried entry stores the placeholder value 0, so the first read of exactly N = 62 pairs (those with prev-b == a) returns 0, not the recorded sign  --  pairs whose first read hits the carried entry = 62 = N
+========================================================================================================
+RESULT: 16/16 PASS   elapsed 6.1 s
+========================================================================================================

@@ -1,0 +1,222 @@
+[
+ {
+  "check": "A1 Delta file md5 starts 63536d1776 (docs/36 s2 provenance claim)",
+  "ok": true,
+  "detail": "md5=63536d177609bd6c12026e0aeccdf6ae"
+ },
+ {
+  "check": "A2 Delta = 48 pts / 6 vertices / h11 36 / h21 98 (file fields)",
+  "ok": true,
+  "detail": "n_pts=48 n_vert=6 h11=36 h21=98"
+ },
+ {
+  "check": "A3 Delta* = 85 pts (file field == list length)",
+  "ok": true,
+  "detail": "n_points_file=85 len=85"
+ },
+ {
+  "check": "A4 phi vector = 73 entries, sum 1800, phi[0] 360, phi[1] 176",
+  "ok": true,
+  "detail": "len=73 sum=1800 phi0=360 phi1=176"
+ },
+ {
+  "check": "B1 Delta vertices (rebuilt) = {1,2,3,4,5,7}",
+  "ok": true,
+  "detail": "[1, 2, 3, 4, 5, 7]"
+ },
+ {
+  "check": "B2 facets(Delta*) = 6 (= number of Delta vertices)",
+  "ok": true,
+  "detail": "facet sizes=[5, 8, 13, 34, 58, 77]"
+ },
+ {
+  "check": "B3 Delta* facet-interior labels = 73..84 (12 pts)",
+  "ok": true,
+  "detail": "[73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84]"
+ },
+ {
+  "check": "B4 origin (label 0) is the only Delta* interior point",
+  "ok": true,
+  "detail": "[0]"
+ },
+ {
+  "check": "B5 Delta* non-facet labels = 0..72 exactly (73 = origin + 72 rays)",
+  "ok": true,
+  "detail": "n=73 labels 0..72"
+ },
+ {
+  "check": "B6 Delta* extreme points = 7 -> facets(Delta) = 7",
+  "ok": true,
+  "detail": "vertices=[1, 2, 3, 4, 5, 6, 7]"
+ },
+ {
+  "check": "B7 Delta facet-interior labels = 37..47 (11 pts)",
+  "ok": true,
+  "detail": "[37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]"
+ },
+ {
+  "check": "B8 Delta non-facet labels = 0..36 exactly (37 = origin + 36 rays = h11)",
+  "ok": true,
+  "detail": "n=37 labels 0..36 h11=36"
+ },
+ {
+  "check": "B9 origin is the only Delta interior point",
+  "ok": true,
+  "detail": "[0]"
+ },
+ {
+  "check": "B10 triangulation label set = {0..72} == Delta* non-facet labels (phi index == Delta* label, labels NOT compacted)",
+  "ok": true,
+  "detail": "n_used=73 max=72"
+ },
+ {
+  "check": "C1 SUM of simplex 4-volumes = 360 = Sigma(phi)/5 (saved simplicial complex tiles Delta*)",
+  "ok": true,
+  "detail": "total vol=360  sum(phi)=1800"
+ },
+ {
+  "check": "C2 phi recomputed from saved simplices x exact volumes == saved vector (73/73)",
+  "ok": true,
+  "detail": "mismatched=none"
+ },
+ {
+  "check": "C3 phi[1] = 176 = 2*88",
+  "ok": true,
+  "detail": "phi[1]=176"
+ },
+ {
+  "check": "D1 phi=9 labels = {33,37,41,44,45,47,48,50,51} (9 pts)",
+  "ok": true,
+  "detail": "[33, 37, 41, 44, 45, 47, 48, 50, 51]"
+ },
+ {
+  "check": "D2 docs/14 coordinate table (9 rows) matches Delta* coords at those labels",
+  "ok": true,
+  "detail": "{33: [-1, 0, 0, 1], 37: [-1, 0, 0, 5], 41: [-1, 0, 0, 9], 44: [-1, 0, 1, 0], 45: [-1, 0, 1, 1], 47: [-1, 0, 1, 3], 48: [-1, 0, 1, 4], 50: [-1, 0, 1, 6], 51: [-1, 0, 1, 7]}"
+ },
+ {
+  "check": "D3 coordinate law (x2=0 & x3=1 mod 4) or (x2=1 & x3 in {0,1,3,4,6,7}) selects exactly the 9 phi=9 points",
+  "ok": true,
+  "detail": "law_set=[33, 37, 41, 44, 45, 47, 48, 50, 51]"
+ },
+ {
+  "check": "D3b on the FULL 85-point set the same law also selects 3 facet-interior pts -> needs the qualifier 'among the 73 phi-indexed points'",
+  "ok": true,
+  "detail": "extra=[74, 78, 79]"
+ },
+ {
+  "check": "D4 G1 (x2=0) = 3 pts with x3 = {1,5,9} = 1+4k",
+  "ok": true,
+  "detail": "[1, 5, 9]"
+ },
+ {
+  "check": "D5 G2 (x2=1) = 6 pts with x3 in {0,1,3,4,6,7} = (3k,3k+1)",
+  "ok": true,
+  "detail": "[0, 1, 3, 4, 6, 7]"
+ },
+ {
+  "check": "E1 Delta* pt[33] = (-1,0,0,1) with phi=9",
+  "ok": true,
+  "detail": "pt=[-1, 0, 0, 1] phi=9"
+ },
+ {
+  "check": "E2 Delta* pt[11] = (-1,0,-1,3) with phi=18",
+  "ok": true,
+  "detail": "pt=[-1, 0, -1, 3] phi=18"
+ },
+ {
+  "check": "E3 gamma_33 = 2+sqrt2, gamma_11 = 2-sqrt2, sum = 4",
+  "ok": true,
+  "detail": "g33=3.414213562373 g11=0.585786437627 sum=4.000000000000"
+ },
+ {
+  "check": "E4 phi<=12 test: pt[33] in low (9), pt[11] not in low (18)",
+  "ok": true,
+  "detail": "phi33=9 phi11=18"
+ },
+ {
+  "check": "E5 low-phi set = 44 pts (= N_d), high-phi set = 29 pts (= L_7)",
+  "ok": true,
+  "detail": "low=44 high=29"
+ },
+ {
+  "check": "E6 low-phi label list == O137 data/sub_glsm_44_indices.json",
+  "ok": true,
+  "detail": "[2, 5, 17, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 66, 70, 71, 72]"
+ },
+ {
+  "check": "E7 GKZ phi partition = 44 = 2 + 5 + 9 + 28 (phi = 6 / 8 / 9 / 12), the 'GKZ phi layer' identity registered in O137 docs/24 L162",
+  "ok": true,
+  "detail": "phi=6:2 labels=[2, 31] | phi=8:5 labels=[5, 17, 25, 29, 72] | phi=12:28"
+ },
+ {
+  "check": "E8 the A5 9-mode set = first 13 integers minus the 4 even {6,8,10,12} (O137 docs/24 L260) -- pure mode-side arithmetic, no polytope index",
+  "ok": true,
+  "detail": "[1, 2, 3, 4, 5, 7, 9, 11, 13]"
+ },
+ {
+  "check": "F1 A3 raw observation: phi=9 label set INTERSECT 9-mode set = EMPTY",
+  "ok": true,
+  "detail": "labels9=[33, 37, 41, 44, 45, 47, 48, 50, 51] modes9=[1, 2, 3, 4, 5, 7, 9, 11, 13]"
+ },
+ {
+  "check": "F2 range check: 5 of the 9 phi=9 labels exceed the 44-chain mode range 1..44",
+  "ok": true,
+  "detail": "[45, 47, 48, 50, 51]"
+ },
+ {
+  "check": "F3 same integer, different polytope: label 33 of Delta vs of Delta* differ",
+  "ok": true,
+  "detail": "Delta[33]=[-11, -7, -3, -1]  Delta*[33]=[-1, 0, 0, 1]"
+ },
+ {
+  "check": "F4 the labels 33 / 11 are NOT enumeration-invariant (they are artefacts of the data-file ordering)",
+  "ok": true,
+  "detail": "{'file': {'pt33': 33, 'pt11': 11}, 'lex': {'pt33': 19, 'pt11': 4}, 'norm_lex': {'pt33': 6, 'pt11': 39}, 'reversed': {'pt33': 51, 'pt11': 73}}"
+ },
+ {
+  "check": "F5 label-map verdict: 33 allowed, 11 excluded (the docs/19 s2 mechanism)",
+  "ok": true,
+  "detail": "{11: False, 33: True}"
+ },
+ {
+  "check": "F6 rank-map verdict on the same pair: BOTH allowed -> test is vacuous (all 44 rank-mapped modes are low-phi by construction)",
+  "ok": true,
+  "detail": "mode33->label54 mode11->label32"
+ },
+ {
+  "check": "F7 label-map excludes 21 of the 44 modes, incl. the 2-adic candidates 1 and 7 (phi[1]=176, phi[7]=20)",
+  "ok": true,
+  "detail": "allowed n<=44 = [2, 5, 17, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]"
+ },
+ {
+  "check": "F8 density baseline: P(random 9 of 73 disjoint from the 9-mode set) = 0.2837",
+  "ok": true,
+  "detail": "exact=27540584512/97082021465  (N_search=1, d_obs=0, median d=1)"
+ },
+ {
+  "check": "F9 density baseline: P(a random phi layer splits a given pair one-low-one-high) = 0.4855",
+  "ok": true,
+  "detail": "exact=319/657"
+ },
+ {
+  "check": "G1 kappa saved shape = 36^3",
+  "ok": true,
+  "detail": "[36, 36, 36]"
+ },
+ {
+  "check": "G2 K[0,0,0] = -360 (docs/06 'index 0 = pt 0 = origin' claim)",
+  "ok": true,
+  "detail": "-360.0"
+ },
+ {
+  "check": "G3 kappa nonzero count (reported, no external claim)",
+  "ok": true,
+  "detail": "nonzero=1341"
+ },
+ {
+  "check": "G4 the premise sentence exists verbatim in docs/06 s1 (quoted for the record)",
+  "ok": true,
+  "detail": "CYTools divisor label = 1-36 (1-based) = pt index = mode index (1-based)"
+ }
+]

@@ -76,7 +76,7 @@
 | B | h0_tension | open | H0 張力 (Hubble) |
 | B | kchain_number_field | open | K_Chain 數域 — 946 拍頻無理數結構 |
 | B | ktree_structure | open | K_Tree 結構 — 33 層 |
-| B | neutrino_p6_mode | open | 中微子質量 — W-field p6 模式 |
+| B | neutrino_p6_mode | open | 中微子質量 — W-field P6 模式 |
 | C | O1 | open | O1: 冷斑 15.11° 幾何夾角 — 精確機制 |
 | C | O102 | open | (no title) |
 | C | O105 | open | o105_pi144_structure — SESSION START |

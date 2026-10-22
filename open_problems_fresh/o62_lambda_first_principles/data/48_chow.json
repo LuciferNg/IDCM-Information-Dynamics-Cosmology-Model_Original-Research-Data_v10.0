@@ -1,0 +1,10 @@
+{
+  "test": "O62 九期 48: Chow ring",
+  "n_sage": 144,
+  "n_cyt": 144,
+  "inter": 144,
+  "sage_only": 0,
+  "cyt_only": 0,
+  "passed": 0,
+  "failed": 0
+}

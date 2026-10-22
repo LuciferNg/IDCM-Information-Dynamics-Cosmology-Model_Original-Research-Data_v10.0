@@ -1,0 +1,11 @@
+{
+  "f_peak": 0.034482758620689655,
+  "M_peak": 630800000000.0,
+  "f_peak_derivation": "1/L7 = 1/29",
+  "M_peak_derivation": "M_c/F4 = MC/3",
+  "beta_idcm": 1.6666666666666667,
+  "gamma_idcm": 0.6180339887498948,
+  "best_beta": 1.0,
+  "best_gamma": 1.5,
+  "chi2dof": NaN
+}

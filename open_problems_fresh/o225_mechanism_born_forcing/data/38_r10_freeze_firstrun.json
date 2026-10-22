@@ -1,0 +1,81 @@
+{
+ "rules": "r10-universality-and-selection-v1",
+ "contract": "docs/20_r10_contract.md",
+ "contract_sha256": "4aee979b786a5d8ad7dd4c9994592d96117a09313260d2c339041235b787b8ae",
+ "frozen_inputs": {
+  "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/12_b5_budget.py": {
+   "sha256": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a"
+  },
+  "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/09_a2_rollback.py": {
+   "sha256": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace"
+  }
+ },
+ "frozen_at": "first run of scripts/38",
+ "n_pass": 5,
+ "n_total": 5,
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "預註冊 tag 完整性：A1–E3 全部 18 個 tag 皆在凍結合約中",
+   "ok": true,
+   "detail": "missing = []"
+  },
+  {
+   "tag": "C2",
+   "name": "關鍵片語完整性（範圍證明）：核心命題與判準片語皆在合約中",
+   "ok": true,
+   "detail": "missing = []"
+  },
+  {
+   "tag": "C3",
+   "name": "陽性對照：篡改「7440 → 7441」之副本被判為不合（sha 不同）",
+   "ok": true,
+   "detail": "sha 不同 = True"
+  },
+  {
+   "tag": "C4",
+   "name": "陰性對照：真合約（未篡改）通過 sha 與片語檢查",
+   "ok": true,
+   "detail": "tag 缺 = 0 ; 片語缺 = 0"
+  },
+  {
+   "tag": "C5",
+   "name": "上游唯讀：O222 兩個輸入腳本之 sha256 於本輪全程不變",
+   "ok": true,
+   "detail": "變化 = []"
+  }
+ ],
+ "gate": "OPEN",
+ "tags": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "B1",
+  "B2",
+  "B3",
+  "B4",
+  "C1",
+  "C2",
+  "C3",
+  "D1",
+  "D2",
+  "D3",
+  "D4",
+  "E1",
+  "E2",
+  "E3"
+ ],
+ "phrases": [
+  "7440",
+  "S_TF(a,g) = 0",
+  "S_FT(a,g) = 0",
+  "共軛類",
+  "u-奇",
+  "中心封閉",
+  "商",
+  "非仿射",
+  "充要",
+  "2·n_tie"
+ ]
+}

@@ -1,0 +1,123 @@
+==============================================================================
+O221 / scripts/43 - Round 32b: LINEAR-ORDER closure audit (V1-V4)
+==============================================================================
+      (naive M=3) conf raw 1.529e-01 fd 1.527e-01 | TT raw 6.271e-03 fd 6.364e-03
+      (naive M=4) conf raw 4.533e-01 fd 4.525e-01 | TT raw 2.219e-02 fd 2.263e-02
+      (naive M=6) conf raw 1.429e+00 fd 1.426e+00 | TT raw 4.891e-02 fd 5.091e-02
+      (naive M=8) conf raw 3.269e+00 fd 3.258e+00 | TT raw 8.453e-02 fd 9.051e-02
+      (naive M=12) conf raw 1.064e+01 fd 1.059e+01 | TT raw 1.749e-01 fd 2.036e-01
+      (naive M=16) conf raw 2.477e+01 fd 2.462e+01 | TT raw 2.736e-01 fd 3.620e-01
+      (vert M=3) conf raw 1.528e-02 fd 1.527e-02 | TT raw -1.309e-05 fd -1.343e-09
+      (vert M=4) conf raw 4.526e-02 fd 4.525e-02 | TT raw -3.192e-05 fd -1.469e-09
+      (vert M=6) conf raw 1.426e-01 fd 1.426e-01 | TT raw -1.006e-04 fd -4.764e-09
+      (vert M=8) conf raw 3.261e-01 fd 3.258e-01 | TT raw -2.301e-04 fd -1.106e-08
+      (vert M=12) conf raw 1.060e+00 fd 1.059e+00 | TT raw -7.481e-04 fd -3.657e-08
+      (vert M=16) conf raw 2.466e+00 fd 2.462e+00 | TT raw -1.740e-03 fd -8.577e-08
+      (cube M=3) conf raw -8.441e-07 fd -3.979e-10 | TT raw -8.086e-07 fd -2.323e-11
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/42_linearized_deficit.py:199: RuntimeWarning: invalid value encountered in divide
+  A[name] = float(np.sum(np.abs(q) / out[name]["R_map"])
+      (cube M=4) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=6) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=8) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=12) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=16) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+
+  V1 vert FD-deficit window scan:
+      M=4->8 : -0.06518
+      M=8->16 : -0.03701
+      M=6->12 : -0.04725
+      M=12->16 : -0.03061
+      M=4->16 : -0.05110
+      M=6->16 : -0.04237
+      LS-fit (all 6) : +0.36086
+      spread sigma_def = 0.14259
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/43_linear_close_audit.py", line 251, in <module>
+    main()
+    ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/43_linear_close_audit.py", line 118, in main
+    d_eps.append(deficit_window({"vert": {4: ra, 8: rb}}, "vert", "fd", 4, 8))
+                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/43_linear_close_audit.py", line 78, in deficit_window
+    return def_slope(R, var, "conf", which, M1, M2) - def_slope(R, var, "TT", which, M1, M2)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/43_linear_close_audit.py", line 72, in def_slope
+    a = qv(R[(var, M1)], sec, which)
+           ~^^^^^^^^^^^
+KeyError: ('vert', 4)
+==============================================================================
+O221 / scripts/43 - Round 32b: LINEAR-ORDER closure audit (V1-V4)
+==============================================================================
+  PRE-REG AMENDMENT (2026-10-11, before rerun; the V1 crash exposed it):
+    - the log-magnitude LS slope is INVALID when a sector response crosses zero
+      (log|q| diverges); LS is used ONLY if every ladder |q| > 1e-3*max|q| per
+      sector; otherwise LS is marked invalid and EXCLUDED from sigma_def.
+    - V4 decision refinement: measurement-limited (sigma>=0.010) is classified by
+      the threshold BAND: |d|+sigma<0.05 -> cleanly CLOSED; |d|>=0.05 with
+      |d|-sigma>=0.05 -> cleanly over (gate stands); otherwise (band straddles
+      0.05, incl. |d|<0.05 but |d|+sigma>=0.05) -> BORDERLINE (no closure claim;
+      candidate 3 / terminal statement).
+      (naive M=3) conf raw 1.529e-01 fd 1.527e-01 | TT raw 6.271e-03 fd 6.364e-03
+      (naive M=4) conf raw 4.533e-01 fd 4.525e-01 | TT raw 2.219e-02 fd 2.263e-02
+      (naive M=6) conf raw 1.429e+00 fd 1.426e+00 | TT raw 4.891e-02 fd 5.091e-02
+      (naive M=8) conf raw 3.269e+00 fd 3.258e+00 | TT raw 8.453e-02 fd 9.051e-02
+      (naive M=12) conf raw 1.064e+01 fd 1.059e+01 | TT raw 1.749e-01 fd 2.036e-01
+      (naive M=16) conf raw 2.477e+01 fd 2.462e+01 | TT raw 2.736e-01 fd 3.620e-01
+      (vert M=3) conf raw 1.528e-02 fd 1.527e-02 | TT raw -1.309e-05 fd -1.343e-09
+      (vert M=4) conf raw 4.526e-02 fd 4.525e-02 | TT raw -3.192e-05 fd -1.469e-09
+      (vert M=6) conf raw 1.426e-01 fd 1.426e-01 | TT raw -1.006e-04 fd -4.764e-09
+      (vert M=8) conf raw 3.261e-01 fd 3.258e-01 | TT raw -2.301e-04 fd -1.106e-08
+      (vert M=12) conf raw 1.060e+00 fd 1.059e+00 | TT raw -7.481e-04 fd -3.657e-08
+      (vert M=16) conf raw 2.466e+00 fd 2.462e+00 | TT raw -1.740e-03 fd -8.577e-08
+      (cube M=3) conf raw -8.441e-07 fd -3.979e-10 | TT raw -8.086e-07 fd -2.323e-11
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/42_linearized_deficit.py:199: RuntimeWarning: invalid value encountered in divide
+  A[name] = float(np.sum(np.abs(q) / out[name]["R_map"])
+      (cube M=4) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=6) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=8) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=12) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+      (cube M=16) conf raw 0.000e+00 fd 0.000e+00 | TT raw 0.000e+00 fd 0.000e+00
+
+  V1 vert FD-deficit window scan:
+      M=4->8 : -0.06518
+      M=8->16 : -0.03701
+      M=6->12 : -0.04725
+      M=12->16 : -0.03061
+      M=4->16 : -0.05110
+      M=6->16 : -0.04237
+      LS-fit (all 6) : +0.36086
+      LS valid (no zero crossing): True
+      spread sigma_def = 0.14259
+      EPS scan (4->8): -0.06518  -0.05770  -0.05732
+      EPS spread sigma = 0.00362
+  [FAIL] V1: vert FD deficit is WINDOW-STABLE (spread < 0.010) - the linear-order deficit is a well-defined quantity mean +0.01248 ; window sigma 0.14259
+  [PASS] V1E: vert FD deficit is EPS-STABLE (4->8 window, 1e-3/1e-4/1e-5; spread < 0.010) - the linear part is EPS-independent as the EPS^1 law demands EPS spread 0.00362 ; mean -0.06007
+
+  V2 naive FD-deficit window scan (vs raw swing):
+      fd M=4->8 : +0.84800
+      fd M=8->16 : +0.91754
+      fd M=6->12 : +0.89309
+      fd M=12->16 : +0.93250
+      fd M=4->16 : +0.88277
+      fd M=6->16 : +0.90465
+      fd LS-fit  : +0.70026
+      LS valid (no zero crossing): True
+      raw window ref: 2-pt 4->16 = +1.07373 (R32)
+  [FAIL] V2: naive FD-d deficit is WINDOW-STABLE (range < 0.05) while the raw 2-pt window! swung 0.19 - the canonical +0.88 linear value is the stable one; the raw swing is even (quadratic) contamination (protocol-side), residual-5's deficit axis is FIRST-ORDER fd window range 0.0845 ; fd LS +0.7003
+      naive raw alpha(M=8, conf) = 1.0012 (EPS 1e-3->1e-4)
+  [PASS] V2E: naive raw alpha(M=8, conf) in [0.9,1.1] - the response stays FIRST-ORDER at the deficit window; the raw 2-pt deficit swing is a window convention, not an order change alpha=1.0012
+      naive raw alpha(M=8, TT) = 0.9732 (EPS 1e-3->1e-4)
+  [PASS] V2E: naive raw alpha(M=8, TT) in [0.9,1.1] - the response stays FIRST-ORDER at the deficit window; the raw 2-pt deficit swing is a window convention, not an order change alpha=0.9732
+
+  V3 cube exact-zero:
+      M=3: conf -8.441482e-07 TT -8.086170e-07 ; M=4: conf +0.000000e+00 TT +0.000000e+00 ; (R32 log already exact 0.000e+00 for M=4..16, all sectors)
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/43_linear_close_audit.py", line 284, in <module>
+    main()
+    ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o221_low_energy_continuum/scripts/43_linear_close_audit.py", line 202, in main
+    kb = float(np.array([a, b, c, d] for a in (0, 1) for b in (0, 1)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                for c in (0, 1) for d in (0, 1))[oi] @ k4v)
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+IndexError: too many indices for array: array is 0-dimensional, but 1 were indexed

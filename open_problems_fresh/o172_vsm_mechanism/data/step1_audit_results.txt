@@ -1,0 +1,6 @@
+O172 - Step 1: 60-digit audit
+[1] dev = 4.3111368e-8% (float64 'dev=0' was rounding): PASS
+[2] M0_required = 27.9009144991889399 MeV vs cascade 27.900914511217407: PASS
+[3] composite identities (1575/1573): PASS
+[4] correction = 1 - mu^2/((N_d+1)(K_tree+mu^2)): PASS
+v_SM/v_eff = 6240.06602905585394281766

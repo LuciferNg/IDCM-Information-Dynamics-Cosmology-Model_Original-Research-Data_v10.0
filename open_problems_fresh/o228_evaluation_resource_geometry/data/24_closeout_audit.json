@@ -1,0 +1,443 @@
+{
+ "o": "O228",
+ "script": "24_closeout_audit.py",
+ "started": "2026-10-02 14:03:57",
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "o222 four frozen inputs: sha256 identical to the R1 literals",
+   "ok": true,
+   "detail": "4/4 match"
+  },
+  {
+   "tag": "A2",
+   "name": "o222 untouched today (find -newermt count)",
+   "ok": true,
+   "detail": "count=0"
+  },
+  {
+   "tag": "B1",
+   "name": "K shape = 120 x 62 and values in {+1,-1}",
+   "ok": true,
+   "detail": "shape=120x62 values=[-1, 1]"
+  },
+  {
+   "tag": "B2",
+   "name": "distinct full column vectors of K = 32 (R1 value)",
+   "ok": true,
+   "detail": "got 32"
+  },
+  {
+   "tag": "B3",
+   "name": "rank_Q(K) = 6 (independent rational RREF)",
+   "ok": true,
+   "detail": "rank=6 pivots=6"
+  },
+  {
+   "tag": "C1",
+   "name": "M_edge rebuilt: rows=30 cols=62 pairs=435; every pair separated by >=1 column",
+   "ok": true,
+   "detail": "rows=30 cols=62 pairs=435"
+  },
+  {
+   "tag": "C1b",
+   "name": "M_edge machine: 60 distinct column vectors (R11 value), 62 columns",
+   "ok": true,
+   "detail": "raw_distinct=60 pm_classes=60"
+  },
+  {
+   "tag": "C2",
+   "name": "R10 explicit 7-cover [0,1,4,9,10,15,23] separates all 435 pairs (independent)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C3",
+   "name": "root-LP support from data/10 = 10 columns; x* = 1/2 on it is a fractional cover (LP* >= 5)",
+   "ok": true,
+   "detail": "support=[3, 4, 6, 8, 9, 13, 15, 18, 19, 32] sum=5"
+  },
+  {
+   "tag": "C4",
+   "name": "R12 support S is 9-redundant: S minus ANY one column still covers all 435 pairs",
+   "ok": true,
+   "detail": "10/10"
+  },
+  {
+   "tag": "C5",
+   "name": "F_6(M_edge) = 0 by independent DFS (=> k_min >= 7)",
+   "ok": true,
+   "detail": "frames=0 nodes=38704793 abort=False 8.4s"
+  },
+  {
+   "tag": "C6",
+   "name": "F_7(M_edge) = 8584 by independent DFS (=> k_min = 7)",
+   "ok": true,
+   "detail": "frames=8584 nodes=304315585 abort=False 66.7s"
+  },
+  {
+   "tag": "E1",
+   "name": "per-column degrees: min 812 / max 1306, all 62 columns used",
+   "ok": true,
+   "detail": "min=812 max=1306 ncols=62 distinct=30"
+  },
+  {
+   "tag": "E2",
+   "name": "all 8584 frames inclusion-minimal",
+   "ok": true,
+   "detail": "non-minimal=0"
+  },
+  {
+   "tag": "E3",
+   "name": "independently counted F_7 equals data/22 enumeration.frames",
+   "ok": true,
+   "detail": "8584 vs 8584"
+  },
+  {
+   "tag": "E4",
+   "name": "pairwise mutual-exclusion count = 17,659,238 (47.9%)",
+   "ok": true,
+   "detail": "got 17659238 vs 17659238 (3.2s)"
+  },
+  {
+   "tag": "E5",
+   "name": "distinct frame types = 6960 (frames modulo +/- column classes)",
+   "ok": true,
+   "detail": "types=6960 classes=60 vs 6960"
+  },
+  {
+   "tag": "D0",
+   "name": "T/O/D4 groups + axis lines rebuilt independently: |T|=12 |O|=24 |D4|=8; lines 7/13/5",
+   "ok": true,
+   "detail": "|T|/|O|/|D4|=(12, 24, 8) lines=(7, 13, 5)"
+  },
+  {
+   "tag": "D0b",
+   "name": "machine shapes m/N match the record: 4/14, 6/26, 2/10",
+   "ok": true,
+   "detail": "[(4, 14), (6, 26), (2, 10)]"
+  },
+  {
+   "tag": "D1",
+   "name": "M_T F_k recomputed independently (k<=k_min) agrees with data/04",
+   "ok": true,
+   "detail": "F={1: 0, 2: 12, 3: 244, 4: 911} recorded={1: 0, 2: 12, 3: 244, 4: 911}"
+  },
+  {
+   "tag": "D1",
+   "name": "M_O F_k recomputed independently (k<=k_min) agrees with data/04",
+   "ok": true,
+   "detail": "F={1: 0, 2: 0, 3: 1080, 4: 10692} recorded={1: 0, 2: 0, 3: 1080, 4: 10692}"
+  },
+  {
+   "tag": "D1",
+   "name": "M_D4 F_k recomputed independently (k<=k_min) agrees with data/04",
+   "ok": true,
+   "detail": "F={1: 10, 2: 45, 3: 120, 4: 210} recorded={1: 10, 2: 45, 3: 120, 4: 210}"
+  },
+  {
+   "tag": "D3",
+   "name": "M_2I F_4 = 12645 (independent DFS)",
+   "ok": true,
+   "detail": "frames=12645 nodes=700679 0.1s"
+  },
+  {
+   "tag": "D4",
+   "name": "M_face F_5 = 320 (independent DFS)",
+   "ok": true,
+   "detail": "frames=320 nodes=8509971 1.8s"
+  },
+  {
+   "tag": "F1",
+   "name": "MANIFEST covers the disk both ways (self-excluded on both sides)",
+   "ok": true,
+   "detail": "uncovered=[] stale=[]"
+  },
+  {
+   "tag": "F2",
+   "name": "MANIFEST hashes match the disk (audit own outputs excluded)",
+   "ok": true,
+   "detail": "mismatch=[]"
+  },
+  {
+   "tag": "F3",
+   "name": "script-chain symmetry: every docs/contract round has a results doc",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "G1",
+   "name": "register: every R1..R12 has at least one event (bidirectional coverage)",
+   "ok": true,
+   "detail": "missing=[] kinds={'registered': 13, 'note': 112, 'handed_off': 2, 'progress': 13, 'posthoc': 2, 'closed': 7}"
+  },
+  {
+   "tag": "G2",
+   "name": "register: every ref path exists (no REF-MISSING drift)",
+   "ok": true,
+   "detail": "bad=[]"
+  },
+  {
+   "tag": "G3",
+   "name": "register: no ghost entry outside R1..R12 (reverse coverage)",
+   "ok": true,
+   "detail": "extra=[]"
+  },
+  {
+   "tag": "H1",
+   "name": "no /tmp write patterns in scripts/",
+   "ok": true,
+   "detail": "hits=[]"
+  },
+  {
+   "tag": "I1",
+   "name": "headline numbers present in the doc set (coverage, not correctness)",
+   "ok": true,
+   "detail": "missing=[]"
+  }
+ ],
+ "sections": {
+  "frozen": {
+   "sha256": {
+    "scripts/12_b5_budget.py": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a",
+    "scripts/09_a2_rollback.py": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace",
+    "data/04_b2_settings.json": "2357006c68e0165dc9fd7d8d73524593a776e1bf6a8b62ddbc8dc2c1a8af20ee",
+    "data/08_a2_h_table.json": "adeaf8a7fb5495ea57be194c1a704c973a9208026cdd10ef615cd59c58005b66"
+   },
+   "o222_writes_today": "0",
+   "seconds": 0.0
+  },
+  "k_props": {
+   "shape": [
+    120,
+    62
+   ],
+   "values": [
+    -1,
+    1
+   ],
+   "distinct_full_cols": 32,
+   "rank": 6,
+   "seconds": 2.1
+  },
+  "edge": {
+   "pairs": 435,
+   "Ssize": [
+    [
+     12,
+     48
+    ],
+    [
+     14,
+     12
+    ],
+    [
+     20,
+     40
+    ],
+    [
+     22,
+     20
+    ],
+    [
+     24,
+     36
+    ],
+    [
+     26,
+     24
+    ],
+    [
+     30,
+     30
+    ],
+    [
+     32,
+     30
+    ],
+    [
+     36,
+     24
+    ],
+    [
+     38,
+     36
+    ],
+    [
+     40,
+     20
+    ],
+    [
+     42,
+     40
+    ],
+    [
+     48,
+     12
+    ],
+    [
+     50,
+     48
+    ],
+    [
+     62,
+     15
+    ]
+   ],
+   "support": [
+    3,
+    4,
+    6,
+    8,
+    9,
+    13,
+    15,
+    18,
+    19,
+    32
+   ],
+   "redundant": 10,
+   "F6": {
+    "frames": 0,
+    "nodes": 38704793,
+    "abort": false
+   },
+   "F7": {
+    "frames": 8584,
+    "nodes": 304315585,
+    "abort": false
+   },
+   "seconds": 77.3
+  },
+  "r11": {
+   "degrees": [
+    812,
+    1306
+   ],
+   "non_minimal": 0,
+   "disjoint": 17659238,
+   "types": 6960,
+   "seconds": 80.5
+  },
+  "machines": {
+   "detail": {
+    "M_T": {
+     "rows": 4,
+     "cols": 14,
+     "pairs": 6,
+     "F": {
+      "1": 0,
+      "2": 12,
+      "3": 244,
+      "4": 911
+     },
+     "recorded": {
+      "1": 0,
+      "2": 12,
+      "3": 244,
+      "4": 911
+     },
+     "agree": true,
+     "abort": false
+    },
+    "M_O": {
+     "rows": 6,
+     "cols": 26,
+     "pairs": 15,
+     "F": {
+      "1": 0,
+      "2": 0,
+      "3": 1080,
+      "4": 10692
+     },
+     "recorded": {
+      "1": 0,
+      "2": 0,
+      "3": 1080,
+      "4": 10692
+     },
+     "agree": true,
+     "abort": false
+    },
+    "M_D4": {
+     "rows": 2,
+     "cols": 10,
+     "pairs": 1,
+     "F": {
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 210
+     },
+     "recorded": {
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 210
+     },
+     "agree": true,
+     "abort": false
+    }
+   },
+   "M2I_F4": 12645,
+   "Mface_F5": 320,
+   "seconds": 83.4
+  },
+  "manifest": {
+   "n_files": 103,
+   "disk_files": 109,
+   "uncovered": [],
+   "stale": [],
+   "mismatch": [],
+   "scripts_with_RESULT": 23,
+   "seconds": 83.4
+  },
+  "register": {
+   "events": {
+    "registered": 13,
+    "note": 112,
+    "handed_off": 2,
+    "progress": 13,
+    "posthoc": 2,
+    "closed": 7
+   },
+   "by_pid": {
+    "O228": 12,
+    "O228/R1": 21,
+    "O228/R2": 18,
+    "O228/R3": 14,
+    "O228/R4": 6,
+    "O228/R5": 18,
+    "O228/R6": 13,
+    "O228/R7": 8,
+    "O228/R8": 8,
+    "O228/R9": 7,
+    "O228/R10": 8,
+    "O228/R11": 9,
+    "O228/R12": 7
+   },
+   "bad_refs": [],
+   "seconds": 83.4
+  },
+  "hygiene": {
+   "tmp_hits": [],
+   "scratch": [
+    "o228_mini6.py",
+    "o228_null_diag.py",
+    "o228_null_probe2.py",
+    "o228_probe.py",
+    "o228_probe2.py",
+    "o228_r5_covercheck.py",
+    "o228_r5_probe.py"
+   ],
+   "seconds": 83.4
+  },
+  "docs": {
+   "tokens_checked": 13,
+   "missing": [],
+   "seconds": 83.4
+  }
+ },
+ "verdict": "32/32 PASS",
+ "total_seconds": 83.4
+}

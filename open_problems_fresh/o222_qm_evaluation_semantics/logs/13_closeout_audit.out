@@ -1,0 +1,88 @@
+=== O222 closeout audit (scripts/13) ===
+repo root : /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat
+
+--- A  session chain (provenance) ---
+[PASS] A1 chain size = 8 sessions (thread 93184)      ids=8
+[PASS] A2 compression chain: parent[i] == id[i-1]     
+[PASS] A3 chain is append-only in time (start monotone) 
+[PASS] A4 chain message total >= 1488 (live chain: snapshot, not a frozen count) n=1593 at audit time
+[PASS] A5 chain span 2026-09-29 17:22 -> live (end_reason NULL on tail) first_start=1790673775 last_start=1790694586
+
+--- B  write ledger scope ---
+[PASS] B1 write targets: 0 outside {O222, register, master README, scratch, skills} {"O222": 23, "register": 2, "master_README": 0, "scratch": 18, "skill": 1, "OTHER": 0}
+[PASS] B2 O222 + register writes present (>=20 distinct paths) O222=23 register=2 (total distinct=44)
+[PASS] B3 shell/python write channels inventoried (master README, register tool, backups) {"register_tool_edit": 12, "prepatch_backup_copies": 14, "master_README_via_python": 2}
+
+--- C  numeric coverage (assistant narration -> records) ---
+[PASS] C1 assistant-narration number inventory extracted (55..90 distinct) n=68
+[PASS] C2 every missing number is bookkeeping (ids / char counts) missing=0 non-bookkeeping=[]
+
+--- D  B5 resource identities (first principles, exact) ---
+[PASS] D1 read cost = 2*E_min exactly                 123/88 vs 123/88
+[PASS] D2 reads per budget-exhausting pass = 44 = N_d reads=44 N_d=44
+[PASS] D3 O41 self-consistency: 44 * read_cost == budget 123/2
+[PASS] D4 tau_deco = 2 ticks = 2 passes (88/44)       ticks=2
+[PASS] D5 A2 overrun = 1922/11 (~174.7x)              1922/11
+[PASS] D6a recorded histogram is a multiset of per-pair costs summing to 43 costs=[2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+[PASS] D6b prefix recomputed independently = 15 pairs (44-read budget, 1 read left) pairs=15 reads=43 left=1
+[PASS] D6c terminal pair blocked structurally: reads left < cheapest pair cost left=1 < min_next=2
+[PASS] D7 recorded k_feasible_pairs = 15 and reads = 43 agree json: 15 / 43
+[PASS] D8 lexicographic pair index = 62a+b; first 15 pairs share a = 0 [(0, 0), (0, 1), (0, 2)]...
+[PASS] D9 budget-feasible CHSH == 0 for all four statistics ['0', '0', '0', '0']
+[PASS] D10 random-axis null: unrestricted median 2, feasible median = max = 0 {"unrestricted_median": "2", "unrestricted_max": "2", "budget_feasible_median": "0", "budget_feasible_max": "0"}
+
+--- E  A2 CHSH maxima (separable algorithm, independent) ---
+[PASS] E1 antipodal mutual pairs = 62 (31 unordered)  pairs=31
+[PASS] E0 self-check separable vs sample scan E1/raw  sample max=400 min=-352 vs global max=480 min=-480 (n_pairs=150)
+[PASS] E0 self-check separable vs sample scan E1/distinct sample max=400 min=-352 vs global max=480 min=-480 (n_pairs=150)
+[PASS] E0 self-check separable vs sample scan E1/distinct_anti sample max=400 min=-352 vs global max=480 min=-480 (n_pairs=150)
+[PASS] E0 self-check separable vs sample scan E1/all4 sample max=240 min=-240 vs global max=240 min=-240 (n_pairs=150)
+[PASS] E0 self-check separable vs sample scan E2/raw  sample max=50 min=-44 vs global max=60 min=-60 (n_pairs=150)
+[PASS] E0 self-check separable vs sample scan E2/distinct sample max=50 min=-44 vs global max=60 min=-60 (n_pairs=150)
+[PASS] E0 self-check separable vs sample scan E2/distinct_anti sample max=50 min=-44 vs global max=60 min=-60 (n_pairs=150)
+[PASS] E0 self-check separable vs sample scan E2/all4 sample max=30 min=-35 vs global max=45 min=-45 (n_pairs=150)
+   independent values:
+     E1_all4            2    argmax=['V00', 'V01', 'E00', 'F06']
+     E1_distinct        4    argmax=['E27', 'E28', 'V01', 'E28']
+     E1_distinct_anti   4    argmax=['E27', 'E28', 'V01', 'E28']
+     E1_raw             4    argmax=['E27', 'E28', 'V01', 'E28']
+     E2_all4            3    argmax=['E27', 'E28', 'V01', 'E29']
+     E2_distinct        4    argmax=['E28', 'E27', 'V01', 'E27']
+     E2_distinct_anti   4    argmax=['E28', 'E27', 'V01', 'E27']
+     E2_raw             4    argmax=['E28', 'E27', 'V01', 'E27']
+[PASS] E2 independent E1 all4 = 2 EXACT               2
+[PASS] E3 independent E2 all4 = 3 > 2                 3
+[PASS] E4 independent distinct/raw all = 4 (diagonal artifact) {"E1_raw": "4", "E1_distinct": "4", "E1_distinct_anti": "4", "E2_raw": "4", "E2_distinct": "4", "E2_distinct_anti": "4"}
+[PASS] E5 independent values == recorded chsh fields (8/8) {"E1_raw": ["4", "4"], "E1_distinct": ["4", "4"], "E1_distinct_anti": ["4", "4"], "E1_all4": ["2", "2"], "E2_raw": ["4", "4"], "E2_distinct": ["4", "4"], "E2_distinct_anti": ["4", "4"], "E2_all4": ["3", "3"]}
+[PASS] E6 recorded all4 argmax attains the recorded max value ['V00', 'V01', 'E00', 'F06']
+[PASS] E7 recorded E1_all4 argmax attains the headline value ['V00', 'V01', 'E00', 'F06'] -> 2 (expected 2)
+[PASS] E7 recorded E2_all4 argmax attains the headline value ['E27', 'E28', 'V01', 'E29'] -> 3 (expected 3)
+[PASS] E8a combinatorial counts: all4 = 12,517,800 and distinct_anti = 13,388,280 {"raw": 14776336, "distinct": 14303524, "distinct_anti": 13388280, "all4": 12517800}
+[PASS] E8b direct enumeration of all4 = same 12,517,800 enum=12517800 comb=12517800
+[PASS] E8c B5 round recorded the CORRECT visited counts (14,303,524 / 12,517,800) 14303524 / 12517800
+[PASS] E8d FINDING G3: A2-recorded counts 13,711,284 / 12,838,884 NOT reproducible (correct: 13,388,280 / 12,517,800) -- values unaffected {"claimed": {"distinct_anti": 13711284, "all4": 12838884}, "derived": {"raw": 14776336, "distinct": 14303524, "distinct_anti": 13388280, "all4": 12517800}, "reproducible": {"distinct_anti": false, "all4": false}}
+[PASS] E9 raw domain = 62^4 exactly                   14776336
+[PASS] E10 distinct domain = 62*61*62*61              14303524
+[PASS] E11 brute-force JSON values reproduce the same 8 fields (where present) {"E1_raw": "4", "E1_distinct": "4", "E1_distinct_anti": "4", "E1_all4": "2", "E2_raw": "4", "E2_distinct": "4", "E2_distinct_anti": "4", "E2_all4": "3"}
+
+--- F  B2 algebra: cos^2 from raw vectors vs C^2 ---
+[PASS] F1 B2 C^2 value set = {0,1/9,4/9,1} (as a set) {"1": 264, "1/9": 1660, "0": 960, "4/9": 960}
+[PASS] F2 B2 C^2 multiplicities = {0:960, 1/9:1660, 4/9:960, 1:264} {"1": 264, "1/9": 1660, "0": 960, "4/9": 960}
+[PASS] F3 independently recomputed cos^2 == recorded cos2 matrix (3844/3844) mismatch=0 []
+[PASS] F4 exact hits C^2 == cos^2 : 634/3844          hits=634
+[PASS] F5 irrational cos^2 count = 1920/3844          irrational=1920
+[PASS] F6 max|C^2 - cos^2| = 8/9                      max=8/9 at ('E00', 'E29', '1/9', '1')
+
+--- G  results docs: headline numbers must be in the frozen record ---
+[PASS] G1 headline numbers: no non-derivable (integer / exact) value is missing {"04_b2_results.md": [], "06_a2_results.md": [], "08_b5_results.md": []}
+[PASS] G2 headline derived-decimal list reported for review (documented in docs/09) {"04_b2_results.md": [], "06_a2_results.md": [], "08_b5_results.md": []}
+[PASS] G3 full-doc sweep stays below 65% missing (rest are prose-derived decimals) {"04_b2_results.md": "0/34", "06_a2_results.md": "0/15", "08_b5_results.md": "0/11"}
+
+--- H  frozen integrity / declared outputs ---
+[PASS] H1 frozen MANIFEST: 29 artefacts, drift = 0, missing = 0 n=29 drift=0
+[PASS] H2 no orphan data/*.json (gate-history family exempt: documented in docs/04 S12.1) []
+
+--- I  unclosed marker inventory ---
+[PASS] I1 unclosed markers inventoried (all carry a written verdict) {"01_problem_record.md": 16, "SESSION_START.md": 12, "final_result.md": 13}
+
+RESULT: 57/57 PASS

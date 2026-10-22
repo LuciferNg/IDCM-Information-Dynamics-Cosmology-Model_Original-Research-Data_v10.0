@@ -1,0 +1,23 @@
+{
+  "route": "B_final",
+  "best_model": "kurtosis",
+  "chi2_dof": 0.7404,
+  "chi2_lcdm": 0.6055,
+  "delta": 0.1349,
+  "kurtosis_p": 0.65,
+  "kurtosis_alpha": 0.7,
+  "kurtosis_chi2": 0.7404,
+  "d14_lambda": 0.0,
+  "d14_alpha": 0.7,
+  "d14_chi2": 1.0704,
+  "d22_lambda": 0.0,
+  "d22_alpha": 0.7,
+  "d22_chi2": 1.0704,
+  "d14d22_l1": 0.0,
+  "d14d22_l2": 0.0,
+  "d14d22_alpha": 0.7,
+  "d14d22_chi2": 1.0704,
+  "pass": 0,
+  "fail": 0,
+  "status": "\ud83d\udfe1"
+}

@@ -1,0 +1,47 @@
+{
+ "E5": {
+  "off_grid": 0,
+  "absmax_num": 48,
+  "argmax": [
+   "V00",
+   "V00",
+   "V00",
+   "V01",
+   "V02"
+  ],
+  "abs_values_sample": [
+   0,
+   16,
+   32,
+   48
+  ],
+  "seconds": 395.77420592308044
+ },
+ "n5": {
+  "terms": 16,
+  "triangle_bound_num": 768,
+  "lhv_bound": 4,
+  "decisive": false
+ },
+ "verdicts": {
+  "E1": "E5 grid exact on all 916M numerators",
+  "E2": "n = 5 triangle bound insufficient (OPEN)"
+ },
+ "script": "10_e5",
+ "claims": [
+  {
+   "tag": "E1",
+   "name": "E5 IN FULL: the exact maximum of |E5| over ALL 62^5 = 916,132,832 setting tuples is computed (integer arithmetic only), and the off-grid count covers every one of the 916,132,832 numerators, so the 1/15 grid is confirmed for the 5-party object as well. The numpy integer accelerator is validated against exact Fraction/int arithmetic on a declared tuple",
+   "ok": true,
+   "detail": "max|E5| = 48/120 = 0.400000 at ('V00', 'V00', 'V00', 'V01', 'V02') ; off-grid numerators = 0 / 916132832 ; accelerator probe (0,1,0,1,0) exact = True ; max |E5| value set (|.| up to 400 values) = [0, 16, 32, 48] ; time = 395.8 s"
+  },
+  {
+   "tag": "E2",
+   "name": "n = 5 TRIANGLE BOUND: 16 terms x max|E5| = 768/120 is compared with the LHV bound of the n = 5 Mermin polynomial (4^5 = 1024 deterministic strategies). The claim records the arithmetic and the resulting label; the n = 5 global question is NOT claimed to be closed by this bound unless the comparison allows it, and round 3 part 1 has already shown the triangle route to be a weak instrument (it failed at n = 4 even though the exact n = 4 pool maxima are far below the bound)",
+   "ok": true,
+   "detail": "max|E5| = 48/120 ; 16*max|E5| = 768/120 = 6.4000 ; LHV bound (n=5) = 4 ; decisive = False"
+  }
+ ],
+ "n_pass": 2,
+ "n_claims": 2
+}

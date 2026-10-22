@@ -1,0 +1,20 @@
+================================================================================================================
+O228 scripts/12 -- R7 (2): the geometry of lambda(p) (separation profile by shell)
+================================================================================================================
+  M_2I    shells (by |dot| desc): [('-5/2+1/2*sqrt5', [62]), ('1/2+-1/2*sqrt5', [38, 40]), ('-1/2+1/2*sqrt5', [22, 24])]
+           hardest pair: pair=[0, 3] shell=-1/2+1/2*sqrt5 lambda=22 lines=15 types=['E', 'F', 'V'] complement_law=True
+  M_face  shells (by |dot| desc): [('-3+0*sqrt5', [62]), ('0+1*sqrt5', [14, 16]), ('0+-1*sqrt5', [46, 48]), ('-1+0*sqrt5', [38]), ('1+0*sqrt5', [24])]
+           hardest pair: pair=[0, 13] shell=0+1*sqrt5 lambda=14 lines=9 types=['E', 'F', 'V'] complement_law=True
+  M_edge  shells (by |dot| desc): [('-1+0*sqrt5', [62]), ('1/4+1/4*sqrt5', [12, 14]), ('-1/4+-1/4*sqrt5', [48, 50]), ('-1/2+0*sqrt5', [40, 42]), ('1/2+0*sqrt5', [20, 22]), ('1/4+-1/4*sqrt5', [36, 38]), ('-1/4+1/4*sqrt5', [24, 26]), ('0+0*sqrt5', [30, 32])]
+           hardest pair: pair=[0, 5] shell=1/4+1/4*sqrt5 lambda=12 lines=11 types=['E', 'F', 'V'] complement_law=True
+[FAIL] P2a-1  -- M_edge hardest shell 1/4+1/4*sqrt5: lambda=12, lines=11 ['E02', 'E10', 'E12', 'E13', 'E14', 'F00', 'F07', 'F08', 'F09', 'V03', 'V05']
+[PASS] P2a-3  -- checks=21421 violations=0 []
+[PASS] P2a-1-c  -- hardest pair [0, 5]: lambda=12 over 11 lines ['E02', 'E10', 'E12', 'E13', 'E14', 'F00', 'F07', 'F08', 'F09', 'V03', 'V05'] (types ['E', 'F', 'V'])
+[PASS] P2a-2  -- violations = [[], [], []] ; pairs containing a double-perpendicular column = {'M_2I': 60, 'M_face': 60, 'M_edge': 420} ; antipodal pairs excluded = {'M_2I': 6, 'M_face': 10, 'M_edge': 15}
+[FAIL] P2b-1  -- monotone=False ; hardest line types=['E', 'F', 'V']
+[PASS] P2b-1-c  -- lambda per shell = {'-1+0*sqrt5': {'n_pairs': 15, 'lambda': [62]}, '1/4+1/4*sqrt5': {'n_pairs': 60, 'lambda': [12, 14]}, '-1/4+-1/4*sqrt5': {'n_pairs': 60, 'lambda': [48, 50]}, '-1/2+0*sqrt5': {'n_pairs': 60, 'lambda': [40, 42]}, '1/2+0*sqrt5': {'n_pairs': 60, 'lambda': [20, 22]}, '1/4+-1/4*sqrt5': {'n_pairs': 60, 'lambda': [36, 38]}, '-1/4+1/4*sqrt5': {'n_pairs': 60, 'lambda': [24, 26]}, '0+0*sqrt5': {'n_pairs': 60, 'lambda': [30, 32]}} ; hardest pair = {'shell': '1/4+1/4*sqrt5', 'pair': [0, 5], 'n_columns': 12, 'n_lines': 11, 'lines': ['E02', 'E10', 'E12', 'E13', 'E14', 'F00', 'F07', 'F08', 'F09', 'V03', 'V05'], 'line_types': ['E', 'F', 'V'], 'lambda': 12, 'dot': '1/4+1/4*sqrt5', 'complement_law_ok': True, 'complement_law_violations': [], 'pairs_with_double_perpendicular_column': 420, 'antipodal_pairs_excluded': 15}
+[PASS] P2c-1  -- checks=30182 mismatches=0 ties_skipped=12660
+================================================================================================================
+RESULT: 5/7 PASS  (2 FAIL)   elapsed 10.9 s
+================================================================================================================
+exit=1

@@ -1,0 +1,164 @@
+== G1: T̂ (Fibonacci/Lucas shift) ==
+  PASS  T̂ 特徵值 = φ (解析)  (|dev| < 1.0e-30)
+  PASS  T̂ 特徵值 = −1/φ (解析)  (|dev| < 1.0e-30)
+  PASS  Tr(T̂^1) = L_1 = 1  1 == 1
+  PASS  (T̂^1)₁₂ = F_1 = 1  1 == 1
+  PASS  Tr(T̂^2) = L_2 = 3  3 == 3
+  PASS  (T̂^2)₁₂ = F_2 = 1  1 == 1
+  PASS  Tr(T̂^3) = L_3 = 4  4 == 4
+  PASS  (T̂^3)₁₂ = F_3 = 2  2 == 2
+  PASS  Tr(T̂^4) = L_4 = 7  7 == 7
+  PASS  (T̂^4)₁₂ = F_4 = 3  3 == 3
+  PASS  Tr(T̂^5) = L_5 = 11  11 == 11
+  PASS  (T̂^5)₁₂ = F_5 = 5  5 == 5
+  PASS  Tr(T̂^6) = L_6 = 18  18 == 18
+  PASS  (T̂^6)₁₂ = F_6 = 8  8 == 8
+  PASS  Tr(T̂^7) = L_7 = 29  29 == 29
+  PASS  (T̂^7)₁₂ = F_7 = 13  13 == 13
+  PASS  Tr(T̂^8) = L_8 = 47  47 == 47
+  PASS  (T̂^8)₁₂ = F_8 = 21  21 == 21
+  PASS  Tr(T̂^9) = L_9 = 76  76 == 76
+  PASS  (T̂^9)₁₂ = F_9 = 34  34 == 34
+  PASS  Tr(T̂^10) = L_10 = 123  123 == 123
+  PASS  (T̂^10)₁₂ = F_10 = 55  55 == 55
+  PASS  Tr(T̂^11) = L_11 = 199  199 == 199
+  PASS  (T̂^11)₁₂ = F_11 = 89  89 == 89
+  PASS  Tr(T̂^12) = L_12 = 322  322 == 322
+  PASS  (T̂^12)₁₂ = F_12 = 144  144 == 144
+  PASS  Tr(T̂^13) = L_13 = 521  521 == 521
+  PASS  (T̂^13)₁₂ = F_13 = 233  233 == 233
+  PASS  Tr(T̂^14) = L_14 = 843  843 == 843
+  PASS  (T̂^14)₁₂ = F_14 = 377  377 == 377
+  PASS  Tr(T̂^15) = L_15 = 1364  1364 == 1364
+  PASS  (T̂^15)₁₂ = F_15 = 610  610 == 610
+
+== G2: K_chain 176-L 譜 ==
+  PASS  γ₄₄ = 4sin²(π/4) = 2 = μ²  (|dev| < 1.0e-30)
+  PASS  γ₈₈ = 4sin²(π/2) = 4 = B (Nyquist)  (|dev| < 1.0e-30)
+  PASS  Z₂ 對偶: γ_k + γ_{88−k} = 4 ∀k (max dev)  (|dev| < 1.0e-30)
+
+== G3: 譜和 (176-L world/observer) ==
+  PASS  Σγ_even = 90 (world)  (|dev| < 1.0e-30)
+  PASS  Σγ_odd  = 88 (observer)  (|dev| < 1.0e-30)
+  PASS  Σγ = 178 = 2F₁₁  (|dev| < 1.0e-30)
+  PASS  Σγ_even − Σγ_odd = 2 = μ²  (|dev| < 1.0e-30)
+
+== G4: 慣例 A/B 裁決 (44-site parity vs 176-L parity) ==
+  PASS  44-site even-n 和 = 46 (s0 = k≡0 mod4)  (|dev| < 1.0e-30)
+  PASS  44-site odd-n  和 = 44 (s2 = k≡2 mod4)  (|dev| < 1.0e-30)
+  PASS  44-site 總和 = 90 = 176-L even 總和  (|dev| < 1.0e-30)
+  PASS  s0 (k≡0) = 46  (|dev| < 1.0e-30)
+  PASS  s1 (k≡1) = 44 − sec(π/88)  (|dev| < 1.0e-30)
+  PASS  s2 (k≡2) = 44  (|dev| < 1.0e-30)
+  PASS  s3 (k≡3) = 44 + sec(π/88)  (|dev| < 1.0e-30)
+  PASS  s1+s3 = 88 (超越項對消)  (|dev| < 1.0e-30)
+  PASS  s0+s1+s2+s3 = 178 (扇區閉合)  (|dev| < 1.0e-30)
+
+== G5: Σ√γ_n = 1+cot(π/176) EXACT ==
+  PASS  Σ_{n=1..44} √γ_n = 1+cot(π/176)  (|dev| < 1.0e-30)
+  INFO  57+1/60 近似偏差 = -7.681079573e-5 (冇閉式, 有理近似)
+
+== G6: ⊗ 閉合 (K_chain ⊗ K_tree) ==
+  PASS  ΣΓ = Σγ·Σλ = 90×66 = 5940  (|dev| < 1.0e-30)
+  PASS  5940 = B·N_gen³·F₅·L₅ = 4·27·5·11  (|dev| < 1.0e-30)
+  PASS  Tr(A⊗B) = TrA·TrB (4×4 直積, 精確)  0 == 0
+  PASS  dim(V₈₈⊗W₃₃) = 88×33 = 2904  2904 == 2904
+
+== G7: ⊕ 閉合 ==
+  PASS  176 = 66⊕68⊕42 (O155)  176 == 176
+  PASS  178 = 172+2+4 (O153 譜分解)  178 == 178
+  PASS  V₈₈ = world⊕obs: dim 44+44 = 88  88 == 88
+  PASS  12 = 1⊕11 (SU(12) Cartan ⊕ roots)  12 == 12
+  PASS  144 = 66⊕78 = Λ²(12)⊕Sym²(12)  144 == 144
+
+== G8: Spec 譜分解 ==
+  PASS  γ̂ = Σ γ_k P_k 重建 (對角元素一致)  True == True
+  PASS  P_k² = P_k (3×3 顯式, 逐點)  True == True
+  PASS  P_k P_l = 0 (k≠l, 3×3 顯式)  True == True
+  PASS  ΣP_k = I₃ (3×3 顯式)  True == True
+  PASS  T̂ = φ·P_φ + (−1/φ)·P_{−1/φ} (重建)  (|dev| < 1.0e-30)
+
+== G9: Proj 投影 ==
+  PASS  P_world entries ∈ {0,1} ⇒ P_world² = P_world  True == True
+  PASS  P_obs  entries ∈ {0,1} ⇒ P_obs²  = P_obs  True == True
+  PASS  P_world + P_obs = I₈₈ (逐點 0/1 補集)  True == True
+  PASS  Tr(P_world) = 44 (world 維度)  44 == 44
+  PASS  Tr(P_obs) = 44 (observer 維度)  44 == 44
+  PASS  Tr(P_world γ̂_176) = 90 (world 譜和)  True == True
+  PASS  Tr(P_obs γ̂_176) = 88 (observer 譜和)  True == True
+  PASS  dim Λ²(I₄₄) = 946 = C(44,2)  946 == 946
+  PASS  P_CY 像維 = 134 = h¹¹+h²¹  134 == 134
+  PASS  946 − 134 = 812 (投影核維)  812 == 812
+  PASS  E_proj = 2+B·L = 28.5 (L=53/8)  57/2 == 57/2
+  PASS  E_sync = 88−4L = 61.5 = L₁₀/2  123/2 == 123/2
+  PASS  E_proj + E_sync = Σγ = 90  (|dev| < 1.0e-30)
+  INFO  譜截斷 n=1..27 Σ = 29.1154630941 (≠ E_proj 28.5)
+  INFO  譜截斷 n=28..44 Σ = 60.8845369058578 (= O222 E_capture 60.88453690585779)
+  INFO  E_bottleneck = 123/2 − Σ_{n≥28} = 0.615463094142201752
+  PASS  ★ E_bottleneck 唔係 8/13 (偏差 7.848e-5 > 1e-6; 落憲章 C7 陷阱窗)  True == True
+  PASS  E_sync = 44×123/88 = 123/2 (跨 O 恆等, O222 B5 I1)  123/2 == 123/2
+  PASS  譜截斷兩段之和 = Σγ = 90 (守恆)  (|dev| < 1.0e-30)
+  PASS  E_proj/Σγ = 19/60  19/60 == 19/60
+  PASS  E_sync/Σγ = 41/60  41/60 == 41/60
+
+== G10: † 伴隨 ==
+  PASS  T̂† = T̂ (實對稱 2×2)  True == True
+  PASS  K_chain Laplacian 生成元自伴隨 (4×4 對稱)  True == True
+  PASS  γ̂† = γ̂ (實對角 ⇒ 自伴隨)  True == True
+  PASS  γ_k^(176-L) = |1−U_k|² (U_k = e^{ikπ/88})  (|dev| < 1.0e-30)
+  PASS  U_k† = U_k⁻¹ (么正)  (|dev| < 1.0e-30)
+  PASS  Wilson 總相位 Σθ_k = 44.5π  (|dev| < 1.0e-30)
+  PASS  T_pipe + T_pipe† = I₄₄ (逐點)  True == True
+  PASS  dim ker(T_pipe) = 17 = F_proj  17 == 17
+  PASS  F_proj = L₆−1 = 18−1 = 17  17 == 17
+  PASS  J² = −I₂ (O159 複結構實現)  [[-1, 0], [0, -1]] == [[-1, 0], [0, -1]]
+
+== G11: Contr 收縮 ==
+  PASS  Tr_chain(Γ) = Σγ·Σλ = 5940 (全收縮)  (|dev| < 1.0e-30)
+  PASS  部分收縮到 chain: Σλ·γ̂ 譜和 = 5940 (收縮閉合)  (|dev| < 1.0e-30)
+  PASS  指數收縮 = Tr(γ̂) = 178  (|dev| < 1.0e-30)
+
+== G12: 憲章數字 ==
+  PASS  m_ρ² = 4μ² = 8 (O204, 非 2μ²)  8 == 8
+  INFO  W₀ = 7.84219357067906 (v10; 舊 1.23607 係 v6 |W₀|² = ε/2κ)
+  PASS  λ = 2/L₁₀ = 2/123  2/123 == 2/123
+  INFO  γ₄₀^(176-L) = 1.71537032345, 1/γ₄₀ = 0.582964498294
+  PASS  λ_max = 36 − 1/γ₄₀^(176-L) = 35.4170...  (|dev| < 0.0001)
+  PASS  同值: γ₂₀^(88-L) = γ₄₀^(176-L) (指數標籤漂移)  (|dev| < 1.0e-30)
+  PASS  κ_crit = sin(π/88)/⟨W⟩ = 0.00455132  (|dev| < 1.0e-9)
+  PASS  κ = 1/B⁴ 亞臨界比 = 0.8583 κ_crit  (|dev| < 0.001)
+  PASS  E_min = L₁₀/(4N_d) = 123/176  123/176 == 123/176
+  PASS  f_unproj = L₁₀/(4(N_d+1)) = 41/60  41/60 == 41/60
+  PASS  ε = (L₆+1)/L₁₀ = 19/123  19/123 == 19/123
+  PASS  Ω_m = E_proj/Σγ = 19/60  19/60 == 19/60
+  PASS  真空能 = E_sync/Σγ = 41/60  41/60 == 41/60
+  PASS  C_energy = μ²/Σγ = 1/45  1/45 == 1/45
+  PASS  C = B/L₅ = 4/11  4/11 == 4/11
+  PASS  M₄/M₀ = L₄/(L₅+B) = 7/15  7/15 == 7/15
+  PASS  dβ/dℓ = 4N_d/(N_d−μ²) = 88/21  88/21 == 88/21
+  PASS  21 = (N_d−μ²)/2  21 == 21
+  PASS  Ω_b 候選 = 19/450  19/450 == 19/450
+  PASS  L₁₀ = N_gen(N_d−N_gen) = 123  123 == 123
+  PASS  123 = 3(N_d−3)  123 == 123
+  PASS  75 = L₄L₅−μ² = 2N_d−F₇  75 == 75
+  PASS  88 = 2N_d = F₁₁−1 = 90−2  88 == 88
+  PASS  55 = F₁₀ = C(L₅,2) = N_d+L₅  55 == 55
+  PASS  66 = Λ²(12) = 12·11/2  66 == 66
+  PASS  137 = 3N_d+F₅ = α⁻¹  137 == 137
+  PASS  946 = C(44,2)  946 == 946
+  PASS  77 = 66+11 = Borel  77 == 77
+  PASS  29 = L₇ = a+b (a=14,b=15, 421 = a²+b²)  29 == 29
+  PASS  42 = N_d−μ² = N_d⁻  42 == 42
+  PASS  46 = N_d⁺ = N_d+μ²  46 == 46
+  PASS  92 = 2N_d⁺  92 == 92
+  PASS  36 = (2N_gen)² = h¹¹  36 == 36
+  PASS  98 = 2L₄² = h¹¹  98 == 98
+  PASS  134 = h¹¹+h²¹  134 == 134
+  PASS  χ = −4(N_d−F₇) = −124  -124 == -124
+  PASS  88×34 = 2992 lattice sites  2992 == 2992
+
+============================================
+O210 closure verify — PASS 129 / FAIL 0 / WARN 0
+============================================
+NOTE: 裁決: 44-site even (n 偶, 1-indexed) = 46; odd = 44。88-site (176-L) even k = 90; odd k = 88。0-indexed slicing γ[::2] 揀中 1-indexed odd → 44, 誤標 'even' — 已入憲章 C2 遷移表。
+RESULT: PASS (全部檢查通過)

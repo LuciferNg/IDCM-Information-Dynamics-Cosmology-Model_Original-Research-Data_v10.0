@@ -1,0 +1,93 @@
+{
+ "domain": 46080,
+ "existence_count": 11318,
+ "census_convention_count": 880,
+ "probe_convention_count": 392,
+ "mixed_count": 11318,
+ "recorded": {
+  "census_v3.antipodal_realised": 880,
+  "probe_r4.py": 392,
+  "scripts_14_Q3_reconstruction": {
+   "census_rule": 1734,
+   "probe_rule": 1794
+  }
+ },
+ "witnesses": {
+  "probe_convention": {
+   "six": [
+    0,
+    1,
+    7,
+    3,
+    2,
+    6
+   ],
+   "d_dp": [
+    19,
+    24
+   ],
+   "value": 112
+  },
+  "census_convention": {
+   "six": [
+    0,
+    1,
+    2,
+    5,
+    7,
+    3
+   ],
+   "d_dp": [
+    24,
+    19
+   ],
+   "value": 128
+  },
+  "mixed_attainment": {
+   "six": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    6
+   ],
+   "value": 96,
+   "antipodal_example": [
+    29,
+    14
+   ],
+   "attainers": 12
+  }
+ },
+ "verdict": "the \"antipodal-realised\" counts 392 / 880 / 1734 / 1794 are four tie conventions of one degenerate maximum; the rule-independent existence count is 11318 of 46080 = 24.5616%",
+ "script": "15_anti_convention",
+ "claims": [
+  {
+   "tag": "T1",
+   "name": "CONVENTION REPRODUCTION: re-running the two recorded selection conventions verbatim reproduces the two recorded numbers exactly -- probe convention = 392, census convention = 880 -- which identifies the discrepancy as a tie-convention artefact rather than a disagreement about the v3 semantics",
+   "ok": true,
+   "detail": "probe convention = 392 (recorded 392) ; census convention = 880 (recorded 880) ; domain = 46080 ; witnesses: probe {\"six\": [0, 1, 7, 3, 2, 6], \"d_dp\": [19, 24], \"value\": 112} / census {\"six\": [0, 1, 2, 5, 7, 3], \"d_dp\": [24, 19], \"value\": 128}"
+  },
+  {
+   "tag": "T2",
+   "name": "CONVENTION INVARIANCE OF THE EXISTENCE COUNT: the full 62x62 outer-sum algorithm (different from scripts/14's top-2-based maximum) reproduces the existence count 11318 exactly, so the quantity reported by scripts/14 is not movable by any tie convention",
+   "ok": true,
+   "detail": "this script (62x62 outer sum) = 11318 ; scripts/14 (top-2 based) = 11318 ; domain = 46080"
+  },
+  {
+   "tag": "T3",
+   "name": "RELATIONS: the census-rule and probe-rule counts are both lower bounds on the existence count, and the existence incidence is 24.5616% of the 46,080 domain, so the 1.910% recorded in docs/06 (census rule) understates the phenomenon by a factor of about 12.9",
+   "ok": true,
+   "detail": "existence = 11318/46080 = 24.5616% ; census rule = 880 (1.9097%) ; probe rule = 392 (0.8507%) ; ratio existence/census-rule = 12.86"
+  },
+  {
+   "tag": "T4",
+   "name": "TIE-DEGENERACY WITNESSES: six-tuples exist whose attaining set contains both an antipodal and a non-antipodal pair, and the number of such mixed six-tuples is reported -- direct evidence for the mechanism behind the convention-dependent counts",
+   "ok": true,
+   "detail": "mixed (both antipodal and non-antipodal attainers) six-tuples = 11318 ; witness = {\"six\": [0, 1, 2, 4, 8, 6], \"value\": 96, \"antipodal_example\": [29, 14], \"attainers\": 12}"
+  }
+ ],
+ "n_pass": 4,
+ "n_claims": 4
+}

@@ -1,0 +1,599 @@
+{
+ "results": [
+  {
+   "id": "A1",
+   "number": "90 = Σγ_even(88-site) = Σγ44",
+   "operator": "G2 K_chain",
+   "function": "F6 譜和/世界能量",
+   "status": "PASS",
+   "detail": "Σ_even=90.0, Σγ44=90.0"
+  },
+  {
+   "id": "A2",
+   "number": "88 = Σγ_odd(88-site) = C_obs",
+   "operator": "G2 K_chain",
+   "function": "F6 譜和/觀察者容量",
+   "status": "PASS",
+   "detail": "Σ_odd=88.0"
+  },
+  {
+   "id": "A3",
+   "number": "178 = 2F₁₁ (全譜和)",
+   "operator": "G2⊗T̂",
+   "function": "F6 譜和 ⊗ F2 跡",
+   "status": "PASS",
+   "detail": "Σ_tot=178.0, 2F₁₁=178"
+  },
+  {
+   "id": "A4",
+   "number": "mod-4 閉式 s1=44−sec, s3=44+sec, s2=44, s0=46",
+   "operator": "G2 K_chain",
+   "function": "F6 譜和 (mod-4 投影)",
+   "status": "PASS",
+   "detail": "s1=42.9993624194, s3=45.0006375806, s2=44.0, s0=46.0"
+  },
+  {
+   "id": "A5",
+   "number": "Z₂ pairing γ_k+γ_{88−k}=4=B (88-site)",
+   "operator": "Z₂",
+   "function": "F1 本徵值/對稱",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "A6",
+   "number": "Z₂ pairing γ_n+γ_{44−n}=4=B (44-site)",
+   "operator": "Z₂",
+   "function": "F1 本徵值/對稱",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "A7",
+   "number": "44-site = 88-site 偶子空間 (結構身份)",
+   "operator": "G2",
+   "function": "F1 本徵值集合",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "B1",
+   "number": "Lucas 階梯 L₀..L₁₀ = {2,1,3,4,7,11,18,29,47,76,123}",
+   "operator": "G1 T̂",
+   "function": "F2 跡 Tr(T̂ⁿ)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "B2",
+   "number": "Fibonacci 階梯 F₁..F₁₁ = {1,1,2,3,5,8,13,21,34,55,89}",
+   "operator": "G1 T̂",
+   "function": "F3 矩陣元 (T̂ⁿ)₁₂",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "B3",
+   "number": "eig(T̂) = {φ, −1/φ}, φ²=φ+1",
+   "operator": "G1 T̂",
+   "function": "F1 本徵值",
+   "status": "PASS",
+   "detail": "φ=1.6180339887498948482, −1/φ=-0.6180339887498948482"
+  },
+  {
+   "id": "B4",
+   "number": "det(T̂) = −1, Tr(T̂) = 1",
+   "operator": "G1 T̂",
+   "function": "F3 行列式/F2 跡",
+   "status": "PASS",
+   "detail": "det=−1 (x²−x−1 常數項)"
+  },
+  {
+   "id": "C1",
+   "number": "2 = log₂B (B=4)",
+   "operator": "G8 log_B",
+   "function": "F10 資訊量",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C2",
+   "number": "C_obs = N_d·log₂B = 44×2 = 88 = Σγ_odd (dev=0)",
+   "operator": "G8⊗G2",
+   "function": "F10 容量",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C3",
+   "number": "90 = (N_d+1)·log₂B = 45×2 = Σγ_even",
+   "operator": "G8⊗G2",
+   "function": "F10 容量/世界",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D1",
+   "number": "88 = C_obs",
+   "operator": "G8⊗G2",
+   "function": "D1 容量",
+   "status": "PASS",
+   "detail": "觀察者側"
+  },
+  {
+   "id": "D2",
+   "number": "132 = N_d×(B−1) = 44×3 = dim(SU12)−rank = 143−11 = 12×11",
+   "operator": "G9 Lie",
+   "function": "D1 容量/非Cartan生成元",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D3",
+   "number": "264 = C_obs×(B−1) = 88×3 = N_d×2N_gen = 44×6",
+   "operator": "G8⊗G2",
+   "function": "D1 容量/世界側",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D4",
+   "number": "528 = C_obs×2N_gen = 44×dim(G_SM) = 44×12 = C(33,2)",
+   "operator": "G9⊗G2",
+   "function": "D1 容量/全息",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D5",
+   "number": "12 = dim(G_SM) = 8+3+1 = 4N_gen = 2×3×2 = L₅+1",
+   "operator": "G9 Lie",
+   "function": "D3 維數/規範",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D6",
+   "number": "192 = 4N_d + B² = 176+16 = B×N_gen×16",
+   "operator": "G2⊗G6",
+   "function": "D3 維數/全息費米子",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D7",
+   "number": "16 = B² = SO(10) spinor",
+   "operator": "G6 K_tree",
+   "function": "D3 維數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E1",
+   "number": "E_min = 123/176 = L₁₀/(4N_d) = (41/60)×(90/88) EXACT",
+   "operator": "G1⊗G2",
+   "function": "F7 比率/能量量子",
+   "status": "PASS",
+   "detail": "123/176 = 41×90/(60×88) = 3690/5280 = 123/176 ✓"
+  },
+  {
+   "id": "E2",
+   "number": "61.5 = 88×E_min = L₁₀/2 (真空能)",
+   "operator": "G8⊗G2",
+   "function": "D2 能量/容量×量子",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E3",
+   "number": "123 = 176×E_min = L₁₀",
+   "operator": "G1⊗G2",
+   "function": "D2 能量/全譜×量子",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E4",
+   "number": "92.25 = 132×E_min = 3L₁₀/4 (世代信道能量)",
+   "operator": "G9⊗G2",
+   "function": "D2 能量",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E5",
+   "number": "184.5 = 264×E_min = 3L₁₀/2 (世界側能量)",
+   "operator": "G8⊗G2",
+   "function": "D2 能量",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E6",
+   "number": "369 = 528×E_min = 3L₁₀ (全息能量)",
+   "operator": "G9⊗G2",
+   "function": "D2 能量",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E7",
+   "number": "123/88 = 2E_min (寫入能量)",
+   "operator": "G8⊗G2",
+   "function": "D2 能量/寫入",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E8",
+   "number": "61/88 = E_min − 1/(4N_d) (Landauer 有限尺寸修正)",
+   "operator": "G1⊗G2",
+   "function": "D2 能量修正",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E9",
+   "number": "123 = round(4N_d·ln2 + 1) (L₁₀ 閉合)",
+   "operator": "G1⊗G2",
+   "function": "F2 跡/Landauer",
+   "status": "PASS",
+   "detail": "4·44·ln2+1 = 122.993904"
+  },
+  {
+   "id": "F1",
+   "number": "143 = dim(SU(12)) = 12²−1",
+   "operator": "G9 Lie",
+   "function": "D3 維數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F2",
+   "number": "66 = dim Λ²(12) = 12×11/2",
+   "operator": "G9 Lie",
+   "function": "D3 維數/反稱表示",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F3",
+   "number": "77 = Borel = 正根66 + Cartan11 = L₄×L₅ = 7×11",
+   "operator": "G9 Lie",
+   "function": "D3 維數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F4",
+   "number": "33 = M = ΣK_tree = N_gen×rank = 3×11",
+   "operator": "G6 K_tree",
+   "function": "D3 維數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F5",
+   "number": "11 = rank(SU(12)) = L₅",
+   "operator": "G9 Lie",
+   "function": "F5 秩",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F6",
+   "number": "36 = h¹¹(CY₃) = 6²",
+   "operator": "G10 CY₃",
+   "function": "D3 維數/Kähler",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F7",
+   "number": "98 = h²¹(CY₃)",
+   "operator": "G10 CY₃",
+   "function": "D3 維數/複結構",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F8",
+   "number": "124 = |χ(CY₃)| = |2(36−98)|",
+   "operator": "G10 CY₃",
+   "function": "D3 維數/尤拉數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "G1",
+   "number": "60 = 頂點數 (rhombicosidodecahedron: 20Δ+30□+12⬠, 4 面/頂點)",
+   "operator": "G10 CY₃",
+   "function": "D6 幾何/節點",
+   "status": "PASS",
+   "detail": "V = (3F₃+4F₄+5F₅)/4 = 240/4"
+  },
+  {
+   "id": "G2",
+   "number": "30 = □ 錨定面 (冷斑)",
+   "operator": "G10 CY₃",
+   "function": "D6 幾何/錨定",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "G3",
+   "number": "32 = 20Δ+12⬠ 阻挫",
+   "operator": "G10 CY₃",
+   "function": "D6 幾何/阻挫",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "G4",
+   "number": "24 = 低次數端點數 (22 偶 + {11,33})",
+   "operator": "G3 Ω",
+   "function": "F5 秩/代數次數",
+   "status": "PASS",
+   "detail": "kchain_number_field 16_magic_rows_rule"
+  },
+  {
+   "id": "G5",
+   "number": "40 = φ(88) Euler totient; 20 = [Q(ζ₈₈)⁺:Q] 數域次數",
+   "operator": "G2 K_chain",
+   "function": "D3 維數/數域",
+   "status": "PASS",
+   "detail": "φ(88) = 88·(1/2)·(10/11) = 40; 實子域次數 = 20 (kchain_number_field)"
+  },
+  {
+   "id": "G6",
+   "number": "276 = C(24,2) 低次數拍頻",
+   "operator": "G5 Beat",
+   "function": "F5 秩/組合",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "G7",
+   "number": "946 = C(44,2) 拍頻總數",
+   "operator": "G5 Beat",
+   "function": "F5 秩/組合",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "G8",
+   "number": "43 = 邊數 = 44−1",
+   "operator": "G3 Ω",
+   "function": "F5 秩/邊",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "G9",
+   "number": "87 = 43 邊 + 44 self-loop = 3L₇ 原子",
+   "operator": "G3⊗G5",
+   "function": "F5 秩/原子",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "G10",
+   "number": "84 = 21 對 × 4 (世界/邊集對偶核心)",
+   "operator": "Z₂⊗G2",
+   "function": "F6 譜和/對偶核心",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "H1",
+   "number": "beat(a,b) = |ω_b−ω_a| = 4sin(dπ/176)cos(sπ/176) (946/946)",
+   "operator": "G5 Beat",
+   "function": "F8 拍頻",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "H2",
+   "number": "beat = 4sin(dπ/176)·v_g((a+b)/2) — v_g@半整數縫 (O149 定理1)",
+   "operator": "G4⊗G5",
+   "function": "F8 拍頻/群速度",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "H3",
+   "number": "ω_n = 2v_g(44−n), γ_n = 4v_g(44−n)² (44/44)",
+   "operator": "G4",
+   "function": "F1 本徵值/群速度",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "H4",
+   "number": "k-ladder: g₂=beat(42,43)/beat(10,31)=0.0035074294; g₃=beat(41,42)/beat(3,37)=0.0036910176 (O149 定理4)",
+   "operator": "G5⊗G4",
+   "function": "F8 拍頻比率/混合角",
+   "status": "PASS",
+   "detail": "k=2: (42,43)/(10,31) = 0.0035074294 (O149: 0.0035074294); k=3: (41,42)/(3,37) = 0.0036910176 (O149: 0.0036910176)"
+  },
+  {
+   "id": "H5",
+   "number": "v_g floor = sin(π/176) = 0.01785",
+   "operator": "G4",
+   "function": "F1 本徵值下限",
+   "status": "PASS",
+   "detail": "sin(π/176)=0.01784901038"
+  },
+  {
+   "id": "H6",
+   "number": "beat 零點: cos((2n+1)π/176)=0 ⟺ n=43.5",
+   "operator": "G5",
+   "function": "F11 零點/半整數縫",
+   "status": "PASS",
+   "detail": "2n+1=88 → n=43.5, 87=3L₇"
+  },
+  {
+   "id": "I1",
+   "number": "44 個半整數縫 {0.5..43.5} = 觀察者子空間 (O34)",
+   "operator": "Z₂⊗G5",
+   "function": "F11 零點/縫",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "I2",
+   "number": "43.5 = 3L₇/2 = 87/2 (beat 零點縫)",
+   "operator": "G1⊗Z₂",
+   "function": "F11 零點",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "I3",
+   "number": "61.5 = L₁₀/2 = 88×E_min (真空能半整數)",
+   "operator": "G1⊗Z₂",
+   "function": "D2 能量/半整數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "I4",
+   "number": "6.5 = F₇/2 = 13/2 = Ω_DM/Ω_b",
+   "operator": "G1⊗Z₂",
+   "function": "F7 比率/物質比",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "I5",
+   "number": "0.5 = log₄(2) = 半整數資訊量子",
+   "operator": "G8",
+   "function": "F10 資訊量/半整數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "I6",
+   "number": "L_odd/2 階梯: {0.5,1.5,3.5,5.5,14.5,23.5,61.5} (61.5 已閉合 O41)",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫生成",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "I7",
+   "number": "F_odd/2 階梯: {0.5,0.5,1.5,2.5,6.5,10.5,27.5,44.5} (6.5 已閉合)",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫生成",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "J1",
+   "number": "90/88 = Σ_even/Σ_odd = E/O 比率",
+   "operator": "G2",
+   "function": "F7 比率",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "J2",
+   "number": "41/60 = f_unproj (投影未投影結構量, O151)",
+   "operator": "G7 P",
+   "function": "F9 投影係數",
+   "status": "PASS",
+   "detail": "O151 S22: f_unproj = 41/60, E_min = f_unproj×90/88"
+  },
+  {
+   "id": "J3",
+   "number": "19/123 = ε_exact (O148)",
+   "operator": "G1",
+   "function": "F7 比率",
+   "status": "PASS",
+   "detail": "O148: ε_exact = 19/123, E_min = L₁₀/(4N_d)"
+  },
+  {
+   "id": "J4",
+   "number": "3/2 = 90/60 = N_gen/2 (O151 S22)",
+   "operator": "G2⊗G6",
+   "function": "F7 比率",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "J5",
+   "number": "1/2 = log₄(2) (資訊算子半整數)",
+   "operator": "G8",
+   "function": "F10 資訊量",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "J6",
+   "number": "δ₁ = 41/60 − 4/(φ⁴−1) = √5φ⁻¹⁰/[60(3φ+1)]; M* = 33−180δ₁ = 32.9907 ≠ 33 — 🔴 φ-近似",
+   "operator": "G1",
+   "function": "F7 比率/陷阱窗",
+   "status": "PASS",
+   "detail": "δ₁=5.176e-05, M*=32.9907 — 陷阱窗排除 (O148 Q1: 41/60 係結構量)"
+  },
+  {
+   "id": "J7",
+   "number": "137 = α⁻¹(0) = 3·44+F₅; 128 = α⁻¹(M_Z) = 2·44+F₅F₆",
+   "operator": "G1⊗G2",
+   "function": "F7 比率/精細結構",
+   "status": "PASS",
+   "detail": "137 = 132+5, 128 = 88+40"
+  },
+  {
+   "id": "K1",
+   "number": "ω_ring = c/R_world = 72.59 (km/s)/Mpc",
+   "operator": "G2⊗G10",
+   "function": "D10 尺度/角頻率",
+   "status": "PASS",
+   "detail": "c/R=72.5900"
+  },
+  {
+   "id": "K2",
+   "number": "T_ring = 2πR_world/c = 84.64 Gyr (SYNC 週期)",
+   "operator": "G2⊗G10",
+   "function": "D10 尺度/週期",
+   "status": "PASS",
+   "detail": "T_ring=84.6349 Gyr"
+  },
+  {
+   "id": "K3",
+   "number": "λ_sync = R_world·2π/88 = 294.88 Mpc (88 份環)",
+   "operator": "G2⊗G10",
+   "function": "D10 尺度/同步波長",
+   "status": "PASS",
+   "detail": "λ_sync=294.8770 Mpc"
+  },
+  {
+   "id": "L1",
+   "number": "容量階梯 = N_d×{log₂B, B−1, 2N_gen, dim(G_SM)} = {88,132,264,528}",
+   "operator": "G8⊗G9⊗G2",
+   "function": "D1 容量階梯",
+   "status": "PASS",
+   "detail": "乘數集 {2,3,6,12} = {log₂B, B−1, 2N_gen, dim(G_SM)} 四算子值 (O151 S8 階梯閉合)"
+  },
+  {
+   "id": "L2",
+   "number": "能量階梯 = {2,3,6,12}×L₁₀/4 = {61.5, 92.25, 184.5, 369} (基底 30.75 = L₁₀/4)",
+   "operator": "G1⊗G2",
+   "function": "D2 能量階梯",
+   "status": "PASS",
+   "detail": "E_ladder = C_ladder×E_min, 全部 = {2,3,6,12}×L₁₀/4"
+  },
+  {
+   "id": "L3",
+   "number": "30.75 = L₁₀/4 = N_d×E_min = 44×123/176 (能量階梯基底, quarter-integer)",
+   "operator": "G1⊗G2",
+   "function": "D2 能量基底",
+   "status": "PASS",
+   "detail": ""
+  }
+ ],
+ "n_pass": 74,
+ "n_fail": 0,
+ "total": 74
+}

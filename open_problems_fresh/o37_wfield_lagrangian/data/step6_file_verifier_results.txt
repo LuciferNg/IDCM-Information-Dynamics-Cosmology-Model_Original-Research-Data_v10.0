@@ -1,0 +1,16 @@
+O37 — Step 6: 檔案驗證器
+======================================================================
+
+  R1 檔案齊全: PASS
+  R2 零 FAIL: PASS
+  R3a M₀: PASS
+  R3b ⟨W⟩=M₀: PASS
+  R3c Σγ=90: PASS
+  R4a step2 M₀: PASS
+  R4b step1 scalar: PASS
+  R4c step3 g_n: PASS
+  R4d step4 8/8: PASS
+  R5 質量比: PASS
+
+總計: 10/10 PASS
+檔案 PASS 總數: 38, FAIL 總數: 0

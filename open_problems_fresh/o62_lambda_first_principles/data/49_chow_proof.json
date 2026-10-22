@@ -1,0 +1,12 @@
+{
+  "test": "O62 九期 49: Chow ring 證明",
+  "n_cosimp": 904,
+  "sr_killed": 166,
+  "zero": 554,
+  "nnz": 350,
+  "sr_zero": 121,
+  "sr_nnz": 45,
+  "non_sr_zero": 433,
+  "passed": 0,
+  "failed": 1
+}

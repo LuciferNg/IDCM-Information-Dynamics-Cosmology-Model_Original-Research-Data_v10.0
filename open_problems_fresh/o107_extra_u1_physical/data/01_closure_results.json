@@ -1,0 +1,78 @@
+{
+  "id": "O107",
+  "name": "6 Extra U(1) \u7269\u7406\u610f\u7fa9",
+  "status": "\ud83d\udfe2 CLOSED",
+  "cartan_count": 11,
+  "tensor_cartan_count": 5,
+  "extra_u1_count": 6,
+  "extra_u1_generators": [
+    {
+      "from_full_H": "H_1",
+      "norm": 0.9999999999999998
+    },
+    {
+      "from_full_H": "H_2",
+      "norm": 1.0000000000000002
+    },
+    {
+      "from_full_H": "H_3",
+      "norm": 1.0
+    },
+    {
+      "from_full_H": "H_4",
+      "norm": 1.0
+    },
+    {
+      "from_full_H": "H_5",
+      "norm": 0.9999999999999999
+    },
+    {
+      "from_full_H": "H_6",
+      "norm": 1.0
+    }
+  ],
+  "extra_u1_physical_identities": {
+    "U(1)_1_H1": "\u7d14\u6c34\u5e73\u5c0d\u7a31\u6027 (Gen1-Gen2 red)",
+    "U(1)_2_H2": "\u7d14\u6c34\u5e73\u5c0d\u7a31\u6027 (Gen3 all colors)",
+    "U(1)_3_H3": "\u7d14\u6c34\u5e73\u5c0d\u7a31\u6027 (Gen1-Gen2 green)",
+    "U(1)_4_H4": "\u7d14\u6c34\u5e73\u5c0d\u7a31\u6027 (Gen2-Gen3 green/blue)",
+    "U(1)_5_H5": "\u7d14\u6c34\u5e73\u5c0d\u7a31\u6027 (Gen1 blue/lepton)",
+    "U(1)_6_H6": "\u7d14\u6c34\u5e73\u5c0d\u7a31\u6027 (Gen2-Gen3 blue/lepton)"
+  },
+  "structural_identities": {
+    "6 = L\u2085-F\u2085": "11-5",
+    "6 = B+N_gen-1": "4+3-1",
+    "6 = N_d-K_tree-F\u2085": "44-33-5",
+    "6 = C\u2082(adj)/2": "12/2",
+    "6 = \u0394(\u03b1_GUT)": "gauge coupling matching constant"
+  },
+  "breaking_scales": {
+    "M_GUT": 6.221426544682902e+16,
+    "M_PS": 317029635931567.2,
+    "M_R": 1615510355013.3574,
+    "all_extra_u1": "broken at M_GUT via (15,8) adjoint Higgs",
+    "B_L_option": "could break at M_PS"
+  },
+  "zprime_masses": {
+    "min": 835344753148.3448,
+    "max": 3.2169623704799644e+16,
+    "lhc_reach": "10 TeV << 10^12 GeV",
+    "observable": false
+  },
+  "zz_mixing": {
+    "theta_min_rad": 5.9581314030816106e-21,
+    "theta_min_urad": 5.95813140308161e-15,
+    "observable": false
+  },
+  "v_lambda_relation": {
+    "264": "264 = 6U(1)\u00d7N_d",
+    "F_gamma": 264.082129,
+    "V_Lambda": {
+      "formula": "F(\u03b3)+N_d-F\u2088-B",
+      "value": 283.0821
+    }
+  },
+  "verification_count": 8,
+  "verification_total": 8,
+  "timestamp": "2026-08-29"
+}

@@ -1,0 +1,112 @@
+{
+ "claims": [
+  {
+   "tag": "C0",
+   "name": "MANIFEST: every one of the 165 frozen artifacts still hashes to its recorded value",
+   "ok": false,
+   "detail": "drift = 3 ['data/32_closeout3_audit.json', 'logs/32_closeout3_audit.out', 'scripts/32_closeout3_audit.py'] ; missing = 0 [] ; unreadable = 0"
+  },
+  {
+   "tag": "C1",
+   "name": "round inventory: every declared doc / script / data / log of all 11 rounds is on disk",
+   "ok": true,
+   "detail": "R0 5/5 | B2 7/7 | A2 7/7 | B5 4/4 | closeout1 4/4 | B3R2 4/4 | D6 5/5 | G4 5/5 | G5 5/5 | C2G7 5/5 | G1G8 5/5"
+  },
+  {
+   "tag": "C2",
+   "name": "freeze discipline: all 5 freeze records name an impl whose sha256 still equals the disk file (no post-number edits)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C3a",
+   "name": "B5 identity: 44 reads x (123/88) = 123/2 = 61.5 exactly (44 = N_d = 1 tick)",
+   "ok": true,
+   "detail": "44 * 123/88 = 123/2"
+  },
+  {
+   "tag": "C3b",
+   "name": "D6 headline: the frozen K carries exactly 1200/7440 tie entries (dot = 0)",
+   "ok": true,
+   "detail": "tie entries recomputed = 1200"
+  },
+  {
+   "tag": "C3c",
+   "name": "G4 cost law 3 - [t = a] - [b = a] on all 62 x 62 x 63 = 242,172 cells, with the exact value counts (1: 62 degenerate, 2: 7626, 3: 234484); restricting the top to the 62 contexts gives 7564 = 2N(N-1), the same count the G1+G8 ledger reaches independently",
+   "ok": true,
+   "detail": "cells = 242172 ; 63-top counts = {1: 62, 2: 7626, 3: 234484} ; 62-top counts = {1: 62, 2: 7564, 3: 230702}"
+  },
+  {
+   "tag": "C3d",
+   "name": "C2+G7 headline: all 62 column sums vanish (P(+/-1) = 1/2) and rank_GF(7)(K) = 6",
+   "ok": true,
+   "detail": "columns with nonzero sum = 0 ; GF(7) rank = 6"
+  },
+  {
+   "tag": "C3e",
+   "name": "G1+G8 headline identity: 2N(N-1) = 7564 = 62 x 122, and the recorded ledger length matches",
+   "ok": true,
+   "detail": "2N(N-1) = 7564"
+  },
+  {
+   "tag": "C3f",
+   "name": "A2 domain counts are internally ordered and the raw domain is exactly 62^4 = 14,776,336",
+   "ok": true,
+   "detail": "raw=14776336, distinct=14303524, distinct_anti=13388280, all4=12517800"
+  },
+  {
+   "tag": "C4",
+   "name": "documentation completeness: each of the 11 rounds is recorded in all four active documents",
+   "ok": true,
+   "detail": "gaps = none"
+  },
+  {
+   "tag": "C5a",
+   "name": "register check runs and its hard-drift budget is unchanged at 8, with no O222 involvement",
+   "ok": true,
+   "detail": "hard sections = {'DUPLICATE-DIR': 4, 'REF-MISSING': 3, 'REF-LINE-OOR': 0, 'README-ONLY': 1} ; total = 8 ; O222 inside a hard section = False"
+  },
+  {
+   "tag": "C5b-refs",
+   "name": "every O222 event ref stays inside the allowed scope (o222 dir / register / master README)",
+   "ok": true,
+   "detail": "events = 106 ; out-of-scope refs = none ; check tail = HARD DRIFT: 8"
+  },
+  {
+   "tag": "C5c",
+   "name": "the O222 sub-problems are registered and carry progress verdicts",
+   "ok": true,
+   "detail": "pids = ['O222', 'O222/B1', 'O222/B2', 'O222/B3', 'O222/B3R2', 'O222/B4', 'O222/B5', 'O222/C2', 'O222/C2G7', 'O222/D6', 'O222/G1G8', 'O222/G4', 'O222/G5', 'O222/Q1', 'O222/Q2', 'O222/Q3', 'O222/Q4', 'O222/Q5', 'O222/R0'] ; verdicts = {'O222/Q1': 'partial', 'O222/Q5': 'partial', 'O222/Q2': 'partial', 'O222/B1': 'partial', 'O222/B3R2': 'partial', 'O222/D6': 'partial', 'O222/G4': 'partial', 'O222/G5': 'partial', 'O222/C2G7': 'partial', 'O222/G1G8': 'partial'}"
+  },
+  {
+   "tag": "C6",
+   "name": "scope: no live writer, and the manifest now covers EVERY file on disk (165 files)",
+   "ok": true,
+   "detail": "live = NONE ; uncovered = none"
+  },
+  {
+   "tag": "C7",
+   "name": "independence: this auditor recomputes from the frozen interfaces 09 / 12 only (it never imports the round machines 18 / 21 / 24 / 27 / 30)",
+   "ok": true,
+   "detail": "exact recomputations: tie count, cost-law cells, GF(7) rank, column sums, ledger identity, 62^4"
+  }
+ ],
+ "n_pass": 14,
+ "n_total": 15,
+ "rounds": [
+  "R0",
+  "B2",
+  "A2",
+  "B5",
+  "closeout1",
+  "B3R2",
+  "D6",
+  "G4",
+  "G5",
+  "C2G7",
+  "G1G8"
+ ],
+ "artifacts": 165,
+ "elapsed_s": 2.45,
+ "audited_at": "2026-09-30T11:03:31+0800"
+}

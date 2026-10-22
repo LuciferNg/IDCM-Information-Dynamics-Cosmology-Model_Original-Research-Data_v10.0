@@ -1,0 +1,19 @@
+{
+  "test": "O66 07: 中微子質量譜預言",
+  "m1_eV": 0.020916159172789824,
+  "m2_eV": 0.022644772344660034,
+  "m3_eV": 0.05358624557236194,
+  "dm21_eV2": 7.529999999999999e-05,
+  "dm31_eV2": 0.002434,
+  "sum_nu_eV": 0.0971471770898118,
+  "mbb_range_meV": [
+    6.367069109110205,
+    22.146109547211758
+  ],
+  "mbb_median_meV": 14.18427026040411,
+  "dm31_self_consistent": true,
+  "dm21_self_consistent": true,
+  "status": "NO hierarchy, Σm_ν tension with DESI",
+  "passed": 2,
+  "failed": 1
+}

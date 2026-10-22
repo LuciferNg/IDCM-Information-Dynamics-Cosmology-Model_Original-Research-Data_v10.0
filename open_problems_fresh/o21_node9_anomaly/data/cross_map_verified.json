@@ -1,0 +1,45 @@
+{
+  "fwhm_deg": 4.17,
+  "maps": {
+    "SMICA": {
+      "node9_T_uK": -106.99234553612769,
+      "node0_T_uK": -134.18926391750574,
+      "node9_rank": 3,
+      "node0_rank": 1,
+      "all_mean_uK": -1.2494984275690513,
+      "all_std_uK": 45.806419764682516,
+      "node9_hop": 1,
+      "node9_color": 0
+    },
+    "NILC": {
+      "node9_T_uK": -107.21081650621029,
+      "node0_T_uK": -134.08769780094585,
+      "node9_rank": 3,
+      "node0_rank": 1,
+      "all_mean_uK": -1.444756629265492,
+      "all_std_uK": 45.62406653602906,
+      "node9_hop": 1,
+      "node9_color": 0
+    },
+    "Commander": {
+      "node9_T_uK": -104.47359803877401,
+      "node0_T_uK": -133.32236772385636,
+      "node9_rank": 3,
+      "node0_rank": 1,
+      "all_mean_uK": -1.5825558361590377,
+      "all_std_uK": 46.02206501414846,
+      "node9_hop": 1,
+      "node9_color": 0
+    }
+  },
+  "consistency": {
+    "node9_mean_uK": -106.22558669370399,
+    "node9_spread_uK": 2.7372184674362785,
+    "node9_spread_pct": 2.5767976931291585,
+    "node9_verdict": "\ud83d\udfe2\ud83d\udfe2 confirmed",
+    "node0_mean_uK": -133.866443147436,
+    "node0_spread_uK": 0.8668961936493815,
+    "node0_spread_pct": 0.6475828992442947,
+    "node0_verdict": "\ud83d\udfe2\ud83d\udfe2 confirmed"
+  }
+}

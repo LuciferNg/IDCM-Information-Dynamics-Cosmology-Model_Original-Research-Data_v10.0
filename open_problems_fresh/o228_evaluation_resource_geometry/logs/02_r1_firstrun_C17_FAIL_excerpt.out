@@ -1,0 +1,34 @@
+# O228 R1 — 首跑 FAIL 原樣保留（`scripts/02_r1_closed_form.py` 第一次完整運行，2026-10-02）
+
+> 用途：預註冊判準 C17 之首跑 FAIL **原樣保留**（鐵律：被偽證者不得改寫成 PASS）。
+> 檔案內容 = 首跑 stdout 之**逐字節錄**（該次 stdout 已被 run-2 覆寫；本節錄為 transcript 之忠實副本）。
+> 校正：本 FAIL 由**實作缺陷**（見下）造成，非定理錯；修復後以 `-c` 校正 tag 重跑，見 `logs/02_r1_closed_form.out`。
+
+```
+[PASS] C14  the closed form agrees with the independent brute-force count for k = 1..6 (including the NEW values F_5 and F_6)  --  closed form F_1..F_6 = [0, 0, 0, 12645, 1051351, 23083292] ; brute force = [0, 0, 0, 12645, 1051351, 23083292]
+[PASS] C15  rank_Q(K) = 6 with V00-V05 an explicit basis; 5 columns can never span it (dimension), so 6 is minimal  --  rank(K) = 6 ; rank(V00..V05) = 6 ; max rank over 2000 random 5-subsets = 5 (5 = dimension bound) ; distinct column vectors = 32 ; exact number of rank-6 bases = 13016132
+[PASS] C16  family-mixture decomposition of F_4 sums to 12645 with the single-family EEEE count = 625  --  mixtures = {'EEEE': 625, 'EEEF': 1980, 'EEEV': 920, 'EEFF': 1860, 'EEFV': 2480, 'EEVV': 460, 'EFFF': 800, 'EFFV': 1520, 'EFVV': 1040, 'EVVV': 80, 'FFFV': 480, 'FFVV': 240, 'FVVV': 160}
+exact null: F_4(all 462 bisections) = 176340780 / 1873709145 -> p0 = 16964/180251 = 0.094113 ; MC(200000) = 0.034835 ; machine rate = 0.022668
+[FAIL] C17  EXACT null p0 (separating rate of 4 random bisections) computed over all 462 bisections by the size-multiset Mobius sum, cross-checked by MC; the machine rate is compared with it and NO excess is claimed  --  p0(exact) = 0.094113 (0.2 s) ; MC(200000 draws) = 0.034835 ; machine F_4/C(62,4) = 0.022668
+[PASS] C18  convention dependence: under the equivariant tie-break (tie -> +1) the census AND F_4 change  --  frozen: 16 types / hist {3:10,5:5,7:1} / F_4 = 12645 ; equivariant: 46 types / hist {1: 30, 2: 16} / F_4 = 1000 / shapes [(4, 8), (6, 6)]
+   V     n=12  k_min=5    F = {1: 0, 2: 0, 3: 0, 4: 0, 5: 192, 6: 544, 7: 672}
+   F     n=20  k_min=5    F = {1: 0, 2: 0, 3: 0, 4: 0, 5: 5184, 6: 25440, 7: 65760}
+   E     n=30  k_min=4    F = {1: 0, 2: 0, 3: 0, 4: 625, 5: 24535, 6: 237545, 7: 1246590}
+   V+F   n=32  k_min=4    F = {1: 0, 2: 0, 3: 0, 4: 880, 5: 41696, 6: 422952, 7: 2302136}
+   V+E   n=42  k_min=4    F = {1: 0, 2: 0, 3: 0, 4: 2085, 5: 129557, 6: 1869459, 7: 15001452}
+   F+E   n=50  k_min=4    F = {1: 0, 2: 0, 3: 0, 4: 5265, 5: 383049, 6: 6538590, 7: 61781400}
+   all   n=62  k_min=4    F = {1: 0, 2: 0, 3: 0, 4: 12645, 5: 1051351, 6: 23083292, 7: 283782566}
+[PASS] C19  sub-arrangement table: E alone already admits 4-frames (k_min = 4) while V and F alone need 5; the 625 E-frames are reproduced  --  k_min = {'V': 5, 'F': 5, 'E': 4, 'V+F': 4, 'V+E': 4, 'F+E': 4, 'all': 4} ; F_4(E) = 625
+============================================================================================================
+RESULT: 7/8 PASS  (1 FAIL)   elapsed 221.4 s
+============================================================================================================
+```
+
+## 缺陷與校正（`C17-c`）
+
+- **首跑實作**：`npar(λ) = n! / (∏ m_i! · ∏ s_i^{m_i})` —— 錯用 `s^{m}` 而非 `(s!)^{m}`。
+- **症狀**：pts = 6 之最小反例（全二分割排列，k = 1）給 `F_1 = 40` 但 brute force `F_1 = 0`；
+  正確分割數應為 `6!/(3!·3!·2!) = 10`，首跑給 `40`。
+- **發現途徑**：預註冊 C17 要求「精確值 ↔ MC 互相核對」——MC 0.034835 與首跑精確值 0.094113 相距 140σ ⟹ 即時暴露。
+- **校正**：`npar = n! / (∏ (s_i!)^{m_i} · ∏ m_i!)`；pts = 4 / 6 之小反例全中（見 scratch 診斷），再重跑。
+- **原 FAIL 保留**（本檔），重跑結果另載；C17 之判定以重跑為準，並在 `docs/01_r1_results.md` 明載此校正史。

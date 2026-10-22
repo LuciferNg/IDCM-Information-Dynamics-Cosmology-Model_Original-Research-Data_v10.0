@@ -15,7 +15,7 @@ O31 完成了：
 
 ## 交接點
 
-- IDCM DM 解釋: m₇ = 13.8 MeV (p7 mode) ✅
+- IDCM DM 解釋: m₇ = 13.8 MeV (P7 mode) ✅
 - K_Chain: 44-site, λ_sync = 294.88 Mpc
 - K_Tree: 33 levels, B=4 branching
 - D_app(ℓ): 已驗證宇宙學尺度

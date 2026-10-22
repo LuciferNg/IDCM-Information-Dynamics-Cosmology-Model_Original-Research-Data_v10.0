@@ -1,0 +1,16 @@
+{
+  "test": "sympy 投影 kernel 數學驗證",
+  "L6_exact": 18,
+  "n_star": 27,
+  "f_proj": 0.7719601959627247,
+  "E_proj": 28.5,
+  "E_sync": 61.5,
+  "conservation": 90.0,
+  "kernel_modes": [
+    28,
+    44
+  ],
+  "kernel_count": 17,
+  "kernel_energy": 60.88453690567985,
+  "conclusion": "L₆=18 精確, n*=27, f_proj=0.771960, E_proj=28.5/E_sync=61.5/Σγ=90 全精確守恆, kernel=17 模式 60.8845"
+}

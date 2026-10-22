@@ -1,0 +1,16 @@
+{
+  "test": "O56 3L6 <-> N_gen=3 代數證明",
+  "B": 4,
+  "L5": 11,
+  "L6": 18,
+  "Nd": 44,
+  "Sigma_gamma": 90,
+  "h11": 36,
+  "h21": 98,
+  "chi": -124,
+  "N_gen_from_h11": 3,
+  "N_gen_from_h21": 3,
+  "N_gen_from_proof": 3,
+  "proof": "h21-h11 = 98-36 = 62 = Nd+L6 = 44+18 = 62 => N_gen = (Nd+L6 - B*L5)/6 = 3",
+  "conclusion": "OK N_gen=3 is forced by h21-h11=Nd+L6 structural constraint"
+}

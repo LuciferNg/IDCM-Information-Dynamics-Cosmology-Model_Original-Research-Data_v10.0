@@ -1,0 +1,7 @@
+O31 α sweep results
+phi = 1.618033988749895
+R_H = 5687.688370286446 h⁻¹ Mpc
+
+Real α sweep [-5,5]: phi_found=False, rh_found=False
+Complex α sweep [-3,3]i: phi_found=False, rh_found=False
+Conclusion: No φ or R_H fixed points for any α

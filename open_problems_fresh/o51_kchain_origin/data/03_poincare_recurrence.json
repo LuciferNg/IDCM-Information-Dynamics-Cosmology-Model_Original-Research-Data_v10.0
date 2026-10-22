@@ -1,0 +1,19 @@
+{
+  "formula": "Poincar\u00e9 recurrence count + real age from irrational beats",
+  "theorem1_exact_recurrence": 0,
+  "theorem1_reason": "946/946 frequency ratios irrational (sympy) \u2192 no t with all 44 phases at zero",
+  "theorem2_T_sync_Gyr": 84.63490006686331,
+  "theorem2_turns_of_n44": 88.00000000000001,
+  "theorem2_T44_Gyr": 0.9617602280325375,
+  "theorem3_ratio_t_render_T_sync": 0.16285622083821852,
+  "theorem3_22_over_43pi": 0.1628562208382185,
+  "theorem3_pct_of_first_cycle": 16.285622083821853,
+  "theorem3_complete_sync_recurrences": 0,
+  "theorem4_sum_floor_beat_cycles": 4269,
+  "theorem4_mean_N_ij": 5.00772877104916,
+  "theorem4_F5_candidate_dev_pct": 0.1545754209831962,
+  "theorem5_real_age_Gyr": 13.783319975909647,
+  "theorem5_age_status": "no cosmic age in IDCM; observable time depth = rendering depth",
+  "framework": "v10.0 non-expanding",
+  "date": "2026-08-22"
+}

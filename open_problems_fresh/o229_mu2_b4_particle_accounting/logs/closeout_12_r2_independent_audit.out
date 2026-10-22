@@ -1,0 +1,49 @@
+==============================================================================
+O229/12 (R2) — 獨立核對器（換算法、唔 import 受核腳本）
+==============================================================================
+
+[A] 凍結合約指紋 vs register 預註冊
+    檔案 sha256 = cd2e8af286d3bceae947cb83…
+    register 註冊 = cd2e8af286d3bceae947cb83…
+  [PASS] A1 docs/08_r2_contract.md 存在且 register 有預註冊 sha256
+  [PASS] A2 預註冊 sha256 == 現檔 sha256（跑數後未改合約）
+
+[B] 獨立重算（逐項換算法）
+  [PASS] B1 Binet Lucas: L₃ = 4, L₀ = 2, L₅ = 11 (對比 09 之遞迴表)   L₃=4.0
+  [PASS] B2 Binet Fib: F₃ = 2，且 4 ∉ Fibonacci（掃 n = 0..40, tol 1e-40）   F₃=2.0
+    實現計數（0..40）: |R(2)| = 2   |R(4)| = 1
+  [PASS] B3 |R(2)| = 2 且 |R(4)| = 1（與 09 結論獨立一致）
+    (i) 黃金分割 400 步: x* = 61.5   註: 二次比較退化 ⟹ 精度上限 ~1e-30
+  [PASS] B4 區間收縮法 x* = 61.5（精度受二次比較退化所限，容差 1e-25）   |Δ| = 1.08e-30
+  [PASS] B5 三點二次擬合頂點（對二次式精確）= 61.5   x* = 61.5
+  [PASS] B6 findroot 於 dV/dx = 0 → x* = 61.5   x* = 61.5
+  [PASS] B7 V_min 數值 = −61.5（由 B5 之頂點）   V_min = -61.5
+  [PASS] B8 全 16 態求和 = 16/3（獨立，對比 10 之 -c4）   態數=16, Σ=16/3
+  [PASS] B9 三代和 = 16 = B²
+  [PASS] B10 端點鎖多項式形式 B⁴+B²−272 = 0 ⟺ B = 4 (正根唯一)
+  [PASS] B10b B⁴+B²−272 = 0 之正根 = 4
+    凍結 A=4: γ_max=4.0 B=4.004 | K16=斷 ; γ_(M/4)=2.0 μ²=2.0 | K17=生存
+    選單 A:=B: γ_max=4.004 B=4.004 | K16=生存 ; γ_(M/4)=2.002 μ²=2.0 | K17=斷
+  [PASS] B11 data/11 之四區存活數 = 軸I 20 / 軸II 6 / 內點 5 / 橋線 6   [20] [6] [5] [6]
+  [PASS] B12 data/11 原點 = 22 且網格點數 = 25
+
+[C] log ↔ data 逐腳本一致（01–12）
+  [PASS] C 全部 27 個腳本 log↔data 一致   腳本數=27
+
+[D] AST 真空斷言掃描（scripts/09–12；chk 第二參數為字面 True/1）
+  [PASS] D 真空 chk = 0   0 ✓
+
+[E] docs ↔ 證據綁定
+  [PASS] E docs 承載各腳本 RESULT 與關鍵數字   全部命中
+
+[F] 寫入範圍與清單
+  [PASS] F1 scripts = 25 個，編號 01–25 完備（全鏈 closeout 2026-10-03 擴充）   n=25
+  [PASS] F2 docs = 32 個（00–31）   n=32: ['00_contract.md', '01_accounting_table.md', '02_gap1_degeneracy.md', '03_gap2_mu2_identity.md', '04_gap4_rigidity.md', '05_gap5_density.md', '06_r1_verdicts.md', '07_independent_audit.md', '08_r2_contract.md', '09_r2_gap2b_index_identity.md', '10_r2_vmin_closed_form.md', '11_r2_two_param_rigidity.md', '12_r2_verdicts.md', '13_r2_independent_audit.md', '14_r3_contract.md', '15_r3_y_uniqueness.md', '16_r3_spectrum_family.md', '17_r3_polysemy_classification.md', '18_r3_density_atom_pool.md', '19_r3_verdicts.md', '20_r4_contract.md', '21_r4_chain_family.md', '22_r4_mu2_support.md', '23_r4_hardtest_reaudit.md', '24_r4_verdicts.md', '25_r4_residuals.md', '26_r5_contract.md', '27_r5_endpoint_anatomy.md', '28_r5_form_class.md', '29_r5_discrimination.md', '30_r5_verdicts.md', '31_r5_residuals.md']
+  [PASS] F3 data/logs 前綴 ⊆ 腳本前綴（無孤兒）；唯一允許未寫者 = 本核對器自身輸出 12   data=27 logs=35; 缺=[]/[]; 孤兒=[]
+
+★ 核對器發現（非 PASS/FAIL，記錄用）:
+   • R2-⑤ 之『8 = 2B』係 **naive 約定**（只計 u,d,e）之產物；標準 QED 約定計全 16 態
+     ⟹ 每代 16/3、三代 16 = **B²**（已於 scripts/10 §[3] 加 -c4 校正，B8 獨立重算一致）
+   • R2-④ 兩條預註冊（存活數 +1、橋線外恆 5）被否證，已原樣保留 FAIL 並各加 -c 校正
+
+RESULT: 21/21 PASS

@@ -1,0 +1,22 @@
+{
+  "test": "O62 九期 50: 消去機制",
+  "n_total": 8436,
+  "n_cosimp": 904,
+  "n_not": 7532,
+  "zero": 8086,
+  "nnz": 350,
+  "cosimp_zero": 554,
+  "cosimp_nnz": 350,
+  "d_zero": 331,
+  "t_zero": 220,
+  "a_zero": 3,
+  "a_zero_idx": [
+    3,
+    7,
+    14
+  ],
+  "zero_mean_simp": 4.859205776173285,
+  "nnz_mean_simp": 6.365714285714286,
+  "passed": 5,
+  "failed": 0
+}

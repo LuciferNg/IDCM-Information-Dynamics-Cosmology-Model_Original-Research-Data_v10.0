@@ -1,0 +1,13 @@
+========================================================================================================
+O226 scripts/05 -- J3 multi-round ledger, R = 1..8 x 120 states (rules: o226-r1-contract-v1)
+========================================================================================================
+[PASS] R1      Pr-3.2: every pair map is a right translation s -> s.g(a,b) (bijection on 120 states) for all 3844 pairs; the round word W = prod g(a,b) exists  --  mismatches = 0 / 461280 ; W word index = 37
+[PASS] R2      Pr-3.2: the coset order of W divides 60 (the world-line closes on the centre quotient)  --  ord_2I(W) = 5 ; ord_{2I/{+-1}}(W) = 5 (divides 60: True)
+[PASS] R3      Pr-3.1: for every R = 1..8 the per-round account is IDENTICAL over all 120 initial states and over all rounds: 15 completed pairs / 44 charges / hits / 15 pops / terminal (0,15) / Sigma = 61.5 / B_rem = 0  --  distinct accounts per R = {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} ; account = (15, 44, 2, 15, (0, 15), '123/2', '0', 14)
+[PASS] R4      Pr-3.2: the state distribution stays exactly uniform: every round map is bijective (120 distinct images) for all 120 initial states  --  distinct final states per R = {1: 120, 2: 120, 3: 120, 4: 120, 5: 120, 6: 120, 7: 120, 8: 120}
+[PASS] R5      Pr-3.2: after R rounds the world state is s0 . W^R (word-level closure); the map is a bijection for every R  --  verified for R = 1..8 (W^R words)
+[FAIL] R6      Pr-3.3: rigidity split -- the counted structure (pops = one per completed pair, charges = 44, Sigma = B) is order independent, while the hit count is NOT (it follows N + C(order)), so hits = 2N is a frozen-order property  --  {"0": {"completed": 15, "charges": 44, "hits": 1, "pops": 15, "predicted_hits": 118}, "1": {"completed": 14, "charges": 44, "hits": 0, "pops": 15, "predicted_hits": 125}, "2": {"completed": 15, "charges": 44, "hits": 1, "pops": 15, "predicted_hits": 121}}
+[PASS] R6-c    CORRECTED (unit mismatch in the pre-registered check, disclosed): under order permutation the BUDGET LAW is rigid (charges = 44, Sigma = B = 123/2, B_rem = 0 for every order) while the reached content is not (completed pairs and in-prefix hits vary) => "the budget is a law, the prefix is an outcome"  --  charges [44, 44, 44] ; completed [15, 14, 15] ; in-prefix hits [1, 0, 1] (the N + C(order) closed form applies to the UNBUDGETED full pass, established independently in scripts/04)
+========================================================================================================
+RESULT: 6/7 PASS
+========================================================================================================

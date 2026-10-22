@@ -1,0 +1,38 @@
+{
+  "problem": "O121/G8 τ_ref 體積一致性審計",
+  "volumes": {
+    "V_comov_Mpc3": 12000000000000.0,
+    "V_world_Mpc3": 295000000000.0,
+    "ratio": 40.67796610169491
+  },
+  "A_G8_reproduction": {
+    "M_BH_Msun": 5.88e+18,
+    "Mdot_uhecr_used": 82.51175629356901,
+    "tau_ref_used_yr": 7.1262572318537464e+16,
+    "V_used_MBH_Mpc3": 12000000000000.0,
+    "V_used_Mdot_Mpc3": 295000000000.0,
+    "mixed_volumes": true
+  },
+  "B_corrected": {
+    "Mdot_uhecr_1e45": 6712.820851002224,
+    "Mdot_uhecr_5e44": 3356.410425501112,
+    "tau_ref_1e45_yr": 875935784748689.6,
+    "tau_ref_5e44_yr": 1751871569497379.2,
+    "overestimate_factor": 81.35593220338983
+  },
+  "C_reeval": {
+    "tau_pred_yr": 8.874784590563531e+16,
+    "dev_vs_1e45": 100.31775348246278,
+    "dev_vs_5e44": 49.65887674123139,
+    "lower_bound_satisfied": true,
+    "verdict": "+24.56% 吻合係體積假象; 下界仍滿足, 無吻合"
+  },
+  "D_f_return": {
+    "Mdot_structural": 66.25512923718898,
+    "Mdot_o175": 17408.357403599322,
+    "f_return_corrected_1e45": 0.00986993854115697,
+    "f_return_G8_used": 0.8029780508059907,
+    "o175_over_uhecr_corrected": 2.5932998645420806
+  },
+  "verdict": "G8 root-cause: τ_ref 混用體積; +24.56% 假象; 修正 gap ~100×"
+}

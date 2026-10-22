@@ -1,0 +1,30 @@
+{
+ "R": "R3",
+ "title": "t VEV 凝結方向",
+ "gamma13": 0.8014446669773061,
+ "M0_gamma13": 22.361039530537127,
+ "m_t": 173100.0,
+ "gap_no_Phi": 7741.14279274037,
+ "gap_with_Phi64": 120.95535613656828,
+ "phi_max_inferred": 63.99523591225575,
+ "phi_max_64": 64.0,
+ "yt": 0.9942359082980509,
+ "v_SM": 246.2196,
+ "BminusL": {
+  "e": -1.0,
+  "mu": -1.0,
+  "tau": -1.0,
+  "t": 0.3333333333333333
+ },
+ "lambda_max_O101": 51.560606,
+ "linkage_main_mode_phase1": "no structural map (negative)",
+ "verdict_R3_1": "已收口 (O233 docs/15, B−L 閘)",
+ "verdict_R3_2": "負結果 (命名巧合, O210 陰影)",
+ "verdict_R3_3": "負結果 (Φ_max 唔收缺口; t = VEV 層, y_t≈1)",
+ "observation_level_hits": [
+  "88^2=7744 dev 0.02%",
+  "L5^2=121 dev 0.03%",
+  "gamma13_Phi_max vs lambda_max dev 0.55% (均唔升格)"
+ ],
+ "cheat": "全部輸入已閉合; 零新常數"
+}

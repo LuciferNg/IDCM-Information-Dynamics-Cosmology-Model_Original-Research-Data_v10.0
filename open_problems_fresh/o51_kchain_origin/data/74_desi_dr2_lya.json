@@ -1,0 +1,15 @@
+{
+  "z_lya": 2.33,
+  "D_app": 5989.26,
+  "rd_corrected": 147.0883,
+  "dm_rd_idcm": 40.6221,
+  "dm_rd_corrected": 40.7188,
+  "dm_rd_desi": 39.32,
+  "dm_rd_err": 0.33,
+  "dh_rd_idcm": 10.4835,
+  "dh_rd_corrected": 10.5084,
+  "dh_rd_desi": 8.6,
+  "dh_rd_err": 0.066,
+  "pass": 0,
+  "fail": 2
+}

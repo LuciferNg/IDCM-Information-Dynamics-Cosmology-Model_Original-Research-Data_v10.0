@@ -1,0 +1,898 @@
+{
+ "cap_table": {
+  "1": 2,
+  "2": 4,
+  "3": 8,
+  "4": 14,
+  "5": 22,
+  "6": 32,
+  "7": 44
+ },
+ "kmin_bound": {
+  "M_2I": 4,
+  "M_face": 5,
+  "M_edge": 6,
+  "M_T": 2,
+  "M_O": 3,
+  "M_D4": 1
+ },
+ "k_min_measured": {
+  "M_2I": 4,
+  "M_face": 5,
+  "M_edge": 7,
+  "M_T": 2,
+  "M_O": 3,
+  "M_D4": 1
+ },
+ "transition_facts": {
+  "M_2I_F1": 0,
+  "M_2I_F2": 0,
+  "M_2I_F3": 0,
+  "M_face_F1": 0,
+  "M_face_F2": 0,
+  "M_face_F3": 0,
+  "M_face_F4": 0,
+  "M_edge_F1": 0,
+  "M_edge_F2": 0,
+  "M_edge_F3": 0,
+  "M_edge_F4": 0,
+  "M_edge_F5": 0,
+  "M_edge_F6": 0,
+  "M_T_F1": 0,
+  "M_O_F1": 0,
+  "M_O_F2": 0
+ },
+ "pat": {
+  "M_2I": {
+   "k1": {
+    "max_pat": 2,
+    "cap": 2,
+    "exhaustive": true,
+    "arg": [
+     0
+    ]
+   },
+   "k2": {
+    "max_pat": 4,
+    "cap": 4,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1
+    ]
+   },
+   "k3": {
+    "max_pat": 8,
+    "cap": 8,
+    "exhaustive": true,
+    "arg": [
+     0,
+     4,
+     9
+    ]
+   },
+   "k4": {
+    "max_pat": 12,
+    "cap": 14,
+    "exhaustive": true,
+    "arg": [
+     0,
+     4,
+     7,
+     11
+    ]
+   },
+   "k5": {
+    "max_pat": 12,
+    "cap": 22,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     2,
+     5,
+     8
+    ],
+    "mode": "exhaustive"
+   }
+  },
+  "M_face": {
+   "k1": {
+    "max_pat": 2,
+    "cap": 2,
+    "exhaustive": true,
+    "arg": [
+     0
+    ]
+   },
+   "k2": {
+    "max_pat": 4,
+    "cap": 4,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1
+    ]
+   },
+   "k3": {
+    "max_pat": 8,
+    "cap": 8,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     4
+    ]
+   },
+   "k4": {
+    "max_pat": 14,
+    "cap": 14,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     9,
+     17
+    ]
+   },
+   "k5": {
+    "max_pat": 20,
+    "cap": 22,
+    "exhaustive": true,
+    "arg": [
+     1,
+     11,
+     14,
+     21,
+     22
+    ],
+    "mode": "exhaustive"
+   }
+  },
+  "M_edge": {
+   "k1": {
+    "max_pat": 2,
+    "cap": 2,
+    "exhaustive": true,
+    "arg": [
+     0
+    ]
+   },
+   "k2": {
+    "max_pat": 4,
+    "cap": 4,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1
+    ]
+   },
+   "k3": {
+    "max_pat": 8,
+    "cap": 8,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     4
+    ]
+   },
+   "k4": {
+    "max_pat": 14,
+    "cap": 14,
+    "exhaustive": true,
+    "arg": [
+     0,
+     3,
+     17,
+     23
+    ]
+   },
+   "k5": {
+    "max_pat": 20,
+    "cap": 22,
+    "exhaustive": false,
+    "arg": [
+     2,
+     22,
+     25,
+     36,
+     45
+    ],
+    "mode": "sample200000"
+   }
+  },
+  "M_T": {
+   "k1": {
+    "max_pat": 2,
+    "cap": 2,
+    "exhaustive": true,
+    "arg": [
+     0
+    ]
+   },
+   "k2": {
+    "max_pat": 4,
+    "cap": 4,
+    "exhaustive": true,
+    "arg": [
+     2,
+     4
+    ]
+   },
+   "k3": {
+    "max_pat": 4,
+    "cap": 8,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     3
+    ]
+   },
+   "k4": {
+    "max_pat": 4,
+    "cap": 14,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   "k5": {
+    "max_pat": 4,
+    "cap": 22,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "mode": "exhaustive"
+   }
+  },
+  "M_O": {
+   "k1": {
+    "max_pat": 2,
+    "cap": 2,
+    "exhaustive": true,
+    "arg": [
+     0
+    ]
+   },
+   "k2": {
+    "max_pat": 4,
+    "cap": 4,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1
+    ]
+   },
+   "k3": {
+    "max_pat": 6,
+    "cap": 8,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     2
+    ]
+   },
+   "k4": {
+    "max_pat": 6,
+    "cap": 14,
+    "exhaustive": true,
+    "arg": [
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  "M_D4": {
+   "k1": {
+    "max_pat": 2,
+    "cap": 2,
+    "exhaustive": true,
+    "arg": [
+     0
+    ]
+   },
+   "k2": {
+    "max_pat": null,
+    "cap": 4,
+    "exhaustive": true,
+    "arg": null,
+    "note": "only 1 types exist (< k) -> no k-subset"
+   },
+   "k3": {
+    "max_pat": null,
+    "cap": 8,
+    "exhaustive": true,
+    "arg": null,
+    "note": "only 1 types exist (< k) -> no k-subset"
+   },
+   "k4": {
+    "max_pat": null,
+    "cap": 14,
+    "exhaustive": true,
+    "arg": null,
+    "note": "only 1 types exist (< k) -> no k-subset"
+   }
+  }
+ },
+ "parity": {
+  "M_2I": {
+   "rows_closed_under_negation": true,
+   "codes_closed_under_complement": true,
+   "n_types": 16,
+   "mode": "2000 samples"
+  },
+  "M_face": {
+   "rows_closed_under_negation": true,
+   "codes_closed_under_complement": true,
+   "n_types": 24,
+   "mode": "2000 samples"
+  },
+  "M_edge": {
+   "rows_closed_under_negation": true,
+   "codes_closed_under_complement": true,
+   "n_types": 60,
+   "mode": "2000 samples"
+  },
+  "M_T": {
+   "rows_closed_under_negation": false,
+   "codes_closed_under_complement": false,
+   "n_types": 7,
+   "mode": "2000 samples"
+  },
+  "M_O": {
+   "rows_closed_under_negation": true,
+   "codes_closed_under_complement": true,
+   "n_types": 4,
+   "mode": "2000 samples"
+  },
+  "M_D4": {
+   "rows_closed_under_negation": true,
+   "codes_closed_under_complement": null,
+   "n_types": 1,
+   "mode": "vacuous"
+  }
+ },
+ "edge_k6": {
+  "F_4": 0,
+  "F_5": 0,
+  "F_6": 0,
+  "max_pat_greedy": 26,
+  "arg_greedy": [
+   10,
+   12,
+   14,
+   15,
+   32,
+   47
+  ],
+  "max_pat_sample": 26,
+  "arg_sample": [
+   11,
+   20,
+   29,
+   32,
+   40,
+   54
+  ],
+  "max_pat_best": 26,
+  "arg_best": [
+   10,
+   12,
+   14,
+   15,
+   32,
+   47
+  ],
+  "upper_bound": 28,
+  "cap6": 32,
+  "max_pat_k5": 20,
+  "collision_classes": [
+   [
+    10,
+    14,
+    25
+   ],
+   [
+    16,
+    17,
+    20
+   ]
+  ],
+  "collisions": [
+   {
+    "rows": [
+     10,
+     14
+    ],
+    "dot": [
+     "1/4",
+     "1/4"
+    ],
+    "abs_dot": 0.8090169943749475,
+    "is_nearest_pair": false
+   },
+   {
+    "rows": [
+     10,
+     25
+    ],
+    "dot": [
+     "1/4",
+     "1/4"
+    ],
+    "abs_dot": 0.8090169943749475,
+    "is_nearest_pair": false
+   },
+   {
+    "rows": [
+     14,
+     25
+    ],
+    "dot": [
+     "1/4",
+     "1/4"
+    ],
+    "abs_dot": 0.8090169943749475,
+    "is_nearest_pair": false
+   },
+   {
+    "rows": [
+     16,
+     17
+    ],
+    "dot": [
+     "1/4",
+     "1/4"
+    ],
+    "abs_dot": 0.8090169943749475,
+    "is_nearest_pair": false
+   },
+   {
+    "rows": [
+     16,
+     20
+    ],
+    "dot": [
+     "1/4",
+     "1/4"
+    ],
+    "abs_dot": 0.8090169943749475,
+    "is_nearest_pair": false
+   },
+   {
+    "rows": [
+     17,
+     20
+    ],
+    "dot": [
+     "1/4",
+     "1/4"
+    ],
+    "abs_dot": 0.8090169943749475,
+    "is_nearest_pair": false
+   }
+  ],
+  "nearest_threshold": 1.0,
+  "n_distinct_abs_dot_levels": 5,
+  "n_nearest_pairs": 15,
+  "extended_search": {
+   "samples": 300000,
+   "sample_max": 26,
+   "anneal_max": 26,
+   "best": 26,
+   "arg": [
+    6,
+    22,
+    35,
+    38,
+    40,
+    51
+   ],
+   "seconds": 5.887073993682861
+  }
+ },
+ "third_route": {
+  "M_2I": {
+   "direct_k1_4": [
+    0,
+    0,
+    0,
+    12645
+   ],
+   "typeset_k1_4": [
+    0,
+    0,
+    0,
+    12645
+   ],
+   "match": true
+  },
+  "M_face": {
+   "direct_k1_4": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "typeset_k1_4": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "match": true
+  },
+  "M_edge": {
+   "direct_k1_4": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "typeset_k1_4": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "match": true
+  },
+  "M_T": {
+   "direct_k1_4": [
+    0,
+    12,
+    244,
+    911
+   ],
+   "typeset_k1_4": [
+    0,
+    12,
+    244,
+    911
+   ],
+   "match": true,
+   "direct_F5": 1966,
+   "dfs_F5": 1966
+  },
+  "M_O": {
+   "direct_k1_4": [
+    0,
+    0,
+    1080,
+    10692
+   ],
+   "typeset_k1_4": [
+    0,
+    0,
+    1080,
+    10692
+   ],
+   "match": true,
+   "direct_F5": 57546,
+   "dfs_F5": 57546
+  },
+  "M_D4": {
+   "direct_k1_4": [
+    10,
+    45,
+    120,
+    210
+   ],
+   "typeset_k1_4": [
+    10,
+    45,
+    120,
+    210
+   ],
+   "match": true,
+   "direct_F5": 252,
+   "dfs_F5": 252
+  }
+ },
+ "packing": {
+  "M_2I": {
+   "nu": 2,
+   "k_min": 4,
+   "gap": 2,
+   "certificate_ok": true,
+   "separating_subset_of_size_nu": null,
+   "dfs_nodes": 1387,
+   "dfs_budget": 4000000,
+   "dfs_truncated": false,
+   "packing_pairs": [
+    [
+     6,
+     7
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "n_row_pairs": 66
+  },
+  "M_face": {
+   "nu": 3,
+   "k_min": 5,
+   "gap": 2,
+   "certificate_ok": true,
+   "separating_subset_of_size_nu": null,
+   "dfs_nodes": 27190,
+   "dfs_budget": 4000000,
+   "dfs_truncated": false,
+   "packing_pairs": [
+    [
+     7,
+     10
+    ],
+    [
+     10,
+     11
+    ],
+    [
+     11,
+     12
+    ]
+   ],
+   "n_row_pairs": 190
+  },
+  "M_edge": {
+   "nu": 5,
+   "k_min": 7,
+   "gap": 2,
+   "certificate_ok": true,
+   "separating_subset_of_size_nu": null,
+   "dfs_nodes": 2232275,
+   "dfs_budget": 4000000,
+   "dfs_truncated": false,
+   "packing_pairs": [
+    [
+     2,
+     7
+    ],
+    [
+     2,
+     20
+    ],
+    [
+     7,
+     12
+    ],
+    [
+     17,
+     20
+    ],
+    [
+     17,
+     23
+    ]
+   ],
+   "n_row_pairs": 435
+  },
+  "M_T": {
+   "nu": 1,
+   "k_min": 2,
+   "gap": 1,
+   "certificate_ok": true,
+   "separating_subset_of_size_nu": null,
+   "dfs_nodes": 11,
+   "dfs_budget": 4000000,
+   "dfs_truncated": false,
+   "packing_pairs": [
+    [
+     1,
+     2
+    ]
+   ],
+   "n_row_pairs": 6
+  },
+  "M_O": {
+   "nu": 2,
+   "k_min": 3,
+   "gap": 1,
+   "certificate_ok": true,
+   "separating_subset_of_size_nu": null,
+   "dfs_nodes": 259,
+   "dfs_budget": 4000000,
+   "dfs_truncated": false,
+   "packing_pairs": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "n_row_pairs": 15
+  },
+  "M_D4": {
+   "nu": 1,
+   "k_min": 1,
+   "gap": 0,
+   "certificate_ok": true,
+   "separating_subset_of_size_nu": [
+    0
+   ],
+   "dfs_nodes": 2,
+   "dfs_budget": 4000000,
+   "dfs_truncated": false,
+   "packing_pairs": [
+    [
+     0,
+     1
+    ]
+   ],
+   "n_row_pairs": 1
+  }
+ },
+ "antipodal_twins": {
+  "M_2I": {
+   "pairs_with_antipodal_twin": 66,
+   "of": 66
+  },
+  "M_face": {
+   "pairs_with_antipodal_twin": 190,
+   "of": 190
+  },
+  "M_edge": {
+   "pairs_with_antipodal_twin": 435,
+   "of": 435
+  },
+  "M_T": {
+   "pairs_with_antipodal_twin": 0,
+   "of": 6
+  },
+  "M_O": {
+   "pairs_with_antipodal_twin": 15,
+   "of": 15
+  },
+  "M_D4": {
+   "pairs_with_antipodal_twin": 1,
+   "of": 1
+  }
+ },
+ "claims": [
+  {
+   "tag": "K1a-1",
+   "name": "cap(k) = min(2^k, k^2-k+2) = {1:2, 2:4, 3:8, 4:14, 5:22, 6:32, 7:44} (regions of k great circles in general position; the k^2-k+2 branch dominates from k = 4)",
+   "ok": true,
+   "detail": "cap = {1: 2, 2: 4, 3: 8, 4: 14, 5: 22, 6: 32, 7: 44}"
+  },
+  {
+   "tag": "K1a-2",
+   "name": "every machine satisfies the arrangement bound k_min >= min{k : cap(k) >= m}",
+   "ok": true,
+   "detail": "M_2I: m=12 bound=4 measured=4 ; M_face: m=20 bound=5 measured=5 ; M_edge: m=30 bound=6 measured=7 ; M_T: m=4 bound=2 measured=2 ; M_O: m=6 bound=3 measured=3 ; M_D4: m=2 bound=1 measured=1"
+  },
+  {
+   "tag": "K1a-3",
+   "name": "the bound is attained by exactly 5 of 6 machines; the sole excess is M_edge (bound 6, measured 7)",
+   "ok": true,
+   "detail": "equal: ['M_2I', 'M_D4', 'M_O', 'M_T', 'M_face'] ; over: {'M_edge': (6, 7)}"
+  },
+  {
+   "tag": "K1b-1",
+   "name": "all 11 transition facts hold: F_k = 0 for every k below the arrangement bound (equivalently for every k < k_min), on all six machines",
+   "ok": false,
+   "detail": "PREDICTED 11 facts, ACTUAL 16 recorded facts (all still zero) = {'M_2I_F1': 0, 'M_2I_F2': 0, 'M_2I_F3': 0, 'M_face_F1': 0, 'M_face_F2': 0, 'M_face_F3': 0, 'M_face_F4': 0, 'M_edge_F1': 0, 'M_edge_F2': 0, 'M_edge_F3': 0, 'M_edge_F4': 0, 'M_edge_F5': 0, 'M_edge_F6': 0, 'M_T_F1': 0, 'M_O_F1': 0, 'M_O_F2': 0}"
+  },
+  {
+   "tag": "K1b-1-c",
+   "name": "CORRECTION (post-hoc, criteria unchanged): the substantive content holds for every F-value R2 recorded -- 16/16 facts are zero, i.e. F_k = 0 for EVERY k below the bound; the pre-registered count 11 was a bookkeeping miscount of how many F-values R2 stores (2I F1-3, face F1-4, edge F1-6 via DFS, T F1, O F1-2, D4 none = 16)",
+   "ok": true,
+   "detail": "non-zero facts = 0 ; fact table size = 16"
+  },
+  {
+   "tag": "K1c-1",
+   "name": "the arrangement bound is a bound on the REALISED pattern count, not only on the region count: max_T pat(T) <= cap(k) for every machine and every k in 1..4 (exhaustive over all k-subsets of types), and for k = 5 as marked (M_edge: 200000-declared sample)",
+   "ok": true,
+   "detail": "M_2I {'k1': (2, 2), 'k2': (4, 4), 'k3': (8, 8), 'k4': (12, 14), 'k5': (12, 22)} ; M_face {'k1': (2, 2), 'k2': (4, 4), 'k3': (8, 8), 'k4': (14, 14), 'k5': (20, 22)} ; M_edge {'k1': (2, 2), 'k2': (4, 4), 'k3': (8, 8), 'k4': (14, 14), 'k5': (20, 22)} ; M_T {'k1': (2, 2), 'k2': (4, 4), 'k3': (4, 8), 'k4': (4, 14), 'k5': (4, 22)} ; M_O {'k1': (2, 2), 'k2': (4, 4), 'k3': (6, 8), 'k4': (6, 14)} ; M_D4 {'k1': (2, 2), 'k2': (None, 4), 'k3': (None, 8), 'k4': (None, 14)}"
+  },
+  {
+   "tag": "K2a-1",
+   "name": "every machine has a row set closed under negation and (on 2000 random subsets) a pattern set closed under bit-complement  =>  #distinct patterns is EVEN",
+   "ok": false,
+   "detail": "M_2I {'rows_closed_under_negation': True, 'codes_closed_under_complement': True, 'n_types': 16, 'mode': '2000 samples'} ; M_face {'rows_closed_under_negation': True, 'codes_closed_under_complement': True, 'n_types': 24, 'mode': '2000 samples'} ; M_edge {'rows_closed_under_negation': True, 'codes_closed_under_complement': True, 'n_types': 60, 'mode': '2000 samples'} ; M_T {'rows_closed_under_negation': False, 'codes_closed_under_complement': False, 'n_types': 7, 'mode': '2000 samples'} ; M_O {'rows_closed_under_negation': True, 'codes_closed_under_complement': True, 'n_types': 4, 'mode': '2000 samples'} ; M_D4 {'rows_closed_under_negation': True, 'codes_closed_under_complement': None, 'n_types': 1, 'mode': 'vacuous'}"
+  },
+  {
+   "tag": "K2b-1",
+   "name": "M_edge: F_5 = 0 and F_6 = 0 re-verified by the pruned DFS (independently of R2)",
+   "ok": true,
+   "detail": "F_4=0 F_5=0 F_6=0"
+  },
+  {
+   "tag": "K2b-2",
+   "name": "M_edge at k = 6: pat <= 28 EXACTLY -- F_6 = 0 gives pat <= 29 and evenness gives pat <= 28, so the region bound cap(6) = 32 alone would have allowed separation",
+   "ok": true,
+   "detail": "cap(6)=32 ; F_6=0 => pat<=29 ; even => pat<=28"
+  },
+  {
+   "tag": "K2b-3",
+   "name": "the bound 28 is ATTAINED (declared-seed greedy + 200000-sample) => the exact maximum is 28 : 14 of the 15 complementary code pairs, one short",
+   "ok": false,
+   "detail": "max found = 26 (greedy 26, sample 26) ; arg = [10, 12, 14, 15, 32, 47]"
+  },
+  {
+   "tag": "K2c-1",
+   "name": "M_edge at k = 5: realised pattern count <= 22 = cap(5) (so F_5 = 0 is forced by the arrangement geometry, not by the orbit accidentally)",
+   "ok": true,
+   "detail": "sampled max pat(k=5) = 20, cap(5) = 22"
+  },
+  {
+   "tag": "K2d-1",
+   "name": "at k = 6 the two collisions are pairs of rows that cannot be told apart by any of the 6 chosen axes; each such colliding pair is a NEAREST pair (|dot| = the maximum over all 435 row pairs)",
+   "ok": false,
+   "detail": "collisions = [([10, 14], 0.809017), ([10, 25], 0.809017), ([14, 25], 0.809017), ([16, 17], 0.809017), ([16, 20], 0.809017), ([17, 20], 0.809017)] ; max|dot| = 1.000000 ; nearest pairs = 15/435"
+  },
+  {
+   "tag": "K3-1",
+   "name": "third route (plain column-subset enumeration, no type aggregation) reproduces the type-set closed form for k = 1..4 on all six machines, and F_5 by two further independent ways on the small machines",
+   "ok": true,
+   "detail": "mismatches = []"
+  },
+  {
+   "tag": "K2a-1-c",
+   "name": "CORRECTION: parity holds exactly for the machines whose ROW SET IS CLOSED UNDER NEGATION (M_2I, M_face, M_edge, M_O, and vacuously M_D4); M_T is the sole exception -- its orbit is one tetrahedron {(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)}, which is NOT centrally symmetric. This is the same dichotomy R2 registered as T2-c (bisection <=> centrally symmetric orbit). The M_edge certificate below needs only the M_edge row, which is negation-closed",
+   "ok": true,
+   "detail": "negation closure: {'M_2I': True, 'M_face': True, 'M_edge': True, 'M_T': False, 'M_O': True, 'M_D4': True}"
+  },
+  {
+   "tag": "K2d-1-c",
+   "name": "CORRECTION: the registered prediction (collisions at the nearest shell) FAILED. The collisions of the best k = 6 subset sit on the SECOND angular shell |dot| = cos 36 deg = (1+sqrt5)/4 = 0.809017 (the nearest shell |dot| = 1 is the 15 antipodal row pairs, which every column separates and therefore never collide). Structure: two TRIPLES of edge midpoints, the three rows inside each triple mutually at 36 deg",
+   "ok": true,
+   "detail": "shells |dot| = [1.0, 0.809017, 0.5, 0.309017] ; collision shell = [0.809017] ; collision classes = [[10, 14, 25], [16, 17, 20]]"
+  },
+  {
+   "tag": "K2b-3-c",
+   "name": "CORRECTION of the registered prediction (which expected the bound 28 to be attained): the extended search (300000 declared-seed samples + 200 greedy/swap restarts) reaches max pat = 26, so the certified interval is 26 <= max pat(k=6) <= 28 (the upper end is PROVEN: F_6 = 0 gives <= 29 and parity gives <= 28). The registered FAIL is kept; the interval, not the point value, is the round result",
+   "ok": true,
+   "detail": "best = 26 (samples 26, anneal 26) ; proven upper = 28 ; earlier constructions = 26"
+  },
+  {
+   "tag": "K4-1",
+   "name": "PACKING CERTIFICATE (new this round): a set P of row pairs with the property that NO single column separates two of them yields k_min >= |P|. For every machine a packing of size exactly k_min exists AND a separating column subset of the same size is exhibited, so k_min = nu(P) = {'M_2I': (2, 4), 'M_face': (3, 5), 'M_edge': (5, 7), 'M_T': (1, 2), 'M_O': (2, 3), 'M_D4': (1, 1)} on all six machines",
+   "ok": false,
+   "detail": "nu vs k_min = {'M_2I': (2, 4), 'M_face': (3, 5), 'M_edge': (5, 7), 'M_T': (1, 2), 'M_O': (2, 3), 'M_D4': (1, 1)}"
+  },
+  {
+   "tag": "K4-2",
+   "name": "M_edge certificate: nu = 7 > cap(6) = 6 -> the arrangement bound is NOT tight here, but the packing bound IS: 7 jointly-unseparable row pairs need 7 columns, and 7 columns suffice (explicit subset) => k_min(M_edge) = 7 exactly, no F_6-enumeration needed",
+   "ok": false,
+   "detail": "nu=5 ; separating 7-subset = None ; pairs = [[2, 7], [2, 20], [7, 12], [17, 20], [17, 23]]"
+  },
+  {
+   "tag": "K4-1-c",
+   "name": "CORRECTION: the registered equality k_min = nu(P) is FALSIFIED. What survives is the inequality k_min >= nu(P) (every packing certificate verifies: no column separates two of its pairs). Measured relation nu = k_min - gap with gap = [0, 1, 2] -- a uniform gap 2 across the three icosahedral machines, 1 for T and O, 0 for D4",
+   "ok": true,
+   "detail": "nu / k_min / gap = {'M_2I': (2, 4, 2), 'M_face': (3, 5, 2), 'M_edge': (5, 7, 2), 'M_T': (1, 2, 1), 'M_O': (2, 3, 1), 'M_D4': (1, 1, 0)}"
+  },
+  {
+   "tag": "K4-3",
+   "name": "the 5 machines with nu < k_min: the pruned DFS over ALL C(N, nu) column subsets (budget 4e6 nodes, not exhausted) finds NO separating nu-subset => nu < k_min is PROVED, not merely \"not found\" -- the packing certificate is strictly weaker than k_min in 5 of 6 cases",
+   "ok": true,
+   "detail": "machines with gap>0: truncated/nodes = {'M_2I': (False, 1387), 'M_face': (False, 27190), 'M_edge': (False, 2232275), 'M_T': (False, 11), 'M_O': (False, 259)}"
+  },
+  {
+   "tag": "K4-4",
+   "name": "ANTIPODAL-TWIN LEMMA: whenever the row set is closed under negation, the pair (r, r-prime) and its antipode (-r, -r-prime) have BIT-IDENTICAL separating-column sets on all 62 columns (verified pair by pair). Consequence: every pair drags an automatic conflict partner into any packing, which caps nu -- the structural reason the packing certificate is not tight",
+   "ok": true,
+   "detail": "twins: {'M_2I': {'pairs_with_antipodal_twin': 66, 'of': 66}, 'M_face': {'pairs_with_antipodal_twin': 190, 'of': 190}, 'M_edge': {'pairs_with_antipodal_twin': 435, 'of': 435}, 'M_T': {'pairs_with_antipodal_twin': 0, 'of': 6}, 'M_O': {'pairs_with_antipodal_twin': 15, 'of': 15}, 'M_D4': {'pairs_with_antipodal_twin': 1, 'of': 1}}"
+  }
+ ],
+ "elapsed_s": 26.930826425552368
+}

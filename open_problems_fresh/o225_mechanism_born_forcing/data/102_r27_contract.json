@@ -1,0 +1,39 @@
+{
+ "rules": "r27-crit1-orbit-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "合約 doc 存在且含關鍵定義",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 齊備（O1–O4／P1–P4／Q1–Q2 = 10 條）",
+   "ok": true,
+   "detail": "缺 = 無"
+  },
+  {
+   "tag": "C3",
+   "name": "判決規則聲明在場",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C4",
+   "name": "負對照：原式僅以「否證」形式出現，未作為 Part O／P 判據",
+   "ok": true,
+   "detail": "原式出現於否證語境 = True；被誤用作判據 = False"
+  },
+  {
+   "tag": "C5",
+   "name": "凍結指紋已寫入（sha256 = 合約內容）",
+   "ok": true,
+   "detail": "sha256 = 709b75f38548ec38…"
+  }
+ ],
+ "gate": "OPEN",
+ "n_pass": 5,
+ "n_total": 5,
+ "contract_sha256": "709b75f38548ec382881ba24f659b8b838cd7f317b32af0da0b6b1d4dea593c2"
+}

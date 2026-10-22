@@ -1,0 +1,120 @@
+{
+ "lhv_bound_num": 480,
+ "lhv_bound": 4,
+ "achiever": {
+  "tuple": [
+   0,
+   60,
+   0,
+   53,
+   43,
+   22,
+   13,
+   28
+  ],
+  "ids": [
+   "V00",
+   "E28",
+   "V00",
+   "E21",
+   "E11",
+   "F10",
+   "F01",
+   "F16"
+  ],
+  "value_num": 512,
+  "within_pair_distinct": true,
+  "eight_distinct": false
+ },
+ "attainer_min": {
+  "tuple": [
+   0,
+   60,
+   0,
+   53,
+   43,
+   22,
+   30,
+   15
+  ],
+  "ids": [
+   "V00",
+   "E28",
+   "V00",
+   "E21",
+   "E11",
+   "F10",
+   "F18",
+   "F03"
+  ],
+  "value_num": -512,
+  "within_pair_distinct": true
+ },
+ "party_constrained_4d": {
+  "at_achiever": [
+   512,
+   -512
+  ],
+  "at_minimiser": [
+   512,
+   -512
+  ]
+ },
+ "raw_global_from_round4": [
+  512,
+  -512
+ ],
+ "brackets": {
+  "eight": [
+   320,
+   512
+  ],
+  "eight_anti": [
+   224,
+   512
+  ],
+  "party": [
+   512,
+   512
+  ]
+ },
+ "verdicts": {
+  "P3": "the n = 4 Mermin inequality is violated by the frozen machine inside the legitimate (within-pair-distinctness) window by exactly 32/120; gained by the exact round-4 raw global plus the exact membership and attainment checks of P1/P2",
+  "P4": "eight and eight_anti globals remain bracketed, not closed"
+ },
+ "script": "13_party_window",
+ "claims": [
+  {
+   "tag": "P1",
+   "name": "MEMBERSHIP IN THE LEGITIMATE WINDOW: the round-4 achieving configuration satisfies the party-window constraints exactly (all four within-pair settings pairwise distinct), so it is a legitimate Bell configuration rather than a merely unconstrained one; the same holds for the minimising configuration",
+   "ok": true,
+   "detail": "max tuple ['V00', 'E28', 'V00', 'E21', 'E11', 'F10', 'F01', 'F16'] -> within-pair pairs [(0, 60), (0, 53), (43, 22), (13, 28)] distinct = True ; min tuple ['V00', 'E28', 'V00', 'E21', 'E11', 'F10', 'F18', 'F03'] -> distinct = True"
+  },
+  {
+   "tag": "P2",
+   "name": "ATTAINMENT BY BRUTE FORCE WITH THE PARTY CONSTRAINTS: a full 4-D enumeration over (c,c',d,d') restricted by the party constraints reproduces the value 512 at the round-4 maximising quadruple and -512 at the minimising one, so the party-window extremes are attained, not extrapolated",
+   "ok": true,
+   "detail": "achieving quadruple ('V00', 'E28', 'V00', 'E21') -> party-constrained 4-D (max 512, min -512) ; minimising quadruple ('V00', 'E28', 'V00', 'E21') -> (max 512, min -512) ; exact 8-term value at the achiever = 512, at the minimiser = -512"
+  },
+  {
+   "tag": "P3",
+   "name": "THE VIOLATION IS EXACT AND CLOSED IN THE LEGITIMATE WINDOW: because the party window is a subset of the raw window and both attain 512, the chained inequality LHV bound < 512/120 = party global <= raw global = 512/120 collapses to an equality at both ends: the frozen machine violates the n = 4 Mermin inequality inside the physically legitimate (within-pair-distinctness) window by exactly 512 - 480 = 32 units of 1/120, i.e. by 6.667%. The statement is recorded as it is",
+   "ok": true,
+   "detail": "LHV bound = 480 = 480/120 ; raw global max = 512/120 ; party-window global max = 512/120 (sandwiched) ; excess = 32/120 = 6.6667% of the bound ; raw global min = -512/120 ; party-window global min = -512/120 ; |M4|max = 512/120 = 4.266667"
+  },
+  {
+   "tag": "P4",
+   "name": "BRACKETS FOR THE STRICTER WINDOWS (not closed here, stated honestly): the eight and eight_anti windows are subsets of the party window, so their global maxima lie in [320, 512] and [224, 512] respectively (round-3 pool values as lower bounds, this round's party/raw global as the upper bound); equality is NOT claimed, because the round-4 achiever is not eight-distinct, and the exact global values of those two windows are recorded as NOT computed",
+   "ok": true,
+   "detail": "round-3 pool values = {'raw': 480, 'party': 480, 'eight': 320, 'eight_anti': 224} ; brackets: eight in [320, 512], eight_anti in [224, 512] ; achiever eight-distinct = False"
+  },
+  {
+   "tag": "P5",
+   "name": "GRID: the reported numerators are divisible by 8 (the 1/15 grid)",
+   "ok": true,
+   "detail": "max 512 % 8 = 0 ; min -512 % 8 = 0"
+  }
+ ],
+ "n_pass": 5,
+ "n_claims": 5
+}

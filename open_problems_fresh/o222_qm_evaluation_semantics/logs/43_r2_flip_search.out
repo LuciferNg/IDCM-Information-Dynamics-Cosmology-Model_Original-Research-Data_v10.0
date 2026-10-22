@@ -1,0 +1,53 @@
+====================================================================================================
+O222 R20-ext: flip-based (simulated annealing) rank-2 search, 120x62, seed 2026093, restarts 400 x 6000 steps, budget 240 s
+====================================================================================================
+  restart 1 step 78: energy 3691
+  restart 1 step 79: energy 3690
+  restart 1 step 125: energy 3689
+  restart 1 step 126: energy 3681
+  restart 1 step 131: energy 3678
+  restart 1 step 133: energy 3677
+  restart 1 step 136: energy 3676
+  restart 1 step 137: energy 3674
+  restart 1 step 138: energy 3673
+  restart 1 step 149: energy 3669
+  restart 2 step 0: energy 3610
+  restart 2 step 17: energy 3608
+  restart 2 step 18: energy 3607
+  restart 39 step 2261: energy 3605
+  restart 39 step 2266: energy 3603
+  restart 39 step 2267: energy 3602
+  restart 39 step 2536: energy 3601
+  restart 39 step 2538: energy 3599
+  restart 39 step 2550: energy 3598
+  restart 39 step 2553: energy 3597
+  restart 39 step 2555: energy 3595
+  restart 47 step 114: energy 3593
+  restart 47 step 117: energy 3592
+  restart 47 step 288: energy 3591
+  restart 47 step 312: energy 3588
+  restart 47 step 313: energy 3585
+  restart 47 step 316: energy 3584
+  restart 47 step 327: energy 3581
+  restart 47 step 336: energy 3579
+  restart 47 step 337: energy 3575
+  restart 47 step 341: energy 3573
+  restart 47 step 342: energy 3571
+  restart 47 step 344: energy 3570
+  restart 47 step 345: energy 3569
+  restart 160 step 1859: energy 3568
+  restart 315 step 356: energy 3567
+  restart 315 step 358: energy 3566
+  restart 315 step 360: energy 3565
+  restart 315 step 363: energy 3563
+  restart 315 step 400: energy 3561
+  restart 315 step 401: energy 3560
+  restart 315 step 413: energy 3559
+  restart 315 step 419: energy 3558
+  restart 315 step 420: energy 3550
+  restart 315 step 421: energy 3549
+  restart 315 step 422: energy 3548
+  restart 315 step 423: energy 3547
+  restart 315 step 424: energy 3545
+  restart 315 step 425: energy 3543
+best energy = 3543 / 7440  (mismatching signs)

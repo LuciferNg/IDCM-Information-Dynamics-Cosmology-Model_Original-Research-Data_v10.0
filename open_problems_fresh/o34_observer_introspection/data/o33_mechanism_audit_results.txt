@@ -1,0 +1,6 @@
+O34 — O33 Mechanism Audit
+===================================================================
+matter = 2 + B*L = 28.5 (dev vs exact 5.18e-05)
+unprojected = 88 - B*L = 61.5
+Omega_L exact = 0.6832815730, 41/60 = 0.6833333333
+Status: 🟡 strong structural candidate (0.005%), needs stricter derivation

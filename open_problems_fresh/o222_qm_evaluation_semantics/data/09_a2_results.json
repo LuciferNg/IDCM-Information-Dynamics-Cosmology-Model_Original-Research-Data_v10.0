@@ -1,0 +1,220 @@
+{
+ "rules_version": "a2-contract-v1",
+ "finished_at": "2026-09-29T22:14:38+0800",
+ "n_2I": 120,
+ "r_passes": 1000,
+ "seed": 222,
+ "epochs": [
+  0,
+  961,
+  1922,
+  2883
+ ],
+ "chsh": {
+  "E1_raw": "4",
+  "E1_raw_argmax": [
+   "E27",
+   "E28",
+   "V01",
+   "E28"
+  ],
+  "E1_distinct": "4",
+  "E1_distinct_argmax": [
+   "E27",
+   "E28",
+   "V01",
+   "E28"
+  ],
+  "E1_distinct_anti": "4",
+  "E1_all4": "2",
+  "E2_raw": "4",
+  "E2_raw_argmax": [
+   "E27",
+   "E28",
+   "V10",
+   "E27"
+  ],
+  "E2_distinct": "4",
+  "E2_distinct_argmax": [
+   "E27",
+   "E28",
+   "V10",
+   "E27"
+  ],
+  "E2_distinct_anti": "4",
+  "E2_all4": "3"
+ },
+ "delta_order_max": "4/3",
+ "delta_order_argmax": [
+  "V01",
+  "E27"
+ ],
+ "mc": {
+  "E1_max_abs_diff": "41/375",
+  "E2_max_abs_diff": "31/300"
+ },
+ "ablation_abs_sum": 0,
+ "non_bijective_pair_maps": 0,
+ "max_p_L1_dev_from_uniform": "0",
+ "epoch_diagnostics": {
+  "0": {
+   "L1_dev_from_uniform": "0",
+   "max_p": "1/120",
+   "min_p": "1/120"
+  },
+  "961": {
+   "L1_dev_from_uniform": "0",
+   "max_p": "1/120",
+   "min_p": "1/120"
+  },
+  "1922": {
+   "L1_dev_from_uniform": "0",
+   "max_p": "1/120",
+   "min_p": "1/120"
+  },
+  "2883": {
+   "L1_dev_from_uniform": "0",
+   "max_p": "1/120",
+   "min_p": "1/120"
+  }
+ },
+ "null_random_axis_chsh": {
+  "median": "4",
+  "max": "4",
+  "draws_chsh": 200,
+  "draws_kernel": 1000,
+  "kernel_agreement": 0.5065
+ },
+ "null_order_perm_L1_dev": [
+  "0",
+  "0",
+  "0"
+ ],
+ "null_h_scramble_chsh": {
+  "median": "4",
+  "max": "4",
+  "draws": 200
+ },
+ "claims": [
+  {
+   "tag": "A0",
+   "name": "group + tables rebuilt (|2I| = 120, K = 120x62, h-table 62, frozen order 3844)",
+   "ok": true,
+   "detail": "h bijective = True"
+  },
+  {
+   "tag": "A1",
+   "name": "E1 closed form == literal machine on 344 pairs x 120 states (incl. reconcile check)",
+   "ok": true,
+   "detail": "mismatches = 0"
+  },
+  {
+   "tag": "A1b",
+   "name": "E1 diagonal C1[a][a] = +1 EXACT (memo hit, no second write)",
+   "ok": true,
+   "detail": "all 62 diagonal entries = 1"
+  },
+  {
+   "tag": "A2/P3",
+   "name": "order asymmetry Delta_order > 0 (a read writes the world)",
+   "ok": true,
+   "detail": "max |C1[a][b] - C1_rev[a][b]| = 160/120 (argmax ('V01', 'E27'))"
+  },
+  {
+   "tag": "A3/P2",
+   "name": "E2 exact state-distribution DP over all 3844 pairs (persistent ledger)",
+   "ok": true,
+   "detail": "max L1 dev of p_k from uniform = 0 at k = None ; non-bijective pair maps = 0"
+  },
+  {
+   "tag": "A3b",
+   "name": "world-line evolution is a BIJECTION on all 3844 pairs (uniformity preserved)",
+   "ok": true,
+   "detail": "non-bijective = 0 (if 0 then p_k == uniform exactly, by group-translation argument)"
+  },
+  {
+   "tag": "A4",
+   "name": "antipodal table rebuilt (A4 rule, exact algebraic test)",
+   "ok": true,
+   "detail": "antipodal ordered pairs = 62"
+  },
+  {
+   "tag": "A5/P1v2",
+   "name": "E1 CHSH <= 2 EXACT on the v2 criterion (all4: four settings pairwise distinct)",
+   "ok": true,
+   "detail": "2 = 2.000000  argmax=('V00', 'V01', 'E00', 'F06')"
+  },
+  {
+   "tag": "A5b/P1-pre",
+   "name": "PRE-REGISTERED P1 (distinct statistic) is REFUTED and reported as such",
+   "ok": true,
+   "detail": "distinct = 4 = 4.000000  argmax=('E27', 'E28', 'V01', 'E28') (NOT <= 2) -- the tuple has b' = a', so the forced diagonal C[a][a] = +1 (memo hit) enters the sum; raw = 4 = 4.000000  argmax=('E27', 'E28', 'V01', 'E28'); the value is disclosed, not hidden"
+  },
+  {
+   "tag": "A5b",
+   "name": "E1 raw/degenerate reference: raw and its degenerate argmax disclosed",
+   "ok": true,
+   "detail": "raw = 4 = 4.000000  argmax=('E27', 'E28', 'V01', 'E28') (degenerate tuples such as b' = a' let the diagonal +1 in)"
+  },
+  {
+   "tag": "A6/P2",
+   "name": "E2 CHSH measured (value deliberately not pre-guessed); all variants reported",
+   "ok": true,
+   "detail": "distinct = 4 = 4.000000  argmax=('E27', 'E28', 'V10', 'E27') | distinct+anti = 4 = 4.000000  argmax=('E27', 'E28', 'V10', 'E27') | all4 = 3 = 3.000000  argmax=('E27', 'E28', 'V01', 'E29')"
+  },
+  {
+   "tag": "A7/P5",
+   "name": "marginal of every axis = 0 (P(x=+1) = 1/2 EXACT; centre symmetry)",
+   "ok": true,
+   "detail": "non-zero = 0 / 62"
+  },
+  {
+   "tag": "A8/P5",
+   "name": "E2 second-read conditional marginal P(x_b=+1 | a) = 1/2 for all (a,b) EXACT",
+   "ok": true,
+   "detail": "non-zero conditionals = 0 / 3844"
+  },
+  {
+   "tag": "A9/P6",
+   "name": "ablation (independent world per read) gives C = 0 EXACTLY",
+   "ok": true,
+   "detail": "sum |C_abl| = 0 (structure: independent states x centre symmetry)"
+  },
+  {
+   "tag": "A10/H19",
+   "name": "E1 MC (R=1000) agrees with the closed form (RMS criterion, max reported)",
+   "ok": true,
+   "detail": "RMS = 0.0297 (1/sqrt(R) = 0.0316) ; max = 0.1093 (~3.5 sigma over 3844 pairs is expected)"
+  },
+  {
+   "tag": "A11/H19",
+   "name": "E2 MC (R=1000 continuous world-lines) agrees with the exact DP",
+   "ok": true,
+   "detail": "max |MC - exact DP| = 0.1033"
+  },
+  {
+   "tag": "A12/P8",
+   "name": "null (1) random axes: 10^3 kernel draws; CHSH on the first 200",
+   "ok": true,
+   "detail": "kernel agreement with lattice = 0.506 (expect ~0.5) ; null CHSH median = 4, max = 4"
+  },
+  {
+   "tag": "A13/P8",
+   "name": "null (2) order permutation: 3 draws + STRUCTURAL result (bijection => uniform)",
+   "ok": true,
+   "detail": "final L1 devs = ['0', '0', '0'] (0 confirms the group-translation argument)"
+  },
+  {
+   "tag": "A14/P8",
+   "name": "null (3) h-table conjugation scramble (200 draws, closed form)",
+   "ok": true,
+   "detail": "E1 CHSH median = 4, max = 4 (lattice value = 4)"
+  },
+  {
+   "tag": "A15/P7",
+   "name": "E2 excess present -> argmax type composition reported",
+   "ok": true,
+   "detail": "{'edge': 3, 'vertex': 1}"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+  "source": "Goodwin & Mummery 2026, Nature Astronomy, arXiv:2602.14838",
+  "mdot_high_super_eddington": 1.0,
+  "mdot_low_lowhard_jet": 0.02,
+  "mdot_ratio": 50.0,
+  "sample_considered": 20,
+  "sample_used": 10,
+  "prompt_fraction_A": 0.45454545454545453,
+  "super_eddington_disk_fraction": 0.42,
+  "prompt_detection_rate_band": [
+    0.3,
+    0.5
+  ],
+  "windows": {
+    "W1_xrb_band": [
+      0.01,
+      0.03
+    ],
+    "W2_pm10pct": [
+      0.018000000000000002,
+      0.022000000000000002
+    ],
+    "W3_pm25pct": [
+      0.015,
+      0.025
+    ]
+  },
+  "theoretical_support": "Rees 1982: threshold depends on h and alpha, not M_BH",
+  "curiosities": {
+    "C1_prompt_fraction_vs_F5_over_L5": {
+      "paper": 0.45454545454545453,
+      "idcm": 0.45454545454545453
+    },
+    "C2_super_edd_fraction_vs_mu2NgenL4": {
+      "paper": 0.42,
+      "idcm_integer": 42
+    }
+  },
+  "scope": "data layer only; checks verify anchor arithmetic, not IDCM closure"
+}

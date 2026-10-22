@@ -1,10 +1,10 @@
 {
   "n_imf": 1,
-  "A_phi_slope": 0.29369398906346367,
-  "A_phi_dev_pct": 38.9678362481873,
-  "A_gamma_rms": 0.31150415044285135,
-  "B_spearman_rho": 0.9979360165118679,
+  "A_phi_slope": 0.23383795589908918,
+  "A_phi_dev_pct": 51.40644021577696,
+  "A_gamma_rms": 0.09879265339893398,
+  "B_spearman_rho": 1.0,
   "C_bin_spacing": 5.0,
-  "C_n_max": 8.527432155736205,
-  "C_n_resolvable": 6
+  "C_n_max": 5.822644462821061,
+  "C_n_resolvable": 3
 }

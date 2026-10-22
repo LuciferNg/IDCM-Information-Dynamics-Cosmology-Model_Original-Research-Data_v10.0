@@ -1,0 +1,50 @@
+[
+  {
+    "idx": 0,
+    "has": true,
+    "pid": 8,
+    "K": -232,
+    "star": 8
+  },
+  {
+    "idx": 1,
+    "has": true,
+    "pid": 8,
+    "K": -232,
+    "star": 18
+  },
+  {
+    "idx": 2,
+    "has": false
+  },
+  {
+    "idx": 3,
+    "has": true,
+    "pid": 8,
+    "K": -232,
+    "star": 20
+  },
+  {
+    "idx": 5,
+    "has": false
+  },
+  {
+    "idx": 10,
+    "has": false
+  },
+  {
+    "idx": 20,
+    "has": false
+  },
+  {
+    "idx": 50,
+    "has": true,
+    "pid": 5,
+    "K": -232,
+    "star": 14
+  },
+  {
+    "idx": 89,
+    "has": false
+  }
+]

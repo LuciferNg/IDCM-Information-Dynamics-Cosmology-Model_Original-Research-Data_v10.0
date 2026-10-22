@@ -1,0 +1,15 @@
+========================================================================================================
+O226 scripts/11 -- R3 INDEPENDENT audit (self-contained)
+========================================================================================================
+[PASS] A0   |2I| = 120 rebuilt independently (Hurwitz units + BFS)  --  order = 120
+[PASS] A1   the frozen axis set F1: 62 axes, type counts 12 vertex / 20 face / 30 edge  --  counts = V12 F20 E30
+[PASS] A2   the kernel has exactly 12 classes of size 10 (the R2 count reproduced)  --  classes = 12 ; sizes = [10]
+[PASS] A3   every one of the 12 reference images has exactly 10 perpendicular axes of the frozen set, and they are ALL of type edge  --  perpendicular counts = [10] ; types = ['edge']
+[PASS] A4   the staleness value set is {0,22,24,38,40,62} with multiplicities {0:12, 22:40, 24:20, 38:20, 40:40, 62:12} (the R2 R3 values)  --  D multiplicities = [(0, 12), (22, 40), (24, 20), (38, 20), (40, 40), (62, 12)]
+[PASS] A5   the geometric part of the agreement (axes perpendicular to neither reference image) is a function of cos(v_i,v_j) alone, with the values 52 (cos=1) / 30 (cos=+1/sqrt5) / 14 (cos=-1/sqrt5) / 0 (cos=-1)  --  geo per cos class = [((Fraction(-1, 1), Fraction(0, 1)), [0]), ((Fraction(0, 1), Fraction(-1, 5)), [14]), ((Fraction(0, 1), Fraction(1, 5)), [30]), ((Fraction(1, 1), Fraction(0, 1)), [52])]
+[PASS] A6   the tie-break part takes at most two values per off-diagonal cosine class and splits each 60-pair class as 40 + 20 (near class: 8x20 / 10x40; far class: 8x40 / 10x20)  --  tie distribution per cos class = [[(0, 12)], [(8, 20), (10, 40)], [(8, 40), (10, 20)], [(10, 12)]]
+[PASS] A7   convention test (independent): under an equivariant tie-break the multiplicities differ from the frozen ones, so the value set / multiplicities are convention-relative while the geometric part is not  --  frozen = [(0, 12), (22, 40), (24, 20), (38, 20), (40, 40), (62, 12)] ; equivariant = [(0, 12), (22, 60), (38, 60), (52, 12)]
+[PASS] A8   the R3 machine JSON records the same value set and multiplicities as this audit  --  machine D multiplicities = [[0, 12], [22, 40], [24, 20], [38, 20], [40, 40], [62, 12]]
+========================================================================================================
+RESULT: 9/9 PASS (independent R3 audit)   elapsed 27.9 s
+========================================================================================================

@@ -1,0 +1,37 @@
+drwxr-xr-x    7 1003     1003         8192 Jul 17 09:47 .
+drwxr-xr-x    7 1003     1003         8192 Jul 17 09:47 ..
+-rw-r--r--    1 1003     1003          151 May 06  2014 .f.awk
+-rw-r--r--    1 0        0            1201 Oct 13  2021 .message
+-rw-r--r--    1 0        0            1125 Dec 04  2019 .message.old
+-rw-r--r--    1 1003     1003         1276 Jan 28  2020 .message20211013
+lrwxrwxrwx    1 1003     1003            6 Sep 26  2014 B -> cats/B
+lrwxrwxrwx    1 1003     1003            6 Sep 26  2014 I -> cats/I
+lrwxrwxrwx    1 1003     1003            7 Sep 26  2014 II -> cats/II
+lrwxrwxrwx    1 1003     1003            8 Sep 26  2014 III -> cats/III
+lrwxrwxrwx    1 1003     1003            7 Sep 26  2014 IV -> cats/IV
+lrwxrwxrwx    1 1003     1003            7 Sep 26  2014 IX -> cats/IX
+lrwxrwxrwx    1 1003     1003            6 Sep 26  2014 J -> cats/J
+lrwxrwxrwx    1 1003     1003            6 Sep 26  2014 V -> cats/V
+lrwxrwxrwx    1 1003     1003            7 Sep 26  2014 VI -> cats/VI
+lrwxrwxrwx    1 1003     1003            8 Sep 26  2014 VII -> cats/VII
+lrwxrwxrwx    1 1003     1003            9 Sep 26  2014 VIII -> cats/VIII
+lrwxrwxrwx    1 1003     1003           11 Dec 03  2013 afoev -> catx/afoev/
+lrwxrwxrwx    1 1003     1003            7 Dec 03  2013 cati -> 0/cati/
+lrwxrwxrwx    1 1003     1003            7 Dec 03  2013 catj -> 0/catj/
+lrwxrwxrwx    1 1003     1003            7 Dec 03  2013 cats -> 0/cats/
+lrwxrwxrwx    1 1003     1003            7 Dec 03  2013 catv -> 0/catv/
+lrwxrwxrwx    1 1003     1003            7 Dec 03  2013 catx -> 0/catx/
+lrwxrwxrwx    1 1003     1003            8 Dec 03  2013 contrib -> incoming
+lrwxrwxrwx    1 1003     1003            3 Dec 03  2013 ftp -> pub
+lrwxrwxrwx    1 1003     1003           11 Dec 03  2013 iau27 -> catx/iau27/
+-r--rw-r--    1 0        1        27132186 Nov 10  2019 ls-lR.gz
+lrwxrwxrwx    1 1003     1003            7 Dec 03  2013 more -> 0/more/
+lrwxrwxrwx    1 1003     1003            1 Dec 03  2013 pub -> 0
+-rw-r--r--    1 1003     1003          159 Jul 17 09:47 robots.txt
+lrwxrwxrwx    1 1003     1003            6 Dec 03  2013 sw -> pub/sw
+dr-xr-xr-x    7 1005     0            4096 Jun 08  2011 vizier
+lrwxrwxrwx    1 1003     1003           24 Jul 17  2023 vizier.submit -> /data-asd/vizier.submit/
+lrwxrwxrwx    1 1003     1003            7 Sep 23  2020 vizier.submit.beta -> ../tmp/
+drwxr-xr-x   11 1003     1003         4096 Jan 13  2026 0
+drwxr-x--x   21 1003     1003         4096 Jun 22  2023 1
+drwxr-x--x    4 1003     1003         4096 Nov 26  2021 2

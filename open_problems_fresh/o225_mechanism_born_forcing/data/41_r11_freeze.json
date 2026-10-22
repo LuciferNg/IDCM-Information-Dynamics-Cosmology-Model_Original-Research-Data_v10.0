@@ -1,0 +1,41 @@
+{
+ "rules": "r11-mechanism-proof-and-laws-v1",
+ "contract": "docs/22_r11_contract.md",
+ "contract_sha256": "f17d35f3ae3bba28316df54a214a791f95230af5878d341a1f3813bf8202004b",
+ "frozen_at": "first run of scripts/41",
+ "n_pass": 5,
+ "n_total": 5,
+ "gate": "OPEN",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "凍結合約 sha256 與記錄一致",
+   "ok": true,
+   "detail": "sha = f17d35f3ae3bba28…"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 完整（18 個：T1–T3／U0–U4／V1–V5／W1–W5）",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C3",
+   "name": "陽性對照：合約載明 T1 之完整雙向判準（不可只寫方向）",
+   "ok": true,
+   "detail": "命中 = True"
+  },
+  {
+   "tag": "C4",
+   "name": "陰性對照：篡改後之合約（弱化為單層判準）必須被 C3 判據拒絕",
+   "ok": true,
+   "detail": "篡改版仍含完整判準 = False"
+  },
+  {
+   "tag": "C5",
+   "name": "GATE 條件：合約未被改動、tag 完整、陰陽對照成立",
+   "ok": true,
+   "detail": "GATE = OPEN"
+  }
+ ]
+}

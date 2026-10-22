@@ -1,0 +1,206 @@
+{
+  "target": 0.02,
+  "thresholds": [
+    {
+      "name": "1/(N_d + B + mu^2) = 1/50",
+      "value": 0.02,
+      "dev": 0.0,
+      "mechanism": "integer sum (no mechanism)",
+      "class": "integer"
+    },
+    {
+      "name": "C_energy * (1 - lambda_Edd) = 1/50",
+      "value": 0.02,
+      "dev": 0.0,
+      "mechanism": "composition: sector asymmetry x (1 - LRD Eddington fraction)",
+      "class": "composite"
+    },
+    {
+      "name": "C_energy = mu^2/(2N_d+mu^2) = 1/45",
+      "value": 0.022222222222222223,
+      "dev": 0.11111111111111113,
+      "mechanism": "Z2 sector capacity asymmetry = drift fraction (O203)",
+      "class": "spectral"
+    },
+    {
+      "name": "site-count normalisation mu^2/(2N_d) = 1/44",
+      "value": 0.022727272727272728,
+      "dev": 0.13636363636363638,
+      "mechanism": "2 phase slips per ring period, 44-cycle (O7/O203)",
+      "class": "spectral"
+    },
+    {
+      "name": "lambda_self = mu^2/L_10 = 2/123",
+      "value": 0.016260162601626018,
+      "dev": 0.18699186991869912,
+      "mechanism": "vacuum self-coupling (O204)",
+      "class": "spectral"
+    },
+    {
+      "name": "1/(2N_d) = 1/88",
+      "value": 0.011363636363636364,
+      "dev": 0.4318181818181818,
+      "mechanism": "single Nyquist mode of the 88-site ring",
+      "class": "spectral"
+    },
+    {
+      "name": "1/(2N_d + 2B) = 1/96",
+      "value": 0.010416666666666666,
+      "dev": 0.4791666666666667,
+      "mechanism": "integer sum (no mechanism)",
+      "class": "integer"
+    },
+    {
+      "name": "mu^2/<W>^2 = 4/123",
+      "value": 0.032520325203252036,
+      "dev": 0.6260162601626018,
+      "mechanism": "mass quantum / condensate capacity (O204)",
+      "class": "spectral"
+    },
+    {
+      "name": "1/(N_d B) = 1/176",
+      "value": 0.005681818181818182,
+      "dev": 0.7159090909090909,
+      "mechanism": "single mode of the full 176 cycle",
+      "class": "spectral"
+    },
+    {
+      "name": "kappa_crit = sin(pi/88)/<W>",
+      "value": 0.004551320178122759,
+      "dev": 0.772433991093862,
+      "mechanism": "O81 sub-critical coupling bound",
+      "class": "spectral"
+    },
+    {
+      "name": "lambda_Edd = B/(N_d-B) = 1/10",
+      "value": 0.1,
+      "dev": 4.0,
+      "mechanism": "LRD Eddington ratio candidate (O176 D10)",
+      "class": "registered candidate"
+    },
+    {
+      "name": "frustration edges / full cycle 32/176",
+      "value": 0.18181818181818182,
+      "dev": 8.090909090909092,
+      "mechanism": "frustration edges against 176-cycle sites",
+      "class": "geometric"
+    },
+    {
+      "name": "A5 frustration fraction 32/120",
+      "value": 0.26666666666666666,
+      "dev": 12.333333333333334,
+      "mechanism": "32 = 4b - 2a frustration edges (O171)",
+      "class": "geometric"
+    },
+    {
+      "name": "K-window fraction 21/44",
+      "value": 0.4772727272727273,
+      "dev": 22.863636363636363,
+      "mechanism": "mass threshold gamma_n < mu^2 (O169 docs/14)",
+      "class": "spectral"
+    },
+    {
+      "name": "sector capacity sum_odd/sum = 88/178",
+      "value": 0.4888888888888889,
+      "dev": 23.444444444444443,
+      "mechanism": "Z2 sector capacity share (176 half-set)",
+      "class": "spectral"
+    },
+    {
+      "name": "half-power point cos^2(theta_22) = 1/2",
+      "value": 0.5,
+      "dev": 24.0,
+      "mechanism": "projection kernel r_k = 2 pi R cos^2 theta_k; n = N_d/2 self-dual mode",
+      "class": "geometric"
+    },
+    {
+      "name": "condensation onset 44/88",
+      "value": 0.5,
+      "dev": 24.0,
+      "mechanism": "M_base at the k = 44 centre mode (O197 docs/04)",
+      "class": "geometric"
+    },
+    {
+      "name": "Z2 self-dual mode fraction 22/44",
+      "value": 0.5,
+      "dev": 24.0,
+      "mechanism": "the single fixed point n -> N_d - n",
+      "class": "geometric"
+    },
+    {
+      "name": "A5 transparent-edge fraction 88/120",
+      "value": 0.7333333333333333,
+      "dev": 35.666666666666664,
+      "mechanism": "88 = 120 - 32 transparent edges (O182)",
+      "class": "geometric"
+    }
+  ],
+  "frustration_percolation": {
+    "k_mean": 1.0666666666666667,
+    "p_c": 15.000000000000004,
+    "subcritical": true
+  },
+  "mode_fractions_near_target": [],
+  "robustness": [
+    {
+      "N": 22,
+      "values": {
+        "mu^2/(2N+mu^2)": 0.043478260869565216,
+        "mu^2/(2N)": 0.045454545454545456,
+        "1/(N+B+mu^2)": 0.03571428571428571,
+        "C_energy*(1-lambda_Edd)": 0.033816425120772944
+      },
+      "devs": {
+        "mu^2/(2N+mu^2)": 1.1739130434782608,
+        "mu^2/(2N)": 1.2727272727272727,
+        "1/(N+B+mu^2)": 0.7857142857142856,
+        "C_energy*(1-lambda_Edd)": 0.6908212560386472
+      }
+    },
+    {
+      "N": 44,
+      "values": {
+        "mu^2/(2N+mu^2)": 0.022222222222222223,
+        "mu^2/(2N)": 0.022727272727272728,
+        "1/(N+B+mu^2)": 0.02,
+        "C_energy*(1-lambda_Edd)": 0.02
+      },
+      "devs": {
+        "mu^2/(2N+mu^2)": 0.11111111111111113,
+        "mu^2/(2N)": 0.13636363636363638,
+        "1/(N+B+mu^2)": 0.0,
+        "C_energy*(1-lambda_Edd)": 0.0
+      }
+    },
+    {
+      "N": 88,
+      "values": {
+        "mu^2/(2N+mu^2)": 0.011235955056179775,
+        "mu^2/(2N)": 0.011363636363636364,
+        "1/(N+B+mu^2)": 0.010638297872340425,
+        "C_energy*(1-lambda_Edd)": 0.010700909577314071
+      },
+      "devs": {
+        "mu^2/(2N+mu^2)": 0.43820224719101125,
+        "mu^2/(2N)": 0.4318181818181818,
+        "1/(N+B+mu^2)": 0.46808510638297873,
+        "C_energy*(1-lambda_Edd)": 0.4649545211342965
+      }
+    },
+    {
+      "N": 176,
+      "values": {
+        "mu^2/(2N+mu^2)": 0.005649717514124294,
+        "mu^2/(2N)": 0.005681818181818182,
+        "1/(N+B+mu^2)": 0.005494505494505495,
+        "C_energy*(1-lambda_Edd)": 0.005518328734726054
+      },
+      "devs": {
+        "mu^2/(2N+mu^2)": 0.7175141242937854,
+        "mu^2/(2N)": 0.7159090909090909,
+        "1/(N+B+mu^2)": 0.7252747252747253,
+        "C_energy*(1-lambda_Edd)": 0.7240835632636973
+      }
+    }
+  ]
+}

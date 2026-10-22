@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O235
 title:   C_f 鋸齒 Z₂ 嘅 tick-宇稱/時間處理假説 (88-chain checkerboard/staggered 對偶)
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O235
 created: 2026-10-07

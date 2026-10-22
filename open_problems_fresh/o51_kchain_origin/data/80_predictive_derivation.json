@@ -1,0 +1,10 @@
+{
+  "k_decay": -1.9954,
+  "v0": 1.9979,
+  "v1": 31.7635,
+  "correction_coefficient": -3.7025,
+  "H0_orig": 72.6064,
+  "H0_pred": 134.4932,
+  "pass": 0,
+  "fail": 1
+}

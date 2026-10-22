@@ -1,0 +1,5 @@
+MANIFEST: 117 files covered ; upstream sha256 all match = True
+   04_b2_settings.json                                  OK
+   08_a2_h_table.json                                   OK
+   09_a2_rollback.py                                    OK
+   12_b5_budget.py                                      OK

@@ -1,0 +1,979 @@
+First-order phase transitions in the cores of neutron stars
+Oleg Komoltsev1, ∗
+1
+
+Faculty of Science and Technology, University of Stavanger, 4036 Stavanger, Norway
+
+arXiv:2404.05637v5 [nucl-th] 4 Jun 2025
+
+I explore various scenarios for the phase transition within neutron-star matter. I do so by generating large model-agnostic ensemble using Gaussian processes, both with and without explicit
+inclusion of first-order phase transitions (FOPTs). The ensemble is conditioned with state-of-theart astrophysical and theoretical inputs in a fully Bayesian approach. I study how the current data
+affect the posterior probability of the location and the strength of FOPT. I find that the previously
+observed peak structure of the sound speed remains stable against inclusion of FOPTs. While the
+current data cannot differentiate between a smooth crossover and a first-order phase transition, 91%
+of the total evidence consists of equations of state with some form of phase changes, such as FOPT
+occurring within or terminating the stable branch of neutron stars, or an indication of a crossover
+to quark matter.
+
+I.
+
+INTRODUCTION
+
+The phase structure of matter, when compressed to
+several times nuclear saturation density (nsat ≈ 0.16
+fm3 ), is one of the central questions in the study of neutron stars (NSs). While it remains unclear how to theoretically probe cold dense matter, recent progress in astrophysical observations of NSs has given rise to rapid
+development in the study of such matter [1–28]. This
+work is among those studies.
+The structure of NSs is determined by the equation
+of state (EoS), which, for strongly interacting matter, is
+governed by Quantum Chromodynamics (QCD). In practice, ab-initio theoretical calculations can only be performed in two limits. The low-density part, corresponding to hadronic matter, can be constrained by Chiral Effective Field Theory (cEFT) up to [1.1-2]nsat [29–33].
+On the other hand, the perturbative QCD calculations
+(pQCD) [34–39] at high-density regime inform us about
+the behavior of quark matter, which are reliable starting
+from [25-40]nsat [40]. The densities reached within the
+most massive neutron stars are around 3-8 nsat , where
+the matter is on the verge of dissolving into deconfined
+quarks [10, 21]. It remains an open question of whether
+the phase transition (PT) from hadronic to quark matter
+occurs in the cores of NSs - the densest matter found in
+the Universe.
+The second fundamental question that arises is how
+the phase transition happens. Some alternative scenarios include the smooth crossover leading to quark matter
+cores, a violent FOPT with a discontinuous change in
+density destabilizing NSs and leading to collapse into a
+black hole (BH), or a more exotic phase transition suggesting a new state of matter. However, as of yet, there
+is no theoretical basis to favor any one of these scenarios.
+A natural approach to addressing these questions is by
+exploiting a model-agnostic method to generate large ensemble of different EoSs. By conditioning the ensemble
+with astrophysical observations and ab-initio theoretical
+
+∗ oleg.komoltsev@uis.no
+
+calculations, we can estimate evidences for different scenarios of the phase change. There have been multiple
+inferences of the EoS [1, 5, 7–13, 16, 18, 20–23], most
+of which do not include a first-order phase transition.
+While there are studies examining the first-order PT in
+neutron-star matter, they have certain limitations. Some
+works do not explicitly model FOPT [41, 42], while others lack a Bayesian interpretation [43–45], or utilize a
+restrictive prior [46]. As of yet, no studies utilize the
+recent development of QCD input [22], and to the best
+of my knowledge, there is no Bayesian inference of the
+FOPT properties.
+In this Letter, I perform a state-of-the-art fully
+Bayesian inference of the EOS using Gaussian processes
+(GP) regression [5, 12, 20, 46] with explicit inclusion of
+the first-order phase transition. The astrophysical inputs
+include tidal-deformability (TD) measurements from the
+GW170817 [47–49], the hypothesis that the remnant in
+GW170817 collapsed to a BH [50–54], radio mass measurement of the heaviest pulsar [55], and 12 X-ray measurements of mass and radius of NS [14, 56–63]. The
+theoretical constraints come from the low-density regime
+provided by cEFT up to 2nsat [29–32] and high-density
+pQCD calculations using either conservative QCD input
+[20, 64] or the marginalized QCD likelihood function [22].
+I categorize each generated EoS into one of several mutually exclusive sets, each representing the most interesting scenario:
+No FOPT: there is no first-order PT in the stable neutron star branch.
+FOPT inside NS: there is a first-order PT in the stable
+neutron star branch. The NS remains stable after
+FOPT.
+Destabilizing FOPT: there is a first-order PT in the
+stable neutron star branch, after which NS collapses into a BH.
+Twin stars: there is a second stable branch in massradius curve, irrespective of the location of the
+FOPT.
+
+2
+The main objective of the study is to compare evidences of each set based on the current data. Furthermore, I evaluate how the explicit inclusion of the FOPT
+into the prior changes the previously determined probability of having quark matter cores inside the most massive NSs [21]. In the case of a first-order PT, I calculate
+the posterior distribution for the beginning nPT and the
+strength ∆n of PT. Lastly, I examine how future massradius measurements of NS affect the evidence of the sets.
+This analysis pinpoints which possible observations could
+help in distinguishing between various potential scenarios
+for the phase transition.
+II.
+
+SETUP
+
+In this section, I present a brief summary of the prior
+choices, theoretical and astrophysical inputs that have
+been used. GP regression is performed in an auxiliary
+variable ϕ(n) = − ln(1/c2s −1), with the prior distribution
+being a multivariate Gaussian distribution:
+
+ϕ(n) ∼ N − ln(1/c̄2s − 1), K(n, n′ ) ,
+(1)
+
+where K(n, n′ ) = η exp −(n − n′ )2 /2ℓ2 is a Gaussian
+kernel. The hyperparameters η, ℓ, c̄2s are independently
+drawn for each EoS from the distribution (see Eq. 6 in
+[20]). The grid spacing in n is around 0.2nsat . The details
+regarding EoS construction using GP regression in ϕ(n)
+can be found in [20].
+The EoS is constructed from two samples of GP, with
+a segment of zero sound speed in between, introducing a
+discontinuous jump in density. Both samples are drawn
+from the GP conditioned with cEFT up to 1.1nsat 1 . The
+hyperparameters, such as the correlating length ℓ and the
+variance η of the Gaussian kernel, are identical before
+and after FOPT. The algorithm can be written in the
+following way:
+1. Select the location of the FOPT from a uniform
+distribution between 1.1nsat and 10nsat , nPT ∈
+[1.1, 10]nsat .
+2. Draw the strength of FOPT from uniform distribution ∆n ∈ [0, 8]nsat .
+3. Draw two independent samples of EoS from the
+conditioned GP regression. One sample extends
+from 1.1nsat to nPT , while the second sample spans
+from nPT + ∆n to 10nsat .
+4. Combine these samples to form a single EoS across
+the range [1.1, 10]nsat , assuming c2s = 0 within the
+interval [nPT , nPT + ∆n].
+
+1 For no particular reason,
+
+the cEFT input is divided into two
+parts: first, GP is conditioned with cEFT up to 1.1nsat , and then
+the cEFT likelihood function is used in the range [1.1, 2]nsat
+
+This procedure ensures that the prior is uniform in the
+nPT –∆n –plane, and that there is no correlation in c2s
+before and after FOPT.
+Subsequently, I solve the Tolman-Volkoff-Oppenheimer
+(TOV) equation to predict mass-radius relation [65, 66]
+as well as determine the maximal density nTOV that is
+supported by the stable nonrotating NS. To capture the
+behavior of tidal deformability (TD) with discontinuous
+jump in number density in the case of first-order PT I follow the approach outlined in [67]. Each EoS is used only
+up to TOV-density; thus, densities greater than nTOV
+are excluded from the analysis.
+Following the approach outlined in [32] and reviewed
+in [23] to incorporate more information from the lowdensity calculations, I employ the cEFT likelihood function within the interval [1.1,2]nsat (as provided by eqs.
+(4) and (5), and fig. 2 in [23]). To obtain a likelihood for EoS, the function is integrated over the interval
+[1.1,2]nsat , penalizing EoSs that fall outside the range
+[p+ , p− ] provided in [23].
+Two types of QCD inputs are considered. Conservative QCD input was introduced in [64] and [20] (publicly available in [68]). It verifies whether the density
+up to which an EoS is modeled (chosen to be nTOV in
+this study) can be connected by at least one causal, stable, and consistent EoS to the perturbative QCD limit
+at 40 nsat . The marginalized QCD likelihood function,
+introduced in [22] and publicly available in [69], incorporates additional information on the well-convergent
+sound speed in the perturbative regime starting from
+25nsat . It is marginalized over another GP prior in the
+range [nTOV , 40nsat ]. This GP prior is conditioned with
+pQCD calculation of c2s within [25,40]nsat and does not
+have first-order PT. Both conservative and marginalized
+QCD inputs are imposed at TOV density.
+
+TABLE I. A summary of all mass and mass-radius measurements that have been used to condition the ensemble.
+Name
+Ref.
+Radio measurement
+PSR J0348+0432
+[55]
+NICER pulsars
+PSR J0030+0451 [56, 57]
+PSR J0740+6620 [14, 58, 59]
+qLMXB systems
+M13
+[60]
+M28
+[61]
+M30
+[61]
+ω Cen
+[61]
+NGC 6304
+[61]
+NGC 6397
+[61]
+47 Tuc X7
+[61]
+X-ray bursters
+4U 1702-429
+[62]
+4U 1724-307
+[63]
+SAX J1810.8-260
+[63]
+
+3
+
+FIG. 1. (Upper left) Sixty-eight percent CI for c2s for different sets. An EoS contributes to the CI only up to TOV density. The
+plot shows the conditional posterior distribution P(c2s |n, n < nTOV ) up to fixed n. (Other panels) A representative sample of
+EoSs for each set. The color coding of each EoS corresponds to the likelihood assigned according to eq. (3), normalized to the
+maximum likelihood in the ensemble.
+
+The ensemble is conditioned with astrophysical inputs
+identical to those in [21]. The methodology is elaborated in [20] and [21]. Mass and mass-radius measurements are summarized in table I. For gravitational-wave
+(GW) data, I use the joint posterior density function
+for the TD parameter Λ̃ and mass ratio at fixed chirp
+mass from GW170817 by the LIGO-Virgo Collaboration
+[47–49]. Additionally, as suggested by the electromagnetic counterpart of GW170817 [70], the resulting binary
+merger product is a BH [50–54], which puts constraints
+on the total baryon mass that can be supported by the
+EoS.
+All the inputs are subsequently incorporated into
+Bayes’ theorem:
+P (EoS | data) =
+
+P (EoS) P (data | EoS )
+,
+P (data)
+
+(2)
+
+where P (data | EoS) is the product of uncorrelated likelihoods, which can be written as
+P (data | EoS) = P (QCD | EoS)P (cEFT | EoS)
+×P (X-rays | EoS)P (Λ̃, BH | EoS)P (Radio | EoS).
+(3)
+
+These likelihoods correspond to the QCD and cEFT inputs, product of likelihoods for all x-rays measurements
+listed in table I (under NICER pulsars, qLMXB systems and x-ray bursters), along with constraints from
+GW170817 and radio mass measurement. All the plots
+in this Letter are produced using all the mentioned astrophysical data, cEFT likelihood function up to 2nsat as
+well as marginalized QCD input (cf. fig. 5 in the supplemental material).
+The ensemble is then divided into the sets described
+in the introduction, based on the location of the FOPT
+with respect to the stable branch of NS. No FOPT – set
+is constructed from the following EoSs: firstly, if an EoS
+has ∆n = 0, which happens when ∆n is smaller than
+half of the grid spacing ∼ 0.1nsat ; or secondly, if a phase
+transition occurs outside the first stable branch, nTOV <
+nPT , as these densities are excluded and have no effect
+on the density below TOV. An EoS is labeled to have
+destabilizing FOPT if the FOPT happens in the stable
+NS branch and the first grid point after FOPT falls in the
+unstable branch. In this case the TOV density is taken
+to be the last grid point of the FOPT: nTOV = nPT +∆n.
+FOPT inside NS is identified if nPT + ∆n < nTOV . An
+EoS is assigned to twin stars – set if it has second stable
+
+4
+branch, irrespective of the FOPT location. For twins
+stars the astrophysical likelihoods are marginalized over
+both stable branches, and QCD input is imposed at the
+maximal density of the second branch.
+The total number of EoSs in the ensemble is 300k,
+distributed among the categories as follows: 66k - no
+FOPT, 37k - FOPT inside NS, 121k - destabilizing FOPT
+and 76k - twin stars.
+
+B.
+
+The Bayes factor quantifies how effectively a model explains the data compared to another model. Sets, each
+representing distinct scenarios, can be compared as competing statistical models. The Bayes factor is the ratio
+of marginalized likelihood, also known as evidence, and
+can be expressed as
+set1
+Bset
+=
+2
+
+III.
+A.
+
+RESULTS
+EoS inference
+
+The samples of the EoSs and the corresponding credible intervals (CI) for speed of sound can be found in
+fig. 1. Regardless of the presence of a FOPT, the overall
+structure of the EoS remains similar, characterized by a
+peak in the sound speed around 2-3nsat , followed by a
+softening. No FOPT – set reproduces the results seen in
+[18, 20]. The absence of twins – set in the figure is due
+to their vanishing evidence, as will be explained in the
+next section.
+The peak in sound speed is determined by the mass
+constraints and becomes more prominent with the inclusion of X-ray measurements. Data from GW170817
+and cEFT constraints soften an EoS at lower density.
+After the peak is reached, all astrophysical constraints
+are relaxed. Note that rapid stiffening can be explained
+within, e.g. Quarkyonic matter model [71]. The behavior
+of an EoS is solely determined by the QCD input above
+the peak in the interval [2M⊙ , MTOV ], which forces an
+EoS to soften. The forced softening can be either the
+rapid softening indicating a phase transition or a slower
+crossover to a conformal value c2s = 1/3 or below.
+The peak tends to be higher for scenarios involving
+a first-order PT, as also evident from the CI (upper left
+subplot). Marginalized QCD input utilizes more information from the pQCD calculations and requires a strong
+softening. The more dramatic the softening, the stiffer
+an EoS can become before being penalized by QCD constraints, as explained in [22]. An EoS cannot achieve
+sound speeds close to unity without experiencing sharp
+softening immediately after the peak, effectively exhibiting FOPT-like behavior. Consequently, an EoS with a
+FOPT can reach a higher values of c2s .
+Note that an EoS contributes to CI only up to TOV
+density. The posterior distribution can only be shown up
+to the lowest TOV density within the ensemble. However, since destabilizing FOPT tends to have smaller
+TOV densities, and such a plot would offer limited information. Therefore, a conditional posterior distribution
+P(c2s | n, n < nTOV ) is displayed in the upper left panel
+of fig. 1.
+
+Bayes factors
+
+P (set1 | data ) P (set2 )
+,
+P (set2 | data ) P (set1 )
+
+(4)
+
+where P (seti | data ) represents posterior probability of
+set i given by eq. (2), and P (seti ) denotes the prior probability of set i. Assuming that a priori all sets are equally
+probable, the prior probability simplifies to the number
+of EoSs in the set.
+TABLE II. A summary of the Bayes factors for various scenarios. Each entry corresponds to the ratio of evidence for a
+given set to that of the no FOPT – set as defined in eq. (4).
+The evidences are computed for priors conditioned with radio
+measurements, cEFT likelihood function and GW data, along
+with two likelihoods listed in the first column.
+Bset
+Destab. FOPT FOPT inside NS Twins
+noFOPT
+Marginalized QCD
+1.5
+0.7
+0.001
++ X-rays
+Marginalized QCD
+1.5
+1.0
+0.001
++ PSR J0740
+Conservative QCD
+0.8
+0.5
+0.001
++ X-rays
+Conservative QCD
+0.8
+0.7
+0.001
++ PSR J0740
+
+The Bayes factors obtained in the study are summarized in table II. Each entry represents the ratio of the
+evidences of the named set in the column to that of the
+no FOPT – set. For a robust evidence that the data
+favors set i over the scenario without any FOPT, the
+Bayes factor must be several times greater than unity
+(or smaller if the no FOPT – set is preferred). All of the
+evidences are calculated using radio measurements and
+GW data constraints. Additionally, either conservative
+or marginalized QCD input is imposed, as well as two
+options for x-ray measurements are considered: either all
+available measurements or solely the NICER measurement of PSR J0740+662.
+By examining the table II the only decisive factor corresponds to twin stars, indicating that twin stars are not
+twins
+supported by the current data as BnoFOPT
+≪ 1. The rest
+of the Bayes factors are not of any statistical significance,
+indicating that the current data cannot differentiate between the sets. I speculate that the reason why is that
+the QCD input, which becomes important in determining the EoS above 2M⊙ , can be fully satisfied by either
+FOPT or a crossover. Consequently, there is currently
+no measurement or theoretical input favoring either scenario.
+
+5
+Nonetheless, it is interesting to observe how conditioning the prior with different inputs can impact the outcome. The mild increase in the Bayes factor resulting
+from the change from conservative to marginalized QCD
+input can be explained by the exclusion of stiff EoSs from
+the no FOPT – set, thus slightly decreasing the evidence.
+The choice of x-ray data only affects the intermediate
+densities below n < 3nsat (see fig. 5 in the supplemental material) and, therefore, it has a limited impact on
+whether EoS terminates with a crossover or a destabilizing FOPT.
+
+0.5
+
+Destabilizing FOPT
+No FOPT
+FOPT inside NS
+
+sound speed is stable against inclusion of FOPT in the
+prior.
+The probability of the absence of the phase change can
+be assessed by comparing the combined sets of FOPT inside NS, destabilizing FOPT, and EoSs with crossover to
+QM in no FOPT set against the rest of the prior, namely
+set of EoSs without a crossover to QM in the no FOPT
+set (twins carry vanishing weight). The combined sets
+make up 91% of the total evidence, leaving only 9% for
+the EoSs without FOPT or crossover to QM. It’s important to note that EoSs in the no FOPT set that do not
+meet criteria for QM may mimic FOPT-like behavior.
+Consequently, introducing any criteria for such ”pseudo”
+first-order PTs would only decrease the 9% probability
+further.
+
+dc
+
+0.4
+
+C.
+
+0.3
+0.2
+0.1
+2 × 100
+
+3 × 100
+
+n [nsat]
+
+4 × 100
+
+6 × 100
+
+FOPT posterior
+
+In this section, I present the results of Bayesian inference of the FOPT properties, such as its location and
+strength. The impact of the astrophysical data and theoretical inputs on the properties of first-order PT is summarized in fig. 3, illustrating the posterior distribution of
+nPT –∆n. The prior distribution is uniform in the nPT –
+∆n – plane. Any values nPT + ∆n exceeding 10nsat are
+discarded, as indicated by the prior cut on the figure.
+
+prio
+
+7
+
+FIG. 2. 68%-CI for the dc parameter for different sets. An
+EoS contributes to the CI only up to TOV density. The
+plot shows the conditional posterior distribution P(dc |n, n <
+nTOV ) up to fixed n.
+
+6
+
+Destabilizing FOPT
+FOPT inside NS
+Twins
+
+r cu
+
+t
+
+4
+3
+2
+1
+
+where
+∆ =
+
+n [nsat]
+
+5
+It has been suggested in [21] that quark matter (QM)
+can be identified by observing an approximate restoration
+of conformal symmetry, with the quantity dc proposed for
+this purpose:
+p
+∆2 + (∆′ )2 ,
+(5)
+dc ≡
+
+1 c2s
+−
+,
+3
+γ
+
+∆′ = c2s
+
+
+
+
+1
+−1 ,
+γ
+
+γ=
+
+d ln p
+. (6)
+d ln ε
+
+68%-CI for the dc parameter is shown in fig. 2. The
+posterior probability of a crossover to QM, defined as
+dc < 0.2, in the no FOPT set is 64% for the most massive NSs (cf. 75% reported in [21]). However, with the
+explicit inclusion of FOPT in the prior, this probability
+decreases to 50% for FOPT inside NSs set and to 30%
+for destabilizing FOPT set. While there are EoSs with
+FOPT inside NSs that result in QM appearing above PT,
+most EoSs with destabilizing FOPT do not meet this criterion. Only a small portion exhibit a crossover to QM
+before destabilizing PT. What is particularly intriguing
+is that softening of the EoS seems to be inevitable, as
+evident from fig. 1, and thus the peaked structure of the
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+nPT [nsat]
+
+6
+
+7
+
+8
+
+FIG. 3. The posterior distribution of the location nPT and
+strength ∆n of the FOPT. The prior is uniform in the nPT –
+∆n – plane. A Gaussian filter is applied to smooth the data.
+
+FOPT inside NS – set is shown in black in fig. 3. A
+notable feature of the posterior distribution is the gap
+between FOPTs occurring early in the density range
+[1,2]nsat and the latter PTs within [3,6]nsat . The gap
+in densities corresponds roughly to a mass range spanning from 0.5 to 1.9 M⊙ . The existence of the gap is a
+consequence of the mass constraints, which require that
+an EoS remains stiff in this interval, mostly excluding
+
+9
+
+6
+
+IV.
+
+CONCLUSIONS
+
+The results of this Letter demonstrate that the previously discovered peak structure of the sound speed inside NSs remains stable even with the explicit inclusion
+of the first-order PT in the prior. While the current
+data constrain the location and the strength of the potential first-order PT, it does not definitively favor any
+particular scenario. The possibilities, including a small
+first-order PT within NS, a crossover to quark matter,
+or a destabilizing FOPT leading to a collapse, remain
+viable. By generating a broad prior, I evaluate that the
+probability of the scenario falling outside these categories
+is low. Most of the total evidence, approximately 91%,
+consists of EoSs either featuring FOPT occurring within
+or terminating the stable branch of NSs, or a crossover to
+quark matter. This leaves 9% probability for the absence
+of any form of the phase change. Moreover, identifying
+EoSs in no FOPT set that mimic FOPT-like behavior
+would only reduce 9% probability further. This suggests
+that nontrivial phase changes can be explored within the
+densities found in neutron stars.
+The challenges in distinguishing between sets are outlined in section III B. In brief, the only constraint that
+propagates within the interval between 2M⊙ and MTOV
+is the QCD input, which necessitates softening but remains indifferent as to whether an EoS exhibits FOPTlike behavior or conformalization. However, by imposing
+various mass-radius measurements, we can predict what
+future detection might help differentiate between scenarios.
+The summary of various Bayes factors obtained by considering potential future M -R measurements is presented
+in fig. 4. Each hexagon represents a mass-radius measurement, wherein the likelihood is assigned a value of one if
+EoS intersects the hexagon and zero otherwise. To avoid
+numerical instabilities, only hexagons through which at
+
+2.5
+
+2.0
+
+M [M ]
+
+FOPTs in this region. Another noteworthy aspect is that
+any FOPT with ∆n ≳ 1.2nsat results in the destabilization of NS and cannot support FOPT inside the NS. Note
+that any small FOPTs do not change an EoS at the level
+of integral quantities such as pressure and energy density,
+and therefore no astrophysical data can disfavor an EoS
+with small FOPT.
+Destabilizing FOPT appears only above 3nsat , which
+is the typical minimal density at which an EoS satisfies
+mass constraints. In principle, if an EoS becomes destabilized due to a FOPT of some strength ∆n, then any
+larger FOPT would also lead to the collapse of NS, resulting in a uniform distribution of ∆n above the lower
+bound. However, large FOPTs are slightly penalized by
+marginalized QCD input, resulting in a peak distribution
+around nPT = 4nsat and ∆n ranging from 2 to 3nsat .
+Twin stars are mostly overlapping with both sets. In addition, twin star solutions allow for some FOPT in the
+gap below 3nsat , although with small posterior weight.
+
+1.5
+
+1.0
+
+0.5
+10.5
+
+destab
+BnoFOPT
+0.2 0.2 0.3 0.6 0.9 1.5 3.9
+0.5 0.6 0.8 1.0 1.0 1.2 1.6 2.0
+1.7 1.3 1.3 1.2 1.3 1.7 1.4
+1.5 1.2 1.2 1.3 1.5 1.6
+1.3 1.2 1.3 1.4 1.5
+1.1 1.1 1.3 1.4 1.3
+1.0 1.3 1.4 1.4 1.2
+0.8 1.2 1.4 1.4 1.4 1.4 1.4 1.4
+11.0
+
+11.5
+
+12.0
+
+R [km]
+
+12.5
+
+13.0
+
+FIG. 4. The collection of the Bayes factors for two sets destabilizing FOPT and no FOPT for future mass-radius measurement. Each hexagon represents a mass-radius measurement,
+with the likelihood being a step function set to one inside
+the hexagon and zero outside. The Bayes factor greater than
+unity indicates data preference toward destabilizing FOPT.
+None of these factors are of any statistical significance.
+
+least 100 EoSs pass with a nonzero weight are taken into
+account. The Bayes factors are computed to compare the
+destabilizing FOPT set and the no FOPT set. Although
+none of the factors yield decisive conclusions, measurements with high mass and high radius tend to slightly
+favor the destabilizing FOPT set. Note the that effect
+of black-widow pulsar PSR J0952-0607 with the mass
+of 2.35±0.17M⊙ [72] depends on the radius of the pulsar. A possible candidate for a light NS, HESS J1731+0.86
+347 (M = 0.77+0.20
+−0.17 M⊙ and R = 10.4−0.78 km) [73], has
+a vanishing Bayes factor in the analysis, approximately
+10−3 .
+As shown in fig. 4, a single mass-radius measurement is
+insufficient to distinguish between the sets. Low-energy
+nuclear experiments and tidal deformability measurements can further constrain EoS at intermediate densities. However, to address the question of whether the stable branch of neutron stars terminates with a crossover or
+FOPT, precise mapping of the EoS will be needed. Such
+precise mapping can be achieved, i.e by collecting GW
+data from a large number of binary NS mergers. Yet,
+even with extensive data, mapping the region near the
+TOV limit might pose challenges, necessitating stars to
+be near their maximum mass to constrain this area effectively. Therefore, the interplay between astrophysical
+constrains and QCD input might be crucial to determine
+what is happening inside neutron stars. Another potential source of information is the post-merger GW signal
+from NS mergers [24, 74], which can be achieved with the
+next generation of GW detectors [75, 76].
+
+7
+V.
+
+SUPPLEMENTAL MATERIAL
+
+VI.
+
+ACKNOWLEDGMENTS
+
+The author expresses gratitude to Aleksi Kurkela for
+providing thorough supervision throughout the development of the manuscript and for suggesting the topic. The
+author thanks Tyler Gorda, Joonas Nättilä, Aleksi Vuorinen, Jacquelyn Noronha-Hostler, Philippe Landry and
+Reed Essick for their valuable discussions and insightful
+comments.
+
+FIG. 5. 68%-CI for c2s for different sets for less aggressive
+inputs: cEFT up to 1.1nsat , conservative QCD input, NICER
+PSR J0740+662, radio measurement PSR J0348+0432 and
+GW170818 data. The plot shows the conditional posterior
+distribution P(c2s |n, n < nTOV ).
+
+In this supplemental material I compare the results
+obtained in the main text using state-of-the-art inputs
+with less aggressive choices: conservative QCD input,
+cEFT constraints up to 1.1 nsat , only NICER PSR
+J0740+662 out of all x-ray observations, along with radio
+and GW170817 data.
+Confidence intervals for the sounds speed are shown
+in fig. 5. The most noticeable difference to fig. 1 upper
+left subplot is the lack of forced softening at the highest
+densities reached in NSs for No FOPT and PT inside NS
+sets. This happens due to the change from marginalized
+QCD to conservative QCD input. While destabilizing
+FOPT has a manually imposed softening to c2s = 0 at
+the end of the stable branch, the peak in sound speed
+reaches lower values. This is because, as explained in
+Section IIIA, dramatic softening requires a stiffer EoS
+when utilizing more information from the pQCD limit.
+It is important to note that, according to [22], using
+conservative QCD input, a stiff EoS requires extreme behavior above nTOV , such as a large PT of ∆n ∼ 20nsat
+followed by a segment of c2s ≈ 1 to remain consistent
+with pQCD. The marginalized QCD likelihood function
+penalizes such behavior.
+Another noticeable difference is the wider 68%-CI at
+the intermediate densities below n < 3nsat for the less
+aggressive inputs. This is due to the number of x-ray observations used. While mass constraints from radio measurements and NICER PSR J0740 require stiffening of
+EoS at intermediate densities, the 12 x-ray observations
+impose much stronger constraints, necessitating greater
+stiffening and narrowing the band.
+
+8
+
+[1] A. Kurkela, E. S. Fraga, J. Schaffner-Bielich, and
+A. Vuorinen, Constraining neutron star matter with
+Quantum Chromodynamics, Astrophys. J. 789, 127
+(2014), arXiv:1402.6618 [astro-ph.HE].
+[2] E. R. Most, L. R. Weih, L. Rezzolla, and J. SchaffnerBielich, New constraints on radii and tidal deformabilities
+of neutron stars from GW170817, Phys. Rev. Lett. 120,
+261103 (2018), arXiv:1803.00549 [gr-qc].
+[3] E. Annala, T. Gorda, A. Kurkela, and A. Vuorinen, Gravitational-wave constraints on the neutron-starmatter Equation of State, Phys. Rev. Lett. 120, 172703
+(2018), arXiv:1711.02644 [astro-ph.HE].
+[4] I. Tews, J. Margueron, and S. Reddy, Critical examination of constraints on the equation of state of dense matter obtained from GW170817, Phys. Rev. C 98, 045804
+(2018), arXiv:1804.02783 [nucl-th].
+[5] P. Landry and R. Essick, Nonparametric inference of
+the neutron star equation of state from gravitational
+wave observations, Phys. Rev. D 99, 084049 (2019),
+arXiv:1811.12529 [gr-qc].
+[6] C. D. Capano, I. Tews, S. M. Brown, B. Margalit, S. De,
+S. Kumar, D. A. Brown, B. Krishnan, and S. Reddy,
+Stringent constraints on neutron-star radii from multimessenger observations and nuclear theory, Nature Astron. 4, 625 (2020), arXiv:1908.10352 [astro-ph.HE].
+[7] M. C. Miller, C. Chirenti, and F. K. Lamb, Constraining the equation of state of high-density cold
+matter using nuclear and astronomical measurements,
+arXiv:1904.08907 [astro-ph.HE] (2019).
+[8] R. Essick, P. Landry, and D. E. Holz, Nonparametric Inference of Neutron Star Composition, Equation of State,
+and Maximum Mass with GW170817, Phys. Rev. D 101,
+063007 (2020), arXiv:1910.09740 [astro-ph.HE].
+[9] G. Raaijmakers, S. K. Greif, T. E. Riley, et al., Constraining the dense matter equation of state with joint analysis
+of NICER and LIGO/Virgo measurements, Astrophys. J.
+Lett. 893, L21 (2020), arXiv:1912.11031 [astro-ph.HE].
+[10] E. Annala, T. Gorda, A. Kurkela, J. Nättilä, and
+A. Vuorinen, Evidence for quark-matter cores in massive neutron stars, Nature Phys. 16, 907 (2020),
+arXiv:1903.09121 [astro-ph.HE].
+[11] T. Dietrich, M. W. Coughlin, P. T. H. Pang, M. Bulla,
+J. Heinzel, L. Issa, I. Tews, and S. Antier, Multimessenger constraints on the neutron-star equation of state
+and the Hubble constant, Science 370, 1450 (2020),
+arXiv:2002.11355 [astro-ph.HE].
+[12] P. Landry, R. Essick, and K. Chatziioannou, Nonparametric constraints on neutron star matter with
+existing and upcoming gravitational wave and pulsar observations, Phys. Rev. D 101, 123007 (2020),
+arXiv:2003.04880 [astro-ph.HE].
+[13] M. Al-Mamun, A. W. Steiner, J. Nättilä, J. Lange,
+R. O’Shaughnessy, I. Tews, S. Gandolfi, C. Heinke, and
+S. Han, Combining Electromagnetic and GravitationalWave Constraints on Neutron-Star Masses and Radii,
+Phys. Rev. Lett. 126, 061101 (2021), arXiv:2008.12817
+[astro-ph.HE].
+[14] M. C. Miller, F. K. Lamb, A. J. Dittmann, S. Bogdanov,
+Z. Arzoumanian, K. C. Gendreau, S. Guillot, W. C. G.
+Ho, J. M. Lattimer, M. Loewenstein, S. M. Morsink,
+P. S. Ray, M. T. Wolff, C. L. Baker, T. Cazeau, S. Man-
+
+thripragada, C. B. Markwardt, T. Okajima, S. Pollard,
+I. Cognard, H. T. Cromartie, E. Fonseca, L. Guillemot,
+M. Kerr, A. Parthasarathy, T. T. Pennucci, S. Ransom, and I. Stairs, The Radius of PSR J0740+6620
+from NICER and XMM-Newton Data, The Astrophysical Journal Letters 918, L28 (2021).
+[15] G. Raaijmakers, S. K. Greif, K. Hebeler, T. Hinderer,
+S. Nissanke, A. Schwenk, T. E. Riley, A. L. Watts,
+J. M. Lattimer, and W. C. G. Ho, Constraints on the
+Dense Matter Equation of State and Neutron Star Properties from NICER’s Mass–Radius Estimate of PSR
+J0740+6620 and Multimessenger Observations, Astrophys. J. Lett. 918, L29 (2021), arXiv:2105.06981 [astroph.HE].
+[16] E. Annala, T. Gorda, E. Katerini, A. Kurkela, J. Nättilä,
+V. Paschalidis, and A. Vuorinen, Multimessenger Constraints for Ultradense Matter, Phys. Rev. X 12, 011058
+(2022), arXiv:2105.05132 [astro-ph.HE].
+[17] S. Huth et al., Constraining Neutron-Star Matter with
+Microscopic and Macroscopic Collisions, Nature 606, 276
+(2022), arXiv:2107.06229 [nucl-th].
+[18] S. Altiparmak, C. Ecker, and L. Rezzolla, On the Sound
+Speed in Neutron Stars, Astrophys. J. Lett. 939, L34
+(2022), arXiv:2203.14974 [astro-ph.HE].
+[19] Y. Lim and J. W. Holt, Neutron Star Radii, Deformabilities, and Moments of Inertia from Experimental and
+Ab Initio Theory Constraints of the 208 Pb Neutron
+Skin Thickness, Galaxies 10, 99 (2022), arXiv:2204.09000
+[nucl-th].
+[20] T. Gorda, O. Komoltsev, and A. Kurkela, Ab-initio QCD
+Calculations Impact the Inference of the Neutron-starmatter Equation of State, Astrophys. J. 950, 107 (2023),
+arXiv:2204.11877 [nucl-th].
+[21] E. Annala, T. Gorda, J. Hirvonen, O. Komoltsev,
+A. Kurkela, J. Nättilä, and A. Vuorinen, Strongly interacting matter exhibits deconfined behavior in massive neutron stars, Nature Commun. 14, 8451 (2023),
+arXiv:2303.11356 [astro-ph.HE].
+[22] O. Komoltsev, R. Somasundaram, T. Gorda, A. Kurkela,
+J. Margueron, and I. Tews, Equation of state at neutronstar densities and beyond from perturbative QCD, Phys.
+Rev. D 109, 094030 (2024), arXiv:2312.14127 [nucl-th].
+[23] H. Koehn et al., An overview of existing and new nuclear
+and astrophysical constraints on the equation of state
+of neutron-rich dense matter, (2024), arXiv:2402.04172
+[astro-ph.HE].
+[24] C. Ecker, T. Gorda, A. Kurkela, and L. Rezzolla, Listening to the long ringdown: a novel way to pinpoint
+the equation of state in neutron-star cores, (2024),
+arXiv:2403.03246 [astro-ph.HE].
+[25] Y. Fujimoto, K. Fukushima, S. Kamata, and K. Murase,
+Uncertainty quantification in the machine-learning inference from neutron star probability distribution to the
+equation of state, Phys. Rev. D 110, 034035 (2024),
+arXiv:2401.12688 [nucl-th].
+[26] Y. Fujimoto, K. Fukushima, L. D. McLerran, and
+M. Praszalowicz, Trace Anomaly as Signature of Conformality in Neutron Stars, Phys. Rev. Lett. 129, 252702
+(2022), arXiv:2207.06753 [nucl-th].
+[27] H. Tan, T. Dore, V. Dexheimer, J. Noronha-Hostler, and
+N. Yunes, Extreme matter meets extreme gravity: Ultra-
+
+9
+heavy neutron stars with phase transitions, Phys. Rev. D
+105, 023018 (2022).
+[28] M. G. Alford and S. Han, Characteristics of hybrid compact stars with a sharp hadron-quark interface, Eur.
+Phys. J. A 52, 62 (2016), arXiv:1508.01261 [nucl-th].
+[29] K. Hebeler, J. M. Lattimer, C. J. Pethick, and
+A. Schwenk, Equation of state and neutron star properties constrained by nuclear physics and observation,
+Astrophys. J. 773, 11 (2013), arXiv:1303.4662 [astroph.SR].
+[30] C. Drischler, K. Hebeler, and A. Schwenk, Chiral interactions up to next-to-next-to-next-to-leading order and
+nuclear saturation, Phys. Rev. Lett. 122, 042501 (2019),
+arXiv:1710.08220 [nucl-th].
+[31] C. Drischler, R. J. Furnstahl, J. A. Melendez, and D. R.
+Phillips, How Well Do We Know the Neutron-Matter
+Equation of State at the Densities Inside Neutron Stars?
+A Bayesian Approach with Correlated Uncertainties,
+Phys. Rev. Lett. 125, 202702 (2020), arXiv:2004.07232
+[nucl-th].
+[32] I. Tews, J. Carlson, S. Gandolfi, and S. Reddy, Constraining the speed of sound inside neutron stars with chiral
+effective field theory interactions and observations, Astrophys. J. 860, 149 (2018), arXiv:1801.01923 [nucl-th].
+[33] J. Keller, K. Hebeler, and A. Schwenk, Nuclear equation
+of state for arbitrary proton fraction and temperature
+based on chiral effective field theory and a gaussian process emulator, Phys. Rev. Lett. 130, 072701 (2023).
+[34] A. Kurkela, P. Romatschke, and A. Vuorinen, Cold
+Quark Matter, Phys. Rev. D 81, 105021 (2010),
+arXiv:0912.1856 [hep-ph].
+[35] A. Kurkela and A. Vuorinen, Cool quark matter, Phys.
+Rev. Lett. 117, 042501 (2016), arXiv:1603.00750 [hepph].
+[36] T. Gorda, A. Kurkela, P. Romatschke, S. Säppi, and
+A. Vuorinen, Next-to-Next-to-Next-to-Leading Order
+Pressure of Cold Quark Matter: Leading Logarithm,
+Phys. Rev. Lett. 121, 202701 (2018), arXiv:1807.04120
+[hep-ph].
+[37] T. Gorda, A. Kurkela, R. Paatelainen, S. Säppi, and
+A. Vuorinen, Soft Interactions in Cold Quark Matter,
+Phys. Rev. Lett. 127, 162003 (2021), arXiv:2103.05658
+[hep-ph].
+[38] T. Gorda, R. Paatelainen, S. Säppi, and K. Seppänen,
+Equation of State of Cold Quark Matter to O(αs3 ln αs ),
+Phys. Rev. Lett. 131, 181902 (2023), arXiv:2307.08734
+[hep-ph].
+[39] T. Gorda and S. Säppi, Cool quark matter with perturbative quark masses, Phys. Rev. D 105, 114005 (2022),
+arXiv:2112.11472 [hep-ph].
+[40] T. Gorda, O. Komoltsev, A. Kurkela, and A. Mazeliauskas, Bayesian uncertainty quantification of perturbative QCD input to the neutron-star equation of state,
+JHEP 06, 002, arXiv:2303.02175 [hep-ph].
+[41] L. Brandes, W. Weise, and N. Kaiser, Evidence against a
+strong first-order phase transition in neutron star cores:
+Impact of new data, Phys. Rev. D 108, 094014 (2023),
+arXiv:2306.06218 [nucl-th].
+[42] R. Essick, I. Legred, K. Chatziioannou, S. Han, and
+P. Landry, Phase transition phenomenology with nonparametric representations of the neutron star equation of state, Phys. Rev. D 108, 043013 (2023),
+arXiv:2305.07411 [astro-ph.HE].
+
+[43] T. Gorda, K. Hebeler, A. Kurkela, A. Schwenk, and
+A. Vuorinen, Constraints on Strong Phase Transitions in Neutron Stars, Astrophys. J. 955, 100 (2023),
+arXiv:2212.10576 [astro-ph.HE].
+[44] R. Somasundaram, I. Tews, and J. Margueron, Investigating signatures of phase transitions in neutron-star
+cores, Phys. Rev. C 107, 025801 (2023).
+[45] M. G. Alford, S. Han, and M. Prakash, Generic conditions for stable hybrid stars, Phys. Rev. D 88, 083013
+(2013).
+[46] D. Mroczek, M. C. Miller, J. Noronha-Hostler, and
+N. Yunes, Nontrivial features in the speed of sound inside
+neutron stars, (2023), arXiv:2309.02345 [astro-ph.HE].
+[47] B. P. Abbott, R. Abbott, T. D. Abbott, et al.
+(LIGO Scientific Collaboration and Virgo Collaboration), GW170817: Observation of Gravitational Waves
+from a Binary Neutron Star Inspiral, Phys. Rev. Lett.
+119, 161101 (2017).
+[48] B. P. Abbott, R. Abbott, T. D. Abbott, F. Acernese,
+et al. (The LIGO Scientific Collaboration and the Virgo
+Collaboration), GW170817: Measurements of Neutron
+Star Radii and Equation of State, Phys. Rev. Lett. 121,
+161101 (2018).
+[49] B. P. Abbott, R. Abbott, T. D. Abbott, F. Acernese,
+et al. (LIGO Scientific Collaboration and Virgo Collaboration), Properties of the Binary Neutron Star Merger
+GW170817, Phys. Rev. X 9, 011001 (2019).
+[50] B. Margalit and B. D. Metzger, Constraining the maximum mass of neutron stars from multi-messenger observations of GW170817, Astrophys. J. Lett. 850, L19
+(2017), arXiv:1710.05938 [astro-ph.HE].
+[51] L. Rezzolla, E. R. Most, and L. R. Weih, Using
+gravitational-wave observations and quasi-universal relations to constrain the maximum mass of neutron stars,
+Astrophys. J. Lett. 852, L25 (2018), arXiv:1711.00314
+[astro-ph.HE].
+[52] M. Ruiz, S. L. Shapiro, and A. Tsokaros, GW170817,
+general relativistic magnetohydrodynamic simulations,
+and the neutron star maximum mass, Phys. Rev. D 97,
+021501(R) (2018), arXiv:1711.00473 [astro-ph.HE].
+[53] M. Shibata, S. Fujibayashi, K. Hotokezaka, K. Kiuchi,
+K. Kyutoku, Y. Sekiguchi, and M. Tanaka, Modeling
+GW170817 based on numerical relativity and its implications, Phys. Rev. D 96, 123012 (2017), arXiv:1710.07579
+[astro-ph.HE].
+[54] M. Shibata, E. Zhou, K. Kiuchi, and S. Fujibayashi,
+Constraint on the maximum mass of neutron stars using GW170817 event, Phys. Rev. D 100, 023015 (2019),
+arXiv:1905.03656 [astro-ph.HE].
+[55] J. Antoniadis, P. C. C. Freire, N. Wex, T. M. Tauris, R. S. Lynch, M. H. van Kerkwijk, M. Kramer,
+C. Bassa, V. S. Dhillon, T. Driebe, J. W. T. Hessels,
+V. M. Kaspi, V. I. Kondratiev, N. Langer, T. R.
+Marsh, M. A. McLaughlin, T. T. Pennucci, S. M.
+Ransom, I. H. Stairs, J. van Leeuwen, J. P. W.
+Verbiest, and D. G. Whelan, A massive pulsar in a
+compact relativistic binary, Science 340, 1233232 (2013),
+https://www.science.org/doi/pdf/10.1126/science.1233232.
+[56] M. C. Miller, F. K. Lamb, A. J. Dittmann, S. Bogdanov, Z. Arzoumanian, K. C. Gendreau, S. Guillot,
+A. K. Harding, W. C. G. Ho, J. M. Lattimer, R. M. Ludlam, S. Mahmoodifar, S. M. Morsink, P. S. Ray, T. E.
+Strohmayer, K. S. Wood, T. Enoto, R. Foster, T. Okajima, G. Prigozhin, and Y. Soong, PSR J0030+0451 Mass
+
+10
+and Radius from NICER Data and Implications for the
+Properties of Neutron Star Matter, The Astrophysical
+Journal Letters 887, L24 (2019).
+[57] T. E. Riley, A. L. Watts, S. Bogdanov, P. S. Ray, R. M.
+Ludlam, S. Guillot, Z. Arzoumanian, C. L. Baker, A. V.
+Bilous, D. Chakrabarty, K. C. Gendreau, A. K. Harding,
+W. C. G. Ho, J. M. Lattimer, S. M. Morsink, and T. E.
+Strohmayer, A NICER View of PSR J0030+0451: Millisecond Pulsar Parameter Estimation, The Astrophysical Journal Letters 887, L21 (2019).
+[58] E. Fonseca, H. T. Cromartie, T. T. Pennucci, P. S. Ray,
+A. Y. Kirichenko, S. M. Ransom, P. B. Demorest, I. H.
+Stairs, Z. Arzoumanian, L. Guillemot, A. Parthasarathy,
+M. Kerr, I. Cognard, P. T. Baker, H. Blumer, P. R.
+Brook, M. DeCesar, T. Dolch, F. A. Dong, E. C. Ferrara,
+W. Fiore, N. Garver-Daniels, D. C. Good, R. Jennings,
+M. L. Jones, V. M. Kaspi, M. T. Lam, D. R. Lorimer,
+J. Luo, A. McEwen, J. W. McKee, M. A. McLaughlin,
+N. McMann, B. W. Meyers, A. Naidu, C. Ng, D. J. Nice,
+N. Pol, H. A. Radovan, B. Shapiro-Albert, C. M. Tan,
+S. P. Tendulkar, J. K. Swiggum, H. M. Wahl, and W. W.
+Zhu, Refined Mass and Geometric Measurements of the
+High-mass PSR J0740+6620, The Astrophysical Journal
+Letters 915, L12 (2021).
+[59] T. E. Riley, A. L. Watts, P. S. Ray, S. Bogdanov,
+S. Guillot, S. M. Morsink, A. V. Bilous, Z. Arzoumanian, D. Choudhury, J. S. Deneva, K. C. Gendreau, A. K.
+Harding, W. C. G. Ho, J. M. Lattimer, M. Loewenstein, R. M. Ludlam, C. B. Markwardt, T. Okajima,
+C. Prescod-Weinstein, R. A. Remillard, M. T. Wolff,
+E. Fonseca, H. T. Cromartie, M. Kerr, T. T. Pennucci,
+A. Parthasarathy, S. Ransom, I. Stairs, L. Guillemot,
+and I. Cognard, A NICER View of the Massive Pulsar
+PSR J0740+6620 Informed by Radio Timing and XMMNewton Spectroscopy, The Astrophysical Journal Letters
+918, L27 (2021).
+[60] A. W. Shaw, C. O. Heinke, A. W. Steiner, S. Campana,
+H. N. Cohn, W. C. G. Ho, P. M. Lugger, and M. Servillat, The radius of the quiescent neutron star in the globular cluster M13, Mon. Not. Roy. Astron. Soc. 476, 4713
+(2018), arXiv:1803.00029 [astro-ph.HE].
+[61] A. W. Steiner, C. O. Heinke, S. Bogdanov, C. Li,
+W. C. G. Ho, A. Bahramian, and S. Han, Constraining the Mass and Radius of Neutron Stars in Globular
+Clusters, Mon. Not. Roy. Astron. Soc. 476, 421 (2018),
+arXiv:1709.05013 [astro-ph.HE].
+
+[62] J. Nättilä, M. C. Miller, A. W. Steiner, J. J. E. Kajava,
+V. F. Suleimanov, and J. Poutanen, Neutron star mass
+and radius measurements from atmospheric model fits to
+X-ray burst cooling tail spectra, Astron. Astrophys. 608,
+A31 (2017), arXiv:1709.09120 [astro-ph.HE].
+[63] J. Nättilä, A. W. Steiner, J. J. E. Kajava, V. F.
+Suleimanov, and J. Poutanen, Equation of state constraints for the cold dense matter inside neutron stars
+using the cooling tail method, Astron. Astrophys. 591,
+A25 (2016), arXiv:1509.06561 [astro-ph.HE].
+[64] O. Komoltsev and A. Kurkela, How Perturbative
+QCD Constrains the Equation of State at NeutronStar Densities, Phys. Rev. Lett. 128, 202701 (2022),
+arXiv:2111.05350 [nucl-th].
+[65] R. C. Tolman, Static solutions of Einstein’s field equations for spheres of fluid, Phys. Rev. 55, 364 (1939).
+[66] J. R. Oppenheimer and G. M. Volkoff, On massive neutron cores, Phys. Rev. 55, 374 (1939).
+[67] S. Han and A. W. Steiner, Tidal deformability with sharp
+phase transitions in (binary) neutron stars, Phys. Rev. D
+99, 083014 (2019), arXiv:1810.10967 [nucl-th].
+[68] O. Komoltsev, T. Gorda, and A. Kurkela, QCD likelihood function (2023).
+[69] O. Komoltsev, T. Gorda, and A. Kurkela, Marginalized
+QCD likelihood function (2025).
+[70] B. P. Abbott, R. Abbott, T. D. Abbott, F. Acernese,
+et al., Multi-messenger observations of a binary neutron
+star merger, The Astrophysical Journal Letters 848, L12
+(2017).
+[71] L. McLerran and S. Reddy, Quarkyonic Matter and
+Neutron Stars, Phys. Rev. Lett. 122, 122701 (2019),
+arXiv:1811.12503 [nucl-th].
+[72] R. W. Romani, D. Kandel, A. V. Filippenko, T. G. Brink,
+and W. Zheng, PSR J0952−0607: The Fastest and Heaviest Known Galactic Neutron Star, Astrophys. J. Lett.
+934, L17 (2022), arXiv:2207.05124 [astro-ph.HE].
+[73] V. Doroshenko, V. Suleimanov, G. Pühlhofer, and
+A. Santangelo, A strangely light neutron star within a
+supernova remnant, Nature Astronomy 6, 1444 (2022).
+[74] Y. Fujimoto, K. Fukushima, K. Hotokezaka, and K. Kyutoku, Gravitational Wave Signal for Quark Matter with
+Realistic Phase Transition, Phys. Rev. Lett. 130, 091404
+(2023), arXiv:2205.03882 [astro-ph.HE].
+[75] M. Evans et al., A Horizon Study for Cosmic Explorer: Science, Observatories, and Community, (2021),
+arXiv:2109.09882 [astro-ph.IM].
+[76] M. Punturo et al., The third generation of gravitational
+wave observatories and their science reach, Class. Quant.
+Grav. 27, 084007 (2010).
+
+

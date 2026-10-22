@@ -1,0 +1,8 @@
+O204 Script 04 — W-field 原理: 35/35 PASS
+P1 形式強迫: 最低次 SSB = 四次 (唯一)
+P2 eta = 0.0 (四次完備)
+P3 mu2 = E-O = gamma22 = 2 ; |Tr(LJ)| = 2.0
+P4 lambda = 1/<W>^2 = mu2/(Sigma gamma+M) = 2/123
+P5 one-loop: c2 = -0.063200456 (<0), c4 = -0.015784539 vs lambda = 0.016260163
+   kappa2 needed for mu2: 0.123614615 ; for lambda: 0.003964665285
+   Sigma_odd 1/gamma = 968.0 = 968 ; Sigma_even = 322.75

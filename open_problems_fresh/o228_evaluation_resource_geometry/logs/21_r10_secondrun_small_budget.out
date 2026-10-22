@@ -1,0 +1,30 @@
+================================================================================================================
+O228 scripts/21 -- R10 (fixed indexings): B&B certificate attempt for k_min(edge) = 7
+================================================================================================================
+M_edge B&B: bound = None ; nodes = 253 ; depth = 12 ; 3.0 s
+[FAIL] P8-1  -- bound = None ; nodes = 253 (predicted <= 40)
+[FAIL] P8-2  -- depth = 12 (DEPTH_CAP 6)
+re-verification of every node: 0 mismatches
+[PASS] P8-3  -- 0 mismatches over 253 nodes
+explicit 7-cover: [0, 1, 4, 9, 10, 15, 23] (search nodes 387478, covers all = True)
+[PASS] P8-4  -- columns = [0, 1, 4, 9, 10, 15, 23] ; all pairs covered = True
+  M_2I    k_min=4 -> tree bound None (281 nodes, depth 10)
+  M_face  k_min=5 -> tree bound None (263 nodes, depth 12)
+  M_edge  k_min=7 -> tree bound None (253 nodes, depth 12)
+   ... B&B 15 nodes, depth 2, R=1 C=12, 0 s
+   ... B&B 65 nodes, depth 2, R=1 C=12, 0 s
+   ... B&B 95 nodes, depth 2, R=1 C=12, 0 s
+   ... B&B 115 nodes, depth 2, R=1 C=12, 0 s
+   ... B&B 145 nodes, depth 2, R=1 C=12, 0 s
+   ... B&B 165 nodes, depth 2, R=1 C=12, 0 s
+   ... B&B 165 nodes, depth 1, R=2 C=13, 0 s
+   ... B&B 175 nodes, depth 2, R=1 C=12, 0 s
+  M_T     k_min=2 -> tree bound None (209 nodes, depth 6)
+  M_O     k_min=3 -> tree bound None (233 nodes, depth 6)
+  M_D4    k_min=1 -> tree bound 1 (1 nodes, depth 0)
+[FAIL] P8-5  -- M_2I None(281 nodes) ; M_face None(263 nodes) ; M_edge None(253 nodes) ; M_T None(209 nodes) ; M_O None(233 nodes) ; M_D4 1(1 nodes)
+[PASS] P8-6  -- tree nodes = 253 ; depth = 12 ; certified = False ; DFS nodes = 19,352,397
+================================================================================================================
+RESULT: 3/6 PASS  (3 FAIL)   elapsed 11.8 s
+================================================================================================================
+exit=1

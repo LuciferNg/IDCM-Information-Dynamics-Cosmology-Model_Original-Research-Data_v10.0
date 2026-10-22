@@ -1,0 +1,41 @@
+{
+ "rules": "r22-two-coordinate-v1",
+ "contract": "docs/45_r22_contract.md",
+ "contract_sha256": "a3ab551d5783ed70f6e439c86512deff2b4a96c38f994f8a9db8161cccb87528",
+ "frozen_at": "first run of scripts/41",
+ "n_pass": 5,
+ "n_total": 5,
+ "gate": "OPEN",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "凍結合約 sha256 與記錄一致",
+   "ok": true,
+   "detail": "sha = a3ab551d5783ed70…"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 完整（8 個：W1–W5／X1–X3）",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C3",
+   "name": "陽性對照：合約載明 Part W 之兩座標分解與 Part X 之異號相消",
+   "ok": true,
+   "detail": "命中 = True"
+  },
+  {
+   "tag": "C4",
+   "name": "陰性對照：篡改後之合約（弱化為「可能成群」）必須被 C3 判據拒絕",
+   "ok": true,
+   "detail": "篡改版仍含完整判準 = False"
+  },
+  {
+   "tag": "C5",
+   "name": "GATE 條件：合約未被改動、tag 完整、陰陽對照成立",
+   "ok": true,
+   "detail": "GATE = OPEN"
+  }
+ ]
+}

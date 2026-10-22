@@ -1,0 +1,41 @@
+{
+ "rules": "r17-sign-closure-v1",
+ "contract": "docs/35_r17_contract.md",
+ "contract_sha256": "4814548bd5e391bf24656ade063067cd0eadddf04071d7a761df8ca211e51936",
+ "frozen_at": "first run of scripts/41",
+ "n_pass": 5,
+ "n_total": 5,
+ "gate": "OPEN",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "凍結合約 sha256 與記錄一致",
+   "ok": true,
+   "detail": "sha = 4814548bd5e391bf…"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 完整（7 個：K1–K4／L1–L3）",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C3",
+   "name": "陽性對照：合約載明 Part K 之完整判準（ε(v) = ε(w) ＋ 端點）",
+   "ok": true,
+   "detail": "命中 = True"
+  },
+  {
+   "tag": "C4",
+   "name": "陰性對照：篡改後之合約（弱化為「可能成群」）必須被 C3 判據拒絕",
+   "ok": true,
+   "detail": "篡改版仍含完整判準 = False"
+  },
+  {
+   "tag": "C5",
+   "name": "GATE 條件：合約未被改動、tag 完整、陰陽對照成立",
+   "ok": true,
+   "detail": "GATE = OPEN"
+  }
+ ]
+}

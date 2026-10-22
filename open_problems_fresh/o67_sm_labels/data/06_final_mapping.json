@@ -1,0 +1,544 @@
+{
+  "test": "O67 Phase 6: Final Mapping",
+  "mapping": [
+    {
+      "index": 0,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 18.271669975198844,
+      "lambda": 333.8539236825829
+    },
+    {
+      "index": 1,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 12.95936965532369,
+      "lambda": 167.94526186332445
+    },
+    {
+      "index": 2,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 12.632895410532765,
+      "lambda": 159.5900464534598
+    },
+    {
+      "index": 3,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 12.501006997447377,
+      "lambda": 156.2751759502283
+    },
+    {
+      "index": 4,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 11.90222500257143,
+      "lambda": 141.6629600118365
+    },
+    {
+      "index": 5,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 8.701809741256481,
+      "lambda": 75.72149277302617
+    },
+    {
+      "index": 6,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.5021678272883365,
+      "lambda": 56.282522108800194
+    },
+    {
+      "index": 7,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.393747126549058,
+      "lambda": 54.667496571352444
+    },
+    {
+      "index": 8,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.320494771642074,
+      "lambda": 53.589643701638934
+    },
+    {
+      "index": 9,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.291423519704684,
+      "lambda": 53.16485694370264
+    },
+    {
+      "index": 10,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.242746462040768,
+      "lambda": 52.45737631340406
+    },
+    {
+      "index": 11,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.219035696213463,
+      "lambda": 52.1144763832042
+    },
+    {
+      "index": 12,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.199215287481408,
+      "lambda": 51.82870075550602
+    },
+    {
+      "index": 13,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.173433763041955,
+      "lambda": 51.45815195275026
+    },
+    {
+      "index": 14,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.159731971631358,
+      "lambda": 51.26176190560025
+    },
+    {
+      "index": 15,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.099741121514362,
+      "lambda": 50.406323992522005
+    },
+    {
+      "index": 16,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.081112287157701,
+      "lambda": 50.14215122333577
+    },
+    {
+      "index": 17,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 7.017888482891854,
+      "lambda": 49.25075875830613
+    },
+    {
+      "index": 18,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 6.911616017601928,
+      "lambda": 47.77043597477154
+    },
+    {
+      "index": 19,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 6.815502410580924,
+      "lambda": 46.45107310863439
+    },
+    {
+      "index": 20,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 4.909862885120615,
+      "lambda": 24.10675355068493
+    },
+    {
+      "index": 21,
+      "sector": "C",
+      "group": "C1",
+      "generation": "Gen3",
+      "sqrt_lambda": 4.358055218008331,
+      "lambda": 18.99264528320964
+    },
+    {
+      "index": 22,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 3.7586443468389827,
+      "lambda": 14.127407326024642
+    },
+    {
+      "index": 23,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 3.6301130696589703,
+      "lambda": 13.177720898508872
+    },
+    {
+      "index": 24,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.8972120776957717,
+      "lambda": 8.39383782314625
+    },
+    {
+      "index": 25,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.8609709960718175,
+      "lambda": 8.185155040364167
+    },
+    {
+      "index": 26,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.8111495761539977,
+      "lambda": 7.902561939510801
+    },
+    {
+      "index": 27,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.80189209780842,
+      "lambda": 7.850599327761269
+    },
+    {
+      "index": 28,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.765059413173134,
+      "lambda": 7.6455535583773555
+    },
+    {
+      "index": 29,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.7220011458726727,
+      "lambda": 7.409290238132143
+    },
+    {
+      "index": 30,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.697765392454386,
+      "lambda": 7.277938112724566
+    },
+    {
+      "index": 31,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.624141945871263,
+      "lambda": 6.886120952081018
+    },
+    {
+      "index": 32,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.6115322863214825,
+      "lambda": 6.820100882499509
+    },
+    {
+      "index": 33,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.5118647926912465,
+      "lambda": 6.309464736761839
+    },
+    {
+      "index": 34,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.5093986927792002,
+      "lambda": 6.297081799321959
+    },
+    {
+      "index": 35,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.3950253443256297,
+      "lambda": 5.7361463999621005
+    },
+    {
+      "index": 36,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.389209719835874,
+      "lambda": 5.7083230853582165
+    },
+    {
+      "index": 37,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.272447052959855,
+      "lambda": 5.16401560850593
+    },
+    {
+      "index": 38,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.260418497480239,
+      "lambda": 5.10949178375082
+    },
+    {
+      "index": 39,
+      "sector": "K",
+      "group": "K-ferm",
+      "generation": "Gen2",
+      "sqrt_lambda": 2.14577436373801,
+      "lambda": 4.604347620075261
+    },
+    {
+      "index": 40,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 2.129632211592449,
+      "lambda": 4.535333356652146
+    },
+    {
+      "index": 41,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 2.018905459783632,
+      "lambda": 4.075979255544158
+    },
+    {
+      "index": 42,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 2.0006294594864436,
+      "lambda": 4.002518234165019
+    },
+    {
+      "index": 43,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.895297340977239,
+      "lambda": 3.592152010715392
+    },
+    {
+      "index": 44,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.8766416116357791,
+      "lambda": 3.5217837385229345
+    },
+    {
+      "index": 45,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.7778221994210741,
+      "lambda": 3.1606517727543855
+    },
+    {
+      "index": 46,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.7602578365249153,
+      "lambda": 3.0985076510473752
+    },
+    {
+      "index": 47,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.6687116924036498,
+      "lambda": 2.7845987123646534
+    },
+    {
+      "index": 48,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.6534125884259503,
+      "lambda": 2.733773187565401
+    },
+    {
+      "index": 49,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.5695751593198501,
+      "lambda": 2.463566180753933
+    },
+    {
+      "index": 50,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.5574360259259221,
+      "lambda": 2.4256069748519296
+    },
+    {
+      "index": 51,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.4814694886352084,
+      "lambda": 2.194751845757066
+    },
+    {
+      "index": 52,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.473143014639825,
+      "lambda": 2.1701503415821115
+    },
+    {
+      "index": 53,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.4049965304397707,
+      "lambda": 1.9740152505477933
+    },
+    {
+      "index": 54,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.4009347972329886,
+      "lambda": 1.962618306098235
+    },
+    {
+      "index": 55,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.3408680153446046,
+      "lambda": 1.7979270345741791
+    },
+    {
+      "index": 56,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.3404038777970306,
+      "lambda": 1.7966825556133168
+    },
+    {
+      "index": 57,
+      "sector": "K",
+      "group": "K-bos",
+      "generation": "Boson",
+      "sqrt_lambda": 1.2876450160936994,
+      "lambda": 1.6580296874709437
+    },
+    {
+      "index": 58,
+      "sector": "C",
+      "group": "C2",
+      "generation": "Gen1",
+      "sqrt_lambda": 0.737635592821438,
+      "lambda": 0.5441062677970342
+    },
+    {
+      "index": 59,
+      "sector": "C",
+      "group": "C2",
+      "generation": "Gen1",
+      "sqrt_lambda": 0.7361593175197589,
+      "lambda": 0.5419305407711573
+    },
+    {
+      "index": 60,
+      "sector": "C",
+      "group": "C2",
+      "generation": "Gen1",
+      "sqrt_lambda": 0.7332253614244982,
+      "lambda": 0.5376194306360861
+    },
+    {
+      "index": 61,
+      "sector": "C",
+      "group": "C2",
+      "generation": "Gen1",
+      "sqrt_lambda": 0.7317167927881063,
+      "lambda": 0.5354094648481126
+    },
+    {
+      "index": 62,
+      "sector": "C",
+      "group": "C2",
+      "generation": "Gen1",
+      "sqrt_lambda": 0.7294366013429104,
+      "lambda": 0.5320777553786961
+    },
+    {
+      "index": 63,
+      "sector": "C",
+      "group": "C2",
+      "generation": "Gen1",
+      "sqrt_lambda": 0.7287847321050122,
+      "lambda": 0.5311271857493743
+    },
+    {
+      "index": 64,
+      "sector": "C",
+      "group": "C2",
+      "generation": "Gen1",
+      "sqrt_lambda": 0.7261913465186189,
+      "lambda": 0.5273538717585249
+    },
+    {
+      "index": 65,
+      "sector": "C",
+      "group": "C2",
+      "generation": "Gen1",
+      "sqrt_lambda": 0.725605105430414,
+      "lambda": 0.5265027690266822
+    }
+  ],
+  "n_fermions": 48,
+  "n_bosons": 18,
+  "n_C1": 22,
+  "n_C2": 8,
+  "n_K_fermion": 18,
+  "n_K_boson": 18,
+  "verification": {
+    "fermions_48": true,
+    "bosons_18": true,
+    "total_66": true
+  }
+}

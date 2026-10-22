@@ -1,0 +1,213 @@
+{
+ "rules_version": "o226-r1-contract-v1",
+ "rounds": {
+  "1": {
+   "distinct_accounts": 1,
+   "account": [
+    15,
+    44,
+    2,
+    15,
+    [
+     0,
+     15
+    ],
+    "123/2",
+    "0",
+    14
+   ]
+  },
+  "2": {
+   "distinct_accounts": 1,
+   "account": [
+    15,
+    44,
+    2,
+    15,
+    [
+     0,
+     15
+    ],
+    "123/2",
+    "0",
+    14
+   ]
+  },
+  "3": {
+   "distinct_accounts": 1,
+   "account": [
+    15,
+    44,
+    2,
+    15,
+    [
+     0,
+     15
+    ],
+    "123/2",
+    "0",
+    14
+   ]
+  },
+  "4": {
+   "distinct_accounts": 1,
+   "account": [
+    15,
+    44,
+    2,
+    15,
+    [
+     0,
+     15
+    ],
+    "123/2",
+    "0",
+    14
+   ]
+  },
+  "5": {
+   "distinct_accounts": 1,
+   "account": [
+    15,
+    44,
+    2,
+    15,
+    [
+     0,
+     15
+    ],
+    "123/2",
+    "0",
+    14
+   ]
+  },
+  "6": {
+   "distinct_accounts": 1,
+   "account": [
+    15,
+    44,
+    2,
+    15,
+    [
+     0,
+     15
+    ],
+    "123/2",
+    "0",
+    14
+   ]
+  },
+  "7": {
+   "distinct_accounts": 1,
+   "account": [
+    15,
+    44,
+    2,
+    15,
+    [
+     0,
+     15
+    ],
+    "123/2",
+    "0",
+    14
+   ]
+  },
+  "8": {
+   "distinct_accounts": 1,
+   "account": [
+    15,
+    44,
+    2,
+    15,
+    [
+     0,
+     15
+    ],
+    "123/2",
+    "0",
+    14
+   ]
+  }
+ },
+ "distinct_final_states": {
+  "1": 120,
+  "2": 120,
+  "3": 120,
+  "4": 120,
+  "5": 120,
+  "6": 120,
+  "7": 120,
+  "8": 120
+ },
+ "W_index": 37,
+ "ord_W_2I": 5,
+ "ord_W_quotient": 5,
+ "permutation_probe": {
+  "0": {
+   "completed": 15,
+   "charges": 44,
+   "hits": 1,
+   "pops": 15,
+   "predicted_hits": 118
+  },
+  "1": {
+   "completed": 14,
+   "charges": 44,
+   "hits": 0,
+   "pops": 15,
+   "predicted_hits": 125
+  },
+  "2": {
+   "completed": 15,
+   "charges": 44,
+   "hits": 1,
+   "pops": 15,
+   "predicted_hits": 121
+  }
+ },
+ "claims": [
+  {
+   "tag": "R1",
+   "name": "Pr-3.2: every pair map is a right translation s -> s.g(a,b) (bijection on 120 states) for all 3844 pairs; the round word W = prod g(a,b) exists",
+   "ok": true,
+   "detail": "mismatches = 0 / 461280 ; W word index = 37"
+  },
+  {
+   "tag": "R2",
+   "name": "Pr-3.2: the coset order of W divides 60 (the world-line closes on the centre quotient)",
+   "ok": true,
+   "detail": "ord_2I(W) = 5 ; ord_{2I/{+-1}}(W) = 5 (divides 60: True)"
+  },
+  {
+   "tag": "R3",
+   "name": "Pr-3.1: for every R = 1..8 the per-round account is IDENTICAL over all 120 initial states and over all rounds: 15 completed pairs / 44 charges / hits / 15 pops / terminal (0,15) / Sigma = 61.5 / B_rem = 0",
+   "ok": true,
+   "detail": "distinct accounts per R = {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} ; account = (15, 44, 2, 15, (0, 15), '123/2', '0', 14)"
+  },
+  {
+   "tag": "R4",
+   "name": "Pr-3.2: the state distribution stays exactly uniform: every round map is bijective (120 distinct images) for all 120 initial states",
+   "ok": true,
+   "detail": "distinct final states per R = {1: 120, 2: 120, 3: 120, 4: 120, 5: 120, 6: 120, 7: 120, 8: 120}"
+  },
+  {
+   "tag": "R5",
+   "name": "Pr-3.2: after R rounds the world state is s0 . W^R (word-level closure); the map is a bijection for every R",
+   "ok": true,
+   "detail": "verified for R = 1..8 (W^R words)"
+  },
+  {
+   "tag": "R6",
+   "name": "Pr-3.3: rigidity split -- the counted structure (pops = one per completed pair, charges = 44, Sigma = B) is order independent, while the hit count is NOT (it follows N + C(order)), so hits = 2N is a frozen-order property",
+   "ok": false,
+   "detail": "{\"0\": {\"completed\": 15, \"charges\": 44, \"hits\": 1, \"pops\": 15, \"predicted_hits\": 118}, \"1\": {\"completed\": 14, \"charges\": 44, \"hits\": 0, \"pops\": 15, \"predicted_hits\": 125}, \"2\": {\"completed\": 15, \"charges\": 44, \"hits\": 1, \"pops\": 15, \"predicted_hits\": 121}}"
+  },
+  {
+   "tag": "R6-c",
+   "name": "CORRECTED (unit mismatch in the pre-registered check, disclosed): under order permutation the BUDGET LAW is rigid (charges = 44, Sigma = B = 123/2, B_rem = 0 for every order) while the reached content is not (completed pairs and in-prefix hits vary) => \"the budget is a law, the prefix is an outcome\"",
+   "ok": true,
+   "detail": "charges [44, 44, 44] ; completed [15, 14, 15] ; in-prefix hits [1, 0, 1] (the N + C(order) closed form applies to the UNBUDGETED full pass, established independently in scripts/04)"
+  }
+ ]
+}

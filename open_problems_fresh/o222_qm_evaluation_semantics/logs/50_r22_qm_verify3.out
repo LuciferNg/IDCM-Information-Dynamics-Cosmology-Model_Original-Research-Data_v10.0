@@ -1,0 +1,55 @@
+data/09 shape: {'rules_version': 'str', 'denominator': 'int', 'axis_ids': 'list[62]', 'axis_types': 'list[62]', 'C1_num': 'list[62]', 'C1rev_num': 'list[62]', 'C2': 'list[62]'}
+{
+ "QV4p": {
+  "group": "2I/{+-1}",
+  "order": 60,
+  "conjugacy_classes": 5,
+  "class_sizes": [
+   1,
+   12,
+   12,
+   15,
+   20
+  ],
+  "order_distribution": {
+   "1": 1,
+   "2": 15,
+   "3": 20,
+   "5": 24
+  },
+  "expected_A5": {
+   "order": 60,
+   "classes": 5,
+   "class_sizes": [
+    1,
+    12,
+    12,
+    15,
+    20
+   ],
+   "orders": {
+    "1": 1,
+    "2": 15,
+    "3": 20,
+    "5": 24
+   }
+  },
+  "matches_A5": true
+ },
+ "QV5": {
+  "shape": {
+   "rules_version": "str",
+   "denominator": "int",
+   "axis_ids": "list[62]",
+   "axis_types": "list[62]",
+   "C1_num": "list[62]",
+   "C1rev_num": "list[62]",
+   "C2": "list[62]"
+  },
+  "C1_num": "nested/None",
+  "C1rev_num": "nested/None",
+  "C2": "nested/None",
+  "denominator": "120",
+  "chsh_error": "ValueError:Invalid literal for Fraction: '[120, 40, -40, -40, -40, -40, 40, 40, 40, 40, -40"
+ }
+}

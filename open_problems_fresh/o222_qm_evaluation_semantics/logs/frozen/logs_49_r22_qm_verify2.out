@@ -1,0 +1,17 @@
+sample group element: ((Fraction(-1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1))) | type <class 'tuple'>
+axis sample: ((Fraction(-1, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1)))
+  scalar-position 0 -> sum|chi|^2 = 0
+  scalar-position 1 -> sum|chi|^2 = 0
+  scalar-position 2 -> sum|chi|^2 = 0
+  scalar-position 3 -> sum|chi|^2 = 0
+{
+ "Q4": {
+  "sum_chi2_by_position": [
+   "0",
+   0
+  ]
+ },
+ "Q5": {
+  "error": "argument should be a string or a Rational instance"
+ }
+}

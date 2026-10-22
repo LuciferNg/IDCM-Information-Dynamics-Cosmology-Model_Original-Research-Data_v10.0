@@ -1,0 +1,15 @@
+{
+  "N": 131,
+  "Psi_rad": -3.14078,
+  "Psi_error_rad": 0.000813,
+  "vector_magnitude": 9.568519,
+  "T_cold_uK": -134.2,
+  "T_obs_uK": -134.19,
+  "T_diff_uK": 0.01,
+  "tau_gyr": 13.4701,
+  "T_sync_gyr": 84.6349,
+  "t_true_gyr": 11100.642,
+  "N_0_Psi": -1.978693,
+  "N_0_err": 1.1629,
+  "N_0_T": -53.23
+}

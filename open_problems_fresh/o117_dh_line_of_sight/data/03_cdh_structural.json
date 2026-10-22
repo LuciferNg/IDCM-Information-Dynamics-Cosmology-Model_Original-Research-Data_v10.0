@@ -1,0 +1,12 @@
+{
+  "optimal_C_DH": -0.2242,
+  "optimal_chi2": 7.4122,
+  "C_DM": -0.16973,
+  "C_DM_chi2": 7.5506,
+  "C_43_chi2": 7.4124,
+  "ratio_C_DH_C_DM": 1.320921,
+  "B_over_N_gen": 1.3333333333333333,
+  "closest_candidate": "C_DM \u00d7 B/N_gen = C_DM \u00d7 4/3",
+  "pass": 3,
+  "fail": 1
+}

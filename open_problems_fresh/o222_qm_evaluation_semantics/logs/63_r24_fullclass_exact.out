@@ -1,0 +1,33 @@
+====================================================================================================
+O222 scripts/63 -- exact class prevalence via prefix decomposition + BEST
+====================================================================================================
+CONTROL n=4 L=5 : brute 0/256 (ec 256) | counting 0/256 (ec 256) | match True
+CONTROL n=5 L=9 : brute 184704/972000 (ec 972000) | counting 184704/958176 (ec 972000) | match False
+EXACT n=6 L=9 : constructible 19734119424 / total 247669456896  = 7.967926%
+EXACT n=6 L=10 : constructible 44054323200 / total 247576144896  = 17.794252%
+SAMPLE n=6 L=21 K=20000 : 20000/20000 = 100.0000%  [🟡 sampling]
+SAMPLE n=7 L=21 K=20000 : 20000/20000 = 100.0000%  [🟡 sampling]
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/63_r24_fullclass_exact.py", line 157, in <module>
+    main()
+    ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/63_r24_fullclass_exact.py", line 155, in main
+    json.dump(out,open(os.path.join(ROOT,"data","63_r24_fullclass_exact.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 433, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.13/json/encoder.py", line 407, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 407, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 440, in _iterencode
+    o = _default(o)
+  File "/usr/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Fraction is not JSON serializable

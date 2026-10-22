@@ -1,0 +1,15 @@
+{
+ "rules": "r32-crit3-misc2-v1",
+ "contract": "docs/68_r32_contract.md",
+ "sha256": "02f0413f3a78a4d892123f2f978adf525ac22142e11b0e68c4267dcfe973bf90",
+ "frozen_at": "2026-10-01 23:29:28",
+ "claims_declared": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "Q1",
+  "Q2",
+  "Q3"
+ ]
+}

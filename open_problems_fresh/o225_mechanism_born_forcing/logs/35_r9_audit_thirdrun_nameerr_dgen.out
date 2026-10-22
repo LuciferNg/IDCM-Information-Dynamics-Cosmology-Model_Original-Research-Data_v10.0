@@ -1,0 +1,13 @@
+======================================================================================================================
+O225 scripts/35 -- R9 INDEPENDENT AUDIT   (r9-protocol-pairing-v1)
+======================================================================================================================
+[PASS] E1    ★ 獨立事件序列重建：事件數、類別計數、序列雜湊與 34 相同  --  事件數 = 124 ; 類別 = {'FF': 89, 'TF': 14, 'TT': 8, 'FT': 13} ; sha 符 = True
+[FAIL] E2    ★★ 逐態重建：由歸約（事件之 (a,s_w,s_r) 直接算，不經 g）重建 f_tf/f_ft/f_tt/Δ，與 R8 之 120 態值逐態相同  --  f_tf 同 = False ; f_ft 同 = False ; f_tt 同 = False ; Δ 同 = False ; Σf_tf = 0 ; Σf_ft = -44 ; Σf_tt = 96
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/35_r9_audit.py", line 302, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/35_r9_audit.py", line 214, in main
+    a2 += dgen[w][a] * eps[w] * sgn_uw2(a, r)
+          ^^^^
+UnboundLocalError: cannot access local variable 'dgen' where it is not associated with a value

@@ -1,0 +1,8 @@
+# O4_renew D01: 統計驗證
+BIC constant-mean (k=1): chi2=29.4 bic=33.5
+BIC φ^-d freeA=115 (k=1): chi2=30.7 bic=34.8
+BIC φ^-d A=150 (k=1): chi2=33.5 bic=37.6
+BIC 5lv (k=5): chi2=29.6 bic=50.1
+BIC 6lv (k=6): chi2=30.1 bic=54.6
+BIC 3lv (k=3): chi2=51.4 bic=63.7
+best=constant-mean (k=1) bic=33.5

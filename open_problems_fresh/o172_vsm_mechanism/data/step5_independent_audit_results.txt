@@ -1,0 +1,7 @@
+O172 - Step 5: independent doc audit: 33/33 PASS
+A chain: M0/veff/ratio/dev/M0_required all match docs
+B structure: mu2/35/1575/1573/correction match
+C uniqueness: no pure products; phi-ladder rejected (0.0043%)
+D spectra: Sg2=272, pair-sum=7828, Sg2_odd=264, set identity OK
+E mechanism: F_proj=17=n0(1), y_t=0.99188, O34 m_t cross-check OK
+F template: sections present, <=20 lines, doc consistency OK

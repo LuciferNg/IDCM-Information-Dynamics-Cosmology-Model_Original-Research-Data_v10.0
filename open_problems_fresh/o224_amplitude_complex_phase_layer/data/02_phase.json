@@ -1,0 +1,103 @@
+{
+ "order_distribution": {
+  "1": 1,
+  "2": 1,
+  "3": 20,
+  "4": 30,
+  "5": 24,
+  "6": 20,
+  "10": 24
+ },
+ "n_classes": 9,
+ "class_sizes": [
+  1,
+  1,
+  12,
+  12,
+  12,
+  12,
+  20,
+  20,
+  30
+ ],
+ "commutator_subgroup_order": 120,
+ "n_distinct_commutators": 120,
+ "sum_chi2": "(Fraction(120, 1), Fraction(0, 1))",
+ "sum_chi": "(Fraction(0, 1), Fraction(0, 1))",
+ "fs_indicator": "(Fraction(-1, 1), Fraction(0, 1))",
+ "n_order4": 30,
+ "minus_one_index": 0,
+ "distinct_inner_product_values": 11,
+ "verdict_a": "RED inside the frozen inventory (perfect group + all-real characters + real +-1 readout); the phase layer itself EXISTS in IDCM as the W-field Goldstone theta (cited), i.e. the boundary is a boundary of the PROTOCOL, not of IDCM",
+ "script": "02_phase",
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "element-order distribution = {1:1, 2:1, 3:20, 4:30, 5:24, 6:20, 10:24} (the 2I table) => group is 2I, not some other order-120 group",
+   "ok": true,
+   "detail": "{1: 1, 2: 1, 3: 20, 4: 30, 5: 24, 6: 20, 10: 24}"
+  },
+  {
+   "tag": "A2",
+   "name": "conjugacy classes: exactly 9, sizes {1,1,12,12,12,12,20,20,30} (2I table) => 9 irreps",
+   "ok": true,
+   "detail": "n classes = 9 ; sizes = [1, 1, 12, 12, 12, 12, 20, 20, 30]"
+  },
+  {
+   "tag": "A3",
+   "name": "EVERY conjugacy class is closed under inversion (C^-1 = C) => every irreducible character of 2I is REAL-valued => 2I has NO genuinely complex (Frobenius-Schur indicator 0) irreducible representation",
+   "ok": true,
+   "detail": "classes not inversion-closed = 0 ; equivalently: every g is conjugate to g^-1 (checked over all 120 elements)"
+  },
+  {
+   "tag": "A3b",
+   "name": "element-wise version: g ~ g^-1 for all 120 elements",
+   "ok": true,
+   "detail": "violations = 0"
+  },
+  {
+   "tag": "A4",
+   "name": "[2I,2I] = 2I (2I is a PERFECT group) => the abelianisation is trivial => Hom(2I,U(1)) = {1}: NO non-trivial U(1)-valued phase CHARACTER exists",
+   "ok": true,
+   "detail": "distinct commutators = 120 ; commutator subgroup order = 120 (= |2I|) ; number of 1-dim irreps = |G/[G,G]| = 1"
+  },
+  {
+   "tag": "A5",
+   "name": "the faithful 2-dim (spin-1/2) representation: sum_g |chi|^2 = 120 = |G| (irreducible, re-verified); sum_g chi = 0 (no trivial component); Frobenius-Schur indicator nu = (1/120) sum_g chi(g^2) = -1 (cross-checked by the determinant identity nu = (sum chi^2 - 2|G|)/|G|)",
+   "ok": true,
+   "detail": "sum|chi|^2 = (Fraction(120, 1), Fraction(0, 1)) ; sum chi = (Fraction(0, 1), Fraction(0, 1)) ; nu = (Fraction(-1, 1), Fraction(0, 1)) ; nu(identity route) = (Fraction(-1, 1), Fraction(0, 1))  (nu = -1 => QUATERNIONIC / symplectic)"
+  },
+  {
+   "tag": "A6",
+   "name": "30 elements of order 4 and for each g^2 = -1 (the central element) => a complex structure J = rho(g) with J^2 = -I EXISTS inside 2I, but by A5 it is the symplectic (quaternionic) J, NOT a U(1) structure",
+   "ok": true,
+   "detail": "order-4 elements = 30 ; all satisfy g^2 = -1 : True ; -1 = element index 0"
+  },
+  {
+   "tag": "A6b",
+   "name": "the -1 element is central and gives the 2-to-1 spinor collapse (2I -> A5), i.e. the \"phase\" that the group carries is a spinor sign, not a U(1) angle",
+   "ok": true,
+   "detail": "central = True ; 2I/{+-1} = A5 (order 60)"
+  },
+  {
+   "tag": "A7",
+   "name": "MINIMAL COST (theorem, not a search over IDCM numbers): a finite group has a genuinely complex irreducible character iff some element is NOT conjugate to its inverse; every group of order <= 2 (=1 or Z2) has all characters real, so the minimal finite carrier of a genuinely complex phase is Z3 (order 3, character omega = exp(2 pi i/3)). For a CONTINUOUS U(1) phase one needs a non-discrete sector. 2I satisfies neither: it is perfect (A4) with all-real characters (A3)",
+   "ok": true,
+   "detail": "minimal discrete carrier order = 3 (Z3) ; 2I has no element outside its inverse class: verified on all 120 elements (A3b)"
+  },
+  {
+   "tag": "A8",
+   "name": "the +-1 sign map destroys the exact structure: the un-binarised readout <u_a, R_g n_0> takes far more than 2 values over the 7440 entries, while the frozen readout keeps only 2",
+   "ok": true,
+   "detail": "distinct exact inner-product values (in Q(sqrt5)) = 11 ; frozen readout alphabet = {+1,-1}"
+  },
+  {
+   "tag": "A9",
+   "name": "[CITATION, no re-derivation] IDCM does possess an exact continuous U(1) phase sector: the W-field Goldstone phase theta. O73 docs/15 §0/§1 (o73_h0_first_principles/docs/15_c_first_principles.md): \"light = the W-field phase (Goldstone) mode\"; the action S_theta = (1/2) W_0^2 int (d_mu theta)^2 has NO potential => m_theta = 0. O144 docs/17 §1-§2 (o144_boson_identity/docs/17_photon_phase_mode.md): the radial mode carries m_rho^2 = mu^2 = 2 while the phase mode has m_theta^2 = 0, and the action is EXACTLY U(1)-invariant (\"U(1) 唔係貼上去\")",
+   "ok": true,
+   "detail": "VERDICT consequence: the complex-phase layer EXISTS in IDCM, but it lives in the W-field sector and is invisible to the frozen +-1 real-sign readout; a readout that could see it must be phase-sensitive (new object, F1(a))"
+  }
+ ],
+ "n_pass": 11,
+ "n_claims": 11
+}

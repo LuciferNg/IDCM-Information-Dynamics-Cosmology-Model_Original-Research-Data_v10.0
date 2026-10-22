@@ -1,0 +1,24 @@
+==============================================================================================================
+O222 scripts/08 -- A2 CONTRACT v1 ENFORCER   (rules: a2-contract-v1)
+==============================================================================================================
+[PASS] [C1]   17 generators (24-element 2T + q0=(phi,1,psi,0)/2) are unit quaternions  --  with q q* = 1 exactly
+[PASS] [C2]   2I = <2T, q0> closes to exactly 120 UNIT quaternions  --  |2I| = 120
+[PASS] [C3]   2I is inverse-closed
+[PASS] [C4]   order histogram = {1:1, 2:1, 3:20, 4:30, 5:24, 6:20, 10:24}  --  {1: 1, 4: 30, 6: 20, 3: 20, 2: 1, 10: 24, 5: 24}
+[PASS] [C5]   axis LINES re-derived from element orders = 6 vertex / 10 face / 15 edge  --  {'vertex': 6, 'face': 10, 'edge': 15}
+[PASS] [C6]   re-derived axis lines reproduce data/04_b2_settings.json EXACTLY (all 3 classes)  --  {'vertex': True, 'face': True, 'edge': True}
+[PASS] [C7]   oriented axis counts (frozen) = 12 V + 20 F + 30 E = 62  --  {'vertex': 12, 'face': 20, 'edge': 30}
+[PASS] [C8]   h(ctx) well-defined for all 62 oriented axes (least order + positive alignment)  --  62 / 62 assigned
+[PASS] [C9]   h(ctx) rotation order matches the axis class (V->5, F->3, E->2)  --  distinct h values = 62
+[PASS] [C10]  h table recorded (62 rows, exact quaternion components)  --  bijective = True
+[PASS] [C11]  centre symmetry: sum_v sign(u.v) = 0 for all 62 axes (marginal = 1/2 EXACT)  --  unbalanced = 0 / 62
+[PASS] [C12]  frozen tie audit reproduced (7200 tie events, 0 unbalanced after H3)  --  tie_events=7200 unbalanced=0
+[PASS] [C13]  B2 contract artifacts reused unchanged (settings/partition hashes match freeze)  --  settings=2357006c68e0 partition=499b3d16b084
+[PASS] [C14]  DEV=144 / BLIND=3700 partition reused; enumeration order = frozen list order  --  dev=144 blind=3700
+[PASS] [C15]  A2 contract text present (docs/05) and hashable  --  docs/05 sha256 = 33ddc69787b98ebd...
+[WAITING] [C16] implementation not supplied: run with --freeze-impl scripts/09_a2_rollback.py
+[note] impl hash preserved from previous freeze: d8037bb16f690a29
+==============================================================================================================
+RESULT: 15/16 PASS  (1 FAIL)   GATE = CLOSED
+freeze -> data/08_a2_freeze.json   h-table -> data/08_a2_h_table.json
+==============================================================================================================

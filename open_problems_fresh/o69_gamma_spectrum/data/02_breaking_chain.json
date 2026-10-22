@@ -1,0 +1,53 @@
+{
+  "breaking_chain": "SU(4) \u2192 SU(3) \u2192 SU(2) \u2192 U(1)",
+  "branch_assignment": {
+    "electron": "Branch 1 (n=1, Level 1)",
+    "neutrino": "Branch 2 (n=6, Level 2)",
+    "muon": "Branch 3 (n=7, Level 2)",
+    "tau": "Branch 4 (n=20, Level 5)"
+  },
+  "level_selection": {
+    "1": "SU(3) subgroup: branches 1,2,3",
+    "2": "SU(2) subgroup: branches 2,3",
+    "5": "U(1) remnant: branch 4"
+  },
+  "gamma6_centrality": {
+    "reason": "n=6 = 2\u00d7N_gen, sum of 1+2+3, center of K_Tree (branch 2, level 2)",
+    "roles": 5
+  },
+  "checks": [
+    {
+      "check": "SU(4)\u2192SU(3)\u2192SU(2)\u2192U(1) \u7834\u7f3a\u93c8",
+      "pass": true
+    },
+    {
+      "check": "B1=\u96fb\u5b50, B2=\u4e2d\u5fae\u5b50, B3=\u03bc, B4=\u03c4",
+      "pass": true
+    },
+    {
+      "check": "Level 1 = SU(3) \u5b50\u7fa4 (branch 1,2,3)",
+      "pass": true
+    },
+    {
+      "check": "Level 2 = SU(2) \u5b50\u7fa4 (branch 2,3)",
+      "pass": true
+    },
+    {
+      "check": "Level 5 = U(1) \u5269\u9918 (branch 4)",
+      "pass": true
+    },
+    {
+      "check": "Level \u9593\u8ddd 1 = B/4, 3 = N_gen",
+      "pass": true
+    },
+    {
+      "check": "n=6 \u552f\u4e00\u6eff\u8db3 2\u00d7N_gen + \u9078\u4e2d\u96c6 + \u4e2d\u9593\u4f4d\u7f6e",
+      "pass": true
+    },
+    {
+      "check": "5 \u500b\u7c92\u5b50 (e,\u03bc,\u03c4,\u03bd) + 3 \u500b\u6df7\u5408\u89d2 + 1 CKM = 9 \u6620\u5c04",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

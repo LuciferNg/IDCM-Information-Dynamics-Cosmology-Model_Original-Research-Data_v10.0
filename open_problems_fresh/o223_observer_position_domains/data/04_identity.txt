@@ -1,0 +1,40 @@
+==========================================================================
+O223 / 04 -- graph identity: RH or not?
+==========================================================================
+[Q] rotation system + face tracing
+    rotation system built for all 60 vertices
+  [OK] Q1 every vertex has degree 4
+    traced F = 62 faces   sizes = {3: 20, 4: 30, 5: 12}
+    chi = V - E + F = 60 - 120 + 62 = 2
+  [OK] Q2 Euler chi = 2 (graph is planar-embedded, genus 0)   chi=2
+  [OK] Q3 F = 62
+  [OK] Q4 20 triangular faces
+  [OK] Q5 30 quadrilateral faces
+  [OK] Q6 12 pentagonal faces
+    ==> combinatorial identity: RHOMBICOSIDODECAHEDRON
+[R] convex hull merged faces (independent)
+    merged: F=76 sizes={3: 60, 6: 10, 10: 6}  E=150  chi=-14
+    [DIAGNOSTIC, not a pass/fail check] the merged-coplanar hull face set
+    is NOT a valid polyhedron (chi != 2) because the RH faces are NOT
+    planar in this realization; the rotation-system face trace (Q2-Q6)
+    is the correct, topology-only test.
+    hull edges = 174  graph edges = 120  extra = 54
+    extra-edge lengths = [np.float64(31.6786), np.float64(31.6787), np.float64(31.6788), np.float64(42.9711), np.float64(42.9712)]
+    [DIAGNOSTIC] hull != graph edge set -> the node set is NOT the ideal
+    RH position: the 12 pentagons / 30 squares are non-planar here,
+    so the convex hull subdivides them with 54 extra edges.
+[S] genuine RH via icosahedral rotation group
+    icosahedral ROTATION group order = 60 (after quotienting q ~ -q)
+  [OK] S1 |I| = 60
+    (1,1,phi^3) [RH]     4 nearest = [25.8786 25.8786 25.8786 25.8786]  spread = 0.0000  achiral = True
+    (phi^2,phi,2phi)     4 nearest = [15.126  25.8786 25.8786 32.4711]  spread = 17.3451  achiral = False
+    (1,phi,phi^2)        4 nearest = [20.9301 20.9301 31.045  34.1823]  spread = 13.2522  achiral = False
+    best regular position: (1,1,phi^3) [RH] (spread 0.0000 deg, achiral=True)
+    DATA node-0 4 nearest  = [26.0913 26.0913 26.1664 26.1664]
+  [OK] S2 ideal RH position gives 4 EQUAL edges (spread < 1e-6)
+  [OK] S3 the ideal RH position is ACHIRAL (I_h, contains -orbit)
+  [OK] S4 data node-0 neighbourhood is NOT the regular RH position   max dev = 0.2878 deg
+--------------------------------------------------------------------------
+RESULT: 10/10 PASS
+--------------------------------------------------------------------------
+wrote data/04_identity.json

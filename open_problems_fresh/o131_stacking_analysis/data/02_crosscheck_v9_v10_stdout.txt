@@ -1,0 +1,56 @@
+================================================================================
+  O131/02 — v9.0 物件 vs v10.0 權威值 (mpmath dps=50)
+================================================================================
+
+  物件                         v9.0                     v10.0 權威                 dev          分類
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  λ_sync (v9: 2πR_H/88)      294.877138               294.877138               0.000e+00    ✅ 遷移 (公式代數恆等)
+  ✅ A1 λ_sync v9 公式 = v10 公式 (dev = 0 EXACT, 同一 R) — dev=0.000e+00
+       ⚠️ 註冊值捨入: v10 註冊 R_world=4129.94 (4 s.f.) ⟹ λ 註冊值 dev = 3.783e-07 (純捨入, 非結構差異)
+  ✅ A1b λ_sync = 294.88 Mpc (v10 註冊) — 294.8770
+  R (c/ω_ring vs R_world)    4129.941562              4129.941562              0.000e+00    ✅ 遷移 (標籤🔴) (v9 標「Hubble radius」)
+  ✅ A2 R_H_v9 = R_world (公式恆等, dev = 0 EXACT) — dev=0.000e+00
+  [CLAIM] A3 H₀=72.59 (v9) 同 ω_ring=72.59 (v10) 數值相同但身份唔同 (v10: 角頻率, 唔係哈伯常數 — O73 改名) ⟹ v9 標籤 🔴, 數值 ✅
+  [CLAIM] A4 h = 72.59/100 = 0.7259 係慣例 (用 ω_ring 做 h); v10 有三個 h 投影 (h_cmb=0.674071 / h_lad=0.73130 / h_o170=0.71157) ⟹ h⁻¹Mpc 換算係 fiducial, 非結構聲稱
+  Ω_Λ                        0.683281573              0.6833333333             7.575e-05    🟡 φ 近似 
+  ✅ A5 Ω_Λ 落 φ 陷阱窗 [1e-5,1e-3] — dev=7.575e-05
+       尾截斷: 41/60 − 4/(φ⁴−1) = 5.1760334e-5  (√5φ⁻¹⁰/[60(3φ+1)] = 5.1760334e-5)
+  ✅ A5b Ω_Λ 舊 φ 形 = 精確式之 Lucas 尾截斷 (EXACT, dev<1e-40)
+  ε                          0.1545084972             0.1544715447             2.392e-04    🟡 φ 近似 
+  ✅ A6 ε 落 φ 陷阱窗 — dev=2.392e-04
+  ✅ A6b ε 舊 φ 形 = 精確式之 Lucas 尾截斷 (EXACT, dev<1e-40) — 19/123 − φ⁻¹/4 = -3.6952472e-5
+  ✅ A7 γ_n = 4sin²(πn/88) = 2−2cos(2πn/88) (v9 公式 = v10 公式, EXACT)
+  ✅ A7b v_g(n) = cos(πn/88) (公式相同)
+        z_c=0.6 → ℓ = log₄(1.6) = 0.33903595 (非整數 ⟹ 非 4^ℓ rung)
+  ✅ A8 z_c=0.6 非 4^ℓ rung (ℓ=0.339036 非整數) — ℓ=0.339036
+  [CLAIM] A8b z_c=0.6 (sync dip, F₄/F₅=3/5) 已由 O126 §D 撤回 (v9.0 膨脹偽影), O129 獨立重驗 5/5
+
+────────────────────────────────────────────────────────────────────────────────
+  B. 框架依賴掃描 (v9.0 stacking_toolbox + kchain_cosmic_web)
+────────────────────────────────────────────────────────────────────────────────
+  掃描檔案: 48 個
+    H0_IDCM      命中  20  [v9 用 72.59 當 H₀ (v10 = ω_ring)]  02_verify.py×4, 03_verify_hz.py×1, 04_derive_hz.py×4, 21_multipole_velocity.py×2 …
+    Omega_L      命中  32  [Ω_Λ φ-form (v10 = 41/60)]  03_verify_hz.py×10, 04_derive_hz.py×2, 40_hz_derivation.py×8, 40_hz_derivation_v2.py×4 …
+    zeta         命中   2  [ζ(z) 阻抗修正 (v9 demote 參數)]  _core.py×2
+    ZETA_        命中   8  [ζ(z) 參數常數]  _core.py×8
+    (1+z)        命中 120  [膨脹律 (1+z)^α]  03_verify_hz.py×3, 04_derive_hz.py×12, 05_impedance_reflection.py×3, 16_damping_refinement.py×1 …
+    inflation    命中   0  [膨脹假設]  
+    e-fold       命中   0  [膨脹 e-folds]  
+    z_c          命中  45  [sync dip z_c=0.6]  04_derive_hz.py×37, 05_impedance_reflection.py×6, 40_hz_derivation_v2.py×2
+    H_z(         命中   1  [H(z) 膨脹函數]  _core.py×1
+    R_H          命中 270  [Hubble radius 標籤]  02_verify.py×22, 03_verify_hz.py×17, 04_derive_hz.py×6, 16_damping_refinement.py×4 …
+
+  ★ stacking_toolbox/01_stacked_waveform.py 自身:
+      顯式膨脹假設 (inflation/(1+z)): 冇
+      ζ(z) 阻抗修正:                 冇
+      Ω_Λ φ-form:                    冇
+      z_c=0.6 sync dip:              冇
+  ✅ B1 stacking script 本身冇顯式膨脹假設 (inflation/(1+z))
+  ✅ B1b stacking script 冇 ζ(z) / Ω_Λ / z_c 依賴 (只經 import _core 間接繼承)
+  ✅ B2 框架假設集中喺 _core.py (H₀ 標籤/Ω_Λ φ-form/ζ(z) 全喺 _core)
+
+================================================================================
+  RESULT: 13/13 PASS  (+3 結構聲稱, 唔入 PASS 計數)
+================================================================================
+
+  寫入 /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o131_stacking_analysis/data/02_crosscheck_results.txt

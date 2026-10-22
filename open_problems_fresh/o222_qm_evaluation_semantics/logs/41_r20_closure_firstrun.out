@@ -1,0 +1,18 @@
+================================================================================================================
+O222 scripts/41 -- R20 closure machine (M1..M6), exact arithmetic
+contract: docs/27_r20_contract.md (r20-contract-v1)
+================================================================================================================
+[load] K = 120x62  (pin P1: scripts/12_b5_budget.load_machine)
+[M1] 🔴  2I-J_5 rank = 5 ; counterexample det = 0 ; rank_R(K) = 6
+[M2] L_max = 2  (rank_R(K) = 6 ; distinct rows 12 / cols 32)  arrangement excludes: []
+[M3] certified candidates 600/600 ; best certified rank = 3
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/41_r20_closure.py", line 497, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/41_r20_closure.py", line 328, in main
+    red = poly_mod(tmp, phi)
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/41_r20_closure.py", line 150, in poly_mod
+    a[s + i] -= c * phi[i]
+    ~^^^^^^^
+IndexError: list index out of range

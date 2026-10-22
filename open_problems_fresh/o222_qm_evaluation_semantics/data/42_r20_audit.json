@@ -1,0 +1,122 @@
+{
+ "round": "R20",
+ "audit_of": "scripts/41_r20_closure.py",
+ "checks": [
+  {
+   "check": "A0a impl sha256 matches freeze",
+   "pass": true,
+   "detail": "0f8233988680fbe8 vs 0f8233988680fbe8"
+  },
+  {
+   "check": "A0b pin hashes match freeze",
+   "pass": true,
+   "detail": "bad: none"
+  },
+  {
+   "check": "A0c gate OPEN at freeze",
+   "pass": true,
+   "detail": "OPEN"
+  },
+  {
+   "check": "A1a rank_R(K) by Fraction elimination",
+   "pass": true,
+   "detail": "audit=6 machine=6"
+  },
+  {
+   "check": "A1b explicit 6x6 certificate block (rows [0, 1, 2, 4, 5, 6]) has rank 6",
+   "pass": true,
+   "detail": "rank = 6 ; det = -64 (R19 record: -64)"
+  },
+  {
+   "check": "A2a witness submatrix is 2I-J",
+   "pass": true,
+   "detail": "5x5 submatrix check"
+  },
+  {
+   "check": "A2b counterexample singular with diag>0 offdiag<0",
+   "pass": true,
+   "detail": "det=0"
+  },
+  {
+   "check": "A2c rank-1 sign lemma (sgn(u_i v_j) factors, rank<=1)",
+   "pass": true,
+   "detail": "rank=1"
+  },
+  {
+   "check": "A2d M1 verdict is the contracted one",
+   "pass": true,
+   "detail": "verdict=🔴"
+  },
+  {
+   "check": "A3a certified realization re-verified (transposed traversal)",
+   "pass": true,
+   "detail": "mismatches=0 over 7440 signs (r=3 seed=0)"
+  },
+  {
+   "check": "A3b rank bound min(rank U, rank V)",
+   "pass": true,
+   "detail": "audit min rank = 3 ; machine = 3"
+  },
+  {
+   "check": "A3c sign_rank upper bound < 6 (the improvement)",
+   "pass": true,
+   "detail": "upper bound = 3"
+  },
+  {
+   "check": "A4a power sums p_1..p_20 rational (Newton route)",
+   "pass": true,
+   "detail": "p_1=-40 p_20=38909101361254328342071962444"
+  },
+  {
+   "check": "A4b Newton polynomial == machine polynomial",
+   "pass": true,
+   "detail": "equal"
+  },
+  {
+   "check": "A4c degree 20 monic integer",
+   "pass": true,
+   "detail": "len=21 lead=1"
+  },
+  {
+   "check": "A5a pinned-replay hits == machine hits (all 120 states)",
+   "pass": true,
+   "detail": "pinned=124 machine=[124]"
+  },
+  {
+   "check": "A5b class A from pinned stored_vs_now == machine class A",
+   "pass": true,
+   "detail": "pinned=33 machine=33 (R19 record asserted 28)"
+  },
+  {
+   "check": "A5c machine honestly reports the class-B finding (contract criterion A>=1,B>=1 not met)",
+   "pass": true,
+   "detail": "verdict=🔴 ; class B == 0 for all 5 orders ; matching orders = []"
+  },
+  {
+   "check": "A5d the frozen first order (lex) gives hits = 124 on all 120 states",
+   "pass": true,
+   "detail": "first-order hits = [124] ; other orders are different passes: {'diag': [124], 'antidiag': [123], 'block': [1954], 'stride': [124]}"
+  },
+  {
+   "check": "A6a reads_used == sum(per_pair_misses)",
+   "pass": true,
+   "detail": "bad: none"
+  },
+  {
+   "check": "A6b unique minimum reads_used",
+   "pass": true,
+   "detail": "reads={'lex': 43, 'diag': 44, 'antidiag': 44, 'block': 42, 'stride': 44} min=42 unique=['block']"
+  },
+  {
+   "check": "A7a six cells with legal verdicts",
+   "pass": true,
+   "detail": "{'M1': '🔴', 'M2': '✅', 'M3': '✅', 'M4': '✅', 'M5': '🔴', 'M6': '✅'}"
+  },
+  {
+   "check": "A7b interval statement present",
+   "pass": true,
+   "detail": "sign_rank in [2, 3]"
+  }
+ ],
+ "pass": "23/23"
+}

@@ -1,0 +1,41 @@
+O236 scripts/05 -- R5: 補填原理統一 (d/t filler unification)
+==============================================================================
+
+[C1] 可證偽檢查: 「補填角色 ⟹ C_f 塊極端值」對現有 filler d
+   [PASS] C1  R5 預言 FAIL: d 嘅 C_f = 3.662 唔係 gen1 極端值 (中位: e 3.594 < d 3.662 < u 3.803) — C_f_d=3.662; block={'e': 3.5941, 'u': 3.8029, 'd': 3.662} —— 預言被現有 filler d 否證
+   [PASS] C1b 另一個「補填」候選 (c/b 喺 s3 高值) 亦唔係塊極端 (τ 159.6 < c 186.1 < b 255.8) — s3 塊={'tau': 159.6437, 'c': 186.0605, 'b': 255.7517} ⟹ 「補填 → 極端」喺 s3 側都唔成立
+
+[C2] d = γ 階梯主導嘅質量次序補填
+   [PASS] C2  輕子 rank = {1,5,7} 全奇 (前 8 個 odd rank 3/4 用咗); 剩餘 odd rank 3 = d (質量次序固有) — odd ranks (非 t) = [1, 3, 5, 7]; rank3 = d
+   [PASS] C3  m_d/m_u = γ₃C_d/(γ₂C_u) = 2.162 (O233 P2 EXACT) ⟹ d 位置由 γ 階梯主導 — ratio=2.16204 vs obs 2.1620
+
+[C3] t = B−L 閘 + VEV 層
+   [PASS] C4  t 嘅 B−L = +1/3 ∉ ℤ ⟹ T3 荷定義域外; y_t ≈ 1 ⟹ m_t = v/√2 (VEV 層) —— 唔係 γ-C_f 層產物 — y_t=0.99424, B−L(t)=0.3333333333333333
+
+[C4] 機制對比: 兩個 filler 係咪同一現象
+   [PASS] C5  d 機制 = γ 階梯 (質量次序); t 機制 = B−L/VEV —— 冇共同算子 (唔係同一現象) — 兩個 filler 由唔同層決定: L2 (γ譜) vs SSB (v) —— 統一機制唔存在 (負結果)
+   [PASS] C6  唯一共享 = 3+1 sieve 算術: odd-flow sieve 3 輕子 + d; phase sieve 3 輕子 + t —— 描述性平行, 唔係機制同一 — d = flow-sieve 第 4 成員; t = phase-sieve 第 4 成員 (R1 T-P 已證 s1 全 odd-rank 而 t 係 label 異常)
+
+[C5] O136 incoming ×3 整合
+   [PASS] C7  O136/mass-shape: rank-parity 兩值修正 P=0.2165 否證 ⟹ 同 R1 T-G (格填充唔係群論/label 機制) 一致 —— d 嘅補填係質量次序, 唔係 rank-parity 修正 — 冪律家族窮盡; 本 O 冇新冪律 ansatz (R6 已負閉合)
+   [PASS] C8  O136/cs-outlier: s/c 獨立單點 (ΔRMS −0.1455/−0.068; 家族 P=0.7065) ⟹ C_f 內結構冇扇區共同性; d 唔 special (C_f 中位) 一致 — s 係最大 breaker 但與 sector/family 無關
+   [PASS] C9  O136/dquark-sector: H_sector FAIL (|Σ| P=0.0856) ⟹ down 扇區冇共同修正; d 嘅 odd-flow 補填唔涉扇區機制 — d 按單點處理 (R5 範圍收窄: 唔再需要 sector 解釋)
+
+[verdict]
+   [PASS] C10 R5 裁決: 統一補填機制 **否證** —— d (γ階梯) 與 t (B−L/VEV) 係兩個機制嘅第 4 成員; R5 可證偽自身已 FAIL (C1/C1b); 明顯負結果, close (docs/01 風險註明) — 3+1 pattern 只係 sieve 算術; 唔升格統一機制
+
+-> data/05_filler_unification.json
+
+==============================================================================
+RESULT: 11/11 PASS
+   [PASS] C1  R5 預言 FAIL: d 嘅 C_f = 3.662 唔係 gen1 極端值 (中位: e 3.594 < d 3.662 < u 3.803) — C_f_d=3.662; block={'e': 3.5941, 'u': 3.8029, 'd': 3.662} —— 預言被現有 filler d 否證
+   [PASS] C1b 另一個「補填」候選 (c/b 喺 s3 高值) 亦唔係塊極端 (τ 159.6 < c 186.1 < b 255.8) — s3 塊={'tau': 159.6437, 'c': 186.0605, 'b': 255.7517} ⟹ 「補填 → 極端」喺 s3 側都唔成立
+   [PASS] C2  輕子 rank = {1,5,7} 全奇 (前 8 個 odd rank 3/4 用咗); 剩餘 odd rank 3 = d (質量次序固有) — odd ranks (非 t) = [1, 3, 5, 7]; rank3 = d
+   [PASS] C3  m_d/m_u = γ₃C_d/(γ₂C_u) = 2.162 (O233 P2 EXACT) ⟹ d 位置由 γ 階梯主導 — ratio=2.16204 vs obs 2.1620
+   [PASS] C4  t 嘅 B−L = +1/3 ∉ ℤ ⟹ T3 荷定義域外; y_t ≈ 1 ⟹ m_t = v/√2 (VEV 層) —— 唔係 γ-C_f 層產物 — y_t=0.99424, B−L(t)=0.3333333333333333
+   [PASS] C5  d 機制 = γ 階梯 (質量次序); t 機制 = B−L/VEV —— 冇共同算子 (唔係同一現象) — 兩個 filler 由唔同層決定: L2 (γ譜) vs SSB (v) —— 統一機制唔存在 (負結果)
+   [PASS] C6  唯一共享 = 3+1 sieve 算術: odd-flow sieve 3 輕子 + d; phase sieve 3 輕子 + t —— 描述性平行, 唔係機制同一 — d = flow-sieve 第 4 成員; t = phase-sieve 第 4 成員 (R1 T-P 已證 s1 全 odd-rank 而 t 係 label 異常)
+   [PASS] C7  O136/mass-shape: rank-parity 兩值修正 P=0.2165 否證 ⟹ 同 R1 T-G (格填充唔係群論/label 機制) 一致 —— d 嘅補填係質量次序, 唔係 rank-parity 修正 — 冪律家族窮盡; 本 O 冇新冪律 ansatz (R6 已負閉合)
+   [PASS] C8  O136/cs-outlier: s/c 獨立單點 (ΔRMS −0.1455/−0.068; 家族 P=0.7065) ⟹ C_f 內結構冇扇區共同性; d 唔 special (C_f 中位) 一致 — s 係最大 breaker 但與 sector/family 無關
+   [PASS] C9  O136/dquark-sector: H_sector FAIL (|Σ| P=0.0856) ⟹ down 扇區冇共同修正; d 嘅 odd-flow 補填唔涉扇區機制 — d 按單點處理 (R5 範圍收窄: 唔再需要 sector 解釋)
+   [PASS] C10 R5 裁決: 統一補填機制 **否證** —— d (γ階梯) 與 t (B−L/VEV) 係兩個機制嘅第 4 成員; R5 可證偽自身已 FAIL (C1/C1b); 明顯負結果, close (docs/01 風險註明) — 3+1 pattern 只係 sieve 算術; 唔升格統一機制

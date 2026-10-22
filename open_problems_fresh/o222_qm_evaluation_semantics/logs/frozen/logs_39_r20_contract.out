@@ -1,0 +1,14 @@
+[PASS] C1a pins exist  missing: none
+[PASS] C1b pin hashes unchanged  drifted: none
+[PASS] C1c contract unchanged since freeze  docs/27 sha256 compared
+[PASS] C2a imports allowed  imports=['fractions', 'importlib.util', 'json', 'os', 'sys'] ; offenders=[]
+[PASS] C2b no non-integer float literals  found: none
+[PASS] C2c no math/numpy/scipy/random imports  found: none
+[PASS] C2d no banned identifier names  found: none
+[PASS] C3 cells M1..M6 present  absent: none
+[PASS] C4 no import of R19 machine/audit or discovery script  found: none
+[PASS] C5 writes confined to data/ and logs/  offenders: none
+[PASS] C6 impl hash matches freeze (RE-FREEZE: old hash kept as superseded_impl_sha256)  old 12365910a26fa7e1 -> new 0f8233988680fbe8 ; old freeze preserved on disk
+----------------------------------------------------------------------------------------------------
+GATE = OPEN   (11/11 checks pass)  impl sha256 = 0f8233988680fbe8
+freeze written: data/39_r20_freeze.json

@@ -1,0 +1,131 @@
+{
+ "n_scanned": 16,
+ "n_unregistered": 0,
+ "verdict_counts": {
+  "🟢 已閉合 — 否決 (ℓ=2 反四極 p=0.99)": 2,
+  "🟡 已判定 — 數據定向效應, 非結構缺口": 4,
+  "🟢 已判定 — 中尺度環境輸入 + 比值病態": 3,
+  "🟢 已判定 — 無結構身份, 非客觀 sky 方向": 3,
+  "⚠️ 屬 O150 — 唔係 O143 缺口": 2,
+  "🟢 已解 — 冷斑方向手性 I-軌道": 1,
+  "🟢 已閉合 — 原 4 步框架否證 (範疇錯誤)": 1,
+  "🟢 已判定 — 環境輸入, 無需拓撲寫入假設": 2
+ },
+ "unregistered": [],
+ "rows": [
+  {
+   "file": "SESSION_START",
+   "line": 95,
+   "verdicts": [
+    "🟢 已閉合 — 否決 (ℓ=2 反四極 p=0.99)"
+   ]
+  },
+  {
+   "file": "SESSION_START",
+   "line": 105,
+   "verdicts": [
+    "🟡 已判定 — 數據定向效應, 非結構缺口"
+   ]
+  },
+  {
+   "file": "SESSION_START",
+   "line": 107,
+   "verdicts": [
+    "🟢 已判定 — 中尺度環境輸入 + 比值病態",
+    "🟢 已判定 — 無結構身份, 非客觀 sky 方向"
+   ]
+  },
+  {
+   "file": "SESSION_START",
+   "line": 108,
+   "verdicts": [
+    "⚠️ 屬 O150 — 唔係 O143 缺口"
+   ]
+  },
+  {
+   "file": "SESSION_START",
+   "line": 109,
+   "verdicts": [
+    "🟢 已解 — 冷斑方向手性 I-軌道"
+   ]
+  },
+  {
+   "file": "SESSION_START",
+   "line": 172,
+   "verdicts": [
+    "🟢 已判定 — 中尺度環境輸入 + 比值病態"
+   ]
+  },
+  {
+   "file": "SESSION_START",
+   "line": 173,
+   "verdicts": [
+    "🟢 已判定 — 無結構身份, 非客觀 sky 方向"
+   ]
+  },
+  {
+   "file": "SESSION_START",
+   "line": 185,
+   "verdicts": [
+    "🟡 已判定 — 數據定向效應, 非結構缺口"
+   ]
+  },
+  {
+   "file": "SESSION_START",
+   "line": 267,
+   "verdicts": [
+    "🟡 已判定 — 數據定向效應, 非結構缺口"
+   ]
+  },
+  {
+   "file": "01_problem_record",
+   "line": 96,
+   "verdicts": [
+    "🟢 已閉合 — 原 4 步框架否證 (範疇錯誤)"
+   ]
+  },
+  {
+   "file": "01_problem_record",
+   "line": 126,
+   "verdicts": [
+    "🟢 已閉合 — 否決 (ℓ=2 反四極 p=0.99)"
+   ]
+  },
+  {
+   "file": "01_problem_record",
+   "line": 233,
+   "verdicts": [
+    "🟢 已判定 — 環境輸入, 無需拓撲寫入假設"
+   ]
+  },
+  {
+   "file": "01_problem_record",
+   "line": 271,
+   "verdicts": [
+    "🟢 已判定 — 環境輸入, 無需拓撲寫入假設"
+   ]
+  },
+  {
+   "file": "final_result",
+   "line": 60,
+   "verdicts": [
+    "🟡 已判定 — 數據定向效應, 非結構缺口"
+   ]
+  },
+  {
+   "file": "final_result",
+   "line": 65,
+   "verdicts": [
+    "🟢 已判定 — 中尺度環境輸入 + 比值病態",
+    "🟢 已判定 — 無結構身份, 非客觀 sky 方向"
+   ]
+  },
+  {
+   "file": "final_result",
+   "line": 66,
+   "verdicts": [
+    "⚠️ 屬 O150 — 唔係 O143 缺口"
+   ]
+  }
+ ]
+}

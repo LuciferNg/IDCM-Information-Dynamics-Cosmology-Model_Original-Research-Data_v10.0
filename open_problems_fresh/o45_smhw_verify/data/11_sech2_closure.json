@@ -1,0 +1,31 @@
+{
+  "product": "O45 closure-8: sine-Gordon soliton (sech\u00b2)",
+  "date": "2026-09-12",
+  "physical_basis": "O7 tuner sine-Gordon, cold spot = phase slip \u03c0, \u03b5 \u221d \u03c6'\u00b2 = sech\u00b2(x/\u03bb)",
+  "sech2": {
+    "lambda": 6.965978020760095,
+    "T_pix": -119.32059687431422,
+    "w": -29.37452534389825,
+    "profRMS": 28.15308910145421,
+    "chi2": 2505.408662951052,
+    "structural": {
+      "R8x5/4": 5.2125,
+      "dhop/F5": 5.234,
+      "2F7/F5": 5.2
+    }
+  },
+  "sech2_R": {
+    "lambda": 7.999999999999997,
+    "B": 61.86961543210141,
+    "theta_r": 13.565523062979032,
+    "sigma_r": 3.829026295524334,
+    "T_pix": -121.42468801327776,
+    "w": -32.59400781084191,
+    "profRMS": 9.982651928679608,
+    "chi2": 873.6505311466341
+  },
+  "comparison": {
+    "SG_chi2": 868,
+    "SG_R_chi2": 104
+  }
+}

@@ -1,0 +1,81 @@
+==============================================================================
+O229/08 — 獨立核對器（R1 era 45/45；2026-10-04 還原重建 v2）
+★ 重建方法（verbatim 來源 state.db 20261002_065636_7）：
+  [A][B][C] 物理段 = auditor 輸出（與 R1 era 相同；05 引用 25/25）；
+  [D][E][F] = @1790898659 verbatim（R1 era：chk 總數 151、scripts=8、目錄 31 檔）。
+  ⚠️ Scripts 自寫 logs/：任何重跑都會覆寫本檔 ⟹ 驗證必須先備份＋事後恢復。
+==============================================================================
+
+[A] 合約指紋
+  [PASS] 合約 sha256 與預註冊一致 (跑數後未改一字)   e3f18caac665984bbdb7ffd0…
+
+[B] 獨立重算 — 全部用與 01–07 唔同之算法
+  [PASS] Lucas 由矩陣冪獨立重算: L₃ = 4, L₄ = 7, L₅ = 11, L₁₀ = 123   L = [2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123]
+  [PASS] F₃ = 2 (Fibonacci 由矩陣冪)   F₃=2
+  [PASS] L_n = 2F_n 之解唯一 n = 3 (掃 n ≤ 20, 唔用 sympy)
+  [PASS] B 由端點鎖純整數搜索 (唔用 sympy): 唯一解 B = 4   [4]
+  [PASS] 端點鎖之四形式: B⁴ + B² = 272 @ B=4
+  [PASS] 8 條鎖之聯合解集 = {4} (純整數枚舉)   [4]
+  [PASS] 鏈譜 cos 形式: γ⁽⁸⁸⁾_22 = 2 = μ²   1.999999999999999
+  [PASS] 鏈譜 cos 形式: γ⁽⁸⁸⁾_44 = 4 = B   4.000000000000000
+  [PASS] 鏈譜 cos 形式: γ⁽¹⁷⁶⁾_44 = 2 = μ²   1.999999999999999
+  [PASS] 兩鏈全配對和 = 4 (max dev)   1.33e-15
+  [PASS] ★ 精確閉式 Σγ⁽⁸⁸⁾ = 2·44 + 2 = 90 (由 Σcos = −1 之配對論證, 非數值求和)   2N_d + μ²
+  [PASS] ★ 精確閉式 Σγ⁽¹⁷⁶⁾ = 176 + 2 = 178
+  [PASS] 數值求和 Σγ⁽⁸⁸⁾ 與閉式一致   90.0
+  [PASS] 數值求和 Σγ⁽¹⁷⁶⁾ 與閉式一致   178.0
+  [PASS] PS 路徑: 16 = (4,2,1) + (4̄,1,2) = 8 + 8 = 2·B·2
+  [PASS] λ_Edd = B/(N_d − B) = 4/40 = 1/10 (Fraction 精確)
+  [PASS] Σγ = B(N_d+1)/2 = 4·45/2 = 90
+  [PASS] 獨立統計: μ² 之路線中『外部可觀測 RHS』者 = 0 條   external=[]
+  [PASS] 獨立統計: 8 條 μ² 路線全部有 class 標籤   n=8
+  [PASS] 獨立統計: B 之獨立路線 (振幅無關 & 不用 N_c/N_gen) 數 = 9   ['R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'R12']
+
+[C] log↔data 一致 (每個腳本之 RESULT 行 對 其 data JSON)
+  [PASS] 01_atom_identity: log RESULT RESULT: 74/74 PASS ≡ data (74/74)
+  [PASS] 02_roles_graph: log RESULT RESULT: 34/34 PASS ≡ data (34/34)
+  [PASS] 03_gap1_degeneracy: log RESULT RESULT: 14/14 PASS ≡ data (14/14)
+  [PASS] 04_gap2_mu2_identity: log RESULT RESULT: 20/20 PASS ≡ data (20/20)
+  [PASS] 05_gap3_completeness: log RESULT RESULT: 29/29 PASS ≡ data (29/29)
+  [PASS] 06_gap4_rigidity: log RESULT RESULT: 9/9 PASS ≡ data (9/9)
+  [PASS] 07_gap5_density: log RESULT RESULT: 12/13 PASS ≡ data (12/13)
+    逐腳本: 01_atom_identity=74/74  02_roles_graph=34/34  03_gap1_degeneracy=14/14  04_gap2_mu2_identity=20/20  05_gap3_completeness=29/29  06_gap4_rigidity=9/9  07_gap5_density=12/13
+    全鏈 FAIL 條目數 = 1
+      07_gap5_density: [FAIL] [5-4b] (預註冊) Farey N_search ≫ 1 ⟹『可達性』類陳述零判別力   實測 tol=1e-12: N
+  [PASS] 唯一 FAIL = 07 之預註冊 5-4b (已立 -c 校正), 無其他   [('07_gap5_density', '[FAIL] [5-4b] (預註冊) Farey N_search ≫ 1 ⟹『可達性』類陳述零判別力   實測 tol=1e-12: N')]
+[D] 真空檢驗: chk() 之第二參數不得為字面 True/1
+    01_atom_identity.py              chk() 數 = 59
+    02_roles_graph.py                chk() 數 = 21
+    03_gap1_degeneracy.py            chk() 數 = 14
+    04_gap2_mu2_identity.py          chk() 數 = 20
+    05_gap3_completeness.py          chk() 數 = 15
+    06_gap4_rigidity.py              chk() 數 = 9
+    07_gap5_density.py               chk() 數 = 13
+    全鏈 chk() 總數 = 151;  字面 True/1 者 = 0
+  [PASS] 零個 chk() 以字面 True/1 作條件 (無真空 PASS)   []
+
+[E] 文檔 ↔ 證據綁定
+  [PASS] docs/01_accounting_table.md 載有證據 token「74/74」
+  [PASS] docs/01_accounting_table.md 載有證據 token「24/24」
+  [PASS] docs/02_gap1_degeneracy.md 載有證據 token「9 條」
+  [PASS] docs/03_gap2_mu2_identity.md 載有證據 token「20/20」
+  [PASS] docs/04_gap4_rigidity.md 載有證據 token「9/9」
+  [PASS] docs/05_gap5_density.md 載有證據 token「12/13」
+  [PASS] docs/06_r1_verdicts.md 載有證據 token「1.25」
+  [PASS] docs/06_r1_verdicts.md 載有證據 token「1.3e-6」
+  [PASS] docs/05 之 MC 命中數 = data/07 之實測值
+  [PASS] docs/02 之「9 條」= data/02 之 independent_routes 長度
+  [PASS] docs/01 之「11 項」= data/05 之 polysemy 數   len=11
+  [PASS] docs/06 之「16/16」= data/06 之 B-擾動斷裂數 (16)   斷裂 16/16
+
+[F] 寫入範圍 (只准 O229 目錄)
+    O229 目錄檔案數 = 31
+      docs/: ['docs/00_contract.md', 'docs/01_accounting_table.md', 'docs/02_gap1_degeneracy.md', 'docs/03_gap2_mu2_identity.md', 'docs/04_gap4_rigidity.md', 'docs/05_gap5_density.md', 'docs/06_r1_verdicts.md']
+      scripts/: ['scripts/01_atom_identity.py', 'scripts/02_roles_graph.py', 'scripts/03_gap1_degeneracy.py', 'scripts/04_gap2_mu2_identity.py', 'scripts/05_gap3_completeness.py', 'scripts/06_gap4_rigidity.py', 'scripts/07_gap5_density.py', 'scripts/08_independent_audit.py']
+      data/: ['data/01_atom_identity.json', 'data/02_roles_graph.json', 'data/03_gap1_degeneracy.json', 'data/04_gap2_mu2_identity.json', 'data/05_gap3_completeness.json', 'data/06_gap4_rigidity.json', 'data/07_gap5_density.json']
+      logs/: ['logs/01_atom_identity.out', 'logs/02_roles_graph.out', 'logs/03_gap1_degeneracy.out', 'logs/04_gap2_mu2_identity.out', 'logs/05_gap3_completeness.out', 'logs/06_gap4_rigidity.out', 'logs/07_gap5_density.out']
+  [PASS] docs 檔 ≥ 6 (00 合約 + 01–06 報告)
+  [PASS] scripts 檔 = 8 (01–08)
+  [PASS] data/logs 一一對應 7 個腳本
+
+RESULT: 45/45 PASS

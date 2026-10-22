@@ -1,0 +1,16 @@
+{
+  "test": "CY₃ 複結構 U(1) 荷 + 費米子自旋",
+  "h11": 36,
+  "h21": 98,
+  "h21_formula": "Σγ+2B",
+  "chi": -124,
+  "Y_structure": "3×12D",
+  "matter_charge": 1,
+  "antimatter_charge": -1,
+  "matter_spinor": "S⁺",
+  "antimatter_spinor": "S⁻",
+  "C_operator": "J → −J",
+  "C2": 1,
+  "pairs_98": "90 頻率 + 8 複相位",
+  "conclusion": "反物質=CY₃ (1,2) forms (荷−1, S⁻); 物質=(2,1) forms (荷+1, S⁺); C: J→−J; 98=90頻率+8複相位"
+}

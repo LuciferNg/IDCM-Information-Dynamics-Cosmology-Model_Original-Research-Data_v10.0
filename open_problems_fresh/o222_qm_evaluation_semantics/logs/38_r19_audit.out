@@ -1,0 +1,12 @@
+[PASS] A0   pins L1-L9 unchanged and the impl hash matches the freeze -- drift = none ; impl = c0272e0ab5555fca
+[PASS] A1   rank_R(K) = 6 by an independent column elimination and a nonzero 6x6 minor -- column-space rank = 6 ; pivot state indices = [0, 1, 2, 4, 5, 6] ; nonzero 6x6 minor on states [0, 1, 2, 4, 5, 6] x axes 0-5 = -64
+[PASS] A2   fooling-set maximum reproduced independently (= 5, set-based BnB) and the witness re-verified -- independent max = 5 ; machine = 5 ; witness = [(46, 22), (4, 14), (34, 12), (58, 20), (114, 17)] ; two-sided = True ; 19.9s (cap 240s)
+[PASS] A3   protocol recomputed (top-only recurrence): hits 124, net ledger 7564, histogram match -- hits = 124 ; net ledger = 7564 ; histogram = {2: 124, 3: 3720} ; record: entries 7564, reads 11532
+[PASS] A4   override recomputation: s0=0 gives 58 with a 28/30 split; 65 at 10 starting states -- s0=0 overrides = 58 (first 28 / post 30) ; states giving 65 = [27, 34, 35, 38, 59, 60, 102, 104, 107, 113]
+[PASS] A5   exact cyclotomic test reproduced: Phi_88 divides correctly, Tr_K(G) = -40, residual not in Q -- Phi_88 reconstructed: True ; Tr_K(G) = -40 ; (b/2)G - Tr = [-20, -40, -40, -40, 0] ; residual rational = False
+[PASS] A6   K6 prefix vectors found verbatim in the raw L6 text and cost sums match -- vectors not found verbatim = 0 ; cost sums = [('lex', 43, 43), ('diag', 44, 44), ('antidiag', 44, 44), ('block', 42, 42), ('stride', 44, 44)]
+[PASS] A7   block window brute-forced over all quadruples: max |S| = 16/15, matching the machine -- brute force = 16/15 at (0, 1, 2, 6) ; machine = 16/15 ; W size = 7 ; antipodal ordered pairs = 112
+[PASS] A8   machine writes only inside this OO; audit loads no sibling script (only L1/L2 interfaces) -- machine write targets = [] ; audit script loads = ['12_b5_budget.py', '15_b3r2_orderfair.py'] ; pin roots = ['open_problems_fresh']
+----------------------------------------------------------------------------------------------------
+AUDIT 9/9 PASS   fail = none
+----------------------------------------------------------------------------------------------------

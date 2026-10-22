@@ -1,0 +1,101 @@
+==============================================================================
+O229/01 — 原子註冊表 + 對賬恆等式
+==============================================================================
+
+[1] Lucas/Fibonacci 精確值 (遞迴)
+  [PASS] L_3 = 4   got 4
+  [PASS] L_4 = 7   got 7
+  [PASS] L_5 = 11   got 11
+  [PASS] L_6 = 18   got 18
+  [PASS] L_7 = 29   got 29
+  [PASS] L_8 = 47   got 47
+  [PASS] L_9 = 76   got 76
+  [PASS] L_10 = 123   got 123
+  [PASS] F_3 = 2   got 2
+  [PASS] F_5 = 5   got 5
+  [PASS] F_6 = 8   got 8
+  [PASS] F_7 = 13   got 13
+  [PASS] F_8 = 21   got 21
+  [PASS] F_9 = 34   got 34
+  [PASS] F_10 = 55   got 55
+  [PASS] F_11 = 89   got 89
+  [PASS] F_12 = 144   got 144
+
+[2] B 之刻畫 (多路)
+  [PASS] B = L_3 = 4
+  [PASS] B = N_d/L_5 = 44/11
+  [PASS] B = 2 mu^2
+  [PASS] B = 16^(1/2) i.e. B^2 = 16
+  [PASS] B = N_c + 1 (Pati-Salam 4 = 3+1)
+  [PASS] B = sqrt(B^2) = sqrt(16) = 4 (unique positive)
+
+[3] mu^2 之刻畫 (多路)
+  [PASS] mu^2 = F_3 = 2
+  [PASS] mu^2 = gamma88_22 = 4 sin^2(pi/4)
+  [PASS] mu^2 = gamma176_44 = 4 sin^2(pi/4)
+  [PASS] mu^2 = Sigma_even - Sigma_odd = 46 - 44 (O159 E-O)   (2.0)
+
+[4] 世代/色/模塊簿記
+  [PASS] N_gen = B - 1 = 3
+  [PASS] N_c   = B - 1 = 3 (Pati-Salam SU(B)->SU(B-1)xU(1))
+  [PASS] L_5 + 1 = B * N_gen = 12 = dim SU(12)
+  [PASS] N_d = K_tree + L_5 = 33 + 11
+  [PASS] K_tree = N_gen * L_5 = 33
+  [PASS] N_gen = K_tree/L_5 = N_d/L_5 - 1 = B - 1
+
+[5] 端點鎖 / alpha
+  [PASS] alpha^-1(0) = C(B^2,2) + B^2 + 1 = 137
+  [PASS] B^4 + B^2 - 272 = 0 has unique positive root B = 4   roots=[-4, 4, -sqrt(17)*I, sqrt(17)*I]
+  [PASS] alpha^-1(M_Z) = C(B^2,2) + 2B = 128
+  [PASS] Delta alpha^-1 = (B-1)^2 = 9 = 137 - 128
+  [PASS] alpha^-1(0) lock uses no N_c symbol  [contract 1-5]   free_symbols = {Bs} (只有 B; 無 N_c)
+
+[6] 費米子對賬
+  [PASS] 每代多重態 6+3+3+2+1+1 = 16 = B^2   dims={'Q_L': 6, 'u_R': 3, 'd_R': 3, 'L_L': 2, 'e_R': 1, 'nu_R': 1}
+  [PASS] 每代 Sigma N_c Q_f^2 = 3*(4/9)+3*(1/9)+1 = 8/3   got 8/3
+  [PASS] Sigma_f N_c Q_f^2 = 3 代 x 8/3 = 8 = 2B
+
+[7] beta / 膠子 / 其他 B 角色
+  [PASS] b_0 = L_4 = 7
+  [PASS] b_1 = 2 F_7 = 26
+  [PASS] 88 = B * 2 L_5
+  [PASS] N_site = 88 = 2 N_d
+  [PASS] Sigma gamma_88 = B(N_d+1)/2 = 90   see [8] for numeric
+  [PASS] C_A = N_c = B-1 = 3
+  [PASS] C_F = B/3 = 4/3
+  [PASS] h11 = N_d - 2B = 36
+  [PASS] h21 = Sigma gamma + 2B = 98
+  [PASS] h11 (alt decomposition) = 8+3+1+24 = 36
+  [PASS] 60 = N_d + B^2
+  [PASS] Omega_b : Omega_dm : Omega_Lambda = 3:16:41 over 60 (sums to 1)
+  [PASS] Omega_m = Omega_b + Omega_dm = 19/60 (NOT a third independent share)
+  [PASS] trap: 19+16+41 = 76 != 60  (Omega_m must not be added as a 3rd share)
+  [PASS] F_11 = 53 + B*Delta alpha^-1 = 89
+
+[8] K_chain 譜恆等式 (精確)
+  [PASS] 88-chain pairing  gamma_n + gamma_{44-n} = 4 = B  (n=1..44, gamma_0:=0)   maxdev=6.223e-61
+  [PASS] 176-chain pairing gamma_{44-j} + gamma_{44+j} = 4 = B (j=0..43)   maxdev=9.3345e-61
+  [PASS] Sigma gamma_88 = 90 EXACT   got 90.0
+  [PASS] Sigma gamma_176 = 178 EXACT   got 178.0
+  [PASS] Sigma gamma_odd = 44 = N_d   got 44.0
+  [PASS] Sigma gamma_even = 46 = N_d + mu^2   got 46.0
+  [PASS] chain relation gamma88_n = gamma176_{2n}   maxdev=0.0
+  [PASS] trig identity sin^2(x)+sin^2(pi/2-x)-1 = 0 (symbolic)
+
+[9] Binet 符號審計 (否證載體)
+  [PASS] phi^3 - phi^-3 = 4 EXACT (= L_3, Binet with psi = -1/phi)
+  [PASS] phi^3 + phi^-3 = 2 sqrt(5) ~= 4.4721 != 4  [upstream typo carrier]   value=4.47213595500
+
+[10] W-field 勢/常數
+  [PASS] <W>^2 = mu^2/(2 lambda) = 61.5
+  [PASS] m_rho^2 = 4 mu^2 = 8
+  [PASS] lambda_WH = mu^2/123 = 2/123  == lambda_self
+  [PASS] mu^2/lambda = 123 = 2<W>^2 = L_10 = E_J
+  [PASS] E_J = 2<W>^2 = 123 = L_10
+  [PASS] W_0 = sqrt(mu^2/(2 lambda)) = sqrt(61.5) = 7.84219357068...
+  [PASS] lambda_Edd = B/(N_d - B) = 4/40 = 1/10
+
+[11] 逐項葉審計 (§B 原子表)
+  [PASS] 所有整數葉落喺 §B 原子表 (含派生 6,9,10,12,24,40,53)   未註冊: []
+
+RESULT: 74/74 PASS

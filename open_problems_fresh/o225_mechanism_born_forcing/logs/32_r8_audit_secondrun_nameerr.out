@@ -1,0 +1,19 @@
+====================================================================================================================
+O225 scripts/32 -- R8 INDEPENDENT AUDIT   (r8-group-identity-v1)
+====================================================================================================================
+[PASS] E1   ★ 獨立核 Part C：tie 條目每態 = 10、d(s,ā) + d(s,a) = 1、Σ_a d = 5（並解釋 600 = 1200/2）  --  tie 值集 = [10] ; 偏離 = 0 ; Σ_a d 值集 = [5] ; 全體 = 600
+[PASS] E2   ★ 獨立協定 pass：f_tf／f_ft／f_tt 逐態與 31 相同；Z10 與零態集一致（零態亦 = R6 之零態集）  --  Z10 = [9, 15, 21, 31, 57, 67, 77, 87, 111, 117] ; 零態 = [9, 15, 40, 77, 87, 100] ; 與 R6 同 = True ; 逐態 f 同 = True
+[FAIL] E3a  ★ 修正（非預測）：旋轉矩陣對照為 **2:1 覆蓋**（60 個相異矩陣 = A₅ 之 60 個元素）  --  相異矩陣 = 60 ; 單位候選數 = 2
+[PASS] E3b  ★ 獨立核（商層）：A₅（60 元素）之階分佈；且 f_tf 於商上良定義（同商鍵之全部態 f 相同）  --  A₅ 階分佈 = [(1, 1), (2, 15), (3, 20), (5, 24)] ; f_tf 商良定義 = True
+[INFO] E3 報告：Z10 之商元素數 = 5 ; A₅ 階值集 = [2, 3, 5]（coset 預測 = [5]）
+[PASS] E4   ★ 獨立陪集檢驗（商層，60 元素 × 5 階子群）：Z10 是否為某 C₅ 之陪集（重現 31 A3 之判決）  --  命中 = [] ; 31 之命中 = []
+[PASS] E5   ★ 獨立 B1（商層）：使 f_tf 全體反號之商元素集合（重現 31 B1 之判決）  --  商命中 = 0 ; 31 之右乘命中 = []
+[PASS] E6   ★ 交叉核對：32 之 (f_tf, f_ft, f_tt, Δ, Z10, 零態) 與 31 輸出逐項相同  --  逐項相同 = True
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/32_r8_audit.py", line 306, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/32_r8_audit.py", line 270, in main
+    'E2': {'Z10': Z10, 'zeros': zeros}, 'E3': {'ordZ': ordZ, 'centre_inv': ciZ, 'orders_full': sorted(set(morders))},
+                                                       ^^^^
+NameError: name 'ordZ' is not defined. Did you mean: 'ordZq'?

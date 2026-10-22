@@ -1,0 +1,24 @@
+O = /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o229_mu2_b4_particle_accounting
+索引：scripts 25 檔 / logs 35 檔 / data 27 檔；doc 34 份
+headline 數字（≥4 有效位）= 37
+  BOUND_SRC     27  ( 73.0%)
+  BOUND_LOG     10  ( 27.0%)
+  ELSEWHERE      0  (  0.0%)
+  DATA_ONLY      0  (  0.0%)
+  UNBOUND        0  (  0.0%)
+
+--- 逐 doc ---
+  docs/01_accounting_table.md                  BOUND_SRC=8
+  docs/05_gap5_density.md                      BOUND_LOG=3  BOUND_SRC=4
+  docs/14_r3_contract.md                       BOUND_SRC=1
+  docs/17_r3_polysemy_classification.md        BOUND_SRC=1
+  docs/23_r4_hardtest_reaudit.md               BOUND_LOG=1  BOUND_SRC=1
+  docs/25_r4_residuals.md                      BOUND_SRC=1
+  docs/28_r5_form_class.md                     BOUND_SRC=2
+  docs/29_r5_discrimination.md                 BOUND_LOG=4  BOUND_SRC=1
+  docs/30_r5_verdicts.md                       BOUND_LOG=2  BOUND_SRC=1
+  docs/31_r5_residuals.md                      BOUND_SRC=3
+  final_result.md                              BOUND_SRC=4
+
+RESULT: numbers=37 bound_src=27 bound_log=10 elsewhere=0 data_only=0 unbound=0
+VERDICT: ALL-BOUND

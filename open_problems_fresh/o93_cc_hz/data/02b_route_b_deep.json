@@ -1,0 +1,10 @@
+{
+  "route": "B_deep",
+  "best_n": 0.6,
+  "chi2_n_best": 1.3265,
+  "chi2_lcdm": 0.6055,
+  "chi2_n15": 48.3991,
+  "pass": 4,
+  "fail": 1,
+  "status": "\ud83d\udfe1"
+}

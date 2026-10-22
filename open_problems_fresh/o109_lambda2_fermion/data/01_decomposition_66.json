@@ -1,0 +1,245 @@
+{
+  "problem": "O109",
+  "title": "66 = Λ²(12) fermion correspondence",
+  "status": "🟡 PARTIALLY CLOSED",
+  "decomposition": {
+    "Λ²(12)": {
+      "total": 66,
+      "SU4xSU3": [
+        {
+          "rep": "(6, 6)",
+          "dim": 36,
+          "idcm_id": "h11 = K_tree + N_gen = 33+3",
+          "SU3c_x_U1BL": {
+            "3̄_{2/3} ⊗ 6_gen": {
+              "SU3c": "3̄",
+              "U1_BL": "2/3",
+              "gen_reps": "6",
+              "dim": 18
+            },
+            "3_{-2/3} ⊗ 6_gen": {
+              "SU3c": "3",
+              "U1_BL": "-2/3",
+              "gen_reps": "6",
+              "dim": 18
+            }
+          }
+        },
+        {
+          "rep": "(10, 3̄)",
+          "dim": 30,
+          "idcm_id": "Nd−2L₄ = 44−14",
+          "SU3c_x_U1BL": {
+            "6_{2/3} ⊗ 3̄_gen": {
+              "SU3c": "6",
+              "U1_BL": "2/3",
+              "gen_reps": "3̄",
+              "dim": 18
+            },
+            "3_{-2/3} ⊗ 3̄_gen": {
+              "SU3c": "3",
+              "U1_BL": "-2/3",
+              "gen_reps": "3̄",
+              "dim": 9
+            },
+            "1_{-2} ⊗ 3̄_gen": {
+              "SU3c": "1",
+              "U1_BL": "-2",
+              "gen_reps": "3̄",
+              "dim": 3
+            }
+          }
+        }
+      ]
+    }
+  },
+  "sm_fermions": {
+    "per_generation": {
+      "Q_L": {
+        "rep": "(3,2)_{1/6}",
+        "SU3c": "3",
+        "SU2L": "2",
+        "U1_Y": "1/6",
+        "count": 6,
+        "type": "left-handed quark doublet"
+      },
+      "u_R": {
+        "rep": "(3,1)_{2/3}",
+        "SU3c": "3",
+        "SU2L": "1",
+        "U1_Y": "2/3",
+        "count": 3,
+        "type": "right-handed up-quark"
+      },
+      "d_R": {
+        "rep": "(3,1)_{-1/3}",
+        "SU3c": "3",
+        "SU2L": "1",
+        "U1_Y": "-1/3",
+        "count": 3,
+        "type": "right-handed down-quark"
+      },
+      "L_L": {
+        "rep": "(1,2)_{-1/2}",
+        "SU3c": "1",
+        "SU2L": "2",
+        "U1_Y": "-1/2",
+        "count": 2,
+        "type": "left-handed lepton doublet"
+      },
+      "e_R": {
+        "rep": "(1,1)_{-1}",
+        "SU3c": "1",
+        "SU2L": "1",
+        "U1_Y": "-1",
+        "count": 1,
+        "type": "right-handed charged lepton"
+      },
+      "ν_R": {
+        "rep": "(1,1)_0",
+        "SU3c": "1",
+        "SU2L": "1",
+        "U1_Y": "0",
+        "count": 1,
+        "type": "right-handed neutrino"
+      }
+    },
+    "total_per_gen": 16,
+    "total_3_gen": 48,
+    "from_3x12plus12bar": 72,
+    "VL_extra": 24
+  },
+  "bl_comparison": {
+    "SM_from_12": {
+      "quarks": "1/3",
+      "leptons": "-1"
+    },
+    "SM_from_12bar": {
+      "antiquarks": "-1/3",
+      "antileptons": "1"
+    },
+    "66_from_Lambda2_12": {
+      "3̄_{2/3}": "2/3",
+      "3_{-2/3}": "-2/3",
+      "6_{2/3}": "2/3",
+      "1_{-2}": "-2"
+    },
+    "verdict": "66 = Λ²(12) has DIFFERENT B-L charges from SM fermions in 12/12̄. NO direct overlap."
+  },
+  "interpretations": [
+    {
+      "name": "SO(12) gauge bosons (P7 from O96)",
+      "description": "Under SU(12)→SO(12), adj(SU(12)) = 143 → 66⊕77. 66 = adj(SO(12)) = SO(12) gauge bosons.",
+      "evidence": [
+        "66 = dim(SO(12)) = adj(SO(12))",
+        "66 = Λ²(12) = antisymmetric product = Lie algebra of SO(12)",
+        "77 = coset = SU(12)/SO(12) = broken generators/Higgs",
+        "O96 P7: 11/11 PASS for 66+77 decomposition"
+      ],
+      "status": "🟢 STRONG — well-established group theory"
+    },
+    {
+      "name": "2×K_tree = complete L+R structure",
+      "description": "66 = 2×33 = 2×K_tree represents the complete tree structure of the W-field, appearing twice (left + right chirality, or particle + antiparticle).",
+      "evidence": [
+        "36 = h11 = K_tree + N_gen = 33+3 = one chiral sector (3 generations)",
+        "66 = 2×K_tree = 2×33 = both chiral sectors WITHOUT generation indices",
+        "66 = 36 + 30 mirrors the 36 (L) + 36 (R) = 72 total fermion space, minus 6 N_gen-related terms",
+        "72 - 6 = 66 = complete fermion mass spectrum structure"
+      ],
+      "status": "🟡 GOOD — structurally consistent with IDCM framework"
+    },
+    {
+      "name": "ψψ bilinear (Majorana sector)",
+      "description": "66 = Λ²(12) = antisymmetric ψψ product. Carries Majorana mass terms, NOT Dirac ψ̄ψ mass terms (which live in 12⊗12̄ = 1⊕143).",
+      "evidence": [
+        "12 ⊗ 12 = 66 ⊕ 78: 66 = antisymmetric, 78 = symmetric",
+        "ψψ bilinear (fermion-fermion) vs ψ̄ψ (fermion-antifermion)",
+        "Majorana masses for ν_R live in this sector",
+        "B-L = -2 component (1_{-2}⊗3̄_gen) corresponds to ΔL=2 processes"
+      ],
+      "status": "🟡 GOOD — explains the different B-L charges"
+    },
+    {
+      "name": "U(1)₆ extra gauge bosons",
+      "description": "66 = 2×K_tree carries 6 extra U(1) gauge bosons from the rank difference (11 vs 5: SU(12) vs SM).",
+      "evidence": [
+        "SU(12) rank = 11, SM rank = 4+1 = 5",
+        "6 extra U(1) factors: 11-5 = 6",
+        "O96 §III, O90: 6 extra U(1) connected to V_Λ=283.0821",
+        "66 = 6×11 = 6×L₅ = 6×rank(SU(12))"
+      ],
+      "status": "🟡 SPECULATIVE — needs more evidence"
+    }
+  ],
+  "idcm_numbers": {
+    "66": {
+      "Λ²(12)": "C(12,2) = 66",
+      "2×K_tree": "2×33 = 66",
+      "adj(SO(12))": "dim(SO(12)) = 66",
+      "|Φ⁺(SU(12))|": "positive roots of SU(12) = 66",
+      "72 - 6": "total fermions (72) - 2×N_gen (6) = 66",
+      "h11 + (Nd-2L₄)": "36 + 30 = 66",
+      "B×K_tree + Nd - 2B": "4×33 + 44 - 8 = 132 + 36 = 168... NO",
+      "B×K_tree - L₄": "4×33 - 7 = 132 - 7 = 125... NO",
+      "K_tree + L₆ + Nd": "33 + 18 + 44 = 95... NO",
+      "CORRECT: 66 = 2×K_tree": "2×33 = 66 ✓"
+    },
+    "36 = (6,6)": {
+      "h11": "K_tree + N_gen = 33 + 3 = 36 ✓",
+      "3×12": "3 generations of SU(12) fundamental = 36 ✓",
+      "Λ²(4)×Sym²(3)": "6×6 = 36 ✓"
+    },
+    "30 = (10,3̄)": {
+      "Nd - 2L₄": "44 - 14 = 30 ✓",
+      "Sym²(4)×Λ²(3)": "10×3 = 30 ✓",
+      "icosahedron_edges": "30 = icosahedron edge count"
+    }
+  },
+  "mapping": {
+    "conclusion": "66 = Λ²(12) does NOT contain the 48 SM Weyl fermions directly. The SM fermions live in 3×(12⊕12̄)=72. The 66 is a DIFFERENT representation with different quantum numbers.",
+    "what_66_represents": [
+      "66 = adj(SO(12)) = SO(12) gauge bosons under SU(12)→SO(12) breaking",
+      "66 = 2×K_tree = 2×33 = complete two-sector tree structure of the W-field",
+      "66 = ψψ antisymmetric bilinear = Majorana/diquark sector (not Dirac ψ̄ψ)",
+      "66 = the fermion PAIRING structure (two generation indices, not one)"
+    ],
+    "66_vs_48_SM": {
+      "66": "Λ²(12) = antisymmetric product of two fundamentals",
+      "48": "SM Weyl fermions from 3×(12⊕12̄) = 72",
+      "66_contains_SM_fermions": false,
+      "reason": "Different B-L charges (2/3, -2/3, -2 vs 1/3, -1, -1/3, 1). Different color reps (3, 3̄, 6, 1 vs 3, 3̄, 1).",
+      "66_overlaps_with_72": "The 66 and 72 are different representations of SU(12); they intersect only at the identity.",
+      "66_minus_48": "18 ≠ meaningful difference; they're different rep spaces."
+    },
+    "66_2xK_tree_meaning": {
+      "K_tree": 33,
+      "2xK_tree": 66,
+      "interpretation": "66 = 2×33 = two copies of the W-field tree structure. Each copy represents one sector (e.g., left/right chirality, or particle/antiparticle, or generation pairing).",
+      "comparison_with_36": "36 = h11 = K_tree + N_gen = 33+3 = one chiral sector with 3 generations. 66 = 2×K_tree = 2×33 = both sectors without explicit generation indices."
+    },
+    "status": "🟡 PARTIALLY CLOSED — 66 is NOT the SM fermion representation. It represents the SO(12) gauge boson sector / two-fermion pairing structure / mass matrix sector."
+  },
+  "questions_answered": [
+    {
+      "q": "1. 66 個態點樣對應到 SM fermions？",
+      "a": "66 = Λ²(12) 的 66 個態並未直接對應到 SM fermions。SM fermions 在 3×(12⊕12̄) = 72 中。66 有不同嘅 B-L 電荷 (2/3, -2/3, -2 vs SM 嘅 1/3, -1, -1/3, 1) 同色表示 (3, 3̄, 6, 1 vs SM 嘅 3, 3̄, 1)。66 代表 SO(12) 規範玻色子或雙費米子配對結構。",
+      "status": "🟡 PARTIAL"
+    },
+    {
+      "q": "2. 66 = 2×K_tree = 2×33 嘅物理意義？",
+      "a": "66 = 2×33 = 兩份 K_tree 結構。一份對應一個手性 sector (左或右)，或者對應費米子-費米子配對嘅兩個世代指標。相比 36 = h11 = K_tree + N_gen = 33+3 係一個手性 sector 加三代，66 = 2×K_tree = 2×33 係兩個 sector 唔帶世代指標。",
+      "status": "🟡 PARTIAL"
+    },
+    {
+      "q": "3. 66 同 48 SM fermions 嘅關係？",
+      "a": "66 同 48 係唔同嘅 SU(12) 表示 — 66 = Λ²(12) 而 SM fermions ⊂ 3×(12⊕12̄)。66-48=18 冇直接物理意義因為兩者屬於唔同表示空間。66 嘅 B-L 電荷係 2/3, -2/3, -2，而 SM fermions 嘅係 1/3, -1, -1/3, 1。",
+      "status": "🟢 CLEAR"
+    },
+    {
+      "q": "4. 66 中邊啲態對應到 observed particles？",
+      "a": "66 中嘅態如果係 SO(12) 規範玻色子，則預言喺高能標度 (~M_GUT) 出現。如果係雙費米子配對，則對應到 Majorana 中微子質量項 (1_{-2}⊗3̄_gen, ΔL=2) 或 diquark 態。冇 66 嘅態喺低能可直接觀測。",
+      "status": "🟢 CLEAR"
+    }
+  ]
+}

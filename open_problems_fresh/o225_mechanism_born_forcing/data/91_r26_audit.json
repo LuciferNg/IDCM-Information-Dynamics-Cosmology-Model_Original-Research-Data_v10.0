@@ -1,0 +1,27 @@
+{
+ "script": "91_r26_audit",
+ "checks": [
+  {
+   "tag": "A1",
+   "ok": true,
+   "detail": "差異數 = 0（樣本 []）；另路值集 = [-8, 0, 8]"
+  },
+  {
+   "tag": "A2",
+   "ok": true,
+   "detail": "另路 |非零 g| = 100；補集相符 = True；相異 = []"
+  },
+  {
+   "tag": "A3",
+   "ok": true,
+   "detail": "封閉 = True（乘積集 20）｜表現式 = True（witness = [99, 46, 20]）｜生成 = True（|⟨a,b⟩| = 20）"
+  },
+  {
+   "tag": "A4",
+   "ok": true,
+   "detail": "階譜 = {1: 1, 2: 1, 4: 10, 5: 4, 10: 4}；對合數 = 1；對合居中 = True"
+  }
+ ],
+ "pass": 4,
+ "total": 4
+}

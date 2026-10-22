@@ -1,0 +1,27 @@
+================================================================================================================
+O222 scripts/12 -- B5: D5 rollback layer under the O41 resource bound (rules: b5-contract-v1)
+================================================================================================================
+[FAIL] P1     max reads per pass = (123/2)/(123/176) = 88 EXACT  --  per-read cost = 123/88 ; 88 reads consume 123 = budget
+[PASS] P2     A2's specified pass (3844 pairs x reads) is budget-infeasible  --  overrun factor = 961/11
+[FAIL] P4     tau_deco = 2 tick from two independently frozen factors (88 = I1/I3 ; 44 reads/tick = N_d)  --  88/44 = 2 ticks = 4808807/2500000 Gyr (registered 1.9235227)
+[PASS] P3     budget-feasible pass = the frozen-order prefix (cost computed, not assumed)  --  feasible pairs = 16 (reads used = 46, misses/pair = [2, 3]) ; budget left = -123/44
+[PASS] P5     p_k stays exactly uniform and every pair map stays bijective under the budget bound  --  non-bijective pairs = 0 ; max L1 dev from uniform = 0
+E1   raw    unrestricted |S| = 4           budget-feasible |S| = 0           visited 14303524 tuples (3.629105806350708 s)
+E1   all4   unrestricted |S| = 2           budget-feasible |S| = 0           visited 12517800 tuples (4.296330213546753 s)
+E2   raw    unrestricted |S| = 4           budget-feasible |S| = 0           visited 14303524 tuples (3.4361581802368164 s)
+E2   all4   unrestricted |S| = 3           budget-feasible |S| = 0           visited 12517800 tuples (4.217031002044678 s)
+[PASS] P6     the resource bound constrains the reachable |S| (full 62^4 sweep with the window)  --  E2 all4: unrestricted 3 -> budget-feasible 0 (window <= 16 pairs)
+[PASS] P6b    A2 reproduced: unrestricted E2 all4 = 3 and E1 all4 = 2 (the sweep agrees with scripts/10)  --  E1 all4 = 2 ; E2 all4 = 3
+[PASS] P7     order asymmetry holds within the feasible prefix (Delta_order > 0)  --  max |C1[a][b] - C1[b][a]| (prefix) = 2/5
+
+-- null (full sweep under the same budget window), 6 draws --
+null draw 0: unrestricted |S| = 2 ; budget-feasible |S| = 0
+null draw 1: unrestricted |S| = 2 ; budget-feasible |S| = 0
+null draw 2: unrestricted |S| = 2 ; budget-feasible |S| = 0
+null draw 3: unrestricted |S| = 2 ; budget-feasible |S| = 0
+null draw 4: unrestricted |S| = 2 ; budget-feasible |S| = 0
+null draw 5: unrestricted |S| = 2 ; budget-feasible |S| = 0
+null E1 all4: unrestricted median = 2 max = 2 ; budget-feasible median = 0 max = 0
+================================================================================================================
+RESULT: 6/8 PASS  (2 FAIL)   elapsed 45.2 s
+================================================================================================================

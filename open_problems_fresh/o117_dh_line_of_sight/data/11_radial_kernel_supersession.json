@@ -1,0 +1,26 @@
+{
+  "trigger": "O117 SESSION_START unexecuted items 1-2",
+  "finding": "C_DM/C_DH re-derivation MOOT -- O170 arch kernel supersedes",
+  "chi2_DH_arch": "3.4711966",
+  "chi2_DH_arch_per_dof": "0.578533",
+  "chi2_DH_O117_errorset": "7.4123582",
+  "chi2_DH_O117_table6": "29.504684",
+  "lyalpha_pull_arch": "-0.300663",
+  "lyalpha_pull_O117_table6": "-4.75584",
+  "M_deep_arch": "1.414213562",
+  "M_deep_O117": "1.386294361",
+  "W_4over3_chi2": "17.237534",
+  "W_1_chi2": "3.4711966",
+  "H0_arch": "71.15696555",
+  "retained": [
+    "D_H != dD_A/dz independent projections",
+    "DM/rd error set correct",
+    "3D anisotropy non-issue"
+  ],
+  "superseded": [
+    "O117 radial parameterization with delta_k0 Gaussian + delta_gd linear",
+    "C_DM = -C_delay*2phi^-1*sqrt5 and C_DH = C_DM*B/N_gen"
+  ],
+  "pass": 6,
+  "fail": 0
+}

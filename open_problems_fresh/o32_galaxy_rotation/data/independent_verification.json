@@ -1,0 +1,170 @@
+{
+  "n_pass": 27,
+  "n_fail": 0,
+  "details": [
+    {
+      "id": "V1",
+      "name": "a\u2080 = c\u00b2/(2\u03c0R_H)",
+      "ok": true,
+      "dev": 1.3195907312499258e-10
+    },
+    {
+      "id": "V1b",
+      "name": "a\u2080 = cH\u2080/2\u03c0 (\u540c\u4e00)",
+      "ok": true,
+      "dev": 1.2924697071141057e-26
+    },
+    {
+      "id": "V2",
+      "name": "\u03bd(\u03bd-1)\u00b7x = 1 (5 \u9ede)",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V3",
+      "name": "\u03bc(x) = 1-G_surf(x+2) = 1/\u03bd (8 \u9ede)",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V4",
+      "name": "\u03bd\u00b2 = \u03bd + 1/x (5 \u9ede)",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V5",
+      "name": "\u03bc\u00b2 = x(1-\u03bc) (5 \u9ede)",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V6",
+      "name": "F'(y) = \u221ay/(1+\u221ay) (5 \u9ede)",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V7",
+      "name": "a\u2080 = c\u00b7\u03c9\u2081/(2\u03c0\u00b788sin(\u03c0/88))",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V7b",
+      "name": "88sin(\u03c0/88) \u2248 \u03c0",
+      "ok": true,
+      "dev": 0.00021240047106377762
+    },
+    {
+      "id": "V8",
+      "name": "\u03a3 1/\u03b3_n = 322.75",
+      "ok": "True",
+      "dev": 0.0
+    },
+    {
+      "id": "V8b",
+      "name": "\u9589\u5408 [(88\u00b2-1)/3+1]/8",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V9",
+      "name": "\u5c0d\u5076\u548c 21/21",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V10",
+      "name": "\u03b3_{2n} = \u03b3_n(4-\u03b3_n) (21 \u9ede)",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V11",
+      "name": "\u03b4T_pred (\u03bcK)",
+      "ok": true,
+      "dev": 0.001832246128667497
+    },
+    {
+      "id": "V11b",
+      "name": "\u03b4T_pred (\u03bcK) \u8072\u7a31 134.42",
+      "ok": true,
+      "dev": 0.00019258615137017729
+    },
+    {
+      "id": "V12",
+      "name": "\u03c9\u2081\u00b7T_sync = 2\u03c0\u00b2",
+      "ok": true,
+      "dev": 0.00015215538978968356
+    },
+    {
+      "id": "V13",
+      "name": "\u03bb_sync = \u03c0R_H/44 (Mpc)",
+      "ok": true,
+      "dev": 1.0083935019128202e-05
+    },
+    {
+      "id": "V14",
+      "name": "BTFR orthogonal slope",
+      "ok": "True",
+      "dev": 8.858673748124654e-05
+    },
+    {
+      "id": "V14b",
+      "name": "BTFR slope vs \u6587\u737b 3.71",
+      "ok": "True",
+      "dev": 0.03602681201647493
+    },
+    {
+      "id": "V15",
+      "name": "\u5916\u570d \u03c1 \u221d R\u207b\u00b2 (\u89e3\u6790\u63a8\u5c0e)",
+      "ok": true,
+      "dev": 0.0
+    },
+    {
+      "id": "V16",
+      "name": "M\u2080 (Msun)",
+      "ok": true,
+      "dev": 0.0010647084183743676
+    },
+    {
+      "id": "V16b",
+      "name": "d=4: M (Msun)",
+      "ok": true,
+      "dev": 0.00047494177748254465
+    },
+    {
+      "id": "V17",
+      "name": "\u03bc(1) = 1/\u03c6",
+      "ok": true,
+      "dev": 1.7963785889362148e-16
+    },
+    {
+      "id": "V17b",
+      "name": "\u03bd(1) = \u03c6",
+      "ok": true,
+      "dev": 1.3723111286221163e-16
+    },
+    {
+      "id": "V18",
+      "name": "\u96c6\u9ad4\u97ff\u61c9 vs \u221a\u03bc (median)",
+      "ok": "True",
+      "dev": 0.004413041458153303
+    },
+    {
+      "id": "V19",
+      "name": "\u03b3\u2082\u2082 = 2 (\u81ea\u5c0d\u5076)",
+      "ok": "True",
+      "dev": 4.440892098500626e-16
+    },
+    {
+      "id": "V20",
+      "name": "RAR bins \u03c7\u00b2 (IDCM 0 \u53c3\u6578)",
+      "ok": "True",
+      "dev": 0.0038923879334725564
+    }
+  ],
+  "a0": 1.1224506351481175e-10,
+  "slope_orth": 3.843659472581122
+}

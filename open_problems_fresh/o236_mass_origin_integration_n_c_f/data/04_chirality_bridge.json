@@ -1,0 +1,35 @@
+{
+ "R": "R4",
+ "title": "s1↔s3 對偶 = 手性鏡像橋",
+ "deficit_T3": {
+  "0": 2.0,
+  "1": -1.000637580593,
+  "2": 0.0,
+  "3": 1.000637580593
+ },
+ "r_even": [
+  1.999999999999993,
+  0.0
+ ],
+ "r_odd": [
+  -1.0006375805930077,
+  1.0006375805930006
+ ],
+ "reflection": {
+  "0": 0,
+  "1": 3,
+  "2": 2,
+  "3": 1
+ },
+ "F_mirror_disjoint": true,
+ "geometric_chirality_map": false,
+ "geometric_criterion": "|Sym|=60 all proper (O213/O220); chain r-symmetric ⟹ phase classes achiral",
+ "arc_bridge": {
+  "N_d_plus_1": 45,
+  "factorization": "3×15",
+  "mirrors": 15,
+  "status": "counting consistency only; mechanism OPEN (O233 expectation)"
+ },
+ "verdict": "r-odd pairing theorem (🟢) + geometric correspondence negative (⚰️) + bridge candidate open (🟡)",
+ "cheat": "T3/R2/O213/O220/O223 已閉合引用; 零新常數"
+}

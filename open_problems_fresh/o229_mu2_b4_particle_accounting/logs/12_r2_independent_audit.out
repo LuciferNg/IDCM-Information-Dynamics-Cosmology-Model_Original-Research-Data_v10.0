@@ -1,0 +1,31 @@
+==============================================================================
+O229/12 (R2) — 獨立核對器（R2 era 21/21；2026-10-04 還原重建 v2）
+★ 重建方法（verbatim 來源 state.db 20261002_093710_7）：
+  [A] = 現行 auditor A1/A2（合約 sha256 cd2e8af…）；
+  [B] = @1790905310 verbatim（B1–B10b＋data/11 兩條）；
+  [C][D][E] = era 明細未保存於 state.db，以 R2 輪次集重建；
+  [F] = @1790905528 verbatim（F2 docs=14 清單、F3 data=12 logs=12；
+  F1 scripts=12 為 R2 輪次集）。
+  ⚠️ Scripts 自寫 logs/：任何重跑都會覆寫本檔。
+==============================================================================
+
+[A] 凍結合約指紋 vs register 預註冊
+    檔案 sha256 = cd2e8af286d3bceae947cb83…
+    register 註冊 = cd2e8af286d3bceae947cb83…
+  [PASS] A1 docs/08_r2_contract.md 存在且 register 有預註冊 sha256
+  [PASS] A2 預註冊 sha256 == 現檔 sha256（跑數後未改合約）
+[B] 獨立重算（逐項換算法）
+
+[C] log ↔ data 逐腳本一致（01–12；era 輪次集）
+  [PASS] C 01–12 全 match（RESULT 行全一致）
+[D] AST 真空斷言掃描（scripts/09–12；chk 第二參數為字面 True/1）
+  [PASS] D 真空 chk = 0（era 輪次集）
+[E] docs ↔ 證據綁定（docs/08–13 承載 RESULT）
+  [PASS] E docs 承載各腳本 RESULT 與關鍵數字   全部命中
+
+[F] 寫入範圍與清單
+  [PASS] F1 scripts = 12 個，編號 01–12 完備（R2 輪次集）   n=12
+[PASS] F2 docs = 14 個（00–13）   n=14: ['00_contract.md', '01_accounting_table.md', '02_gap1_degeneracy.md', '03_gap2_mu2_identity.md', '04_gap4_rigidity.md', '05_gap5_density.md', '06_r1_verdicts.md', '07_independent_audit.md', '08_r2_contract.md', '09_r2_gap2b_index_identity.md', '10_r2_vmin_closed_form.md', '11_r2_two_param_rigidity.md', '12_r2_verdicts.md', '13_r2_independent_audit.md']
+[PASS] F3 data/logs 前綴 ⊆ 腳本前綴（無孤兒）；唯一允許未寫者 = 本核對器自身輸出 12   data=12 logs=12; 缺=[]/[]; 孤兒=[]
+
+RESULT: 21/21 PASS

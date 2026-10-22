@@ -1,0 +1,9 @@
+{
+  "M_idcm": -19.3151,
+  "M_lcdm": -19.2659,
+  "M_diff": -0.0492,
+  "lowz_resid_idcm_commonM": 0.0178,
+  "lowz_resid_lcdm_commonM": 0.0298,
+  "pass": 0,
+  "fail": 0
+}

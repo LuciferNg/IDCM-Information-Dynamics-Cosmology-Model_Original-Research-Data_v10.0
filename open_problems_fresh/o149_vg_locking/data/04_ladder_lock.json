@@ -1,0 +1,104 @@
+{
+  "ladder": [
+    {
+      "k": 1,
+      "num": "(43,44)",
+      "den_sum": 42,
+      "d": 13,
+      "valid": false
+    },
+    {
+      "k": 2,
+      "num": "(42,43)",
+      "den_sum": 41,
+      "d": 21,
+      "valid": true
+    },
+    {
+      "k": 3,
+      "num": "(41,42)",
+      "den_sum": 40,
+      "d": 34,
+      "valid": true
+    },
+    {
+      "k": 4,
+      "num": "(40,41)",
+      "den_sum": 39,
+      "d": 55,
+      "valid": false
+    }
+  ],
+  "values": {
+    "k2_sin13": 0.0035074293683934757,
+    "k3_vub": 0.0036910175759119488
+  },
+  "stats": {
+    "window_sin13": 23,
+    "window_vub": 29,
+    "p_joint": 9.642260367707477e-10
+  },
+  "sensitivity": {
+    "relaxed_candidates": 98,
+    "hits": [
+      [
+        2,
+        21,
+        41,
+        10,
+        31,
+        0.0035074293683934757
+      ],
+      [
+        3,
+        34,
+        40,
+        3,
+        37,
+        0.0036910175759119488
+      ]
+    ]
+  },
+  "blind": {
+    "pred1_ladder_termination": "k>=4 no valid pair -> no 3rd sub-floor CKM element",
+    "pred2_pmns_no_suppression": "all PMNS > floor 0.0178 -> no two-factor needed",
+    "pred3_achievability": [
+      {
+        "name": "CKM tan\u03b8\u2081\u2082",
+        "delta": 0.0007577541658296099
+      },
+      {
+        "name": "CKM tan\u03b8\u2082\u2083",
+        "delta": 0.004958835109871626
+      },
+      {
+        "name": "CKM \u03bb",
+        "delta": 0.002205966385797496
+      },
+      {
+        "name": "CKM V_cb",
+        "delta": 0.011073746142314553
+      },
+      {
+        "name": "CKM A",
+        "delta": 0.0016699454370835006
+      },
+      {
+        "name": "PMNS tan\u03b8\u2081\u2082",
+        "delta": 0.0005786503673390779
+      },
+      {
+        "name": "PMNS tan\u03b8\u2082\u2083",
+        "delta": 8.835801207249514e-05
+      },
+      {
+        "name": "PMNS tan\u03b8\u2082\u2083b",
+        "delta": 3.263750925557713e-05
+      },
+      {
+        "name": "PMNS sin\u03b8\u2081\u2083",
+        "delta": 0.00932668515263956
+      }
+    ]
+  }
+}

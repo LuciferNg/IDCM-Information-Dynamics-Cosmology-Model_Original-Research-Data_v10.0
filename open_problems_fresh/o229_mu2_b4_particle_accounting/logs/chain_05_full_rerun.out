@@ -1,0 +1,29 @@
+O229 全鏈重跑 2026-10-04 02:25:51 ｜ dry-run=0
+  01_atom_identity                   rc=0   RESULT: 74/74 PASS
+  02_roles_graph                     rc=0   RESULT: 34/34 PASS
+  03_gap1_degeneracy                 rc=0   RESULT: 14/14 PASS
+  04_gap2_mu2_identity               rc=0   RESULT: 20/20 PASS
+  05_gap3_completeness               rc=0   RESULT: 29/29 PASS
+  06_gap4_rigidity                   rc=0   RESULT: 9/9 PASS
+  07_gap5_density                    rc=0   RESULT: 12/13 PASS
+  08_independent_audit               rc=0   RESULT: 45/45 PASS
+  09_r2_index_identity_and_routes    rc=0   RESULT: 14/15 PASS
+  10_r2_vmin_and_qed_sum             rc=0   RESULT: 13/13 PASS
+  11_r2_two_param_rigidity           rc=0   RESULT: 15/16 PASS
+  12_r2_independent_audit            rc=0   RESULT: 21/21 PASS
+  13_r3_y_uniqueness                 rc=0   RESULT: 14/16 PASS
+  14_r3_spectrum_family              rc=0   RESULT: 19/22 PASS
+  15_r3_polysemy_classification      rc=0   RESULT: 15/16 PASS
+  16_r3_density_atom_pool            rc=0   RESULT: 11/11 PASS
+  17_r3_independent_audit            rc=0   RESULT: 18/18 PASS
+  18_r4_chain_family                 rc=0   RESULT: 13/13 PASS
+  19_r4_mu2_support                  rc=0   RESULT: 12/12 PASS
+  20_r4_hardtest_reaudit             rc=0   RESULT: 8/10 PASS
+  21_r4_independent_audit            rc=0   RESULT: 18/18 PASS
+  22_r5_endpoint_anatomy             rc=0   RESULT: 13/13 PASS
+  23_r5_form_class                   rc=0   RESULT: 8/8 PASS
+  24_r5_discrimination               rc=0   RESULT: 3/8 PASS
+  25_r5_independent_audit            rc=0   RESULT: 23/23 PASS
+--- 仲裁器 ---
+  third_route_arbiter rc=0  與 24 之 lock 表差異原子數 = 0 RESULT: PASS — 第三路線與 24 逐項一致 
+覆蓋: 25 支腳本

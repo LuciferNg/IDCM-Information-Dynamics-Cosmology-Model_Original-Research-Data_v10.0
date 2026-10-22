@@ -1,0 +1,10 @@
+{
+  "surface_GF": "G_surface(E) = (E-\u221a(E\u00b2-4))/2, band [-2,2]",
+  "rar_identity": "\u03bc(x) = 1 - G_surface(x+2) = (\u221a(x(x+4))-x)/2",
+  "bandwidth": "4 = \u03b3_max = B; \u5e36\u5fc3 2 = \u03b3_22 (\u81ea\u5c0d\u5076)",
+  "quadratic": "\u03bc\u00b2 = x(1-\u03bc) \u27fa \u03bd\u00b2 = \u03bd + 1/x \u27fa g_obs\u00b2 = g_bar(g_obs+a\u2080)",
+  "collective_S_vs_sqrt_mu_median": 0.8046013105091806,
+  "ir_fixed_point": "mode 1 \u5b9a\u7fa9 a\u2080 \u2192 \u03bc(x) = x/(1+x)",
+  "deep_mond": "(2/3)y^{3/2} \u2194 van Hove \u03ba^{-1/2}",
+  "a0": 1.1224506353268579e-10
+}

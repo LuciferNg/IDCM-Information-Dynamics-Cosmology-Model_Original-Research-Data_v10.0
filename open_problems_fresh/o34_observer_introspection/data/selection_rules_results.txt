@@ -1,0 +1,11 @@
+O34 — (n1,n2) Selection Rules
+===================================================================
+u/d: 24-10 = 14 = B^2-2
+c/s: 22-8 = 14 = B^2-2
+t/b: 33-19 = 14 = B^2-2 (t=19 predicted)
+★★ Isospin splitting Δn = 14 = B^2-2 all generations
+Z(41) = N_d - dim_C, W(30) = N_d - (B^2-2)
+H(38) = 2×19 = 2×(N_d/2 - dim_C) double frequency
+Generation centers: n0 = 17, 15, 26 (1st, 2nd, 3rd)
+t predicted n=19, sin(19)/sin(33) vs m_t/m_b: check
+Status: 🟡 isospin splitting closed, generation offset 🟡

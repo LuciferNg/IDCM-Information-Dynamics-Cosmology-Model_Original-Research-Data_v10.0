@@ -1,0 +1,887 @@
+{
+ "rules_version": "o226-r5-contract-v1",
+ "H_order": 10,
+ "kernel_size": 2,
+ "orbit_table": {
+  "V": [
+   1,
+   5
+  ],
+  "F": [
+   5,
+   5
+  ],
+  "E": [
+   5,
+   5,
+   5
+  ]
+ },
+ "pair_orbit_sizes": {
+  "1": [
+   1,
+   5
+  ],
+  "-1/sqrt5": [
+   5
+  ],
+  "+1/sqrt5": [
+   5
+  ],
+  "-1": [
+   1,
+   5
+  ]
+ },
+ "pair_orbit_counts": {
+  "1": 4,
+  "-1/sqrt5": 12,
+  "+1/sqrt5": 12,
+  "-1": 4
+ },
+ "pair_orbit_table": [
+  [
+   "1",
+   [
+    0,
+    0
+   ],
+   [
+    1,
+    5,
+    5,
+    5,
+    3,
+    4,
+    3
+   ],
+   [
+    26
+   ]
+  ],
+  [
+   "1",
+   [
+    3,
+    3
+   ],
+   [
+    1,
+    5,
+    5,
+    5,
+    5,
+    0,
+    5
+   ],
+   [
+    26
+   ]
+  ],
+  [
+   "1",
+   [
+    6,
+    6
+   ],
+   [
+    1,
+    5,
+    5,
+    5,
+    3,
+    4,
+    3
+   ],
+   [
+    26
+   ]
+  ],
+  [
+   "1",
+   [
+    8,
+    8
+   ],
+   [
+    1,
+    5,
+    5,
+    5,
+    5,
+    0,
+    5
+   ],
+   [
+    26
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    1,
+    1,
+    3,
+    1,
+    0,
+    0
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    0,
+    5
+   ],
+   [
+    1,
+    1,
+    1,
+    3,
+    1,
+    0,
+    0
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    0,
+    7
+   ],
+   [
+    0,
+    2,
+    2,
+    2,
+    0,
+    1,
+    0
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    0,
+    8
+   ],
+   [
+    0,
+    2,
+    3,
+    1,
+    0,
+    0,
+    1
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    0,
+    9
+   ],
+   [
+    0,
+    2,
+    2,
+    2,
+    0,
+    1,
+    0
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    3,
+    6
+   ],
+   [
+    0,
+    2,
+    3,
+    1,
+    0,
+    0,
+    1
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    6,
+    1
+   ],
+   [
+    0,
+    2,
+    2,
+    2,
+    0,
+    1,
+    0
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    6,
+    3
+   ],
+   [
+    0,
+    2,
+    3,
+    1,
+    0,
+    0,
+    1
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    6,
+    4
+   ],
+   [
+    0,
+    2,
+    2,
+    2,
+    0,
+    1,
+    0
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    6,
+    9
+   ],
+   [
+    1,
+    1,
+    1,
+    3,
+    1,
+    0,
+    0
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    6,
+    11
+   ],
+   [
+    1,
+    1,
+    1,
+    3,
+    1,
+    0,
+    0
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "-1/sqrt5",
+   [
+    8,
+    0
+   ],
+   [
+    0,
+    2,
+    3,
+    1,
+    0,
+    0,
+    1
+   ],
+   [
+    7
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    0,
+    2
+   ],
+   [
+    1,
+    3,
+    3,
+    3,
+    2,
+    2,
+    1
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    0,
+    3
+   ],
+   [
+    1,
+    3,
+    2,
+    4,
+    3,
+    0,
+    2
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    0,
+    4
+   ],
+   [
+    1,
+    3,
+    3,
+    3,
+    2,
+    2,
+    1
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    0,
+    6
+   ],
+   [
+    0,
+    4,
+    4,
+    2,
+    0,
+    3,
+    2
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    0,
+    10
+   ],
+   [
+    0,
+    4,
+    4,
+    2,
+    0,
+    3,
+    2
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    3,
+    0
+   ],
+   [
+    1,
+    3,
+    2,
+    4,
+    3,
+    0,
+    2
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    6,
+    0
+   ],
+   [
+    0,
+    4,
+    4,
+    2,
+    0,
+    3,
+    2
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    6,
+    2
+   ],
+   [
+    0,
+    4,
+    4,
+    2,
+    0,
+    3,
+    2
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    6,
+    7
+   ],
+   [
+    1,
+    3,
+    3,
+    3,
+    2,
+    2,
+    1
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    6,
+    8
+   ],
+   [
+    1,
+    3,
+    2,
+    4,
+    3,
+    0,
+    2
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    6,
+    10
+   ],
+   [
+    1,
+    3,
+    3,
+    3,
+    2,
+    2,
+    1
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "+1/sqrt5",
+   [
+    8,
+    6
+   ],
+   [
+    1,
+    3,
+    2,
+    4,
+    3,
+    0,
+    2
+   ],
+   [
+    15
+   ]
+  ],
+  [
+   "-1",
+   [
+    0,
+    11
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0
+   ]
+  ],
+  [
+   "-1",
+   [
+    3,
+    8
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0
+   ]
+  ],
+  [
+   "-1",
+   [
+    6,
+    5
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0
+   ]
+  ],
+  [
+   "-1",
+   [
+    8,
+    3
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0
+   ]
+  ]
+ ],
+ "axis_orbits": [
+  [
+   "V",
+   1
+  ],
+  [
+   "V",
+   5
+  ],
+  [
+   "F",
+   5
+  ],
+  [
+   "F",
+   5
+  ],
+  [
+   "E",
+   5
+  ],
+  [
+   "E",
+   5
+  ],
+  [
+   "E",
+   5
+  ]
+ ],
+ "per_class_sums": {
+  "+1/sqrt5": {
+   "V": [
+    4
+   ],
+   "F": [
+    6
+   ],
+   "E": [
+    5
+   ]
+  },
+  "-1/sqrt5": {
+   "V": [
+    2
+   ],
+   "F": [
+    4
+   ],
+   "E": [
+    1
+   ]
+  },
+  "1": {
+   "V": [
+    6
+   ],
+   "F": [
+    10
+   ],
+   "E": [
+    10
+   ]
+  },
+  "-1": {
+   "V": [
+    0
+   ],
+   "F": [
+    0
+   ],
+   "E": [
+    0
+   ]
+  }
+ },
+ "accounts": {
+  "frozen": [
+   [
+    15,
+    44,
+    2,
+    15,
+    3,
+    [
+     0,
+     15
+    ],
+    14
+   ]
+  ],
+  "equivariant": [
+   [
+    15,
+    44,
+    2,
+    15,
+    3,
+    [
+     0,
+     15
+    ],
+    14
+   ]
+  ],
+  "random_pm1": [
+   [
+    15,
+    44,
+    2,
+    15,
+    3,
+    [
+     0,
+     15
+    ],
+    14
+   ]
+  ]
+ },
+ "carried_accounts": {
+  "frozen": [
+   [
+    11408,
+    124,
+    3844
+   ]
+  ],
+  "equivariant": [
+   [
+    11408,
+    124,
+    3844
+   ]
+  ],
+  "random_pm1": [
+   [
+    11408,
+    124,
+    3844
+   ]
+  ]
+ },
+ "fidelity_mismatches": {
+  "frozen": 0,
+  "equivariant": 2038
+ },
+ "fidelity_by_type_equivariant": {
+  "vertex": 232,
+  "face": 480,
+  "edge": 1326
+ },
+ "impact_matrix": {
+  "invariant": [
+   "J1 timing ratios (pure arithmetic)",
+   "J2 budget closed form m* = floor((B-theta)/c)+1",
+   "class count 12 and the class partition (R4 U5)",
+   "one-pass ledger account (V3 value-blindness theorem)",
+   "the W table and geo = 2W (R4 U1/U2/U3)"
+  ],
+  "relative": [
+   "staleness value set (R3/R4)",
+   "pair outputs x_a, x_b",
+   "upstream F3 fidelity relation (V4)",
+   "any quantity derived from x"
+  ]
+ },
+ "claims": [
+  {
+   "tag": "V0a",
+   "name": "the stabilisers agree with R2: |{t : rho(t)u_0 = lambda u_0, lambda > 0}| = 10 and the row stabiliser H = {t : K[s.t] = K[s] for all s} also has order 10, with H_pos = H (the strict proportionality test replaces the weak first-component test of the first run)",
+   "ok": true,
+   "detail": "|Stab+|= 10 ; |row stabiliser| = 10 ; identical = True"
+  },
+  {
+   "tag": "V0b",
+   "name": "the effective action of H on the 31 axes has kernel {+-1} (order 2), so orbit sizes divide 5; the orbit table is V: 1+5, F: 5+5, E: 5+5+5",
+   "ok": true,
+   "detail": "orbits by type = {'V': [1, 5], 'F': [5, 5], 'E': [5, 5, 5]} ; kernel size = 2"
+  },
+  {
+   "tag": "V1a",
+   "name": "V1a: the H-orbits on the ordered pairs of each cos class -- the derived count forgot the {+-1} kernel, so the measured sizes are 5 (12 orbits of 5) for the near/far classes and a 5/1 mixture for the diagonal/antipodal classes",
+   "ok": true,
+   "detail": "pair-orbit sizes = {'1': [1, 5], '-1/sqrt5': [5], '+1/sqrt5': [5], '-1': [1, 5]} ; pair-orbit counts = {'1': 4, '-1/sqrt5': 12, '+1/sqrt5': 12, '-1': 4}"
+  },
+  {
+   "tag": "V1a-c",
+   "name": "CORRECTED (V1a): the pre-measurement derivation predicted orbit size 10 because it overlooked that {+-1} lies in the kernel of the H-action on the images; with the effective group of order 5 the near/far classes carry 12 pair-orbits of size 5",
+   "ok": true,
+   "detail": "near pair-orbits = 12 (size 5)"
+  },
+  {
+   "tag": "V1b",
+   "name": "CORRECTED (Pv-2): the per-axis-orbit in-lune count is NOT constant on a whole cos class, but it IS constant on each H-orbit of pairs -> the closed form is the small table (pair-orbit) x (7 axis-orbits), whose row sums are W",
+   "ok": true,
+   "detail": "constant on pair-orbits = True ; the 12 near pair-orbits fall into 3 distinct rows (the extra symmetry beyond H merges them)"
+  },
+  {
+   "tag": "V1c",
+   "name": "V1c: the row sums of that table reproduce W of R4 (the class sums V/F/E = 4/6/5 near, 2/4/1 far, 6/10/10 diagonal, 0/0/0 antipodal)",
+   "ok": true,
+   "detail": "per-class row sums = {'+1/sqrt5': [15], '-1/sqrt5': [7], '1': [26], '-1': [0]}"
+  },
+  {
+   "tag": "V1d",
+   "name": "the per-type sums (over the axis orbits of each type) are the R4 table: V/F/E = 4/6/5 near, 2/4/1 far, 6/10/10 diagonal, 0/0/0 antipodal",
+   "ok": true,
+   "detail": "per-type class sums = {'+1/sqrt5': {'V': [4], 'F': [6], 'E': [5]}, '-1/sqrt5': {'V': [2], 'F': [4], 'E': [1]}, '1': {'V': [6], 'F': [10], 'E': [10]}, '-1': {'V': [0], 'F': [0], 'E': [0]}}"
+  },
+  {
+   "tag": "V3",
+   "name": "Pv-3 THEOREM (value-blindness): the pass account is INDEPENDENT of the kernel values -- the read path compares contexts only and advances the state with MUL[s][hx[ctx]], never consulting K; verified over 120 initial states for the frozen, the equivariant and a pseudo-random +-1 kernel",
+   "ok": true,
+   "detail": "frozen = [(15, 44, 2, 15, 3, (0, 15), 14)] ; equivariant = [(15, 44, 2, 15, 3, (0, 15), 14)] ; random = [(15, 44, 2, 15, 3, (0, 15), 14)]"
+  },
+  {
+   "tag": "V3b",
+   "name": "the CARRIED full-pass account of R1 (read-ops / hits / pops) is likewise identical under all three kernels (the R1 dynamic results are convention-invariant)",
+   "ok": true,
+   "detail": "frozen = [(11408, 124, 3844)] ; equivariant = [(11408, 124, 3844)] ; random = [(11408, 124, 3844)]"
+  },
+  {
+   "tag": "V4",
+   "name": "Pv-5: the upstream F3 fidelity relation C1[a][b] = sum_s x_a(s).x_b(s.h(a)) is reproduced ONLY by the frozen convention; the equivariant convention breaks it, so the tie-break is PINNED by the upstream frozen data",
+   "ok": true,
+   "detail": "mismatches vs F3 C1_num (of 3844): frozen = 0 ; equivariant = 2038"
+  },
+  {
+   "tag": "V4b",
+   "name": "the equivariant fidelity breakdown is concentrated on the axes whose entries change (the perpendicular-to-u_0 columns), not on the others",
+   "ok": true,
+   "detail": "equivariant mismatches by type of a = {'vertex': 232, 'face': 480, 'edge': 1326}"
+  }
+ ]
+}

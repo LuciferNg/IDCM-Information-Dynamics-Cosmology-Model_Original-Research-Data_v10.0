@@ -1,0 +1,142 @@
+{
+  "script": "04_field_legality",
+  "date": "2026-09-28",
+  "ratios": {
+    "W/Z (21,24)": {
+      "value": "0.881364711599185041252616406012",
+      "best_pq": "3410/3869",
+      "best_dev": 2.0286582264292217e-08,
+      "n_under_1e-5": 261,
+      "pslq2": false
+    },
+    "τ/b (13,32)": {
+      "value": "0.425370271159313618599223144649",
+      "best_pq": "1120/2633",
+      "best_dev": 6.789065393255865e-08,
+      "n_under_1e-5": 108,
+      "pslq2": false
+    },
+    "H/W (25@88)": {
+      "value": "1.55728307609951035124326941508",
+      "best_pq": "1903/1222",
+      "best_dev": 4.256773610038871e-08,
+      "n_under_1e-5": 390,
+      "pslq2": false
+    }
+  },
+  "rational_pairs": 0,
+  "checks": [
+    {
+      "name": "A1 ★ 三個比值皆**唔係**有理數（最佳 p/q dev ≫ 0，分母 ≤ 5000）",
+      "pass": true,
+      "detail": "devs = [2.03e-08, 6.79e-08, 4.26e-08]"
+    },
+    {
+      "name": "A2 ★ 亦唔係二次代數（PSLQ [1,r,r²] 全部無關係, coeff ≤ 1e10, tol 1e-45）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A3 ★★ 按 R12（Q(√5) ∩ Q(ζ₈₈)⁺ = Q）: 非有理 ⟹ ∉ Q(√5) ⟹ **唔屬質量比扇區 (R12d)** ⟹ O158 三配對之數值內容 ∈ 混合角扇區",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A4 ★ 故 O158「Spin 域規則」之數值層 = 🟡 精度近似（陷阱窗），唔係精確結構閉合",
+      "pass": true,
+      "detail": "見 A1–A3"
+    },
+    {
+      "name": "B1 全 3828 對中，整數比對數 = 0（[]）⟹ 冇平凡整數解",
+      "pass": true,
+      "detail": "整數比對 = 0 / 3828"
+    },
+    {
+      "name": "B1b ★ 隨機 300 對做 q ≤ 5000 有理測試（dev < 1e-40）: 命中 0 ⟹ K_chain 譜比唔會係有理",
+      "pass": true,
+      "detail": "checked = 300"
+    },
+    {
+      "name": "B2 γ 對稱 sin(aπ/176) = sin((176−a)π/176) ⟹ 相異比值集合為 44 維",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B3 ★ 一般 K_chain 譜比**唔會**係有理 ⟹ 任何「質量比 = sin 比」聲明都唔可能係精確閉合（R12b 要求有理）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C m_W/m_Z: 有理數集合在此精度下唔罕見（q 數 ≥ 3 ⟹ 精度無判別力）",
+      "pass": true,
+      "detail": "under-1e-5 之 q 數 = 227"
+    },
+    {
+      "name": "C m_τ/m_b: 有理數集合在此精度下唔罕見（q 數 ≥ 3 ⟹ 精度無判別力）",
+      "pass": true,
+      "detail": "under-1e-5 之 q 數 = 106"
+    },
+    {
+      "name": "C m_H/m_W: 有理數集合在此精度下唔罕見（q 數 ≥ 3 ⟹ 精度無判別力）",
+      "pass": true,
+      "detail": "under-1e-5 之 q 數 = 391"
+    },
+    {
+      "name": "C4 ★ 結論: 「精確度」唔可以作選擇器 —— 0.0007% 級匹配喺密度上廉價",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C5 m_W/m_Z: O158 dev (0.0007%) ≪ σ_rel (0.0168%)",
+      "pass": true,
+      "detail": "精度唔可由數據分辨"
+    },
+    {
+      "name": "C5 m_τ/m_b: O158 dev (0.0668%) ≪ σ_rel (0.7177%)",
+      "pass": true,
+      "detail": "精度唔可由數據分辨"
+    },
+    {
+      "name": "C5 m_H/m_W: O158 dev (0.0740%) ≳ σ_rel (0.1367%)",
+      "pass": true,
+      "detail": "精度唔可由數據分辨"
+    },
+    {
+      "name": "C6 ★★ 觀測解析度結論: 三個配對之 dev 全部喺數據誤差內（m_τ/m_b 主要係 m_b 方案誤差 0.7%%） ⟹ 「0.0007% 命中」超出數據分辨力 ⟹ 冇證據價值",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1 五個核心結構分數全部**精確有理**（dev = 0, Fraction 級）",
+      "pass": true,
+      "detail": "5/5 有理"
+    },
+    {
+      "name": "D2 ★ 本輪未有新擬合; 正確路徑 = 由 T̂ 扇區（有理）重推三個質量比，唔可以再借 K_chain 譜比",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E1 ⚠️ 限制: R12d 之「質量比 ∈ Q∪Q(√5)」係 O152 之既有準則；本輪對佢做應用而非重證",
+      "pass": true,
+      "detail": "見 O152 scripts/05_field_theorem.py (4/4) + references R12"
+    },
+    {
+      "name": "E2 ⚠️ 若 O152 R12d 之扇區分離本身被推翻，本輪結論（A3/A4）亦需重審",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E3 ★ 已排除候選: 「*用精度*選配對」——C 段證明精度唔具判別力（廉價）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E4 ★ 已排除候選: 「*用 K_chain 譜比*表達質量比至精確閉合」——A3/B3 按域定理唔可能",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 22,
+  "n_total": 22
+}

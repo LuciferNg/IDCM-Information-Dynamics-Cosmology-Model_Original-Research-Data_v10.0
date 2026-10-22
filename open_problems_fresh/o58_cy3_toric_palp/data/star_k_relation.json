@@ -1,0 +1,65 @@
+{
+  "note": "CORRECTED 0-based. star size is triangulation-dependent (NOT universal). The universal closure is lattice point (1,1,0,0) ↔ K=-232=-8×L₇.",
+  "universal_closure": {
+    "point": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "K": -232,
+    "factor": "-8×L₇ (L₇=29)",
+    "instances": [
+      0,
+      1,
+      3,
+      50
+    ],
+    "verified": "4/4 instances with (1,1,0,0) give K=-232"
+  },
+  "canonical_negative_diag": {
+    "divisor_0": {
+      "pt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "K": -360,
+      "factor": "-8×45 (45=Σγ/2=N_d+1)"
+    },
+    "divisor_8": {
+      "pt": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "K": -232,
+      "factor": "-8×L₇ (L₇=29)"
+    },
+    "divisor_12": {
+      "pt": [
+        -23,
+        -15,
+        -6,
+        -2
+      ],
+      "K": -5
+    },
+    "divisor_17": {
+      "pt": [
+        -11,
+        -6,
+        -3,
+        -1
+      ],
+      "K": -5
+    }
+  },
+  "withdrawn": [
+    "star=8 ↔ negative K (canonical coincidence only)",
+    "(-1,-1,0,0) ↔ -360 (actual +8)",
+    "Z₂ mirror pair 29/45 (index artifact)"
+  ]
+}

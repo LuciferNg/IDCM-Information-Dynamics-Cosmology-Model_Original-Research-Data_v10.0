@@ -1,9 +1,12 @@
-# Global Routing Table — 完整文檔目錄 (2026-08-17)
+# Global Routing Table — 完整文檔目錄 (2026-10-20 結構合規更新)
 
 ## 專案概述
 
 A5 晶網 (60 節點 Rhombicosidodecahedron) 天球路由 + W-field 通信機制推導。
 本目錄包含: 路由表 → 晶體通信 → 天球無載體通信 → 拓撲位元 → 相位投影 → 電路實現 → 穩定性 → 誠實評估。
+
+> 權威狀態: `01_problem_record.md` + register (P14)；審計: `docs/31` (全面審計) + `docs/32` (逐文檔審閱)。
+> 本 README 維持文檔/腳本索引作用（非狀態權威）。
 
 ## 文檔索引 (docs/)
 
@@ -131,21 +134,13 @@ A5 晶網 (60 節點 Rhombicosidodecahedron) 天球路由 + W-field 通信機制
 - 風險可控: ¥266 淘寶零件, 一個下午砌起 🟢
 - 推薦材料: Y-128° 切 LiNbO₃ 10×10×0.5mm, 電光效應讀取
 
-## 檔案統計
+## 檔案統計（2026-10-20 實測）
 
 ```
-docs/    30 個 .md
-scripts/ 64 個 .py
-data/    60+ 個檔案 (.txt + .png)
-```
-| CMB 節點讀取 | ¥0 (Planck 公開數據) |
-
-## 檔案統計
-
-```
-docs/    21 個 .md
-scripts/ 49 個 .py
-data/    43 個檔案 (.txt + .png)
+docs/    39 個 .md（01-39）
+scripts/ 76 個 .py（01-75 + 35b + debug_frust + grt_common）
+data/    76 個檔案（57 .txt + 13 .npy + 6 .png）
+root     01_problem_record.md / README.md / SESSION_START.md / final_result.md
 ```
 
-*最後更新: 2026-08-17*
+*最後更新: 2026-10-20*（統計 2026-10-22 closeout 更新為 76/39）

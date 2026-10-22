@@ -1,0 +1,8 @@
+O204 Script 12 — 跨版本 W-field 審計: 22/22 PASS
+A v6 convention: eps=1/(4phi)=0.1545084972 kappa=1/16 W0^2=2/phi=1.2360679775
+B invariant mu2/lambda: v6=2.472136 v10=123.0 => DIFFERENT THEORY
+C radial mass: V''(rho_0)=2eps [rho=sqrt2|W|] vs V''(|W|_0)=4eps [|W|] ; ratio m^2/mu2=4 both
+D N_modes=(4phi)^36=1.5765754e+29; claimed 0.0128% requires H0=68.2087 (not 72.59)
+E v6 W_field_waves internal conflict: m_phi=123 (sec4.1) vs 174 (sec4.2/5.1/8.1)
+F v6 c formula 16phi^2*H0*xi = 299754.42 km/s (dev 0.01269%) => superseded
+G O73 sec1 formula gives W0=7.8423 (v10) but number 1.23607 (v6) => internal inconsistency

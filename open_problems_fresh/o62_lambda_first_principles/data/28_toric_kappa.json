@@ -1,0 +1,14 @@
+{
+  "test": "O62 八期 28: Toric κ",
+  "n_cones": 432,
+  "kappa_toric_nnz": 1458,
+  "match_diag": 3,
+  "n_match": 45177,
+  "n_total": 46656,
+  "scale": null,
+  "t_nnz": 61,
+  "t_zero": 843,
+  "agree": 553,
+  "passed": 0,
+  "failed": 4
+}

@@ -1,0 +1,537 @@
+{
+ "chain": [
+  {
+   "id": "20260929_172254_1aa1852b",
+   "start": 1790673774.795927,
+   "end": 1790675099.015857,
+   "reason": "compression",
+   "parent": null,
+   "msgs": 117,
+   "tools": 65
+  },
+  {
+   "id": "20260929_174458_ed8ff7",
+   "start": 1790675098.9617527,
+   "end": 1790679422.1834447,
+   "reason": "compression",
+   "parent": "20260929_172254_1aa1852b",
+   "msgs": 244,
+   "tools": 120
+  },
+  {
+   "id": "20260929_185702_e00f9b",
+   "start": 1790679422.1498015,
+   "end": 1790681388.20974,
+   "reason": "compression",
+   "parent": "20260929_174458_ed8ff7",
+   "msgs": 165,
+   "tools": 81
+  },
+  {
+   "id": "20260929_192948_999970",
+   "start": 1790681388.1678514,
+   "end": 1790684863.8425987,
+   "reason": "compression",
+   "parent": "20260929_185702_e00f9b",
+   "msgs": 230,
+   "tools": 112
+  },
+  {
+   "id": "20260929_202743_ba09e1",
+   "start": 1790684863.78091,
+   "end": 1790687401.0970583,
+   "reason": "compression",
+   "parent": "20260929_192948_999970",
+   "msgs": 228,
+   "tools": 109
+  },
+  {
+   "id": "20260929_211001_451052",
+   "start": 1790687401.0344806,
+   "end": 1790691262.9001417,
+   "reason": "compression",
+   "parent": "20260929_202743_ba09e1",
+   "msgs": 249,
+   "tools": 108
+  },
+  {
+   "id": "20260929_221422_e60c1a",
+   "start": 1790691262.8451478,
+   "end": 1790694586.4232457,
+   "reason": "compression",
+   "parent": "20260929_211001_451052",
+   "msgs": 237,
+   "tools": 112
+  },
+  {
+   "id": "20260929_230946_6fca64",
+   "start": 1790694586.395841,
+   "end": null,
+   "reason": null,
+   "parent": "20260929_221422_e60c1a",
+   "msgs": 123,
+   "tools": 60
+  }
+ ],
+ "chain_messages": 1593,
+ "ledger": {
+  "classes": {
+   "O222": 23,
+   "register": 2,
+   "master_README": 0,
+   "scratch": 18,
+   "skill": 1,
+   "OTHER": 0
+  },
+  "paths": [
+   "/home/wsl/.hermes/cache/scratch/probe05_time.py",
+   "/home/wsl/.hermes/cache/scratch/probe05_time2.py",
+   "/home/wsl/.hermes/cache/scratch/probe3.py",
+   "/home/wsl/.hermes/cache/scratch/probe3b.py",
+   "/home/wsl/.hermes/cache/scratch/probe3c.py",
+   "/home/wsl/.hermes/cache/scratch/probe_a2_axes.py",
+   "/home/wsl/.hermes/cache/scratch/probe_cmp2.py",
+   "/home/wsl/.hermes/cache/scratch/probe_cmp3.py",
+   "/home/wsl/.hermes/cache/scratch/probe_cmp4.py",
+   "/home/wsl/.hermes/cache/scratch/probe_null.py",
+   "/home/wsl/.hermes/cache/scratch/probe_null2.py",
+   "/home/wsl/.hermes/cache/scratch/probe_null3.py",
+   "/home/wsl/.hermes/cache/scratch/probe_null4.py",
+   "/home/wsl/.hermes/cache/scratch/probe_null5.py",
+   "/home/wsl/.hermes/cache/scratch/probe_perdraw.py",
+   "/home/wsl/.hermes/cache/scratch/probe_sampler_cmp.py",
+   "/home/wsl/.hermes/cache/scratch/probe_tie.py",
+   "/home/wsl/.hermes/cache/scratch/probe_tie2.py",
+   "/home/wsl/.hermes/skills/research/theory-self-falsification-harness/SKILL.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/01_problem_record.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/SESSION_START.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/01_wfield_qm_inventory.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/02_evaluation_semantics.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/03_b2_contract.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/04_b2_results.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/05_a2_contract.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/06_a2_results.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/07_b5_contract.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/08_b5_results.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/final_result.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/01_verify_wfield_qm.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/02_lazy_semantics.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/03_aut_stabilizer.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/04_b2_contract.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/05_b2_correlation.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/06_b2_gpu_verify.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/08_a2_contract.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/09_a2_rollback.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/10_a2_bruteforce.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/11_b5_contract.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/12_b5_budget.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/13_closeout_audit.py",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/problem_register/README.md",
+   "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/problem_register/register.py"
+  ]
+ },
+ "ledger_alt": {
+  "register_tool_edit": 12,
+  "prepatch_backup_copies": 14,
+  "master_README_via_python": 2
+ },
+ "coverage": {
+  "distinct": 68,
+  "missing": [],
+  "missing_nonbookkeeping": []
+ },
+ "b5_prefix": {
+  "costs": [
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ],
+  "pairs": 15,
+  "reads": 43,
+  "reads_left": 1,
+  "min_cost_next_pair": 2
+ },
+ "denominators": {
+  "E1": 120,
+  "E2": 15
+ },
+ "antipodal_dir_pairs": 62,
+ "a2_values": {
+  "E1_raw": "4",
+  "E1_distinct": "4",
+  "E1_distinct_anti": "4",
+  "E1_all4": "2",
+  "E2_raw": "4",
+  "E2_distinct": "4",
+  "E2_distinct_anti": "4",
+  "E2_all4": "3"
+ },
+ "domains": {
+  "raw": 14776336,
+  "distinct": 14303524,
+  "distinct_anti": 13388280,
+  "all4": 12517800
+ },
+ "A2_domain_count_discrepancy": {
+  "claimed": {
+   "distinct_anti": 13711284,
+   "all4": 12838884
+  },
+  "derived": {
+   "raw": 14776336,
+   "distinct": 14303524,
+   "distinct_anti": 13388280,
+   "all4": 12517800
+  },
+  "reproducible": {
+   "distinct_anti": false,
+   "all4": false
+  }
+ },
+ "b2_c2_sq": {
+  "1": 264,
+  "1/9": 1660,
+  "0": 960,
+  "4/9": 960
+ },
+ "b2_cos2_recompute": {
+  "mismatch": 0,
+  "irrational": 1920,
+  "exact_hits": 634,
+  "max_dev": "8/9",
+  "max_dev_pair": [
+   "E00",
+   "E29",
+   "1/9",
+   "1"
+  ]
+ },
+ "doc_headline_missing": {
+  "04_b2_results.md": [],
+  "06_a2_results.md": [],
+  "08_b5_results.md": []
+ },
+ "doc_headline_missing_non_derived": {
+  "04_b2_results.md": [],
+  "06_a2_results.md": [],
+  "08_b5_results.md": []
+ },
+ "doc_all_missing_raw": {
+  "04_b2_results.md": [],
+  "06_a2_results.md": [],
+  "08_b5_results.md": []
+ },
+ "manifest": {
+  "n": 29,
+  "drift": []
+ },
+ "orphan_data": [],
+ "unclosed_markers": {
+  "01_problem_record.md": 16,
+  "SESSION_START.md": 12,
+  "final_result.md": 13
+ },
+ "claims": [
+  {
+   "id": "A1 chain size = 8 sessions (thread 93184)",
+   "ok": true,
+   "detail": "ids=8"
+  },
+  {
+   "id": "A2 compression chain: parent[i] == id[i-1]",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "A3 chain is append-only in time (start monotone)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "A4 chain message total >= 1488 (live chain: snapshot, not a frozen count)",
+   "ok": true,
+   "detail": "n=1593 at audit time"
+  },
+  {
+   "id": "A5 chain span 2026-09-29 17:22 -> live (end_reason NULL on tail)",
+   "ok": true,
+   "detail": "first_start=1790673775 last_start=1790694586"
+  },
+  {
+   "id": "B1 write targets: 0 outside {O222, register, master README, scratch, skills}",
+   "ok": true,
+   "detail": "{\"O222\": 23, \"register\": 2, \"master_README\": 0, \"scratch\": 18, \"skill\": 1, \"OTHER\": 0}"
+  },
+  {
+   "id": "B2 O222 + register writes present (>=20 distinct paths)",
+   "ok": true,
+   "detail": "O222=23 register=2 (total distinct=44)"
+  },
+  {
+   "id": "B3 shell/python write channels inventoried (master README, register tool, backups)",
+   "ok": true,
+   "detail": "{\"register_tool_edit\": 12, \"prepatch_backup_copies\": 14, \"master_README_via_python\": 2}"
+  },
+  {
+   "id": "C1 assistant-narration number inventory extracted (55..90 distinct)",
+   "ok": true,
+   "detail": "n=68"
+  },
+  {
+   "id": "C2 every missing number is bookkeeping (ids / char counts)",
+   "ok": true,
+   "detail": "missing=0 non-bookkeeping=[]"
+  },
+  {
+   "id": "D1 read cost = 2*E_min exactly",
+   "ok": true,
+   "detail": "123/88 vs 123/88"
+  },
+  {
+   "id": "D2 reads per budget-exhausting pass = 44 = N_d",
+   "ok": true,
+   "detail": "reads=44 N_d=44"
+  },
+  {
+   "id": "D3 O41 self-consistency: 44 * read_cost == budget",
+   "ok": true,
+   "detail": "123/2"
+  },
+  {
+   "id": "D4 tau_deco = 2 ticks = 2 passes (88/44)",
+   "ok": true,
+   "detail": "ticks=2"
+  },
+  {
+   "id": "D5 A2 overrun = 1922/11 (~174.7x)",
+   "ok": true,
+   "detail": "1922/11"
+  },
+  {
+   "id": "D6a recorded histogram is a multiset of per-pair costs summing to 43",
+   "ok": true,
+   "detail": "costs=[2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]"
+  },
+  {
+   "id": "D6b prefix recomputed independently = 15 pairs (44-read budget, 1 read left)",
+   "ok": true,
+   "detail": "pairs=15 reads=43 left=1"
+  },
+  {
+   "id": "D6c terminal pair blocked structurally: reads left < cheapest pair cost",
+   "ok": true,
+   "detail": "left=1 < min_next=2"
+  },
+  {
+   "id": "D7 recorded k_feasible_pairs = 15 and reads = 43 agree",
+   "ok": true,
+   "detail": "json: 15 / 43"
+  },
+  {
+   "id": "D8 lexicographic pair index = 62a+b; first 15 pairs share a = 0",
+   "ok": true,
+   "detail": "[(0, 0), (0, 1), (0, 2)]..."
+  },
+  {
+   "id": "D9 budget-feasible CHSH == 0 for all four statistics",
+   "ok": true,
+   "detail": "['0', '0', '0', '0']"
+  },
+  {
+   "id": "D10 random-axis null: unrestricted median 2, feasible median = max = 0",
+   "ok": true,
+   "detail": "{\"unrestricted_median\": \"2\", \"unrestricted_max\": \"2\", \"budget_feasible_median\": \"0\", \"budget_feasible_max\": \"0\"}"
+  },
+  {
+   "id": "E1 antipodal mutual pairs = 62 (31 unordered)",
+   "ok": true,
+   "detail": "pairs=31"
+  },
+  {
+   "id": "E0 self-check separable vs sample scan E1/raw",
+   "ok": true,
+   "detail": "sample max=400 min=-352 vs global max=480 min=-480 (n_pairs=150)"
+  },
+  {
+   "id": "E0 self-check separable vs sample scan E1/distinct",
+   "ok": true,
+   "detail": "sample max=400 min=-352 vs global max=480 min=-480 (n_pairs=150)"
+  },
+  {
+   "id": "E0 self-check separable vs sample scan E1/distinct_anti",
+   "ok": true,
+   "detail": "sample max=400 min=-352 vs global max=480 min=-480 (n_pairs=150)"
+  },
+  {
+   "id": "E0 self-check separable vs sample scan E1/all4",
+   "ok": true,
+   "detail": "sample max=240 min=-240 vs global max=240 min=-240 (n_pairs=150)"
+  },
+  {
+   "id": "E0 self-check separable vs sample scan E2/raw",
+   "ok": true,
+   "detail": "sample max=50 min=-44 vs global max=60 min=-60 (n_pairs=150)"
+  },
+  {
+   "id": "E0 self-check separable vs sample scan E2/distinct",
+   "ok": true,
+   "detail": "sample max=50 min=-44 vs global max=60 min=-60 (n_pairs=150)"
+  },
+  {
+   "id": "E0 self-check separable vs sample scan E2/distinct_anti",
+   "ok": true,
+   "detail": "sample max=50 min=-44 vs global max=60 min=-60 (n_pairs=150)"
+  },
+  {
+   "id": "E0 self-check separable vs sample scan E2/all4",
+   "ok": true,
+   "detail": "sample max=30 min=-35 vs global max=45 min=-45 (n_pairs=150)"
+  },
+  {
+   "id": "E2 independent E1 all4 = 2 EXACT",
+   "ok": true,
+   "detail": "2"
+  },
+  {
+   "id": "E3 independent E2 all4 = 3 > 2",
+   "ok": true,
+   "detail": "3"
+  },
+  {
+   "id": "E4 independent distinct/raw all = 4 (diagonal artifact)",
+   "ok": true,
+   "detail": "{\"E1_raw\": \"4\", \"E1_distinct\": \"4\", \"E1_distinct_anti\": \"4\", \"E2_raw\": \"4\", \"E2_distinct\": \"4\", \"E2_distinct_anti\": \"4\"}"
+  },
+  {
+   "id": "E5 independent values == recorded chsh fields (8/8)",
+   "ok": true,
+   "detail": "{\"E1_raw\": [\"4\", \"4\"], \"E1_distinct\": [\"4\", \"4\"], \"E1_distinct_anti\": [\"4\", \"4\"], \"E1_all4\": [\"2\", \"2\"], \"E2_raw\": [\"4\", \"4\"], \"E2_distinct\": [\"4\", \"4\"], \"E2_distinct_anti\": [\"4\", \"4\"], \"E2_all4\": [\"3\", \"3\"]}"
+  },
+  {
+   "id": "E6 recorded all4 argmax attains the recorded max value",
+   "ok": true,
+   "detail": "['V00', 'V01', 'E00', 'F06']"
+  },
+  {
+   "id": "E7 recorded E1_all4 argmax attains the headline value",
+   "ok": true,
+   "detail": "['V00', 'V01', 'E00', 'F06'] -> 2 (expected 2)"
+  },
+  {
+   "id": "E7 recorded E2_all4 argmax attains the headline value",
+   "ok": true,
+   "detail": "['E27', 'E28', 'V01', 'E29'] -> 3 (expected 3)"
+  },
+  {
+   "id": "E8a combinatorial counts: all4 = 12,517,800 and distinct_anti = 13,388,280",
+   "ok": true,
+   "detail": "{\"raw\": 14776336, \"distinct\": 14303524, \"distinct_anti\": 13388280, \"all4\": 12517800}"
+  },
+  {
+   "id": "E8b direct enumeration of all4 = same 12,517,800",
+   "ok": true,
+   "detail": "enum=12517800 comb=12517800"
+  },
+  {
+   "id": "E8c B5 round recorded the CORRECT visited counts (14,303,524 / 12,517,800)",
+   "ok": true,
+   "detail": "14303524 / 12517800"
+  },
+  {
+   "id": "E8d FINDING G3: A2-recorded counts 13,711,284 / 12,838,884 NOT reproducible (correct: 13,388,280 / 12,517,800) -- values unaffected",
+   "ok": true,
+   "detail": "{\"claimed\": {\"distinct_anti\": 13711284, \"all4\": 12838884}, \"derived\": {\"raw\": 14776336, \"distinct\": 14303524, \"distinct_anti\": 13388280, \"all4\": 12517800}, \"reproducible\": {\"distinct_anti\": false, \"all4\": false}}"
+  },
+  {
+   "id": "E9 raw domain = 62^4 exactly",
+   "ok": true,
+   "detail": "14776336"
+  },
+  {
+   "id": "E10 distinct domain = 62*61*62*61",
+   "ok": true,
+   "detail": "14303524"
+  },
+  {
+   "id": "E11 brute-force JSON values reproduce the same 8 fields (where present)",
+   "ok": true,
+   "detail": "{\"E1_raw\": \"4\", \"E1_distinct\": \"4\", \"E1_distinct_anti\": \"4\", \"E1_all4\": \"2\", \"E2_raw\": \"4\", \"E2_distinct\": \"4\", \"E2_distinct_anti\": \"4\", \"E2_all4\": \"3\"}"
+  },
+  {
+   "id": "F1 B2 C^2 value set = {0,1/9,4/9,1} (as a set)",
+   "ok": true,
+   "detail": "{\"1\": 264, \"1/9\": 1660, \"0\": 960, \"4/9\": 960}"
+  },
+  {
+   "id": "F2 B2 C^2 multiplicities = {0:960, 1/9:1660, 4/9:960, 1:264}",
+   "ok": true,
+   "detail": "{\"1\": 264, \"1/9\": 1660, \"0\": 960, \"4/9\": 960}"
+  },
+  {
+   "id": "F3 independently recomputed cos^2 == recorded cos2 matrix (3844/3844)",
+   "ok": true,
+   "detail": "mismatch=0 []"
+  },
+  {
+   "id": "F4 exact hits C^2 == cos^2 : 634/3844",
+   "ok": true,
+   "detail": "hits=634"
+  },
+  {
+   "id": "F5 irrational cos^2 count = 1920/3844",
+   "ok": true,
+   "detail": "irrational=1920"
+  },
+  {
+   "id": "F6 max|C^2 - cos^2| = 8/9",
+   "ok": true,
+   "detail": "max=8/9 at ('E00', 'E29', '1/9', '1')"
+  },
+  {
+   "id": "G1 headline numbers: no non-derivable (integer / exact) value is missing",
+   "ok": true,
+   "detail": "{\"04_b2_results.md\": [], \"06_a2_results.md\": [], \"08_b5_results.md\": []}"
+  },
+  {
+   "id": "G2 headline derived-decimal list reported for review (documented in docs/09)",
+   "ok": true,
+   "detail": "{\"04_b2_results.md\": [], \"06_a2_results.md\": [], \"08_b5_results.md\": []}"
+  },
+  {
+   "id": "G3 full-doc sweep stays below 65% missing (rest are prose-derived decimals)",
+   "ok": true,
+   "detail": "{\"04_b2_results.md\": \"0/34\", \"06_a2_results.md\": \"0/15\", \"08_b5_results.md\": \"0/11\"}"
+  },
+  {
+   "id": "H1 frozen MANIFEST: 29 artefacts, drift = 0, missing = 0",
+   "ok": true,
+   "detail": "n=29 drift=0"
+  },
+  {
+   "id": "H2 no orphan data/*.json (gate-history family exempt: documented in docs/04 S12.1)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "id": "I1 unclosed markers inventoried (all carry a written verdict)",
+   "ok": true,
+   "detail": "{\"01_problem_record.md\": 16, \"SESSION_START.md\": 12, \"final_result.md\": 13}"
+  }
+ ],
+ "RESULT": {
+  "pass": 57,
+  "total": 57
+ }
+}

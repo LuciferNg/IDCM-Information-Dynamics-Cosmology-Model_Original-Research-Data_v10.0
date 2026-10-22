@@ -1,0 +1,30 @@
+brute circuits = 972000 distinct prefixes = 13578
+trail prefixes enumerated = 13578
+  mismatch(prefix len 9 end 2): brute 256 head 0 tail 0
+  mismatch(prefix len 9 end 0): brute 64 head 64 tail 64
+  mismatch(prefix len 9 end 3): brute 96 head 96 tail 96
+  mismatch(prefix len 9 end 4): brute 96 head 96 tail 96
+  mismatch(prefix len 9 end 0): brute 72 head 72 tail 72
+sum(head-root)= 958176  sum(tail-root)= 958176  | brute total 972000 EC(5)= 972000
+prefixes with head-root mismatch: 54  with tail-root mismatch: 54  unbalanced G'': 54
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/64_diag_prefix_count.py", line 99, in <module>
+    json.dump({"brute_total":tot_b,"sum_head":sumH,"sum_tail":sum0,"ec":n**(n-2)*fact(n-2)**n,
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               "prefixes":len(P),"mismatch_head":badH,"mismatch_tail":bad0,"unbalanced":unbal},
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              open(os.path.join(ROOT,"data","64_diag_prefix_count.json"),"w",encoding="utf-8"),ensure_ascii=False,indent=1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 433, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.13/json/encoder.py", line 407, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 440, in _iterencode
+    o = _default(o)
+  File "/usr/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Fraction is not JSON serializable

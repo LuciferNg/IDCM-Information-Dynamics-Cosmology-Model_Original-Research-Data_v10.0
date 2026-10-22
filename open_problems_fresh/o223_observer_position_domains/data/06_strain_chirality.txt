@@ -1,0 +1,47 @@
+============================================================================
+O223 / 06 -- strain as the geometric signature of chirality
+============================================================================
+[G] standard-frame icosahedral group Gs: 60 rotations
+    edges E = 120, all degrees = [4]
+  [OK] R1 V invariant under Gs (max residual 0.00009689 deg)
+
+[R2] face tracing: F = 62, sizes = {3: 20, 4: 30, 5: 12}
+  [OK] R2a F = 62 = 20 triangles + 30 squares + 12 pentagons
+  [OK] R2b face census {3:20, 4:30, 5:12}
+  [OK] R2c sum of face sizes = 2E = 240
+    triangle  n=20  edge len min 26.0913  max 26.0914  spread 0.0001
+    square    n=30  edge len min 26.0913  max 26.1664  spread 0.0751
+    pentagon  n=12  edge len min 26.1663  max 26.1664  spread 0.0001
+  [OK] R4a all 20 triangles equilateral (short 26.0914 deg)
+  [OK] R4b all 12 pentagons equilateral (long 26.1664 deg)
+  [OK] R4c all 30 squares alternate 2 short + 2 long
+    edge classes by bounding-face types: {(3, 4): 60, (4, 5): 60}
+  [OK] R3 120 edges split 60 (triangle+square, short) / 60 (pentagon+square, long)
+  [OK] R3b exactly two edge classes -> exactly two edge lengths
+
+[R5] delta_m = 2.670063 deg   (recorded 2.670063)
+     180 - d(0,57) = 5.340103 deg   (recorded 5.3401 = 2*delta_m)
+  [OK] R5a delta_m = 2.670063 deg reproduced from Gs axes
+  [OK] R5b antipodal approach = 2*delta_m
+
+[R6] orientation null (uniform random seed direction, 200000 draws):
+     delta_m: mean 2.5348  median 2.2346  std 1.7835  max 7.5475 deg
+     observed delta_m = 2.670063 deg -> percentile 57.8%
+  [OK] R6a delta_m = 2.6701 deg sits at percentile 57.8% of the uniform null (report only)
+  [OK] R6b an achiral orbit needs delta_m = 0: probability 0.00e+00 -> chirality is generic
+
+[R7] tilt family p(d) = cos d * p_RH + sin d * a_mirror
+     d(deg)   nn edges (deg)                split
+      0.000   [25.8786 25.8786 25.8786 25.8786] 0.0000
+      1.000   [25.9022 25.9022 25.9345 25.9345] 0.0323
+      2.000   [25.9729 25.9729 26.1015 26.1015] 0.1286
+      2.670   [26.0464 26.0464 26.2746 26.2746] 0.2282
+      4.000   [26.2534 26.2534 26.7588 26.7588] 0.5054
+      6.000   [25.3445 26.7134 26.7134 27.8189] 2.4744
+      8.000   [21.585  27.3422 27.3422 29.2367] 7.6517
+     data     [26.0913 26.0913 26.1664 26.1664] 0.0751
+  [OK] R7 strain is monotone in the mirror deviation (single-parameter family)
+
+----------------------------------------------------------------------------
+RESULT: 14/14 PASS
+----------------------------------------------------------------------------

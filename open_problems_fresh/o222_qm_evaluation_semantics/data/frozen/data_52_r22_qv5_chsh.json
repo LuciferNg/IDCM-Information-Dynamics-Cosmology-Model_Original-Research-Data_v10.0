@@ -1,0 +1,92 @@
+{
+ "denominator": 120,
+ "antipodal_pairs_authentic": 62,
+ "antipodal_pairs_Kcolumn": 112,
+ "results": {
+  "C1_raw": {
+   "max_abs_S": "4",
+   "float": 4.0,
+   "argmax": [
+    59,
+    60,
+    1,
+    60
+   ]
+  },
+  "C1_distinct": {
+   "max_abs_S": "4",
+   "float": 4.0,
+   "argmax": [
+    59,
+    60,
+    1,
+    60
+   ]
+  },
+  "C1_distinct_anti": {
+   "max_abs_S": "4",
+   "float": 4.0,
+   "argmax": [
+    59,
+    60,
+    1,
+    60
+   ]
+  },
+  "C1_all4": {
+   "max_abs_S": "2",
+   "float": 2.0,
+   "argmax": [
+    0,
+    1,
+    32,
+    18
+   ]
+  },
+  "C2_raw": {
+   "max_abs_S": "4",
+   "float": 4.0,
+   "argmax": [
+    59,
+    60,
+    10,
+    59
+   ]
+  },
+  "C2_distinct": {
+   "max_abs_S": "4",
+   "float": 4.0,
+   "argmax": [
+    59,
+    60,
+    10,
+    59
+   ]
+  },
+  "C2_distinct_anti": {
+   "max_abs_S": "4",
+   "float": 4.0,
+   "argmax": [
+    59,
+    60,
+    10,
+    59
+   ]
+  },
+  "C2_all4": {
+   "max_abs_S": "3",
+   "float": 3.0,
+   "argmax": [
+    59,
+    60,
+    1,
+    61
+   ]
+  }
+ },
+ "bounds": {
+  "classical": 2,
+  "tsirelson": "2*sqrt(2)=2.828427...",
+  "trivial": 4
+ }
+}

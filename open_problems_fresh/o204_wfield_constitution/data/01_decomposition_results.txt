@@ -1,0 +1,4 @@
+O204 Script 01 — W-field 譜基分解: 23/23 PASS
+Σγ=90.0 Σγ_odd=88.0 Σγ_even=90.0 μ²=2.0
+γ_22=2.0 γ_44=4.0 maxpairdev=1.0691059e-50
+Parseval rel dev=4.5669367e-50 reconstruct err=2.1740049e-49

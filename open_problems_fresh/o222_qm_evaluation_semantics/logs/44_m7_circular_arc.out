@@ -1,0 +1,9 @@
+==============================================================================================================
+O222 scripts/44 -- M7 rank-2 exclusion by circular-arc consistency (contract docs/29_r20_m7_contract.md)
+==============================================================================================================
+[CTRL C1] rank-2 realizable targets  -> PASS expected : [('list', 132), ('list', 19)]
+[CTRL C2] random +-1 targets         -> FAIL expected : [(False, 12), (False, 12)]
+[CTRL] decider valid = True
+[M7] 🔴 rank-2 impossible (search exhausted)  nodes = 22
+--------------------------------------------------------------------------------------------------------------
+🔴 窮盡而無共同圓序 ⟹ **秩 2 實現不可能** ⟹ `sign_rank(K) ≥ 3`；配合已認證上界 3 ⟹ **sign_rank(K) = 3 EXACT**

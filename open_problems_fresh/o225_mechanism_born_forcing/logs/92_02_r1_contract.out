@@ -1,0 +1,11 @@
+================================================================================================
+O225 scripts/02 -- R1 contract enforcer
+================================================================================================
+[PASS] C1   合約檔存在（docs/01_r1_contract.md）  --  /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/docs/01_r1_contract.md
+[PASS] C2   機器 impl 存在（scripts/03_r1_barrier.py）  --  /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/03_r1_barrier.py
+[PASS] C3   impl 無禁字集命中（float 字面值 / math / random / numpy / scipy / statistics / cmath / secrets）  --  violations = 0
+[PASS] C4   陽性對照（含 float 字面值 + import math）必須被拒 —— scanner 已受測  --  detected = ['positive-control: import math (line 2)', 'positive-control: float literal 0.5 (line 4)', 'positive-control: float literal 0.0015 (line 4)', 'positive-control: attribute math.sqrt (line 4)']
+[PASS] C5   合約含全部預註冊謂詞標籤（P4..P13）與 D5 定義  --  missing = 0
+================================================================================================
+GATE = OPEN   (contract sha256 = 2e508b5b6aa0bcdd...)
+================================================================================================

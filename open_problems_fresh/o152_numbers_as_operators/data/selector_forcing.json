@@ -1,0 +1,109 @@
+{
+ "results": [
+  {
+   "id": "R9a",
+   "result": "h¹¹ = (2N_gen)² = 36",
+   "status": "PASS",
+   "detail": "6² = 36"
+  },
+  {
+   "id": "R9b",
+   "result": "h²¹ = (2N_gen)² + 2(N_d−F₇) = 36 + 2×31 = 98",
+   "status": "PASS",
+   "detail": "N_d−F₇ = 31"
+  },
+  {
+   "id": "R9c",
+   "result": "χ = −4(N_d−F₇) = −4×31 = −124",
+   "status": "PASS",
+   "detail": "Euler 數 = −4×(世界符號位數 − F₇)"
+  },
+  {
+   "id": "R9d",
+   "result": "h¹¹+h²¹ = 134 = 4N_d − 2F₈ = 176 − 42",
+   "status": "PASS",
+   "detail": "4×44−2×21 = 134"
+  },
+  {
+   "id": "R9e",
+   "result": "鏡像對 (98,36): χ' = +124, h²¹−h¹¹ = 62 = L₁₀/2 + log₄2",
+   "status": "PASS",
+   "detail": "62 = 61.5 + 0.5 (L₁₀/2 + log₄2) — 鏡像互換保持 T̂/G2 形式"
+  },
+  {
+   "id": "R9f",
+   "result": "χ/2 = −62 為整數, |χ| = 4×31 可被 4 整除 (CY₃ Euler 一致性)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "R10a",
+   "result": "23.5 = L₈/2 = 47/2 (直接 Z₂⊗T̂ 形式)",
+   "status": "PASS",
+   "detail": "L₈ = 47"
+  },
+  {
+   "id": "R10b",
+   "result": "27.5 = F₁₀/2 = 55/2 (直接 Z₂⊗T̂ 形式)",
+   "status": "PASS",
+   "detail": "F₁₀ = 55"
+  },
+  {
+   "id": "R10c",
+   "result": "55 = C(L₅,2) = C(11,2) — 秩 11 嘅二項式 = F₁₀",
+   "status": "PASS",
+   "detail": "C(11,2) = 55"
+  },
+  {
+   "id": "R10d",
+   "result": "55 = 66 − 11 = SU(12) 非單正根數 = N_d + L₅",
+   "status": "PASS",
+   "detail": "66−11 = 44+11 = 55"
+  },
+  {
+   "id": "R10e",
+   "result": "47 = L₈ = L₁₀ − L₉ = 123 − 76 (Lucas 遞減身份)",
+   "status": "PASS",
+   "detail": "123−76 = 47"
+  },
+  {
+   "id": "R10f",
+   "result": "10 縫完整枚舉 = {奇T̂≤88}/2 = {0.5, 1.5, 2.5, 3.5, 5.5, 6.5, 10.5, 14.5, 23.5, 27.5}",
+   "status": "PASS",
+   "detail": "奇 T̂ ≤ 88: 1,3,5,7,11,13,21,29,47,55"
+  },
+  {
+   "id": "R11a",
+   "result": "F_proj = 17 = L₆−1; 44 = 17 + 27 = (L₆−1) + N_gen³",
+   "status": "PASS",
+   "detail": "18−1 = 17, 3³ = 27, 17+27 = 44"
+  },
+  {
+   "id": "R11b",
+   "result": "1 − f_unproj = 19/60 = N_gen(L₆+1)/(4(N_d+1))",
+   "status": "PASS",
+   "detail": "3×19 = 57; 57/(4×45) = 57/180 = 19/60"
+  },
+  {
+   "id": "R11c",
+   "result": "ε 分子 19 = (1−f_unproj) 分子 — 未投影分數同修正共用 L₆+1",
+   "status": "PASS",
+   "detail": "19 = L₆+1 統一"
+  },
+  {
+   "id": "R11d",
+   "result": "16 = γ₄₄² 約束 → O143 唯一解 (P 嘅測量代數 = B²)",
+   "status": "PASS",
+   "detail": "P_f: 16 個約束 (O143)"
+  },
+  {
+   "id": "R11e",
+   "result": "選擇器鏈: P→{{17, 41/60}}, SU(12)→{{12,11,66,77,132,143}}, CY₃→{{36,98,124,134}} — 全部 ∈ T̂/G2 數字域 (R6/R8/R9)",
+   "status": "PASS",
+   "detail": "三個選擇器各自選取 A 嘅唔同切片 (分數 / 群維數 / Hodge 數) — 互不相交"
+  }
+ ],
+ "n_pass": 17,
+ "n_fail": 0,
+ "total": 17
+}

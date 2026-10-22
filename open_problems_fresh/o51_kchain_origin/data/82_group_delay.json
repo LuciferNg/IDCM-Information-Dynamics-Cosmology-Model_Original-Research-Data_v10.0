@@ -1,0 +1,13 @@
+{
+  "C_energy": 0.022222,
+  "C_delay": 0.06141,
+  "C_delay_ratio": 2.7635,
+  "C_final": 0.075907,
+  "C_obs": 0.1697,
+  "F_proj": 17,
+  "n_cut": 27,
+  "chi2_orig": 27.13,
+  "chi2_corr": 35.89,
+  "pass": 0,
+  "fail": 1
+}

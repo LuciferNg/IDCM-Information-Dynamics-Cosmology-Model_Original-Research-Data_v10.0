@@ -1,0 +1,20 @@
+============================================================================================================
+O224 scripts/01 -- machine re-lock against the frozen O222 values
+============================================================================================================
+[PASS] R1      |2I| = 120 ; K = 120x62 with +1/-1 = 3720/3720 ; all 62 columns sum to 0  --  plus = 3720, minus = 3720, nonzero column sums = 0
+[PASS] R1b     axis composition = 30 edge + 20 face + 12 vertex = 62  --  {'vertex': 12, 'face': 20, 'edge': 30}
+[PASS] R2      our rebuilt C1 == frozen O222 C1_num on all 3844 entries (external check)  --  mismatches = 0 ; denominator = 120 ; axis ids identical = True
+[PASS] R3      our rebuilt C2 == frozen O222 C2 on all 3844 entries (external check)  --  mismatches = 0
+[PASS] R4      C1[a][a] = +1 EXACT for all 62 axes (memo hit, no second write)  --  all 62 diagonal entries = 1
+[PASS] R5      max|S| reproduced: E1 all4 = 2 (classical bound), E2 all4 = 3, distinct = 4 for both E1 and E2  --  E1 all4 = 2 (argmax ['V00', 'V01', 'E00', 'F06']) ; E2 all4 = 3 (argmax ['E27', 'E28', 'V01', 'E29']) ; E1 distinct = 4 ; E2 distinct = 4
+[PASS] R5b     Tsirelson 2*sqrt2 = 2.828427... is NOT reached in the feasible window (gap = 41.42% of the classical value)  --  all4 values are 2 (E1) and 3 (E2, budget-infeasible per docs/45)
+[PASS] R6      no-signalling layer reproduced: marginals 62/62 = 1/2, conditionals 3844/3844 = 1/2, ablation = 0  --  nonzero marginals = 0/62 ; nonzero conditionals = 0/3844 ; sum|C_abl| = 0
+[PASS] R7      budget/window identities: (123/2)/(123/88) = 44 = N_d reads per pass ; per-read cost = 2*E_min ; A2 pass overrun = 1922/11 = 174.7x ; reads = 3N^2 = 11532 ; hits = 2N = 124  --  reads/pass = 44 ; overrun = 1922/11 = 174.7273 ; 3N^2 = 11532 ; 2N = 124
+[PASS] R8      C1 value magnitudes == the docs/45 B2 set {0,1/15,2/15,1/5,4/15,1/3,2/3,1} exactly (8 values, 15 signed values)  --  C1: 15 distinct signed values ; magnitudes = ['0', '1/15', '2/15', '1/5', '4/15', '1/3', '2/3', '1']
+[PASS] R8b     C2 (persistent-ledger) value set reported for the record  --  15 distinct values: ['-1', '-2/3', '-1/3', '-4/15', '-1/5', '-2/15', '-1/15', '0', '1/15', '2/15', '1/5', '4/15', '...']
+[PASS] R9      redundancy: 120 initial states collapse to 60 distinct behaviours, every class of size 2 (centre Z2 2-to-1 collapse) => effective randomness log2(60) bits  --  distinct behaviours = 60 ; class sizes = [2] ; log2(60) = 5.9069 bits
+[PASS] R10     rank_R(K) = 6 EXACT (exact rational elimination, cross-checked mod p = 1000003 and p = 2^31-1)  --  rank_Q = 6 ; rank_GF(1000003) = 6 ; rank_GF(2^31-1) = 6
+[PASS] R11     explicit real 3-dim sign witness: K[i][a] = sgn(x_i . y_a) with x_i = R_{g_i} n_0 in R^3 and y_a = u_a in R^3, EXCEPT on the 1200 tied entries where the frozen H3 rule (axis-independent, function of the state alone) applies -- every one of these is verified  --  ties = 1200 (16.13% of 7440) ; mismatches = 0 ; tied entries are axis-independent = True
+[PASS] R11b    [INHERITED, not re-verified here] sign_rank(K) = 3 EXACT (O222 R20/M3 600/600 + R20/M7 circular-arc necessary condition: rank 2 impossible; quoted as provenance for the "no rank advantage" statement)  --  provenance: o222 docs/26_r19_results.md, docs/28_r20_results.md, docs/37_r23_u2_results.md
+RESULT: 15/15 PASS  (0 FAIL)
+exit=0

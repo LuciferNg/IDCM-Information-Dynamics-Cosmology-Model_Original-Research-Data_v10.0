@@ -1,0 +1,56 @@
+============================================================================
+O223 / 05 -- shell theorem + colour/T decoupling
+============================================================================
+[S] BFS shell decomposition from the anchor (node 0)
+    hop ladder = [1, 4, 8, 11, 12, 11, 8, 4, 1]   (sum = 60, diameter = 8)
+  [OK] S1 hop ladder = [1,4,8,11,12,11,8,4,1] (matches o179 record)
+[S2] SHELL THEOREM: frustrated edge <=> same shell
+    same-shell edges  = 32
+    adjacent-shell    = 88
+    total             = 120
+  [OK] S2 frustrated set == same-shell set EXACTLY (set equality)   32 edges
+  [OK] S3 |intra-shell| = 32 (frustration)
+  [OK] S4 |inter-shell| = 88 = 2*N_d (the O182 88-grid!)
+  [OK] S5 no edge connects shells differing by >= 2 (BFS property)
+[V] variance decomposition of T: why colour cannot predict T
+    total SS      =   125892.8
+    between-shell =    29888.3  (R^2 = 0.2374)
+    within-shell  =    96004.5  (1-R^2 = 0.7626)
+    -> 76.3% of the temperature variance lives INSIDE a shell
+    within-shell std per shell:
+      hop 1: n= 4  mean   -10.4  std   67.4  range  -107.0..  +36.2
+      hop 2: n= 8  mean    -3.8  std   45.7  range   -83.0..  +49.4
+      hop 3: n=11  mean   +24.1  std   37.5  range   -20.4.. +112.0
+      hop 4: n=12  mean   -14.2  std   44.2  range  -123.4..  +46.1
+      hop 5: n=11  mean    -1.9  std   42.6  range   -77.0..  +95.5
+      hop 6: n= 8  mean    -5.7  std   34.5  range   -48.3..  +71.7
+      hop 7: n= 4  mean   +23.7  std   43.7  range   -25.5..  +71.7
+[C] colour (hop parity) vs T
+    r = +0.2436   r^2 = 0.0593
+    2-group R^2 (direct) = 0.0593   -> consistency |diff| = 1.39e-17
+  [OK] C1 r^2 == 2-group R^2 (binary predictor consistency)
+  [OK] C2 R^2(colour) < R^2(shell): parity is strictly weaker than the full shell   0.0593 vs 0.2374
+  [XX] C3 within-shell variance dominates (>= 80% of total)   76.3%
+[N] permutation null for r(colour, T)
+    null: mean -0.0000  std 0.1301   observed r = +0.2436
+    z = +1.87   one-sided p = 0.9696   two-sided p = 0.0608
+  [OK] N1 |r| below 0.35 (colour is a weak predictor)
+  [XX] N2 two-sided p < 0.05 (the weak association is nevertheless real)   p = 0.0608
+[D] structural prediction: frust(i)=2  =>  theta_i = +-pi/2  =>  T_i ~ 0
+    frust(i) groups: 0 -> 8 nodes, 1 -> 40, 2 -> 12
+    mean |T|:  frust=2 ->   19.0 uK   frust=1 ->   30.4   frust=0 ->   64.8
+    frust=2 node temps: [-11.7, 10.8, 7.6, -23.6, 31.1, 10.4, 33.1, -4.1, -7.0, 58.0, 1.6, -29.5]
+    permutation: mean   32.8  std   8.3   observed   19.0   one-sided p = 0.0398
+  [OK] D1 frust=2 (Delta E = 0) nodes have smaller |T| than the field (p < 0.05)   p = 0.0398, obs = 19.0 vs null 32.8
+[J] node 9 diagnosis
+    hop(9) = 1 (shell 1)   T[9] = -107.0 uK   |T|/A = 0.797
+    shell 1 = [9, 20, 41, 50]
+    shell 1 temps = [-107.0, 35.4, -6.3, 36.2]
+    -> shell 1 contains BOTH a very cold node (-107) and hot nodes (+35,+36)
+    -> the phase theta_i is NOT a function of the shell; it is a free STATE
+  [OK] J1 node 9 is in shell 1 with |T|/A = 0.80 (a large unsaturated domain)
+  [OK] J2 shell 1 spans both signs (phase is a state, not a shell function)
+----------------------------------------------------------------------------
+RESULT: 11/13 PASS
+----------------------------------------------------------------------------
+wrote data/05_shell_decoupling.json

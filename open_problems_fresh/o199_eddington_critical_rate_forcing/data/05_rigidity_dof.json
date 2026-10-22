@@ -1,0 +1,170 @@
+{
+  "dictionary_size": {
+    "50_2term": 24,
+    "50_3term": 184,
+    "45_2term": 22,
+    "44_2term": 21,
+    "examples_50_2term": [
+      [
+        1,
+        49
+      ],
+      [
+        2,
+        48
+      ],
+      [
+        3,
+        47
+      ],
+      [
+        4,
+        46
+      ],
+      [
+        5,
+        45
+      ],
+      [
+        6,
+        44
+      ]
+    ],
+    "examples_50_3term": [
+      [
+        1,
+        2,
+        47
+      ],
+      [
+        1,
+        3,
+        46
+      ],
+      [
+        1,
+        4,
+        45
+      ],
+      [
+        1,
+        5,
+        44
+      ],
+      [
+        1,
+        6,
+        43
+      ],
+      [
+        1,
+        7,
+        42
+      ]
+    ],
+    "examples_45_2term": [
+      [
+        1,
+        44
+      ],
+      [
+        2,
+        43
+      ],
+      [
+        3,
+        42
+      ],
+      [
+        4,
+        41
+      ],
+      [
+        5,
+        40
+      ],
+      [
+        6,
+        39
+      ]
+    ],
+    "examples_44_2term": [
+      [
+        1,
+        43
+      ],
+      [
+        2,
+        42
+      ],
+      [
+        3,
+        41
+      ],
+      [
+        4,
+        40
+      ],
+      [
+        5,
+        39
+      ],
+      [
+        6,
+        38
+      ]
+    ]
+  },
+  "convention_swap": {
+    "C_energy (44-chain)": 0.022222222222222223,
+    "C_energy (176 half-set, mu^2/(sum+mu^2))": 0.011111111111111112,
+    "1/(N_d+B+mu^2) (44-chain)": 0.02,
+    "1/(2N_d+B+mu^2) (176 convention)": 0.010638297872340425
+  },
+  "discrimination": {
+    "1/50 = 2.000% vs 1/45 = 2.222%": {
+      "rel_sep": 0.10526315789473686,
+      "N_required": {
+        "s=0.30": 292.4099999999998,
+        "s=0.50": 812.2499999999995,
+        "s=0.80": 2079.3599999999997
+      }
+    },
+    "1/50 = 2.000% vs 1/44 = 2.273%": {
+      "rel_sep": 0.12765957446808512,
+      "N_required": {
+        "s=0.30": 198.8099999999999,
+        "s=0.50": 552.2499999999999,
+        "s=0.80": 1413.7600000000002
+      }
+    },
+    "1/45 = 2.222% vs 1/44 = 2.273%": {
+      "rel_sep": 0.022471910112359543,
+      "N_required": {
+        "s=0.30": 6416.010000000004,
+        "s=0.50": 17822.250000000015,
+        "s=0.80": 45624.96000000004
+      }
+    }
+  },
+  "classification": [
+    {
+      "candidate": "1/45 = C_energy",
+      "why": "spectral invariant (Z2 sector capacity asymmetry), unique expression",
+      "class": "FORCED FORM (no dictionary choice)",
+      "value": 0.022222222222222223
+    },
+    {
+      "candidate": "1/44 = mu^2/(2N_d)",
+      "why": "spectral invariant (2 phase slips per ring period), unique expression",
+      "class": "FORCED FORM (no dictionary choice)",
+      "value": 0.022727272727272728
+    },
+    {
+      "candidate": "1/50 = 1/(N_d+B+mu^2)",
+      "why": "integer sum with >= 24 decompositions in the pool",
+      "class": "DICTIONARY HIT (choice of decomposition)",
+      "value": 0.02
+    }
+  ]
+}

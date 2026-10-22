@@ -1,0 +1,25 @@
+{
+  "R_c_kpc": 48.482578888054086,
+  "V_max_kms": 409.7809396929605,
+  "M_c_Msun": 1892416506364.5876,
+  "M_c_formula": "a0\u00b7\u03bb_sync\u00b2/(44\u2074\u00b7\u03c0\u00b2\u00b7G)",
+  "V_max_formula": "c\u00b744^(-3/2)/\u221a(2\u03c0)",
+  "d_c_ladder": 3.2097764757601905,
+  "script26_correction": "27\u21929 (3\u00d7)",
+  "d_star_correction": "-2.94 (not 3.48)",
+  "Schechter_match": "M* \u2248 10\u00b9\u00b9-10\u00b9\u00b2 Msun \u2705",
+  "results": [
+    {
+      "name": "V_max (km/s)",
+      "value": 409.7809396929605,
+      "expect": 410,
+      "note": "max rotation"
+    },
+    {
+      "name": "M_c (Msun)",
+      "value": 1892416506364.5876,
+      "expect": 1890000000000.0,
+      "note": "Schechter M*"
+    }
+  ]
+}

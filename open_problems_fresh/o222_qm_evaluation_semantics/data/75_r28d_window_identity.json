@@ -1,0 +1,11 @@
+{
+ "pairs": 3844,
+ "reads": 11532,
+ "hits": 124,
+ "pops": 3844,
+ "pop_frac": "1",
+ "ticks_per_read": "1/44",
+ "pass_ticks": "2883/11",
+ "two_ticks_reads": 88,
+ "has_88": false
+}

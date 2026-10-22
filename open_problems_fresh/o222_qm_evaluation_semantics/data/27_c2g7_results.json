@@ -1,0 +1,321 @@
+{
+ "cells": {
+  "C1": {
+   "verdict": "✅",
+   "value": {
+    "steps": 3844,
+    "uniform_steps": 3844,
+    "max_L1_dev_from_uniform": "0",
+    "dev_argmax_k": null,
+    "p_value_set": [
+     "1/120"
+    ],
+    "support": 120,
+    "max_p": "1/120",
+    "min_p": "1/120",
+    "C2_reproduced_exactly": true,
+    "C2_mismatches": 0,
+    "log2_support_info_only": "6.9068905956 (log2 120)",
+    "measure_preserving_by_group_axiom": "MUL is a left translation (a bijection) => the uniform measure is invariant"
+   }
+  },
+  "C2": {
+   "verdict": "✅",
+   "value": {
+    "colsum_set": [
+     0
+    ],
+    "plus_minus_per_column": "60/60 for all 62",
+    "P_plus_minus": "1/2 EXACT for all 62 settings",
+    "cited_from": "docs/13_d6_results.md P4c (NOT re-derived here)",
+    "K_entries_are_pm1": true
+   }
+  },
+  "C3": {
+   "verdict": "✅",
+   "value": {
+    "C1": {
+     "max_abs_S_all4": "2",
+     "argmax_all4": [
+      0,
+      1,
+      32,
+      58
+     ],
+     "used_all4_tuple": true,
+     "no_gt2_instance": true,
+     "joint_measure_found": true,
+     "quartet": [
+      0,
+      1,
+      32,
+      58
+     ],
+     "E_scaled": {
+      "(0, 0)": 15,
+      "(0, 1)": -15,
+      "(1, 0)": 3,
+      "(1, 1)": -3
+     },
+     "E_fraction": {
+      "(0, 0)": "1",
+      "(0, 1)": "-1",
+      "(1, 0)": "1/5",
+      "(1, 1)": "-1/5"
+     },
+     "table_values_from_frozen_record": {
+      "(0, 0)": "1",
+      "(0, 1)": "-1",
+      "(1, 0)": "1/5",
+      "(1, 1)": "-1/5"
+     },
+     "marginals_computed": [
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2"
+     ],
+     "marginals_ok_1_2": true,
+     "correlators_from_p": {
+      "(0, 0)": "1",
+      "(0, 1)": "-1",
+      "(1, 0)": "1/5",
+      "(1, 1)": "-1/5"
+     },
+     "all_p_nonnegative": true,
+     "sum_p": "1",
+     "min_p": "0",
+     "support": 4,
+     "p_vector": [
+      "0",
+      "3/10",
+      "0",
+      "0",
+      "0",
+      "1/5",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/5",
+      "0",
+      "0",
+      "0",
+      "3/10",
+      "0"
+     ]
+    },
+    "C2": {
+     "max_abs_S_all4": "3",
+     "argmax_all4": [
+      59,
+      60,
+      1,
+      61
+     ],
+     "max_abs_S_clean": "2",
+     "argmax_clean": [
+      0,
+      1,
+      32,
+      58
+     ],
+     "used_all4_tuple": false,
+     "no_gt2_instance": false,
+     "joint_measure_found": true,
+     "quartet": [
+      0,
+      1,
+      32,
+      58
+     ],
+     "E_scaled": {
+      "(0, 0)": 15,
+      "(0, 1)": -15,
+      "(1, 0)": 3,
+      "(1, 1)": -3
+     },
+     "E_fraction": {
+      "(0, 0)": "1",
+      "(0, 1)": "-1",
+      "(1, 0)": "1/5",
+      "(1, 1)": "-1/5"
+     },
+     "table_values_from_frozen_record": {
+      "(0, 0)": "1",
+      "(0, 1)": "-1",
+      "(1, 0)": "1/5",
+      "(1, 1)": "-1/5"
+     },
+     "marginals_computed": [
+      "1/2",
+      "1/2",
+      "1/2",
+      "1/2"
+     ],
+     "marginals_ok_1_2": true,
+     "correlators_from_p": {
+      "(0, 0)": "1",
+      "(0, 1)": "-1",
+      "(1, 0)": "1/5",
+      "(1, 1)": "-1/5"
+     },
+     "all_p_nonnegative": true,
+     "sum_p": "1",
+     "min_p": "0",
+     "support": 4,
+     "p_vector": [
+      "0",
+      "3/10",
+      "0",
+      "0",
+      "0",
+      "1/5",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/5",
+      "0",
+      "0",
+      "0",
+      "3/10",
+      "0"
+     ]
+    }
+   }
+  },
+  "C4": {
+   "verdict": "✅",
+   "value": {
+    "C1": {
+     "max_abs_S_all4": "2",
+     "argmax_all4": [
+      0,
+      1,
+      32,
+      58
+     ],
+     "atomwise_max_x1y1-x1y2+x2y1+x2y2": 2,
+     "atomwise_bound_ok": true,
+     "joint_measure_exists_for_gt2_tuple": true,
+     "marginals_ok": true
+    },
+    "C2": {
+     "max_abs_S_all4": "3",
+     "argmax_all4": [
+      59,
+      60,
+      1,
+      61
+     ],
+     "atomwise_max_x1y1-x1y2+x2y1+x2y2": 2,
+     "atomwise_bound_ok": true,
+     "joint_measure_exists_for_gt2_tuple": false,
+     "marginals_ok": true,
+     "verdict": "✅ (no joint measure)"
+    }
+   }
+  },
+  "C5": {
+   "verdict": "🔴",
+   "value": {
+    "rank_R_K": 6,
+    "rows": 120,
+    "cols": 62,
+    "distinct_rows": 12,
+    "pairs_equal_or_complementary": 1140,
+    "pairs_neither": 6000,
+    "sign_rank_eq_1_iff_all_rows_equal_or_complementary": true,
+    "fooling_set_size_lower_bound": 4,
+    "fooling_set_scan": "lexicographic over (s, a) (greedy)",
+    "conclusion": "sign_rank > 1 (explicit non-complementary row pair) and rank_R(K) = 6 => K cannot come from a rank-1 sqrt(p)sqrt(p)^T amplitude structure"
+   }
+  },
+  "C6": {
+   "verdict": "✅",
+   "value": {
+    "observable_commutator_checks": 226920,
+    "observable_nonzero_commutators": 0,
+    "observables": "all diag(K[.][a]): they commute identically (zero off-diagonal)",
+    "commutator_subgroup_size": 120,
+    "group_order": 120,
+    "group_is_perfect": true,
+    "translation_pairs_not_commuting": 3720,
+    "translation_pairs_total": 3844,
+    "order": "identity of the group",
+    "reading": "non-commutativity lives in the DYNAMICS (2I is perfect: [G,G] = G), never in the observables (all diagonal => simultaneously measurable)"
+   }
+  },
+  "C7": {
+   "verdict": "🟡",
+   "value": {
+    "claim": "any non-negative normalised p is the diagonal of a rank-1 PSD matrix: take psi = phi = sqrt(p) (or sqrt(p) sqrt(p)^T)",
+    "demonstration": "psi = (3/5, 4/5, 0): diag(psi psi^T) = (9/25, 16/25, 0) = psi^2, rank = 1, sum = 1",
+    "demonstration_verified_exactly": false,
+    "frozen_p_uniform": "p = 1/120 on 120 atoms: psi psi^T with psi = 1/sqrt(120) works",
+    "discriminating_power": 0,
+    "meta": "the naive \"is p the diagonal of a rank-1 PSD matrix\" test is TRUE for every non-negative normalised p => it can never be evidence of a Hilbert-space origin (same family as the alpha_s zero-discriminating-power lesson in docs/20)"
+   }
+  }
+ },
+ "cell_order": [
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C5",
+  "C6",
+  "C7"
+ ],
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "state measure: p_k = uniform at every step (dev_L1 = 0), C2 reproduced exactly",
+   "ok": true,
+   "detail": "steps=3844 uniform=3844 maxdev=0 p=[Fraction(1, 120)] C2 mismatches=0"
+  },
+  {
+   "tag": "C2",
+   "name": "outcome measure: sum_s K[s][a] = 0 for all 62 settings (=> P(+1) = 1/2 EXACT)",
+   "ok": true,
+   "detail": "colsum set = [0] ; 60/60 for all columns"
+  },
+  {
+   "tag": "C3",
+   "name": "explicit 16-atom rational joint measure for the clean quartet (both tables)",
+   "ok": true,
+   "detail": "C1: 2; C2: 2"
+  },
+  {
+   "tag": "C4",
+   "name": "no joint measure when |S| > 2 (atom-wise bound + exact feasibility on those tuples)",
+   "ok": true,
+   "detail": "gt2 tables = ['C2']"
+  },
+  {
+   "tag": "C5",
+   "name": "K is not a rank-1 sign structure: 6000 row pairs neither equal nor complementary, rank = 6",
+   "ok": true,
+   "detail": "fooling-set lower bound = 4 (<= sign-rank)"
+  },
+  {
+   "tag": "C6",
+   "name": "observables commute identically (226920 checks, 0 non-zero) while the dynamics is non-commutative ([G,G] = 120/120, 3720/3844 translation pairs do not commute)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C7",
+   "name": "the naive Hilbert-origin test has ZERO discriminating power (exactly demonstrated)",
+   "ok": true,
+   "detail": "phi = sqrt(p) works for every p"
+  }
+ ],
+ "elapsed_s": 7.21,
+ "contract": "c2g7-contract-v1",
+ "D_common_denominator": 15,
+ "anti_pairs": 62,
+ "nodes_used": 0,
+ "samples_used": 0
+}

@@ -1,0 +1,19 @@
+/home/wsl/.local/lib/python3.13/site-packages/cytools/config.py:151: UserWarning: 
+**************************************************************
+Warning: You have enabled experimental features of CYTools.
+Some of these features may be broken or not fully tested,
+and they may undergo significant changes in future versions.
+**************************************************************
+
+  warnings.warn(
+  [PASS] K1 cytools dual(points) == data/dual_polytope_points.json (order too)  -- n=85 vs 85, identical=True
+  [PASS] K2 Delta* labels: facet-interior = 73..84, non-facet = 0..72  -- facet=[73, 74, 75]...84 | not_facet n=73
+  [PASS] K3 Delta labels: non-facet = 0..36, facet-interior = 37..47  -- not_facet n=37 facet=37..47
+  [PASS] K4 prime_toric_divisors = 1..36 ; divisor_basis omits {0,3,4,7,8}  -- basis n=32 missing=[0, 3, 4, 7, 8]
+  [PASS] K5 intersection_numbers key set = 0..36 (0 = origin), inter[(0,0,0)] = -360  -- keys n=37 min=0 max=36 inter000=-360
+  [PASS] K6 triangulating Delta* (topcom, as in O137) reproduces the saved gkz_phi  -- match=True  fresh[:5]=[360, 176, 6, 18, 113] saved[:5]=[360, 176, 6, 18, 113]
+      INFO: qhull on Delta* gives a different chamber: [360, 167, 13, 8, 10] (backend choice changes phi; the 73-label index space is invariant)
+  [PASS] K7 h11/h21 = 36/98 for the CY of this triangulation (right polytope!)  -- h11=36 h21=98
+  [FAIL] K8 (finding, expected FAIL) the phi=9 / 44=2+5+9+28 layer is triangulation-chamber invariant -- it is NOT: qhull has no phi=9 point at all  -- topcom phi9=[33, 37, 41, 44, 45, 47, 48, 50, 51] classes={'6': 2, '8': 5, '9': 9, '12': 28} | qhull phi9=[] classes={'6': 0, '8': 10, '9': 0, '12': 12} | coordinate-law set=[33, 37, 41, 44, 45, 47, 48, 50, 51]
+  RESULT: 7/8 PASS
+  wrote data/03_cytools_checks.json

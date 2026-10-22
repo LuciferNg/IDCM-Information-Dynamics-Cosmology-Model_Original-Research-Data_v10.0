@@ -1,0 +1,19 @@
+{
+  "inrange": {
+    "idcm_n": -0.6683653320190749,
+    "boss_n": -1.5324313583361993,
+    "delta_n": 0.8640660263171244,
+    "cmass_n": -1.5502176101375078,
+    "lowz_n": -1.5146451065348905
+  },
+  "fullrange": {
+    "idcm_n": -1.246778008019153,
+    "note": "6/9 lines k>0.3 out of BOSS range"
+  },
+  "line_ratios_q": null,
+  "checks": [
+    false,
+    false,
+    false
+  ]
+}

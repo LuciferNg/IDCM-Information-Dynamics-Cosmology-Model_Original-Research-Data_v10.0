@@ -1,0 +1,71 @@
+{
+ "rules": "r1-barrier-v1-audit",
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "獨立路徑重建 K（顯式 3x3 旋轉矩陣）：值重數 {+1:3720,-1:3720}；每欄 Σ_s = 0",
+   "ok": true,
+   "detail": "values = [(-1, 3720), (1, 3720)]"
+  },
+  {
+   "tag": "A2",
+   "name": "R(s) ∈ {+10,-10} 60/60；Delta = 20",
+   "ok": true,
+   "detail": "distinct = [-10, 10] hist = {'-10': 60, '10': 60}"
+  },
+  {
+   "tag": "A3",
+   "name": "Bareiss 秩：rank_Q(K) = 6；rank_Q[K|1] = 7 ⟹ 1 ∉ range(K)",
+   "ok": true,
+   "detail": "rank K = 6 ; rank [K|1] = 7"
+  },
+  {
+   "tag": "A4",
+   "name": "相異 row = 12，重數全 10",
+   "ok": true,
+   "detail": "distinct = 12 ; multiplicities = [10]"
+  },
+  {
+   "tag": "A5",
+   "name": "Cramer 規則獨立解歸一方程：唯一解 (alpha, beta) = (1/62, 0) ⟹ W 均勻 ⟹ 態盲目",
+   "ok": true,
+   "detail": "alpha = 1/62 ; beta = 0 ; det = -1240"
+  },
+  {
+   "tag": "A6",
+   "name": "獨立搜尋：m_min(K) = 10（A = 0）；且 m = 9 時無任何 A 可行（最小性顯式反證）",
+   "ok": true,
+   "detail": "m_min = 10 ; A = 0 ; m=9 infeasible = True"
+  },
+  {
+   "tag": "A7",
+   "name": "10 欄修復 ≡ -theta x10（逐項相同）且欄平衡；修復後 R' ≡ 0；n = 72",
+   "ok": true,
+   "detail": "identical = True ; col sums = [0] ; n = 72"
+  },
+  {
+   "tag": "A8",
+   "name": "beta = 1/72 之 W 非負（含 0）且歸一；相異 row = 12（態敏感）",
+   "ok": true,
+   "detail": "min entry = 0 ; distinct rows = 12"
+  },
+  {
+   "tag": "A9",
+   "name": "獨立二項式：P(單 row #(-1) ∈ {26,36}) = 2*C(62,26)/2^62；^120 為 P(全 120 row 同結構)",
+   "ok": true,
+   "detail": "C(62,26) = 209769429934732479 ; P_row = 209769429934732479/2305843009213693952 ; P_all num digits = 2079"
+  },
+  {
+   "tag": "A10",
+   "name": "對 03 報告值逐項 0-dev 一致（rank / rank_aug / Delta / null 命中 0 / 多副本 k=4 / edge 子表）",
+   "ok": true,
+   "detail": "consistent = True"
+  },
+  {
+   "tag": "A11",
+   "name": "03 全部 checks 為 PASS 且 GATE OPEN",
+   "ok": true,
+   "detail": "n_claims = 19"
+  }
+ ]
+}

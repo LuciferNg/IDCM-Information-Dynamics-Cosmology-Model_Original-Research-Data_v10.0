@@ -1,0 +1,109 @@
+{
+  "problem": "O190 attack1 modulus stability",
+  "script": "scripts/03_modulus_stability_audit.py",
+  "date": "2026-09-13T21:57:12.574811",
+  "result": "19/19 PASS",
+  "checks": [
+    {
+      "name": "Σγ = 2N+2 (所有 N)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Σodd = N (觀察者預算 = 鏈長, 所有 N)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Σeven = N+2 (世界 = 鏈長+2)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E−O = 2 = μ² (N 獨立!!)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "γ_{N/2} = 2 自對偶 (N 獨立!!)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Q = Σeven k − Σodd k = N/2 (N 獨立形式)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "BC-cost Tr(D)−Tr(N) = 2 (N 獨立!!)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mean(odd) = 2 = μ² (N 獨立)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Wilson: holonomy = i ⟺ N ≡ 0 (mod 4) (唯一 N 依賴約束)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C1: N = F_{L5} − 1 = 88 (秩鎖定唯一)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C2: 88 ≡ 0 (mod 4) (Wilson 一致)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C3: Σγ(88) = 178 = 2F₁₁ (譜和 = 2×秩 Fibonacci)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C4: Wilson 相位 (F₁₁/2)π = 44.5π (holonomy 相位 = 秩 Fibonacci 半整數)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Casimir: E_cas(N) 平滑單調 (冇 N=88 極小)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "88 = 2·B·R = 2·L3·L5 = 2·4·11 (O95 L3 雙鏈)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "33 = N_gen·R = 3·11 = K_tree 深度 (同一秩!)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F₁₁ − 1 = 2·L3·L5 (Lucas-Fibonacci 影子, O148 算術組織)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F_{L5} ≡ 1 (mod 4) → Wilson mod-4 自動滿足",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "docs/01「γ_n = csc(πn/88), γ_n+γ_{44−n}=4」混慣例: csc 階梯冇 EXACT pairing (max dev=25.018), 4sin²(nπ/88) 44鏈先有 (dev<1e-9)",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "key_findings": [
+    "Radion-Flatness: all O159/O161 spectral identities N-independent for even N",
+    "Stabilization equation: N+1 = F_L5 = 89 -> N = 88 unique (rank-locked)",
+    "GW no-go: uniform chain has no warp volume element; S_min(N) saturates",
+    "88 = 2*B*R = 2*L3*L5 (O95); 33 = N_gen*R; {88,33} = {2B,N_gen}*R"
+  ]
+}

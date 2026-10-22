@@ -1,0 +1,51 @@
+================================================================================================================
+O228 scripts/13 -- R7 (3): packing gap k_min - nu across a machine zoo (law hunt)
+================================================================================================================
+  regression M_2I    m=12  N=62  nu=2  LP*=5/2
+  regression M_face  m=20  N=62  nu=3  LP*=3
+  regression M_edge  m=30  N=62  nu=5  LP*=5
+  regression M_T     m=4   N=14  nu=1  LP*=3/2
+  regression M_O     m=6   N=26  nu=2  LP*=2
+  regression M_D4    m=2   N=10  nu=1  LP*=1
+[PASS] P3R-1  -- M_2I: nu=2 LP*=5/2 gap=2 ; M_face: nu=3 LP*=3 gap=2 ; M_edge: nu=5 LP*=5 gap=2 ; M_T: nu=1 LP*=3/2 gap=1 ; M_O: nu=2 LP*=2 gap=1 ; M_D4: nu=1 LP*=1 gap=0
+   ... zoo 10 entries (3.6 s)
+   ... zoo 20 entries (3.6 s)
+   ... zoo 30 entries (4.4 s)
+zoo size = 30 (deduped)
+   D2|(1, 1, 1)     m=4   N=6   |G|=4   k_min=2  nu=1   LP*=3/2    gap=1
+   D2|(1, 1, 0)     m=4   N=6   |G|=4   k_min=2  nu=2   LP*=2      gap=0
+   D2|(1, 0, 0)     m=2   N=6   |G|=4   k_min=1  nu=1   LP*=1      gap=0
+   D3|(1, 1, 1)     m=4   N=14  |G|=12  k_min=2  nu=1   LP*=3/2    gap=1
+   D3|(1, 1, 0)     m=12  N=14  |G|=12  k_min=4  nu=3   LP*=3      gap=1
+   D3|(1, 0, 0)     m=6   N=14  |G|=12  k_min=3  nu=2   LP*=2      gap=1
+   D3|(0, 0, 1)     m=6   N=14  |G|=12  k_min=3  nu=2   LP*=2      gap=1
+   D3|(1, 2, 0)     m=12  N=14  |G|=12  k_min=4  nu=3   LP*=3      gap=1
+   D3|(1, 1, 2)     m=12  N=14  |G|=12  k_min=5  nu=4   LP*=4      gap=1
+   D3|(2, 1, 0)     m=12  N=14  |G|=12  k_min=4  nu=3   LP*=3      gap=1
+   D4|(1, 1, 1)     m=8   N=10  |G|=8   k_min=3  nu=3   LP*=3      gap=0
+   D4|(1, 1, 0)     m=4   N=10  |G|=8   k_min=2  nu=2   LP*=2      gap=0
+   D4|(0, 0, 1)     m=2   N=10  |G|=8   k_min=1  nu=1   LP*=1      gap=0
+   D4|(1, 2, 0)     m=8   N=10  |G|=8   k_min=4  nu=4   LP*=4      gap=0
+   D4|(1, 2, 3)     m=8   N=10  |G|=8   k_min=3  nu=2   LP*=5/2    gap=1
+   D4|(1, -1, 1)    m=8   N=10  |G|=8   k_min=3  nu=3   LP*=3      gap=0
+   D4|(2, 1, 0)     m=8   N=10  |G|=8   k_min=4  nu=4   LP*=4      gap=0
+   T|(1, 1, 0)      m=12  N=14  |G|=12  k_min=4  nu=3   LP*=3      gap=1
+   T|(1, 0, 0)      m=6   N=14  |G|=12  k_min=3  nu=2   LP*=2      gap=1
+   T|(1, 2, 0)      m=12  N=14  |G|=12  k_min=4  nu=3   LP*=3      gap=1
+   T|(1, 1, 2)      m=12  N=14  |G|=12  k_min=5  nu=None LP*=4      gap=None
+   T|(2, 1, 0)      m=12  N=14  |G|=12  k_min=4  nu=3   LP*=3      gap=1
+   S4|(1, 1, 1)     m=8   N=26  |G|=24  k_min=3  nu=2   LP*=2      gap=1
+   S4|(1, 1, 0)     m=12  N=26  |G|=24  k_min=4  nu=3   LP*=3      gap=1
+   S4|(1, 0, 0)     m=6   N=26  |G|=24  k_min=3  nu=2   LP*=2      gap=1
+   S4|(1, 2, 0)     m=24  N=26  |G|=24  k_min=6  nu=5   LP*=5      gap=1
+   S4|(1, 1, 2)     m=24  N=26  |G|=24  k_min=6  nu=4   LP*=4      gap=2
+   S4|(1, 2, 3)     m=24  N=26  |G|=24  k_min=6  nu=4   LP*=4      gap=2
+   S4|(1, -1, 1)    m=8   N=26  |G|=24  k_min=3  nu=2   LP*=2      gap=1
+   S4|(2, 1, 0)     m=24  N=26  |G|=24  k_min=6  nu=None LP*=5      gap=None
+[PASS] P3a-1  -- entries=30 complete=28
+[PASS] P3b-1  -- gap by m = {'2': [0], '4': [0, 1], '6': [1], '8': [0, 1], '12': [1], '24': [1, 2]} ; counterexamples at m = [4, 8, 24]
+[PASS] P3b-2  -- gap values seen = [0, 1, 2] ; distribution = {0: 8, 1: 18, 2: 2}
+================================================================================================================
+RESULT: 4/4 PASS  (0 FAIL)   elapsed 4.4 s
+================================================================================================================
+exit=0

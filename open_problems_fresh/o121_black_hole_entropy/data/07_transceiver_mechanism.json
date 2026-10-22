@@ -1,0 +1,17 @@
+{
+  "title": "收發機制: 截斷接收端, 傳播端完好",
+  "propagation_end": {
+    "A_n_ne_0": true,
+    "v_g_finite": true,
+    "sync_energy_kept": 60.88453690585779,
+    "SigmaGamma": 90.0
+  },
+  "reception_end": {
+    "V_sync_modes": 0.0,
+    "V_proj_modes": "A_n",
+    "bottleneck_V": 1.2682082850597385
+  },
+  "bh_antiprojection": "T_pipe†=I−T_pipe: 已投影模式接收反轉, 物質→sync, ΔE守恆",
+  "generation_measurement_duality": "O36: 質量∝讀數∝干涉可見度 → 截斷接收=截斷生成",
+  "verdict": "接收端(投影/干涉結晶)被截斷; 傳播端(W-field模式)完好; 黑洞=接收端反向操作"
+}

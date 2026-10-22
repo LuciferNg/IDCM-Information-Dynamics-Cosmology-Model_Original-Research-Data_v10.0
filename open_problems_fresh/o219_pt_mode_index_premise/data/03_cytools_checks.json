@@ -1,0 +1,42 @@
+[
+ {
+  "check": "K1 cytools dual(points) == data/dual_polytope_points.json (order too)",
+  "ok": true,
+  "detail": "n=85 vs 85, identical=True"
+ },
+ {
+  "check": "K2 Delta* labels: facet-interior = 73..84, non-facet = 0..72",
+  "ok": true,
+  "detail": "facet=[73, 74, 75]...84 | not_facet n=73"
+ },
+ {
+  "check": "K3 Delta labels: non-facet = 0..36, facet-interior = 37..47",
+  "ok": true,
+  "detail": "not_facet n=37 facet=37..47"
+ },
+ {
+  "check": "K4 prime_toric_divisors = 1..36 ; divisor_basis omits {0,3,4,7,8}",
+  "ok": true,
+  "detail": "basis n=32 missing=[0, 3, 4, 7, 8]"
+ },
+ {
+  "check": "K5 intersection_numbers key set = 0..36 (0 = origin), inter[(0,0,0)] = -360",
+  "ok": true,
+  "detail": "keys n=37 min=0 max=36 inter000=-360"
+ },
+ {
+  "check": "K6 triangulating Delta* (topcom, as in O137) reproduces the saved gkz_phi",
+  "ok": true,
+  "detail": "match=True  fresh[:5]=[360, 176, 6, 18, 113] saved[:5]=[360, 176, 6, 18, 113]"
+ },
+ {
+  "check": "K7 h11/h21 = 36/98 for the CY of this triangulation (right polytope!)",
+  "ok": true,
+  "detail": "h11=36 h21=98"
+ },
+ {
+  "check": "K8 (finding, expected FAIL) the phi=9 / 44=2+5+9+28 layer is triangulation-chamber invariant -- it is NOT: qhull has no phi=9 point at all",
+  "ok": false,
+  "detail": "topcom phi9=[33, 37, 41, 44, 45, 47, 48, 50, 51] classes={'6': 2, '8': 5, '9': 9, '12': 28} | qhull phi9=[] classes={'6': 0, '8': 15, '9': 0, '12': 10} | coordinate-law set=[33, 37, 41, 44, 45, 47, 48, 50, 51]"
+ }
+]

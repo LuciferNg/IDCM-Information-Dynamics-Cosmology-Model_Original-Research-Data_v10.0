@@ -1,0 +1,18 @@
+N (axes) = 62
+full pass: {'pairs': 3844, 'reads': 11532, 'misses': 11408, 'pops': 3844, 'hits': 124, 'net_ledger': 7564, 'first_hit': 62} | 2N = 124 | 2N(N-1) = 7564
+lex       pairs=3844 axes=62 hits=124 (2N'=124) net=7564
+diag      pairs=3844 axes=62 hits=124 (2N'=124) net=7564
+antidiag  pairs=3844 axes=62 hits=123 (2N'=124) net=7565
+block     pairs=3844 axes=62 hits=1954 (2N'=124) net=5734
+stride    pairs=3844 axes=62 hits=124 (2N'=124) net=7564
+subset N= 4 pairs=  16 hits=  8 (2N=  8, 3N^2-2N=  40?) net=   24 (2N(N-1)=   24)
+subset N= 8 pairs=  64 hits= 16 (2N= 16, 3N^2-2N= 176?) net=  112 (2N(N-1)=  112)
+subset N=12 pairs= 144 hits= 24 (2N= 24, 3N^2-2N= 408?) net=  264 (2N(N-1)=  264)
+subset N=16 pairs= 256 hits= 32 (2N= 32, 3N^2-2N= 736?) net=  480 (2N(N-1)=  480)
+subset N=31 pairs= 961 hits= 62 (2N= 62, 3N^2-2N=2821?) net= 1860 (2N(N-1)= 1860)
+subset N=62 pairs=3844 hits=124 (2N=124, 3N^2-2N=11408?) net= 7564 (2N(N-1)= 7564)
+shuffle#0 hits=124 (2N=124) net=7564
+shuffle#1 hits=124 (2N=124) net=7564
+shuffle#2 hits=124 (2N=124) net=7564
+
+CLOSED-FORM CHECK: hits == 2N and net == 2N(N-1) over all tested orders? False

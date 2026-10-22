@@ -1,0 +1,25 @@
+================================================================================================================
+O228 scripts/17 -- R8: critical sub-machine for k_min(edge) = 7  (short certificate hunt)
+================================================================================================================
+full machine: budget_exceeded (nodes 2000001, pairs 435)
+peel: |R0| = 30 rows [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29] ; steps 30 ; budget-exceeded steps 30
+final R0: status budget_exceeded (nodes 2000001, pairs 435)
+removal-minimal: False  (0/30 removals give a 6-cover)
+R0 catalogue: greedy packing 5 ; exact LP 5 ; arrangement cap(6) = 32 >= 30
+[FAIL] P4-1  -- |R0| = 30 (predicted <= 16) ; status budget_exceeded
+[FAIL] P4-2  -- 0/30 single removals give a 6-cover ; budget-exceeded in peel = 30
+[FAIL] P4-3  -- greedy packing = 5 ; exact LP = 5 -- both <= 5 as the monotonicity no-go predicts
+[PASS] P4-4  -- cap(6) = 32 ; |R0| = 30
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/17_r8_critical_submachine.py", line 234, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/17_r8_critical_submachine.py", line 207, in main
+    claim('P4-5', 'RECORD: the critical sub-machine is a strictly smaller certificate instance than the full '
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  'machine: |R0| rows / %d pairs vs %d rows / %d pairs; the exhaustive certificate costs %d '
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  'nodes (budget %d)' % (len(R), len(Rp), m, NP, ndR, BUDGET),
+                  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+exit=1

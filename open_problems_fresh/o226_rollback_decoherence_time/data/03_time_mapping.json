@@ -1,0 +1,252 @@
+{
+ "rules_version": "o226-r1-contract-v1",
+ "table": [
+  {
+   "object": "read (miss)",
+   "type": "D",
+   "predicate": "charges c = 123/88, advances G <- G.h(ctx)",
+   "value": "1/44",
+   "unit": "tick"
+  },
+  {
+   "object": "read (memo hit)",
+   "type": "H",
+   "predicate": "returns the recorded value, no write, no charge",
+   "value": "0",
+   "unit": "tick"
+  },
+  {
+   "object": "rollback (pop)",
+   "type": "R",
+   "predicate": "inverse: restores G to the recorded state, no charge",
+   "value": "0",
+   "unit": "tick"
+  },
+  {
+   "object": "reconcile read (3rd read of a pair)",
+   "type": "D",
+   "predicate": "charged like any miss read, but observationally redundant (J1/Pr-1.4)",
+   "value": "1/44",
+   "unit": "tick"
+  },
+  {
+   "object": "pair (feasible prefix, a=b)",
+   "type": "D",
+   "predicate": "2 charged reads inside the pair",
+   "value": "1/22",
+   "unit": "tick"
+  },
+  {
+   "object": "pair (feasible prefix, a!=b)",
+   "type": "D",
+   "predicate": "3 charged reads inside the pair",
+   "value": "3/44",
+   "unit": "tick"
+  },
+  {
+   "object": "feasible pass (budget-exhausting)",
+   "type": "D",
+   "predicate": "N_d = 44 charged reads",
+   "value": "1",
+   "unit": "tick"
+  },
+  {
+   "object": "full pass (counterfactual)",
+   "type": "D",
+   "predicate": "3N^2 = 11532 read operations",
+   "value": "2883/11",
+   "unit": "tick"
+  },
+  {
+   "object": "tick",
+   "type": "-",
+   "predicate": "N_d = 44 miss reads (I5 / F6)",
+   "value": "1",
+   "unit": "tick"
+  },
+  {
+   "object": "tau_deco",
+   "type": "-",
+   "predicate": "2 budget-exhausting passes (F6)",
+   "value": "2",
+   "unit": "tick"
+  },
+  {
+   "object": "Gamma",
+   "type": "-",
+   "predicate": "1/(2 tick) exit rate of a budget-exhausting pass",
+   "value": "1/2",
+   "unit": "tick^-1"
+  },
+  {
+   "object": "E_sync",
+   "type": "-",
+   "predicate": "44 x 123/88 = 123/2 = the whole pass budget",
+   "value": "123/2",
+   "unit": "energy"
+  },
+  {
+   "object": "DeltaE_read",
+   "type": "-",
+   "predicate": "B(n) = 2 E_min",
+   "value": "123/88",
+   "unit": "energy"
+  },
+  {
+   "object": "E_min",
+   "type": "-",
+   "predicate": "Landauer lower bound (F6 I3)",
+   "value": "123/176",
+   "unit": "energy"
+  },
+  {
+   "object": "pass account: hits",
+   "type": "H",
+   "predicate": "N diagonal hits + N carry hits = 2N",
+   "value": "124",
+   "unit": "count"
+  },
+  {
+   "object": "pass account: misses",
+   "type": "D",
+   "predicate": "3N^2 - 2N = 11408 charged misses",
+   "value": "11408",
+   "unit": "count"
+  },
+  {
+   "object": "pass account: pops",
+   "type": "R",
+   "predicate": "N^2 = 3844 pops, one per pair",
+   "value": "3844",
+   "unit": "count"
+  },
+  {
+   "object": "pass account: read operations",
+   "type": "-",
+   "predicate": "3N^2 = 11532 (3 per pair)",
+   "value": "11532",
+   "unit": "count"
+  }
+ ],
+ "tick_gyr": "4808807/5000000",
+ "one_read_tick": "1/44",
+ "full_pass_tick": "2883/11",
+ "cost_family": [
+  {
+   "k": 1,
+   "reads_per_tick": "88",
+   "structure_pool_hit": "2N_d"
+  },
+  {
+   "k": 2,
+   "reads_per_tick": "44",
+   "structure_pool_hit": "N_d"
+  },
+  {
+   "k": 4,
+   "reads_per_tick": "22",
+   "structure_pool_hit": "N_d/2"
+  },
+  {
+   "k": 8,
+   "reads_per_tick": "11",
+   "structure_pool_hit": null
+  },
+  {
+   "k": 11,
+   "reads_per_tick": "8",
+   "structure_pool_hit": "2B = F_6"
+  },
+  {
+   "k": 22,
+   "reads_per_tick": "4",
+   "structure_pool_hit": "B = mu^2*B/... = B"
+  },
+  {
+   "k": 44,
+   "reads_per_tick": "2",
+   "structure_pool_hit": "2"
+  },
+  {
+   "k": 88,
+   "reads_per_tick": "1",
+   "structure_pool_hit": "1"
+  }
+ ],
+ "pool_hits": [
+  1,
+  2,
+  4,
+  11,
+  22,
+  44,
+  88
+ ],
+ "gauge_s_X": {
+  "read (miss)": -1,
+  "rollback (pop)": 0,
+  "feasible pass": -1,
+  "full pass": -1,
+  "tick": -1,
+  "tau_deco": -1,
+  "Gamma": 1,
+  "E_sync": 0,
+  "DeltaE_read": 0,
+  "tau_deco/tick": 0,
+  "full pass/tick": 0,
+  "reads/tick": 0
+ },
+ "gauge_keys": {
+  "absolute_time": [
+   "read (miss)",
+   "feasible pass",
+   "full pass",
+   "tick",
+   "tau_deco",
+   "Gamma"
+  ],
+  "ratios": [
+   "tau_deco/tick",
+   "full pass/tick",
+   "reads/tick"
+  ]
+ },
+ "claims": [
+  {
+   "tag": "T1",
+   "name": "Pr-1.1: the matching table is complete -- every machine object carries a type (D/H/R), a structural predicate and an exact rational value",
+   "ok": true,
+   "detail": "rows = 18 ; D/H/R counts = 7/2/2"
+  },
+  {
+   "tag": "T2",
+   "name": "Pr-1.2: 1 miss read = 1/44 tick ; tick = 44 = N_d ; full pass = 11532/44 = 2883/11 tick ; Gamma = 1/(2 tick) ; tau_deco = 2 tick",
+   "ok": true,
+   "detail": "full pass = 2883/11 tick = 262.090909 ; tau_deco = 2.0 tick = 1.9235228 Gyr"
+  },
+  {
+   "tag": "T3",
+   "name": "R-type (rollback) rows carry duration 0 and D-type rows carry the charge c: the type column is part of the table, not a numeric coincidence (duration rows only)",
+   "ok": true,
+   "detail": "duration rows = 10 ; D positive = True ; H/R zero = True"
+  },
+  {
+   "tag": "T4",
+   "name": "Pr-1.3: within the cost family c = k.E_min the number and identity of the reads-per-tick values that land on the structure pool is >= 5  =>  the numeric match \"44 = N_d\" has ZERO discriminating power on its own (k = 1 also gives 88 = 2N_d)",
+   "ok": true,
+   "detail": "integer-count k = [1, 2, 4, 8, 11, 22, 44, 88] ; pool hits = ['k=1->88(2N_d)', 'k=2->44(N_d)', 'k=4->22(N_d/2)', 'k=11->8(2B = F_6)', 'k=22->4(B = mu^2*B/... = B)', 'k=44->2(2)', 'k=88->1(1)']"
+  },
+  {
+   "tag": "T5",
+   "name": "Pr-1.5: uniqueness of the time map is CONDITIONAL -- it is forced by (i) the read-cost law c = 2 E_min and (ii) the tick anchor; unconditional uniqueness is refuted by T4",
+   "ok": true,
+   "detail": "forced by I4 (cost law) + I5 (N_d reads per tick) + F7 (anchor); free inputs = 1 anchor only"
+  },
+  {
+   "tag": "T6",
+   "name": "Pr-1.6: every absolute time carries s_X = -1 (one unit convention); every ratio (tau_deco/tick = 2, full pass/tick = 2883/11, reads/tick = 44) is gauge invariant (s_X = 0) => the time map has exactly one anchored dimensionful input",
+   "ok": true,
+   "detail": "s_X: {\"read (miss)\": -1, \"rollback (pop)\": 0, \"feasible pass\": -1, \"full pass\": -1, \"tick\": -1, \"tau_deco\": -1, \"Gamma\": 1, \"E_sync\": 0, \"DeltaE_read\": 0, \"tau_deco/tick\": 0, \"full pass/tick\": 0, \"reads/tick\": 0}"
+  }
+ ]
+}

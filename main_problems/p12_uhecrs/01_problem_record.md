@@ -1,12 +1,12 @@
 # P12 — UHECR 超高能宇宙射線（晶體應力釋放詳情）
 
 <!-- registry
-pid:     uhecrs
-title:   UHECR 超高能宇宙射線（晶體應力釋放詳情）
+pid:     P12
+title:   P12 — UHECR 超高能宇宙射線（晶體應力釋放詳情）
 state:   open
 verdict: -
 flags:   -
-owner:   uhecrs
+owner:   P12
 created: 2026-10-05
 updated: 2026-10-20
 prereq:  O7, O110, O121, O173

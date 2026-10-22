@@ -1,0 +1,76 @@
+{
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "exact ranks reproduced by fraction-free elimination: rank(C1) = 61, rank(C2) = 62, rank(C1rev) = 61 (all > 1 => not factorisable)",
+   "ok": true,
+   "detail": "recorded = 61/62/61"
+  },
+  {
+   "tag": "A0",
+   "name": "group table has a unique identity (index 75) and every element an inverse",
+   "ok": true,
+   "detail": "identity index = 75"
+  },
+  {
+   "tag": "A2",
+   "name": "axis orbits recomputed with an independently coded exact quaternion conjugation (no rot_ref): sizes = [12, 20, 30], type-invariant = True, orbits = 3",
+   "ok": true,
+   "detail": "recorded = [12, 20, 30] ; (q, axis) images matched = 7440/7440"
+  },
+  {
+   "tag": "A2b",
+   "name": "frozen kernel reconstructed exactly from the geometry + the tie rule: 0 mismatches of 7440, ties (vanishing dot) = 1200",
+   "ok": true,
+   "detail": "ties = 1200/7440 = 16.13% of the kernel"
+  },
+  {
+   "tag": "A3",
+   "name": "the 62 axes form exactly 31 antipodal pairs (double cover of 31 lines), each axis with exactly one antipode",
+   "ok": true,
+   "detail": "recorded antipodal_pairs = 31"
+  },
+  {
+   "tag": "A4",
+   "name": "closed-form memo law predicts every observed read count: 33/33 pairs (misses = 3 - [top == a] - [b == a])",
+   "ok": true,
+   "detail": "recorded memo_hit_pairs = 14 ; audit hits = 14"
+  },
+  {
+   "tag": "A5",
+   "name": "per-pair ledger growth (misses - 1) is at least 1 > 0 on every witnessed pair => the rollback never restores the record",
+   "ok": true,
+   "detail": "recorded total growth = [28, 24]"
+  },
+  {
+   "tag": "A6",
+   "name": "history-sensitive settings = 62/62 and outcome-balanced axes = 62/62 (marginal 1/2)",
+   "ok": true,
+   "detail": "recorded 62 / 62"
+  },
+  {
+   "tag": "A7",
+   "name": "P4b cites the B3R2 record exactly (16/15, 13/15, 2, 3) and adds no new number",
+   "ok": true,
+   "detail": "B3R2 14/14 = True"
+  },
+  {
+   "tag": "A8",
+   "name": "verdict table integrity: 13 cells, all with a verdict and a value",
+   "ok": true,
+   "detail": "table = ✅✅🟡✅✅✅🔴✅✅🔴✅🔴✅"
+  }
+ ],
+ "ranks": {
+  "C1": 61,
+  "C2": 62,
+  "C1rev": 61
+ },
+ "antipodal_pairs": 31,
+ "memo_law": {
+  "pairs": 33,
+  "pred_ok": 33,
+  "growth_min": 1,
+  "hits": 14
+ }
+}

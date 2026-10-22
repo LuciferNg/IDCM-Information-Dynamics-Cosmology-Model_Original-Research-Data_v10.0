@@ -1,0 +1,6 @@
+O31 Attractor Tri-state: RH∞ vs String 10^500 vs IDCM 88
+
+CY3(36,98): h11=36, h21=98, b3=198, 2b3=396
+Flux vacua: N_vac ≈ (2πL)^396/396! = 10^500 at L=140.6
+IDCM: 88 fixed points (44 nulls + 44 peaks), all realized
+Conclusion: ∞ → pseudo-infinity 10^500 → finite 88

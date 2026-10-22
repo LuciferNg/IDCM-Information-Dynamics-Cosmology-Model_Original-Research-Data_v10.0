@@ -13,7 +13,7 @@
 - **正確 associativity 定義**（WDVV / Frobenius manifold）：
   `C^q_ab = d_abp g^{pq}`（g = metric），要求 `(a*b)*c == a*(b*c)`：
   `Σ_p C^p_ab · C^d_pc == Σ_p C^p_bc · C^d_ap`
-- **metric 候選**：p15 solver 用 `g = d·ones(12)`（`compute_wdvv_loss` 定義）；docs/14 用 `g = Y = d·v12`。
+- **metric 候選**：P15 solver 用 `g = d·ones(12)`（`compute_wdvv_loss` 定義）；docs/14 用 `g = Y = d·v12`。
 - docs/13-14 + 31_verify_all:183/186/220 嘅「associativity error = 0.00」一律只驗
   `d_sq − d_sq.transpose(1,0,2,3)`（三階對稱張量自動成立）⇒ **同義反覆，非 associativity**。
 
@@ -29,7 +29,7 @@
 | ring assoc（無 metric） | — | 1.588 | 唔成立 |
 
 **根源**：`g_ones = d·ones` 嘅 eig = {−7.90, −0.99, …, 43.38} —— **min eig < 0 ⇒ g 唔正定 ⇒ Frobenius metric 唔存在 ⇒ associativity 無從成立**。
-p15 solver 嘅 loss（0.0165/0.17）係局部極小，受 `λ_pos=100` 懲罰主導，**從未收斂到 associativity=0**。
+P15 solver 嘅 loss（0.0165/0.17）係局部極小，受 `λ_pos=100` 懲罰主導，**從未收斂到 associativity=0**。
 
 ### 2.2 36D κ（真 CYTools intersection numbers）
 
@@ -70,7 +70,7 @@ p15 solver 嘅 loss（0.0165/0.17）係局部極小，受 `λ_pos=100` 懲罰主
    - SVD 比 47 = K_tree+2L₄（47.001）
    - **12D eigenvalue 閉合全系列**（λ_max/tr/λ₂/v_geom，dev ≤0.03%）
 3. 🟡 **新定性**：12D = **K_Chain eigenvalue 閉合張量**（v12-contraction 譜滿足結構公式），
-   唔係「Frobenius algebra」；「WDVV solution」標籤降格為「p15 求解器輸出（未證實 associativity）」。
+   唔係「Frobenius algebra」；「WDVV solution」標籤降格為「P15 求解器輸出（未證實 associativity）」。
 
 ## 四、O53 側 handoff 發現（記錄，唔改 O53）
 

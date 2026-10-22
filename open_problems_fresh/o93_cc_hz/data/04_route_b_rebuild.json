@@ -1,0 +1,14 @@
+{
+  "route": "B_rebuild",
+  "best_model": "D_diff",
+  "best_power": 0.1,
+  "chi2_best": 27.9362,
+  "chi2_lcdm": 0.6055,
+  "hd_mean": 271025.0,
+  "hd_std_ratio": 0.964,
+  "d14_avg_beat": 0.931705,
+  "d22_avg_beat": 1.054338,
+  "pass": 1,
+  "fail": 3,
+  "status": "\ud83d\udfe1"
+}

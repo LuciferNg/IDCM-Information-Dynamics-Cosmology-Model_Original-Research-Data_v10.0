@@ -1,0 +1,8 @@
+{
+  "Delta_c": 177.65646215398345,
+  "Delta_c_formula": "L6 \u00d7 Nd\u00b2 \u00d7 (\u03bb_sync/R_H)\u00b2 = 18\u03c0\u00b2",
+  "L6": 18,
+  "L6_derivation": "\u03c6\u2076 + \u03c6\u207b\u2076 = 17.944+0.056 = 18",
+  "pi_derivation": "44\u00b7\u03bb_sync/R_H = 44 \u00d7 294.88/4129.94",
+  "status": "IDCM decode: \u0394_c = L\u2086 \u00d7 \u03c0\u00b2 = 18\u03c0\u00b2 \u2705"
+}

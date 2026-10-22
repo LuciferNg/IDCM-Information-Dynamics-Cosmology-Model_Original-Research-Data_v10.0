@@ -1,0 +1,14 @@
+{
+  "test": "O111 攻堅 2: 19 機制",
+  "c_star": 18.993070999999986,
+  "c_star_vs_19": 0.00692900000001373,
+  "mechanisms": {
+    "P̂ projection gap": "19 = N_d − (F₈+B) = 44 − 25",
+    "rho_L": "exp(-F) × exp(-N_d) × exp(+25)",
+    "CPX_rank_gap": 25,
+    "world_chain": 44,
+    "gauge_origin": "幾何非微擾 (P̂ rank theorem)"
+  },
+  "passed": 1,
+  "failed": 0
+}

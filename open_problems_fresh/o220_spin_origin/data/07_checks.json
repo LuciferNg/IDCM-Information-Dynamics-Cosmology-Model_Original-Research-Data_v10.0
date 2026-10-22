@@ -1,0 +1,132 @@
+{
+  "script": "07_chirality_time_arrow_identity",
+  "date": "2026-09-28",
+  "det_equivariance_worst": 1.2201734982292741e-13,
+  "axial_worst": 3.3771818326322334e-15,
+  "A5_improper_residual_deg": 5.340202135329706,
+  "achiral_improper_residual_deg": 1.4787793334710982e-06,
+  "checks": [
+    {
+      "name": "A1 |I| = 60, |I_h| = 120, |A2| = 15（2-fold 軸 = 鏡面法向）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A2 ★★ δ(gx) = det(g)·δ(x) ∀g ∈ I_h（120 元素 × 4 隨機種子）",
+      "pass": true,
+      "detail": "worst rel dev = 1.22e-13"
+    },
+    {
+      "name": "A3 δ 之零集 = 15 條鏡面（取每條平面內之點 ⟹ δ = 0）",
+      "pass": true,
+      "detail": "max |δ| = 2.3e-17"
+    },
+    {
+      "name": "A4 δ(−x) = (−1)^15 δ(x) = −δ(x)（15 次奇 ⟹ ε(−I) = −1；I_h^ab = Z₂ ⟹ **ε = det**）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B1 軸向量定義: axial(rot_axis(u,θ)) ∥ u（|angle| = 0.00e+00 deg）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B2 ★★ axial(g R gᵀ) = det(g)·(g·axial(R)) ∀g ∈ I_h（偽向量律）",
+      "pass": true,
+      "detail": "worst dev = 3.38e-15"
+    },
+    {
+      "name": "B3 ★ 反射（det = −1）⟹ 軸向量**變號**（|ax+rot_ax| = 0.0e+00 ≪ |ax−rot_ax| = 2.000） ⟹ 旋轉 sense 反 ⟹ **時間 sense 反**（同一個 det 標籤）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C1 W = Π_{k=1..88}U_k = e^{i·44.5π} = i ⟹ 繞數 89/4 ⟹ class [1/4] ∈ Z₄",
+      "pass": true,
+      "detail": "W = (-2.07086e-39 + 1.0j), w = 22.25"
+    },
+    {
+      "name": "C2 ★ 時間反演（t→−t ⇔ k→−k）: W ↦ W* = W⁻¹ = −i ⟹ class [1/4] ↦ [3/4]（Z₄ 反演）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C3 ★ Aut(Z₄) ≅ Z₂，非平凡元素 = 反演（i ↦ i⁻¹）⟹ 與手性同一個 Z₂ 抽象群",
+      "pass": true,
+      "detail": "{1/4, 3/4} = 兩個生成元類（互逆）"
+    },
+    {
+      "name": "C4 ★ 譜 γ **偶**（γ_{−k} = γ_k, dev 0.0e+00）⟹ 譜本身**冇箭頭**；色散 ω **奇**（ω_{−k} = −ω_k） ⟹ 傳播 sense 有箭頭",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C5 ord(W) = 4 ⟹ 4 圈回歸 ⟹ holonomy **本身**唔提供箭頭（與 O213 docs/06 §五「環週期 ⟹ 本徵無箭頭」一致）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1 δ 在 I_h 內之 stabilizer 階 = 60（= |I|，全 proper）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D2 ★★ δ 之 flip set = {det = −1} 之集合（|flip| = 60, |improper| = 60）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D3 ★★ 三個量（手性 δ / 軸向 sense / winding class）之 stabilizer 皆 = I 且 flip set 皆 = improper 餘集 ⟹ 作為 Z₂ 標籤**完全相同** ⟹ 嚴格同一（非相關、非類比）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E1 ★ tightness: 非手性集（I_h-軌道, 120 點）improper 殘差 = 1.48e-06° ⟹ 集係自身鏡像 ⟹ sense 不可區分（δ 之手性判別消失）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E2 ★ A₅ 60-軌道: improper 殘差 = 5.3402° ≫ 0 ⟹ mirror(A₅) ≠ A₅ ⟹ sense 可區分 （同 O213 docs/09 C17: 5.3402°）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E3 ⚠️ 繼承前提: 「時間 = 世界環相位流」(O73 ω_ring) —— 本輪只證 **sense 之同一**, 唔重證該前提",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E4 ⚠️ 未覆蓋: 不可逆方向（O213 docs/06 已 🟢 = decimation 函數 vs 關係）、熵增定量、量子測量方向 ⟹ 完整箭頭 = 方向（O213）+ sense（本輪）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "E5 ★ 可證偽預言: 若世界幾何係非手性（I_h, |Sym| = 120）⟹ δ 判別失效 ⟹ **冇絕對時間 sense**；反之 A₅ 手性（improper 殘差 5.34°）⟹ 必然有絕對 sense",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F1 ★★ 同一 det 表徵同時決定: (a) 9 模式 vs 24（O213 docs/09 C19–C22, 9 = N_gen²）、(b) 自旋 sense（docs/04 T9）、(c) 時間 sense（本輪）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F2 ★ 完整時間箭頭 = 方向（不可逆, O213 🟢）+ sense（手性 det, 本輪 🟢）⟹ **零外部輸入**（vs ΛCDM 之 Past Hypothesis 低熵初態）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F3 密度: 零自由參數、零新部件（全部為群論恆等式 + 既有 A₅ 幾何）; N_search = 1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F4 ★ 結論: 「手性 = 時間 sense = 自旋 sense」係**同一個 Z₂ 標籤之三個名字** ⟹ U7 閉合",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 24,
+  "n_total": 24
+}

@@ -1,0 +1,92 @@
+{
+  "k3_closure": {
+    "value": 0.005648000290342601,
+    "structure": "GLSM phase space capacity = 2B\u00b2 = 2\u2075",
+    "proof": "32 U(1) GLSM charges, exact match to 2-adic depth",
+    "status": "GLSM\u5168\u6df1\u5ea6, \u76f8\u7a7a\u9593\u5bb9\u91cf, \u4f4e\u80fd\u89c0\u6e2c\u91cf\u80cc\u666f"
+  },
+  "k4_closure": {
+    "value": 0.0028240001451713004,
+    "structure": "CY\u2083 holographic UV cutoff = 2\u2076 = 6D winding",
+    "proof": "6 = 2\u00d7N_gen CY\u2083 real dimensions, 2\u2076 covers all windings",
+    "status": "\u8d85\u8d8aGLSM, 6D CY\u2083\u5168\u606fUV\u622a\u65b7, EFT\u2192\u5f26\u7406\u8ad6\u908a\u754c"
+  },
+  "adic_cascade": {
+    "k0": {
+      "factor": 4,
+      "structure": "B",
+      "domain": "K_Tree branching"
+    },
+    "k1": {
+      "factor": 8,
+      "structure": "2B",
+      "domain": "PMNS (EW scale)"
+    },
+    "k2": {
+      "factor": 16,
+      "structure": "B\u00b2",
+      "domain": "CKM (quark scale)"
+    },
+    "k3": {
+      "factor": 32,
+      "structure": "2B\u00b2",
+      "domain": "GLSM phase space"
+    },
+    "k4": {
+      "factor": 64,
+      "structure": "2\u00d72B\u00b2",
+      "domain": "6D CY\u2083 UV cutoff"
+    }
+  },
+  "checks": [
+    {
+      "check": "32 = 2B\u00b2 = 2\u2075 (GLSM \u5168\u6df1\u5ea6)",
+      "pass": true
+    },
+    {
+      "check": "GLSM \u6709 32 U(1) charges (O62)",
+      "pass": true
+    },
+    {
+      "check": "k=3 \u4fc2 GLSM \u76f8\u7a7a\u9593\u5bb9\u91cf\u4e0a\u9650",
+      "pass": true
+    },
+    {
+      "check": "k=1 (8) \u7528 1/4 GLSM, k=2 (16) \u7528 1/2, k=3 (32) \u7528\u5168\u90e8",
+      "pass": true
+    },
+    {
+      "check": "k=3 \u5187\u76f4\u63a5 SM \u89c0\u6e2c\u91cf = \u80cc\u666f\u800c\u975e\u524d\u666f",
+      "pass": true
+    },
+    {
+      "check": "64 = 2\u2076 (\u8d85\u8d8a GLSM)",
+      "pass": true
+    },
+    {
+      "check": "CY\u2083 \u6709 6 \u5be6\u7dad\u5ea6 = 2\u00d7N_gen",
+      "pass": true
+    },
+    {
+      "check": "2\u2076 = \u5168\u606f\u8986\u84cb\u6240\u6709 6 \u7dad winding",
+      "pass": true
+    },
+    {
+      "check": "k=4 \u4fc2 EFT \u2192 \u5f26\u7406\u8ad6 UV \u622a\u65b7",
+      "pass": true
+    },
+    {
+      "check": "CKM \u03bb \u540c \u03b3\u2086/64 2.85% = \u7a7f\u900f 6D \u908a\u754c",
+      "pass": true
+    },
+    {
+      "check": "0\u2264k\u22644 \u5b8c\u6574\u8986\u84cb\u5f9e K_Tree \u5230 CY\u2083 \u6240\u6709\u5c64\u6b21",
+      "pass": true
+    },
+    {
+      "check": "k=0..4 \u5f62\u6210\u55ae\u8abf\u905e\u589e\u5605 2-adic \u7d1a\u806f",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

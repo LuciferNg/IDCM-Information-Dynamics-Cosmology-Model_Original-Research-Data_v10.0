@@ -1,0 +1,33 @@
+{
+  "dipole": {
+    "magnitude_uK": 5.252560816476377,
+    "direction_ra": 92.77203868170514,
+    "direction_dec": -26.662545667843087,
+    "monopole_uK": 4.914648830890657,
+    "residual_std_uK": 19.363667535191393,
+    "angle_from_cmb_dipole_deg": 73.68906910217497
+  },
+  "dipole_quadrupole": {
+    "residual_std_uK": 13.923267604028858,
+    "variance_explained": 0.49535770224636744
+  },
+  "coldest_12_nodes_pentagon_dist": {
+    "8": 3,
+    "5": 4,
+    "6": 1,
+    "4": 1,
+    "10": 1,
+    "2": 1,
+    "9": 1
+  },
+  "hottest_12_nodes_pentagon_dist": {
+    "4": 2,
+    "3": 1,
+    "10": 2,
+    "9": 2,
+    "6": 1,
+    "7": 2,
+    "8": 1,
+    "2": 1
+  }
+}

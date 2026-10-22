@@ -1,0 +1,15 @@
+================================================================================================================
+O228 scripts/23 -- R12: support-set cutting planes for the covering LP (M_edge)
+================================================================================================================
+root LP = 5 (support 10 columns)
+no valid cutting candidate found at step 1
+final LP bound = 5 after 0 cuts
+[FAIL] P11-1  -- first cut: valid=False, mass at previous point < 1: False
+[FAIL] P11-2  -- final = 5 after 0 cuts (ladder ['5'])
+[FAIL] P11-3  -- final = 5 after 0 cuts
+[PASS] P11-4  -- 0 cuts checked, 0 failures
+[PASS] P11-5  -- 0 cuts, ladder ['5']
+================================================================================================================
+RESULT: 2/5 PASS  (3 FAIL)   elapsed 3.2 s
+================================================================================================================
+exit=1

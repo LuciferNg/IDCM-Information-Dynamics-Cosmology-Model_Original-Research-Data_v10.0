@@ -1,0 +1,65 @@
+{
+ "rules": "r12-law-closure-v1",
+ "n_pass": 6,
+ "n_total": 6,
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "★★ 獨立（重建「邊」= 互相鄰接且和 ∥ U_a）：B10 之 5 線 ⟺ 該邊之兩端點皆屬 N(U_0) ∪ −N(U_0) 且同號 dot",
+   "ok": true,
+   "detail": "候選 = [39, 40, 41, 42, 45] ; B10 線 = [39, 40, 41, 42, 45] ; 每線邊數 = [2]"
+  },
+  {
+   "tag": "A2",
+   "name": "★★ 獨立（推導）：v + w = 2·U_a ⟹ ⟨U_a,U_0⟩ = (⟨v,U_0⟩+⟨w,U_0⟩)/2 = ±φ⁻¹（B10 之 dot 條件係此結構之推論）",
+   "ok": true,
+   "detail": "逐線 (L, v+w=2U_a, mid, ⟨U_a,U_0⟩) = [(39, True, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))'), (40, True, '(Fraction(-1, 2), Fraction(1, 2))', '(Fraction(-1, 2), Fraction(1, 2))'), (41, True, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))'), (42, True, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))'), (45, True, '(Fraction(1, 2), Fraction(-1, 2))', '(Fraction(1, 2), Fraction(-1, 2))')]"
+  },
+  {
+   "tag": "A3",
+   "name": "★★ 獨立（推導）：y-線（B10 ∩ 座標軸）之 4 赤道值：U_a × v = (v_z, 0, −v_x)，dind 之實際值 = [sgn(v_z) ≠ sgn(v_x)]（單項符號條件）⟹ 4 值不同型",
+   "ok": true,
+   "detail": "y-線 = 45 ; (索引, U_a×v, dind 實算, 單項預測) = [(2, '((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))', 0, 0), (3, '((Fraction(-1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(-1, 2), Fraction(1, 2)))', 1, 1), (8, '((Fraction(1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))', 1, 1), (9, '((Fraction(-1, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(-1, 2)))', 0, 0)]"
+  },
+  {
+   "tag": "A4",
+   "name": "★★ 獨立：逐欄貢獻之奇偶 —— 奇異（欄）恰 = {61}（其餘 61 欄之逐欄和恆偶）",
+   "ok": true,
+   "detail": "奇異欄 = [61] ; 逐欄奇數態數 = {61: 64}"
+  },
+  {
+   "tag": "A5",
+   "name": "★★ 獨立：Z10 = {s : 每欄 abs(N_a) ≤ 1 ∧ Σ N_a = 0 ∧ 非零}（N_a := Λ_a/2，a ≠ 61）",
+   "ok": true,
+   "detail": "候選 = [9, 15, 21, 31, 57, 67, 77, 87, 111, 117]（10）; Λ⁻¹(0) = [9, 15, 21, 31, 57, 67, 77, 87, 111, 117]（10）; N 值域 = [Fraction(-1, 1), Fraction(-1, 2), Fraction(0, 1), Fraction(1, 2), Fraction(1, 1)]"
+  },
+  {
+   "tag": "A6",
+   "name": "★ 獨立：鍵（三元組）之重數 ∈ {1,2}；重數 1 之鍵恰 2 個且皆屬第 61 欄（其 2 事件之 (sw,sr) 不同）",
+   "ok": true,
+   "detail": "m1 = [(61, 69, 37), (61, 104, 17)]（欄 = [61]）; |鍵|= 63, {2: 61, 1: 2}; 第61欄之鍵 = [(61, 69, 37), (61, 104, 17)]"
+  }
+ ],
+ "B10L": [
+  39,
+  40,
+  41,
+  42,
+  45
+ ],
+ "Z10i": [
+  9,
+  15,
+  21,
+  31,
+  57,
+  67,
+  77,
+  87,
+  111,
+  117
+ ],
+ "oddcols": [
+  61
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "min_frame_size": 4,
+ "witness": [
+  "V02",
+  "F00",
+  "V00",
+  "V04"
+ ],
+ "deletable": 58,
+ "rank_on_min_frame": 4,
+ "n_row_types": 12
+}

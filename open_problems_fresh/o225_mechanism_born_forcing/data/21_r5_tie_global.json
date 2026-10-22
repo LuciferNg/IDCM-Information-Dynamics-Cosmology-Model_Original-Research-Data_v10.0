@@ -1,0 +1,1009 @@
+{
+ "rules": "r5-tie-global-v1",
+ "Q1_census": {
+  "0": {
+   "ref_type": "vertex",
+   "n_tie_entries": 10,
+   "n_tie_pairs": 5,
+   "tie_types": {
+    "edge": 5
+   }
+  },
+  "1": {
+   "ref_type": "vertex",
+   "n_tie_entries": 10,
+   "n_tie_pairs": 5,
+   "tie_types": {
+    "edge": 5
+   }
+  },
+  "2": {
+   "ref_type": "vertex",
+   "n_tie_entries": 10,
+   "n_tie_pairs": 5,
+   "tie_types": {
+    "edge": 5
+   }
+  },
+  "3": {
+   "ref_type": "vertex",
+   "n_tie_entries": 10,
+   "n_tie_pairs": 5,
+   "tie_types": {
+    "edge": 5
+   }
+  },
+  "4": {
+   "ref_type": "vertex",
+   "n_tie_entries": 10,
+   "n_tie_pairs": 5,
+   "tie_types": {
+    "edge": 5
+   }
+  },
+  "5": {
+   "ref_type": "vertex",
+   "n_tie_entries": 10,
+   "n_tie_pairs": 5,
+   "tie_types": {
+    "edge": 5
+   }
+  },
+  "12": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "13": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "14": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "15": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "16": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "17": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "18": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "19": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "20": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "21": {
+   "ref_type": "face",
+   "n_tie_entries": 6,
+   "n_tie_pairs": 3,
+   "tie_types": {
+    "edge": 3
+   }
+  },
+  "32": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "33": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "34": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "35": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "36": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "37": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "edge": 2,
+    "vertex": 2,
+    "face": 2
+   }
+  },
+  "38": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "edge": 2,
+    "vertex": 2,
+    "face": 2
+   }
+  },
+  "39": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "40": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "41": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "42": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "43": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "44": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  },
+  "45": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "edge": 2,
+    "vertex": 2,
+    "face": 2
+   }
+  },
+  "46": {
+   "ref_type": "edge",
+   "n_tie_entries": 12,
+   "n_tie_pairs": 6,
+   "tie_types": {
+    "vertex": 2,
+    "edge": 2,
+    "face": 2
+   }
+  }
+ },
+ "Q1_summary": {
+  "n_tie_values": [
+   3,
+   5,
+   6
+  ],
+  "vertex": 6,
+  "face": 10,
+  "edge": 15
+ },
+ "Q2": {
+  "Hr_order": 20,
+  "orbit_sizes": [
+   5
+  ],
+  "tie_set_size": 5
+ },
+ "Q3": {
+  "total_incidences": 60,
+  "edge_multiplicities": [
+   4
+  ],
+  "n_edge_axes_hit": 15
+ },
+ "Q4_pentagon": {
+  "0": {
+   "36": 5,
+   "72": 5
+  },
+  "1": {
+   "36": 5,
+   "72": 5
+  },
+  "2": {
+   "72": 5,
+   "36": 5
+  },
+  "3": {
+   "72": 5,
+   "36": 5
+  },
+  "4": {
+   "36": 5,
+   "72": 5
+  },
+  "5": {
+   "36": 5,
+   "72": 5
+  }
+ },
+ "Q5": {
+  "hits_equal": true,
+  "misses_equal": true,
+  "ledger_equal": true,
+  "tops_equal": true,
+  "hits_value": [
+   124
+  ],
+  "misses_value": [
+   11408
+  ]
+ },
+ "Q6": {
+  "machine": {
+   "distinct": [
+    52,
+    54,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    79,
+    80
+   ],
+   "range": [
+    52,
+    80
+   ]
+  },
+  "prod": {
+   "distinct": [
+    52,
+    53,
+    54,
+    55,
+    58,
+    59,
+    60,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    69,
+    70,
+    72,
+    73,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81
+   ],
+   "range": [
+    52,
+    81
+   ]
+  },
+  "negprod": {
+   "distinct": [
+    55,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+   ],
+   "range": [
+    55,
+    79
+   ]
+  },
+  "centre_invariant_all": true,
+  "abs_diff_hist": [
+   [
+    0,
+    6
+   ],
+   [
+    1,
+    30
+   ],
+   [
+    2,
+    14
+   ],
+   [
+    3,
+    18
+   ],
+   [
+    4,
+    6
+   ],
+   [
+    5,
+    14
+   ],
+   [
+    6,
+    2
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    8,
+    2
+   ],
+   [
+    9,
+    6
+   ],
+   [
+    10,
+    4
+   ],
+   [
+    11,
+    4
+   ],
+   [
+    12,
+    2
+   ],
+   [
+    14,
+    4
+   ]
+  ]
+ },
+ "Q7": {
+  "pairs": 3844,
+  "mismatches": 0
+ },
+ "Q8": {
+  "identical": false,
+  "n_states_differ": 114,
+  "sample": [
+   [
+    0,
+    65,
+    63
+   ],
+   [
+    1,
+    69,
+    70
+   ],
+   [
+    2,
+    56,
+    53
+   ],
+   [
+    3,
+    68,
+    75
+   ],
+   [
+    4,
+    61,
+    75
+   ],
+   [
+    5,
+    54,
+    55
+   ],
+   [
+    6,
+    72,
+    73
+   ],
+   [
+    7,
+    64,
+    62
+   ]
+  ]
+ },
+ "Q9": {
+  "prod_eq_negprod": false,
+  "n_states_differ": 116
+ },
+ "overrides_machine": [
+  65,
+  69,
+  56,
+  68,
+  61,
+  54,
+  72,
+  64,
+  68,
+  70,
+  66,
+  68,
+  64,
+  68,
+  66,
+  62,
+  64,
+  76,
+  75,
+  67,
+  74,
+  72,
+  79,
+  58,
+  80,
+  68,
+  63,
+  72,
+  56,
+  57,
+  73,
+  68,
+  62,
+  72,
+  80,
+  69,
+  66,
+  74,
+  65,
+  60,
+  52,
+  63,
+  64,
+  68,
+  75,
+  60,
+  72,
+  66,
+  69,
+  71,
+  64,
+  68,
+  59,
+  72,
+  65,
+  63,
+  67,
+  62,
+  68,
+  77,
+  77,
+  68,
+  60,
+  71,
+  69,
+  66,
+  72,
+  62,
+  67,
+  63,
+  65,
+  72,
+  59,
+  68,
+  64,
+  65,
+  64,
+  62,
+  66,
+  68,
+  74,
+  67,
+  75,
+  76,
+  64,
+  68,
+  66,
+  70,
+  61,
+  68,
+  56,
+  69,
+  68,
+  64,
+  72,
+  54,
+  64,
+  63,
+  75,
+  68,
+  52,
+  60,
+  65,
+  74,
+  80,
+  72,
+  66,
+  69,
+  73,
+  57,
+  62,
+  68,
+  56,
+  72,
+  63,
+  68,
+  79,
+  72,
+  80,
+  58
+ ],
+ "overrides_prod": [
+  63,
+  70,
+  53,
+  75,
+  75,
+  55,
+  73,
+  62,
+  63,
+  70,
+  69,
+  67,
+  69,
+  67,
+  67,
+  62,
+  73,
+  69,
+  66,
+  64,
+  79,
+  75,
+  78,
+  63,
+  77,
+  64,
+  75,
+  62,
+  55,
+  58,
+  80,
+  69,
+  60,
+  69,
+  69,
+  77,
+  65,
+  76,
+  64,
+  67,
+  52,
+  66,
+  62,
+  79,
+  70,
+  62,
+  77,
+  69,
+  73,
+  70,
+  54,
+  59,
+  63,
+  66,
+  66,
+  65,
+  81,
+  63,
+  65,
+  72,
+  72,
+  65,
+  62,
+  70,
+  73,
+  69,
+  77,
+  63,
+  81,
+  65,
+  66,
+  66,
+  63,
+  59,
+  54,
+  63,
+  73,
+  62,
+  67,
+  67,
+  79,
+  64,
+  66,
+  69,
+  69,
+  67,
+  69,
+  70,
+  75,
+  75,
+  53,
+  70,
+  63,
+  62,
+  73,
+  55,
+  62,
+  66,
+  70,
+  79,
+  52,
+  67,
+  64,
+  76,
+  69,
+  69,
+  65,
+  77,
+  80,
+  58,
+  60,
+  69,
+  55,
+  62,
+  75,
+  64,
+  78,
+  75,
+  77,
+  63
+ ],
+ "overrides_negprod": [
+  64,
+  73,
+  57,
+  71,
+  60,
+  60,
+  62,
+  70,
+  68,
+  63,
+  61,
+  72,
+  69,
+  67,
+  68,
+  61,
+  69,
+  77,
+  79,
+  74,
+  75,
+  71,
+  76,
+  55,
+  76,
+  69,
+  64,
+  70,
+  67,
+  57,
+  71,
+  73,
+  63,
+  73,
+  76,
+  70,
+  61,
+  67,
+  70,
+  59,
+  59,
+  73,
+  66,
+  71,
+  67,
+  57,
+  69,
+  61,
+  68,
+  73,
+  61,
+  71,
+  70,
+  78,
+  64,
+  58,
+  70,
+  67,
+  66,
+  71,
+  71,
+  66,
+  57,
+  73,
+  68,
+  61,
+  69,
+  67,
+  70,
+  58,
+  64,
+  78,
+  70,
+  71,
+  61,
+  64,
+  69,
+  61,
+  68,
+  67,
+  75,
+  74,
+  79,
+  77,
+  69,
+  72,
+  61,
+  63,
+  60,
+  71,
+  57,
+  73,
+  68,
+  70,
+  62,
+  60,
+  66,
+  73,
+  67,
+  71,
+  59,
+  59,
+  70,
+  67,
+  76,
+  73,
+  61,
+  70,
+  71,
+  57,
+  63,
+  73,
+  67,
+  70,
+  64,
+  69,
+  76,
+  71,
+  76,
+  55
+ ],
+ "claims": [
+  {
+   "tag": "Q1",
+   "name": "★ 62 軸（31 對）全軸普查：n_tie ∈ {0,5}，且 n_tie = 5 時 tie 集全部 edge 型",
+   "ok": false,
+   "detail": "n_tie 值域 = [3, 5, 6] ; 非零者 = 6 條 ; tie types = {('edge',): 16, ('edge', 'face', 'vertex'): 15}"
+  },
+  {
+   "tag": "Q1b",
+   "name": "★ 型別細分：vertex 參考軸（6 條）n_tie = 5；face（10 條）／edge（15 條）之 n_tie",
+   "ok": true,
+   "detail": "vertex: [5] ; face: [3] ; edge: [6]"
+  },
+  {
+   "tag": "Q2",
+   "name": "★★ 軌道-穩定子：H_r（線穩定子，階 20）作用於軸對；tie 集 = 單一軌道，大小 5 ⟹ 「5」由群結構強制",
+   "ok": true,
+   "detail": "|H_r| = 20 ; orbits = [5] ; |tie| = 5"
+  },
+  {
+   "tag": "Q3",
+   "name": "★★ 全域計數：6 條頂點軸之 tie 聯集總數 = 30 = edge 軸數；每個 edge 軸恰被 tie 一次（重數 ≡ 1）",
+   "ok": false,
+   "detail": "Σ = 60 ; edge 重數值域 = [4] ; face/vertex 被 tie 次數 = [0] / [0]"
+  },
+  {
+   "tag": "Q4",
+   "name": "★★ 幾何刻畫：頂點軸之 5 條 tie 軸構成正五邊形線族 —— 兩兩歸一化點積² 精確 ∈ {cos²36°, cos²72°}（判據 ⟨u_i,u_j⟩² == N_i·N_j·(3±√5)/8），且 36°:72° = 5:5",
+   "ok": true,
+   "detail": "每軸之 (36°,72°) 計數 = [(('36', 5), ('72', 5))]"
+  },
+  {
+   "tag": "Q1c",
+   "name": "★ 修正普查（原 Q1 被否證）：vertex → 5（全 edge）；face → 3（全 edge）；edge → 6（混合型別）",
+   "ok": true,
+   "detail": "{'vertex': {'n': 6, 'n_tie': [5], 'tie_types': [('edge',)]}, 'face': {'n': 10, 'n_tie': [3], 'tie_types': [('edge',)]}, 'edge': {'n': 15, 'n_tie': [6], 'tie_types': [('edge', 'face', 'vertex')]}}"
+  },
+  {
+   "tag": "Q3b",
+   "name": "★ 修正計數（原 Q3「重數 ≡ 1」被否證）：Σ = 60 = 15 × 4（欄計數）⟹ 每 edge 軸 ⟂ **恰 2** 條頂點軸；且 6 × 5 = 30 = 15 × 2（對稱性自洽）",
+   "ok": true,
+   "detail": "Σ = 60 ; edge 重數 = [4] ; 6×5 = 30 ; 15×2 = 30"
+  },
+  {
+   "tag": "Q4b",
+   "name": "★★ 新預測（寫於計算前）：face 參考之 3 條 tie 軸兩兩 |歸一化點積|² 精確 = 1/4（cos²60° 正三角形線族）",
+   "ok": true,
+   "detail": "比較對數 = 30 ; 偏離 = 0"
+  },
+  {
+   "tag": "Q4c",
+   "name": "探索（無預測）：edge 參考之 6 條 tie 軸 —— 兩兩 (⟨·,·⟩², N_iN_j) 精確配對之多重集",
+   "ok": true,
+   "detail": "相異配對數 = 9 ; 樣本 = [(('num', '3/2', '-1/2', 'den', '15/2', '-5/2'), 15), (('num', '3/2', '1/2', 'den', '15/2', '-3/2'), 30), (('num', '7/2', '-3/2', 'den', '15/2', '-3/2'), 30)]"
+  },
+  {
+   "tag": "Q7",
+   "name": "★ P1 gate：複製之 ledger_replay 對 O222 18_d6_mapping.replay_protocol 逐對 0 差異",
+   "ok": true,
+   "detail": "pairs = 3844 ; mismatches = 0"
+  },
+  {
+   "tag": "Q5",
+   "name": "★ K-無關量預註冊：hits、Σmisses、ledger_len 分佈、top 序列 於 3 個 K 變體完全相同（協定控制流只依 ctx 序列）",
+   "ok": true,
+   "detail": "hits 同 = True（值 = [124]）; Σmisses 同 = True ; ledger 同 = True ; top 同 = True"
+  },
+  {
+   "tag": "Q6",
+   "name": "★ 效應量化：overrides 兩表之相異值數／值域／差分佈；且兩者皆中心不變（K_Mb[−s][a] = K_Mb[s][a] ⟹ λ ≡ +1）",
+   "ok": true,
+   "detail": "machine: 26 值 range [52, 80] ; prod: 24 值 range [52, 81] ; negprod: 23 值 range [55, 79] ; |Δ| 分佈 = [(0, 6), (1, 30), (2, 14), (3, 18), (4, 6), (5, 14), (6, 2), (7, 8), (8, 2), (9, 6), (10, 4), (11, 4), (12, 2), (14, 4)] ; 中心不變 = True"
+  },
+  {
+   "tag": "Q8",
+   "name": "★ 宇稱之動力可辨識性判決（兩者皆合法）：報告實況",
+   "ok": true,
+   "detail": "overrides(machine) == overrides(prod) ? False ; 相異態數 = 114 ; 樣本 (s, machine, prod) = [(0, 65, 63), (1, 69, 70), (2, 56, 53), (3, 68, 75), (4, 61, 75)]"
+  },
+  {
+   "tag": "Q9",
+   "name": "★ 剛性：R4 之「R-中性位」(−u×r) 與正則位(+u×r) 在動態側之關係",
+   "ok": true,
+   "detail": "overrides(prod) == overrides(negprod) ? False ; overrides_first 同 ? True ; 相異態數 = 116"
+  }
+ ]
+}

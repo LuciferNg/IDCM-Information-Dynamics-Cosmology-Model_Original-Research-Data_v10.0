@@ -1,0 +1,44 @@
+{
+ "script_sha256": "add870a68eeddf841016cca8b9b2b2964ac64317464fb55f90672102b32b0d37",
+ "gpu": "NVIDIA GeForce GTX 1060 3GB",
+ "frozen_table_sha256": "ed3cc92049e0514fd72e337292937fa534bfae06ef4b9620e7b9407225378f86",
+ "impl_sha256_checked": "be946911c087862d7bd02b460235b0b47fe1ff4ed85d2a855b6855f717e49235",
+ "table_mismatches": 0,
+ "chsh_gpu_num": 240,
+ "chsh_den": 120,
+ "chsh_frozen_num": 240,
+ "distinct_gpu_num": 240,
+ "null_draws": 500,
+ "timings_s": {
+  "kernel": 0.2680187225341797,
+  "full_sweep": 0.049510955810546875,
+  "distinct_sweep": 0.05817103385925293,
+  "null": 25.02520990371704
+ },
+ "checks": [
+  {
+   "tag": "G1",
+   "name": "GPU int64 correlation table == frozen CPU exact table (all 3844 entries, denominator 120)",
+   "ok": true,
+   "detail": "mismatches = 0 ; |G| = 120"
+  },
+  {
+   "tag": "G2",
+   "name": "GPU full 62^4 ordered CHSH sweep == frozen max (as an exact fraction over the same denominator)",
+   "ok": true,
+   "detail": "GPU max |S| = 240/120 ; frozen = 240/120 ; argmax ('V00', 'V00', 'V00', 'V00') (['V00', 'V00', 'V00', 'V00'])"
+  },
+  {
+   "tag": "G3",
+   "name": "GPU non-degenerate (four distinct settings) CHSH max + argmax == frozen record",
+   "ok": true,
+   "detail": "GPU 240/120 argmax ('V00', 'V01', 'V10', 'V04') ; frozen 2/120 argmax ('V00', 'V01', 'V10', 'V04')"
+  },
+  {
+   "tag": "G4",
+   "name": "GPU null (ii) == frozen null (same splitmix64 seed, same sampler, same statistic, 500 draws)",
+   "ok": true,
+   "detail": "GPU median/95th/max = ('22/15', '8/5', '26/15') ; frozen = ('22/15', '8/5', '26/15')"
+  }
+ ]
+}

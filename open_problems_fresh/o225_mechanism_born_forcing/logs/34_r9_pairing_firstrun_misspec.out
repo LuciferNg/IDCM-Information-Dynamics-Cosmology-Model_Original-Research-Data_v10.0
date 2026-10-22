@@ -1,0 +1,32 @@
+======================================================================================================================
+O225 scripts/34 -- R9: protocol-layer pairing of Sigma-f   (r9-protocol-pairing-v1)
+======================================================================================================================
+[INFO] 事件總 = 124 ; 類別計數 = {'FF': 89, 'TF': 14, 'TT': 8, 'FT': 13}（R6 之 11200/1120/1280/1280 對照）
+[PASS] A1    ★ 推導+核：軌跡等變 — s_t(s0) = s0·s_t(e)（截斷前 300 對、4 個 s0 逐事件核）；且事件集 K-無關  --  逐事件偏離 = 0 ; 事件集 K-無關 = True ; 截斷事件數 = 10
+[FAIL] A2    ★ 推導+核：Σ_{s0} f_tf(s0) = Σ_{e∈TF} W_e 且 Σ_{s0} f_ft(s0) = Σ_{e∈FT} W'_e（三條算式互核，0 偏離）  --  Σf_tf(輸入) = 0 ; Σ W_e = 0（群化 0／直接 0）；Σf_ft(輸入) = 0 ; Σ W'_e = -44（群化 -44）
+[PASS] A3    ★ 推導+核：ε(x)·d(x,a) = (ε(x) − γ(a,x))/2（全部 1200 個 tie 條目，0 偏離）  --  偏離 = 0（tie 條目總 = 1200）
+[PASS] A4    ★ 預測（見數前）：逐事件 s_w = s_r·g_e（或 s_r = s_w·ĥ_e）成立；Φ_e 只依 (a_e, g_e)  --  關係偏離 = 0 ; 相異 (類,a,g) 鍵數 = 14 ; TF/FT 鍵數 = 7/7
+[FAIL] A5a   ★★ 預測（見數前，核心）：對全部 (T,F) 事件 W_e = 0；對全部 (F,T) 事件 W'_e = 0  --  TF 非零鍵 = 0（例 []）；FT 非零鍵 = 5（例 [(40, 53, -8), (42, 55, -24), (56, 74, 4)]）；TF 鍵數 = 7、FT 鍵數 = 7
+[FAIL] A5b   預測：報告 (T,T) 事件之 W''_e 值集，並核 Σ W''_e = Σf_tt = 64  --  Σ W''_e = 96 ; Σf_tt(輸入) = 64 ; 值集 = [0, 8, 40] ; TT 事件數 = 8
+[FAIL] A5c   預測（A5a 若敗才判）：W(a,g) = −W(ā,g) 逐 (a,g)  --  成立對數 = 0 / 7
+[FAIL] A5d   預測（A5a 若敗才判）：W(a,g) = −W(a,g^{-1}) 逐 (a,g)  --  成立對數 = 0 / 7
+[PASS] A6    ★ 預測（見數前）：W = ½[W1 − W2] 逐 (a,g) 成立（W1 := Σ_{tie} εB、W2 := Σ_{tie} γB）  --  偏離 = 0 / 7
+[INFO] A7 報告：TF 相異 (a,g) 對 = 7（快取鍵）；FT = 7；W 值集 = [0]
+[INFO] A7 報告：TF 之 g 階分佈 = {4: 7} ; n(a,g) 重數分佈 = {2: 7}
+[PASS] A7    報告：(a,g) 表（鍵數、重數分佈、W 值集、g 階分佈）＋ 事件類計數  --  TF 鍵 = 7、FT 鍵 = 7；g 階 = {4: 7}；重數分佈 = {2: 7}；事件類 = {'FF': 89, 'TF': 14, 'TT': 8, 'FT': 13}
+[FAIL] B1a   ★ 預測（見數前）：f_tf(s^{-1}) = f_ft(s) ∀120  --  成立 12/120
+[FAIL] B1b   ★ 預測（見數前）：f_tf(s^{-1}) = −f_ft(s) ∀120  --  成立 14/120
+[FAIL] B2a   ★ 預測（見數前）：f_ft(s^{-1}) = f_tf(s) ∀120  --  成立 12/120
+[FAIL] B2b   ★ 預測（見數前）：f_ft(s^{-1}) = −f_tf(s) ∀120  --  成立 14/120
+[FAIL] B4    ★ 預測（見數前）：f_tt(s^{-1}) = f_tt(s) ∀120  --  成立 56/120
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/34_r9_pairing.py", line 409, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/34_r9_pairing.py", line 340, in main
+    w_cand = [s for s in range(n) if KV[s] == neg(U[0])]
+                                              ~~~^^^^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/34_r9_pairing.py", line 56, in neg
+    return (-x[0], -x[1])
+            ^^^^^
+TypeError: bad operand type for unary -: 'tuple'

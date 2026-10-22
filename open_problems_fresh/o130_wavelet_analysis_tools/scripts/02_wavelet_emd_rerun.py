@@ -73,7 +73,12 @@ print("=" * 78)
 R_WORLD_v10 = 4129.94             # Mpc (v10.0 registered)
 H_DIM = 0.7259                    # omega_ring/100
 LAM_SYNC = math.pi * R_WORLD_v10 / 44.0
-LAM_HINV = LAM_SYNC / H_DIM       # 406.2227 h^-1 Mpc
+# --- UNITS: corrected 2026-09-28 (see docs/04_unit_correction.md) -------------
+# lambda_sync = 294.877026 Mpc (PHYSICAL Mpc); the survey xi(s) axis is in h^-1 Mpc
+# => lambda_sync[h^-1 Mpc] = lambda_sync[Mpc] * h_fid  (NOT / h).
+# v9.0 _core.py wrote LAMBDA_SYNC/H_DIM (divide!) -> 406.2227, 1.897x too long.
+H_FID = 0.6736                                    # DESI/BOSS/eBOSS fiducial h
+LAM_HINV = LAM_SYNC * H_FID                       # 198.63 h^-1 Mpc
 
 print("\n" + "-" * 78)
 print("  A. data + constants")

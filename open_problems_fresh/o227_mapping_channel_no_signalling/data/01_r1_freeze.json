@@ -1,0 +1,71 @@
+{
+ "rules_version": "o227-r1-contract-v1",
+ "gate": "OPEN",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "frozen-input hash pins (11 objects from docs/01 section 1)",
+   "ok": true,
+   "detail": "mismatches = 0 "
+  },
+  {
+   "tag": "C2",
+   "name": "contract carries the 26 pre-registered predicate rows",
+   "ok": true,
+   "detail": "missing = [] ; unexpected = []"
+  },
+  {
+   "tag": "C2b",
+   "name": "provenance objects reachable and carry the composition law, no dimension data",
+   "ok": true,
+   "detail": "files_ok=True ; law_text=True ; dimension_text_found=False (P1c must stay provenance-only)"
+  },
+  {
+   "tag": "C3",
+   "name": "machine AST block (imports / math.log2 only / no float literal / no eval / no local read)",
+   "ok": true,
+   "detail": "violations = 0 []"
+  },
+  {
+   "tag": "C3b",
+   "name": "no write-open on a path mentioning another O directory",
+   "ok": true,
+   "detail": "write sites = 0 ; foreign-O write sites = 0"
+  },
+  {
+   "tag": "C4",
+   "name": "contract tag set == machine claim tag set",
+   "ok": true,
+   "detail": "missing in machine = [] ; extra = []"
+  },
+  {
+   "tag": "C5",
+   "name": "machine imports the frozen read semantics (load_machine) and does not re-implement it",
+   "ok": true,
+   "detail": "load_machine call present = True ; banned local defs present = []"
+  },
+  {
+   "tag": "C6",
+   "name": "static ledger rule on the frozen source (top-only / append-only / pop=rollback / no rewrite)",
+   "ok": true,
+   "detail": "top_only=True append=True pop=True no_inplace_rewrite=True prototype_read_rule=True"
+  },
+  {
+   "tag": "C7",
+   "name": "pre-registration present: O227/R1 + 26 sub-pids with a pre-run note",
+   "ok": true,
+   "detail": "registered-with-pre-run-note = 27 / 27 ; missing = []"
+  },
+  {
+   "tag": "C8",
+   "name": "amendment table carries only pre-freeze, pre-run rows (no post-freeze amendment)",
+   "ok": true,
+   "detail": "placeholder_free=True ; pre-freeze row declared=True"
+  }
+ ],
+ "n_pass": 10,
+ "n_total": 10,
+ "contract_sha256": "074f5053209695141d8ce6a2bb3cbf50f852ddf6b96db8365260bf8078102021",
+ "finished_at": "2026-10-02T04:09:57+0800",
+ "elapsed_s": 0.03511500358581543
+}

@@ -1,0 +1,69 @@
+{
+  "route3_blind_test_20261017": {
+    "sample": [
+      {
+        "id": "PAO191110",
+        "E_EeV": 166.0,
+        "ra": 128.9,
+        "dec": -52.0,
+        "d_node_deg": 4.642167258963188
+      },
+      {
+        "id": "PAO070114",
+        "E_EeV": 165.0,
+        "ra": 192.9,
+        "dec": -21.2,
+        "d_node_deg": 7.487246779371865
+      },
+      {
+        "id": "PAO200611",
+        "E_EeV": 155.0,
+        "ra": 107.2,
+        "dec": -47.6,
+        "d_node_deg": 11.649450077657864
+      },
+      {
+        "id": "PAO141021",
+        "E_EeV": 155.0,
+        "ra": 102.9,
+        "dec": -37.8,
+        "d_node_deg": 7.965776106769719
+      }
+    ],
+    "N": 4,
+    "median_d_node": 7.726511443070792,
+    "k8": 3,
+    "k10": 3,
+    "binom_p1": 0.09467306235199999,
+    "binom_p2": 0.27739065267199997,
+    "mc_null_median_p": 0.16849,
+    "mc_null_k8_p": 0.10361,
+    "mc_null_k10_p": 0.27956,
+    "verdicts": {
+      "P0_median_lt_9p6": true,
+      "P1_gt50pct_8deg": true,
+      "P2_gt50pct_10deg": true
+    },
+    "falsification_gate": false,
+    "note": "N<20, \u5426\u8b49\u689d\u4ef6\u672a\u9069\u7528, \u7b49 AugerPrime"
+  },
+  "power_table_corrected": {
+    "old": {
+      "N20": "3.1\u03c3",
+      "N50": "5.2\u03c3",
+      "ratio": 1.6774193548387097,
+      "self_consistent_ratio": 1.5811388300841898
+    },
+    "two_proportion": {
+      "z20": 3.07,
+      "z50": 4.86,
+      "N_for_5sigma": 53
+    },
+    "single_proportion": {
+      "z20": 4.2,
+      "z50": 6.64,
+      "N_for_5sigma": 29
+    },
+    "augerprime_10per_yr_years_5sigma_two": 5.3
+  }
+}

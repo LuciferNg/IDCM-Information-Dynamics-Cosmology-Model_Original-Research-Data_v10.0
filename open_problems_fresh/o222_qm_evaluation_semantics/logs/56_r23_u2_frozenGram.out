@@ -1,0 +1,9 @@
+FROZEN Gram (exact Q(sqrt5)) -> sgn(Kc^T G_frozen Kc) vs certified vsign : mismatches = 0/3844  (zeros 0)
+frozen Gram rank over Q(sqrt5) = 3
+{
+ "frozen_gram_rank": 3,
+ "vsign_mismatches": 0,
+ "total": 3844,
+ "zeros": 0,
+ "verdict": "FROZEN-DATA-DETERMINED (canonical)"
+}

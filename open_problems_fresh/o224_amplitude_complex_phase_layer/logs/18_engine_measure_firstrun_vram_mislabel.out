@@ -1,0 +1,13 @@
+# FIRST PASS of this measurement log -- superseded by logs/18_engine_measure.out (same run).
+# The only defect was the final VRAM line: the script printed cupy mem_info as (free, total) as if
+# it were (used, total) and summed them, yielding "free/total 2.51 / 5.74 GB" for a 3 GB card.
+# No number in this file was used in any document. The three engine timings below are correct and
+# are reproduced identically by the second pass.
+# ------------------------------------------------------------------------------------------
+E4 build: 2.5 s, |E4|max = 120
+M1 numpy per-group path (scripts/16): 18 groups in 0.3 s -> 15.0 ms/group/(core) over 66 window evaluations
+M2 Numba JIT (scripts/18, bmax = 62, 12 threads): 46128 groups in 59.4 s -> 1.287 ms/group -> full 62^8 estimate 317.1 min
+M3 CuPy GPU (scripts/17), chunk B=64: median 184.0 ms/chunk -> 2.875 ms/group -> full 62^8 estimate 11.8 h (single stream)
+M3 CuPy GPU (scripts/17), chunk B=128: median 362.7 ms/chunk -> 2.833 ms/group -> full 62^8 estimate 11.6 h (single stream)
+GPU VRAM free/total: 2.51 / 5.74 GB
+MEASUREMENT COMPLETE (no project data written)

@@ -1,0 +1,21 @@
+========================================================================================================
+O226 scripts/09 -- R2 INDEPENDENT audit (self-contained; rebuilds 2I and the kernel)
+========================================================================================================
+[PASS] A0   |2I| = 120 rebuilt independently (Hurwitz units + BFS closure); inverses built  --  order = 120
+[PASS] A1   the frozen axis set F1: 62 axes with type counts 12 vertex / 20 face / 30 edge; the reference axis u_0 is the first entry  --  types = {'vertex': 12, 'face': 20, 'edge': 30} ; u_0 type = vertex
+[PASS] A2b  H = Stab_{2I}(u_0) (pointed): the reference axis is fixed by exactly 10 of the 120 elements  --  |H| = 10
+[PASS] A3   K is right-H-invariant: K[s*t] = K[s] for all 120 states and all 10 elements of H (1200 row comparisons)  --  invariant = True
+[PASS] A4   the kernel has exactly 12 distinct rows, each one a right coset rep*H (orbit-stabiliser: 120/10 = 12)  --  distinct rows = 12 ; every class = rep*H = True
+[PASS] A5   orbit-stabiliser route: 120/|Stab(u_a)| over ALL 62 axes gives exactly 12 / 20 / 30 for the vertex / face / edge axes; the direct orbit enumeration (pointed directions) agrees for one representative per type  --  route 1 (120/|Stab|) = {'vertex': [12], 'face': [20], 'edge': [30]} ; route 2 (orbit enumeration) = {'vertex': 12, 'face': 20, 'edge': 30}
+[PASS] A6   rebuilding the kernel with a reference axis of each type really gives 12 / 20 / 30 distinct rows (the non-degeneracy of the theorem)  --  measured rows = {'vertex': 12, 'face': 20, 'edge': 30}
+[PASS] A7   the common stabiliser H fixes exactly 2 of the 62 pointed axes: both of type vertex, mutually antipodal, and one of them is the reference axis u_0  --  fixed = [0, 11] (types ['vertex', 'vertex'])
+[PASS] A8   agreement value set = {0,11,12,19,20}; class weights = 6 x(+10) and 6 x(-10) (summing to 0)  --  agreement values = [0, 11, 12, 19, 20, 31] ; weights = [-10, -10, -10, -10, -10, -10, 10, 10, 10, 10, 10, 10]
+[PASS] A9   the 120 states form 60 antipodal pairs and each kernel class is exactly 5 of them (12 x 5 = 60): the kernel collapse is strictly coarser than the Z2 behaviour collapse  --  pairs = 60 ; 5 per class = True
+[FAIL] A10  the 12 x 12 distance table is a function of the double coset H x H only (no double coset carries two different distances)  [this is the pre-registered Pr-5.4 claim, and the audit REPRODUCES its refutation independently]  --  double cosets = 4 ; distances per coset = [(0,), (22, 24), (38, 40), (62,)]
+[PASS] A10-c AUDIT STATEMENT (measured): the double-coset hypothesis is REFUTED independently -- of the 4 double cosets, 2 carry two distances each, so the staleness metric is strictly finer than the double-coset structure  --  double cosets = 4 ; the two colliding cosets carry [(22, 24), (38, 40)]
+[PASS] A11  charge table in INTEGER theta units (B = 88 theta): k = 1..4 gives m* = 88 / 44 / 30 / 22; only k = 2 reproduces the recorded 44 reads = 1 tick  --  table = [(1, 88), (2, 44), (3, 30), (4, 22)]
+[PASS] A12  the R2 machine JSON (data/07_class_machine.json) records the same class count, stabiliser order, orbit sizes, agreement set and weights as this audit  --  classes = 12 ; |H| = 10 ; orbit = {'vertex': [12], 'face': [20], 'edge': [30]} ; agreement = [0, 11, 12, 19, 20, 31]
+[PASS] A13  null (8 random axis sets, splitmix64, declared draws) contrasted with the lattice kernel: lattice = 12 classes, random kernels differ  --  null class counts = [1, 12, 20, 30] ; lattice = 12
+========================================================================================================
+RESULT: 14/15 PASS (independent R2 audit)   elapsed 3.6 s
+========================================================================================================

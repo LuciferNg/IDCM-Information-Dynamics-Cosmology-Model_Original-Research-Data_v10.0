@@ -1,0 +1,8 @@
+O34 — eps4/11 Mechanism Exploration
+===================================================================
+11 = L5 = N_d/B = 44/4 (structural)
+eps4/11 = phi^-4/(B^3*N_d) = 5.181038130338e-05 (algebraic rewrite)
+ratio = dev/(eps4/11) = 0.9990340214 (no simple structure)
+dev - eps4/11 = -5.00e-08 (eps5-level, no mechanism)
+exact dev = (161-72sqrt5)/60 = Fibonacci CF error
+Status: eps4/11 is eps4-level approx (0.1%), no mechanism, stays 🟡

@@ -182,7 +182,7 @@ IDCM-v10.0/
 ├── docs/
 │   ├── ckm_derivation.md         # CKM 夸克混合矩陣推導
 │   ├── jcp_derivation.md         # CP 破壞 Jarlskog 不變量
-│   ├── neutrino_p6_mode.md       # 中微子：W-field p6 模式
+│   ├── neutrino_p6_mode.md       # 中微子：W-field P6 模式
 │   └── research_record.md        # 主研究記錄（12 章）
 │   ├── research_direction.md    # 方向調整記錄
 │   ├── up_quark_correction.md   # Up 修正文檔
@@ -570,12 +570,12 @@ J_CP 推導記錄於 `docs/jcp_derivation.md`。
 
 ---
 
-## 十三、中微子：W-field p6 模式
+## 十三、中微子：W-field P6 模式
 
 ### 13.1 背景
 
 中微子質量唔係來自 Seesaw 機制，而係直接來自 K_Chain 嘅 W-field harmonic 結構。
-**中微子 = W-field 嘅 p6 模式**（n=6 諧波）。
+**中微子 = W-field 嘅 P6 模式**（n=6 諧波）。
 
 ### 13.2 K_Chain 諧波對應
 
@@ -785,7 +785,7 @@ $$M_{comp} = \frac{M_{Pl}}{2 \times h^{11} \times h^{21} \times N_d} = 3.93 \tim
 ### 14.6 中微子類型：Majorana
 
 **結論：** 中微子係 Majorana 粒子（自伴）。原因：
-1. W-field p6 mode 係實數模式（K_Chain Laplacian 實數本徵值）
+1. W-field P6 mode 係實數模式（K_Chain Laplacian 實數本徵值）
 2. 無需右旋中微子（無 Seesaw 機制）
 3. CY₃ 投影保持實數性
 4. 0 自由參數，純幾何推導

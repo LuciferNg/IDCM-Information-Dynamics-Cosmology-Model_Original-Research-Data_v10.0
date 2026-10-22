@@ -1,0 +1,32 @@
+{
+  "note": "CORRECTED 0-based. Only (1,1,0,0) ↔ -232=-8×L₇ is universal (4/4).",
+  "universal": {
+    "point": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "K": -232,
+    "factor": -232,
+    "lucas_index": 7,
+    "lucas_value": 29,
+    "instances": [
+      0,
+      1,
+      3,
+      50
+    ]
+  },
+  "canonical_only": {
+    "divisor_0": {
+      "K": -360,
+      "factor": -360,
+      "note": "45=Σγ/2; NOT universal (values -336..-640)"
+    }
+  },
+  "withdrawn": [
+    "K[35,35,35]=-360 (index artifact)",
+    "K[0,0,35]=-44 (index artifact)"
+  ]
+}

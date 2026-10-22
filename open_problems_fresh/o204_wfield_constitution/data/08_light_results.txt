@@ -1,0 +1,8 @@
+O204 Script 08 — 光 cross-check: 24/24 PASS
+L1 相位扇區 ω = sqrt(J)k (無 gap, 零色散)
+L2 c = a sqrt(J) = R_world*omega_ring EXACT (N_d 相消)
+L3 O164 質量-頻率鎖 = O204 質量塔 (lambda_sync, c 相消, 44/44 EXACT)
+L4 Lambda_1 = hbar*pi*N_d/R_world = pi N_d * hbar*omega_ring = 2.140399e-31 eV
+L5 G8: 光 = U(1)_EM 光子 (2 dof); W Goldstone = 環座標/時鐘模 (1 dof)
+L6 ka >> 1 => 晶格色散唔適用 => ripple = 0
+L7 新約束 U7: Goldstone 熱平衡 => Delta N_eff = 2.20 => 被排除 13 sigma

@@ -1,0 +1,15 @@
+{
+  "test": "正電子 CR 譜接駁 (修正)",
+  "E_res_MeV": 47.5535012488607,
+  "CR_spectral_index": 2.7,
+  "W_effective_index": 0.25812150940979006,
+  "f_W_peak_GeV": "冪律上升 (無峰值)",
+  "gamma_peak": 0,
+  "E_p_peak_TeV": 0,
+  "chi2": 11.009728940986495,
+  "dof": 8,
+  "chi2_dof": 1.3762161176233119,
+  "f_W_model": "power_law: 0.0400·E^(0.258)",
+  "mechanism": "W-field 共振 ~50MeV → CR Lorentz boost → E_e⁺ = γ_p·E_res; 模式譜 Γ_n=M₀·γ_n 決定共振強度",
+  "conclusion": "f_W=0.0400·E^(0.258) fit χ²/dof=1.4; W-field 共振 E_res=47.6MeV; CR boost 決定能量標度; 高頻模式主導上升"
+}

@@ -1,0 +1,39 @@
+{
+ "rules": "r29-mech1-residual-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "合約含關鍵定義",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 齊備（P1–P5／Q1–Q4 = 9 條）",
+   "ok": true,
+   "detail": "缺 = 無"
+  },
+  {
+   "tag": "C3",
+   "name": "判決規則在場",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C4",
+   "name": "負對照：禁以含 dind／事件量之「不變量」冒充導出（純 u-符號/型別量之閘在場）",
+   "ok": true,
+   "detail": "閘條款 = 在場"
+  },
+  {
+   "tag": "C5",
+   "name": "凍結指紋已寫入",
+   "ok": true,
+   "detail": "sha256 = 78ddcd38575d3088…"
+  }
+ ],
+ "gate": "OPEN",
+ "n_pass": 5,
+ "n_total": 5,
+ "contract_sha256": "78ddcd38575d3088bf4771c8f9fde9be9763a62ce5d60fcf1e325abd83795ae4"
+}

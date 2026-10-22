@@ -1,0 +1,36 @@
+{
+  "problem": "O121/G8 三項收尾",
+  "A_ktree": {
+    "decomposition": "583/2 = N_d * (53/8) = 291.5",
+    "L_depth": 6.625,
+    "tree_capacity_BL": 26.5,
+    "L_status": "🔴 53 質數, 無自然 Fibonacci 分解 (O72 docs/07)",
+    "eta_exponent": 21.0,
+    "eta_independent_of_L": true,
+    "verdict": "η 指數只依賴 階梯比 φ + 級數 21; 兩者皆非 L"
+  },
+  "B_n_to_E": {
+    "dispersion": "E_n = hbar*c*2sin(pi*n/88)/a",
+    "E_27_at_a_eq_ell_eV": 7179392603570082.0,
+    "obs_ankle_eV": 5e+18,
+    "a_needed_m": 6.4844273995445e-26,
+    "obstruction": "晶格尺度 a 未由 IDCM 獨立定出",
+    "status": "🟡 P-G8f 維持"
+  },
+  "C_constraints": {
+    "tau_pred": 8.874784590563531e+16,
+    "tau_ref": 875938505541651.8,
+    "viable_range": [
+      875938505541651.8,
+      8.874784590563531e+16
+    ],
+    "orders_of_magnitude": 2.0056842026338515,
+    "constraints_checked": [
+      "UHECR 下界",
+      "BH 人口統計",
+      "吸積率",
+      "質量函數低端"
+    ],
+    "verdict": "τ_rec 現時不可檢驗; 唯一 ΛCDM 判別力 = P-G8d M_crit"
+  }
+}

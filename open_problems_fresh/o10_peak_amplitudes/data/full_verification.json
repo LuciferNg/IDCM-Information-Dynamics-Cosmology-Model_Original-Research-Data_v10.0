@@ -1,0 +1,131 @@
+{
+  "passed": 25,
+  "total": 25,
+  "results": [
+    {
+      "name": "D\u2083 = 2553 (\u5514\u4fc2\u6587\u737b 1400)",
+      "ok": true,
+      "detail": "D\u2083=2553, \u6587\u737b 1400 \u932f 82%"
+    },
+    {
+      "name": "D\u2081 \u2248 5700 (\u6587\u737b\u4e00\u81f4)",
+      "ok": true,
+      "detail": "D\u2081=5816"
+    },
+    {
+      "name": "\u771f\u5cf0 = \u8cea\u6578\u4f4d\u7f6e {1,2,3,5,7}",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "\u8cea\u6578\u5cf0\u76f8\u4f4d \u2113 \u2261 \u00b11, \u00b121 (mod 44)",
+      "ok": true,
+      "detail": "s = +1, -1, +23, +21, +1"
+    },
+    {
+      "name": "\u76f8\u4f4d\u7b26\u865f\u4ea4\u66ff (-1)^(j-1)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "M/(M+1) = 33/34 \u2248 0.9702",
+      "ok": true,
+      "detail": "33/34=0.970588 vs fit 0.9702 (\u504f\u5dee +0.040%)"
+    },
+    {
+      "name": "M+1 = 34 = F\u2089",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "\u8cea\u6578\u5cf0\u516c\u5f0f Planck RMS 0.30%",
+      "ok": true,
+      "detail": "RMS = 0.30%"
+    },
+    {
+      "name": "\u6bcf\u5cf0\u504f\u5dee < 1%",
+      "ok": true,
+      "detail": "\u504f\u5dee = -0.05%, +0.23%, -0.49%, +0.26%"
+    },
+    {
+      "name": "P\u2082 (5,7) Planck",
+      "ok": true,
+      "detail": "0.1779 vs 0.1771 (+0.45%)"
+    },
+    {
+      "name": "P\u2082 (5,7) ACT DR6",
+      "ok": true,
+      "detail": "0.1759 (-0.65%)"
+    },
+    {
+      "name": "P\u2082 (5,7) SPT-3G",
+      "ok": true,
+      "detail": "0.1766 (-0.23%)"
+    },
+    {
+      "name": "A\u2083/A\u2082 \u2248 F\u2081/F\u2082 = 1",
+      "ok": true,
+      "detail": "0.9899 vs 1 (-1.01%)"
+    },
+    {
+      "name": "A\u2087/A\u2085 \u2248 F\u2083/F\u2084 = 2/3",
+      "ok": true,
+      "detail": "0.6598 vs 0.6667 (-1.03%)"
+    },
+    {
+      "name": "\u8def\u5f91\u6578 = F_m (m=1..9)",
+      "ok": true,
+      "detail": "F = 1,1,2,3,5,8,13,21,34"
+    },
+    {
+      "name": "\u6b0a\u91cd\u5747\u4e00\u6027 = \u03c6^{-(m-1)} (m=2..7)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "T = [[1,1],[1,0]] \u03bb_max = \u03c6",
+      "ok": true,
+      "detail": "\u03bb_max = 1.618033988749895"
+    },
+    {
+      "name": "(T^{m-1})[0,0] = F_m (m=1..9)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Binet \u516c\u5f0f F_m (m=1..9)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "N_m = \u8cea\u6578\u5c0d\u548c (5, 12, 18, 32)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "N\u2085 = 25 = 2+23",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P\u2081 = 3\u03b5",
+      "ok": true,
+      "detail": "0.4635"
+    },
+    {
+      "name": "P\u2082 = 3\u03b5\u03c6\u207b\u00b2",
+      "ok": true,
+      "detail": "0.1771"
+    },
+    {
+      "name": "P\u2083 = 3\u03b5\u00b72\u03c6\u207b\u2074",
+      "ok": true,
+      "detail": "0.1353"
+    },
+    {
+      "name": "P\u2084 = 3\u03b5\u00b73\u03c6\u207b\u2076 \u2248 0.0775",
+      "ok": true,
+      "detail": "0.0775"
+    }
+  ]
+}

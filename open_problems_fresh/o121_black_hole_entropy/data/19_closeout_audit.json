@@ -1,0 +1,26 @@
+{
+  "script": "19_closeout_audit",
+  "pass": 68,
+  "fail": 0,
+  "A_files": {
+    "docs": 19,
+    "scripts": 20,
+    "data": 19,
+    "logs": 20
+  },
+  "E_total_pass": 195,
+  "F_residual": 45,
+  "F_unjudged": 0,
+  "H_append_only": {
+    "01_problem_record.md": "verified",
+    "SESSION_START.md": "verified"
+  },
+  "I_register_events": 18,
+  "I_kinds": {
+    "registered": 2,
+    "note": 11,
+    "closed": 1,
+    "handed_off": 4
+  },
+  "verdict": "68 PASS / 0 FAIL"
+}

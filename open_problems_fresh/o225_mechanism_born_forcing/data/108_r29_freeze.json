@@ -1,0 +1,18 @@
+{
+ "rules": "r29-mech1-residual-v1",
+ "contract": "docs/62_r29_contract.md",
+ "sha256": "78ddcd38575d3088bf4771c8f9fde9be9763a62ce5d60fcf1e325abd83795ae4",
+ "frozen_at": "2026-10-01 22:48:00",
+ "claims_declared": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P5",
+  "Q1",
+  "Q2",
+  "Q3",
+  "Q4"
+ ],
+ "note": "見數前凍結：本指紋於 scripts/109（機器）與 scripts/110（審計）執行前寫定"
+}

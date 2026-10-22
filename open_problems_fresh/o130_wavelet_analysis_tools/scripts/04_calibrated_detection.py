@@ -61,12 +61,23 @@ print("=" * 78)
 print("  O130/04 -- calibrated detection test (matched filter + trial-corrected null)")
 print("=" * 78)
 
-LAM = math.pi * 4129.94 / 44 / 0.7259            # 406.2227 h^-1 Mpc
+# --- UNITS: corrected 2026-09-28 (see docs/04_unit_correction.md) -------------
+# lambda_sync = 2*pi*R_H/88 = pi*R_world/44 = 294.877026 Mpc  -- PHYSICAL Mpc.
+# The survey xi(s) axis is in h^-1 Mpc with that survey's fiducial h, so
+#     lambda_sync[h^-1 Mpc] = lambda_sync[Mpc] * h_fid
+# v9.0 _core.py wrote  LAMBDA_SYNC / H  (divide!), giving 406.22 -> 1/h^2 = 1.897x
+# too long, and the migration carried it verbatim.  Empirical proof of the axis
+# unit: the BAO bump in the released DESI DR2 best-fit theory curve sits at
+# s = 102.0 h^-1 Mpc = r_d(147.09 Mpc) * h_fid  => the axis really is h^-1 Mpc.
+LAM_MPC = 294.877026
+H_FID = 0.6736                                   # DESI/BOSS/eBOSS fiducial h
+LAM = LAM_MPC * H_FID                            # 198.63 h^-1 Mpc
 GAM = lambda n: 4 * math.sin(math.pi * n / 88) ** 2
 S_MIN = 40.0                                     # BAO-relevant window (see section A)
 SIGMA = 10.0                                     # nonlinear BAO damping (h^-1 Mpc)
 KNOT_SET = (4, 5, 6)
-BAND = list(range(3, 9))                         # resolvable band (script 03: n_max=8.53)
+BAND = list(range(3, 9))                         # structural band; at ds = 5 only n <= 5.82
+#                                                  (i.e. n = 3,4,5) is resolvable -- script 05 A1
 DELTA_GRID = [-0.10, -0.05, -0.02, -0.01, 0.0, 0.01, 0.02, 0.05, 0.10]
 
 z = zipfile.ZipFile(os.path.join(DATA, "ross_dr12_corrfunc.zip"))

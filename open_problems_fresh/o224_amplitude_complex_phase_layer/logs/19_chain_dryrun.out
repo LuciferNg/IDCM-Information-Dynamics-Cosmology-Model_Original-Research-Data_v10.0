@@ -1,0 +1,64 @@
+=== O224 chain (rounds 1-5) from /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o224_amplitude_complex_phase_layer  [mode: dry-run]
+
+--- round 1: contract, re-lock of the frozen machine, the five judgment items, audit
+[dry ] /usr/bin/python3 scripts/00_contract.py > logs/00_contract.out
+[dry ] /usr/bin/python3 scripts/01_relock.py > logs/01_relock.out
+[dry ] /usr/bin/python3 scripts/02_phase.py > logs/02_phase.out
+[dry ] /usr/bin/python3 scripts/03_tensor.py > logs/03_tensor.out
+[dry ] /usr/bin/python3 scripts/04_multiparty.py > logs/04_multiparty.out
+[dry ] /usr/bin/python3 scripts/04b_window.py > logs/04b_window.out
+[dry ] /usr/bin/python3 scripts/05_valueset.py > logs/05_valueset.out
+[dry ] /usr/bin/python3 scripts/06_escape.py > logs/06_escape.out
+[dry ] /usr/bin/python3 scripts/07_audit.py > logs/07_audit.out
+
+--- round 2: the four round-1 residuals, then re-audit
+[dry ] /usr/bin/python3 scripts/08_residuals.py > logs/08_residuals.out
+[dry ] /usr/bin/python3 scripts/07_audit.py > logs/07_audit.out
+
+--- round 3: E4 layer, E5 layer, determinism, re-audit
+[dry ] /usr/bin/python3 scripts/09_global_n.py > logs/09_global_n.out
+[dry ] /usr/bin/python3 scripts/10_e5.py > logs/10_e5.out
+[dry ] /usr/bin/python3 scripts/11_determinism.py > logs/11_determinism.out
+[dry ] /usr/bin/python3 scripts/07_audit.py > logs/07_audit.out
+
+--- round 4: 12 shards over the party-1 ordered-pair index, then aggregate + addenda
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 0 12 > logs/12_shard_00.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 1 12 > logs/12_shard_01.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 2 12 > logs/12_shard_02.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 3 12 > logs/12_shard_03.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 4 12 > logs/12_shard_04.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 5 12 > logs/12_shard_05.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 6 12 > logs/12_shard_06.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 7 12 > logs/12_shard_07.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 8 12 > logs/12_shard_08.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 9 12 > logs/12_shard_09.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 10 12 > logs/12_shard_10.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py --shard 11 12 > logs/12_shard_11.out
+[dry ] /usr/bin/python3 scripts/12_n4_global.py > logs/12_n4_global.out
+[dry ] /usr/bin/python3 scripts/13_party_window.py > logs/13_party_window.out
+[dry ] /usr/bin/python3 scripts/14_census_exact.py > logs/14_census_exact.out
+[dry ] /usr/bin/python3 scripts/15_anti_convention.py > logs/15_anti_convention.out
+[dry ] /usr/bin/python3 scripts/11_determinism.py > logs/11_determinism.out
+[dry ] /usr/bin/python3 scripts/07_audit.py > logs/07_audit.out
+
+--- round 5: cross-engine checks FIRST, then 8 mutually exclusive ranges, merge, aggregate
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --check > logs/18_check_j1.out
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --check-range 0 24 2 > logs/18_j6_bmax2_pairs0_24.out
+[dry ] /usr/bin/python3 scripts/17_windows_global_gpu.py --check > logs/17_check_g1.out
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --run-range 0 480 > logs/18_run_r5.log
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --run-range 480 960 > logs/18_run_r5.log
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --run-range 960 1440 > logs/18_run_r5.log
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --run-range 1440 1920 > logs/18_run_r5.log
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --run-range 1920 2400 > logs/18_run_r5.log
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --run-range 2400 2880 > logs/18_run_r5.log
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --run-range 2880 3360 > logs/18_run_r5.log
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --run-range 3360 3844 > logs/18_run_r5.log
+[dry ] /usr/bin/python3 scripts/18_windows_global_jit.py --merge > logs/18_merge_revB.out
+[dry ] /usr/bin/python3 scripts/16_windows_global.py --aggregate > logs/16_aggregate.out
+[dry ] /usr/bin/python3 scripts/16_windows_global.py --shard 0 3844 > logs/16_smoke_shard0of3844.out
+
+--- round 5 close-out: engine measurements, chain audit
+[dry ] /usr/bin/python3 scripts/measure_engines.py > logs/18_engine_measure.out
+[dry ] /usr/bin/python3 scripts/chain_audit.py > logs/19_chain_audit.out
+
+=== DRY RUN ONLY (no file written).  Re-run with --execute to rebuild everything.

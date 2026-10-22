@@ -1,0 +1,13 @@
+{
+  "title": "資訊悖論無損失定理 + 蒸發回復",
+  "S_tot_init": 90.0,
+  "S_proj_init": 28.5,
+  "S_sync_init": 61.49999999999999,
+  "n_steps": 123,
+  "Sync_monotonic_decrease": true,
+  "Proj_monotonic_increase": true,
+  "n_sync_modes": 17,
+  "conservation_each_step": true,
+  "no_loss_theorem": "T_pipe† bijective on ker(T_pipe); info encoded in sync DOF; S_tot constant",
+  "verdict": "資訊悖論係偽問題: S_tot=Σγ=90 全程守恆, 蒸發=T_pipe†→T_pipe逆映射回復資訊"
+}

@@ -1,0 +1,6 @@
+# O4_renew A01: 基礎幾何驗證
+nodes=60 edges=120 degree=[4]
+edge_len_mean=26.1289
+faces={5: 12, 4: 30, 3: 20} euler=2
+bfs_profile=[1, 4, 8, 11, 12, 11, 8, 4, 1] diameter=8
+frustration=32

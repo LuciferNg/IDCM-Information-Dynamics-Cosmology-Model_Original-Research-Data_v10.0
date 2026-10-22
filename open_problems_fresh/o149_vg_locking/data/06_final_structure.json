@@ -1,0 +1,169 @@
+{
+  "monotonicity": {
+    "holds": true,
+    "angles": [],
+    "beats": []
+  },
+  "denominator_means": [
+    {
+      "name": "CKM tan\u03b8\u2081\u2082",
+      "pair": "(19,25)",
+      "mean": 22.0,
+      "nearest_special": "SYNC(22)",
+      "delta": 0.0
+    },
+    {
+      "name": "CKM tan\u03b8\u2082\u2083",
+      "pair": "(3,22)",
+      "mean": 12.5,
+      "nearest_special": "F\u2087(13)",
+      "delta": 0.5
+    },
+    {
+      "name": "CKM sin\u03b8\u2081\u2083",
+      "pair": "(10,31)",
+      "mean": 20.5,
+      "nearest_special": "F\u2088(21)",
+      "delta": 0.5
+    },
+    {
+      "name": "CKM \u03bb",
+      "pair": "(6,37)",
+      "mean": 21.5,
+      "nearest_special": "F\u2088(21)",
+      "delta": 0.5
+    },
+    {
+      "name": "CKM V_cb",
+      "pair": "(6,37)",
+      "mean": 21.5,
+      "nearest_special": "F\u2088(21)",
+      "delta": 0.5
+    },
+    {
+      "name": "CKM V_ub",
+      "pair": "(3,37)",
+      "mean": 20.0,
+      "nearest_special": "F\u2088(21)",
+      "delta": 1.0
+    },
+    {
+      "name": "CKM A",
+      "pair": "(10,28)",
+      "mean": 19.0,
+      "nearest_special": "L\u2086(18)",
+      "delta": 1.0
+    },
+    {
+      "name": "PMNS tan\u03b8\u2081\u2082",
+      "pair": "(9,25)",
+      "mean": 17.0,
+      "nearest_special": "L\u2086(18)",
+      "delta": 1.0
+    },
+    {
+      "name": "PMNS tan\u03b8\u2082\u2083",
+      "pair": "(12,26)",
+      "mean": 19.0,
+      "nearest_special": "L\u2086(18)",
+      "delta": 1.0
+    },
+    {
+      "name": "PMNS tan\u03b8\u2082\u2083b",
+      "pair": "(22,44)",
+      "mean": 33.0,
+      "nearest_special": "3\u00b711(33)",
+      "delta": 0.0
+    },
+    {
+      "name": "PMNS sin\u03b8\u2081\u2083",
+      "pair": "(3,20)",
+      "mean": 11.5,
+      "nearest_special": "L\u2085(11)",
+      "delta": 0.5
+    }
+  ],
+  "numerator_means": [
+    {
+      "name": "CKM tan\u03b8\u2081\u2082",
+      "pair": "(5,6)",
+      "mean": 5.5,
+      "nearest_fib": "F\u2085(5)",
+      "delta": 0.5
+    },
+    {
+      "name": "CKM tan\u03b8\u2082\u2083",
+      "pair": "(33,35)",
+      "mean": 34.0,
+      "nearest_fib": "F\u2089(34)",
+      "delta": 0.0
+    },
+    {
+      "name": "CKM sin\u03b8\u2081\u2083",
+      "pair": "(42,43)",
+      "mean": 42.5,
+      "nearest_fib": "F\u2089(34)",
+      "delta": 8.5
+    },
+    {
+      "name": "CKM \u03bb",
+      "pair": "(25,35)",
+      "mean": 30.0,
+      "nearest_fib": "F\u2089(34)",
+      "delta": 4.0
+    },
+    {
+      "name": "CKM V_cb",
+      "pair": "(13,14)",
+      "mean": 13.5,
+      "nearest_fib": "F\u2087(13)",
+      "delta": 0.5
+    },
+    {
+      "name": "CKM V_ub",
+      "pair": "(41,42)",
+      "mean": 41.5,
+      "nearest_fib": "F\u2089(34)",
+      "delta": 7.5
+    },
+    {
+      "name": "CKM A",
+      "pair": "(16,35)",
+      "mean": 25.5,
+      "nearest_fib": "F\u2088(21)",
+      "delta": 4.5
+    },
+    {
+      "name": "PMNS tan\u03b8\u2081\u2082",
+      "pair": "(4,13)",
+      "mean": 8.5,
+      "nearest_fib": "F\u2086(8)",
+      "delta": 0.5
+    },
+    {
+      "name": "PMNS tan\u03b8\u2082\u2083",
+      "pair": "(11,23)",
+      "mean": 17.0,
+      "nearest_fib": "F\u2087(13)",
+      "delta": 4.0
+    },
+    {
+      "name": "PMNS tan\u03b8\u2082\u2083b",
+      "pair": "(4,14)",
+      "mean": 9.0,
+      "nearest_fib": "F\u2086(8)",
+      "delta": 1.0
+    },
+    {
+      "name": "PMNS sin\u03b8\u2081\u2083",
+      "pair": "(25,29)",
+      "mean": 27.0,
+      "nearest_fib": "F\u2088(21)",
+      "delta": 6.0
+    }
+  ],
+  "counts": {
+    "den_special_within2": 11,
+    "num_fib_within1": 5
+  }
+}

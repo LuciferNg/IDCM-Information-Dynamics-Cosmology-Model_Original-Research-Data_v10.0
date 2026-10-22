@@ -1,0 +1,92 @@
+{
+ "rules": "o225-script-chain-check-v1",
+ "n_pass": 8,
+ "n_total": 8,
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "編號連續性：缺號 = 宣告式 [8, 9]（無重號）",
+   "ok": true,
+   "detail": "缺號 = [8, 9] ; 劇本數 = 121 ; 重號 = 0"
+  },
+  {
+   "tag": "C2",
+   "name": "每劇本皆有 ≥1 執行日誌（依編號前綴）",
+   "ok": true,
+   "detail": "無 log 之劇本 = 無 ; logs/ = 252"
+  },
+  {
+   "tag": "C3",
+   "name": "每輪「合約閘 → 機器 → 審計」命名三件套齊備（13 輪）",
+   "ok": true,
+   "detail": "缺件 = 無"
+  },
+  {
+   "tag": "C4",
+   "name": "docs 對映：docs/*.md ≥ 26 件且 01_problem_record 引用 scripts/ 之數 ≥ 43",
+   "ok": true,
+   "detail": "docs = 72 ; 引用數 = 244"
+  },
+  {
+   "tag": "C5",
+   "name": "MANIFEST 覆蓋劇本 45/45 且活檔 sha 無誤（自指產物 3 件除外）",
+   "ok": true,
+   "detail": "MANIFEST 內劇本 = 121/121 ; sha 錯配 = 無"
+  },
+  {
+   "tag": "C7",
+   "name": "文檔內 scripts/ 引用全部解析（O225 自身 or O222 凍結輸入；範圍／簡寫另計）",
+   "ok": true,
+   "detail": "可解析 = 304 ; 簡寫（範圍／純數字）= 106 個 ; 未解析 = 無"
+  },
+  {
+   "tag": "C8",
+   "name": "每輪皆可由鏈表自足重跑（鏈表列明合約→機器→審計指令）",
+   "ok": true,
+   "detail": "輪次指令數 = 28 ; scratch 探針登錄 = 0 件"
+  },
+  {
+   "tag": "C6",
+   "name": "鏈表已生成 docs/26_script_chain_index.md（26_script_chain_index.md）",
+   "ok": true,
+   "detail": "行數 = 133"
+  }
+ ],
+ "declared_gaps": [
+  8,
+  9
+ ],
+ "n_scripts": 121,
+ "n_logs": 252,
+ "n_data": 129,
+ "rounds": [
+  "R0",
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5",
+  "R6",
+  "R7",
+  "R8",
+  "R9",
+  "closeout-v1",
+  "R10",
+  "R11",
+  "R12",
+  "R13",
+  "R14",
+  "R15",
+  "R16",
+  "R17",
+  "R18",
+  "R19",
+  "R20",
+  "R21",
+  "R22",
+  "R23",
+  "R24",
+  "R25",
+  "R26"
+ ]
+}

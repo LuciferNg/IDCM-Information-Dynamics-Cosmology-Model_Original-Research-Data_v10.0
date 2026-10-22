@@ -1,0 +1,15 @@
+{
+ "n_pass": 10,
+ "n_total": 10,
+ "V": 60,
+ "E": 120,
+ "F_traced": 62,
+ "face_sizes": {
+  "5": 12,
+  "4": 30,
+  "3": 20
+ },
+ "chi": 2,
+ "is_RH": true,
+ "graph_triangles": 20
+}

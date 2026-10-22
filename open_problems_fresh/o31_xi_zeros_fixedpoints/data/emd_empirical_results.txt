@@ -1,0 +1,11 @@
+O31 EMD + Wiggle empirical verification
+
+eBOSS: 1 zeros
+BOSS:  1 zeros
+Consistent: 0
+
+Empirical nulls (eBOSS EMD):
+  15.830 (theory=15.925, diff=-0.096)
+
+Extra fixed points: 12 (noise: 1)
+88 fixed-point theorem: THEORETICAL 🟢, EMPIRICAL 🟡

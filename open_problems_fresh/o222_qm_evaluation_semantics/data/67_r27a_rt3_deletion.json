@@ -1,0 +1,48 @@
+{
+ "families": {
+  "V": 12,
+  "F": 20,
+  "E": 30
+ },
+ "calibration": {
+  "J1": 6,
+  "J2": [
+   "1",
+   62
+  ],
+  "J3": [
+   "1",
+   124
+  ],
+  "J4": [
+   6000,
+   7140
+  ],
+  "J5": [
+   12,
+   62
+  ]
+ },
+ "family_deletions": {
+  "del_V": {
+   "cols": 50,
+   "broken": [],
+   "rank": 6,
+   "sep": 12
+  },
+  "del_F": {
+   "cols": 42,
+   "broken": [],
+   "rank": 6,
+   "sep": 12
+  },
+  "del_E": {
+   "cols": 32,
+   "broken": [],
+   "rank": 6,
+   "sep": 12
+  }
+ },
+ "single_axis_breaks_J5": [],
+ "single_axis_min_sep": 12
+}

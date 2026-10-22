@@ -1,0 +1,620 @@
+{
+ "rules_version": "o226-r2-contract-v1",
+ "classes": 12,
+ "common_stabiliser_order": 10,
+ "stab_u0_order": 10,
+ "reference_axis_type": "vertex",
+ "fixed_pointed_axes_of_H": [
+  0,
+  11
+ ],
+ "orbit_sizes_by_reference_type": {
+  "vertex": [
+   12
+  ],
+  "face": [
+   20
+  ],
+  "edge": [
+   30
+  ]
+ },
+ "measured_rows_by_reference_type": {
+  "vertex": 12,
+  "face": 20,
+  "edge": 30
+ },
+ "class_pair_distance": [
+  [
+   0,
+   38,
+   22,
+   22,
+   24,
+   40,
+   22,
+   38,
+   40,
+   40,
+   24,
+   62
+  ],
+  [
+   38,
+   0,
+   22,
+   22,
+   40,
+   24,
+   38,
+   22,
+   40,
+   40,
+   62,
+   24
+  ],
+  [
+   22,
+   22,
+   0,
+   22,
+   40,
+   40,
+   22,
+   22,
+   40,
+   62,
+   40,
+   40
+  ],
+  [
+   22,
+   22,
+   22,
+   0,
+   24,
+   24,
+   38,
+   38,
+   62,
+   40,
+   40,
+   40
+  ],
+  [
+   24,
+   40,
+   40,
+   24,
+   0,
+   22,
+   40,
+   62,
+   38,
+   22,
+   22,
+   38
+  ],
+  [
+   40,
+   24,
+   40,
+   24,
+   22,
+   0,
+   62,
+   40,
+   38,
+   22,
+   38,
+   22
+  ],
+  [
+   22,
+   38,
+   22,
+   38,
+   40,
+   62,
+   0,
+   22,
+   24,
+   40,
+   24,
+   40
+  ],
+  [
+   38,
+   22,
+   22,
+   38,
+   62,
+   40,
+   22,
+   0,
+   24,
+   40,
+   40,
+   24
+  ],
+  [
+   40,
+   40,
+   40,
+   62,
+   38,
+   38,
+   24,
+   24,
+   0,
+   22,
+   22,
+   22
+  ],
+  [
+   40,
+   40,
+   62,
+   40,
+   22,
+   22,
+   40,
+   40,
+   22,
+   0,
+   22,
+   22
+  ],
+  [
+   24,
+   62,
+   40,
+   40,
+   22,
+   38,
+   24,
+   40,
+   22,
+   22,
+   0,
+   38
+  ],
+  [
+   62,
+   24,
+   40,
+   40,
+   38,
+   22,
+   40,
+   24,
+   22,
+   22,
+   38,
+   0
+  ]
+ ],
+ "distance_value_set": [
+  0,
+  22,
+  24,
+  38,
+  40,
+  62
+ ],
+ "agreement_value_set": [
+  0,
+  11,
+  12,
+  19,
+  20,
+  31
+ ],
+ "agreement_patterns": {
+  "0|0|0": 12,
+  "4|8|10": 40,
+  "4|8|12": 20,
+  "8|12|18": 20,
+  "8|12|20": 40,
+  "12|20|30": 12
+ },
+ "agreement_not_union_pairs": [
+  [
+   0,
+   1,
+   24
+  ],
+  [
+   0,
+   2,
+   40
+  ],
+  [
+   0,
+   3,
+   40
+  ],
+  [
+   0,
+   4,
+   38
+  ],
+  [
+   0,
+   5,
+   22
+  ],
+  [
+   0,
+   6,
+   40
+  ],
+  [
+   0,
+   7,
+   24
+  ],
+  [
+   0,
+   8,
+   22
+  ],
+  [
+   0,
+   9,
+   22
+  ],
+  [
+   0,
+   10,
+   38
+  ],
+  [
+   1,
+   0,
+   24
+  ],
+  [
+   1,
+   2,
+   40
+  ],
+  [
+   1,
+   3,
+   40
+  ],
+  [
+   1,
+   4,
+   22
+  ],
+  [
+   1,
+   5,
+   38
+  ],
+  [
+   1,
+   6,
+   24
+  ],
+  [
+   1,
+   7,
+   40
+  ],
+  [
+   1,
+   8,
+   22
+  ],
+  [
+   1,
+   9,
+   22
+  ],
+  [
+   1,
+   11,
+   38
+  ]
+ ],
+ "double_cosets": 4,
+ "double_coset_collisions": 2,
+ "collision_detail": [
+  [
+   0,
+   1,
+   38,
+   10
+  ],
+  [
+   0,
+   2,
+   22,
+   6
+  ],
+  [
+   0,
+   3,
+   22,
+   10
+  ],
+  [
+   0,
+   4,
+   24,
+   6
+  ],
+  [
+   0,
+   5,
+   40,
+   10
+  ],
+  [
+   0,
+   6,
+   22,
+   6
+  ],
+  [
+   0,
+   7,
+   38,
+   6
+  ],
+  [
+   0,
+   8,
+   40,
+   6
+  ],
+  [
+   0,
+   9,
+   40,
+   6
+  ],
+  [
+   0,
+   10,
+   24,
+   10
+  ],
+  [
+   1,
+   0,
+   38,
+   10
+  ],
+  [
+   1,
+   2,
+   22,
+   6
+  ]
+ ],
+ "antipodal_pairs": 60,
+ "weights": [
+  -10,
+  -10,
+  -10,
+  -10,
+  -10,
+  -10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10
+ ],
+ "k_table": [
+  {
+   "k": 1,
+   "m_star": 88,
+   "sigma_units": 88,
+   "exact": true,
+   "is_44": false
+  },
+  {
+   "k": 2,
+   "m_star": 44,
+   "sigma_units": 88,
+   "exact": true,
+   "is_44": true
+  },
+  {
+   "k": 3,
+   "m_star": 30,
+   "sigma_units": 90,
+   "exact": false,
+   "is_44": false
+  },
+  {
+   "k": 4,
+   "m_star": 22,
+   "sigma_units": 88,
+   "exact": true,
+   "is_44": false
+  }
+ ],
+ "null_class_counts": [
+  1,
+  12,
+  20,
+  30
+ ],
+ "claims": [
+  {
+   "tag": "U1",
+   "name": "the read kernel has 12 classes (R1 G1 reproduced); reps rebuilt from the frozen inputs",
+   "ok": true,
+   "detail": "classes = 12 ; sizes = [10]"
+  },
+  {
+   "tag": "U2",
+   "name": "Pr-5.2: every class stabiliser has order 10 with element-order multiset {1,2,5,5,5,5,10,10,10,10} (= C10, contains the centre)",
+   "ok": true,
+   "detail": "sizes = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10] ; order multisets distinct = [(1, 2, 5, 5, 5, 5, 10, 10, 10, 10)]"
+  },
+  {
+   "tag": "U3",
+   "name": "Pr-5.2 (as pre-registered): distinct classes have stabilisers meeting exactly in the centre {+-1} (order 2)",
+   "ok": false,
+   "detail": "pairwise intersection sizes = [10]"
+  },
+  {
+   "tag": "U3-c",
+   "name": "CORRECTED Pr-5.2 (measured): all 12 classes share ONE and the SAME stabiliser subgroup H of order 10 (pairwise intersections = |H| = 10) => K is right-H-invariant",
+   "ok": true,
+   "detail": "distinct stabiliser sets = 1 ; |H| = 10"
+  },
+  {
+   "tag": "U4",
+   "name": "the 12 stabilisers fall into 6 distinct subgroups (12 = 6 conjugate C10 x 2 classes each)",
+   "ok": false,
+   "detail": "distinct stabiliser subgroups = 1 ; classes per subgroup = 12"
+  },
+  {
+   "tag": "U4-c",
+   "name": "CORRECTED: the class count is [2I : H] = 120/10 = 12 (not 6 subgroups); the 12 rows are exactly the 12 right cosets rep*H",
+   "ok": true,
+   "detail": "distinct subgroups = 1 ; every class = rep*H = True"
+  },
+  {
+   "tag": "U5-c",
+   "name": "THEOREM (immediate from the definition of K, measured): H = Stab_{2I}(u_0), the pointed stabiliser of the reference axis u_0 => K is right-H-invariant and the class count equals |orbit(u_0)|",
+   "ok": true,
+   "detail": "|Stab(u_0)| = 10 ; equals the common class stabiliser = True ; u_0 type = vertex"
+  },
+  {
+   "tag": "U5",
+   "name": "Pr-5.1: every class stabiliser fixes exactly 2 of the 62 pointed axes, both of type vertex and mutually antipodal",
+   "ok": true,
+   "detail": "fixed pointed axes of H = [0, 11] (types ['vertex', 'vertex'])"
+  },
+  {
+   "tag": "U6",
+   "name": "Pr-5.1: the map class -> directed fixed vertex axis is a BIJECTION onto the 12 vertex axes (each used exactly once)",
+   "ok": false,
+   "detail": "directed fixed axes over the 12 classes = 2 (all classes share the same 2 axes: no bijection)"
+  },
+  {
+   "tag": "U6-c",
+   "name": "CORRECTED Pr-5.1 (the real bijection): class(s) -> rho(s) u_0 is a bijection onto the 12 pointed vertex axes; well defined on right cosets since H = Stab(u_0) fixes u_0",
+   "ok": true,
+   "detail": "orbit size of every vertex axis = [12] ; distinct images of the 12 classes = 12"
+  },
+  {
+   "tag": "U7",
+   "name": "Pr-5.1: the induced map class -> antipodal vertex pair is 2-to-1 onto 6 pairs (12 = 2 x 6)",
+   "ok": false,
+   "detail": "antipodal pairs reached by the 12 classes = 1 (all classes share the reference pair): the 2-to-1 structure is REFUTED; the bijection is 12 classes <-> 12 pointed vertex axes"
+  },
+  {
+   "tag": "U20",
+   "name": "FAMILY PREDICTION (registered before measurement): with the reference axis replaced by an axis of type T the number of kernel classes equals |orbit| = 120/|Stab| = 12 / 20 / 30 for T = vertex / face / edge",
+   "ok": true,
+   "detail": "orbit sizes by reference type over all 62 axes = {'vertex': [12], 'face': [20], 'edge': [30]}"
+  },
+  {
+   "tag": "U20b",
+   "name": "non-degeneracy of the theorem: for a reference axis of each type the kernel really has exactly |orbit| distinct rows (no further degeneracy) -- 12 / 20 / 30",
+   "ok": true,
+   "detail": "measured distinct rows = {'vertex': 12, 'face': 20, 'edge': 30}"
+  },
+  {
+   "tag": "U8",
+   "name": "BLIND (reported, not pre-registered): the 12 class row weights split 6/6 as +-10 (forced by the 62 per-setting 60/60 balances: the 12 weights must sum to 0)",
+   "ok": true,
+   "detail": "weights = [-10, -10, -10, -10, -10, -10, 10, 10, 10, 10, 10, 10]"
+  },
+  {
+   "tag": "U9",
+   "name": "Pr-5.3: the agreement counts (62-d)/2 take the value set {0,11,12,19,20}",
+   "ok": false,
+   "detail": "agreement value set = [0, 11, 12, 19, 20, 31] (d value set [0, 22, 24, 38, 40, 62])"
+  },
+  {
+   "tag": "U10",
+   "name": "Pr-5.3 (pre-registered direction): at least one agreement set is NOT a union of the V/F/E axis-type orbits (the agreement structure is finer than the type partition)",
+   "ok": true,
+   "detail": "non-union pairs = 120 of 144 ; first = [[0, 1, 24], [0, 2, 40], [0, 3, 40], [0, 4, 38]]"
+  },
+  {
+   "tag": "U11",
+   "name": "the agreement sets take 6 distinct patterns over the 144 class pairs = (how much of each of V/F/E is agreed); reported only",
+   "ok": true,
+   "detail": "patterns (V,F,E) -> multiplicity = [((0, 0, 0), 12), ((4, 8, 10), 40), ((4, 8, 12), 20), ((8, 12, 18), 20), ((8, 12, 20), 40), ((12, 20, 30), 12)]"
+  },
+  {
+   "tag": "U12-c",
+   "name": "POST-HOC (not pre-registered): the refuted double-coset hypothesis is replaced by the measured finer structure -- the colliding double cosets carry 2 distances each, and the distance is not a function of the order of rep_i^-1 rep_j either",
+   "ok": true,
+   "detail": "collisions = 2 ; colliding (i,j,d,ord(x)) = [[0, 1, 38, 10], [0, 2, 22, 6], [0, 3, 22, 10], [0, 4, 24, 6], [0, 5, 40, 10], [0, 6, 22, 6], [0, 7, 38, 6], [0, 8, 40, 6], [0, 9, 40, 6], [0, 10, 24, 10], [1, 0, 38, 10], [1, 2, 22, 6]] ; distance per order of x = {1: [0], 3: [24], 4: [22, 38, 40, 62], 5: [22, 38, 40], 6: [22, 24, 38, 40], 10: [22, 24, 38, 40]}"
+  },
+  {
+   "tag": "U12",
+   "name": "Pr-5.4: d(i,j) depends only on the double coset H x H -- the 144 distances collapse onto the distinct double cosets with no collision carrying two values",
+   "ok": false,
+   "detail": "distinct double cosets = 4 ; value multiset = [0, 22, 24, 38, 40, 62] ; collisions = 2"
+  },
+  {
+   "tag": "U9-c",
+   "name": "CORRECTED Pr-5.3: the agreement counts are {31} on the 12 diagonal (self) pairs and {0,11,12,19,20} on the 132 off-diagonal class pairs -- the pre-registered set forgot the diagonal (62/2 = 31), which is an accounting slip, not a structural finding",
+   "ok": true,
+   "detail": "full agreement value set = [0, 11, 12, 19, 20, 31] ; off-diagonal (d > 0) = [0, 11, 12, 19, 20]"
+  },
+  {
+   "tag": "U13",
+   "name": "Pr-5.5: the 120 states form 60 antipodal pairs {s,-s} (the B5 Z2 collapse quoted from G3), and every kernel class is exactly 5 such pairs",
+   "ok": true,
+   "detail": "antipodal pairs = 60 ; pairs per class = 5 ; 12 x 5 = 60"
+  },
+  {
+   "tag": "U14",
+   "name": "Pr-5.5: the kernel collapse (120 -> 12) is strictly coarser than the B5 behaviour collapse (120 -> 60)",
+   "ok": true,
+   "detail": "behaviour pairs = 60 ; kernel classes = 12 ; ratio = 5"
+  },
+  {
+   "tag": "U15",
+   "name": "Pr-5.6: k is fixed by the RECORDED account (the feasible pass charges exactly 44 = N_d reads = 1 tick), not by exact exhaustion; measured k-table for k = 1..4",
+   "ok": true,
+   "detail": "k=1 -> m*=88 Sigma=88 theta exact=True | k=2 -> m*=44 Sigma=88 theta exact=True | k=3 -> m*=30 Sigma=90 theta exact=False | k=4 -> m*=22 Sigma=88 theta exact=True"
+  },
+  {
+   "tag": "U16",
+   "name": "Pr-5.6 (pre-registered value for k = 3 was 29): the machine measures k = 3 -> 30 ((88-1)//3 + 1 = 30)  =>  the pre-registered number is REFUTED",
+   "ok": true,
+   "detail": "k = 3 -> m* = 30 (pre-registered 29)"
+  },
+  {
+   "tag": "U16-c",
+   "name": "CORRECTED Pr-5.6: for k = 1..4 the charged reads are 88 / 44 / 30 / 22; only k = 2 reproduces the recorded 44 reads per tick, and k = 1 also exhausts the budget exactly (Sigma = 88 theta = B) => the choice k = 2 is DATA-selected, not derived from exhaustion",
+   "ok": true,
+   "detail": "reads = [88, 44, 30, 22] ; exactly-exhausting k = [1, 2, 4]"
+  },
+  {
+   "tag": "U17",
+   "name": "Pr-5.7: every raw number in play (12, 10, 6, 5, 11, 19, 20, 22, 24, 38, 40) carries >= 2 independent structural readings => no single number has discriminating power; only the explicit orbit statement (U5-c/U6-c/U20) carries structure",
+   "ok": true,
+   "detail": "values with >= 2 readings = 11 of 11"
+  },
+  {
+   "tag": "U18",
+   "name": "null (32 random axis sets, splitmix64, declared draws): the lattice kernel (12 classes, all of size 10) contrasted with random kernels",
+   "ok": true,
+   "detail": "lattice = 12 (sizes [10]) ; null class counts = [1, 12, 20, 30] ; null size sets = [(4,), (6,), (10,), (120,)]"
+  },
+  {
+   "tag": "U19",
+   "name": "rigidity: the 12 x 12 distance table is independent of the choice of class representatives (first vs last member of each class)",
+   "ok": true,
+   "detail": "identical = True"
+  }
+ ]
+}

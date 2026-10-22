@@ -1,0 +1,21 @@
+================================================================================================================
+O222 scripts/17 -- Contract D6 v1 enforcer (mapping table, operationalised)
+================================================================================================================
+[PASS] C1    group rebuilt: |2I| = 120 (closed)  --  |2I| = 120
+[PASS] C2    62 frozen axes reproduced verbatim; h-table bijective (62/62)  --  types = ['edge', 'face', 'vertex']
+[PASS] C3    contract declares all 13 predicate cells  --  declared = ['P1a', 'P1b', 'P1c', 'P2a', 'P2b', 'P2c', 'P2d', 'P3a', 'P3b', 'P3c', 'P4a', 'P4b', 'P4c']
+[PASS] C4    provenance: O210 carries the composition law T = K_chain (x) K_tree  --  found in o210_causal_tensor_algebra
+[PASS] C5    G6 witness: O210 carries NO dimensions for K_chain / K_tree (P1c stays provenance-only)  --  dimension expressions found = False
+[PASS] C6    frozen ledger rules: top-only access, append-only push, pop used only for the rollback  --  top_only=True append=True pop=True
+[PASS] C7    frozen read operator is a pure function of (state, setting) with locality scope read(G, ctx)  --  read(G, ctx) present
+[PASS] C8    register: O222/D6 registered before any number (pre-number discipline)  --  found=True
+[PASS] C9    cited B3R2 values verifiable: budget-feasible all4 = 16/15 (E1) / 13/15 (E2); unrestricted = 2 / 3  --  B3R2 14/14=True ; A2 20/20=True
+[PASS] C10   impl AST gate: no trig / no float literal / no numpy-scipy-math / no random  --  clean
+[PASS] C11   cell parity: the impl computes exactly the 13 pre-registered cells  --  impl cells = ['P1a', 'P1b', 'P1c', 'P2a', 'P2b', 'P2c', 'P2d', 'P3a', 'P3b', 'P3c', 'P4a', 'P4b', 'P4c']
+[PASS] C12   frozen semantics are IMPORTED, not re-implemented (no local read / run_pair)  --  local defs = ['load', 'mul5', 'canon', 'rank_q', 'replay_protocol', 'main', 'find', 'union', 'seq_of', 'observe']
+
+frozen impl scripts/18_d6_mapping.py = a681ae8cf6bcfd69b50a9a3c776f8c43011c3b6c52149bc1f1f565abbe797cf7
+GATE = OPEN   (data/17_d6_freeze.json)
+================================================================================================================
+RESULT: 12/12 PASS  (0 FAIL)
+================================================================================================================

@@ -1,0 +1,266 @@
+{
+ "rules": "r4-tie-parity-v1",
+ "P1_axis_pairs": {
+  "n_pairs": 31,
+  "types": {
+   "vertex": 6,
+   "face": 10,
+   "edge": 15
+  }
+ },
+ "P2": {
+  "off_antisym": true,
+  "tie_same": true
+ },
+ "P3": {
+  "n_tie": [
+   5
+  ],
+  "R": [
+   -10,
+   10
+  ],
+  "Delta": 20,
+  "m_min": 10,
+  "A": 0,
+  "identity_R_eq_2tau_ntie": true
+ },
+ "P4": {
+  "canon_eq_Mb": 7440,
+  "canon_eq_machine_offtie": 6240,
+  "n_offtie": 6240,
+  "canon_eq_machine_tie": 600,
+  "n_tie": 1200
+ },
+ "P5_candidates": {
+  "r (機器型)": {
+   "R_range": [
+    -10,
+    10
+   ],
+   "R_zero": false,
+   "u_odd": false,
+   "u_even": true
+  },
+  "u": {
+   "R_range": [
+    0
+   ],
+   "R_zero": true,
+   "u_odd": true,
+   "u_even": false
+  },
+  "u×r": {
+   "R_range": [
+    0
+   ],
+   "R_zero": true,
+   "u_odd": true,
+   "u_even": false
+  },
+  "u+r": {
+   "R_range": [
+    -10,
+    -6,
+    0,
+    6,
+    10
+   ],
+   "R_zero": false,
+   "u_odd": false,
+   "u_even": false
+  },
+  "u−r": {
+   "R_range": [
+    -10,
+    -6,
+    0,
+    6,
+    10
+   ],
+   "R_zero": false,
+   "u_odd": false,
+   "u_even": false
+  },
+  "conj(r)·u = (⟨u,r⟩, u×r)": {
+   "R_range": [
+    0
+   ],
+   "R_zero": true,
+   "u_odd": true,
+   "u_even": false
+  }
+ },
+ "P6": {
+  "states_per_axis": {
+   "0": 20,
+   "4": 20,
+   "3": 20,
+   "5": 20,
+   "2": 20,
+   "1": 20
+  },
+  "tie_types_per_axis": {
+   "0": {
+    "edge": 10
+   },
+   "4": {
+    "edge": 10
+   },
+   "3": {
+    "edge": 10
+   },
+   "5": {
+    "edge": 10
+   },
+   "2": {
+    "edge": 10
+   },
+   "1": {
+    "edge": 10
+   }
+  }
+ },
+ "P7_subtables": {
+  "edge": {
+   "n_axes": 30,
+   "R": [
+    -10,
+    10
+   ],
+   "n_tie": [
+    5
+   ],
+   "m_min": 10,
+   "u_odd_R": [
+    0
+   ]
+  },
+  "face": {
+   "n_axes": 20,
+   "R": [
+    0
+   ],
+   "n_tie": [
+    0
+   ],
+   "m_min": 0,
+   "u_odd_R": [
+    0
+   ]
+  },
+  "vertex": {
+   "n_axes": 12,
+   "R": [
+    0
+   ],
+   "n_tie": [
+    0
+   ],
+   "m_min": 0,
+   "u_odd_R": [
+    0
+   ]
+  }
+ },
+ "P7_random": {
+  "ok_even": 200,
+  "ok_odd": 200,
+  "exceptions": []
+ },
+ "P8": {
+  "tie_diff": 1200,
+  "R_plus": [
+   0
+  ],
+  "R_minus": [
+   0
+  ]
+ },
+ "claims": [
+  {
+   "tag": "P1",
+   "name": "★ 62 軸恰成 31 對精確負（U[ā] = −U[a]），型別分解 15 edge + 10 face + 6 vertex",
+   "ok": true,
+   "detail": "paired = 62/62 ; pairs = 31 ; types = {'vertex': 6, 'face': 10, 'edge': 15}"
+  },
+  {
+   "tag": "P2",
+   "name": "★ 非 tie 條目 K[s][ā] = −K[s][a]（對消）；tie 條目 K[s][ā] = +K[s][a]（相加）（因凍結 tie 分支只依 r_s，唔依 U[a]）",
+   "ok": true,
+   "detail": "off-tie antisymmetry = True ; tie same-sign = True ; ties/row = [5] ; τ 值域 = [-1, 1]"
+  },
+  {
+   "tag": "P3a",
+   "name": "★ R(s) = 2·τ(s)·n_tie(s) 逐 row 精確（R1 障礙之代數機制）",
+   "ok": true,
+   "detail": "R 值域 = [-10, 10] ; n_tie ≡ [5]"
+  },
+  {
+   "tag": "P3b",
+   "name": "★ R1 重導：n_tie ≡ 5 ⟹ R = ±10、Δ = 20、m_min = ceil(Δ/2) = 10 = 2×5",
+   "ok": true,
+   "detail": "n_tie = [5] ; R = [-10, 10] ; Δ = 20 ; m_min = 10 (A = 0)"
+  },
+  {
+   "tag": "P4a",
+   "name": "★★ 乘積層讀出 Λ(conj(r)·u) = Λ(⟨u,r⟩, u×r) 在全部 7440 條目上 == M-b（0 例外）",
+   "ok": true,
+   "detail": "matches = 7440 / 7440"
+  },
+  {
+   "tag": "P4b",
+   "name": "★ 同規則在全部非 tie 條目上 == 機器 K（0 例外）",
+   "ok": true,
+   "detail": "matches = 6240 / 6240"
+  },
+  {
+   "tag": "P4c",
+   "name": "★ 在 tie 條目上只部分一致 ⟹ 機器 tie 分支非「單一物件之首非零分量」函數",
+   "ok": true,
+   "detail": "matches = 600 / 1200（機器讀 r、乘積層讀 u×r）"
+  },
+  {
+   "tag": "P5",
+   "name": "★ u-宇稱充要：R ≡ 0 ⟺ 該規則在 tie 上 u-奇（候選族 6 個逐個驗）",
+   "ok": true,
+   "detail": "r (機器型): R=[-10, 10] u_odd=False; u: R=[0] u_odd=True; u×r: R=[0] u_odd=True; u+r: R=[-10, -6, 0, 6, 10] u_odd=False; u−r: R=[-10, -6, 0, 6, 10] u_odd=False; conj(r)·u = (⟨u,r⟩, u×r): R=[0] u_odd=True"
+  },
+  {
+   "tag": "P6",
+   "name": "★ 商：ax(s)（r_s 之二十面體軸線）恰 6 值、每值 20 態；tie 集合係 ax 之函數（6 個相異 tie 集）⟹ 障礙之表住喺 6 條軸上",
+   "ok": true,
+   "detail": "states/axis = [20, 20, 20, 20, 20, 20] ; distinct tie sets = 6 ; tie types per axis = {0: {'edge': 10}, 4: {'edge': 10}, 3: {'edge': 10}, 5: {'edge': 10}, 2: {'edge': 10}, 1: {'edge': 10}}"
+  },
+  {
+   "tag": "P7a",
+   "name": "★ 子表 edge(30)/face(20)/vertex(12)：各表之 n_tie 與 R、u-奇規則下 R ≡ 0",
+   "ok": true,
+   "detail": "edge: n=30 n_tie=[5] R=[-10, 10] m_min=10 u-odd R=[0]; face: n=20 n_tie=[0] R=[0] m_min=0 u-odd R=[0]; vertex: n=12 n_tie=[0] R=[0] m_min=0 u-odd R=[0]"
+  },
+  {
+   "tag": "P7b",
+   "name": "★ 200 旋轉機器：u-偶規則 ⟹ |R| = 2·n_tie（每 row 一致）；u-奇規則 ⟹ R ≡ 0（逐個驗）",
+   "ok": true,
+   "detail": "u-even ok = 200/200 ; u-odd ok = 200/200 ; n_tie 值域 = [(5,)] ; 例外 = []"
+  },
+  {
+   "tag": "P8a",
+   "name": "★ tie 位分解（障礙位）：候選族中 R ≡ 0 ⟺ u-奇；u-偶（含機器之 r-only）⟹ |R| = 2n_tie > 0",
+   "ok": true,
+   "detail": "機器型 = {'R_range': [-10, 10], 'R_zero': False, 'u_odd': False, 'u_even': True}"
+  },
+  {
+   "tag": "P8b",
+   "name": "★ R-中性位：兩個「乘積層且非 tie 一致」候選（+u×r 與 −u×r）皆 R ≡ 0，但 tie 值不同 ⟹ 「乘積層 + 非 tie 一致」唔足以唯一固定 tie 位（本輪預註冊之唯一性被否證，誠實報）",
+   "ok": true,
+   "detail": "R(+cross) = [0] ; R(−cross) = [0] ; tie 值相異條目 = 1200"
+  },
+  {
+   "tag": "P8c",
+   "name": "判決：障礙完全由「讀出物件」之宇稱位決定（乘積層 vs r-only）；餘下之向量部符號位係 R-中性約定 ⟹ M-b 之「1 bit」= 讀出約定，唔係新增物理輸入",
+   "ok": true,
+   "detail": "見 P5/P8a/P8b"
+  }
+ ]
+}

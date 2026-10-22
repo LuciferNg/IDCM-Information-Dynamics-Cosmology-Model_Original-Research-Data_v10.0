@@ -1,0 +1,39 @@
+{
+  "extra_u1_count": 6,
+  "rank_su12": 11,
+  "rank_tensor": 5,
+  "id": "O90",
+  "name": "6 Extra U(1) \u2194 V_\u039b = 283.0821",
+  "key_identities": {
+    "264 = 6\u00d744": "6\u00d744",
+    "264 = 3\u00d788": "3\u00d788",
+    "264 = 4\u00d766": "4\u00d766",
+    "264 = -2(\u03a3\u03ba+\u03c7)": "-2(-8+-124)",
+    "F(\u03b3) \u2248 264": "264.0821292326",
+    "V_\u039b = F(\u03b3)+N_d-F\u2088-B": "283.08212923",
+    "V_\u039b = 7\u00d7N_d - 25": "283"
+  },
+  "u1_physical_meaning": [
+    "U(1)_{B-L} \u2014 baryon minus lepton number (Pati-Salam)",
+    "U(1)_{PQ} \u2014 Peccei-Quinn symmetry",
+    "U(1)_{F1}, F2, F3 \u2014 family/horizontal symmetries",
+    "U(1)_{R} \u2014 right-handed isospin"
+  ],
+  "structural_identities": {
+    "6 = L\u2085-F\u2085": "11-5",
+    "6 = B+N_gen-1": "4+3-1",
+    "6 = N_d-K_tree-F\u2085": "44-33-5",
+    "6 = C\u2082(adj)/2": "12/2"
+  },
+  "gamma_identity": "F(\u03b3) = 264.0821292326 \u2248 6\u00d744 = 6U(1)\u00d7N_d",
+  "V_Lambda": {
+    "formula": "F(\u03b3) + N_d - F\u2088 - B",
+    "value": 283.08212923258026,
+    "target": 283.0752,
+    "error_pct": 0.002447841626628586
+  },
+  "verification_count": 22,
+  "verification_total": 22,
+  "status": "\ud83d\udfe2 CLOSED",
+  "timestamp": "2026-08-27"
+}

@@ -1,0 +1,71 @@
+{
+  "S_obs_uK2": 12271.55090512685,
+  "rms_obs_uK": 110.77703238996273,
+  "AMP": 1.1007073211605742e-05,
+  "AMP_xT_uK": 29.999557896767218,
+  "TGT_uK2": 899.9734740014884,
+  "candidate_devs_peak_pct": {
+    "M1 counting (w=1)": -99.9524599517053,
+    "M2 ring-Nyquist (w=N_d=44)": -97.90823787503278,
+    "M3 rung spacing (w=44(8-m))": -86.75524740405103,
+    "M4 sky modes (w=2l+1)": -62.4223497856865,
+    "M5 proj kernel (w=cos^2)": -99.95272825754714,
+    "M6 spectral weight (w=gamma_m)": -99.99972992443332,
+    "M7 FSR cascade (w=4^(m-1))": -95.65552656659113,
+    "M8 log-l uniform (w=ln ratio)": -99.83599021636718,
+    "M9 half-Nyquist (w=22)": -98.9541189375164,
+    "M10 Z2 multiplicity (w=2)": -99.90491990341059,
+    "M11 Voronoi partition (w=spacing)": -83.36464670229998
+  },
+  "candidate_devs_plateau_pct": {
+    "M1 counting (w=1)": -99.91961568469063,
+    "M2 ring-Nyquist (w=N_d=44)": -96.46309012638783,
+    "M3 rung spacing (w=44(8-m))": -81.31771699942597,
+    "M4 sky modes (w=2l+1)": 2.673586265573719,
+    "M5 proj kernel (w=cos^2)": -99.92074820481005,
+    "M6 spectral weight (w=gamma_m)": -99.99885681383462,
+    "M7 FSR cascade (w=4^(m-1))": -70.76162455351866,
+    "M8 log-l uniform (w=ln ratio)": -99.82423852180338,
+    "M9 half-Nyquist (w=22)": -98.2315450631939,
+    "M10 Z2 multiplicity (w=2)": -99.83923136938127,
+    "M11 Voronoi partition (w=spacing)": -72.44391831503613
+  },
+  "admissible": {
+    "M1 counting (w=1)": true,
+    "M2 ring-Nyquist (w=N_d=44)": true,
+    "M3 rung spacing (w=44(8-m))": false,
+    "M4 sky modes (w=2l+1)": false,
+    "M5 proj kernel (w=cos^2)": true,
+    "M6 spectral weight (w=gamma_m)": true,
+    "M7 FSR cascade (w=4^(m-1))": false,
+    "M8 log-l uniform (w=ln ratio)": true,
+    "M9 half-Nyquist (w=22)": true,
+    "M10 Z2 multiplicity (w=2)": true,
+    "M11 Voronoi partition (w=spacing)": false
+  },
+  "min_admissible_dev_pct": 96.46309012638783,
+  "M4_plateau_dev_pct": 2.673586265573719,
+  "w_required": 2103.489659498909,
+  "dl_eff_full": 23.186402837006675,
+  "dl_eff_binned": 24.722650750389125,
+  "dl_eff_hits_full": 38,
+  "dl_eff_hits_binned": 31,
+  "dl_eff_null_mean": 36.95,
+  "obs": {
+    "full_rms_ratio": 3.6926221636719574,
+    "peak_ratio": 7.0817875683183305,
+    "sw_platform_dev_pct": -5.748688210976316,
+    "coldspot_dev_pct": 0.18322461286675507
+  },
+  "flat_reading_dev_pct_by_lmax": {
+    "500": -18.68522122821922,
+    "1000": -8.533029720641782,
+    "1500": -2.5906978192692556,
+    "2000": 1.6264764006343764,
+    "2508": 4.944842560341405,
+    "3000": 7.571249348185143,
+    "4000": 11.78964462477877
+  },
+  "random_partition_hit_rate_pct": 0.25,
+  "verdict": "路線 1 整族排除: 可容結構測度候選 7/11 個全部 |dev| >= 5% (最小 96.46%); 唯一通過 5% 之 M4 (+2.674%) 由可容性排除 (頻帶重疊 4.57x); 所需 w*=2103.5/峰 無結構身份 (上限 44); 唯一邊緣命中 = flat/HZ 平台高度讀法 (D_l=TGT) 在 l_max=2508 得 +4.95%, 但隨 l_max 對數發散 (-18.69% @500, -8.53% @1000, +11.79% @4000, 過零 @1790) => 「總方差」唔係良定義觀測量 (M1 ill-posed)"
+}

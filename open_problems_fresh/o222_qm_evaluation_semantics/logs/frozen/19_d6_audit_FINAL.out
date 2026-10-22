@@ -1,0 +1,16 @@
+================================================================================================================
+O222 scripts/19 -- INDEPENDENT audit of the D6 mapping table (does not import scripts/18)
+================================================================================================================
+[PASS] A1    exact ranks reproduced by fraction-free elimination: rank(C1) = 61, rank(C2) = 62, rank(C1rev) = 61 (all > 1 => not factorisable)  --  recorded = 61/62/61
+[PASS] A0    group table has a unique identity (index 75) and every element an inverse  --  identity index = 75
+[PASS] A2    axis orbits recomputed with an independently coded exact quaternion conjugation (no rot_ref): sizes = [12, 20, 30], type-invariant = True, orbits = 3  --  recorded = [12, 20, 30] ; (q, axis) images matched = 7440/7440
+[PASS] A2b   frozen kernel reconstructed exactly from the geometry + the tie rule: 0 mismatches of 7440, ties (vanishing dot) = 1200  --  ties = 1200/7440 = 16.13% of the kernel
+[PASS] A3    the 62 axes form exactly 31 antipodal pairs (double cover of 31 lines), each axis with exactly one antipode  --  recorded antipodal_pairs = 31
+[PASS] A4    closed-form memo law predicts every observed read count: 33/33 pairs (misses = 3 - [top == a] - [b == a])  --  recorded memo_hit_pairs = 14 ; audit hits = 14
+[PASS] A5    per-pair ledger growth (misses - 1) is at least 1 > 0 on every witnessed pair => the rollback never restores the record  --  recorded total growth = [28, 24]
+[PASS] A6    history-sensitive settings = 62/62 and outcome-balanced axes = 62/62 (marginal 1/2)  --  recorded 62 / 62
+[PASS] A7    P4b cites the B3R2 record exactly (16/15, 13/15, 2, 3) and adds no new number  --  B3R2 14/14 = True
+[PASS] A8    verdict table integrity: 13 cells, all with a verdict and a value  --  table = ✅✅🟡✅✅✅🔴✅✅🔴✅🔴✅
+================================================================================================================
+RESULT: 10/10 PASS  (0 FAIL)
+================================================================================================================

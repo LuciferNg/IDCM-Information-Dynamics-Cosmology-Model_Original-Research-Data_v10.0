@@ -1,0 +1,9 @@
+O47-D3 — D_app(ℓ) Exact Function Closure
+===================================================================
+l0 = N_d/(N_d - F7) = 44/31 = 1.4193548387
+D_app(l) = R_H * (1 - exp(-l/l0))
+l_max = 14.7085
+D_app(l_max) = 4129.8096 (target R_H = 4129.94)
+Deviation: 0.1304 Mpc
+Zero-parameter: YES ✅
+Status: 🟢 Closed

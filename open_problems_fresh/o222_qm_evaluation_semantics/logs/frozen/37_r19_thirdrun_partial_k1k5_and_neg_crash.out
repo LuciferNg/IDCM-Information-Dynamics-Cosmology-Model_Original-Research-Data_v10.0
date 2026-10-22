@@ -1,0 +1,22 @@
+[🔴] K1   sign_rank(K) = rank_R(K) = 6 EXACT：精確有理秩證書（120 列全為 6 條 pivot 列之有理組合，pivot 欄 [0, 1, 2, 3, 4, 5]）＋ 顯式 fooling set（6 對）⟹ 上界 = 下界
+      rank_R = 6（pivot 欄 6 個，消元雙向夾 ⟹ rank 恰為 6）；fooling set = [(0, 0), (1, 1), (2, 9), (8, 8), (10, 6), (46, 2)]（size 6，全行全列相異 = True；DFS 用 30.6s，上限 240s）；sign(K) = K = True ⟹ sign_rank <= rank_R <= 6 且 >= 6
+[🔴] K1b  amplitude 尖銳化：sign_rank = rank_R ⟹ **無 rank 空隙** ⟹ 複（amplitude）模型無 rank 優勢 ⟹ amplitude 缺口**唔係** rank 現象（推論格）
+      推論：任何 rank-r 因式分解 r >= sign_rank = 6，而實數 K 本身已達 6 ⟹ 量子上界 = 實數上界 = 6
+[🔴] K2   C2 一般閉式：`hits = #reads − #ledger_entries`（每次未命中恰寫 1 條、命中寫 0 條）；由凍結記錄（L8）＋全 pass 對數驗：None = 7688 − 7564 = 7564 ✓ 且 #entries 飽和 = 2N(N−1) = 7564
+      記錄 {"entries_total": 7564}；我嘅自建棧機（2 讀/對）entries = 3905、hits = 3783、reads = 7688 ⟹ hits + entries = 7688 = 2×對數 = True；L4 replay 之值 {"misses": 2, "ledger_len": 1}
+[🔴] K3   G1 語義修訂形式化：值層規則 `R_rev(G, ctx) := (memo_v[ctx] == sgn(u_ctx·(G n̂)))` 可由凍結記錄判定；**機制檢定**（合約預測：override 皆為回滾後命中）⟹ 實測 override = 0（首讀 0／回滾後 0）
+      合約之機制預測 **被否證**（回滾後命中 0 個 override，預測應為 None）⟹ 實測機制 = **首讀路徑**（0 個）：配對邊界之重複 ctx（a = 上一對之末 ctx）命中舊 entry，而該 entry 之值係在**更早嘅態**下算出 ⟹ 記錄壓過態；命中分佈 首讀 3721／回滾後 62（全部命中 3783）
+[🔴] K4   G8 冗餘判準：`R_det`（協定＋序列決定性重建）= 2（trivial、**無糾錯信息**）；`R_indep`（互相獨立副本）= 2 ⟹ `R >= 2` 在**獨立副本**義下仍失敗 ⟹ 缺口性質 = **架構非算術**
+      自建棧機 entries = 3905（記錄 7564；L4 replay {"misses": 2, "ledger_len": 1}）；獨立副本 = 2（data/18 與 data/30 各含一份 ledger 記錄，但兩者係同一協定之決定性產物 ⟹ 非獨立）
+[✅] K5   Q5c 成因：殘差 = 123/2 − Σ_{n≥28}γ_n = 0.6154630941422070；譜和 = 4[(17/2) − C/2]，C = Σcos(πn/44) 由反解 C = -13.442268452929 自洽重建至 1e-9；連分數無 q ≤ 10^6 之逼近 ⟹ **唔係任何小分母分數**（數值判定）
+      Σγ = 90.000000000（=90? True）；Σ_{n≥28} = 60.88453690585779（記錄 60.88453690585779）；殘差 = 0.6154630941422070；有理骨架 4×(17/2) = 34、|{n≥28}| = 17；連分數前 8 項 = [0, 1, 1, 1, 1, 1, 1, 74]；最佳有理逼近 q ≤ 1e6 = (13875, 22544)；⟹ 成因 = **有理分帳（19/60 : 41/60）與譜截斷（無理數）之差**，非換算誤差
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/37_r19_closure.py", line 338, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/37_r19_closure.py", line 277, in main
+    neg = a2.neg(U[a])
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/09_a2_rollback.py", line 66, in neg
+    return (-x[0], -x[1])
+            ^^^^^
+TypeError: bad operand type for unary -: 'tuple'

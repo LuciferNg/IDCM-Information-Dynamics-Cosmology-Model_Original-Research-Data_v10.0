@@ -1,0 +1,8 @@
+O47-D3 — D_app(ℓ) LCDM Analogy
+===================================================================
+H0 = 72.5900, Omega_L = 0.683282, Omega_m = 0.316718
+DA(z=1) = 1577.47, DA(z=1100) = 11.72
+DA(inf) = 1.31
+z0 (from l=1 cal) = 137085.0000
+l0 (exponential) = 1.4189
+Status: 🟡 Exploration complete

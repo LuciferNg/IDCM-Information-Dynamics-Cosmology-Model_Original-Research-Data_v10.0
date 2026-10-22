@@ -1,0 +1,9 @@
+{
+  "test": "O62 十期 62: div0 假設",
+  "anom_has_div0": 25,
+  "anom_no_div0": [],
+  "norm_has_div0": 184,
+  "norm_no_div0": 0,
+  "passed": 0,
+  "failed": 0
+}

@@ -1,0 +1,403 @@
+{
+ "results": [
+  {
+   "id": "A1",
+   "desc": "Lucas L_n = Tr(T̂ⁿ) n=0..12",
+   "status": "PASS",
+   "detail": "L₈=47, L₁₀=123"
+  },
+  {
+   "id": "A2",
+   "desc": "Fib F_n = (T̂ⁿ)₁₂ n=1..12",
+   "status": "PASS",
+   "detail": "F₇=13, F₈=21, F₁₀=55"
+  },
+  {
+   "id": "A3",
+   "desc": "T̂ 特徵方程 x²−x−1; eig {φ,−1/φ}",
+   "status": "PASS",
+   "detail": "Q(√5) 譜域"
+  },
+  {
+   "id": "B1",
+   "desc": "88-site 譜和: Σγ_even = 90, Σγ_odd = 88, total 178 = 2F₁₁",
+   "status": "PASS",
+   "detail": "even=90.0, odd=88.0"
+  },
+  {
+   "id": "B2",
+   "desc": "Z₂ pairing γ_n + γ_{44−n} = 4 (44-site)",
+   "status": "PASS",
+   "detail": "γ₂₂ 自對偶 = 2, γ₄₄ Nyquist = 4"
+  },
+  {
+   "id": "B3",
+   "desc": "mod-4 閉式: s1=44−sec(π/88), s3=44+sec(π/88), s0=46, s2=44 (O148)",
+   "status": "PASS",
+   "detail": "mod-4 扇區譜和 (88-site), k=88 ∈ n≡0 扇區"
+  },
+  {
+   "id": "B4",
+   "desc": "A7: 44-site 偶子空間 ≡ 88-site 偶模 (Σ=90)",
+   "status": "PASS",
+   "detail": "O40 結構巧合 = 精確集合身份"
+  },
+  {
+   "id": "B5",
+   "desc": "ω_n = √γ_n (R1); v_g(n) = √(1−γ_n/4) (R2)",
+   "status": "PASS",
+   "detail": "Dirac 平方根 D² = L"
+  },
+  {
+   "id": "B6",
+   "desc": "beat(a,b) = |√γ_b − √γ_a| = |ω_b − ω_a| (R3, 946/946)",
+   "status": "PASS",
+   "detail": "拍頻空間 = 平方根譜差空間"
+  },
+  {
+   "id": "C1",
+   "desc": "88×E_min = 61.5; 132×E_min = 92.25 = 3L₁₀/4; 264×E_min = 184.5 = 3L₁₀/2; 528×E_min = 369 = 3L₁₀",
+   "status": "PASS",
+   "detail": "能量耦合階梯 (docs/01 §四.5)"
+  },
+  {
+   "id": "C2",
+   "desc": "半整數: 43.5 = 87/2 = 3L₇/2; 61.5 = L₁₀/2; 6.5 = F₇/2; 0.5 = log₄2",
+   "status": "PASS",
+   "detail": "Z₂ ⊗ 奇 T̂-譜"
+  },
+  {
+   "id": "C3",
+   "desc": "H1 半整數表: 10 縫完整枚舉 = {奇 T̂ ≤ 88}/2 = {0.5..27.5}",
+   "status": "PASS",
+   "detail": "seams = [0.5, 1.5, 2.5, 3.5, 5.5, 6.5, 10.5, 14.5, 23.5, 27.5] — 奇 T̂ ≤ 88 = {1,3,5,7,11,13,21,29,47,55}/2"
+  },
+  {
+   "id": "C4",
+   "desc": "R1: ω_n = √γ_n 44/44",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C5",
+   "desc": "R2: v_g(44−n) = √γ_n/2",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C6",
+   "desc": "R4: B = γ₄₄ = 4; log₂B = γ₂₂ = 2; C_obs = 44×2 = 88; 90 = 45×2",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C7",
+   "desc": "R4d/e: 12 = 4×3; 528 = 44×12; 132 = 44×3; 264 = 44×6",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C8",
+   "desc": "R5a: 10 T̂ 縫 ∪ {43.5} = 11 個特殊縫 = rank(SU(12)) = L₅",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C9",
+   "desc": "R5c: 14.5 = L₇/2 阻擋 k=1 (a=(42−13)/2 = 14.5 非整數)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C10",
+   "desc": "R6: 36 = (2×3)²; 98 = 2L₄²; 60 = F₅·4·3; 12 = 4×3; 143 = 12²−1; 66 = C(12,2); 77 = 66+11; 132 = 12×11",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C11",
+   "desc": "R7a-d: 1.5 = (1+2)/2 (F₂,F₃); 2.5 = (2+3)/2 (F₃,F₄); 3.5 = (3+4)/2 (N_gen,B); 5.5 = (5+6)/2",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C12",
+   "desc": "R8: ε = (L₆+1)/L₁₀ = 19/123; f_unproj = L₁₀/(4·45) = 123/180 = 41/60; E_min = L₁₀/(4·44) = 123/176",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C13",
+   "desc": "R9: h¹¹ = 36, h²¹ = 98, χ = −4(44−13) = −124, 134 = 4·44 − 2·21",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C14",
+   "desc": "R10: 23.5 = L₈/2 = 47/2; 27.5 = F₁₀/2 = 55/2; 55 = C(11,2) = 66−11 = 44+11; 47 = L₁₀−L₉",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C15",
+   "desc": "R11: 44 = (L₆−1) + N_gen³ = 17+27; 1−f_unproj = 19/60 = 3(L₆+1)/(4·45)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C16",
+   "desc": "R12 域定理: Q(√5) ∩ Q(ζ₈₈)⁺ = Q (5∤88); √5/φ 族與 γ_n 無重合",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C17",
+   "desc": "R13: 406 = C(29,2) = 2·7·29; 61 = (L₁₀−1)/2; 40 = 44−4; 53 = 44+9; 6.625 = 53/8 = 53/(2·4)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "C18",
+   "desc": "R14: k-ladder 終止 F₁₀ = 55 > 43; F₈ = 21 ≤ 43, F₉ = 34 ≤ 43",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D1",
+   "desc": "numbers.yaml: 74 entries, 全部 PASS",
+   "status": "PASS",
+   "detail": "74 entries"
+  },
+  {
+   "id": "D2",
+   "desc": "docs/03 §一 整數表 unique 數 = 49 (header 標 42 係過時)",
+   "status": "PASS",
+   "detail": "docs/03 整數表 unique = 49 (51 行, 2 出現 3 次) — header 42 需修正"
+  },
+  {
+   "id": "D3",
+   "desc": "docs/02 列舉整數數目 = 47 (缺 1, 1496)",
+   "status": "PASS",
+   "detail": "docs/02 列出 47 個整數 (冇 1, 冇 1496)"
+  },
+  {
+   "id": "D4",
+   "desc": "容量階梯 44×{2,3,6,12} = {88,132,264,528}",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D5",
+   "desc": "能量階梯 {2,3,6,12}×L₁₀/4 = {61.5, 92.25, 184.5, 369}, 基底 30.75 = L₁₀/4",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "D6",
+   "desc": "跨家族互鎖: 123 = 4·44·E_min; 61.5 = L₁₀/2; 13/2 = Ω_DM/Ω_b; F₈=21, F₉=34 k-ladder 分母",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E1",
+   "desc": "整數字典: 5=F₅, 7=L₄, 8=F₆, 13=F₇, 18=L₆, 19=L₆+1, 21=F₈, 11=L₅, 17=L₆−1, 123=L₁₀",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E2",
+   "desc": "SU(12): 143 = 12²−1; 66 = Λ²(12) = C(12,2); 77 = 66+11; 132 = 143−11 = 12×11; 11 = rank",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E3",
+   "desc": "CY₃/幾何: 36 = h¹¹, 98 = h²¹, 124 = |2(36−98)|; 60 節點 (20Δ+30□+12⬠ = 62 面, χ = 60−120+62 = 2); 32 = 20+12",
+   "status": "PASS",
+   "detail": "V−E+F = 2 (E = 4V/2 = 120)"
+  },
+  {
+   "id": "E4",
+   "desc": "分數字典: 1/2 = log₄2; 3/2 = 90/60; 13/2 = F₇/2; 61/88 = E_min − 1/176; 90/88 = 45/44; 123/88 = 2E_min; 19/176 = ε·E_min",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E5",
+   "desc": "半整數字典: 43.5 = 3L₇/2 (cos((2n+1)π/176)=0 ⟺ n=43.5); 87 = 3L₇ = 88−1",
+   "status": "PASS",
+   "detail": "2×43.5+1 = 88 → cos(88π/176) = cos(π/2) = 0"
+  },
+  {
+   "id": "E6",
+   "desc": "4.1 譜和: 88 = Σγ_odd; 90 = Σγ_even; 178 = 2F₁₁; 176 = 4·44; 84 = 21×4; 46 = 44+2",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E7",
+   "desc": "4.4: E_min = 123/176 = (41/60)×(90/88); 90/60 = 3/2",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E8",
+   "desc": "4.5: ω_n = 2v_g(44−n); γ_n = 4v_g(44−n)²; γ_n+γ_{44−n} = 4; beat 定理 1",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "E9",
+   "desc": "k-ladder: g₂ = beat(42,43)/beat(10,31) = 0.0035074294; g₃ = beat(41,42)/beat(3,37) = 0.0036910176",
+   "status": "PASS",
+   "detail": "O149 k-ladder 目標值"
+  },
+  {
+   "id": "F1",
+   "desc": "S2: 178 = 2F₁₁; S3: Z₂ pairing; S6: C_obs = 88; S8: 2 = γ₄₄/2 = γ₂₂",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F2",
+   "desc": "S12: 61.5 = 41×90/60; 123 = ×2; 369 = ×6",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F3",
+   "desc": "S18: F_proj = 17 = L₆−1; S19: 61.5 = 88×123/176; S20: 946 = C(44,2)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "F4",
+   "desc": "S22: beat 零點 cos((2n+1)π/176)=0 ⟺ n = 43.5",
+   "status": "PASS",
+   "detail": "2×43.5+1 = 88 → cos(π/2) = 0"
+  },
+  {
+   "id": "F5",
+   "desc": "S23: 61.5 = ⟨W⟩² − log₄2 (凝聚 − 0.5)",
+   "status": "PASS",
+   "detail": "61.5 − 0.5 = 61"
+  },
+  {
+   "id": "G1",
+   "desc": "scripts 完整性: 01-07 全齊",
+   "status": "PASS",
+   "detail": "scripts = ['01_inventory.py', '02_operator_reduction.py', '03_reducibility_epsilon.py', '04_selector_forcing.py', '05_field_theorem.py', '06_audit.py', '07_selector_polyhedron.py']"
+  },
+  {
+   "id": "G2",
+   "desc": "docs 完整性: 01_operator_framework, 02_number_inventory, 03_operator_dictionary",
+   "status": "PASS",
+   "detail": "docs = ['01_operator_framework.md', '02_number_inventory.md', '03_operator_dictionary.md']"
+  },
+  {
+   "id": "G3",
+   "desc": "data 完整性: 7 個 JSON + numbers.yaml",
+   "status": "PASS",
+   "detail": "data = ['audit.json', 'field_theorem.json', 'numbers.yaml', 'operator_dict.json', 'reducibility_epsilon.json', 'reduction_theorems.json', 'selector_forcing.json', 'selector_polyhedron.json']"
+  },
+  {
+   "id": "G4",
+   "desc": "problem_record 時序索引 T1-T9 全部存在",
+   "status": "PASS",
+   "detail": "T1 前置 → T9 追擊 5"
+  },
+  {
+   "id": "G5",
+   "desc": "問題記錄 §七 時序鐵律 (唔回溯污染) 記載",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "G6",
+   "desc": "docs/01 有 R12 域定理章節; docs/03 有 R8 閉合塊; docs/02 有階梯",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "H1",
+   "desc": "docs/03 半整數表 🔮 已消除 — R7a-d/R10a-b 閉合行存在",
+   "status": "PASS",
+   "detail": "6 個 🔮 → 🟢 (R7a-d midpoints/duals + R10a-b L₈/2, F₁₀/2); 「🔮 剩餘預言: 無」係正確注記"
+  },
+  {
+   "id": "H2",
+   "desc": "docs/03 header 整數數目已修正 42 → 49 unique",
+   "status": "PASS",
+   "detail": "51 行, 2 三重身份"
+  },
+  {
+   "id": "H3",
+   "desc": "docs/01 R7e-f 已標注被 R10a-b 取代",
+   "status": "PASS",
+   "detail": "保留作時序記錄, 冇刪除"
+  },
+  {
+   "id": "H4",
+   "desc": "docs/01 錯名 02_operator_functions.py 已清除",
+   "status": "PASS",
+   "detail": "已改為 scripts/01_inventory.py + 06_audit.py"
+  },
+  {
+   "id": "H5",
+   "desc": "problem_record header 狀態已同步 🟡 部分閉合; §六 212/212",
+   "status": "PASS",
+   "detail": "header + §六 一致"
+  },
+  {
+   "id": "H6",
+   "desc": "problem_record U3/U4/U6 已更新 (🔮 0 個, ε R8a, 縫全閉合)",
+   "status": "PASS",
+   "detail": "U3 ✅, U4 ✅, U6 ✅"
+  },
+  {
+   "id": "H7",
+   "desc": "docs/02 v2 更新段存在 (T8 審計)",
+   "status": "PASS",
+   "detail": "現狀修正, 唔改 v1 記錄"
+  },
+  {
+   "id": "H8",
+   "desc": "problem_record 章節編號: 八、依賴 / 九、檔案",
+   "status": "PASS",
+   "detail": "兩個「八」已修正"
+  },
+  {
+   "id": "H9",
+   "desc": "problem_record 時序索引有 T9 (追擊 5, 07_selector_polyhedron.py)",
+   "status": "PASS",
+   "detail": "T1-T9 完整鏈"
+  },
+  {
+   "id": "H10",
+   "desc": "docs/01 §七 有 R15-R19 行 (選擇器鏈 + 多面體張量分級)",
+   "status": "PASS",
+   "detail": "追擊 5 結果已入框架"
+  },
+  {
+   "id": "H11",
+   "desc": "docs/03 誠實清單: 44.5 邊界標記 🟡 + 283 整數部分閉合 🟢 + 尾巴 🔴",
+   "status": "PASS",
+   "detail": "R16/R18 已入字典"
+  },
+  {
+   "id": "H12",
+   "desc": "final_result.md 存在並符合 RESULT_TEMPLATE.md 範本 (狀態/結論/關鍵公式/剩餘/依賴)",
+   "status": "PASS",
+   "detail": "範本五段齊全"
+  },
+  {
+   "id": "H13",
+   "desc": "全員重新驗證: 01-07 scripts 全綠 (74+13+12+17+10+20 = 146 驗證 + 66 審計 = 212)",
+   "status": "PASS",
+   "detail": "07 加入後總數 212/212"
+  }
+ ],
+ "n_pass": 66,
+ "n_fail": 0,
+ "total": 66
+}

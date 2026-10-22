@@ -1,0 +1,34 @@
+{
+ "rules_version": "g4-contract-v1",
+ "doc": {
+  "path": "docs/14_g4_contract.md",
+  "sha256": "807041684a7765293d2e72f14d0511067ba69d5e5727e6ee788e5d8b8dd582ad"
+ },
+ "enforcer_sha256": "4133240bc4dc3aa12639b3f34af8b52405947624007264ddc0a0689a96ab5f6f",
+ "impl": {
+  "path": "scripts/21_g4_eulerian.py",
+  "sha256": "efa6aaded922a959eb9a7a5a711b8a99f72051e401b4ef4a83ecd73ab8b3deba"
+ },
+ "upstream": {
+  "B5": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a",
+  "B3R2": "14e17e7cdff25b04cda70fe93010827505cec6f8b2059cc435f3f8775d9c375d",
+  "D6": "a681ae8cf6bcfd69b50a9a3c776f8c43011c3b6c52149bc1f1f565abbe797cf7"
+ },
+ "frozen_at": "2026-09-30T09:42:18+0800",
+ "cells": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P5",
+  "P6"
+ ],
+ "objects": {
+  "machine": "scripts/12_b5_budget.py",
+  "statistic": "scripts/15_b3r2_orderfair.py",
+  "axes": "data/04_b2_settings.json",
+  "C2": "data/09_a2_correlation.json",
+  "budget": "docs/07_b5_contract.md"
+ },
+ "gate": "OPEN"
+}

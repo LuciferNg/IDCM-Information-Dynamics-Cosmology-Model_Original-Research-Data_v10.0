@@ -1,0 +1,88 @@
+{
+  "problem": "O121/G8 預言登記 + Gemini 4 項核帳",
+  "A_gemini_audit": [
+    {
+      "claim": "① f_return = 0.8028",
+      "source": "o121 docs/14,15 (本 session 自導)",
+      "verdict": "✅ 真",
+      "note": "但「19.7% 來自直接重聯」之拆分**未導出** (只導出 80.3% 總量)"
+    },
+    {
+      "claim": "② P8 冇 Hawking 蒸發 → 冇 γ 爆",
+      "source": "o173 docs/06 P8 (真條目)",
+      "verdict": "⚠️ 有內部張力",
+      "note": "O121 docs/04: IDCM **重現標準 Hawking** (T_H, t_evap=5120πG²M³/ħc⁴) — 見 §B"
+    },
+    {
+      "claim": "③ ρ_debris∞=4.0e6, today≈3.0e6 (75%)",
+      "source": "o173 docs/12: 固定點 = 總恆星質量×2%",
+      "verdict": "✅ 真 (逐字)",
+      "note": "數值與 75% 皆見於原文"
+    },
+    {
+      "claim": "④ n=27 瓶頸 σ=0.772 → UHECR 能譜截斷",
+      "source": "o121 docs/07: σ(n≤26)=1, σ(27)=0.772, σ(n≥28)=0",
+      "verdict": "🟡 推論",
+      "note": "σ_n 係**模指數** throughput; n↔能量映射**未導出**"
+    }
+  ],
+  "B_P8_tension": {
+    "ell_m": 4.516e-23,
+    "M_crit_kg": 79000.7160239404,
+    "M_crit_naive_kg": 30407.389775063446,
+    "M_pbh_now_kg": 173001968808.37918,
+    "ratio": 2189878.491176619,
+    "verdict": "P8 原句不成立; 可辯護版 = 最小黑洞質量 M_crit ≈ 7.9e4 kg"
+  },
+  "C_register": [
+    {
+      "id": "P-G8a",
+      "prediction": "f_return = 0.8028 (BH 返池佔 UHECR 質量率)",
+      "derivation": "✅ 導出 (docs/15)",
+      "falsification": "Auger/TA 成分+各向異性 → BH 源佔比; 若 <0.55 或 >0.95 (>3σ)",
+      "discriminator": "ΛCDM 無此定值",
+      "status": "🟢"
+    },
+    {
+      "id": "P-G8b",
+      "prediction": "τ_rec/τ_p = 3.07e-22 (質子衰變從未啟動)",
+      "derivation": "✅ 導出 (docs/13)",
+      "falsification": "Hyper-K/ DUNE 見質子衰變 ⟹ 反駁",
+      "discriminator": "ΛCDM 無預言",
+      "status": "🟢"
+    },
+    {
+      "id": "P-G8c",
+      "prediction": "黑洞質量函數**無萎縮端** (冇『回收中』群)",
+      "derivation": "✅ 導出 (O173 P10)",
+      "falsification": "質量函數低端出現萎縮/空洞",
+      "discriminator": "ΛCDM 無此否定預言",
+      "status": "🟢"
+    },
+    {
+      "id": "P-G8d",
+      "prediction": "★ **最小黑洞質量 M_crit ≈ 7.9e4 kg**",
+      "derivation": "🟡 由 ℓ (ρ_max=ρ_P 假設) 導出",
+      "falsification": "確認 PBH 蒸發至 <7.9e4 kg ⟹ 反駁",
+      "discriminator": "ΛCDM: 無最小質量 (蒸發至 Planck)",
+      "status": "🟡"
+    },
+    {
+      "id": "P-G8e",
+      "prediction": "ρ_debris(z=0) ≈ 3.0e6 → 固定點 4.0e6 M☉/Mpc³",
+      "derivation": "✅ 導出 (O173 docs/12 P15)",
+      "falsification": "Euclid/LSST/JWST 暗殘骸普查 >4.0e6 ⟹ 反駁",
+      "discriminator": "ΛCDM 無飽和",
+      "status": "🟢"
+    },
+    {
+      "id": "P-G8f",
+      "prediction": "T_pipe† σ_n 譜: σ(n≤26)=1, σ(27)=0.772, σ(n≥28)=0",
+      "derivation": "✅ 導出 (docs/07)",
+      "falsification": "需 **n↔E 映射**導出後方可測 UHECR 能譜",
+      "discriminator": "ΛCDM 無此階梯",
+      "status": "🟡"
+    }
+  ],
+  "D_verdict": "應加入驗證: 瞬時比例 + 否定性特徵 + 飽和固定點 (非等待)"
+}

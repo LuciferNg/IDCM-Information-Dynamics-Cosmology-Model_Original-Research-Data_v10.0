@@ -58,7 +58,7 @@ stair 序: 33(Up) → 26(Down) → 19(Lepton) 深度遞減
 γ = −M_{N_gen−1}/B  ← Lepton 錨定（最輕端 = stair 底）
     ├ stair M_k = 33−7k（K_Tree 33 層定理, L₄=7=B+(B−1)）
     ├ k = N_gen−1 = 2（三族結構唯一自洽, 降維檢定）
-    ├ B = 4（K_Tree 分枝數, p10 定理）
+    ├ B = 4（K_Tree 分枝數, P10 定理）
     └ 零新常數 ✓
 ```
 

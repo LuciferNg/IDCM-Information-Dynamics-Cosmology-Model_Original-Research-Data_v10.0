@@ -1,0 +1,14 @@
+{
+  "P1_ladder_termination": true,
+  "P2_pmns_no_suppression": true,
+  "P3_vtd_subfloor": {
+    "below_floor": true,
+    "not_ladder": true,
+    "best_two_factor": "(40,42)/(3,42)",
+    "best_delta": 0.00018352824940673536
+  },
+  "P4_adjacent_achievability": {
+    "hits": 8,
+    "total": 9
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "problem1_VL_splitting": {
+    "M_VL_c": 126211771342324.14,
+    "M_VL_orig": 25200000000000.0,
+    "ratio": 5.0084036246954025,
+    "alpha3_inv_MZ": 8.425967289066424,
+    "deviation_pct": -0.16626434755421077,
+    "radiative_correction_factor": 0.19966441903148677,
+    "conclusion": "\u03b1\u2083\u207b\u00b9=8.43 (\u0394=-0.17%), M_VL_c=1.26e+14"
+  },
+  "problem2_alphaGUT_matching": {
+    "structural_prediction": 53,
+    "best_fit": 47.0,
+    "delta": 6,
+    "delta_relations": {
+      "Nd_minus_Ktree_minus_F5": 6,
+      "B_plus_Ngen_minus_1": 6,
+      "L5_minus_F5": 6,
+      "C2_adj_over_2": 6.0,
+      "A_Lambda2_minus_2": 6
+    },
+    "conclusion": "\u0394=6 confirmed from multiple structural relations"
+  },
+  "problem3_MVL_geometric_mean": {
+    "M_PS": 317029635931567.2,
+    "M_R": 1615510355013.3574,
+    "geo_mean": 22631055205039.855,
+    "M_VL_2loop": 25200000000000.0,
+    "ratio": 1.1135141411518474,
+    "Kahler_correction": 0.10752090736688273,
+    "conclusion": "M_VL/\u221a(M_PS\u00d7M_R)=1.1135"
+  },
+  "problem5_EW_correction": {
+    "correction_factor": 1.0105749656481486,
+    "F8_over_Ktree_minus_F7": 1.05,
+    "one_plus_1_over_2alphaGUT": 1.0106382978723405,
+    "conclusion": "correction=1.010575\u22481+1/(2\u00d7\u03b1_GUT\u207b\u00b9)"
+  },
+  "problem6_exponents": {
+    "exponents": [
+      1,
+      2,
+      3,
+      8
+    ],
+    "mappings": {
+      "1": "A(12)=1",
+      "2": "B/2=4/2",
+      "3": "N_gen=3",
+      "8": "A(\u039b\u00b2(12))=12-4"
+    },
+    "closure": "e\u2081e\u2084+e\u2082e\u2083=14=2L\u2084=14"
+  },
+  "summary": {
+    "passed": 22,
+    "failed": 1,
+    "total": 23
+  }
+}

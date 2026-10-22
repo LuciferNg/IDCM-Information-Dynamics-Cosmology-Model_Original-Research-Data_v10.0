@@ -1,0 +1,31 @@
+{
+ "rules": "r12-law-closure-v1",
+ "n_pass": 4,
+ "n_total": 4,
+ "claims": [
+  {
+   "tag": "A1",
+   "name": "★★ 獨立：單項族之兩式（`dind = [sgn(u_0u_1u_2)=+1]`／`= [sgn(u_2)=+1]`）對 R16 儲存之 dind 表逐值吻合",
+   "ok": true,
+   "detail": "反例 = []"
+  },
+  {
+   "tag": "A2",
+   "name": "★★ 獨立：非單項型 `A_0 = −(u_0u_1x_0 + (u_1²+u_2²)x_1)/u_2`（另實作）",
+   "ok": true,
+   "detail": "反例 = []"
+  },
+  {
+   "tag": "A3",
+   "name": "★★ 獨立：非承載 = 單項族（∧ 首兩分量同號）∪ 41/42（雙項符號一致）——12 非座標線",
+   "ok": true,
+   "detail": "逐線 (L, 單項?, 同號?, 預測非承載, 實測非承載) = [(33, False, True, False, False), (34, False, True, False, False), (35, False, False, False, False), (36, False, False, False, False), (37, True, False, False, False), (38, True, False, False, False), (39, True, True, True, True), (40, True, True, True, True), (41, False, False, True, True), (42, False, False, True, True), (43, False, True, False, False), (44, False, True, False, False)]"
+  },
+  {
+   "tag": "A4",
+   "name": "★★ 獨立：凍結路線之零集 = 10 態 Z10；且 support 欄（除 61）於 Z10 之 Λ_a ∈ {−2,0,2}",
+   "ok": true,
+   "detail": "Z10 = [9, 15, 21, 31, 57, 67, 77, 87, 111, 117] ; 值集 = [-2, 0, 2]"
+  }
+ ]
+}

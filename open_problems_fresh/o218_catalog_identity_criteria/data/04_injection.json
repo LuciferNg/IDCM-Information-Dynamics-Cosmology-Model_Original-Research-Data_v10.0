@@ -1,0 +1,282 @@
+{
+ "rows": [
+  {
+   "tag": "I1 off-by-one (+1)",
+   "injection": "目標 90 → 91",
+   "verdict": "FALSE",
+   "want_verdict": "{'FALSE'}",
+   "want_gate": "G0_equality_holds",
+   "gate_fired": [
+    "G0_equality_holds",
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": 0.011235955056179775,
+   "note": ""
+  },
+  {
+   "tag": "I2 擬合常數",
+   "injection": "加乘性擬合因子 1.000237 去命中觀測",
+   "verdict": "FITTED",
+   "want_verdict": "{'FITTED'}",
+   "want_gate": "G3_zero_free_param",
+   "gate_fired": [
+    "G3_zero_free_param",
+    "G0_equality_holds",
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": null,
+   "note": "觀測 = 1.119379212"
+  },
+  {
+   "tag": "I3 閉包退化葉 (397)",
+   "injection": "葉 397 只係「落喺閉包區間」",
+   "verdict": "ILLEGAL",
+   "want_verdict": "{'ILLEGAL'}",
+   "want_gate": "G1_G2_leaf_audit",
+   "gate_fired": [
+    "G1_G2_leaf_audit"
+   ],
+   "dev": 0.0,
+   "note": ""
+  },
+  {
+   "tag": "I4 數域偷換",
+   "injection": "N_d → b_spec/√5",
+   "verdict": "FIELD",
+   "want_verdict": "{'FIELD', 'FALSE'}",
+   "want_gate": "G6_field",
+   "gate_fired": [
+    "G5_exact_cert",
+    "G5_density",
+    "G6_field"
+   ],
+   "dev": 0.0023,
+   "note": ""
+  },
+  {
+   "tag": "I5 陷阱窗",
+   "injection": "把 EXACT 鬆成 dev 1.42e-4",
+   "verdict": "TRAP",
+   "want_verdict": "{'TRAP'}",
+   "want_gate": "G4_trap_window",
+   "gate_fired": [
+    "G4_trap_window",
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": 0.000142,
+   "note": ""
+  },
+  {
+   "tag": "I6 自由乘數",
+   "injection": "加乘性修正因子 9/10",
+   "verdict": "MULTIPLIER",
+   "want_verdict": "{'MULTIPLIER', 'DENSITY'}",
+   "want_gate": [
+    "T5_two_level",
+    "G5_density"
+   ],
+   "gate_fired": [
+    "T5_two_level",
+    "G5_exact_cert"
+   ],
+   "dev": 0.0,
+   "note": ""
+  },
+  {
+   "tag": "I7 重言式",
+   "injection": "等式對共有量 41 恆等",
+   "verdict": "TAUTOLOGY",
+   "want_verdict": "{'TAUTOLOGY'}",
+   "want_gate": "T1_tautology",
+   "gate_fired": [
+    "T1_tautology",
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": 0.0,
+   "note": ""
+  },
+  {
+   "tag": "I8 跨框架巧合",
+   "injection": "MSSM b₁ 重新包裝成 N_d",
+   "verdict": "COINCIDENCE",
+   "want_verdict": "{'COINCIDENCE'}",
+   "want_gate": "T2_cross_framework",
+   "gate_fired": [
+    "T2_cross_framework",
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": 0.0,
+   "note": ""
+  },
+  {
+   "tag": "I9 目錄非唯一",
+   "injection": "把已閉合恆等式降級成「目錄值」",
+   "verdict": "NONUNIQUE",
+   "want_verdict": "{'NONUNIQUE'}",
+   "want_gate": "U_nonunique",
+   "gate_fired": [
+    "U_nonunique",
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": 0.0,
+   "note": "R(44) = 5"
+  },
+  {
+   "tag": "I10 密度膨脹 (3 因子)",
+   "injection": "加第 3 個因子 ⟹ 池爆炸",
+   "verdict": "DENSITY",
+   "want_verdict": "{'DENSITY'}",
+   "want_gate": "G5_density",
+   "gate_fired": [
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": 0.0,
+   "note": ""
+  },
+  {
+   "tag": "I11 實數冒充",
+   "injection": "√5/2 寫成十進小數",
+   "verdict": "FITTED",
+   "want_verdict": "{'FITTED'}",
+   "want_gate": "G3_zero_free_param",
+   "gate_fired": [
+    "G3_zero_free_param",
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": 0.0,
+   "note": ""
+  },
+  {
+   "tag": "I12 無出處符號",
+   "injection": "引入未註冊符號 y_z",
+   "verdict": "ILLEGAL",
+   "want_verdict": "{'ILLEGAL'}",
+   "want_gate": "G1_G2_leaf_audit",
+   "gate_fired": [
+    "G1_G2_leaf_audit",
+    "G0_equality_holds",
+    "G5_exact_cert",
+    "G5_density"
+   ],
+   "dev": null,
+   "note": ""
+  },
+  {
+   "tag": "I13 裸數 401",
+   "injection": "葉 401 超出閉包上限",
+   "verdict": "ILLEGAL",
+   "want_verdict": "{'ILLEGAL'}",
+   "want_gate": "G1_G2_leaf_audit",
+   "gate_fired": [
+    "G1_G2_leaf_audit"
+   ],
+   "dev": 0.0,
+   "note": ""
+  }
+ ],
+ "checks": [
+  [
+   "I1 off-by-one (+1)",
+   true,
+   "FALSE / gate G0_equality_holds"
+  ],
+  [
+   "I2 擬合常數",
+   true,
+   "FITTED / gate G3_zero_free_param"
+  ],
+  [
+   "I3 閉包退化葉 (397)",
+   true,
+   "ILLEGAL / gate G1_G2_leaf_audit"
+  ],
+  [
+   "I3b 葉分類階梯 (24 DEPTH1 / 397 CLOSURE_TRIVIAL / 401 BARELITERAL)",
+   true,
+   "{24: 'DEPTH1', 397: 'CLOSURE_TRIVIAL', 401: 'BARELITERAL', 946: 'REGISTERED'}"
+  ],
+  [
+   "I4 數域偷換",
+   true,
+   "FIELD / gate G6_field"
+  ],
+  [
+   "I5 陷阱窗",
+   true,
+   "TRAP / gate G4_trap_window"
+  ],
+  [
+   "I6 自由乘數",
+   true,
+   "MULTIPLIER / gate ['T5_two_level', 'G5_density']"
+  ],
+  [
+   "I7 重言式",
+   true,
+   "TAUTOLOGY / gate T1_tautology"
+  ],
+  [
+   "I8 跨框架巧合",
+   true,
+   "COINCIDENCE / gate T2_cross_framework"
+  ],
+  [
+   "I9 目錄非唯一",
+   true,
+   "NONUNIQUE / gate U_nonunique"
+  ],
+  [
+   "I10 密度膨脹 (3 因子)",
+   true,
+   "DENSITY / gate G5_density"
+  ],
+  [
+   "I11 實數冒充",
+   true,
+   "FITTED / gate G3_zero_free_param"
+  ],
+  [
+   "I12 無出處符號",
+   true,
+   "ILLEGAL / gate G1_G2_leaf_audit"
+  ],
+  [
+   "I13 裸數 401",
+   true,
+   "ILLEGAL / gate G1_G2_leaf_audit"
+  ],
+  [
+   "N1 等價改寫判級不變",
+   true,
+   "IDENTITY_OK / IDENTITY_OK"
+  ],
+  [
+   "N2 等價寫法 (43+1) 判級不變",
+   true,
+   "IDENTITY_OK / IDENTITY_OK"
+  ],
+  [
+   "N3 敏感度 dev = 1e-12",
+   true,
+   "FORMAL_OK (期望 FORMAL_OK)"
+  ],
+  [
+   "N3 敏感度 dev = 1e-06",
+   true,
+   "FALSE (期望 FALSE)"
+  ],
+  [
+   "N3 敏感度 dev = 0.001",
+   true,
+   "FALSE (期望 FALSE)"
+  ]
+ ]
+}

@@ -1,0 +1,14 @@
+================================================================================================================
+O222 scripts/35 -- G2+Q5 INDEPENDENT AUDIT
+================================================================================================================
+[PASS] A0    freeze discipline: 14/14 pins unchanged and the impl hash still matches the freeze record  --  pin drift = none ; impl = 84789a1a8314f61c
+[PASS] A1    exhaustive scan of the whole O206 tree (123 files): no numeric f(n) / frequency table exists, and the falsification statement is present  --  files = 123 ; numeric-f(n) hits = NONE ; 證偽 in 26 files ; 「真正開放項」 in 4 files (the machine probed 「真實開放項」 and honestly reported 0)
+[PASS] A2    spectral identities by an independent raw-text parse: 44 modes, gamma = omega^2 bit-tight, sum gamma = 90, omega strictly increasing with omega_44 = 2 (Nyquist)  --  modes = 44 ; max dev = 0.00e+00 ; sum gamma = 90.000000000000 ; monotone = True ; omega_44 = 2.000000000000
+[PASS] A3    pass-length bounds re-derived by an explicit read-by-read simulation (charge the cost, stop when the remainder falls below E_min): [29, 790]; the uniform cost reproduces B5 (44 reads)  --  simulated low(high-cost mode) = 29 ; high(low-cost mode) = 790 ; uniform = 44 ; sum c_n = 61.500000000000 ; 88 (the E_min cap of B5 P1) and 44 (the 123/88 count of B5 A4) both lie inside the range = True
+[PASS] A4    triple identity by integer arithmetic: 17 = 44 - 27 = L5 + C(4,2) = L6 - 1, with the kernel list equal to {28..44} and the structural n* definition quoted verbatim from O33  --  computed (A,B,C) = (17, 17, 17) ; kernel = 17 modes, set-equal to {{28..44}} = True ; O33 n* line present = True
+[PASS] A5    energy side: E_capture agrees between the direct sum and the complement sum, E_sync = 44 x 123/88 is exactly 123/2, and E_bottleneck misses 8/13 by 7.85e-05 (> 1e-6) so it is NOT 8/13  --  direct = 60.88453690585779 ; complement = 60.88453690585780 ; recorded = 60.88453690585779 ; E_sync = 123/2 ; bottleneck = 0.6154630941422070 ; 8/13 = 0.6153846153846154 ; dev = 7.848e-05
+[PASS] A6    read-only discipline: no file outside this O222 directory was modified during the round  --  files touched elsewhere = NONE
+[PASS] A7    independence: this auditor imports nothing from scripts/34 and re-derives all six cells by different routes (exhaustive absence scan, raw-text parse, explicit simulation, integer arithmetic, complement sum)  --  four cross-checks confirmed the machine cell by cell
+----------------------------------------------------------------------------------------------------------------
+AUDIT: 8/8 PASS
+----------------------------------------------------------------------------------------------------------------

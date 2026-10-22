@@ -1,0 +1,237 @@
+{
+ "cells": {
+  "G1a": {
+   "verdict": "✅",
+   "value": {
+    "definition": "s_coord(ctx) = idx[h(ctx)] read off the frozen write rule",
+    "frozen_rule": "read (miss) => s := MUL[s][hx[ctx]]  (scripts/12 rd(), scripts/09 read())",
+    "source_checked": true,
+    "behavioural_checks": 7440,
+    "mismatches": 0,
+    "check_used": "diagonal pair (a,a): s_final == MUL[s0][h(a)]",
+    "distinct_h_values": 62,
+    "contexts": 62,
+    "injective": true
+   }
+  },
+  "G1b": {
+   "verdict": "✅",
+   "value": {
+    "pairs": 7440,
+    "positive": 7440,
+    "zero": 0,
+    "zero_contexts": [],
+    "trigger_fires_per_context": true,
+    "squared_norm_value_set": [
+     "2 + 0*sqrt5",
+     "5/2 + 1/2*sqrt5",
+     "3 + 0*sqrt5"
+    ],
+    "value_set_size": 3,
+    "reading": "the trigger |N(s) - s|^2 > 0 is a function of ctx only (never of s); it fires on every one of the 7440 steps whenever h(ctx) != e, so the literal D5 rollback rule would refuse EVERY memo, i.e. it is vacuous as a state-level rule -- the frozen machine s real self-consistency lives at the value level (route 1 of G1c)"
+   }
+  },
+  "G1c": {
+   "verdict": "🟡",
+   "value": {
+    "route_1_value_level_consistency": {
+     "status": "✅ 124 memo hits over the FULL pass; 65 of them (all on the first-read path) return a value the current state would not give = the record outranks the state (D6 P3b s primitive), the remaining hits agree with both the stored entry and the current state. D6 P3b recorded 2 such overrides inside its BUDGET-TRUNCATED witnessed pass (18 pairs) -- a shorter instance of the same protocol, cited not contradicted",
+     "note": "the frozen machine s only self-consistency is the value-level rule; it never fails"
+    },
+    "route_2_O210_projection": {
+     "status": "🟡 provenance only",
+     "provenance_files_present": 2,
+     "provenance_files_expected": 4,
+     "explicit_f_found": false,
+     "dimensions_found": false,
+     "cited_from": "docs/13_d6_results.md P1c (O210 docs/01, docs/02, final_result.md, data/02_type_registry.json; no dimensions carried upstream)"
+    },
+    "reading": "the state-level trigger is vacuous and the value-level consistency is total; the O210 projection route carries no explicit f, so it cannot be evaluated here => the G1 gap is a SEMANTIC one (D5 s N must be read as a value-level map), not a missing-map one"
+   }
+  },
+  "G8a": {
+   "verdict": "✅",
+   "value": {
+    "passes": 120,
+    "pairs_per_pass": 3844,
+    "reads_per_pass": 11532,
+    "ledger_len_after_full_pass": 7564,
+    "entries_per_ctx_min": 122,
+    "entries_per_ctx_max": 122,
+    "entries_total": 7564,
+    "conflict_contexts": 62,
+    "conflict_list": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "conflict_values": {
+     "0": [
+      "-1",
+      "1"
+     ],
+     "1": [
+      "-1",
+      "1"
+     ],
+     "2": [
+      "-1",
+      "1"
+     ],
+     "3": [
+      "-1",
+      "1"
+     ],
+     "4": [
+      "-1",
+      "1"
+     ],
+     "5": [
+      "-1",
+      "1"
+     ],
+     "6": [
+      "-1",
+      "1"
+     ],
+     "7": [
+      "-1",
+      "1"
+     ],
+     "8": [
+      "-1",
+      "1"
+     ],
+     "9": [
+      "-1",
+      "1"
+     ],
+     "10": [
+      "-1",
+      "1"
+     ],
+     "11": [
+      "-1",
+      "1"
+     ]
+    },
+    "validation_vs_I7": {
+     "pairs_compared": 3844,
+     "mismatches": 0
+    },
+    "per_pair_misses_histogram": {
+     "2": 124,
+     "3": 3720
+    },
+    "ledger_length_identity": "total = 7564 = 62 x 122 = 2 x N x (N - 1); identical for all 120 start states",
+    "distance_value_context_split": {
+     "2 + 0*sqrt5": 30,
+     "3 + 0*sqrt5": 20,
+     "5/2 + 1/2*sqrt5": 12
+    },
+    "all_states_entries_total_range": [
+     7564,
+     7564
+    ],
+    "all_states_conflict_contexts": [
+     62
+    ]
+   }
+  },
+  "G8b": {
+   "verdict": "✅",
+   "value": {
+    "R_consistent": 1,
+    "reason": "only the ledger TOP is readable (L[-1][0] == ctx)",
+    "cited_from": "docs/13_d6_results.md P3c (reach depth = 1) and P3b (2 records dominate the current state)",
+    "R_naive_entries_per_ctx_max": 122,
+    "stale_copies_present": true,
+    "conflict_contexts": 62,
+    "reading": "copies exist in the ledger but they DISAGREE with the live value (conflicts above), so they are not redundant records; R_consistent = 1"
+   }
+  },
+  "G8c": {
+   "verdict": "🔴",
+   "value": {
+    "distinct_K_rows": 12,
+    "states": 120,
+    "multiplicity_histogram": {
+     "10": 12
+    },
+    "orbit_sizes_cited": [
+     12,
+     20,
+     30
+    ],
+    "ledger_fragments": 1,
+    "observable": false,
+    "reading": "the only multiplicities available are the K-row degeneracy (states indistinguishable to all 62 settings) and the 2I orbits; both are UNOBSERVABLE and the ledger holds a single fragment => no environment redundancy in the QM sense (R >= 2 fails)"
+   }
+  }
+ },
+ "cell_order": [
+  "G1a",
+  "G1b",
+  "G1c",
+  "G8a",
+  "G8b",
+  "G8c"
+ ],
+ "claims": [
+  {
+   "tag": "G8a-replay",
+   "name": "the explicit ledger replay reproduces the frozen D6 protocol (I7) pair by pair",
+   "ok": true,
+   "detail": "pairs compared = 3844 ; mismatches = 0"
+  },
+  {
+   "tag": "G1a",
+   "name": "ctx -> s exists by reading the frozen write rule: s_coord(ctx) = idx[h(ctx)] (62/62 contexts, injective: 62 distinct h values; 7440/7440 behavioural checks, 0 mismatches)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "G1b",
+   "name": "D5 trigger computed exactly: |N(s)-s|^2 > 0 on 7440/7440, = 0 on 0, ctx-only = True (value set: 3 exact elements)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "G1c",
+   "name": "route 1 (value-level consistency) re-verified as TOTAL (124 hits, 65 stored-value overrides, 65 on the first-read path; D6 P3b s 2 came from its 18-pair witnessed pass); route 2 (O210 projection) is provenance-only (2/4 files present, no explicit f) => 🟡",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "G8a",
+   "name": "ledger quantified on the D6 machine s OWN ledger over the full pass: 7564 entries in total, ledger entries per ctx in [122, 122], 62 contexts carry CONFLICTING values (stale copies exist)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "G8b",
+   "name": "consistency-based redundancy: R_consistent = 1 while R_naive reaches 122 entries for a single context, and 62 contexts hold conflicting values => copies are stale, not redundant",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "G8c",
+   "name": "multiplicity candidates: 12 distinct K rows over 120 states (multiplicities {10: 12}) and the orbits {12,20,30} are all UNOBSERVABLE; ledger fragments = 1 => R >= 2 fails (🔴)",
+   "ok": true,
+   "detail": "ledger entries per ctx: max = 122 ; R_consistent = 1 ; R >= 2 fails"
+  }
+ ],
+ "elapsed_s": 5.88,
+ "contract": "g1g8-contract-v1",
+ "samples_used": 0,
+ "nodes_used": 0
+}

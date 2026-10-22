@@ -1,0 +1,16 @@
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/26_r14_cover_family.py:217: SyntaxWarning: invalid escape sequence '\{'
+  'no_minimal_contains_a_frame': 'if C contains a size-7 frame F, then C\{a} for a in C\F still contains F and covers -> C not inclusion-minimal',
+/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/26_r14_cover_family.py:218: SyntaxWarning: invalid escape sequence '\S'
+  'minimal_implies_C_cap_S_le_9': 'if C contains S then S covers and any a in C\S has C\{a} covering -> C not inclusion-minimal, so minimal covers satisfy |C∩S| <= 9',
+[PASS] R14-0 M_edge rebuilt: (rows, cols, pairs) = (30, 62, 435)  --  30/62/435
+[PASS] R14-1 root-LP support S (10 columns) and LP*=5 read from the persisted R13 certificate  --  S=[3, 4, 6, 8, 9, 13, 15, 18, 19, 32] LP*=5
+[PASS] R14-2 R11/R13 census reused as input: 8584 size-7 frames  --  n=8584
+[PASS] P13-1 S itself is a cover: union of cme[a] over a in S equals ALLP  --  covered pairs=435/435
+[PASS] P13-2 UNCONDITIONAL theorem: separating LP value <= max_{a in S} x*_a (dual witness mu_S), so at x* = 1/2*1_S the value <= 1/2 < 1 -> no non-negative coefficient cut separates x*  --  max x*_a = 1/2 < 1 ; witness mu_S = 1/2 feasible since every a in S lies in S
+[PASS] P13-3 M_all := min sum_C mu_C s.t. sum_{C ni a} mu_C >= 1 over ALL covers = 1 EXACT (LB: |S| = sum_a sum_{C ni a} mu_C = sum_C mu_C|C∩S| <= 10*sum_C mu_C -> sum mu >= 1 ; UB: mu_S = 1)  --  LB=1 UB=1 -> [P] = 1/2*M_all = 1/2
+[PASS] P13-4 cross-check: adding S to the 8584-frame family drops the exact cut-LP value 9/5 -> 1  --  value=1 (frames-only was 9/5) iters=16 subset=83
+[FAIL] P13-5 max_{C in F} |C ∩ S| = 3  --  hist=[(0, 3569), (1, 2569), (2, 1384), (3, 703), (4, 271), (5, 68), (6, 18), (7, 2)]
+[FAIL] P13-6 general theorem is TIGHT: for 200 random x* >= 0 (support in S) the cut-LP over F ∪ {S} equals EXACTLY max_{a in S} x*_a (0 violations)  --  violations=197/200 sample=[('11/6', '1'), ('5/2', '1'), ('5/3', '1')]
+[FAIL] P13-7 size-8 covering density: uniform random 8-subset covers with p_hat >= 0.05 (i.e. A8 >= 1e8)  --  hit=104/100000 p_hat=0.001040 +- 5.10e-04 (5 sigma) -> A8 ~ 3.516e+06 of C(62,8)=3.381e+09
+[PASS] P13-8 HONEST GRADING: complete size-8 minimal-cover census reported INFEASIBLE (R11-style DFS dead-end ratio ~1.8e4 -> >=1e10 nodes at this density); deliverable = MC density + witness lower bound. EXACT structural facts recorded: no inclusion-minimal cover contains a frame; every C in M has |C∩S| <= 9  --  A8_est=3.516e+06 ; witness lower bound from R13 = 130969 (search-time lower bound)
+RESULT: 8/11 PASS (+0 N/A)  (122.5s)

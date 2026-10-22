@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O234
 title:   質量公式檢驗方法反推: RG-invariant 質量比驗證協議 (FLAG/PDG 凍結觀測層)
-state:   registered
-verdict: -
+state:   closed
+verdict: closed
 flags:   -
 owner:   O234
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-07
 prereq:  O120, O233, O136, O137
 source:  O233 C_f 無檢驗能力 → 驗證方法反推 (2026-10-06 調律者指示)
 -->

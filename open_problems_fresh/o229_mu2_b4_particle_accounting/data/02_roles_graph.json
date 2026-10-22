@@ -1,0 +1,279 @@
+{
+ "script": "02_roles_graph",
+ "pass": 34,
+ "fail": 0,
+ "total": 34,
+ "B_routes": {
+  "R1": {
+   "name": "端點鎖",
+   "expr": "C(B^2,2)+B^2+1 = alpha^-1(0)",
+   "inputs": [
+    "alpha0=137"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R2": {
+   "name": "模數簿記",
+   "expr": "B*L5 = N_d",
+   "inputs": [
+    "L5=11",
+    "Nd=44"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R3": {
+   "name": "旋量維數",
+   "expr": "B^2 = dim(SO(10) spinor) = 16",
+   "inputs": [
+    "spinor=16"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R4": {
+   "name": "環站點",
+   "expr": "B*2*L5 = N_site = 88",
+   "inputs": [
+    "L5=11",
+    "Nsite=88"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R5": {
+   "name": "跑動增量",
+   "expr": "(B-1)^2 = Delta alpha^-1 = 9",
+   "inputs": [
+    "Delta_alpha=9"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R6": {
+   "name": "模圖跡",
+   "expr": "N_d - 2B = h11 = 36",
+   "inputs": [
+    "Nd=44",
+    "h11=36"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R7": {
+   "name": "預算",
+   "expr": "B^2 + N_d = 60",
+   "inputs": [
+    "Nd=44",
+    "sixty=60"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R8": {
+   "name": "愛丁頓",
+   "expr": "B/(N_d-B) = lambda_Edd = 1/10",
+   "inputs": [
+    "Nd=44",
+    "lam_Edd=1/10"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R9": {
+   "name": "世代數",
+   "expr": "B*N_gen = L5+1 = 12",
+   "inputs": [
+    "L5=11",
+    "Ngen=3"
+   ],
+   "uses_Nc": true,
+   "uses_Ngen": true,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R10": {
+   "name": "色數",
+   "expr": "B-1 = N_c = 3",
+   "inputs": [
+    "Nc=3"
+   ],
+   "uses_Nc": true,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R11": {
+   "name": "QED和",
+   "expr": "2B = Sigma N_c Q_f^2 = 8",
+   "inputs": [
+    "Nc=3",
+    "eight=8"
+   ],
+   "uses_Nc": true,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R12": {
+   "name": "Lucas 跡",
+   "expr": "L_B = b0 = 7  (Lucas index)",
+   "inputs": [
+    "b0=7"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": false,
+   "solutions": [
+    4
+   ]
+  },
+  "R13": {
+   "name": "鏈和",
+   "expr": "Sigma gamma = B(N_d+1)/2 = 90",
+   "inputs": [
+    "Nd=44",
+    "Sgamma=90"
+   ],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": true,
+   "solutions": [
+    4
+   ]
+  },
+  "R14": {
+   "name": "Nyquist",
+   "expr": "B = gamma88_44 = gamma_max",
+   "inputs": [],
+   "uses_Nc": false,
+   "uses_Ngen": false,
+   "chain_amp": true,
+   "solutions": [
+    4
+   ]
+  }
+ },
+ "independent_routes": [
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5",
+  "R6",
+  "R7",
+  "R8",
+  "R12"
+ ],
+ "mu2_routes": [
+  {
+   "id": "M1",
+   "name": "中心模",
+   "expr": "mu^2 = gamma176_44 = 2",
+   "class": "chain",
+   "external_observable_RHS": false
+  },
+  {
+   "id": "M2",
+   "name": "宇稱差",
+   "expr": "mu^2 = Sigma_even - Sigma_odd = 46 - 44",
+   "class": "chain",
+   "external_observable_RHS": false
+  },
+  {
+   "id": "M3",
+   "name": "勢參數",
+   "expr": "V = -mu^2|W|^2 + lambda|W|^4 (輸入/定義)",
+   "class": "input",
+   "external_observable_RHS": false
+  },
+  {
+   "id": "M4",
+   "name": "Z_2 不動點",
+   "expr": "mu^2 = gamma_22 = Z_2 反射不動點 (O206 docs/14)",
+   "class": "chain",
+   "external_observable_RHS": false
+  },
+  {
+   "id": "M5",
+   "name": "BC 成本",
+   "expr": "mu^2 = E - O = 2*lambda (O159 四合一)",
+   "class": "chain",
+   "external_observable_RHS": false
+  },
+  {
+   "id": "M6",
+   "name": "Fibonacci",
+   "expr": "mu^2 = F_3 = 2",
+   "class": "atom",
+   "external_observable_RHS": false
+  },
+  {
+   "id": "M7",
+   "name": "徑向模",
+   "expr": "mu^2 = m_rho^2/4 = 2",
+   "class": "derived",
+   "external_observable_RHS": false
+  },
+  {
+   "id": "M8",
+   "name": "由 B",
+   "expr": "mu^2 = B/2 (B 已獨立固定)",
+   "class": "derived",
+   "external_observable_RHS": false
+  }
+ ],
+ "chain_integer_eigenvalues": [
+  [
+   0,
+   0
+  ],
+  [
+   22,
+   2
+  ],
+  [
+   44,
+   4
+  ]
+ ]
+}

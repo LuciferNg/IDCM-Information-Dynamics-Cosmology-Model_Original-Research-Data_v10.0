@@ -1,0 +1,19 @@
+{
+ "rules": "r27-crit1-orbit-v1",
+ "contract": "docs/58_r27_contract.md",
+ "sha256": "709b75f38548ec382881ba24f659b8b838cd7f317b32af0da0b6b1d4dea593c2",
+ "frozen_at": "2026-10-01 21:59:56",
+ "claims_declared": [
+  "O1",
+  "O2",
+  "O3",
+  "O4",
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "Q1",
+  "Q2"
+ ],
+ "note": "見數前凍結：本指紋於 scripts/103（機器）與 scripts/104（審計）執行前寫定"
+}

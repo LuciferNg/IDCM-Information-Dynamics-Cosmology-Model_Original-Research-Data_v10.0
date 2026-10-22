@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "pass": 33,
+    "fail": 0,
+    "total": 33,
+    "rate": "100.0%"
+  },
+  "data_sources": {
+    "jades_dr4": {
+      "status": "\u2705",
+      "sources": 5190,
+      "file": "jades_dr4_combined.fits",
+      "size": "90 MB"
+    },
+    "ceers_dr1": {
+      "status": "\u2705",
+      "sources": 87345,
+      "file": "ceers_dr1_catalog.fits.gz",
+      "size": "195 MB"
+    },
+    "silverrush": {
+      "status": "\ud83d\udfe1",
+      "lae_sample": 1266,
+      "papers": "silverrush_iv_2017.pdf"
+    },
+    "candels": {
+      "status": "\ud83d\udfe1",
+      "papers": "Bouwens+2015, Finkelstein+2015"
+    },
+    "spitzer": {
+      "status": "\ud83d\udfe1",
+      "papers": "Ashby+2015, Stefanon+2017"
+    },
+    "hera_lofar_mwa": {
+      "status": "\ud83d\udfe1",
+      "papers": "HERA 2023, LOFAR 2021, MWA 2020"
+    },
+    "desi": {
+      "status": "\u2705",
+      "papers": "desi_dr1_bao.pdf, desi_dr2_lya_bao.pdf"
+    },
+    "planck": {
+      "status": "\u2705",
+      "papers": "planck_2018_parameters.pdf"
+    }
+  },
+  "idcm_predictions": {
+    "tau": {
+      "value": 0.05410473852295148,
+      "planck": 0.054,
+      "error_pct": 0.1939602276879171
+    },
+    "bao": {
+      "value": 147.44,
+      "desi_dr2": 147.09,
+      "error_pct": 0.23794955469440549
+    },
+    "delta_k": {
+      "value": 0.021307600743284,
+      "unit": "h/Mpc"
+    },
+    "gp_mode_7": {
+      "z_activation": 6.21,
+      "z_obs": 6.0
+    },
+    "lae_prediction": "N(z) \u221d 1/(1+z)"
+  }
+}

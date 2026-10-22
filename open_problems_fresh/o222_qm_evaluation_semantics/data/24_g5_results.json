@@ -1,0 +1,303 @@
+{
+ "rules_version": "g5-contract-v1",
+ "cells": {
+  "P1": {
+   "verdict": "✅",
+   "value": {
+    "cases": 6892,
+    "agree": 6892,
+    "counterexamples": [],
+    "constructible_cases": 80,
+    "exhaustive_part": "all pair sets of size <= 5 on 4 settings (loops included)",
+    "known_prefixes": [
+     "antidiag",
+     "block",
+     "diag",
+     "euler_canonical",
+     "euler_rectangle",
+     "lex",
+     "stride"
+    ]
+   },
+   "note": "T1: constructible <=> exists a != a2 with c(a,a2) >= 2 ; tested case by case against the frozen brute force"
+  },
+  "P2": {
+   "verdict": "✅",
+   "value": {
+    "counterexamples": [],
+    "injective_prefixes_tested": [
+     "antidiag",
+     "diag",
+     "stride",
+     "synth4_1_8",
+     "synth4_1_9",
+     "synth4_1_10",
+     "synth4_1_11",
+     "synth4_1_12"
+    ],
+    "injective_count": 627,
+    "b3r2_corollary": {
+     "diag": {
+      "max_deg_out": 1,
+      "constructible": false
+     },
+     "antidiag": {
+      "max_deg_out": 1,
+      "constructible": false
+     },
+     "stride": {
+      "max_deg_out": 1,
+      "constructible": false
+     }
+    }
+   },
+   "note": "T2: |P| >= 4, exists deg_out >= 2, exists deg_in >= 2 ; injective => not constructible (B3R2 theorem becomes a corollary of the degree condition)"
+  },
+  "P3": {
+   "verdict": "✅",
+   "value": {
+    "k_ge_6_instances_in_test_set": 0,
+    "all_k_ge_6_constructible": true,
+    "constructed_k_ge_6_positives": [
+     {
+      "k": 6,
+      "criterion": true,
+      "frozen_brute_force": true
+     },
+     {
+      "k": 8,
+      "criterion": true,
+      "frozen_brute_force": true
+     },
+     {
+      "k": 10,
+      "criterion": true,
+      "frozen_brute_force": true
+     },
+     {
+      "k": 12,
+      "criterion": true,
+      "frozen_brute_force": true
+     },
+     {
+      "k": 20,
+      "criterion": true,
+      "frozen_brute_force": true
+     }
+    ],
+    "positive_tests_ok": true,
+    "tight_bound_instance": {
+     "Q": [
+      0,
+      1,
+      11,
+      10,
+      30,
+      31
+     ],
+     "k": 6,
+     "c": 2,
+     "k_minus_c": 4,
+     "criterion": true,
+     "frozen_brute_force": true
+    },
+    "k_le_1_instances": 6421,
+    "max_k_minus_c": 2,
+    "tightness": {
+     "2": {
+      "constructible_instance": [
+       2,
+       3
+      ],
+      "non_constructible_instance": [
+       0,
+       1
+      ]
+     },
+     "3": {
+      "constructible_instance": [
+       0,
+       2,
+       3
+      ],
+      "non_constructible_instance": [
+       0,
+       1,
+       2
+      ]
+     },
+     "4": {
+      "constructible_instance": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "non_constructible_instance": [
+       0,
+       1,
+       2,
+       10
+      ]
+     },
+     "5": {
+      "constructible_instance": [
+       0,
+       1,
+       2,
+       3,
+       4
+      ],
+      "non_constructible_instance": [
+       0,
+       1,
+       2,
+       10,
+       11
+      ]
+     }
+    }
+   },
+   "note": "T3: with anti a perfect matching (31 pairs) c >= k - 4, so k >= 6 forces constructibility; k <= 1 forces non-constructibility; k = 2..5 must be decided case by case (bound is tight)"
+  },
+  "P4": {
+   "verdict": "✅",
+   "value": {
+    "rz_3": 6,
+    "rz_4": 9,
+    "rz_5": 12,
+    "kst_upper_bound_N62_ceil": 527,
+    "kst_sqrt_floor": 15,
+    "kst_root_ceil": 16,
+    "kst_integer_form": "62*(1+ceil(sqrt(245)))/2 = 527",
+    "budget_edges": 21,
+    "ratio_budget_over_bound": "21/527"
+   },
+   "note": "T4: rz(n) exact for n = 3,4,5 by exhaustive 0-1 matrix search; the KST bound at N = 62 is far above the budget => sparsity does NOT force non-constructibility"
+  },
+  "P5": {
+   "verdict": "✅",
+   "value": [
+    {
+     "prefix": "antidiag",
+     "edges": 15,
+     "sum_k": 0,
+     "sum_c": 0,
+     "max_k_minus_c": 0,
+     "raw_rectangles": 0,
+     "filtered_max_c": 0,
+     "constructible": false
+    },
+    {
+     "prefix": "block",
+     "edges": 18,
+     "sum_k": 28,
+     "sum_c": 15,
+     "max_k_minus_c": 2,
+     "raw_rectangles": 36,
+     "filtered_max_c": 2,
+     "constructible": true
+    },
+    {
+     "prefix": "diag",
+     "edges": 22,
+     "sum_k": 0,
+     "sum_c": 0,
+     "max_k_minus_c": 0,
+     "raw_rectangles": 0,
+     "filtered_max_c": 0,
+     "constructible": false
+    },
+    {
+     "prefix": "euler_canonical",
+     "edges": 21,
+     "sum_k": 45,
+     "sum_c": 45,
+     "max_k_minus_c": 0,
+     "raw_rectangles": 0,
+     "filtered_max_c": 1,
+     "constructible": false
+    },
+    {
+     "prefix": "euler_rectangle",
+     "edges": 21,
+     "sum_k": 33,
+     "sum_c": 33,
+     "max_k_minus_c": 0,
+     "raw_rectangles": 2,
+     "filtered_max_c": 2,
+     "constructible": true
+    },
+    {
+     "prefix": "lex",
+     "edges": 15,
+     "sum_k": 0,
+     "sum_c": 0,
+     "max_k_minus_c": 0,
+     "raw_rectangles": 0,
+     "filtered_max_c": 0,
+     "constructible": false
+    },
+    {
+     "prefix": "stride",
+     "edges": 15,
+     "sum_k": 0,
+     "sum_c": 0,
+     "max_k_minus_c": 0,
+     "raw_rectangles": 0,
+     "filtered_max_c": 0,
+     "constructible": false
+    }
+   ],
+   "note": "T5: k - c <= 4 (self-exclusion kills at most 2 columns, anti at most 2); the raw count is reported next to the filtered one"
+  },
+  "P6": {
+   "verdict": "🟡",
+   "value": {
+    "n4_exact": {
+     "constructible": 0,
+     "circuits": 256,
+     "nodes": 1751,
+     "capped": false
+    },
+    "n4_expected_circuits": 256,
+    "n4_exact_ok": true,
+    "n4_prefix_len": 5,
+    "n5_attempt": {
+     "constructible": 184704,
+     "circuits": 972000,
+     "nodes": 7740621,
+     "capped": false
+    },
+    "n5_sampled": null,
+    "n5_prefix_len": 9,
+    "n62_sampled": {
+     "constructible": 1,
+     "circuits": 1000,
+     "sampled": 1000
+    },
+    "n62_prefix_len": 21,
+    "lcg": {
+     "a": 1103515245,
+     "c": 12345,
+     "m": 2147483648,
+     "seed": 20260930,
+     "K": 1000
+    },
+    "caps": {
+     "nodes": 30000000,
+     "seconds": 600
+    }
+   },
+   "note": "class-level prevalence: n = 4 enumerated exactly (whole class, first edge (0,1)); n = 5 / n = 62 are SAMPLES (LCG) -> this cell is honestly 🟡, never an exact value. For n <= 5 the whole circuit fits inside the 21-edge budget, so the non-trivial question uses the pre-registered shorter prefixes L_small"
+  }
+ },
+ "cell_order": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P5",
+  "P6"
+ ]
+}

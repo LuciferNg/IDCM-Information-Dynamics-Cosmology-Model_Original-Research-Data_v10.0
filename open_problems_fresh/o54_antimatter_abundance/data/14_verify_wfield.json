@@ -1,0 +1,11 @@
+{
+  "test": "sympy W-field 數學驗證",
+  "Omega_Lambda": 0.6832815729997477,
+  "mu2": 2,
+  "lambda": 1.4635254915624212,
+  "W2_condensate": 0.6832815729997477,
+  "kappa2_M0": 27.9009,
+  "rate_prop": "M₀γ_n",
+  "charge_conservation": true,
+  "conclusion": "⟨W⟩²=μ²/2λ=1/λ=4/(φ⁴−1)=Ω_Λ 精確; μ²=2 (90−88); 產生率∝M₀γ_n; 荷守恆"
+}

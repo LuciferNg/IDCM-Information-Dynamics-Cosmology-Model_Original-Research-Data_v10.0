@@ -1,0 +1,14 @@
+================================================================================================================
+O225 scripts/23 -- R6 CONTRACT ENFORCER   (rules: r6-mechanism-v1)
+================================================================================================================
+[PASS] C1   合約 doc 含 A1-A7 / B1-B3 / C1-C5 全部標籤  --  missing = []
+[PASS] C2   合約 doc 含關鍵定義與推導約束詞  --  missing = [] ; chars = 3128
+[PASS] C3   scripts/24,25,26 通過禁字集掃描（無禁模組、無 float 字面值）  --  issues = []
+[PASS] C4   scripts/24,25,26 皆 from fractions import Fraction  --  {'scripts/24_r6_mechanism.py': {'imports': 7, 'float_literals': 0, 'has_fractions': True}, 'scripts/25_r6_geometry.py': {'imports': 7, 'float_literals': 0, 'has_fractions': True}, 'scripts/26_r6_audit.py': {'imports': 8, 'float_literals': 0, 'has_fractions': True}}
+[PASS] C5   陽性對照：人造違規源必須被拒  --  ['pos: forbidden import numpy (line 1)', 'pos: forbidden import random (line 2)', 'pos: float literal 0.035 (line 3)']
+[PASS] C6   陰性對照：合法精確算術源必須通過  --  []
+[PASS] C7   上游 O222 凍結輸入 + 合約 doc SHA-256 落盤，GATE = OPEN  --  contract sha = cce467b1ed786835…
+[FAIL] C8   見數前註冊核：R6 於 register 之註冊 note ≥ 6 條，且**未含任何結果 note**（避免後驗污染）  --  note 數 = 27 ; 見數前類 = 13 ; 結果 note = ['R6 結果：enforcer 8/8（含見數前註冊核 9 條 pre-note、0 條結果 note）、機器 24 9/']
+================================================================================================================
+RESULT: 7/8 PASS
+================================================================================================================

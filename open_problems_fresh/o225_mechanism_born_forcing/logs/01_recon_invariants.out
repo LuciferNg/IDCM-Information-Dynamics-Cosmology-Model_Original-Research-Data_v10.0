@@ -1,0 +1,27 @@
+====================================================================================================
+O225 scripts/01 -- recon inventory (only-read re-derivation of O222 cited invariants)
+====================================================================================================
+[PASS] R1    K value multiset = {+1: 3720, -1: 3720} (完全平衡)  --  multiset = [(-1, 3720), (1, 3720)]
+[PASS] R2    K 值集 size = 2  --  values = [-1, 1]
+[PASS] R3    62/62 欄（軸）之 sum_s K[s][a] = 0 且 +1 個數 = 60  --  colsum distinct = [0] ; +1 count distinct = [60]
+[PASS] R4b   ★ 本 o 新量度：列和 R(s) = sum_a K[s,a] 恰為兩值 {+10, -10}，60/60 分裂  --  distinct = [-10, 10] ; histogram = {'-10': 60, '10': 60} ; Delta = 20
+[PASS] R4    120/120 列和 ≠ 1（O222 docs/43 §二(a)）  --  row sums = [-10, 10]
+[PASS] R5    「(1+K)/2 投影」之列和 = 26 / 36（= (62 -/+ 10)/2），120/120 ≠ 1  --  distinct = [26, 36]
+[PASS] R6    rank_Q(K) = 6（O222 docs/19 C5）  --  rank_Q(K) = 6
+[PASS] R7    相異 row = 12（O222 docs/19 C5）  --  distinct rows = 12
+[PASS] R8    row 對：equal 540 / complementary 600 / neither 6000（O222 docs/19 C5「6000/7140 非等非互補」）  --  equal=540 complementary=600 neither=6000
+[PASS] R9    rank[K | 1] = rank(K) ⟺ 全 1 向量 ∈ 行空間（複相位修復存在性之充要條件，R1 機器用）  --  rank[K|1] = 7 ; rank(K) = 6 ⟹ 全 1 ∈ range(K) = False
+  [INFO] axis type edge   : n=30  rowsum distinct=[-10, 10]  Delta=20  ceil(Delta/2)=10
+  [INFO] axis type face   : n=20  rowsum distinct=[0]  Delta=0  ceil(Delta/2)=0
+  [INFO] axis type vertex : n=12  rowsum distinct=[0]  Delta=0  ceil(Delta/2)=0
+  [INFO] identity index = 75 ; center (-1) index = 0
+[PASS] R10   中心元素 -1 之伴隨軸唔喺 62 軸集內  --  no axis with h == center index 0 (資訊性，非判據)
+[PASS] R11   ★ theta 喺中心元素 -1 之左平移下不變（rot_ref 對 q 與 -q 同值 ⟹ 列 s 與列 -s 相同）  --  flip = 0/120 ; same = 120
+  [INFO] theta 之左平移穩定子階 = 10 ; 含中心元素 = True
+[PASS] R14   ★ K 恰有 12 個相異 row，每款重數恰為 10（= 120/12 = |Stab(theta)|）  --  distinct = 12 ; multiplicities = [10]
+[PASS] R15   ★ 每個 row 類 = Stab(theta)（階 10 子群）之一個左陪集  --  coset test over all 12 row classes = True
+  [INFO] Stab(theta) 之元素階分佈 = {'1': 1, '2': 1, '5': 4, '10': 4}
+[PASS] R13   ★ Delta 完全由 30 條邊軸承載（vertex 12 + face 20 塊之列和恆 0）  --  edge block row sums = [-10, 10] ; edge +1 count per row = [10, 20]
+====================================================================================================
+RESULT: 15/15 PASS
+====================================================================================================

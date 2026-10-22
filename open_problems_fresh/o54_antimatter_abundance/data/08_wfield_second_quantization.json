@@ -1,0 +1,15 @@
+{
+  "test": "W-field 二次量子化 — 產生機制",
+  "mu2": 2.0,
+  "lambda": 1.4635254915624214,
+  "W2_condensate": 0.6832815729997476,
+  "Omega_Lambda": 0.6832815729997476,
+  "kappa2_M0": 27.9009,
+  "charge_matter": 1,
+  "charge_antimatter": -1,
+  "pair_energy": "2ħω_a",
+  "rate_prop": "M₀ω²_n",
+  "macro_closed": true,
+  "local_open": true,
+  "conclusion": "反物質=W-field 虛部 φ₂ (和頻通道); U(1) 荷 ±1; 對產生 E=2ħω; 產生率∝M₀ω²; 宏觀關閉/局部開啟"
+}

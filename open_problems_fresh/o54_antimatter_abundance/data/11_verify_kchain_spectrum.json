@@ -1,0 +1,11 @@
+{
+  "test": "sympy K_Chain 譜數學驗證",
+  "sum_gamma_44": 90,
+  "sum_gamma_even_88": 90,
+  "sum_gamma_odd_88": 88,
+  "sum_gamma_total": 178,
+  "z2_dual_exact": true,
+  "gamma_2n_identity": true,
+  "correction_check1": "Σγ_even 44→90, Σγ_odd 46→88 (88-site 定義)",
+  "conclusion": "44-site Σγ=90 精確; 88-site 偶數=90 奇數=88 total=178=2F₁₁; Z₂ 對偶精確; 檢查 1 奇偶數字修正"
+}

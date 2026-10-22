@@ -1,0 +1,15 @@
+[PASS] T0    水位表建立：列出全部檔案之 mtime／上次 closed-out；「從未 closed-out」者全檔驗（本輪）  --  檔案數 = 155 ; 從未 closed-out = 3 ; 上次 closed-out 後有變更 = 0
+[FAIL] CO1   MANIFEST 覆蓋（§39）：磁碟檔案 − MANIFEST 鍵 = 0（缺者僅新增收錄）  --  磁碟 = 152 ; MANIFEST = 151 ; 未收錄 = 1 ['logs/37_closeout_docs_firstrun_residue.out']
+[FAIL] CO2   MANIFEST 內容漂移：全部鍵之 sha256 與磁碟一致（0 錯配）  --  錯配 = 1 ['scripts/37_closeout_docs.py']
+[INFO] 已回填 1 件（backfilled_by = closeout-v1）→ MANIFEST v10
+[PASS] CO3   宣告輸出（關鍵 data JSON）全部存在  --  宣告 = 37 ; 缺檔（data）= []
+[PASS] CO4   無孤兒 data JSON（每個 JSON 皆被某 script 宣告）  --  孤兒 = []
+[INFO] Traceback 日誌（應全部為已記錄之首跑／中間跑）：['22_r5_audit_firstrun_naivecount.out', '28_r7_mechanism2_firstrun2_vadd_bug.out', '28_r7_mechanism2_firstrun_vscale_bug.out', '32_r8_audit_firstrun_matrixcover_bug.out', '32_r8_audit_secondrun_nameerr.out', '34_r9_pairing_firstrun_misspec.out', '35_r9_audit_firstrun_nojson.out', '35_r9_audit_thirdrun_nameerr_dgen.out', '36_closeout_audit_firstrun_invbug.out', '37_closeout_docs_firstrun_residue.out']
+[PASS] CO5   日誌衛生：含 Traceback 之檔全屬已記錄之首跑／中間跑（無未記錄之崩潰）  --  TB 檔 = 10 ; 其中屬首跑/中間檔名 = 10
+[INFO] 首跑／中間跑日誌共 27 份
+[FAIL] CO6   未閉合項掃描（§4.1）：排除八類後殘餘 = 0（每條已逐條研判）  --  殘餘 = 19 ['01_problem_record.md:37 🔴 障礙定理之充要性；最小修改族之行為；動態側 17；判準獨立性之反事實版本', '01_problem_record.md:42 🔴 障礙定理：{K 之符號/列結構} ⟹ {無非負歸一權重} 之**充要**條件（現只係逐值觀察）', '01_problem_record.md:43 🔴 最小修改族：定義「非決定性/複值讀出」之一參數族，判其是否產生 Born 型權重（含不可能性證明）', '01_problem_record.md:44 🔴 動態側 17：全量枚舉動態可達不變量，機械判定 17 之出現/不出現（含其結構意義）']
+[PASS] CO6b  被排除之 🔴/🟡 行全部附書面判定（逐條帳）  --  被排除之標記行 = 4（逐條判定見 data/37_closeout_docs.json 之 excluded_ledger）
+[PASS] T2    文檔數值交叉核對：docs/16、docs/18、§十六 之頭條數字 vs 凍結 JSON（逐項）  --  項數 = 9 ; 不符 = []
+[PASS] T2b   §十六（R9）與 docs/18 之驗證數字一致（12/23、6/8、8/10）  --  missing = []
+========================================================================
+RESULT: 7/10 PASS  |  O225 close-out 記錄層核對

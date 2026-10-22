@@ -1,0 +1,85 @@
+{
+  "ee_structural_formula": {
+    "\u2113_E(k) = 44 \u00d7 (F\u2086 + L\u2084\u00b7(k-1)) + \u03c6(k)": true,
+    "F\u2086": 8,
+    "L\u2084": 7,
+    "k_range": [
+      1,
+      7
+    ],
+    "n_int_sequence": [
+      8,
+      15,
+      22,
+      29,
+      36,
+      43,
+      50
+    ],
+    "\u2113_base_sequence": [
+      352,
+      660,
+      968,
+      1276,
+      1584,
+      1892,
+      2200
+    ],
+    "camb_phases": [
+      43,
+      28,
+      23,
+      24,
+      26,
+      32,
+      38
+    ],
+    "camb_ee_peaks": [
+      395,
+      688,
+      991,
+      1300,
+      1610,
+      1924,
+      2238
+    ]
+  },
+  "te_structure": {
+    "camb_te_peaks": [
+      310,
+      468,
+      596,
+      749,
+      914,
+      1072,
+      1220,
+      1370,
+      1537,
+      1692,
+      1996,
+      2319
+    ],
+    "te_pairs_around_ee": true,
+    "te_n_int": [
+      7,
+      10,
+      13,
+      17,
+      20,
+      24,
+      27,
+      31,
+      34,
+      38,
+      45,
+      52
+    ]
+  },
+  "closure_summary": {
+    "camb_ee_vs_formula": "7/7 \u2705",
+    "planck_ee_vs_formula": "\u9700\u66f4\u7cbe\u78ba\u6aa2\u6e2c \ud83d\udfe1",
+    "spt_ee_vs_formula": "\u90e8\u5206\u5339\u914d \ud83d\udfe1",
+    "te_structure": "\u6210\u5c0d\u5305\u570d EE \u6574\u6578\u90e8\u5206 \ud83d\udfe2",
+    "phase_formula": "\u6709\u5f85\u9589\u5408 \ud83d\udd34"
+  }
+}

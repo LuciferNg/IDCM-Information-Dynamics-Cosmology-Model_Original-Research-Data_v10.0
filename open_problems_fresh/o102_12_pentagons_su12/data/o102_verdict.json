@@ -1,0 +1,20 @@
+{
+  "passed": 12,
+  "failed": 0,
+  "verdict": "\ud83d\udfe1 WEAK \u2014 12 \u2b20 \u2194 su(12) is numeric coincidence with 62 = h\u00b2\u00b9\u2212h\u00b9\u00b9 structural bridge",
+  "strong_connections": [
+    "V+E+F = 62 = h\u00b2\u00b9\u2212h\u00b9\u00b9 = Nd+L\u2086",
+    "12 = L\u2085+1 = B\u00d7N_gen = su(12) fundamental",
+    "30 edges = Nd\u22122L\u2084 = 44\u221214",
+    "20 faces = L\u2086+2 = 18+2",
+    "A\u2085 \u2282 SU(12) via 12D perm rep"
+  ],
+  "weak_connections": [
+    "12 \u2b20 \u2194 su(12) fundamental 12 (different representation structures)",
+    "12 \u0394E=0 nodes \u2194 su(12) fundamental 12 (different mechanisms)"
+  ],
+  "rejected": [
+    "12 \u2b20 = 'same 12' as su(12) fundamental",
+    "12 \u0394E=0 nodes = su(12) fundamental"
+  ]
+}

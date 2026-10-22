@@ -1,0 +1,19 @@
+{
+ "rules": "r28-crit2-misc1-v1",
+ "contract": "docs/60_r28_contract.md",
+ "sha256": "58ef8468d7daa7978508863d8aa9028902ba1591e25d0fc6ff7745638da87742",
+ "frozen_at": "2026-10-01 22:36:51",
+ "claims_declared": [
+  "F1",
+  "F2",
+  "F3",
+  "F4",
+  "F5",
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5"
+ ],
+ "note": "見數前凍結：本指紋於 scripts/106（機器）與 scripts/107（審計）執行前寫定"
+}

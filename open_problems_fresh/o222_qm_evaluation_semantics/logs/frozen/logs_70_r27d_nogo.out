@@ -1,0 +1,14 @@
+P1: |<a,b>| = 48 (expect 120) MISMATCH
+P1 order distribution: {1: 1, 2: 1, 3: 8, 4: 18, 6: 8, 8: 12} | record {1: 1, 2: 1, 3: 20, 4: 30, 5: 24, 6: 20, 10: 24} MISMATCH
+P1 conjugacy classes: n=8 sizes=[1, 1, 6, 6, 6, 8, 8, 12] | record [1,1,12,12,12,12,20,20,30] MISMATCH
+P1 class-deletion generation (size,|<complement>|): [(1, 48), (8, 48), (6, 48), (6, 48), (12, 48), (6, 48), (1, 48), (8, 48)]
+Pr-1 (all complements generate 2I): REFUTED
+P2 invariants: {"NC": 62, "NR": 120, "pass_reads_uncapped": 11532, "hits": 124, "capped_pass_record": 7564, "axis_families": [12, 20, 30], "quadruples": 14776336, "pairs": 3844, "kchain_44": 44, "kchain_88": 88, "constitution_176": 176, "A5": 60, "I": 60, "2I": 120}
+P2 per-ctx permutation orders: {3: 20, 4: 30, 5: 12} | cycle lengths: {3: 800, 4: 900, 5: 288}
+P2 divisibility by 17: NOWHERE
+P2 factorisations: {'7564': [2, 2, 31, 61], '11532': [2, 2, 3, 31, 31], '124': [2, 2, 31], '3844': [2, 2, 31, 31], '7440': [2, 2, 2, 2, 3, 5, 31], '62': [2, 31], '120': [2, 2, 2, 3, 5], '60': [2, 2, 3, 5]}
+Pr-2 (17 absent from every invariant): HOLDS -> Gemini P5 REFUTED
+P3 rollback = 1 pop = 1 read; reachable depth = 1 (docs/13 P3c); pass reads = 11532 = 3*62^2
+P3 tick = 1/44 of a pass-slot => one rollback = 1/44 tick ; tau_deco = 2 ticks => ratio 88
+P3 for the window to BE 2 ticks one rollback would need 88 reads; actual = 1 => factor 88
+Pr-3 (window != 2 ticks): HOLDS -> identity FAILS (no-go)

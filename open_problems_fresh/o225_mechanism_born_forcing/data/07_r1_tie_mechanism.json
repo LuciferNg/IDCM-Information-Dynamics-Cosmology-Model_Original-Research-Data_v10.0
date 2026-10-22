@@ -1,0 +1,57 @@
+{
+ "rules": "r1-tie-mechanism-v1",
+ "total_ties": 1200,
+ "per_row_ties": [
+  10
+ ],
+ "R": [
+  -10,
+  10
+ ],
+ "tie_sign_sum_distinct": [
+  -10,
+  10
+ ],
+ "M_b_rowsum_distinct": [
+  0
+ ],
+ "M_b_distinct_rows": 12,
+ "claims": [
+  {
+   "tag": "T1",
+   "name": "tie 條目總數 = 1200（= 1200 = 16.13% of 7440，與 O222 docs/13 §2(b) 一致）；每 row 之 tie 數 = [10]",
+   "ok": true,
+   "detail": "total = 1200 ; per-row distinct = [10]"
+  },
+  {
+   "tag": "T2",
+   "name": "★ R(s) = Σ_{tie 條目} tie_sign（非 tie 條目因對負封閉而兩兩抵消；tie 條目之 u-偶性 ⟹ 唔抵消）—— 逐 row 精確吻合",
+   "ok": true,
+   "detail": "R distinct = [-10, 10] ; Σ_{tie} sign distinct = [-10, 10]"
+  },
+  {
+   "tag": "T3",
+   "name": "★ 每 row 10 個 tie **同號** ⟹ Σ = ±10 = R（即 R 唔可能取其他值）",
+   "ok": true,
+   "detail": "Σ tie sign per row distinct = [-10, 10]"
+  },
+  {
+   "tag": "T4",
+   "name": "★ 零成本分支 M-b：tie 規則改為 u-奇（dot = 0 ⟹ sgn(u x r_s 之首非零分量)）⟹ R ≡ 0",
+   "ok": true,
+   "detail": "M-b row sums distinct = [0]"
+  },
+  {
+   "tag": "T5",
+   "name": "★ M-b 讀出表之仿射 Born 族：W = 1/62 + beta·K_b（beta = ±1/62）皆 非負＋歸一＋態敏感（相異 row = 12）",
+   "ok": true,
+   "detail": "distinct rows of K_b = 12 ; per-beta = {'1/62': (True, True, 12), '-1/62': (True, True, 12)}"
+  },
+  {
+   "tag": "T6",
+   "name": "★ M-b 讀出表仍屬 {±1} 族（無 0 值、無新值域）⟹ 零成本分支唔離開凍結讀出字母表",
+   "ok": true,
+   "detail": "M-b value set = [-1, 1]"
+  }
+ ]
+}

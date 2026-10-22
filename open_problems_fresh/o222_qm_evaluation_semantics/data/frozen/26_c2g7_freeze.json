@@ -1,0 +1,119 @@
+{
+ "rules": "c2g7-contract-v1",
+ "impl": {
+  "path": "scripts/27_c2g7_measure.py",
+  "sha256": "d8d7443603decd9ebb5de35fd2b1e971f6177ffc2910e0c7fa90ef0e52c383fd"
+ },
+ "upstream": {
+  "scripts/09_a2_rollback.py": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace",
+  "scripts/12_b5_budget.py": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a",
+  "scripts/15_b3r2_orderfair.py": "14e17e7cdff25b04cda70fe93010827505cec6f8b2059cc435f3f8775d9c375d"
+ },
+ "anchors": [
+  "p_k = uniform",
+  "sum_s K[s][a] = 0",
+  "|S| <= 2",
+  "vertex enumeration",
+  "sign_rank > 1",
+  "diag(K",
+  "sqrt(p)sqrt(p)^T",
+  "30000000",
+  "c2g7-contract-v1"
+ ],
+ "gate": "OPEN",
+ "frozen_at": "2026-09-30T10:24:47+0800",
+ "claims": [
+  {
+   "tag": "U",
+   "name": "frozen upstream scripts/09_a2_rollback.py pinned",
+   "ok": true,
+   "detail": "sha256 d8037bb16f69"
+  },
+  {
+   "tag": "U",
+   "name": "frozen upstream scripts/12_b5_budget.py pinned",
+   "ok": true,
+   "detail": "sha256 f2cb54fa5df0"
+  },
+  {
+   "tag": "U",
+   "name": "frozen upstream scripts/15_b3r2_orderfair.py pinned",
+   "ok": true,
+   "detail": "sha256 14e17e7cdff2"
+  },
+  {
+   "tag": "U4",
+   "name": "upstream GATE released by the G5 round",
+   "ok": true,
+   "detail": "logs/23_g5_contract.out contains GATE = OPEN"
+  },
+  {
+   "tag": "I2",
+   "name": "correlation record structure (denominator 120, 62x62 tables, C1/C2/C1rev)",
+   "ok": true,
+   "detail": "sha256 dbe664760d36"
+  },
+  {
+   "tag": "A1",
+   "name": "machine imports no banned module",
+   "ok": true,
+   "detail": "imports = ['bisect', 'fractions', 'hashlib', 'importlib', 'io', 'itertools', 'json', 'os', 'sys', 'time']"
+  },
+  {
+   "tag": "A2",
+   "name": "machine declares no banned identifier",
+   "ok": true,
+   "detail": "hits = []"
+  },
+  {
+   "tag": "A3",
+   "name": "machine contains no non-integer float literal",
+   "ok": true,
+   "detail": "literals = []"
+  },
+  {
+   "tag": "A4",
+   "name": "no eval/exec/compile in the machine",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "A5",
+   "name": "no random sampling anywhere in the machine",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C1",
+   "name": "all 9 frozen ASCII anchors appear in BOTH the contract and the machine",
+   "ok": true,
+   "detail": "missing = []"
+  },
+  {
+   "tag": "C2",
+   "name": "the machine declares the seven frozen cells C1..C7 in order",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C3",
+   "name": "the machine loads the two frozen interfaces (scripts/12 machine, scripts/15 anti)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C4",
+   "name": "the machine writes its own append-only result record",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C5",
+   "name": "the machine never imports the enforcer or the audit",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "n_pass": 15,
+ "n_total": 15
+}

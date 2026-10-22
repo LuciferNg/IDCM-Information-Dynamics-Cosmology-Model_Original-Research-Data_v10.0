@@ -1,0 +1,14 @@
+{
+  "test": "O62 六期 20: γ VEV 穩定性",
+  "V_gamma": 264.08212923258026,
+  "K": -7.655701692023912,
+  "G_evals_min": -0.29597996262223003,
+  "G_evals_max": 0.6111440943715136,
+  "G_pos_def": false,
+  "n_pos_evals": 17,
+  "Y_kernel": 4,
+  "random_pos_def_ratio": 0.0,
+  "d2V_ds2": 1584.4927753954817,
+  "passed": 5,
+  "failed": 2
+}

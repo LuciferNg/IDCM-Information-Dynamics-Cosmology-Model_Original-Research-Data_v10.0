@@ -1,0 +1,49 @@
+==============================================================================
+O126 前置驗證: v9.0 runtime ISA -> v10.0 非膨脹框架
+==============================================================================
+
+--- [A] 存活: v10.0 結構恆等式重算 ---
+  [PASS] A1 B = phi^3 - phi^-3 = 4 EXACT (MERA branching)   dev = 0.00e+00
+  [PASS] A2 lattice sites 88 x 34 = 2992   88*34 = 2992
+  [PASS] A3 domain size 2992 / 44 = 68 = 2 x K_tree   68 = 2*34 (結構, 非時間)
+  [PASS] A4 44 = 2^2 * 11 = B * L5   44 = 4*11
+  [PASS] A5 Sigma_gamma(44) = 90 = B(N_d+1)/2   Sigma gamma_n^2 = 90.000000000000
+  [PASS] A6 176-L 半集 k=1..88: Sigma_even = 90, Sigma_odd = 88 (總 178 = 2F11)   E = 90.000000000, O = 88.000000000
+  [PASS] A7 44 - h11 = 44 - 36 = 8 = 2B = F6   8 = 2B (身份未定, o143)
+  [PASS] A8 946 = C(44,2) = 43 x 22   C(44,2) = 946
+  [PASS] A9 SYNC(omega_n) = 2 omega_n = 4 sin(n pi/88)  (44/44)   DUP+ADD 恆等式
+  [PASS] A10 total cost = 2 + 2*7 = 16 = B^2 = L3^2   16 = 4^2 = 4^2
+  [PASS] A11 kappa_lat = 1/B^2 = 1/16 = 0.0625   1/16
+  [PASS] A12 JMP cost 7 = L4  (29 = 4*7 + 1)   29 = L7
+  [PASS] A13 phi iteration gap ratio -> phi^-2 = 0.381966 (doc 14 L1)   ratio = 0.381966011250
+  [PASS] A14 self loop 2w(22) = 2 sqrt(2)   2*sqrt(2) = 2.828427125
+  [PASS] A15 self loop 2w(44) = 4 (Nyquist, deg 1)   4.0
+
+--- [B] 失效: 膨脹依賴 / v9.0 demote 參數 / 符號碰撞 ---
+  [PASS] B1 Omega_L: v9.0 4/(phi^4-1) vs v10.0 41/60 -> 身份替換   0.6832816 vs 0.6833333  dev = 0.00757%
+  [PASS] B1b v10.0 身份: 41/60 = <W>^2/Sigma_gamma = 61.5/90 EXACT   61.5/90 = 41/60
+  [PASS] B2 T_CMB(exp(-74)) 公式 -> O166 降級 (反秘數 e 冪 + 任意 10^2)   2.728321 K, dev vs Fixsen = 0.1042%
+  [PASS] B2b exp(-74) 係非整數 phi 冪 (反秘數違規)   exp(-74) = phi^-153.778
+  [PASS] B3 v10.0 替代: T_CMB 重子扇區投影閉合 (零擬合)   T_proj = 2.72835 K (o166: 2.7284 +-0.5%)
+  [PASS] B3b 前向 round-trip: eta_B(T_proj) 復原   eta_B = 6.062200e-10
+  [PASS] B4 H0: v9.0 68.2 (SYNC cost) vs v10.0 omega_ring = 72.59 -> 需重推   dev = 6.05% (h0_tension 明文: 需投影框架重推)
+  [PASS] B5 N_e = 44+7+4+3+1 = 59 (v9.0 e-folds) -> v10.0 無膨脹, 概念不存   N_e = 59 (膨脹依賴)
+  [PASS] B6 W 符號碰撞: v9.0 W = N_d = 44  vs  v10.0 W = phi^291.5   phi^291.5 = 8.315668e+60  (比值 1.890e+59)
+  [PASS] B7 kappa 碰撞: 1/16 (無量綱) vs kappa^2 = M0 = 27.9009 MeV   量綱衝突 (同 O125 docs/02 裁決)
+  [PASS] B8 kappa_lat = B^-2 超臨界 13.73x (o37 4c.3) -> 無下界   kappa_crit x 13.7323
+  [PASS] B9 frame rate: v9.0 doc01 1/T_Pl vs doc04 1/(68 T_Pl) -> 內部矛盾   用戶更正: 幀率 = 1/T_Pl, 68 = 結構域大小 (非時間)
+
+--- [C] 替代: v10.0 已閉合對應結構 (遷移目標) ---
+  [PASS] C1 v10.0 週期: T_sync = 2 pi (R_world/c) = 84.635 Gyr (取代 v9.0 frame)   T_sync = 84.6351 Gyr
+  [PASS] C2 觀察者 = 奇模態 Sigma_odd = 88; 世界 = Sigma_even = 90 (176-L 半集)   測量 = 投影讀數 (O138), 取代 v9.0 render-on-demand
+  [PASS] C3 946 拍頻 = 指令空間; d,s 同奇偶 946/946   946/946
+  [PASS] C4 Sigma_(k=1..44) omega_k^2 = 90 = B(N_d+1)/2 (O211 交叉)   90
+
+==============================================================================
+總計: 31/31 PASS
+==============================================================================
+  [A] 15/15
+  [B] 12/12
+  [C] 4/4
+
+全部 PASS -- v9.0 runtime ISA 分類裁決見 docs/02_v9_to_v10_verification.md

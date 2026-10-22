@@ -1,0 +1,13 @@
+============================================================================================================
+O224 R1 -- CONTRACT + PRE-REGISTRATION  (o222-no-go-boundary-charter-v1 / o224-r1-contract-v1)
+============================================================================================================
+results already present: NONE
+frozen 04_b2_settings.json          sha256=2357006c68e0165dc9fd7d8d73524593a776e1bf6a8b62ddbc8dc2c1a8af20ee
+frozen 08_a2_h_table.json           sha256=adeaf8a7fb5495ea57be194c1a704c973a9208026cdd10ef615cd59c58005b66
+frozen 09_a2_correlation.json       sha256=dbe664760d3648bd5591f5c43a6ab5ef69bcf9c5834893bc0d907df5e561942e
+pre-registration fingerprint (sha256 of scripts/00_contract.py) = 16f1b0a14b6fbd75a1ff4f700bb192ce7b13a218832e312c9e67989233be453c
+O222 read-only snapshot: 734 files, listing sha256 = 93c3c487e95fdeccd30120ee6099ab46ab895aff9a88d2392ffc6a94ab9cc63c
+sibling O dirs newer than this script = 0 []
+[PASS] C0 contract frozen BEFORE any number of this round
+RESULT: contract FROZEN ; artefact /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o224_amplitude_complex_phase_layer/data/00_contract.json
+============================================================================================================

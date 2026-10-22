@@ -1,0 +1,121 @@
+{
+  "floor": 0.01784901037884606,
+  "best_adjacent": [
+    {
+      "name": "CKM tan\u03b8\u2081\u2082",
+      "target": 0.231604,
+      "num": "(37,38)",
+      "den": "(3,4)",
+      "delta": 0.0007577541658217005,
+      "vg_num": 0.22997253112088056,
+      "vg_den": 0.9922039361395185
+    },
+    {
+      "name": "CKM tan\u03b8\u2082\u2083",
+      "target": 0.041563,
+      "num": "(43,44)",
+      "den": "(31,32)",
+      "delta": 0.004958835109794162,
+      "vg_num": 0.01784901037884622,
+      "vg_den": 0.43158486570960053
+    },
+    {
+      "name": "CKM \u03bb",
+      "target": 0.225,
+      "num": "(38,39)",
+      "den": "(14,15)",
+      "delta": 0.002205966385797496,
+      "vg_num": 0.19509032201612833,
+      "vg_den": 0.868985049658767
+    },
+    {
+      "name": "CKM V_cb",
+      "target": 0.04182,
+      "num": "(43,44)",
+      "den": "(31,32)",
+      "delta": 0.011073746142237566,
+      "vg_num": 0.01784901037884622,
+      "vg_den": 0.43158486570960053
+    },
+    {
+      "name": "CKM A",
+      "target": 0.83,
+      "num": "(27,28)",
+      "den": "(23,24)",
+      "delta": 0.001669945437080424,
+      "vg_num": 0.5555702330196022,
+      "vg_den": 0.6682457925175762
+    },
+    {
+      "name": "PMNS tan\u03b8\u2081\u2082",
+      "target": 0.659629,
+      "num": "(25,26)",
+      "den": "(10,11)",
+      "delta": 0.0005786503673387412,
+      "vg_num": 0.6134710667365596,
+      "vg_den": 0.9305628732605136
+    },
+    {
+      "name": "PMNS tan\u03b8\u2082\u2083",
+      "target": 0.906745,
+      "num": "(16,17)",
+      "den": "(11,12)",
+      "delta": 8.835801207102586e-05,
+      "vg_num": 0.8314696123025452,
+      "vg_den": 0.9169018321483198
+    },
+    {
+      "name": "PMNS tan\u03b8\u2082\u2083b",
+      "target": 1.150368,
+      "num": "(36,37)",
+      "den": "(37,38)",
+      "delta": 3.2637509271404805e-05,
+      "vg_num": 0.26456167503277894,
+      "vg_den": 0.22997253112088056
+    },
+    {
+      "name": "PMNS sin\u03b8\u2081\u2083",
+      "target": 0.1485,
+      "num": "(40,41)",
+      "den": "(16,17)",
+      "delta": 0.00932668515265769,
+      "vg_num": 0.12462483343718603,
+      "vg_den": 0.8314696123025452
+    }
+  ],
+  "monotonicity": false,
+  "denominator_clusters": {
+    "SYNC \u221a2/2 (22)": [
+      "CKM tan\u03b8\u2081\u2082"
+    ],
+    "LADDER cos3\u03c0/8 (33)": [
+      "PMNS tan\u03b8\u2082\u2083b"
+    ],
+    "\u8fd1-SYNC [19.5,21.5]": [
+      "CKM sin\u03b8\u2081\u2083",
+      "CKM \u03bb",
+      "CKM V_cb",
+      "CKM V_ub"
+    ],
+    "mid [0.5,0.92]": [
+      "CKM tan\u03b8\u2082\u2083",
+      "CKM A",
+      "PMNS tan\u03b8\u2081\u2082",
+      "PMNS tan\u03b8\u2082\u2083",
+      "PMNS sin\u03b8\u2081\u2083"
+    ]
+  },
+  "final_status": {
+    "CKM tan\u03b8\u2081\u2082": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 0.08%",
+    "CKM tan\u03b8\u2082\u2083": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 0.50%",
+    "CKM sin\u03b8\u2081\u2083": "\u2705 k-ladder \u5148\u9a57 (p=1e-9)",
+    "CKM \u03bb": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 0.22%",
+    "CKM V_cb": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 \u908a\u7de3 1.1%",
+    "CKM V_ub": "\u2705 k-ladder \u5148\u9a57 (p=1e-9)",
+    "CKM A": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 0.17%",
+    "PMNS tan\u03b8\u2081\u2082": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 0.06%",
+    "PMNS tan\u03b8\u2082\u2083": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 0.009%",
+    "PMNS tan\u03b8\u2082\u2083b": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 0.003%",
+    "PMNS sin\u03b8\u2081\u2083": "\ud83d\udfe1 docs \u5f8c\u9a57; R2 0.93%"
+  }
+}

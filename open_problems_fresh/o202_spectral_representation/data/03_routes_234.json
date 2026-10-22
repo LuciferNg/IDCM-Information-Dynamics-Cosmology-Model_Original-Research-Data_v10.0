@@ -1,0 +1,24 @@
+{
+  "route2": {
+    "spectrum": "4sin²(kπ/176), k=1..88",
+    "sum": 178,
+    "density": "arcsine on [0,4]",
+    "mass": 88,
+    "verdict": "獨立重現典範測度 (γ-軸) — 支持 C1"
+  },
+  "route3": {
+    "kernel": "r_k = 2πR_world cos²θ_k, v_k = c cosθ_k",
+    "identity": "v_k² = a₀r_k EXACT",
+    "weight_blind": true,
+    "verdict": "❌ 核係重量盲 => 密度係自由輸入, 唔提供測度"
+  },
+  "route4": {
+    "fsr": "N_l = 88·4^l",
+    "naming_collision": "FSR 層 l ≠ CMB 多極矩 ℓ_m",
+    "peak_hits": "1/7",
+    "min_dev_pct": 0.28328611898017,
+    "verdict": "❌ 4^ℓ 係模態計數級聯, 唔係 ℓ_m 密度"
+  },
+  "common": "冇任何路線畀出 dl_eff = 23.1864 (無結構身份, scripts/01 B)",
+  "verdict": "路線 2 支持 C1(γ-軸); 路線 3/4 唔提供 ℓ-軸測度; ℓ-軸密度仍然缺失"
+}

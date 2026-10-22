@@ -196,7 +196,7 @@ lines.append("")
 lines.append("  K_Chain 頻道對照 (部分):")
 lines.append("    mode 1  → 基頻 λ=R_H (4129.94 Mpc)  全宇宙尺度")
 lines.append("    mode 11 → BAO 尺度 λ=375 Mpc       星系團通信")
-lines.append("    mode 22 → 駐波 v_g=0               本地同步 (唔使郁)")
+lines.append("    mode 22 → 中頻 v_g=0.7071c           中距通信")
 lines.append("    mode 44 → Nyquist λ=93.86 Mpc      最高分辨率")
 
 lines.append("")

@@ -1,0 +1,42 @@
+{
+ "normalisation": {
+  "dropped_keys": [
+   "build_s",
+   "seconds",
+   "times",
+   "elapsed_s",
+   "e4_build_s",
+   "solve_s",
+   "shard_solve_s"
+  ],
+  "detail_rewrite": "\\d+(\\.\\d+)? s -> <T> s"
+ },
+ "verdicts": {
+  "D1": "scripts/09 reproducible modulo timing metadata",
+  "D2": "scripts/10 reproducible modulo timing metadata",
+  "D3": "scripts/12 shard pass reproducible modulo timing metadata (the shard path is byte-stable across the round-4 aggregate amendments, which touched only the aggregate/census code)"
+ },
+ "script": "11_determinism",
+ "claims": [
+  {
+   "tag": "D1",
+   "name": "DETERMINISM (09_global_n.py): re-running 09_global_n.py reproduces the decision projection of data/09_global_n.json exactly (walls excluded by the declared normalisation), and the re-run itself exits 0 with the same decision inventory",
+   "ok": true,
+   "detail": "returncode = 0 ; wall = 752.5 s ; projection sha256 before = 86817f4ab30f7f2b after = 86817f4ab30f7f2b ; claims = ['R6', 'R7a', 'R7b', 'R7c', 'R7d', 'R7f', 'R7e', 'R9'] ; ok flags equal = True ; child output tail = RESULT: 8/8 PASS  (0 FAIL)"
+  },
+  {
+   "tag": "D2",
+   "name": "DETERMINISM (10_e5.py): re-running 10_e5.py reproduces the decision projection of data/10_e5.json exactly (walls excluded by the declared normalisation), and the re-run itself exits 0 with the same decision inventory",
+   "ok": true,
+   "detail": "returncode = 0 ; wall = 397.0 s ; projection sha256 before = 0767a3c6b83d30e9 after = 0767a3c6b83d30e9 ; claims = ['E1', 'E2'] ; ok flags equal = True ; child output tail = RESULT: 2/2 PASS  (0 FAIL)"
+  },
+  {
+   "tag": "D3",
+   "name": "DETERMINISM (12_n4_global.py --shard 0 12): re-running 12_n4_global.py reproduces the decision projection of data/12_shard_00of12.json exactly (walls excluded by the declared normalisation), and the re-run itself exits 0 with the same decision inventory",
+   "ok": true,
+   "detail": "returncode = 0 ; wall = 658.5 s ; projection sha256 before = 5b9d4434742d5705 after = 5b9d4434742d5705 ; claims = [] ; ok flags equal = True ; child output tail = shard 0/12: pairs 321, groups 4743203856, pos 512, neg -512, 654.6 s (E4 2.5 s), |E4|max 120, acc mism 0 -> /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From"
+  }
+ ],
+ "n_pass": 3,
+ "n_claims": 3
+}

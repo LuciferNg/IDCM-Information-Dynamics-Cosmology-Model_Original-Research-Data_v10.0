@@ -1,0 +1,15 @@
+================================================================================================================
+O225 scripts/33 -- R9 CONTRACT ENFORCER   (rules: r9-protocol-pairing-v1)
+================================================================================================================
+[PASS] C1    合約 doc 含 A1–A7 / B1a–B4 / C1–C2 全部標籤  --  missing = []
+[FAIL] C2    合約 doc 含關鍵定義與推導約束詞（原關鍵詞表）  --  missing = ['事件級分解'] ; chars = 2889
+[PASS] C2c   校正（新 tag）：以修正後之關鍵詞表（原表之「事件級分解」於合約中作「之分解」）  --  missing = []
+[PASS] C3    scripts/34,35 通過禁字集掃描（無禁模組、無 float 字面值）  --  issues = []
+[PASS] C4    scripts/34,35 皆 from fractions import Fraction  --  {'scripts/34_r9_pairing.py': {'imports': 8, 'float_literals': 0, 'has_fractions': True}, 'scripts/35_r9_audit.py': {'imports': 8, 'float_literals': 0, 'has_fractions': True}}
+[PASS] C5    陽性對照：人造違規源必須被拒  --  ['pos: forbidden import math (line 1)', 'pos: forbidden import numpy (line 2)', 'pos: float literal 0.00125 (line 3)']
+[PASS] C6    陰性對照：合法精確算術源必須通過  --  []
+[PASS] C7    上游 O222 凍結輸入 + 合約 doc SHA-256 落盤，GATE = OPEN  --  contract sha = 393af06cdd54e2e3…
+[FAIL] C8    見數前註冊核：R9 於 register 之 note 數 ≥ 12 且未含任何結果 note  --  pre-note = 22 ; 結果 note = 1
+================================================================================================================
+RESULT: 7/9 PASS   |  GATE OPEN  |  contract sha256 = 393af06cdd54e2e3…
+================================================================================================================

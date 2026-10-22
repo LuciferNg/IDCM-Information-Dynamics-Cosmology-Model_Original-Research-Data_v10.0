@@ -1,0 +1,122 @@
+{
+ "rules": "g1g8-contract-v1",
+ "impl": {
+  "path": "scripts/30_g1g8_gaps.py",
+  "sha256": "840d0d4ed792617cfeb6ed2bb083f8851129ea133afe51d096c2ed03a76aac2a"
+ },
+ "upstream": {
+  "scripts/09_a2_rollback.py": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace",
+  "scripts/12_b5_budget.py": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a",
+  "scripts/18_d6_mapping.py": "a681ae8cf6bcfd69b50a9a3c776f8c43011c3b6c52149bc1f1f565abbe797cf7"
+ },
+ "anchors": [
+  "s_coord(ctx) = idx[h(ctx)]",
+  "|N(s) - s|^2 > 0",
+  "value-level consistency",
+  "ledger entries per ctx",
+  "R_consistent = 1",
+  "R >= 2"
+ ],
+ "gate": "OPEN",
+ "frozen_at": "2026-09-30T10:55:11+0800",
+ "claims": [
+  {
+   "tag": "U",
+   "name": "frozen upstream scripts/09_a2_rollback.py pinned",
+   "ok": true,
+   "detail": "sha256 d8037bb16f69"
+  },
+  {
+   "tag": "U",
+   "name": "frozen upstream scripts/12_b5_budget.py pinned",
+   "ok": true,
+   "detail": "sha256 f2cb54fa5df0"
+  },
+  {
+   "tag": "U",
+   "name": "frozen upstream scripts/18_d6_mapping.py pinned",
+   "ok": true,
+   "detail": "sha256 a681ae8cf6bc"
+  },
+  {
+   "tag": "U3",
+   "name": "upstream GATE released by the C2+G7 round",
+   "ok": true,
+   "detail": "logs/26_c2g7_contract.out contains GATE = OPEN"
+  },
+  {
+   "tag": "A1",
+   "name": "machine imports no banned module",
+   "ok": true,
+   "detail": "imports = ['collections', 'fractions', 'importlib', 'io', 'json', 'os', 'sys', 'time']"
+  },
+  {
+   "tag": "A2",
+   "name": "machine declares no banned identifier",
+   "ok": true,
+   "detail": "hits = []"
+  },
+  {
+   "tag": "A3",
+   "name": "machine contains no non-integer float literal",
+   "ok": true,
+   "detail": "literals = []"
+  },
+  {
+   "tag": "A4",
+   "name": "no eval/exec/compile in the machine",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "A5",
+   "name": "no random sampling anywhere in the machine",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C1",
+   "name": "all 6 frozen ASCII anchors appear in BOTH the contract and the machine",
+   "ok": true,
+   "detail": "missing = []"
+  },
+  {
+   "tag": "C2",
+   "name": "the machine declares the six frozen cells G1a..G8c in order",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C3",
+   "name": "the machine loads the two frozen interfaces and reads the single frozen order",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C4",
+   "name": "the machine writes its own result record",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C5",
+   "name": "the machine never imports the enforcer or the audit",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C6",
+   "name": "no unrestricted local protocol: the only permitted helper is the declared ledger replay, and it must be validated pair by pair against the frozen I7 replay_protocol (amendment A1)",
+   "ok": true,
+   "detail": "local defs = ['_hist', 'claim', 'ledger_replay', 'load', 'main', 'q_str']"
+  },
+  {
+   "tag": "C7",
+   "name": "the machine loads I7 (the D6 machine) by filename and reports the replay validation",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "n_pass": 16,
+ "n_total": 16
+}

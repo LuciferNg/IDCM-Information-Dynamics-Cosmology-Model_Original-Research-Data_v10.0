@@ -1,0 +1,14 @@
+families: {'E': 30, 'F': 20, 'V': 12} rows 120 cols 62
+CAL J1 rank=6 (6) OK
+CAL J2 frac=1 (62/62) (1, 62/62) OK
+CAL J3 frac=1 hits=124 (1, 124) OK
+CAL J4 6000/7140 (6000/7140) OK
+CAL J5 distinct row types=12/62 (record: 12 distinct rows)
+BASE full judge: {'rank': 6, 'balf': '1', 'hitsf': '1', 'ps': [6000, 7140], 'sep': [12, 62]}
+[FAM] del_V cols=50 rank=6 sep=12 broken=NONE
+[FAM] del_F cols=42 rank=6 sep=12 broken=NONE
+[FAM] del_E cols=32 rank=6 sep=12 broken=NONE
+[AXIS] single-axis deletions that break J5: 0/62  []
+[AXIS] worst J5 after single deletion = 12 ; unchanged for 62 axes
+PR-1 (family deletion breaks J5 or J4): REFUTED
+PR-2 (some single-axis deletion breaks J5): REFUTED (generator is irredundant at axis level) -> irredundant

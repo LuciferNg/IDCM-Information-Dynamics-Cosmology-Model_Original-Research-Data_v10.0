@@ -1,0 +1,90 @@
+{
+ "E3_distinct_values": 7,
+ "raw_max": "22/15",
+ "raw_argmax": [
+  "V07",
+  "E07",
+  "V05",
+  "E08",
+  "V00",
+  "V01"
+ ],
+ "raw_argmax_legitimate": true,
+ "windowed_bruteforce_vertex_pool": {
+  "party": {
+   "max": "22/15",
+   "argmax": [
+    "V01",
+    "V04",
+    "V03",
+    "V02",
+    "V05",
+    "V00"
+   ],
+   "n_tuples": null
+  },
+  "six": {
+   "max": "22/15",
+   "argmax": [
+    "V01",
+    "V04",
+    "V03",
+    "V02",
+    "V05",
+    "V00"
+   ],
+   "n_tuples": null
+  },
+  "six_anti": {
+   "max": "22/15",
+   "argmax": [
+    "V01",
+    "V04",
+    "V03",
+    "V02",
+    "V05",
+    "V00"
+   ],
+   "n_tuples": null
+  }
+ },
+ "lhv_bound_n3": 2,
+ "lhv_bound_n4": 4,
+ "mermin4_max_pool6_party": "38/15",
+ "verdict_c": "RED: the exact maximum over ALL 62^6 setting tuples is 22/15 < 2, the classical bound, so the frozen E1 sequential semantics reaches no multiparty non-classical correlation in any window",
+ "script": "04b_window",
+ "claims": [
+  {
+   "tag": "W0",
+   "name": "E3 is a genuine 3-party object: over all 3844 (a,b) pairs, E3(.,.,c) depends on c for a positive number of them and is neither a function of the pair alone nor reducible to it. The single-party OUTCOME marginal is exactly 1/2 for every setting (no-signalling), which is the axis-column balance of K (all 62 columns sum to zero over the 120 states)",
+   "ok": true,
+   "detail": "pairs where E3 depends on c = 1890 ; E3 identically 0 in c = 1954 ; E3 constant nonzero in c = 0 (of 3844) ; all 62 axis columns of K sum to 0 : True (= every outcome marginal is 1/2)"
+  },
+  {
+   "tag": "W1",
+   "name": "EXACT maximum of the n=3 Mermin polynomial over ALL 62^6 setting tuples (raw window, no pruning, no masking) is 22/15 = 1.4667, strictly BELOW the classical bound 2 of this polynomial (bound verified by exhaustive strategy enumeration), and far below the GHZ value 4 and the no-signalling bound 4. Because the raw window contains every other window, no legitimate window can exceed it",
+   "ok": true,
+   "detail": "max |M3| (all 62^6) = 22/15 = 1.466667 ; classical bound = 2 ; GHZ = 4 ; no-signalling bound = 4 ; argmax = ['V07', 'E07', 'V05', 'E08', 'V00', 'V01']"
+  },
+  {
+   "tag": "W1b",
+   "name": "the raw argmax tuple is itself a LEGITIMATE Bell tuple: the six settings are pairwise distinct, and they contain no antipodal pair, so the value 22/15 is attained inside the strictest window (six_anti) as well; the windowed maxima therefore equal the raw maximum rather than being smaller",
+   "ok": true,
+   "detail": "argmax = ['V07', 'E07', 'V05', 'E08', 'V00', 'V01'] ; six settings pairwise distinct = True ; no antipodal pair = True"
+  },
+  {
+   "tag": "W1c",
+   "name": "brute-force cross-check on the 12-axis vertex pool (12^6 tuples, zero pruning, all three windows): the windowed maxima are bounded by the raw maximum 22/15, confirming the raw-window computation independently of any masking logic",
+   "ok": true,
+   "detail": "vertex-pool windowed maxima = {'party': '22/15', 'six': '22/15', 'six_anti': '22/15'} ; raw maximum = 22/15"
+  },
+  {
+   "tag": "W2",
+   "name": "n=4 parity (Mermin-family) polynomial, exact over the declared 6-axis vertex pool with all four within-party pairs distinct (a!=a' etc.), drawn from 6 axes: max |M4| is compared with the polynomial's own classical bound (computed by exhaustive strategy enumeration)",
+   "ok": true,
+   "detail": "max |M4| = 38/15 over pool ['V00', 'V01', 'V02', 'V03', 'V04', 'V05'] ; classical bound of this polynomial = 4 ; GHZ value of this polynomial = 7"
+  }
+ ],
+ "n_pass": 5,
+ "n_claims": 5
+}

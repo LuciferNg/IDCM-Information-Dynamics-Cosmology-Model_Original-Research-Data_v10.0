@@ -1,0 +1,19 @@
+{
+  "test": "O67 Problem 1: 30 C → 48 Weyl",
+  "h11": 36,
+  "h21": 98,
+  "chi": -124,
+  "b3": 198,
+  "nC": 30,
+  "nWeyl": 48,
+  "branching": 1.6,
+  "F5": 5,
+  "F6": 8,
+  "N_gen": 3,
+  "L5": 11,
+  "B": 4,
+  "C1_count": 22,
+  "C2_count": 8,
+  "passed": 12,
+  "failed": 0
+}

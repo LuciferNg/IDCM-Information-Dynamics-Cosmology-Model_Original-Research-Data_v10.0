@@ -1,0 +1,10 @@
+O34 — ±M Split Symmetry (O33 unprojected mechanism)
+===================================================================
+unproj = (90+33)/2 = 61.5
+matter = (90-33)/2 = 28.5
+41/60 = 0.6833333333 vs Omega_L = 0.6832815730 (dev 5.18e-05)
+19/60 = 0.3166666667 vs Omega_m = 0.3167184270 (dev 5.18e-05)
+41 - 19 = 22 = N_d/2
+M = 33 = 3(phi^5-phi^-5) = (chi-2)/4
+PASS = 12, FAIL = 0
+Status: 🟡 strong structural candidate, ε⁰-level

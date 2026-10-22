@@ -1,0 +1,9 @@
+{
+  "chi2_idcm": 2096.0,
+  "chi2_lcdm_planck": 2002.1,
+  "chi2_lcdm_ring": 2002.1,
+  "chi2_lcdm_fit": 1989.3,
+  "Om_fit": 0.381,
+  "pass": 0,
+  "fail": 0
+}

@@ -1,0 +1,33 @@
+{
+  "n_pairs": 30,
+  "spearman_rho": -0.300111234705228,
+  "spearman_p": 0.10710942260432398,
+  "pearson_r": -0.2610550781039485,
+  "pearson_p": 0.16349872666000614,
+  "abs_dt_mean": 55.98724666666667,
+  "abs_dt_median": 38.623999999999995,
+  "abs_dt_max": 178.6643,
+  "t_sum_mean": -2.498993333333334,
+  "t_sum_std": 55.70196281251935,
+  "neg_prod_frac": 0.6333333333333333,
+  "neg_prod_count": 19,
+  "bootstrap_rho_mean": -0.011357640393302145,
+  "bootstrap_rho_std": 0.18378274136631065,
+  "bootstrap_rho_ci95": [
+    -0.37131352959635294,
+    0.3488965510816198
+  ],
+  "bootstrap_absdt_mean": 49.82078522966667,
+  "bootstrap_absdt_ci95": [
+    35.768223166666665,
+    65.82050366666667
+  ],
+  "bootstrap_negfrac_mean": 0.5042,
+  "bootstrap_negfrac_ci95": [
+    0.3333333333333333,
+    0.6666666666666666
+  ],
+  "p_rho_le_observed": 0.056,
+  "p_absdt_ge_observed": 0.2111,
+  "p_negfrac_ge_observed": 0.1046
+}

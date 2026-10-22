@@ -1,0 +1,14 @@
+{
+  "fermi_form": "mu = 1/(1+e^eps), eps = ln(a0/g_bar)",
+  "single_mode": "a0 = c\u00b7omega_1/(2\u03c0\u00b788\u00b7sin(\u03c0/88)) \u2192 mode 1 only",
+  "quadratic": "g_obs^2 = g_bar(g_obs + a0)",
+  "quadratic_check": "\u03bd\u00b2 = \u03bd + 1/x \u6046\u7b49",
+  "lambda_1": 8259.88,
+  "lambda_n_Mpc": [
+    8259.88,
+    4129.94,
+    2753.293333333333,
+    2064.97,
+    1651.976
+  ]
+}

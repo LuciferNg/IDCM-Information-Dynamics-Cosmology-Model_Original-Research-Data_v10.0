@@ -1,0 +1,222 @@
+{
+  "verdict": "ALL PASS — SU(12) is the unique solution",
+  "all_pass": true,
+  "total_checks": 8,
+  "passed": 8,
+  "results": {
+    "S1_rank_11_count": {
+      "pass": true,
+      "detail": "rank=11 群數 = 3 (SU(12), SO(22), Sp(22))"
+    },
+    "S2_only_SU12": {
+      "pass": true,
+      "detail": "只有 1 個群滿足 rank=11 且 fundamental=12"
+    },
+    "S2_is_SU12": {
+      "pass": true,
+      "detail": "唯一匹配群 = SU(12)"
+    },
+    "S3_Lambda2_match": {
+      "pass": true,
+      "detail": "Λ²匹配: 1"
+    },
+    "S4_adjoint_match": {
+      "pass": true,
+      "detail": "adjoint 匹配: 1"
+    },
+    "S4_is_SU12": {
+      "pass": true,
+      "detail": "唯一解 = SU(12)"
+    },
+    "S5_tensor_match": {
+      "pass": true,
+      "detail": "tensor product 匹配: 1"
+    },
+    "S5_is_SU12": {
+      "pass": true,
+      "detail": "唯一解 = SU(12)"
+    },
+    "L5_summary_unique": {
+      "pass": true,
+      "detail": "唯一通過所有篩選嘅群: SU(12)"
+    }
+  },
+  "target": {
+    "rank": 11,
+    "fundamental": 12,
+    "Lambda2": 66,
+    "adjoint": 143,
+    "tensor_4x3": true
+  },
+  "exclusion_data": [
+    {
+      "name": "SU(5)",
+      "rank": 4,
+      "fundamental": 5,
+      "Lambda2": 10,
+      "adjoint": 24,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "SU(11)",
+      "rank": 10,
+      "fundamental": 11,
+      "Lambda2": 55,
+      "adjoint": 120,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "SU(12)",
+      "rank": 11,
+      "fundamental": 12,
+      "Lambda2": 66,
+      "adjoint": 143,
+      "tensor_4x3": true,
+      "rank_match": true,
+      "fundamental_match": true,
+      "Lambda2_match": true,
+      "adjoint_match": true,
+      "tensor_match": true,
+      "unique_solution": true
+    },
+    {
+      "name": "SU(13)",
+      "rank": 12,
+      "fundamental": 13,
+      "Lambda2": 78,
+      "adjoint": 168,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "SO(10)",
+      "rank": 5,
+      "fundamental": 10,
+      "Lambda2": 45,
+      "adjoint": 45,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "SO(22)",
+      "rank": 11,
+      "fundamental": 22,
+      "Lambda2": 231,
+      "adjoint": 231,
+      "tensor_4x3": false,
+      "rank_match": true,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "Sp(22)",
+      "rank": 11,
+      "fundamental": 22,
+      "Lambda2": 231,
+      "adjoint": 253,
+      "tensor_4x3": false,
+      "rank_match": true,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "G₂",
+      "rank": 2,
+      "fundamental": 7,
+      "Lambda2": 21,
+      "adjoint": 14,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "F₄",
+      "rank": 4,
+      "fundamental": 26,
+      "Lambda2": 324,
+      "adjoint": 52,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "E₆",
+      "rank": 6,
+      "fundamental": 27,
+      "Lambda2": 351,
+      "adjoint": 78,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "E₇",
+      "rank": 7,
+      "fundamental": 56,
+      "Lambda2": 1540,
+      "adjoint": 133,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    },
+    {
+      "name": "E₈",
+      "rank": 8,
+      "fundamental": 248,
+      "Lambda2": 30628,
+      "adjoint": 248,
+      "tensor_4x3": false,
+      "rank_match": false,
+      "fundamental_match": false,
+      "Lambda2_match": false,
+      "adjoint_match": false,
+      "tensor_match": false,
+      "unique_solution": false
+    }
+  ],
+  "unique_solution": "SU(12)"
+}

@@ -1,0 +1,191 @@
+{
+  "spectra": {
+    "sum_odd_44chain": 44.0,
+    "sum_even_44chain": 45.99999999999999,
+    "sum_44chain": 90.0,
+    "sum_odd_176half": 88.0,
+    "sum_even_176half": 90.0,
+    "sum_176half": 178.0
+  },
+  "target": 0.02,
+  "windows": {
+    "W1": [
+      0.01,
+      0.03
+    ],
+    "W2": [
+      0.018,
+      0.022
+    ]
+  },
+  "inventory": [
+    {
+      "label": "1/(N_d+B+mu^2) = 1/50",
+      "value": 0.02,
+      "dev": 0.0,
+      "source": "integer sum",
+      "class": "integer ratio"
+    },
+    {
+      "label": "C_energy*(1-lambda_Edd) = 1/50",
+      "value": 0.02,
+      "dev": 0.0,
+      "source": "composition of 2 registered identities",
+      "class": "composite"
+    },
+    {
+      "label": "1/(N_d+2N_gen) = 1/50",
+      "value": 0.02,
+      "dev": 0.0,
+      "source": "integer sum",
+      "class": "integer ratio"
+    },
+    {
+      "label": "1/(2*F5^2) = 1/50",
+      "value": 0.02,
+      "dev": 0.0,
+      "source": "integer sum",
+      "class": "integer ratio"
+    },
+    {
+      "label": "1/(M+F_proj) = 1/50",
+      "value": 0.02,
+      "dev": 0.0,
+      "source": "integer sum",
+      "class": "integer ratio"
+    },
+    {
+      "label": "1/(L4^2+1) = 1/50",
+      "value": 0.02,
+      "dev": 0.0,
+      "source": "integer sum",
+      "class": "integer ratio"
+    },
+    {
+      "label": "1/45 * 9/10 (N/(N+1), N=N_gen^2)",
+      "value": 0.02,
+      "dev": 0.0,
+      "source": "O171 truncation form",
+      "class": "composite"
+    },
+    {
+      "label": "1/(2*<phi^2>) = 1/(2*25.236745)",
+      "value": 0.019812380577598192,
+      "dev": 0.009380971120090398,
+      "source": "O159 propagator sum",
+      "class": "transcendental"
+    },
+    {
+      "label": "1/(A5_E-A5_V-2B) = 1/52",
+      "value": 0.019230769230769232,
+      "dev": 0.03846153846153843,
+      "source": "integer sum",
+      "class": "integer ratio"
+    },
+    {
+      "label": "C_energy = mu^2/(2N_d+mu^2) = 1/45",
+      "value": 0.022222222222222223,
+      "dev": 0.11111111111111113,
+      "source": "44-chain, O203 EXACT",
+      "class": "single spectral ratio"
+    },
+    {
+      "label": "mu^2/(2N_d) = 1/44",
+      "value": 0.022727272727272728,
+      "dev": 0.13636363636363638,
+      "source": "site-count normalisation, O7/O203",
+      "class": "single spectral ratio"
+    },
+    {
+      "label": "1/60 = 1/A5_V",
+      "value": 0.016666666666666666,
+      "dev": 0.16666666666666669,
+      "source": "A5 net vertices",
+      "class": "geometric"
+    },
+    {
+      "label": "lambda_self = mu^2/L_10 = 2/123",
+      "value": 0.016260162601626018,
+      "dev": 0.18699186991869912,
+      "source": "O204 vacuum coupling",
+      "class": "single spectral ratio"
+    },
+    {
+      "label": "1/(2N_d) = 1/88",
+      "value": 0.011363636363636364,
+      "dev": 0.4318181818181818,
+      "source": "Nyquist single mode",
+      "class": "single spectral ratio"
+    },
+    {
+      "label": "(sum_even-sum_odd)/sum (176)",
+      "value": 0.011235955056179775,
+      "dev": 0.43820224719101125,
+      "source": "176 half-set, = mu^2/2F_11",
+      "class": "single spectral ratio"
+    },
+    {
+      "label": "mu^2/sum (176 half-set)",
+      "value": 0.011235955056179775,
+      "dev": 0.43820224719101125,
+      "source": "176 half-set",
+      "class": "single spectral ratio"
+    },
+    {
+      "label": "1/(2N_d+B+mu^2) = 1/94",
+      "value": 0.010638297872340425,
+      "dev": 0.46808510638297873,
+      "source": "integer sum",
+      "class": "integer ratio"
+    },
+    {
+      "label": "f_proj^2/10 = (19/60)^2/10",
+      "value": 0.010027777777777778,
+      "dev": 0.4986111111111111,
+      "source": "derived",
+      "class": "composite"
+    },
+    {
+      "label": "mu^2/<W>^2 = 4/123",
+      "value": 0.032520325203252036,
+      "dev": 0.6260162601626018,
+      "source": "O204",
+      "class": "single spectral ratio"
+    },
+    {
+      "label": "1/(N_d*B) = 1/176",
+      "value": 0.005681818181818182,
+      "dev": 0.7159090909090909,
+      "source": "full 176 cycle",
+      "class": "single spectral ratio"
+    },
+    {
+      "label": "1/(L4*B) = 1/28",
+      "value": 0.03571428571428571,
+      "dev": 0.7857142857142856,
+      "source": "K(F_proj) window",
+      "class": "integer ratio"
+    },
+    {
+      "label": "1/(L4*N_gen) = 1/21",
+      "value": 0.047619047619047616,
+      "dev": 1.3809523809523807,
+      "source": "K(0) window",
+      "class": "integer ratio"
+    },
+    {
+      "label": "r_LRD = N_gen/(N_d-B) = 3/40",
+      "value": 0.075,
+      "dev": 2.7499999999999996,
+      "source": "O176 D8 candidate",
+      "class": "registered candidate"
+    },
+    {
+      "label": "lambda_Edd = B/(N_d-B) = 1/10",
+      "value": 0.1,
+      "dev": 4.0,
+      "source": "O176 D10 candidate",
+      "class": "registered candidate"
+    }
+  ]
+}

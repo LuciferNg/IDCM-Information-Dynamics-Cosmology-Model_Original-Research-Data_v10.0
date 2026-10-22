@@ -9,46 +9,46 @@
    (s < 40 excluded: BOSS relative errors there are ~0.5%%, so the small-s peak
     dominates chi^2 and no smooth broadband can pass; the BAO/ladder test lives
     in the s >= 40 window where relative errors are O(1-100%%) )
-   knots=4 : chi2_broadband =   35.83 (chi2/dof = 1.63)   dchi2(+template) =  +10.56   A = +7.264e-03
-   knots=5 : chi2_broadband =   23.86 (chi2/dof = 1.14)   dchi2(+template) =  +11.64   A = +1.046e-02
-   knots=6 : chi2_broadband =   16.25 (chi2/dof = 0.81)   dchi2(+template) =   +6.93   A = +9.906e-03
+   knots=4 : chi2_broadband =   35.83 (chi2/dof = 1.63)   dchi2(+template) =   +2.54   A = +3.421e-02
+   knots=5 : chi2_broadband =   23.86 (chi2/dof = 1.14)   dchi2(+template) =   +1.38   A = -2.782e-02
+   knots=6 : chi2_broadband =   16.25 (chi2/dof = 0.81)   dchi2(+template) =   +0.19   A = -1.380e-02
   [PASS] A1  window restricted to s >= 40 h^-1 Mpc (BAO/ladder window)  -- 28 bins
   [PASS] A2  broadband model is adequate (chi2/dof in [0.5, 3] at knots=5)  -- chi2/dof = 1.19
 
 ------------------------------------------------------------------------------
   B. Delta-chi^2 profile (matched filter, 1 dof)
 ------------------------------------------------------------------------------
-   knots=4 : dchi2 = +10.56  -> nominal 3.25 sigma (1 dof)  A = +7.264e-03
-   knots=5 : dchi2 = +11.64  -> nominal 3.41 sigma (1 dof)  A = +1.046e-02
-   knots=6 : dchi2 = +6.93  -> nominal 2.63 sigma (1 dof)  A = +9.906e-03
+   knots=4 : dchi2 = +2.54  -> nominal 1.59 sigma (1 dof)  A = +3.421e-02
+   knots=5 : dchi2 = +1.38  -> nominal 1.17 sigma (1 dof)  A = -2.782e-02
+   knots=6 : dchi2 = +0.19  -> nominal 0.44 sigma (1 dof)  A = -1.380e-02
    NOTE the strong knot-count dependence: the 'signal' shrinks as the broadband
    becomes more flexible -> the ladder is DEGENERATE with broadband shape.
 
 ------------------------------------------------------------------------------
   C. trial-corrected null: max over (knots x lambda shift)
 ------------------------------------------------------------------------------
-   observed trial-corrected statistic D = +14.57
-   broadband+noise null D: mean +15.50  std 7.08  max +51.75
-   phase-randomised null D: mean +26.89  max +63.04 (wrapped-edge ringing)
-   p (broadband+noise null) = 0.500
-  [PASS] C1  trial-corrected p-value computed over (knots x shift) trials  -- p = 0.500 (D_obs 14.57 vs null max 51.75)
-  [PASS] C2  K_Chain ladder is NOT a significant detection (p > 0.01)  -- p = 0.500
+   observed trial-corrected statistic D = +11.26
+   broadband+noise null D: mean +19.71  std 6.93  max +54.86
+   phase-randomised null D: mean +24.66  max +60.22 (wrapped-edge ringing)
+   p (broadband+noise null) = 0.935
+  [PASS] C1  trial-corrected p-value computed over (knots x shift) trials  -- p = 0.935 (D_obs 11.26 vs null max 54.86)
+  [PASS] C2  K_Chain ladder is NOT a significant detection (p > 0.01)  -- p = 0.935
   [CLAIM] C  => with the trial factor (broadband flexibility x ladder offset) accounted for, the K_Chain ladder is NOT significantly detected in BOSS DR12 xi(s)
 
 ------------------------------------------------------------------------------
   D. shifted-ladder profile (knots=5): does the specific lambda_sync matter?
 ------------------------------------------------------------------------------
    delta   lam' (h^-1Mpc)   dchi2
-   -0.10   365.60             +8.14
-   -0.05   385.91            +14.57
-   -0.02   398.10            +13.51
-   -0.01   402.16            +12.72
-   +0.00   406.22            +11.64
-   +0.01   410.28            +10.17
-   +0.02   414.35             +8.16
-   +0.05   426.53             +0.47
-   +0.10   446.84             +6.32
-  [PASS] D1  shifted-ladder profile scanned (structural lambda_sync at delta = 0)  -- best delta = -0.05 (dchi2 = +14.57)
+   -0.10   178.77             +3.73
+   -0.05   188.70             +0.16
+   -0.02   194.66             +2.05
+   -0.01   196.64             +2.74
+   +0.00   198.63             +1.38
+   +0.01   200.62             +0.50
+   +0.02   202.60             +0.10
+   +0.05   208.56             +0.40
+   +0.10   218.49             +0.12
+  [PASS] D1  shifted-ladder profile scanned (structural lambda_sync at delta = 0)  -- best delta = -0.10 (dchi2 = +3.73)
   [CLAIM] D  => the shifted-ladder profile is FLAT/broad (no sharp peak at delta=0), i.e. the data does not single out lambda_sync over +-5-10% shifts at this precision -> the 'detection' is not ladder-position-specific
 
 ------------------------------------------------------------------------------

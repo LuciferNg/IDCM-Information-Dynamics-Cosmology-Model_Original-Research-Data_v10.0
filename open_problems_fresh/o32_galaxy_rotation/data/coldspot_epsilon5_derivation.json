@@ -1,0 +1,14 @@
+{
+  "F5": 5,
+  "F6": 8,
+  "F7": 13,
+  "epsilon": 0.1511627906976744,
+  "formula": "\u03b4T/T = 5\u00b7\u03b5\u2075/8 = F\u2085\u00b7\u03b5^(F\u2085)/F\u2086",
+  "dT_pred_uK": 134.44588743046717,
+  "dT_obs_uK": 134.2,
+  "deviation_pct": 0.1832246128667497,
+  "F5_origin": "A\u2085 symmetry group, CY\u2083 dim_C+2, B+1",
+  "F6_origin": "2\u00b3 cube, B\u00d72 K_Tree",
+  "F7_origin": "N = F_k+L_k+2 = 44 unique solution k=7",
+  "eps_denom": "86 = 2N-2 = 88-site ring degenerate modes"
+}

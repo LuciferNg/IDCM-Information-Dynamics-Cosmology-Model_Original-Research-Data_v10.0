@@ -1,0 +1,36 @@
+O108 — VL 質量譜計算結果
+============================================================
+
+M₀ = 27.900915 MeV
+SM 模式: [1, 8, 10, 18, 19, 22, 24, 30, 33, 38, 41]
+VL 模式: {2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 20, 21, 23, 25, 26, 27, 28, 29, 31, 32}
+
+VL 質量譜 (O89 f_VL):
+  Gen1 n= 2: m_c=1.7130e+13 GeV, m_s=3.4259e+12 GeV
+  Gen1 n= 3: m_c=2.5667e+13 GeV, m_s=5.1335e+12 GeV
+  Gen1 n= 4: m_c=3.4172e+13 GeV, m_s=6.8344e+12 GeV
+  Gen1 n= 5: m_c=4.2633e+13 GeV, m_s=8.5267e+12 GeV
+  Gen1 n= 6: m_c=5.1040e+13 GeV, m_s=1.0208e+13 GeV
+  Gen1 n= 7: m_c=5.9382e+13 GeV, m_s=1.1876e+13 GeV
+  Gen1 n= 9: m_c=7.5829e+13 GeV, m_s=1.5166e+13 GeV
+  Gen1 n=11: m_c=9.1889e+13 GeV, m_s=1.8378e+13 GeV
+  Gen2 n=12: m_c=9.9748e+13 GeV, m_s=1.9950e+13 GeV
+  Gen2 n=13: m_c=1.0748e+14 GeV, m_s=2.1496e+13 GeV
+  Gen2 n=14: m_c=1.1508e+14 GeV, m_s=2.3015e+13 GeV
+  Gen2 n=15: m_c=1.2252e+14 GeV, m_s=2.4505e+13 GeV
+  Gen2 n=16: m_c=1.2982e+14 GeV, m_s=2.5963e+13 GeV
+  Gen2 n=17: m_c=1.3694e+14 GeV, m_s=2.7389e+13 GeV
+  Gen2 n=20: m_c=1.5724e+14 GeV, m_s=3.1449e+13 GeV
+  Gen2 n=21: m_c=1.6362e+14 GeV, m_s=3.2724e+13 GeV
+  Gen3 n=23: m_c=1.7574e+14 GeV, m_s=3.5148e+13 GeV
+  Gen3 n=25: m_c=1.8696e+14 GeV, m_s=3.7393e+13 GeV
+  Gen3 n=26: m_c=1.9222e+14 GeV, m_s=3.8445e+13 GeV
+  Gen3 n=27: m_c=1.9724e+14 GeV, m_s=3.9447e+13 GeV
+  Gen3 n=28: m_c=2.0200e+14 GeV, m_s=4.0400e+13 GeV
+  Gen3 n=29: m_c=2.0650e+14 GeV, m_s=4.1301e+13 GeV
+  Gen3 n=31: m_c=2.1472e+14 GeV, m_s=4.2944e+13 GeV
+  Gen3 n=32: m_c=2.1842e+14 GeV, m_s=4.3684e+13 GeV
+
+譜統計:
+  Colored: min=1.7130e+13, max=2.1842e+14, mean=1.2600e+14 GeV
+  Singlet: min=3.4259e+12, max=4.3684e+13, mean=2.5200e+13 GeV

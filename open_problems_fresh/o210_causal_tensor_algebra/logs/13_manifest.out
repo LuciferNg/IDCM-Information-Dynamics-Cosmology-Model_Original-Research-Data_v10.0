@@ -1,0 +1,12 @@
+   檔案總數 = 51（scripts=13　docs=14　logs=13）
+  PASS  覆蓋 scripts/*.py ≥ 13   [dev = 0]
+  PASS  覆蓋 docs/*.md ≥ 13   [dev = 0]
+  PASS  覆蓋 logs/*.out ≥ 13   [dev = 0]
+  PASS  寫入後讀回：path 集合一致   [dev = 0]
+  PASS  寫入後讀回：sha 逐個一致   [dev = 0]
+  PASS  self 唔在 files（避免自指）   [dev = 0]
+  MANIFEST → data/MANIFEST.json（51 檔；untracked_by_design = ['data/MANIFEST.json', 'logs/13_manifest.out']）
+====================================================================================
+O210 MANIFEST — PASS 6 / FAIL 0
+====================================================================================
+RESULT: PASS

@@ -1,0 +1,191 @@
+{
+  "O": "O232",
+  "built": "2026-10-05 21:21:40",
+  "purpose": "O232 closeout 2026-10-05 — trail C4（最終版含原設問題裁決 §十六 後刷新）",
+  "untracked_by_design": [
+    "MANIFEST.json"
+  ],
+  "files": [
+    {
+      "path": "01_problem_record.md",
+      "sha256": "f0be66308af2c32faf3cc83144a6369e33d99bfa0297c5f19cd98c9b98f9fd76",
+      "bytes": 26394,
+      "mtime": "2026-10-05 21:21:18"
+    },
+    {
+      "path": "SESSION_START.md",
+      "sha256": "671c3815795cd1244b8d8a8e7c0e388926e6ab5402dc00d96a7a4ac51c268e2a",
+      "bytes": 12848,
+      "mtime": "2026-10-05 21:21:07"
+    },
+    {
+      "path": "final_result.md",
+      "sha256": "d2cf75fb084c39f70fdf77df155382a9ef0769c00a876c3e8d5655b26324b92b",
+      "bytes": 9499,
+      "mtime": "2026-10-05 21:21:07"
+    },
+    {
+      "path": "data/01_idcm_age_ladder.json",
+      "sha256": "29d6ed9aa4674fe7004a56b0f8ec7708851914faf874b7e432e32d454e4fd2af",
+      "bytes": 2790,
+      "mtime": "2026-10-05 14:13:31"
+    },
+    {
+      "path": "data/02_stellar_age_tail.json",
+      "sha256": "d9c917f804d1fe3e10bbc10f4489ecac39121c258fe85ae2552a9cc58d224809",
+      "bytes": 1184,
+      "mtime": "2026-10-05 14:13:31"
+    },
+    {
+      "path": "data/03_ceiling_criterion.json",
+      "sha256": "57d23ba9cdbf6085883758a077e9bacc1ce2e7299f05b25dc4cd80962902f595",
+      "bytes": 1474,
+      "mtime": "2026-10-05 14:13:31"
+    },
+    {
+      "path": "data/04_jades_age_ceiling.json",
+      "sha256": "97a2f9c76bbff4879875aba2e42ac982e64b05628fa37d919392c5cd2b5c03d9",
+      "bytes": 2424,
+      "mtime": "2026-10-05 14:13:45"
+    },
+    {
+      "path": "data/05_r3_r4_definition_ladder.json",
+      "sha256": "0ac553935014aebcc9dc843a3d749c8499b334f930b9fd1718302e031aec42f4",
+      "bytes": 1013,
+      "mtime": "2026-10-05 14:13:45"
+    },
+    {
+      "path": "data/06_stellar_age_candidates.json",
+      "sha256": "a6f68ee38cd235a89649739925865711e605a184249e318498b673f821179361",
+      "bytes": 2430,
+      "mtime": "2026-10-05 14:13:45"
+    },
+    {
+      "path": "data/raw/LAMOST_Gaia_subgiants_Xiangetal2024.fits",
+      "sha256": "aa3ecdd1d56f5f810971a8dedd23e0580b53f131a60b707e6cfa4131a409e25c",
+      "bytes": 93464640,
+      "mtime": "2026-10-05 04:07:25"
+    },
+    {
+      "path": "data/raw/dlv.txt",
+      "sha256": "22ddb9704358fddb2a881d0772dcb01e9f78f8df6a4b9614c45607edbe0d3dac",
+      "bytes": 335252,
+      "mtime": "2026-10-05 04:23:58"
+    },
+    {
+      "path": "docs/01_paper_vs_idcm_divergence.md",
+      "sha256": "2579c2477b5d28f1a19d31917921fd602a07cb913e66beced33a4a5a40ffe4d4",
+      "bytes": 6755,
+      "mtime": "2026-10-05 03:38:02"
+    },
+    {
+      "path": "docs/02_r1_rendering_depth_verdict.md",
+      "sha256": "0ed41aa387815bdded40762f68b8fb5ffc24c078a51d71f40d82dac728ca5498",
+      "bytes": 5242,
+      "mtime": "2026-10-05 04:10:41"
+    },
+    {
+      "path": "docs/03_r6_highz_ceiling_verdict.md",
+      "sha256": "29c989136744d640d3ec1cbaa5a29d6a1d929ba96a0a38714273209535c0a5a0",
+      "bytes": 4628,
+      "mtime": "2026-10-05 09:33:51"
+    },
+    {
+      "path": "docs/04_r3_13p8_definition.md",
+      "sha256": "f9793e5ba5c12cdb609e2f28dfc66e61730b8a46554118869c3915b79015a7f1",
+      "bytes": 2886,
+      "mtime": "2026-10-05 12:25:09"
+    },
+    {
+      "path": "docs/05_r4_translation_layer.md",
+      "sha256": "efb14cce25eca39d8b706cbc69047ef7bb908c73585ce75191e00525a53613a6",
+      "bytes": 2834,
+      "mtime": "2026-10-05 12:25:09"
+    },
+    {
+      "path": "docs/06_milkyway_stellar_age_questions.md",
+      "sha256": "d3aaa461a226a402e77cd866b4bdf97c3ead782dfae09e8268273548ebb0bfe1",
+      "bytes": 4115,
+      "mtime": "2026-10-05 12:38:34"
+    },
+    {
+      "path": "docs/07_no_bigbang_falsifiability.md",
+      "sha256": "c3de4d3eccab253837904953d89c193c6e4370342fb7f75586bf9ca626217979",
+      "bytes": 3644,
+      "mtime": "2026-10-05 12:38:34"
+    },
+    {
+      "path": "logs/01_idcm_age_ladder.out",
+      "sha256": "a0da97b3d2eb323cc721bb9d8da00891a61f925a1b9b42dc6e1b3c668027bb6e",
+      "bytes": 2840,
+      "mtime": "2026-10-05 03:37:09"
+    },
+    {
+      "path": "logs/02_stellar_age_tail_test.out",
+      "sha256": "c3d0e807dd7e541956ca65c9b8a9186f35fb209e3e3f94dcb1e5c6d80c3ae9e3",
+      "bytes": 2846,
+      "mtime": "2026-10-05 04:10:02"
+    },
+    {
+      "path": "logs/03_ceiling_criterion.out",
+      "sha256": "7ce6331ff4ab799331a397e6ba374b0c805935c9578fdb86fa7f4a28e2ec4ac3",
+      "bytes": 2792,
+      "mtime": "2026-10-05 14:13:31"
+    },
+    {
+      "path": "logs/04_jades_age_ceiling.out",
+      "sha256": "5d5785d09f4e45fe42b85d58767282dd5aa523e37dbed76f0f416fc4b568756e",
+      "bytes": 2900,
+      "mtime": "2026-10-05 09:33:33"
+    },
+    {
+      "path": "logs/05_r3_r4_definition_ladder.out",
+      "sha256": "2a8aa7bec4b349756ba9965b2cbf2b0b525e3e5d00c29736d4e63b1569ff4e33",
+      "bytes": 2721,
+      "mtime": "2026-10-05 12:24:37"
+    },
+    {
+      "path": "logs/06_stellar_age_ceiling_candidates.out",
+      "sha256": "6a9b4dedb29d66fbd1e198a5690af34d7101fed445bf378b98bca84ded5b280a",
+      "bytes": 3272,
+      "mtime": "2026-10-05 12:38:06"
+    },
+    {
+      "path": "scripts/01_idcm_age_ladder.py",
+      "sha256": "900bcbee6e9cd0a72e10cca9b11a4d7332935c1611c86beb61ec9b65c295684a",
+      "bytes": 9187,
+      "mtime": "2026-10-05 03:37:04"
+    },
+    {
+      "path": "scripts/02_stellar_age_tail_test.py",
+      "sha256": "d3639fbb025c5d817960a1202d83d41e49fc92745e22cd89d0da7ce6c4b86a0b",
+      "bytes": 5694,
+      "mtime": "2026-10-05 04:09:57"
+    },
+    {
+      "path": "scripts/03_ceiling_criterion.py",
+      "sha256": "6693d3fb651930db903c12116980f8f70a2b42e9ddda362abc43132f10d668b6",
+      "bytes": 5265,
+      "mtime": "2026-10-05 04:10:15"
+    },
+    {
+      "path": "scripts/04_jades_age_ceiling.py",
+      "sha256": "7d3cb91043f063708ecffd4510aa8fce98fb0ff437ad4255ce8b990507d668c0",
+      "bytes": 6067,
+      "mtime": "2026-10-05 09:33:14"
+    },
+    {
+      "path": "scripts/05_r3_r4_definition_ladder.py",
+      "sha256": "74fd0e181ad6875c380d0cec8ad71b60b1f92773f4f5965b2b463a0eb1016dea",
+      "bytes": 5959,
+      "mtime": "2026-10-05 12:24:32"
+    },
+    {
+      "path": "scripts/06_stellar_age_ceiling_candidates.py",
+      "sha256": "f60c5ae9c51ab84f07dfc2af65bcc350728d822ccc6c6df0f84e6b676fc117c5",
+      "bytes": 4658,
+      "mtime": "2026-10-05 12:38:02"
+    }
+  ],
+  "count": 30
+}

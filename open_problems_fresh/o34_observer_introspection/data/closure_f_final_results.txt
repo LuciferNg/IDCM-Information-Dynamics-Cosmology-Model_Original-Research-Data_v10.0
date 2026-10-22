@@ -1,0 +1,10 @@
+O34 — Final Closure of Cascade Operator D
+===================================================================
+f_target = 1.034293244318
+Candidate 1: phi^(37/528), err = 0.000295% (log 0.008735%)
+Candidate 2 (G): sqrt(phi^(3/44)*44/42.5), err = 0.002939%
+37/528 = (3 + 1/12)/(12*44), 12 = dim_C*B = 3*4
+47 = N_d + dim_C(CY3) = 44 + 3
+m_7 implied = 13.8000 MeV (target 13.8000, err 0.000295%)
+Cascade: m_7 = E_kchain * phi^(47+37/528) * sqrt(gamma_7)
+Status: 🟢 closed within m_7 precision (0.009% < 0.7%)

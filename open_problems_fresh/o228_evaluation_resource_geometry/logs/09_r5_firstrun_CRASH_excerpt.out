@@ -1,0 +1,32 @@
+================================================================================================================
+O228 scripts/09 -- R5: arrangement lower bound + M_edge k=6 certificate + third route
+================================================================================================================
+machines: {'M_2I': (12, 62), 'M_face': (20, 62), 'M_edge': (30, 62), 'M_T': (4, 14), 'M_O': (6, 26), 'M_D4': (2, 10)}
+cap(k) = {1: 2, 2: 4, 3: 8, 4: 14, 5: 22, 6: 32, 7: 44}
+bound: {'M_2I': 4, 'M_face': 5, 'M_edge': 6, 'M_T': 2, 'M_O': 3, 'M_D4': 1}
+measured: {'M_2I': 4, 'M_face': 5, 'M_edge': 7, 'M_T': 2, 'M_O': 3, 'M_D4': 1}
+[PASS] K1a-1  -- cap = {1: 2, 2: 4, 3: 8, 4: 14, 5: 22, 6: 32, 7: 44}
+[PASS] K1a-2  -- M_2I: m=12 bound=4 measured=4 ; M_face: m=20 bound=5 measured=5 ; M_edge: m=30 bound=6 measured=7 ; M_T: m=4 bound=2 measured=2 ; M_O: m=6 bound=3 measured=3 ; M_D4: m=2 bound=1 measured=1
+[PASS] K1a-3  -- equal: ['M_2I', 'M_D4', 'M_O', 'M_T', 'M_face'] ; over: {'M_edge': (6, 7)}
+  M_2I    m=12  bound=4 measured=4  F_k(k<k_min) = {1: 0, 2: 0, 3: 0}
+  M_face  m=20  bound=5 measured=5  F_k(k<k_min) = {1: 0, 2: 0, 3: 0, 4: 0}
+  M_edge  m=30  bound=6 measured=7  F_k(k<k_min) = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+  M_T     m=4   bound=2 measured=2  F_k(k<k_min) = {1: 0}
+  M_O     m=6   bound=3 measured=3  F_k(k<k_min) = {1: 0, 2: 0}
+  M_D4    m=2   bound=1 measured=1  F_k(k<k_min) = {}
+[FAIL] K1b-1  -- PREDICTED 11 facts, ACTUAL 16 recorded facts (all still zero) = {'M_2I_F1': 0, 'M_2I_F2': 0, 'M_2I_F3': 0, 'M_face_F1': 0, 'M_face_F2': 0, 'M_face_F3': 0, 'M_face_F4': 0, 'M_edge_F1': 0, 'M_edge_F2': 0, 'M_edge_F3': 0, 'M_edge_F4': 0, 'M_edge_F5': 0, 'M_edge_F6': 0, 'M_T_F1': 0, 'M_O_F1': 0, 'M_O_F2': 0}
+[PASS] K1b-1-c  -- non-zero facts = 0 ; fact table size = 16
+  M_2I    pat: {'k1': (2, 2), 'k2': (4, 4), 'k3': (8, 8), 'k4': (12, 14), 'k5': (12, 22)}
+  M_face  pat: {'k1': (2, 2), 'k2': (4, 4), 'k3': (8, 8), 'k4': (14, 14), 'k5': (20, 22)}
+  M_edge  pat: {'k1': (2, 2), 'k2': (4, 4), 'k3': (8, 8), 'k4': (14, 14), 'k5': (20, 22)}
+  M_T     pat: {'k1': (2, 2), 'k2': (4, 4), 'k3': (4, 8), 'k4': (4, 14), 'k5': (4, 22)}
+  M_O     pat: {'k1': (2, 2), 'k2': (4, 4), 'k3': (6, 8), 'k4': (6, 14)}
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/09_r5_kmin_law.py", line 459, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o228_evaluation_resource_geometry/scripts/09_r5_kmin_law.py", line 294, in main
+    rec['k%d' % k] = {'max_pat': best, 'cap': cap(k), 'exhaustive': True, 'arg': list(arg)}
+                                                                                 ~~~~^^^^^
+TypeError: 'NoneType' object is not iterable
+exit=1

@@ -1,0 +1,41 @@
+{
+ "rules": "r15-mechanism-v1",
+ "contract": "docs/31_r15_contract.md",
+ "contract_sha256": "184eefad4d849f55a71282146cc2ed35ac0281236beb1a4676aaa67c27d03310",
+ "frozen_at": "first run of scripts/41",
+ "n_pass": 5,
+ "n_total": 5,
+ "gate": "OPEN",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "凍結合約 sha256 與記錄一致",
+   "ok": true,
+   "detail": "sha = 184eefad4d849f55…"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 完整（10 個：E1–E4／G1–G3／A1–A3）",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C3",
+   "name": "陽性對照：合約載明 Part E 之完整判準（w_g(t·y) ＋ 構造性零）",
+   "ok": true,
+   "detail": "命中 = True"
+  },
+  {
+   "tag": "C4",
+   "name": "陰性對照：篡改後之合約（弱化為「可能成群」）必須被 C3 判據拒絕",
+   "ok": true,
+   "detail": "篡改版仍含完整判準 = False"
+  },
+  {
+   "tag": "C5",
+   "name": "GATE 條件：合約未被改動、tag 完整、陰陽對照成立",
+   "ok": true,
+   "detail": "GATE = OPEN"
+  }
+ ]
+}

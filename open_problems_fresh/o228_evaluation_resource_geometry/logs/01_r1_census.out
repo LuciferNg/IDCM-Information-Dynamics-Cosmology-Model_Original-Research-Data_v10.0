@@ -1,0 +1,18 @@
+============================================================================================================
+O228 scripts/01 -- R1 resource-geometry census   (rules o228-r1-resource-geometry-v1)
+============================================================================================================
+[PASS] C1   K is 120 x 62 with value set {-1,+1}  --  shape = 120x62 ; values = [-1, 1]
+[PASS] C2   distinct rows = 12 and every multiplicity = 10  --  distinct = 12 ; multiplicities = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+[PASS] C2b  the 12 row directions are the icosahedron vertices (exact): every degree = 5  --  degrees = [5] ; edge count = 30
+[PASS] C3   F_1 = F_2 = F_3 = 0, F_4 = 12645, C(62,4) = 557845 (upstream values reproduced)  --  F_1..F_4 = [0, 0, 0, 12645] ; C(62,4) = 557845 ; rate = 12645/557845
+[PASS] C4   the 62 columns form 31 unoriented axes (6 vertex / 10 face / 15 edge), each column having its negative in the set  --  lines = 31 ; families = {'vertex': 6, 'face': 10, 'edge': 15} ; columns with a negative partner = 62
+[PASS] C5   every column fibre partition is a bisection (6,6); distinct partitions = 16  --  shapes = [(6, 6)] ; distinct = 16
+[PASS] C6   multiplicity histogram = {3:10, 5:5, 7:1} (sum = 62)  --  histogram = {3: 10, 5: 5, 7: 1} ; sum = 62
+[PASS] C7   split lines (the two columns of a line give DIFFERENT fibre partitions) <=> edge lines; the 16 non-split lines are the 6 vertex + 10 face ones  --  split = 15 (['edge']) ; non-split = 16 ({'vertex': 6, 'face': 10})
+[PASS] C8   zero law: every edge column is perpendicular to exactly 4 rows, vertex/face columns to none; total zeros = 120 = 12 x 10  --  zeros by (family,#rows) = {('edge', 4): 30, ('face', 0): 20, ('vertex', 0): 12} ; total = 120
+[PASS] C9   bijection: the 16 distinct bisections <-> the 16 non-edge lines; each vertex line and each face line contributes its two columns to the SAME bisection  --  non-edge lines = 16 ; distinct bisections from them = 16 ; +-coherence = True
+[PASS] C10  edge columns allocate 20 to the V-type bisections (5 + 3+3+3+3+3) and 10 to the F-type ones (1 each)  --  V-type edge counts = [3, 3, 3, 3, 3, 5] ; F-type edge counts = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[PASS] C11  the 6 V-type bisections are the closed neighbourhoods N[v] of the icosahedron graph (with their complements)  --  V-type bisections matching a closed neighbourhood (or its complement): 6/6
+============================================================================================================
+RESULT: 12/12 PASS  (0 FAIL)
+============================================================================================================

@@ -1,0 +1,129 @@
+{
+ "cells": {
+  "G2a": true,
+  "G2b": true,
+  "G2c": true,
+  "Q5a": true,
+  "Q5b": true,
+  "Q5c": true
+ },
+ "results": [
+  {
+   "cell": "G2a",
+   "name": "O206 之 f(n) = 質量閉合因子（`ω_n = μ²·f(n)`），其假說已明文否證；與資源成本之頻率無關",
+   "verdict": "✅",
+   "detail": "J3 定義行 2 條；J1 否證行 1 條；J2 剩餘開放項 0 條；狀態標籤 J1=## 狀態: 🟢 主體收束（九輪攻堅 2026-09-21/22；2 vs J2=## 狀態: 🔴 開放（九輪攻堅 2026-09-22；23 腳本 （⚠ 上游記載層不一致，唯讀不改）"
+  },
+  {
+   "cell": "G2b",
+   "name": "資源側逐模頻率已存在且可算：`ω_n = √γ_n = 2sin(πn/88)`（44 模；`ω_44 = 2` Nyquist）；`ω = μ²` 係 fiducial 非結構強制",
+   "verdict": "✅",
+   "detail": "模數 44；max|γ_n − ω_n²|/ω_n² = 0.000e+00；ω_44 = 2.000000000000；fiducial/結構強制 語句 9 條；J13 I4 之「均勻」語句 4 條"
+  },
+  {
+   "cell": "G2c",
+   "name": "非均勻歷階 `c_n = (123/88)(ω_n/⟨ω⟩)`：Σc_n = 61.5 精確；讀數界 = [最貴模態, 最平模態] = [29, 790]（uniform 88 ∈ 界內；uniform 上限重現 B5 之 44 讀／pass = 內建 sanity）",
+   "verdict": "✅",
+   "detail": "Σω_n = 57.016589856、⟨ω⟩ = 1.295831588；c_min = 0.076997889（n=1）、c_max = 2.157266864（n=44）；n_max(c) = ⌊(123/2 − 123/176)/c⌋ + 1；n_max(123/88) = 44 == B5 之 44 ✓；⚠ read↦mode n 未定義 ⟹ 只報界；採用非均勻歷階 = modelling choice"
+  },
+  {
+   "cell": "Q5a",
+   "name": "`F_proj` 符號碰撞：兩個互不相同之對象（(i) 17 = dim ker T_pipe；(ii) 質量框架之形狀因子 C_f = {18/5, 15.5, 37, 42}）；全 14 件 pinned 檔中**冇**任何等式斷言 ⟹ 三方「衝突」= 同名",
+   "verdict": "✅",
+   "detail": "維數路線命中 4 條（J7/J8/J10）；形狀因子路線命中 3 條（J14 + J1 之 C_f(gen1)=18/5）；等式斷言 = none"
+  },
+  {
+   "cell": "Q5b",
+   "name": "三重身份 `17 = N_d − n* = L₅ + C(4,2) = L₆ − 1`（A/B/C 全 17）且 `n* ≡ N_d − L₆ + 1` 使 A 與 C **代數同一** ⟹ 恆等式非數值巧合；O121 譜資料之 kernel_modes = [28..44] 共 17",
+   "verdict": "✅",
+   "detail": "A = 44 − 27 = 17；B = 11 + 6 = 17；C = L₆ − 1 = 17（Lucas 迭代 L₆ = 18）；代數收斂 = True；O121 recorded triple = {'A_dim_ker_Nd_minus_n_star': 17, 'B_F_proj_L5_plus_C42': 17, 'C_dim_ker_L6_minus_1': 17, 'O138_err_3Ngen_B_2': 15}"
+  },
+  {
+   "cell": "Q5c",
+   "name": "能量側三數逐字 ＋ 由 γ 譜獨立重算 E_capture；`E_sync^{closed} = 44×123/88 = 61.5` **＝ O222 B5 之 I1（跨 O 連結）**；`E_bottleneck` 對 8/13 之偏差 = 7.848e-05 ⟹ **唔係** 8/13",
+   "verdict": "✅",
+   "detail": "E_sync = 61.5（精確 123/2）vs E_sync_theory = 61.49534156997728 vs E_capture(γ 譜 n≥28) = 60.88453690585779（記錄 60.88453690585779）；E_bottleneck = 0.6154630941421971（自算 0.6154630941422070）；8/13 = 0.6153846153846154 ⟹ 偏差 7.848e-05 > 1e-6 （小數級近似，非等式）；成因未定 ⟹ 能量側維持 🟡"
+  }
+ ],
+ "numbers": {
+  "G2a_state_labels": [
+   [
+    "## 狀態: 🟢 主體收束（九輪攻堅 2026-09-21/22；26 腳本 / 145 checks，PASS 140 + 誠實 FAIL 5；CSSG-v3 承接；宇宙預算已移交 O215）"
+   ],
+   [
+    "## 狀態: 🔴 開放（九輪攻堅 2026-09-22；23 腳本 / 137 checks，PASS 132 + 誠實 FAIL 5；CSSG-v3 承接 — docs/25,26）"
+   ]
+  ],
+  "G2a_f1_quote": [
+   "逐模式頻率 f(n) 假說已**證偽**（驗證標準或然分支 2 達成——缺口唔喺頻率層）；"
+  ],
+  "G2b": {
+   "n_modes": 44,
+   "max_rel_dev_gamma_vs_omega_sq": 0.0,
+   "omega_44": 2.0
+  },
+  "G2c": {
+   "sum_c_n": 61.49999999999999,
+   "mean_omega": 1.2958315876334305,
+   "c_min": 0.076997889093196,
+   "c_max": 2.1572668640991126,
+   "n_max_low": 29,
+   "n_max_high": 790,
+   "n_max_uniform_sanity": 44,
+   "reads_sigma_omega": 57.01658985587094,
+   "budget": 61.5,
+   "E_min": 0.6988636363636364
+  },
+  "Q5a": {
+   "dim_route_hits": 4,
+   "cf_route_hits": 3,
+   "equality_assertions": []
+  },
+  "Q5b": {
+   "A_Nd_minus_n_star": 17,
+   "B_L5_plus_C42": 17,
+   "C_L6_minus_1": 17,
+   "L6_lucas": 18,
+   "algebraic_collapse": true,
+   "kernel_modes_count": 17,
+   "recorded_triple": {
+    "A_dim_ker_Nd_minus_n_star": 17,
+    "B_F_proj_L5_plus_C42": 17,
+    "C_dim_ker_L6_minus_1": 17,
+    "O138_err_3Ngen_B_2": 15
+   }
+  },
+  "Q5c": {
+   "E_sync_closed": 61.5,
+   "E_capture_recorded": 60.88453690585779,
+   "E_capture_recomputed": 60.88453690585779,
+   "E_sync_theory": 61.49534156997728,
+   "E_bottleneck_recorded": 0.6154630941421971,
+   "E_bottleneck_recomputed": 0.615463094142207,
+   "eight_thirteenths": 0.6153846153846154,
+   "dev_from_8_13": 7.847875758171252e-05,
+   "is_8_13": false
+  }
+ },
+ "verdicts": {
+  "G2": "🟢 已判定（負面 ＋ 層次修正）",
+  "Q5_dim": "🟢 維數側已統一",
+  "Q5_energy": "🟡 已量化（成因未定）"
+ },
+ "pins": {
+  "J1": "4fd2b54cbd202df0",
+  "J10": "582e9db2c71b3be3",
+  "J11": "050851fdda9ed99e",
+  "J12": "de0bbfe0260adff2",
+  "J13": "662df4c48a7b3219",
+  "J14": "29737f9cfa69d929",
+  "J2": "7d872304454b7546",
+  "J3": "e7d48e1f9e716a03",
+  "J4": "58298be13bbf76e6",
+  "J5": "b7cb2a43ced7b6f8",
+  "J6": "f64edfbe4cef6672",
+  "J7": "7eeeae61d4e8e4f0",
+  "J8": "558be30c27cbd2ed",
+  "J9": "375ac00a4d0b8381"
+ }
+}

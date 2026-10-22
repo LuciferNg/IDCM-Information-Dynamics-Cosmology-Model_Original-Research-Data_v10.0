@@ -1,0 +1,28 @@
+O47 — Deep Derivation: ℓ_max Projection Pipeline Closure
+=====================================================================
+Date: 2026-08-31
+Status: 🟡 Pipeline closure (structural form identified, needs exact D_app(ℓ))
+
+ℓ_max Best Structural Candidate:
+  ℓ_max = N_d/N_gen + φ⁻⁵/2 − ε³ = 44/3 + 0.04509 − 0.00369 = 14.7081
+  Error: 0.0004 (0.003%)
+  Structural interpretation: N_d/3 = sites per generation,
+  φ⁻⁵/2 = φ-identity correction, ε³ = higher-order correction
+
+D_app(ℓ_max) Structural Form:
+  D_app(ℓ_max) = 6 + matter/Σγ = 6 + 28.5/90 = 6.3167
+  Actual: 6.3183, error: 0.0016
+  Note: 6 = N_gen! = 3! = generations factorial
+
+T_pipe Energy Transmission:
+  Transmission rate = matter/Σγ = 28.5/90 = 19/60 ≈ 31.67%
+  Retention rate = vacuum/Σγ = 61.5/90 = 41/60 ≈ 68.33%
+  Effective compression: 44-site K_Chain → 6D projection space
+
+R_H ↔ Ω_Λ Closure:
+  Both are independent structural quantities from the same 88-site dual chain.
+  R_H = 44·a (ring geometry)
+  Ω_Λ = 4/(φ⁴-1) (energy partition)
+  The link is through the T_pipe projection operator, which maps the
+  K_Chain structure to the observable universe. The energy partition
+  (matter vs vacuum) determines the projected arc length.

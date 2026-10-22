@@ -1,0 +1,22 @@
+====================================================================================================================
+O225 scripts/28 -- R7: Delta as a signed tie-parity-disagreement count   (r7-delta-as-parity-count-v1)
+====================================================================================================================
+[PASS] A2   ★ d 之全域分佈：Σ_tie d = 600（= 1200/2）；d(a,−s) = d(a,s)（中心不變）；報告每態 d 之和  --  tie 條目 = 1200 ; Σd = 600 ; 中心不變 = True ; 每態 d 和之值集 = [5]
+[PASS] A1   ★★★ 主公式（推導自 R6 A3a）：Δ = Σ_events f，(F,F) 0；(T,T) [d(s_r)≠d(s_w)]·ε(s_r)ε(s_w)；(T,F) d(s_r)ε(s_r)·x；(F,T) d(s_w)ε(s_w)·x —— 逐事件與 Δ_ind 相等  --  事件總 = 14880 ; 逐事件偏離 = 0 ; Δ 總和 = 64
+[FAIL] A3   ★★ 預測（見數前）：Δ = 0 之 6 態其事件貢獻**逐事件全為 0**（pointwise，非正負相消）  --  Δ = 0 之態 = [9, 15, 40, 77, 87, 100] ; 逐事件全零（S=0）之態 = [] ; S=0 之態數 = 0
+[FAIL] A5   ★ S(s0) := Σ|f|；宣稱 Δ(s0) = 0 ⟺ S(s0) = 0；S = 0 態集應 = R6 零態集  --  S 值域 = [5, 21] ; S = 0 之態 = []
+[FAIL] A6   ★ 合流：#1 之 Δ 與 overrides 皆為 A₅ 商（60 類）上之函數；報告聯合表值數（核 R5 之 26）  --  A₅ 類 = 60 ; ov_machine 值數 = 60（R5 之 26）; Δ 值數 = 60（R6 之 22）; S 值數 = 60 ; 四元聯合值數 = 60
+[FAIL] A7   ★★ 預測（見數前）：零態所在之 2 條線 = 6 條線中 Σ_{20 態} S 最小之 2 條  --  零態線 = [3, 5] ; ΣS 升序 = [(5, 200), (1, 216), (2, 232), (0, 264), (3, 280), (4, 280)] ; 最小 2 = [1, 5] ; 各線 ΣS = {0: 264, 1: 216, 2: 232, 3: 280, 4: 280, 5: 200}
+[INFO] A4 抵消結構：非零貢獻事件總數 = 1472（+768 / -704）；零態細節 = {'9': {'nz_events': 8, '+': 4, '-': 4, 'n_tt': 10, 'n_tf': 8, 'n_ft': 11}, '15': {'nz_events': 8, '+': 4, '-': 4, 'n_tt': 8, 'n_tf': 7, 'n_ft': 8}, '40': {'nz_events': 12, '+': 6, '-': 6, 'n_tt': 6, 'n_tf': 7, 'n_ft': 20}, '77': {'nz_events': 8, '+': 4, '-': 4, 'n_tt': 8, 'n_tf': 7, 'n_ft': 8}, '87': {'nz_events': 8, '+': 4, '-': 4, 'n_tt': 10, 'n_tf': 8, 'n_ft': 11}, '100': {'nz_events': 12, '+': 6, '-': 6, 'n_tt': 6, 'n_tf': 7, 'n_ft': 20}}
+[INFO] Δ 之分項總和：f_tf = 0 ; f_ft = 0 ; f_tt = 64
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/28_r7_mechanism2.py", line 407, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/28_r7_mechanism2.py", line 341, in main
+    v = (add(U[p], mul((F(s), F(0)), U[q])))
+                   ~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/28_r7_mechanism2.py", line 47, in mul
+    return (x[0] * y[0] + 5 * x[1] * y[1], x[0] * y[1] + y[0] * x[1])
+            ~~~~~^~~~~~
+TypeError: can't multiply sequence by non-int of type 'Fraction'

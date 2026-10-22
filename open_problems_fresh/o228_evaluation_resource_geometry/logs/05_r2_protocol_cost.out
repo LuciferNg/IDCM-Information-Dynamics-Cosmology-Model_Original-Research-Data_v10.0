@@ -1,0 +1,10 @@
+================================================================================================================
+O228 scripts/05 -- R2/D: protocol-level cost law (frozen run_pair replayed read-only)
+================================================================================================================
+per-pair miss histogram = {'2': 124, '3': 3720} ; total misses = 11408 ; 2-miss pairs = 124 (off-diagonal 62 + diagonal 62)
+2-miss off-diagonal pairs are the b = a+1 successors (61 of them) plus the single wrap [(61, 0)]
+[PASS] P1   BLIND/derived: replaying the frozen run_pair over the frozen-order 62x62 sweep, every pair costs 2 or 3 reads; exactly 124 pairs cost 2 (62 successors b = a+1, 62 diagonal pairs) and 3720 cost 3; total misses = 11408 = 2*124 + 3*3720  --  histogram = {'2': 124, '3': 3720} ; total = 11408 ; 2-miss = 124 (successors 61, diagonal 62, wrap [(61, 0)])
+[PASS] P2   resource identity: 31 axis lines -> 31^2 = 961 = the epoch unit (EPOCHS = 0,961,1922,2883) -> the A2 spec pass 7688 = 2*62^2 = 8*31^2 reads ; the frozen per-pass budgets are 88 reads at E_min and 44 = N_d reads at cost  --  lines = 31 (V6/F10/E15) ; 62^2 = 3844 = 4*31^2 ; A2 spec = 2*62^2 = 7688 = 8*31^2 ; reads/pass = BUDGET/E_MIN = 88 ; reads-at-cost = BUDGET/PER_READ = 44 = N_d ; EPOCHS = [0, 961, 1922, 2883] ; overrun of the A2 pass vs the 88-read pass = 961/11 ; vs the 44-read cost = 1922/11
+================================================================================================================
+RESULT: 2/2 PASS  (0 FAIL)   elapsed 1.1 s
+================================================================================================================

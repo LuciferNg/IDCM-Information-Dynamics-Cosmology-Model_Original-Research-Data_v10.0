@@ -1,0 +1,67 @@
+{
+ "rules": "r2-g1-dyn-v1",
+ "contract": {
+  "path": "docs/03_r2_contract.md",
+  "sha256": "7446e4fda48301528f63e6b1b2cf4523c71bd666631dd43a6bfe8245b0478c48",
+  "bytes": 6129
+ },
+ "impls": [
+  {
+   "path": "scripts/11_r2_g1_table.py",
+   "sha256": "6a390d792bb2f387e0da94c0888b3aebacfda358d569e14bc2d7410289307fa2",
+   "bytes": 12642
+  },
+  {
+   "path": "scripts/12_r2_dyn17.py",
+   "sha256": "02789ba87d90ec0a4f967fe381628b7674a72cb382496090f3a610773cd18b04",
+   "bytes": 12501
+  }
+ ],
+ "enforcer": {
+  "path": "scripts/10_r2_contract.py",
+  "sha256": "5c906a80075442e1491f6cc35e51f8ca40caa6926c5fb3419a40fec08333d8a9"
+ },
+ "forbidden_modules": [
+  "cmath",
+  "decimal",
+  "math",
+  "numpy",
+  "random",
+  "scipy",
+  "secrets",
+  "statistics"
+ ],
+ "checks": [
+  {
+   "tag": "C1",
+   "name": "合約檔存在（docs/03_r2_contract.md）",
+   "ok": true,
+   "detail": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/docs/03_r2_contract.md"
+  },
+  {
+   "tag": "C2",
+   "name": "兩部機器存在（scripts/11_r2_g1_table.py、scripts/12_r2_dyn17.py）",
+   "ok": true,
+   "detail": "missing = 0"
+  },
+  {
+   "tag": "C3",
+   "name": "兩部機器皆無禁字集命中",
+   "ok": true,
+   "detail": "violations = 0"
+  },
+  {
+   "tag": "C4",
+   "name": "陽性對照必須被拒（scanner 已受測）",
+   "ok": true,
+   "detail": "detected = ['positive-control: import random (line 2)', 'positive-control: float literal 0.25 (line 4)', 'positive-control: random.random (line 4)']"
+  },
+  {
+   "tag": "C5",
+   "name": "合約含全部預註冊標籤（P1..P17、D1..D4、兩判準）",
+   "ok": true,
+   "detail": "missing = 0"
+  }
+ ],
+ "GATE": "OPEN"
+}

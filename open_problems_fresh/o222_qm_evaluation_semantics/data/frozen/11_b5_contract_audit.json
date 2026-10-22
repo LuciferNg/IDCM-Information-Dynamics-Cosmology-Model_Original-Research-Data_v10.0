@@ -1,0 +1,65 @@
+{
+ "rules_version": "b5-contract-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "group rebuilt: |2I| = 120, closed under multiplication",
+   "ok": true,
+   "detail": "|2I| = 120"
+  },
+  {
+   "tag": "C2",
+   "name": "62 frozen lattice axes reproduced verbatim (12 V / 20 F / 30 E)",
+   "ok": true,
+   "detail": "types = ['edge', 'face', 'vertex']"
+  },
+  {
+   "tag": "C3",
+   "name": "A2 h-table present and bijective (62/62)",
+   "ok": true,
+   "detail": "distinct h entries = 62"
+  },
+  {
+   "tag": "C4",
+   "name": "A2 frozen results present with 20/20 PASS (B5 builds on A2)",
+   "ok": true,
+   "detail": "claims = 20, all-ok = True"
+  },
+  {
+   "tag": "C5",
+   "name": "budget identities exact: 88 reads at the E_min floor; 44 reads at the TRUE read cost (B(n) = 2 x E_min); 7688/44 = 1922/11; a 44-read pass = 1 tick; tau_deco = 2 ticks",
+   "ok": true,
+   "detail": "floor reads = 88 ; reads at cost = 44 ; overrun = 1922/11 ; pass duration = 1 tick"
+  },
+  {
+   "tag": "C6",
+   "name": "provenance: O41 carries 61.5 / 123/176 ; O126 carries tick/tau_deco ; O222 inv. carries the tick + tau_deco row ; O206 carries omega_n = mu^2",
+   "ok": true,
+   "detail": "per-file = [True, True, True, True]"
+  },
+  {
+   "tag": "C7",
+   "name": "tau_deco identity: 88 reads at 44 reads/tick = 2 ticks = 1.9235228 Gyr (registered 1.9235227)",
+   "ok": true,
+   "detail": "2*tick = 1.9235228 Gyr"
+  },
+  {
+   "tag": "C8",
+   "name": "impl AST gate: no trig / no float / no numpy-scipy-math / no random",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "tag": "C9",
+   "name": "factor-table locality: the machine read operator is read(G, ctx)",
+   "ok": true,
+   "detail": "constrained functions = ['read']"
+  },
+  {
+   "tag": "C10",
+   "name": "full-enumeration requirement declared in the impl (sweep + visit count)",
+   "ok": true,
+   "detail": "sweep=True count=True"
+  }
+ ]
+}

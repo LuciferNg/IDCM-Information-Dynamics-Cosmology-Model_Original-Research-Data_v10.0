@@ -333,3 +333,43 @@ Gemini 主張「宏觀宇宙與微觀粒子共用同一套 A₅ chiral icosahedr
 ⟹ 「I 而非 I_h」唔只係模式數之來源，亦係**時間箭頭定向**之來源。
 
 **原文保留不改**（本附錄為 append-only）。
+
+---
+
+# 2026-10-18 — register incoming handoff 應答 (O7 + O252)
+
+> **append-only**: 本段為新增，以上原文一字不刪。
+> **來源**: problem_register 嘅 2 個 incoming handoff；本 O (O143) 推完後經 register 回覆。
+> **執行**: `scripts/42_handoff_o7_aliasing_m3.py` · `scripts/43_handoff_o252_per_source.py` (exit 0)。
+> **詳細**: `docs/12_handoff_responses_20261018.md`。
+
+## ① O7 (2026-10-11) — ℓ'=5 混疊通道 ↔ m=+3 對照
+
+- **O7 表完全重現** ✅: k=13→m=+3 (|c|=0.846), 7/7 bijection 逐項一致
+- **家族層面對應 ✅**: ℓ'=5 通道接收器 = **λ=2.618 (φ²) 圖特徵子空間** (洩漏 96.1% 落該子空間,
+  k=13 所屬家族); rank 3 (3 個簡併接收模); 群論機制 = ℓ' 與 ℓ3 共享 I-irrep (3)
+- **標籤層面 ❌**: receiver m-譜峰值 = **m=−1** (0.327) > m=+3 (0.286)。m 係 SO(3) 標籤,
+  **唔係 I 量子數** — O7 嘅 k=13↔m=+3 指派係 eigh 退化子空間基底內嘅副產品, 基依賴
+- 副產物: ‖M[5→3]‖_F = **0.2723** (exact orbit = observed 一致至 1e-6) — 取代 docs/07 §1.2
+  嘅 2.41e-1 (09-21 更正座標前後差異); ‖M[4→3]‖ = 4e-15 (唯一通道確認);
+  ‖M[3→3]−I‖ 譜範數 = 0.1354 (convention 不變)
+
+## ② O252 (2026-10-18) — 𝒫 per-source 凝聚身份模型
+
+- 𝒫 = **60×88** (節點×鏈site), 無 per-source 維度 (O252 講嘅「88 節點」= 鏈 site 側)
+- 節點晶格: **NN = 26.091° 全格均一** (min=med=max), 覆蓋半徑 **22.58°**
+- 6 個真實源: GOODS-N 4 源 (A/C/I/J) 全部 → 節點 #52 (8.4°), EGS 2 源 (E/K) → 節點 #05 (13.8°),
+  **全部 k-class = 1** ⟹ R3 身份零分辨力; 同簇簽名相關 0.99999–1.0
+- **判定: per-source column density 結構性不可行** (四重原因: 無 per-source 維 / 26° 量子化 /
+  節點值 GRF-null / 唯一身份 k-class 且六源同類)。若需要 → **連續場模型** (3–10° 中尺度),
+  唔係 60 節點量子化; O179 hop 階梯同一量子化限制
+
+## ③ register 事件 (2026-10-18)
+`handed_off O143→O7` · `handed_off O143→O252` · `note O143` (閉環記錄) — 全部已核實對方可見
+(O7 incoming 2 條、O252 incoming 1 條含本回覆)。
+
+**全套重跑 (scripts/36, 二輪)**: **42/42 exit 0, 0 Traceback**；核對層 37=91/91 · 38=**76/76**
+(含 docs/12 token) · 39=25/25 · 40=17/17 · 41=16 行掃描、未登記 0。首輪 2 個非零已修
+(38 KeyError = DOCS 路徑漏 docs/12；39 TIMEOUT = 900s 上限已按 script 專用升 1500s)。
+
+**本 O 狀態維持 🟢 已閉合**；新增檔: `docs/12` · `scripts/42/43` · `data/step39/40`。

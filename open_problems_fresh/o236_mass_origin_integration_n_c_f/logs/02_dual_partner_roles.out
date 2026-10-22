@@ -1,0 +1,55 @@
+O236 scripts/02 -- R2: 對偶 partner 空槽角色
+==============================================================================
+
+[P-1] partner 映射 = ℤ₄ reflection (88−k mod 4 = −(k mod 4))
+   [PASS] C1  9 個 partner 全落鏡像半環 (>44=M/2) 且 = {88−n: n∈F} (稀疏 9/13) — partners=[75, 77, 79, 81, 83, 84, 85, 86, 87]  ⊂ 鏡像 45..88
+   [PASS] C1b 鏡像空隙 = 未佔據低 mode {6,8,10,12} 嘅鏡像 {76,78,80,82} (雙向配對) — 未佔據低 mode=[6, 8, 10, 12] → 鏡像=[76, 78, 80, 82] (全空)
+   [PASS] C2  元素級雙射: p ↔ 88−n_p 係單射 (9 個 partner 全相異) — bijective
+   [PASS] C3  定理: (88−k) mod 4 = −k mod 4 ∀k (M=88≡0 mod 4 ⟹ 反射 j→−j) — ℤ₄ reflection: s1↔s3, s0↔s0, s2↔s2
+   [PASS] C4  docs/01 換類聲稱: s1 partner 全 phase-3; s3 partner 全 phase-1 — s1 partners→[3] (≡3), s3 partners→[1] (≡1)
+   [PASS] C5  s0/s2 自對偶: u(2)→86(≡2), s(4)→84(≡0) —— partner 唔換類 — s2→s2, s0→s0
+   [PASS] C6  partner 換類 = T3 C6 已閉合配對嘅元素級重現 (s1↔s3 唯一對偶相) — O235 T3 C6: k→88−k s1↔s3 互換, s0/s2 自對偶 (87 pairs)
+
+[P-2] 反射奇佔據: F ∩ (88−F) = ∅
+   [PASS] C7  佔據集對反射完全奇: F ∩ {88−k: k∈F} = ∅ (鏡像半環全空) — F=[1, 2, 3, 4, 5, 7, 9, 11, 13]; mirror=[87, 86, 85, 84, 83, 81, 79, 77, 75] —— 交集為空 ⟹ 空槽 = 反射奇佔據
+   [PASS] C8  「空」本身係結構性: 佔據集中喺低半環 [1,13] ⟺ 對 ℤ₄-reflection 完全反對稱 — max(F)=13 < 44.0
+
+[P-3] 鏡像互補: gk176(n) + gk176(88−n) = 4  (EXACT)
+   [PASS] C9  鏡像互補 γ 和 = 4 (全部 n ∈ [1,88)) — gk176(k)=4sin²(kπ/176), gk176(88−k)=4cos²(kπ/176) ⟹ 和 4 (恆等)
+
+[P-4] 剛性: phase-swap 定理需 M ≡ 0 (mod 4)
+   [PASS] C10 相換類 ⟺ M ≡ 0 (mod 4): {84..92} 中只得 84/88/92 成立 — swap_ok(M)={84: True, 85: False, 86: False, 87: False, 88: True, 89: False, 90: False, 91: False, 92: True} ⟹ 88 屬 M≡0 家族 (84,88,92)
+   [PASS] C11 半環定位 (partners > M/2) 只需 M > 26 (平凡算術; 唔特別) — M−13 > M/2 ⟺ M > 26; 84/88/92 全中 ⟹ 88 冇額外特殊性喺半環定位
+
+[P-5] 可證偽內容 + 中微子掛鉤
+   [PASS] C12 若鏡像半環有中性/無質量粒子, 必須落 partner 槽 75..87 — falsifier: 中性粒子 mode ∉ [75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87] 即證偽 mirror-role 假說
+   [PASS] C13 中微子 (O49/O57) = mode 6 —— 低半環未佔據偶槽, 唔係 mirror-slot ⟹ 「中微子=mirror半環」假說已被已閉合框架 refute — ν main condensate mode 6 (K_Chain n=6, γ₆=4sin²(6π/88)); +2 能隙束縛態 (非整數 mode)
+
+[四道硬測試]
+   [PASS] HT1 零參數: partner 映射 = 內部環結構 (88≡0 mod 4); 本 R 零新常數 — no free parameter
+   [PASS] HT2 null: 換類係恆等定理 (M≡0 mod 4 ⟹ (M−k)≡−k), 非統計聲稱 —— MC N/A — deterministic identity; no coincidence claim
+   [PASS] HT3 可證偽 + 樣本外: C12 (中性粒子鏡像槽) + 中微子掛鉤 refute (C13) — falsifier registered
+   [PASS] HT4 結構剛性: C10/C11 (M-mod-4 敏感; M>26 半環定位) — rigidity mapped
+
+-> data/02_dual_partner_roles.json
+
+==============================================================================
+RESULT: 18/18 PASS
+   [PASS] C1  9 個 partner 全落鏡像半環 (>44=M/2) 且 = {88−n: n∈F} (稀疏 9/13) — partners=[75, 77, 79, 81, 83, 84, 85, 86, 87]  ⊂ 鏡像 45..88
+   [PASS] C1b 鏡像空隙 = 未佔據低 mode {6,8,10,12} 嘅鏡像 {76,78,80,82} (雙向配對) — 未佔據低 mode=[6, 8, 10, 12] → 鏡像=[76, 78, 80, 82] (全空)
+   [PASS] C2  元素級雙射: p ↔ 88−n_p 係單射 (9 個 partner 全相異) — bijective
+   [PASS] C3  定理: (88−k) mod 4 = −k mod 4 ∀k (M=88≡0 mod 4 ⟹ 反射 j→−j) — ℤ₄ reflection: s1↔s3, s0↔s0, s2↔s2
+   [PASS] C4  docs/01 換類聲稱: s1 partner 全 phase-3; s3 partner 全 phase-1 — s1 partners→[3] (≡3), s3 partners→[1] (≡1)
+   [PASS] C5  s0/s2 自對偶: u(2)→86(≡2), s(4)→84(≡0) —— partner 唔換類 — s2→s2, s0→s0
+   [PASS] C6  partner 換類 = T3 C6 已閉合配對嘅元素級重現 (s1↔s3 唯一對偶相) — O235 T3 C6: k→88−k s1↔s3 互換, s0/s2 自對偶 (87 pairs)
+   [PASS] C7  佔據集對反射完全奇: F ∩ {88−k: k∈F} = ∅ (鏡像半環全空) — F=[1, 2, 3, 4, 5, 7, 9, 11, 13]; mirror=[87, 86, 85, 84, 83, 81, 79, 77, 75] —— 交集為空 ⟹ 空槽 = 反射奇佔據
+   [PASS] C8  「空」本身係結構性: 佔據集中喺低半環 [1,13] ⟺ 對 ℤ₄-reflection 完全反對稱 — max(F)=13 < 44.0
+   [PASS] C9  鏡像互補 γ 和 = 4 (全部 n ∈ [1,88)) — gk176(k)=4sin²(kπ/176), gk176(88−k)=4cos²(kπ/176) ⟹ 和 4 (恆等)
+   [PASS] C10 相換類 ⟺ M ≡ 0 (mod 4): {84..92} 中只得 84/88/92 成立 — swap_ok(M)={84: True, 85: False, 86: False, 87: False, 88: True, 89: False, 90: False, 91: False, 92: True} ⟹ 88 屬 M≡0 家族 (84,88,92)
+   [PASS] C11 半環定位 (partners > M/2) 只需 M > 26 (平凡算術; 唔特別) — M−13 > M/2 ⟺ M > 26; 84/88/92 全中 ⟹ 88 冇額外特殊性喺半環定位
+   [PASS] C12 若鏡像半環有中性/無質量粒子, 必須落 partner 槽 75..87 — falsifier: 中性粒子 mode ∉ [75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87] 即證偽 mirror-role 假說
+   [PASS] C13 中微子 (O49/O57) = mode 6 —— 低半環未佔據偶槽, 唔係 mirror-slot ⟹ 「中微子=mirror半環」假說已被已閉合框架 refute — ν main condensate mode 6 (K_Chain n=6, γ₆=4sin²(6π/88)); +2 能隙束縛態 (非整數 mode)
+   [PASS] HT1 零參數: partner 映射 = 內部環結構 (88≡0 mod 4); 本 R 零新常數 — no free parameter
+   [PASS] HT2 null: 換類係恆等定理 (M≡0 mod 4 ⟹ (M−k)≡−k), 非統計聲稱 —— MC N/A — deterministic identity; no coincidence claim
+   [PASS] HT3 可證偽 + 樣本外: C12 (中性粒子鏡像槽) + 中微子掛鉤 refute (C13) — falsifier registered
+   [PASS] HT4 結構剛性: C10/C11 (M-mod-4 敏感; M>26 半環定位) — rigidity mapped

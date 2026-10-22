@@ -1,0 +1,23 @@
+O31 Direction D: Kawahira Analogue Results
+=========================================
+
+λ_sync = 406.1 h⁻¹ Mpc
+N = 44 sites
+φ = 1.6180339887
+
+Fixed point verification (all nulls):
+  α=0.0: ALL PASSED
+  α=0.1: ALL PASSED
+
+Extra fixed point search:
+  α=+0.0000: 32 extra fixed points
+  α=+0.0100: 34 extra fixed points
+  α=+0.1000: 36 extra fixed points
+  α=-0.0100: 32 extra fixed points
+  α=-0.1000: 36 extra fixed points
+
+IDCM Kawahira Theorem (preliminary):
+  ξ(s) nulls at λ_sync/(n+0.5)
+  ⟺ N(s) has exactly 44 fixed points (the nulls)
+Status: 🟢 numerical verification complete
+Status: 🔴 rigorous proof needed

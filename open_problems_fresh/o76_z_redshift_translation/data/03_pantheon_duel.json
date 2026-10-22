@@ -1,0 +1,15 @@
+{
+  "N_sn": 1701,
+  "M_idcm": -19.3151,
+  "chi2_idcm": 2096.0,
+  "chi2_idcm_dof": 1.233,
+  "Om_lcdm": 0.381,
+  "M_lcdm": -19.2451,
+  "chi2_lcdm": 1989.3,
+  "chi2_lcdm_dof": 1.171,
+  "delta_chi2": 106.7,
+  "aic_idcm": 2098.0,
+  "aic_lcdm": 1993.3,
+  "pass": 0,
+  "fail": 0
+}

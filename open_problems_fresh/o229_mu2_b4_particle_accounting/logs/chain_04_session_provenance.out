@@ -1,0 +1,103 @@
+session 鏈 = 9 個: 20261002_064253_b, 20261002_065636_7, 20261002_093710_7, 20261002_095449_9, 20261002_101900_f, 20261003_052323_c, 20261003_063438_3, 20261003_071644_c, 20261003_220131_e
+全鏈訊息總數 = 1952
+O229 寫入事件(write_file/patch) = 399 ｜ 終端命令 = 295 ｜ execute_code payload = 18
+逐 session 工具事件: 20261002_064253_b 53；20261002_065636_7 124；20261002_093710_7 80；20261002_095449_9 90；20261002_101900_f 75；20261003_052323_c 86；20261003_063438_3 99；20261003_071644_c 78；20261003_220131_e 105
+  payload 20261002_064253_b: 23 行, 潛在計算 0
+  payload 20261002_065636_7: 54 行, 潛在計算 6
+          m=re.search(r"RESULT:\s*(\d+)/(\d+)\s*PASS", txt)
+      gate=" | ".join(f"{k.split('_')[0]} {v.split(' ')[1]}" for k,v in res.items())
+           "gate":gate,
+         "## 一、閘門（逐腳本 RESULT）","","```"]
+            "# 逐腳本 RESULT 應與本檔 §一 一致；08 為獨立核對器（唔 import 01–07）","```",
+            "- 全鏈: 01–07 = 188/189 + 08 = 45/45 ⟹ **233/234**（唯一 FAIL = 07 之預註冊 5-4b，原樣保留 + `-c` 校正）",
+  payload 20261002_065636_7: 50 行, 潛在計算 6
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS", txt)   # 只認行首 (排除核對器引述)
+          res[f.replace(".out","")]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+           "date":"2026-10-02","gate":gate,"total":f"{tot_p}/{tot_n}","result_lines":res,
+         f"## 一、閘門（逐腳本 RESULT）— 合計 {tot_p}/{tot_n}","","```"]
+            "# 逐腳本 RESULT 應與本檔 §一 一致；08 為獨立核對器（唔 import 01–07）","```",
+  payload 20261002_065636_7: 45 行, 潛在計算 7
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS", open(os.path.join(BASE,"logs",f),encoding="utf-8").rea
+          res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+        "date":"2026-10-02","gate":gate,"total":f"{tp}/{tn}","result_lines":res,
+         f"## 一、閘門（逐腳本 RESULT）— 合計 {tp}/{tn}","","```"]
+          "","★ 全鏈於 closeout 時**整體重跑一次**，逐項 RESULT 與本表一致（另捉 X6–X8 三項文檔/核對器漂移，見 `docs/07 §3b`）。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08 為獨立核對器（唔 import 01–07）","```",
+  payload 20261002_065636_7: 18 行, 潛在計算 1
+      print("閘門:",man["gate"])
+  payload 20261002_065636_7: 5 行, 潛在計算 0
+  payload 20261002_093710_7: 45 行, 潛在計算 7
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS", open(os.path.join(BASE,"logs",f),encoding="utf-8").rea
+          res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+        "date":"2026-10-02","gate":gate,"total":f"{tp}/{tn}","result_lines":res,
+         f"## 一、閘門（逐腳本 RESULT）— 合計 {tp}/{tn}","","```"]
+          "","★ 全鏈於 closeout 時**整體重跑一次**，逐項 RESULT 與本表一致（另捉 X6–X8 三項文檔/核對器漂移，見 `docs/07 §3b`）。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08 為獨立核對器（唔 import 01–07）","```",
+  payload 20261002_093710_7: 18 行, 潛在計算 1
+      print("閘門:",man["gate"])
+  payload 20261002_093710_7: 5 行, 潛在計算 0
+  payload 20261002_093710_7: 54 行, 潛在計算 6
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",txt)
+          res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+        "date":"2026-10-02","gate":gate,"total_R1":tot(R1),"total_R2":tot(R2),
+          "★ 兩輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12 為獨立核對器（唔 import 受核腳本）","```",
+  payload 20261002_093710_7: 43 行, 潛在計算 6
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",open(os.path.join(BASE,"logs",f),encoding="utf-8").read
+          assert len(ms)==1,(f,ms); res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+          "★ 兩輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12 為獨立核對器（唔 import 受核腳本）","```",
+        "date":"2026-10-02","gate":gate,"total_R1":t1,"total_R2":t2,"total_R1_n":[a1,b1],"total_R2_n":[a2,b2],
+  payload 20261002_095449_9: 54 行, 潛在計算 6
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",txt)
+          res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+        "date":"2026-10-02","gate":gate,"total_R1":tot(R1),"total_R2":tot(R2),
+          "★ 兩輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12 為獨立核對器（唔 import 受核腳本）","```",
+  payload 20261002_095449_9: 43 行, 潛在計算 6
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",open(os.path.join(BASE,"logs",f),encoding="utf-8").read
+          assert len(ms)==1,(f,ms); res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+          "★ 兩輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12 為獨立核對器（唔 import 受核腳本）","```",
+        "date":"2026-10-02","gate":gate,"total_R1":t1,"total_R2":t2,"total_R1_n":[a1,b1],"total_R2_n":[a2,b2],
+  payload 20261002_095449_9: 51 行, 潛在計算 6
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",open(os.path.join(BASE,"logs",f),encoding="utf-8").read
+          assert len(ms)==1,(f,ms); res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+          "★ 三輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12/17 為獨立核對器（唔 import 受核腳本）","```",
+        "date":"2026-10-02","gate":gate,"total_R1":t1,"total_R2":t2,"total_R3":t3,
+  payload 20261002_095449_9: 47 行, 潛在計算 5
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",open(os.path.join(BASE,"logs",f),encoding="utf-8").read
+          assert len(ms)==1,(f,ms); res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      L+=["```","","★ 三輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12/17 為獨立核對器（唔 import 受核腳本）","```",
+        "gate":" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items()),
+  payload 20261002_101900_f: 51 行, 潛在計算 6
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",open(os.path.join(BASE,"logs",f),encoding="utf-8").read
+          assert len(ms)==1,(f,ms); res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      gate=" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items())
+          "★ 三輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12/17 為獨立核對器（唔 import 受核腳本）","```",
+        "date":"2026-10-02","gate":gate,"total_R1":t1,"total_R2":t2,"total_R3":t3,
+  payload 20261002_101900_f: 47 行, 潛在計算 5
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",open(os.path.join(BASE,"logs",f),encoding="utf-8").read
+          assert len(ms)==1,(f,ms); res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      L+=["```","","★ 三輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12/17 為獨立核對器（唔 import 受核腳本）","```",
+        "gate":" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items()),
+  payload 20261002_101900_f: 53 行, 潛在計算 5
+          ms=re.findall(r"(?m)^RESULT:\s*(\d+)/(\d+)\s*PASS",open(os.path.join(BASE,"logs",f),encoding="utf-8").read
+          assert len(ms)==1,(f,ms); res[f[:-4]]=f"RESULT: {ms[0][0]}/{ms[0][1]} PASS"
+      L+=["```","",f"★ 四輪各自於 closeout 時**整體重跑**，逐項 RESULT 與本表一致。",
+          "# 逐腳本 RESULT 應與本檔 §一 一致；08/12/17/21 為獨立核對器（唔 import 受核腳本）","```",
+        "gate":" | ".join(f"{k.split('_')[0]} {v.split()[1]}" for k,v in res.items()),
+
+RESULT: PASS — 18 個 inline payload 全部係 MANIFEST/gate 聚合（後繼者 verify/build_manifest.py）；零 headline 推導缺口（§4.9⑤）

@@ -1,0 +1,43 @@
+{
+  "script": "O129/01_sigma_sync_nature.py",
+  "date": "2026-09-27",
+  "lambda_sync_v9_Mpc": 294.877138,
+  "lambda_sync_v10_Mpc": 294.877026,
+  "lambda_sync_identity_dev": 0.0,
+  "R_world_vs_c_over_H0_dev": 3.7826168406086013e-07,
+  "sigma_sync_recomputed": {
+    "2": 0.066173,
+    "3": 0.115736,
+    "4": 0.173159,
+    "5": 0.233877,
+    "6": 0.295181,
+    "7": 0.356392,
+    "8": 0.416399,
+    "9": 0.473641,
+    "10": 0.527959,
+    "11": 0.58022,
+    "12": 0.630824,
+    "13": 0.680023,
+    "14": 0.728041,
+    "15": 0.774991,
+    "16": 0.820836,
+    "17": 0.865508,
+    "18": 0.90897,
+    "19": 0.951232,
+    "20": 0.992351
+  },
+  "sigma_sync_v9_table": {
+    "2": 0.0662,
+    "3": 0.1157,
+    "4": 0.1732,
+    "5": 0.2339,
+    "8": 0.4164,
+    "10": 0.528
+  },
+  "sigma_sync_max_dev_vs_v9": 0.000403,
+  "sigma8_off_ladder_n": 13.3782,
+  "verdict": "sigma_sync = variance operator (width), NOT the dip position; geometry identical v9/v10",
+  "pass": 8,
+  "fail": 0,
+  "claims": 7
+}

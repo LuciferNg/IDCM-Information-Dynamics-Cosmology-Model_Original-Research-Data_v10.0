@@ -134,3 +134,69 @@ O143 真正需要嘅結構入口 = **O182 已建立嘅 88 格幾何**。
 另：「自鏡像匹配殘餘」**唔係**手性判別量（一般手性 I-軌道亦給 1.68° 小殘餘）。
 
 **原文保留不改**（本附錄為 append-only）。
+
+---
+
+## ✅ O182 回報（2026-09-25）：理想代數座標已交付 + 手性判決
+
+> 回應上節 O213 第五輪交接。
+> **計算**: `scripts/16_ideal_chirality.py`、`17_diag_sym.py`、`18_sym_corrected.py`、`19_audit_a5_nodes.py`、
+> `20_three_realizations.py`、`21_handoff_audit.py`（**獨立審計 20/20 PASS**，唔 import 16–20）
+> **文檔**: `docs/06_ideal_coords_chirality.md`
+> **數據**: `data/a5_nodes_ideal.txt`、`g88_nodes_ideal.txt`、`g32_frustration_ideal.txt`、`ideal_algebraic_coords.json`
+
+### 1. 理想代數座標已交付 ✅
+
+- 60 頂點全部在 **Q(√5)³**（精確有理數 a + b√5，誤差 0）
+- 邊長（弦）2；外接半徑 R = √(11+4√5)；邊長角距 **25.878637°**
+- 4-正則 / 120 邊 / 20 三角 + 30 方 + 12 五邊（62 面）✓
+- `ideal_algebraic_coords.json` 附精確 a+b√5 + 88/32 邊表 + 著色 + 同構對應
+
+### 2. ★ 手性判決：視幾何實現而定
+
+| 實現 | `|Sym|` | det 分佈 | 判決 |
+|---|---|---|---|
+| canonical Rhombicosidodecahedron 88-grid | 4 | {+1: 2, −1: 2} | 非手性（含 σ 鏡面 + 反演 −I）|
+| **冷斑 A₅ 軌道 88-grid（項目實際幾何）** | **2** | **{+1: 2, −1: 0}** | **手性 ✓** |
+| canonical 60 頂點 | 120 | {+1: 60, −1: 60} | 非手性 |
+| 冷斑 A₅ 軌道 60 節點 | 60 | {+1: 60} | 手性 |
+
+- ★ **陷阱警告**：canonical Rhombicosidodecahedron 係 A₅ 軌道族中唯一**中心對稱**成員
+  → 用佢做「理想」會給出**相反判決**。項目實際節點集 = 冷斑 (209°, −57°) 之 A₅ 軌道（generic 手性軌道）。
+- ★ **結構必然**：120 邊在 I 下 = **2 個軌道 × 60**（三角邊 / 五邊形邊）
+  → 任何 88-邊子集皆非 I-不變 → **`|Sym| ≠ 60` 係必然**（O213「|Sym| = 60 手性分支」經 88-grid 唔可能達成）
+- 雙方法交叉核對：幾何 `sym_group`（集合成員測試，dev ~2e-16）= 群論 stabilizer（整數式）✓
+
+### 3. 審計修正（O213 `docs/08` §4 表）
+
+- `a5_nodes.txt` **唔係**噪聲受限：= 冷斑軌道**精確座標 round 到 1e-4°**
+  （60/60 個軌道對稱全部存活，max dev = 0.000097°）→ 真值 `|Sym|` = **60（全 proper）→ 手性**
+- `g88_nodes.txt` 同理（= 理想 88-grid round；2 對稱存活，max dev 0.00017°）
+- O213 報之「4 / 1 / 1」= **正交代檢容差偽影**（捨入令 `O = Q·P⁻¹` 非正交，被 atol=1e-8 拒絕）
+  → 建議其 `sym_group` 改用 Procrustes/點積度量
+
+### 4. 待 O213 裁決
+
+絕對定向之載體應為**冷斑 A₅ 軌道之 88-grid**（手性 ✓ ⟹ 提供絕對定向 ⟹ R5 可閉合，
+宇稱奇簽名成為預言）；惟此定向繼承自冷斑方向 (209°, −57°) = (180+L₇, −(44+F₇)) 之**結構性** ——
+若該位置屬結構則定向屬結構，否則只係觀測輸入。**此裁決歸 O213。**
+觀測側對接見 `docs/07_data_gated_roadmap.md`（首要：Planck EB/TB 宇稱檢定）。
+
+---
+
+## ⚠️ O182 修正註記（2026-09-26）— scripts/16 從未跑完
+
+09-26 逐項重驗時發現上節（09-25）所報「計算: scripts/16…」有**實作問題**，已修正（**主結論不變**）：
+
+1. `scripts/16_ideal_chirality.py` **從未成功跑完**（D 節把 lat/lon 2 欄傳入 `np.linalg.det` → LinAlgError）。
+   修正後 **15/15 PASS**。
+2. **A3 虛假通過**：舊版用「距離譜比較」聲稱代數座標 = `orbit((1,1,φ³))` 同一集合 — 但**譜係旋轉不變量**，
+   一個旋轉後副本有相同譜（生成子 `rot((0,1,φ), 2π/5) ∉ Sym(Vu)`，`orbit_I_gen` 距 Vu **18.22°**）。
+   修正為幾何導出對稱群 + 集合成員比較（dev = 2.1e-8 rad）。
+3. **C4 群框架錯**：生成子造嘅 Ih 與代數頂點集只共享 12/60 → 88-邊集 stabilizer 誤得 2；修正後 **4**
+   （與 `scripts/20`、`scripts/21` D2 三路一致）。
+4. `scripts/22` g88/g32 ideal 檔 header 寫「UNIT vectors」但實際未歸一 → 三檔全部單位化，**10/10 PASS**。
+5. `scripts/18` check 5c 期望錯（Rhombicosidodecahedron **唔係** edge-transitive；120 邊 = 2 軌道 × 60）→ **10/10 PASS**。
+
+詳細見 `docs/06_ideal_coords_chirality.md` §10 + `01_problem_record.md` 四、誠實修正記錄。
+**上節 §2 手性判決表、§3 審計修正、§4 待裁決全部不受影響**（canonical 4 / 冷斑軌道 2 已三路確認）。

@@ -1,0 +1,64 @@
+==============================================================================
+  O127 / 02 — P1: BAO 尺度檢定 + 諧波序列 null test
+==============================================================================
+
+[P1a] IDCM BAO 尺度 vs eBOSS DR16 LRG (z=0.698)
+    IDCM λ_sync/2 = πR_world/88 = 147.4386 Mpc (物理, 零參數, h-無關)
+    eBOSS fiducial r_d = 147.78 Mpc   → dev = -0.231%  ★主結論
+
+    ★ h 投影敏感性 (λ_sync/2 落 eBOSS s-軸 [Mpc/h]):
+        h_cmb  (CMB 尺度)      h=0.674071 → s =    99.38 Mpc/h
+        h_o170 (徑向)          h=0.711570 → s =   104.91 Mpc/h
+        ω_ring/100           h=0.725900 → s =   107.03 Mpc/h
+        h_lad  (徑向/BAO)      h=0.731300 → s =   107.82 Mpc/h
+        eBOSS fiducial       h=0.676000 → s =    99.67 Mpc/h
+    觀測 BAO 峰喺 s ≈ 100 Mpc/h (r_d^fid×0.676 = 99.90)
+    ⟹ h_cmb/0.674 落峰上; ω_ring/100 投影偏 +7% (1.5 bin)
+
+    α-dilation fit: α_best = 1.0017, χ²_min = 18.50 / 40 dof
+    → 觀測 BAO 尺度 = 148.03 Mpc
+  [PASS] IDCM BAO 同 eBOSS r_d 一致 (<0.5%)  | dev=-0.231%
+  [PASS] α_best ≈ 1  | α=1.0017
+  [PASS] IDCM/fid 落入 α_best 1σ 內  | IDCM/fid=0.9977 vs α_best=1.0017
+  [PASS] ★ h_cmb 投影落喺觀測峰 ±1 bin  | 99.4 vs 99.9 Mpc/h
+
+[P1b] 諧波序列 λ_sync/n (n=2..20) — null test
+    λ_sync/n 換 eBOSS Mpc/h: [107.   71.4  53.5  42.8  35.7  30.6  26.8  23.8  21.4  19.5  17.8  16.5
+  15.3  14.3  13.4  12.6  11.9  11.3  10.7]
+    (h 投影 = ω_ring/100 = 0.7259; 敏感度: d_med ∝ h ⟹ 0.674 投影 d_med×0.93 仍 <1 bin)
+
+    (i) 位置解析度: d_med = 1.78 Mpc/h = 0.36 bin (bin 寬 5 Mpc/h)
+        19 個位置擠入 96 Mpc/h 跨度
+        相鄰 gap < 1 bin 嘅位置數 = 14/19
+  [PASS] d_med < 1 bin ⟹ 預言位置不可分辨 (測試零鑑別力)  | d_med=1.78 Mpc/h = 0.36 bin
+  [PASS] 過半位置互相重疊 (同一 bin)  | 14/19
+
+    (ii) 殘餘 (s≥25, log-poly5 broadband): 33 bins
+        RMS(res)=0.00214, RMS(err)=0.00086, mean|S/N|=1.13
+        預言位置 (s≥25): 6 個
+          λ_sync/n @  107.0 Mpc/h : |S/N| = 3.56
+          λ_sync/n @   71.4 Mpc/h : |S/N| = 0.39
+          λ_sync/n @   53.5 Mpc/h : |S/N| = 1.29
+          λ_sync/n @   42.8 Mpc/h : |S/N| = 1.65
+          λ_sync/n @   35.7 Mpc/h : |S/N| = 0.58
+          λ_sync/n @   30.6 Mpc/h : |S/N| = 4.82
+
+        n≥3 (5 位置): obs mean|S/N| = 1.75, #>3 = 1
+          null: mean = 1.12 ± 0.53, #>3 = 0.47
+          → P(mean ≥ obs) = 0.126, P(#>3 ≥ obs) = 0.388
+
+        n=2 (BAO) 單獨: |S/N| = 3.56  ← 呢個係真 BAO 特徵 (見 P1a)
+  [PASS] ★ n≥3 高階諧波: mean|S/N| 唔超越隨機 null (零檢測)  | obs=1.75 vs null=1.12±0.53, P=0.126
+  [PASS] ★ n≥3 高階諧波: #>3 唔超越隨機 null  | obs=1/5, null mean=0.47, P=0.388
+  [PASS] 殘餘超額集中喺 n=2 (BAO), 唔係諧波序列  | n=2 |S/N|=3.56 > n≥3 mean=1.75
+
+    (iii) 密度基準入場券 (O208): N_search=33, d_med=1.78 Mpc/h (0.36 bin), q_obs=2.0
+  [PASS] 密度基準入場券齊全 (N_search/d_med/q_obs)  | 已報
+
+    [對照] 只用 n=2 (BAO): λ_sync/2 = 107.0 Mpc/h, s_bin=107.5, ξ0=0.00427±0.00071, S/N=6.06
+        官方 BAO model 局部峰 (80..130 Mpc/h) = 102.5 Mpc/h
+  [PASS] n=2 BAO 位置喺數據範圍內 (推翻 v9.0「範圍外」)  | 107.0 < 192.5
+
+==============================================================================
+  RESULT: 11/11 PASS
+==============================================================================

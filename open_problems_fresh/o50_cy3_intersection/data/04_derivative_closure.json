@@ -1,0 +1,14 @@
+{
+  "PASS": 2,
+  "FAIL": 1,
+  "results": [
+    "  \u2705 3\u00d712 \u540c\u69cb\u5fc5\u7136\u6027\u8b49\u660e (h\u00b9\u00b9=36 + Z_3 center \u2192 3\u00d712 \u81ea\u7136\u5206\u89e3)",
+    "  \u274c \u771f\u5be6 \u03ba_ijk \u76f4\u63a5 SM \u8cea\u91cf\u9810\u6e2c (\u52d5\u614b\u7bc4\u570d 403.0 << SM \u6240\u9700 338,000)",
+    "  \u2705 WDVV \u7f3a\u9677\u6e90\u982d\u5224\u65b7 (\u53e4\u5178 toric \u76f8\u4ea4\u6578, \u5187\u4e16\u754c\u9762\u77ac\u5b50\u4fee\u6b63)"
+  ],
+  "o56_3x12_necessity": "h11=36 + Z3_center \u2192 3\u00d712 \u81ea\u7136\u5206\u89e3",
+  "o57_sm_prediction": "\u03ba_ijk \u52d5\u614b\u7bc4\u570d 403.0 << SM 338,000, \u9700 e-V-cycle \u6a5f\u5236",
+  "o58_wdvv_source": "CYTools \u53e4\u5178 toric \u76f8\u4ea4\u6578, \u5187\u4e16\u754c\u9762\u77ac\u5b50\u4fee\u6b63",
+  "real_kappa_dynamic_range": 403.01111769529155,
+  "d_tensor_dynamic_range": 37888.94770377937
+}

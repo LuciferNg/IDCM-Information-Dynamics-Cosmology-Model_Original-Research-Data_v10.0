@@ -1,0 +1,7 @@
+{
+ "reproduction_mismatches": 0,
+ "reproduction_total": 744,
+ "all120_mismatches": 0,
+ "all120_total": 3844,
+ "verdict": "canonical construction confirmed (frozen Gram): V-side determined; rank-3 = rank of the frozen Gram"
+}

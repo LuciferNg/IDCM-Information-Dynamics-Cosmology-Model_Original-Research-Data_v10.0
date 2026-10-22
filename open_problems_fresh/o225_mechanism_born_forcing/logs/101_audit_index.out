@@ -1,0 +1,24 @@
+層     引擎                         判決           說明
+A     92_audit_sweep.py          88 支重跑       逐支重跑（88 支）
+A2    97_drift_audit.py          {"match_log": 83, "match_gate": 3, "drift_ 三方對帳（凍結 JSON↔重跑↔歷史日誌）
+B     95_doc_binding.py          bound 128 / unbound 0 宣稱↔證據綁定
+C/D   93_audit_blind.py          12/12        獨立重算＋精確 null
+Q1    98_round_claim_check.py    {"gate_ok": 3, "match": 77, "diverge": 5,  逐輪文檔聲稱↔重跑
+Q3    99_gap_blind.py            11/11        缺口補完（Λ/Z10、f 三重、三支和）
+Q3    100_register_sync.py       5/5          register↔problem_record 同步
+R27   103_r27_machine.py         7/10         CRIT-1 orbit 分類／三層族
+R27   104_r27_audit.py           5/6          R27 獨立審計
+R28   106_r28_machine.py         8/13         CRIT-2 響應矩陣／MISC-1 τ-orbit
+R28   107_r28_audit.py           9/9          R28 獨立審計
+R29   109_r29_machine.py         6/11         MECH-1 殘餘／MECH-2 收口
+R29   110_r29_audit.py           4/5          R29 獨立審計
+R30   112_r30_machine.py         5/11         Z10-1 選擇律／Z10-2 根因
+R30   113_r30_audit.py           4/4          R30 獨立審計
+R31   115_r31_machine.py         6/10         STT-1 機制／四類／補集
+R31   116_r31_audit.py           4/5          R31 獨立審計
+R32   118_r32_machine.py         4/7          CRIT-3 充要／MISC-2 混合
+R32   119_r32_audit.py           4/4          R32 獨立審計
+R33   121_r33_machine.py         7/7          收口批：五項閉合
+R33   122_r33_audit.py           4/4          R33 獨立審計
+
+索引已寫 data/101_audit_index.json（21 層）

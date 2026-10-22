@@ -1,0 +1,3 @@
+initial states: 120 ; distinct read behaviours: 60 ; class sizes [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+Pr-1 (distinct < 120): HOLDS
+log2(#behaviours) = 5.9069 bits (the protocol's effective randomness source)

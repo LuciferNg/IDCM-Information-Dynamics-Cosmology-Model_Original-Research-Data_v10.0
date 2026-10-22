@@ -1,0 +1,1 @@
+{"construction": "v_j = sum_i K[i][j]*u_i (closed form, zero parameters)", "mismatch_vsign": 0, "total": 3844, "pct": 0.0, "reproduces_K_on_12_classes": [744, 744], "float_only": true, "note": "U taken from the certified r=3 candidate (rigid, N1)"}

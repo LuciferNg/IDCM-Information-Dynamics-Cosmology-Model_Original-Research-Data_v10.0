@@ -1,0 +1,84 @@
+==============================================================================
+O86 CLOSURE B -- SM-SECTOR COUPLINGS (N3 + N5 + N6) -- 2026-09-20
+==============================================================================
+
+--- N5. L_KS = Sum_n Sum_f kappa*omega_n*Q_f * phi_n * psibar psi ---
+    natural units: [phi_4D] = 1, [psibar psi] = 3, [L] = 4  (exponent of M)
+  [PASS] N5a as written (kappa = sqrt(M0) with a 4D field phi_n) the term has dimension 4.5
+           M^{1/2} * M^1 * M^3 = M^{4.5}  !=  M^4  -> NOT a Lagrangian density
+  [PASS] N5b repair B: coefficient kappa^2*omega_n = M0*omega_n (dim M), mode phi_n dimensionless -> 4
+           M^1 * 1 * M^3 = M^4  OK
+  [PASS] N5c repair C: dimensionless coupling g, amplitude w_n (dim M) -> 4 (also admissible)
+           both repairs exist; B is the one O82 already uses
+  [PASS] N5d O82 R2 already states the dim-M form: Sigma(p) = -kappa^2*omega_n
+           O82 SESSION_START line 17: "Sigma(p) approx (g^2/m_W^2)*omega_n = -kappa^2*omega_n"
+  [PASS] N5e every NUMBER is unchanged: kappa^2 = M0 = 27.900915 MeV
+           kappa = 5.282131671967294 MeV^{1/2} (a label, not a coupling)
+  [PASS] N5f the boson tower m_n = M0*omega_n = M0*sqrt(gamma_n) is reproduced (n=7 -> DM mass)
+           m_7 = 13.800155301821238 MeV  (O204/O82)
+  [PASS] N5g docs/02 s3.4 prints g_e = 10.52 MeV^{3/2} and a ratio of 0.0000 -- both dimensionless-invalid
+           the printed 10.52 MeV^{3/2} is kappa*omega_1*M0 -- an artefact of the label error
+
+    VERDICT N5: docs/02 s3.3-s3.4 use kappa = sqrt(M0) = 5.2821 MeV^{1/2} as a
+    COUPLING, giving a term of dimension M^{4.5}. The dimensionally correct
+    coefficient -- and the one O82/O36/O204 actually use -- is kappa^2 = M0
+    (a mass). No number changes: Sigma = kappa^2 omega_n = M0 omega_n is intact.
+    => label/dimension fix only; the physics content is unaffected.
+
+--- N6. L_WH = lambda_WH |W|^2 |H|^2 ---
+
+    candidate                    value         new constant?
+    --------------------------------------------------------------
+    mu^2/123  (= lambda_self)    0.016260162601626018 NO  -- reuses lambda
+    1/<W>^2                      0.016260162601626018 NO  -- = 2/123 identically
+    lambda_self x N_gen          0.04878048780487805 YES -- ad hoc factor N_gen
+    2 mu^2/123                   0.032520325203252036 YES -- ad hoc factor 2
+    phi^-4                       0.14589803375031546 YES -- new phi power
+  [PASS] N6a 1/<W>^2 = mu^2/123 = lambda_self = 2/123 EXACTLY (three readings, one number)
+           1/61.5 = 0.0162601626 = 2/123 = 0.0162601626
+  [PASS] N6b under the zero-new-constant axiom the portal coefficient is forced to lambda_WH = lambda
+           the only dim-4 U(1)_W-invariant W-sector self-coupling available
+  [PASS] N6c caveat: P1 form-forcing fixes the SET of operators, not the RATIO between two of them
+           so this is axiom-driven selection, not an independent derivation -- state it as such
+  [PASS] N6d every candidate gives d m_H^2 / m_H^2 < 1e-8 -- observationally indistinguishable
+           lambda_WH route: 8.088112007255633e-10 (using <W>_phys = M0 = 27.9009 MeV)
+
+    VERDICT N6: lambda_WH == lambda_self is the unique zero-new-constant value;
+    all alternatives introduce an unmotivated factor and change nothing observable
+    (d m_H^2/m_H^2 ~ 1e-9). => CLOSED as a labelling identity under the
+    zero-new-constant axiom; explicitly NOT an independent derivation.
+
+--- N3. L_xi = xi |W|^2 R  (G9: xi underived) ---
+
+    candidate              xi           xi<W>^2/M_Pl^2
+    ----------------------------------------------------------
+    1/6 (conformal)        0.16666666666666666 8.704274299401704e-43
+    lambda = 2/123         0.016260162601626018 8.491974926245565e-44
+    1/123 = 1/L_10         0.008130081300813009 4.2459874631227827e-44
+    mu^2/123               0.016260162601626018 8.491974926245565e-44
+    1/(2<W>^2)             0.008130081300813009 4.2459874631227827e-44
+  [PASS] N3a every candidate gives xi <W>^2/M_Pl^2 < 1e-41 -- zero observational consequence
+           max = 8.704274299401704e-43 (so no experiment can choose between them)
+  [PASS] N3b conformal coupling xi = 1/6 is NOT forced: IDCM breaks conformal invariance explicitly
+           the mass term mu^2|W|^2 = 2|W|^2 breaks Weyl invariance at tree level -> xi = 1/6 has no basis
+  [PASS] N3c 6 = B + mu^2 = 4 + 2 is available, but 6 = 2N_gen = 3! = C(4,2) also are
+           multiple structural readings of the same integer -> numerology risk, no unique derivation
+  [PASS] N3d WHY P1 does not extend: R is not a W-field object; |W|^2 R is a NEW operator
+           form-forcing of V(W) constrains the W sector; the gravity-sector coefficient is outside it
+  [PASS] N3e the FORM is settled: zeta*W*R is forbidden by U(1)_W, xi|W|^2R is allowed
+           O204 POINTER G9 -- so the gap is narrowed to one unobservable number
+
+    VERDICT N3: honest NEGATIVE. Four structurally-motivated candidates exist
+    (1/6, 2/123, 1/123, 1/246) and NOTHING in the current structure selects one;
+    all give identical (null) predictions. Per the no-numerology rule we do NOT
+    claim a value. The deliverable is the structural REASON the gap is irreducible:
+    P1 form-forcing constrains V(W); xi belongs to the gravity sector, which P1
+    does not reach. Status: maintained YELLOW (form settled, value underived).
+
+==============================================================================
+RESULT: 16/16 PASS
+==============================================================================
+
+  N5 -> CLOSED (dimension/label). Correct coefficient kappa^2 = M0; no number changes.
+  N6 -> CLOSED (identity, conditional on zero-new-constant). lambda_WH = lambda_self.
+  N3 -> MAINTAINED YELLOW, with the structural reason for irreducibility stated.

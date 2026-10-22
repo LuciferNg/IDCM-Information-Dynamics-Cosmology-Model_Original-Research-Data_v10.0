@@ -1,0 +1,15 @@
+{
+  "test": "O66 04: M_comp 深層推導",
+  "o62_o66_connection": "19 = Nd - F8 - B = 19, 76 = 4×19",
+  "formula_compact": "log10(M_pl/M_comp) = (76/γ₆ - 1)/76",
+  "log10_value": 5.519773832167232,
+  "M_comp_GeV": 36889796677471.16,
+  "err_pct": 0.027651280565972224,
+  "m_nu3_eV": 0.05358624557236194,
+  "dm31_from_structure": 0.00287148571454148,
+  "dm31_from_PDG": 0.002434,
+  "dm31_deviation_pct": 0.6502629303648827,
+  "mechanism_hint": "K_Chain tunneling: S = ln(10)/γ₆ - ln(10)/76",
+  "passed": 6,
+  "failed": 0
+}

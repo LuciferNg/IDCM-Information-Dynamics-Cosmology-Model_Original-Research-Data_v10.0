@@ -1,0 +1,82 @@
+{
+ "rules": "r1-axis-sign-structure-v1",
+ "negation_closed_all": true,
+ "per_type": {
+  "vertex": {
+   "n": 12,
+   "negation_closed": true,
+   "distinct_axes": 12,
+   "R_distinct": [
+    0
+   ],
+   "distinct_rows": 12
+  },
+  "face": {
+   "n": 20,
+   "negation_closed": true,
+   "distinct_axes": 20,
+   "R_distinct": [
+    0
+   ],
+   "distinct_rows": 20
+  },
+  "edge": {
+   "n": 30,
+   "negation_closed": true,
+   "distinct_axes": 30,
+   "R_distinct": [
+    -4,
+    4
+   ],
+   "distinct_rows": 30
+  }
+ },
+ "positive_control": {
+  "vertex_beta=1/12": {
+   "nonneg": true,
+   "normalized": true,
+   "distinct_rows": 12
+  },
+  "vertex_beta=-1/12": {
+   "nonneg": true,
+   "normalized": true,
+   "distinct_rows": 12
+  },
+  "face_beta=1/20": {
+   "nonneg": true,
+   "normalized": true,
+   "distinct_rows": 20
+  },
+  "face_beta=-1/20": {
+   "nonneg": true,
+   "normalized": true,
+   "distinct_rows": 20
+  }
+ },
+ "claims": [
+  {
+   "tag": "S1",
+   "name": "凍結 62 軸之整體對負封閉性 = True ⟹ R = ±10（唔係 0）之機制",
+   "ok": false,
+   "detail": "negation-closed = True ; #null-vector axes = 0 ; distinct axes = 62"
+  },
+  {
+   "tag": "S2",
+   "name": "★ 按型別：vertex / face 塊對負封閉 ⟹ R ≡ 0；edge 塊唔封閉 ⟹ R = ±10（Delta 全由邊軸之符號不平衡承載）",
+   "ok": false,
+   "detail": "vertex: closed=True R=[0]; face: closed=True R=[0]; edge: closed=True R=[-4, 4]"
+  },
+  {
+   "tag": "S3",
+   "name": "★ 真陽性對照（out-of-sample）：vertex(12 軸) 與 face(20 軸) 讀出表之 R ≡ 0 ⟹W = 1/n + beta·K（beta = ±1/n）皆 非負＋歸一＋態敏感 ⟹ P4 之充分性得真實例證",
+   "ok": true,
+   "detail": "face_beta=-1/20: rows=20; face_beta=1/20: rows=20; vertex_beta=-1/12: rows=12; vertex_beta=1/12: rows=12"
+  },
+  {
+   "tag": "S4",
+   "name": "scripts/05 Q4 之 3 個「R 恆常」個案 = 參考軸抽到中心元素 ±1（向量部 = (0,0,0)）⟹ 全零讀出（K ≡ 0），屬退化抽樣、唔屬 ±1 讀出族 ⟹ 非 P4 反例",
+   "ok": true,
+   "detail": "凍結 62 軸中零向量軸數 = 0（凍結集無此退化）⟹ 3/200 = 參考軸命中 ±1 之機率 2/120 = 1/60 之預期 3.3"
+  }
+ ]
+}

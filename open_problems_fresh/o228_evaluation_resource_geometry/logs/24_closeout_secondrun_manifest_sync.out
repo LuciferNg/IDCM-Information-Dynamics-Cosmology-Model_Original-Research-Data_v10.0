@@ -1,0 +1,37 @@
+[PASS] A1    o222 four frozen inputs: sha256 identical to the R1 literals  --  4/4 match
+[PASS] A2    o222 untouched today (find -newermt count)  --  count=0
+[PASS] B1    K shape = 120 x 62 and values in {+1,-1}  --  shape=120x62 values=[-1, 1]
+[PASS] B2    distinct full column vectors of K = 32 (R1 value)  --  got 32
+[PASS] B3    rank_Q(K) = 6 (independent rational RREF)  --  rank=6 pivots=6
+[PASS] C1    M_edge rebuilt: rows=30 cols=62 pairs=435; every pair separated by >=1 column  --  rows=30 cols=62 pairs=435
+[PASS] C1b   M_edge machine: 60 distinct column vectors (R11 value), 62 columns  --  raw_distinct=60 pm_classes=60
+[PASS] C2    R10 explicit 7-cover [0,1,4,9,10,15,23] separates all 435 pairs (independent)
+[PASS] C3    root-LP support from data/10 = 10 columns; x* = 1/2 on it is a fractional cover (LP* >= 5)  --  support=[3, 4, 6, 8, 9, 13, 15, 18, 19, 32] sum=5
+[PASS] C4    R12 support S is 9-redundant: S minus ANY one column still covers all 435 pairs  --  10/10
+[PASS] C5    F_6(M_edge) = 0 by independent DFS (=> k_min >= 7)  --  frames=0 nodes=38704793 abort=False 8.3s
+[PASS] C6    F_7(M_edge) = 8584 by independent DFS (=> k_min = 7)  --  frames=8584 nodes=304315585 abort=False 66.2s
+[PASS] E1    per-column degrees: min 812 / max 1306, all 62 columns used  --  min=812 max=1306 ncols=62 distinct=30
+[PASS] E2    all 8584 frames inclusion-minimal  --  non-minimal=0
+[PASS] E3    independently counted F_7 equals data/22 enumeration.frames  --  8584 vs 8584
+[PASS] E4    pairwise mutual-exclusion count = 17,659,238 (47.9%)  --  got 17659238 vs 17659238 (3.4s)
+[PASS] E5    distinct frame types = 6960 (frames modulo +/- column classes)  --  types=6960 classes=60 vs 6960
+[PASS] D0    T/O/D4 groups + axis lines rebuilt independently: |T|=12 |O|=24 |D4|=8; lines 7/13/5  --  |T|/|O|/|D4|=(12, 24, 8) lines=(7, 13, 5)
+[PASS] D0b   machine shapes m/N match the record: 4/14, 6/26, 2/10  --  [(4, 14), (6, 26), (2, 10)]
+[PASS] D1    M_T F_k recomputed independently (k<=k_min) agrees with data/04  --  F={1: 0, 2: 12, 3: 244, 4: 911} recorded={1: 0, 2: 12, 3: 244, 4: 911}
+[FAIL] D1    M_O F_k recomputed independently (k<=k_min) agrees with data/04  --  F={1: 0, 2: 0, 3: 1080} recorded={1: 0, 2: 0, 3: 1080, 4: 10692}
+[FAIL] D1    M_D4 F_k recomputed independently (k<=k_min) agrees with data/04  --  F={1: 10} recorded={1: 10, 2: 45, 3: 120, 4: 210}
+[PASS] D3    M_2I F_4 = 12645 (independent DFS)  --  frames=12645 nodes=700679 0.2s
+[PASS] D4    M_face F_5 = 320 (independent DFS)  --  frames=320 nodes=8509971 1.8s
+[FAIL] F1    MANIFEST covers the disk both ways (self-excluded on both sides)  --  uncovered=['scripts/24_closeout_audit.py', 'data/00_o228_manifest.json', 'logs/08_manifest.out', 'logs/24_closeout_firstrun_expectation_bugs.out'] stale=[]
+[PASS] F2    MANIFEST hashes match the disk (audit own outputs excluded)  --  mismatch=[]
+[PASS] F3    script-chain symmetry: every docs/contract round has a results doc
+[PASS] G1    register: every R1..R12 has at least one event (bidirectional coverage)  --  missing=[] kinds={'registered': 13, 'note': 112, 'handed_off': 2, 'progress': 13, 'posthoc': 2, 'closed': 7}
+[PASS] G2    register: every ref path exists (no REF-MISSING drift)  --  bad=[]
+[PASS] G3    register: no ghost entry outside R1..R12 (reverse coverage)  --  extra=[]
+[FAIL] H1    no /tmp write patterns in scripts/  --  hits=['24_closeout_audit.py:526']
+[PASS] I1    headline numbers present in the doc set (coverage, not correctness)  --  missing=[]
+RESULT: 28/32 PASS  (83.2)
+  FAIL D1 M_O F_k recomputed independently (k<=k_min) agrees with data/04
+  FAIL D1 M_D4 F_k recomputed independently (k<=k_min) agrees with data/04
+  FAIL F1 MANIFEST covers the disk both ways (self-excluded on both sides)
+  FAIL H1 no /tmp write patterns in scripts/

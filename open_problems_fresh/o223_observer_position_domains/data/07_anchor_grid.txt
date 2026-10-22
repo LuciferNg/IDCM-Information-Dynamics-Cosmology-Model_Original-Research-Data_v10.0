@@ -1,0 +1,44 @@
+============================================================================
+O223 / 07 -- anchor selection, 88-grid, orientation null
+============================================================================
+[I] recorded frustration set: 32 edges ; node field T loaded (60 nodes)
+
+[A] anchor scan over all 60 nodes:
+    distinct frustration patterns: 30
+  [OK] A1 60 anchors -> 30 distinct frustration patterns
+    anchor-pair separation: 180 - d = min 5.340051  mean 5.340114  max 5.340200 deg
+    chirality angle 2*delta_m = 5.340126 deg
+  [OK] A2 the graph-Aut partner is NOT the exact antipode: its separation from 180 deg equals the CHIRALITY ANGLE 2*delta_m = 5.3401 deg (all 30 pairs)
+  [OK] A3 only {0, 57} reproduces the recorded pattern
+
+[A4] all 30 patterns vs the SMICA node field (5 deg smoothing):
+     pair           n_cold  dT(uK)    z      p(perm)
+     (2, 43)           30    +24.49   +2.92  0.0034
+     (0, 57)           30    +22.31   +2.65  0.0070
+     (18, 42)          30    -21.14   -2.52  0.0112
+     (14, 52)          30    +18.03   +2.16  0.0305
+     (9, 54)           30    -18.27   -2.16  0.0293
+     (11, 56)          30    -17.79   -2.09  0.0349
+     ... (24 more)
+     recorded pair (0,57): dT = +22.31 uK   z = +2.65   p = 0.0070   RANK 2/30
+  [XX] A4a HONEST: the recorded pair (0,57) ranks 2/30 by |z| -- the anchor is NOT selected by the temperature statistic; it is selected by node 0 = the cold spot
+  [OK] A4b its permutation p-value < 0.05 (p = 0.0070)
+  [OK] A4c best pattern is (2, 43) with z = +2.92 (p = 0.0034); spread of all 30: z = +0.11 .. +2.92
+
+[A5] the 88-grid:
+    intra-class (frustrated) edges = 32 ; inter-class edges = 88
+  [OK] A5a 88 inter-class edges = 120 - 32 = 2*N_d
+    88 midpoints built; pairwise min angle = 13.3058 deg
+    under Gs (anchor moves): Hausdorff deviation mean 15.3833  max 16.1070 deg
+  [OK] A5b the 88-grid is NOT Gs-invariant (max dev 16.1070 deg) -> anchor-dependent
+  [OK] A5c consistent with the recorded 16.1070 deg (O213 docs/09)
+
+[A6] orientation null (31 symmetry axes: 15 2-fold + 10 3-fold + 6 5-fold)
+    galactic pole     nearest axis 12.094 deg   null median 10.739   percentile 60.4%
+    CMB dipole        nearest axis 13.889 deg   null median 10.739   percentile 73.9%
+    galactic centre   nearest axis 15.094 deg   null median 10.739   percentile 83.2%
+  [OK] A6 orientation null computed (no special alignment claimed)
+
+----------------------------------------------------------------------------
+RESULT: 9/10 PASS
+----------------------------------------------------------------------------

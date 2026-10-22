@@ -1,0 +1,27 @@
+{
+ "rules_version": "contract-v1",
+ "frozen_at": "2026-09-29T20:22:16+08:00",
+ "doc": {
+  "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/03_b2_contract.md",
+  "sha256": "01d2fb03ead127ef09ff7e209b456b16a9da7b19838fe612f62e69b625481953"
+ },
+ "enforcer": {
+  "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/04_b2_contract.py",
+  "sha256": "830dbf755605c1a4db5a819b6c066995ad20ce1789d935b650a9cdd721c26de2"
+ },
+ "settings": {
+  "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/data/04_b2_settings.json",
+  "sha256": "2357006c68e0165dc9fd7d8d73524593a776e1bf6a8b62ddbc8dc2c1a8af20ee"
+ },
+ "partition": {
+  "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/data/04_b2_partition.json",
+  "sha256": "499b3d16b084b7801e404e1763a9353ac3a58561e1fbfd084d5269f8cfdf0455"
+ },
+ "impl": {
+  "path": "scripts/05_b2_correlation.py",
+  "sha256": "41057876aae62ead0cfb7d9be811954e8f24f1a61958df7763f6f548233d45e6",
+  "ast_ok": true,
+  "locality_ok": true
+ },
+ "gate": "OPEN"
+}

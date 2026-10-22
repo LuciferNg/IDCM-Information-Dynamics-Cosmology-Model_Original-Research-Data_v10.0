@@ -1,0 +1,66 @@
+== scripts/01_tree_boundary_derivation.py
+   sinθ₁₃ = 0.149000 vs ε·32/33 = 0.149826 (0.55%)
+== scripts/02_tree5_origin.py
+   → 兩個 δ 共享 tree 5-step 結構
+== scripts/03_t_operator_algebra.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/04_projector_boundary.py
+ModuleNotFoundError: No module named 'numpy'
+== scripts/05_tree_laplacian.py
+ModuleNotFoundError: No module named 'numpy'
+== scripts/06_ap_ladder.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/07_channel_duality.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/08_delta_operator.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/09_doc_crosscheck.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/10_pythagorean_operator.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/11_home_mechanism.py
+RESULT: 18/18 PASS
+== scripts/12_delta_audit.py
+RESULT: 10/10 PASS
+== scripts/13_channel_duality.py
+RESULT: 16/16 PASS
+== scripts/14_cy3_observer_projection.py
+RESULT: 24/24 PASS
+== scripts/15_zero_closure_ses.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/16_circle_dual_observation.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/17_three_axioms.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/18_projector_operator.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/19_mu2_switch_operator.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/20_qsqrt5_bridge.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/21_mode_selection_rule.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/22_hold_rule.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/23_fib_index_selection.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/24_minimality_criterion.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/25_ktree_5.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/26_prime_distribution.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/27_what_is_88.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/28_identity_hub.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/29_doc_crosscheck_round2.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/30_remaining_open_items.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/31_necessity_proof.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/32_algebraic_incompatibility.py
+ModuleNotFoundError: No module named 'mpmath'
+== scripts/33_energy_functional_dbc.py
+ModuleNotFoundError: No module named 'mpmath'

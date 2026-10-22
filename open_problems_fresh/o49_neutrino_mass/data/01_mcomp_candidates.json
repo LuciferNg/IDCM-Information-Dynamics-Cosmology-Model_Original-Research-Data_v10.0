@@ -1,0 +1,40 @@
+{
+  "title": "O49-1: M_comp Structural Candidates",
+  "M_comp_target": 36909000000000.0,
+  "M_Pl": 1.22091e+19,
+  "ratio": 330789.2383971389,
+  "top_candidates": [
+    {
+      "name": "M_Pl × e^(-V=ln(330788))",
+      "M_comp": 36909138179135.88,
+      "error_pct": 0.0004,
+      "status": "🟢"
+    },
+    {
+      "name": "Nd³ × B",
+      "M_comp": 35831552873779.12,
+      "error_pct": 2.9192,
+      "status": "🟡"
+    },
+    {
+      "name": "2 × h¹¹ × h²¹ × Nd",
+      "M_comp": 39325332405689.55,
+      "error_pct": 6.5467,
+      "status": "🔴"
+    },
+    {
+      "name": "L₅ × L₇ × Nd × F₈",
+      "M_comp": 41421039775271.75,
+      "error_pct": 12.2248,
+      "status": "🔴"
+    },
+    {
+      "name": "h¹¹ × h²¹ × Nd × φ²",
+      "M_comp": 30041880720171.477,
+      "error_pct": 18.6055,
+      "status": "🔴"
+    }
+  ],
+  "gamma6": 0.18073600929096323,
+  "m_nu_inferred": 0.05355836527333363
+}

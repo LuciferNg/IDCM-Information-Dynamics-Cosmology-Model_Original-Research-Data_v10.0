@@ -1,0 +1,81 @@
+{
+  "test": "O56 M_{36x44} 投影矩陣 (v2)",
+  "M_shape": [
+    36,
+    44
+  ],
+  "rank_M": 36,
+  "nullity": 8,
+  "active_modes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "null_modes": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "gamma_active_range": [
+    0.005095770779492917,
+    3.682507065662362
+  ],
+  "gamma_null_range": [
+    3.7553579791345117,
+    4.0
+  ],
+  "M_orthogonal": true,
+  "null_projection_zero": true,
+  "boundary_sites": [
+    11,
+    12,
+    22,
+    23,
+    33,
+    34,
+    44,
+    1
+  ],
+  "null_boundary_ratio": 0.20362484030942038,
+  "active_boundary_ratio": 0.17697225770901773,
+  "block_structure": "3x12",
+  "conclusion": "OK M_{36x44} projection: rank=36, nullity=8=2B, 3x12 blocks"
+}

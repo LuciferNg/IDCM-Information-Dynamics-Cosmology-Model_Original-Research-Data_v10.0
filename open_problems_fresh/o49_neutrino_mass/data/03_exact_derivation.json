@@ -1,0 +1,14 @@
+{
+  "M_comp_from_dm31": 37030038660968.89,
+  "M_comp_with_phi18": 34868294903902.695,
+  "ratio_MPl_Mcomp": 329708.00035563746,
+  "ratio_MPl_Mcomp_phi18": 350149.04037172964,
+  "best_structural_candidate": {
+    "formula": "B⁴ × h¹¹²",
+    "denominator": 331776,
+    "M_comp": 36799225983796.3,
+    "error_pct": 0.6233120070054892
+  },
+  "phi_18_correction": 1.0619974037452644,
+  "m_nu_tau_from_best": 0.05704851743889337
+}

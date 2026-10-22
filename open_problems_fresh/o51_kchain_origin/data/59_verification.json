@@ -1,0 +1,144 @@
+{
+  "pass": 25,
+  "fail": 0,
+  "total": 25,
+  "results": [
+    {
+      "name": "N_d = B \u00d7 L\u2085 = 4 \u00d7 11 = 44",
+      "status": "\u2705 PASS",
+      "detail": "N_d=44"
+    },
+    {
+      "name": "B = \u03c6\u00b3-\u03c6\u207b\u00b3 = 4",
+      "status": "\u2705 PASS",
+      "detail": "B=4"
+    },
+    {
+      "name": "L\u2085 = 11",
+      "status": "\u2705 PASS",
+      "detail": "L\u2085=11"
+    },
+    {
+      "name": "\u03a3\u03b3 = 90 (\u80fd\u91cf\u5b88\u6046)",
+      "status": "\u2705 PASS",
+      "detail": "\u03a3\u03b3=90.0000000000"
+    },
+    {
+      "name": "Z\u2082 \u5c0d\u5076 \u03b3_n + \u03b3_{44-n} = 4 (43/43)",
+      "status": "\u2705 PASS",
+      "detail": "43 \u5c0d\u5168\u90e8 PASS"
+    },
+    {
+      "name": "\u03a3\u03b3_even = 46 (44-site \u5076\u6578\u5b50\u96c6)",
+      "status": "\u2705 PASS",
+      "detail": "\u03a3\u03b3_even=46.0000000000"
+    },
+    {
+      "name": "\u03a3\u03b3_odd = 44 (44-site \u5947\u6578\u5b50\u96c6)",
+      "status": "\u2705 PASS",
+      "detail": "\u03a3\u03b3_odd=44.0000000000"
+    },
+    {
+      "name": "sympy \u7cbe\u78ba\u4ee3\u6578: 946/946 \u7121\u7406\u6bd4",
+      "status": "\u2705 PASS",
+      "detail": "total=946, rational=0"
+    },
+    {
+      "name": "43 \u50b3\u64ad\u6a21\u5f0f (n=1..43, v_g>0)",
+      "status": "\u2705 PASS",
+      "detail": "n=1..43: v_g = c\u00b7cos(\u03c0n/88) > 0.0357c"
+    },
+    {
+      "name": "n=44 Nyquist v_g\u22480",
+      "status": "\u2705 PASS",
+      "detail": "v_g(44) = c\u00b7cos(\u03c0/2) \u2248 0 (\u99d0\u6ce2)"
+    },
+    {
+      "name": "\u5b9a\u74061: \u7cbe\u78ba\u5fa9\u6b78=0 (\u983b\u7387\u6bd4\u5168\u7121\u7406, \u7121 t>0 \u4ee444\u76f8\u4f4d\u8fd4\u96f6)",
+      "status": "\u2705 PASS",
+      "detail": "\u7d14\u4ee3\u6578\u5b9a\u7406, \u540c R_H \u7121\u95dc"
+    },
+    {
+      "name": "\u5b9a\u74062: T_sync = 88\u00b7T\u2084\u2084 (n=44 Nyquist \u9328\u5b9a)",
+      "status": "\u2705 PASS",
+      "detail": "T_sync = 2\u03c0R_H/c, T_44 = 2\u03c0R_H/(88c)"
+    },
+    {
+      "name": "43 \u500b\u7121\u7406\u6f02\u79fb \u03b4_n, \u5e73\u5747=0.5053",
+      "status": "\u2705 PASS",
+      "detail": "min=0.030311, max=0.988924"
+    },
+    {
+      "name": "\u03c6_n = n\u00b7[\u03c6\u00b7cos(F\u2087/L\u2087) + \u03b8\u00b7sin(B/N_d)] + 2\u03c0\u00b7n\u00b7(L\u2087+F\u2087)/N_d",
+      "status": "\u2705 PASS",
+      "detail": "cos(13/29)=0.901196, sin(4/44)=0.090784, (L\u2087+F\u2087)/N_d=42/44"
+    },
+    {
+      "name": "\u51b7\u6591 (209\u00b0,-57\u00b0) = (180+L\u2087, -(44+F\u2087))",
+      "status": "\u2705 PASS",
+      "detail": "180+29=209, 44+13=57"
+    },
+    {
+      "name": "n=44 \u7a7a\u9593\u76f8\u4f4d \u03c6_44 mod 2\u03c0",
+      "status": "\u2705 PASS",
+      "detail": "\u03c6_44 mod 2\u03c0 = 4.0943 rad"
+    },
+    {
+      "name": "N=131: \u03a8 \u2248 \u03c0",
+      "status": "\u2705 PASS",
+      "detail": "\u03a8=-3.140780 rad, err=0.000813 rad"
+    },
+    {
+      "name": "N=131: T_cold \u2248 -134.19 \u03bcK",
+      "status": "\u2705 PASS",
+      "detail": "T_cold=-134.20 \u03bcK (obs=-134.19 \u03bcK)"
+    },
+    {
+      "name": "N=131: \u5411\u91cf\u5e45\u5ea6 > 0",
+      "status": "\u2705 PASS",
+      "detail": "|\u03a3| = 9.5685"
+    },
+    {
+      "name": "N=131: \u5411\u91cf\u548c\u63a5\u8fd1 (-|\u03a3|, 0)",
+      "status": "\u2705 PASS",
+      "detail": "(-9.568516, -0.007781)"
+    },
+    {
+      "name": "N=131 \u4fc2\u6700\u5c0f\u89e3 + \u6700\u5c0f\u8aa4\u5dee (9 \u500b\u8fd1\u4f3c\u89e3)",
+      "status": "\u2705 PASS",
+      "detail": "\u6700\u5c0f\u89e3 N=131, \u6700\u5c0f\u8aa4\u5dee=0.000813 rad, \u5168\u90e8\u89e3: [131, 262, 695, 702, 1047, 1292, 1421, 1488, 1793]"
+    },
+    {
+      "name": "N=0 \u6392\u9664 (\u03a8\u2260\u03c0, T\u2260-134.19)",
+      "status": "\u2705 PASS",
+      "detail": "\u03a8=-1.9787 rad, err=1.1629 rad, T=-53.23 \u03bcK"
+    },
+    {
+      "name": "\u03c4 = R_H/c = 13.470 Gyr",
+      "status": "\u2705 PASS",
+      "detail": "\u03c4=13.4701 Gyr"
+    },
+    {
+      "name": "T_sync = 84.635 Gyr",
+      "status": "\u2705 PASS",
+      "detail": "T_sync=84.6349 Gyr"
+    },
+    {
+      "name": "t_true = 131\u00d7T_sync + \u03c4 = 11,100.64 Gyr",
+      "status": "\u2705 PASS",
+      "detail": "t_true = 131\u00d784.6349 + 13.4701 = 11100.64 Gyr"
+    }
+  ],
+  "key_values": {
+    "N": 131,
+    "\u03a8_rad": -3.14078,
+    "\u03a8_error_rad": 0.000813,
+    "T_cold_uK": -134.2,
+    "T_obs_uK": -134.19,
+    "T_diff_uK": 0.01,
+    "tau_gyr": 13.4701,
+    "T_sync_gyr": 84.6349,
+    "t_true_gyr": 11100.642,
+    "num_solutions": 9
+  }
+}

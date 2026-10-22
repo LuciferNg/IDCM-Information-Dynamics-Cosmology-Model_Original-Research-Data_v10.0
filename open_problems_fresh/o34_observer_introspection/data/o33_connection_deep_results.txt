@@ -1,0 +1,8 @@
+O34 — O33 Connection Deep Derivation
+===================================================================
+sum_even = 90.0, sum_odd = 88.0
+matter = 2 + B*L = 2 + 4*53/8 = 28.5
+unprojected = 90 - matter = 61.5
+Omega_L exact = 0.6832815730, matter/90 = 0.3166666667
+dev = 5.18e-05
+Status: O33 mechanism candidate (🟡)

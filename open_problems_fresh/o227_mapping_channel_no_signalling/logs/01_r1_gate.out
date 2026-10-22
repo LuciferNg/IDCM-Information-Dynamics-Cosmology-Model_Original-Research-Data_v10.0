@@ -1,0 +1,16 @@
+==============================================================================================================
+O227 scripts/01 -- R1 contract enforcer (rules: o227-r1-contract-v1)
+==============================================================================================================
+[PASS] C1   frozen-input hash pins (11 objects from docs/01 section 1)  --  mismatches = 0 
+[PASS] C2   contract carries the 26 pre-registered predicate rows  --  missing = [] ; unexpected = []
+[PASS] C2b  provenance objects reachable and carry the composition law, no dimension data  --  files_ok=True ; law_text=True ; dimension_text_found=False (P1c must stay provenance-only)
+[PASS] C3   machine AST block (imports / math.log2 only / no float literal / no eval / no local read)  --  violations = 0 []
+[PASS] C3b  no write-open on a path mentioning another O directory  --  write sites = 0 ; foreign-O write sites = 0
+[PASS] C4   contract tag set == machine claim tag set  --  missing in machine = [] ; extra = []
+[PASS] C5   machine imports the frozen read semantics (load_machine) and does not re-implement it  --  load_machine call present = True ; banned local defs present = []
+[PASS] C6   static ledger rule on the frozen source (top-only / append-only / pop=rollback / no rewrite)  --  top_only=True append=True pop=True no_inplace_rewrite=True prototype_read_rule=True
+[PASS] C7   pre-registration present: O227/R1 + 26 sub-pids with a pre-run note  --  registered-with-pre-run-note = 27 / 27 ; missing = []
+[PASS] C8   amendment table carries only pre-freeze, pre-run rows (no post-freeze amendment)  --  placeholder_free=True ; pre-freeze row declared=True
+--------------------------------------------------------------------------------------------------------------
+GATE: 10/10 PASS -> OPEN
+==============================================================================================================

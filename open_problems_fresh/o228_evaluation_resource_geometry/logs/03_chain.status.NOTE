@@ -1,0 +1,20 @@
+# NOTE — `logs/03_chain.status` 之讀法（2026-10-02 註，原檔一字不改）
+
+`logs/03_chain.status` 係 **R1 兩階段鏈之首跑記錄**，內容為：
+
+```
+02 exit=0
+03 exit=1
+logs/02_r1_closed_form.out:RESULT: 8/8 PASS  (0 FAIL)   elapsed 224.3 s
+logs/03_r1_audit.out:RESULT: 11/12 PASS  (1 FAIL)
+```
+
+## ⚠️ 為何同 `logs/03_r1_audit.out` 之現行結論唔一致
+
+| 階段 | 事件 | 證據 |
+|---|---|---|
+| ① 鏈首跑（07:26–07:27） | `scripts/03_r1_audit.py` 之 **B3 有實作缺陷**（把「型→列」遮罩當「型→行對」遮罩）⟹ **11/12**、exit 1，並寫入本 status | `logs/03_r1_audit_firstrun_B3_FAIL_excerpt.out` |
+| ② 修正後單獨重跑（07:27:25） | 修 B3（改以 **pair masks（tpm）** 之 inclusion–exclusion 重算）⟹ **12/12 PASS** | `logs/03_r1_audit.out`（現行）、`data/03_r1_audit.json` |
+
+⟹ **權威 = `logs/03_r1_audit.out`（12/12 PASS）**；本 status 檔為**首跑之歷史見證**（正因如此保留，未覆寫）。
+兩者之差異 100% 來自 B3 之實作缺陷，唔係審計結論分歧。`docs/01_r1_results.md` §8b／§9c 有相同說明。

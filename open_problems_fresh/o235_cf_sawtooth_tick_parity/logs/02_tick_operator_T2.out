@@ -1,0 +1,39 @@
+============================================================================
+T2: tick 算子時間演化 ↔ τ / T_ring / λ_sync  (O235)
+============================================================================
+
+[A] H_cb = P_E·L·P_O + P_O·L·P_E  (88-ring, L = 2I − A, off-diag −1)
+   H_cb 譜: 44 對 ±，radius=2.000000000000000 (=μ²) ; ker dim = 2
+   閉式 maxdev (週期) = 3.33e-15 ; 反週期 maxdev = 8.88e-16
+
+[B] tick 時間恆等 (全部 EXACT, 定義鏈 O73/O132)
+   T_ring = 84.635877 Gyr ; λ_sync = 294.8804 Mpc ; Δt = 0.961771 Gyr
+   ω_ring·Δt = 0.071399833036 rad/tick ; 每 tick 掃 0.07139983 rad = π/44
+
+[C] leapfrog 兩步映射 U2 = V†V + tick 宇稱 P
+
+[D] 硬測試
+
+============================================================================
+RESULT: 21/21 PASS
+   [PASS] A1  H_cb 譜 == ±2cos(πk/44), k=0..43 (週期扇區閉式) — maxdev=3.33e-15
+   [PASS] A2  譜半徑 = 2 = μ² EXACT (k=0 模式 ±2) — radius=2.000000000000000
+   [PASS] A3  ker(H_cb) = 2 維 (k=22 θ=π 零模 ×2) — #zeros=2
+   [PASS] A4  T1 [D] hint |2cos((2m+1)π/88)| = 反週期扇區奇異值 (hint 身份確定) — maxdev=8.88e-16
+   [PASS] B1  T_ring/Δt = 88 EXACT (88 = L_ring/λ_sync = 2N_d) — = 88.000000000000000
+   [PASS] B2  ω_ring·Δt = π/44 EXACT (每 tick 環掃 π/44 rad) — = 0.071399833036132
+   [PASS] B3  Δt = (π/44)·τ EXACT (τ = 環半徑幀) — =1
+   [PASS] B4  λ_sync = π·a, a = R_world/N_d (O73 站點距) — EXACT
+   [PASS] B5  站點穿越時間 = τ/44 = a/c (T1 舊「half-tick」= 站點時間, 改名) — EXACT
+   [PASS] B6  f_Nyquist = c/λ_sync = 1/Δt (O164 頂端模式 = tick 率) — EXACT
+   [PASS] B7  f_n·Δt = sin(πn/88) ∀n (每 tick 週期數 = 色散半波) — 44/44
+   [PASS] B8  Nyquist 模式每 tick 整整 1 週期 (γ=4), 每 T_ring 88 週期 — sin(π/2)=1
+   [PASS] B9  數值對照 O73 存儲: T_ring=84.6348 Gyr, λ_sync=294.8770 Mpc — T_dev=1.27e-05, λ_dev=1.16e-05
+   [PASS] C1  {P, H_cb} = 0 (tick 宇稱 P 反交換 — Z₂ 譜對稱 ±對) — max|PHP+H|=0.00e+00
+   [PASS] C2  spec(U2) = 4cos²(πk/44), k=0..43 (兩步映射閉式) — maxdev=3.55e-15
+   [PASS] C3  U2 冇 eigenvalue 1 (環模無兩步不動點; 44/3∉ℤ) —— T4 判死工具 — min|λ−1|=8.13e-02
+   [PASS] C4  spec(U2) ⊆ [0, 2μ²] (4 = 2μ² EXACT; k=0 及 k=22 端點) — max=4.000000000000002
+   [PASS] D1  零參數: 只入既有常數 {R_world, c_SI, N_d=44} (O73/O132 定義鏈) — 3 inputs, 0 free
+   [PASS] D2  譜半徑 = 2 = μ² 對所有偶數 M∈[4,176] (二部 2-regular 結構強制) — 87/87
+   [PASS] D3  ±1% 邊權擾動 ⟹ 半徑偏離 2 (2 係正則性結構值, 非湊數) — radius_perturbed=2.00211 (Δ=+0.00211)
+   [PASS] D4  MC null N/A: T2 全為 EXACT 恆等 (N_search=1, d_obs=0, q N/A); 可證偽內容委派 T3(槽位相位) + T4(不動點) — density bred: N/A

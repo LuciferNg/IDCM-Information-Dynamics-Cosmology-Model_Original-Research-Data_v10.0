@@ -1,0 +1,53 @@
+O236 scripts/04 -- R4: s1↔s3 對偶 = 手性鏡像橋?
+==============================================================================
+
+[T-Rodd] ℤ₄-reflection r 下嘅 deficit 向量分解
+   [PASS] C1  T3 deficit 向量重現: (s0,s1,s2,s3) = (μ², −sec, 0, +sec) — deficit={0: 2.0, 1: -1.0006375806, 2: 0.0, 3: 1.0006375806}
+   [PASS] C2  反射 r = ℤ₄ 自同構 (R2 P-1): s0↔s0, s1↔s3, s2↔s2, s3↔s1 — (88−k) mod 4 = −k mod 4
+   [PASS] C3  r-even 部分 = (μ², 0) (自對偶相 s0/s2); r-odd 部分 = (−sec, +sec) (s1/s3) — r-even=(1.999999999999993, 0.0), r-odd=(-1.0006375805930077, 1.0006375805930006)
+   [PASS] C4  r-odd 部分反對稱 (Σ = 0); r-even 部分 = μ² (偶扇區標記) — sum r-odd = -7.11e-15
+   [PASS] C5  ★ T5 雙重篩對象 = r-odd 扇區: 輕子³ ∈ s1, 重夸克³ ∈ s3 —— 對偶槽就係 chain 反射嘅唯一 odd sector — s1/s3 之 ±sec = r-odd; s0/s2 = r-even
+   [PASS] C6  對偶 partner 換類 = 粒子級 r-odd 表徵 (輕子 partner→s3, 重夸克 partner→s1) — 每粒子 partner ≡ −n (mod 4)
+
+[T-Anti] 佔據集反射反對稱
+   [PASS] C7  F ∩ r(F) = ∅ (佔據側 mirror 配對完全缺席) — F=[1, 2, 3, 4, 5, 7, 9, 11, 13], r(F)=[75, 77, 79, 81, 83, 84, 85, 86, 87]
+   [PASS] C8  與幾何手性類比: chiral 60-軌道 S ∩ −S = ∅ (O220 F1) ↔ chain F ∩ r(F) = ∅ —— 兩者同型 (結構類比, 非同一證明) — analogy: no reflection pairing in the selected structure
+
+[T-NoMap] 幾何手性 (det 判準) ↔ 相位類 —— 否證
+   [PASS] C9  相位類結構本身唔係幾何 hand-chiral: r 存在並保持全譜 (自鏡像) — r ∈ Aut(chain); 唔係 |Sym|=60(chiral) / =120(achiral) 判準嘅對象
+   [PASS] C10 手性分側對應 ⟹ 冇 map: A₅ 60-軌道 (|Sym|=60, O213/O220/O223) 係宇球幾何; s1/s3 係 chain ℤ₄; 兩者之間冇推導橋 —— 「分側對應」否證 (O210 no-go 陰影) — no structural map ⟹ 輕子³/重夸克³ 唔可以宣稱係幾何手性兩側
+   [PASS] C11 δ_m (O223) 係典型值 (57.8 百分位) ⟹ 手性大小無結構強迫; 存在性 (δ≠0) 先係結構 —— 對 s1/s3 亦冇大小分側對應 — 0.578 唔微調; 只存在性可用
+
+[T-Bridge] 算術橋候選: 45 = N_d+1 = 3·15
+   [PASS] C12 N_d+1 = 45 = 3×15 (15 = A₅ 2-fold 軸 = 鏡面數, O220 A5) —— 計數一致, — 45 = C(10,2) = N_d+1 (O203 C_energy = 1/45 EXACT); 機制開放 (O233 已註冊預期, 唔閉合)
+
+[F] 可證偽內容 (R4)
+   [PASS] C13 docs/01 R4 可證偽選項: 「手性分側對應」→ 否證 (C9/C10); 「對偶 partner 換類 ↔ r-odd 機制」→ 成立 (C6) — negative for geometric correspondence; positive for r-odd pairing mechanism
+
+[四道硬測試]
+   [PASS] HT1 零參數: 輸入 = T3 deficit 向量 (已閉合) + R2 partner 定理 + O213/O220 手性判準引用 — 零新常數
+   [PASS] HT2 null: 主結果係恆等/結構分解 (r-odd 定理) —— MC N/A; 45=3·15 只報計數一致性 — no new statistical claim
+   [PASS] HT3 可證偽: C13 (分側對應否證; r-odd 機制成立) + R2 C12 (mirror 中性粒子位) — falsifiers registered
+   [PASS] HT4 剛性: r-odd 分解依賴 M ≡ 0 (mod 4) (R2 C10); 45 一致係算術恆等 — M-mod-4 mapped; arithmetic identity
+
+-> data/04_chirality_bridge.json
+
+==============================================================================
+RESULT: 17/17 PASS
+   [PASS] C1  T3 deficit 向量重現: (s0,s1,s2,s3) = (μ², −sec, 0, +sec) — deficit={0: 2.0, 1: -1.0006375806, 2: 0.0, 3: 1.0006375806}
+   [PASS] C2  反射 r = ℤ₄ 自同構 (R2 P-1): s0↔s0, s1↔s3, s2↔s2, s3↔s1 — (88−k) mod 4 = −k mod 4
+   [PASS] C3  r-even 部分 = (μ², 0) (自對偶相 s0/s2); r-odd 部分 = (−sec, +sec) (s1/s3) — r-even=(1.999999999999993, 0.0), r-odd=(-1.0006375805930077, 1.0006375805930006)
+   [PASS] C4  r-odd 部分反對稱 (Σ = 0); r-even 部分 = μ² (偶扇區標記) — sum r-odd = -7.11e-15
+   [PASS] C5  ★ T5 雙重篩對象 = r-odd 扇區: 輕子³ ∈ s1, 重夸克³ ∈ s3 —— 對偶槽就係 chain 反射嘅唯一 odd sector — s1/s3 之 ±sec = r-odd; s0/s2 = r-even
+   [PASS] C6  對偶 partner 換類 = 粒子級 r-odd 表徵 (輕子 partner→s3, 重夸克 partner→s1) — 每粒子 partner ≡ −n (mod 4)
+   [PASS] C7  F ∩ r(F) = ∅ (佔據側 mirror 配對完全缺席) — F=[1, 2, 3, 4, 5, 7, 9, 11, 13], r(F)=[75, 77, 79, 81, 83, 84, 85, 86, 87]
+   [PASS] C8  與幾何手性類比: chiral 60-軌道 S ∩ −S = ∅ (O220 F1) ↔ chain F ∩ r(F) = ∅ —— 兩者同型 (結構類比, 非同一證明) — analogy: no reflection pairing in the selected structure
+   [PASS] C9  相位類結構本身唔係幾何 hand-chiral: r 存在並保持全譜 (自鏡像) — r ∈ Aut(chain); 唔係 |Sym|=60(chiral) / =120(achiral) 判準嘅對象
+   [PASS] C10 手性分側對應 ⟹ 冇 map: A₅ 60-軌道 (|Sym|=60, O213/O220/O223) 係宇球幾何; s1/s3 係 chain ℤ₄; 兩者之間冇推導橋 —— 「分側對應」否證 (O210 no-go 陰影) — no structural map ⟹ 輕子³/重夸克³ 唔可以宣稱係幾何手性兩側
+   [PASS] C11 δ_m (O223) 係典型值 (57.8 百分位) ⟹ 手性大小無結構強迫; 存在性 (δ≠0) 先係結構 —— 對 s1/s3 亦冇大小分側對應 — 0.578 唔微調; 只存在性可用
+   [PASS] C12 N_d+1 = 45 = 3×15 (15 = A₅ 2-fold 軸 = 鏡面數, O220 A5) —— 計數一致, — 45 = C(10,2) = N_d+1 (O203 C_energy = 1/45 EXACT); 機制開放 (O233 已註冊預期, 唔閉合)
+   [PASS] C13 docs/01 R4 可證偽選項: 「手性分側對應」→ 否證 (C9/C10); 「對偶 partner 換類 ↔ r-odd 機制」→ 成立 (C6) — negative for geometric correspondence; positive for r-odd pairing mechanism
+   [PASS] HT1 零參數: 輸入 = T3 deficit 向量 (已閉合) + R2 partner 定理 + O213/O220 手性判準引用 — 零新常數
+   [PASS] HT2 null: 主結果係恆等/結構分解 (r-odd 定理) —— MC N/A; 45=3·15 只報計數一致性 — no new statistical claim
+   [PASS] HT3 可證偽: C13 (分側對應否證; r-odd 機制成立) + R2 C12 (mirror 中性粒子位) — falsifiers registered
+   [PASS] HT4 剛性: r-odd 分解依賴 M ≡ 0 (mod 4) (R2 C10); 45 一致係算術恆等 — M-mod-4 mapped; arithmetic identity

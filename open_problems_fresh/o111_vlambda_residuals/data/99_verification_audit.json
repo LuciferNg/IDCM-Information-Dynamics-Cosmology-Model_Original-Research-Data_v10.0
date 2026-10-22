@@ -1,0 +1,28 @@
+{
+  "test": "O111 Verification Audit",
+  "date": "2026-08-29",
+  "passed": 65,
+  "failed": 0,
+  "total": 65,
+  "Fg": 264.08212923258026,
+  "delta": 0.0821292325802574,
+  "V_Lambda": 283.08212923258026,
+  "Y_signature": {
+    "pos": 18,
+    "neg": 14,
+    "kernel": 4
+  },
+  "G_signature": {
+    "pos": 15,
+    "neg": 17,
+    "kernel": 4
+  },
+  "sign_exchange": {
+    "G_pos_eq_Y_neg_plus_1": true,
+    "G_neg_eq_Y_pos_minus_1": true,
+    "kernel_eq_B": true
+  },
+  "radial_stable": true,
+  "random_best": 26,
+  "random_full_pos_def": 0
+}

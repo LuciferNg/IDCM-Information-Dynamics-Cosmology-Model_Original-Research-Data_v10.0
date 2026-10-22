@@ -1,0 +1,303 @@
+{
+ "rules": "o225-recon-v1",
+ "K_shape": [
+  120,
+  62
+ ],
+ "axis_ids": [
+  "V00",
+  "V01",
+  "V02",
+  "V03",
+  "V04",
+  "V05",
+  "V06",
+  "V07",
+  "V08",
+  "V09",
+  "V10",
+  "V11",
+  "F00",
+  "F01",
+  "F02",
+  "F03",
+  "F04",
+  "F05",
+  "F06",
+  "F07",
+  "F08",
+  "F09",
+  "F10",
+  "F11",
+  "F12",
+  "F13",
+  "F14",
+  "F15",
+  "F16",
+  "F17",
+  "F18",
+  "F19",
+  "E00",
+  "E01",
+  "E02",
+  "E03",
+  "E04",
+  "E05",
+  "E06",
+  "E07",
+  "E08",
+  "E09",
+  "E10",
+  "E11",
+  "E12",
+  "E13",
+  "E14",
+  "E15",
+  "E16",
+  "E17",
+  "E18",
+  "E19",
+  "E20",
+  "E21",
+  "E22",
+  "E23",
+  "E24",
+  "E25",
+  "E26",
+  "E27",
+  "E28",
+  "E29"
+ ],
+ "axis_types": [
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "vertex",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "face",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge",
+  "edge"
+ ],
+ "rowsum_distinct": [
+  -10,
+  10
+ ],
+ "rowsum_histogram": {
+  "-10": 60,
+  "10": 60
+ },
+ "indicator_rowsum_distinct": [
+  26,
+  36
+ ],
+ "row_pair_classes": {
+  "equal": 540,
+  "complementary": 600,
+  "neither": 6000
+ },
+ "rank_K_augmented_by_ones": 7,
+ "axis_type_subtables": {
+  "edge": {
+   "n_axes": 30,
+   "rowsum_distinct": [
+    -10,
+    10
+   ],
+   "delta": 20,
+   "m_min_pred": 10
+  },
+  "face": {
+   "n_axes": 20,
+   "rowsum_distinct": [
+    0
+   ],
+   "delta": 0,
+   "m_min_pred": 0
+  },
+  "vertex": {
+   "n_axes": 12,
+   "rowsum_distinct": [
+    0
+   ],
+   "delta": 0,
+   "m_min_pred": 0
+  }
+ },
+ "identity_index": 75,
+ "center_index": 0,
+ "theta_center_parity": {
+  "flip": 0,
+  "same": 120
+ },
+ "theta_stabilizer_order": 10,
+ "theta_stabilizer_contains_center": true,
+ "distinct_row_multiplicity": {
+  "n_distinct": 12,
+  "multiplicities": [
+   10
+  ]
+ },
+ "theta_stabilizer_orders": {
+  "1": 1,
+  "2": 1,
+  "5": 4,
+  "10": 4
+ },
+ "edge_block": {
+  "n_axes": 30,
+  "rowsum_distinct": [
+   -10,
+   10
+  ],
+  "plus_counts": [
+   10,
+   20
+  ]
+ },
+ "claims": [
+  {
+   "tag": "R1",
+   "name": "K value multiset = {+1: 3720, -1: 3720} (完全平衡)",
+   "ok": true,
+   "detail": "multiset = [(-1, 3720), (1, 3720)]"
+  },
+  {
+   "tag": "R2",
+   "name": "K 值集 size = 2",
+   "ok": true,
+   "detail": "values = [-1, 1]"
+  },
+  {
+   "tag": "R3",
+   "name": "62/62 欄（軸）之 sum_s K[s][a] = 0 且 +1 個數 = 60",
+   "ok": true,
+   "detail": "colsum distinct = [0] ; +1 count distinct = [60]"
+  },
+  {
+   "tag": "R4b",
+   "name": "★ 本 o 新量度：列和 R(s) = sum_a K[s,a] 恰為兩值 {+10, -10}，60/60 分裂",
+   "ok": true,
+   "detail": "distinct = [-10, 10] ; histogram = {'-10': 60, '10': 60} ; Delta = 20"
+  },
+  {
+   "tag": "R4",
+   "name": "120/120 列和 ≠ 1（O222 docs/43 §二(a)）",
+   "ok": true,
+   "detail": "row sums = [-10, 10]"
+  },
+  {
+   "tag": "R5",
+   "name": "「(1+K)/2 投影」之列和 = 26 / 36（= (62 -/+ 10)/2），120/120 ≠ 1",
+   "ok": true,
+   "detail": "distinct = [26, 36]"
+  },
+  {
+   "tag": "R6",
+   "name": "rank_Q(K) = 6（O222 docs/19 C5）",
+   "ok": true,
+   "detail": "rank_Q(K) = 6"
+  },
+  {
+   "tag": "R7",
+   "name": "相異 row = 12（O222 docs/19 C5）",
+   "ok": true,
+   "detail": "distinct rows = 12"
+  },
+  {
+   "tag": "R8",
+   "name": "row 對：equal 540 / complementary 600 / neither 6000（O222 docs/19 C5「6000/7140 非等非互補」）",
+   "ok": true,
+   "detail": "equal=540 complementary=600 neither=6000"
+  },
+  {
+   "tag": "R9",
+   "name": "rank[K | 1] = rank(K) ⟺ 全 1 向量 ∈ 行空間（複相位修復存在性之充要條件，R1 機器用）",
+   "ok": true,
+   "detail": "rank[K|1] = 7 ; rank(K) = 6 ⟹ 全 1 ∈ range(K) = False"
+  },
+  {
+   "tag": "R10",
+   "name": "中心元素 -1 之伴隨軸唔喺 62 軸集內",
+   "ok": true,
+   "detail": "no axis with h == center index 0 (資訊性，非判據)"
+  },
+  {
+   "tag": "R11",
+   "name": "★ theta 喺中心元素 -1 之左平移下不變（rot_ref 對 q 與 -q 同值 ⟹ 列 s 與列 -s 相同）",
+   "ok": true,
+   "detail": "flip = 0/120 ; same = 120"
+  },
+  {
+   "tag": "R14",
+   "name": "★ K 恰有 12 個相異 row，每款重數恰為 10（= 120/12 = |Stab(theta)|）",
+   "ok": true,
+   "detail": "distinct = 12 ; multiplicities = [10]"
+  },
+  {
+   "tag": "R15",
+   "name": "★ 每個 row 類 = Stab(theta)（階 10 子群）之一個左陪集",
+   "ok": true,
+   "detail": "coset test over all 12 row classes = True"
+  },
+  {
+   "tag": "R13",
+   "name": "★ Delta 完全由 30 條邊軸承載（vertex 12 + face 20 塊之列和恆 0）",
+   "ok": true,
+   "detail": "edge block row sums = [-10, 10] ; edge +1 count per row = [10, 20]"
+  }
+ ]
+}

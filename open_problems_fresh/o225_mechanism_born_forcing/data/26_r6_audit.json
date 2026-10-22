@@ -1,0 +1,93 @@
+{
+ "audit_of": [
+  "24_r6_mechanism.py",
+  "25_r6_geometry.py"
+ ],
+ "samples": [
+  0,
+  1,
+  3,
+  11,
+  42,
+  61,
+  88,
+  119
+ ],
+ "A": {
+  "clean_all_same": true,
+  "overrides_match": true,
+  "delta_match": true,
+  "eps_identity": true
+ },
+ "B": {
+  "non_tie": 6240,
+  "tie": 1200,
+  "deviations": []
+ },
+ "C": {
+  "type_pairs": {
+   "edge-edge": 15,
+   "edge-face": 30,
+   "edge-vertex": 30
+  },
+  "nonedge": {
+   "face-face": 0,
+   "face-vertex": 0,
+   "vertex-vertex": 0
+  }
+ },
+ "C2b": {
+  "signatures": [
+   [
+    "(('edge', 2), ('face', 2), ('vertex', 2))",
+    15
+   ]
+  ]
+ },
+ "D1": {
+  "vertex_ok": 6,
+  "face_ok": 10
+ },
+ "D2": {
+  "checked": 3,
+  "matched": 0
+ },
+ "claims": [
+  {
+   "tag": "B",
+   "name": "獨立碼路：7440 條目（non-tie 三變體同值；tie K = ε(s)、K_prod = γ、K_neg = −γ）",
+   "ok": true,
+   "detail": "non-tie = 6240 ; tie = 1200 ; 偏離 = []"
+  },
+  {
+   "tag": "A",
+   "name": "第二套讀事件實作：抽樣 8 態之 overrides（三變體）、clean 分解、Δ 與 24 之輸出逐值一致",
+   "ok": true,
+   "detail": "clean 全同 = True ; overrides 對 24 一致 = True ; Δ 一致 = True ; ε 恆等 = True ; 樣本 = {0: [65, 63, 44], 1: [69, 70, 50], 3: [68, 75, 50]}"
+  },
+  {
+   "tag": "C",
+   "name": "獨立正交圖：非邊軸兩兩非正交（三類皆 0）；edge–vertex = 30、edge–face = 30、edge–edge = P 對照 25",
+   "ok": true,
+   "detail": "型別對 = {'edge-edge': 15, 'edge-face': 30, 'edge-vertex': 30} ; 非邊三類 = {('face', 'face'): 0, ('face', 'vertex'): 0, ('vertex', 'vertex'): 0}"
+  },
+  {
+   "tag": "C2b",
+   "name": "獨立 edge 型別分解：15 條 edge 參考之型別簽名唯一，且 vertex = 2、f + e = 4",
+   "ok": true,
+   "detail": "簽名多重集 = [((('edge', 2), ('face', 2), ('vertex', 2)), 15)] ; 判 = True"
+  },
+  {
+   "tag": "D1",
+   "name": "獨立端點識別（entry 路線）：vertex 參考 → 5 條端點線 ×2；face 參考 → 3 條端點線 ×2",
+   "ok": true,
+   "detail": "vertex 全符 = 6/6 ; face 全符 = 10/10"
+  },
+  {
+   "tag": "D2",
+   "name": "獨立複現 C3 之 FAIL：鄰居五邊形邊之中點線集 ≠ tie 集（原預測被否證之獨立確認）",
+   "ok": true,
+   "detail": "檢查 = 3 ; 意外相符 = 0"
+  }
+ ]
+}

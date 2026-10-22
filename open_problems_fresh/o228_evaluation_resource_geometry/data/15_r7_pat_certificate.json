@@ -1,0 +1,748 @@
+{
+ "lemmas": {
+  "checked_subsets": 3000,
+  "odd_code_map": true,
+  "no_self_twin_class": true,
+  "class_size_multiset_twin_invariant": true,
+  "loss2_iff_two_uncovered_pairs": true
+ },
+ "certificates": {
+  "n_groups": 225,
+  "missing_separator": 135,
+  "restricted_packing": 30,
+  "fractional_packing": 0,
+  "unresolved": 60,
+  "min_packing_size": 8,
+  "min_fractional_value": null,
+  "per_group": [
+   {
+    "group": [
+     0,
+     134
+    ],
+    "type": "restricted_packing",
+    "size": 8,
+    "pairs": [
+     16,
+     22,
+     175,
+     259,
+     67,
+     174,
+     325,
+     73
+    ],
+    "disjoint_verified": true
+   },
+   {
+    "group": [
+     1,
+     109
+    ],
+    "type": "restricted_packing",
+    "size": 8,
+    "pairs": [
+     4,
+     15,
+     148,
+     325,
+     38,
+     50,
+     204,
+     248
+    ],
+    "disjoint_verified": true
+   },
+   {
+    "group": [
+     2,
+     83
+    ],
+    "type": "restricted_packing",
+    "size": 8,
+    "pairs": [
+     5,
+     14,
+     174,
+     313,
+     44,
+     186,
+     265,
+     36
+    ],
+    "disjoint_verified": true
+   },
+   {
+    "group": [
+     3,
+     56
+    ],
+    "type": "restricted_packing",
+    "size": 8,
+    "pairs": [
+     17,
+     23,
+     153,
+     280,
+     61,
+     74,
+     148,
+     313
+    ],
+    "disjoint_verified": true
+   },
+   {
+    "group": [
+     6,
+     413
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     7,
+     389
+    ],
+    "type": "missing_separator",
+    "witness_pair": 5,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     8,
+     424
+    ],
+    "type": "missing_separator",
+    "witness_pair": 22,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     9,
+     368
+    ],
+    "type": "missing_separator",
+    "witness_pair": 17,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     10,
+     379
+    ],
+    "type": "missing_separator",
+    "witness_pair": 16,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     11,
+     419
+    ],
+    "type": "missing_separator",
+    "witness_pair": 23,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     12,
+     406
+    ],
+    "type": "missing_separator",
+    "witness_pair": 15,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     13,
+     398
+    ],
+    "type": "missing_separator",
+    "witness_pair": 14,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     18,
+     224
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     19,
+     329
+    ],
+    "type": "missing_separator",
+    "witness_pair": 15,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     20,
+     314
+    ],
+    "type": "missing_separator",
+    "witness_pair": 14,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     21,
+     203
+    ],
+    "type": "missing_separator",
+    "witness_pair": 5,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     24,
+     356
+    ],
+    "type": "missing_separator",
+    "witness_pair": 13,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     25,
+     158
+    ],
+    "type": "missing_separator",
+    "witness_pair": 5,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     26,
+     181
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     27,
+     343
+    ],
+    "type": "missing_separator",
+    "witness_pair": 12,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     28,
+     28
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "requirement_ok": true,
+    "n_missing_pairs": 434
+   },
+   {
+    "group": [
+     29,
+     84
+    ],
+    "type": "restricted_packing",
+    "size": 8,
+    "pairs": [
+     40,
+     47,
+     248,
+     265,
+     4,
+     5,
+     259,
+     280
+    ],
+    "disjoint_verified": true
+   },
+   {
+    "group": [
+     30,
+     58
+    ],
+    "type": "restricted_packing",
+    "size": 8,
+    "pairs": [
+     49,
+     186,
+     204,
+     35,
+     14,
+     15,
+     153,
+     175
+    ],
+    "disjoint_verified": true
+   },
+   {
+    "group": [
+     31,
+     31
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "requirement_ok": true,
+    "n_missing_pairs": 434
+   },
+   {
+    "group": [
+     32,
+     131
+    ],
+    "type": "missing_separator",
+    "witness_pair": 43,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     33,
+     132
+    ],
+    "type": "missing_separator",
+    "witness_pair": 50,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     34,
+     127
+    ],
+    "type": "missing_separator",
+    "witness_pair": 40,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     37,
+     122
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     39,
+     128
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     41,
+     125
+    ],
+    "type": "missing_separator",
+    "witness_pair": 35,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     42,
+     133
+    ],
+    "type": "missing_separator",
+    "witness_pair": 33,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     43,
+     130
+    ],
+    "type": "missing_separator",
+    "witness_pair": 44,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     45,
+     116
+    ],
+    "type": "missing_separator",
+    "witness_pair": 33,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     46,
+     113
+    ],
+    "type": "missing_separator",
+    "witness_pair": 47,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     48,
+     118
+    ],
+    "type": "missing_separator",
+    "witness_pair": 49,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     51,
+     114
+    ],
+    "type": "missing_separator",
+    "witness_pair": 32,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     52,
+     121
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     53,
+     110
+    ],
+    "type": "missing_separator",
+    "witness_pair": 36,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     54,
+     111
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     55,
+     120
+    ],
+    "type": "missing_separator",
+    "witness_pair": 38,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     57,
+     57
+    ],
+    "type": "missing_separator",
+    "witness_pair": 0,
+    "requirement_ok": true,
+    "n_missing_pairs": 434
+   },
+   {
+    "group": [
+     60,
+     107
+    ],
+    "type": "missing_separator",
+    "witness_pair": 70,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     62,
+     99
+    ],
+    "type": "missing_separator",
+    "witness_pair": 63,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     63,
+     104
+    ],
+    "type": "missing_separator",
+    "witness_pair": 65,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     64,
+     97
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     65,
+     98
+    ],
+    "type": "missing_separator",
+    "witness_pair": 67,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     66,
+     103
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     68,
+     100
+    ],
+    "type": "missing_separator",
+    "witness_pair": 61,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     69,
+     108
+    ],
+    "type": "missing_separator",
+    "witness_pair": 59,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     71,
+     90
+    ],
+    "type": "missing_separator",
+    "witness_pair": 74,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     72,
+     91
+    ],
+    "type": "missing_separator",
+    "witness_pair": 73,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     75,
+     93
+    ],
+    "type": "missing_separator",
+    "witness_pair": 72,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     76,
+     87
+    ],
+    "type": "missing_separator",
+    "witness_pair": 71,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   },
+   {
+    "group": [
+     77,
+     92
+    ],
+    "type": "missing_separator",
+    "witness_pair": 71,
+    "requirement_ok": true,
+    "n_missing_pairs": 10
+   },
+   {
+    "group": [
+     78,
+     89
+    ],
+    "type": "missing_separator",
+    "witness_pair": 73,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     79,
+     96
+    ],
+    "type": "missing_separator",
+    "witness_pair": 81,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     80,
+     85
+    ],
+    "type": "missing_separator",
+    "witness_pair": 82,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     135,
+     429
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     136,
+     410
+    ],
+    "type": "missing_separator",
+    "witness_pair": 148,
+    "requirement_ok": true,
+    "n_missing_pairs": 4
+   },
+   {
+    "group": [
+     137,
+     386
+    ],
+    "type": "missing_separator",
+    "witness_pair": 4,
+    "requirement_ok": true,
+    "n_missing_pairs": 18
+   }
+  ],
+  "unresolved_detail": [
+   {
+    "group": [
+     4,
+     431
+    ],
+    "packing": 3,
+    "lp": "5",
+    "why": "no certificate of any of the three types"
+   },
+   {
+    "group": [
+     5,
+     433
+    ],
+    "packing": 3,
+    "lp": "5",
+    "why": "no certificate of any of the three types"
+   },
+   {
+    "group": [
+     14,
+     434
+    ],
+    "packing": 3,
+    "lp": "5",
+    "why": "no certificate of any of the three types"
+   },
+   {
+    "group": [
+     15,
+     428
+    ],
+    "packing": 3,
+    "lp": "5",
+    "why": "no certificate of any of the three types"
+   },
+   {
+    "group": [
+     16,
+     263
+    ],
+    "packing": 4,
+    "lp": "6",
+    "why": "no certificate of any of the three types"
+   }
+  ]
+ },
+ "claims": [
+  {
+   "tag": "P1L-1",
+   "name": "ODD CODE MAP + TWIN PARITY (verified on 3000 random 6-subsets, and proved structurally): code(-r) = complement(code(r)); no class contains an antipodal pair; class sizes pair up into twins of equal size. CONSEQUENCE: loss = m - pat = 2 happens IFF the uncovered pairs are exactly two twin pairs, i.e. |U| = 2",
+   "ok": true,
+   "detail": "{'checked_subsets': 3000, 'odd_code_map': True, 'no_self_twin_class': True, 'class_size_multiset_twin_invariant': True, 'loss2_iff_two_uncovered_pairs': True}"
+  },
+  {
+   "tag": "P1C-1",
+   "name": "NO GROUP ADMITS A 6-COLUMN COVER, each refuted by a SHORT independently re-verified certificate: (a) a witness pair with no separator among the 50 allowed columns, or (b) a restricted packing of pairwise disjoint separator sets of size >= 7 (so 6 columns cannot cover them), or (c) a FRACTIONAL packing (exact rational LP, still restricted to the 50 allowed columns) of total weight >= 7, which by weak duality lower-bounds any integral cover by 7. Hence no 6-subset leaves exactly one twin pair unseparated, i.e. loss != 2, i.e. pat != 28",
+   "ok": false,
+   "detail": "135 + 30 + 0 = 165 groups, unresolved = 60, min packing = 8, min fractional weight = None"
+  },
+  {
+   "tag": "P1C-2",
+   "name": "POINT VALUE: pat <= 28 (R5, from F_6 = 0 plus evenness) and pat = 26 is constructed (R5, best sampled value 26); the certificates above exclude 28, so max pat(k=6, M_edge) = 26 EXACTLY -- the interval [26,28] is closed",
+   "ok": false,
+   "detail": "R5 best = 26 ; excluded 28 by 165 certificates"
+  },
+  {
+   "tag": "P1C0-1-c",
+   "name": "REFUTATION OF MY OWN PRECEDING CONSTRUCTION (recorded, scripts/14): the \"collapse lemma\" -- that the two columns u and -u of a line induce the same partition and can be identified -- is FALSE. On a tie row tau gives BOTH u and -u the same value, so -u is not the sign negation of u; the script 14 verification FAILED (partner_defined = False, 60 distinct pair masks out of 62) and its enumeration degenerated to C(62,6), so it was killed. The certificate route above needs no such collapse",
+   "ok": true,
+   "detail": "scripts/14 log P1C0-1 FAIL is kept as the record"
+  }
+ ],
+ "elapsed_s": 51.122905254364014
+}

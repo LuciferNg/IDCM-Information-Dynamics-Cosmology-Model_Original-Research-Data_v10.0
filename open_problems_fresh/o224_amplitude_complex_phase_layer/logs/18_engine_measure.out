@@ -1,0 +1,7 @@
+E4 build: 2.5 s, |E4|max = 120
+M1 numpy per-group path (scripts/16): 18 groups in 0.3 s -> 14.3 ms/group/(core) over 66 window evaluations
+M2 Numba JIT (scripts/18, bmax = 62, 12 threads): per group 1.280 ms ; full 3844-pair estimate 315.2 min  [wall 63.2 s incl. E4 rebuild]
+M3 CuPy GPU (scripts/17), chunk B=64: median 185.8 ms/chunk -> 2.903 ms/group -> full 62^8 estimate 11.9 h (single stream)
+M3 CuPy GPU (scripts/17), chunk B=128: median 363.7 ms/chunk -> 2.842 ms/group -> full 62^8 estimate 11.7 h (single stream)
+GPU VRAM: 2.51 GB free of 3.22 GB total
+MEASUREMENT COMPLETE (no project data written)

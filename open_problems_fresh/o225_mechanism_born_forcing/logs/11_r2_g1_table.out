@@ -1,0 +1,27 @@
+==============================================================================================================
+O225 scripts/11 -- R2A: G1 full semantics table (r2-g1-dyn-v1)
+==============================================================================================================
+[PASS] P1   校準閘：本 o replay 與 I7 replay_protocol 逐 pair 0 mismatch（misses/top/ledger_len）  --  pairs = 3844 ; mismatches = 0
+[PASS] P1b  MUL 與 a2.build_group 之 MUL2 逐項相同（狀態索引與四元數索引一致）  --  MUL == MUL2 : True
+[PASS] P2   hits ≡ 124 = 2N 對全部 120 個 s0 恆定  --  distinct hits = [124]
+[PASS] P3   overrides(s0) ∈ [52, 80]，恰 26 個相異值  --  range = [52, 80] ; distinct = 26
+[PASS] P4   校準 s0 = 0 → overrides = 65  --  s0=0 : hits=124 overrides=65 stale=124 agree=0
+[FAIL] P5pre 【預註冊形式已被偽證，保留】overrides = stale = hits − agree（120/120）  --  首跑 FAIL（s0=0: overrides=65 vs stale=124）⟹ stale 只量「狀態已前進」，override 量「值翻轉」
+[PASS] P5a  修正恆等式① hits = agree + stale_agree + overrides（120/120）  --  s0=0: 124 = 0 + 59 + 65
+[PASS] P5b  修正恆等式② stale = stale_agree + overrides（120/120）  --  stale_agree := 「狀態已前進但值仍相同」之命中數
+[PASS] P6   #ctx = 62、#distinct (s,ctx) = 4728、#visited = 120（全部 s0 相同）  --  ctxs=[62] pairs=[4728] visited=[120]
+[FAIL] P7   上游記錄「58 出現 28/30、10 個態給 65」不可重現；預註冊預期 58x1、65x3、68x10  --  ov_hist = {52: 2, 54: 2, 56: 4, 57: 2, 58: 2, 59: 2, 60: 4, 61: 2, 62: 6, 63: 6, 64: 10, 65: 6, 66: 8, 67: 4, 68: 18, 69: 6, 70: 2, 71: 2, 72: 12, 73: 2, 74: 4, 75: 4, 76: 2, 77: 2, 79: 2, 80: 4}
+[PASS] P7b  ★ 全部 override 重數皆為偶數（中心對 {s,-s} 同值之必要後果）  --  multiplicities = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 8, 10, 12, 18]
+  [INFO] P1_Krow          blocks =  12  constant = False  max internal range = 25
+  [INFO] P2_conj          blocks =   9  constant = False  max internal range = 28
+  [INFO] P3_order         blocks =   6  constant = False  max internal range = 28
+  [INFO] P4_centre_pair   blocks =  60  constant = True   max internal range = 0
+  [INFO] P5_d5_signature  blocks =   1  constant = False  max internal range = 28
+[PASS] P8a  共軛分拆（階 ＋ Re 類函數）之塊大小 = [1,1,12,12,12,12,20,20,30]（驗證 P2 確為共軛分拆）  --  block sizes = [1, 1, 12, 12, 12, 12, 20, 20, 30]
+[PASS] P8b  P4 中心對分拆（鍵 = min(s, -s)）之塊數 = 60，每塊恰 2 態 {s, -s}  --  blocks = 60 ; sizes = [2]
+[PASS] P8d  ★ 中心不變律：overrides(s) = overrides(-s) 對全部 120 態  --  centre-invariant = True
+[PASS] P8e  ★ 26 個相異 override 值分布於 60 個中心類；#distinct profiles = 26 ⟹ (stale, agree) 由 overrides 決定  --  distinct overrides = 26 ; centre classes = 60 ; agree determined by overrides = True
+[PASS] P8c  ★ 分拆恆定性判定：報最細恆定分拆 ＋ 由全 profile 決定之相異類數  --  constant partitions (coarse->fine) = ['P4_centre_pair'] ; #distinct profiles = 26 ; finest = P4_centre_pair
+==============================================================================================================
+RESULT: 14/16 PASS
+==============================================================================================================

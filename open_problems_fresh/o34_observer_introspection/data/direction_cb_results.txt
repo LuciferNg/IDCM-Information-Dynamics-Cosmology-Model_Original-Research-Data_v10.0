@@ -1,0 +1,9 @@
+O34 — Direction C+B: Mass Ratios + Generation Ladder
+===================================================================
+m_u/m_d = 0.462527, sin(1π/88)/sin(2π/88) = 0.500319, dev 8.1708%
+k(e→μ) = 11.079514 ≈ 11 = L₅ (dev 0.7177%)
+k(μ→τ) = 5.865265 ≈ 6 = C(4,2) (dev 2.2972%)
+k(e→τ) = 16.944779 ≈ 17 = L₅+C(4,2) (dev 0.3259%)
+m_μ = m_e×φ^11 = 101.6916 vs 105.6580 (dev 3.7540%)
+m_τ = m_μ×φ^6 = 1895.9559 vs 1776.9300 (dev 6.6984%)
+Status: 🟡 generation ladder candidates, need precise closure

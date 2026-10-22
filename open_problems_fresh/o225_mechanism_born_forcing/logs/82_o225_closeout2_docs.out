@@ -1,0 +1,10 @@
+[PASS] D1   狀態行三檔同步（SESSION_START／01_problem_record／final_result 同記 R1–R23）  --  三檔 = {'SESSION_START.md': 'R1–R23', '01_problem_record.md': 'R1–R23', 'final_result.md': 'R1–R23'}
+[PASS] D2   markdown 圍欄平衡（docs 全部 + 三檔 root + README）  --  不平衡 = []
+[PASS] D3   U+FFFD 損壞字元 = 0  --  含壞字 = []
+[PASS] D4   未閉合項掃描（三級）：① 已帶書面判定 ② 3-gram 對映 docs/49 清冊 ③ 依 §六-c 接手表收口；未覆蓋必須 = 0  --  殘餘 20 行；① 已帶書面判定 = 12；② 3-gram 對映清冊 = 6；③ 依 §六-c 接手表收口 = 2；未覆蓋 = []
+[PASS] D5   輪次覆蓋 R1–R23：每輪有（docs 合約＋結果）∧（scripts 三件套）∧（problem_record 專節）  --  缺 = []
+[PASS] D6   docs↔data 數字錨：R13–R23 之（閘／機器／審計）N/M 皆在結果檔原文且與 JSON 一致  --  不匹配 = []
+[PASS] D7   problem_record 之 registry metadata 塊完整（10 欄）  --  缺 = []
+[PASS] D8   時序索引無重複行號；problem_record 無重複章節標題  --  重複行 = []；重複節 = []
+==============================================================================================================
+RESULT: 8/8 PASS  |  O225 close-out 第二輪 文檔層審計

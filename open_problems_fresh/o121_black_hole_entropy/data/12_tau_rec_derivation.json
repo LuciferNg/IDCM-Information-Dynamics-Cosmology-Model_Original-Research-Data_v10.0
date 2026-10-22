@@ -1,0 +1,74 @@
+{
+  "problem": "O121/G8 — T_pipe† 返池時標 τ_rec 結構推導",
+  "constants": {
+    "N_d": 44,
+    "mu2": 2,
+    "MIS_bits": 20,
+    "dim_ker": 17,
+    "E_sync": 61.5,
+    "Omega90": 90.0,
+    "omega_ring": 72.59,
+    "T_ring_yr": 84636541276.58397,
+    "eta_phi21": 4.0856349008447376e-05
+  },
+  "primary_route": {
+    "name": "Poincaré 構型復現",
+    "formula": "tau_rec = 2**MIS_bits * T_ring",
+    "premises": [
+      "BH 凍結阻挫扇區一特定構型 (本 O docs/07)",
+      "構型空間 = 2^20 (O7 MIS=20)",
+      "每 T_ring 全扇區重排 (O175 docs/01: 88.7 bits ≥ 20 bits)"
+    ],
+    "tau_pred_yr": 8.874784590563531e+16,
+    "tau_ref_yr": 7.124681933842239e+16,
+    "ratio": 1.2456394086040956,
+    "dev": 0.2456394086040956
+  },
+  "alt_routes": {
+    "R1a 相位滑移對偶 (dim_ker/44 · 2^20 · T_ring)": {
+      "yr": 3.4288940463540916e+16,
+      "dev": -0.5187302284938722
+    },
+    "R1b 純構型復現 (2^20 · T_ring)": {
+      "yr": 8.874784590563531e+16,
+      "dev": 0.2456394086040956
+    },
+    "R2a η 階梯 (T_ring/η)": {
+      "yr": 2071563987743611.0,
+      "dev": -0.9709241197434557
+    },
+    "R2b η 階梯 ×N_d (N_d·T_ring/η)": {
+      "yr": 9.114881546071888e+16,
+      "dev": 0.2793387312879472
+    },
+    "R2c η 階梯 ×dim_ker": {
+      "yr": 3.5216587791641384e+16,
+      "dev": -0.5057100356387477
+    },
+    "R3  主通道反推 (M_BH/R_rel)": {
+      "yr": 873588219038874.8,
+      "dev": -0.9877385653542043
+    }
+  },
+  "hard_tests": {
+    "T1_zero_param": "PASS (只依賴 T_ring + O7 整數 20)",
+    "T2_deviation": "+24.56%",
+    "T3_falsifiable": {
+      "f_return": 0.8028005481302433,
+      "tau_rec_over_tau_p": 3.0697975062481947e-22,
+      "dM_over_M_per_age": 1.5549673188319862e-07
+    },
+    "T4_rigidity": {
+      "dlnTau_dlnTring": 1.0,
+      "dlnTau_dlnrho_BH": 0.0,
+      "dlnTau_dlnLUHECR": 0.0
+    }
+  },
+  "null_test": {
+    "continuous_b": 19.683113506846194,
+    "integer_hits_within_25pct": [
+      20
+    ]
+  },
+  "verdict": "結構推導得候選; dev +24.56% ⟹ 🟡 (未達閉合; 非 🔴 未推導)"
+}

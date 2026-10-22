@@ -1,0 +1,137 @@
+==============================================================================
+O171 scripts/40 -- 第十輪獨立核對 (唔 import 38/39; 唔用 sympy)
+==============================================================================
+
+=== A: Table 2 逐欄獨立重算 (Fraction) ===
+  c1: r* = 144.46+-0.48  r_d = 147.21+-0.48  ratio = 0.98131920
+  c2: r* = 144.95+-0.48  r_d = 147.59+-0.49  ratio = 0.98211261
+  c3: r* = 144.29+-0.64  r_d = 146.46+-0.70  ratio = 0.98518367
+  c4: r* = 144.39+-0.30  r_d = 147.05+-0.30  ratio = 0.98191091
+  c5: r* = 144.43+-0.26  r_d = 147.09+-0.26  ratio = 0.98191583
+  c6: r* = 144.57+-0.22  r_d = 147.21+-0.23  ratio = 0.98206644
+  [PASS] A1 ★ col5 ratio = 0.98191583... (Fraction 精確) (0.9819158338)
+  [PASS] A2 ★ col1 ratio = 0.98131920... (0.9813192039)
+  [PASS] A3 ★ 144.46 只在 col1 (r*); col5 之 r* = 144.43 
+  [PASS] A4 ★★ (col1 r* / col5 r_d) = 0.98211979 = o167 用值 => 混欄確證 (0.98211979)
+  o167 用值 0.98211979 同各欄自身一致 ratio 之距離:
+    c1: 0.00080059
+    c2: 0.00000718
+    c3: 0.00306388
+    c4: 0.00020888
+    c5: 0.00020396
+    c6: 0.00005335
+  ★ 最近者 = c2 (距離 7.18e-06 = 0.00073%)
+  [PASS] A5 ★ 冇任何一欄之 ratio 精確等於 o167 用值 (最近 c2 仍差 7e-6) (最近 c2, 差 7.18e-06)
+
+=== B: 分派律代數定理 (純數值, 唔用 sympy) ===
+  定理: z_dev = z_det * (R - 1),  其中
+        R = d*(1 - O/B),  z_det = (B/d)/sigma,  z_dev = (B(d-1)/d - O)/sigma
+  200 組隨機代入之最大殘差 = 5.47382e-47
+  [PASS] B1 ★ z_dev = z_det*(R-1) 對 200 組隨機數值精確成立 (< 1e-40) (max resid = 5.47382e-47)
+
+  實例 420/421 x r_d: R = 0.995154  z_det = 1.3470  z_dev = -0.0065
+  [PASS] B2 ★ 實例 (421 x r_d) 之 z_dev = z_det*(R-1) 到 1e-12 
+
+=== C: sigma_stat(r*/r_d) 之獨立估算 ===
+  C1 欄間散佈 (排除 c3 EE, n=5): mean = 0.98186500  sd = 0.03180%
+  C2 naive 獨立傳播 = 0.25229%
+  C3 CAMB 7 點網格 (Omega_b h^2):
+      obh2 = 0.02192  ratio = 0.980899760
+      obh2 = 0.02207  ratio = 0.981243422
+      obh2 = 0.02222  ratio = 0.981583475
+      obh2 = 0.02237  ratio = 0.981920483
+      obh2 = 0.02252  ratio = 0.982254503
+      obh2 = 0.02267  ratio = 0.982585695
+      obh2 = 0.02282  ratio = 0.982913361
+      相對斜率 = 2.2784 /unit  =>  sigma_CAMB = 0.03418%
+  C4 rho(r_d, r*): 由 CAMB sigma 反解 = 0.98181; 由欄間散佈反解 = 0.98428
+  [PASS] C1 ★ 欄間散佈 < 0.05% (0.03180%)
+  [PASS] C2 ★ CAMB 網格 sigma < 0.05% (0.03418%)
+  [PASS] C3 ★★ CAMB 網格 sigma 同欄間散佈差 < 25% (0.03418% vs 0.03180%)
+  [PASS] C4 ★★ rho(r_d, r*) > 0.95 (兩條獨立路徑) (0.9818, 0.9843)
+  [PASS] C5 ★★ sigma_naive / sigma_stat > 7 (兩條獨立路徑) (7.38x, 7.93x)
+
+=== D: ★★ sigma_lik — 已發表 likelihood 系統差 (Planck Table 1) ===
+  出處: Planck 2018 VI Table 1 (base-LCDM, TT,TE,EE+lowE+lensing)
+        https://www.aanda.org/articles/aa/full_html/2020/09/aa33910-18/T1.html
+  原文註: 'A total systematic uncertainty of around 0.5 sigma may be more
+           realistic, and values should not be overinterpreted beyond this level.'
+  Table 1 兩組獨立 likelihood: Plik 同 CamSpec
+
+               CAMB r_d     報告 r_d     CAMB r*   CAMB ratio
+   Plik        147.0935     147.09    144.4341  0.981920483
+   CamSpec     147.2617     147.26    144.5725  0.981738481
+
+  ★ r_d   之 Plik-vs-CamSpec 差 = 0.11558% = 0.654 x sigma_stat(r_d)
+  ★ r*/r_d 之 Plik-vs-CamSpec 差 = 0.01854% = 0.583 x sigma_stat(r*/r_d)
+  ★ CAMB 重現兩組之報告 r_d: Plik 差 +0.0024%, CamSpec 差 +0.0012%
+
+  ★ sigma_tot(r*/r_d) = sqrt(sigma_stat^2 + sigma_lik^2)
+      = sqrt(0.03180%^2 + 0.01854%^2) = 0.03681%
+  [PASS] D1 ★★ CAMB 重現 Plik 之 r_d 到 < 0.01% (+0.0024%)
+  [PASS] D2 ★★ CAMB 重現 CamSpec 之 r_d 到 < 0.01% (+0.0012%)
+  [PASS] D3 ★★ r*/r_d 之 likelihood 系統差 (0.0185%) 係 r_d 之 (0.116%) 之 1/6 以下 (0.01854% vs 0.11558%)
+  [PASS] D4 ★★ likelihood 系統差 / 統計誤差 = 0.4~0.8 (同 Planck '~0.5sigma' 一致) (0.583x)
+  [PASS] D5 ★★ r_d 之 likelihood 系統差 / 統計誤差 = 0.4~0.9 (0.654x)
+
+=== E: 檢定量重算 (用 sigma_tot) ===
+  obs = 0.98191583
+  sigma_stat = 0.03180%   sigma_lik = 0.01854%   sigma_tot = 0.03681%
+     55/56: 0.98214286  dev =  +0.02312%  z(stat) = +0.7271  z(tot) = +0.6282sigma
+     54/55: 0.98181818  dev =  -0.00995%  z(stat) = -0.3127  z(tot) = -0.2702sigma
+     60/61: 0.98360656  dev =  +0.17219%  z(stat) = +5.4148  z(tot) = +4.6781sigma
+     48/49: 0.97959184  dev =  -0.23668%  z(stat) = -7.4430  z(tot) = -6.4303sigma
+     56/57: 0.98245614  dev =  +0.05503%  z(stat) = +1.7304  z(tot) = +1.4950sigma
+     49/50: 0.98000000  dev =  -0.19511%  z(stat) = -6.1358  z(tot) = -5.3010sigma
+
+  1sigma 窗 (sigma_tot) = [0.98155442, 0.98227725]  => ['55/56', '54/55']
+  z_det(55/56): sigma_stat => 56.16sigma;  sigma_tot => 48.52sigma
+  55/56 vs 54/55 值差 = 0.03307%  = 1.0398sigma(stat)  = 0.8984sigma(tot)
+  3sigma 分辨需 sigma 改善 = 3.34x (用 sigma_tot)
+
+  -- 420/421 x r_d --
+    sigma_stat(r_d) = 0.17676%   sigma_lik = 0.11558%   sigma_tot = 0.21119%
+    z_dev: 用 sigma_stat = -0.0065sigma;  用 sigma_tot = -0.0055sigma
+    z_det(420/421) 用 sigma_tot = 1.1247sigma
+  [PASS] E1 ★ 55/56 之 z_dev(tot) < 1sigma (+0.6282sigma)
+  [PASS] E2 ★ 54/55 之 z_dev(tot) < 1sigma (-0.2702sigma)
+  [PASS] E3 ★★ 窗內 (sigma_tot) 只有 2 個候選 = {54/55, 55/56} (['55/56', '54/55'])
+  [PASS] E4 ★ 60/61 被排除 (|z_tot| > 4) (+4.6781sigma)
+  [PASS] E5 ★ 48/49 被排除 (|z_tot| > 5) (-6.4303sigma)
+  [PASS] E6 ★ 56/57 被排除 (|z_tot| > 1) (+1.4950sigma)
+  [PASS] E7 ★★ z_det(55/56) 用 sigma_tot > 40sigma (48.52sigma)
+  [PASS] E8 ★★ 3sigma 分辨需求 < 4x (3.34x)
+  [PASS] E9 ★ 55/56 同 54/55 差距 < 1sigma(tot) => 兩者統計上不可分 (0.8984sigma)
+  [PASS] E10 ★★ 420/421 x r_d 之 z_det 用 sigma_tot 仍 >= 1sigma (家族唯一存活) (1.1247sigma)
+
+  -- r* 通道 (base = piR/88, 單成員鏈) --
+     55/56: 144.805683  z_dev =  +1.4449sigma
+     54/55: 144.757813  z_dev =  +1.2608sigma
+     44/45: 144.162102  z_dev =  -1.0304sigma
+     33/34: 143.102086  z_dev =  -5.1074sigma
+  [PASS] E11 ★★ 44/45 x r* (替代鏈) = -1.030sigma => 邊緣 (只差 0.030sigma 通過) (-1.0304sigma)
+
+=== F: 與 scripts/38/39 已記錄值比對 ===
+  scripts/38 d_req(更正後)    = None
+  scripts/39 col5 ratio       = 0.98191583
+  scripts/39 sigma (MC-B)     = 0.03209%
+  scripts/39 z_det(55/56)     = 55.643sigma
+  scripts/39 3sigma 改善需求  = 2.91x
+  [PASS] F1 ★ scripts/39 col5 ratio 同本節獨立值一致 (< 1e-7) (0.98191583 vs 0.98191583)
+  [PASS] F2 ★★ scripts/39 sigma(MC-B) 同本節 sigma_stat 差 < 15% (0.03209% vs 0.03180%)
+  [PASS] F3 ★★ scripts/39 z_det(用 sigma_stat) 同本節一致到 < 10% (55.643 vs 56.16)
+
+=== G: 整體一致性 ===
+  sigma_stat(r*/r_d) 三條獨立路徑:
+    scripts/39 線性響應  = 0.03403%
+    scripts/39 CAMB MC   = 0.03209%
+    本節 CAMB 網格       = 0.03418%
+    本節 欄間散佈        = 0.03180%
+  [PASS] G1 ★★ 四條路徑之 sigma_stat 全部落在 [0.030%, 0.036%] 
+  [PASS] G2 ★★ sigma 更正 (7-8x) 為本輪最穩健之發現 (四法一致) (線性 7.41x / MC 7.86x / 散佈 7.93x / 網格 7.83x)
+  [PASS] G3 ★★ likelihood 系統差 (0.0185%) 由 Planck 官方 Table 1 兩組 likelihood 導出 (0.01854%)
+  [PASS] G4 ★ 混欄確證 (A4) + CAMB 驗證 (39 C3) + likelihood 系統差 (D) 三軸互相獨立 
+
+==============================================================================
+RESULT: 35/35 PASS
+==============================================================================

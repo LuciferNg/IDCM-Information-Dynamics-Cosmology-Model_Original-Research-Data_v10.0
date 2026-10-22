@@ -1,0 +1,77 @@
+{
+ "rules_version": "g4-contract-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "frozen upstream impls match their freeze records (B5 / B3R2 / D6)",
+   "ok": true,
+   "detail": "B3R2=14e17e7cdff2 ; B5=f2cb54fa5df0 ; D6=a681ae8cf6bc"
+  },
+  {
+   "tag": "C2",
+   "name": "frozen objects rebuilt verbatim: |2I| = 120, 62 axes, h-table bijective",
+   "ok": true,
+   "detail": "types = ['edge', 'face', 'vertex']"
+  },
+  {
+   "tag": "C3",
+   "name": "contract declares the six cells and the three theorems",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C4",
+   "name": "register: O222/G4 registered with its six pre-numbered sub-questions before any number",
+   "ok": true,
+   "detail": "sub-questions registered = True"
+  },
+  {
+   "tag": "C5",
+   "name": "upstream gates healthy: D6 gate OPEN, B3R2 14/14, A2 20/20, docs/13 present",
+   "ok": true,
+   "detail": "D6 gate = OPEN"
+  },
+  {
+   "tag": "C6",
+   "name": "budget constants come from the frozen machine (per-read cost 123/88, E_min 123/176, budget 123/2)",
+   "ok": true,
+   "detail": "PER_READ=123/88 E_MIN=123/176"
+  },
+  {
+   "tag": "C7",
+   "name": "contract and implementation carry the SAME cost-law expression",
+   "ok": true,
+   "detail": "doc expression present = True"
+  },
+  {
+   "tag": "C8",
+   "name": "contract and implementation agree on the edge count 3782 = 62*61 (loop-free)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C9",
+   "name": "impl AST gate: no trig / no float literal / no numpy-scipy-math / no random",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "tag": "C10",
+   "name": "cell parity (both directions): the impl computes exactly the six registered cells",
+   "ok": true,
+   "detail": "impl cells = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6']"
+  },
+  {
+   "tag": "C11",
+   "name": "frozen semantics are IMPORTED, not re-implemented (no local machine/statistic defs)",
+   "ok": true,
+   "detail": "local defs = ['load', 'fact', 'law', 'hierholzer', 'trail_ok', 'eulerian_clock', 'main', 'arborescences', 'brute_ec', 'fairness', 'rec', 'dfs']"
+  },
+  {
+   "tag": "C12",
+   "name": "impl takes its budget and its objects from the frozen modules (123/2, load_a2, load_machine)",
+   "ok": true,
+   "detail": "budget literal + loaders referenced"
+  }
+ ]
+}

@@ -1,0 +1,1196 @@
+                                              MNRAS 000, 1–14 (2023)                                                Preprint 4 January 2024                                            Compiled using MNRAS LATEX style file v3.0
+
+
+
+
+                                              The rotation curve and mass distribution of M31
+                                              Xiangwei Zhang,1★ Bingqiu Chen,2 † Pinjian Chen,1 Jiarui Sun,1 and Zhĳia Tian1
+                                              1 Department of Astronomy, Yunnan University, Kunming, 650500, P. R. China
+                                              2 South-Western Institute for Astronomy Research, Yunnan University, Kunming, 650500, P. R. China
+
+
+
+
+                                              Accepted XXX. Received YYY; in original form ZZZ
+arXiv:2401.01517v1 [astro-ph.GA] 3 Jan 2024
+
+
+
+
+                                              ABSTRACT
+                                              To gain a better understanding of the Andromeda galaxy M31 and its role in the Local Group, measuring its mass precisely
+                                              is essential. In this work, we have constructed the rotation curve of M31 out to ∼125 kpc using 13,679 M31 objects obtained
+                                              from various sources, including the LAMOST data release 9 (LAMOST DR9), the DESI survey, and relevant literature. We
+                                              divide all objects in our sample into bulge, disk and halo components. For the sources in the M31 disk, we have measured their
+                                              circular velocities by a kinematic model with asymmetric drift corrections. For the bulge and halo objects, we calculate their
+                                              velocity dispersions and use the spherical and projected Jeans equation to obtain the circular velocities. Our findings indicate a
+                                              nearly isotropic nature for the M31 bulge, while the halo exhibits tangential anisotropy. The results show that the rotation curve
+                                              remains constant at ∼220 km s−1 up to radius ∼25 kpc and gradually decreases to ∼170 km s−1 further out. Based on the newly
+                                              determined rotation curve, we have constructed a mass distribution model for M31. Our measurement of the M31 virial mass is
+                                              𝑀vir = 1.14+0.51
+                                                           −0.35
+                                                                 × 1012 𝑀⊙ within 𝑟 vir = 220 ± 25 kpc.
+                                              Key words: galaxies: fundamental parameters (mass) – galaxies: individual: M31 – galaxies: kinematics and dynamics
+
+
+
+                                              1 INTRODUCTION                                                                                           2.00       This work
+                                                                                                                                                                  Chemin et al. (2009)
+                                              Out of the billions of galaxies in the observable universe, only a few                                   1.75       Tamm et al. (2012)
+                                                                                                                                                                  Sofue. (2015)
+                                                                                                                            Cumulative Mass (1012M )
+
+
+
+
+                                              galaxies in the Local Group can be resolved into individual objects                                                 Kafle et al. (2018)
+                                              and studied in full phase space such as the positions, velocities and                                    1.50       Galleti et al. (2006)
+                                                                                                                                                                  Lee et al. (2008)
+                                                                                                                                                                  Veljanoski et al. (2014)
+                                              element abundances. The Andromeda galaxy M31, being the nearest                                          1.25       Watkins et al. (2010)
+                                              spiral dynamical system to us and the only large spiral galaxy that                                                 Ibata et al. (2004)
+                                              can be studied in full and detail, serves as an ideal astrophysical                                      1.00       Dey et al. (2022)
+                                              laboratory for exploring the formation and evolution of galaxies.
+                                                 Mass is a fundamental property of a galaxy. An accurate mea-                                          0.75
+                                              surement of the mass of M31 is crucial for understanding its matter                                      0.50
+                                              distribution, formation and evolution history, and the role played in
+                                              the Local Group. So far, there are a number of efforts devoted to                                        0.25
+                                              the determination of the dynamical mass of M31, with a variety of
+                                              tracers such as emission-line objects (e.g. Rubin & Ford 1970; Kafle                                     0.00
+                                                                                                                                                              0           50           100      150      200      250     300
+                                                                                                                                                                                             R (kpc)
+                                              et al. 2018), globular clusters (e.g. Galleti et al. 2006; Lee et al.
+                                              2008; Veljanoski et al. 2014), tidal stellar streams (e.g. Ibata et al.
+                                              2004; Fardal et al. 2013; Dey et al. 2023) and satellite galaxies (e.g.
+                                              Côté et al. 2000; Watkins et al. 2010; Tollerud et al. 2012); and a
+                                              variety of methods such as the rotation curve method (e.g. Rubin &               Figure 1. A summary of recent M31 mass measurements from previous
+                                              Ford 1970; Carignan et al. 2006; Chemin et al. 2009; Sofue 2015),                works. The cumulative mass profile calculated in this study is represented by
+                                              velocity distribution fitting (e.g. Evans & Wilkinson 2000; Watkins              the red solid line with grey shade indicating uncertainties.
+                                              et al. 2013), virial theorem (e.g. Hartwick & Sargent 1974; Tollerud
+                                              et al. 2012), projected mass estimator and tracer mass estimator (e.g.
+                                              Federici et al. 1990, 1993; Lee et al. 2008; Veljanoski et al. 2013).            certainties in many of the results due to unclear parameter values
+                                                 Even with these extensive efforts to determine the mass of M31,               like the halo anisotropy parameter and limited data sample sizes.
+                                              an accurate estimation still remains elusive. A summary of previous              Intriguingly, it is still uncertain whether M31 or the Milky Way is the
+                                              mass measurements is presented in Fig. 1, indicating significant un-             most massive member of the Local Group (e.g. Evans & Wilkinson
+                                                                                                                               2000; Watkins et al. 2010).
+                                                                                                                                  Most of the mass measurements of M31 are based on the line-of-
+                                              ★ E-mail: zhangxw@mail.ynu.edu.cn                                                sight (LOS) velocity measurements of objects in it. Many projects
+                                              † E-mail: bchen@ynu.edu.cn                                                       have been undertaken to observe the spectra of objects in M31.
+
+                                              © 2023 The Authors
+2      Zhang et al.
+Merrett et al. (2006, hereafter M06) published a catalogue of 3,300         the individual wavelengths as the input parameters, we train a ran-
+emission-line objects with their positions, magnitudes, and veloci-         dom forest classifier to categorize the LAMOST objects into three
+ties, which were discovered using the Planetary Nebula Spectrograph.        classes: objects with emission lines, stars without emission lines,
+Halliday et al. (2006) presented a catalogue of 723 planetary neb-          and star clusters. Spectra with significant emission lines and no obvi-
+ulae (PNe), utilizing the WYFFOS fiber spectrograph. Galleti et al.         ous continuum are selected as candidates for emission-line nebulae.
+(2009) presented LOS velocities of 118 M31 globular clusters from a         The nebulae candidates are then classified into various types such
+series of spectroscopic observations (Galleti et al. 2006, 2007, 2009).     as PNe, H ii regions, and others based on their emission line flux
+Caldwell et al. (2008) used the Multi-Mirror Telescope (MMT) Hec-           ratios. This classification is carried out using the Baldwin-Phillips-
+tospec to observe spectra of 670 cluster candidates. There are also         Terlevich (BPT) diagram (Baldwin et al. 1981). Spectra with sig-
+other catalogues of emission-line objects (e.g. Sanders et al. 2012;        nificant emission lines and continuum are classified as stars with
+Martin et al. 2018) and clusters (e.g. Veljanoski et al. 2013; Fan et al.   emission lines. Using a straightforward kinematic analysis similar to
+2011, 2012) in M31 that have been established. The Spectroscopic            that of Drout et al. (2009), we select M31 stars based on their posi-
+and Photometric Landscape of Andromeda’s Stellar Halo (SPLASH;              tions and LOS velocities, both those with emission lines and those
+Guhathakurta et al. 2006) survey utilized the DEIMOS instrument             without. For star cluster candidates, we examine their morphology
+on the Keck II Telescope to study the kinematic and dynamical prop-         by analyzing their Pan-Andromeda Archaeological Survey (PAndAS;
+erties of the disk and halo of M31. More than 5,000 red giants in           McConnachie et al. 2009) 𝑔- and 𝑖-band images.
+50 fields have been observed so far (Gilbert et al. 2018). Most re-            As a result, the LAMOST M31 source catalogue includes a total of
+cently, the Dark Energy Spectroscopic Instrument (DESI) survey has          1,019 sources, consisting of 258 emission-line nebulae, 382 clusters
+provided LOS velocities of 7,617 M31 sources (Dey et al. 2023).             and candidates, and 379 supergiants and candidates.
+   With 4000 fibers and a field of view of 20 deg2 , the Large Sky
+Area Multi-Object Fiber Spectroscopic Telescope (LAMOST; Cui
+et al. 2010, 2012) serves as a powerful tool to observe object in           2.2 Sources from the literature
+M31. The LAMOST Spectroscopic Survey of the Galactic Anti-                  The quantity of tracers has a greater impact on the accuracy and pre-
+center (LSS-GAC; Liu et al. 2014; Yuan et al. 2015) systematically          cision of mass measurement than the quality (Hughes et al. 2021). In
+observed sources in M31, such as the PNe (e.g. Yuan et al. 2010;            recent years, the number of spectroscopic observed sources in M31
+Xiang et al. 2017; Zhang et al. 2020), H ii regions (e.g. Zhang et al.      has significantly increased, thanks in large part to the development
+2020; Alexeeva & Zhao 2022), supergiants (e.g. Huang et al. 2019;           of wide-field multi-object spectrographs. To expand the sample size,
+Liu et al. 2022) and globular clusters (e.g. Chen et al. 2015, 2016;        we have also incorporated previous M31 source catalogues that have
+Wang et al. 2021).                                                          LOS velocity measurements in our work. The sources in these cat-
+   We have attempted to compile the most comprehensive catalogue            alogues are primarily stars (Drout et al. 2009; Cordiner et al. 2010;
+of sources in M31 with LOS velocity measurements by utilizing               Dey et al. 2023, referred to as D09, C10 and D23), emission-line
+data from these projects. This promising sample will enable us to           objects (Merrett et al. 2006; Halliday et al. 2006; Sanders et al. 2012;
+accurately determine the mass of M31. This paper is the first in a          Martin et al. 2018, referred to as M06, H06, S12, and M18), and
+series of articles in which we will establish the rotation curve of         clusters (Chen et al. 2016; Sakari et al. 2016; Veljanoski et al. 2014,
+M31. The rotation curve is a crucial tool for constraining the mass         referred to as C16, S16 and V14). Revised Bologna Catalogue Ver-
+distribution of the galaxy, including its dark matter content (e.g.         sion 5 (RBCV5; Galleti et al. 2004)1 and Studies of Resolved Objects
+Rubin & Ford 1970; Carignan et al. 2006; Chemin et al. 2009).               in M312 by Caldwell & Romanowsky (2016) are also included (re-
+                                                                            ferred to as RBCV5 and Caldwell). We have compiled all published
+                                                                            catalogues from the literature that we are aware of. The information
+2 DATA                                                                      pertaining to all collected catalogues from previous studies is pre-
+                                                                            sented in Table 1, including the facilities used in observation, fiber
+We hereby introduce the data set used in the current work. The
+                                                                            sizes, the wavelength coverage and resolution of the spectra, the types
+sample comprises objects primarily selected from two sources, M31
+                                                                            and size of samples.
+objects identified from the LAMOST data and existing ones from the
+                                                                               To combine all these catalogues, both position error and LOS
+literature.
+                                                                            velocity error should be considered. We conduct cross-matching be-
+                                                                            tween catalogues, selecting a radius based on the tracer types and
+2.1 Sources selected from the LAMOST data                                   fiber sizes. We adopt a matching radius of 1.5 arcsec for stars and
+                                                                            emission-line objects in M06, H06, S12, M18, D09, C10, D23, and
+In this work, we select objects in M31 from the LAMOST DR9                  Caldwell; whereas for clusters in C16, S16, V14, RBCV5, and Cald-
+low resolution catalogue (Luo et al. 2015) released in March 2022.          well, we use a radius of 3 arcsec. If a source appears in multiple
+Based on 10 years of spectroscopic surveys, the LAMOST DR9 low-             catalogues, we prioritize its LOS velocity measurement and type
+resolution catalogue contains 11.22 million spectra with a resolution       with smaller velocity uncertainty or better observing condition. It
+of 𝑅 ∼ 1800 and a wavelength range of 3800 – 9000 Å. We briefly             is possible that there are systematic differences between velocities
+describe here how we selected the sources in M31 from LAMOST.               from different catalogues. We perform cross-matching between lit-
+For more details we refer the reader to Chen et al. (in prep.).             erature catalogues and the LAMOST M31 source catalogue. We
+   To identify objects in M31, we initially search for all sources          obtain zero-point values from the velocities of the common sources,
+within a sky area of ±15◦ centered on M31 from the LAMOST DR9.              which are then utilized to correct the velocities of all sources in the
+This yields a sample of 648,485 spectra. To distinguish genuine M31         literature catalogues and align them with those from LAMOST. In
+members, we first use a machine learning algorithm to classify these
+objects. We cross match the LAMOST sources with the SIMBAD
+database and catalogues from previous studies. We adopt objects             1   http://www.bo.astro.it/M31/
+with confirmed types as our training sample. Using the fluxes of            2   https://lweb.cfa.harvard.edu/oir/eg/m31clusters/M31_Hectospec.html
+
+MNRAS 000, 1–14 (2023)
+                                                                                                                               The rotation curve of M31                                  3
+
+Table 1. Information of our collected literature catalogues.
+
+    Catalogue     Spectrograph/Telescope   Fiber Size (arcsec)         Wavelength (Å)            Resolution    zero point (km s −1 )                                              Note
+
+    M06               PN.S/WHT                      -                     ∼5002.2                   -                 0.83                                 3,300 emission-line objects
+    H06             WYFFOS/WHT                  2.7, 1.6               ∼4808 – 5158           𝑅 ∼5000, 10000           3.8                                                    723 PNe
+    S12             Hectospec/MMT                 1.5                   3650 – 9200              𝑅 ∼1200              −3.0                              253 H ii regions and 407 PNe
+    M18             SITELLE/CFHT                    -                   6470 – 6850              𝑅∼5000               −29.6                           nearly 800 emission-line objects
+    D09             Hectospec/MMT                 1.5                   4550 – 7050              𝑅 ∼2000              −9.1                                             116 supergiants
+    C10             GMOS/Gemini N                  1a                  ∼4000 – 7000           𝑅∼2500 – 3500             -                                                  34 OB stars
+    C16                LAMOST                      3                   ∼4000 – 9000              𝑅 ∼1800                -                                         306 massive clusters
+    S16              APOGEE/APO                    2                   ∼3000 – 9000              𝑅∼22500              −0.35                                                    25 GCs
+    RBCV5                   -                       -                        -                      -                 −8.29                                956 clusters and candidates
+    V14                ISIS/WHT                  1.5-2a          ∼3500 – 5100, ∼7500 – 9200   𝑅 ∼1500, 2700           −11.4                                                 78 clusters
+                       RC/KPNO                     2a                  ∼3500 – 6500              𝑅 ∼1300
+                    GMOS/Gemini N                0.75a                 ∼7450 – 9500              𝑅 ∼4000
+    D23           DESI/Mayall telescope           1.5                   3600 – 9800              𝑅 ∼2000              −9.8                                        7,617 M31 sources
+    Caldwell        Hectospec/MMT                 1.5                   3650 – 9200              𝑅 ∼1200               -               ∼5,000 emission-line objects, stars and clusters
+
+   a Slit width
+
+
+
+Table 1, we additionally present the computed zero-point values for                           2.3.2 Velocity Transformation
+the individual catalogues.
+                                                                                              To transform velocity, we first convert the LOS velocity of each object
+   The resulting combined catalogue comprises 13,679 M31 sources,
+                                                                                              into the Galactocentric coordinate system, and then into the M31-
+all of which have corresponding LOS velocity measurements. Among
+                                                                                              centric coordinate system. This allows us to decompose the peculiar
+these sources, 8,341 are stars, with the majority originating from D23.
+                                                                                              velocity (𝑣 pec ) of an object into three components, as:
+There are 3,997 emission-line objects, which consist of 3,274 PNe
+and candidates, 661 H ii regions and candidates, and 62 sources with                          𝑣 pec = 𝑣★→⊙ + 𝑣 ⊙→MW + 𝑣 MW→M31                                                       (1)
+types listed as ‘other type’ or ‘unknown’. Additionally, there are 1,103
+clusters, the majority of which (902) are globular clusters located in                        where 𝑣★→⊙ is the motion of the object relative to the Sun, which is
+the halo of M31. The spatial distribution of all the catalogued sources                       the LOS velocity that can be derived from its spectrum, 𝑣 ⊙→MW is
+is shown in Fig. 2.                                                                           the motion of the Sun relative to the Galactic center, and 𝑣 MW→M31
+   In our sample, 10,353 sources are accompanied by LOS velocity                              is the motion of the Galactic center relative to the center of M31.
+errors, with 72% of them having errors ≤ 20 km s −1 , and 66% having                             For a given object, we first calculate its motion relative to the
+errors ≤ 10 km s −1 .                                                                         Galactic centre, i.e., 𝑣★→MW . In the current work, we adopt the
+                                                                                              Galactic rotation velocity at the position of the Sun as 239.3 km s −1
+                                                                                              (McMillan 2011) and the Solar peculiar motion as (𝑈 ⊙ , 𝑉⊙ , 𝑊 ⊙ ) =
+                                                                                              (11.1, 12.24, 7.25) km s −1 (Schönrich et al. 2010). We then have
+
+                                                                                              𝑣★→MW = 𝑣★→⊙ +(239.3+𝑉⊙ ) sin 𝑙 cos 𝑏+𝑈 ⊙ cos 𝑙 cos 𝑏+𝑊 ⊙ sin 𝑏,
+2.3 Coordinate and velocity transformations                                                                                                                                          (2)
+
+2.3.1 Coordinate transformation                                                               where 𝑙 and 𝑏 are longitude and latitude of the object in the Galactic
+                                                                                              coordinates.
+In this study, we adopt the coordinates of the M31 center as (𝛼M31 ,                             We then compute the motion of the object relative to the center
+𝛿M31 ) = (10.6847083◦ , 41.26875◦ ) (de Vaucouleurs 1958), the                                of M31, i.e., 𝑣 pec . To accomplish this, we decompose the velocity of
+position angle and inclination angle of the M31 disk as 38◦ (Kent                             M31 relative to the Galactic center in the Galactocentric frame into
+1989) and 77◦ (Walterbos & Kennicutt 1987), respectively, and the                             the Galactocentric radial velocity (𝑣 M31r ) and Galactocentric trans-
+distance of M31 as 𝑑M31 = 780 kpc (Holland 1998). To simplify                                 verse velocity (𝑣 M31t ). We adopt (𝑣 M31r , 𝑣 M31t ) = (−109, 17) km s −1
+analysis, we establish a Cartesian coordinate system projected in                             (van der Marel & Guhathakurta 2008; van der Marel et al. 2012) and
+M31 disk, with the X-axis coinciding with the M31 major axis in the                           a position angle of 𝜃 M31t = 287◦ (van der Marel et al. 2012), then
+northeast direction and the Y-axis coinciding with the M31 minor                              𝑣 pec is given by
+axis in the northwest direction.
+   For each source, we are able to obtain its major axis projection                           𝑣 pec = 𝑣★→MW − 𝑣 M31r cos 𝜚 + 𝑣 M31t sin 𝜚 cos(𝜙 − 𝜃 M31t ),                          (3)
+distance (𝑋) and minor axis projection distance (𝑌 ). However, de-                            where 𝜚 is the angular separation between the object and the center
+termining its radii, which is the distance between the object and the                         of M31, and 𝜙 is the position angle of the object with respect to the
+center of M31, is challenging as the actual distance from the Sun is un-                      M31 center.
+known. Therefore, we use different methods to calculate radii values
+for objects in the disk and in the bulge/halo of M31. For disk objects
+which are assumed to be concentrated on the disk plane, we use their
+projected                                                                                     3 KINEMATICS MODELING: THE DISK OF M31
+       √︁ distance in the disk. This gives us elliptical contours of radii
+(𝑅 = 𝑋 2 + (𝑌 /cos 77◦ ) 2 ). For sources in the halo/bulge which are                         To properly discuss the kinematics of the disk of M31, it is crucial
+generally spherically distributed, we use their two-dimensional (2D)                          to first consider the range of the disk and the relevant tracers. The
+projected
+        √ distance in the sky. This leads to round contours of radii                          commonly accepted range where the disk dominates is between 1.2
+(𝑟 𝑝 = 𝑋 2 + 𝑌 2 ). In the current work, we use a combination of these                        and 9 kpc (Courteau et al. 2011). Rotation curves based on H i gas
+radii, denoted by R, as shown in Fig. 1. Furthermore, the symbol 𝑟                            have been observed at much farther distances, such as 38 kpc (Chemin
+is utilized to represent the three-dimensional (3D) radii.                                    et al. 2009). Moreover, extensive kinematic surveys (e.g. Ibata et al.
+
+                                                                                                                                                       MNRAS 000, 1–14 (2023)
+4      Zhang et al.
+
+                                       45                         Supergaint                 45                       PN
+                                       44                         Other types                44                       HII
+                                                                  OBstar                                              Unclassified obj.
+                                       43                                                    43
+                                       42                                                    42
+                           Dec (deg)
+
+
+
+
+                                                                                  Dec(deg)
+                                       41                                                    41
+                                       40                                                    40
+                                       39                                                    39
+                                       38                                                    38
+                                       37                                                    37
+                                             14   12        10          8                         14        12        10         8
+                                                       RA (deg)                                                  RA(deg)
+                                                                                                                               DESI star
+                                       55                                                                                      Cluster
+
+
+                                       50
+
+
+
+                                       45
+                           Dec (deg)
+
+
+
+
+                                       40
+
+
+
+                                       35
+
+
+
+                                       30
+
+
+
+                                            25         20              15             10                5                  0
+                                                                                 RA (deg)
+
+Figure 2. The spatial distribution of all sources in our final catalogue. The upper left panel illustrates the distribution of stars in the disk of M31, which includes
+OB stars (red dots), supergiants (blue dots), and other types (gray dots). The upper right panel depicts the distribution of emission-line objects, including PNe
+(blue dots), H ii regions (red dots), and unclassified objects (gray dots). The bottom panel shows the distribution of clusters (red dots) and stars in the halo of
+M31 (gray dots). The black dashed ellipses represent circles with a disk projected radius 𝑅 = 20 kpc, while the green and purple dashed circles represent sky
+projected radii of 𝑟 𝑝 = 50 kpc and 100 kpc, respectively.
+
+
+
+2005) and wide-field imaging surveys (e.g. Bernard et al. 2015)                          as the radius increases. However, when we consider disk limits of
+have shown that M31 has an extended disk, spanning radii from                            30 and 25 kpc, we observe an increase in radial velocity dispersion
+15 kpc to 40 kpc and exhibiting extended disk-like substructures at                      beyond 20 kpc, indicating contaminations from halo objects. Among
+around 60 kpc. In our study, we have explored various disk limits,                       the objects in our sample, 89% of the H ii regions and candidates,
+favoring a more conservative approach to minimize contamination                          which are believed to be young disk objects, are located within the
+from halo objects and obtain a relatively pure sample of the disk.                       range of 1.2–20 kpc. H ii regions and candidates beyond this range
+We plot the radial velocity dispersion values for objects located close                  mainly come from the M06 catalogue and are considered candidates
+to the minor axis of M31, using radii limits of 20, 25, and 30 kpc,                      rather than confirmed H ii regions. Therefore, we adopt a maximum
+respectively, in the upper panel of Fig. 3. Within the radius bins of                    radius limit of 20 kpc for the kinematic analysis of the M31 disk. For
+20 kpc, we observe a decrease in the radial velocity dispersion values                   our analysis of the M31 disk, we have focused on tracers such as stars
+
+MNRAS 000, 1–14 (2023)
+                                                                                                                            The rotation curve of M31                  5
+
+             140                                       this work                                      80                                     Cubic polynomial
+                                                       30 kpc upper limit                             60
+             120                                       25 kpc upper limit                             40
+             100
+                                                       20 kpc upper limit
+                                                                                                      20
+
+
+
+
+                                                                                        vR (km s 1)
+R (km s 1)
+
+
+
+
+             80                                                                                        0
+                                                                                                       20
+             60
+                                                                                                       40
+             40                                                                                        60
+
+             20                                                                                        80
+                                                                                                      400
+             180                                       this work
+                                                       M06                                            300
+                                                       H06
+             140
+                                                       Zou et al. (2011)
+                                                                                      v (km s 1)
+                                                                                                      200
+                                                       20 kpc upper limit
+(km s 1)
+
+
+
+
+             100
+                                                                                                      100
+
+
+             60                                                                                        0
+
+
+             25                                                                                       100
+                                                                                                            0           5           10               15              20
+                   0     5         10           15       20        25         30                                                  R (kpc)
+                                          R (kpc)
+                                                                                         Figure 4. Upper panel: Mean values of the radial velocities for the selected
+  Figure 3. Dispersions of the radial velocity (upper panel) for the selected            objects close to the minor axis (blue dots). The red line and light grey shading
+  objects close to the minor axis and the tangential velocity (bottom panel) for         represent the best cubic polynomial fit curve and the 1𝜎 region error respec-
+  the selected objects close to the major axis. The measured dispersion values           tively, used to infer the radial velocity of all the disk objects. Bottom panel:
+  for individual radius bins (using 20 kpc as the disk limit) are represented by         Mean values of the tangential velocities for the selected objects close to the
+  black dots with error bars. The best-fit curves are shown as black lines, and the      major axis (blue dots) and the density distribution of estimated tangential
+  1𝜎 regions of the best fits are depicted with light grey shadings. In the upper        velocities for all the disk sources of M31 (grey scales). The darker the color,
+  panel, additional blue and red dots with error bars represent disk limits of 25        the greater the density.
+  and 30,kpc. The black dashed curve, black dots and green dots in the bottom
+  panel show the results from M06, H06, and Zou et al. (2011), respectively.
+                                                                                         where 𝑖 is the inclination angle of the disk of M31.
+                                                                                            The tangential velocity 𝑣 𝜃 is not equivalent to the circular velocity
+  (including OB stars, supergiants, and other types) and emission-line                   𝑣 𝑐 due to the non-negligible effect of asymmetric drift (𝑣 𝑎 ), which
+  objects (including PNe, H ii regions, and unclassified objects) located                arises from the heating effect of the disk. We assume the disk is in
+  within the selected disk radii range, i.e., from 1.2 to 20 kpc.                        a steady state and ignore the variations of covariance 𝑣 𝑅 𝑣 𝑧 with Z.
+     For the subsequent kinematic analysis, we utilize the cylindrical                   The density of tracers in the disk and their radial velocity dispersion,
+  coordinate system centered on the centre of M31, which is similar to                   𝜎𝑅 , both decrease exponentially with 𝑅, and the scale lengths for the
+  the one in Section 2.3.1 but with slight differences. For disk objects,                decrease in number density and radial velocity dispersion are 𝐿 𝑑 and
+  we disregard their vertical velocity component in the 𝑍-direction,                     𝐿 𝑅 , respectively. The asymmetric drift is then given by (e.g. Binney
+  which is perpendicular to the M31 disk. We measure the angle coor-                     & Tremaine 2008)
+  dinates 𝜃 in a counterclockwise direction from the negative semi-axis
+  of the X-axis and the radial coordinate 𝑅 increasing outward. The                                         𝜎𝑅2 (𝑅) 𝜎𝜃2 (𝑅)            1   2
+                                                                                         𝑣 𝑎 (𝑅) =                  [        − 1 + 𝑅(    +   )],                     (5)
+  positive direction of the tangential velocity 𝑣 𝜃 is opposite to the di-                                  2𝑣 𝑐 (𝑅) 𝜎 2 (𝑅)          𝐿𝑑 𝐿𝑅
+                                                                                                                      𝑅
+  rection of 𝜃 increase. By adopting this convention, we ensure that the
+                                                                                         where 𝜎𝜃 is the tangential velocity dispersions. In this work we adopt
+  disk sources have positive circular velocities. The positive direction
+                                                                                         a value of 𝐿 𝑑 = 5.3 ± 0.5 kpc based on the work of (Courteau et al.
+  of the radial velocity 𝑣 𝑅 points away from the center of M31. We can
+                                                                                         2011). For the rest of the parameters, we will derive them from our
+  then decompose 𝑣 pec into two components: 𝑣 𝑅 and 𝑣 𝜃 , given by,
+                                                                                         sample as some are not available in the literature at present, and some
+  𝑣 pec = −𝑣 𝑅 sin 𝜃 sin 𝑖 + 𝑣 𝜃 cos 𝜃 sin 𝑖,                                  (4)       are accompanied by considerable uncertainty.
+
+                                                                                                                                            MNRAS 000, 1–14 (2023)
+6      Zhang et al.
+3.1 Radial and tangential velocity dispersions                               near the major axis of the M31 disk. Now, we aim to estimate the
+                                                                             tangential velocities of all the selected disk objects. To do so, we
+The radial velocity dispersion 𝜎𝑅 (𝑅) of the disk source in M31 is
+                                                                             assume a radial velocity function for all disk objects. Ideally, the
+still uncertain. It is very difficult to measure the radial velocity 𝑣 𝑅
+                                                                             radial velocities of objects in a stable, symmetric disk would be zero.
+of an M31 disk source directly. However, we can approximate the
+                                                                             However, as depicted in upper panel of Fig. 4, the mean radial motion
+LOS velocity and dispersion of the source located on the minor axis
+                                                                             𝑣 𝑅 oscillates with 𝑅, much like what has been observed in the Milky
+of the M31 disk as a radial velocity. We select objects located in
+                                                                             Way (Williams et al. 2013; Huang et al. 2016; Wang et al. 2022). The
+a fan-shaped region near the minor axis of the M31 disk, as given
+                                                                             mean radial velocity varies around zero, indicating either an elliptical
+by: |𝑋/𝑅| < 0.1. For these sources, their tangential velocity 𝑣 𝜃 is
+                                                                             mean orbit of the disk objects or the process of radial migration. To
+perpendicular to our LOS, so the contribution of the LOS velocity
+                                                                             smooth out this oscillation relation, we apply a cubic polynomial fit,
+to 𝑣 𝜃 can be neglected. The value of the radial velocity 𝑣 𝑅 of these
+                                                                             which is also shown in Fig. 4. Based on the fitted relation, we calculate
+objects can be calculated by,
+                                                                             the radial velocity of all the disk objects, then the tangential velocity
+𝑣 𝑅 = −𝑣 pec /(sin 𝜃 sin 𝑖).                                          (6)    of each object can be derived using equation (4). The distribution of
+                                                                             tangential velocities calculated for all disk sources in M31 is shown
+The selected tracers are divided into seven radius bins, each contain-       in the lower panel of Fig. 4. In the diagram we also show the mean
+ing more than 35 sources. The mean and dispersion uncertainties of           values of the tangential velocities for the objects located close to the
+the individual bins are estimated from 300 bootstrapping samples.            major axis of the disk of M31. The tangential velocities vary with
+The top panel of Fig. 3 show the dispersion values for these seven           radius in a manner very similar to that observed for sources located
+bins.                                                                        near the major axis of M31, demonstrating the robustness of our
+   As in the case of the Galactic disk (e.g. Huang et al. 2016), we          results.
+assume that the radial velocity dispersions 𝜎𝑅 of the objects in the            With the tangential velocities of all the selected disk objects and all
+disk of M31 decrease exponentially with respect to the radii 𝑅, given        parameters except for the circular velocity to calculate the asymmetric
+by,                                                                          drift corrections, we can now determine the circular velocities of the
+                        𝑅 − 𝑅0                                               individual objects in the disk of M31. This is achieved by combining
+𝜎𝑅 (𝑅) = 𝜎𝑅0 exp(−             ),                                     (7)    equation (5) with the relation 𝑣 𝑐 = 𝑣 𝜃 + 𝑣 𝑎 . Tracers located near
+                          𝐿𝑅
+                                                                             the minor axis (|𝑋/𝑅| < 0.1) are excluded from the analysis, as
+where 𝜎LOS0 is the radial velocity dispersion at the reference position      their peculiar velocities have minimal contribution to the circular
+𝑅0 . In the current work, we adopt 𝑅0 = 10 kpc considering the size          velocities, leading to a larger uncertainty. To account for the errors
+of the disk of M31. We use Monte Carlo Markov Chain (MCMC)                   we use the Monte Carlo (MC) method.
+analysis to extract the best-fit values for 𝜎𝑅0 and 𝐿 𝑅 . As a result, we
+obtain: 𝜎𝑅0 = 62.7+3.4
+                     −3.4
+                          km s −1 and 𝐿 𝑅 = 19.8+6.5
+                                                  −4.0
+                                                         kpc. The best-fit
+curve is illustrated in top panel of Fig. 3.
+                                                                             4 KINEMATICS MODELLING: THE BULGE AND HALO
+  In a similar manner, for the tangential velocity 𝑣 𝜃 , we select objects
+                                                                               OF M31
+that are located close to the major axis of the disk of M31, where
+the radial velocity 𝑣 𝑅 is perpendicular to our LOS. Only objects            We first select objects that belong to the bulge and halo of M31.
+that meet the criterion |𝑌 /𝑅| < 0.07 are chosen, and their tangential       According to Section 3, we set the radii range of the bulge as 𝑅 <
+velocity 𝑣 𝜃 can be calculated by,                                           1.2 kpc, and that of the halo as 𝑅 > 30 kpc. Halo stars from DESI
+                                                                             observations, PNe, unclassified emission-line objects, and clusters
+𝑣 𝜃 = 𝑣 pec /(cos 𝜃 sin 𝑖).                                           (8)
+                                                                             that fall within these radius ranges are selected. Due to the different
+We group the selected objects into ten radius bins, with tracer size         methods used to calculate the radii of disk and halo objects, there
+of each bin larger than 45. The bottom panel of Fig. 3 presents the          is overlap between the disk and the halo in the resulting rotation
+tangential velocity dispersion values for each bin. We have compared         curve (see Fig. 6). This overlap will be utilized to constrain the halo
+our results with those obtained from previous studies, including M06,        anisotropy parameter. In the subsequent calculations of this section,
+H06, and Zou et al. (2011), which are over-plotted in the Fig. 3. The        we will employ the 3D radius (𝑟) and the 2D projected radius (𝑟 𝑝 ) in
+results demonstrate a good agreement with the previous studies. We           the sky (see Section 2.3.1).
+used an exponential function similar to equation (7) to model the               Unlike the disk, both the bulge and the halo of M31 are assumed to
+tangential velocity dispersion, given by,                                    be spherical gravitational potential systems. To model the kinematics
+                                                                             of these systems, we use the Jeans equation given by (Jeans 1919;
+                       𝑅 − 𝑅0
+𝜎𝜃 (𝑅) = 𝜎𝜃0 exp(−            ),                                      (9)    Binney & Tremaine 2008),
+                         𝐿𝜃
+                                                                             d(𝜌𝜎𝑟2 )      𝛽            dΦ
+where 𝜎𝜃0 is the tangential velocity dispersion at 𝑅 = 𝑅0 and 𝐿 𝜃 the                  + 2 𝜌𝜎𝑟2 = −𝜌       ,                                    (10)
+scale length of the tangential velocity dispersion. Similarly, we have           d𝑟        𝑟            d𝑟
+applied the MCMC analysis to estimate the best-fit parameters, which         where 𝜌 is the number density, 𝜎𝑟 is the radial velocity dispersion, 𝛽
+yields values of 𝜎𝜃0 = 69.6+3.3
+                            −3.3
+                                 km s −1 and 𝐿 𝜃 = 21.0+5.2
+                                                        −3.5
+                                                              kpc. The       is the anisotropy parameter, and Φ is the total gravitational potential.
+corresponding best-fit curve is shown in bottom panel of Fig. 3.             The circular velocity is associated with the gravitational potential by,
+
+                                                                                     𝑑Φ
+3.2 Tangential velocity and asymmetric drift correction                      𝑣 2𝑐 = 𝑟   .                                                      (11)
+                                                                                     𝑑𝑟
+In order to determine the circular velocity of objects in M31 disk,             The number density 𝜌 of the bulge and halo of M31, as utilized
+we need to make the asymmetric drift corrections to their tangential         in this study, is based on the results of Courteau et al. (2011). The
+velocity. We previously computed the tangential velocities of a small        bulge is characterized by a projected profile that can be described
+subset of the disk objects (508 out of 5261 tracers) that are located        by the Sérsic form, with a Sérsic shape index of 𝑛 = 2.2 ± 0.3, a
+
+MNRAS 000, 1–14 (2023)
+                                                                                                           The rotation curve of M31                            7
+Sérsic shape parameter 𝑏 𝑛 = 1.9992𝑛 − 0.3271, and an effective                                                                         Gilbert et al. (2018)
+radius 𝑅𝑒 = 1.0 ± 0.2 kpc. On the other hand, the halo exhibits a                                                                       This work
+                                                                                           140
+power law profile in both 2D and 3D. This can be expressed as a 2D
+surface density profile, Σ = Σ0 𝑟 𝑝𝛼2D , and a 3D density profile, 𝜌 =
+𝜌0 𝑟 𝛼3D , where Σ0 and 𝜌0 represent the 2D and 3D densities at 1 kpc,                     120
+
+
+
+
+                                                                            LOS (km s 1)
+respectively. The power law indices are chosen as 𝛼2D = −2.5 ± 0.2
+and 𝛼3D = −3.5 ± 0.2 (Courteau et al. 2011).
+   Following the works of Veljanoski et al. (2014) and Gilbert et al.                      100
+(2018), we adopt a power law for the radial velocity dispersion, 𝜎𝑟 ,
+such that 𝜎𝑟 ∝ 𝑟 𝛾 .
+                                                                                           80
+   Now the circular velocities of the bulge and halo are respectively
+given by,
+                         𝑏 𝑛 𝑟 1/𝑛                                                         60
+𝑣 2𝑐bulge = −𝜎𝑟2 (2𝛾 −      ( )    + 2𝛽bulge ),                      (12)
+                          𝑛 𝑅𝑒
+                                                                                                 0   20   40     60         80        100          120
+and
+                                                                                                                 rp (kpc)
+𝑣 2𝑐halo = −𝜎𝑟2 (2𝛾 + 𝛼3D + 2𝛽halo ).                                (13)
+However, since we are unable to directly measure the actual distance        Figure 5. The relationship between 𝜎LOS and 𝑟 𝑝 for the halo of M31. The
+and 3D velocity of individual objects in the M31 halo, we can only          blue dots correspond to the 𝜎LOS values for each of the radius bins. The red
+obtain projected 2D kinematic parameters from observations. In this         curve and the grey shading represent the best-fit curve and the 1𝜎 region of
+study, we provide the deprojected circular velocities of the halo as a      the fit, respectively. The black dashed line and black points with errorbars
+replacement for equation (13), given by,                                    denotes the velocity dispersion from Gilbert et al. (2018).
+                    2 × 𝜌0 /Σ0
+ 2
+𝜎LOS (𝑟 𝑝 ) =                       𝑟 − 𝛼2D ×
+                −2𝛾 − 𝛼3D − 2𝛽halo 𝑝
+                ∫ ∞                                                         107.88+1.77
+                                                                                    −1.74
+                                                                                          km s −1 and 𝛾 = −0.09 ± 0.03. The best-fit curve is
+                               𝑟 2𝑝                     𝑑𝑟           (14)
+                    (1 − 𝛽halo 2 )𝑟 𝛼3D +1 𝑣 2𝑐halo √︃           .          displayed in Fig. 5.
+                 𝑟𝑝            𝑟                      𝑟 2 − 𝑟 2𝑝               To obtain the 𝜎LOS of the bulge, we separate the bulge objects into
+                                                                            two radius bins and compute the radii and LOS velocity dispersions
+where Σ00 = 0.57 kpc −1 is the ratio of number density to surface
+        𝜌
+                                                                            for each bin. However, bulge velocity dispersion is still assumed
+density at 1 kpc. The derivation of this equation is described in           in power law form as equation (15). As there are only two 𝜎LOS
+Appendix A. Previous literature does not offer comprehensive 3D             measurements within 0 < 𝑅 < 1.2 kpc for the bulge, we have not
+information on the circular velocities of the bulge, making it difficult    attempted to fit a velocity dispersion relation. 𝛾 = −0.09 ± 0.03
+to establish a corresponding equation. Therefore, we continue to use        obtained from the halo fits is adopted for both the bulge and halo
+equation (12) with 2D parameters to approximate the 3D circular             analysis.
+velocities of the bulge. Within the bulge region, there are only two           Finally, given the lack of knowledge about the anisotropic param-
+available measurements of circular velocity, and their impact on the        eter of the bulge and halo of M31 (𝛽bulge and 𝛽halo ), we treat them as
+virial mass is minimal. Furthermore, the circular velocity values in        free kinematic parameters in conjunction with the dynamical param-
+the bulge are primarily influenced by 𝛽bulge . Instead of opting for        eters determined in Section 6. However, as observed in the Milky
+more complex models that incorporate missing information, substi-           Way, the anisotropy parameters exhibit spatial variations. For the
+tuting the 2D scenario is a preferable choice.                              bulge and halo of M31, accounting for the influence of radius on 𝛽
+    To calculate 𝜎LOS for the halo of M31, we divide the halo objects       presents challenges, so we only constrain an spatially averaged value
+into 20 radial bins. In the case of the inner 15 bins, as the radius in-    for these parameters.
+creases, the sky area covered by each radial bin widens progressively,
+resulting in additional dispersion beyond the intrinsic value. To ad-
+dress this, we partition the objects within each bin into four quadrants
+using the 𝑋 and 𝑌 axes of M31. Subsequently, we calculate the LOS           5 THE ROTATION CURVE OF M31
+velocity dispersion for each quadrant and derive a weighted average
+as the velocity dispersion value for the bin, considering the number        Using the most extensive collection of velocity measurements of
+of objects in each quadrant. For the outer 5 bins, we do not differ-        M31 objects to date, we have generated a rotation curve for M31
+entiate between quadrants due to the limited number of objects in           that encompasses all of its components, including the bulge, disk,
+our sample and calculate the LOS velocity dispersion directly. Fig. 5       and halo. Hereafter, we adopt the terminology of “rotation veloc-
+displays 𝜎LOS of the halo objects as a function of 𝑟 𝑝 , with previous      ity” and “rotation curve” rather than “circular velocity” to maintain
+results from Gilbert et al. (2018) over-plotted. Our results are gener-     consistency with prior studies. However, it is important to note that
+ally consistent with Gilbert et al. (2018), though slightly higher. We      these concepts are only equivalent in the context of a cold disk. The
+fit 𝜎LOS as a power law (Veljanoski et al. 2014; Gilbert et al. 2018),      rotation velocity of stars is typically lower than the circular velocity,
+given by,                                                                   and in some literature, it is even assumed to be effectively zero in
+                  𝑟𝑝 𝛾                                                      the halo. The resulting rotation curve extends out to a distance of
+𝜎LOS = 𝜎LOS0 (         ) ,                                          (15)    ∼125 kpc, which is presented in Fig. 6. Table 2 displays the values of
+                  𝑟 𝑝0
+                                                                            our calculated rotation curve. Table 3 presents a summary of all the
+where we keep 𝑟 𝑝0 fixed at 30 kpc and use MCMC analysis to de-             kinematic parameters utilized in the calculation of the rotation curve
+termine the parameters 𝜎LOS0 and 𝛾. Our analysis yields 𝜎LOS0 =             for the current study.
+
+                                                                                                                                 MNRAS 000, 1–14 (2023)
+   8              Zhang et al.
+
+
+
+                                                       Bulge
+                                                       Disk
+                                          250          Halo
+                                                       Total
+
+
+                                          200
+                            vc (km s 1)
+
+
+                                          150
+
+
+
+                                          100
+
+
+
+                                          50
+
+
+
+                                           0
+                                            10 1                             100                     101                          102
+                                                                                        R (kpc)
+   Figure 6. Final combined 3-part rotation curve of M31, comprising the disk (blue dots), bulge and halo (red dots). The different line styles, as indicated in the
+   top-left corner of the diagram, represent the best-fit rotation curve contributions to the individual components of M31. The black line represents the sum of
+   contributions from all the mass components, while the grey shading corresponds to the 1𝜎 region of the fit.
+
+
+            350                                                                             However, for regions at radius 𝑅 = 7 – 18 kpc, our estimates for the
+                                                                                            rotation curve are slightly lower than those from the H i studies. Since
+                                                                                            the difference is relatively small and still falls within the 3𝜎 range, it
+            300                                                                             is probable that the dissimilarity is caused by systematic differences
+                                                                                            in the tracers and methods used to measure the rotation curve.
+                                                                                               Our calculated rotation velocities in the disk of M31 have a typical
+            250                                                                             uncertainty of about 17 km s −1 . The most significant contributor to
+vc (km/s)
+
+
+
+
+                                                                                            this uncertainty is the tangential velocity error. Since we cannot
+                                                                                            directly measure the tangential velocities of the individual objects in
+            200                                                                             the disk, we have assumed a radial velocity and radius relationship
+                                                                                            to derive the tangential velocities. Fig. 4 shows that the uncertainties
+                                                                                            of the fitted radial velocities can range from 9 to 30 km s −1 , leading
+                                                                                            to an error of around 5 to 38 km s −1 in the obtained rotation velocity.
+            150                                                                             Typically, this results in an error of approximately 16 km s −1 . Aside
+                                                                    Carignan et al. 2006
+                                                                    Chemin et al. 2009      from this, there are other sources of uncertainty, including errors in
+                                                                    This work               the parameters used. For instance, the scale length of number density
+            100                                                                             𝐿 𝑑 can have a maximum value of 6.5 kpc (Kormendy & Bender
+                   0    5       10              15      20     25       30         35
+                                                     R (kpc)                                1999). Using a different value of 𝐿 𝑑 would result in a systematic
+                                                                                            rotation velocity error of about 5 km s −1 . Finally, the uncertainty of
+                                                                                            rotation curve caused by the error of the scale length of radial velocity
+   Figure 7. Rotation curve of the disk of M31. The red dots represent the results          dispersion 𝐿 𝑅 is about 2 km s −1 , while that from the error of the scale
+   from this study, and the blue and green dots are the previous M31 rotation               length of tangential velocity dispersion 𝐿 𝜃 is about 1 km s −1 .
+   curves obtained from the H i studies.
+
+
+   5.1 Rotation curve of the disk of M31                                                    5.2 Rotation curve of the bulge and halo of M31
+   The resulting rotation curve of the disk of M31, along with a com-                       The objects in the bulge of M31 has been divided into two radius bins.
+   parison to previous H i studies (Carignan et al. 2006; Chemin et al.                     The rotation velocities are 163.24 and 210.95 km s −1 at distances of
+   2009), is shown in Fig. 7. The disk objects are divided into 20 radius                   0.22 and 0.65 kpc, respectively. These values are lower than those of
+   bins, each containing over 220 objects. The typical rotation velocity                    the disk.
+   in the disk of M31 is about 220 km s −1 . Our results generally agree                      The uncertainty of the rotation velocities of the bulge is about
+   with the previous rotation curves obtained from H i observations.                        33 km s −1 . This can be attributed to our lack of understanding of
+
+   MNRAS 000, 1–14 (2023)
+                                                                                                       The rotation curve of M31                 9
+
+Table 2. The rotation curve of M31.                                       M31. Since the way for measuring radii in the disk differs from that
+                                                                          used for objects in the halo (as described in Section 2.3.1), there are
+            R       R error       𝑣𝑐        𝑣𝑐 error     fitted 𝑣𝑐        some overlapped bins in the rotation curve. In these overlapped radii,
+          (kpc)      (kpc)     (km s −1 )   (km s −1 )   (km s −1 )       the rotation curve of the disk agrees well as that of the halo, which
+                                                                          strengthens the reliability of our results. The rotation curve of the
+          Bulge
+                                                                          halo exhibits a radial decline, decreasing from around 230 km s −1 at
+           0.22      0.1        163.24       15.61        175.78          a distance of 30 kpc to approximately 170 km s −1 at 125 kpc.
+           0.65      0.19       210.95       18.56        220.61             Equation (14) demonstrates high sensitivity to kinematic param-
+                                                                          eters, making it crucial to obtain precise values. Error propagation
+          Disk
+                                                                          analysis reveals that a mere 0.2 error in 𝛼2D and 𝛼3D can introduce
+          1.86       0.02        223.8       10.72        223.43          a substantial error of 30 km s −1 into the rotation curve. The surface
+          3.19       0.02       226.79        7.96        220.33          density power law index of the halo, denoted as 𝛼2D and documented
+          4.23       0.02       213.74        8.17        221.38          in Courteau et al. (2011), exhibits a considerable range from −3.5
+          5.32       0.02       212.54        7.55        223.04          to −2.2. This wide variation in 𝛼2D significantly impacts the halo’s
+          6.27       0.02       221.94         7.2        224.04
+                                                                          rotation curve. Additionally, the power law index 𝛾, as reported in
+           7.2       0.02        223.3        8.49        224.43
+           8.2       0.02       225.97        9.28        224.28
+                                                                          Gilbert et al. (2018), is associated with an error of approximately
+          9.14       0.02       226.63        9.07        223.75          18 km s −1 in the rotation velocities. Fortunately, due to the degener-
+          9.93       0.02       223.45       10.29         223.1          acy between these kinematic parameters and 𝛽halo , the uncertainty
+          10.62      0.01       221.25       10.24        222.44          in halo rotation velocity is somewhat mitigated. However, it remains
+          11.25      0.01       221.17       11.16        221.79          imperative to achieve more precise measurements of these kinematic
+          11.83      0.01       213.58        9.75        221.17          parameters, particularly 𝛼.
+          12.48      0.01       215.04       12.67        220.44
+          13.37      0.02       215.12       12.82        219.48
+          14.29      0.02       217.92       13.52        218.48
+          15.2       0.02       215.97       13.09        217.54
+                                                                          6 THE MASS DISTRIBUTION OF M31
+          16.08      0.02       223.22       13.07        216.67          6.1 The gravitational potential model
+          17.21      0.02       213.32       13.44        215.61
+          18.31      0.03       213.85       15.37        214.64          We have developed a parameterized potential model to fit the rotation
+          19.38      0.03       199.73       15.19        213.76          curve of M31 and obtain its mass distribution. The model consists of
+                                                                          three components: the bulge, disk, and halo, and the total gravitational
+          Halo
+                                                                          potential is obtained by summing these components.
+          8.88        1.08      233.09       32.4         223.92             In the current work, we adopt the potential models proposed by
+          11.55       0.77      217.54       35.26        221.46          Hernquist (1990) and Miyamoto & Nagai (1975) for the bulge and
+          13.55       0.57      230.53       35.63        219.28          disk, respectively. Therefore, the bulge and disk potentials can be
+          15.25       0.54      212.91        36.6        217.49          respectively given by,
+          16.91       0.62      212.36       36.67        215.88
+          18.68       0.54      204.64        38.1        214.33                       𝐺 𝑀b
+                                                                          Φbulge = −        ,                                                 (16)
+          20.41       0.54      220.27       37.18        212.98                       R+𝑞
+          22.26       0.62      213.35       37.17        211.68
+          24.12       0.67      219.28       36.73        210.51
+                                                                          and
+          26.26       0.76      217.99       35.88        209.29                              𝐺 𝑀d
+                                                                          Φdisk = − √︃                      ,                                 (17)
+          28.63       0.87      222.84       38.16        208.08                                 √︁
+          31.23       0.88      204.28       37.89        206.88                         R + (𝑎 + 𝑧 + 𝑏 )
+                                                                                          2         2  2  2
+
+          34.28       1.19      210.33       38.76        205.58          where 𝐺 is the gravitational constant, 𝑀b and 𝑀d are the mass of
+          39.56       2.21      221.84       36.68        203.53
+                                                                          the bulge and disk, respectively, and the parameters 𝑞, 𝑎, and 𝑏
+          46.21       2.42      185.33       38.68        201.19
+          52.08       1.63      182.05       38.15        199.23
+                                                                          correspond to the scale lengths. If 𝑎 = 0, the potential of the disk
+          54.85       1.67      196.28       38.81        198.33          (Φdisk ) simplifies to Plummer’s spherical potential (Plummer 1911),
+          67.26      14.95      202.02       40.67        194.47          while if 𝑏 = 0, it simplifies to Kuzmin’s potential for a razor-thin disk
+          98.74      17.19      192.59       42.23        185.55          (Binney & Tremaine 2008). The ratio 𝑏/𝑎 characterizes the flatness
+         123.56       11.6      168.53       41.34        179.31          of the M31 disk. Depending on the values of 𝑎 and 𝑏, the potential
+                                                                          model can range from a nearly infinitesimally thin disk to a spherical
+                                                                          system.
+                                                                             For the dark matter halo of M31, we adopt the NFW model
+the bulge parameters, which themselves have large errors. The Sér-        (Navarro et al. 1996), given by,
+sic effective radius of the bulge number density distribution 𝑅𝑒 has
+a maximum reported value of 1.93 by Seigar et al. (2008), which                       𝐺 𝑀vir ln (1 + R𝑐/𝑟 vir )
+                                                                          Φhalo = −                             ,                             (18)
+could result in a systematic error of approximately 30 km s −1 for                            𝑔(𝑐)R
+the rotation velocity. measurement of the Sérsic shape index of the       where 𝑟 vir is the virial radius, 𝑐 is concentration parameter and
+bulge number density 𝑛 has an uncertainty that could lead to a sys-       𝑔(𝑐) = ln(1 + 𝑐) − 1+𝑐𝑐 . 𝑀
+                                                                                                      vir is the virial mass given by the equa-
+tematic error of approximately 12 km s −1 for the rotation velocity.      tion 𝑀vir = 43𝜋 𝑟 vir
+                                                                                            3 Δ𝜌 , where Δ is the virial overdensity param-
+                                                                                                  𝑐
+Additionally, for the velocity dispersion power law index 𝛾, Gilbert                         3𝐻 2
+et al. (2018) has measured a value of −0.12, which could result in a      eter, and 𝜌 𝑐 = 8 𝜋𝐺0
+                                                                                                 is the critical density of the universe, where
+systematic error of about 5 km s −1 for the rotation velocity.            𝐻0 = 70 km s Mpc −1 . We set Δ = 200, which is commonly used in
+                                                                                        −1
+   Rotation velocities are calculated in 20 radius bins for the halo of   the definition of halo mass in simulations and observations (Seigar
+
+                                                                                                                         MNRAS 000, 1–14 (2023)
+10       Zhang et al.
+
+Table 3. Kinematic parameters used to calculate the rotation curve.
+
+                     Component       Parameter                           Description                                 Value         Note
+
+                     Bulge               𝛾                    Velocity dispersion power law index                −0.09±0.03        fixed
+                                         𝑛          Sérsic shape index of the number density distribution          2.2 ± 0.3       fixed
+                                        𝑅𝑒         Sérsic effective radius of the number density distribution    1.0 ± 0.2 kpc     fixed
+                                       𝛽bulge                  Anisotropy parameter of the bulge                   0.07+0.13
+                                                                                                                       −0.29
+                                                                                                                                   fitted
+
+                     Disk               𝑅0                             Reference radius                             10 kpc         fixed
+                                        𝜎 𝑅0                   Radial velocity dispersion at 𝑅0                 62.7+3.4
+                                                                                                                    −3.4
+                                                                                                                         km s −1   fitted
+                                        𝐿𝑅                 Scale length of radial velocity dispersion            19.8+6.5
+                                                                                                                      −4.0
+                                                                                                                           kpc     fitted
+                                        𝜎 𝜃0                  Tangent velocity dispersion at 𝑅0                 69.6+3.3
+                                                                                                                    −3.3
+                                                                                                                         km s −1   fitted
+                                        𝐿𝜃                Scale length of tangent velocity dispersion            21.0+5.2
+                                                                                                                      −3.5
+                                                                                                                           kpc     fitted
+                                        𝐿𝑑                   Scale length of the number density                  5.3 ± 0.5 kpc     fixed
+
+                     Stellar halo       𝛾                    Velocity dispersion power law index                  −0.09±0.03       fitted
+                                       𝛼2D                    Number density power law index                      −2.5 ± 0.2       fixed
+                                       𝛼3D                    Number density power law index                      −3.5 ± 0.2       fixed
+                                       𝛽halo                  Anisotropy parameter of the halo                    −0.54+0.38
+                                                                                                                       −1.29
+                                                                                                                                   fitted
+
+
+
+et al. 2008; Tamm, A. et al. 2012; Fardal et al. 2013; Veljanoski et al.          two-dimensional (1D and 2D) forms. The joint probability density
+2014).                                                                            reveal correlations among some of the parameters, such as a strong
+   By combining equation (16), (17), and (18), we can create a model              correlation between 𝑀b and 𝑞 as well as anticorrelations between
+for the total potential of M31. This potential model has seven free               𝑀d and 𝑐. Other pairwise parameters are generally independent.
+parameters. In addition to these parameters, we also have the bulge               The best-fit values for the model parameters are estimated using
+and halo anisotropy parameters (see Section 4), which brings the total            the median values of their marginalized PDFs, while uncertainties
+number of free parameters to nine. We denote these parameters as                  are calculated from the 68% probability intervals of the marginalized
+Θ = {𝑞, log(𝑀b ), 𝑎, 𝑏, log(𝑀d ), log(𝑐), 𝑀vir , 𝛽bulge , 𝛽halo }. We use         PDFs. It should be noted that the rotation curve of the disk constrains
+a Bayesian approach to model the posterior probability distribution               the rotation of the bulge and halo, effectively determining the values
+of these free parameters, as given by,                                            of 𝛽bulge and 𝛽halo . As a result, 𝛽bulge and 𝛽halo have independent
+                                              Ö                                   joint distributions with each other and with 𝑀vir . However, this does
+𝑝(Θ|R, 𝑣 𝑐 , 𝑣 𝑐err , 𝜎LOS , 𝜎LOSerr ) ∝ 𝑝(Θ)    L,                  (19)         not mean that we can eliminate the degeneracy between mass and
+where 𝑣 𝑐err is the error of rotation velocity, 𝜎LOSerr is the error              anisotropy, as there are uncertainties in the disk rotation curve. For
+of LOS velocity dispersion and 𝑝(Θ) is the prior. We adopt flat                   the same reason, 𝛽bulge and 𝛽halo in the fitting are still recommended
+priors with the following ranges: 𝑝(𝑞), 𝑝(𝑎), and 𝑝(𝑏) are uni-                   values.
+formly distributed between 0 and 10 kpc, while 𝑝[log(𝑀b /M ⊙ )] and                  According to our analysis, the bulge of M31 has a anisotropy pa-
+𝑝 [log(𝑀d /M ⊙ )] are uniformly distributed between 9 and 12. We also             rameter of 𝛽bulge = 0.07+0.13
+                                                                                                              −0.29
+                                                                                                                    . Other kinematic parameters would
+constrain log(𝑀b /M ⊙ ) > log(𝑀d /M ⊙ ). We consider different pre-               influence value of 𝛽bulge , making it varying between −0.12 and 0.30.
+vious estimates of the concentration parameters of the Milky Way and              The narrow down process for the uncertainty of 𝛽bulge remains chal-
+M31, as reported in previous studies (e.g. Kafle et al. 2014; Huang               lenging. Nevertheless, our calculation leads us to an approximate
+et al. 2016; Kafle et al. 2018), and set 𝑝 [log(𝑐)] to be uniformly dis-          value of 0, suggesting that M31 likely possesses an isotropic bulge.
+tributed between −2 and 10. Additionally, we set 𝑝 [log(𝑀vir /M ⊙ )]              Regarding the halo, our conclusion indicates a tangential anisotropy
+to be uniformly distributed between 10 and 14, so the distribution                parameter, with 𝛽halo = −0.54+0.38 −1.29
+                                                                                                                           . The MCMC sampling proba-
+of 𝑀vir /1012 M ⊙ is 𝑝 [𝑥 = 𝑀vir /1012 M ⊙ ] = 1/(4 ln 10 · 𝑥) between            bility distribution of 𝛽bulge displays a prolonged negative tail and a
+0.01 and 100. L is likelihood, given by,                                          corresponding large lower error, indicating a diminishing slope of
+                                                                                  rotation velocity associated with decreasing 𝛽bulge .
+L = N (𝑣 𝑐 (R)|Model(R), 𝑣 𝑐err ),                                     (20)
+                                                                                     In our gravitational potential model, the M31 galaxy is divided
+for disk, and                                                                     into the bulge, the disk, and the halo. However, recent studies have
+L = N (𝜎LOS (R)|Model(R), 𝜎LOSerr ),                                   (21)       suggested that M31 is a barred spiral galaxy (e.g. Athanassoula &
+                                                                                  Beaton 2006; Beaton et al. 2007; Blaña Díaz et al. 2016; Blaña Díaz
+for bulge and halo, where N is a Gaussian function, Φ(R) is the                   et al. 2018). Objects associated with the bar do not follow perfectly
+potential. Model(R) is given by equation 11, while the bulge and                  circular orbits, which can be misleading when calculating the rotation
+the halo 𝑣 𝑐 is given by equation 12 and equation 14. We employ an                curve. This can result in a noticeable peak in the rotation curve of the
+MCMC analysis to sample prior distribution of these free parameters               H i gas at around 1-2 kpc, as shown in Fig. 7. It is worth noting that
+using the emcee python package (Foreman-Mackey et al. 2013). 40                   our analysis did not reveal similar structures. The investigations and
+walkers are employed and we run the chains for 10,000 steps to ensure             studies on the bar of M31 primarily focus on the observations in the
+convergence, with the first 3,000 steps are discarded as burn-in.                 infrared bands, whereas this particular study employs stars, emission
+                                                                                  line objects, and star clusters as tracers, utilizing their optical wave-
+                                                                                  lengths spectra. This distinction in observational methods may be a
+6.2 The best-fitted potential and mass distribution
+                                                                                  potential factor contributing to the absence of bar structures. Addi-
+Fig. 8 displays the marginalized (1D) and joint (2D) probability                  tionally, the rotation velocities of the bulge are determined based on
+density functions (PDFs) for the model parameters in both one- and                velocity dispersion measurements, rather than being directly derived
+
+MNRAS 000, 1–14 (2023)
+                                                                                                                                   The rotation curve of M31                                   11
+               q = 0.84+0.46
+                        0.27
+
+
+
+
+                               log(Mb) = 10.57+0.17
+                                               0.28
+ log(Mb)
+          .4
+     10
+
+
+
+
+                                                      a = 5.77+2.14
+                                                               3.79
+      9.6  8
+ a
+           4
+
+
+
+
+                                                                      b = 0.55+1.83
+                                                                               0.35
+           5
+
+
+
+
+           3
+ b
+           1
+
+
+
+
+                                                                                      log(Md) = 10.86+0.20
+                                                                                                      0.36
+       11
+ log(Md)
+
+
+
+
+                                                                                                             log(c) = 0.94+0.25
+      1.5 10
+
+
+
+
+                                                                                                                           0.35
+ log(c)
+      0.0
+
+
+
+
+                                                                                                                                  Mvir = 1.14+0.51
+                                                                                                                                              0.35
+           2
+ Mvir
+           1
+
+
+
+
+                                                                                                                                                      bulge = 0.07+0.13
+                                                                                                                                                                   0.29
+      0.0
+  bulge
+
+
+
+
+                                                                                                                                                                          halo =   0.54+0.38
+      0.8
+
+
+
+
+                                                                                                                                                                                        1.29
+           1
+   halo
+           3
+
+
+
+
+                                                                               3
+           5
+
+
+
+
+                                                                                                                           1.5
+                               9.6
+
+
+
+
+                                                                                                               0.0
+
+
+
+
+                                                                                                                                                             0.0
+                                                                                                 11
+
+
+
+
+                                                                                                                                                                      5
+
+
+
+                                                                                                                                                                                      1
+                                                                                      10
+
+
+
+
+                                                                                                                                                                             3
+                1
+
+
+
+
+                                                       4
+
+
+
+
+                                                                      1
+
+
+
+
+                                                                                       5
+
+
+
+
+                                                                                                                                  1
+                         2
+
+
+
+
+                                                               8
+
+
+
+
+                                                                                                                                               2
+                                         .4
+
+
+
+
+                                                                                                                                                     0.8
+                                        10
+
+
+
+
+                    q                log(Mb)               a               b                log(Md)               log(c)                Mvir                bulge                  halo
+
+Figure 8. The probability distributions of the free parameters in the MCMC chains that describe the potential of M31. The 2D distribution panels show contours
+at levels of 0.5, 1, 1.5, and 2𝜎. Dashed lines marking the values of the 16th, 50th, and 84th percentiles of the individual parameters can be seen in the 1D
+distribution panels, with their corresponding values displayed at the top.
+
+
+from observational data. Nevertheless, it remains unclear how this                              depends on the shape of the rotation curve more and even small
+distinction might impact the resulting mass measurement. Another                                oscillations in it, but it is difficult to quantify this effect. Change in
+possible explanation for the absence of such structures could be the                            kinematic parameters would introduce about an error of 0.05, which
+role of 𝛽bulge , which effectively constrains the level of the bulge ro-                        is far lower than error from MCMC samples. The resulting mass
+tation velocities. This limitation may mitigate the impact of the bar                           distribution of M31 is shown in Figure 1. Our results are consistent
+on the mass analysis.                                                                           with researches that employed the rotation curve and escape velocity
+                                                                                                curve methods (e.g. Chapman et al. 2006; Tamm, A. et al. 2012;
+    In the best-fitted potential model, the dark matter mass of M31                             Kafle et al. 2018).
+is estimated to be 𝑀vir = 1.14+0.51−0.35
+                                         × 1012 𝑀⊙ within a radius of
+𝑟 vir = 220±25 kpc. The associated concentration parameter is log 𝑐 =
+0.94+0.25
+      −0.35
+            . In some extent, virial mass scarcely depend on the bulge
+and halo kinematic parameters because of degeneracy. Virial mass
+
+                                                                                                                                                              MNRAS 000, 1–14 (2023)
+12      Zhang et al.
+7 SUMMARY                                                                  DATA AVAILABILITY
+We have obtained a large sample of M31 sources with LOS velocity           The data underlying this article is available in the manuscript.
+measurements, consisting of a total of 13,679 objects selected from
+LAMOST DR9 and the literature. With the largest sample available
+to date, we have explored the kinematic properties of M31. We have
+                                                                           REFERENCES
+obtained measurements for the radial and tangential velocity disper-
+sion profiles in the disk of M31. Specifically, at a projected radius      Alexeeva S., Zhao G., 2022, ApJ, 925, 76
+of 𝑟 = 10 kpc, our measurements indicate 𝜎𝑅0 = 62.7+3.4     −3.4
+                                                                 km s −1   Astropy Collaboration et al., 2013, A&A, 558, A33
+                 +3.3      −1
+and 𝜎𝜃0 = 69.6 −3.3 km s . We also provide the constraints on the          Astropy Collaboration et al., 2018, AJ, 156, 123
+                                                                           Astropy Collaboration et al., 2022, apj, 935, 167
+scale lengths of both the radial and tangential velocity dispersion,
+                                                                           Athanassoula E., Beaton R. L., 2006, Monthly Notices of the Royal Astro-
+with 𝐿 𝑅 = 19.8+6.5−4.0
+                        kpc and 𝐿 𝜃 = 21.0+5.2  −3.5
+                                                     kpc. Our measure-         nomical Society, 370, 1499
+ments suggest that the velocity dispersion of M31 halo stars exhibits      Baldwin J. A., Phillips M. M., Terlevich R., 1981, PASP, 93, 5
+a mild decrease with projected radius, with a power-law index of           Beaton R. L., et al., 2007, The Astrophysical Journal, 658, L91
+𝛾 = −0.09 ± 0.03. We also reveal evidence of a isotropic bulge, with       Bernard E. J., Ferguson A. M. N., Chapman S. C., Ibata R. A., Irwin M. J.,
+a recommended value 𝛽bulge = 0.07+0.13 −0.29
+                                             , and tangential anisotropy       Lewis G. F., McConnachie A. W., 2015, Monthly Notices of the Royal
+in the M31 halo, with a recommended value 𝛽halo = −0.54+0.38   −1.29
+                                                                     .         Astronomical Society: Letters, 453, L113
+                                                                           Binney J., Mamon G. A., 1982, Monthly Notices of the Royal Astronomical
+   Based on these derived kinematic properties, together with pa-
+                                                                               Society, 200, 361
+rameters from existing literature, we have derived the rotation curve
+                                                                           Binney J., Tremaine S., 2008, Galactic Dynamics: Second Edition
+of M31 from kinematic models. The rotation curve which encom-              Blaña Díaz M., et al., 2018, MNRAS, 481, 3210
+passes all of the components of M31, including the bulge, disk, and        Blaña Díaz M., Wegg C., Gerhard O., Erwin P., Portail M., Opitsch M., Saglia
+halo, extends up to a distance of about 125 kpc. The resulting rotation        R., Bender R., 2016, Monthly Notices of the Royal Astronomical Society,
+curve of M31 is generally flat at 220 km s −1 in the disk, gradually de-       466, 4279
+creasing to 170 km s −1 at ∼125 kpc. We have also provided a detailed      Caldwell N., Romanowsky A. J., 2016, The Astrophysical Journal, 824, 42
+discussion of the sources of error in our rotation curve measurements,     Caldwell N., Harding P., Morrison H., Rose J. A., Schiavon R., Kriessler J.,
+clearly identifying each source of error. Based on the newly derived           2008, The Astronomical Journal, 137, 94
+rotation curve of M31, we have obtained the best estimate of its virial    Carignan C., Chemin L., Huchtmeier W. K., Lockman F. J., 2006, ApJ, 641,
+mass to be 𝑀vir = 1.14+0.51
+                         −0.35
+                               × 1012 𝑀⊙ within 𝑟 vir = 220 ± 25 kpc.          L109
+                                                                           Chapman S. C., Ibata R., Lewis G. F., Ferguson A. M. N., Irwin M., Mc-
+Our measurement is consistent with the results from earlier rotation
+                                                                               Connachie A., Tanvir N., 2006, The Astrophysical Journal, 653, 255
+curve and escape velocity curve analyses.                                  Chemin L., Carignan C., Foster T., 2009, ApJ, 705, 1395
+   However, our understanding of many of the kinematic parameters          Chen B.-Q., et al., 2015, Research in Astronomy and Astrophysics, 15, 1392
+of M31 remains limited. As large scale multi-object spectroscopic          Chen B., et al., 2016, AJ, 152, 45
+surveys like LAMOST, SDSS, and DESI continue, and new projects             Cordiner M. A., Cox N. L. J., Evans C. J., Trundle C., Smith K. T., Sarre P. J.,
+like China Space Station Telescope (CSST), WEAVE (William Her-                 Gordon K. D., 2010, The Astrophysical Journal, 726, 39
+schel Telescope Enhanced Area Velocity Explorer Instrument) , and          Côté P., Mateo M., Sargent W. L. W., Olszewski E. W., 2000, ApJ, 537, L91
+Prime Focus Spectrograph (PFS) in Subaru to be initiated, we an-           Courteau S., Widrow L. M., McDonald M., Guhathakurta P., Gilbert K. M.,
+ticipate that we will gain a deeper understanding of our neighboring           Zhu Y., Beaton R. L., Majewski S. R., 2011, ApJ, 739, 20
+galaxy, much in the same way that we have with the Milky Way.              Cui X., Wang S.-G., Su D.-Q., Zhao Y., Wang Y.-N., Chu Y., Li G., 2010,
+                                                                               in Stepp L. M., Gilmozzi R., Hall H. J., eds, Society of Photo-Optical
+                                                                               Instrumentation Engineers (SPIE) Conference Series Vol. 7733, Ground-
+                                                                               based and Airborne Telescopes III. p. 77330B, doi:10.1117/12.856700
+                                                                           Cui X.-Q., et al., 2012, Research in Astronomy and Astrophysics, 12, 1197
+ACKNOWLEDGEMENTS
+                                                                           Dey A., et al., 2023, The Astrophysical Journal, 944, 1
+We express our gratitude for reviewer’s thoughtful suggestions. We         Drout M. R., Massey P., Meynet G., Tokarz S., Caldwell N., 2009, ApJ, 703,
+thank Prof. Yang Huang, Dr. Haifeng Wang and Ms. Yuan Zhou for                 441
+useful discussions. This work is partially supported by the National       Evans N. W., Wilkinson M. I., 2000, MNRAS, 316, 929
+                                                                           Fan Z., Huang Y.-F., Li J.-Z., Zhou X., Ma J., Wu H., Zhang T.-M., Zhao
+Key R&D Program of China No. 2019YFA0405500, National Natu-
+                                                                               Y.-H., 2011, Research in Astronomy and Astrophysics, 11, 1298
+ral Science Foundation of China 11803029, 12173034 and 11833006,
+                                                                           Fan Z., Huang Y.-F., Li J.-Z., Zhou X., Ma J., Zhao Y.-H., 2012, Research in
+Yunnan University Innovation and Entrepreneurship Training Pro-                Astronomy and Astrophysics, 12, 829
+gram 202110673079 and Yunnan Province grant No. C619300A034.               Fardal M. A., et al., 2013, MNRAS, 434, 2779
+We acknowledge the science research grants from the China Manned           Federici L., Fusi-Pecci F., Marano B., 1990, A&A, 236, 99
+Space Project with NO. CMS-CSST-2021-A09, CMS-CSST-2021-                   Federici L., Bonoli F., Ciotti L., Fusi Pecci F., Marano B., Lipovetsky V. A.,
+A08 and CMS-CSST-2021-B03.                                                     Neizvestny S. I., Spassova N., 1993, A&A, 274, 87
+   This research made use of Astropy (Astropy Collaboration et al.         Foreman-Mackey D., 2016, The Journal of Open Source Software, 1, 24
+2013, 2018, 2022), Numpy (Harris et al. 2020), pandas (McKinney            Foreman-Mackey D., Hogg D. W., Lang D., Goodman J., 2013, PASP, 125,
+et al. 2010), Matplotlib (Hunter 2007), emcee (Foreman-Mackey                  306
+                                                                           Galleti S., Federici L., Bellazzini M., Fusi Pecci F., Macrina S., 2004, A&A,
+et al. 2013), and corner (Foreman-Mackey 2016).
+                                                                               416, 917
+   Guoshoujing Telescope (the Large Sky Area Multi-Object Fiber
+                                                                           Galleti S., Federici L., Bellazzini M., Buzzoni A., Fusi Pecci F., 2006, A&A,
+Spectroscopic Telescope LAMOST) is a National Major Scientific                 456, 985
+Project built by the Chinese Academy of Sciences. Funding for the          Galleti S., Bellazzini M., Federici L., Buzzoni A., Fusi Pecci F., 2007, A&A,
+project has been provided by the National Development and Reform               471, 127
+Commission. LAMOST is operated and managed by the National                 Galleti S., Bellazzini M., Buzzoni A., Federici L., Fusi Pecci F., 2009, A&A,
+Astronomical Observatories, Chinese Academy of Sciences.                       508, 1285
+
+MNRAS 000, 1–14 (2023)
+                                                                                                              The rotation curve of M31                       13
+Gilbert K. M., et al., 2018, ApJ, 852, 128                                         Stanghellini L., Karakas A., eds, Vol. 323, Planetary Nebulae: Multi-
+Guhathakurta P., et al., 2006, AJ, 131, 2497                                       Wavelength Probes of Stellar and Galactic Evolution. pp 388–389,
+Halliday C., et al., 2006, MNRAS, 369, 97                                          doi:10.1017/S1743921317002356
+Harris C. R., et al., 2020, Nature, 585, 357                                   Yuan H.-B., et al., 2010, Research in Astronomy and Astrophysics, 10, 599
+Hartwick F. D. A., Sargent W. L. W., 1974, ApJ, 190, 283                       Yuan H. B., et al., 2015, MNRAS, 448, 855
+Hernquist L., 1990, ApJ, 356, 359                                              Zhang M., et al., 2020, Research in Astronomy and Astrophysics, 20, 097
+Holland S., 1998, The Astronomical Journal, 115, 1916                          Zou H., et al., 2011, Research in Astronomy and Astrophysics, 11, 1093
+Huang Y., et al., 2016, Monthly Notices of the Royal Astronomical Society,     de Vaucouleurs G., 1958, ApJ, 128, 465
+    463, 2623                                                                  van der Marel R. P., Guhathakurta P., 2008, The Astrophysical Journal, 678,
+Huang Y., et al., 2019, The Astrophysical Journal Letters, 884, L7                 187
+Hughes M. E., et al., 2021, MNRAS, 502, 2828                                   van der Marel R. P., Fardal M., Besla G., Beaton R. L., Sohn S. T., Anderson
+Hunter J. D., 2007, Computing in Science & Engineering, 9, 90                      J., Brown T., Guhathakurta P., 2012, The Astrophysical Journal, 753, 8
+Ibata R., Chapman S., Ferguson A. M. N., Irwin M., Lewis G., McConnachie
+    A., 2004, Monthly Notices of the Royal Astronomical Society, 351, 117
+Ibata R., Chapman S., Ferguson A. M. N., Lewis G., Irwin M., Tanvir N.,
+    2005, The Astrophysical Journal, 634, 287                                  APPENDIX A: DERIVATION OF THE DEPROJECTED
+Jeans J. H., 1919, Philosophical Transactions of the Royal Society of London   CIRCULAR VELOCITY OF HALO
+    Series A, 218, 157
+Kafle P. R., Sharma S., Lewis G. F., Bland-Hawthorn J., 2014, The Astro-       In this section, we present a detailed derivation of the deprojection
+    physical Journal, 794, 59                                                  rotation velocity (equation 14). Assuming 𝜎𝜃 = 𝜎𝜙 , we can ex-
+Kafle P. R., Sharma S., Lewis G. F., Robotham A. S. G., Driver S. P., 2018,    press the projected dynamical pressure, which is a product of the
+    MNRAS, 475, 4043                                                           observable quantities: the surface density profile Σ(𝑟 𝑝 ) and the LOS
+Kent S. M., 1989, Publications of the Astronomical Society of the Pacific,                           2 , as follows:
+                                                                               velocity dispersion 𝜎LOS
+    101, 489
+Kormendy J., Bender R., 1999, The Astrophysical Journal, 522, 772                                   ∫ ∞
+                                                                                       2                                                      𝑑𝑟
+Lee M. G., Hwang H. S., Kim S. C., Park H. S., Geisler D., Sarajedini A.,      Σ(𝑟 𝑝 )𝜎LOS =2             [(𝑟 2 − 𝑟 2𝑝 )𝜎𝑟2 + 𝑟 2𝑝 𝜎𝜃2 ] 𝜌 √︃                (A1)
+    Harris W. E., 2008, ApJ, 674, 886                                                               𝑟𝑝                                    𝑟 𝑟 2 − 𝑟 2𝑝
+Liu X. W., et al., 2014, in Feltzing S., Zhao G., Walton N. A., Whitelock
+    P., eds, Vol. 298, Setting the scene for Gaia and LAMOST. pp 310–321                            ∫ ∞          𝑟 2𝑝               𝑟𝑑𝑟
+    (arXiv:1306.5376), doi:10.1017/S1743921313006510                                           =2      (1 − 𝛽halo 2 ) [𝜌(𝑟)𝜎𝑟2 ] √︃        .                 (A2)
+Liu C., Kudritzki R.-P., Zhao G., Urbaneja M. A., Huang Y., Zhang H., Zhao                          𝑟𝑝           𝑟                 𝑟2 − 𝑟2        𝑝
+    J., 2022, The Astrophysical Journal, 932, 29
+Luo A.-L., et al., 2015, Research in Astronomy and Astrophysics, 15, 1095      Here, 𝜌(𝑟)𝜎𝑟2 represents the radial dynamical pressure. Thus, 𝜎LOS
+Mamon G. A., Boué G., 2010, Monthly Notices of the Royal Astronomical          is given by (Binney & Mamon 1982; Mamon & Boué 2010):
+    Society, 401, 2433
+                                                                                                     ∫ ∞            𝑟 2𝑝
+Martin T. B., Drissen L., Melchior A.-L., 2018, MNRAS, 473, 4130                 2              2                                   𝑟𝑑𝑟
+                                                                               𝜎LOS  (𝑟 𝑝 ) =             (1 − 𝛽halo 2 ) 𝜌(𝑟)𝜎𝑟2 √︃           . (A3)
+McConnachie A. W., et al., 2009, Nature, 461, 66                                              Σ(𝑟 𝑝 ) 𝑟 𝑝           𝑟
+McKinney W., et al., 2010, in Proceedings of the 9th Python in Science                                                             𝑟 2 − 𝑟 2𝑝
+    Conference. pp 51–56
+McMillan P. J., 2011, Monthly Notices of the Royal Astronomical Society,
+                                                                               By substituting the halo density profile as shown in Section 4, we
+    414, 2446                                                                  obtain the following equation:
+Merrett H. R., et al., 2006, MNRAS, 369, 120                                                              ∫ ∞
+                                                                                              𝜌                         𝑟 2𝑝                𝑑𝑟
+                                                                                    (𝑟 𝑝 ) = 2 0 𝑟 −𝑝 𝛼2D     (1 − 𝛽halo 2 )𝑟 𝛼3D +1 𝜎𝑟2 √︃
+Miyamoto M., Nagai R., 1975, PASJ, 27, 533                                      2
+                                                                               𝜎LOS                                                               .
+Navarro J. F., Frenk C. S., White S. D. M., 1996, ApJ, 462, 563                               Σ0                        𝑟
+Plummer H. C., 1911, MNRAS, 71, 460
+                                                                                                           𝑟𝑝                              𝑟 − 𝑟2
+                                                                                                                                            2
+                                                                                                                                                         𝑝
+Rubin V. C., Ford W. Kent J., 1970, ApJ, 159, 379                                                                                                            (A4)
+Sakari C. M., et al., 2016, ApJ, 829, 116
+Sanders N. E., Caldwell N., McDowell J., Harding P., 2012, ApJ, 758, 133       Then we take equation (13) to recover equation (14) by:
+Schönrich R., Binney J., Dehnen W., 2010, Monthly Notices of the Royal                             2 × 𝜌0 /Σ0
+    Astronomical Society, 403, 1829                                             2
+                                                                               𝜎LOS (𝑟 𝑝 ) =                       𝑟 − 𝛼2D ×
+Seigar M. S., Barth A. J., Bullock J. S., 2008, Monthly Notices of the Royal                   −2𝛾 − 𝛼3D − 2𝛽halo 𝑝
+    Astronomical Society, 389, 1911
+                                                                                               ∫ ∞            𝑟 2𝑝                                           (A5)
+                                                                                                                                       𝑑𝑟
+Sofue Y., 2015, PASJ, 67, 75                                                                       (1 − 𝛽halo 2 )𝑟 𝛼3D +1 𝑣 2𝑐halo √︃           .
+                                                                                                𝑟𝑝            𝑟                      𝑟 2 − 𝑟 2𝑝
+Tamm, A. Tempel, E. Tenjes, P. Tihhonova, O. Tuvikene, T. 2012, A&A, 546,
+    A4
+                                                                                                          𝜌
+Tollerud E. J., et al., 2012, ApJ, 752, 45                                     In this equation, only Σ00 and 𝛽halo are unknown, with the latter being
+                                                                                                                                              𝜌
+Veljanoski J., et al., 2013, ApJ, 768, L33                                     a free parameter in MCMC sampling. We can now calculate Σ00 . The
+Veljanoski J., et al., 2014, MNRAS, 442, 2929                                  relationship between surface density Σ(𝑟 𝑝 ) and number density 𝜌(𝑟)
+Walterbos R. A. M., Kennicutt R. C. J., 1987, A&AS, 69, 311
+                                                                               is given by:
+Wang S., Chen B., Ma J., 2021, A&A, 645, A115                                              ∫ ∞
+Wang H.-F., Žofia Chrobáková López-Corredoira M., Labini F. S., 2022, The                         𝜌(𝑟)𝑟𝑑𝑟
+    Astrophysical Journal, 942, 12                                             Σ(𝑟 𝑝 ) = 2       √︃           .                                   (A6)
+Watkins L. L., Evans N. W., An J. H., 2010, MNRAS, 406, 264
+                                                                                            𝑟𝑝     𝑟 2 − 𝑟 2𝑝
+Watkins L. L., Evans N. W., van de Ven G., 2013, Monthly Notices of the
+    Royal Astronomical Society, 430, 971
+                                                                               This relationship can be inverted using the Abel transform:
+Williams M. E. K., et al., 2013, Monthly Notices of the Royal Astronomical
+                                                                                           ∫ ∞
+                                                                                         1       𝑑Σ     𝑑𝑟 𝑝
+    Society, 436, 101                                                          𝜌(𝑟) = −              √︃           .                                          (A7)
+                                                                                         𝜋 𝑟 𝑑𝑟 𝑝
+Xiang M., Liu X., Zhang M., Yuan H., Huo Z., 2017, in Liu X.,                                          𝑟 2𝑝 − 𝑟 2
+
+                                                                                                                                      MNRAS 000, 1–14 (2023)
+14       Zhang et al.
+                                                                      𝜌
+By substituting the halo density profile shown in Section 4, Σ00 is
+calculated as:
+             ∫ ∞
+𝜌0      𝛼                      𝑑𝑟 𝑝
+    = − 2D         𝑟 𝛼2D −1 √︃           = 0.57 kpc −1 .     (A8)
+Σ0        𝜋 1 kpc 𝑝
+                              𝑟 2𝑝 − 𝑟 2
+
+
+This paper has been typeset from a TEX/LATEX file prepared by the author.
+
+
+
+
+MNRAS 000, 1–14 (2023)
+

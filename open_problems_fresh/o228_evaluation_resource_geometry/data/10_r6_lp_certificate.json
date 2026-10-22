@@ -1,0 +1,300 @@
+{
+ "claims": [
+  {
+   "tag": "L1-1",
+   "name": "weak duality sandwich holds on all six machines: nu (integral packing, R5) <= LP* <= k_min",
+   "ok": true,
+   "detail": "M_2I: nu=2 <= LP*=5/2 <= k_min=4 ; M_face: nu=3 <= LP*=3 <= k_min=5 ; M_edge: nu=5 <= LP*=5 <= k_min=7 ; M_T: nu=1 <= LP*=3/2 <= k_min=2 ; M_O: nu=2 <= LP*=2 <= k_min=3 ; M_D4: nu=1 <= LP*=1 <= k_min=1"
+  },
+  {
+   "tag": "L2-1",
+   "name": "exact certificate pair for every machine: x* >= 0 covers every pair, y* >= 0 packs every column, and sum x* = sum y* = LP* -- so LP* is optimal BY ARITHMETIC, not by trusting the simplex",
+   "ok": true,
+   "detail": "M_2I: sum_x=5/2 sum_y=5/2 opt=5/2 ; M_face: sum_x=3 sum_y=3 opt=3 ; M_edge: sum_x=5 sum_y=5 opt=5 ; M_T: sum_x=3/2 sum_y=3/2 opt=3/2 ; M_O: sum_x=2 sum_y=2 opt=2 ; M_D4: sum_x=1 sum_y=1 opt=1"
+  },
+  {
+   "tag": "L3-1",
+   "name": "BLIND PREDICTION: LP*(M_edge) < 7, i.e. the set-cover LP relaxation does NOT reach the integral optimum -- the LP route cannot certify k_min(M_edge) = 7",
+   "ok": true,
+   "detail": "LP*(M_edge) = 5 = 5.000000 ; k_min = 7"
+  },
+  {
+   "tag": "L3-2",
+   "name": "COROLLARY (registered either way): since LP* <= k_min = 7 always, LP*(M_edge) = 7 would have been a certificate; the measured value settles whether the LP route lives or dies",
+   "ok": true,
+   "detail": "LP* = 5 ; gap to k_min = 2"
+  },
+  {
+   "tag": "L4-1",
+   "name": "BLIND PREDICTION: the hardest row pair of M_edge is separated by lambda_min in [8, 12] columns",
+   "ok": true,
+   "detail": "lambda_min = 12 (max = 62) ; uniform bound 62/lambda_min = 31/6 = 5.1667"
+  },
+  {
+   "tag": "L5-1",
+   "name": "BLIND PREDICTION: the primal optimum spreads over MORE than k_min columns (|support(x*)| > k_min) -- no 7-column certificate hides in the fractional optimum",
+   "ok": true,
+   "detail": "support = 10 columns vs k_min = 7"
+  }
+ ],
+ "machines": {
+  "M_2I": {
+   "n_pairs": 66,
+   "n_cols": 62,
+   "status": "optimal",
+   "pivots": 29,
+   "LP": "5/2",
+   "LP_float": 2.5,
+   "nu": 2,
+   "k_min": 4,
+   "lambda_min": 22,
+   "lambda_max": 62,
+   "uniform_bound": "31/11",
+   "support_size": 10,
+   "support": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "n_tight_pairs": 30,
+   "tight_pairs_sample": [
+    2,
+    3,
+    4,
+    5,
+    9,
+    11,
+    14,
+    15,
+    17,
+    20,
+    22,
+    23
+   ],
+   "certificate": {
+    "primal_nonneg": true,
+    "primal_covers": true,
+    "dual_nonneg": true,
+    "dual_packs": true,
+    "sum_x": "5/2",
+    "sum_y": "5/2",
+    "objectives_equal": true
+   }
+  },
+  "M_face": {
+   "n_pairs": 190,
+   "n_cols": 62,
+   "status": "optimal",
+   "pivots": 35,
+   "LP": "3",
+   "LP_float": 3.0,
+   "nu": 3,
+   "k_min": 5,
+   "lambda_min": 14,
+   "lambda_max": 62,
+   "uniform_bound": "31/7",
+   "support_size": 6,
+   "support": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "n_tight_pairs": 90,
+   "tight_pairs_sample": [
+    3,
+    5,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    20,
+    21,
+    22
+   ],
+   "certificate": {
+    "primal_nonneg": true,
+    "primal_covers": true,
+    "dual_nonneg": true,
+    "dual_packs": true,
+    "sum_x": "3",
+    "sum_y": "3",
+    "objectives_equal": true
+   }
+  },
+  "M_edge": {
+   "n_pairs": 435,
+   "n_cols": 62,
+   "status": "optimal",
+   "pivots": 108,
+   "LP": "5",
+   "LP_float": 5.0,
+   "nu": 5,
+   "k_min": 7,
+   "lambda_min": 12,
+   "lambda_max": 62,
+   "uniform_bound": "31/6",
+   "support_size": 10,
+   "support": [
+    3,
+    4,
+    6,
+    8,
+    9,
+    13,
+    15,
+    18,
+    19,
+    32
+   ],
+   "n_tight_pairs": 80,
+   "tight_pairs_sample": [
+    4,
+    5,
+    14,
+    15,
+    35,
+    36,
+    38,
+    44,
+    50,
+    61,
+    67,
+    73
+   ],
+   "certificate": {
+    "primal_nonneg": true,
+    "primal_covers": true,
+    "dual_nonneg": true,
+    "dual_packs": true,
+    "sum_x": "5",
+    "sum_y": "5",
+    "objectives_equal": true
+   }
+  },
+  "M_T": {
+   "n_pairs": 6,
+   "n_cols": 14,
+   "status": "optimal",
+   "pivots": 5,
+   "LP": "3/2",
+   "LP_float": 1.5,
+   "nu": 1,
+   "k_min": 2,
+   "lambda_min": 8,
+   "lambda_max": 8,
+   "uniform_bound": "7/4",
+   "support_size": 3,
+   "support": [
+    0,
+    2,
+    8
+   ],
+   "n_tight_pairs": 6,
+   "tight_pairs_sample": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "certificate": {
+    "primal_nonneg": true,
+    "primal_covers": true,
+    "dual_nonneg": true,
+    "dual_packs": true,
+    "sum_x": "3/2",
+    "sum_y": "3/2",
+    "objectives_equal": true
+   }
+  },
+  "M_O": {
+   "n_pairs": 15,
+   "n_cols": 26,
+   "status": "optimal",
+   "pivots": 5,
+   "LP": "2",
+   "LP_float": 2.0,
+   "nu": 2,
+   "k_min": 3,
+   "lambda_min": 12,
+   "lambda_max": 26,
+   "uniform_bound": "13/6",
+   "support_size": 4,
+   "support": [
+    0,
+    1,
+    3,
+    7
+   ],
+   "n_tight_pairs": 12,
+   "tight_pairs_sample": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13
+   ],
+   "certificate": {
+    "primal_nonneg": true,
+    "primal_covers": true,
+    "dual_nonneg": true,
+    "dual_packs": true,
+    "sum_x": "2",
+    "sum_y": "2",
+    "objectives_equal": true
+   }
+  },
+  "M_D4": {
+   "n_pairs": 1,
+   "n_cols": 10,
+   "status": "optimal",
+   "pivots": 1,
+   "LP": "1",
+   "LP_float": 1.0,
+   "nu": 1,
+   "k_min": 1,
+   "lambda_min": 10,
+   "lambda_max": 10,
+   "uniform_bound": "1",
+   "support_size": 1,
+   "support": [
+    0
+   ],
+   "n_tight_pairs": 1,
+   "tight_pairs_sample": [
+    0
+   ],
+   "certificate": {
+    "primal_nonneg": true,
+    "primal_covers": true,
+    "dual_nonneg": true,
+    "dual_packs": true,
+    "sum_x": "1",
+    "sum_y": "1",
+    "objectives_equal": true
+   }
+  }
+ },
+ "elapsed_s": 3.313077926635742
+}

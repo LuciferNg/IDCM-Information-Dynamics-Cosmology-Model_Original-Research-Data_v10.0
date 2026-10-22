@@ -1,0 +1,33 @@
+{
+  "part1_f5_rigidity": {
+    "phi8_dimension": 5,
+    "level1_modes": 3,
+    "level2_modes": 2,
+    "level5_modes": 1,
+    "phi8_freedom_consumed": 5,
+    "assertion": "Level 5 = Branch 4 first available after \u03c6=8 freedom exhausted"
+  },
+  "part2_branch1_diagonalization": {
+    "n1_min_gamma": true,
+    "theta12_best_match": {
+      "a": 2,
+      "b": 3,
+      "ratio": 0.3081452222759344,
+      "err_pct": 1.6980931603743865
+    },
+    "n1_cant_form_mixing": true
+  },
+  "part3_tau_level5": {
+    "n20_equals_B_times_F5": true,
+    "unique_before_nyquist": true,
+    "gen_depths": {
+      "gen1": 1,
+      "gen2": 7,
+      "gen3": 20
+    },
+    "near_nyquist": true
+  },
+  "total_checks": 48,
+  "pass_checks": 48,
+  "all_pass": true
+}

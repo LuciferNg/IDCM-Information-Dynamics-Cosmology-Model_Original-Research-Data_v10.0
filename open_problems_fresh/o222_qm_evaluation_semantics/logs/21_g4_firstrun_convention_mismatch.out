@@ -1,0 +1,12 @@
+================================================================================================================
+O222 scripts/21 -- G4: read order derived from the frozen structure (rules g4-contract-v1)
+================================================================================================================
+  P1  ✅  {"cells": 242172, "matches": 242172, "exceptions": [], "gradient_histogram": {"0": 242172}, "degenerate_t_a_b": 62}
+  P2  ✅  {"edges_in_circuit": 3782, "distinct_edges": 3782, "expected": 3782, "closed_and_connected": true, "head_equals_tail_everywhere": true, "first_edges": [["V00", "V01"], ["V01", "V00"], ["V00", "V02"], ["V02", "V00"], ["V0
+  P3  ✅  {"i_min_cost": {"min_cost_loop_free_edges": 2, "min_cost_all_pairs": 1, "law_total_for_circuit": 7565}, "ii_measured": {"feasible_prefix_edges": 21, "reads": 43, "budget": "123/2", "budget_left": "123/88", "blocked_at": 
+  P4  🔴  {"n3_n4_validation": [{"n": 3, "arborescences_bruteforce": 3, "n^(n-2)": 3, "best_theorem": 3, "brute_force_EC_from_vertex0": 6, "agree": false}, {"n": 4, "arborescences_bruteforce": 16, "n^(n-2)": 16, "best_theorem": 25
+  P5  ✅  {"a_canonical_prefix_edges": 21, "a_constructible": false, "a_all4": null, "a_argmax": null, "b_prefix_edges": 21, "b_rectangle_present": true, "b_constructible": true, "b_all4": "13/15", "b_argmax": ["V01", "V00", "V03"
+  P6  ✅  [{"family": "Eulerian-canonical", "edges": 21, "max_abs_out_minus_in": 1, "unbalanced_vertices": 2, "max_out": 11, "max_in": 10}, {"family": "lex", "edges": 15, "max_abs_out_minus_in": 14, "unbalanced_vertices": 15, "max
+----------------------------------------------------------------------------------------------------------------
+G4: 6 cells -> 5 OK / 0 PARTIAL / 1 FAILED
+================================================================================================================

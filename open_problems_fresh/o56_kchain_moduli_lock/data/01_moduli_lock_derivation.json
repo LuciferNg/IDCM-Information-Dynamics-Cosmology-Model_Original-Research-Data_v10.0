@@ -1,0 +1,27 @@
+{
+  "test": "O56 CY₃ moduli 鎖定機制",
+  "phi": 1.618033988749895,
+  "B": 4.0,
+  "L5": 11.000000000000002,
+  "L6": 18.000000000000004,
+  "Nd": 44,
+  "Sigma_gamma": 90.0,
+  "Sigma_gamma_88": 176.0,
+  "Z2_dual_pairs": 22,
+  "h11_A": 36,
+  "h21_A": 98,
+  "h11_B": 36,
+  "h21_B": 98,
+  "chi": -124,
+  "method_A": "h11 = Nd-2B, h21 = Σγ+2B",
+  "method_B": "h11 = 2L₆, h21 = B×L₅+3L₆",
+  "method_C": "two constraints: h11+h21=Nd+Σγ, h21-h11=Nd+L₆",
+  "structural_identity": "h11 = 2L₆ (pure energy/dual), h21 = B×L₅+3L₆ (site+3gen)",
+  "coupling_mechanism": "2B=8 exchange between site and energy sectors via K_Tree branching",
+  "conclusion": "🟢 CY₃(36,98) moduli 完全由 K_Chain 結構鎖定 — 唔係巧合，係機制",
+  "B_test": {
+    "3": "h11=38, h21=96",
+    "4": "h11=36, h21=98",
+    "5": "h11=34, h21=100"
+  }
+}

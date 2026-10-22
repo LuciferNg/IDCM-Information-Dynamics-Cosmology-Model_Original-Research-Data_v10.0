@@ -1,0 +1,48 @@
+{
+  "scripts": [
+    {
+      "file": "02_o169_correction_reverify.py",
+      "desc": "O169 伸長律修正點 (#17)",
+      "pass": true,
+      "result": "結果: 6/6 通過 ✅"
+    },
+    {
+      "file": "10_reverify_energy.py",
+      "desc": "UHECR 能量尺度 (01 §2.1-2.4)",
+      "pass": true,
+      "result": "結果: 8/8 通過 ✅"
+    },
+    {
+      "file": "11_reverify_anisotropy.py",
+      "desc": "Auger 各向異性 (01 §2.5)",
+      "pass": true,
+      "result": "結果: 全部一致 ✅"
+    },
+    {
+      "file": "12_reverify_cluster_vacuum.py",
+      "desc": "星系團節點真空 (01 §2.6)",
+      "pass": true,
+      "result": "結果: 全部一致 ✅"
+    },
+    {
+      "file": "13_reverify_lrd_spectral.py",
+      "desc": "譜結構 + LRD 標度 (04)",
+      "pass": true,
+      "result": "結果: 18/18 通過 ✅"
+    },
+    {
+      "file": "14_reverify_predictions.py",
+      "desc": "偏振/GRB/盲測 (03 §7)",
+      "pass": false,
+      "result": "結果: 7/9 有 FAIL ❌"
+    },
+    {
+      "file": "16_reverify_doc_consistency.py",
+      "desc": "文檔一致性 (docs/)",
+      "pass": true,
+      "result": "結果: ✅ 全部通過"
+    }
+  ],
+  "n_pass": 6,
+  "n_total": 7
+}

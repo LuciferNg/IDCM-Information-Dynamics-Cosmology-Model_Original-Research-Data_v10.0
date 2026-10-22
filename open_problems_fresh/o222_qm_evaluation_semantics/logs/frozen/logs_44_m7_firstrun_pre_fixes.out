@@ -1,0 +1,9 @@
+# 首跑（未修正版）之殘存輸出，來源 = 延遲 background 通知 proc_0095b3319469（原 log 已被後續修正版覆蓋）
+EXIT=1
+==============================================================================================================
+O222 scripts/44 -- M7 rank-2 exclusion by circular-arc consistency (contract docs/29_r20_m7_contract.md)
+==============================================================================================================
+[CTRL C1] rank-2 realizable targets  -> PASS expected : [(False, 1), (False, 6)]
+[CTRL C2] random +-1 targets         -> FAIL expected : [([0], 1), ([0], 1)]
+[CTRL] decider valid = False
+!! decider invalid -- M7 verdict withheld !!

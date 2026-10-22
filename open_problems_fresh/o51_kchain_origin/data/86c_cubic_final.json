@@ -1,0 +1,20 @@
+{
+  "C1": -0.169733,
+  "C3_kurtosis": -0.048693,
+  "C3_RG_full": -6.2e-05,
+  "C3_optimal": -1.217336,
+  "optimal_scale": 25.0,
+  "chi2_original": 42.23,
+  "chi2_linear": 18.09,
+  "chi2_cubic_structural": 17.72,
+  "chi2_cubic_optimal": 11.77,
+  "beta1": 0.06141,
+  "beta2": -0.234812,
+  "beta3": 0.017617,
+  "kurtosis_gd": 0.284759,
+  "skewness_gd": -0.944033,
+  "beta2sq_beta3_ratio": 3.1,
+  "C3_C1_ratio": 0.2869,
+  "H0_orig": 72.6064,
+  "H0_cubic": 72.5933
+}

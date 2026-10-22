@@ -1,0 +1,167 @@
+{
+  "script": "02_chirality_orientation",
+  "date": "2026-09-28",
+  "delta_m_deg": 2.670025733164667,
+  "improper_min_dev_deg": 5.340202135329706,
+  "sym_a5": 60,
+  "sym_rh": 24,
+  "checks": [
+    {
+      "name": "A1 |I| = 60（5-fold + 3-fold 閉包）",
+      "pass": true,
+      "detail": "|I| = 60"
+    },
+    {
+      "name": "A2 ∀g ∈ I: det = +1（純旋轉群, 冇 improper）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "A3 |I_h| = 120 = 2×60（含 −I）",
+      "pass": true,
+      "detail": "|I_h| = 120"
+    },
+    {
+      "name": "A4 階元素分佈 = (1,15,20,24) ⟹ 群身份 = A₅ ≅ I（非 C/D/T/O）",
+      "pass": true,
+      "detail": "分佈 = {1: 1, 2: 15, 3: 20, 5: 24}"
+    },
+    {
+      "name": "A5 2-fold 軸數 = 15 = #H₃ 鏡面 = #正根（deg δ 之來源）",
+      "pass": true,
+      "detail": "|A2| = 15"
+    },
+    {
+      "name": "B1 δ(I·s) = δ(s) ∀g ∈ I（15 次不變量, I-不變）",
+      "pass": true,
+      "detail": "max dev = 2.107e-20"
+    },
+    {
+      "name": "B2 δ(−s) = (−1)¹⁵δ(s) = −δ(s)（奇次 ⟹ 偽標量）",
+      "pass": true,
+      "detail": "δ(s)=-4.115874e-07, δ(−s)=4.115874e-07"
+    },
+    {
+      "name": "B3 60 個一般位置種子: δ ≠ 0 且 −s ∉ I·s（全數）",
+      "pass": true,
+      "detail": "chiral = 60/60"
+    },
+    {
+      "name": "B4 60 個鏡面種子: δ = 0 且 −s ∈ I·s（全數）",
+      "pass": true,
+      "detail": "achiral = 60/60"
+    },
+    {
+      "name": "B5 ★ 精確二分: δ ≠ 0 ⟺ 手性（−s ∉ I·s）⟺ 種子唔落鏡面",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C 12 (5-fold 軸)  N = 12, −v ∈ 軌道? 是     ⟹ 非手性",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C 20 (3-fold 軸)  N = 20, −v ∈ 軌道? 是     ⟹ 非手性",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C 30 (2-fold 軸)  N = 30, −v ∈ 軌道? 是     ⟹ 非手性",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "C 60 (一般位置)      N = 60, −v ∈ 軌道? 否     ⟹ 手性 (|Sym| = 60, 全 proper = True)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D0 兩個資料集都係 60 點單位向量",
+      "pass": true,
+      "detail": "A₅ = (60, 3), RH = (60, 3)"
+    },
+    {
+      "name": "D1 冷斑 A₅ 集 = I-軌道（proper 最大偏差 < 0.001° = 檔案 4 位小數級）",
+      "pass": true,
+      "detail": "proper 最大偏差 = 0.000097°"
+    },
+    {
+      "name": "D2 ★ 冷斑 A₅ 集對**全部** improper 元素皆唔不變（偏差 ≫ 0）",
+      "pass": true,
+      "detail": "improper 最小偏差 = 5.340202°"
+    },
+    {
+      "name": "D3 ★ |Sym(冷斑 A₅)| = 60（全 det = +1）⟹ 嚴格手性",
+      "pass": true,
+      "detail": "|Sym| = 60, improper = 0"
+    },
+    {
+      "name": "D4 ⚠️ 觀察: o182 `a5_nodes_ideal.txt`（標稱 RH 60 頂點）之 |Sym| = 24（12 proper + 12 improper）≠ 120 ⟹ 在標準二十面體框架下**並非** I_h-對稱。本輪**唔用**佢做非手性校準組（改用自建 I_h-軌道），並列為跨 O 待核實項",
+      "pass": true,
+      "detail": "|Sym| = 24"
+    },
+    {
+      "name": "D4b 自建 I_h-軌道（一般位置）: |Sym| = 120（60 improper）且 δ ≠ 0 ⟹ 合法非手性校準組",
+      "pass": true,
+      "detail": "|Sym| = 120, δ = 1.082e-06"
+    },
+    {
+      "name": "D5 δ_m := ½·對極接近 = ½·min angle(−v, w) ⟹ δ_m = 2.670026°（O213 報 2.670063°；O223 報 2δ_m = 5.340114°）",
+      "pass": true,
+      "detail": "δ_m = 2.670026°（對極接近 = 5.340051°）"
+    },
+    {
+      "name": "D6 2δ_m = 對極接近 = 全部 improper 元素之共同殘差（連結兩量；容差 1e-3° 配合檔案 4 位小數捨入）",
+      "pass": true,
+      "detail": "2δ_m = 5.340051° vs improper 殘差 5.340202°（差 1.5e-04° = 檔案捨入）"
+    },
+    {
+      "name": "D7 A₅ 集: improper 殘差係**常數**（∀ improper g 皆同一值）⟹ 殘差只取決於軌道 vs 其鏡像",
+      "pass": true,
+      "detail": "improper 殘差 = 5.340202°（見 D2；因 (−R)·(I·s) = −(I·s) ∀R ∈ I）"
+    },
+    {
+      "name": "E1 ★ 手性集: δ 之符號在全部 |Sym| = 60 元素下**不變** ⟹ 絕對 sense 有定義",
+      "pass": true,
+      "detail": "符號集 = {np.float64(-1.0)}"
+    },
+    {
+      "name": "E2 ★ 非手性集: δ 之符號在 improper g 下**全部翻轉**（δ ↦ −δ）⟹ 兩 sense 由對稱連繫 ⟹ sense 相對",
+      "pass": true,
+      "detail": "δ(s) 符號 = 1.0；improper 下之符號集 = {np.float64(-1.0)}"
+    },
+    {
+      "name": "E3 ★ 定理（T9）: 旋轉 sense 絕對化 ⟺ 幾何手性（|Sym| 冇 improper 元素）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F1 A₅ 60-軌道: −v ∉ 集 ⟹ **冇** inversion ⟹ helicity 配對（±p）唔存在於其內",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F2 RH 集: −v ∈ 集 ⟹ 有 inversion ⟹ helicity 配對存在（但非手性）",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "F3 ★ 互補性: 定向（手性）同對偶（helicity 配對）住喺**唔同**結構 —— A₅ 軌道提供定向但冇對偶；88-grid（O182 canonical |Sym| = 4 = {+1:2, −1:2}，含 −I）提供對偶但非手性 ⟹ 螺旋度符號之絕對意義需要**兩者同時**",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "G1 docs/03 (B7): 鏈 holonomy 階 = 4 之結論與定向約定無關 ⟹ 自旋存在唔需要手性",
+      "pass": true,
+      "detail": "（結構陳述；見 docs/03 B7）"
+    },
+    {
+      "name": "G2 ★ 完整鏈: 偶鏈 holonomy（階 4）⟹ 自旋存在；手性（|Sym| = 60 全 proper）⟹ 旋轉 sense 絕對化；兩者獨立 ⟹ 自旋 + 定向 = 螺旋度符號有物理意義",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "n_pass": 31,
+  "n_total": 31
+}

@@ -1,0 +1,8 @@
+O204 Script 10 — 引力 + 全部行為: 21/21 PASS
+G1 zeta = M_Pl*lambda = 1.985187e+17 GeV (O86 candidate)
+G2 G9: U(1)_W forbids zeta*W*R; allows xi|W|^2R with xi NEW unfixed
+G3 m_7 = 13.800155 MeV; m_dW/m_7 = 1.0108913 (non-structural)
+A1 v7 alpha^-1 = 137.0362129 vs obs 137.035999177 (rel 1.56e-6)
+A2 NULL: 7497 same-form candidates, 0 hits <1e-5, expected 0.05997 => SELECTION EFFECT
+A3 Omega_Lambda = 41/60 = <W>^2/Sigma gamma EXACT
+A4 alpha^-1(0)=137, alpha^-1(MZ)=128, cold spot A=134.2 uK

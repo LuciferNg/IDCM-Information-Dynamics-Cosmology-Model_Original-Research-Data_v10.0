@@ -1,0 +1,12 @@
+{
+  "route": "B",
+  "best_weight_type": "gamma_vg",
+  "best_power": 1.0,
+  "chi2_idcm_modal": 14856569708304.92,
+  "chi2_lcdm": 21.8,
+  "delta_chi2": -14856569708283.12,
+  "n_total": 36,
+  "pass": 3,
+  "fail": 2,
+  "status": "\ud83d\udfe1"
+}

@@ -1,0 +1,78 @@
+{
+  "trigger": "O170 docs/04 F2 (DESI DR2 Table 6 error correction)",
+  "chi2_dh_O117_errorset": 7.4124,
+  "chi2_dh_table6": 29.5047,
+  "chi2_dh_table6_dof": 6,
+  "delta_chi2": 22.0923,
+  "chi2_dm_table6_5pt": 27.1224,
+  "chi2_dm_table6_6pt": 27.1512,
+  "C_DM": -0.1697331557,
+  "C_DH": -0.22631087426666666,
+  "per_tracer": [
+    {
+      "tracer": "LRG1",
+      "z": 0.51,
+      "DH_pred": 21.10187,
+      "DESI": 21.863,
+      "sigma_O117": 0.429,
+      "sigma_table6": 0.425,
+      "pull_table6": -1.7909
+    },
+    {
+      "tracer": "LRG2",
+      "z": 0.706,
+      "DH_pred": 19.75835,
+      "DESI": 19.455,
+      "sigma_O117": 0.334,
+      "sigma_table6": 0.33,
+      "pull_table6": 0.9193
+    },
+    {
+      "tracer": "LRG3+ELG",
+      "z": 0.934,
+      "DH_pred": 17.95057,
+      "DESI": 17.641,
+      "sigma_O117": 0.201,
+      "sigma_table6": 0.193,
+      "pull_table6": 1.604
+    },
+    {
+      "tracer": "ELG2",
+      "z": 1.321,
+      "DH_pred": 14.28846,
+      "DESI": 14.176,
+      "sigma_O117": 0.225,
+      "sigma_table6": 0.221,
+      "pull_table6": 0.5089
+    },
+    {
+      "tracer": "QSO",
+      "z": 1.484,
+      "DH_pred": 12.84319,
+      "DESI": 12.817,
+      "sigma_O117": 0.518,
+      "sigma_table6": 0.516,
+      "pull_table6": 0.0508
+    },
+    {
+      "tracer": "Lyalpha",
+      "z": 2.33,
+      "DH_pred": 8.15166,
+      "DESI": 8.632,
+      "sigma_O117": 0.532,
+      "sigma_table6": 0.101,
+      "pull_table6": -4.7558
+    }
+  ],
+  "lyalpha_pull_O117": -0.9029,
+  "lyalpha_pull_table6": -4.7558,
+  "scan_optimal_C_diagnostic": -0.02605,
+  "scan_optimal_chi2_diagnostic": 9.7606,
+  "verdict": "DH/rd chi2 = 7.41 VOID; Lyalpha sigma 0.532 -> 0.101",
+  "retained": [
+    "D_H != dD_A/dz (independent projections)",
+    "DM/rd error set already correct"
+  ],
+  "pass": 7,
+  "fail": 0
+}

@@ -1,0 +1,269 @@
+{
+ "generated_at": "2026-10-06T18:11:20",
+ "base": "open_problems_fresh/o210_causal_tensor_algebra",
+ "files": [
+  {
+   "path": "01_problem_record.md",
+   "bytes": 26026,
+   "sha256": "f3a9f2fc67437d34b9ce625669e80dbab94eb9632a5101da1a57959284a2bd7e"
+  },
+  {
+   "path": "SESSION_START.md",
+   "bytes": 2746,
+   "sha256": "b6b90349633bd62e823251a935d3b74a018b45072de153d560abace88a7d41ee"
+  },
+  {
+   "path": "data/02_type_registry.json",
+   "bytes": 20849,
+   "sha256": "558be30c27cbd2ed26bd41307ff888caf93ff60462af64e5015981ef20fa15c7"
+  },
+  {
+   "path": "data/audit/_check.txt",
+   "bytes": 4893,
+   "sha256": "b377eeca296339525ae9f2e7681ca57d2ba1cdf81a0eb35ba74e67b26d93fb8d"
+  },
+  {
+   "path": "data/audit/binding_o210.json",
+   "bytes": 2179,
+   "sha256": "86dff4106be36f5c4f75e3d5489a320081a326b9eaba685eef8c0d1e31abdcdc"
+  },
+  {
+   "path": "data/audit/hygiene_o210.json",
+   "bytes": 5707,
+   "sha256": "d2dc910872bc5b87233846c24c29b4aa22fa2a546c5fa67e4509fa7e4ddbcbf8"
+  },
+  {
+   "path": "data/audit/independent_recheck.json",
+   "bytes": 596,
+   "sha256": "917ac720a36c4fe4dbd9d691a7111b97e557bb5252e814abed9ea21a9a3859d5"
+  },
+  {
+   "path": "data/audit/register_coverage.json",
+   "bytes": 4285,
+   "sha256": "4a483c61e089bf95d47d868bd51a22de8bbacb3f8bc2c2e5f6ded334de40756a"
+  },
+  {
+   "path": "data/audit/session_chain_o210.json",
+   "bytes": 5574,
+   "sha256": "985fc8791e0e52f5519bb51a506ce3e3a8949d0fea5ec6bce544d8590d0fa798"
+  },
+  {
+   "path": "docs/01_type_system.md",
+   "bytes": 6492,
+   "sha256": "49f88b0bb2457eabfcd28768c7f5feb26d1f509af24f8b2285a1110821c42225"
+  },
+  {
+   "path": "docs/02_operations_closure.md",
+   "bytes": 6160,
+   "sha256": "7eeeae61d4e8e4f02a609d287f345d575b1968b7a1d1403a3cfd5d80c3c2f69b"
+  },
+  {
+   "path": "docs/03_normalization_charter.md",
+   "bytes": 12767,
+   "sha256": "3199be5e4fb5df6f5423da9b9fd12b0b4e4b13ad178598adc3bb78e7022d48b4"
+  },
+  {
+   "path": "docs/04_rewrite_report.md",
+   "bytes": 6350,
+   "sha256": "bcf5d0d5691ca47f36392ec118d536674120af66a46b233e3617160704b00c00"
+  },
+  {
+   "path": "docs/05_inbound_handoff.md",
+   "bytes": 6659,
+   "sha256": "8046f71a19f636f72b40f7abc17597717c47668bf3037d872191bdb6c9d0181a"
+  },
+  {
+   "path": "docs/06_escape_period_theorem.md",
+   "bytes": 8470,
+   "sha256": "8910cc766b7023d4cb276067f12dfdb1d81c544da3dc3a01ca616904c60c3576"
+  },
+  {
+   "path": "docs/07_operator_layer_selection.md",
+   "bytes": 10409,
+   "sha256": "6a65c7741a11fb3a65da68c4310b83be6f167ddec89f22d82417d23199102d83"
+  },
+  {
+   "path": "docs/08_branch_charge_no_go.md",
+   "bytes": 5446,
+   "sha256": "3fb2c7a337389bc04fc6002573f78ddfdc154c9e15f69e36183a32898dc7570d"
+  },
+  {
+   "path": "docs/09_ktree_two_counts.md",
+   "bytes": 5652,
+   "sha256": "d10605b413116d04be1c5f1e95803bfbc4dbe8e2a77ca8db7f4a0f24b230acc7"
+  },
+  {
+   "path": "docs/10_z4_bridge.md",
+   "bytes": 8381,
+   "sha256": "cf5c74df82b304cb7d23d79cac72fcf06c986c4b98d629c5ef9b5d3fcf5b0017"
+  },
+  {
+   "path": "docs/11_common_measure_no_go.md",
+   "bytes": 7542,
+   "sha256": "9b928f1ac52b08c7445cece94ad7dc44cffde6d6b29eb91c6d5427495368590b"
+  },
+  {
+   "path": "docs/12_full_chain_closeout.md",
+   "bytes": 16940,
+   "sha256": "8be6a2f3f6d76cd80f4060dfe170841ab4d11efdb61bf07a23693bb31262d271"
+  },
+  {
+   "path": "docs/13_script_chain.md",
+   "bytes": 5506,
+   "sha256": "d68c4cae88a6f800afa20db8529c9388cf206d93859b2d0450716b03aa998c43"
+  },
+  {
+   "path": "docs/14_inbound_handoff_20261006.md",
+   "bytes": 3976,
+   "sha256": "a57940cf9e66467e7bb22f72fb73f7b3ea4c557a833f691d620c26d620c33c70"
+  },
+  {
+   "path": "final_result.md",
+   "bytes": 9130,
+   "sha256": "fb716bb2efa02f8e93e52e9f5732e1b7972c79031e4cb27583629f6363bf2868"
+  },
+  {
+   "path": "logs/01_closure_verify.out",
+   "bytes": 8149,
+   "sha256": "a3ae6545ed59120435b0c41ce564ec3bf5b3cbf01b5acdf2e86669c2ec6b2333"
+  },
+  {
+   "path": "logs/02_type_registry.out",
+   "bytes": 297,
+   "sha256": "fe8063c0e1bd96d7b9687eba1a3a4c292bfd41a6acac6b2b1fd996d62d4b9c06"
+  },
+  {
+   "path": "logs/03_inbound_recompute.out",
+   "bytes": 2122,
+   "sha256": "2bfdd8aacbfda8a3ea3a31cc201c276d1e8f99571aebaf9228e6db8be9115fce"
+  },
+  {
+   "path": "logs/04_escape_period_derivation.out",
+   "bytes": 8500,
+   "sha256": "a9075fd074d3ac825cfbb23fe35554e3233d52858789751a2781a300fbdcf4eb"
+  },
+  {
+   "path": "logs/05_operator_layer_selection.out",
+   "bytes": 6959,
+   "sha256": "e756314805927061e2c9723bfc0c7da09294a0e0f5c799e29be77317e07de665"
+  },
+  {
+   "path": "logs/06_branch_charge_definition.out",
+   "bytes": 5466,
+   "sha256": "cfe9c4c2a83adc198c40938481fcfb15346a224d204f74f22cd6adf4cffe7556"
+  },
+  {
+   "path": "logs/07_ktree_two_counts.out",
+   "bytes": 5113,
+   "sha256": "24b653444a176435940f1dff269e6fd3a48cbbb42ba4a2c41bca79c9e1ff0873"
+  },
+  {
+   "path": "logs/08_z4_bridge_definition.out",
+   "bytes": 6278,
+   "sha256": "039066ba604bbca1dbd08cf8361ab061490d9daab75c5b282995ff043e369a89"
+  },
+  {
+   "path": "logs/09_common_measure.out",
+   "bytes": 5402,
+   "sha256": "eb6db78bfdffdc30e5b7c2e2803f15c5ee46b2da8ef2b61e3332ee53183c4f8c"
+  },
+  {
+   "path": "logs/10_audit_independent.out",
+   "bytes": 9183,
+   "sha256": "9cfac9658571d5ce51f1ed9ec5e8de28a821ea987fa66e278873e4b324b71886"
+  },
+  {
+   "path": "logs/11_session_chain_provenance.out",
+   "bytes": 2551,
+   "sha256": "6a16ceff5ff08cb0c9b500254a7ba274add8234e4e914c7deb74b48bfa4e5a53"
+  },
+  {
+   "path": "logs/12_register_coverage.out",
+   "bytes": 2814,
+   "sha256": "31dc0af3fce3915b554cbdccb34f61f408697edaa3dbcb98fc4924cf3eaa30f6"
+  },
+  {
+   "path": "logs/13_manifest.out",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "scripts/01_closure_verify.py",
+   "bytes": 17634,
+   "sha256": "7df71791d1986e9fd0bbe52712808fd8e2ef9c7a37f7b3898994ccb1aac0a10a"
+  },
+  {
+   "path": "scripts/02_type_registry.py",
+   "bytes": 14662,
+   "sha256": "35519c556f3b176d57418c2072fd67a20c3232adf13fe30b30f397b861e46b60"
+  },
+  {
+   "path": "scripts/03_inbound_recompute.py",
+   "bytes": 6660,
+   "sha256": "fe6886858a9ac4bf9b17f3698311dd5affb75eeaabf7c9165939251a7a12f1e3"
+  },
+  {
+   "path": "scripts/04_escape_period_derivation.py",
+   "bytes": 16146,
+   "sha256": "c4eecde39b9da1bd3592e8089f5c7007ee28e633ec63fd39595708e4fa483c69"
+  },
+  {
+   "path": "scripts/05_operator_layer_selection.py",
+   "bytes": 11072,
+   "sha256": "cece9f7ea36ea4d32b8bf2d9b62708ff557a7414e91c6f29da50a61666cb4900"
+  },
+  {
+   "path": "scripts/06_branch_charge_definition.py",
+   "bytes": 11120,
+   "sha256": "7a4aecfe5ecc8f2feb0b14adb594372318238cfc7a508870a0a4740ec8f46d77"
+  },
+  {
+   "path": "scripts/07_ktree_two_counts.py",
+   "bytes": 7416,
+   "sha256": "c3f683dca72b958e52578561e97db4e48b9d3ce5a0c735410af4f85417ceccd1"
+  },
+  {
+   "path": "scripts/08_z4_bridge_definition.py",
+   "bytes": 9518,
+   "sha256": "79554aa52889234a209b5a8b4291253e7e3b5408a2a2b7743b712fd583cff8b4"
+  },
+  {
+   "path": "scripts/09_common_measure.py",
+   "bytes": 9497,
+   "sha256": "43ce432940755f1a7b71eeba8f8ef5ad357e5747f3f9cc8e03054c8131ee5f53"
+  },
+  {
+   "path": "scripts/10_audit_independent.py",
+   "bytes": 19891,
+   "sha256": "411748a15ced878d9f7a46ca9dbd2d90dbcdca53c7b97973f465ddf05e64a310"
+  },
+  {
+   "path": "scripts/11_session_chain_provenance.py",
+   "bytes": 13120,
+   "sha256": "ac0de84baf5025db0edfa9a81868b6c32eaae2a35e7facf819c2a21b812f7913"
+  },
+  {
+   "path": "scripts/12_register_coverage.py",
+   "bytes": 8868,
+   "sha256": "d34a7383627681326aed058910a18e8e0c427ce75f8cf71be03b27ee552a14fb"
+  },
+  {
+   "path": "scripts/13_manifest.py",
+   "bytes": 3671,
+   "sha256": "612194af77d353bd052ca680435cbbcb9a321de35e59dbfd6b163930603b8304"
+  },
+  {
+   "path": "scripts/run_chain.sh",
+   "bytes": 1230,
+   "sha256": "d47881d28aa0a25d0cd08aec4bb520a641181da53c241c52627efb5f0d4c2a0d"
+  }
+ ],
+ "untracked_by_design": [
+  "data/MANIFEST.json",
+  "logs/13_manifest.out"
+ ],
+ "note": "O210 收尾凍結（R8）。任何後續重跑都會令 logs/11_session_chain_provenance.out（動態 session 統計）及 data/audit/*.json 失效 ⟹ 必須重新產生 MANIFEST 並經 register 通報。",
+ "n_scripts": 13,
+ "n_docs": 14,
+ "n_logs": 13
+}

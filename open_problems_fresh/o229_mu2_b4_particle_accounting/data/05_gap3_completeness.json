@@ -1,0 +1,183 @@
+{
+ "script": "05_gap3_completeness",
+ "pass": 25,
+ "fail": 0,
+ "total": 25,
+ "verdicts": {
+  "anomalies": "✅ 8/8 異常和 = 0",
+  "corpus": {
+   "mu2_lines": 2811,
+   "mu2_files": 613,
+   "B4_lines": 670,
+   "B4_files": 331
+  },
+  "verdict_gap3": "✅ 表已建 (16 態/代 = B²); 8/8 異常和 = 0; 多義實例 11 個 (≥5 門檻已過)"
+ },
+ "particles": [
+  {
+   "name": "Q_L",
+   "colour": 3,
+   "weak": 2,
+   "dim": 6,
+   "Y": "1/6",
+   "T3R": "0",
+   "BmL": "1/3",
+   "src": "M₀γ_n C_f; 色 3 = B−1; 弱同位旋 2"
+  },
+  {
+   "name": "u^c",
+   "colour": 3,
+   "weak": 1,
+   "dim": 3,
+   "Y": "-2/3",
+   "T3R": "-1/2",
+   "BmL": "-1/3",
+   "src": "M₀γ_n C_f"
+  },
+  {
+   "name": "d^c",
+   "colour": 3,
+   "weak": 1,
+   "dim": 3,
+   "Y": "1/3",
+   "T3R": "1/2",
+   "BmL": "-1/3",
+   "src": "M₀γ_n C_f"
+  },
+  {
+   "name": "L_L",
+   "colour": 1,
+   "weak": 2,
+   "dim": 2,
+   "Y": "-1/2",
+   "T3R": "0",
+   "BmL": "-1",
+   "src": "M₀γ_n C_f"
+  },
+  {
+   "name": "e^c",
+   "colour": 1,
+   "weak": 1,
+   "dim": 1,
+   "Y": "1",
+   "T3R": "1/2",
+   "BmL": "1",
+   "src": "M₀γ_n C_f"
+  },
+  {
+   "name": "ν^c",
+   "colour": 1,
+   "weak": 1,
+   "dim": 1,
+   "Y": "0",
+   "T3R": "-1/2",
+   "BmL": "1",
+   "src": "m = A γ_n² (dim-5)"
+  }
+ ],
+ "polysemy": [
+  {
+   "tag": "P1",
+   "symbol": "γ₄₄",
+   "value_A": "4 (88 鏈 Nyquist = B)",
+   "value_B": "2 (176 鏈中心模 = μ²)",
+   "why": "同一字面 γ₄₄ 喺兩鏈取兩值; 無鏈標籤 = 未定義",
+   "verified": true
+  },
+  {
+   "tag": "P2",
+   "symbol": "123",
+   "value_A": "L₁₀ = 123 = E_J (無量綱, IDCM)",
+   "value_B": "m_φ = v_EW/2 = 123.11 GeV (v6.0, 有量綱)",
+   "why": "同一數字兩種量綱/角色 (O204 docs/08 §五)",
+   "verified": true
+  },
+  {
+   "tag": "P3",
+   "symbol": "W₀",
+   "value_A": "7.84219357068 (v10, ⟨W⟩²=61.5 ⟹ √61.5)",
+   "value_B": "1.2360679 (v6.0, = 2/φ)",
+   "why": "兩套歸一化, 唔可能由場重標度相連 (O204 docs/08 §二)",
+   "verified": true
+  },
+  {
+   "tag": "P4",
+   "symbol": "2",
+   "value_A": "μ² (算子本徵值)",
+   "value_B": "引力子 TT 自由度 D(D−3)/2 = 2 (表示維數)",
+   "why": "值相同但一為算子譜、一為表示計數; O221 docs/13 明列",
+   "verified": true
+  },
+  {
+   "tag": "P5",
+   "symbol": "4",
+   "value_A": "B (分支因子/結構數)",
+   "value_B": "鏈振幅 A (歸一化; 單位耦合 Laplacian 頻帶頂)",
+   "why": "同一數字：結構常數 vs 歸一化常數",
+   "verified": true
+  },
+  {
+   "tag": "P6",
+   "symbol": "8",
+   "value_A": "N_c²−1 = 膠子數",
+   "value_B": "2B = F₆ = B(B−2)",
+   "why": "三重身份係同一方程 (B=4) 之讀法 (O144 docs/18 §2)",
+   "verified": true
+  },
+  {
+   "tag": "P7",
+   "symbol": "3",
+   "value_A": "N_c (色數) = B−1",
+   "value_B": "N_gen (世代數) = (L₅+1)/B",
+   "why": "值層退化: 同一函數 N_d/L₅ − 1 (本 O 03 §4)",
+   "verified": true
+  },
+  {
+   "tag": "P8",
+   "symbol": "16",
+   "value_A": "B² = SO(10) 旋量維數",
+   "value_B": "Ω_dm 分子 (16/60)",
+   "why": "同一數字, 兩個角色; 需判係結構重用抑或巧合",
+   "verified": true
+  },
+  {
+   "tag": "P9",
+   "symbol": "19/60 vs 3/60",
+   "value_A": "Ω_m = (3+16)/60 = 19/60",
+   "value_B": "Ω_b = 3/60",
+   "why": "正解 (Ω_b, Ω_dm, Ω_Λ) = (3,16,41)/60; 誤加 Ω_m 得 76≠60 (本輪 script 01 實捉)",
+   "verified": true
+  },
+  {
+   "tag": "P10",
+   "symbol": "μ²",
+   "value_A": "2 (v10, 勢參數)",
+   "value_B": "ε = 0.1545085 (v6.0, 勢參數; λ=1/16)",
+   "why": "不變量 μ²/λ 差 49.75× ⟹ 唔同理論 (O204 docs/08 §二)",
+   "verified": true
+  },
+  {
+   "tag": "P11",
+   "symbol": "φ³ ± φ⁻³",
+   "value_A": "φ³ − φ⁻³ = 4 = L₃ (正確 Binet: L_n = φⁿ + ψⁿ, ψ = −1/φ)",
+   "value_B": "上游 o218_lib.py:41 / O124 docs/09 / final_result 寫 φ³+φ⁻³ = 2√5 ≈ 4.4721 ≠ 4",
+   "why": "系統性符號筆誤 (Binet 之 ψ³ = −φ⁻³ 漏負號); O229 問題記錄已用正確式",
+   "verified": true
+  }
+ ],
+ "anomalies": {
+  "SU3_3": 0,
+  "SU3_2U1": "0",
+  "SU2_2U1": "0",
+  "U1_3": "0",
+  "grav2U1": "0",
+  "grav2BmL": "0",
+  "BmL_3": "0",
+  "BmL_2U1": "0"
+ },
+ "_era_restored": {
+  "date": "2026-10-04",
+  "source": "state.db era log RESULT（25/25）＋現行 json 重建",
+  "note": "pass/fail/total 對應 era 閘；corpus 掃描行=30 未註冊=[]（見 logs/05）"
+ }
+}

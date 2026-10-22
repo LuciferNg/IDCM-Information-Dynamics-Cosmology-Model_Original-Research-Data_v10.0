@@ -1,0 +1,22 @@
+{
+  "distinct_colorings": 30,
+  "all_32_edges": true,
+  "k_dist_ok": true,
+  "odd_face_ok": true,
+  "corr_min": -0.3819115568925749,
+  "corr_max": 0.27995337213210764,
+  "corr_median": -0.008472776377800709,
+  "n_sig_p05": 2,
+  "n_k2_eq_DE0": 1,
+  "n_distinct_k2": 30,
+  "anchor_corr": -0.3819115568925749,
+  "distinct_fingerprints": 9,
+  "verdict_sibling_claims": {
+    "C1_30_colorings": true,
+    "C2_all_satisfy": true,
+    "C3_range": true,
+    "C4_only_1_sig": false,
+    "C4b_k2_only_1": true,
+    "C5_fingerprints": false
+  }
+}

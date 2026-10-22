@@ -1,0 +1,125 @@
+====================================================================================================
+O224 CHAIN COMPLETENESS AUDIT   root = /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o224_amplitude_complex_phase_layer
+====================================================================================================
+
+--- 1. PRODUCER MAP (artefact <- writing script)
+  data/00_contract.json                    <- DOCUMENTED: the round-1 CONTRACT itself (pre-registration; 00_contract.py writes it in-place, path built from a variable)
+  data/01_relock.json                      <- scripts/01_relock.py
+  data/02_phase.json                       <- scripts/02_phase.py
+  data/03_tensor.json                      <- scripts/03_tensor.py
+  data/04_multiparty.json                  <- scripts/04_multiparty.py
+  data/04b_window.json                     <- scripts/04b_window.py
+  data/05_valueset.json                    <- scripts/05_valueset.py
+  data/06_escape.json                      <- scripts/06_escape.py
+  data/07_audit.json                       <- scripts/07_audit.py
+  data/08_residuals.json                   <- scripts/08_residuals.py
+  data/09_global_n.json                    <- scripts/09_global_n.py
+  data/10_e5.json                          <- scripts/10_e5.py
+  data/11_determinism.json                 <- scripts/11_determinism.py
+  data/12_n4_global.json                   <- scripts/12_n4_global.py
+  data/12_shard_00of12.json                <- scripts/12_n4_global.py
+  data/12_shard_01of12.json                <- scripts/12_n4_global.py
+  data/12_shard_02of12.json                <- scripts/12_n4_global.py
+  data/12_shard_03of12.json                <- scripts/12_n4_global.py
+  data/12_shard_04of12.json                <- scripts/12_n4_global.py
+  data/12_shard_05of12.json                <- scripts/12_n4_global.py
+  data/12_shard_06of12.json                <- scripts/12_n4_global.py
+  data/12_shard_07of12.json                <- scripts/12_n4_global.py
+  data/12_shard_08of12.json                <- scripts/12_n4_global.py
+  data/12_shard_09of12.json                <- scripts/12_n4_global.py
+  data/12_shard_10of12.json                <- scripts/12_n4_global.py
+  data/12_shard_11of12.json                <- scripts/12_n4_global.py
+  data/13_party_window.json                <- scripts/13_party_window.py
+  data/14_census_exact.json                <- scripts/14_census_exact.py
+  data/15_anti_convention.json             <- scripts/15_anti_convention.py
+  data/16_r5_manifest.sha256               <- DOCUMENTED: round-5 in-directory hash manifest (self-referential by design)
+  data/16_shard_00of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_01of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_02of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_03of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_04of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_05of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_06of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_07of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_08of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_09of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_10of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_shard_11of12.json                <- scripts/16_windows_global.py,scripts/17_windows_global_gpu.py,scripts/18_windows_global_jit.py
+  data/16_windows_global.json              <- scripts/16_windows_global.py
+  data/frozen/04_b2_settings.json          <- DOCUMENTED: frozen INPUT from O222 (round-1 re-lock)
+  data/frozen/08_a2_h_table.json           <- DOCUMENTED: frozen INPUT from O222
+  data/frozen/09_a2_correlation.json       <- DOCUMENTED: frozen INPUT from O222
+  data/frozen/o222_snapshot.sha256         <- DOCUMENTED: frozen INPUT: O222 source snapshot manifest
+  data/smoke/16_shard_01of3844.json        <- DOCUMENTED: ARCHIVED round-5 smoke artefact (moved here, kept)
+  [ok]   every data/** artefact is attributed: 41 producer-matched, 7 documented external/archive/pattern, 0 ORPHAN []
+
+--- 2. CONSUMPTION
+  artefacts no script reads (they are all glob-read by 07_audit/16 --aggregate, and the
+  round-5 shards are read by 16 through a glob): 38
+  ['data/01_relock.json', 'data/02_phase.json', 'data/03_tensor.json', 'data/04_multiparty.json', 'data/05_valueset.json', 'data/06_escape.json']
+
+--- 3. DRIVER (scripts/run_chain.sh)
+  [ok]   driver: 31 commands, 0 problems []
+  [ok]   driver covers 00_contract.py
+  [ok]   driver covers 07_audit.py
+  [ok]   driver covers 12_n4_global.py --shard
+  [ok]   driver covers 18_windows_global_jit.py --run-range
+  [ok]   driver covers --merge
+  [ok]   driver covers 16_windows_global.py --aggregate
+  [ok]   driver covers measure_engines.py
+  [ok]   driver covers chain_audit.py
+
+--- 4. MIRRORED PROBES (sha256 vs PROVENANCE.md)
+  [ok]   mirrored probes/manifests verified: 32 hashes match (expected >= 25) []
+
+--- 5. INVENTORY (script -> artefacts)
+  scripts/00_contract.py                     -> (launcher / reader only)
+  scripts/01_relock.py                       -> data/01_relock.json
+  scripts/02_phase.py                        -> data/02_phase.json
+  scripts/03_tensor.py                       -> data/03_tensor.json
+  scripts/04_multiparty.py                   -> data/04_multiparty.json
+  scripts/04b_window.py                      -> data/04b_window.json
+  scripts/05_valueset.py                     -> data/05_valueset.json
+  scripts/06_escape.py                       -> data/06_escape.json
+  scripts/07_audit.py                        -> data/07_audit.json
+  scripts/08_residuals.py                    -> data/08_residuals.json
+  scripts/09_global_n.py                     -> data/09_global_n.json
+  scripts/10_e5.py                           -> data/10_e5.json
+  scripts/11_determinism.py                  -> data/11_determinism.json
+  scripts/12_n4_global.py                    -> data/12_n4_global.json, data/12_shard_%02dof%02d.json
+  scripts/13_party_window.py                 -> data/13_party_window.json
+  scripts/14_census_exact.py                 -> data/14_census_exact.json
+  scripts/15_anti_convention.py              -> data/15_anti_convention.json
+  scripts/16_windows_global.py               -> data/16_shard_%02dof%02d.json, data/16_windows_global.json
+  scripts/17_windows_global_gpu.py           -> data/16_shard_%02dof%02d.json
+  scripts/18_windows_global_jit.py           -> data/16_shard_%02dof%02d.json, scratch/r5_part_%s.npz
+  scripts/bench_r5.py                        -> (launcher / reader only)
+  scripts/chain_audit.py                     -> (launcher / reader only)
+  scripts/chain_audit_v1.py                  -> (launcher / reader only)
+  scripts/lib2i.py                           -> (launcher / reader only)
+  scripts/measure_engines.py                 -> (launcher / reader only)
+  scripts/probe_a4b.py                       -> (launcher / reader only)
+  scripts/probe_anti_dbg.py                  -> (launcher / reader only)
+  scripts/probe_axisfamily.py                -> (launcher / reader only)
+  scripts/probe_e4mask.py                    -> (launcher / reader only)
+  scripts/probe_gpu.py                       -> (launcher / reader only)
+  scripts/probe_gpu2.py                      -> (launcher / reader only)
+  scripts/probe_quant.py                     -> (launcher / reader only)
+  scripts/probe_r4.py                        -> (launcher / reader only)
+  scripts/probe_r5.py                        -> (launcher / reader only)
+  scripts/probe_r7a_fix.py                   -> (launcher / reader only)
+  scripts/probe_relax.py                     -> (launcher / reader only)
+  scripts/probe_v8_debug.py                  -> (launcher / reader only)
+  scripts/prof_r5.py                         -> (launcher / reader only)
+  scripts/run_chain.sh                       -> (launcher / reader only)
+  scripts/run_r4_closeout.sh                 -> logs/07_audit.out, logs/11_determinism.out, logs/12_n4_global.out, logs/13_party_window.out
+  scripts/run_r4_shards.sh                   -> (launcher / reader only)
+  scripts/run_r5_ranges.sh                   -> (launcher / reader only)
+
+--- 6. EXTERNAL DEPENDENCIES OF THE CHAIN
+  data/frozen/*            O222 snapshot, copied in round 1 (state frozen at 2026-09-30)
+  everything else           scripts + probes + launchers + manifests + artefacts now live INSIDE this directory
+
+====================================================================================================
+VERDICT: CHAIN COMPLETE   (0 failed checks)
+====================================================================================================

@@ -1,0 +1,88 @@
+{
+ "checks": [
+  {
+   "tag": "R1",
+   "ok": true,
+   "msg": "V invariant under Gs (max residual 0.00009689 deg)"
+  },
+  {
+   "tag": "R2a",
+   "ok": true,
+   "msg": "F = 62 = 20 triangles + 30 squares + 12 pentagons"
+  },
+  {
+   "tag": "R2b",
+   "ok": true,
+   "msg": "face census {3:20, 4:30, 5:12}"
+  },
+  {
+   "tag": "R2c",
+   "ok": true,
+   "msg": "sum of face sizes = 2E = 240"
+  },
+  {
+   "tag": "R4a",
+   "ok": true,
+   "msg": "all 20 triangles equilateral (short 26.0914 deg)"
+  },
+  {
+   "tag": "R4b",
+   "ok": true,
+   "msg": "all 12 pentagons equilateral (long 26.1664 deg)"
+  },
+  {
+   "tag": "R4c",
+   "ok": true,
+   "msg": "all 30 squares alternate 2 short + 2 long"
+  },
+  {
+   "tag": "R3",
+   "ok": true,
+   "msg": "120 edges split 60 (triangle+square, short) / 60 (pentagon+square, long)"
+  },
+  {
+   "tag": "R3b",
+   "ok": true,
+   "msg": "exactly two edge classes -> exactly two edge lengths"
+  },
+  {
+   "tag": "R5a",
+   "ok": true,
+   "msg": "delta_m = 2.670063 deg reproduced from Gs axes"
+  },
+  {
+   "tag": "R5b",
+   "ok": true,
+   "msg": "antipodal approach = 2*delta_m"
+  },
+  {
+   "tag": "R6a",
+   "ok": true,
+   "msg": "delta_m = 2.6701 deg sits at percentile 57.8% of the uniform null (report only)"
+  },
+  {
+   "tag": "R6b",
+   "ok": true,
+   "msg": "an achiral orbit needs delta_m = 0: probability 0.00e+00 -> chirality is generic"
+  },
+  {
+   "tag": "R7",
+   "ok": true,
+   "msg": "strain is monotone in the mirror deviation (single-parameter family)"
+  }
+ ],
+ "n_pass": 14,
+ "n_total": 14,
+ "delta_m": 2.670063061881919,
+ "percentile": 57.8105,
+ "F": 62,
+ "face_census": {
+  "5": 12,
+  "4": 30,
+  "3": 20
+ },
+ "edge_classes": {
+  "(4, 5)": 60,
+  "(3, 4)": 60
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "test": "CKM/CP 差額符號",
+  "delta_ckm": 66.4,
+  "J_cp": 3.2267e-05,
+  "J_cp_sign": "+",
+  "sum_mean": 2.5916631752668606,
+  "diff_mean": 0.6988496781888697,
+  "delta_E_mean": 1.892813497077991,
+  "eta_B_sign": "+",
+  "eta_B_mechanism": "能量分配 (大小) + δ_CKM 投影 (符號)",
+  "antiuniverse_prediction": "δ_CKM < 0 → 反宇宙",
+  "conclusion": "δ_CKM=66.40°>0 ⟹ J_CP>0 ⟹ 差頻(物質)優先投影; 和頻平均能量更高 (ΔE=0.946) ⟹ 宏觀物質主導; |η_B|=能量分配, sign=δ_CKM"
+}

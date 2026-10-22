@@ -1,0 +1,43 @@
+{
+ "ladder": [
+  {
+   "step": 0,
+   "value": "5",
+   "cuts": 0
+  }
+ ],
+ "cuts": [],
+ "claims": [
+  {
+   "tag": "P11-1",
+   "name": "at least one candidate cut is VALID (no cover inside A0^c) and BITES the current LP point [BLIND]",
+   "ok": false,
+   "detail": "first cut: valid=False, mass at previous point < 1: False"
+  },
+  {
+   "tag": "P11-2",
+   "name": "the cut ladder reaches >= 6 within <= 8 cuts  [BLIND]",
+   "ok": false,
+   "detail": "final = 5 after 0 cuts (ladder ['5'])"
+  },
+  {
+   "tag": "P11-3",
+   "name": "the cut ladder reaches exactly 7 within <= 8 cuts (=> a SHORT certificate for k_min = 7) [BLIND]",
+   "ok": false,
+   "detail": "final = 5 after 0 cuts"
+  },
+  {
+   "tag": "P11-4",
+   "name": "every added cut is re-verified exhaustively: no cover lies inside its A0^c (0 counterexamples)  [not blind: same oracle as construction]",
+   "ok": true,
+   "detail": "0 cuts checked, 0 failures"
+  },
+  {
+   "tag": "P11-5",
+   "name": "RECORD: certificate size. The cut certificate is 0 cuts, each an explicit column set A0 plus a 2^0 exhaustive check; the only previously known lower-bound certificate is a 19,352,397-node pruned DFS",
+   "ok": true,
+   "detail": "0 cuts, ladder ['5']"
+  }
+ ],
+ "elapsed_s": 3.166551113128662
+}

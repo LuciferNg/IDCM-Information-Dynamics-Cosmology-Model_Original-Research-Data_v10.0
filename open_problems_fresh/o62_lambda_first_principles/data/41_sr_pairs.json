@@ -1,0 +1,11 @@
+{
+  "test": "O62 九期 41: SR pairs",
+  "n_sage": 484,
+  "n_mine": 912,
+  "inter": 450,
+  "only_sage": 25,
+  "only_mine": 462,
+  "diff_inactive": 462,
+  "passed": 0,
+  "failed": 0
+}

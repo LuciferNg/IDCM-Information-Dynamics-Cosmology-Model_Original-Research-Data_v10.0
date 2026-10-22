@@ -1,0 +1,13 @@
+{
+  "title": "sync sector 微態計數",
+  "n_full_sync_modes": 17,
+  "E_sync": 61.5,
+  "Omega_E": 401101,
+  "S_lattice_lnOmega": 12.90196854489889,
+  "S_asymptotic_17lnE": 17.7621488286987,
+  "S_bits_17ln2": 11.78350206951907,
+  "lattice_entropy_order": "subexponential (ln E)",
+  "area_law": "A/4G linear — needs sub-lattice DOF",
+  "MERA_boundary": "S ~ N_b ln 2, 1/4 = 1/B candidate",
+  "verdict": "格點層微態可計數但次指數; 面積律線性階需次格點微結構 (MERA B=4 邊界 1/4 候選 🟡)"
+}

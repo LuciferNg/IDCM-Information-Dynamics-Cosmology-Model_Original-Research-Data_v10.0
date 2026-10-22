@@ -1,0 +1,39 @@
+{
+ "rules": "r31-stt-mechanism-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "合約含關鍵定義",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C2",
+   "name": "預註冊 tag 齊備（P1–P3／Q1–Q3／R1–R2 = 8 條）",
+   "ok": true,
+   "detail": "缺 = 無"
+  },
+  {
+   "tag": "C3",
+   "name": "判決規則在場",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C4",
+   "name": "負對照：P2 明載「逆命題亦真」（不得只驗 R26 之單向 T3）",
+   "ok": true,
+   "detail": "閘條款 = 在場"
+  },
+  {
+   "tag": "C5",
+   "name": "凍結指紋已寫入",
+   "ok": true,
+   "detail": "sha256 = bb05ab2854f1ca4a…"
+  }
+ ],
+ "gate": "OPEN",
+ "n_pass": 5,
+ "n_total": 5,
+ "contract_sha256": "bb05ab2854f1ca4a8af1d2fff16d894f1eb0589702b0cac9c4b1f7fc8820b724"
+}

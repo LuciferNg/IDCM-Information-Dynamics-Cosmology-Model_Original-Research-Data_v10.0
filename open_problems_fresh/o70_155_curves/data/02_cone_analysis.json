@@ -1,0 +1,8 @@
+{
+  "test": "O70 02: Kähler Cone",
+  "curves_rank": 30,
+  "nz_curves": 52,
+  "null_dim": 6,
+  "actual_cone_dim": 32,
+  "missing_constraints": 2
+}

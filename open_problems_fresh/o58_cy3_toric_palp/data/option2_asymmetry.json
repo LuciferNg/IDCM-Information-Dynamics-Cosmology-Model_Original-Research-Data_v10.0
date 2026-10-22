@@ -1,0 +1,20 @@
+{
+  "note": "CORRECTED 0-based. divisor 0 (ray 0, sum -742) K=-360=-8×45; divisor 8 (ray 8, sum +733) K=-232=-8×29. 45 = 29 + 16 = L₇ + B².",
+  "ray0": {
+    "divisor": 0,
+    "glsm_sum": -742,
+    "K": -360,
+    "K_over_8": 45
+  },
+  "ray8": {
+    "divisor": 8,
+    "glsm_sum": 733,
+    "K": -232,
+    "K_over_8": 29
+  },
+  "additive": "45 = L₇(29) + B²(16)",
+  "verified": "glsm sums verified from cy.glsm_charge_matrix()",
+  "withdrawn": [
+    "(-1,-1,0,0) mirror K=-360 (actual +8)"
+  ]
+}

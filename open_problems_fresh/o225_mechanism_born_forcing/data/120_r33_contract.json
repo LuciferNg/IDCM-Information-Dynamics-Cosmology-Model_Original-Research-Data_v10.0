@@ -1,0 +1,39 @@
+{
+ "rules": "r33-closure-batch-v1",
+ "claims": [
+  {
+   "tag": "C1",
+   "name": "合約含五項完備類與關鍵詞",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C2",
+   "name": "完備候選類 C1–C5 預註冊齊備",
+   "ok": true,
+   "detail": "缺 = 無"
+  },
+  {
+   "tag": "C3",
+   "name": "判決規則在場",
+   "ok": true,
+   "detail": "缺 = []"
+  },
+  {
+   "tag": "C4",
+   "name": "負對照：C2 明載「R31 P2 ✗ 屬凍結 T3 之重證，非新殘餘」（禁以重證冒充新發現）",
+   "ok": true,
+   "detail": "閘條款 = 在場"
+  },
+  {
+   "tag": "C5",
+   "name": "凍結指紋已寫入",
+   "ok": true,
+   "detail": "sha256 = 3d07804b5f285202…"
+  }
+ ],
+ "gate": "OPEN",
+ "n_pass": 5,
+ "n_total": 5,
+ "contract_sha256": "3d07804b5f28520294d1c11fc4117bb1149e7789982805e0c09de2eee7efd7ca"
+}

@@ -1,0 +1,1734 @@
+{
+ "rules_version": "contract-v1",
+ "set": "DEV = V x V",
+ "pairs": [
+  {
+   "a": "V00",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V00",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V00",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V01",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V01",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V01",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V01",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V02",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V02",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V02",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V03",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V03",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V03",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V04",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V04",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V04",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V05",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V05",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V05",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V06",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V06",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V06",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V07",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V07",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V07",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V08",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V08",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V08",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V09",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V09",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V09",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V10",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V10",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V10",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V00",
+   "type": "vertexxvertex",
+   "C_num": -120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  },
+  {
+   "a": "V11",
+   "b": "V01",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V02",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V03",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V04",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V05",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V06",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V07",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V08",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V09",
+   "type": "vertexxvertex",
+   "C_num": -40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V10",
+   "type": "vertexxvertex",
+   "C_num": 40,
+   "C_den": 120,
+   "cos2": [
+    "1/5",
+    "0"
+   ],
+   "exact_eq": false
+  },
+  {
+   "a": "V11",
+   "b": "V11",
+   "type": "vertexxvertex",
+   "C_num": 120,
+   "C_den": 120,
+   "cos2": [
+    "1",
+    "0"
+   ],
+   "exact_eq": true
+  }
+ ]
+}

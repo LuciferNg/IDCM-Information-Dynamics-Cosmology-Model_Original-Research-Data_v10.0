@@ -1,0 +1,35 @@
+{
+  "route": "C_pdg_validation",
+  "pass": 7,
+  "fail": 0,
+  "total": 7,
+  "status": "\ud83d\udfe2",
+  "fractional_deviation": {
+    "rms_pct": 0.2306,
+    "mean_pct": -0.0141,
+    "max_pct": 0.3391
+  },
+  "chi2_conservative": {
+    "sigma_pct": 0.5,
+    "chi2": 0.638,
+    "dof": 3,
+    "chi2_dof": 0.2127
+  },
+  "predictions": {
+    "e": {
+      "idcm": 0.5118,
+      "pdg": 0.51099895,
+      "dev_pct": 0.1638
+    },
+    "mu": {
+      "idcm": 105.7989,
+      "pdg": 105.6583755,
+      "dev_pct": 0.133
+    },
+    "tau": {
+      "idcm": 1770.8349,
+      "pdg": 1776.86,
+      "dev_pct": -0.3391
+    }
+  }
+}

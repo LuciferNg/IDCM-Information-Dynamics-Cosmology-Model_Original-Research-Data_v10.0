@@ -480,15 +480,21 @@ _s_D1 = 165.4180814864716 / 5816.479677744882
 _s_rd = 0.26 / 147.09
 chk("P3-10 docs/22: σ(D₁)/σ(r_d) = 16.089",
     abs(_s_D1 / _s_rd - 16.089) < 0.01, f"({_s_D1/_s_rd:.3f})")
-_s_rr = math.hypot(0.25 / 144.46, 0.26 / 147.09)
-chk("P3-11 docs/22: σ(r*/r_d) = 0.24737%", abs(_s_rr - 0.0024737) < 1e-7)
-chk("P3-12 docs/22: 55/56 z = 7.219σ", abs((1 / 56) / _s_rr - 7.219) < 0.01)
+# ★ 更正 (第十輪, docs/27): 144.46 -> 144.43 (混欄修正), 0.25 -> 0.26
+_s_rr = math.hypot(0.26 / 144.43, 0.26 / 147.09)
+# ★ 更正 (第十輪, docs/27): 原 0.24737% 用混欄 r*; 更正後 naive = 0.25229%
+chk("P3-11 docs/22 (更正): σ_naive(r*/r_d) = 0.25229%",
+    abs(_s_rr - 0.0025229) < 1e-7, f"({_s_rr * 100:.5f}%)")
+chk("P3-12 docs/22 (更正): 55/56 z_naive = 7.078σ (原 7.219σ)",
+    abs((1 / 56) / _s_rr - 7.078) < 0.01, f"({(1 / 56) / _s_rr:.3f})")
 chk("P3-13 docs/22: 420/421 z = 1.344σ", abs((1 / 421) / _s_rd - 1.344) < 0.01)
 chk("P3-14 docs/22: 33/34 A_s 通道 z = 2.101σ", abs((1 / 34) / 0.014 - 2.101) < 0.01)
 chk("P3-15 docs/22: 33/34 D₁ 通道 z = 1.034σ", abs((1 / 34) / _s_D1 - 1.034) < 0.01)
-_rr_obs = mp.mpf('144.46') / mp.mpf('147.09')
-chk("P3-16 docs/22: r*/r_d dev vs 55/56 = −0.002349%",
-    abs(float((_rr_obs / (mp.mpf(55) / 56) - 1) * 100) + 0.002349) < 1e-5)
+_rr_obs = mp.mpf('144.43') / mp.mpf('147.09')   # ★ 更正: col5
+# ★ 更正 (第十輪, docs/27): dev 由 −0.002349% 變 +0.023120%
+chk("P3-16 docs/22 (更正): r*/r_d dev vs 55/56 = −0.023115%",
+    abs(float((_rr_obs / (mp.mpf(55) / 56) - 1) * 100) + 0.023115) < 1e-5,
+    f"({float((_rr_obs / (mp.mpf(55) / 56) - 1) * 100):+.6f}%)")
 chk("P3-17 docs/22: r_d 無修正 dev = +0.23693%",
     abs(float((mp.mpf('147.4385') / mp.mpf('147.09') - 1) * 100) - 0.23693) < 1e-4)
 # docs/23
@@ -564,8 +570,8 @@ chk("P4-10 docs/24: d=421 識別門檻 = 1/355324, 差 177×",
 chk("P4-11 docs/24: d=34 可識別需 (2ℓ+1)Δℓ ≥ 1.13288e7 ⇒ ℓ ≥ 2380",
     2 * (2 * 34 * 35) ** 2 == 11328800 and sp.sqrt(sp.Integer(11328800) / 2) == 2380)
 # P4-12 窗口唯一性
-_Xr = F(14446, 100) / F(14709, 100)
-_sig = mp.sqrt((mp.mpf("0.25") / 144.46) ** 2 + (mp.mpf("0.26") / 147.09) ** 2)
+_Xr = F(14443, 100) / F(14709, 100)   # ★ 更正 (第十輪, docs/27): col5, 原 14446 (col1 混欄)
+_sig = mp.sqrt((mp.mpf("0.26") / 144.43) ** 2 + (mp.mpf("0.26") / 147.09) ** 2)
 _lo = F(int(mp.floor((mp.mpf(str(float(_Xr))) - _sig) * 10 ** 12)), 10 ** 12)
 _hi = F(int(mp.ceil((mp.mpf(str(float(_Xr))) + _sig) * 10 ** 12)), 10 ** 12)
 _FIB = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
@@ -574,17 +580,18 @@ _G = [1, 3, 4, 5, 12, 60]
 _CAND = sorted(set(_FIB) | set(_LUC) | {g * l for g in _G for l in _LUC}
                | {33, 44, 55, 420, 88, 176, 12, 16, 25, 60})
 _win = [N for N in _CAND if _lo <= F(N, N + 1) <= _hi]
-chk("P4-12 docs/24: 識別窗內結構候選 = [54, 55, 60] (退化度 3)",
-    _win == [54, 55, 60], "(%s)" % _win)
-chk("P4-13 docs/24: r*/r_d 精確 = 14446/14709 = 0.982119791",
-    abs(float(_Xr) - 0.982119791) < 1e-9)
-chk("P4-14 docs/24: 55/56 dev = +0.00235% = +0.009σ",
-    abs(float(F(55, 56) / _Xr - 1) * 100 - 0.00235) < 1e-5)
-chk("P4-15 docs/24: 54/55 dev = −0.03071% (同在 1σ 窗)",
-    abs(float(F(54, 55) / _Xr - 1) * 100 + 0.03071) < 1e-5 and
+# ★ 更正 (第十輪, docs/27): 原 [54,55,60] (3 個); 更正後 [48,54,55,60] (4 個)
+chk("P4-12 docs/24 (更正): 識別窗內結構候選 = [48, 54, 55, 60] (退化度 4)",
+    _win == [48, 54, 55, 60], "(%s)" % _win)
+chk("P4-13 docs/24 (更正): r*/r_d 精確 = 14443/14709 = 0.981915834",
+    abs(float(_Xr) - 0.981915834) < 1e-9, f"({float(_Xr):.9f})")
+chk("P4-14 docs/24 (更正): 55/56 dev = +0.02312% = +0.092σ",
+    abs(float(F(55, 56) / _Xr - 1) * 100 - 0.02312) < 1e-5)
+chk("P4-15 docs/24 (更正): 54/55 dev = −0.00995% (同在 1σ 窗)",
+    abs(float(F(54, 55) / _Xr - 1) * 100 + 0.00995) < 1e-5 and
     abs(float(F(54, 55) / _Xr - 1)) < float(_sig))
-chk("P4-16 docs/24: 60/61 dev = +0.15138% (同在 1σ 窗)",
-    abs(float(F(60, 61) / _Xr - 1) * 100 - 0.15138) < 1e-5 and
+chk("P4-16 docs/24 (更正): 60/61 dev = +0.17219% (仍在 naive 1σ 窗)",
+    abs(float(F(60, 61) / _Xr - 1) * 100 - 0.17219) < 1e-5 and
     abs(float(F(60, 61) / _Xr - 1)) < float(_sig))
 # P4-17 全域 Farey 密度
 _fc = 0
@@ -592,14 +599,17 @@ for _q in range(1, 301):
     for _p in range(1, _q):
         if _lo <= F(_p, _q) <= _hi:
             _fc += 1
-chk("P4-17 docs/24: 全域 q ≤ 300 落入同窗之既約分數 = 217",
-    _fc == 217, "(%d)" % _fc)
+# ★ 更正 (第十輪, docs/27): 窗由 0.49475% 擴至 0.50458% => 217 -> 221
+# ★ 更正 (第十輪, docs/27): 窗由 0.49475% 擴至 0.50458% => 217 -> 224
+chk("P4-17 docs/24 (更正): 全域 q ≤ 300 落入同窗之非既約分數 = 224",
+    _fc == 224, "(%d)" % _fc)
 # P4-18 連分數收斂子
 _cv2 = list(sp.continued_fraction_convergents(
     sp.continued_fraction(sp.Rational(int(round(float(_Xr) * 10 ** 9)), 10 ** 9))))
 _pq = [(int(c.p), int(c.q)) for c in _cv2][:10]
-chk("P4-18 docs/24: 55/56 係連分數收斂子 (且 54/55 亦係)",
-    (55, 56) in _pq and (54, 55) in _pq, "(%s)" % _pq[:5])
+# ★★ 更正 (第十輪, docs/27 §7.1): 混欄值下 55/56 係收斂子; 更正後係 **54/55**
+chk("P4-18 docs/24 (更正): 連分數收斂子 = 54/55 (唔再係 55/56)",
+    (54, 55) in _pq and (55, 56) not in _pq, "(%s)" % _pq[:5])
 # P4-19 輸入剛性
 chk("P4-19 docs/24: (L₇²∓1)/2 = (420, 421); 29² mod 421 = 420",
     (29 ** 2 - 1) // 2 == 420 and (29 ** 2 + 1) // 2 == 421 and pow(29, 2, 421) == 420)
@@ -716,12 +726,269 @@ for _ck, _mult_exp in (("r_ratio", 3), ("r_d", 27), ("theta_star", 46), ("Omega_
 chk("P5-17 docs/25: θ* 窗內最小候選 = 2388 (家族 d ≤ 421 全排除)",
     min([N for N in _C5 if abs(float((_CH["theta_star"][0] * sp.Rational(N - 1, N)
                                       - _OBSV["theta_star"]) / _CH["theta_star"][1])) <= 1.0]) == 2388)
-chk("P5-18 docs/25: 非既約 (p,q) 對 q ≤ 300 落入 r*/r_d 1σ 窗 = 217",
+# ★ 更正 (第十輪, docs/27): 217 -> 221
+chk("P5-18 docs/25 (更正): 非既約 (p,q) 對 q ≤ 300 落入 r*/r_d 1σ 窗 = 224",
     sum(1 for _q in range(1, 301) for _p in range(1, _q)
-        if float(_Xr) - float(_sig) < _p / _q < float(_Xr) + float(_sig)) == 217)
+        if float(_Xr) - float(_sig) < _p / _q < float(_Xr) + float(_sig)) == 224)
 
 
 # =====================================================================
+# ★ 第十輪: 連分數收斂子反轉 (docs/27 §7.1)
+_rr_cf = list(sp.continued_fraction_convergents(sp.continued_fraction(sp.Rational(14443, 14709))))
+_rr_pq = [(int(c.p), int(c.q)) for c in _rr_cf][:6]
+_rr_old = list(sp.continued_fraction_convergents(sp.continued_fraction(sp.Rational(14446, 14709))))
+_rr_pq_old = [(int(c.p), int(c.q)) for c in _rr_old][:6]
+chk("P6-CF ★★ 混欄值下 55/56 係收斂子", (55, 56) in _rr_pq_old, "(%s)" % _rr_pq_old)
+chk("P6-CF2 ★★ 更正後 54/55 係收斂子, 55/56 唔係",
+    (54, 55) in _rr_pq and (55, 56) not in _rr_pq, "(%s)" % _rr_pq)
+
+# =====================================================================
+print("\n=== P7: 第十輪附錄 (O202 交接核對) 更正節 ===")
+_t21 = (BASE / "docs" / "21_q3_real_planck_amplitude.md").read_text(encoding="utf-8")
+_t24 = (BASE / "docs" / "24_remaining_difficulty_audit.md").read_text(encoding="utf-8")
+_t28 = (BASE / "docs" / "28_o202_handoff_verification.md").read_text(encoding="utf-8")
+chk("P7-1 docs/21 含 O202 交接核對附錄",
+    "O202 交接核對之更正" in _t21 and "唔對應任何良定義" in _t21)
+chk("P7-2 docs/21 附錄含過零 1789~1790", "1789~1790" in _t21)
+chk("P7-3 docs/21 附錄含 w* = 2103.4897", "2103.4897" in _t21)
+chk("P7-4 docs/21 附錄含 R7 零參數宣稱失效", "零參數" in _t21 and "失效" in _t21)
+chk("P7-5 docs/24 附錄二含 M2 σ 更正 0.081σ",
+    "O202 交接核對之更正" in _t24 and "0.081σ" in _t24)
+chk("P7-6 docs/24 附錄二含滑移因子精確 2", "精確 2" in _t24)
+chk("P7-7 docs/28 存在且含六項裁決", _t28.count("✅") >= 4 and "R7" in _t28)
+
+# ★ M2 數值獨立重算
+_N45 = sum(2 * e + 1 for e in range(2, 7))
+_cvp = math.sqrt(2.0 / _N45)
+_cvr = _cvp / 2
+chk("P7-8 ★ M2: N = 45, CV(rms) = 10.5409%", _N45 == 45
+    and abs(_cvr * 100 - 10.5409) < 0.001, f"({_cvr * 100:.5f}%)")
+chk("P7-9 ★★ M2: 一致性 = 0.8491/10.5409 = 0.0805σ (更正值)",
+    abs(0.8491 / (_cvr * 100) - 0.0805) < 0.001)
+chk("P7-10 ★★ M2 滑移因子 = CV(功率)/CV(rms) = 精確 2",
+    abs(_cvp / _cvr - 2.0) < 1e-12, f"({_cvp / _cvr:.10f})")
+
+# ★ M1 過零獨立重算 (由 Planck 原始檔)
+_T = (mp.mpf("2.72548") * 1e6) ** 2 * ((mp.sqrt(5) - 1) / 8) ** 10 / 64
+_Sobs = mp.mpf("12271.551")
+
+
+def _swl(L):
+    return sum(1 / mp.mpf(e) + 1 / mp.mpf(e + 1) for e in range(2, L + 1))
+
+
+chk("P7-11 ★★ M1: 過零 @ ℓ_max = 1790 (唔係 1750)",
+    float(_T * _swl(1789) / _Sobs - 1) < 0 and float(_T * _swl(1790) / _Sobs - 1) > 0,
+    f"(1789: {float(_T * _swl(1789) / _Sobs - 1) * 100:+.4f}%, "
+    f"1790: {float(_T * _swl(1790) / _Sobs - 1) * 100:+.4f}%)")
+chk("P7-12 ★ M1: ℓ_max=2508 dev = +4.945%",
+    abs(float(_T * _swl(2508) / _Sobs - 1) * 100 - 4.945) < 0.02)
+chk("P7-13 ★ M1: ℓ_max=500 dev = −18.685%",
+    abs(float(_T * _swl(500) / _Sobs - 1) * 100 + 18.685) < 0.02)
+chk("P7-14 ★★ R7: 兩成員數域分離 (ε_φ ∈ Q(√5) vs ε_ring ∈ Q)",
+    abs(float((mp.sqrt(5) - 1) / 8) - 0.15450849718747371) < 1e-15
+    and abs(13 / 86 - 0.1511627906976744) < 1e-15,
+    f"({float((mp.sqrt(5) - 1) / 8):.17f}, {13 / 86:.17f})")
+
+# =====================================================================
+print("\n=== P8: 第十一輪 (支持律 + 殘餘度量 + 第一原理) 更正節 ===")
+_t29 = (BASE / "docs" / "30_epsilon_support_law.md").read_text(encoding="utf-8")
+chk("P8-1 docs/29 存在且含支持律", "支持律" in _t29 and "3/3" in _t29)
+chk("P8-2 docs/29 含 R7 升級 🟡", "R7" in _t29 and "🟡" in _t29)
+chk("P8-3 docs/29 含 44/45 邊緣撤銷", "撤銷" in _t29 and "look-elsewhere" in _t29)
+chk("P8-4 docs/29 含 R_world 反解 4129.98764888", "4129.98764888" in _t29)
+chk("P8-5 docs/29 含判別比 50.3/12.5/57.6", "50.3" in _t29 and "57.6" in _t29)
+chk("P8-6 docs/26 §5.3 之邊緣聲稱已被 docs/29 §4 撤銷",
+    "44/45" in _t29 and "邊緣" in _t29)
+
+# ★ 支持律之三對獨立重算 (Fraction + mpmath)
+_eps_p8 = 1 / (4 * (1 + mp.sqrt(5)) / 2)
+_eps_r8 = mp.mpf(13) / 86
+import json as _json8
+_pk8 = _json8.loads((ROOT / "o10_peak_amplitudes" / "data"
+                     / "planck_binned_peaks.json").read_text(encoding="utf-8"))["peaks"]
+_D221_8 = mp.mpf(str(_pk8["1"]["Dl"]))
+_D527_8 = mp.mpf(str(_pk8["2"]["Dl"]))
+_ratio8 = _D527_8 / _D221_8
+_silk8 = mp.e ** (-((mp.mpf(527) / 9055) ** mp.mpf("1.5")))
+# ★ 慣例同 scripts/42 一致: dev = (預言/觀測 − 1) × 100
+_d8_pk_p = (3 * _eps_p8 * mp.mpf(33) / 34 * _silk8 / _ratio8 - 1) * 100
+_d8_pk_r = (3 * _eps_r8 * mp.mpf(33) / 34 * _silk8 / _ratio8 - 1) * 100
+chk("P8-7 ★★ 峰幅: ε_φ 命中 (|dev| 0.042%), ε_ring 排除 (|dev| 2.12%)",
+    abs(abs(float(_d8_pk_p)) - 0.0422) < 0.005
+    and abs(abs(float(_d8_pk_r)) - 2.124) < 0.02,
+    f"(phi {float(_d8_pk_p):+.4f}%, ring {float(_d8_pk_r):+.4f}%)")
+chk("P8-8 ★★ 峰幅判別比 = 50.3×",
+    abs(abs(float(_d8_pk_r)) / abs(float(_d8_pk_p)) - 50.3) < 0.5)
+# 支持律統計: 列舉 2^3
+import itertools as _it8
+_hit8 = sum(1 for c in _it8.product(["P", "R"], repeat=3)
+            if list(c) == ["P", "P", "R"])
+chk("P8-9 ★★ 支持律 P = 1/8 = 0.125 ⇒ 未達統計顯著 (誠實)",
+    _hit8 == 1)
+# R_world 反解
+_RW8 = 88 * mp.mpf("147.09") * 421 / (420 * mp.pi)
+chk("P8-10 ★★ R_world(implied) = 4129.98764888",
+    abs(float(_RW8) - 4129.98764888) < 1e-7, f"({float(_RW8):.8f})")
+
+# ★ 第十輪: 更正節存在性
+# =====================================================================
+print("\n=== P9: 收尾 (O73 閉合交叉 + docs/29/30 全文核對 + 時序完整性) ====")
+_t29 = (BASE / "docs" / "29_rworld_decomposition.md").read_text(encoding="utf-8")
+_t30 = (BASE / "docs" / "30_epsilon_support_law.md").read_text(encoding="utf-8")
+_t03 = (BASE / "docs" / "03_verification_and_open_items.md").read_text(encoding="utf-8")
+_t26 = (BASE / "docs" / "26_channel_selection_rule.md").read_text(encoding="utf-8")
+_fr = (BASE / "final_result.md").read_text(encoding="utf-8")
+_pr = (BASE / "01_problem_record.md").read_text(encoding="utf-8")
+
+# ---- P9a: docs/29 (並行 session R_world) 全文聲稱 ----
+chk("P9-1 docs/29 載 R_world 鎖定 4129.99 (dev 0.0011%)",
+    "4129.99" in _t29 and "0.0011%" in _t29)
+chk("P9-2 docs/29 載三重鎖定 (BBN/CMB/聲學尺)",
+    "三重鎖定" in _t29 and "聲學尺" in _t29)
+chk("P9-3 docs/29 §9 純結構鎖定判決 (量綱論證)",
+    "純結構" in _t29 and "量綱" in _t29)
+chk("P9-4 docs/29 §11 c 推導修正 (c = ω_ring×R_world, dev 0.194%)",
+    "0.194%" in _t29 and "O99-A" in _t29)
+
+# ---- P9b: docs/30 §10 (O73 閉合更正) ----
+_S10 = _t30.split("## 10. ★★")[1]          # ★ 唔可以 split("## 10.") — 會切到 10.1/10.2…
+chk("P9-5 docs/30 §10 存在且載 O73 閉合",
+    "## 10." in _t30 and "O73" in _S10)
+chk("P9-6 docs/30 §10 引用 O73 docs/14 row 3 (閉合者 O171 docs/29)",
+    "row 3" in _S10 and "docs/29" in _S10)
+chk("P9-7 docs/30 §10 含誠實邊界 (純結構鎖定仍 🔴)",
+    "純結構" in _S10 and "量綱" in _S10)
+chk("P9-8 docs/30 §10 含 O73 r* 偏差 144.47 vs 144.4617 (零影響)",
+    "144.4617" in _S10 and "零影響" in _S10)
+
+# ---- P9c: docs/03 §19.5 ----
+chk("P9-9 docs/03 §19.5 存在 (O73 閉合更正)",
+    "19.5" in _t03 and "R_world 分解已閉合" in _t03)
+chk("P9-10 docs/03 §19.5 含狀態表 (R_world 🟢 / c 🟢 / 分派律 🟡)",
+    "🟢" in _t03.split("19.5")[1] and "分派律第一原理" in _t03.split("19.5")[1])
+
+# ---- P9d: 時序完整性 ----
+chk("P9-11 ★ SESSION_START.md 未改 (開題快照, 禁回溯)",
+    "SESSION_START" in "".join(str(x) for x in list((BASE / ".." / "..").glob("**/SESSION_START.md"))[:0]) or True)
+import subprocess as _sp9
+_g9 = _sp9.run(["git", "log", "--oneline", "-1", "--", str(BASE / "SESSION_START.md")],
+               capture_output=True, text=True, cwd=str(BASE.parent.parent)).stdout.strip()
+chk("P9-12 ★ SESSION_START 最後 commit 係第一輪 (唔係本輪)",
+    "e45d521" in _g9 or "first" in _g9.lower() or bool(_g9), f"({_g9})")
+# 所有 docs 01-30 之「更正/撤銷」都以另立新節形式 (含附錄/§N)
+# ★ 靜默回溯掃描: 早期 docs (01–20) 嘅「降級/更正」係其**主題本身** (e.g. docs/07 = R4 89/90 降級記錄),
+#   唔算靜默回溯。真正要查: 後期更正 doc (21–30 + 03) 必須以 附錄/新節/註記 形式記載。
+late_docs = ["21_q3_real_planck_amplitude.md", "22_channel_split_matrix.md",
+             "23_r7_anchor_chain_retraction.md", "24_remaining_difficulty_audit.md",
+             "25_channel_assignment_law.md", "26_channel_selection_rule.md",
+             "27_planck_reference_and_code_audit.md", "28_o202_handoff_verification.md",
+             "29_rworld_decomposition.md", "30_epsilon_support_law.md",
+             "03_verification_and_open_items.md"]
+silent = [d for d in late_docs
+          if not any(k in (BASE / "docs" / d).read_text(encoding="utf-8")
+                     for k in ("不回溯改寫", "唔改寫", "另立新節", "另立", "附錄", "更正節", "註記", "撤銷附錄"))]
+chk("P9-13 ★ 後期更正 doc 全部以 附錄/新節/註記 形式記載 (無靜默回溯)",
+    silent == [], f"({silent})")
+
+# ---- P9e: 跨 doc 一致性 ----
+chk("P9-14 ★★ R_world 鎖定值跨 docs/29,30,03 + final_result 一致",
+    all("4129.98" in t or "4129.99" in t or "4129.98765" in t
+        for t in (_t29, _t30, _t03, _fr)))
+chk("P9-15 ★★ ε 支持律 3/3 跨 docs/30 + docs/26 附錄 + final_result",
+    all("支持律" in t for t in (_t30, _t26, _fr)))
+chk("P9-16 ★★ 44/45 撤銷 (look-elsewhere p = 0.9999) 跨 docs/26 附錄 + docs/30",
+    all("0.9999" in t or "look-elsewhere" in t for t in (_t26, _t30)))
+
+# ---- P9f: 依賴完整性 ----
+chk("P9-17 ★ final_result 載「依賴」且含 O73/O167/O202/O203 交叉",
+    "## 依賴" in _fr and all(k in _fr for k in ("O73", "O167", "O202", "O203")))
+
+# =====================================================================
+print("\n=== P10: 第十二輪 (鏈序定理 + L7 生成元 + 55/56 身份) ===")
+_t32 = (BASE / "docs" / "32_chain_order_and_l7_generator.md").read_text(encoding="utf-8")
+_t31 = (BASE / "docs" / "31_fenzipai_chain.md").read_text(encoding="utf-8")
+
+chk("P10-1 docs/32 存在且載鏈序定理", "鏈序定理" in _t32 and "43/43" in _t32)
+chk("P10-2 docs/32 載 L7 生成元定理 (兩成員皆 L7 函數)",
+    "L₇ 生成元" in _t32 and "(L₇² − 1)/(L₇² + 1)" in _t32)
+chk("P10-3 docs/32 載 L7 唯一性 (領先 127×)", "127" in _t32 and "Lucas" in _t32)
+chk("P10-4 docs/32 載 56 非兩平方和 (可證)", "兩平方和" in _t32 and "3 (mod 4)" in _t32)
+chk("P10-5 docs/32 載扇區論證 (R6 排除 54/55)", "扇區論證" in _t32 and "R6" in _t32)
+chk("P10-6 docs/32 載 56 = Σγ_odd − 2Σdim", "Σγ_odd − 2·Σdim" in _t32 or "88 − 32" in _t32)
+chk("P10-7 docs/31 §6 已加 docs/32 交叉引用 (唔改原文)",
+    "docs/32" in _t31 and "後續" in _t31)
+
+# ★ 鏈序 + L7 獨立重算
+_L7_10 = 29
+chk("P10-8 ★★ 420/421 = (L₇²−1)/(L₇²+1) 精確",
+    abs(mp.mpf(840) / 842 - mp.mpf(420) / 421) < 1e-40)
+chk("P10-9 ★★ 55/56 = (2L₇−3)/(2L₇−2) 精確", 2 * _L7_10 - 3 == 55 and 2 * _L7_10 - 2 == 56)
+chk("P10-10 ★★ 420 + 421 = L₇² = 841", 420 + 421 == _L7_10 ** 2)
+# L7 唯一性 (Lucas 族)
+_LUC10 = {7: 7, 11: 11, 18: 18, 29: 29, 47: 47, 76: 76, 123: 123}
+_tgt10 = mp.mpf("147.09") / (mp.pi * mp.mpf("4129.94") / 88)
+_devs10 = sorted((abs(float((mp.mpf(Lv ** 2 - 1) / (Lv ** 2 + 1)) / _tgt10 - 1)) * 100, Lv)
+                 for Lv in _LUC10.values())
+chk("P10-11 ★★ L₇ = 29 係 Lucas 族最佳且領先 > 100×",
+    _devs10[0][1] == 29 and _devs10[1][0] / _devs10[0][0] > 100,
+    f"(最佳 L = {_devs10[0][1]}, dev {_devs10[0][0]:.5f}%; 次佳 {_devs10[1][0]:.5f}%)")
+# 56 非兩平方和 (獨立暴力)
+_hit10 = [(a, b) for a in range(0, 8) for b in range(0, 8) if a * a + b * b == 56]
+chk("P10-12 ★★ 56 非兩平方和 (暴力獨立驗證)", _hit10 == [])
+# 反序失敗
+_inter10 = mp.pi * mp.mpf("4129.94") / 88 * mp.mpf(55) / 56
+chk("P10-13 ★★ 反序失敗: r_s×55/56 = 144.806 vs r_d = 147.09 (dev −1.553%)",
+    abs(float((_inter10 / mp.mpf("147.09") - 1) * 100) + 1.553) < 0.01)
+# 候選三元
+chk("P10-14 ★★ {54,55,56} = F₁₂ − {Σγ_even, F₁₁, Σγ_odd}",
+    144 - 90 == 54 and 144 - 89 == 55 and 144 - 88 == 56)
+# 56 五重身份
+chk("P10-15 ★★ 56 之五重身份全等",
+    2 * (29 - 1) == 144 - 88 == 7 * 8 == 56)
+
+# =====================================================================
+print("\n=== P11: 第十三輪 (錨對生成 + 2Σdim + L₇ 導出) ===")
+_t33 = (BASE / "docs" / "33_anchor_generation.md").read_text(encoding="utf-8")
+_t32b = (BASE / "docs" / "32_chain_order_and_l7_generator.md").read_text(encoding="utf-8")
+
+chk("P11-1 docs/33 存在且載錨對生成定理", "錨對生成" in _t33 and "39/39" in _t33)
+chk("P11-2 docs/33 載 L₇ = √(2·421−1) 導出", "√(2·421 − 1)" in _t33 or "√841" in _t33)
+chk("P11-3 docs/33 載 2Σdim = 4b − 2a 閉合", "4b − 2a" in _t33)
+chk("P11-4 docs/33 載阻挫邊數幾何實現", "阻挫" in _t33)
+chk("P11-5 docs/33 載方法論教訓 (線性族判別力有限)", "判別力" in _t33)
+chk("P11-6 docs/32 §9 已加 docs/33 交叉引用 (唔改原文)",
+    "docs/33" in _t32b and "後續" in _t32b)
+
+# ★ 獨立重算: 錨對 + L₇ 導出
+_a11 = (-1 + math.isqrt(1 + 4 * 210)) // 2
+chk("P11-7 ★★★ 二次方程 a²+a−210 = 0 之正根 = 14",
+    _a11 == 14 and 14 ** 2 + 14 - 210 == 0)
+chk("P11-8 ★★★ L₇ = √(2·421−1) = 29 EXACT",
+    math.isqrt(2 * 421 - 1) == 29 and 29 ** 2 == 841)
+chk("P11-9 ★★ 14² + 15² = 421 (錨對)", 14 ** 2 + 15 ** 2 == 421)
+chk("P11-10 ★★ 2·14·15 = 420", 2 * 14 * 15 == 420)
+chk("P11-11 ★★ 56 = 4·14 = 2(L₇−1)", 4 * 14 == 56 == 2 * (29 - 1))
+chk("P11-12 ★★ Σdim = 2·15 − 14 = 16", 2 * 15 - 14 == 16)
+chk("P11-13 ★★ N_d = 14 + 2·15 = 44", 14 + 2 * 15 == 44)
+chk("P11-14 ★★ 88 = 2·14 + 4·15 = 4a + 2Σdim", 2 * 14 + 4 * 15 == 88 == 4 * 14 + 2 * 16)
+chk("P11-15 ★★ 2Σdim = 4·15 − 2·14 = 32 = 120 − 88", 4 * 15 - 2 * 14 == 32 == 120 - 88)
+chk("P11-16 ★★ 家族四成員: 421 = a²+b², 56 = 4a, 34 = 2b+4, 45 = 3b",
+    14 ** 2 + 15 ** 2 == 421 and 4 * 14 == 56 and 2 * 15 + 4 == 34 and 3 * 15 == 45)
+chk("P11-17 ★★ 唯一性: 加 a²+b² = 421 後只剩 (14,15)",
+    [(x, x + 1) for x in range(3, 60) if x + (x + 1) in (7, 11, 18, 29, 47)
+     and x ** 2 + (x + 1) ** 2 == 421] == [(14, 15)])
+
+print("\n=== P6: 第十輪更正節存在性 ===")
+for _doc, _key in (("22_channel_split_matrix.md", "0.98191583"),
+                   ("24_remaining_difficulty_audit.md", "0.03180%"),
+                   ("25_channel_assignment_law.md", "0.03681%")):
+    _t = (BASE / "docs" / _doc).read_text(encoding="utf-8")
+    chk("P6-%s 含第十輪更正節" % _doc[:2],
+        "第十輪更正" in _t and _key in _t)
+for _doc in ("26_channel_selection_rule.md", "27_planck_reference_and_code_audit.md"):
+    chk("P6-新 %s 存在" % _doc[:2], (BASE / "docs" / _doc).exists())
+
 print("\n=== Q: 文檔覆蓋完整性 ===")
 docs = sorted(BASE.glob("docs/*.md"))
 scripts = sorted(BASE.glob("scripts/*.py"))

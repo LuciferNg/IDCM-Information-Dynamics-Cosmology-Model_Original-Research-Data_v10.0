@@ -1,0 +1,43 @@
+{
+  "n_lrd": 434,
+  "node_hist": {
+    "8": 434
+  },
+  "node8": {
+    "hop": 4,
+    "frust": 0,
+    "W": 0.6363636363636364,
+    "P_pct": 0.5845558676253699
+  },
+  "hop4_nodes": [
+    0,
+    7,
+    8,
+    9,
+    10,
+    16,
+    25,
+    26,
+    48,
+    54,
+    55,
+    57
+  ],
+  "modal_identity": "44=4*11, 60=4*(11+4), 44/60=11/(11+4)",
+  "dof_identity": "60+32=2(44+2)=92, 60=3+16+(44-3)",
+  "predictions": [
+    "P1: LRD density \u221d W(i)",
+    "P2: hop=4 mass -53.3%",
+    "P3: flip drift L1~0.03",
+    "P4: no off-lattice condensation",
+    "P5: event rate \u221d W(i)\u00b74^-l"
+  ],
+  "checks": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ]
+}

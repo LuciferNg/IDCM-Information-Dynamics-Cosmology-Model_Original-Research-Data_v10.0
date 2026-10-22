@@ -1,0 +1,30 @@
+{
+  "title": "奇點替換: 密度飽和核心 (冇奇點證明)",
+  "W4_self_coupling": "λ|W|⁴ (v10: λ=2/123) → 強場硬化 → 密度飽和",
+  "rho_Planck": 5.154848506403409e+96,
+  "r_core_m": 4.516176775247563e-23,
+  "R_s_m": 2954.007736491099,
+  "hayward": {
+    "external_restores_schwarzschild": true,
+    "core_deSitter": true,
+    "f_H(0)": 1.0
+  },
+  "kretschmann": {
+    "core_finite": 5.769358278372373e+90,
+    "schwarzschild_diverge": true
+  },
+  "horizon": {
+    "r_H_m": 2954.0077364910985,
+    "Delta_rel": 1.539425050479499e-16
+  },
+  "mass_conservation": {
+    "M_core": 1.9889200000000165e+30,
+    "M_in": 1.98892e+30
+  },
+  "open": [
+    "ρ_max=ρ_P 需嚴格化 (O110 B10)",
+    "Hayward 完整場論耦合",
+    "核心溫度/殘餘物"
+  ],
+  "verdict": "IDCM 冇奇點證明: W⁴ 自耦合→密度飽和→de Sitter 核心, 曲率有限 24/ℓ⁴, 視界仍在 R_s"
+}

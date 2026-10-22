@@ -1,0 +1,9 @@
+O47 — Final Verification
+===================================================================
+Status: ALL PASS
+R_H = 4129.94, Omega_L = 0.6832815730
+Unprojected arc = 2822.1257, Projected arc = 1307.8143
+Sum = 4129.9400 = R_H? True
+l_max candidate = 14.708063 (dev 0.000437)
+D_app candidate = 6.316667 (dev 0.001633)
+All zero-parameter: YES

@@ -1,0 +1,18 @@
+{
+  "R1_agree_by_k": {
+    "0": 0.625,
+    "1": 0.575,
+    "2": 0.75
+  },
+  "R1_fisher_p": 1.0,
+  "R1_seam_both_agree": 14,
+  "R2_fisher_p": 0.14285714285714288,
+  "R2_corr_hop_absT": -0.6271050763980944,
+  "R2_corr_ang_absT": -0.625860198730927,
+  "R3_edge_types": {
+    "ST": 20,
+    "PS": 12
+  },
+  "R3_PS_2regular": false,
+  "R3_ST_all_deg1": true
+}

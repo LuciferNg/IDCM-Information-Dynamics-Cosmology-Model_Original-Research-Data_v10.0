@@ -1,0 +1,5 @@
+O204 Script 02 — W-field 構成: 21/21 PASS
+dim(K_chain x K_tree) = 1496
+e = 47 + 37/528 = 47.0700757575758  = (N_d+N_gen) + (N_d-L4)/(N_d*B*N_gen)
+M0 = 27.9009145112 MeV ; m_7 = 13.8001550601 MeV
+omega_scale/H0 = 88.000033287

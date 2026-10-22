@@ -1,0 +1,16 @@
+family,target,target_value,value,count,cell_a,cell_b,cell_c,truncated
+R88,log₄2,0.5,0.5,1,88,44,,False
+R88,μ²,2,2,1,44,88,,False
+GT_prod,2B,8,8,1,88,17,,False
+GT_prod,B,4,4,1,44,17,,False
+GT_div,μ²,2,2,1,88,17,,False
+OT_prod,B,4,4,1,88,17,,False
+FULL_wr,μ²,2,2,88,1,1,17,False
+FULL_gr,B,4,4,1,44,88,17,False
+FULL_gr,μ²,2,2,88,1,1,17,False
+FULL_gd,log₄2,0.5,0.5,88,1,1,17,False
+SUM_plus,2B,8,8,2,44,88,17,False
+SUM_plus,2N_gen,6,6,87,1,87,17,False
+SUM_minus,2N_gen,6,6,1,88,88,17,False
+SUM_minus,B,4,4,2,44,88,17,False
+SUM_minus,μ²,2,2,87,1,87,17,False

@@ -1,0 +1,162 @@
+{
+ "mode": "reveal",
+ "pass": 19,
+ "fail": 0,
+ "claims": 5,
+ "max_abs_S_num": 240,
+ "S_den": 120,
+ "argmax": [
+  "V00",
+  "V00",
+  "V00",
+  "V00"
+ ],
+ "verdict": "LHV-class: |S| <= 2 EXACTLY -- matches pre-registered P2 (g is a shared hidden variable)",
+ "blind_sha256": "1b0420a620eacd7b130a1a6da0a181124d5ad0c17f1de17c9626413538a6ba96",
+ "checks": [
+  {
+   "tag": "P0",
+   "name": "structure reproduced from scripts/04 (|2I| = 120, |I| = 60, 62 axes)",
+   "ok": true,
+   "detail": "NA = 62"
+  },
+  {
+   "tag": "P0b",
+   "name": "multiplicities exact: every vertex direction hit 10x (2I) / 5x (I60); 12x10 = 120, 12x5 = 60",
+   "ok": true,
+   "detail": "mult sets = [10] / [5]"
+  },
+  {
+   "tag": "P0c",
+   "name": "dual-path: fast vertex table == direct 120-element loop (row multiset, ties, all 144 DEV correlations)",
+   "ok": true,
+   "detail": "row-multiset mismatches = 0 ; tie mismatches = 0 ; correlation mismatches = 0/144"
+  },
+  {
+   "tag": "P1",
+   "name": "marginal = 1/2 EXACT for all 62 axes, ties ASSIGNED by H3 (2I: 120 ; I60: 60)",
+   "ok": true,
+   "detail": "nonzero marginals: 0/62 (2I), 0/62 (I60) ; tie events (ref V00) = 1200"
+  },
+  {
+   "tag": "P1b",
+   "name": "H4 robustness: every reference axis maps to the 12 vertices x10 and its marginal vanishes (12 x 62)",
+   "ok": true,
+   "detail": "violations = 0"
+  },
+  {
+   "tag": "H5",
+   "name": "C[a][b] assembled from single-setting factor tables (local); C(a,a) = 1 exactly",
+   "ok": true,
+   "detail": "denominator = 120 ; C(V00,V00) = 1"
+  },
+  {
+   "tag": "L-SET2",
+   "name": "setting set contains antipodal pairs (these force C = -1 for ANY sign kernel, so all CHSH statements are reported both raw and antipodal-free)",
+   "ok": true,
+   "detail": "antipodal ordered pairs = 62 (= 31 axis pairs)"
+  },
+  {
+   "tag": "P4",
+   "name": "DEV grid: exact algebraic comparison C^2 vs cos^2 in Q(sqrt5) (no tolerance to tune)",
+   "ok": true,
+   "detail": "exact matches = 24/144 ; max |delta| (num+den coeff) = 4/45 ; max |C| = 1"
+  },
+  {
+   "tag": "P2",
+   "name": "full 62^4 ordered sweep executed (no subset selection, no cherry-pick)",
+   "ok": true,
+   "detail": "argmax = ('V00', 'V00', 'V00', 'V00')"
+  },
+  {
+   "tag": "P2b",
+   "name": "verdict against the pre-registered H8 windows (exact: |S| vs 2, |S|^2 vs 8)",
+   "ok": true,
+   "detail": "LHV-class: |S| <= 2 EXACTLY -- matches pre-registered P2 (g is a shared hidden variable)"
+  },
+  {
+   "tag": "P2c",
+   "name": "Tsirelson comparison carried out exactly (no irrational input)",
+   "ok": null,
+   "detail": "|S|^2 = 4 ; |S|^2 - 8 = -4 (exact rational sign)"
+  },
+  {
+   "tag": "P2e",
+   "name": "non-degenerate sweep over all 13388280 ordered 4-distinct-setting tuples executed",
+   "ok": true,
+   "detail": "max |S| = 2 ; argmax = ('V00', 'V01', 'V10', 'V04')"
+  },
+  {
+   "tag": "P2f",
+   "name": "verdict on non-degenerate settings (H8 windows)",
+   "ok": true,
+   "detail": "LHV-class: |S| <= 2 EXACTLY on non-degenerate settings as well (matches pre-registered P2)"
+  },
+  {
+   "tag": "P2g",
+   "name": "antipodal-free sweep executed: max |S| on the non-trivial setting subsample",
+   "ok": true,
+   "detail": "max |S| = 2 (raw max was 2) ; argmax = ('V01', 'V04', 'F01', 'V00')"
+  },
+  {
+   "tag": "P2d",
+   "name": "sign-convention invariance check on the 12-vertex grid (all 4 minus positions)",
+   "ok": true,
+   "detail": "distinct max values = ['2']"
+  },
+  {
+   "tag": "H1",
+   "name": "measure control: uniform on I (60 rotations) vs uniform on 2I (120 quaternions)",
+   "ok": null,
+   "detail": "max |S| = 2 (I60) vs 2 (2I) ; identical on both measures"
+  },
+  {
+   "tag": "P6",
+   "name": "ablation (communication attribution): independent draws per wing -> C = 0 EXACT",
+   "ok": true,
+   "detail": "identity (sum_g K(g,a))(sum_h K(h,b)) = 0 over all 3844 pairs ; explicit double sum verified on 10 pairs"
+  },
+  {
+   "tag": "P5",
+   "name": "null (i): 10000 random-direction pairs, seed 222 -- |C| distribution vs the real grid",
+   "ok": true,
+   "detail": "null mean|C| = 1973/5000 ; real grid mean|C| = 1093/2883 ; null max|C| = 1"
+  },
+  {
+   "tag": "P5b1",
+   "name": "null is NOT degenerate: >= 100 distinct rotations per draw and null marginals at the random-walk scale (~sqrt(120) ~ 11, not ~120)",
+   "ok": true,
+   "detail": "min distinct rotations = 117 ; max |null marginal| = 38"
+  },
+  {
+   "tag": "P5b0",
+   "name": "every random quaternion in the null is EXACTLY unit (q q* = 1) -- a non-unit generator silently degenerates the null",
+   "ok": true,
+   "detail": "500 draws, non-unit count = 0"
+  },
+  {
+   "tag": "P5b",
+   "name": "null (ii): random RATIONAL unit-quaternion sets replace 2I (seed 222)",
+   "ok": null,
+   "detail": "500 draws (resolution reduced from 10^4 for runtime; the criterion is unchanged) ; max|S| on the 12-vertex grid, ANTIPODAL-FREE statistic: median = 22/15, 95th pct = 8/5, max = 26/15"
+  },
+  {
+   "tag": "P3",
+   "name": "sequential / rollback-level C(theta) -- NOT COMPUTED",
+   "ok": null,
+   "detail": "Contract v1 pins only the coexistence kernel (SS3); the rollback-level construction is not defined there, so computing it now would be an unfrozen derivation (forbidden by SS7). Requires amendment A2 (definition + its own pre-registered windows) before any number at that level."
+  },
+  {
+   "tag": "P4r",
+   "name": "full grid: exact algebraic comparison C^2 vs cos^2, by type class",
+   "ok": true,
+   "detail": "exact matches = 634/3844 ; max |delta| = 8/9 ; max |C| = 1"
+  },
+  {
+   "tag": "P4s",
+   "name": "QM comparison summary",
+   "ok": null,
+   "detail": "C is rational with denominator 120 taking 7 distinct values; exact coincidences with cos^2(theta): 634/3844 -> the coexistence kernel does NOT reproduce -cos(theta) pointwise (exact statement, no tolerance involved)"
+  }
+ ]
+}

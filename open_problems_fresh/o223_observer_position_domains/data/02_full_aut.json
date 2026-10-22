@@ -1,0 +1,16 @@
+{
+ "n_pass": 15,
+ "n_total": 16,
+ "geo_aut": 60,
+ "full_aut": 120,
+ "non_isometric": 60,
+ "n_frustration_edges": 32,
+ "triangles": 20,
+ "orbit_geo": 30,
+ "orbit_full": 30,
+ "d09": 1,
+ "edge09_frustrated": false,
+ "T0": -134.19,
+ "T9": -106.99,
+ "deg2mpc": 72.07581492205864
+}

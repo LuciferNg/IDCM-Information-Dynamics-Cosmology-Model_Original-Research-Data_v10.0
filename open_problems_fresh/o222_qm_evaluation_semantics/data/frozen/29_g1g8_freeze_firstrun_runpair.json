@@ -1,0 +1,109 @@
+{
+ "rules": "g1g8-contract-v1",
+ "impl": {
+  "path": "scripts/30_g1g8_gaps.py",
+  "sha256": "22ab5e0fdc611b661475d5699754f4887e73e092c37b69cb5a39485c035dc7e3"
+ },
+ "upstream": {
+  "scripts/09_a2_rollback.py": "d8037bb16f690a2935c7028b3680d48df6540e01c938ade1d3b5858aed594ace",
+  "scripts/12_b5_budget.py": "f2cb54fa5df094a1e2f7b4910a4c16726a37160f39b194f0157988823aeb1e7a"
+ },
+ "anchors": [
+  "s_coord(ctx) = idx[h(ctx)]",
+  "|N(s) - s|^2 > 0",
+  "value-level consistency",
+  "ledger entries per ctx",
+  "R_consistent = 1",
+  "R >= 2"
+ ],
+ "gate": "OPEN",
+ "frozen_at": "2026-09-30T10:48:01+0800",
+ "claims": [
+  {
+   "tag": "U",
+   "name": "frozen upstream scripts/09_a2_rollback.py pinned",
+   "ok": true,
+   "detail": "sha256 d8037bb16f69"
+  },
+  {
+   "tag": "U",
+   "name": "frozen upstream scripts/12_b5_budget.py pinned",
+   "ok": true,
+   "detail": "sha256 f2cb54fa5df0"
+  },
+  {
+   "tag": "U3",
+   "name": "upstream GATE released by the C2+G7 round",
+   "ok": true,
+   "detail": "logs/26_c2g7_contract.out contains GATE = OPEN"
+  },
+  {
+   "tag": "A1",
+   "name": "machine imports no banned module",
+   "ok": true,
+   "detail": "imports = ['collections', 'fractions', 'hashlib', 'importlib', 'io', 'json', 'os', 'sys', 'time']"
+  },
+  {
+   "tag": "A2",
+   "name": "machine declares no banned identifier",
+   "ok": true,
+   "detail": "hits = []"
+  },
+  {
+   "tag": "A3",
+   "name": "machine contains no non-integer float literal",
+   "ok": true,
+   "detail": "literals = []"
+  },
+  {
+   "tag": "A4",
+   "name": "no eval/exec/compile in the machine",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "A5",
+   "name": "no random sampling anywhere in the machine",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C1",
+   "name": "all 6 frozen ASCII anchors appear in BOTH the contract and the machine",
+   "ok": true,
+   "detail": "missing = []"
+  },
+  {
+   "tag": "C2",
+   "name": "the machine declares the six frozen cells G1a..G8c in order",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C3",
+   "name": "the machine loads the two frozen interfaces and reads the single frozen order",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C4",
+   "name": "the machine writes its own result record",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C5",
+   "name": "the machine never imports the enforcer or the audit",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "tag": "C6",
+   "name": "the machine does not re-implement the frozen machine (no local read loop; every state update comes through the frozen run_pair)",
+   "ok": true,
+   "detail": "local defs = ['claim', 'load', 'main', 'q_str']"
+  }
+ ],
+ "n_pass": 14,
+ "n_total": 14
+}

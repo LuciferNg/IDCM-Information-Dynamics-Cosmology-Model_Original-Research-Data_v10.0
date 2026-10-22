@@ -1,0 +1,85 @@
+{
+  "theta12_modes": {
+    "n1": 2,
+    "n2": 3,
+    "reason": "\u03b3\u2082/(\u03b3\u2082+\u03b3\u2083) matches \u03b8\u2081\u2082, n=1 used for m_e"
+  },
+  "all_level1_ratios": [
+    {
+      "a": 1,
+      "b": 2,
+      "ratio": 0.6918547777240657,
+      "err_pct": 33.92605980919194
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "ratio": 0.6918547777240657,
+      "err_pct": 66.89557007984703
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "ratio": 0.6918547777240657,
+      "err_pct": 163.95906310952196
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "ratio": 0.6918547777240657,
+      "err_pct": 1.6980931603743865
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "ratio": 0.6918547777240657,
+      "err_pct": 196.9285733801771
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "ratio": 0.6918547777240657,
+      "err_pct": 128.3349101399557
+    }
+  ],
+  "theta12_selection_rule": "Level 1, Branches 2,3 (adjacent middle branches, n=1 used for diagonal m_e)",
+  "checks": [
+    {
+      "check": "\u03b3\u2082/(\u03b3\u2082+\u03b3\u2083) \u4fc2 Level 1 \u552f\u4e00\u5339\u914d \u03b8\u2081\u2082",
+      "pass": true
+    },
+    {
+      "check": "n=1 \u5df2\u7528\u65bc m_e (\u5c0d\u89d2\u8cea\u91cf)",
+      "pass": true
+    },
+    {
+      "check": "n=1,2,3 \u540c Level 1",
+      "pass": true
+    },
+    {
+      "check": "n=2,3 \u4fc2\u76f8\u9130 Branch (2,3)",
+      "pass": true
+    },
+    {
+      "check": "\u03b8\u2081\u2082 \u540c \u03b8\u2082\u2083 \u90fd\u7528 Branch 2,3",
+      "pass": true
+    },
+    {
+      "check": "\u03b3\u2081/(\u03b3\u2081+\u03b3\u2082) \u5514\u5339\u914d \u03b8\u2081\u2082",
+      "pass": true
+    },
+    {
+      "check": "\u03b3\u2081/(\u03b3\u2081+\u03b3\u2083) \u5514\u5339\u914d \u03b8\u2081\u2082",
+      "pass": true
+    },
+    {
+      "check": "\u03b3\u2082/(\u03b3\u2082+\u03b3\u2083) \u5339\u914d \u03b8\u2081\u2082 < 2%",
+      "pass": true
+    },
+    {
+      "check": "\u03b3\u2083/(\u03b3\u2082+\u03b3\u2083) = cos\u00b2\u03b8\u2081\u2082",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

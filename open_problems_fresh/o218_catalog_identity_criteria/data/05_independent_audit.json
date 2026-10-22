@@ -1,0 +1,336 @@
+{
+ "sources": [
+  [
+   "b₁×30 = L₁₀",
+   "o151_holographic_channel_capacity/docs/12_b1_123_coincidence_verdict.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "MSSM 33 = N_gen×L₅",
+   "o151_holographic_channel_capacity/docs/17_mssm33_verdict.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "log₂(S_dS) ≈ 406",
+   "o151_holographic_channel_capacity/docs/05_holographic_bound.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "C_old = −0.1697 陷阱窗",
+   "o201_spectral_language/docs/03_identity_criterion.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "「47」目錄身份",
+   "o137_cy3_topological_resonance/docs/36_gap_attack_round19.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "O199 0.02 判死 + 複合式",
+   "o199_eddington_critical_rate_forcing/docs/02_audit_20260921.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "Σγ = 90 = B(N_d+1)/2",
+   "o211_geometry_generation/docs/01_generating_operator.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "Σγ_odd = 44 = N_d",
+   "o169_da_spectral_first_principles/docs/02_delta_spectral_closure.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "b_spec = 1.119113982034844",
+   "o169_da_spectral_first_principles/docs/09_reading_degeneracy.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "b_spec vs √5/2 域分離",
+   "o201_spectral_language/docs/03_identity_criterion.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "G_ss = 72 = C_A²(N_c²−1)",
+   "o124_qcd_gluon_scattering/docs/03_derivation.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "γ⁽¹⁷⁶⁾ 鏡像 44±j = 4",
+   "o124_qcd_gluon_scattering/scripts/13_irreducible_inputs.py",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "γ⁽¹⁷⁶⁾ 錯配對負結果 A3",
+   "o124_qcd_gluon_scattering/docs/09_irreducible_inputs.md",
+   true,
+   "全部 token 命中"
+  ],
+  [
+   "O163 無標籤 Z₂ 對偶和標籤",
+   "o163_dm_identity/docs/07_corrected_derivation.md",
+   true,
+   "全部 token 命中"
+  ]
+ ],
+ "io_hits": [],
+ "files_changed": [],
+ "determinism": [
+  [
+   "01_pool_closure.py",
+   true,
+   true,
+   0,
+   0
+  ],
+  [
+   "02_identity_criterion.py",
+   true,
+   true,
+   0,
+   0
+  ],
+  [
+   "03_regression.py",
+   true,
+   true,
+   0,
+   0
+  ],
+  [
+   "04_injection.py",
+   true,
+   true,
+   0,
+   0
+  ]
+ ],
+ "data_hashes": [
+  [
+   "01_pool_closure.json",
+   "fc152c3c0b5ecdc8"
+  ],
+  [
+   "02_identity_criterion.json",
+   "741371a52f0a46d6"
+  ],
+  [
+   "03_regression.json",
+   "a6b104203869c70d"
+  ],
+  [
+   "04_injection.json",
+   "b417fdac09f61594"
+  ]
+ ],
+ "verdicts_seen": [
+  "COINCIDENCE",
+  "DENSITY",
+  "FALSE",
+  "FIELD",
+  "FITTED",
+  "FORMAL_OK",
+  "IDENTITY_OK",
+  "ILLEGAL",
+  "MATCH_OK",
+  "MULTIPLIER",
+  "NONUNIQUE",
+  "TAUTOLOGY",
+  "TRAP"
+ ],
+ "verdicts_uncovered": [
+  "WEAK_DENSITY"
+ ],
+ "chain_audit": {
+  "88": {
+   "chain": "88",
+   "pairing": "(n, 44-n)",
+   "tested": 44,
+   "max_dev": 0.0,
+   "is_identity": true
+  },
+  "176": {
+   "chain": "176",
+   "pairing": "(44-j, 44+j)",
+   "tested": 44,
+   "max_dev": 0.0,
+   "is_identity": true
+  },
+  "wrong_176": {
+   "chain": "176",
+   "pairing": "(n, 44-n) 錯配對",
+   "min_dev": 2.0701103189919445,
+   "no_solution": true
+  },
+  "wrong_88": {
+   "chain": "88",
+   "pairing": "(n, 44-n) 錯配對",
+   "min_dev": 0.0,
+   "no_solution": false
+  }
+ },
+ "checks": [
+  [
+   "A 出處核對: b₁×30 = L₁₀",
+   true,
+   "✓ 123"
+  ],
+  [
+   "A 出處核對: MSSM 33 = N_gen×L₅",
+   true,
+   "✓ 33"
+  ],
+  [
+   "A 出處核對: log₂(S_dS) ≈ 406",
+   true,
+   "✓ 406, 5.9e-4"
+  ],
+  [
+   "A 出處核對: C_old = −0.1697 陷阱窗",
+   true,
+   "✓ 0.1697, 1.42e-04"
+  ],
+  [
+   "A 出處核對: 「47」目錄身份",
+   true,
+   "✓ 47"
+  ],
+  [
+   "A 出處核對: O199 0.02 判死 + 複合式",
+   true,
+   "✓ 1/45, 0.02000000, 11.111%, (1/45)·9/10"
+  ],
+  [
+   "A 出處核對: Σγ = 90 = B(N_d+1)/2",
+   true,
+   "✓ (N_d+1)/2, 90"
+  ],
+  [
+   "A 出處核對: Σγ_odd = 44 = N_d",
+   true,
+   "✓ Σγ_odd = 44 = N_d"
+  ],
+  [
+   "A 出處核對: b_spec = 1.119113982034844",
+   true,
+   "✓ 1.119113982034844, Q(ζ₁₇₆)"
+  ],
+  [
+   "A 出處核對: b_spec vs √5/2 域分離",
+   true,
+   "✓ √5/2, 域分離, 9.660e-04"
+  ],
+  [
+   "A 出處核對: G_ss = 72 = C_A²(N_c²−1)",
+   true,
+   "✓ 72"
+  ],
+  [
+   "A 出處核對: γ⁽¹⁷⁶⁾ 鏡像 44±j = 4",
+   true,
+   "✓ gamma(44 + j), gamma(44 - j), / 176"
+  ],
+  [
+   "A 出處核對: γ⁽¹⁷⁶⁾ 錯配對負結果 A3",
+   true,
+   "✓ γ_n + γ_{44−n} ≠ 4, 負結果"
+  ],
+  [
+   "A 出處核對: O163 無標籤 Z₂ 對偶和標籤",
+   true,
+   "✓ γ_n + γ_{44−n}, φ³−φ⁻³"
+  ],
+  [
+   "A 出處核對總計",
+   true,
+   "14/14"
+  ],
+  [
+   "B1 o218_lib.py 靜態零 I/O (無 open/write/json.dump)",
+   true,
+   "命中: []"
+  ],
+  [
+   "B2 引擎執行期間 o218 目錄零檔案變動",
+   true,
+   "變動: []"
+  ],
+  [
+   "C1 判決邏輯無案例名/觀測值硬編碼 (已剝除註冊表)",
+   true,
+   "命中: {}"
+  ],
+  [
+   "C2 _decide() 判級只由 gate 驅動 (無 if-return 直接跳判級)",
+   true,
+   "可疑: []"
+  ],
+  [
+   "C3 _decide() 引用之 gate 名集合 ⊆ 已定義 gate",
+   true,
+   "引用 11 個 gate 族: ['G0', 'G1', 'G3', 'G4', 'G5', 'G6', 'T1', 'T2', 'T3', 'T5', 'U_']"
+  ],
+  [
+   "D 確定性: 01_pool_closure.py 兩跑 stdout 一致 + exit 0",
+   true,
+   "rc = 0/0, stdout 一致 = True"
+  ],
+  [
+   "D 確定性: 02_identity_criterion.py 兩跑 stdout 一致 + exit 0",
+   true,
+   "rc = 0/0, stdout 一致 = True"
+  ],
+  [
+   "D 確定性: 03_regression.py 兩跑 stdout 一致 + exit 0",
+   true,
+   "rc = 0/0, stdout 一致 = True"
+  ],
+  [
+   "D 確定性: 04_injection.py 兩跑 stdout 一致 + exit 0",
+   true,
+   "rc = 0/0, stdout 一致 = True"
+  ],
+  [
+   "D 輸出檔齊全 (01–04 data JSON)",
+   true,
+   "01_pool_closure.json:fc152c3c0b5ecdc8, 02_identity_criterion.json:741371a52f0a46d6, 03_regression.json:a6b104203869c70d, 04_injection.json:b417fdac09f61594"
+  ],
+  [
+   "E1 主要判級 (🟢/🔴 核心 8 個) 全部有案例",
+   true,
+   "缺: []"
+  ],
+  [
+   "F1 88 鏈配對恆等式成立",
+   true,
+   "max_dev = 0"
+  ],
+  [
+   "F2 176 鏈鏡像配對恆等式成立",
+   true,
+   "max_dev = 0"
+  ],
+  [
+   "F3 176 鏈錯配對為負結果 (O124 A3 復現)",
+   true,
+   "最近接 dev = 2.0701"
+  ],
+  [
+   "F4 ★ 同一字串在 88 鏈為真 ⟹ O124 A3 係鏈條件性",
+   true,
+   "88 鏈 (n,44−n) dev = 0"
+  ]
+ ]
+}

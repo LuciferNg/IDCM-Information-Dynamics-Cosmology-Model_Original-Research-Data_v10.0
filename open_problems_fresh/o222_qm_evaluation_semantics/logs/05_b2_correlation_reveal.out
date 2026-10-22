@@ -1,0 +1,98 @@
+======================================================================================================================
+O222 B2 -- C(theta) from 2I x 62 lattice axes, UNDER CONTRACT v1 (no trig / no float / no fitting)
+======================================================================================================================
+groups: |2I| = 120, |I| = 60 ; axes: 62 (V 12 / F 20 / E 30) ; measure: uniform
+  [stage     0.3s] group + axes built
+[PASS] P0      structure reproduced from scripts/04 (|2I| = 120, |I| = 60, 62 axes)             NA = 62
+[PASS] P0b     multiplicities exact: every vertex direction hit 10x (2I) / 5x (I60); 12x10 = 120, 12x5 = 60 mult sets = [10] / [5]
+[PASS] P0c     dual-path: fast vertex table == direct 120-element loop (row multiset, ties, all 144 DEV correlations) row-multiset mismatches = 0 ; tie mismatches = 0 ; correlation mismatches = 0/144
+[PASS] P1      marginal = 1/2 EXACT for all 62 axes, ties ASSIGNED by H3 (2I: 120 ; I60: 60)    nonzero marginals: 0/62 (2I), 0/62 (I60) ; tie events (ref V00) = 1200
+[PASS] P1b     H4 robustness: every reference axis maps to the 12 vertices x10 and its marginal vanishes (12 x 62) violations = 0
+[PASS] H5      C[a][b] assembled from single-setting factor tables (local); C(a,a) = 1 exactly  denominator = 120 ; C(V00,V00) = 1
+[PASS] L-SET2  setting set contains antipodal pairs (these force C = -1 for ANY sign kernel, so all CHSH statements are reported both raw and antipodal-free) antipodal ordered pairs = 62 (= 31 axis pairs)
+  [stage     0.8s] kernel tables + C table + cos^2 built
+
+--- DEV set (V x V, 144 pairs) : the only visible set before --reveal ---
+a      b      type        C = N/120        |C|   cos^2 (Q(sqrt5)) C^2 == cos^2
+V00    V00    verxver             1          1        1 + 0*sqrt5        YES
+V00    V01    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V00    V02    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V00    V03    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V00    V04    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V00    V05    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V00    V06    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V00    V07    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V00    V08    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V00    V09    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V00    V10    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V00    V11    verxver            -1          1        1 + 0*sqrt5        YES
+V01    V00    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V01    V01    verxver             1          1        1 + 0*sqrt5        YES
+V01    V02    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V01    V03    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V01    V04    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V01    V05    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V01    V06    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V01    V07    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V01    V08    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V01    V09    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+V01    V10    verxver            -1          1        1 + 0*sqrt5        YES
+V01    V11    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V02    V00    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V02    V01    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V02    V02    verxver             1          1        1 + 0*sqrt5        YES
+V02    V03    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V02    V04    verxver          -1/3        1/3      1/5 + 0*sqrt5         no
+V02    V05    verxver           1/3        1/3      1/5 + 0*sqrt5         no
+   ... all 144 DEV pairs -> data/05_b2_dev_values.json
+[PASS] P4      DEV grid: exact algebraic comparison C^2 vs cos^2 in Q(sqrt5) (no tolerance to tune) exact matches = 24/144 ; max |delta| (num+den coeff) = 4/45 ; max |C| = 1
+
+  [stage     0.8s] DEV metrics done (pre-sweep)
+--- P2: coexistence-level CHSH, FULL ordered sweep over all 62^4 setting 4-tuples ---
+max |S| = 2 (= 2.0)   argmax (a,a',b,b') = ('V00', 'V00', 'V00', 'V00')
+[PASS] P2      full 62^4 ordered sweep executed (no subset selection, no cherry-pick)           argmax = ('V00', 'V00', 'V00', 'V00')
+[PASS] P2b     verdict against the pre-registered H8 windows (exact: |S| vs 2, |S|^2 vs 8)      LHV-class: |S| <= 2 EXACTLY -- matches pre-registered P2 (g is a shared hidden variable)
+[CLAIM] P2c     Tsirelson comparison carried out exactly (no irrational input)                   |S|^2 = 4 ; |S|^2 - 8 = -4 (exact rational sign)
+
+--- P2e: NON-DEGENERATE CHSH (four distinct settings) ---
+max |S| over 4-distinct-setting tuples = 2 (= 2.0)   argmax = ('V00', 'V01', 'V10', 'V04')
+[PASS] P2e     non-degenerate sweep over all 13388280 ordered 4-distinct-setting tuples executed max |S| = 2 ; argmax = ('V00', 'V01', 'V10', 'V04')
+[PASS] P2f     verdict on non-degenerate settings (H8 windows)                                  LHV-class: |S| <= 2 EXACTLY on non-degenerate settings as well (matches pre-registered P2)
+
+--- P2g: ANTIPODAL-FREE CHSH (four distinct, no antipodal pair -- see A4) ---
+max |S| (antipodal-free) = 2 (= 2.0)   argmax = ('V01', 'V04', 'F01', 'V00')
+[PASS] P2g     antipodal-free sweep executed: max |S| on the non-trivial setting subsample      max |S| = 2 (raw max was 2) ; argmax = ('V01', 'V04', 'F01', 'V00')
+[PASS] P2d     sign-convention invariance check on the 12-vertex grid (all 4 minus positions)   distinct max values = ['2']
+[CLAIM] H1      measure control: uniform on I (60 rotations) vs uniform on 2I (120 quaternions)  max |S| = 2 (I60) vs 2 (2I) ; identical on both measures
+  [stage     6.2s] CHSH sweep + conventions + I60 control done
+[PASS] P6      ablation (communication attribution): independent draws per wing -> C = 0 EXACT  identity (sum_g K(g,a))(sum_h K(h,b)) = 0 over all 3844 pairs ; explicit double sum verified on 10 pairs
+  [stage     6.2s] ablation done
+[PASS] P5      null (i): 10000 random-direction pairs, seed 222 -- |C| distribution vs the real grid null mean|C| = 1973/5000 ; real grid mean|C| = 1093/2883 ; null max|C| = 1
+[PASS] P5b1    null is NOT degenerate: >= 100 distinct rotations per draw and null marginals at the random-walk scale (~sqrt(120) ~ 11, not ~120) min distinct rotations = 117 ; max |null marginal| = 38
+[PASS] P5b0    every random quaternion in the null is EXACTLY unit (q q* = 1) -- a non-unit generator silently degenerates the null 500 draws, non-unit count = 0
+[CLAIM] P5b     null (ii): random RATIONAL unit-quaternion sets replace 2I (seed 222)            500 draws (resolution reduced from 10^4 for runtime; the criterion is unchanged) ; max|S| on the 12-vertex grid, ANTIPODAL-FREE statistic: median = 22/15, 95th pct = 8/5, max = 26/15
+  [stage   104.2s] nulls done
+[CLAIM] P3      sequential / rollback-level C(theta) -- NOT COMPUTED                             Contract v1 pins only the coexistence kernel (SS3); the rollback-level construction is not defined there, so computing it now would be an unfrozen derivation (forbidden by SS7). Requires amendment A2 (definition + its own pre-registered windows) before any number at that level.
+
+DEV   : data/05_b2_dev_values.json (144 pairs, values printed above)
+BLIND : data/05_b2_blind_values.json (3700 pairs, values NOT printed) sha256 = 1b0420a620eacd7b130a1a6da0a18112
+table : data/05_b2_correlation.json (exact integer numerators, denominator 120)
+
+--- REVEAL: full 3844-pair aggregates (BLIND unlocked for reporting) ---
+[PASS] P4r     full grid: exact algebraic comparison C^2 vs cos^2, by type class                exact matches = 634/3844 ; max |delta| = 8/9 ; max |C| = 1
+   edgexedge n= 900  mean|C| = 53/135         max|C| = 1
+   edgexface n= 600  mean|C| = 16/45          max|C| = 1
+   edgexvertex n= 360  mean|C| = 11/27          max|C| = 1
+   facexedge n= 600  mean|C| = 16/45          max|C| = 1
+   facexface n= 400  mean|C| = 2/5            max|C| = 1
+   facexvertex n= 240  mean|C| = 1/3            max|C| = 2/3
+   vertexxedge n= 360  mean|C| = 11/27          max|C| = 1
+   vertexxface n= 240  mean|C| = 1/3            max|C| = 2/3
+   vertexxvertex n= 144  mean|C| = 4/9            max|C| = 1
+   antipodal-free max |S| = 2   (raw max 2) ; null median/95th/max = 22/15 / 8/5 / 26/15
+[CLAIM] P4s     QM comparison summary                                                            C is rational with denominator 120 taking 7 distinct values; exact coincidences with cos^2(theta): 634/3844 -> the coexistence kernel does NOT reproduce -cos(theta) pointwise (exact statement, no tolerance involved)
+
+======================================================================================================================
+RESULT: 19/19 PASS  (0 FAIL, 5 claims excluded)   mode = REVEAL
+======================================================================================================================
+saved: data/05_b2_results.json | 05_b2_dev_values.json | 05_b2_blind_values.json | 05_b2_correlation.json

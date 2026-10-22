@@ -1,0 +1,15 @@
+{
+  "route": "A_finite_part",
+  "pass": 8,
+  "fail": 0,
+  "total": 8,
+  "status": "\ud83d\udfe2",
+  "key_results": {
+    "kappa_sq_mev": 27.900915,
+    "g_sq_mev_sq": 778.461058,
+    "m_W_mev": 27.900915,
+    "finite_correction": "\u03b4m_n = 0 (IDCM finite QFT)",
+    "ward_identity": "automatic (scalar coupling)",
+    "spectral_shape": "sin(n\u03c0/88) preserved"
+  }
+}

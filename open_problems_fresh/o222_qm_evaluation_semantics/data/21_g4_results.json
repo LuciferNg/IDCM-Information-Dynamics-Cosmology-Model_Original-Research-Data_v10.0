@@ -1,0 +1,277 @@
+{
+ "rules_version": "g4-contract-v1",
+ "cells": {
+  "P1": {
+   "verdict": "✅",
+   "value": {
+    "cells": 242172,
+    "matches": 242172,
+    "exceptions": [],
+    "gradient_histogram": {
+     "0": 242172
+    },
+    "degenerate_t_a_b": 62
+   },
+   "note": "cost(e) = 3 - [t == a] - [b == a]; the t = a = b case consumes the seeded ledger entry (pop eats the seed) -- reported, never patched"
+  },
+  "P2": {
+   "verdict": "✅",
+   "value": {
+    "edges_in_circuit": 3782,
+    "distinct_edges": 3782,
+    "expected": 3782,
+    "closed_and_connected": true,
+    "head_equals_tail_everywhere": true,
+    "first_edges": [
+     [
+      "V00",
+      "V01"
+     ],
+     [
+      "V01",
+      "V00"
+     ],
+     [
+      "V00",
+      "V02"
+     ],
+     [
+      "V02",
+      "V00"
+     ],
+     [
+      "V00",
+      "V03"
+     ],
+     [
+      "V03",
+      "V00"
+     ]
+    ]
+   },
+   "note": "Hierholzer with the canonical tie-break (smallest index); rotated to start at (0,1)"
+  },
+  "P3": {
+   "verdict": "✅",
+   "value": {
+    "i_min_cost": {
+     "min_cost_loop_free_edges": 2,
+     "min_cost_all_pairs": 1,
+     "law_total_for_circuit": 7565
+    },
+    "ii_measured": {
+     "feasible_prefix_edges": 21,
+     "reads": 43,
+     "budget": "123/2",
+     "budget_left": "123/88",
+     "blocked_at": [
+      "V11",
+      "V00"
+     ],
+     "reads_per_edge": [
+      3,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ]
+    },
+    "iii_toy_n3": {
+     "permutations_enumerated": 720,
+     "min_total_cost": 13,
+     "law_predicted_min": 13,
+     "minimiser_count": 18,
+     "minimisers_all_eulerian": true,
+     "eulerian_minimisers": 18
+    }
+   },
+   "note": "every loop-free edge costs >= 2; the circuit measures exactly 2 per internal edge; in the n=3 toy every cost-optimal order IS Eulerian (T2(iii) survives)"
+  },
+  "P4": {
+   "verdict": "✅",
+   "value": {
+    "n3_n4_validation": [
+     {
+      "n": 3,
+      "arborescences_bruteforce": 3,
+      "n^(n-2)": 3,
+      "best_theorem_fixed_first_edge": 3,
+      "best_times_outdeg_w": 6,
+      "brute_force_edge_sequences_from_vertex0": 6,
+      "agree": true,
+      "convention": "sequences = BEST * outdeg(w)"
+     },
+     {
+      "n": 4,
+      "arborescences_bruteforce": 16,
+      "n^(n-2)": 16,
+      "best_theorem_fixed_first_edge": 256,
+      "best_times_outdeg_w": 768,
+      "brute_force_edge_sequences_from_vertex0": 768,
+      "agree": true,
+      "convention": "sequences = BEST * outdeg(w)"
+     }
+    ],
+    "EC_62_formula": "62^60 * (60!)^62",
+    "EC_62_digits": 5187,
+    "EC_62_head": "392954287854160177130744...00000000",
+    "EC_62_gt_1": true,
+    "unique_order": false
+   },
+   "note": "BEST validated on n=3,4 by brute force (arborescences AND circuits); the structure forces the CLASS, not a unique order"
+  },
+  "P5": {
+   "verdict": "✅",
+   "value": {
+    "a_canonical_prefix_edges": 21,
+    "a_constructible": false,
+    "a_all4": null,
+    "a_argmax": null,
+    "b_prefix_edges": 21,
+    "b_rectangle_present": true,
+    "b_constructible": true,
+    "b_all4": "13/15",
+    "b_argmax": [
+     "V01",
+     "V00",
+     "V03",
+     "V02"
+    ],
+    "b_residual_imbalance_ok": true,
+    "b_residual_full_degree": true,
+    "b_assembled_circuit_edges": 3782,
+    "b_assembled_is_full_eulerian_circuit": true,
+    "b_residual_ok": true
+   },
+   "note": "canonical prefix is a TRAIL (each edge once) so its pair set is sparse; the existence half shows a rectangle CAN sit inside an Eulerian prefix, so constructibility is achievable inside the structurally forced class"
+  },
+  "P6": {
+   "verdict": "✅",
+   "value": [
+    {
+     "family": "Eulerian-canonical",
+     "edges": 21,
+     "max_abs_out_minus_in": 1,
+     "unbalanced_vertices": 2,
+     "max_out": 11,
+     "max_in": 10
+    },
+    {
+     "family": "lex",
+     "edges": 15,
+     "max_abs_out_minus_in": 14,
+     "unbalanced_vertices": 15,
+     "max_out": 15,
+     "max_in": 1
+    },
+    {
+     "family": "diag",
+     "edges": 22,
+     "max_abs_out_minus_in": 0,
+     "unbalanced_vertices": 0,
+     "max_out": 1,
+     "max_in": 1
+    },
+    {
+     "family": "antidiag",
+     "edges": 15,
+     "max_abs_out_minus_in": 1,
+     "unbalanced_vertices": 28,
+     "max_out": 1,
+     "max_in": 1
+    },
+    {
+     "family": "block",
+     "edges": 18,
+     "max_abs_out_minus_in": 0,
+     "unbalanced_vertices": 0,
+     "max_out": 5,
+     "max_in": 5
+    },
+    {
+     "family": "stride",
+     "edges": 15,
+     "max_abs_out_minus_in": 1,
+     "unbalanced_vertices": 22,
+     "max_out": 1,
+     "max_in": 1
+    }
+   ],
+   "note": "theorem: in any prefix of an Eulerian circuit each vertex has |out - in| <= 1; the five human families are listed under the SAME definition"
+  }
+ },
+ "cell_order": [
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P5",
+  "P6"
+ ],
+ "eulerian_circuit_head": [
+  [
+   "V00",
+   "V01"
+  ],
+  [
+   "V01",
+   "V00"
+  ],
+  [
+   "V00",
+   "V02"
+  ],
+  [
+   "V02",
+   "V00"
+  ],
+  [
+   "V00",
+   "V03"
+  ],
+  [
+   "V03",
+   "V00"
+  ],
+  [
+   "V00",
+   "V04"
+  ],
+  [
+   "V04",
+   "V00"
+  ],
+  [
+   "V00",
+   "V05"
+  ],
+  [
+   "V05",
+   "V00"
+  ],
+  [
+   "V00",
+   "V06"
+  ],
+  [
+   "V06",
+   "V00"
+  ]
+ ]
+}

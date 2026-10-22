@@ -1,0 +1,111 @@
+{
+ "results": [
+  {
+   "id": "R1",
+   "theorem": "ω_n = √γ_n (Dirac 平方根 D² = L), 44/44",
+   "operator": "G3 = √G2",
+   "function": "F1 本徵值/譜函數",
+   "status": "PASS",
+   "detail": "√(4sin²(πn/88)) = 2sin(πn/88) = ω_n — 勢算子 = 鏈算子平方根 (Connes 譜三元組結構)"
+  },
+  {
+   "id": "R2",
+   "theorem": "v_g(n) = √(1−γ_n/4); v_g(44−n) = √γ_n/2, 44/44",
+   "operator": "G4 = f(G2)",
+   "function": "F1 本徵值/譜函數",
+   "status": "PASS",
+   "detail": "v_g² = 1−γ/4; v_g(44−n) = ω_n/2 (O149 定理2 嘅逆)"
+  },
+  {
+   "id": "R3",
+   "theorem": "beat(a,b) = |√γ_b − √γ_a|, 946/946",
+   "operator": "G5 = f(G2)",
+   "function": "F8 拍頻/譜差",
+   "status": "PASS",
+   "detail": "拍頻空間 = 平方根譜嘅差空間 — 946 指令全部由 K_chain 本徵值產生"
+  },
+  {
+   "id": "R4a",
+   "theorem": "B = γ₄₄ (Nyquist 本徵值 = 4)",
+   "operator": "G6 = f(G2)",
+   "function": "F1 本徵值",
+   "status": "PASS",
+   "detail": "K_Tree 分支因子 = 鏈嘅最大本徵值"
+  },
+  {
+   "id": "R4b",
+   "theorem": "log₂B = γ₂₂ (Z₂ 自對偶本徵值 = 2)",
+   "operator": "G8 = f(G2)",
+   "function": "F1 本徵值",
+   "status": "PASS",
+   "detail": "每模態 2 bits = γ₂₂"
+  },
+  {
+   "id": "R4c",
+   "theorem": "C_obs = N_d·γ₂₂ = 44×2 = 88; 90 = (N_d+1)·γ₂₂",
+   "operator": "G8⊗G2",
+   "function": "F10 容量",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "R4d",
+   "theorem": "12 = γ₄₄×N_gen = 4×3; 528 = N_d·γ₄₄·N_gen = 44×12",
+   "operator": "G9⊗G2",
+   "function": "F4 維數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "R4e",
+   "theorem": "132 = N_d·(γ₄₄−1) = 44×3; 264 = N_d·γ₄₄·N_gen/2 = 44×6",
+   "operator": "G9⊗G2",
+   "function": "F4 維數",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "R4f",
+   "theorem": "2 = γ₄₄/2 = γ₂₂ (五重身份歸一: 2 = log₂B = γ₄₄/2 = γ₂₂)",
+   "operator": "G2",
+   "function": "F1 本徵值",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "id": "R5a",
+   "theorem": "T̂-譜佔據縫: [0.5, 1.5, 2.5, 3.5, 5.5, 6.5, 10.5, 14.5, 23.5, 27.5] (10 個) + 43.5 (3L₇/2 beat 零點) = 11 = rank(SU(12))",
+   "operator": "Z₂⊗G1",
+   "function": "F11 縫",
+   "status": "PASS",
+   "detail": "10 個 T̂ 譜半整數 + 43.5 (3L₇/2, beat 零點縫) = 11 = L₅ = rank(SU(12))"
+  },
+  {
+   "id": "R5b",
+   "theorem": "縫外半整數: [44.5, 61.5] (61.5 已閉合 O41)",
+   "operator": "Z₂⊗G1",
+   "function": "F11 縫",
+   "status": "PASS",
+   "detail": "44.5 = F₁₁/2 冇物理角色 (Nyquist 外) — 需個別判決"
+  },
+  {
+   "id": "R5c",
+   "theorem": "14.5 = L₇/2 阻擋 k-ladder k=1 (a=(42−13)/2 非整數) → 階梯由 k=2 開始",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫/選擇規則",
+   "status": "PASS",
+   "detail": "O149 §6.1: k=1 分子 dual (0,1) 出譜 + 分母 a=14.5 非整數 → 雙重拒絕"
+  },
+  {
+   "id": "R5d",
+   "theorem": "10.5 = F₈/2 = 21/2: O35 審計 10 vs 10.5 vs 11 拒絕 (模態數整數性) — 一致: 縫 = 讀數位置, 唔係模態",
+   "operator": "G1⊗Z₂",
+   "function": "F11 縫",
+   "status": "PASS",
+   "detail": "O35 docs/02_transfer_matrix_closure.md §4 + O147 docs/03: 10.5 違規"
+  }
+ ],
+ "n_pass": 13,
+ "n_fail": 0,
+ "total": 13
+}

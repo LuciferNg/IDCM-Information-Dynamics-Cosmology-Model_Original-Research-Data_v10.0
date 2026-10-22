@@ -1,0 +1,17 @@
+{
+  "test": "O62 八期 24: SR 消去定理",
+  "n_cones": 432,
+  "sr_pairs": 484,
+  "no_cone_pairs": 912,
+  "sr_eq_no_cone": false,
+  "n_triples_36": 7140,
+  "n_with_cone": 450,
+  "n_without_cone": 6690,
+  "sr_zero": 6690,
+  "violations": 0,
+  "total_zero": 45315,
+  "sr_coverage_pct": 14.76332340284674,
+  "nnz36": 1341,
+  "passed": 1,
+  "failed": 1
+}

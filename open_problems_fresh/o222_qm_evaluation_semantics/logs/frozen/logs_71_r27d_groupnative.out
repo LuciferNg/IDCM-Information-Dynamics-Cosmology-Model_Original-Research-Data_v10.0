@@ -1,0 +1,6 @@
+states reached by words: 120 (of 120)
+order distribution: {1: 1, 2: 1, 3: 20, 4: 30, 5: 24, 6: 20, 10: 24} | record {1: 1, 2: 1, 3: 20, 4: 30, 5: 24, 6: 20, 10: 24} OK
+conjugacy classes: n=9 sizes=[1, 1, 12, 12, 12, 12, 20, 20, 30] | record [1,1,12,12,12,12,20,20,30] OK
+class-deletion generation (class size, |<complement>|): [(1, 120), (20, 120), (12, 120), (12, 120), (30, 120), (1, 120), (20, 120), (12, 120), (12, 120)]
+Pr-1 (all complements generate 2I): HOLDS -> Gemini's class claim REFUTED
+axis-transition orders by family: {'V': {5: 12}, 'F': {3: 20}, 'E': {4: 30}}

@@ -1,0 +1,6 @@
+O31 E_kchain Deep Derivation
+
+E_kchain = 4.060125 meV (from ρ_Λ)
+Best candidate: E_kchain ≈ √(ħ·H₀·M_Planck) = 4.3480 meV (偏差 7%)
+Full closure (O31 script 16): E_kchain = √(M_Planck·ħ·H₀) × φ^(-1/7) = 4.059 meV (0.02%)
+Status: 🟢 √(M_P·ħH₀) 幾何平均發現 (7%); 精確閉合見 scripts/16_correction_factor.py

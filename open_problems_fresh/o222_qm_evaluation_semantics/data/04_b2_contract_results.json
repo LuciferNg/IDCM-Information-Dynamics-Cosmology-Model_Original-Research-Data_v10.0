@@ -1,0 +1,119 @@
+{
+ "pass": 14,
+ "fail": 0,
+ "claims": 0,
+ "checks": [
+  {
+   "tag": "[contract]",
+   "name": "group reconstruction matches R1: |2I| = 120, |I| = 60",
+   "ok": true,
+   "detail": "|2I|=120 |I|=60"
+  },
+  {
+   "tag": "[L-SET]",
+   "name": "62 lattice-native axes (12 vertices / 20 faces / 30 edges), honest counts",
+   "ok": true,
+   "detail": "|V|=12 |F|=20 |E|=30 (lines 6/10/15)"
+  },
+  {
+   "tag": "[L-SET]",
+   "name": "3844 ordered pairs with EXACT cos^2 in Q(sqrt5) (no trig, no float)",
+   "ok": true,
+   "detail": "pairs = 3844 ; sample cos^2(V00,V01) = (Fraction(1, 5), Fraction(0, 1))"
+  },
+  {
+   "tag": "[blind]",
+   "name": "partition frozen: DEV = 144 (V x V), BLIND = 3700 (all the rest)",
+   "ok": true,
+   "detail": "DEV=144 BLIND=3700 total=3844"
+  },
+  {
+   "tag": "[L-CAUSAL]",
+   "name": "P1 structural: single-wing marginal = 1/2 EXACT for all 62 axes (central symmetry 6/6 + uniform multiplicity)",
+   "ok": true,
+   "detail": "balanced axes = 62/62 ; max tie count = 20"
+  },
+  {
+   "tag": "[L-CAUSAL]",
+   "name": "P1 robustness: balance holds for every reference axis n-hat in the 12 vertices (H4)",
+   "ok": true,
+   "detail": "pos-counts (first 6) = [30, 30, 30, 30, 30, 30]"
+  },
+  {
+   "tag": "[L-CAUSAL]",
+   "name": "P1b ties ASSIGNED by H3 (not excluded): 0 unbalanced over 12 refs x 62 axes x 60 rotations",
+   "ok": true,
+   "detail": "tie events = 7200 ; unbalanced = 0"
+  },
+  {
+   "tag": "[L-CAUSAL]",
+   "name": "tie origin structural: edge axes orthogonal to exactly 4 vertex directions (x5 multiplicity = 20); vertex/face axes 0",
+   "ok": true,
+   "detail": "edge = [4] ; vertex/face = [0]"
+  },
+  {
+   "tag": "[L-ZERO]",
+   "name": "AST scanner SELF-TEST: rejects -cos kernel / magic 0.7071 constant / 0.5 float, accepts clean exact kernel",
+   "ok": true,
+   "detail": "pos=3 magic=3 float=2 neg=0"
+  },
+  {
+   "tag": "[L-CAUSAL]",
+   "name": "locality checker SELF-TEST: rejects remote-setting leak in k_table, accepts factor-table C assembly",
+   "ok": true,
+   "detail": "leak-findings=2 clean-findings=0"
+  },
+  {
+   "tag": "[L-ZERO]",
+   "name": "implementation 05_b2_correlation.py passes AST ban (no trig / no numpy / no float literals)",
+   "ok": true,
+   "detail": "findings = 0 []"
+  },
+  {
+   "tag": "[L-CAUSAL]",
+   "name": "implementation passes the static locality check (single-setting factor table)",
+   "ok": true,
+   "detail": "findings = 0 []"
+  },
+  {
+   "tag": "[hash]",
+   "name": "freeze attestation written (doc + enforcer + settings + partition + impl)",
+   "ok": true,
+   "detail": "doc=01d2fb03ead127ef"
+  },
+  {
+   "tag": "[hash]",
+   "name": "settings sha256 recorded for the blind-commitment",
+   "ok": true,
+   "detail": "settings=2357006c68e0165d"
+  }
+ ],
+ "gate": "OPEN",
+ "freeze": {
+  "rules_version": "contract-v1",
+  "frozen_at": "2026-09-29T21:01:03+08:00",
+  "doc": {
+   "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/docs/03_b2_contract.md",
+   "sha256": "01d2fb03ead127ef09ff7e209b456b16a9da7b19838fe612f62e69b625481953"
+  },
+  "enforcer": {
+   "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/scripts/04_b2_contract.py",
+   "sha256": "830dbf755605c1a4db5a819b6c066995ad20ce1789d935b650a9cdd721c26de2"
+  },
+  "settings": {
+   "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/data/04_b2_settings.json",
+   "sha256": "2357006c68e0165dc9fd7d8d73524593a776e1bf6a8b62ddbc8dc2c1a8af20ee"
+  },
+  "partition": {
+   "path": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o222_qm_evaluation_semantics/data/04_b2_partition.json",
+   "sha256": "499b3d16b084b7801e404e1763a9353ac3a58561e1fbfd084d5269f8cfdf0455"
+  },
+  "impl": {
+   "path": "scripts/05_b2_correlation.py",
+   "sha256": "be946911c087862d7bd02b460235b0b47fe1ff4ed85d2a855b6855f717e49235",
+   "ast_ok": true,
+   "locality_ok": true
+  },
+  "gate": "OPEN"
+ }
+}

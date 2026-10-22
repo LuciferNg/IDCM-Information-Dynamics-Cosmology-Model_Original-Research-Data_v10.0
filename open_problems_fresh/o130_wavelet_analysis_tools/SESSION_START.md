@@ -149,3 +149,27 @@ v9.0「尖銳視界 aliasing」在 v10.0 **無精確載體**；正確 native 描
 - **三巡天交叉 (BOSS / eBOSS / DESI, 10 tracer 樣本)**：structural λ_sync **全部無偵測**。
 - 🟡 DESI **DR2** 原始 ξ(s) 官方未公開發佈（只有 chains）；Zenodo `16644577` 1.3 GB 補充包
   已開始下載但速率 ~0.2 MB/s（預估 ~1.8 h）**未完成**。
+
+---
+
+## ⚠️ 2026-09-28 收尾：DESI DR2 完成 + 全線單位修正（最終狀態）
+
+1. **DESI DR2 官方補充數據已到手並驗證**：Zenodo `16644577` `dr2-bao-zenodo.zip`
+   size 1,306,284,840 B、md5 `425623648b4b12515fa1943a5857fd46` **完全一致**（8 路並行 range 下載 +
+   續傳 + 拼接；下載器曾把 early-EOF 當完成 → 已修，見 `data/desi/dr2/PROVENANCE.md`）。
+   `figure5/multipoles_<tracer>_{data,theory}.txt`：**8 tracer × 23 pt，s = 62.04..150.02，Δs ≈ 3.998**。
+2. **⚠️ 單位修正（根因）**：`λ_sync` 由 **406.2227 → 198.63 h⁻¹Mpc**。v9.0 `_core.py`
+   `LAMBDA_SYNC / H` 方向錯（Mpc→h⁻¹Mpc 應 **×h**），錯 1/h² = 1.897×；O130 scripts 03–08 原封繼承。
+   **三條獨立證據**：v9 源碼、Planck r_d 147.09 Mpc×h = 99.1（BAO 峰公認 ~100）、
+   DESI DR2 官方 best-fit 曲線實測 bump = **102.0 h⁻¹Mpc**。獨立佐證：**O132 / O31 舊記錄已記同一 bug**。
+3. **修正後最終結果（全線重跑 83/83 PASS）**：
+   - 節點 s_n = λ/n（n=3..9）= **66.2, 49.7, 39.7, 33.1, 28.4, 24.8, 22.1 h⁻¹Mpc**；
+     n_max(Δs=5) = **5.823**、n_max(4) = **6.565**；門檻 n=22 → 0.3925、n=44 → 0.1003 h⁻¹Mpc。
+   - **BOSS p = 0.935**、**eBOSS p = 0.432**、**DESI DR1 p_global = 0.640 / δ=0 p = 1.000**、
+     **DESI DR2 p_global = 1.000、p_delta0_global = 1.000（adq 0.987）**。
+   - 原「邊緣訊號」（eBOSS 0.078、DR1 LRG3 0.030、DR2 raw Δχ² 12.83）**全部消失**；
+     原「BOSS bin 落在 F_proj/2 門檻（dev 0.61%）」的 🟡 巧合 **撤回**（真 dev 50.8%）。
+   - **四巡天（BOSS / eBOSS / DESI DR1 / DESI DR2）、17 tracer、全部窗口：structural λ_sync 皆無偵測。**
+4. **新增結構事實**：λ_sync/2 = 99.3 h⁻¹Mpc ≡ r_d（BAO 尺度 = 階梯 n=2 節點）⟹ 用「ΛCDM+BAO 模型」
+   做對照對 IDCM **保守**（會移除階梯自己預測的結構）；DESI DR2 的 BAO-fit 窗只含 1 個 j=1 節點。
+5. 記錄：`docs/04_unit_correction.md`（完整對照）、`data/0*_stdout.txt`、`data/desi/dr2/PROVENANCE.md`。

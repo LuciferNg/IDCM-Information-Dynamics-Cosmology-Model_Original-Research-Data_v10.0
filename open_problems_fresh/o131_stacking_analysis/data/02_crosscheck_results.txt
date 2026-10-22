@@ -1,0 +1,8 @@
+O131/02 — v9 vs v10 交叉核對 + 框架依賴掃描
+lambda_sync_v9=294.87713799 lambda_sync_v10_formula=294.87713799 lambda_sync_v10_registry=294.877026449
+R_H_v9=4129.9415622 R_world_exact=4129.9415622 R_world_registry=4129.94
+OmegaL_v9=0.683281573 OmegaL_v10=0.683333333333
+eps_v9=0.154508497187 eps_v10=0.154471544715
+ell(0.6)=0.339035952556
+stacking_script_has_inflation=False zeta=False OmegaL=False zc=False
+RESULT=13/13 PASS claims=3

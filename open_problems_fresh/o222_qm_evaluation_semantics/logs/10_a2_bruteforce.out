@@ -1,0 +1,41 @@
+================================================================================================================
+O222 scripts/10 -- FULL 62^4 = 14,776,336 tuple sweep per variant (exact, no pruning)
+================================================================================================================
+antipodal pairs = 62
+E1 raw            |S| = 60/15          = 4.000000000  argmax=['E27', 'E28', 'V01', 'E28']   (1.5 s)
+E1 distinct       |S| = 60/15          = 4.000000000  argmax=['E27', 'E28', 'V01', 'E28']   (1.7 s)
+E1 distinct_anti  |S| = 60/15          = 4.000000000  argmax=['E27', 'E28', 'V01', 'E28']   (2.4 s)
+E1 all4           |S| = 30/15          = 2.000000000  argmax=['V00', 'V01', 'E00', 'F06']   (2.7 s)
+E2 raw            |S| = 60/15          = 4.000000000  argmax=['E27', 'E28', 'V10', 'E27']   (1.5 s)
+E2 distinct       |S| = 60/15          = 4.000000000  argmax=['E27', 'E28', 'V10', 'E27']   (1.6 s)
+E2 distinct_anti  |S| = 60/15          = 4.000000000  argmax=['E27', 'E28', 'V10', 'E27']   (2.3 s)
+E2 all4           |S| = 45/15          = 3.000000000  argmax=['E27', 'E28', 'V01', 'E29']   (2.6 s)
+Fraction recheck E1_raw         4 vs 4 -> IDENTICAL
+Fraction recheck E1_distinct    4 vs 4 -> IDENTICAL
+Fraction recheck E1_distinct_anti 4 vs 4 -> IDENTICAL
+Fraction recheck E1_all4        2 vs 2 -> IDENTICAL
+Fraction recheck E2_raw         4 vs 4 -> IDENTICAL
+Fraction recheck E2_distinct    4 vs 4 -> IDENTICAL
+Fraction recheck E2_distinct_anti 4 vs 4 -> IDENTICAL
+Fraction recheck E2_all4        3 vs 3 -> IDENTICAL
+
+-- FULL-ENUMERATION null: 12 random-axis draws, h reassigned per draw --
+draw 0   E1 all4 = 240/120  E2 all4 = 40/15   E1 raw = 480/120
+draw 1   E1 all4 = 240/120  E2 all4 = 40/15   E1 raw = 400/120
+draw 2   E1 all4 = 240/120  E2 all4 = 40/15   E1 raw = 480/120
+draw 3   E1 all4 = 240/120  E2 all4 = 40/15   E1 raw = 480/120
+draw 4   E1 all4 = 240/120  E2 all4 = 35/15   E1 raw = 480/120
+draw 5   E1 all4 = 240/120  E2 all4 = 40/15   E1 raw = 480/120
+draw 6   E1 all4 = 240/120  E2 all4 = 45/15   E1 raw = 400/120
+draw 7   E1 all4 = 240/120  E2 all4 = 45/15   E1 raw = 480/120
+draw 8   E1 all4 = 240/120  E2 all4 = 40/15   E1 raw = 480/120
+draw 9   E1 all4 = 240/120  E2 all4 = 45/15   E1 raw = 480/120
+draw 10  E1 all4 = 240/120  E2 all4 = 45/15   E1 raw = 480/120
+draw 11  E1 all4 = 240/120  E2 all4 = 45/15   E1 raw = 480/120
+null E1 raw            median = 4.000000  max = 4.000000  (min = 3.333333)
+null E1 distinct       median = 4.000000  max = 4.000000  (min = 3.333333)
+null E1 distinct_anti  median = 4.000000  max = 4.000000  (min = 3.333333)
+null E1 all4           median = 2.000000  max = 2.000000  (min = 2.000000)
+null E2 all4 median = 2.666667  max = 3.000000
+lattice E1 all4 = 2.0   lattice E2 all4 = 3.0
+wrote data/10_a2_bruteforce.json   elapsed 233.4 s

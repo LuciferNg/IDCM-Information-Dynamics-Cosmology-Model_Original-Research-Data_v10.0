@@ -1,0 +1,13 @@
+{
+  "id": "O107-04",
+  "name": "Causal Hierarchy Extension \u2014 Observer Capacity vs Generation Mixing",
+  "causal_chain": "SU(12) \u2192 \u4e16\u4ee3\u8eab\u4efd(6 Cartan) + \u4e16\u4ee3\u6df7\u5408(132 non-Cartan) \u2192 264 \u4e16\u754c\u5074 \u2192 528 \u89c0\u5bdf\u8005\u5bb9\u91cf",
+  "key_identities": {
+    "132": "dim(SU(12))-rank = 143-11 = non-Cartan mixing channels",
+    "264": "6\u00d744 = N_extra \u00d7 N_d = world side",
+    "528": "2\u00d7264 = 4\u00d7132 = observer capacity",
+    "88": "44\u00d7log\u2082B = C_obs bits"
+  },
+  "verdict": "\ud83d\udfe2 CLOSED \u2014 \u89c0\u5bdf\u8005\u5bb9\u91cf\u4fc2\u5f8c\u679c, \u7531\u4e16\u4ee3\u7d50\u69cb (6+132) \u00d7 \u6676\u683c (44) \u00d7 \u5c0d\u5076 (2) \u5fc5\u7136\u7522\u751f",
+  "timestamp": "2026-09-08"
+}

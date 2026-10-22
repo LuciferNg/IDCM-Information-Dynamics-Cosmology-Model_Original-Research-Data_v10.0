@@ -1,0 +1,14 @@
+{
+  "smica_path": "/home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o5_catalog_compare/data/smooth_cache/smica2_smooth0.5.fits",
+  "smica_std_uK": "84.07",
+  "cold_spot_smica_uK": "-203.13",
+  "cold_spot_model_uK": -133.75,
+  "node_corr": -0.0116,
+  "full_corr": 0.001,
+  "l2_dominant_m": 2,
+  "l3_dominant_m": 3,
+  "p_l2_random": 0.348,
+  "p_l3_random": 0.284,
+  "pass": 2,
+  "fail": 2
+}

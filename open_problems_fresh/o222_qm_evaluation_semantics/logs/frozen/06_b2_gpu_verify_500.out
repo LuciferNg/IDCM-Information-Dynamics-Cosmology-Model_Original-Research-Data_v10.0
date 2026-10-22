@@ -1,0 +1,18 @@
+================================================================================================================
+O222 scripts/06 -- INDEPENDENT GPU CROSS-CHECK (cupy int64) of the frozen C(theta) results
+================================================================================================================
+common denominator D for every lattice coordinate: 4
+vertex multiplicities under 2I (computed): [10]  (sum = 120)
+GPU: NVIDIA GeForce GTX 1060 3GB | free 2.40 GiB / 3.00 GiB
+GPU kernel: sign table + 62x62 correlation in 0.268 s (ties resolved by H3: 1200)
+[PASS] G1     GPU int64 correlation table == frozen CPU exact table (all 3844 entries, denominator 120) mismatches = 0 ; |G| = 120
+[PASS] G2     GPU full 62^4 ordered CHSH sweep == frozen max (as an exact fraction over the same denominator) GPU max |S| = 240/120 ; frozen = 240/120 ; argmax ('V00', 'V00', 'V00', 'V00') (['V00', 'V00', 'V00', 'V00'])
+[PASS] G3     GPU non-degenerate (four distinct settings) CHSH max + argmax == frozen record GPU 240/120 argmax ('V00', 'V01', 'V10', 'V04') ; frozen 2/120 argmax ('V00', 'V01', 'V10', 'V04')
+GPU null (ii): 500 draws in 25.0 s -- max |S| median = 22/15, 95th pct = 8/5, max = 26/15
+[PASS] G4     GPU null (ii) == frozen null (same splitmix64 seed, same sampler, same statistic, 500 draws) GPU median/95th/max = ('22/15', '8/5', '26/15') ; frozen = ('22/15', '8/5', '26/15')
+
+timings: kernel 0.268 s | full sweep 0.050 s | distinct sweep 0.058 s | null 500 draws 25.0 s
+================================================================================================================
+RESULT: 4/4 PASS  (0 FAIL)   GPU = NVIDIA GeForce GTX 1060 3GB
+================================================================================================================
+saved: data/06_b2_gpu_verify.json

@@ -1,0 +1,36 @@
+{
+ "rules_version": "d6-contract-v1",
+ "doc": {
+  "path": "docs/12_d6_contract.md",
+  "sha256": "1f92c1f01ca38f8eb53d2779d67c5f2675390231461bf4da3eb8675a821381c0"
+ },
+ "enforcer_sha256": "f63c8d6218404896ac3303cf7c9d1aa492a4c22d922c4abbf6670d01a3eb16bc",
+ "impl": {
+  "path": "scripts/18_d6_mapping.py",
+  "sha256": "a681ae8cf6bcfd69b50a9a3c776f8c43011c3b6c52149bc1f1f565abbe797cf7"
+ },
+ "frozen_at": "2026-09-30T09:12:23+0800",
+ "cells": [
+  "P1a",
+  "P1b",
+  "P1c",
+  "P2a",
+  "P2b",
+  "P2c",
+  "P2d",
+  "P3a",
+  "P3b",
+  "P3c",
+  "P4a",
+  "P4b",
+  "P4c"
+ ],
+ "objects": {
+  "axes": "data/04_b2_settings.json",
+  "h": "data/08_a2_h_table.json",
+  "C1_C2": "data/09_a2_correlation.json",
+  "machine": "scripts/09 + scripts/12",
+  "composition_law": "open_problems_fresh/o210_causal_tensor_algebra"
+ },
+ "gate": "OPEN"
+}

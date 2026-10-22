@@ -1,0 +1,5 @@
+# O4_renew C02: 座標 frame 審計
+coldspot_galactic=209,-57
+a5_nodes0_as_ICRS=209.00,-57.00
+match=True
+NOTE: a5_nodes.txt stores ICRS (RA,Dec); node0 = cold spot at Gal (209,-57)

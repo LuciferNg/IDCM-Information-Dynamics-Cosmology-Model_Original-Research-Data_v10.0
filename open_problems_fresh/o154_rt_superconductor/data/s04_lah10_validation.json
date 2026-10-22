@@ -1,0 +1,114 @@
+[
+  {
+    "name": "常規胞原子數",
+    "got": 44,
+    "want": 44,
+    "ok": true,
+    "note": "= N_d (世界扇區模數)"
+  },
+  {
+    "name": "原胞/1 f.u. 原子數",
+    "got": 11,
+    "want": 11,
+    "ok": true,
+    "note": "= L₅ = rank(SU(12)) = Tr(T̂⁵)"
+  },
+  {
+    "name": "La 數 (4a)",
+    "got": 4,
+    "want": 4,
+    "ok": true,
+    "note": "= B (K_Tree 分支數)"
+  },
+  {
+    "name": "H 總數",
+    "got": 40,
+    "want": 40,
+    "ok": true,
+    "note": "= N_d − B (O152 R13)"
+  },
+  {
+    "name": "32f 四面體 H (籠)",
+    "got": 32,
+    "want": 32,
+    "ok": true,
+    "note": "= 2B² (O61) = H₃₂ 籠"
+  },
+  {
+    "name": "8c 八面體 H",
+    "got": 8,
+    "want": 8,
+    "ok": true,
+    "note": "= F₆ (Fibonacci 6)"
+  },
+  {
+    "name": "特殊位 (La + 8c H)",
+    "got": 12,
+    "want": 12,
+    "ok": true,
+    "note": "= B×N_gen = L₅+1 (O59 su(12) fundamental)"
+  },
+  {
+    "name": "純玻色子索引 {8,32,40} ⊂ {8,16,24,32,40}",
+    "got": true,
+    "want": true,
+    "ok": true,
+    "note": "O137 v₂≥3 — 氫亞晶格 = 純玻色子扇區"
+  },
+  {
+    "name": "Z₂ parity = 配對奇偶性 (s-wave)",
+    "got": "even+even→even",
+    "want": "even+even→even",
+    "ok": true,
+    "note": "Cooper 對 = odd+odd → even (世界/玻色凝聚)"
+  },
+  {
+    "name": "parity gap E−O",
+    "got": 2,
+    "want": 2,
+    "ok": true,
+    "note": "= γ₄₄/2 = log₂B = μ²"
+  },
+  {
+    "name": "λ 8/3 vs 實驗",
+    "got": 2.6666666666666665,
+    "want": 2.58,
+    "ok": true,
+    "note": "(0.79σ)"
+  },
+  {
+    "name": "λ 8/3 vs 理論",
+    "got": 2.6666666666666665,
+    "want": 2.67,
+    "ok": true,
+    "note": "(0.1%)"
+  },
+  {
+    "name": "Tc (IDCM vs 量度)",
+    "got": 291.4,
+    "want": 250,
+    "ok": true,
+    "note": "(+17%)"
+  },
+  {
+    "name": "Δ₀ (IDCM vs 量度)",
+    "got": 61.0,
+    "want": 53,
+    "ok": true,
+    "note": "(+15%, 1.6σ)"
+  },
+  {
+    "name": "2Δ₀/kTc (IDCM vs 量度)",
+    "got": 4.86,
+    "want": 5.6,
+    "ok": true,
+    "note": "(量度重算 4.93)"
+  },
+  {
+    "name": "ω_max 預言",
+    "got": 186.5,
+    "want": 190,
+    "ok": true,
+    "note": "(文獻區間待核)"
+  }
+]

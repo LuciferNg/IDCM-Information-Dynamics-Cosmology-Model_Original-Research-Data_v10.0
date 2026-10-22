@@ -1,0 +1,38 @@
+========================================================================
+O223 / 01 -- anchor gauge freedom + frustration-set orbit
+========================================================================
+[A] graph
+    threshold = 28.9225 deg (120th=26.1664, 121st=31.6786)
+    V=60  E=120  degree set=[4]
+  [OK] A1 V=60
+  [OK] A2 E=120
+  [OK] A3 4-regular
+  [OK] A4 graph diameter = 8   d(0,57)=8
+[B] Aut(G) by exact 3-point linear solve
+    frame vertices = [0, 9, 20]
+    |GeoAut| = 60   proper = 60   improper = 0
+  [OK] B1 |GeoAut| = 60 (chiral icosahedral group I)
+  [OK] B2 60 proper + 0 improper (strictly chiral)
+  [OK] B3 -I NOT in GeoAut(G) (point set is chiral, no inversion)
+  [OK] C1 60 node temperatures loaded
+[D] anchored colouring + frustration statistics
+    anchor 0: |frustration edges| = 32
+  [OK] D1 32 frustration edges (anchor 0)
+    random null (5000): mean = 48.02  std = 4.21 uK
+    z(0) = -3.22   mean|dT|(0) = 34.5 uK
+    z(57) = -3.22  mean|dT|(57) = 34.5 uK
+    z distribution: min=-3.22 max=+3.75 mean=+0.40 std=1.55
+  [OK] D2 z(0) < -3.0 (anchor-0 uniqueness)   z=-3.22
+  [OK] D3 z(57) = z(0) (antipode degeneracy)
+    anchors with z < -2 : 2
+  [OK] D4 only {0,57} below -2
+[E] frustration-set orbit under Aut(G)
+    orbit size of anchor-0 frustration set = 30
+    distinct frustration sets over 60 anchors = 30
+  [OK] E1 frustration set NOT Aut-invariant (orbit > 1)   orbit=30
+    vertex orbit of node 0 under Aut = 60 vertices
+  [OK] E2 vertex-transitive (orbit of 0 = 60)
+------------------------------------------------------------------------
+RESULT: 14/14 PASS
+------------------------------------------------------------------------
+wrote data/01_anchor_gauge.json

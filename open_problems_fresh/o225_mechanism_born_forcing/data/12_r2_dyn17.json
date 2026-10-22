@@ -1,0 +1,979 @@
+{
+ "rules": "r2-g1-dyn-v1",
+ "orders": [
+  "lex",
+  "diag",
+  "antidiag",
+  "block",
+  "stride"
+ ],
+ "per_order": {
+  "lex": {
+   "hits": [
+    124
+   ],
+   "overrides": [
+    52,
+    80,
+    26
+   ],
+   "pass_reads": [
+    11408
+   ],
+   "ledger_len": [
+    7564,
+    7564
+   ],
+   "max_len": [
+    7564,
+    7564
+   ]
+  },
+  "diag": {
+   "hits": [
+    124
+   ],
+   "overrides": [
+    48,
+    82,
+    16
+   ],
+   "pass_reads": [
+    11408
+   ],
+   "ledger_len": [
+    7564,
+    7564
+   ],
+   "max_len": [
+    7564,
+    7564
+   ]
+  },
+  "antidiag": {
+   "hits": [
+    123
+   ],
+   "overrides": [
+    53,
+    78,
+    22
+   ],
+   "pass_reads": [
+    11409
+   ],
+   "ledger_len": [
+    7565,
+    7565
+   ],
+   "max_len": [
+    7565,
+    7565
+   ]
+  },
+  "block": {
+   "hits": [
+    1954
+   ],
+   "overrides": [
+    1128,
+    1254,
+    44
+   ],
+   "pass_reads": [
+    9578
+   ],
+   "ledger_len": [
+    5734,
+    5734
+   ],
+   "max_len": [
+    5734,
+    5734
+   ]
+  },
+  "stride": {
+   "hits": [
+    124
+   ],
+   "overrides": [
+    56,
+    80,
+    19
+   ],
+   "pass_reads": [
+    11408
+   ],
+   "ledger_len": [
+    7564,
+    7564
+   ],
+   "max_len": [
+    7564,
+    7564
+   ]
+  }
+ },
+ "n_values_total": 174,
+ "distinct_values": [
+  0,
+  1,
+  2,
+  3,
+  48,
+  50,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61,
+  62,
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  82,
+  83,
+  84,
+  85,
+  86,
+  87,
+  88,
+  89,
+  90,
+  91,
+  92,
+  93,
+  94,
+  95,
+  96,
+  97,
+  98,
+  99,
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119,
+  120,
+  121,
+  122,
+  123,
+  124,
+  1128,
+  1162,
+  1163,
+  1166,
+  1172,
+  1173,
+  1176,
+  1180,
+  1182,
+  1183,
+  1185,
+  1186,
+  1187,
+  1189,
+  1192,
+  1193,
+  1194,
+  1196,
+  1197,
+  1199,
+  1200,
+  1202,
+  1203,
+  1204,
+  1208,
+  1209,
+  1210,
+  1211,
+  1214,
+  1215,
+  1217,
+  1218,
+  1219,
+  1223,
+  1225,
+  1230,
+  1232,
+  1233,
+  1235,
+  1237,
+  1239,
+  1242,
+  1247,
+  1254,
+  1890,
+  1954,
+  3720,
+  3721,
+  3844,
+  3971,
+  4716,
+  4728,
+  4731,
+  4747,
+  5734,
+  7564,
+  7565,
+  9578,
+  11408,
+  11409
+ ],
+ "value_names": {
+  "50": [
+   "overrides"
+  ],
+  "109": [
+   "entries_per_ctx"
+  ],
+  "59": [
+   "overrides"
+  ],
+  "118": [
+   "entries_per_ctx"
+  ],
+  "63": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "68": [
+   "overrides",
+   "entries_per_ctx"
+  ],
+  "72": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "1209": [
+   "overrides"
+  ],
+  "1218": [
+   "overrides"
+  ],
+  "1163": [
+   "overrides"
+  ],
+  "1172": [
+   "overrides"
+  ],
+  "93": [
+   "entries_per_ctx"
+  ],
+  "62": [
+   "n_ctx_with_two_values",
+   "ctxs",
+   "conflict_ctx",
+   "top_count",
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "102": [
+   "entries_per_ctx"
+  ],
+  "52": [
+   "overrides"
+  ],
+  "111": [
+   "entries_per_ctx"
+  ],
+  "61": [
+   "overrides"
+  ],
+  "120": [
+   "entries_per_ctx",
+   "visited"
+  ],
+  "65": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "3": [
+   "miss_hist_key"
+  ],
+  "1202": [
+   "overrides"
+  ],
+  "1211": [
+   "overrides"
+  ],
+  "86": [
+   "entries_per_ctx"
+  ],
+  "4747": [
+   "pairs"
+  ],
+  "95": [
+   "entries_per_ctx"
+  ],
+  "104": [
+   "entries_per_ctx"
+  ],
+  "54": [
+   "overrides"
+  ],
+  "113": [
+   "entries_per_ctx"
+  ],
+  "122": [
+   "entries_per_ctx"
+  ],
+  "1204": [
+   "overrides"
+  ],
+  "1954": [
+   "stale",
+   "miss_hist_count",
+   "hits"
+  ],
+  "79": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "3721": [
+   "miss_hist_count"
+  ],
+  "88": [
+   "entries_per_ctx"
+  ],
+  "11409": [
+   "pass_reads"
+  ],
+  "97": [
+   "entries_per_ctx"
+  ],
+  "123": [
+   "stale",
+   "miss_hist_count",
+   "hits",
+   "entries_per_ctx"
+  ],
+  "106": [
+   "entries_per_ctx"
+  ],
+  "56": [
+   "overrides"
+  ],
+  "115": [
+   "entries_per_ctx"
+  ],
+  "1890": [
+   "miss_hist_count"
+  ],
+  "1197": [
+   "overrides"
+  ],
+  "9578": [
+   "pass_reads"
+  ],
+  "7564": [
+   "max_len",
+   "ledger_len"
+  ],
+  "1215": [
+   "overrides"
+  ],
+  "77": [
+   "overrides",
+   "entries_per_ctx"
+  ],
+  "81": [
+   "entries_per_ctx"
+  ],
+  "0": [
+   "agree"
+  ],
+  "90": [
+   "entries_per_ctx"
+  ],
+  "99": [
+   "entries_per_ctx"
+  ],
+  "108": [
+   "entries_per_ctx"
+  ],
+  "117": [
+   "entries_per_ctx"
+  ],
+  "1254": [
+   "overrides"
+  ],
+  "1199": [
+   "overrides"
+  ],
+  "1208": [
+   "overrides"
+  ],
+  "70": [
+   "overrides",
+   "entries_per_ctx"
+  ],
+  "1217": [
+   "overrides"
+  ],
+  "1162": [
+   "overrides"
+  ],
+  "74": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "83": [
+   "entries_per_ctx"
+  ],
+  "92": [
+   "entries_per_ctx"
+  ],
+  "101": [
+   "entries_per_ctx"
+  ],
+  "1183": [
+   "overrides"
+  ],
+  "110": [
+   "entries_per_ctx"
+  ],
+  "1128": [
+   "overrides"
+  ],
+  "1247": [
+   "overrides"
+  ],
+  "1192": [
+   "overrides"
+  ],
+  "2": [
+   "miss_hist_key"
+  ],
+  "1210": [
+   "overrides"
+  ],
+  "67": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "4728": [
+   "pairs"
+  ],
+  "1219": [
+   "overrides"
+  ],
+  "76": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "85": [
+   "entries_per_ctx"
+  ],
+  "3971": [
+   "pairs"
+  ],
+  "94": [
+   "entries_per_ctx"
+  ],
+  "124": [
+   "hits",
+   "stale",
+   "miss_hist_count"
+  ],
+  "1176": [
+   "overrides"
+  ],
+  "103": [
+   "entries_per_ctx"
+  ],
+  "1185": [
+   "overrides"
+  ],
+  "7565": [
+   "ledger_len",
+   "max_len"
+  ],
+  "1194": [
+   "overrides"
+  ],
+  "1203": [
+   "overrides"
+  ],
+  "69": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "5734": [
+   "ledger_len",
+   "max_len"
+  ],
+  "78": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "87": [
+   "entries_per_ctx"
+  ],
+  "11408": [
+   "pass_reads"
+  ],
+  "96": [
+   "entries_per_ctx"
+  ],
+  "1233": [
+   "overrides"
+  ],
+  "1242": [
+   "overrides"
+  ],
+  "1187": [
+   "overrides"
+  ],
+  "1196": [
+   "overrides"
+  ],
+  "58": [
+   "overrides"
+  ],
+  "71": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "80": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "89": [
+   "entries_per_ctx"
+  ],
+  "98": [
+   "entries_per_ctx"
+  ],
+  "1235": [
+   "overrides"
+  ],
+  "1180": [
+   "overrides"
+  ],
+  "1189": [
+   "overrides"
+  ],
+  "60": [
+   "overrides"
+  ],
+  "4716": [
+   "pairs"
+  ],
+  "119": [
+   "entries_per_ctx"
+  ],
+  "64": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "73": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "82": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "91": [
+   "entries_per_ctx"
+  ],
+  "1173": [
+   "overrides"
+  ],
+  "1237": [
+   "overrides"
+  ],
+  "1182": [
+   "overrides"
+  ],
+  "53": [
+   "overrides"
+  ],
+  "1200": [
+   "overrides"
+  ],
+  "112": [
+   "entries_per_ctx"
+  ],
+  "121": [
+   "entries_per_ctx"
+  ],
+  "66": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "75": [
+   "entries_per_ctx",
+   "overrides"
+  ],
+  "84": [
+   "entries_per_ctx"
+  ],
+  "1166": [
+   "overrides"
+  ],
+  "1230": [
+   "overrides"
+  ],
+  "3720": [
+   "miss_hist_count"
+  ],
+  "1239": [
+   "overrides"
+  ],
+  "1193": [
+   "overrides"
+  ],
+  "105": [
+   "entries_per_ctx"
+  ],
+  "55": [
+   "overrides"
+  ],
+  "114": [
+   "entries_per_ctx"
+  ],
+  "3844": [
+   "npairs"
+  ],
+  "1214": [
+   "overrides"
+  ],
+  "1": [
+   "min_len"
+  ],
+  "1223": [
+   "overrides"
+  ],
+  "1232": [
+   "overrides"
+  ],
+  "1186": [
+   "overrides"
+  ],
+  "48": [
+   "overrides"
+  ],
+  "107": [
+   "entries_per_ctx"
+  ],
+  "57": [
+   "overrides"
+  ],
+  "116": [
+   "entries_per_ctx"
+  ],
+  "4731": [
+   "pairs"
+  ],
+  "1225": [
+   "overrides"
+  ],
+  "100": [
+   "entries_per_ctx"
+  ]
+ },
+ "seventeen_in_V": false,
+ "multiples_of_17": [
+  68,
+  85,
+  102,
+  119,
+  1173,
+  7565
+ ],
+ "positive_control": {
+  "62": true,
+  "120": true,
+  "124": true,
+  "4728": true,
+  "3844": true
+ },
+ "planted_control": true,
+ "prime_support": [
+  2,
+  3,
+  5,
+  7,
+  11,
+  13,
+  17,
+  19,
+  23,
+  29,
+  31,
+  37,
+  41,
+  43,
+  47,
+  53,
+  59,
+  61,
+  67,
+  71,
+  73,
+  79,
+  83,
+  89,
+  97,
+  101,
+  103,
+  107,
+  109,
+  113,
+  131,
+  137,
+  149,
+  151,
+  173,
+  197,
+  199,
+  293,
+  401,
+  593,
+  601,
+  607,
+  977,
+  1163,
+  1187,
+  1193,
+  1217,
+  1223,
+  1237,
+  3803,
+  4789
+ ],
+ "d3_divisible_by_17": [],
+ "d3_factorisations": {
+  "62": [
+   2,
+   31
+  ],
+  "120": [
+   2,
+   2,
+   2,
+   3,
+   5
+  ],
+  "3844": [
+   2,
+   2,
+   31,
+   31
+  ],
+  "7440": [
+   2,
+   2,
+   2,
+   2,
+   3,
+   5,
+   31
+  ],
+  "11532": [
+   2,
+   2,
+   3,
+   31,
+   31
+  ],
+  "124": [
+   2,
+   2,
+   31
+  ],
+  "7564": [
+   2,
+   2,
+   31,
+   61
+  ],
+  "4728": [
+   2,
+   2,
+   2,
+   3,
+   197
+  ],
+  "44": [
+   2,
+   2,
+   11
+  ],
+  "88": [
+   2,
+   2,
+   2,
+   11
+  ],
+  "176": [
+   2,
+   2,
+   2,
+   2,
+   11
+  ],
+  "60": [
+   2,
+   2,
+   3,
+   5
+  ],
+  "990": [
+   2,
+   3,
+   3,
+   5,
+   11
+  ],
+  "12": [
+   2,
+   2,
+   3
+  ],
+  "20": [
+   2,
+   2,
+   5
+  ],
+  "30": [
+   2,
+   3,
+   5
+  ]
+ },
+ "flip_rigidity_17": false,
+ "mb_readout_17": false,
+ "mb_distinct_values": [
+  0,
+  1,
+  2,
+  3,
+  52,
+  53,
+  54,
+  55,
+  58,
+  59,
+  60,
+  62,
+  63,
+  64,
+  65,
+  66,
+  67,
+  69,
+  70,
+  72,
+  73,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  120,
+  122,
+  124,
+  3720,
+  3844,
+  4728,
+  7564,
+  11408
+ ],
+ "claims": [
+  {
+   "tag": "P10",
+   "name": "★ M-value：17 ∉ V（機械值域）",
+   "ok": true,
+   "detail": "|V| = 174 ; distinct = 139 ; min = 0 max = 11409 ; 17 present = False"
+  },
+  {
+   "tag": "P11",
+   "name": "★ M-div：17 ∤ v ∀v ∈ V＼{0}",
+   "ok": false,
+   "detail": "multiples of 17 found = [68, 85, 102, 119, 1173, 7565]"
+  },
+  {
+   "tag": "P12",
+   "name": "★ 陽性對照：同一掃描器必須報出已知在場之數（62 / 120 / 124 / 4728 / 3844）",
+   "ok": true,
+   "detail": "presence = {62: True, 120: True, 124: True, 4728: True, 3844: True}"
+  },
+  {
+   "tag": "P13",
+   "name": "★ 植入對照：人造量 17 / 34 加入後掃描器必須命中（M-value 命中 17、M-div 命中 34）",
+   "ok": true,
+   "detail": "planted detected = True ; multiples = [17, 34, 68, 85, 102, 119, 1173, 7565]"
+  },
+  {
+   "tag": "P14",
+   "name": "★ 素支撐：V 之素因子支撐（須唔含 17）",
+   "ok": false,
+   "detail": "prime support = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 131, 137, 149, 151, 173, 197, 199, 293, 401, 593, 601, 607, 977, 1163, 1187, 1193, 1217, 1223, 1237, 3803, 4789]"
+  },
+  {
+   "tag": "P15",
+   "name": "D3 清單 {62,120,3844,7440,11532,124,7564,4728,44,88,176,60,990,12,20,30}：17 唔整除任一項",
+   "ok": true,
+   "detail": "divisible entries = [] ; factorisations = {'62': [2, 31], '120': [2, 2, 2, 3, 5], '3844': [2, 2, 31, 31], '7440': [2, 2, 2, 2, 3, 5, 31], '11532': [2, 2, 3, 31, 31], '124': [2, 2, 31], '7564': [2, 2, 31, 61], '4728': [2, 2, 2, 3, 197], '44': [2, 2, 11], '88': [2, 2, 2, 11], '176': [2, 2, 2, 2, 11], '60': [2, 2, 3, 5], '990': [2, 3, 3, 5, 11], '12': [2, 2, 3], '20': [2, 2, 5], '30': [2, 3, 5]}"
+  },
+  {
+   "tag": "P16",
+   "name": "5 種 order（lex/diag/antidiag/block/stride）之下 M-value 與 M-div 仍成立",
+   "ok": true,
+   "detail": "lex: hits=[124] ov_range=[52, 80]; diag: hits=[124] ov_range=[48, 82]; antidiag: hits=[123] ov_range=[53, 78]; block: hits=[1954] ov_range=[1128, 1254]; stride: hits=[124] ov_range=[56, 80]"
+  },
+  {
+   "tag": "P17a",
+   "name": "剛性：翻轉 K[0][0] 後重掃，17 仍不在值域（且值判準仍可證偽）",
+   "ok": true,
+   "detail": "flipped: 17 present = False ; multiples of 17 = [68]"
+  },
+  {
+   "tag": "P17b",
+   "name": "剛性：M-b 讀出表（u-奇 tie 規則，R1）重掃，17 仍不在值域",
+   "ok": true,
+   "detail": "M-b: 17 present = False ; multiples of 17 = [] ; |V| = 43"
+  }
+ ]
+}

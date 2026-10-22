@@ -1,0 +1,27 @@
+{
+ "R": "R5",
+ "title": "補填原理統一 (d/t filler)",
+ "d": {
+  "Cf": 3.662,
+  "block": {
+   "e": 3.5941,
+   "u": 3.8029,
+   "d": 3.662
+  },
+  "is_extreme": false,
+  "mechanism": "γ-ladder mass-order (m_d/m_u = 2.162 EXACT)"
+ },
+ "t": {
+  "BL": 0.3333333333333333,
+  "yt": 0.9942359082980509,
+  "mechanism": "B−L gate + VEV (y_t≈1, m_t=v/√2)"
+ },
+ "sieve_arithmetic": "3+1 in both sieves (descriptive only)",
+ "o136_integration": [
+  "mass-shape: P=0.2165 rank-parity refuted (consistent)",
+  "cs-outlier: s/c single points P=0.7065 (no family)",
+  "dquark: H_sector FAIL P=0.0856 (no sector coherence)"
+ ],
+ "verdict": "⚰️ 統一機制否證; d/t 兩個機制; R5 close (明顯負結果)",
+ "cheat": "全部輸入已閉合; 零新常數"
+}

@@ -1,0 +1,85 @@
+{
+  "script": "06_stellar_age_ceiling_candidates.py",
+  "AU_Planck_Gyr": 13.787,
+  "max_plausible_Banik": 13.705,
+  "candidates": [
+    {
+      "name": "HD 140283 (Methuselah)",
+      "type": "暈次巨星(Subgiant)",
+      "age_Gyr": 14.46,
+      "sigma": 0.8,
+      "delta_vs_AU": 0.673,
+      "nsig": 0.84125,
+      "verdict": "相容 (≤1σ)",
+      "ref": "Bond+2013 HST 視差 (名義值)"
+    },
+    {
+      "name": "HD 140283 (現代複審)",
+      "type": "暈次巨星(Subgiant)",
+      "age_Gyr": 13.9,
+      "sigma": 0.7,
+      "delta_vs_AU": 0.113,
+      "nsig": 0.16142857142857145,
+      "verdict": "相容 (≤1σ)",
+      "ref": "VandenBerg+2013 等時線+Gaia 後收窄 (綜合)"
+    },
+    {
+      "name": "NGC 6752 WD 冷卻序列",
+      "type": "球狀星團白矮星",
+      "age_Gyr": 13.1,
+      "sigma": 0.4,
+      "delta_vs_AU": -0.687,
+      "nsig": -1.7175,
+      "verdict": "⚠️ 邊緣 (1–3σ)",
+      "ref": "Bedin+2022 MNRAS (12.7–13.5 峰值)"
+    },
+    {
+      "name": "M4 WD 冷卻序列",
+      "type": "球狀星團白矮星",
+      "age_Gyr": 12.1,
+      "sigma": 0.9,
+      "delta_vs_AU": -1.687,
+      "nsig": -1.8744444444444444,
+      "verdict": "⚠️ 邊緣 (1–3σ)",
+      "ref": "Hansen+2004"
+    },
+    {
+      "name": "NGC 6397 WD 冷卻序列",
+      "type": "球狀星團白矮星",
+      "age_Gyr": 11.5,
+      "sigma": 1.0,
+      "delta_vs_AU": -2.287,
+      "nsig": -2.287,
+      "verdict": "⚠️ 邊緣 (1–3σ)",
+      "ref": "Hansen+2007 (≈11.5–13)"
+    },
+    {
+      "name": "BPS CS 22876−32",
+      "type": "特低金屬主序星",
+      "age_Gyr": 13.6,
+      "sigma": 0.6,
+      "delta_vs_AU": -0.187,
+      "nsig": -0.3116666666666667,
+      "verdict": "相容 (≤1σ)",
+      "ref": "Ruchti+2013 (綜合)"
+    },
+    {
+      "name": "Banik+2026 A_★ (樣本最老)",
+      "type": "155,600 次巨星 latent max",
+      "age_Gyr": 13.73,
+      "sigma": 0.165,
+      "delta_vs_AU": -0.057,
+      "nsig": -0.34545454545454546,
+      "verdict": "相容 (≤1σ)",
+      "ref": "由 (13.73,+0.18/−0.15) 取平均σ"
+    }
+  ],
+  "red_dwarf_lifetimes_Gyr": {
+    "0.1 M☉": 10000.0,
+    "0.3 M☉": 1000.0,
+    "0.5 M☉": 200.0,
+    "0.8 M☉": 20.0
+  },
+  "conclusion": "no star robustly exceeds 13.787 Gyr; all consistent within uncertainties",
+  "disclaimer": "全部候選 = 文獻引用, 冇新閉合; 零參數 — 判據只有 σ 距離"
+}

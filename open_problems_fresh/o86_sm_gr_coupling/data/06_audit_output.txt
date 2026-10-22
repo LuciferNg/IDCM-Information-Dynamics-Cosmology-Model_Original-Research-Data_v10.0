@@ -1,0 +1,155 @@
+==============================================================================
+O86 INDEPENDENT AUDIT -- 2026-09-20
+==============================================================================
+
+--- SECTION A ---
+  [PASS] A1 omega_ring = c/R_world = 72.590027
+           stored 72.59 dev 3.782616839547044e-05 %
+  [PASS] A2 T_ring = 2*pi*R/c = 84.6348 Gyr
+           doc 84.63
+  [PASS] A3 T_ring * omega_ring = 2*pi EXACT
+           dev 0.0
+  [PASS] A4 c * T_ring = 2*pi*R_world
+           identity
+  [PASS] A5 s_max = pi*R_world = 12974.59 Mpc
+           doc 12974.6
+  [PASS] A6 L_ring = 2*pi*R_world = 25949.18 Mpc
+           doc 25949
+  [PASS] A7 Delta_s = R_world/88 = 46.9318 Mpc
+           doc 46.93
+  [PASS] A8 T_sync = T_ring/88 = 0.961759 Gyr
+           doc 0.96
+  [PASS] A9 lambda_sync (canonical) = 2*pi*R/88 = pi*R/44 = 294.8770 Mpc
+           L_ring/88 = pi*R/44 = 294.8770264492416
+  [PASS] A10 lambda_sync/R_world = pi/44 EXACT
+           geometric identity
+  [PASS] A11 site spacing a = R_world/N_d = 93.8623 = lambda_sync/pi
+           O86 calls this value lambda_sync -- see E1
+  [PASS] A12 H_CMB = omega_ring*(1-pi/44) = 67.4071 (Planck 67.36, 0.09 sigma)
+           sigma = 0.08724373599028408
+  [PASS] A13 l_Nyq = log_4(18) = 2.0849625
+           doc 2.0850
+
+--- SECTION B ---
+  [PASS] B1 sum(gamma_n, n=1..44) = 90
+           90.0
+  [PASS] B2 sum_gamma_even = 46
+           46.0
+  [PASS] B3 sum_gamma_odd = 44 = N_d
+           44.0
+  [PASS] B4 mu^2 = E - O = 2
+           2.0
+  [PASS] B5 pairing gamma_n + gamma_(44-n) = 4 for n=1..43
+           Z2 duality
+  [PASS] B6 gamma_44 = 4 = B (Nyquist self-dual)
+           4.0
+  [PASS] B7 gamma_22 = mu^2 = 2 (Z2 self-dual mode)
+           2.0
+  [PASS] B8 lambda = 2/123 = 2/[3(N_d-3)]
+           L10 = 123
+  [PASS] B9 <W>^2 = mu^2/(2 lambda) = 61.5
+           61.5
+  [PASS] B10 Omega_Lambda = <W>^2/Sigma_gamma = 61.5/90 = 41/60 (CURRENT, O39/O204)
+           41/60 = 0.6833333333333333
+  [PASS] B11 Omega_Lambda = 4/(phi^4-1) (REVOKED O37 form) != 41/60
+           4/(phi^4-1) = 0.6832815729997477 vs 41/60 = 0.6833333333333333
+
+--- SECTION C ---
+  [PASS] C1 gamma_n table (9 values) matches doc 3.1
+           gamma_20 = 1.7153703234534297
+  [PASS] C2 m_e = M0*gamma_1*L6/F5 = 0.51181 MeV (obs 0.511, 0.16 %)
+           0.5118360025612163
+  [PASS] C3 m_mu = M0*gamma_7*15.5 = 105.802 MeV (obs 105.66, 0.13 %)
+           105.79891155874154
+  [PASS] C4 m_tau = M0*gamma_20*37 = 1770.83 MeV (obs 1776.86, 0.34 %)
+           1770.834858763276
+  [PASS] C5 M0/v_Higgs = 1.134184e-4
+           0.00011341835365853658
+  [PASS] C6 y_e = 2.9425e-6 (obs 2.9377e-6)
+           2.942461042816676e-06
+  [PASS] C7 y_mu = 6.0822e-4 (obs 6.0742e-4)
+           0.0006082205512629427
+  [PASS] C8 y_tau = 1.0180e-2 (obs 1.0215e-2)
+           0.010180238512138493
+  [PASS] C9 lambda_WH = mu^2/123 IDENTICAL to lambda_self (no independent content)
+           lambda_WH == lambda_self == 2/123
+  [PASS] C10 kappa^2 = M0
+           kappa = 5.282131671967294
+  [PASS] C11 kappa*omega_n ladder (lambda_44 = 2 kappa = 10.5643)
+           lambda_1 = 0.3770632140346173
+
+--- SECTION D ---
+  [PASS] D1 V_Lambda (O62) = 283.082129
+           F(gamma)+44-F8-B
+  [PASS] D2 Lambda_eff (script 02, dimensional) = 1.8992e-48 GeV^2
+           1.8991504907801118e-48
+  [PASS] D3 Lambda_eff (script 04) = 1.8992e-36 -- INCONSISTENT with D2
+           ratio s04/s02 = 1000000000000.0
+  [PASS] D4 zeta = M_Pl*lambda = 1.98519e17 GeV (O86 candidate)
+           1.9851869918699187e+17
+  [PASS] D5 xi = zeta/(2 M0) = 3.5724e18 (NON O(1)) -> zeta*W*R != xi*|W|^2*R
+           G9 (O204)
+  [PASS] D6 xi <W>^2/M_Pl^2 = 1.86e-23 << 1 (zero observational consequence)
+           1.8579618746739934e-23
+  [PASS] D7 G_eff/G_N - 1 < 1e-20 for all 4 zeta candidates (max = 3.72e-23)
+           max dev 1.4123888136705004e-21 (float64 rounds to 0; doc claim "< 1e-30" is loose)
+
+--- SECTION E ---
+  [PASS] E3a old D_app reproduces 0.999019 (self-fulfilling via delta = -0.1697)
+           reproduced
+
+--- SECTION E: STALE / SELF-FULFILLING (expected, not bugs) ---
+  [STALE] docs/02 s3.1 d-quark row
+           O86      : m_pred = 4.7 MeV, Delta = 0.6 % (doc)
+           CURRENT  : m_pred = 2.260366200169331 MeV, Delta = -51.59815417196293 % (script 03)
+           NOTE     : doc row disagrees with its own script
+  [STALE] scripts/02 Omega_Lambda prediction
+           O86      : printed as if consistent; table hardcodes PASS
+           CURRENT  : Omega_Lambda = 3.066293709857545e+17 (dimensionless treatment of V_Lambda)
+           NOTE     : off by 17 orders of magnitude -- dimensional mismatch, masked by hardcoded check table
+  [STALE] lambda_sync (scripts/01 + docs/02 s1.2 identity)
+           O86      : R_world/44 = 93.862273 Mpc (mislabelled lambda_sync)
+           CURRENT  : lambda_sync = L_ring/88 = pi*R_world/44 = 294.8770 Mpc (canonical)
+           NOTE     : the doc identity pi/44 = lambda_sync/R_world gives 1/44 = 0.022727 for 93.86 (FALSE) but 0.071400 for 294.87 (TRUE) -- internal contradiction
+  [STALE] Nyquist saturation claim (docs/02 s5, script 01 8/8)
+           O86      : D_app(l_Nyq)/piR = 0.999019 -- "Nyquist = half ring"
+           CURRENT  : D_A(l_Nyq)/piR = 0.9632287076857056 (O169/O76)
+           NOTE     : gap 3.57905594568916 % -- the 0.9990 value is tuned out by the falsified delta = -0.1697, NOT an independent test
+  [STALE] Omega_Lambda (docs/02 s2.2/s4.1/s5, scripts 02/04/05)
+           O86      : 4/(phi^4-1) = 0.683281573 (O37 form, REVOKED 2026-08-12)
+           CURRENT  : 41/60 = <W>^2/Sigma_gamma = 61.5/90 = 0.683333333 (O39/O204)
+           NOTE     : O86 already carries the correct inputs (<W>^2 = 61.5, Sigma_gamma = 90); only the final combination is stale. Planck 0.6847+-0.0073: both within 1 sigma
+  [STALE] Projection / elongation factor (docs/02 s1.2, s2.4; scripts 01/02/04/05)
+           O86      : E = 1 + 2 phi^-1 l, C = -0.1697
+           CURRENT  : E(l) = l + 1.11911398, C = 1-2 phi^-1 = -phi^-3 = -0.23606798 (O169, 4.88 sigma falsification)
+           NOTE     : DESI DR2 D_M x6: old chi2 = 27.1635/5 vs new 2.4528/5
+  [STALE] scripts/05 "34/34 PASS" composition
+           O86      : 17/34 entries are the literal True (no computation)
+           CURRENT  : only 17/34 checks actually evaluate a condition
+           NOTE     : the headline 34/34 therefore overstates: 17 are hardcoded assertions
+  [STALE] scripts/01 verification table (s1.5)
+           O86      : check "lambda_sync = R_world/44": (R_world/44, 93.86, 0.01)
+           CURRENT  : compares the value against its own rounded form
+           NOTE     : tautological -- cannot fail; plus "T_ring > age" is trivially true
+  [STALE] scripts/02 verification table (s2.5)
+           O86      : all five rows print the literal check mark
+           CURRENT  : no condition is evaluated
+           NOTE     : this is why Omega_Lambda = 3.07e17 passed unnoticed
+  [STALE] scripts/03 s3.4 printout
+           O86      : "O54 measured: m_e = M0*gamma_1*1 = 0.1422 MeV"
+           CURRENT  : m_e = M0*gamma_1*L6/F5 = 0.51181 MeV
+           NOTE     : mislabel -- 0.1422 MeV is the un-scaled M0*gamma_1, not m_e; the following ratio line prints 0.0000 (dimensionally meaningless)
+  [STALE] scripts/03 line 44 comment
+           O86      : comment states gamma_20 = 1.8193
+           CURRENT  : gamma_20 = 1.7153703234534297
+           NOTE     : code computes gamma(20) correctly; only the comment is wrong
+  [STALE] scripts/04 line 46 vs line 169
+           O86      : line 46: L_GR = sqrt(-g)[M_Pl^2 R/2 + Lambda_eff]
+           CURRENT  : line 169: [M_Pl^2 R/2 - Lambda_eff]
+           NOTE     : sign inconsistency inside one script
+
+==============================================================================
+RESULT: 43/43 PASS
+STALE CLASSIFIED: 12 (expected mismatches, not failures)
+==============================================================================
+All structural identities and doc-claim checks verified.

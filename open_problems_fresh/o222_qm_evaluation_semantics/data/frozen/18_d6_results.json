@@ -1,0 +1,447 @@
+{
+ "rules_version": "d6-contract-v1",
+ "cells": {
+  "P1a": {
+   "verdict": "✅",
+   "value": {
+    "orbit_sizes": [
+     12,
+     20,
+     30
+    ],
+    "type_invariant": true,
+    "permutations": 120,
+    "distinct_lines": 31,
+    "antipodal_pairs": 31
+   },
+   "note": "2I acts on the 62 axes; orbits = vertex/face/edge families. Diagnostic: the 62 labels are a DOUBLE COVER of 31 lines (each direction with its antipode) -- this is a property of the frozen axis set, not a condition of the predicate"
+  },
+  "P1b": {
+   "verdict": "✅",
+   "value": {
+    "bijective_axes": 62,
+    "of": 62
+   },
+   "note": "state transition s -> MUL[s][h(a)] is a permutation; read is a pure function"
+  },
+  "P1c": {
+   "verdict": "🟡",
+   "value": {
+    "provenance": "o210_causal_tensor_algebra (docs/01, docs/02, final_result.md, data/02_type_registry.json)",
+    "dimensions_available": false
+   },
+   "note": "composition law exists as a typed object, but the upstream carries no dimensions (G6) => provenance-only, no dimensional cross-check"
+  },
+  "P2a": {
+   "verdict": "✅",
+   "value": {
+    "reproducible_pairs": 3844,
+    "of": 3844,
+    "memo_law": {
+     "lex": {
+      "pairs": 15,
+      "miss_pattern_matches": true,
+      "two_read_pairs": 2,
+      "observed_misses": [
+       2,
+       2,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3
+      ],
+      "predicted_misses": [
+       2,
+       2,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3,
+       3
+      ]
+     },
+     "block": {
+      "pairs": 18,
+      "miss_pattern_matches": true,
+      "two_read_pairs": 12,
+      "observed_misses": [
+       2,
+       2,
+       2,
+       2,
+       3,
+       2,
+       3,
+       2,
+       2,
+       3,
+       2,
+       3,
+       2,
+       3,
+       2,
+       2,
+       3,
+       2
+      ],
+      "predicted_misses": [
+       2,
+       2,
+       2,
+       2,
+       3,
+       2,
+       3,
+       2,
+       2,
+       3,
+       2,
+       3,
+       2,
+       3,
+       2,
+       2,
+       3,
+       2
+      ]
+     }
+    }
+   },
+   "note": "the frozen read operator is reproducible on all 3844 pairs, and an independent replay of the pair protocol reproduces the machine-observed read counts exactly (the memo-hit law is validated, not assumed)"
+  },
+  "P2b": {
+   "verdict": "✅",
+   "value": {
+    "history_sensitive_settings": 62,
+    "of": 62,
+    "example": [
+     "V00",
+     [
+      -1,
+      1
+     ]
+    ]
+   },
+   "note": "the outcome is not a function of the setting alone (contextuality of force)"
+  },
+  "P2c": {
+   "verdict": "✅",
+   "value": {
+    "lex": {
+     "pairs": 15,
+     "reads_per_pair": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+     ],
+     "ledger_growth_per_pair": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+     ],
+     "total_ledger_growth": 28,
+     "pushes": 43,
+     "memo_hit_pairs": 2,
+     "record_overrides_state": 0,
+     "override_example": null
+    },
+    "block": {
+     "pairs": 18,
+     "reads_per_pair": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      2,
+      3,
+      2
+     ],
+     "ledger_growth_per_pair": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      1,
+      2,
+      1
+     ],
+     "total_ledger_growth": 24,
+     "pushes": 42,
+     "memo_hit_pairs": 12,
+     "record_overrides_state": 2,
+     "override_example": {
+      "pair": [
+       "V02",
+       "V00"
+      ],
+      "stored_value": 1,
+      "current_state_would_give": -1
+     }
+    }
+   },
+   "note": "per pair the ledger grows by misses - 1 > 0: the rollback restores the state but not the record (irreversible); 2-read pairs are memo hits"
+  },
+  "P2d": {
+   "verdict": "🔴",
+   "value": {
+    "C1_values": [
+     "-1",
+     "-2/3",
+     "-1/3",
+     "-4/15",
+     "-1/5",
+     "-2/15",
+     "-1/15",
+     "0",
+     "1/15",
+     "2/15",
+     "1/5",
+     "4/15",
+     "1/3",
+     "2/3",
+     "1"
+    ],
+    "C2_values": [
+     "-1",
+     "-2/3",
+     "-1/3",
+     "-4/15",
+     "-1/5",
+     "-2/15",
+     "-1/15",
+     "0",
+     "1/15",
+     "2/15",
+     "1/5",
+     "4/15",
+     "1/3",
+     "2/3",
+     "1"
+    ],
+    "C1_row_sums": [
+     "2",
+     "4",
+     "-8/15",
+     "52/15",
+     "-10/3",
+     "-4/3",
+     "8/3",
+     "-28/15",
+     "32/15",
+     "-2/15",
+     "58/15",
+     "-14/3",
+     "-8/3",
+     "-2/3",
+     "10/3",
+     "16/3",
+     "-22/15",
+     "38/15",
+     "-8",
+     "-2"
+    ],
+    "C2_row_sums": [
+     "3",
+     "-23/15",
+     "37/15",
+     "-9/5",
+     "-4/5",
+     "11/5",
+     "16/5",
+     "21/5",
+     "59/15",
+     "-13/3",
+     "-4/3",
+     "-1/3",
+     "5/3",
+     "8/3",
+     "17/3",
+     "-8/5",
+     "-3/5",
+     "12/5",
+     "-13/15",
+     "47/15",
+     "-17/15",
+     "43/15",
+     "-7/5",
+     "-2/5",
+     "13/5",
+     "-11/3",
+     "-5/3",
+     "4/3",
+     "7/3",
+     "10/3",
+     "13/3",
+     "31/15",
+     "-11/5",
+     "-1/5",
+     "19/5",
+     "-37/15",
+     "-7/15",
+     "53/15",
+     "-26/15",
+     "-7",
+     "-5",
+     "-1"
+    ]
+   },
+   "note": "the tables are SIGNED correlations with vanishing row sums, not non-negative normalised weights: no Born-type probability structure (G7)"
+  },
+  "P3a": {
+   "verdict": "✅",
+   "value": {
+    "memo_hit_pairs_in_witnessed_passes": 14,
+    "pushes_total": 85,
+    "reads_total": 85,
+    "static_rule": "top-only access / append-only push / pop used only for the rollback (scripts/17 C6, machine-checked on the frozen source)"
+   },
+   "note": "a memo hit performs no write at all (pushes = reads - hits): the record is append-only and consistent"
+  },
+  "P3b": {
+   "verdict": "✅",
+   "value": {
+    "hits_returning_a_value_the_current_state_would_not_give": 2,
+    "example": {
+     "pair": [
+      "V02",
+      "V00"
+     ],
+     "stored_value": 1,
+     "current_state_would_give": -1
+    }
+   },
+   "note": "the record outranks the current state: a written entry is never recomputed"
+  },
+  "P3c": {
+   "verdict": "🔴",
+   "value": {
+    "accessible_depth": 1,
+    "redundancy": 1
+   },
+   "note": "read inspects only the ledger top => a single-copy record with no environmental redundancy (the QM decoherence-redundancy requirement is absent)"
+  },
+  "P4a": {
+   "verdict": "✅",
+   "value": {
+    "rank_C1": 61,
+    "rank_C2": 62,
+    "rank_C1rev": 61,
+    "note_rank1_means": "rank 1 <=> C = u (x) v factorisable"
+   },
+   "note": "the correlation tables are NOT factorisable => no independent-per-side decomposition (the structural content of \"sharing\")"
+  },
+  "P4b": {
+   "verdict": "🔴",
+   "value": {
+    "budget_feasible_all4_E1": "16/15",
+    "budget_feasible_all4_E2": "13/15",
+    "unrestricted_all4_E1": "2",
+    "unrestricted_all4_E2": "3",
+    "source": "data/15_b3r2_results.json (cited, not re-derived)"
+   },
+   "note": "no CHSH violation: budget-feasible clean values are below 2"
+  },
+  "P4c": {
+   "verdict": "✅",
+   "value": {
+    "axes_with_balanced_outcomes": 62,
+    "of": 62,
+    "column_sums": [
+     0
+    ],
+    "cited_A2_conditional_marginals": "3844/3844 = 1/2 (A2 A3)",
+    "diagnostic_C1_row_sums_not_a_criterion": [
+     "-8",
+     "-14/3",
+     "-10/3",
+     "-8/3",
+     "-2",
+     "-28/15"
+    ]
+   },
+   "note": "no-signalling content = every local outcome is +-1 with equal weight (Sigma_s K[s][a] = 0, 62/62), i.e. each marginal is 1/2 exactly and does not depend on the remote setting. The C row sums are NOT required to vanish (they are correlations, not marginals) -- they are reported as a diagnostic only"
+  }
+ },
+ "cell_order": [
+  "P1a",
+  "P1b",
+  "P1c",
+  "P2a",
+  "P2b",
+  "P2c",
+  "P2d",
+  "P3a",
+  "P3b",
+  "P3c",
+  "P4a",
+  "P4b",
+  "P4c"
+ ],
+ "cited": {
+  "B3R2_claims": 14,
+  "A2_claims": 20
+ }
+}

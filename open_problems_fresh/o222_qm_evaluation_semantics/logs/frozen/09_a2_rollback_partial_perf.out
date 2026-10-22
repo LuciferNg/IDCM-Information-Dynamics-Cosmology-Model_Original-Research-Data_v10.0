@@ -1,0 +1,28 @@
+================================================================================================================
+O222 scripts/09 -- A2 SEQUENTIAL / ROLLBACK LAYER   (rules: a2-contract-v1)
+================================================================================================================
+[PASS] A0      group + tables rebuilt (|2I| = 120, K = 120x62, h-table 62, frozen order 3844)  --  h bijective = True
+[PASS] A1      E1 closed form == literal machine on 344 pairs x 120 states (incl. reconcile check)  --  mismatches = 0
+[PASS] A1b     E1 diagonal C1[a][a] = +1 EXACT (memo hit, no second write)  --  all 62 diagonal entries = 1
+[PASS] A2/P3   order asymmetry Delta_order > 0 (a read writes the world)  --  max |C1[a][b] - C1_rev[a][b]| = 160/120 (argmax ('V01', 'E27'))
+[PASS] A3/P2   E2 exact state-distribution DP over all 3844 pairs (persistent ledger)  --  max L1 dev of p_k from uniform = 0 at k = None ; non-bijective pair maps = 0
+[PASS] A3b     world-line evolution is a BIJECTION on all 3844 pairs (uniformity preserved)  --  non-bijective = 0 (if 0 then p_k == uniform exactly, by group-translation argument)
+[PASS] A4      antipodal table rebuilt (A4 rule, exact algebraic test)  --  antipodal ordered pairs = 62
+
+---- CHSH (exact rational; |S| = |C1 - C2 + C3 + C4|) ----
+E1 raw           : 4 = 4.000000  argmax=('E27', 'E28', 'V01', 'E28')
+E1 distinct      : 4 = 4.000000  argmax=('E27', 'E28', 'V01', 'E28')
+E1 distinct+anti : 4 = 4.000000  argmax=('E27', 'E28', 'V01', 'E28')
+E1 all4-distinct : 2 = 2.000000  argmax=('V00', 'V01', 'E00', 'F06')
+E2 raw           : 4 = 4.000000  argmax=('E27', 'E28', 'V10', 'E27')
+E2 distinct      : 4 = 4.000000  argmax=('E27', 'E28', 'V10', 'E27')
+E2 distinct+anti : 4 = 4.000000  argmax=('E27', 'E28', 'V10', 'E27')
+E2 all4-distinct : 3 = 3.000000  argmax=('E27', 'E28', 'V01', 'E29')
+[FAIL] A5/P1   E1 CHSH <= 2 EXACT on the standard distinct statistic (a!=a', b!=b')  --  4 = 4.000000  argmax=('E27', 'E28', 'V01', 'E28')
+[PASS] A5b     E1 raw/degenerate reference: raw and its degenerate argmax disclosed  --  raw = 4 = 4.000000  argmax=('E27', 'E28', 'V01', 'E28') (degenerate tuples such as b' = a' let the diagonal +1 in)
+[PASS] A6/P2   E2 CHSH measured (value deliberately not pre-guessed); all variants reported  --  distinct = 4 = 4.000000  argmax=('E27', 'E28', 'V10', 'E27') | distinct+anti = 4 = 4.000000  argmax=('E27', 'E28', 'V10', 'E27') | all4 = 3 = 3.000000  argmax=('E27', 'E28', 'V01', 'E29')
+[PASS] A7/P5   marginal of every axis = 0 (P(x=+1) = 1/2 EXACT; centre symmetry)  --  non-zero = 0 / 62
+[PASS] A8/P5   E2 second-read conditional marginal P(x_b=+1 | a) = 1/2 for all (a,b) EXACT  --  non-zero conditionals = 0 / 3844
+[PASS] A9/P6   ablation (independent world per read) gives C = 0 EXACTLY  --  sum |C_abl| = 0 (structure: independent states x centre symmetry)
+[FAIL] A10/H19 E1 MC (R=1000, fresh state+ledger per pair) agrees with the closed form  --  max |MC - exact| = 0.1093 (MC sigma ~ 0.032)
+[PASS] A11/H19 E2 MC (R=1000 continuous world-lines) agrees with the exact DP  --  max |MC - exact DP| = 0.1033

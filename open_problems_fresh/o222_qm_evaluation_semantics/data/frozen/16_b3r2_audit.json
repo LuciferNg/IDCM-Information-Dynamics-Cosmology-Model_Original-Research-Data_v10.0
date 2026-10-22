@@ -1,0 +1,94 @@
+{
+ "claims": [
+  {
+   "tag": "P1.lex",
+   "name": "prefix reproduced independently (pairs 15 / reads 43 / cov_a 1 / cov_b 15 / terminal (0, 15))",
+   "ok": true,
+   "detail": "recorded = 15/43/1/15/[0, 15]"
+  },
+  {
+   "tag": "P1.diag",
+   "name": "prefix reproduced independently (pairs 22 / reads 44 / cov_a 22 / cov_b 22 / terminal (22, 22))",
+   "ok": true,
+   "detail": "recorded = 22/44/22/22/[22, 22]"
+  },
+  {
+   "tag": "P1.antidiag",
+   "name": "prefix reproduced independently (pairs 15 / reads 44 / cov_a 15 / cov_b 15 / terminal (15, 47))",
+   "ok": true,
+   "detail": "recorded = 15/44/15/15/[15, 47]"
+  },
+  {
+   "tag": "P1.block",
+   "name": "prefix reproduced independently (pairs 18 / reads 42 / cov_a 5 / cov_b 5 / terminal (1, 4))",
+   "ok": true,
+   "detail": "recorded = 18/42/5/5/[1, 4]"
+  },
+  {
+   "tag": "P1.stride",
+   "name": "prefix reproduced independently (pairs 15 / reads 44 / cov_a 15 / cov_b 15 / terminal (25, 15))",
+   "ok": true,
+   "detail": "recorded = 15/44/15/15/[25, 15]"
+  },
+  {
+   "tag": "P2.lex",
+   "name": "rectangle criterion reproduces constructibility (rect=False)",
+   "ok": true,
+   "detail": "recorded constructible_distinct = False ; cov_a=1 cov_b=15"
+  },
+  {
+   "tag": "P2.diag",
+   "name": "rectangle criterion reproduces constructibility (rect=False)",
+   "ok": true,
+   "detail": "recorded constructible_distinct = False ; cov_a=22 cov_b=22"
+  },
+  {
+   "tag": "P2.antidiag",
+   "name": "rectangle criterion reproduces constructibility (rect=False)",
+   "ok": true,
+   "detail": "recorded constructible_distinct = False ; cov_a=15 cov_b=15"
+  },
+  {
+   "tag": "P2.block",
+   "name": "rectangle criterion reproduces constructibility (rect=True)",
+   "ok": true,
+   "detail": "recorded constructible_distinct = True ; cov_a=5 cov_b=5"
+  },
+  {
+   "tag": "P2.stride",
+   "name": "rectangle criterion reproduces constructibility (rect=False)",
+   "ok": true,
+   "detail": "recorded constructible_distinct = False ; cov_a=15 cov_b=15"
+  },
+  {
+   "tag": "P3",
+   "name": "all 40 budget-feasible entries reproduced by the rectangle decomposition (value + domain equal, recorded argmax is a maximiser)",
+   "ok": true,
+   "detail": "mismatches = [] ; max tie multiplicity = 30"
+  },
+  {
+   "tag": "P4",
+   "name": "ARTIFACT-FREE (all4) budget-feasible |S| max = 16/15 <= 2 ; 4 exceedances of 2, all diagonal-contaminated",
+   "ok": true,
+   "detail": "all4 max = 16/15 ; exceedances = [('E1_distinct', '32/15', ['i=a', 'j=a2']), ('E1_distinct_anti', '32/15', ['i=a', 'j=a2']), ('E2_distinct', '11/5', ['i=a', 'j=a2']), ('E2_distinct_anti', '11/5', ['i=a', 'j=a2'])]"
+  },
+  {
+   "tag": "P5",
+   "name": "null (random axis relabelling) median of the exceeding classes is itself > 2 (the excess is class-generic, not a signal)",
+   "ok": true,
+   "detail": "E2_distinct null median = 38/15 ; max = 10/3"
+  },
+  {
+   "tag": "P6",
+   "name": "recorded baseline block still equals the frozen A2 values AND the scripts/10 argmaxes",
+   "ok": true,
+   "detail": "A2 all4 = 2/3"
+  },
+  {
+   "tag": "P7",
+   "name": "recorded domain counts equal the closeout-corrected values (raw 62^4 ; distinct_anti 13,388,280 ; all4 12,517,800)",
+   "ok": true,
+   "detail": "raw 14776336 ; distinct_anti 13388280 ; all4 12517800"
+  }
+ ]
+}

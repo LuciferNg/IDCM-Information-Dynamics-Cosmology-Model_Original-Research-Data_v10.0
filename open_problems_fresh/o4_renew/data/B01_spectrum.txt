@@ -1,0 +1,5 @@
+# O4_renew B01: 圖譜驗證
+lambda1=0.381966011250104 target=0.381966011250105 dev=8.327e-16
+omega=0.618033988749894 phi_inv=0.618033988749895 dev=6.661e-16
+mult3=True vertex_transitive=True
+random_lambda2_mean=0.1642 std=0.0545 n=30

@@ -1,0 +1,11 @@
+{
+ "Q4": {
+  "sum_chi2_by_position": [
+   "0",
+   0
+  ]
+ },
+ "Q5": {
+  "error": "argument should be a string or a Rational instance"
+ }
+}

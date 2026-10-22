@@ -1,0 +1,11 @@
+================================================================================================
+O225 scripts/10 -- R2 contract enforcer (r2-g1-dyn-v1)
+================================================================================================
+[PASS] C1   合約檔存在（docs/03_r2_contract.md）  --  /home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/docs/03_r2_contract.md
+[PASS] C2   兩部機器存在（scripts/11_r2_g1_table.py、scripts/12_r2_dyn17.py）  --  missing = 0
+[PASS] C3   兩部機器皆無禁字集命中  --  violations = 0
+[PASS] C4   陽性對照必須被拒（scanner 已受測）  --  detected = ['positive-control: import random (line 2)', 'positive-control: float literal 0.25 (line 4)', 'positive-control: random.random (line 4)']
+[PASS] C5   合約含全部預註冊標籤（P1..P17、D1..D4、兩判準）  --  missing = 0
+================================================================================================
+GATE = OPEN   (contract sha256 = 7446e4fda4830152...)
+================================================================================================

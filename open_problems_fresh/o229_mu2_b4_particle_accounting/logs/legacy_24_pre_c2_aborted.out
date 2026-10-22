@@ -1,0 +1,33 @@
+O229 / R5 — 更正前證物（`-c2` 之前之 scripts/24 版本）
+==============================================================================
+出處: 遲到之 Hermes 背景通知（proc_d251d8e112b1，exit 1）
+指令: time /usr/bin/python3 scripts/24_r5_discrimination.py > /tmp/r5_24.log 2>&1
+實測: real 2m58.956s ｜ 崩潰點: scripts/24 第 128 行 f-string `#{v: lock(v) ≥ 1}`
+      （`#` + `{v: …}` 被當成格式說明 ⟹ ValueError: Invalid format specifier）
+狀態: **項值未乘係數 c**（`-c2` 修正前）⟹ express(137) 假值 1444、鎖表完全走樣。
+      本檔**原文照錄**（唔改一字），僅加本抬頭。現行 24 = 純 Python 係數向量（0.5s，lock(137) = 228）。
+==============================================================================
+
+real	2m58.956s
+user	2m58.888s
+sys	0m0.064s
+24 exit=1
+[4] D3 lock(v): 「唯一正整數解 = 4」（純 Python 係數向量 + Cauchy 界 = 完備且精確）
+    lock(34) = 26
+    lock(46) = 6
+    lock(88) = 4
+    lock(90) = 2
+    lock(123) = 8
+    lock(134) = 9
+    lock(137) = 21
+    lock(144) = 15
+    lock(176) = 6
+    #{v: lock(v) ≥ 1} = 31/34；max lock = 35，達到者 = [21]
+  [FAIL] C2 #{v: lock(v) ≥ 1} ≤ 12 且 lock(137) = max   實測 31/34；lock(137) = 21，max = 35 @ [21] ⟹ 預註冊 FAIL 原樣保留
+  [FAIL] C3 |argmax| ≥ 2 ⟹ 端點鎖**唔係**唯一被鎖定之值，判別力須下修   |argmax| = 1
+  [FAIL] C3b [c] 正確陳述: 在凍結類下「以 B = 4 為唯一解而命中 v」之形式數，137 並非唯一/最高 ⟹ 端點鎖之**值層判別力接近零**（形式非唯一 + 值非唯一）
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o229_mu2_b4_particle_accounting/scripts/24_r5_discrimination.py", line 128, in <module>
+    f"★ lock(v)（唯一正整數解 = 4）: lock(137) = {lock[137]}；#{v: lock(v) ≥ 1} = {nz}/34；max = {mx} @ {arg}。\n"
+                                                               ^^^^^^^^^^^^^^^^
+ValueError: Invalid format specifier ' lock(v) ≥ 1' for object of type 'int'

@@ -1,0 +1,137 @@
+{
+ "rules_version": "o226-closeout-audit-v1",
+ "claims": [
+  {
+   "tag": "R1",
+   "name": "the whole chain re-runs clean: every script returns its pinned RESULT line, exit code 0, no Traceback",
+   "ok": true,
+   "detail": "checked 15 scripts ; deviations = []"
+  },
+  {
+   "tag": "R2",
+   "name": "the DECISION PROJECTION of every machine JSON (the per-claim ok vector, compared per claim tag) is unchanged before/after the re-run; newly ADDED tags are reported as INFO and are this round's additive completeness checks, not a verdict change",
+   "ok": true,
+   "detail": "compared 11 JSONs ; tag changes = [] ; tags added = []"
+  },
+  {
+   "tag": "R3",
+   "name": "the RESULT line of every canonical log is unchanged by the re-run, except the declared volatile elapsed field and scripts whose pin this round updated to the new value",
+   "ok": true,
+   "detail": "logs whose RESULT changed unexpectedly = [] ; declared pin updates = []"
+  },
+  {
+   "tag": "C1",
+   "name": "closed form of the one-pass account: reads = 3N^2 = 11532, misses = 3N^2-2N = 11408, hits = 2N = 124, pops = N^2 = 3844, and the identity reads = misses + hits holds exactly",
+   "ok": true,
+   "detail": "measured (11532, 11408, 124, 3844) vs closed form (11532, 11408, 124, 3844)"
+  },
+  {
+   "tag": "C2",
+   "name": "tick conversion: 1 read = 1/44 tick exactly and a full pass = 3N^2/44 = 2883/11 ticks (= the recorded full_pass_tick)",
+   "ok": true,
+   "detail": "3N^2 * 1/44 = 2883/11 ; recorded 2883/11"
+  },
+  {
+   "tag": "C3",
+   "name": "budget closed form, recomputed from scratch: c_k = k*theta (theta = 123/176), m* = floor((B-theta)/c_k)+1, Sigma = m* c_k, exhaustion iff c_k | B -- all 88 rows agree",
+   "ok": true,
+   "detail": "ruled out rows = [] ; the exhaust set = [1, 2, 4, 8, 11, 22, 44, 88]"
+  },
+  {
+   "tag": "C4",
+   "name": "SCOPE NOTE (recorded as a finding): exhaustion is exactly k | 88, i.e. the 8 values {1,2,4,8,11,22,44,88}; the R2 note \"k in {1,2,4}\" is the restriction to the k<=4 k-table of docs/08, not the full set",
+   "ok": true,
+   "detail": "exhaust set = [1, 2, 4, 8, 11, 22, 44, 88] ; divisors of 88 = [1, 2, 4, 8, 11, 22, 44, 88]"
+  },
+  {
+   "tag": "C5",
+   "name": "the cost-family reads-per-tick table is exactly ceil(88/k) for every row (k=1: 88, k=2: 44, k=3: 30, k=4: 22, ... k=88: 1)",
+   "ok": true,
+   "detail": "deviations = []"
+  },
+  {
+   "tag": "C6",
+   "name": "R3/R4 closed form verified from the stored W table alone: for each cos class the measured D values are exactly {62 - 2W - tie : tie in {0,8,10}} (near W=15 -> {22,24}; far W=7 -> {38,40}; diagonal W=26 -> {0}; antipodal W=0 -> {62})",
+   "ok": true,
+   "detail": "near [22, 24] ; far [38, 40] ; diagonal value 0 (mult 12) ; antipodal value 62 (mult 12)"
+  },
+  {
+   "tag": "C7",
+   "name": "class-size / multiplicity consistency: the ordered pairs split 60 (near) + 60 (far) + 12 (diagonal) + 12 (antipodal) = 144 = sum of D multiplicities, and within every class the multiplicities sum to the class size",
+   "ok": true,
+   "detail": "class sizes = {0: 12, 7: 60, 15: 60, 26: 12} ; multiplicities per class = {15: 60, 7: 60, 26: 12, 0: 12} ; total = 144"
+  },
+  {
+   "tag": "C8",
+   "name": "complement closure: D and 62-D always carry EQUAL multiplicities (12/12, 40/40, 20/20)",
+   "ok": true,
+   "detail": "multiplicities [(0, 12), (22, 40), (24, 20), (38, 20), (40, 40), (62, 12)]"
+  },
+  {
+   "tag": "C9",
+   "name": "R5 orbit structure: 12 classes x 10 = 120 = |2I|; the 31 axes split V1+5 / F5+5 / E5+5+5; the pair-orbit counts x sizes cover each class (12x5 = 60 twice, 4 orbits of {1,5} for 12 twice)",
+   "ok": true,
+   "detail": "H = 10 ; kernel = 2 ; orbits = {'V': [1, 5], 'F': [5, 5], 'E': [5, 5, 5]} ; pair counts = {'1': 4, '-1/sqrt5': 12, '+1/sqrt5': 12, '-1': 4}"
+  },
+  {
+   "tag": "C10",
+   "name": "frozen-contract pins: the sha256 of all five round contracts still matches the value pinned in the enforcer / register (freeze discipline intact)",
+   "ok": true,
+   "detail": "checked 5 contracts ; deviations = []"
+  },
+  {
+   "tag": "M1",
+   "name": "MANIFEST coverage: every file on disk is in the manifest and every manifest key exists (the manifest itself and this audit log are declared untracked-by-design)",
+   "ok": true,
+   "detail": "on disk = 79 ; in manifest = 79 ; missing = [] ; ghost = []"
+  },
+  {
+   "tag": "D1",
+   "name": "markdown fences balanced and no U+FFFD replacement characters in any of the 23 closeout-scanned documents",
+   "ok": true,
+   "detail": "fence-bad = [] ; U+FFFD = []"
+  },
+  {
+   "tag": "D2",
+   "name": "headline figures of every round are present somewhere in the document corpus (forward coverage: numbers -> docs)",
+   "ok": true,
+   "detail": "missing = []"
+  },
+  {
+   "tag": "D3",
+   "name": "the three live documents exist, are non-empty and each carries a 狀態 marker (the R1-R5 sync assertion is made after the closeout edits by scripts/17)",
+   "ok": true,
+   "detail": "live docs = {'SESSION_START.md': 'present', '01_problem_record.md': 'present', 'RESULT.md': 'present'} ; pre-closeout status strings = []"
+  },
+  {
+   "tag": "T1",
+   "name": "no cross-document backflow: the key terms of rounds 4-5 do not appear in the earlier rounds' documents (each doc carries only what was known when it was written)",
+   "ok": true,
+   "detail": "leaks = []"
+  },
+  {
+   "tag": "U1",
+   "name": "uncleared-item scan over the three live documents (three-tier criterion): every residual line carries a written verdict, or maps onto the closeout residue list, or maps onto the round table -- uncovered = 0",
+   "ok": true,
+   "detail": "tier1 (written verdict) = 13 ; tier2 (residue list) = 22 ; tier3 (round map) = 1 ; peeled (self-reference + header/plan) = 13 ; UNCOVERED = []"
+  },
+  {
+   "tag": "S1",
+   "name": "scope (content-level): no file outside the O226 directory that was touched after the audit start carries fresh O226 content, and the shared README row does carry this round's token (mtime hits from parallel sessions are attributed, not treated as violations)",
+   "ok": true,
+   "detail": "content leaks = [] ; README carries the round token = True"
+  },
+  {
+   "tag": "K1",
+   "name": "CHAIN COMPLETENESS: every chain round carries its contract doc, its verdict/handoff doc, its data files and all of its scripts; and every .py in scripts/ is listed by this record (nothing missing, no unrecorded script)",
+   "ok": true,
+   "detail": "missing = [] ; on disk but unlisted = [] ; listed but absent = []"
+  },
+  {
+   "tag": "K2",
+   "name": "CHAIN COVERAGE: every chain script has its canonical journal (logs/<...>.out with a RESULT line; the _probe_* diagnostics have none by design, and this audit's own journal is checked by scripts/17 instead) and every data/*.json is produced by a script in scripts/",
+   "ok": true,
+   "detail": "journals missing/empty = [] ; data with no producer = []"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "test": "sympy CKM / J_CP 數學驗證",
+  "J_formula_exact": true,
+  "J_cp_idcm": 3.226654343907576e-05,
+  "J_cp_pdg": 3.18e-05,
+  "dev_pct": 1.467117732942646,
+  "delta_ckm": 66.4,
+  "J_cp_sign": "+",
+  "shift_deg": 5.599999999999994,
+  "conclusion": "J_CP 公式 sympy 精確; δ=66.40° ⟹ J_CP=3.2267e-5 (PDG 1.47%); J_CP>0; δ=2π/5−5.60°"
+}

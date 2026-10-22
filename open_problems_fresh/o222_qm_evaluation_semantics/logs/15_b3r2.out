@@ -1,0 +1,55 @@
+================================================================================================================
+O222 scripts/15 -- B3R2: order-fair allocation inside the 44-read budget (rules: b3r2-contract-v1)
+================================================================================================================
+  baseline E1_raw           |S|max = 4      argmax = ['E27', 'E28', 'V01', 'E28'] domain = 14776336
+  baseline E1_distinct      |S|max = 4      argmax = ['E27', 'E28', 'V01', 'E28'] domain = 14303524
+  baseline E1_distinct_anti |S|max = 4      argmax = ['E27', 'E28', 'V01', 'E28'] domain = 13388280
+  baseline E1_all4          |S|max = 2      argmax = ['V00', 'V01', 'E00', 'F06'] domain = 12517800
+  baseline E2_raw           |S|max = 4      argmax = ['E27', 'E28', 'V10', 'E27'] domain = 14776336
+  baseline E2_distinct      |S|max = 4      argmax = ['E27', 'E28', 'V10', 'E27'] domain = 14303524
+  baseline E2_distinct_anti |S|max = 4      argmax = ['E27', 'E28', 'V10', 'E27'] domain = 13388280
+  baseline E2_all4          |S|max = 3      argmax = ['E27', 'E28', 'V01', 'E29'] domain = 12517800
+[PASS] A0 full-sweep baseline reproduces the recorded 8 values + argmaxes
+[PASS] A0b domain counts re-derived (raw 14776336, distinct 14303524, distinct_anti 13388280, all4 12517800)
+  lex       pairs=15  reads=43  cov_a=1  cov_b=15  E1_all4=NOT CONSTRUCTIBLE  E2_all4=NOT CONSTRUCTIBLE  distinct_constr=False
+            misses=[2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  terminal=[0, 15]  E1_raw=2  E1_distinct=NOT CONSTRUCTIBLE
+  diag      pairs=22  reads=44  cov_a=22 cov_b=22  E1_all4=NOT CONSTRUCTIBLE  E2_all4=NOT CONSTRUCTIBLE  distinct_constr=False
+            misses=[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]  terminal=[22, 22]  E1_raw=2  E1_distinct=NOT CONSTRUCTIBLE
+  antidiag  pairs=15  reads=44  cov_a=15 cov_b=15  E1_all4=NOT CONSTRUCTIBLE  E2_all4=NOT CONSTRUCTIBLE  distinct_constr=False
+            misses=[2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  terminal=[15, 47]  E1_raw=2  E1_distinct=NOT CONSTRUCTIBLE
+  block     pairs=18  reads=42  cov_a=5  cov_b=5   E1_all4=16/15              E2_all4=13/15              distinct_constr=True
+            misses=[2, 2, 2, 2, 3, 2, 3, 2, 2, 3, 2, 3, 2, 3, 2, 2, 3, 2]  terminal=[1, 4]  E1_raw=32/15  E1_distinct=32/15
+  stride    pairs=15  reads=44  cov_a=15 cov_b=15  E1_all4=NOT CONSTRUCTIBLE  E2_all4=NOT CONSTRUCTIBLE  distinct_constr=False
+            misses=[2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  terminal=[25, 15]  E1_raw=2  E1_distinct=NOT CONSTRUCTIBLE
+[PASS] A1 lex baseline reproduces B5 (15/43, cov_a=1, constrained classes NOT CONSTRUCTIBLE)
+[PASS] A2 constrained-constructible orders = ['block'] ; all4-constructible = ['block']
+  budget-feasible constrained statistics (FULL enumeration inside each prefix):
+        block     E2  distinct       |S| = 11/5   argmax = ['V00', 'V01', 'V00', 'V01'] diag = ['i=a', 'j=a2']
+        block     E2  distinct_anti  |S| = 11/5   argmax = ['V00', 'V01', 'V00', 'V01'] diag = ['i=a', 'j=a2']
+        block     E1  distinct       |S| = 32/15  argmax = ['V00', 'V02', 'V00', 'V02'] diag = ['i=a', 'j=a2']
+        block     E1  distinct_anti  |S| = 32/15  argmax = ['V00', 'V02', 'V00', 'V02'] diag = ['i=a', 'j=a2']
+        block     E1  all4           |S| = 16/15  argmax = ['V00', 'V02', 'V03', 'V01'] diag = none
+        block     E2  all4           |S| = 13/15  argmax = ['V01', 'V00', 'V03', 'V02'] diag = none
+[PASS] A3 max budget-feasible all4 |S| = 16/15  (max over all constrained classes = 11/5)
+[PASS] B1 marginal balance 62/62 (no-signalling)
+[PASS] B2 Delta_order = 160/120 (recorded 160/120)
+[PASS] B3 ablation_abs_sum = 0 (frozen A2 record)
+  null lex       prefix_len [15..15]
+  null diag      prefix_len [22..22]
+  null antidiag  prefix_len [15..15]
+  null block     prefix_len [18..18]
+        E1_distinct      constr=100 [2..10/3] med=38/15   obs=32/15   p=960 permille
+        E1_distinct_anti constr=100 [2..10/3] med=38/15   obs=32/15   p=960 permille
+        E1_all4          constr=100 [2/15..2] med=14/15   obs=16/15   p=480 permille
+        E2_distinct      constr=100 [2..10/3] med=38/15   obs=11/5    p=970 permille
+        E2_distinct_anti constr=100 [2..10/3] med=38/15   obs=11/5    p=960 permille
+        E2_all4          constr=100 [2/15..11/5] med=14/15   obs=13/15   p=520 permille
+  null stride    prefix_len [15..15]
+[PASS] A4 budget-feasible exceedances of 2 = 4 ; unexplained = 0
+        >2  block     E1_distinct      |S| = 32/15  diag = ['i=a', 'j=a2']      null [2..10/3] med=38/15   p = 960 permille
+        >2  block     E1_distinct_anti |S| = 32/15  diag = ['i=a', 'j=a2']      null [2..10/3] med=38/15   p = 960 permille
+        >2  block     E2_distinct      |S| = 11/5   diag = ['i=a', 'j=a2']      null [2..10/3] med=38/15   p = 970 permille
+        >2  block     E2_distinct_anti |S| = 11/5   diag = ['i=a', 'j=a2']      null [2..10/3] med=38/15   p = 960 permille
+================================================================================================================
+RESULT: 14/14 PASS  (0 FAIL)  [17.8 s]
+================================================================================================================

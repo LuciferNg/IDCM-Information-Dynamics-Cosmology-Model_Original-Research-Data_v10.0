@@ -1,0 +1,23 @@
+[PASS] R13-0 machines rebuilt: shapes match the record (12/20/30/4/6/2 rows, N=62/62/62/14/26/10)  --  [(12, 62), (20, 62), (30, 62), (4, 14), (6, 26), (2, 10)]
+  M_2I    LP* = 5/2      pivots=29    own-reverify={'primal_nonneg': True, 'primal_covers': True, 'dual_nonneg': True, 'dual_packs': True, 'sums_equal_objective': True}
+  M_face  LP* = 3        pivots=35    own-reverify={'primal_nonneg': True, 'primal_covers': True, 'dual_nonneg': True, 'dual_packs': True, 'sums_equal_objective': True}
+  M_edge  LP* = 5        pivots=108   own-reverify={'primal_nonneg': True, 'primal_covers': True, 'dual_nonneg': True, 'dual_packs': True, 'sums_equal_objective': True}
+  M_T     LP* = 3/2      pivots=5     own-reverify={'primal_nonneg': True, 'primal_covers': True, 'dual_nonneg': True, 'dual_packs': True, 'sums_equal_objective': True}
+  M_O     LP* = 2        pivots=5     own-reverify={'primal_nonneg': True, 'primal_covers': True, 'dual_nonneg': True, 'dual_packs': True, 'sums_equal_objective': True}
+  M_D4    LP* = 1        pivots=1     own-reverify={'primal_nonneg': True, 'primal_covers': True, 'dual_nonneg': True, 'dual_packs': True, 'sums_equal_objective': True}
+[PASS] P12-1 certificates persisted for all six machines: x over columns + y over pairs, |x|=N, |y|=pairs  --  M_edge: |x|=62 |y|=435 sum_x=5 sum_y=5
+[PASS] P12-2 independent dual/complementary-side re-verification of the persisted vectors (all six)  --  M_edge dual_packs=True sum_y=5
+[PASS] P12-2b M_edge LP* = 5 reproduced by this round (both certificate sides)  --  LP*=5
+  census: frames=8584 nodes=0 abort=cached 0.0s
+[PASS] R13-1 8584 minimal 7-frames available (own DFS re-enumeration, cached copy declared)  --  frames=8584 nodes=0 abort=cached
+  M = 9/5 (cut-gen iters 9, subset 47, violations 0)
+[PASS] P12-3 BLIND: M <= 2 (census-informed non-negative coefficient cut family also dies)  --  M = 9/5 ; violation at x* = M/2 - 1 = -1/10
+[FAIL] P12-4 cut c >= 0 and satisfies sum_{a in C ∩ S} c_a >= 1 for ALL 8584 frames  --  c = ['1/5', '1/5', '2/5', '1/5', '1/5', '0', '0', '1/5', '2/5', '0']
+[PASS] P12-4c CORRECTED (P12-4-c): c >= 0 and sum_{a in C∩S} c_a <= 1 for ALL 8584 frames, with sum_a c_a x*_a = M/2 = 9/10 < 1 -> Farkas certificate that NO non-negative coefficient cut exists  --  max_C sum = 1 ; sum c x* = 9/10
+[N/A] P12-5 M > 2 -> ladder rises (conditional)  --  M = 9/5 <= 2 : family dies, ladder stays at 5
+[FAIL] R13-2 probe of covers OUTSIDE the frame family: certificate bound holds on every sampled 8-cover and no inclusion-minimal 8-cover exists  --  sampled 8-covers=88544 bound-violations=66 max sum_C c=7/5 ; best minimality score=0 (0 = inclusion-minimal 8-cover)
+[PASS] R13-2c CORRECTED (R13-2-c): inclusion-minimal covers outside the 8584 size-7 family EXIST (witness verified exactly: covers all 435 pairs AND every (n-1)-subset fails)  --  witnesses found=130969 ; first=[0, 1, 2, 3, 4, 9, 32, 48]
+[PASS] P12-6 robustness: with the extra inclusion-minimal covers added as constraints, M_w <= M and still < 2 (the frame family is a RELAXATION, so the non-separation conclusion survives a fortiori)  --  M_w = 9/5 <= M = 9/5 < 2 ; subset 47 -> 52
+RESULT: 9/11 PASS (+1 N/A)  (24.2s)
+  FAIL P12-4 cut c >= 0 and satisfies sum_{a in C ∩ S} c_a >= 1 for ALL 8584 frames
+  FAIL R13-2 probe of covers OUTSIDE the frame family: certificate bound holds on every sampled 8-cover and no inclusion-minimal 8-cover exists

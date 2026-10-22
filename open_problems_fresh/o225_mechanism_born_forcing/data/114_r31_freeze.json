@@ -1,0 +1,16 @@
+{
+ "rules": "r31-stt-mechanism-v1",
+ "contract": "docs/66_r31_contract.md",
+ "sha256": "bb05ab2854f1ca4a8af1d2fff16d894f1eb0589702b0cac9c4b1f7fc8820b724",
+ "frozen_at": "2026-10-01 23:21:11",
+ "claims_declared": [
+  "P1",
+  "P2",
+  "P3",
+  "Q1",
+  "Q2",
+  "Q3",
+  "R1",
+  "R2"
+ ]
+}

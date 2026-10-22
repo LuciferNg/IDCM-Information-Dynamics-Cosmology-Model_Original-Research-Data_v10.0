@@ -1,0 +1,19 @@
+================================================================================================================
+O225 scripts/47 -- SCRIPT-CHAIN INTEGRITY CHECK
+================================================================================================================
+[PASS] C1   編號連續性：缺號 = 宣告式 [8, 9]（無重號）  --  缺號 = [8, 9] ; 劇本數 = 45 ; 重號 = 0
+[PASS] C2   每劇本皆有 ≥1 執行日誌（依編號前綴）  --  無 log 之劇本 = 無 ; logs/ = 82
+[PASS] C3   每輪「合約閘 → 機器 → 審計」命名三件套齊備（13 輪）  --  缺件 = 無
+[PASS] C4   docs 對映：docs/*.md ≥ 26 件且 01_problem_record 引用 scripts/ 之數 ≥ 43  --  docs = 27 ; 引用數 = 43
+[FAIL] C5   MANIFEST 覆蓋劇本 44/44 且活檔 sha 無誤  --  MANIFEST 內劇本 = 45/45 ; sha 錯配 = ['logs/47_chain_index.out']
+[PASS] C6   鏈表已生成 docs/26_script_chain_index.md（26_script_chain_index.md）  --  行數 = 54
+================================================================================================================
+RESULT: 5/6 PASS  |  O225 劇本檔案鏈核對
+Traceback (most recent call last):
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/47_chain_index.py", line 127, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/47_chain_index.py", line 119, in main
+    with io.open(BASE + os.path.join(BASE, 'data', OUT_JSON), 'w', encoding='utf-8') as fh:
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/data/47_chain_index.json'

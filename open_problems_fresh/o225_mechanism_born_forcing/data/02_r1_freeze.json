@@ -1,0 +1,61 @@
+{
+ "rules": "r1-barrier-v1",
+ "contract": {
+  "path": "docs/01_r1_contract.md",
+  "sha256": "2e508b5b6aa0bcdd4dc6369daddc3800d2daa0feffb73c2184eec80a5dae95e0",
+  "bytes": 6436
+ },
+ "impl": {
+  "path": "scripts/03_r1_barrier.py",
+  "sha256": "cff300952928094727dbe9374a5defdfcc66c33f65ed13d79631776dbb0596d4",
+  "bytes": 18659
+ },
+ "enforcer": {
+  "path": "scripts/02_r1_contract.py",
+  "sha256": "2e0a013d5a5d36a052cccd7b8f88dd951b8c5c34a241a05ec9e8b20034417582",
+  "bytes": 5093
+ },
+ "forbidden_modules": [
+  "cmath",
+  "decimal",
+  "math",
+  "numpy",
+  "random",
+  "scipy",
+  "secrets",
+  "statistics"
+ ],
+ "checks": [
+  {
+   "tag": "C1",
+   "name": "合約檔存在（docs/01_r1_contract.md）",
+   "ok": true,
+   "detail": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/docs/01_r1_contract.md"
+  },
+  {
+   "tag": "C2",
+   "name": "機器 impl 存在（scripts/03_r1_barrier.py）",
+   "ok": true,
+   "detail": "/home/wsl/Projects/IDCM-Original/IDCM-v10.0--It-From-Beat/open_problems_fresh/o225_mechanism_born_forcing/scripts/03_r1_barrier.py"
+  },
+  {
+   "tag": "C3",
+   "name": "impl 無禁字集命中（float 字面值 / math / random / numpy / scipy / statistics / cmath / secrets）",
+   "ok": true,
+   "detail": "violations = 0"
+  },
+  {
+   "tag": "C4",
+   "name": "陽性對照（含 float 字面值 + import math）必須被拒 —— scanner 已受測",
+   "ok": true,
+   "detail": "detected = ['positive-control: import math (line 2)', 'positive-control: float literal 0.5 (line 4)', 'positive-control: float literal 0.0015 (line 4)', 'positive-control: attribute math.sqrt (line 4)']"
+  },
+  {
+   "tag": "C5",
+   "name": "合約含全部預註冊謂詞標籤（P4..P13）與 D5 定義",
+   "ok": true,
+   "detail": "missing = 0"
+  }
+ ],
+ "GATE": "OPEN"
+}

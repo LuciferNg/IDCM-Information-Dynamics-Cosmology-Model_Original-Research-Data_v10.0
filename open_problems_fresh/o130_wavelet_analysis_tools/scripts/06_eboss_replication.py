@@ -55,7 +55,13 @@ print("=" * 78)
 print("  O130/06 -- out-of-sample replication: eBOSS DR16 LRG")
 print("=" * 78)
 
-LAM = math.pi * 4129.94 / 44 / 0.7259
+# --- UNITS: corrected 2026-09-28 (see docs/04_unit_correction.md) -------------
+# lambda_sync = 2*pi*R_H/88 = 294.877026 Mpc (PHYSICAL Mpc); the survey s-axis is
+# in h^-1 Mpc => lambda_sync[h^-1 Mpc] = lambda_sync[Mpc] * h_fid.
+# v9.0 _core.py wrote LAMBDA_SYNC / H (divide!) = 406.22 -> 1.897x too long.
+LAM_MPC = 294.877026
+H_FID = 0.6736
+LAM = LAM_MPC * H_FID                            # 198.63 h^-1 Mpc
 GAM = lambda n: 4 * math.sin(math.pi * n / 88) ** 2
 SIGMA = 10.0
 KNOT_SET = (4, 5, 6)
@@ -129,12 +135,15 @@ print("\n" + "-" * 78)
 print("  B. Delta-chi^2 profile (matched filter, 1 dof)")
 print("-" * 78)
 prof = {}
+ampprof = {}
 for nk in KNOT_SET:
     d, _, amp = dchi2(s, xi, e, nk, LAM)
     prof[nk] = d
+    ampprof[nk] = amp
     print("   knots=%d : dchi2 = %+.2f  -> nominal %.2f sigma  A = %+.3e"
           % (nk, d, math.sqrt(max(d, 0)), amp))
 json_out["dchi2_profile"] = {str(k): v for k, v in prof.items()}
+json_out["amplitude_profile"] = {str(k): v for k, v in ampprof.items()}
 
 # ------------------------------------------------------------------
 print("\n" + "-" * 78)
@@ -189,13 +198,30 @@ json_out["shift_profile"] = {str(d): float(v) for d, v in zip(DELTA_GRID, dcs)}
 print("\n" + "-" * 78)
 print("  E. cross-dataset verdict")
 print("-" * 78)
+def _nmax_of(ds):
+    return (-1 + math.sqrt(1 + 4 * LAM / ds)) / 2
+
+
 print("   data set            Ds_bin  range        n_max   dchi2(D=0)   A(D=0)      p(trial-corr)")
-print("   BOSS DR12 post-rec     5.0   175.0        8.53      +11.64     +1.05e-02      0.500")
-print("   eBOSS DR16 LRG         5.0   207.5        8.53      %+7.2f     %+.2e      %.3f"
-      % (prof[5], dchi2(s, xi, e, 5, LAM)[2], pval))
-claim("E1 => the fitted amplitude is POSITIVE on BOSS (+1.05e-02) and NEGATIVE on eBOSS "
-      "(-1.53e-01): the two data sets do not even agree in sign, which is the signature of "
-      "noise, not of a common ladder signal")
+_j4 = os.path.join(DATA, "04_calibrated_detection.json")
+_a_boss = _d_boss = _p_boss = None
+if os.path.exists(_j4):
+    with open(_j4) as _f:
+        _j = json.load(_f)
+    _k = max(_j["dchi2_profile"], key=lambda k: _j["dchi2_profile"][k])
+    _d_boss, _p_boss = _j["dchi2_profile"][_k], _j["p_value"]
+    _a_boss = (_j.get("amplitude_profile") or {}).get(_k)
+    print("   BOSS DR12 post-rec     5.0   175.0      %6.2f      %+7.2f     %s    %.3f"
+          % (_nmax_of(5.0), _d_boss,
+             ("%+.2e" % _a_boss) if _a_boss is not None else "  (n/a) ", _p_boss))
+else:
+    print("   BOSS DR12 post-rec     5.0   175.0        (run script 04 first)")
+print("   eBOSS DR16 LRG         5.0   207.5      %6.2f      %+7.2f     %+.2e      %.3f"
+      % (_nmax_of(5.0), prof[5], ampprof[5], pval))
+claim("E1 => at the corrected scale the BOSS and eBOSS fitted amplitudes have OPPOSITE signs "
+      "(BOSS A = %s at its argmax knots, eBOSS A = %+.2e at knots = 5): the two data sets do "
+      "not agree even in sign -- the signature of noise, not of a common ladder signal"
+      % (("%+.2e" % _a_boss) if _a_boss is not None else "(n/a)", ampprof[5]))
 claim("E  => the migrated K_Chain ladder is a well-defined structural prediction, but it is NOT "
       "detected in either BOSS DR12 or eBOSS DR16 at 5 h^-1 Mpc binning.  The v9.0 'detections' "
       "were artefacts (monotone ramp + pointwise S/N + broadband degeneracy).  Two independent "

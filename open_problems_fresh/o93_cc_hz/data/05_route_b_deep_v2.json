@@ -1,0 +1,15 @@
+{
+  "route": "B_deep_v2",
+  "best_model": "R_active",
+  "best_alpha": 2.4,
+  "chi2_R": 143.0116,
+  "chi2_S": 150.7964,
+  "chi2_EF": 132.3733,
+  "hd_mean": 271025.0,
+  "hd_cv": 0.964,
+  "d14_avg": 0.931705,
+  "d22_avg": 1.054338,
+  "pass": 0,
+  "fail": 0,
+  "status": "\ud83d\udfe1"
+}
