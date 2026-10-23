@@ -268,6 +268,35 @@ O142_MOVE_FIX = {
 }
 
 
+# 2026-10-19 修正 O38 REF-MISSING: 2026-10-18 note event 嘅 ref 指
+# `scratch:o38_handoff_check_20261018.py` — 2026-10-18 O229→O38 handoff 計算
+# (18/18 PASS, μ² 支撐度 8 關係重算) 嘅臨時 script，擺喺 ~/.hermes/cache/scratch
+# (TMPDIR, idle 24h 自動 prune) ⟹ 已被清走 ⟹ 永久 REF-MISSING。
+# JSONL 歷史事件唔改（append-only），翻譯層指向留底代表檔
+# docs/01_derivation_record.md（μ² = Σγ_even − Σγ_odd = 2 等重算結論已入記錄）；
+# 同 REF_PATH_FIX/O247_SLUG_FIX 先例一致。
+O38_SCRATCH_FIX = {
+    os.path.join(REPO, "scratch:o38_handoff_check_20261018.py"):
+        os.path.join(OPF, "o38_kappa_prediction/docs/01_derivation_record.md"),
+}
+
+# 2026-10-24 修正 P4 引起之 REF-MISSING: register `cmb_cold_spot/3d-chiral-shape`
+# registered event 之 ref 寫成**概念依賴**（"cmb_cold_spot; O223; O185/IF4; O7"）
+# 而非檔案路徑 — 該條目 2026-10-24 已生成 (scripts/29-30, data/rhombicosa_*.obj,
+# docs/25)。JSONL 歷史事件唔改（append-only），呢度提供概念 seg → 現存代表檔
+# 翻譯層（每 seg 唯一命中，唔做全庫猜測）。
+P4_CHIRAL_CONCEPT_FIX = {
+    os.path.join(REPO, "cmb_cold_spot"):
+        os.path.join(MAIN, "p4_cmb_cold_spot/01_problem_record.md"),
+    os.path.join(REPO, "O223"):
+        os.path.join(OPF, "o223_observer_position_domains/final_result.md"),
+    os.path.join(REPO, "O185/IF4"):
+        os.path.join(OPF, "o185_string_theory_correspondence/01_problem_record.md"),
+    os.path.join(REPO, "O7"):
+        os.path.join(OPF, "o7_frustration_distribution/01_problem_record.md"),
+}
+
+
 # 2026-10-20 P6 結構重組 (root 建齊四檔, *.py→scripts/): registered 事件 ref 指
 # main_problems/p6_neutrino/neutrino_p6_derivation.py，該檔已移入 scripts/01_。
 # JSONL 歷史事件唔改（append-only），翻譯層補回——同 P10_REF_FIX 先例一致；
@@ -345,6 +374,14 @@ def resolve_ref(fp):
         return new
     # 2026-10-19 O142 遷移 (O38 docs/29 撤回 → O142 docs/37) 翻譯層
     new = O142_MOVE_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-19 O38 scratch 臨時檔 ref (已清) → 留底代表檔 翻譯層
+    new = O38_SCRATCH_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-24 P4 3d-chiral-shape 概念依賴 ref 翻譯層
+    new = P4_CHIRAL_CONCEPT_FIX.get(fp)
     if new and os.path.exists(new):
         return new
     for src, dst in MOVED_SRC.items():
