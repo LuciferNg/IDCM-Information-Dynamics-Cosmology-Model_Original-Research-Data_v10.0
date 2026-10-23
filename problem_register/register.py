@@ -1292,8 +1292,54 @@ def cmd_check(a):
         if a_ and b_ and a_ != b_:
             problems.append(("SEED-DISAGREE", "O%d README=%s markdown=%s" % (n, a_, b_)))
 
+    # ---- ledger hash chain integrity (2026-10-16, P25 加) ----
+    # 真源 register.jsonl：hash = sha256(rec|prev_hash)[:16]，prev_hash 應等於前一條
+    # 有 hash 記錄之 hash。斷鏈 = 寫入次序與鏈接不一致（並行寫入／外部直接 append）。
+    # 歷史斷點按 append-only 鐵律唔改寫，只列 info（白名單）。
+    KNOWN_CHAIN_BREAKS = {
+        2147: "prev 指不存在 hash 0a3ae40cfab2（sqlite 曾含後被移除之記錄）",
+        2412: "無 hash 之外來行（直接 jsonl append，非 register.py 寫入）",
+        2413: "跳過無 hash 行接到 L2411（合理行為）",
+        2420: "並行批次分叉：跳 L2416–L2419（舊 record() 讀 sqlite 投影滯後）",
+    }
+    prev_rec = None
+    chain_breaks, bare = [], []
+    try:
+        with open(JSONL, encoding="utf-8") as fh:
+            for ln, line in enumerate(fh, 1):
+                s = line.strip()
+                if not s:
+                    continue
+                try:
+                    ev = json.loads(s)
+                except json.JSONDecodeError:
+                    problems.append(("CHAIN-BARE", "L%d 非 JSON 行" % ln))
+                    continue
+                if not ev.get("hash"):
+                    bare.append(ln)
+                    continue
+                if prev_rec is not None and ev.get("prev_hash") != prev_rec.get("hash"):
+                    chain_breaks.append((ln, str(ev.get("prev_hash"))[:12],
+                                         str(prev_rec.get("hash"))[:12]))
+                prev_rec = ev
+    except FileNotFoundError:
+        pass
+    known_bad = 0
+    for ln in bare:
+        if ln in KNOWN_CHAIN_BREAKS:
+            known_bad += 1
+        else:
+            problems.append(("CHAIN-BARE", "L%d 記錄無 hash（非 register.py 格式）" % ln))
+    for ln, act, exp in chain_breaks:
+        if ln in KNOWN_CHAIN_BREAKS:
+            known_bad += 1
+        else:
+            problems.append(("CHAIN-DRIFT", "L%d prev=%s 期望=%s" % (ln, act, exp)))
+
     print("register rows=%d (O-series %d, theme %d)  dirs=%d  README rows=%d"
           % (len(db), len(onum), len(db) - len(onum), len(ddirs), len(rdm)))
+    print("chain: 已知歷史斷點 %d（append-only 白名單）  新增斷點 %d"
+          % (known_bad, len([p for p in problems if p[0] in ("CHAIN-DRIFT", "CHAIN-BARE")])))
     srcs = {}
     for r in db.values():
         srcs[r["state_source"] or "-"] = srcs.get(r["state_source"] or "-", 0) + 1
