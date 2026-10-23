@@ -614,6 +614,19 @@ def parse_block(txt):
 
 def iter_docs():
     """Yield (pid_guess, path, kind) for every problem_record / SESSION_START."""
+    # 2026-10-24 fix (register M3 假漂移放大器): 同一物理檔可由多個 theme 名抵達
+    #   (P10/kchain_number_field、M1/m1/v11.0 等) ⟹ 舊版重掃 2–3 次：全庫 43 檔
+    #   多 51 次 yield，任何 BLOCK-DRIFT / NO-BLOCK 都被放大 2–3×（實測 6→18 條）。
+    #   以 realpath 去重，首次（sorted）命中為準；不影響任何判斷，只消除重複計數。
+    seen = set()
+
+    def _fresh(path):
+        real = os.path.realpath(path)
+        if real in seen:
+            return False
+        seen.add(real)
+        return True
+
     for d in sorted(glob.glob(os.path.join(OPF, "o*"))):
         if not os.path.isdir(d):
             continue
@@ -621,7 +634,7 @@ def iter_docs():
                          ("SESSION_START.md", "session"),
                          ("final_result.md", "result")):
             p = os.path.join(d, nm)
-            if os.path.exists(p):
+            if os.path.exists(p) and _fresh(p):
                 yield os.path.basename(d), p, kind
     for t in sorted(listdir_theme_dirs()):
         td = theme_dir(t)
@@ -630,7 +643,8 @@ def iter_docs():
         for root, dirs, names in os.walk(td):
             dirs[:] = [x for x in dirs if x not in ("data", "docs", "__pycache__")]
             for nm in names:
-                if nm in ("01_problem_record.md", "SESSION_START.md", "final_result.md"):
+                if nm in ("01_problem_record.md", "SESSION_START.md", "final_result.md") \
+                        and _fresh(os.path.join(root, nm)):
                     yield t, os.path.join(root, nm), "theme"
 
 
@@ -1327,10 +1341,14 @@ def cmd_check(a):
         if not bp:
             problems.append(("BLOCK-DRIFT", "%s: block has no pid" % rel))
             continue
-        # 2026-10-18: v11 M-series 大寫 block pid (M1/M2/M3) ↔ register 細寫 pid (m1/m2/m3)
-        # 翻譯層 —— block 按命名規範寫大寫 M, register row 用細寫 m（跨版本 register 慣例）
+        # 2026-10-18: v11 M-series 大寫 block pid (M1/M2/M3) ↔ register 細寫 pid
+        # 翻譯層 —— 只在「大寫 row 未註冊」時 fallback 細寫 legacy row（跨版本 register 慣例）
+        # 2026-10-24 fix (register M2 drift): 2026-10-20 mN→MN 大寫化後細寫 mN 已 merged；
+        #   舊層無條件把 M# 映去 m# ⟹ block=registered vs register=merged 假 BLOCK-DRIFT
+        #   (m1/m2/m3 × 2 檔 × 3 次重掃 = 18 條)。大寫 row 存在時必須以其為權威；
+        #   未放寬任何真漂移：M# state 仍與其自身 row 嚴格對比，M9/錯 state 照報。
         mt = re.match(r"^M(\d+)$", bp)
-        if mt:
+        if mt and bp not in db:
             low = "m" + mt.group(1)
             if low in db:
                 bp = low

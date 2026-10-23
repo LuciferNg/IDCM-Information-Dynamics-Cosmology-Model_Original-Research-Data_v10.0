@@ -22,3 +22,14 @@
 
 `register.py check`：HARD DRIFT **0**
 （NO-BLOCK 646、SEED-DISAGREE 54 屬資訊性，不計入）
+
+### 2026-10-24c — M1/M2/M3 假 BLOCK-DRIFT 之放大器（`iter_docs` 重複掃描）
+- **現象**：同一 6 條假漂移（M1/M2/M3 × 2 檔）在 check 報告出現 **3 次**（18 條）。
+- **根因**：`iter_docs()` 同一物理檔可由多個 theme 名抵達（`M1`/`m1`/`v11.0`、`P10`/`kchain_number_field`…）
+  ⟹ 全庫 **43 檔重掃 2–3×（+51 yield）**，任何 BLOCK-DRIFT／NO-BLOCK 被放大。
+- **修法**：`iter_docs()` 以 `realpath` 去重（首次 sorted 命中為準）；不影響任何判斷邏輯。
+- **驗證**：yields 757→706（dups 0）；`check` HARD DRIFT 0、chain 0 斷點；
+  NO-BLOCK 646→**616**（去重後真實數）。
+- **負控制**：M3 block=merged 照報 BLOCK-DRIFT；`M9` 照報 BLOCK-UNREGISTERED；
+  legacy 只有細寫 row 時 fallback 仍生效。
+- 備份：`register.py.pre_m3statededup_20261024_014030`
