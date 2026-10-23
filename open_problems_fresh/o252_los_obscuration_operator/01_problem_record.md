@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O252
 title:   視線遮蔽算子 τ(v): 世界環幾何 → 視線光深 (零新常數, 盲測 dip)
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O252
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-10-18
 prereq:  O180, O143, O179
 source:  p11_little_red_dots records 25-30 (死因定案: 遮蔽層從缺)
 -->
