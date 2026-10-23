@@ -123,9 +123,12 @@ source:  scripts 01-12 + 04_audit_full
 
 | # | 項 | 狀態 | 說明 |
 |:-:|:---|:----:|:-----|
-| 1 | `run_chain.sh` driver | 🟡 | §4.9⑥ 缺；鏈短（12 支）可逐支跑，非阻塞 |
-| 2 | README O1 行 | 🟡 | O 目錄外檔案，需用戶明示批准 |
-| 3 | COLLISION-STALE O1 | ⚫ | pre-existing（o1_15deg 已搬 o184）；已 register note 解釋，append-only 不刪 |
-| 4 | `07` L121 變量覆蓋 bug | ✅ | 已修 data + 記錄；**舊 script 保留**（不回溯改，歷史完整性） |
+| 1 | `run_chain.sh` driver | ✅ **已建** | §4.9⑥ 完成：`scripts/run_chain.sh`（預設 dry-run，`--execute` 真跑）；**實測 12/12 rc=0**，`logs/` 12 份正典 log；11 排喺 07 之後（07 已知 bug 需 11 修正）|
+| 2 | README O1 行 | ✅ **已加** | 行 220 `\| **O1/edge-length** \|` 🟢 已閉合（含全部關鍵數值）；**第一 cell 用子 pid**（非 O1 主號）以避免與 register `O1=merged` 誤配 |
+| 3 | COLLISION-STALE O1 | ✅ **已 retire** | `register.py` 新增 `collision --retire NUM`（與 `unreserve` 對稱：原 collision 事件永久保留 + 追加 `collision_resolved`，replay 時 DELETE）；rebuild 2850 events 一致；COLLISION-STALE **3 → 2** |
+| 4 | `07` L121 變量覆蓋 bug | ✅ | 已修 data + 記錄；**舊 script 保留**（不回溯改，歷史完整性）|
+| 5 | STATUS-DRIFT（本輪引入） | ✅ **已修** | README 行寫 `O1` 令 readme_nums 誤認 O1 主號 ⟹ `O1 register=merged README=closed`；改第一 cell 為 `O1/edge-length`（regex 不匹配）⟹ **STATUS-DRIFT 0** |
 
-**階段性 closeout 判定**：核心結論（θ 閉合 0.000011°）**三重獨立驗證全綠**（原鏈 8/8 + 全量重跑 10/10 + 獨立 verifier 21/21）；文檔零數值錯；登記面完整；殘餘 4 項全部有書面判定，無結構性缺口。
+**check 對基線**：HARD DRIFT **52 → 49**（改善 3：COLLISION-STALE −1、BLOCK-DRIFT −2）；STATUS-DRIFT **0**；本 pid 零 drift。
+
+**階段性 closeout 判定**：核心結論（θ 閉合 0.000011°）**三重獨立驗證全綠**（原鏈 8/8 + 全量重跑 10/10 + 獨立 verifier 21/21）；文檔零數值錯；登記面完整；**殘餘 5 項全部完成/關閉，零結構性缺口**。
