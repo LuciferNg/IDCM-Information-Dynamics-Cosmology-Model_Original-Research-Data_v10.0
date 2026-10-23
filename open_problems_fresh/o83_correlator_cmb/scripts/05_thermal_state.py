@@ -34,6 +34,10 @@ def check(name, cond, detail=""):
     results.append(bool(cond))
     print(f"  [{'✅ PASS' if cond else '❌ FAIL'}] {name} {detail}")
 
+def note(name, detail=""):
+    """陳述標記 — 唔計入 PASS 數 (審計 2026-10-23: 原 check(..., True) 空洞，改註記)"""
+    print(f"  [📝 註記] {name} {detail}")
+
 print("=" * 70)
 print("  O83 — Script 5: Thermal state Z(β) ↔ T_CMB")
 print("=" * 70)
@@ -186,7 +190,7 @@ print("\n─── [E] 低溫極限 (β→∞) ───")
 for n in [1, 7, 44]:
     G0 = 1/(2*omega_n[n-1])
     print(f"  n={n:>2}: ⟨φ_n φ_n⟩_T=0 = {G0:.6f} = 1/(2×{omega_n[n-1]:.6f})")
-check("T=0 propagator = 真空期望值", True, "(標準 QFT)")
+note("T=0 propagator = 真空期望值 (標準 QFT 陳述)")
 
 # ──────────────────────────────────────────────
 # [F] 高溫極限 (β→0)

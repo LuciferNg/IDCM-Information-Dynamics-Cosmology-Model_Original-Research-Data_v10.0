@@ -18,8 +18,9 @@ O83 — Script 1: Mode expansion — δT(Ω) = Σ c_n(Ω) φ_n
   [D] 投影權重 w_n 結構
 """
 import numpy as np
+import os
 import sys
-sys.path.insert(0, '/home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o83_correlator_cmb/scripts')
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # ─── 常數 ───
 N_d = 44          # 半鏈長

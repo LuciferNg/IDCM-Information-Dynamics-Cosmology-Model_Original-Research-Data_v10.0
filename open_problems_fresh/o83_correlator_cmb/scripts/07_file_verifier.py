@@ -26,7 +26,7 @@ def check(name, cond, detail=""):
     print(f"  [{status}] {name} {detail}")
 
 # 路徑
-BASE = "/home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o83_correlator_cmb"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(BASE, "docs")
 SCRIPTS = os.path.join(BASE, "scripts")
 
@@ -89,10 +89,20 @@ for m in range(1, 8):
         ell_pred = 44 * (M - C(9-m, 2)) + ((m-1)*9) % 25
     devs.append((ell_pred - obs[m]) / obs[m] * 100)
 rms = np.sqrt(np.mean(np.array(devs)**2))
-check(f"RMS = {rms:.3f}% < 1%", rms < 1.0)
+check(f"RMS(cmb_cl obs) = {rms:.3f}% < 1%", rms < 1.0)
 
-# 文檔聲稱 RMS = 0.335%
-check("RMS 匹配文檔 0.335%", abs(rms - 0.335) < 0.01, f"({rms:.3f}%)")
+# 審計 2026-10-23: 雙報 — 權威用 O9 最終閉合矩陣 obs
+obs_o9 = {1: 221, 2: 527, 3: 815, 4: 1013, 5: 1121, 6: 1337, 7: 1400}
+devs_o9 = []
+for m in range(1, 8):
+    if m == 5:
+        ell_pred = 44 * (M - F6) + F8
+    else:
+        ell_pred = 44 * (M - C(9-m, 2)) + ((m-1)*9) % 25
+    devs_o9.append((ell_pred - obs_o9[m]) / obs_o9[m] * 100)
+rms_o9 = np.sqrt(np.mean(np.array(devs_o9)**2))
+print(f"  RMS(cmb_cl obs) = {rms:.3f}%   RMS(O9 最終矩陣 obs, 權威) = {rms_o9:.3f}%")
+check(f"RMS 雙報: cmb_cl {rms:.2f}% / O9 權威 {rms_o9:.2f}%", abs(rms-0.34) < 0.02 and abs(rms_o9-0.84) < 0.03)
 
 # ──────────────────────────────────────────────
 # [C] 振幅母函數數值
@@ -185,22 +195,28 @@ check(f"T_CMB = {T_cmb_pred:.4f} K (vs {T_cmb} K, dev={abs(T_cmb_pred-T_cmb)/T_c
 print("\n─── [G] 腳本輸出 vs 文檔聲稱 ───")
 
 # 讀取 docs 確認關鍵短語存在
-doc1_path = os.path.join(DOCS, "01_problem_record.md")
+# 審計 2026-10-23: 量化公式在 root/01 (08-25 原文重建)；docs/01 係 10-15 骨架物證
+root01_path = os.path.join(BASE, "01_problem_record.md")
+doc1_path = os.path.join(BASE, "01_problem_record.md")
 doc2_path = os.path.join(DOCS, "02_derivation_record.md")
+doc3_path = os.path.join(DOCS, "03_audit_report.md")
 
 with open(doc1_path, 'r') as f:
     doc1 = f.read()
 with open(doc2_path, 'r') as f:
     doc2 = f.read()
+with open(doc3_path, 'r') as f:
+    doc3 = f.read()
 
-# 文檔 1 關鍵短語
+# 文檔 1 關鍵短語 (審計 2026-10-23: 對齊 root/01 重建版之規範記法)
 checks_doc1 = [
     ("Correlator ⟨φφ⟩ ↔ C_ℓ", "問題定位"),
-    ("44 × (M − C(9−m, 2))", "峰位公式"),
+    ("44(M−C(9−m,2))", "峰位公式"),
     ("((k+1)/(4k−1))²", "振幅母函數"),
-    ("G_n(0) = 1/(4·sin(nπ/88))", "propagator"),
-    ("Z_0(β) = ∏_n e^{-βω_n/2}", "配分函數"),
+    ("1/(4sin(nπ/88))", "propagator"),
+    ("Z_0(β) = ∏", "配分函數"),
     ("零自由參數", "參數聲稱"),
+    ("🟡 partial", "審計裁決"),
 ]
 for phrase, context in checks_doc1:
     check(f"doc1 包含 '{phrase}' ({context})", phrase in doc1)
@@ -221,6 +237,17 @@ checks_doc2 = [
 ]
 for phrase, context in checks_doc2:
     check(f"doc2 包含 '{phrase}' ({context})", phrase in doc2)
+
+# 文檔 3 (審計報告) 關鍵短語 — 審計 2026-10-23 新增
+checks_doc3 = [
+    ("🟡 **partial**", "審計裁決"),
+    ("0.84%", "RMS 權威值"),
+    ("定義恆等", "ℓ_sync 更正"),
+    ("反解", "振幅循環性"),
+    ("空洞", "空洞 check"),
+]
+for phrase, context in checks_doc3:
+    check(f"doc3 包含 '{phrase}' ({context})", phrase in doc3)
 
 # ──────────────────────────────────────────────
 # [H] 全部腳本 exit code = 0
@@ -246,15 +273,16 @@ if passed == total:
   ★★★ O83 File Simulation Verifier: 全部驗證通過 ★★★
 
   ✅ [A] 文檔存在性: 全部文檔 + 腳本存在
-  ✅ [B] 峰位公式數值: RMS=0.335% 正確
+  ✅ [B] 峰位公式數值: RMS 雙報 cmb_cl 0.34% / O9 權威 0.84%
   ✅ [C] 振幅母函數數值: 全部正確
   ✅ [D] 常數一致性: 44, 33, 9, 25, F₆, F₈ 正確
   ✅ [E] Propagator 數值: G_n(0), ω_n 正確
   ✅ [F] 熱力學數值: E_0=45, T_CMB 閉合正確
-  ✅ [G] 腳本輸出 vs 文檔: 全部關鍵短語存在
+  ✅ [G] 腳本輸出 vs 文檔: 全部關鍵短語存在 (含審計報告)
   ✅ [H] 腳本 exit code: 全部 0 (PASS)
 
   O83 文檔完整性確認: 完整無缺 ✅
+  狀態裁決: 🟡 partial (見 docs/03_audit_report.md)
 """)
 else:
     print(f"\n  ⚠️ {total - passed} FAILS — 需要修正")

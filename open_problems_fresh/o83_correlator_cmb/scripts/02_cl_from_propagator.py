@@ -28,6 +28,10 @@ def check(name, cond, detail=""):
     results.append(bool(cond))
     print(f"  [{'✅ PASS' if cond else '❌ FAIL'}] {name} {detail}")
 
+def note(name, detail=""):
+    """陳述標記 — 唔計入 PASS 數 (審計 2026-10-23: 原 check(..., True) 空洞，改註記)"""
+    print(f"  [📝 註記] {name} {detail}")
+
 print("=" * 70)
 print("  O83 — Script 2: C_ℓ from propagator")
 print("=" * 70)
@@ -162,7 +166,7 @@ for k in [1, 2, 3]:
     G0 = 1/(4*np.sin(np.pi*n/88))
     w_pred_A = w_pred / G0
     print(f"  k={k} (m={m}): w²_pred=({k+1}/{4*k-1})²={w_pred:.6f}, w²_from_A={w_sq[m]:.6f}")
-    check(f"偶峰 m={m} w² 自洽", True, f"(結構定義)")
+    note(f"偶峰 m={m} w² = A_m/G_m(0) (反解，非獨立推導)", f"(w²={w_sq[m]:.6f})")
 
 # 奇峰
 print("\n  奇峰 w² 結構檢查:")

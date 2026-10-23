@@ -23,6 +23,10 @@ def check(name, cond, detail=""):
     results.append(bool(cond))
     print(f"  [{'✅ PASS' if cond else '❌ FAIL'}] {name} {detail}")
 
+def note(name, detail=""):
+    """陳述標記 — 唔計入 PASS 數 (審計 2026-10-23: 原 check(..., True) 空洞，改註記)"""
+    print(f"  [📝 註記] {name} {detail}")
+
 print("=" * 70)
 print("  O83 — Script 6: Final verification — 全部閉合驗證")
 print("=" * 70)
@@ -49,7 +53,7 @@ omega_n = np.array([2*np.sin(np.pi*n/88) for n in range(1, 45)])
 G0_n = 1/(2*omega_n)  # 零時 propagator
 
 check("44 個 K_Chain 模式", len(omega_n) == 44, f"({len(omega_n)})")
-check("ℓ_sync = 44 = 2N_d", True, "(結構恆等)")
+note("ℓ_sync = 44 (定義恆等；λ_sync≡πR_world/44 ⟹ 非預言)")
 check("G_n(0) = 1/(2ω_n) 全部正", np.all(G0_n > 0))
 
 # 偶峰 w² 結構
@@ -109,8 +113,8 @@ check(f"峰位 RMS = {rms:.3f}% < 1%", rms < 1.0)
 for m in range(1, 8):
     tri = C(9-m, 2) if m != 5 else None
     if m == 5:
-        check(f"m=5: F₆={F6} 取代 C(4,2)=6", True)
-        check(f"m=5: F₈={F8} 取代 11", True)
+        note(f"m=5: F₆={F6} 取代 C(4,2)=6 (後驗，無獨立推導)")
+        note(f"m=5: F₈={F8} 取代 11 (後驗，無獨立推導)")
     else:
         check(f"m={m}: C(9−{m},2)={tri}", tri >= 0)
 
@@ -166,7 +170,7 @@ check(f"T_CMB = {T_cmb_pred:.4f} K (vs {T_cmb} K)",
 # [F] 全部腳本存在
 # ──────────────────────────────────────────────
 print("\n─── [F] 腳本存在檢查 ───")
-script_dir = "/home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o83_correlator_cmb/scripts"
+script_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scripts")
 expected_scripts = [
     "01_mode_expansion.py",
     "02_cl_from_propagator.py",
@@ -181,7 +185,7 @@ for s in expected_scripts:
     check(f"{s} 存在", exists)
 
 # 文檔存在
-docs_dir = "/home/wsl/Projects/IDCM/IDCM-v10.0/open_problems_fresh/o83_correlator_cmb/docs"
+docs_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
 expected_docs = [
     "01_problem_record.md",
 ]
@@ -193,20 +197,13 @@ for d in expected_docs:
 # ──────────────────────────────────────────────
 # [G] 零自由參數
 # ──────────────────────────────────────────────
-print("\n─── [G] 零自由參數檢查 ───")
-# 全部係數由結構閉合:
-# 44 = ℓ_sync = π·R_world/λ_sync (結構)
-# 33 = M = K_Tree 深度 (結構)
-# 9 = L₅ − L₀ (Lucas 差, 結構)
-# 25 = F₅² (Fibonacci 平方, 結構)
-# 5 = F₅ (Fibonacci 數, 結構)
-# 8 = F₆ (Fibonacci 數, 結構)
-# 21 = F₈ (Fibonacci 數, 結構)
-# ((k+1)/(4k−1))² = 純代數生成 (0 參數)
-
-check("峰位公式: 零自由參數", True, "(全部係數結構閉合)")
-check("振幅母函數: 零自由參數", True, "(((k+1)/(4k-1))² 純代數)")
-check("CMB 溫度: 結構閉合", True, "(T_CMB = 2×T_Pl×exp(-74)×... )")
+print("\n─── [G] 參數自由度誠實標記 (審計 2026-10-23 修正) ───")
+# 審計結論：唔可以一刀切聲稱「零自由參數」
+note("峰位公式: 係對 ℓ_m 值之代數重讀 (抽出 44)，非獨立生成 ⟹ 後驗")
+note("振幅母函數: w_m 由 A_m 反解 ⟹ 零預測力 (O9 自認『事後揀最靚』)")
+note("CMB 溫度: T_CMB 式子係 cmb_cl 後驗閉合 (0.104%)，非 O83 導出")
+note("m=5 F₆/F₈: 硬寫賦值，無結構生成")
+note("全部數值可重現 (唔等於全部導出 — 見 docs/03_audit_report.md)")
 
 # ──────────────────────────────────────────────
 # 總結

@@ -37,6 +37,10 @@ def check(name, cond, detail=""):
     results.append(bool(cond))
     print(f"  [{'✅ PASS' if cond else '❌ FAIL'}] {name} {detail}")
 
+def note(name, detail=""):
+    """陳述標記 — 唔計入 PASS 數 (審計 2026-10-23: 原 check(..., True) 空洞，改註記)"""
+    print(f"  [📝 註記] {name} {detail}")
+
 print("=" * 70)
 print("  O83 — Script 3: Peak positions from correlator")
 print("=" * 70)
@@ -102,8 +106,8 @@ for m in range(1, 8):
 # 呢個係 m=7 嘅特殊循環
 
 print("\n  整數部分結構確認:")
-check("44 = ℓ_sync = 2N_d", True, "(結構恆等)")
-check("M = 33 = K_Tree 深度", True, f"(M={M})")
+note("44 = ℓ_sync (定義恆等；原「2N_d」標籤有誤 — N_d=44 ⟹ 2N_d=88)")
+note("M = 33 = K_Tree 深度", f"(M={M})")
 check("三角形數遞減 C(8,2)→C(2,2)", 
       all(C(9-m, 2) == tri_expected[m-1] for m in range(1, 8)))
 
@@ -235,7 +239,7 @@ print(f"  ℓ_n = ℓ_sync × (M − C(9−n, 2)) + 相位_n")
 print(f"      = 44 × (33 − 三角形數_n) + 相位_n")
 print(f"  → 峰位公式 = propagator 極點嘅 ℓ 空間像")
 
-check("峰位公式 = propagator 極點選擇", True, "(結構解釋)")
+note("峰位公式 ↔ propagator 極點 — 詮釋，非證明")
 
 # 完整峰位計算
 print(f"\n  完整峰位:")
