@@ -85,6 +85,22 @@ def main():
         except Exception as e:
             errs.append(f"SQLITE: {e}")
 
+    # 4) drift gate（2026-10-24）：agent 改 docs/改名/刪目錄後常見 drift
+    #    只擋 HARD DRIFT > 0；逃生 REGISTER_GATE_ALLOW_DRIFT=1
+    if os.environ.get("REGISTER_GATE_ALLOW_DRIFT") != "1":
+        r = subprocess.run([sys.executable, os.path.join(REPO, "problem_register/register.py"), "check"],
+                           capture_output=True, text=True, cwd=REPO)
+        m = None
+        for line in r.stdout.splitlines():
+            if line.startswith("HARD DRIFT:"):
+                try:
+                    m = int(line.split(":")[1].strip())
+                except ValueError:
+                    pass
+        if m:
+            kinds = [l.strip() for l in r.stdout.splitlines() if l.startswith("[") and not l.strip().endswith("] 0")]
+            errs.append(f"DRIFT: HARD DRIFT {m} — {', '.join(kinds[:6])}（先 register.py check 修，或 REGISTER_GATE_ALLOW_DRIFT=1）")
+
     if errs:
         print("\n[register gate] 鏈完整性檢查 FAIL:")
         for e in errs[:12]:

@@ -1674,6 +1674,88 @@ def cmd_backfill(a):
     print("run: register.py mirror  &&  register.py check")
 
 
+# ---------------------------------------------------------------- audit refs (2026-10-24)
+def cmd_audit_refs(a):
+    """掃 event ref：報告 stale（不存在）+ 同名候選（改名後新路徑）。
+
+    只讀，不改。agent 改目錄名後跑本命令，再用 handoff/note 記錄修正，
+    或（經批准）重簽舊 rec。輸出 --json 方便程式處理。
+    """
+    con = connect()
+    state_map = {r[0]: r[1] for r in con.execute("SELECT pid, state FROM o_problem").fetchall()}
+    rows = con.execute(
+        "SELECT id, ts, pid, kind, ref FROM event WHERE ref IS NOT NULL AND ref != '' ORDER BY id DESC"
+    ).fetchall()
+    seen = set()
+    stale, fmt, history, ext_n = [], [], [], 0
+
+    def _pid_dir(pid):
+        if not pid:
+            return None
+        m = re.match(r"^O(\d+)", pid)
+        if m:
+            ds = sorted(glob.glob(os.path.join(OPF, "o%s_*" % m.group(1))))
+            return ds[0] if ds else None
+        try:
+            td = theme_dir(pid.split("/")[0])
+            return td if os.path.isdir(td) else None
+        except Exception:
+            return None
+
+    for _id, ts, pid, kind, ref in rows:
+        ref = (ref or "").strip()
+        if not ref or (pid, ref) in seen:
+            continue
+        seen.add((pid, ref))
+        if ref.startswith(("http://", "https://", "data:", "scratch:")) or re.match(r"^(O\d+|P\d+|M\d+)\b", ref):
+            ext_n += 1
+            continue
+        path = ref.split("#")[0]
+        ok = os.path.exists(os.path.join(REPO, path))
+        if not ok and re.match(r"^o\d+_", path):
+            ok = os.path.exists(os.path.join(REPO, "open_problems_fresh", path))
+        if not ok and re.match(r"^p\d+_", path):
+            ok = os.path.exists(os.path.join(REPO, "main_problems", path))
+        if not ok and path.startswith("register.jsonl"):
+            ok = os.path.exists(os.path.join(REPO, "problem_register", path))
+        if not ok:
+            d = _pid_dir(pid)
+            if d:
+                ok = os.path.exists(os.path.join(d, path))
+        if not ok:
+            base = os.path.basename(path)
+            cands = sorted(glob.glob(os.path.join(REPO, "**", base), recursive=True))
+            cands = [os.path.relpath(c, REPO) for c in cands if "/." not in c][:5]
+            item = {"id": _id, "ts": ts, "pid": pid, "kind": kind, "ref": ref, "candidates": cands}
+            if re.search(r"[+;|]", ref):
+                fmt.append(item)
+            elif state_map.get(pid) in ("retracted", "merged") or _pid_dir(pid) is None:
+                history.append(item)
+            else:
+                stale.append(item)
+    con.close()
+
+    if getattr(a, "json", False):
+        print(json.dumps({"stale": len(stale), "format": len(fmt), "history": len(history),
+                          "external": ext_n, "items": stale + fmt + history},
+                         ensure_ascii=False, indent=2))
+        return 0 if not stale and not fmt else 2
+    print("ref audit: stale %d / format %d / history %d / external %d / 已檢查 %d"
+          % (len(stale), len(fmt), len(history), ext_n, len(seen)))
+    for label, group in (("STALE（可修）", stale), ("FORMAT（多路徑/prose）", fmt), ("HISTORY（已刪/合併，唔算錯）", history)):
+        if not group:
+            continue
+        print("\n[%s] %d" % (label, len(group)))
+        for s in group[:12]:
+            print("  %s %s (%s)" % (s["pid"], s["kind"], s["ts"][:10]))
+            print("    ref: %s" % s["ref"][:150])
+            for c in s["candidates"][:2]:
+                print("    候選: %s" % c)
+    if len(history) > 12:
+        print("  ... history +%d" % (len(history) - 12))
+    return 0 if not stale and not fmt else 2
+
+
 # ---------------------------------------------------------------- clue index
 def cmd_clues(a):
     """Build the derived clue index: pid mentions + full-text, over the docs.
@@ -1891,6 +1973,8 @@ def build_parser():
     add("mirror", cmd_mirror)
     add("backfill", cmd_backfill)
     add("clues", cmd_clues)
+    s = add("audit-refs", cmd_audit_refs)
+    s.add_argument("--json", action="store_true")
     s = add("find", cmd_find); keyargs(s)
     s.add_argument("--scope", help="resolve a stale label in this scope first")
     s.add_argument("--term")
