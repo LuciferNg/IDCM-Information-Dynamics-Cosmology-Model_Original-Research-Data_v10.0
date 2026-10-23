@@ -55,17 +55,17 @@
 <!-- registry
 pid:     O239
 title:   挫阻缺陷張力凝聚體：A₅ 幾何層 → 質量層嘅生成機制承接 (mass ↔ A₅-tension bridge)
-state:   registered
-verdict: registered
+state:   partial
+verdict: partial
 flags:   -
 owner:   O239
 created: 2026-10-12
-updated: 2026-10-12
+updated: 2026-10-16
 prereq:  O238 / O171 / O223 / O234
 source:  O238 docs/14 §七§八 交接 (2026-10-12) + 調律者綱領「物質 = 挫阻缺陷張力凝聚體，應充滿 A5 二十面體本徵同構」
 -->
 
-> **狀態**: 📄 **已註冊 — 未開始**
+> **狀態**: 🟡 **部分閉合 — 階段性 closeout（主鏈閉合維持, freeze v3 lattice 直量待測）**
 > **建立**: 2026-10-12
 > **位置**: `open_problems_fresh/o239_a5_tension_condensate/`
 
