@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O247
 title:   天然污染階梯：三水平簇生成規則 + 核子原子層缺口 + 相位同步污染框架
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O247
 created: 2026-10-12
-updated: 2026-10-12
+updated: 2026-10-16
 prereq:  O239 R36 + O206-OPEN-4 + IDCM 複合粒子層缺口
 source:  調律者2026-10-12: O239 R36 遺留 + 開新O解決以上問題(只開不推)
 -->
