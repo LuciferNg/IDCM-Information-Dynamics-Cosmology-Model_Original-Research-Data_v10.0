@@ -29,11 +29,3 @@
 
 ## 依賴
 O3 → O26 → O43 (全部完成 2026-08-31: A 🟢, B 🟡, C 🟡, D 🟢, E 🟢🟢, F 🟢)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `c4da0ed051cb216c` | 2026-10-24 | — | 節點 57 係普通區域局部值 (H1+H3)；衍生閉合咗 A₅ 對徑右乘定理、k 值不變量、三角形完美匹配；全息「軸對齊」預測 (G2 溫度 + G3 偏振) 被數據否決，但框架收窄非死亡。 | open_problems_fresh/o26_node57_region/final_result.md | — |
-<!-- conclusion-history:end -->

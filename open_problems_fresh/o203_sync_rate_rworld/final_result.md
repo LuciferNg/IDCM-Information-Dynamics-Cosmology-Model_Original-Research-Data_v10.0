@@ -33,11 +33,3 @@ scripts/01–13 全部 exit 0: **256/256 PASS** (20/20 + 6/6 + 10/10 + 8/8 + 4/4
 2. 🟢 **模分裂通道 — 判準已定, 通道待測** (docs/11): 判準定理 = 讀輸運頻率分佈 **≥二階矩** ⟺ 敏感 (一階 = 結構性盲, 唔係精度不足); corpus 9 通道盤點。**可證偽預言 P1–P5 已列** (分支速度差 c/45 = 6662.05 km/s 模無關; 展寬 0.7767%; kurtosis 1.52299; 扇區滑移 8.0000°/T_ring)。
 3. 🟢 **命名收編 — 完成** (docs/12, O75 收錄): 「同步速率」≜ **同步速度譜** (O140 v_g 階梯); 裁定為**族名非參數名**; N1–N6 登記表 + 命名紀律 4 條; 零公式改動, 零新常數。
 4. 🟢 **已解決遺留**: docs/01 C5 / docs/04 嘅「c/44 vs c/45 dev 2.27% 唔閉合」= Σγ/(2N_d) = 45/44 歸一化誤配
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `0afd3dbf0aa3526a` | 2026-10-24 | closed | KChain 有速率而無「同步速率」之名 — 同步/鎖相/寫入過程全部以已有速率運行 (vg 階梯 O140, Γ = f44/2 O138, 2fring O7)。「同步速率」係命名缺口, 唔係結構缺口。速率維度對 Rworld 惰性:… | open_problems_fresh/o203_sync_rate_rworld/final_result.md | — |
-<!-- conclusion-history:end -->

@@ -38,11 +38,3 @@ O140 → O158 → O159 → O161 → O175 → **O180** → O32
 
 ## 檔案
 01_problem_record.md, SESSION_START.md, docs/01-05, scripts/01-02
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `1e3cc4023e25e028` | 2026-10-24 | — | O175 相位繞數 (θk = kπ/176, Wilson = i, winding 22.25 = F₁₁/4, Noether Q = 44) 到星系盤空間投影嘅嚴格場論翻譯完成 — 投影核 K 由譜結構推出 vφ(r) = √(a… | open_problems_fresh/o180_winding_fieldtheory_translation/final_result.md | — |
-<!-- conclusion-history:end -->

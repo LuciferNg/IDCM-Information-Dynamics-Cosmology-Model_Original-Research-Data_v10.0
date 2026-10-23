@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O228
 title:   求值語義之資源幾何與最小性（Resource Geometry & Minimality）
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O228
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-02
 prereq:  O222
 dir:     open_problems_fresh/o228_evaluation_resource_geometry/
 source:  O222 完整性 closeout 分流（調律者指令 2026-09-30：「開新o，把剩下開題分開幾個o解決，保留o222開放作為最終裁決及整合」）
@@ -16,8 +16,8 @@ source:  O222 完整性 closeout 分流（調律者指令 2026-09-30：「開新
 
 # O228 — 求值語義之資源幾何與最小性（Resource Geometry & Minimality）
 
-> **狀態**: 📄 **已註冊 — 目標已定（依 O222 no-go 邊界憲章 `docs/45`）**
-> **建立/更新**: 2026-09-30｜**位置**: `open_problems_fresh/o228_evaluation_resource_geometry/`
+> **狀態**: 🟡 **部分閉合（partial）— R1–R14 已推；殘餘 5 項見 `final_result.md` §十五**（依 O222 no-go 邊界憲章 `docs/45`）
+> **建立/更新**: 2026-09-30｜**狀態更新**: 2026-10-02｜**位置**: `open_problems_fresh/o228_evaluation_resource_geometry/`
 > **前置**: **O222 保留開放作最終裁決及整合**；本 o 承接憲章判決項：**§3 資源幾何（正面清單）之完整刻畫與推廣**
 > **目標權威來源**: `open_problems_fresh/o222_qm_evaluation_semantics/docs/45_no_go_boundary_charter.md`
 
@@ -275,3 +275,13 @@ source:  O222 完整性 closeout 分流（調律者指令 2026-09-30：「開新
 
 **時序註**：`scripts/26` 有兩次實作錯誤（首跑：`ph` 未定義之插入位置錯；二跑：`two` 計數誤寫成 O(4e9)）—— 首跑 log 分檔
 `logs/26_r14_firstrun_prereg_errors.out`；定案跑 = 127.4 s、`data/26` 齊。
+
+---
+
+## 十二、第 8 輪推導時序（append-only；closeout-2）
+
+| # | 日期 | 步驟 | 產物 | 結果 |
+|:-:|:-----|:-----|:-----|:-----|
+| 28 | 10-02 | drift 修復 | `01_problem_record.md` 塊／`SESSION_START.md` 狀態行；R1–R5 backfill close | HARD DRIFT 32→31；O228 清零 |
+| 29 | 10-02 | closeout-2 審計 | `scripts/27`、`logs/27`、`data/27`、`docs/00_closeout_audit.md` | **24/24 PASS** |
+| 30 | 10-02 | 事故與還原 | `data/25_r13_separation.json`（git restore） | sha256 ≡ MANIFEST ✓ |

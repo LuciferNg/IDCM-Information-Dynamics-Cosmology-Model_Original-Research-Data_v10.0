@@ -18,11 +18,3 @@ O34 → O36 → O14 → O116
 
 ## 備註 (🟡 2026-09-03 審計)
 閉合數字可重現 (37/37 PASS)，但隱含假設待結構證明: (a) 可見側代理 = 單 u 夸克而非 uud; (b) n=3 排除理由; (c) 03 能量計數 ≡ 66 譜求和等價性。詳見 docs/04_audit_20260903.md。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `fe6eec8245eb6a43` | 2026-10-24 | closed | 非膨脹框架無需 freeze-in/freeze-out — DM 豐度是 KChain Σγ 能量的幾何分配。閉合來源 v10.0 O14: ΩDM/Ωb = 13/2 = F₇/L₀ (0.05% ✅), Ωb = 2φ⁻¹/(5(φ… | open_problems_fresh/o116_dm_abundance/final_result.md | — |
-<!-- conclusion-history:end -->

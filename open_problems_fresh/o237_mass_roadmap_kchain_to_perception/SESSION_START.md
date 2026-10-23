@@ -3,18 +3,18 @@
 <!-- registry
 pid:     O237
 title:   質量路線圖:由K-Chain駐波到質量測量/感知(全鏈步驟+未知數盤點)
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O237
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 prereq:  O210(O36,O235,O137,O234,O236,R1-R6,O147,O212,O49/O57/O66,O213,O121,O206,O124/O85,O65)
 source:  2026-10-07 調律者:「要先有路線圖，用整個由K-Chain駐波生成到測量/感知到質量的每一個步驟還有什麼是未知數為目的來開新o」
 -->
 
 > **Session**: 2026-10-07（新建立）
-> **狀態**: 📄 **已註冊 — 路線圖已交付（docs/01），未開推導**
+> **狀態**: 🟡 **部分閉合 — 七輪推完（範圍內 done）；餘下跨 O handoff（U1→O170／U5→O206／U7→O147／U2→O234）**
 > **來源**: 調律者明示「先有路線圖」→ 開 O237 為路線圖 charter
 > **前置**: O210 型別層 + 質量資產鏈（docs/01 §二）
 > **位置**: `open_problems_fresh/o237_mass_roadmap_kchain_to_perception/`
@@ -185,3 +185,50 @@ source:  2026-10-07 調律者:「要先有路線圖，用整個由K-Chain駐波�
 - 🔴 外部判準：U2 → O234 凍結判準（lattice mu/md 1-2%、HL-LHC）
 
 **「終點」定義**：O237 內可推嘅已全程推完（scripts 01-21 全 log、docs 01-17）；餘下 4 項全屬其他 O 管轄（O170/O206/O147/O234）。O237 狀態：partial→**done（範圍內）**。
+
+---
+
+## 十三、2026-10-24 跨 O handoff 修正＋O48 交回收口（append-only）
+
+> 用戶「Handoff 跨 O 修正和剩餘，修復 register 由 O237 引起的 block drift」。
+
+### 13.1 BLOCK-DRIFT 修復（register-drift skill 類⑦）
+
+| 項 | 修前 | 修後 |
+|:---|:-----|:-----|
+| `01_problem_record.md` registry block | state=registered, verdict=-, updated=2026-10-07 | state=partial, verdict=partial, updated=2026-10-24 |
+| `SESSION_START.md` registry block | 同上 | 同上 |
+| 人手狀態行 ×2 | 「已註冊 — 未開推導」 | 「🟡 部分閉合 — 七輪推完（範圍內 done）」 |
+| `open_problems_fresh/README.md` O237 行 | 「三輪攻堅」 | 「七輪推完，範圍內 done；跨 O handoff 已登記」＋第四-七輪摘要 |
+
+**驗證**：BLOCK-DRIFT 26→**24**、SEED-DISAGREE 55→**54**、HARD DRIFT 35→**33**，**O237 零殘留**（check 全段 grep o237 = 空）。兩個檔修前已備份（`.bak_20261024_000527`）。
+**非 O237 drift 24 條**（o185/o225/o227/o228/o231/v11 M-series 等）按 skill 鐵律唔就地改，記錄移交。
+
+### 13.2 Handoff 修正：U5 體驗層（重複 handoff 作廢）
+
+**發現 incoming handoff**（O206，2026-10-11）：**U5 體驗層已由 O206 docs/46 處理完成**（12/12 PASS）：
+- 體驗 = Im P 投影讀數結構；P²=P 讀數穩定；C_f 全正；ker P = 41/60 未投影能量；Σγ=90 EXACT；體驗階級 = PDG 階級
+- ⟹ 今日 handoff U5→O206 **重複**（O206 早答完交回）——register note 作廢該 handoff；U5 體驗層**收貨閉合**；剩 O206↔O212 測量接駁 🟡
+
+**已登記 handoff**：U1→O170（振幅 B 配分級）、U2→O234（外部判準）、U7→O147（κ 機制；U7 pid 本輪新建）。
+
+### 13.3 O48 交回 C_f 鋸齒三候選（全部執行，全負）
+
+**O48 docs/06（2026-10-09）交回**：負結果 P=0.27＋3 候選未做。本輪執行（`scripts/22` 6/6 PASS、20000 MC null）：
+
+| 候選 | 結果 | MC null |
+|:-----|:-----|:--------|
+| ① 完整 Φ18 差 ∈ FL | 17/17 = 100% | mean 99.2%，**P=0.8593**（零判別力） |
+| ② C_f 按 CSG n 排序 Δn | Δn∈{1,6,7,13}＝網格已知結構；C_f 唔係 n 函數（n=1 三值） | ΔC_f 2/5，**P=0.9837** |
+| ③ γ·C_f 乘積層 | mod44 對合 4/8（e/u/d 三個 0 係 γ₁ 極細偽影）；Δ∈7 倍數 2/7 | **P=0.0113**（邊緣，三重校正後唔顯著）／P=0.0806 |
+
+**⟹ C_f 鋸齒同構仍然冇統計支持**（O48 結論維持）；O48 交回事項正式收口。
+
+### 13.4 ⚠️ C_f 同名唔同義（第二例，docs/18 §二）
+
+| 定義 | 來源 | 索引 | 值 |
+|:-----|:-----|:-----|:---|
+| CSG 網格版 | O137/O206 docs/24 | e/u/d=1, μ=7, s=14, τ=20, b=33, c=34 | {3.6,15.5,33,3.6,15.5,13,37,44} |
+| 商值版 | O237 scripts/19-20 | A5 scheme e=1,u=2,d=3,s=4,μ=5,c=7,τ=9,b=11 | {3.59,3.80,3.66,41.32,30.03,186.06,159.64,255.75} |
+
+**兩套唔可以混**（同 docs/10 F_proj 同名唔同義同類）——跨 O 引用必先核對索引 scheme。

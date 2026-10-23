@@ -51,11 +51,3 @@ O212 → O73 → O213 → {O76, O86, O99, O100, O132, O137, O143, O182, O220, O2
   （非 K_chain 譜推導）—— e^{−V_Λ} 本身係純結構數指數（V_Λ=283.0821, O62 閉合）
 - 新量級提示（🟡 未閉合）：`e^{V_Λ/2} ≈ 3.75 × N`（真空能指數 ↔ 階層數 N 之量級橋）
 - O213 closeout 狀態 🟢 不變；R9 屬「已註冊開放項」（雙重歸屬）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `f00c4678f741eb4a` | 2026-10-24 | closed | 世界演化方程 = Cayley 細化流 Λℓ → Λ{ℓ−1}（演化參數 = 相位深度 ℓ， 不動點 = c = cSI）；z 由結構導出（1+z = B^ℓ，B = 4 = φ³−φ⁻³）；距離 = 自相似殼和 1−4^{−ℓ} = 3… | open_problems_fresh/o213_world_dynamics/final_result.md | — |
-<!-- conclusion-history:end -->

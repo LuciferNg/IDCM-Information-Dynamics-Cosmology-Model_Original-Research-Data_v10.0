@@ -62,11 +62,3 @@ R6 包絡攻堅進一步證明: 6 個零參數候選**整族證偽**, 且失敗�
 
 ## 依賴
 O9/O10 (峰位 + 峰高) → O140/O159/O180 (FSR/BVP/投影核) → O192/O193 (冪和) → O171 (M1–M4) → **O202**
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `1d753dad06c38a43` | 2026-10-24 | partial | IDCM 嘅譜測度存在但住喺譜軸 (γ) 而唔係多極矩軸 (ℓ): 44 個奇模態係 44×arcsine(0,4) 嘅精確求積法則, 且由兩條獨立路徑導出 (矩問題反推 + 176-Laplacian BVP 譜密度)。 ℓ-軸密度 (… | open_problems_fresh/o202_spectral_representation/final_result.md | — |
-<!-- conclusion-history:end -->

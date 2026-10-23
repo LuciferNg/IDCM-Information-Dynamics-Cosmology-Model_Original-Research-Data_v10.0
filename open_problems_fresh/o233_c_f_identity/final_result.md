@@ -26,11 +26,3 @@ O120 → O137 → O206 → O233 → O209（C_f 絕對值生成移交）
 - q_obs：關係結構 🟡⁺（O210 確認唔可能更強）；生成器 🔴（誠實負）
 
 > ⚠️ O208 規則: 負結果配合 MC null 已記錄（P 值見 data/02/18/19/20/21）。輕子槽統計層 look-elsewhere 0.1204 與結構層 🟡⁺ 解耦（槽 = T3 結構強制，統計檢定設定錯層；O210 docs/14 背書）。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `810189019cf2c809` | 2026-10-24 | partial | Cf = m/(M₀γn)（無量綱）嘅關係結構已閉合：鋸齒 even/odd 兩流 = 輕子/夸克分離、輕子槽 n≡1 (mod 4) 由 T3（B−L 整數性）× O210 群層 iso 結構強制（🟡⁺ 乾淨）、γ階梯升序、u/d 身份… | open_problems_fresh/o233_c_f_identity/final_result.md | — |
-<!-- conclusion-history:end -->

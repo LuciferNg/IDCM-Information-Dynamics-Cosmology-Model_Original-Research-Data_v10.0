@@ -43,11 +43,3 @@ e⁻ⁿ 係 φ² ≈ e (3.69%) 嘅近似標籤。夾層精確代數化:
 ```
 
 (3:16:41) 計數閉合不受影響 (重子 3 = 可見層計數照舊)。詳見 o165_exponential_weight_origin/final_result.md。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `0015731db5f0168a` | 2026-10-24 | closed | DM = 隱藏譜扇區 (n≥3 模式), 份額 = κ⁻¹/60 = B²/60 = 16/60 — 閘極倒數, 非粒子。 「DM 係乜粒子」係 ΛCDM 類別錯誤; 正確答案係拓撲結構強制一個隱藏扇區。 Ω = (B−1 : B² : … | open_problems_fresh/o163_dm_identity/final_result.md | — |
-<!-- conclusion-history:end -->

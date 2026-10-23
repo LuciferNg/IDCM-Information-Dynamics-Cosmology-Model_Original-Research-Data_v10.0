@@ -22,11 +22,3 @@ O53 → O34 → O56
 
 ## 備註
 - 驗證：L0 128/128（scripts/01,02,03,final_verification）＋ L1 77/77 獨立重算（scripts/05）＋ L2 79/79 文檔審計（scripts/06），三層總計 284/284｜⚠️ 2026-09-20 修正：原「B 變體不存在」聲稱已證偽（(38,96)、(34,100) 實際存在於 KS），詳見 `docs/04_closing_report.md`
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `d25398f6f0ea13bd` | 2026-10-24 | closed | CY₃(36,98) 之 moduli 數由 KChain 44-site 結構鎖定，唔係巧合：KTree 分支 B=4 創造 2B=8 之 site↔energy 耦合，令 h¹¹=Nd−2B=36、h²¹=Σγ+2B=98；Ngen=… | open_problems_fresh/o56_kchain_moduli_lock/final_result.md | — |
-<!-- conclusion-history:end -->

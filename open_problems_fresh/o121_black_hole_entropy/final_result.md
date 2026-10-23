@@ -138,11 +138,3 @@ G = 1/M_Pl² 同 Λ = 4/(φ⁴−1) 皆由 IDCM 參數得出 (零自由參數)�
 `docs/02–11` (10 份) ｜ `scripts/01–10` + `audit_independent.py` ｜ `data/*.json` (10) ｜
 `01_problem_record.md` (含推導時序索引) ｜ `SESSION_START.md` ｜ `POINTER_o204_w0_normalization.md` ｜
 `final_result.md` (本檔)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `b9557cfe23f5548e` | 2026-10-24 | — | IDCM 中黑洞 = 局部 Tpipe† 反投影區域 (投影截斷邊界), 唔係時空奇點; 微觀自由度 = sync sector 佔據組態 (ker(Tpipe) = {n=28..44}, 17 模式)。核心閉合: dim ker(Tp… | open_problems_fresh/o121_black_hole_entropy/final_result.md | — |
-<!-- conclusion-history:end -->

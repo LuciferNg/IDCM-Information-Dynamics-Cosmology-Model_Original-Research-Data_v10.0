@@ -25,11 +25,3 @@ O206 簇結構 = A₅ 模式分配**偽影**（物理 assignment 下水平回 1.
 O51 → O159 → O169 → O180 → O203 → O136 → O206 → CSSG-v3
 （O137 → O54 → O144 → O206 → CSSG-v2 對照 → CSSG-v3）
 移交：O136（|Δm| 降級）、O156（sector 分離結構理由）、O204（玻色塔確認）、O162（色差）、O57/CSSG-v3（Σm_ν）、O207（玻色塔盲測）、O215（宇宙預算 3/60,16/60,41/60）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `e8e6b415c0b13d29` | 2026-10-24 | — | 逐模式頻率 f(n) 假說已證偽（驗證標準或然分支 2 達成——缺口唔喺頻率層）； m = M₀·\|Δm\|^α（0.5872 = 1.80×）係最佳連續 2-參數近似但非零參數公式，且正交於形狀因素 Cf（P=0.127）； 正確框架 =… | open_problems_fresh/o206_per_mode_frequency/final_result.md | — |
-<!-- conclusion-history:end -->

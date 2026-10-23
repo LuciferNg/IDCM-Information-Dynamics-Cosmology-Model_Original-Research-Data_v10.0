@@ -21,11 +21,3 @@ O34（觀察者/質量譜）→ O35（拍頻 link-up）→ O36（W-field 動力�
 
 ---
 *驗證: scripts/01-09 = 110/110 PASS（08-19）+ scripts/10_chain_crosscheck.py = 22/22 PASS（獨立核對）+ scripts/11_o169_reverify.py = 19/19 PASS（O169 修正點重驗, 10-08 closeout）= **151/151**。*
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `4c62d6f7a92386dc` | 2026-10-24 | closed | W-field 凝聚 ⟨W⟩² = 61.5 由 SSB 勢 V(W) = −μ²\|W\|²+λ\|W\|⁴ 結構強制：μ² = Σγeven − Σγodd = 2（世界−觀察者能量差驅動），λ = 2/3(Nd−dimℂ) = 2/123（… | open_problems_fresh/o39_wfield_condensate/final_result.md | — |
-<!-- conclusion-history:end -->

@@ -20,11 +20,3 @@ O230 → O122 → O144
 - q_obs = 未定% → 🔴
 
 > ⚠️ O208 規則: 冇分位數 = 未閉合（docs/01_density_baseline_spec.md）。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `43b44696a7c775e1` | 2026-10-24 | partial | ⚠️ O208 規則: 冇分位數 = 未閉合（docs/01densitybaselinespec.md）。 | open_problems_fresh/o230_nuclear_decay_channels/final_result.md | — |
-<!-- conclusion-history:end -->

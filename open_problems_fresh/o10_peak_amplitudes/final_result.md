@@ -18,11 +18,3 @@ O9 (峰位公式) → O10 → O_next (質數峰「質數性」機制 / m=11,13 �
 
 ---
 *驗證: 25/25 獨立驗證 + 6/6 文檔一致 + 5/5 數值核對 (2026-08-19)*
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `0f5de1f113011bcf` | 2026-10-24 | closed | Planck 2018 binned 真峰只有 5 個 — 對應 IDCM 質數位置 {1,2,3,5,7} (文獻 D₃=1400 錯 82%, 真實 2553; 合數峰 4,6 只係微擾 bump)。質數峰高度由 Fibonacci … | open_problems_fresh/o10_peak_amplitudes/final_result.md | — |
-<!-- conclusion-history:end -->

@@ -15,11 +15,3 @@ O36-O39 誠實標記剩餘嘅 5 個 🔴 項目全部攻堅閉合 (v_eff↔v_SM 
 
 ## 依賴
 O36 → O37 → O38 → O39 → O40
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `9933b17ac4d6b63a` | 2026-10-24 | — | O36-O39 誠實標記剩餘嘅 5 個 🔴 項目全部攻堅閉合 (veff↔vSM dev=0, ρΛ 維里分解, RH=c/H₀ 機制, κ̃²=88 同一性, 44-tone 環同步定理)。 | open_problems_fresh/o40_wfield_remaining/final_result.md | — |
-<!-- conclusion-history:end -->

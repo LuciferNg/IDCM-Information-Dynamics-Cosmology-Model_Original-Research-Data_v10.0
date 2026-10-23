@@ -53,11 +53,3 @@ scripts/01–04 · docs/01–04 · logs/01–04 · 01_timeline rows 1–6；regi
   （如 family M≠88 或新味觀察）先可驗證
 - ⚰️ 嚴格式「質量譜 = 兩步映射靜態快照」：記錄負結果（T4 docs/04）
 - ⚠️ O210 common-measure no-go 冇被推翻（T3 不做數值層對齊）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `8799bbd46edc09fd` | 2026-10-24 | partial | 「Cf 鋸齒嘅 Z₂ = tick 宇稱（時間處理）」假説：值層嚴格形式 ⚰️ 假咗；pattern/機制層 支持成立。 88 環 tick 結構完整確立（T2：tick 算子譜半徑 = 2 = μ² EXACT、tick 週期 Trin… | open_problems_fresh/o235_cf_sawtooth_tick_parity/final_result.md | — |
-<!-- conclusion-history:end -->

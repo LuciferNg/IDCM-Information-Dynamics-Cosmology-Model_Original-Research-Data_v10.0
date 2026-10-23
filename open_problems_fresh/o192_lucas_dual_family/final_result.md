@@ -36,11 +36,3 @@ docs/03 §九 四項開放全閉合：parity-gap 全 n 證明、Σsin^{2m} = 88�
 
 ## 依賴
 O190 → O191 → O192（依賴 O159, O160, O138+O143, O107, O56, O95, O190, O51, O148）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `77d67f82734e119d` | 2026-10-24 | closed | L−1 家族 {Lm−1 \| m=4..12} = {6,10,17,28,46,75,122,198,321} 9/9 命中已閉合身份（零新常數）， 由配對定律 Lm−1 = (F{m−1}−1)+(F{m+1}−1)+1 繼承閉合性與… | open_problems_fresh/o192_lucas_dual_family/final_result.md | — |
-<!-- conclusion-history:end -->

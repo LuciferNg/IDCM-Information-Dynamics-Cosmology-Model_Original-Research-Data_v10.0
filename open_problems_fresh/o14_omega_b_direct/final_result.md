@@ -16,11 +16,3 @@
 
 ## 依賴
 bbn → O13 → O14
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `fe65cb48c4914142` | 2026-10-24 | — | Ωb 直接由 KChain 結構推導: Ωb = 2φ⁻¹/(5(φ⁴-1)) = 2φ⁻¹/(5(3φ+1)) = 0.042229。 純 φ 代數公式, 唔經 ΩΛ; ΩΛ = 1 − 15Ωb/2 反而係導出量。Ωb h² = 0.… | open_problems_fresh/o14_omega_b_direct/final_result.md | — |
-<!-- conclusion-history:end -->

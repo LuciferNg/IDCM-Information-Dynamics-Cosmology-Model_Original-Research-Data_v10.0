@@ -101,11 +101,3 @@ O53  → O219（cy36_98_sage_export、intersection_full κ）
 O219 → O137（回報註記已寫入 o137 SESSION_START 2026-09-28 段）
 O219 → 全 corpus（docs/02 憲章為索引引用之權威來源）
 ```
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `a1275ffa298ba1d0` | 2026-10-24 | — | 輸入：O137 docs/36 §十二 審計項 A3 — 「docs/19 §發現 2 之 pt↔mode 前提有疑；φ=9 點索引 ∩ 9 模式集 = ∅」 方法（次序不可倒，依 SESSIONSTART §三）： 1. 座標直算：唔信… | open_problems_fresh/o219_pt_mode_index_premise/final_result.md | — |
-<!-- conclusion-history:end -->

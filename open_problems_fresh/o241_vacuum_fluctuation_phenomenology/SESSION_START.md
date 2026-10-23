@@ -3,18 +3,18 @@
 <!-- registry
 pid:     O241
 title:   量子漲落實證現象之 IDCM 推導: Casimir/零點譜差 + 量子-經典動力學
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O241
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-08
 prereq:  O36, O38, O41, O84, O86, O121, O138, O204, O213
 source:  2026-10-07 調律者提問:「量子漲落純數學自洽定巨觀實測」; 實證盤點 Lamoreaux 1997/Mohideen-Roy 1998/DCE 2011
 -->
 
 > **Session**: 2026-10-07（新建立）
-> **狀態**: 📄 **已註冊 — 未開始**
+> **狀態**: 🟡 **部分閉合 — 主體完成 (Q1–Q5 + R1–R14, 2026-10-08)**
 > **來源**: 調律者提問「量子漲落到底是純數學上自洽還是已經在巨觀下有測量結果 — 例如兩片近距離金屬片之間的吸引力」(2026-10-07)
 > **前置**: O36, O38, O41, O84, O86, O121, O138, O204, O213 (+ cmb_cl theme)
 > **位置**: `open_problems_fresh/o241_vacuum_fluctuation_phenomenology/`

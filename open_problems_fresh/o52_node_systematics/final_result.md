@@ -22,11 +22,3 @@ O5 → O7 → O21 → O52 → (ΔE=0 跨地圖 → O143 相位機制)
 
 ## 檔案
 NN_results.md (完整報告), VERIFIER_RESULT.md, 01_problem_record.md (時序索引), scripts/01-06, docs/02_deltaE0_verdict_20260911.md (ΔE=0 判死裁決)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `c9f2dfd42b6787f9` | 2026-10-24 | closed | 60 個 A₅ 節點冇系統性微冷/微熱 — 全部 8 尺度 \|z\|<0.4σ, 堆疊 radial profile 全部 \|z\|<0.6σ。IDCM「全部 60 節點有異常」假說被否證, 只有 node0 (冷斑) + node9 (高斯… | open_problems_fresh/o52_node_systematics/final_result.md | — |
-<!-- conclusion-history:end -->

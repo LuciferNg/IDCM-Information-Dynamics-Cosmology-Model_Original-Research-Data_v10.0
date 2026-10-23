@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O250
 title:   重整化次數與 K-Tree 關聯性：IDCM-native running 階數對應探針
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O250
 created: 2026-10-14
-updated: 2026-10-14
+updated: 2026-10-23
 prereq:  O139, O231/Q4, O124, O84, O156, O140, O221
 source:  調律者 2026-10-11: 開新O研究重整化次數和K-Tree的關聯性; 先查上游是否No-Go; 只註冊不推導
 -->

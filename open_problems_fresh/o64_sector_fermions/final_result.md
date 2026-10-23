@@ -21,11 +21,3 @@ O57 → O64 → O209（質量生成機制交接）; O137（A₅ 指派）; O233�
 - AUDIT: 32/32 PASS（scripts/AUDIT_independent_recheck.py, 2026-10-11）
 
 > ⚠️ docs/03「9/9 閉合」係歷史快照, 已降級為數值後驗（docs/04）。原文保留。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `0dad89d5bedcd9cf` | 2026-10-24 | partial | 結構框架成立（A₅ γ升序指派 + γn 譜 + 質量比恆等），但 Cf 生成器 5 線負閉合（O233）、鋸齒形證偽、斜率 5/7 盲測否證——質量生成機制交接 O209，9/9「閉合」降級為數值後驗（docs/04-09）。 | open_problems_fresh/o64_sector_fermions/final_result.md | — |
-<!-- conclusion-history:end -->

@@ -21,11 +21,3 @@ O202 → O256 → (解閘: P3/high-l-tail-transfer 數據 / O162 R3 lensing 語�
 - q_obs = p=2.6% 前排 🟡 → ⚠️ R12 band [289,316] 平均 RMSE 6.356% ≈ φ 6.371% ⟹ 唔可獨立閉合（MC null 過但 band-null 不可分辨）
 
 > ⚠️ 誠實判決：微帶 bump（唯一可區分 IDCM vs lensed ΛCDM 嘅觀測簽名）已否證；λ₁ 係 band 內最中心零參數命中但統計不可分辨。本 O 唔 close，維持 partial。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `6ab13f7b5ea12825` | 2026-10-24 | partial | R1 攻堅確立 4 項新結構（44 模態權重 43.8% 未兌現／峰位公式 m≥8 飽和微帶 1452,1476／λ₁=半週期/lnφ=308.60 盲測 +0.2%／Fibonacci 階梯連續化），但數值閉合被 P3-R12 lens… | open_problems_fresh/o256_cl_continuum_envelope/final_result.md | — |
-<!-- conclusion-history:end -->

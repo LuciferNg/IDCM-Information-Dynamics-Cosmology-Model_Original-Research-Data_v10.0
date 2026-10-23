@@ -45,11 +45,3 @@ O208（驗證標準）→ O115 docs/02（缺陷 4）→ **O210** ← O152（算�
 > **★ 全 session 鏈收尾（append-only, 2026-10-03，收尾輪 R8）**: 依 skill `idcm-closeout` **硬規則 1**（驗證對象 = **整條 session 鏈**：5 session / 618 msg，非單一 session id）＋ **硬規則 5/6**（§4.9 推導落碟完整性、§4.10 登記面覆蓋）。**產物**：`scripts/10_audit_independent.py`（全鏈獨立審計 A–G ＋ §4.9 K 段獨立重做）、`scripts/11_session_chain_provenance.py`（session 鏈 provenance ＋ inline 幽靈偵測）、`scripts/12_register_coverage.py`（§4.10 七項）、`scripts/run_chain.sh`（driver of record，**預設 dry-run**）、`logs/01…12`（12 支正典 log 全部帶 `RESULT:` 行）、`data/MANIFEST.json`、`docs/12_full_chain_closeout.md`、`docs/13_script_chain.md`（鏈表逐個完整檔名）。**外部核對器**：`path_hygiene_scan` **WRITE = 0 / CLEAN**；`numeric_producer_binding` 80 數字 / **UNBOUND 6**（全部 triage 結案）；`trail_integrity_check` C1–C5。**★ 更正**：`docs/11` §6「rank 22528」→ **90112**（free ℂ[ℤ₄]-module 秩 = dim/4；原文保留＋附註）。**register**：R4（續攻 3）鏈記錄補登 ＋ R8 收尾 ＋ 誠實清單（共 10 條事件）；**HARD DRIFT = 78（基線，唔升）**。**範圍**：只本 O ＋ register 欽准通道；`SESSION_START.md` 零改動；未 commit。
 
 > **★ 同輪附註（2026-10-03，R8 後段）**: 上條之「12 劇本／12 log」更正為 **13 劇本 / 13 log** —— 新增 `scripts/13_manifest.py`（MANIFEST 產生器，**鏈上最後一支**）；`data/MANIFEST.json` 由佢產生，`untracked_by_design` = MANIFEST 自身 ＋ `logs/13_manifest.out`。`trail_integrity_check` = **C1–C5 5/5 PASS**（覆蓋劇本 13/13、活檔 sha 零錯配）；register 追補第 11 條事件。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `8148ba05bea1d38d` | 2026-10-24 | closed | 𝒯 = Kchain ⊗ Ktree 已建立為有型別、運算封閉嘅代數對象：四型系統（Op/Sc/Fn/Ix）+ 七運算（⊗, ⊕, Tr, Spec, Proj, †, Contr）閉合性證明 + 歸一化憲章（10 條, 鎖死跨版本漂移）… | open_problems_fresh/o210_causal_tensor_algebra/final_result.md | — |
-<!-- conclusion-history:end -->

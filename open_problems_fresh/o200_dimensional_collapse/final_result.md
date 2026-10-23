@@ -13,11 +13,3 @@
 
 ## 依賴
 O73 §7 → O204 C5 → O200 → O212（錨定理父程序）/ O213（階層數 N 動力學）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `5d51a0f18b3acbf3` | 2026-10-24 | partial | 維度收束成立 — 22 個有量綱量全部寫成「無量綱數 × 幀^k」；幀 = τ = 1/ωring（IDCM 幾何幀，非普朗克時間）；收束後只剩 1 個自由度（階層數 N = τ/tPl = 7.87e60，觀測鎖定，非結構）。 | open_problems_fresh/o200_dimensional_collapse/final_result.md | — |
-<!-- conclusion-history:end -->

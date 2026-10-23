@@ -72,11 +72,3 @@ IDCM 冇膨脹 ⟹ `D_H = c/H(z)` 唔存在；徑向距離由晶格相位深度�
 O167 (M(ℓ) 表 + 分流) → O169 (橫向律修正) → O170
 O159 (half-site) → O76 (z 翻譯) → O170
 O170 → O171 (配分 / rung law 同族結構)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `e0d09535e2a1c03e` | 2026-10-24 | — | IDCM 冇膨脹 ⟹ DH = c/H(z) 唔存在；徑向距離由晶格相位深度定義： DH(ℓ) = Rworld·(dℓ/dz)·M(ℓ)，其中徑向取樣核 M(ℓ) = sec(π·nc(ℓ)/88) 由 IDCM 原子常數 零自由參數生… | open_problems_fresh/o170_phase_depth_distance/final_result.md | — |
-<!-- conclusion-history:end -->

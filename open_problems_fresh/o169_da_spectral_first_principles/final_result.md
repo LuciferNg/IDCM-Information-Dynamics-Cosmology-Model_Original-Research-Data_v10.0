@@ -132,11 +132,3 @@ C 語言層 -> 已拆出專屬 O201 (o201_spectral_language, 2026-09-17 用戶�
 ## 修正交回 (2026-09-15)
 37 個受影響 O 目錄 `SESSION_START.md` 已寫入「O169 修正點」段 (格式: **修正點 + 問題** — 上游改咗乜 + 本 O 每個 file:line 問題定位); 各 O 原有結論未改動, 重驗由該 O 專屬 session 執行。
 第二輪 (B′): `P_n = 1+2φ⁻¹n+K₂n²` 判定**屬 A 類 (受證偽)**; ★ bbn η_B `6.0622e-10` 係雙重 stale → 現行 **`6.0636e-10`** (0.596%, 更準), Ω_b = 19/450。清單見 `docs/04` §E。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `88f38b70605d4e52` | 2026-10-24 | closed | 舊伸長定律 E = 1 + 2φ⁻¹ℓ 被 DESI DR2 DM ×6 排除 4.88σ; 正確形式係仿射、斜率 = 1, 截距 = 譜量 (Z₂ 自對偶半鏈)。δ 修正 = −φ⁻³(ℓ−1/2), 形狀同 O51/82 一致但 (1… | open_problems_fresh/o169_da_spectral_first_principles/final_result.md | — |
-<!-- conclusion-history:end -->

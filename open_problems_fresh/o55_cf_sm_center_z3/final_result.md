@@ -67,11 +67,3 @@ CKM 混合 web ↔ 3c 電荷矩陣 ↔ K_Chain 能量 三域 co-closure。
 - 現有可測約束 (來自 O53, 非 O55 特有): `Δδ_f = (n/3)·ln(φ)` 對 9 個帶電費米子
   質量預測平均誤差 2.8% (O53 docs/12) — **第 3 輪確認為近似閉合, 非精確量子化**。
 - 待做: 由 3c 矩陣唯一性導出**新**質量比 / 混合角閉合 (盲測)。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `1cb68b5fb0d292a8` | 2026-10-24 | closed | cf = n/3 之「3」= SU(3)c 中心 Z₃ 之階。3c 矩陣 M = 0,−2,3,2,−2,−1,1,3,−2 喺全部 6⁹ = 10,077,696 個 3×3 整數矩陣 (元素 ∈ −2,3, 物理值域) 中，由完整約束… | open_problems_fresh/o55_cf_sm_center_z3/final_result.md | — |
-<!-- conclusion-history:end -->

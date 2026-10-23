@@ -21,11 +21,3 @@ O190 穩定方程 N+1 = F_{L₅} 形式化為數場定律：二模量 {N, M} = {
 
 ## 依賴
 O190 → O191（依賴 O159, O161, O95, O145, O155, O69, O160, O56, O61, O65）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `812faef62cf091d6` | 2026-10-24 | closed | O190 穩定方程 N+1 = F{L₅} 形式化為數場定律：二模量 {N, M} = {F₁₁−1, F₉−1} = {88, 33}， 鎖定 m = {L₅ = 11, Ngen² = 9}；F−1 家族 {Fm−1 \| m=4..1… | open_problems_fresh/o191_number_field_law/final_result.md | — |
-<!-- conclusion-history:end -->

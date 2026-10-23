@@ -1,0 +1,27 @@
+[PASS] A1 o222 四檔 sha256 不變（vs closeout-1）            matched 4/4
+[PASS] B1 上游 K 尺寸 120x62                              120x62
+[PASS] B2 M_edge = 30 行 × 62 欄                        30x62
+[PASS] B3 分離任務 = 435 行對（ALLP 遮罩）                      pairs=435
+[PASS] B4 435 對皆由 62 欄分離（全域可分）                        union bits=435
+[PASS] C1 R13 幀檔存在且 8584 條                            n=8584
+[PASS] C2 8584 幀兩兩相異                                  distinct=8584
+[PASS] C3 每幀皆覆蓋 ALLP（435 對）                           
+[PASS] C4 每幀皆極小（移除任一欄即失覆蓋）                            
+[PASS] C5 R11 普查 frame 計數一致（8584）                     data/22 frames=8584 vs 8584；逐幀表未持久化 ⟹ identity N/A
+[PASS] D1 S 自身覆蓋 ALLP（435/435）                        |S|=10, bits=435
+[PASS] D2 |C∩S| 分佈總和 = 8584                           [(0, 3569), (1, 2569), (2, 1384), (3, 703), (4, 271), (5, 68), (6, 18), (7, 2)]
+[PASS] D3 max|C∩S| = 7（2 幀）                           max=7 n=2
+[PASS] D4 與 S 完全不相交之幀 = 3569                          n0=3569
+[PASS] D5 支撐型 >=-形族空（存在 C∩S=∅）                        witness |C∩S|=0
+[PASS] E1 M_all = 1 EXACT（LB |C∩S|<=10 ＋ UB μ_S=1）    max|C∩S|=7<=10; mu_S=1 可行 ⟹ min sum mu = 1
+[PASS] F1 粗計 8584×55 = 472,120                        gross=472120
+[PASS] F2 含 >=2 幀之 8-集 = 25,578                       n=25578
+[PASS] F3 含 >=1 幀之 8-集 = 446,542                      472120 - 25578 = 446542
+[PASS] F4 A8 ≈ p̂·C(62,8) 與 docs/25 一致（±5σ 帶）         p̂=13/12500 C(62,8)=3381098545 A8=3.5163e+06
+[PASS] F5 F_8 ≈ A8 − 446,542（= 3.07e6 級）              F8≈3.0698e+06 (=357.6×8584)
+[PASS] G1 MANIFEST 覆蓋（本輪新檔除外）                         n=117
+[PASS] G2 本輪審計期間 o222 零新檔（＋A1 釘）                      new=0
+[PASS] G3 register 無 O228 drift/MISSING 行             []
+
+SUMMARY: PASS=24 FAIL=0 N/A=0 TOTAL=24
+wrote data/27_closeout2_audit.json

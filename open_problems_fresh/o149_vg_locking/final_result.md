@@ -25,11 +25,3 @@ CKM/PMNS 混合角可以由 K_Chain 色散結構**先驗鎖定**：兩個受抑�
 
 ## 依賴
 O146 → O149（O65 交叉: γ-ratio = v_g²-ratio）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `9cde85346cbae35a` | 2026-10-24 | partial | CKM/PMNS 混合角可以由 KChain 色散結構先驗鎖定：兩個受抑制 CKM 元素（sinθ₁₃、Vub）由 k-ladder 規則以 0 自由參數鎖定（pjoint = 9.64e-10），取代 O146 §10 揭發嘅後驗搜索（… | open_problems_fresh/o149_vg_locking/final_result.md | — |
-<!-- conclusion-history:end -->

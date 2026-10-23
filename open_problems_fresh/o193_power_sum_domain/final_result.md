@@ -48,11 +48,3 @@ D6 密度漲落 = 觀察者譜漲落 = 同一測度三個出場 (譜/漲落/熱�
 
 ## 依賴
 O190 → O191 → O192 → O193 (依賴 O192, O159, O190, O157, O140, O40, O76)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `fb90d52ee1a4fb0a` | 2026-10-24 | closed | O192 冪和閉式 Σγ^n = 88·C(2n,n) + 2^{2n−1} 嘅精確域審計 + 機制化 + 熱力學 + 統一: 數學精確域: odd/even sector n < N = 88 (j=88 諧波首共振), full se… | open_problems_fresh/o193_power_sum_domain/final_result.md | — |
-<!-- conclusion-history:end -->

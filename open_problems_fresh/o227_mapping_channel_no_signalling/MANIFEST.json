@@ -19,8 +19,8 @@
  },
  "files": {
   "01_problem_record.md": {
-   "bytes": 8983,
-   "sha256": "9bdaf196fc3327513cd54db278b60be989d4322adf5248f7d06ccaa65e9a5301"
+   "bytes": 8985,
+   "sha256": "451be83707170dcb11d2cad38fdfc216b4e1a82a8784ce4f62a0f7d95d5de19f"
   },
   "SESSION_START.md": {
    "bytes": 5067,
@@ -97,6 +97,15 @@
   "round_start": "2026-10-02 03:00:34",
   "touched_during_round": []
  },
+ "post_audit_edits": [
+  {
+   "file": "01_problem_record.md",
+   "reason": "registry block synced to the register state (closed -> partial) to clear the O227 BLOCK-DRIFT; the pre-sync hash is the one recorded in the audit point-in-time manifest",
+   "sha256_after": "451be83707170dcb11d2cad38fdfc216b4e1a82a8784ce4f62a0f7d95d5de19f",
+   "sha256_before": "9bdaf196fc3327513cd54db278b60be989d4322adf5248f7d06ccaa65e9a5301",
+   "when": "2026-10-24 00:37:03+0800"
+  }
+ ],
  "refuted_pre_registered": {
   "B5c_common_stabiliser_order": {
    "audit_and_machine_agree": true,
@@ -105,7 +114,7 @@
   }
  },
  "round": "R1",
- "stamp": "2026-10-02 04:50:34+0800",
+ "stamp": "2026-10-24 00:37:03+0800",
  "status": "partial (see final_result.md)",
  "upstream_pins": [
   {

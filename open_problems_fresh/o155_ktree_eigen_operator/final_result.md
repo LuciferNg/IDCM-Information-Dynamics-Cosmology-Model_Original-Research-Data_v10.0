@@ -40,11 +40,3 @@ T27-T31 tree sector 聲稱全部升級為算子級陳述, 用戶身份鏈 (176 =
 
 ## 依賴
 ktree_structure → O152 → O59/O10 → T30/T31 (ckm_reconstruction) → **O155** (T1-T32) ← O156 (Pythagorean 發現, 尺度層)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `894f4813b25a72c2` | 2026-10-24 | partial | T27-T31 tree sector 聲稱全部升級為算子級陳述, 用戶身份鏈 (176 = 134+42 → =0 同調 → 360 階梯 → 三公理) 全部閉合, 三項算子化 (PCY₃, Π₄₄, Binet 橋樑) + 三規則 (… | open_problems_fresh/o155_ktree_eigen_operator/final_result.md | — |
-<!-- conclusion-history:end -->

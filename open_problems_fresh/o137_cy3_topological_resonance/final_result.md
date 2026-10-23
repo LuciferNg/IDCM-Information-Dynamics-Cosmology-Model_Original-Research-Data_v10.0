@@ -409,11 +409,3 @@ O 編號 max = 219；墓碑新增 220/221/222
 ```
 
 詳見 `docs/37_leftover_dispatch_and_handoff.md` §十二。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `b1af366cd41caa31` | 2026-10-24 | — | CY₃(36,98) 鏡像 polytope 之 GKZ φ 結構剛性鎖定 KChain 44-site 鏈 (44 = Nd)； 模式【選擇】由 A₅ 幾何唯一決定 (閉式定律 \|M\| = (e+o−3)/2，12 群掃描，I 群唯一給… | open_problems_fresh/o137_cy3_topological_resonance/final_result.md | — |
-<!-- conclusion-history:end -->

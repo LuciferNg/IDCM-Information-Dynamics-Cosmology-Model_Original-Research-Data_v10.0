@@ -16,11 +16,3 @@ Planck 低 ℓ CMB 異常 (60° 尺度、奇偶缺失、四極-八極對齊、�
 
 ## 依賴
 O5 (冷斑目錄) → cmb_cold_spot → O19 → O10 (峰幅度)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `63a73843561b6d9f` | 2026-10-24 | — | Planck 低 ℓ CMB 異常 (60° 尺度、奇偶缺失、四極-八極對齊、功率低) 全部由 A₅ 60 節點 Rhombicosidodecahedron 拓撲結構解釋：60° 異常係 20 個三角形面嘅歐幾里得內角，奇數 ℓ 抑制係… | open_problems_fresh/o19_lowl_dodecahedron/final_result.md | — |
-<!-- conclusion-history:end -->

@@ -79,11 +79,3 @@ O73/O171 (ω_ring/R_world) → O31 (λ_sync 諧波階梯, 🟢) → **O132**
   ② 更強判別 null（分離「平滑殘餘相似」vs「特定梳狀位置」）🟡
   ③ **O31 單位項**: O31 10 個腳本硬編 `406.1`；O31 自身 `SESSION_START ①` 已列待重跑 —
   **本 O 未改動 O31**（跨 O 寫入限制），此項需 O31 自身處理 🔴
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `6427d21c81e55a35` | 2026-10-24 | — | v9.0 redshiftevolution/01deriveevolution.py（180 行，唯一檔案）之前置驗證完成： 骨架層遷移（λsync 幾何、諧波階梯 sn = λsync/n、h⁻¹Mpc 慣例 — 公式恆等，dev=0… | open_problems_fresh/o132_redshift_evolution/final_result.md | — |
-<!-- conclusion-history:end -->

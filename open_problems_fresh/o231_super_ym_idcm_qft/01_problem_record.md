@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O231
 title:   超楊-米爾斯 IDCM 解 vs QFT
-state:   open
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O231
 created: 2026-10-04

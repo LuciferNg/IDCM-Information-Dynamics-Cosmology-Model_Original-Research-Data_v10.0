@@ -50,11 +50,3 @@ O95 → O140 → O159 → O161 → crystal_stress (E_strain/η/RG/λ_Edd)
 
 ## 檔案
 scripts/01-25 (384 PASS), docs/01-21, data/00-22
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `982f3c00fa8d4e73` | 2026-10-24 | — | 創造-吸收鏈閉合: 池再生被觀測強逼, 機制由已閉合結構組成, 零新常數。 有限池分支三路被證偽 (觀測凝聚 47.3× 一次性預算; 應變消耗 13–47× 成個池; 耗盡時標 0.232 Gyr ≪ 11 Gyr) → 再生係唯一一致… | open_problems_fresh/o173_strain_energy_cycle/final_result.md | — |
-<!-- conclusion-history:end -->

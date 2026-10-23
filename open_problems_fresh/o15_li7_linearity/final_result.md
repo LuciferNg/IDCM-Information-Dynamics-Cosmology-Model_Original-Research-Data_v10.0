@@ -15,11 +15,3 @@ IDCM ⁷Li/H = η_B × 2ε(1-ε) 閉合觀測 0.25%（零自由參數，ΛCDM 40
 
 ## 依賴
 O34 (MERA B=4) + O37 (ε) → O13 (n/p) → O14 (η_B) → O15
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `289523106e78730d` | 2026-10-24 | — | IDCM ⁷Li/H = ηB × 2ε(1-ε) 閉合觀測 0.25%（零自由參數，ΛCDM 40 年 3.1× 張力）；由無熱寂推導出元素豐度幾何鎖定定理 — 所有豐度係 K=Kchain⊗Ktree 幾何投影，redshift 獨立。 | open_problems_fresh/o15_li7_linearity/final_result.md | — |
-<!-- conclusion-history:end -->

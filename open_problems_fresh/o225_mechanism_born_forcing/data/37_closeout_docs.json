@@ -7,7 +7,7 @@
    "tag": "T0",
    "name": "水位表建立：列出全部檔案之 mtime／上次 closed-out；「從未 closed-out」者全檔驗（本輪）",
    "ok": true,
-   "detail": "檔案數 = 598 ; 從未 closed-out = 0 ; 上次 closed-out 後有變更 = 0"
+   "detail": "檔案數 = 598 ; 從未 closed-out = 0 ; 上次 closed-out 後有變更 = 7"
   },
   {
    "tag": "CO1",
@@ -19,7 +19,7 @@
    "tag": "CO2",
    "name": "MANIFEST 內容漂移：非預期漂移 = 0（活文檔與本輪自身產物之漂移屬預期，詳見 data/37 之 refreshed 清單）",
    "ok": true,
-   "detail": "漂移 = 4（其中非預期 = 0 []）"
+   "detail": "漂移 = 3（其中非預期 = 0 []）"
   },
   {
    "tag": "CO3",
@@ -154,163 +154,163 @@
    "text": "🟡 READ 命中：1 處由 **agent scratch / cache** 讀入（唔係 repo 內絕）。（append 2026-10-09：本行歷史標記已收尾 —— O225 結構層五項閉合見 docs/71_r33_results.md §三；PHYS-1 跨 O 待"
   },
   {
-   "where": "01_problem_record.md:383",
+   "where": "01_problem_record.md:384",
    "class": "⑤ dated 更正附註頭",
    "judgement": "dated 更正附註（本身即判定），非項",
    "text": "2026-10-01｜合約 = `docs/01_r1_contract.md`（凍結，GATE OPEN，sha256 見 `data/02_r1_freeze.json`） ｜ 機器 `scripts/03` **19/19 PASS**｜獨立審計 `scripts/04` "
   },
   {
-   "where": "01_problem_record.md:467",
+   "where": "01_problem_record.md:468",
    "class": "⑤ dated 更正附註頭",
    "judgement": "dated 更正附註（本身即判定），非項",
    "text": "機器：`scripts/31_r8_group.py`（11 claims，**7/11** PASS）｜獨立審計：`scripts/32_r8_audit.py` ｜ **⟹ R7 🔴#3 收口**：R7 A2 之「每態 `Σ_a d ≡ 5`（120/120）」與「`Σ_ti"
   },
   {
-   "where": "01_problem_record.md:479",
+   "where": "01_problem_record.md:480",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "§一 ★★ 核心結果：`Σf_tf = Σf_ft = 0` 之機制 = **逐 (a,g) 鍵之 x-和消失**（A5ac） ｜ **★★ 判決（A5ac，PASS）：對全部 62 個 (a,g) 鍵，`S_TF(a,g) = 0` 且 `S_FT(a,g) = 0`（逐鍵局部"
   },
   {
-   "where": "01_problem_record.md:514",
+   "where": "01_problem_record.md:515",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "執行：2026-10-01 15:27｜合約：`docs/22_r11_contract.md`（sha256 `f17d35f3ae3bba28316df54a214a791f95230af5878d341a1f3813bf8202004b`，**見數前凍結**）｜閘：`scr"
   },
   {
-   "where": "01_problem_record.md:549",
+   "where": "01_problem_record.md:550",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "執行：2026-10-01 16:10｜合約 `docs/27_r13_contract.md`（sha `5e62cee5bd580bb3a2a0ca6473eeb5c577f5e8f48f508d48e384dc77d3f2df7b`，見數前凍結）｜閘 `scripts/48"
   },
   {
-   "where": "01_problem_record.md:561",
+   "where": "01_problem_record.md:562",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "執行：2026-10-01 16:27｜合約 `docs/29_r14_contract.md`（sha `f6f9a9f642712cea83e000fa8d9890df5a36d48633e6ff8f1b9f177e4a24f48e`，**見數前凍結**）｜閘 `script"
   },
   {
-   "where": "01_problem_record.md:573",
+   "where": "01_problem_record.md:574",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "執行：2026-10-01 16:48｜合約 `docs/31_r15_contract.md`（sha `184eefad4d849f55a71282146cc2ed35ac0281236beb1a4676aaa67c27d03310`，**見數前凍結**）｜閘 `script"
   },
   {
-   "where": "01_problem_record.md:693",
+   "where": "01_problem_record.md:694",
    "class": "⑤ dated 更正附註頭",
    "judgement": "dated 更正附註（本身即判定），非項",
    "text": "**合約**：`docs/50_r24_contract.md`（`r24-two-term-family-v1`，sha `79b48454…`）｜**閘**：`scripts/83` = 5/5 GATE OPEN ｜ **機器**：`scripts/84` = **10/1"
   },
   {
-   "where": "01_problem_record.md:717",
+   "where": "01_problem_record.md:718",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "**合約**：`docs/55_r26_contract.md`（`r26-stt-mechanism-v1`，sha `2fc09b66…`）｜**閘**：`scripts/89` = 5/5 GATE OPEN ｜ **機器**：`scripts/90` = **11/17*"
   },
   {
-   "where": "01_problem_record.md:729",
+   "where": "01_problem_record.md:730",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "**合約**：`docs/58_r27_contract.md`（見數前凍結，sha256 `709b75f38548ec38…`）｜**閘**：`scripts/102` = **5/5 GATE OPEN** ｜ ｜**機器**：`scripts/103` = **7/10*"
   },
   {
-   "where": "01_problem_record.md:777",
+   "where": "01_problem_record.md:778",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "**合約** `docs/66`（見數前凍結）｜**閘** `scripts/114` = **5/5 GATE OPEN**｜**機器** `scripts/115` = **6/10**｜**審計** `scripts/116`（見 `data/116`）｜登記 `O225/"
   },
   {
-   "where": "01_problem_record.md:789",
+   "where": "01_problem_record.md:790",
    "class": "⑥ 審計自身之描述行",
    "judgement": "審計描述行，非項",
    "text": "**合約** `docs/68`（見數前凍結）｜**閘** `scripts/117` = **5/5 GATE OPEN**｜**機器** `scripts/118` = **4/7**｜**審計** `scripts/119` = **4/4**｜登記 `O225/R32`。"
   },
   {
-   "where": "01_problem_record.md:815",
+   "where": "01_problem_record.md:816",
    "class": "① 章節標題",
    "judgement": "標題，非項",
    "text": "| 1 | **MECH-1** 非單項族（41/42）「雙項式符號一致」之**導出** | 🔴 主線 | R23 | Y4 已給 `A_0 = −(u_0u_1x_0+(u_1²+u_2²)x_1)/u_2`（精確）；單項族已由 Y1/Y2 導出；41/42 之符號一致性未自 "
   },
   {
-   "where": "01_problem_record.md:819",
+   "where": "01_problem_record.md:820",
    "class": "① 章節標題",
    "judgement": "標題，非項",
    "text": "| 3 | **Z10-1** `Z10` 之**選擇律** | 🔴 主線 | R10 | 已排除 值局部／排列不變／子群陪集／單鍵（R16 G4、R17 L6、R18 O2、R21 V1–V3）；已得判準（R19 Q7-c、R20 `{每欄 |N_a|≤1 ∧ ΣN_a=0}`"
   },
   {
-   "where": "01_problem_record.md:821",
+   "where": "01_problem_record.md:822",
    "class": "① 章節標題",
    "judgement": "標題，非項",
    "text": "| 4 | **Z10-2** `W_a ≡ ∅` 之根因 | 🔴 主線 | R15 | R15 ①③ 已歸約（`W_a = ∅ ⟺ dind 於 T_a 恆定`）；機制面未成 | `docs/31`/`32` | 以 R19/R23 之判準（`V(a)` 之 `dind` 恆定"
   },
   {
-   "where": "01_problem_record.md:823",
+   "where": "01_problem_record.md:824",
    "class": "① 章節標題",
    "judgement": "標題，非項",
    "text": "| 5 | **STT-1** `S_TT ≡ 0` 之機制 ＋ `S_TT = ±8` 四類結構 ＋ 補集 20 之刻畫 | 🔴 主線 | R9/R11/R14 | 已排除 ε-全保型；補集律收口（≅ `Dic₅`）；`±8` 之來源（`|X| = 8`、翻轉各半）已量測 | "
   },
   {
-   "where": "01_problem_record.md:825",
+   "where": "01_problem_record.md:826",
    "class": "① 章節標題",
    "judgement": "標題，非項",
    "text": "| 6 | **CRIT-1** 跨族（非仿射）全稱充要性 | 🟡 | R10 | 已得結構式恆等式 ＋ 充分定理（E1-c 256 表全符）；非仿射族只 144/256 ⟹ 一般族之 orbit 分類未成 | `docs/21` | 對非仿射族作 orbit 分類，逐 orbi"
   },
   {
-   "where": "01_problem_record.md:827",
+   "where": "01_problem_record.md:828",
    "class": "① 章節標題",
    "judgement": "標題，非項",
    "text": "| 7 | **CRIT-2** 判準獨立性之**反事實版本** | 🔴（原始判決項） | `§三`（R0） | R10 之非仿射族 256 表為**部分**觸及；「改架構下四判準是否真獨立」之**響應矩陣未成** | `docs/00`/`docs/21` | 定義「改架構」之"
   },
   {
-   "where": "01_problem_record.md:829",
+   "where": "01_problem_record.md:830",
    "class": "① 章節標題",
    "judgement": "標題，非項",
    "text": "| 8 | **MISC-1** 大小 4 `τ` 集之額外對 `±h` 刻畫 ＋ orbit 型別混合細目 | 🔴 | R12 | `τ = {±g_a} ∪ {±h}`（`h g_a h⁻¹ = g_a⁻¹`）已立；orbit 組成已量測（`{v1}`、`{v3,f4,e5}"
   },
   {
-   "where": "01_problem_record.md:835",
+   "where": "01_problem_record.md:836",
    "class": "② metadata blockquote（來源/前置/狀態/下游/目標/權威/機器/合約/執行鏈/判讀）",
    "judgement": "metadata，非項",
    "text": "> **R27 後增量（append-only，見 `docs/59`）**：**CRIT-1** 🟡→✅（二層非仿射族：`⟨M,S⟩ ≅ Z₂×Z₂`、orbit 72 個、`R ≡ 0` orbit-不變、無混合 orbit ⟹ 逐 orbit 判充要；另得 `M`（`u ↦"
   },
   {
-   "where": "01_problem_record.md:839",
+   "where": "01_problem_record.md:840",
    "class": "② metadata blockquote（來源/前置/狀態/下游/目標/權威/機器/合約/執行鏈/判讀）",
    "judgement": "metadata，非項",
    "text": "> **R28 後增量（append-only，見 `docs/61`）**：**CRIT-2** ✅（以否定答案閉合：四判準不獨立，`rank_GF(2) = 3`；`C2`（R17 赤道對式）零判別力、`C1 ≡ C3inv`（R16 判準與 R18 不可約性同一響應類）；`"
   },
   {
-   "where": "01_problem_record.md:843",
+   "where": "01_problem_record.md:844",
    "class": "② metadata blockquote（來源/前置/狀態/下游/目標/權威/機器/合約/執行鏈/判讀）",
    "judgement": "metadata，非項",
    "text": "> **R29 後增量（append-only，見 `docs/63`）**：**MECH-2** ✅ closed（不等價定讞＋修式；`Λ` 奇偶律、Z10 選擇律、支撐 16 欄全不變）；**MECH-1** 🟡 維持部分閉合但否定面增強 —— 機器 30 欄全檢：`dind"
   },
   {
-   "where": "01_problem_record.md:847",
+   "where": "01_problem_record.md:848",
    "class": "② metadata blockquote（來源/前置/狀態/下游/目標/權威/機器/合約/執行鏈/判讀）",
    "judgement": "metadata，非項",
    "text": "> **R30 後增量（append-only，見 `docs/65`）**：**Z10-1** 🔴→🟡（否定面收窄：候選 A／B 空集、③ 僅保 tie/dind 者 = e,−1、④ 反 ε 集（10 元）與 Z10（10 元）互斥；Z10 非 ±-閉、|Inv(tie,di"
   },
   {
-   "where": "01_problem_record.md:851",
+   "where": "01_problem_record.md:852",
    "class": "② metadata blockquote（來源/前置/狀態/下游/目標/權威/機器/合約/執行鏈/判讀）",
    "judgement": "metadata，非項",
    "text": "> **R31 後增量（append-only，見 `docs/67`）**：**STT-1** 🔴→🟡 部分閉合 —— ★±8 四類判別 = (S_TT 符號, sgn⟨U_a,KV_g⟩)（4 類 = 4/2/4/2，全 12 鍵覆蓋）；★補集 Π（20 元）≅ `Dic₅`"
   },
   {
-   "where": "01_problem_record.md:855",
+   "where": "01_problem_record.md:856",
    "class": "② metadata blockquote（來源/前置/狀態/下游/目標/權威/機器/合約/執行鏈/判讀）",
    "judgement": "metadata，非項",
    "text": "> **R32 後增量（append-only，見 `docs/69`）**：**CRIT-3** 🔴→**✅ 閉合** —— 三層族真充要條件已導出：`R³ ≡ 0 ⟺ ρ ∈ S(mask)`（`S(mask) := {ρ : Σ_c ρ_c P[c][·] ≡ 0}`，類和"
   },
   {
-   "where": "01_problem_record.md:859",
+   "where": "01_problem_record.md:860",
    "class": "② metadata blockquote（來源/前置/狀態/下游/目標/權威/機器/合約/執行鏈/判讀）",
    "judgement": "metadata，非項",
    "text": "> **R33 後增量（append-only，見 `docs/71`）—— O225 五項 🟡 全閉合**：MECH-1 ✅ 否定閉合（512 完備類全測）；STT-1 ✅ **正面閉合**：`S_TT ≡ 0 ⟺ ∃` 階 2 `σ ∈ C(g)`（欄 a 域逐項反號）50/"
   },
   {
-   "where": "01_problem_record.md:863",
+   "where": "01_problem_record.md:864",
    "class": "② metadata blockquote（來源/前置/狀態/下游/目標/權威/機器/合約/執行鏈/判讀）",
    "judgement": "metadata，非項",
    "text": "> **新 🔴 3 項見 `docs/65_r30_results.md`**（殘餘 Z10-1／Z10-2 ＋ MECH-1；各有書面判定，承 docs/65 §四 清冊更新）。"
@@ -407,10 +407,9 @@
   }
  ],
  "refreshed": [
-  "01_problem_record.md",
-  "01_problem_record.md.pre_rebuild2_20261009_1315.bak",
+  "data/47_chain_index.json",
   "logs/37_closeout_docs.out",
-  "logs/94_record_rebuild.out"
+  "logs/47_chain_index.out"
  ],
- "now": "2026-10-09 13:15"
+ "now": "2026-10-24 00:56"
 }

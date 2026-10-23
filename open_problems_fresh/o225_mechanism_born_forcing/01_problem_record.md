@@ -3,7 +3,7 @@
 <!-- registry
 pid:     O225
 title:   機制層 Born 權重／概率結構之強制（Mechanism-Level Born Forcing）
-state:   registered
+state:   partial
 verdict: -
 flags:   -
 owner:   O225
@@ -13,6 +13,7 @@ prereq:  O222
 dir:     open_problems_fresh/o225_mechanism_born_forcing/
 source:  O222 完整性 closeout 分流（調律者指令 2026-09-30：「開新o，把剩下開題分開幾個o解決，保留o222開放作為最終裁決及整合」）
 -->
+<!-- 2026-10-09 更正：block state 原 registered（建檔期）→ partial（register 實況；R1–R33 全收口後僅 PHYS-1 待下游裁決）。原文值保留於 register 歷史。 -->
 
 > **狀態**: 📄 **已註冊 — 目標已定（依 O222 no-go 邊界憲章 `docs/45`）**｜**水位：R1–R23 全 DONE；R24–R26 已閉**
 > **建立/更新**: 2026-09-30 / 重建 2026-10-01｜**位置**: `open_problems_fresh/o225_mechanism_born_forcing/`

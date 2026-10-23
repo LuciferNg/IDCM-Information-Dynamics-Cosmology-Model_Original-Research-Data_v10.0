@@ -1,0 +1,107 @@
+{
+ "summary": {
+  "pass": 24,
+  "fail": 0,
+  "na": 0,
+  "total": 24
+ },
+ "checks": {
+  "A1 o222 四檔 sha256 不變（vs closeout-1）": {
+   "pass": true,
+   "detail": "matched 4/4"
+  },
+  "B1 上游 K 尺寸 120x62": {
+   "pass": true,
+   "detail": "120x62"
+  },
+  "B2 M_edge = 30 行 × 62 欄": {
+   "pass": true,
+   "detail": "30x62"
+  },
+  "B3 分離任務 = 435 行對（ALLP 遮罩）": {
+   "pass": true,
+   "detail": "pairs=435"
+  },
+  "B4 435 對皆由 62 欄分離（全域可分）": {
+   "pass": true,
+   "detail": "union bits=435"
+  },
+  "C1 R13 幀檔存在且 8584 條": {
+   "pass": true,
+   "detail": "n=8584"
+  },
+  "C2 8584 幀兩兩相異": {
+   "pass": true,
+   "detail": "distinct=8584"
+  },
+  "C3 每幀皆覆蓋 ALLP（435 對）": {
+   "pass": true,
+   "detail": ""
+  },
+  "C4 每幀皆極小（移除任一欄即失覆蓋）": {
+   "pass": true,
+   "detail": ""
+  },
+  "C5 R11 普查 frame 計數一致（8584）": {
+   "pass": true,
+   "detail": "data/22 frames=8584 vs 8584；逐幀表未持久化 ⟹ identity N/A"
+  },
+  "D1 S 自身覆蓋 ALLP（435/435）": {
+   "pass": true,
+   "detail": "|S|=10, bits=435"
+  },
+  "D2 |C∩S| 分佈總和 = 8584": {
+   "pass": true,
+   "detail": "[(0, 3569), (1, 2569), (2, 1384), (3, 703), (4, 271), (5, 68), (6, 18), (7, 2)]"
+  },
+  "D3 max|C∩S| = 7（2 幀）": {
+   "pass": true,
+   "detail": "max=7 n=2"
+  },
+  "D4 與 S 完全不相交之幀 = 3569": {
+   "pass": true,
+   "detail": "n0=3569"
+  },
+  "D5 支撐型 >=-形族空（存在 C∩S=∅）": {
+   "pass": true,
+   "detail": "witness |C∩S|=0"
+  },
+  "E1 M_all = 1 EXACT（LB |C∩S|<=10 ＋ UB μ_S=1）": {
+   "pass": true,
+   "detail": "max|C∩S|=7<=10; mu_S=1 可行 ⟹ min sum mu = 1"
+  },
+  "F1 粗計 8584×55 = 472,120": {
+   "pass": true,
+   "detail": "gross=472120"
+  },
+  "F2 含 >=2 幀之 8-集 = 25,578": {
+   "pass": true,
+   "detail": "n=25578"
+  },
+  "F3 含 >=1 幀之 8-集 = 446,542": {
+   "pass": true,
+   "detail": "472120 - 25578 = 446542"
+  },
+  "F4 A8 ≈ p̂·C(62,8) 與 docs/25 一致（±5σ 帶）": {
+   "pass": true,
+   "detail": "p̂=13/12500 C(62,8)=3381098545 A8=3.5163e+06"
+  },
+  "F5 F_8 ≈ A8 − 446,542（= 3.07e6 級）": {
+   "pass": true,
+   "detail": "F8≈3.0698e+06 (=357.6×8584)"
+  },
+  "G1 MANIFEST 覆蓋（本輪新檔除外）": {
+   "pass": true,
+   "detail": "n=117"
+  },
+  "G2 本輪審計期間 o222 零新檔（＋A1 釘）": {
+   "pass": true,
+   "detail": "new=0"
+  },
+  "G3 register 無 O228 drift/MISSING 行": {
+   "pass": true,
+   "detail": []
+  }
+ },
+ "timestamp": "2026-10-02"
+}

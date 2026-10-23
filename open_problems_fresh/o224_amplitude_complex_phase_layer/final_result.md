@@ -130,11 +130,3 @@ O222（凍結協定 ＋ docs/45 憲章）→ O224（本輪五判項）→ 後繼
 仍超越古典界，語意層標籤留判決層裁定。全輪零新參數、判決算術全整數、只寫本 O 目錄。
 
 **更正（同日 10:1x，實測取代推算）**：引擎成本表 —— numpy **14.3–15.0 ms/group/核**（12 進程 ≈ **5.0 h**；原記 21.5 係推算）、JIT **1.280 ms/group**（5.3 h）⟹ 兩者**實質等效**（JIT 優勢在運維性）；GPU **2.84–2.90 ms/group**（**撤回「3 GB VRAM 逼細 chunk」歸因**：chunk 64/128 同速，顯卡確為 GTX 1060 3 GB 但 VRAM 非瓶頸）。登錄檔 = `logs/18_engine_measure.out`。**判定值不受影響。**
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `efd79c7bab6c7c24` | 2026-10-24 | partial | 凍結協定（2I 左正則 120 態、±1 讀出 K、pair-local 因式表 ＋ memo、資源窗 all4）內零新物件零新參數下： 相位層 🔴 不可能（2I 完全群、全實特徵標、忠實 2 維表 FS = −1 四元數型）；二分張量層… | open_problems_fresh/o224_amplitude_complex_phase_layer/final_result.md | — |
-<!-- conclusion-history:end -->

@@ -22,11 +22,3 @@ u/d 質量喺三框架下全部數值閉合（<2.1%）；原問題「n=1 三態�
 O54 → O137 → O136 → **O120**（殘餘 → O206 via register）
 
 > 完整closeout記錄: `docs/04_closeout_record.md` · 驗證: `scripts/01` 35/35 + `scripts/02` 78/78
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `4296c913cf7465ac` | 2026-10-24 | partial | u/d 質量喺三框架下全部數值閉合（<2.1%）；原問題「n=1 三態靠 Pf 分化」已裁決 —— Pf={3.6,15.5,33} 係 O136 search + 目錄密度巧合（zombie），由 A₅ 指派（e,u,d→n=1,2,3… | open_problems_fresh/o120_light_quark_masses/final_result.md | — |
-<!-- conclusion-history:end -->

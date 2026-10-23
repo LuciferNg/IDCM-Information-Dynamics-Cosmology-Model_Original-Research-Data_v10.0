@@ -24,11 +24,3 @@ O72 → O39, O62, O80, O86 → O84
 
 > ⚠️ O208 規則: 純代數／結構恆等式型 → `N_search = 1` + 唯一候選聲明即可跳過 MC（恆等之正確檢驗係守恆律自檢，非 MC）。
 > 驗證: scripts/01–05, **99/99 PASS**（18+7+40+21+13）；判決承接 R1/R2 見 `01_problem_record.md` §六。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `5334e72f972bbeb9` | 2026-10-24 | closed | 四個「能量」（Σγ=90, Σγeven/odd=90/88, VΛ=283.0821, Vmin=−61.5）統一為四層次 renormalization scheme（L0 晶格 UV → L1 SSB → L2 CY₃ → L3 p… | open_problems_fresh/o84_vacuum_energy_unified/final_result.md | — |
-<!-- conclusion-history:end -->

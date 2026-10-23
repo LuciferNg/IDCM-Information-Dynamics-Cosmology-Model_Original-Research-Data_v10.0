@@ -27,11 +27,3 @@ R_H 與 Ω_Λ 是同一 88-site 雙鏈的「空間 vs 能量雙重投影」：R_
 
 ## 依賴
 O33 → O34 → O39/O41 → O47
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `e28fb6a8fe510287` | 2026-10-24 | — | RH 與 ΩΛ 是同一 88-site 雙鏈的「空間 vs 能量雙重投影」：RH = 44·a（環幾何）與 ΩΛ = 4/(φ⁴−1)（能量配分）為獨立結構量，無直接比例 RH ∝ 1/ΩΛ；連接橋樑為 Tpipe 投影算子。三方向全部閉… | open_problems_fresh/o47_rh_omegalink/final_result.md | — |
-<!-- conclusion-history:end -->

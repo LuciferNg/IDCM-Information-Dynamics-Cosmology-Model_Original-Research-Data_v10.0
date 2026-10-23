@@ -19,12 +19,3 @@ cmb_cold_spot → O3 → O4 → O4_renew（O4_renew 係 O4 嘅獨立重驗證；
 
 ## 審計 (2026-09-09)
 G01 推導鏈 5 區塊 17/17 獨立重算閉合 ✅；G02 文檔核對 39/39（補 01/03/06/07/README 缺口：λ₂ 數值、冷斑 -134.2、BIC 33.5/34.8、ΔE=0 0.526）；推導時序索引 24 條見 01_problem_record.md。禁止跨文檔污染已遵守 — 只補已有數字，冇加新推導。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `09a3f8543ba45403` | 2026-10-24 | partial | A₅ 60 節點網絡嘅數學閉合成立：λ₂ = φ⁻²（8.33e-16）→ 波主模 ω₂ = φ⁻¹（6.66e-16），冷斑閉合 A = 5ε⁵/8 × Tcmb = 150 μK = F₅；但「節點振幅距離衰減 A(d) = F₅·φ… | open_problems_fresh/o4_fib_motivation/final_result.md | — |
-| `2a3644eb9c0776ff` | 2026-10-24 | partial | O4 原結果經完全獨立重算（A01→D04 + F01-F03 審計）確認冇嚴重 AI 幻覺：A₅ 60 節點 Rhombicosidodecahedron 幾何 ✅、λ₂ = φ⁻² 圖譜閉合 ✅、ω₂ = φ⁻¹ ✅、冷斑 -134.… | open_problems_fresh/o4_renew/final_result.md | — |
-<!-- conclusion-history:end -->

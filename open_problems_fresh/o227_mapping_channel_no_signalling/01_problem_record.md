@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O227
 title:   連接通道：對映表、無信號與糾纏熵（Mapping Channel / No-Signalling）
-state:   closed
-verdict: closed
+state:   partial
+verdict: partial
 flags:   -
 owner:   O227
 created: 2026-09-30

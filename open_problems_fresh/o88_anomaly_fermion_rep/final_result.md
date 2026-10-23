@@ -297,11 +297,3 @@ O85 → O88/composite-dB1-channel → O81（Wilson）、O85（y_i、X/Y 交換�
 ### 驗證（2026-10-16 數字審計）
 - 21 script 全重跑 freeze vs 重跑差集 0；獨立第三層 `scripts/21_audit_stage1.py` **38/38 PASS**
 - 詳見 `docs/19_stage_closeout_audit.md`
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `c1ee535f1b7848c9` | 2026-10-24 | closed | SU(12) 異常自由費米子嵌入之唯一解（dim = 72 且 A = 0，於 12 217 個多重集空間內）為 3×(12 ⊕ 12̄)；12 分解為 SU(4)×SU(3) 內容恰容納 3 代 SM（48 Weyl）＋ 24 vect… | open_problems_fresh/o88_anomaly_fermion_rep/final_result.md | — |
-<!-- conclusion-history:end -->

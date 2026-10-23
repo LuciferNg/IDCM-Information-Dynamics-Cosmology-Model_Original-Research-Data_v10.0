@@ -96,11 +96,3 @@ O45 → O143 → O162 → O171 → O182 → O213 → **O223**
   （銀極 60.4%、偶極 73.9%、銀心 83.2% 百分位）。
 - **外部輸入唯讀未改**: `cmb_cold_spot/data/*`、`o45_smhw_verify/`、`o143_*/docs/08,10`、`o162_*/`、
   `o213_*/`、`o5_catalog_compare/data/smooth_cache/*`。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `a9dac8b3fe3acf7b` | 2026-10-24 | closed | 「node 0」係規範標籤（頂點傳遞），但拓撲位元圖案唔係規範不變量（60 anchor → 30 個相異阻挫集）； 空間有相位域界（32 阻挫邊 = 20△+12⬠，GL R = 434 Mpc）但冇晶格域界（單晶）； 「node0→n… | open_problems_fresh/o223_observer_position_domains/final_result.md | — |
-<!-- conclusion-history:end -->

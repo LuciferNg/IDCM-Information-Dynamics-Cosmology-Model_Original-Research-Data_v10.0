@@ -12,11 +12,3 @@
 
 ## 依賴
 O1(15.11°) → 新O1 (邊長 26.09° 群論閉合) — 邊長先係正確問題
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `f47cf3a308bc09c3` | 2026-10-24 | closed | 「冷斑到 dodecahedron 3-fold 軸距離 15.109° ≈ 60°/4」係座標系依賴假象，唔係結構量：旋轉不變性測試 (100 次隨機旋轉) 顯示距離隨 dodecahedron 任意朝向大變 (min=0.6°, ma… | open_problems_fresh/o184_15deg_coordinate_artifact/final_result.md | — |
-<!-- conclusion-history:end -->

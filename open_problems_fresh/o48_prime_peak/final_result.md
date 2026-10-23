@@ -23,11 +23,3 @@ O10 → O9 → O48 → O31 (ζ↔ξ 形式化延伸)
 ## 驗證（closeout 盤點 2026-10-10 更新）
 - scripts/01-11 audit 271/271 有效（logs/01-10）+ scripts/12-65 補 log（run_chain_closeout）
 - Q1/Q2: scripts 12-17 21 checks + 84 audit 全綠; Q1.31-48 audit 修正 8 項 + PR4 4/6 核心 PASS
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `4b76241a7c32b3c9` | 2026-10-24 | — | CMB 真峰 m ∈ {1,2,3,5,7} 的質數性由雙重篩選定理決定（零自由參數）：相位 s = ℓ mod 44 ∈ {±1, ±21} = (Z/44Z)^× 對合元，且 N = ⌊ℓ/44⌋ ∈ {Lucas} ∪ {Fibon… | open_problems_fresh/o48_prime_peak/final_result.md | — |
-<!-- conclusion-history:end -->

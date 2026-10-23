@@ -14,11 +14,3 @@ SN Ia 峰值光度與 Maser 幾何偏移皆為 K_Chain 全鏈/譜投影的結構
 
 ## 依賴
 O97 → O95 → O73 → O16 → O17
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `3b36ef67e992142d` | 2026-10-24 | — | SN Ia 峰值光度與 Maser 幾何偏移皆為 KChain 全鏈/譜投影的結構量：MB 零點閉合 0.10%，Maser 偏移 φ⁻¹/F₉ 閉合 0.01%，四大校準偏移統一至 φ⁻¹/δ 家族（平均 0.01%），距離階梯 3 R… | open_problems_fresh/o17_snia_phillips/final_result.md | — |
-<!-- conclusion-history:end -->

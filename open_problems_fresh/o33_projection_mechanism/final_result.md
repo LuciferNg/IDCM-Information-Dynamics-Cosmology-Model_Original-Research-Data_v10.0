@@ -29,11 +29,3 @@ O13 (n/p = γ₇/γ₂₀) → O31 (真空能量/Ω_Λ 本質) → O33 → O148 
 
 ---
 *驗證: scripts/verify_all.py — 28/28 PASS (2026-08-18) + scripts/AUDIT_independent_recheck.py — 35/35 PASS (2026-10-08 closeout)*
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `2270e46c7cac6267` | 2026-10-24 | closed | KChain 全譜 Σγ = 90 中 61.5/90 = 68.3% 能量未被投影成 SM 物質，係由投影管道算子 Tpipe 嘅有限通透率（n = 27 截止）強制決定；黑洞 = 反投影（Tpipe† = I − Tpipe），能量於… | open_problems_fresh/o33_projection_mechanism/final_result.md | — |
-<!-- conclusion-history:end -->

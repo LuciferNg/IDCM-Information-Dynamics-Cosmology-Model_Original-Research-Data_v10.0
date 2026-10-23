@@ -31,11 +31,3 @@ O179 → O180 → O182 → **O183** (🟡 移交) → O175 (11/15 null 反思)
 ## 檔案
 
 `SESSION_START.md` (完整交接) + `scripts/01-03` (exit 0) + `01_problem_record.md`
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `29c648e1c0f4b0e1` | 2026-10-24 | partial | W(i) 位置權重框架已應用到 A₅ 溫度統計: 無加權 A5 命中背景 11/45 (O182 巧合確認), 但 O179 W(i) 加權後 M1 = 0.218 ≈ 12/55 = (B·Ngen)/F₁₀ (全譜量) — 4.17°… | open_problems_fresh/o183_a5_chain_projection/final_result.md | — |
-<!-- conclusion-history:end -->

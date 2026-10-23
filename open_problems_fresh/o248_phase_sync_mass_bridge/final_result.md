@@ -27,11 +27,3 @@ P1 = **明確 no-go（結構性）**：W-field Goldstone 相位模（θ）質量
 O247 Q3 → O248 → O239（殘差歸屬）/ O247（Q3 路線關閉）
 
 > ⚠️ 本判決係 v10 結構內；新機制（新常數）屬新 O 範疇，O248 不重開。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `faa6e4b68cbd6c1b` | 2026-10-24 | closed | P1 = 明確 no-go（結構性）：W-field Goldstone 相位模（θ）質量無關（純運動學/時鐘標籤）； 「熱 = 相位同步請求 = 質量污染」在 v10 結構內無載體。P2/P3（T→δm/m 量綱砌 + 盲測）因無載體終… | open_problems_fresh/o248_phase_sync_mass_bridge/final_result.md | — |
-<!-- conclusion-history:end -->

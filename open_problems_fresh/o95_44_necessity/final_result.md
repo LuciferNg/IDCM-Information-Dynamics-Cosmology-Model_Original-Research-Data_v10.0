@@ -23,11 +23,3 @@ O51 → O95 ← O56, O59, O85 → O96 → O97 → O101/O102/O103
 - q_obs = 0.125% → 🟢
 
 > 純代數恆等式: B×R 由 φ 代數強制 (奇 Lucas 差公式), 唯一非退化對 = (L₃, L₅); N_search = 1 等價聲明。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `c2eefe295268b5a7` | 2026-10-24 | closed | Nd = 44 係唯一滿足所有結構約束嘅自然數 (7 層獨立證明 L1-L7; N=1..200 窮舉 + 11 約束只有 44 存活; 歷史跨 9 版本穩定, null test p=0.00125)。 | open_problems_fresh/o95_44_necessity/final_result.md | — |
-<!-- conclusion-history:end -->

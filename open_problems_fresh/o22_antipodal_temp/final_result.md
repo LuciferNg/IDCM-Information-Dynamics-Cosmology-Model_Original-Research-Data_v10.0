@@ -21,11 +21,3 @@
 
 ## 依賴
 O3 (60 節點溫度) → O22 → (後續交叉驗證: O3-06, 結論一致)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `7953cc067497b438` | 2026-10-24 | — | 30 對近對徑 (174.66°, 同色, hop 和=8) 溫度無顯著相關 — H1 (無相關) 接受。A₅ 幾何強制對徑配對但唔決定溫度。弱反相關趨勢 (ρ=-0.30) 邊際顯著, 三地圖 (SMICA/NILC/Commander… | open_problems_fresh/o22_antipodal_temp/final_result.md | — |
-<!-- conclusion-history:end -->

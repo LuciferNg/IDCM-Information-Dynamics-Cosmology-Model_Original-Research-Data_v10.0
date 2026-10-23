@@ -128,6 +128,6 @@
 
 （scratch 目錄已清空／不可讀）
 
-- 劇本總數 **121**、日誌 **252**、`data/` **129**、`docs/` **72**；MANIFEST `o225-manifest-v10`（589 件）。
+- 劇本總數 **121**、日誌 **252**、`data/` **129**、`docs/` **72**；MANIFEST `o225-manifest-v10`（594 件）。
 - 每輪證據鏈 = 合約（`docs/*_contract.md`，見數前凍結＋sha）→ 合約閘 `*_contract.py`（GATE OPEN）→ 機器 `*_machine.py`／`*_universal.py` → 獨立審計 `*_audit.py` → `data/*.json` ＋ `logs/*.out` → `docs/*_results.md` ＋ `01_problem_record.md §輪次`。
 - 探索層（非正式證據）在專案外：`/home/wsl/.hermes/cache/scratch/o225_*`（設計上不進 MANIFEST）。

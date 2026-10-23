@@ -105,11 +105,3 @@ O118 (裁定唔做阻抗模型)
 - 嶄新結構事實：**λ_sync/2 = 99.3 h⁻¹Mpc ≡ r_d**（BAO 尺度 = 階梯 n=2 節點）；
   j=1 節點落在 22–66 h⁻¹Mpc，DESI DR2 的 BAO-fit 窗 [62,150] 只含 1 個。
 - 完整對照：**`docs/04_unit_correction.md`**（獨立佐證：O132 / O31 舊記錄已記同一 bug）。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `fba37527df3c2166` | 2026-10-24 | — | v9.0 wavelettoolbox/ 只有方法層 + 純結構骨架遷移 (P: γn=4sin²(πn/88) 88 環精確譜 / λsync=2πRH/88≡πRworld/44 / vg=cos(πn/88) / B=4,z=4^ℓ… | open_problems_fresh/o130_wavelet_analysis_tools/final_result.md | — |
-<!-- conclusion-history:end -->

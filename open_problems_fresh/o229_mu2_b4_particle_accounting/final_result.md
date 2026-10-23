@@ -202,11 +202,3 @@ Gate：22 **13/13** ｜ 23 **8/8** ｜ 24 **3/8**（5 條預註冊/保守判準 
 修正後 25 = **23/23**（D1 逐形式 0 分歧；D2–D4 與 24 全表一致）；另以第三路線
 `verify/third_route_arbiter.py`（sympy `real_roots` ＋ 精確代入掃描、完備界 B0）獨立重算 ⟹ 與 24 逐項一致。
 恆等類（655 條，對所有 B 恆等成立 ⟹ 零信息）已獨立分類；`2^B` 分支之完備界 B0 = **30**（支配論證，取代原 [1,10⁴] 有界掃描）。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `e20541a911b0e896` | 2026-10-24 | closed | B = 4 與 μ² = 2 非退化、非巧合、非同義反覆：B 由 9 條振幅無關之路線（含 α⁻¹(0) = C(B²,2)+B²+1 = 137，式內無 Nc）過定為 4，Nc = Ngen = B−1 = 3 係樣本外預言；B = 2… | open_problems_fresh/o229_mu2_b4_particle_accounting/final_result.md | — |
-<!-- conclusion-history:end -->

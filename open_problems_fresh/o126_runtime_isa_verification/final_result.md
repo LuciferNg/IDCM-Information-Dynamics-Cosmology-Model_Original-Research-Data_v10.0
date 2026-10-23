@@ -54,11 +54,3 @@ O51 (非膨脹 / T_sync) 🟢 → O39/O215 (Ω_Λ = 41/60) 🟢 → O41 (讀寫�
 - **§D sync dip 🔴 撤回**: v9.0 z_c = 3/5 ≈ φ⁻¹ (gap 1.8% 絕對, 未強迫); v10.0 z 離散 (1+z = 4^ℓ, 0.6 非 rung);
   Ω_Λ = 41/60 常數 (無 DE(z)); O118 🟢 前提作廢; O76 🟢 無訊號 ⟹ v9.0 膨脹紀元偽影
 - ⚠️ 唔可宣稱: 「v10.0 推導出 Γ」/「v10.0 推導出 sync dip」
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `adca31d01d148fcd` | 2026-10-24 | closed | v9.0 runtimeisa 推導在 v10.0 大部分失效 (膨脹機制鏈全斷) — 需重建而非遷移; v10.0 嘅 runtime 層零件 (週期/預算/觀察者/指令空間) 已全部閉合, 可唯一組裝。執行語義攻堅 (docs/04)… | open_problems_fresh/o126_runtime_isa_verification/final_result.md | — |
-<!-- conclusion-history:end -->

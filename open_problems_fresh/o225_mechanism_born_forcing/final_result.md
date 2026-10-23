@@ -117,11 +117,3 @@ R22 後 🔴 2 項見 `docs/46_r22_results.md` §四。
 ★ 全鏈重跑：`scripts/01–80` 逐支重跑，判決與記錄逐項相同（0 漂移）；輪次覆蓋 R1–R23 完整。
 ★ 遺留 🔴/⚠️ 9 項 ＋ 跨 O 1 項 → 清冊 `docs/49_o225_closeout_r1-r23.md` §六（register 同步）。
 ★ 文檔缺陷 1 項（`SESSION_START.md` 重複 H1，**依快照不變規則只記錄不改**）。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `02e9a3953de6dffd` | 2026-10-24 | partial | 凍結協定之量子統計障礙其代數來源 = tie 規則之 u-宇稱（R1/R4），最小移除 = 該 1 bit 之宇稱選擇（R4）；動力側四量逐項閉合（R2/R3）；機制層自 R9 之 protocol 歸約起，經 R16–R19 之值歸約／… | open_problems_fresh/o225_mechanism_born_forcing/final_result.md | — |
-<!-- conclusion-history:end -->

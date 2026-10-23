@@ -22,11 +22,3 @@
 ## 依賴
 O190 → O191 → O192 → O193 → O194 → O195 → O196（承接: v₁₁ 結構證明 +
 B3 撤銷 + k_odd 觀測對應裁決 🔴 冇候選）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `5472bded9623a8be` | 2026-10-24 | closed | 觀察者 sector 累積量 κn ∈ ℤ ∀n — 一頁證明（矩閉式 C(2n,n) ∈ ℤ ⟹ 矩-累積量遞迴 ℤ-封閉 ⟹ 歸納）。開放項 1-3 全閉合：kodd = n!tⁿartanh(δ) 純邊界修正 / devabs ~ … | open_problems_fresh/o195_cumulant_integrality/final_result.md | — |
-<!-- conclusion-history:end -->

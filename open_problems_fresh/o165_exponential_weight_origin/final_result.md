@@ -16,11 +16,3 @@
 
 ## 依賴
 O116 → O163 → O165 → O164
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `4c5128f1b10e58dc` | 2026-10-24 | closed | 可見性權重唔係 e⁻ⁿ — 係 KTree 層振幅平方 \|Wℓ\|² = φ⁻²ˡ; e 係 φ² ≈ e (3.69%) 嘅近似標籤, 已剔除 (R12 域勝利: 閘極鏈全代數閉合, 零超越數)。 | open_problems_fresh/o165_exponential_weight_origin/final_result.md | — |
-<!-- conclusion-history:end -->

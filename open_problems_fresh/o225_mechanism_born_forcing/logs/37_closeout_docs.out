@@ -1,8 +1,8 @@
-[PASS] T0    水位表建立：列出全部檔案之 mtime／上次 closed-out；「從未 closed-out」者全檔驗（本輪）  --  檔案數 = 598 ; 從未 closed-out = 0 ; 上次 closed-out 後有變更 = 0
+[PASS] T0    水位表建立：列出全部檔案之 mtime／上次 closed-out；「從未 closed-out」者全檔驗（本輪）  --  檔案數 = 598 ; 從未 closed-out = 0 ; 上次 closed-out 後有變更 = 7
 [PASS] CO1   MANIFEST 覆蓋（§39）：磁碟檔案 − MANIFEST 鍵 = 0（缺者僅新增收錄）  --  磁碟 = 589 ; MANIFEST = 594 ; 未收錄 = 0 []
-[PASS] CO2   MANIFEST 內容漂移：非預期漂移 = 0（活文檔與本輪自身產物之漂移屬預期，詳見 data/37 之 refreshed 清單）  --  漂移 = 4（其中非預期 = 0 []）
-[INFO] 重跑窗內預期漂移 3 件：['01_problem_record.md.pre_rebuild2_20261009_1315.bak', 'logs/37_closeout_docs.out', 'logs/94_record_rebuild.out']
-[INFO] 已刷新 4 件之 sha（refreshed_by = closeout-v1）
+[PASS] CO2   MANIFEST 內容漂移：非預期漂移 = 0（活文檔與本輪自身產物之漂移屬預期，詳見 data/37 之 refreshed 清單）  --  漂移 = 3（其中非預期 = 0 []）
+[INFO] 重跑窗內預期漂移 3 件：['data/47_chain_index.json', 'logs/37_closeout_docs.out', 'logs/47_chain_index.out']
+[INFO] 已刷新 3 件之 sha（refreshed_by = closeout-v1）
 [PASS] CO3   宣告輸出（關鍵 data JSON）全部存在  --  宣告 = 132 ; 缺檔（data）= []
 [PASS] CO4   無孤兒 data JSON（每個 JSON 皆被某 script 宣告）  --  孤兒 = []
 [INFO] Traceback 日誌（應全部為已記錄之首跑／中間跑）：['22_r5_audit_firstrun_naivecount.out', '28_r7_mechanism2_firstrun2_vadd_bug.out', '28_r7_mechanism2_firstrun_vscale_bug.out', '32_r8_audit_firstrun_matrixcover_bug.out', '32_r8_audit_secondrun_nameerr.out', '34_r9_pairing_firstrun_misspec.out', '35_r9_audit_firstrun_nojson.out', '35_r9_audit_thirdrun_nameerr_dgen.out', '36_closeout_audit_firstrun_invbug.out', '39_r10_universal_firstrun_Ekeyerr.out', '42_r11_machine_secondrun_parttc_crash.out', '45_r12_machine_firstrun_vecneg.out', '47_chain_index_firstrun_headfile.out', '47_chain_index_firstrun_pathbug.out']

@@ -293,11 +293,3 @@ v10 同時有兩套 W₀：`⟨W⟩² = 61.5`（o39 權威, o204）vs `W₀² = 
 |---|---|---|
 | **G10** | v10 W₀ 歸一化分裂（61.5 vs 1.23607） | 🔴 新開放（需 o73/o121 自查） |
 | 舊版語料細審 | v6.0 EM foundation / graviton / QFT（v9.0） | 🟡 委派審計進行中 |
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `2897cda88c8db5a4` | 2026-10-24 | closed | W-field 唔係新引入嘅基本場 —— 佢係 Kchain (形狀/相位扇區) ⊗ Ktree (標度扇區) 嘅場論實現: 凝聚方向 = 88-site 環 Laplacian 嘅唯一零模 (γ0 = 0); 激發塔 = {γn}; 勢… | open_problems_fresh/o204_wfield_constitution/final_result.md | — |
-<!-- conclusion-history:end -->

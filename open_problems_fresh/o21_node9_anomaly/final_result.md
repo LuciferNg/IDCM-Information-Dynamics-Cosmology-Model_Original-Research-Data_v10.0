@@ -18,11 +18,3 @@ O3 → O21 → O26（node-57 區域, 同為 O3 閉環審計）
 
 ---
 驗證: scripts/05_hallucination_check.py 15/15 ✅ + scripts/06_doc_chain_verify.py 70/70 ✅
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `1b95e7e17c9a2fe0` | 2026-10-24 | partial | Node 9（l=214.92°, b=-31.16°, hop=1, color=0）位於 A₅ 晶格透明區域（4 條 normal bichromatic edge）— 其 -106.99 μK（4.17° SMICA）為 CMB 穿… | open_problems_fresh/o21_node9_anomaly/final_result.md | — |
-<!-- conclusion-history:end -->

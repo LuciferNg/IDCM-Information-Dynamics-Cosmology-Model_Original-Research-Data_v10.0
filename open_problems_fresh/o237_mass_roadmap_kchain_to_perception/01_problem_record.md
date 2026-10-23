@@ -3,17 +3,17 @@
 <!-- registry
 pid:     O237
 title:   質量路線圖:由K-Chain駐波到質量測量/感知(全鏈步驟+未知數盤點)
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O237
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-24
 prereq:  O210(O36,O235,O137,O234,O236,R1-R6,O147,O212,O49/O57/O66,O213,O121,O206,O124/O85,O65)
 source:  2026-10-07 調律者:「要先有路線圖，用整個由K-Chain駐波生成到測量/感知到質量的每一個步驟還有什麼是未知數為目的來開新o」
 -->
 
-> **狀態**: 📄 **已註冊 — 路線圖已交付（docs/01），未開推導**（調律者明示「先有路線圖」）
+> **狀態**: 🟡 **部分閉合 — 七輪推完（範圍內 done）；餘下跨 O handoff（U1→O170 配分／U5→O206 體驗層／U7→O147 κ機制／U2→O234 凍結判準）**（調律者明示「先有路線圖」）
 > **建立**: 2026-10-07
 > **前置**: O210 型別層（𝒯=K_chain⊗K_tree）＋ 一眾已閉合質量資產（見 docs/01）
 > **位置**: `open_problems_fresh/o237_mass_roadmap_kchain_to_perception/`
@@ -99,6 +99,7 @@ U7 🟡 兩層 gap 0.73%: k/528 修正全閉合但 κ 先驗規則未推導 (O14
 | 9 | 2026-10-07 | **續推第五輪（用戶: 餘下問題繼續在O237推）**: U7 核實——κ 先驗規則早已閉合（O147 docs/09 κ可加性 21/21, docs/11 κ(t)=0 6/6, docs/12 種子生成 23/23; docs/01 🟡 係未 sync, 剩 κ 機制 🟡）; **U3+U5 攻堅 (scripts/17 14/14, docs/14)**: U3 κ 表 sieve 5 測試全負 ⟹ convention 標記收口（剩 label 命名非物理問題）; U5 形式化——質量=Object−Frame 脫相位度量 \|1−U\|²=γ_n × M₀ × 商殘餘（O206 關係語言一致; 84-ring U 修正 U=e^{inπ/44} 唔係 e^{inπ/88}）; 註冊 O237/U3, O237/U5 | docs/14, scripts/17, register notes |
 | 10 | 2026-10-07 | **續推第六輪（用戶: 繼續推）**: U1 sin(πℓ) 形式侯選閉合 (scripts/18 7/7, docs/15)——讀法分離: 位置讀振幅 sin(πℓ)=Im e^{iπℓ} (176-L 半圈 k=88ℓ), 能量讀強度 λ_k=B(Im e^{ikπ/68})²; sin 反號標回返 vs sin² 非負; O170 χ² 3.471 vs 5.669 撑; **U2 商殘餘算子化定案 (scripts/19+20, docs/16)**: b̂ 可逆, Ĉ 無 𝒯 身份, 商值無鏈數, corr(C_f,γ)=+0.95 偽相關拆解 (log-log spread 10.1× 唔係冪律) | docs/15-16, scripts/18-20, register notes |
 | 11 | 2026-10-07 | **續推第七輪（用戶: 繼續在O237內推完）**: **U5 測量讀數機制收口 (scripts/21 5/5, docs/17)**: V1 M₀ 唯一性 O212 dof=1; V2 協議閉環 m_f≡M₀γF; V3 儀器必然性 (譜間距全 M₀ 標度); V4 體驗層移 O206; ⚠️修正 m_p/M₀ 湊數風險; **O237 範圍內全推完 → done**: 餘下 4 項跨 O (O170 振幅B配分/O206 體驗層/O147 κ機制/O234 凍結判準) | docs/17, scripts/21, register notes |
+| 12 | 2026-10-24 | **跨 O handoff 修正＋register block drift 修復＋O48 交回收口 (docs/18, scripts/22 6/6)**: BLOCK-DRIFT 類⑦修復 (兩檔 block registered→partial, README+人手狀態行同步; 26→24, O237 零殘留); U5 handoff 修正 (O206 10-11 docs/46 已交回體驗層 12/12, 今日 handoff 重複作廢, 收貨閉合); handoff 登記 U1→O170/U2→O234/U7→O147; O48 三候選全負 (Φ18 P=0.8593/ΔC_f P=0.9837/乘積 P=0.0113 邊緣); ⚠️C_f 同名唔同義第二例 (CSG 網格 vs 商值) | docs/18, scripts/22, register notes |
 
 ## 七、相關文件
 

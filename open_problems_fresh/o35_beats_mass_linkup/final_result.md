@@ -22,11 +22,3 @@
 
 ## 依賴
 O34（sin 比值 + 選擇規則 Δn=14）→ O35（拍頻 link-up + m_s/m_d 轉移矩陣閉合）→ O36（共振響應動力學, 已閉合 44/44）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `fd02b81371130d6f` | 2026-10-24 | — | 質量比必然係 sin 比值：KChain 模態係正弦波（ωn = 2sin(πn/88)），拍頻係正弦模態相減嘅和差化積必然結果（ωn−ωm = 4cos·sin），質量比 = 模態振幅比 = sin 比值。tan/cos 形式只係恆等變… | open_problems_fresh/o35_beats_mass_linkup/final_result.md | — |
-<!-- conclusion-history:end -->

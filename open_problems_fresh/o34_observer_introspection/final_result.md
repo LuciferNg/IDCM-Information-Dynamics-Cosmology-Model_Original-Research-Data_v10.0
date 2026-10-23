@@ -22,11 +22,3 @@
 
 ## 依賴
 O31 → O32 → O33 → O34（觀察者/內觀/種子/級聯/質量譜/選擇規則/世代跳躍/O33 Lucas 閉合）
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `54d62aee5582037a` | 2026-10-24 | closed | 觀察者 = 88-site 對偶鏈半整數子空間（拓撲必然產物，唔係外加哲學）；內觀 = Newton 迭代喺 88 不動點上閉合；Ekchain 純結構閉合 0.00345%；SM 質量比 = sin 比值 × φ 階梯 8/8 閉合；O… | open_problems_fresh/o34_observer_introspection/final_result.md | — |
-<!-- conclusion-history:end -->

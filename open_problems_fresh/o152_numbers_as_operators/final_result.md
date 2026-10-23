@@ -22,11 +22,3 @@ IDCM 全部數字（49 整數 / 11 分數 / 半整數縫）都係生成算子嘅
 
 ## 依賴
 O149（群速度鎖定）→ O151（全息信道容量）→ O152; 交叉: O142, O143, O146, O147, O148, O41
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `1b8ba5f14e2b1759` | 2026-10-24 | partial | IDCM 全部數字（49 整數 / 11 分數 / 半整數縫）都係生成算子嘅譜數據；最小數字生成集 = {T̂, Kchain}，Lie/CY₃/P 係結構選擇器；域定理 Q(√5)∩Q(ζ₈₈)⁺=Q 證明 φ-陷阱係數論必然。 | open_problems_fresh/o152_numbers_as_operators/final_result.md | — |
-<!-- conclusion-history:end -->

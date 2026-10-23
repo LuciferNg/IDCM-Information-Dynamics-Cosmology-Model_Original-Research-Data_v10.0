@@ -78,11 +78,3 @@ O43-F (k=0 機制) · O144 (CSG-v2 判定選擇效應)
 - 09-19 記錄審計: 全套重跑 35/35 exit 0 · 文檔核對 91/91 · token 審計 68/68 = **159/159 PASS**
 - 上游未修正項: `o158_nd_pm_ngen_cluster` 3 處引用「O149/O150 語言」(群速度語言) —
   O150 已註冊為 sky-side 投影算子 (見 O150 docs/01 §碰撞記錄)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `c77ed3645b0d8a4e` | 2026-10-24 | closed | 原問題「點解係特定節點 (冷斑) 而唔係全部 60 節點有異常？」嘅完整答案： 圖唔選擇 (頂點傳遞定理)；sky 選擇；而且 sky 亦冇「選擇」— 冇顯著異常可解釋。 1. 圖唔選擇 — ★★★ 頂點傳遞定理：\\|Aut(G)\\| =… | open_problems_fresh/o143_phase_selection_mechanism/final_result.md | — |
-<!-- conclusion-history:end -->

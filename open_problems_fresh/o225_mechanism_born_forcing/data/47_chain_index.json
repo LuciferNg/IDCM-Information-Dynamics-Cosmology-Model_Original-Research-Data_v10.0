@@ -25,7 +25,7 @@
    "tag": "C4",
    "name": "docs 對映：docs/*.md ≥ 26 件且 01_problem_record 引用 scripts/ 之數 ≥ 43",
    "ok": true,
-   "detail": "docs = 72 ; 引用數 = 244"
+   "detail": "docs = 72 ; 引用數 = 250"
   },
   {
    "tag": "C5",
@@ -37,7 +37,7 @@
    "tag": "C7",
    "name": "文檔內 scripts/ 引用全部解析（O225 自身 or O222 凍結輸入；範圍／簡寫另計）",
    "ok": true,
-   "detail": "可解析 = 304 ; 簡寫（範圍／純數字）= 106 個 ; 未解析 = 無"
+   "detail": "可解析 = 310 ; 簡寫（範圍／純數字）= 106 個 ; 未解析 = 無"
   },
   {
    "tag": "C8",

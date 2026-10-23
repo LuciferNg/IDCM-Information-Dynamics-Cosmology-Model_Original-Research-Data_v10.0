@@ -22,11 +22,3 @@ O120 → O233 → O136 → O137 → O234；handoff O234 → O209（混標度 wat
 - 命中率 = 1.4%（1/72 nominal）→ 🟡（單一測試點，非 5σ 閉合；258 條目見 docs/02-04）
 
 > ⚠️ O208 規則: 本 O 為方法論閉合（檢驗能力定界 + 預言 register），唔係常數匹配閉合——密度基準記錄判別力，唔係命中優於 5σ。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `9560b37c3c8c592b` | 2026-10-24 | closed | 檢驗方法建立完成並交付：質量公式 mf = M₀·γn·Cf 在 ratio 層的可證偽內容被精確定界——只有一個純γ比（u/d）可檢驗且雙尺通過（MS +0.85σ / RGI +0.51σ），其餘 8 個比在 {C∈ℝ⁺} 模型類內結… | open_problems_fresh/o234_mass_ratio_reverse_validation/final_result.md | — |
-<!-- conclusion-history:end -->

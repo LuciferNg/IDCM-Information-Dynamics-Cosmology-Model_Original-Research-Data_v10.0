@@ -15,11 +15,3 @@
 O12 → bbn (D/H, Y_p 已閉合) → O12
 
 *驗證: scripts/01_resolution_analysis.py + 02_verifier.py (14/14) + 03_doc_crosscheck.py (23/23)*
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `ddd25e38c188e6c8` | 2026-10-24 | partial | 2026 年止 ³He/H primordial 觀測分辨唔到 IDCM (9.76×10⁻⁶) vs ΛCDM (1.04×10⁻⁵) — 模型差距 6.16%, 觀測誤差 16.5-25.5% (Cooke 2022 empirica… | open_problems_fresh/o12_he3_primordial/final_result.md | — |
-<!-- conclusion-history:end -->

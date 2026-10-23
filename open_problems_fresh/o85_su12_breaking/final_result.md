@@ -28,11 +28,3 @@ O85 → O59（su(12) 結構）→ O72（Q6 原始問題）· O88（PD#2 否證�
 - d_obs / d_med / q_obs = N/A（代數閉合，無觀測偏差；見 docs/15 §D）
 
 > ⚠️ 純代數恆等式: N_search = 1 + 聲明唯一候選即可跳過 MC（RESULT_TEMPLATE 規則）。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `a360cab3d6646ecd` | 2026-10-24 | closed | SU(12) 係 global 結構對稱性，非 gauge 統一群（O72 Q6 判決）：破缺鏈（無 GUT 階梯、由 66=12∧12 複合嵌入 SM）由群論＋SM 觀測唯一鎖定，完整推導至 yi 唯一解。 | open_problems_fresh/o85_su12_breaking/final_result.md | — |
-<!-- conclusion-history:end -->

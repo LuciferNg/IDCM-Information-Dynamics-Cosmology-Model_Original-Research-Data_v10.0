@@ -21,11 +21,3 @@ O209 → O136 → O238；O238 → O206-OPEN-4（模式分配裁決輸入）、O2
 
 > ⚠️ 唔評為「閉合」因為：① C 數值身份（投影讀數標度）等 freeze v2 新量度 ② c/s 機制 C_f 生成層維持 🔴 ③ O206-OPEN-4 模式分配正式裁決未落地。
 > **★ 審計更正附註（2026-10-12）**: 「依賴」行「O234（ms/mu killer 樣本外）」——ms/mu 42.89 已被 O234 docs/04 裁定為**循環**（C_s 校準自 FLAG，Δ=0 Z≡0），唔係 killer；**正確樣本外判決點 = lattice 直量 mu/md 1–2% 對 P2 純 γ（γ3/γ2=2.245204）**。其餘內容維持有效。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `ea44eceb0cbb742d` | 2026-10-24 | partial | 「質量 = 代價^{φ²}」係數量級律（斜率 α≈φ² 全域穩健：LOOCV 剔任何一點 0.42σ 內、三套 scheme 1σ 內），非質量譜閉合（每點 ±55% 散佈，比空間預言 5/5 全滅）。標度 C ≠ M₀ 嘅問題已解析：C… | open_problems_fresh/o238_mass_as_cost/final_result.md | — |
-<!-- conclusion-history:end -->

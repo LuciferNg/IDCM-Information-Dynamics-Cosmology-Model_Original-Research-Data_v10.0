@@ -20,11 +20,3 @@ O3 → O25 (主尺度譜); O5/O21 (node9 透明度框架) → O25 合併; O24 �
 
 ## 驗證
 262/262 PASS (scripts/04,08,11,17,22) + 15/15 交叉核對 + 8/8 重跑一致 + 7/7 手動公式; 09-11 搬移後推導鏈獨立核對全部通過; 修正 04 ICRS 座標 (node8/node9 混淆) + 05/06 ISW 修正註記
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `5b7160dc9a652177` | 2026-10-24 | — | CMB 節點溫度信號嘅完整尺度譜 (0.3°-30°) 已表徵: 冷熱差 = 雙指數衰減, 主導權由冷斑 (細尺度) 轉移至 node9 (大尺度), 後者經判別檢驗 + 模式分解確認為 l=3 octupole 大尺度冷相位帶 上嘅透明… | open_problems_fresh/o25_scale_spectrum/final_result.md | — |
-<!-- conclusion-history:end -->

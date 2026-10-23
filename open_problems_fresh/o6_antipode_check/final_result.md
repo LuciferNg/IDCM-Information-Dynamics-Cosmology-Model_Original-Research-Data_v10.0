@@ -41,11 +41,3 @@
 ## 依賴
 
 O3 (著色=parity, 節點溫度, ΔE=0 群) → O6 → O22 / O26
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `663fbccd5391237f` | 2026-10-24 | closed | 節點 57 (對徑點, hop=8, 冷色) 喺 4.17° 平滑係 +8.21 μK (正溫) —「冷色但正溫」矛盾已 4 層解釋: 1. 冷色 = BFS parity, 唔係溫度預測器 — hop 偶數=冷色, 同溫度符號只有 61… | open_problems_fresh/o6_antipode_check/final_result.md | — |
-<!-- conclusion-history:end -->

@@ -19,11 +19,3 @@ O41 → O157 → O175 → O174 (D6-F3) → **O182** → O175 D1 (11/45 降巧合
 **下游**: O143 𝒫 投影 (09-19 交接 — 88 格方向集可用; 鏈索引 🔴 需新 O, 見 docs/05)
 
 **下游 (09-25)**: O213 R5 絕對定向 — 理想代數座標已交付 (`data/*_ideal.txt`, Q(√5)³); 手性判決: **冷斑 A₅ 軌道 88-grid |Sym| = 2 (全 proper) → 手性** (canonical Rhombicosidodecahedron 實現 = 非手性, 係陷阱) — 見 docs/06; 觀測對接見 docs/07
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `cabc53cd4cf7a304` | 2026-10-24 | closed | 88 格幾何已定義 (A₅ 網絡 88 條透明邊中點) 並完成三圖鑑別: 11/45 正式降為巧合 — A5 命中 = 高斯空想 σ\|b\|20·√(2/π)/A (dev 0.24%, 隨機控制 z=0.14σ); 88 格 G88 = … | open_problems_fresh/o182_88grid_geometry/final_result.md | — |
-<!-- conclusion-history:end -->

@@ -22,11 +22,3 @@ link 變數由譜導出 (U_k = e^{ikπ/88}, γ_k = |1−U_k|²)、Wilson line = 
 
 ## 依賴
 O159 (92/92) → O161 (94/94) → O122 (feynman_rules_wfield 對接)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `d0edeaaf920a2b7e` | 2026-10-24 | closed | O159 靜態場論嘅動態層延續完成: 離散 Noether 電流 (J + 守恆律 + Q = 44 總通量)、 link 變數由譜導出 (Uk = e^{ikπ/88}, γk = \|1−Uk\|²)、Wilson line = i (總… | open_problems_fresh/o161_discrete_action_noether/final_result.md | — |
-<!-- conclusion-history:end -->

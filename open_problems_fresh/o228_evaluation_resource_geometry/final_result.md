@@ -448,11 +448,3 @@ o222 零寫入、MANIFEST 雙向 0 差、register 三向覆蓋 0 缺；**記錄�
 - 記錄修正：block drift 1 條、R1–R5 缺 close（backfill）、SESSION_START 狀態行；
   **事故披露**：首版審計 import `scripts/25` 觸發 R13 重跑覆寫 `data/25_r13_separation.json` → `git checkout` 還原，sha256 ≡ MANIFEST 原值 ✓
 - 母項維持 **partial**（殘餘五項；α 必要性交 O218）。
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `fd77034bb4876fb6` | 2026-10-24 | partial | 狀態: 🟡 部分閉合（§三 判決項 ① ② ④ 已答；③ 部分）｜輪次: R1–R4（2026-10-02） 本檔只寫最終結論、公式與依賴，不寫推導過程（推導見 docs/00–04、scripts/01–08） | open_problems_fresh/o228_evaluation_resource_geometry/final_result.md | — |
-<!-- conclusion-history:end -->

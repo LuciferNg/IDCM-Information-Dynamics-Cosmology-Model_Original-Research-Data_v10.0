@@ -4,8 +4,8 @@
  "files": [
   {
    "path": "01_problem_record.md",
-   "bytes": 118470,
-   "sha256": "506bfe2f66c3dd7505db5c2700ee07f3ba3d82d613fecf4c07861c86be378cd5",
+   "bytes": 118660,
+   "sha256": "8a52685f77eadf7e33b59fad149c1ec1ce8f88b622d9e1cc2672195f5a737442",
    "refreshed_by": "closeout-v1"
   },
   {
@@ -179,7 +179,7 @@
   {
    "path": "data/100_register_sync.json",
    "bytes": 2304,
-   "sha256": "5424132869e1dc4a7b80b223bab48f36764af54b769aaf4f1333b3c000866706",
+   "sha256": "2ac85e727ac043cd1a5754ebd804ea2e8f93a7257d90f961850ddb4ef069ba86",
    "refreshed_by": "closeout-v1"
   },
   {
@@ -587,7 +587,7 @@
   {
    "path": "data/47_chain_index.json",
    "bytes": 1918,
-   "sha256": "dc274bf756d5396eda7d2d0018d2af35aedf3fadbd92c59b26d74a1cfe9f8371",
+   "sha256": "f81fd0eacbc885378532ac589226f80366135b422cfca1e145c022413a4dbe1a",
    "refreshed_by": "closeout-v1"
   },
   {
@@ -790,8 +790,8 @@
   },
   {
    "path": "data/82_o225_closeout2_docs.json",
-   "bytes": 5931,
-   "sha256": "65b176604bb1ec5f7e015f8574d74405a0259c7b0bb0ca8ebbdc7e4c0af34ea4",
+   "bytes": 5762,
+   "sha256": "e13d2b47b53d7764b77929d9742cea1e24a68476f2a98bebb4aa82f822b2e3e0",
    "refreshed_by": "closeout-v1"
   },
   {
@@ -1043,7 +1043,7 @@
   {
    "path": "docs/26_script_chain_index.md",
    "bytes": 9564,
-   "sha256": "95e78fe4fd56d447ba3ccee27b36778ec95e8f2988eff492c5b545889cb34a6c",
+   "sha256": "0092d3e9e7a61d37297d059f24b404210f18b6304bb78d0a4e1c854ea9967327",
    "refreshed_by": "closeout-v1"
   },
   {
@@ -1379,7 +1379,7 @@
   {
    "path": "logs/100_register_sync.out",
    "bytes": 1325,
-   "sha256": "439c44028cd1b626ee6bba9b0848e1b9cb6d9c720f0253230e44c2caea74ab8f",
+   "sha256": "0cf29fb63cdf570b1abe55cbf7823f48678526b504e6fee797c5aacf797b3540",
    "refreshed_by": "closeout-v1"
   },
   {
@@ -1961,7 +1961,7 @@
   {
    "path": "logs/47_chain_index.out",
    "bytes": 1500,
-   "sha256": "cfa2456ff4ffae79759dadeff35957211a169febbc9ca449be6acd437c18db21",
+   "sha256": "8873956ac833fb6184ad629131537ffedc6907ede67d5397b69e470350876fac",
    "refreshed_by": "closeout-v1"
   },
   {
@@ -2195,7 +2195,7 @@
   {
    "path": "logs/82_o225_closeout2_docs.out",
    "bytes": 1313,
-   "sha256": "ed25180c445c84e906ed3705215505baa4c7eae8e975a44de669d6e8b202ce7d",
+   "sha256": "d74c66b4b9cc90fb66ac7a8e46ad86f8ed93aef112054fb29265976b0f07755c",
    "refreshed_by": "closeout-v1"
   },
   {
@@ -3573,7 +3573,7 @@
   "data/81_o225_closeout2_audit.json",
   "data/MANIFEST.json"
  ],
- "note": "R33 收口批後重建（按 37 disk_files 頂層掃描）；logs 含。",
+ "note": "2026-10-09：block-state 更正後重建。",
  "rounds": {
   "closeout-v1": []
  }

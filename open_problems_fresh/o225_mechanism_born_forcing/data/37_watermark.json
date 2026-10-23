@@ -1,3592 +1,3592 @@
 {
  "rules": "o225-closeout-watermark-v1",
- "updated": "2026-10-09 13:15",
+ "updated": "2026-10-24 00:56",
  "files": {
   "01_problem_record.md": {
-   "mtime": "2026-10-09 13:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:55",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2119.bak": {
    "mtime": "2026-10-01 21:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2120.bak": {
    "mtime": "2026-10-01 21:20",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2121.bak": {
    "mtime": "2026-10-01 21:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2138.bak": {
    "mtime": "2026-10-01 21:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2154.bak": {
    "mtime": "2026-10-01 21:54",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2155.bak": {
    "mtime": "2026-10-01 21:55",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2156.bak": {
    "mtime": "2026-10-01 21:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2201.bak": {
    "mtime": "2026-10-01 22:01",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2239.bak": {
    "mtime": "2026-10-01 22:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2240.bak": {
    "mtime": "2026-10-01 22:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2250.bak": {
    "mtime": "2026-10-01 22:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2316.bak": {
    "mtime": "2026-10-01 23:16",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2317.bak": {
    "mtime": "2026-10-01 23:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2322.bak": {
    "mtime": "2026-10-01 23:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261001_2331.bak": {
    "mtime": "2026-10-01 23:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261009_1311.bak": {
    "mtime": "2026-10-09 13:11",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261009_1312.bak": {
    "mtime": "2026-10-09 13:12",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261009_1313.bak": {
    "mtime": "2026-10-09 13:13",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild2_20261009_1315.bak": {
    "mtime": "2026-10-09 13:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "01_problem_record.md.pre_rebuild_2026-10-01.bak": {
    "mtime": "2026-10-01 20:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "SESSION_START.md": {
-   "mtime": "2026-10-09 13:13",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/01_recon_invariants.json": {
    "mtime": "2026-10-01 21:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/02_r1_freeze.json": {
    "mtime": "2026-10-01 21:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/03_r1_results.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/04_r1_audit.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/05_r1_null_analysis.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/06_r1_axis_sign_structure.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/07_r1_tie_mechanism.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/100_register_sync.json": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:55",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/101_audit_index.json": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/102_r27_contract.json": {
    "mtime": "2026-10-01 21:59",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/102_r27_freeze.json": {
    "mtime": "2026-10-01 21:59",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/103_r27_machine.json": {
    "mtime": "2026-10-01 21:58",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/104_r27_audit.json": {
    "mtime": "2026-10-01 22:00",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/105_r28_contract.json": {
    "mtime": "2026-10-01 22:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/105_r28_freeze.json": {
    "mtime": "2026-10-01 22:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/106_r28_machine.json": {
    "mtime": "2026-10-01 22:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/107_r28_audit.json": {
    "mtime": "2026-10-01 22:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/108_r29_contract.json": {
    "mtime": "2026-10-01 22:48",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/108_r29_freeze.json": {
    "mtime": "2026-10-01 22:48",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/109_r29_machine.json": {
    "mtime": "2026-10-01 22:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/10_r2_freeze.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/110_r29_audit.json": {
    "mtime": "2026-10-01 22:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/111_r30_contract.json": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/111_r30_freeze.json": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/112_r30_machine.json": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/113_r30_audit.json": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/114_r31_contract.json": {
    "mtime": "2026-10-01 23:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/114_r31_freeze.json": {
    "mtime": "2026-10-01 23:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/115_r31_machine.json": {
    "mtime": "2026-10-01 23:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/116_r31_audit.json": {
    "mtime": "2026-10-01 23:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/117_r32_contract.json": {
    "mtime": "2026-10-01 23:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/117_r32_freeze.json": {
    "mtime": "2026-10-01 23:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/118_r32_machine.json": {
    "mtime": "2026-10-01 23:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/119_r32_audit.json": {
    "mtime": "2026-10-01 23:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/11_r2_g1_table.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/120_r33_contract.json": {
    "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/120_r33_freeze.json": {
    "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/121_r33_machine.json": {
    "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/122_r33_audit.json": {
    "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/12_r2_dyn17.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/13_r2_audit.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/14_r3_freeze.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/15_r3_centre.json": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/16_r3_audit.json": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/17_r4_freeze.json": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/18_r4_tie_parity.json": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/19_r4_audit.json": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/20_r5_freeze.json": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/21_r5_tie_global.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/22_r5_audit.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/23_r6_freeze.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/24_r6_mechanism.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/25_r6_geometry.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/26_r6_audit.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/27_r7_freeze.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/28_r7_mechanism2.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/29_r7_audit.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/30_r8_freeze.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/31_r8_group.json": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/32_r8_audit.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/33_r9_freeze.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/34_r9_pairing.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/35_r9_audit.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/36_closeout_audit.json": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:56",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/37_closeout_docs.json": {
-   "mtime": "2026-10-09 13:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:55",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/37_watermark.json": {
-   "mtime": "2026-10-09 13:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:55",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/38_r10_freeze.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/38_r10_freeze_firstrun.json": {
    "mtime": "2026-10-01 15:12",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/39_r10_universal.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/40_r10_audit.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/41_r11_freeze.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/41_r11_freeze_firstrun.json": {
    "mtime": "2026-10-01 15:28",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/42_r11_machine.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/43_r11_audit.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/44_r12_freeze.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/45_r12_machine.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/46_r12_audit.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/47_chain_index.json": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:56",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/48_r13_freeze.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/49_r13_machine.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/50_r13_audit.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/51_r14_freeze.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/52_r14_machine.json": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/53_r14_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/54_r15_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/55_r15_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/56_r15_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/57_r16_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/58_r16_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/59_r16_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/60_r17_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/61_r17_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/62_r17_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/63_r18_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/64_r18_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/65_r18_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/66_r19_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/67_r19_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/68_r19_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/69_r20_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/70_r20_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/71_r20_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/72_r21_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/73_r21_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/74_r21_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/75_r22_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/76_r22_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/77_r22_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/78_r23_freeze.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/79_r23_machine.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/80_r23_audit.json": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/81_o225_closeout2_audit.json": {
    "mtime": "2026-10-01 20:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/82_o225_closeout2_docs.json": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:55",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/83_r24_freeze.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/84_r24_machine.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/85_r24_audit.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/86_r25_freeze.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/87_r25_machine.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/88_r25_audit.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/89_r26_freeze.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/90_r26_machine.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/91_r26_audit.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/92_audit_sweep.json": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/93_audit_blind.json": {
    "mtime": "2026-10-01 21:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/95_doc_binding.json": {
    "mtime": "2026-10-01 21:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/97_drift_audit.json": {
    "mtime": "2026-10-01 21:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/98_round_claim_check.json": {
    "mtime": "2026-10-01 21:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/99_gap_blind.json": {
    "mtime": "2026-10-01 21:54",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "data/MANIFEST.json": {
-   "mtime": "2026-10-09 13:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:56",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/00_recon_inventory.md": {
-   "mtime": "2026-10-01 03:28",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/01_r1_contract.md": {
-   "mtime": "2026-10-01 03:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/02_r1_results.md": {
-   "mtime": "2026-10-01 03:46",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/03_r2_contract.md": {
-   "mtime": "2026-10-01 09:44",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/04_r2_results.md": {
-   "mtime": "2026-10-01 11:26",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/05_r3_contract.md": {
-   "mtime": "2026-10-01 11:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/06_r3_results.md": {
-   "mtime": "2026-10-01 11:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/07_r4_contract.md": {
-   "mtime": "2026-10-01 11:47",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/08_r4_results.md": {
-   "mtime": "2026-10-01 11:55",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/09_r5_contract.md": {
-   "mtime": "2026-10-01 11:58",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/10_r5_results.md": {
-   "mtime": "2026-10-01 12:05",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/11_r6_contract.md": {
-   "mtime": "2026-10-01 12:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/12_r6_results.md": {
-   "mtime": "2026-10-01 13:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/13_r7_contract.md": {
-   "mtime": "2026-10-01 12:44",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/14_r7_results.md": {
-   "mtime": "2026-10-01 13:24",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/15_r8_contract.md": {
-   "mtime": "2026-10-01 13:26",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/16_r8_results.md": {
-   "mtime": "2026-10-01 13:54",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/17_r9_contract.md": {
-   "mtime": "2026-10-01 13:59",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/18_r9_results.md": {
-   "mtime": "2026-10-01 14:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/19_closeout_r1-r9.md": {
-   "mtime": "2026-10-01 15:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/20_r10_contract.md": {
-   "mtime": "2026-10-01 14:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/21_r10_results.md": {
-   "mtime": "2026-10-01 15:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/22_r11_contract.md": {
-   "mtime": "2026-10-01 15:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/23_r11_results.md": {
-   "mtime": "2026-10-01 15:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/24_r12_contract.md": {
-   "mtime": "2026-10-01 15:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/25_r12_results.md": {
-   "mtime": "2026-10-01 15:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/26_script_chain_index.md": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:56",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/27_r13_contract.md": {
-   "mtime": "2026-10-01 16:03",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/28_r13_results.md": {
-   "mtime": "2026-10-01 16:10",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/29_r14_contract.md": {
-   "mtime": "2026-10-01 16:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/30_r14_results.md": {
-   "mtime": "2026-10-01 16:27",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/31_r15_contract.md": {
-   "mtime": "2026-10-01 16:46",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/32_r15_results.md": {
-   "mtime": "2026-10-01 16:48",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/33_r16_contract.md": {
-   "mtime": "2026-10-01 16:53",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/34_r16_results.md": {
-   "mtime": "2026-10-01 16:57",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/35_r17_contract.md": {
-   "mtime": "2026-10-01 17:01",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/36_r17_results.md": {
-   "mtime": "2026-10-01 17:07",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/37_r18_contract.md": {
-   "mtime": "2026-10-01 17:10",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/38_r18_results.md": {
-   "mtime": "2026-10-01 17:13",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/39_r19_contract.md": {
-   "mtime": "2026-10-01 17:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/40_r19_results.md": {
-   "mtime": "2026-10-01 17:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/41_r20_contract.md": {
-   "mtime": "2026-10-01 17:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/42_r20_results.md": {
-   "mtime": "2026-10-01 17:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/43_r21_contract.md": {
-   "mtime": "2026-10-01 17:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/44_r21_results.md": {
-   "mtime": "2026-10-01 17:43",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/45_r22_contract.md": {
-   "mtime": "2026-10-01 17:47",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/46_r22_results.md": {
-   "mtime": "2026-10-01 17:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/47_r23_contract.md": {
-   "mtime": "2026-10-01 19:04",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/48_r23_results.md": {
-   "mtime": "2026-10-01 19:08",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/49_o225_closeout_r1-r23.md": {
-   "mtime": "2026-10-01 20:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/50_r24_contract.md": {
-   "mtime": "2026-10-01 20:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/51_r24_results.md": {
-   "mtime": "2026-10-01 20:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/52_r25_contract.md": {
-   "mtime": "2026-10-01 20:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/53_r25_results.md": {
-   "mtime": "2026-10-01 20:41",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/54_doc_loss_incident_and_recovery.md": {
-   "mtime": "2026-10-01 20:49",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/55_r26_contract.md": {
-   "mtime": "2026-10-01 20:52",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/56_r26_results.md": {
-   "mtime": "2026-10-01 20:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/57_audit_report.md": {
-   "mtime": "2026-10-09 13:11",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/58_r27_contract.md": {
-   "mtime": "2026-10-01 21:57",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/59_r27_results.md": {
-   "mtime": "2026-10-01 22:00",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/60_r28_contract.md": {
-   "mtime": "2026-10-01 22:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/61_r28_results.md": {
-   "mtime": "2026-10-01 22:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/62_r29_contract.md": {
-   "mtime": "2026-10-01 22:47",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/63_r29_results.md": {
-   "mtime": "2026-10-01 22:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/64_r30_contract.md": {
-   "mtime": "2026-10-01 23:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/65_r30_results.md": {
-   "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/66_r31_contract.md": {
-   "mtime": "2026-10-01 23:20",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/67_r31_results.md": {
-   "mtime": "2026-10-01 23:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/68_r32_contract.md": {
-   "mtime": "2026-10-01 23:28",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/69_r32_results.md": {
-   "mtime": "2026-10-01 23:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/70_r33_contract.md": {
-   "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "docs/71_r33_results.md": {
-   "mtime": "2026-10-09 13:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "final_result.md": {
-   "mtime": "2026-10-01 20:04",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/01_recon_invariants.out": {
    "mtime": "2026-10-01 20:07",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/02_r1_contract.out": {
    "mtime": "2026-10-01 20:07",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/03_r1_barrier.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/04_r1_audit.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/04_r1_audit_firstrun_crudesgn.out": {
    "mtime": "2026-10-01 11:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/05_r1_null_analysis.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/06_r1_axis_sign_structure.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/07_r1_tie_mechanism.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/07_r1_tie_mechanism_firstrun_factor2.out": {
    "mtime": "2026-10-01 03:45",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/100_register_sync.out": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:55",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/101_audit_index.out": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/102_r27_contract.out": {
    "mtime": "2026-10-01 21:59",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/103_r27_machine.out": {
    "mtime": "2026-10-01 21:58",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/104_r27_audit.out": {
    "mtime": "2026-10-01 22:00",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/105_r28_contract.out": {
    "mtime": "2026-10-01 22:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/106_r28_machine.out": {
    "mtime": "2026-10-01 22:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/107_r28_audit.out": {
    "mtime": "2026-10-01 22:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/108_r29_contract.out": {
    "mtime": "2026-10-01 22:48",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/109_r29_machine.out": {
    "mtime": "2026-10-01 22:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/10_r2_contract.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/110_r29_audit.out": {
    "mtime": "2026-10-01 22:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/111_r30_contract.out": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/112_r30_machine.out": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/113_r30_audit.out": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/114_r31_contract.out": {
    "mtime": "2026-10-01 23:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/115_r31_machine.out": {
    "mtime": "2026-10-01 23:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/116_r31_audit.out": {
    "mtime": "2026-10-01 23:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/117_r32_contract.out": {
    "mtime": "2026-10-01 23:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/118_r32_machine.out": {
    "mtime": "2026-10-01 23:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/119_r32_audit.out": {
    "mtime": "2026-10-01 23:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/11_r2_g1_table.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/11_r2_g1_table_firstrun.out": {
    "mtime": "2026-10-01 11:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/120_r33_contract.out": {
    "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/121_r33_machine.out": {
    "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/122_r33_audit.out": {
    "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/123_r33_register_batch.out": {
    "mtime": "2026-10-09 13:12",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/12_r2_dyn17.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/13_r2_audit.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/13_r2_audit_firstrun_norollback.out": {
    "mtime": "2026-10-01 11:24",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/14_r3_contract.out": {
    "mtime": "2026-10-01 20:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/15_r3_centre.out": {
    "mtime": "2026-10-01 11:37",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/15_r3_centre_firstrun_wronginvolution.out": {
    "mtime": "2026-10-01 11:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/15_r3_centre_theorem.out": {
    "mtime": "2026-10-01 20:16",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/16_r3_audit.out": {
    "mtime": "2026-10-01 20:16",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/16_r3_audit_firstrun_crudesgn.out": {
    "mtime": "2026-10-01 11:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/17_r4_contract.out": {
    "mtime": "2026-10-01 20:16",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/18_r4_tie_parity.out": {
    "mtime": "2026-10-01 20:16",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/18_r4_tie_parity_firstrun_instbug.out": {
    "mtime": "2026-10-01 11:51",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/19_r4_audit.out": {
    "mtime": "2026-10-01 20:16",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/19_r4_audit_firstrun_linegroup_bug.out": {
    "mtime": "2026-10-01 11:52",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/20_r5_contract.out": {
    "mtime": "2026-10-01 20:16",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/21_r5_tie_global.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/21_r5_tie_global_firstrun_naivecount.out": {
    "mtime": "2026-10-01 12:01",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/22_r5_audit.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/22_r5_audit_firstrun_naivecount.out": {
    "mtime": "2026-10-01 12:02",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/23_r6_contract.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/24_r6_mechanism.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/25_r6_geometry.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/25_r6_geometry_firstrun_looseendpoint.out": {
    "mtime": "2026-10-01 12:25",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/25_r6_geometry_firstrun_orientationbug.out": {
    "mtime": "2026-10-01 12:20",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/26_r6_audit.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/27_r7_contract.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/27_r7_contract_atfreeze_prereg10.out": {
    "mtime": "2026-10-01 13:03",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/28_r7_mechanism2.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/28_r7_mechanism2_firstrun2_vadd_bug.out": {
    "mtime": "2026-10-01 13:11",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/28_r7_mechanism2_firstrun_vscale_bug.out": {
    "mtime": "2026-10-01 13:03",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/29_r7_audit.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/30_r8_contract.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/31_r8_group.out": {
    "mtime": "2026-10-01 20:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/32_r8_audit.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/32_r8_audit_firstrun_matrixcover_bug.out": {
    "mtime": "2026-10-01 13:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/32_r8_audit_secondrun_nameerr.out": {
    "mtime": "2026-10-01 13:49",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/33_r9_contract.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/33_r9_contract_firstrun_keyword_miss.out": {
    "mtime": "2026-10-01 14:13",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/33_r9_contract_secondrun_c8false.out": {
    "mtime": "2026-10-01 14:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/34_r9_pairing.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/34_r9_pairing_firstrun_misspec.out": {
    "mtime": "2026-10-01 14:13",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/34_r9_pairing_secondrun_partCbug.out": {
    "mtime": "2026-10-01 14:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/35_r9_audit.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/35_r9_audit_firstrun_nojson.out": {
    "mtime": "2026-10-01 14:13",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/35_r9_audit_secondrun_E2bug.out": {
    "mtime": "2026-10-01 14:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/35_r9_audit_thirdrun_nameerr_dgen.out": {
    "mtime": "2026-10-01 14:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/36_closeout_audit.out": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:56",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/36_closeout_audit_firstrun_invbug.out": {
    "mtime": "2026-10-01 14:51",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/36_closeout_audit_secondrun_h2phrase.out": {
    "mtime": "2026-10-01 14:52",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/37_closeout_docs.out": {
-   "mtime": "2026-10-09 13:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:56",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/37_closeout_docs_firstrun_residue.out": {
    "mtime": "2026-10-01 14:52",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/37_closeout_docs_r10_era_pre_r10files.out": {
    "mtime": "2026-10-01 15:10",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/37_closeout_docs_r10_pre_fix.out": {
    "mtime": "2026-10-01 15:10",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/37_closeout_docs_r11_pre_ext.out": {
    "mtime": "2026-10-01 15:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/37_closeout_docs_secondrun_residue19.out": {
    "mtime": "2026-10-01 14:53",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/37_closeout_docs_thirdrun_residue13.out": {
    "mtime": "2026-10-01 14:53",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/38_r10_contract.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/39_r10_universal.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/39_r10_universal_firstrun_Ekeyerr.out": {
    "mtime": "2026-10-01 15:01",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/40_r10_audit.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/40_r10_audit_firstrun_qmul4th.out": {
    "mtime": "2026-10-01 15:06",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/41_r11_contract.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/42_r11_machine.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/42_r11_machine_secondrun_parttc_crash.out": {
    "mtime": "2026-10-01 15:23",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/42_r11_machine_thirdrun_parttc_ok.out": {
    "mtime": "2026-10-01 15:25",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/43_r11_audit.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/44_r12_contract.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/45_r12_machine.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/45_r12_machine_firstrun_vecneg.out": {
    "mtime": "2026-10-01 15:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/46_r12_audit.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/47_chain_index.out": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:56",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/47_chain_index_firstrun_headfile.out": {
    "mtime": "2026-10-01 16:10",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/47_chain_index_firstrun_pathbug.out": {
    "mtime": "2026-10-01 15:53",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/48_r13_contract.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/49_r13_machine.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/50_r13_audit.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/51_r14_contract.out": {
    "mtime": "2026-10-01 20:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/52_r14_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/53_r14_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/54_r15_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/55_r15_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/56_r15_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/57_r16_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/58_r16_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/59_r16_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/60_r17_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/61_r17_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/62_r17_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/63_r18_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/64_r18_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/65_r18_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/65_r18_audit_firstrun_converse.out": {
    "mtime": "2026-10-01 17:12",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/66_r19_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/67_r19_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/68_r19_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/68_r19_audit_firstrun_implbug.out": {
    "mtime": "2026-10-01 17:20",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/69_r20_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/70_r20_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/71_r20_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/72_r21_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/73_r21_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/74_r21_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/75_r22_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/76_r22_machine.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/77_r22_audit.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/78_r23_contract.out": {
    "mtime": "2026-10-01 20:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/79_r23_machine.out": {
    "mtime": "2026-10-01 20:20",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/80_r23_audit.out": {
    "mtime": "2026-10-01 20:20",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/81_o225_closeout2_audit.out": {
    "mtime": "2026-10-01 20:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/82_o225_closeout2_docs.out": {
-   "mtime": "2026-10-09 13:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-24 00:55",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/83_r24_contract.out": {
    "mtime": "2026-10-01 20:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/84_r24_machine.out": {
    "mtime": "2026-10-01 20:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/85_r24_audit.out": {
    "mtime": "2026-10-01 20:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/86_r25_contract.out": {
    "mtime": "2026-10-01 20:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/87_r25_machine.out": {
    "mtime": "2026-10-01 20:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/88_r25_audit.out": {
    "mtime": "2026-10-01 20:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/89_r26_contract.out": {
    "mtime": "2026-10-01 20:52",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/90_r26_machine.out": {
    "mtime": "2026-10-01 20:55",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/91_r26_audit.out": {
    "mtime": "2026-10-01 20:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_01_recon_invariants.out": {
    "mtime": "2026-10-01 21:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_02_r1_contract.out": {
    "mtime": "2026-10-01 21:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_03_r1_barrier.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_04_r1_audit.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_05_r1_null_analysis.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_06_r1_axis_sign_structure.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_07_r1_tie_mechanism.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_10_r2_contract.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_11_r2_g1_table.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_12_r2_dyn17.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_13_r2_audit.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_14_r3_contract.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_15_r3_centre_theorem.out": {
    "mtime": "2026-10-01 21:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_16_r3_audit.out": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_17_r4_contract.out": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_18_r4_tie_parity.out": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_19_r4_audit.out": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_20_r5_contract.out": {
    "mtime": "2026-10-01 21:31",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_21_r5_tie_global.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_22_r5_audit.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_23_r6_contract.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_24_r6_mechanism.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_25_r6_geometry.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_26_r6_audit.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_27_r7_contract.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_28_r7_mechanism2.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_29_r7_audit.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_30_r8_contract.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_31_r8_group.out": {
    "mtime": "2026-10-01 21:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_32_r8_audit.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_33_r9_contract.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_34_r9_pairing.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_35_r9_audit.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_36_closeout_audit.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_37_closeout_docs.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_38_r10_contract.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_39_r10_universal.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_40_r10_audit.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_41_r11_contract.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_42_r11_machine.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_43_r11_audit.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_44_r12_contract.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_45_r12_machine.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_46_r12_audit.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_47_chain_index.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_48_r13_contract.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_49_r13_machine.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_50_r13_audit.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_51_r14_contract.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_52_r14_machine.out": {
    "mtime": "2026-10-01 21:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_53_r14_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_54_r15_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_55_r15_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_56_r15_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_57_r16_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_58_r16_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_59_r16_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_60_r17_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_61_r17_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_62_r17_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_63_r18_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_64_r18_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_65_r18_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_66_r19_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_67_r19_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_68_r19_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_69_r20_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_70_r20_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_71_r20_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_72_r21_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_73_r21_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_74_r21_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_75_r22_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_76_r22_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_77_r22_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_78_r23_contract.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_79_r23_machine.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_80_r23_audit.out": {
    "mtime": "2026-10-01 21:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_83_r24_contract.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_84_r24_machine.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_85_r24_audit.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_86_r25_contract.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_87_r25_machine.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_88_r25_audit.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_89_r26_contract.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_90_r26_machine.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_91_r26_audit.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_95_doc_binding.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/92_audit_sweep.out": {
    "mtime": "2026-10-01 21:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/93_audit_blind.out": {
    "mtime": "2026-10-01 21:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/94_record_rebuild.out": {
    "mtime": "2026-10-09 13:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/95_doc_binding.out": {
    "mtime": "2026-10-01 21:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/96_audit_report.out": {
    "mtime": "2026-10-09 13:11",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/97_drift_audit.out": {
    "mtime": "2026-10-01 21:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/98_round_claim_check.out": {
    "mtime": "2026-10-01 21:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/99_gap_blind.out": {
    "mtime": "2026-10-01 21:54",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "logs/_rerun_all.out": {
    "mtime": "2026-10-01 20:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/01_recon_invariants.py": {
    "mtime": "2026-10-01 03:28",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/02_r1_contract.py": {
    "mtime": "2026-10-01 03:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/03_r1_barrier.py": {
    "mtime": "2026-10-01 03:30",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/04_r1_audit.py": {
    "mtime": "2026-10-01 11:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/05_r1_null_analysis.py": {
    "mtime": "2026-10-01 03:42",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/06_r1_axis_sign_structure.py": {
    "mtime": "2026-10-01 03:44",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/07_r1_tie_mechanism.py": {
    "mtime": "2026-10-01 03:45",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/100_register_sync.py": {
    "mtime": "2026-10-01 21:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/101_audit_index.py": {
    "mtime": "2026-10-09 13:11",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/102_r27_contract.py": {
    "mtime": "2026-10-01 21:59",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/103_r27_machine.py": {
    "mtime": "2026-10-01 21:58",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/104_r27_audit.py": {
    "mtime": "2026-10-01 22:00",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/105_r28_contract.py": {
    "mtime": "2026-10-01 22:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/106_r28_machine.py": {
    "mtime": "2026-10-01 22:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/107_r28_audit.py": {
    "mtime": "2026-10-01 22:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/108_r29_contract.py": {
    "mtime": "2026-10-01 22:47",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/109_r29_machine.py": {
    "mtime": "2026-10-01 22:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/10_r2_contract.py": {
    "mtime": "2026-10-01 09:45",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/110_r29_audit.py": {
    "mtime": "2026-10-01 22:49",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/111_r30_contract.py": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/112_r30_machine.py": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/113_r30_audit.py": {
    "mtime": "2026-10-01 23:15",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/114_r31_contract.py": {
    "mtime": "2026-10-01 23:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/115_r31_machine.py": {
    "mtime": "2026-10-01 23:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/116_r31_audit.py": {
    "mtime": "2026-10-01 23:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/117_r32_contract.py": {
    "mtime": "2026-10-01 23:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/118_r32_machine.py": {
    "mtime": "2026-10-01 23:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/119_r32_audit.py": {
    "mtime": "2026-10-01 23:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/11_r2_g1_table.py": {
    "mtime": "2026-10-01 11:23",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/120_r33_contract.py": {
    "mtime": "2026-10-09 13:06",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/121_r33_machine.py": {
    "mtime": "2026-10-09 13:08",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/122_r33_audit.py": {
    "mtime": "2026-10-09 13:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/123_r33_register_batch.py": {
    "mtime": "2026-10-09 13:12",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/12_r2_dyn17.py": {
    "mtime": "2026-10-01 09:47",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/13_r2_audit.py": {
    "mtime": "2026-10-01 11:24",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/14_r3_contract.py": {
    "mtime": "2026-10-01 11:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/15_r3_centre_theorem.py": {
    "mtime": "2026-10-01 11:37",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/16_r3_audit.py": {
    "mtime": "2026-10-01 11:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/17_r4_contract.py": {
    "mtime": "2026-10-01 11:55",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/18_r4_tie_parity.py": {
    "mtime": "2026-10-01 11:51",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/19_r4_audit.py": {
    "mtime": "2026-10-01 11:52",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/20_r5_contract.py": {
    "mtime": "2026-10-01 12:00",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/21_r5_tie_global.py": {
    "mtime": "2026-10-01 12:01",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/22_r5_audit.py": {
    "mtime": "2026-10-01 12:02",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/23_r6_contract.py": {
    "mtime": "2026-10-01 12:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/24_r6_mechanism.py": {
    "mtime": "2026-10-01 12:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/25_r6_geometry.py": {
    "mtime": "2026-10-01 12:26",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/26_r6_audit.py": {
    "mtime": "2026-10-01 12:27",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/27_r7_contract.py": {
    "mtime": "2026-10-01 12:48",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/28_r7_mechanism2.py": {
    "mtime": "2026-10-01 13:11",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/29_r7_audit.py": {
    "mtime": "2026-10-01 13:11",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/30_r8_contract.py": {
    "mtime": "2026-10-01 13:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/31_r8_group.py": {
    "mtime": "2026-10-01 13:28",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/32_r8_audit.py": {
    "mtime": "2026-10-01 13:49",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/33_r9_contract.py": {
    "mtime": "2026-10-01 14:14",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/34_r9_pairing.py": {
    "mtime": "2026-10-01 14:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/35_r9_audit.py": {
    "mtime": "2026-10-01 14:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/36_closeout_audit.py": {
    "mtime": "2026-10-01 14:52",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/37_closeout_docs.py": {
    "mtime": "2026-10-01 21:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/38_r10_contract.py": {
    "mtime": "2026-10-01 15:00",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/39_r10_universal.py": {
    "mtime": "2026-10-01 15:01",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/40_r10_audit.py": {
    "mtime": "2026-10-01 15:06",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/41_r11_contract.py": {
    "mtime": "2026-10-01 15:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/42_r11_machine.py": {
    "mtime": "2026-10-01 15:25",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/43_r11_audit.py": {
    "mtime": "2026-10-01 15:27",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/44_r12_contract.py": {
    "mtime": "2026-10-01 15:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/45_r12_machine.py": {
    "mtime": "2026-10-01 15:36",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/46_r12_audit.py": {
    "mtime": "2026-10-01 15:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/47_chain_index.py": {
    "mtime": "2026-10-01 20:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/48_r13_contract.py": {
    "mtime": "2026-10-01 16:03",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/49_r13_machine.py": {
    "mtime": "2026-10-01 16:08",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/50_r13_audit.py": {
    "mtime": "2026-10-01 16:09",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/51_r14_contract.py": {
    "mtime": "2026-10-01 16:18",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/52_r14_machine.py": {
    "mtime": "2026-10-01 16:26",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/53_r14_audit.py": {
    "mtime": "2026-10-01 16:26",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/54_r15_contract.py": {
    "mtime": "2026-10-01 16:46",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/55_r15_machine.py": {
    "mtime": "2026-10-01 16:47",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/56_r15_audit.py": {
    "mtime": "2026-10-01 16:48",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/57_r16_contract.py": {
    "mtime": "2026-10-01 16:53",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/58_r16_machine.py": {
    "mtime": "2026-10-01 16:55",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/59_r16_audit.py": {
    "mtime": "2026-10-01 16:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/60_r17_contract.py": {
    "mtime": "2026-10-01 17:01",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/61_r17_machine.py": {
    "mtime": "2026-10-01 17:05",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/62_r17_audit.py": {
    "mtime": "2026-10-01 17:06",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/63_r18_contract.py": {
    "mtime": "2026-10-01 17:10",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/64_r18_machine.py": {
    "mtime": "2026-10-01 17:11",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/65_r18_audit.py": {
    "mtime": "2026-10-01 17:12",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/66_r19_contract.py": {
    "mtime": "2026-10-01 17:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/67_r19_machine.py": {
    "mtime": "2026-10-01 17:19",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/68_r19_audit.py": {
    "mtime": "2026-10-01 17:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/69_r20_contract.py": {
    "mtime": "2026-10-01 17:29",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/70_r20_machine.py": {
    "mtime": "2026-10-01 17:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/71_r20_audit.py": {
    "mtime": "2026-10-01 17:34",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/72_r21_contract.py": {
    "mtime": "2026-10-01 17:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/73_r21_machine.py": {
    "mtime": "2026-10-01 17:42",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/74_r21_audit.py": {
    "mtime": "2026-10-01 17:42",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/75_r22_contract.py": {
    "mtime": "2026-10-01 17:47",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/76_r22_machine.py": {
    "mtime": "2026-10-01 17:49",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/77_r22_audit.py": {
    "mtime": "2026-10-01 17:49",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/78_r23_contract.py": {
    "mtime": "2026-10-01 19:04",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/79_r23_machine.py": {
    "mtime": "2026-10-01 19:06",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/80_r23_audit.py": {
    "mtime": "2026-10-01 19:08",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/81_o225_closeout2_audit.py": {
    "mtime": "2026-10-01 20:22",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/82_o225_closeout2_docs.py": {
    "mtime": "2026-10-01 20:06",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/83_r24_contract.py": {
    "mtime": "2026-10-01 20:32",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/84_r24_machine.py": {
    "mtime": "2026-10-01 20:33",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/85_r24_audit.py": {
    "mtime": "2026-10-01 20:35",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/86_r25_contract.py": {
    "mtime": "2026-10-01 20:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/87_r25_machine.py": {
    "mtime": "2026-10-01 20:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/88_r25_audit.py": {
    "mtime": "2026-10-01 20:40",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/89_r26_contract.py": {
    "mtime": "2026-10-01 20:52",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/90_r26_machine.py": {
    "mtime": "2026-10-01 20:55",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/91_r26_audit.py": {
    "mtime": "2026-10-01 20:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/92_audit_sweep.py": {
    "mtime": "2026-10-01 21:21",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/93_audit_blind.py": {
    "mtime": "2026-10-01 21:17",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/94_record_rebuild.py": {
    "mtime": "2026-10-09 13:12",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/95_doc_binding.py": {
    "mtime": "2026-10-01 21:39",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/96_audit_report.py": {
    "mtime": "2026-10-01 21:56",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/97_drift_audit.py": {
    "mtime": "2026-10-01 21:38",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/98_round_claim_check.py": {
    "mtime": "2026-10-01 21:50",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/99_gap_blind.py": {
    "mtime": "2026-10-01 21:54",
-   "last_closed_out": "2026-10-09 13:15",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   },
   "scripts/_28_tpl.md": {
-   "mtime": "2026-10-01 16:10",
-   "last_closed_out": "2026-10-09 13:15",
+   "mtime": "2026-10-15 23:34",
+   "last_closed_out": "2026-10-24 00:56",
    "verified_range": "全文",
    "status": "✅ 已驗（close-out 第一輪）"
   }

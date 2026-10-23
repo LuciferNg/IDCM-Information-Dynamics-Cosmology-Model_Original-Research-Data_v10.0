@@ -18,11 +18,3 @@ O177 預言嘅分辨路徑 (M ≥ 5-sf + t ≥ 4-sf) 天文上不可達 — 採�
 
 ## 依賴
 O173 → O175 → O177 → O181 (closed 🔴 gated)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `2833245b1d288ffb` | 2026-10-24 | — | O177 預言嘅分辨路徑 (M ≥ 5-sf + t ≥ 4-sf) 天文上不可達 — 採樣 floor 6.1% (n=434, 0.428 dex) + λEdd common-mode ≥0.5 dex (216%) + 窗口定義依… | open_problems_fresh/o181_lrd_mass_window_resolution/final_result.md | — |
-<!-- conclusion-history:end -->

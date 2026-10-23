@@ -36,11 +36,3 @@
 
 ## 依賴
 O54 → O59 → O53 → O123；ckm_reconstruction T7/T9 → O123
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `6d5148ea2e60c0be` | 2026-10-24 | partial | SESSIONSTART.md 指定路線（CY₃ 投影 / Z₅ twisted sector）經兩個獨立 no-go 否證； 上游 4 個互相矛盾候選（222.5°/72°/144°/230°）全部結構否證； δPMNS 唯一存活機制 … | open_problems_fresh/o123_neutrino_delta_cp/final_result.md | — |
-<!-- conclusion-history:end -->

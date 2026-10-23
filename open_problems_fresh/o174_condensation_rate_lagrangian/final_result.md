@@ -28,11 +28,3 @@ D5 🟡, D6 🟡 (全結構候選), D7 🟡。
 
 ## 依賴
 O171 → O173 (P1/P1′) → O140 → O159; D6 鏈: O157 → O175 → O174 → O182
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `b8e66bd39a1c7401` | 2026-10-24 | closed | 凝聚率 4^{−ℓ} = Noether 電荷稀釋 (代數精確, 零新常數)。衍生攻堅: D13 🟢, D14 🟢, D5 🟡, D6 🟡 (全結構候選), D7 🟡。 | open_problems_fresh/o174_condensation_rate_lagrangian/final_result.md | — |
-<!-- conclusion-history:end -->

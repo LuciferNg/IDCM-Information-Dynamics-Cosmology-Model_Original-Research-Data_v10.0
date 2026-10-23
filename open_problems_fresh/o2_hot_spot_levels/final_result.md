@@ -33,11 +33,3 @@ Planck 三地圖 (SMICA/NILC/Commander) 確認 F₆=277.7μK 熱斑 @ (157.8°,-
 
 ## 依賴
 O2 ← cmb_cold_spot (冷斑 F₅ 閉合) → O_next (F₈ 搜索 / 尺度階梯-K_chain 閉合)
-
-<!-- conclusion-history:start -->
-## 迭代史（machine-generated from register.conclusion；append-only）
-
-| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
-|---|---|---|---|---|---|
-| `815638717ad68833` | 2026-10-24 | partial | Planck 三地圖 (SMICA/NILC/Commander) 確認 F₆=277.7μK 熱斑 @ (157.8°,-70.3°), 1.0° 平滑, 三方法 0.3% 一致; F₇=353.1μK 候選 @ (0.2°,-37.9… | open_problems_fresh/o2_hot_spot_levels/final_result.md | — |
-<!-- conclusion-history:end -->
