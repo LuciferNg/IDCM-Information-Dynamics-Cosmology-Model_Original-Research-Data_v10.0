@@ -65,3 +65,4 @@ open_problems_fresh/o53_cy3_reality/data/polytopes-4d/
 # 備份檔唔上傳 (2026-10-18)
 *.bak_*
 *.pre_*
+*.bak.*
