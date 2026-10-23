@@ -45,3 +45,13 @@ scripts/08_audit.py      審計腳本 (獨立重算 + AST 空洞掃描)
 ## 缺口清單
 **`docs/04_current_gaps.md`** — A 本 O 內 4（A1 `w_n` 無獨立生成★ / A2 密度基準未建 / A3 88-site 未接入 / A4 熱態未接振幅）／B 已發還 P3 ×2／C 跨 O 5（已 handoff O9 ×2）／D 非缺口 5。
 register: **state=partial, verdict=partial**（2026-10-23）。
+
+## 攻堅進展（2026-10-23）
+**`docs/05_w_n_and_thermal_derivation.md`**
+```
+A1 🔴→🟡  b_k = B·a_k − F₅ (單參數族); a_k = {Z₂,N_gen,B}; 族 243,360 → distinct 1
+A2 🔴→🟡  q_obs = 0.00041% (振幅族); 峯位族未掃
+A4 🔴→🟢  熱佔據 < 10^(−3.7×10⁹) ⟹ C_ℓ 振幅 ≡ 真空 propagator
+A5 🔴新   w_n 絕對歸一化 ((δT/T)² 結構式) — φ-power 陷阱 ⟹ 只登記未掃
+```
+`scripts/09_w_n_structural.py` 6/6 ／ `scripts/10_thermal_amplitude.py` 4/4 ／ `07_file_verifier` **83/83**

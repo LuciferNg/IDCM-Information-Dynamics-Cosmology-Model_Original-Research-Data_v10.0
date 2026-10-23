@@ -53,6 +53,9 @@ expected_scripts = [
     "04_amplitude_mother.py",
     "05_thermal_state.py",
     "06_final_verification.py",
+    "08_audit.py",
+    "09_w_n_structural.py",
+    "10_thermal_amplitude.py",
 ]
 for s in expected_scripts:
     path = os.path.join(SCRIPTS, s)
@@ -253,11 +256,17 @@ for phrase, context in checks_doc3:
 # [H] 全部腳本 exit code = 0
 # ──────────────────────────────────────────────
 print("\n─── [H] 腳本 exit code 驗證 ───")
+# 審計 2026-10-23: 08_audit 用 sympy 精確求和需 >30s ⟹ 個別 timeout (唔降級標準)
+TIMEOUTS = {"08_audit.py": 300, "09_w_n_structural.py": 300, "10_thermal_amplitude.py": 300}
 for s in expected_scripts:
     path = os.path.join(SCRIPTS, s)
-    result = subprocess.run([sys.executable, path], capture_output=True, timeout=30)
-    rc = result.returncode
-    check(f"{s} exit code = {rc}", rc == 0, f"({'PASS' if rc == 0 else 'FAIL'})")
+    try:
+        result = subprocess.run([sys.executable, path], capture_output=True,
+                                timeout=TIMEOUTS.get(s, 60))
+        rc = result.returncode
+        check(f"{s} exit code = {rc}", rc == 0, f"({'PASS' if rc == 0 else 'FAIL'})")
+    except subprocess.TimeoutExpired:
+        check(f"{s} 完成 (timeout {TIMEOUTS.get(s,60)}s)", False, "(TIMEOUT)")
 
 # ──────────────────────────────────────────────
 # 總結

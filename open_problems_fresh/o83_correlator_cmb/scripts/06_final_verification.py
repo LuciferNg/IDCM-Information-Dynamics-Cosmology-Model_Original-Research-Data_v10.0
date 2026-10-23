@@ -178,6 +178,10 @@ expected_scripts = [
     "04_amplitude_mother.py",
     "05_thermal_state.py",
     "06_final_verification.py",
+    "07_file_verifier.py",
+    "08_audit.py",
+    "09_w_n_structural.py",
+    "10_thermal_amplitude.py",
 ]
 for s in expected_scripts:
     path = os.path.join(script_dir, s)
