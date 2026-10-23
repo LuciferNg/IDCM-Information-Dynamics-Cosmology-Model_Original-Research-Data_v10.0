@@ -66,3 +66,6 @@ open_problems_fresh/o53_cy3_reality/data/polytopes-4d/
 *.bak_*
 *.pre_*
 *.bak.*
+
+# register 資料夾唔上傳 GitHub（本地權威，2026-10-24 用戶指示）
+problem_register/

@@ -1,9 +1,0 @@
-# problem_register — generated / local-only artifacts
-# register.jsonl is the append-only source of truth and IS tracked.
-register.sqlite
-register.sqlite-wal
-register.sqlite-shm
-clues.sqlite
-REGISTER.md
-__pycache__/
-*.pyc
