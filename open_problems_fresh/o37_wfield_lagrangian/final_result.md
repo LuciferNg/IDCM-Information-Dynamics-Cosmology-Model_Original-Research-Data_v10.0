@@ -18,3 +18,11 @@ g_n = κ·ω_n 由凝聚疊加 + 正交投影推出, 全部遺留閉合 (63/63 +
 
 ## 依賴
 O34 → O36 → O38 → O37 → O40
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `f7fa39b69894fbac` | 2026-10-24 | closed | W-field 係 KChain 圖上嘅 real scalar 場, 完整 Lagrangian 零自由參數閉合, gn = κ·ωn 由凝聚疊加 + 正交投影推出, 全部遺留閉合 (63/63 + 攻堅 10/10)。 | open_problems_fresh/o37_wfield_lagrangian/final_result.md | — |
+<!-- conclusion-history:end -->

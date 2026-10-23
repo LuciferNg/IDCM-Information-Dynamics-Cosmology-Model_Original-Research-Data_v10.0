@@ -99,3 +99,11 @@ e 形陰影:  e^{−25.5}·(1 − 1/(2B²·(N_d+1))) = e^{−25.5}·(1−1/1440)
 - docs/07_dual_verification.md — Q3/α 雙驗證架構 (09-11): 51 代數閉合 + 90 半格點 + α 雙鎖
 - docs/08_phi_reconciliation.md — φ 形 Z₂ 濾波器 + O168 gate 對賬 (09-11): **Q3 閉合** 0.056σ
 - scripts/01–10 (84 PASS: 8+5+6+18+17+6+6+6+6+6), data/ 輸出
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `2182e0f9298ad8d8` | 2026-10-24 | — | TCMB = 2.72548 K 冇「本體結構推導」(🔴) — 佢係重子扇區嘅投影量 (🟡): IDCM 已閉合嘅重子扇區 (Ωb, ωring, ηB, mp) + 黑體光子統計, 唯一決定光子氣體溫度: TCMB = (π²/2ζ(3… | open_problems_fresh/o166_tcmb_absolute_value/final_result.md | — |
+<!-- conclusion-history:end -->

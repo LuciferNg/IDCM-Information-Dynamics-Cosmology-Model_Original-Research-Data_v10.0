@@ -15,3 +15,11 @@ CAMB 高ℓ峰 (1129/1427) 係殘餘假峰；真實觀測 (Planck/SPT-3G/ACT DR4
 
 ## 依賴
 O9 ← CMB C_ℓ 閉合 → O10（振幅母函數延伸）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `e21e14925b0572c2` | 2026-10-24 | — | CAMB 高ℓ峰 (1129/1427) 係殘餘假峰；真實觀測 (Planck/SPT-3G/ACT DR4/ACT DR6) 確認 IDCM 峰位，m=5 需結構修正 ℓ₅=1121。峰位閉合 RMS 0.83%，振幅母函數獲 ACT … | open_problems_fresh/o9_high_ell_peaks/final_result.md | — |
+<!-- conclusion-history:end -->

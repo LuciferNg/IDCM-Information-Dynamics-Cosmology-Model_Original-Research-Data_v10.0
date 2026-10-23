@@ -30,3 +30,11 @@ O54 (antimatter)、O50 以 O53 為前置 🟢
 - q_obs = 100%（block 普適性 15/15）→ 🟢
 
 > ⚠️ 孤島統計（O58 修正）：HF metadata h11/h12 swap — 真實 (36,98) = 5,021 個（非孤島）；3×12 block 閉合用 all_36_98.poly + CYTools，不受影響。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `e37f86255da41ef0` | 2026-10-24 | closed | CY₃(36,98) 係真實存在嘅 toric Calabi-Yau 三倍體（KS 庫確認，χ=−124）。 真 κ（CYTools）確認 3×12 block-triangular 結構係 (36,98) 專屬（15/15 vs 0/4… | open_problems_fresh/o53_cy3_reality/final_result.md | — |
+<!-- conclusion-history:end -->

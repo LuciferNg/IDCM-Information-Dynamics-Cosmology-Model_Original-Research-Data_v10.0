@@ -65,3 +65,10 @@ round 4 新增依賴: O51 T6 (N_gen=3/B=4 強制) · O53 CY₃(36,98) · O56 (mo
 
 > 範本: `open_problems_fresh/RESULT_TEMPLATE.md` (repo root 冇同名檔 — 全系統唯一一份)。
 
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `2eb5085db2aec101` | 2026-10-24 | closed | 兩個密度漲落通道嘅合成 = 乘性 (1+δtot) = (1+δ̂)(1+δenv)，但 δ̂ 唔係乘性因子， 係獨立低端種子通道（兩通道並存 + 質量域分離：通道 A arcsine ∈ 2.02e6, 5.41e6， 通道 B log… | open_problems_fresh/o197_density_synthesis/final_result.md | — |
+<!-- conclusion-history:end -->

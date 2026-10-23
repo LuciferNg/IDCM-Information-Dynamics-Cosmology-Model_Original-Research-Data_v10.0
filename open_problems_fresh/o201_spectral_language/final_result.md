@@ -91,3 +91,11 @@ o201_basis.py                       共用譜基 (2382 原子池 / depth1-2 引�
 - scripts/20 移除恆真 check; scripts/21 群論 check 由循環驗證改真算
 - docs/22 T2 措辭修正 (簡併唔係非 Abel 專有; C₈₈ 45 相異值); docs/21 γ₄₄ 雙約定標註
 - docs/17 T4 + docs/19 Verdict 原文恢復 (git) + 追加「★ 更正」段, 冇回溯改寫
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `8802b1e4c6cf5533` | 2026-10-24 | closed | 「譜分解 = 宇宙語言」四項核心宣稱 (C1 完備性 / C2 唯一性 / C3 判準 / C4 自指) 全部由口號推到 可執行判準 + 定理級結果: C1 真完備率 86.6% (反例 0 個), C2 代數層定理 (冇第三個域), C… | open_problems_fresh/o201_spectral_language/final_result.md | — |
+<!-- conclusion-history:end -->

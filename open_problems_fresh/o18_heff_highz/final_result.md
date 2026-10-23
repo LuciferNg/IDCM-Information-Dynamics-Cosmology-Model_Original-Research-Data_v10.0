@@ -12,3 +12,11 @@ IDCM 預測 H(z) ∝ (1+z)^1.0 由 D_app(ℓ) 零參數拓撲映射在 47 個 H(
 
 ## 依賴
 O2 → O18
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `c8f67652209a5916` | 2026-10-24 | — | IDCM 預測 H(z) ∝ (1+z)^1.0 由 Dapp(ℓ) 零參數拓撲映射在 47 個 H(z) 數據點驗證（χ²/dof=0.65），ΛCDM (1+z)^1.5 排除於 13.5σ。 | open_problems_fresh/o18_heff_highz/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -41,3 +41,11 @@ O239（質量閉合式 + 天然污染框架）→ O247 → {O142 標度橋, O206
 - Q3 相位同步污染 → **O248**（P1 回覆 2026-10-13: v10 無載體，終止）
 - 觀測飽和容量（宏觀/微觀）→ **O249**（新開，2026-10-13）
 - 三水平簇 Q1 → **O206-OPEN-4 已關閉**（A₅ 偽影；調律者「OPEN-4 直接 close 不推」）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `d48e5ed6b51925cc` | 2026-10-24 | partial | 核子/原子質量唔喺 Kchain/KTree 譜域（三層獨立 no-go：單量快閘 → KTree 過渡 → 投影算符層）； 但原子存在性由 α⁻¹(O124) + me(O54) 零新常數閉合（a₀, R∞），且原子層 = 複合投影（結… | open_problems_fresh/o247_natural_contamination_ladder/final_result.md | — |
+<!-- conclusion-history:end -->

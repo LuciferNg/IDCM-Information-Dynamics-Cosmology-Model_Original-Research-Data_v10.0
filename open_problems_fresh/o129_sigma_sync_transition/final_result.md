@@ -38,3 +38,11 @@ O129 → O100 / O133 / O128（σ_sync 算子歸屬, 已有主）; O99 docs/11（
 
 ## 待裁定
 O129 目錄之處置（保留作歷史記錄 / 合併入 O128）待調律者明示 — 本 session 未作合併動作。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `0e8ee4accf630351` | 2026-10-24 | partial | O129 之 σsync 係 v9.0 諧波尺度變異數算子 σsync²(Rn) = ∫ ξ(s)·W(s;Rn) ds at Rn = λsync/(2n) （寬度／振幅量, 取代 σ₈），唔係 sync dip 位置；dip 位置 z… | open_problems_fresh/o129_sigma_sync_transition/final_result.md | — |
+<!-- conclusion-history:end -->

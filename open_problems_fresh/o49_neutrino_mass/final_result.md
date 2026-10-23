@@ -69,3 +69,11 @@ docs/04_generation_chain.md（★質量差源頭生成鏈，新權威）
 docs/05_blind_test_desi.md（★盲測 + DESI DR2 更新，Σm_ν 模型依賴）
 docs/06_two_power_family.md（★2 冪家族統一 + 1456 降級 + 實驗交叉）
 docs/07_sumnu_structural.md（★Σm_ν 第一性原理結構閉式，零 ΛCDM 依賴）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `ffc83b1dc96ca5bf` | 2026-10-24 | — | 中微子絕對質量標度全部結構閉合：Mcomp 經 O66 KChain propagator 機制， 質量差源頭經 KChain 譜內插生成鏈（docs/04, script 08, 13/13 PASS）， 盲測確認（docs/05）：生… | open_problems_fresh/o49_neutrino_mass/final_result.md | — |
+<!-- conclusion-history:end -->

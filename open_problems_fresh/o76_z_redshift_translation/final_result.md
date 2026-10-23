@@ -66,3 +66,11 @@ O76 → O13 (n/p 結構, 舊 α 來源 — 已撤銷) ; O76 → O117/O167 (D_H �
 - `Δt_obs = (1+z)·Δt_emit` — DES b = 1.003 ± 0.011 已確認 (0.27σ)
 - `T(z) = T₀(1+z)` (β = 0) — 8 個公開量度 χ²/dof = 0.203 一致
 - `z > 17` 冇源 (Nyquist 截止 ℓ_Nyq = log₄18 = 2.08496) — 待 JWST 極高 z 搜尋
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `24c75f3015f048ff` | 2026-10-24 | — | IDCM 冇膨脹但紅移完全閉合：1+z = 4^ℓ 係 KTree 尺度階；距離律 DA(ℓ) = R(1−4^{−ℓ})(ℓ + 1.11911398) (O169 修正後) 零參數 fit DESI χ² = 2.4528/5； 光度… | open_problems_fresh/o76_z_redshift_translation/final_result.md | — |
+<!-- conclusion-history:end -->

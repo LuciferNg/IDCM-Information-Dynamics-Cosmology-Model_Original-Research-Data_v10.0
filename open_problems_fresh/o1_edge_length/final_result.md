@@ -22,3 +22,11 @@ O1(15.11° 負結果) → 新O1（本閉合）; 閉合鏈: 冷斑位置碼 (l=18
 θ 三條獨立路徑（球面餘弦定律 / quaternion 120° / 代數 cos²δ−sin²δ/2）全部 = 26.0913571445°，三路差 **1.1e-39°**;
 A₅ 群 60 元素, 角譜命中 26.0914←120°, 26.1664←72°, 31.6787←180°, 42.9712←144°; 旋轉不變性逐節點差 4.4e-39°。
 階段性 closeout 記錄: `05_closeout.md`。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `ba651d24bd7c1614` | 2026-10-24 | — | 60 節點 A₅ 軌道（冷斑自由軌道，一般位置）邊長 26.0913° 係群理論閉合：由 A₅ 群 120°（3-fold）旋轉作用喺冷斑向量決定。公式 θ = arccos(cos²δ − sin²δ/2) 閉合到 0.000011°（… | open_problems_fresh/o1_edge_length/final_result.md | — |
+<!-- conclusion-history:end -->

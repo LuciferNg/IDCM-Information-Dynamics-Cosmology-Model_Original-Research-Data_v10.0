@@ -28,3 +28,11 @@ O155 T31 (winding/域定理) → O155 T32 (泛函建構) → O157 T1-T4 (第一�
 ## 驗證統計
 O157: scripts/01 (54/54) + scripts/02 (19/19) + scripts/03 獨立核對 (55/55) + scripts/04 R6 獨立核對 (14/14) = **142/142 PASS**
 O159 回填來源: scripts/01-02 (92/92) + scripts/03 獨立核對 (47/47) = 139/139 PASS
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `87bd4d19d1fce787` | 2026-10-24 | closed | Eφ = γ₈₈·sin²(π·frac(w))·δphase + γ₄₄·(Δθ/σ)² 由 176-Laplacian 譜 + 環拓撲第一原理推出 (O155 建構 → 定理): 閉合項 = winding deficit 嘅離散梯度… | open_problems_fresh/o157_bc_energy_functional/final_result.md | — |
+<!-- conclusion-history:end -->

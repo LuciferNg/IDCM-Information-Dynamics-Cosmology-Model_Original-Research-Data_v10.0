@@ -18,3 +18,11 @@ Mask 校正後冷 centroid 移離節點 (10°→18-20°)，最近節點 node21 �
 
 ## 依賴
 O5 → O28 → （無衍生）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `f9dbf55110f1d6e2` | 2026-10-24 | — | Planck 2013 第二冷斑 gp10 (l=32°, b=-8°) 喺 SMICA 中尺度 (4.17-7.0°) 唔存在任何冷結構 — 「gp10 冷斑」好可能係 Cruz 2011 Nside=16 variance/skewn… | open_problems_fresh/o28_gp10_mask/final_result.md | — |
+<!-- conclusion-history:end -->

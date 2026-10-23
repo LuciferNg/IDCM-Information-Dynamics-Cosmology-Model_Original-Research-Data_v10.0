@@ -26,3 +26,11 @@ O62 → O86 → O36/O138/O212 → O242 → O240/O241/O138
 
 > 剩餘全部指向有主 O: Casimir-Polder/Lamb/g−2 力學式 → O241; Γ 速率 → O138 已閉合引用;
 > Δ 不可約 20 次域 → O240。O242 本身無開放項。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `0a9ad9ae28cdeb51` | 2026-10-24 | closed | 「量子漲落純數學自洽定巨觀實測」之回答 = 可觀測性分層閉合: 實驗量到嘅永遠係譜差分（A 類）; 絕對真空能密度經結構數 e^{−VΛ} 變成宇觀學可檢驗嘅 B 類量; 兩讀法（實體論 vs DTO）喺實驗檯無差別（NDT-1 定理），… | open_problems_fresh/o242_fluctuation_observability_ontology/final_result.md | — |
+<!-- conclusion-history:end -->

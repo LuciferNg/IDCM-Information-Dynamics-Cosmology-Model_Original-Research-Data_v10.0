@@ -15,3 +15,11 @@
 
 ## 依賴
 O53 → O50 → O55
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `f2b5288e1e8e9a5b` | 2026-10-24 | — | 真實 CY₃(36,98) 嘅幾何相交數 κijk（CYTools，36×36×36，整數）同 IDCM dtensorfinal（12×12×12，float）冇直接幾何對應關係 — 概念解耦。dtensorfinal 係 KChain… | open_problems_fresh/o50_cy3_intersection/final_result.md | — |
+<!-- conclusion-history:end -->

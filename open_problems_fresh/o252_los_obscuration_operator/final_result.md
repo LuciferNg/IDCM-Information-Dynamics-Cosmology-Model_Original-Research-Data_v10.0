@@ -22,3 +22,11 @@ O252 ← O180（投影核 v=√(a₀r)）← O179（hop 階梯）← O140（FSR 
 - 窗中心: N_search = 2（hop=2 204.9 vs hop=4 289.76）, 觀測 μ_hat 兩者皆未鎖定 → 🟡
 - 深度: 上限 τ_w=4（top-3 0.923, 6%）＋中位 τ_eff=28/15（3.5%）→ 🟡
 - 方向: two-sided p=0.092 → 🔴 未閉合
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `455c6b213fc39930` | 2026-10-24 | partial | τ(v) = τ₀·ℓband(θ(v)) + τw·exp(−(v∓vabs)²/2σ²) 第一版由世界環幾何零新常數推出: 窗存在（含冇-dip 反例）＋窗寬統計閉合, 深度上限/中位雙命中; 窗中心結構身份 (μhat=235.7±… | open_problems_fresh/o252_los_obscuration_operator/final_result.md | — |
+<!-- conclusion-history:end -->

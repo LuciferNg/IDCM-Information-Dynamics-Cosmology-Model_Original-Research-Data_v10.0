@@ -53,3 +53,11 @@ H₀ = ω_ring 誤讀 (O73), f_44 = 88·f_ring = c/λ_sync = 3.2948e-17 Hz (Nyqu
 - docs/04_mass_frequency_lock.md — P3 質量-頻率鎖 + T_CMB 裁決
 - scripts/01–03 推導 (7/7 + P2/P3a + 3/3 全綠), scripts/04 審計 81/81
 - data/01_observational_data.md — 觀測數據
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `5a0c2da5314aed22` | 2026-10-24 | closed | 世界必須係離散節奏: 觀察者 = 88 維宇稱 (奇偶譜分解 Σγodd = 88 / Σγeven = 90), 連續場冇奇偶分解 → 冇觀察者。Kchain 頻率標度「~1e-17 Hz」唔係 H₀: H₀ = ωring 誤讀 (O… | open_problems_fresh/o164_world_as_beat/final_result.md | — |
+<!-- conclusion-history:end -->

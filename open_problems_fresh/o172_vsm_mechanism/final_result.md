@@ -17,3 +17,11 @@ F_proj = n₀(1) 統一觀察者/世代詮釋。O40 嘅 dev=0 修正為 4.3e-10 
 
 ## 依賴
 O37 → O38 → O39 → O40 → O172 (O34/O138/O147/O166 支撐)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `7ccae3c98f34cdb1` | 2026-10-24 | closed | O40 遺留 🟡 攻堅完成: vSM = veff·88·71·(1−2/1575) 確認為算子池唯一形式 (結構強迫), 全因子溯源到已閉合 O, 修正項 = 能量失衡 (μ² 每邊界×樹深格), Fproj = n₀(1) 統一觀察者… | open_problems_fresh/o172_vsm_mechanism/final_result.md | — |
+<!-- conclusion-history:end -->

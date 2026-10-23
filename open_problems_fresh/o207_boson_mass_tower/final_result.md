@@ -39,3 +39,11 @@ scripts/01–04: 44/44 PASS（14+12+9+9）
 + 巧合 scripts/09: 8/8 + Gemini scripts/10: 11/11 + 映射 scripts/11: 5/5
 + 移交 scripts/12: 5 目標 O（O82/O85/O86/O137/O204 SESSION_START append-only）
 + docs/01–11
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `bfff6e99e0574448` | 2026-10-24 | closed | 玻色塔 mn = M₀√γn（n=1..44, 零自由參數）係 IDCM 玻色子質量譜 1.99, 55.80 MeV， 本 O 完成其質量譜分解（mn = M₀·ωn·Cb, Cb=1; 五層: 尺度/頻率譜/形狀/結構/場論） + 盲… | open_problems_fresh/o207_boson_mass_tower/final_result.md | — |
+<!-- conclusion-history:end -->

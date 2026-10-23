@@ -247,3 +247,11 @@ O210 → O126 → O138 → O143/O223 → **O222** （→ O221 補完；Bell 若�
 - **K1b ✅**：amplitude 缺口非 rank 現象（`sign_rank = 3 ≪ rank_R = 6`）；缺口定位 = 複相位層 + 二分張量層。
 - **G1 ✅ 語義形式化**；**G8 ✅ no-go**（決定性 ⟹ `R_indep = 1`）。
 - **剩餘真缺口（誠實）**：無結構性缺口；僅「舊記錄特定計數值（(28,30)/[55,81]、58/65 之 10 態）」不可重現（已如實標記）。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `870ad71a94bb8f44` | 2026-10-24 | partial | Part A scripts/02lazysemantics.py — 8/8 PASS（D1 可執行鎖） - T = (gen, σ, ctx) 不可變三元組；force 純函數 + memo；換 ctx = 另一 thunk；疊加 Σ… | open_problems_fresh/o222_qm_evaluation_semantics/final_result.md | — |
+<!-- conclusion-history:end -->

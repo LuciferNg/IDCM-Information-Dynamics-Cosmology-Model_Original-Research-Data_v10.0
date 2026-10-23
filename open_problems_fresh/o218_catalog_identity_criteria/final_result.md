@@ -103,3 +103,11 @@ R6 值層盲區律   值層池 U 測 (R_pool) 對索引層歧義零敏感 ⟹ �
 - 🟡 O169 docs/02:25 之「γ_44 = μ²」係 176 鏈之量, 混入同一句之 88 鏈聲明內
   （⟨γ⟩_odd = 2 = μ² 本身兩鏈皆真, 下游結論無損）— 建議 O169 之後續文檔加鏈標籤
 - 🚫 遺留 6（Δn_color）**唔屬本 O** — O137 docs/37 派工表已寫明歸 **O216**
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `f71a3188ddf80483` | 2026-10-24 | — | IDCM 有咗單一可執行嘅目錄身份判準 —— 一個純函數 criterion(候選式, 目標, 容差; class, 池) 輸出 (class, 12 gates, dev, 密度, 判級🔴/🟡/🟢, 可追溯理由)。 零人手介入、池自動閉… | open_problems_fresh/o218_catalog_identity_criteria/final_result.md | — |
+<!-- conclusion-history:end -->

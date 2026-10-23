@@ -21,3 +21,11 @@ O240 → O53 (κ CY₃) → O57 (P̂ rank) → O61 (kernel(A)) → O62/O84 (V_Λ
 - Δ 冇閉合形式：五重否定 + Trace 非整性數學證明（非統計 claim）
 
 > ⚠️ 閉合標準：scripts/01-13 = 141/141 PASS（含獨立 AUDIT 19/19，零 import 重推全部 headline）；docs/01-11 全齊；6 判決全數落 register。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `c12a31845615a4e6` | 2026-10-24 | closed | 「IDCM 解釋真空能」由主鏈閉合升格為全鏈閉合：VΛ = 283.0821 完全由 κ prepotential + 88-site 譜決定，5 個殘餘項全數收口（Q1 負結果定案、Q2/Q4 閉合、Q3 條件穩定閉合、Q5 機制層收口… | open_problems_fresh/o240_vacuum_energy_full_closure/final_result.md | — |
+<!-- conclusion-history:end -->

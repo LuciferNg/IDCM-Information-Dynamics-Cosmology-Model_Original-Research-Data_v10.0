@@ -31,3 +31,11 @@ O222（憲章 `docs/45` §5 分流）→ O227（成文併回 O222 作最終裁�
 > ⚠️ O208 規則備註：本 O 之宣稱全部為**零自由度結構恆等式**（無搜尋空間、無擬合），故以全量代數核對 ＋ 族抽樣 σ 檢定取代 MC 分位數；詳見 `docs/02_r1_results.md` §5。
 
 > 審計附註：`{"B5c_common_stabiliser_order": {"pre_registered": 2, "measured": 10, "audit_and_machine_agree": true}}`
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `bc90abe7079496ce` | 2026-10-24 | partial | 喺凍結協定內：① 對映表 13 格機械可判（與上游 9✅／1🟡／3🔴 逐格一致）；② 關聯承認顯式 LHV（λ = 初始態 s0）、熵量空缺（無複本 ⟹ 無張量因子化：顯式可分分解存在、無 G-不變二分、Schmidt rank 未定義）… | open_problems_fresh/o227_mapping_channel_no_signalling/final_result.md | — |
+<!-- conclusion-history:end -->

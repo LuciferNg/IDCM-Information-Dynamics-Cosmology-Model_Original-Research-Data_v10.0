@@ -59,3 +59,11 @@ O41 → O147 → O151; O107/O114 (264 = 6U(1)×N_d); O146 (946 拍頻); O121 (S_
 - 封頂: scripts/30 (14/14 PASS, 適用邊界封頂 — 類別錯誤 + 弱必要性 + overclaim 拒絕)
 - 陷阱窗排除: log₂(S_dS) ≈ 406; E_min×192 ≈ 冷斑 A; 61/88 vs ln2 — 全部標 🟡, 唔當閉合
 - 方法論教訓: 捉到 vacuous artifact (patch 吞 row.append → 假容量); 禁 post-hoc 擬合常數; γ₁₈ = φ² 假設係 φ-power 陷阱 (實際 γ = 1.4365); b₁ = 6×f_unproj 係 tautology 陷阱 (6/60 = 1/10)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `54b69e90bf07c47f` | 2026-10-24 | closed | Cobs = Nd·log₂(B) = 88 bits 係 Shannon 意義信道容量 (44 世界模 × KTree 四元分支 log₂4 = 2 bits); 階梯 {88,132,264,528} = Nd×{2,3,6,12} … | open_problems_fresh/o151_holographic_channel_capacity/final_result.md | — |
+<!-- conclusion-history:end -->

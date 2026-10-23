@@ -13,3 +13,11 @@
 
 ## 依賴
 O5 → O41 → O42 → O46
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `6b4528eb011caaaf` | 2026-10-24 | — | 冷斑 A = 134.2 μK 係 CMB 原生訊號: 6 種組份分離方法一致 (mean −133.64 ± 0.98 μK)，raw 頻段差異由前景污染 (同步輻射/塵埃) 完全解釋；ISW 文獻支持 IDCM Aprim = Ato… | open_problems_fresh/o46_multifreq_isw/final_result.md | — |
+<!-- conclusion-history:end -->

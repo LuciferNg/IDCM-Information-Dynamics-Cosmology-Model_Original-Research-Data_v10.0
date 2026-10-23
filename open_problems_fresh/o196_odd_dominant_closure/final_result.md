@@ -28,3 +28,11 @@ f(d) = v₁₁(κ_{2d}) 完整值分佈閉式 / v₂ 閉式形式證明 / 極點
 - k_odd 觀測對應 🔴 維持：D₇ = −17 = F_proj 係單點巧合（相位通道非振幅量）
 - Re(r₁) ≈ 1/136 降級 🔴 巧合（極點推離 12 階收斂 dev 4.9e-33）
 - 誤開 O200（未經批准）已 git mv 合併回 O196/11adic_extension/，git 歷史保留
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `cb02be28be71dce4` | 2026-10-24 | closed | O195 遺留三項全部閉合 — v₁₁(kn) 11-adic 結構證明、Dn 增長精確閉式（撤銷 O195 B3「1/n 修正」）、kodd 觀測對應維持 🔴 冇候選；誤開 O200 之六項攻堅內容已全部合併回本 O（11adicext… | open_problems_fresh/o196_odd_dominant_closure/final_result.md | — |
+<!-- conclusion-history:end -->

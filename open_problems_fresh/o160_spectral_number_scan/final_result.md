@@ -30,3 +30,11 @@
 
 ## 依賴
 O140 → O152 → O155 → O157 → O158 → O160
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `a875174c2a16e629` | 2026-10-24 | closed | 88×88×33 ≈ 160 萬格值排除法全掃描收斂到一個唯一觀測連結 mW/mZ O88(21,24) (0.04σ, O158 張力解 re-discover) + 中心模定理 μ² = 所有譜中心模; T11-T22 開放項全攻閉合… | open_problems_fresh/o160_spectral_number_scan/final_result.md | — |
+<!-- conclusion-history:end -->

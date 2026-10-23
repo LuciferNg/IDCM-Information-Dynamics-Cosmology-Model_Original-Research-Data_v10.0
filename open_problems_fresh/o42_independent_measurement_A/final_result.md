@@ -29,3 +29,11 @@ O41 → O42 → (O5/O7 前置數據) → 延伸: 本徵尺度/T-E/ISW
 - 推導時序索引: 01_problem_record.md §〇 (13 步, 2026-08-25 建立)
 - ⚠️ v1 量綱錯誤已修正: R8=4.17° 係 FWHM (唔係 σ), 本徵閉合用 2×R8
 - 🟡 未閉合: SMHW 係數→pixel 完整換算、E/B 分解偏振、DESI Eridanus ISW (2026+)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `85ec4e20c1bda7ba` | 2026-10-24 | — | O41 結構公式 A = 88×61/40 = 134.2 μK 由 4 種獨立組份分離方法 × 6 個產品一致量度確認 (mean −133.80, std 0.99 μK, spread 3.02 μK, max dev 1.75%)… | open_problems_fresh/o42_independent_measurement_A/final_result.md | — |
+<!-- conclusion-history:end -->

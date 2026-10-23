@@ -44,3 +44,11 @@ O80 → O83 → O84 → O94 → O115（來源）→ **O139**
 - **文檔審計 `scripts/13_doc_audit.py` = 44/44 PASS**（A 範圍 / B 章節連續 / C doc↔stdout 數值 / D 時序 / E 跨文檔 / F 依賴 / G 污染）
 - **第三方方法審計 `scripts/14_audit_independent.py` = 38/38 PASS**（純 `mpmath` 40 dps + `Fraction`，唔 import 任何 O139 腳本）
 - 修訂：`docs/03`、`docs/05`、`docs/06` 各加 ⚠️ 驗證附註（原文保留，唔改寫）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `bc7af29566572eb6` | 2026-10-24 | closed | 88-site 有限 QFT 在原子尺度退化到標準 QED —— KChain 有限譜只產生費米子質量譜，不改變規範玻色子傳播子 ⇒ 光子傳播子連續、IDCM 繼承 QED。 α 兩個端點係結構整數（137 / 128），running … | open_problems_fresh/o139_finite_qft_to_qed/final_result.md | — |
+<!-- conclusion-history:end -->

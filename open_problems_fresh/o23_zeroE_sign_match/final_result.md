@@ -15,3 +15,11 @@
 
 ## 依賴
 O3 → O23
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `92fc6346a688beac` | 2026-10-24 | — | ΔE=0 節點符號匹配率 75% vs 非 ΔE=0 58% 無統計顯著差異 (Fisher p=0.34)，差異係隨機波動 + 低 \|T\| 集中假象。Coloring 係 BFS parity 完美 bipartite 2-colori… | open_problems_fresh/o23_zeroE_sign_match/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -30,3 +30,11 @@ O5 → O44 → O52
 ## 衍生開放問題
 - 🔴 熱斑幾何歸屬（F₆/F₇ 距離節點 8-9°）— O5 遺留
 - 🟡 相位機制假說（點解只有特定節點 node0/node9/ΔE=0 有異常？異常 ∝ cos θ_i?）— 未註冊 O 系列
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `ef14fd51bdf920a9` | 2026-10-24 | — | 減大冷斑後嘅 mean-nearest p=0.072 殘餘信號 冇第二結構 — 佢係大冷斑家族（6 斑：lit#1 + SMICA-c2 + 4 Cruz sub-spots，全部最近 node 0）嘅尾巴。移除全部 6 斑後 p→0.… | open_problems_fresh/o44_residual_decompose/final_result.md | — |
+<!-- conclusion-history:end -->

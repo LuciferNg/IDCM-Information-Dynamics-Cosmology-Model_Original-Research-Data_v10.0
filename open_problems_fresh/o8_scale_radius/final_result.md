@@ -16,3 +16,11 @@
 
 ## 依賴
 o1_edge_length → cmb_cold_spot → crystal_stress → O8 → O25 / P2
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `d5bfd0b356544e30` | 2026-10-24 | closed | 節點影響半徑 = 節點間距/2π = 約化波長 λ̸ = 4.1526°。 冷斑 FWHM 4.17° (R8) = λ̸ + 平滑誤差 (0.4%); 去平滑後真實結構半徑 = 4.152° (0.01% 閉合, 三重獨立驗證 7/7 … | open_problems_fresh/o8_scale_radius/final_result.md | — |
+<!-- conclusion-history:end -->

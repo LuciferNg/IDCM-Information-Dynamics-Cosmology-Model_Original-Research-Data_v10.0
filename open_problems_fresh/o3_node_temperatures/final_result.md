@@ -18,3 +18,11 @@ cmb_cold_spot → O3 → O21 → O22 → O23 → O24 → O25 → O26
 ## 審計輪 (2026-09-09, 2026-09-11)
 20_audit_independent.py 183/183 PASS（第一輪 157/157 + 第二輪 O/P 段覆核對徑對）；02_results 表格 42 cells 抄錄錯誤已修正（ground truth = data/node_temps.txt）；統計結論不變。推導時序索引見 01_problem_record.md。
 對徑對後續 (22_antipodal_temp_check.py, 06_antipodal_temp_check.md, 04 待辦, 2026-09-11): 高緯 2 對對徑對三地圖溫度差穩定 (|ΔT|≈17-22μK) 但 30 對整體 vs 隨機 p≈0.08 邊緣；軸-冷斑方向旋轉對照 p=0.43 — 冇方向性。O3 條目內所有待辦已閉合。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `329bdc33e3af446a` | 2026-10-24 | partial | A₅ 60 節點網絡喺 Planck SMICA 4.17° 平滑圖嘅溫度統計完成：冷斑（節點 0, -134.19 μK）係唯一真正極端節點（98.2% 百分位）；「冷/熱」著色係 BFS parity 而非溫度預測；ΔE=0 零能量節… | open_problems_fresh/o3_node_temperatures/final_result.md | — |
+<!-- conclusion-history:end -->

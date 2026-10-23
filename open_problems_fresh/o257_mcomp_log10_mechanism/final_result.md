@@ -25,3 +25,11 @@ P6 → O257 → O66, O49, P6（審計發還 handoff ×3; target 未閉環）
 
 ## 時序索引尾
 | 8 | 2026-10-22 | 階段性 closeout 審計輪: T1 重跑 16 scripts + 17_audit 32/32; T2 2 個文檔 discrepancy 附註; T3 時序 ✓; T4 handoff ×3 閉環確認 | docs/08_audit_record.md, scripts/17, final_result.md |
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `c5b10f7205da0828` | 2026-10-24 | partial | 「−1/76 log10 修正機制」= 唔存在（後驗揀值）: 獨立校準 target 最優修正係 1/75 唔係 1/76；hop 補數族 87/84/80/77/76 全近命中；O66 0.051% 閉合 circular（Mcal 自… | open_problems_fresh/o257_mcomp_log10_mechanism/final_result.md | — |
+<!-- conclusion-history:end -->

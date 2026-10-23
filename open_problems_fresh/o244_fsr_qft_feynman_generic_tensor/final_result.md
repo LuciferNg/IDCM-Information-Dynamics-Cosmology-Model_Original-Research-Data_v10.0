@@ -136,3 +136,11 @@ O137 → O124 → **O244** (T2) ; O121/O210 → O244 (T3) ; O140 → O244 (T4 �
 E2 機制更正為 pol 排列消滅）、相位削減 56 = 7×8 成塊 N 無關、Ω-spin pairs 定義、
 質量階梯 ε₇/ε₂₀ = 0.142617612955416——全部由真實 PASS checks 支持。
 聲明: 200 PASS 全部係實質斷言（逐個對照 logs, 連同探針預期 6 FAIL 一併誠實記錄）。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `a9fefa508abad7b0` | 2026-10-24 | closed | FSR-QFT 費曼規則完整落地: 4θ 頂點 N 通用顯式張量 + 散射振幅 + 譜 zeta↔RG 橋 — 三個新結構定理: ① 4θ 頂點色選擇律（固定色 (0,1,2,3) 全守恆動量恆等零, 0/56632 全枚舉）; ② h … | open_problems_fresh/o244_fsr_qft_feynman_generic_tensor/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -128,3 +128,11 @@ O51 → O213 → O73/O167 → O76 → O232
 - **壓力仍在**：R6 高 z 包絡跟 ΛCDM 天花板、Q3 0/7 超齡 ⟹ ΛCDM 5/5 兌現 vs IDCM 0/1 形式受損（Q4 🟡 維持）。
 
 （詳表：`01_problem_record.md` §十六；R1/R4/R6 證據：docs/02、docs/05、docs/03。）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `c8bddd007d178f07` | 2026-10-24 | closed | 原文 = arXiv:2607.00764v1 (Banik et al. 2026, MNRAS)：最老恆星 A★ = 13.73 (+0.18/−0.15) Gyr。 IDCM 結構齡 τ = Rworld/c = 1/ωring =… | open_problems_fresh/o232_stellar_age_vs_horizon/final_result.md | — |
+<!-- conclusion-history:end -->

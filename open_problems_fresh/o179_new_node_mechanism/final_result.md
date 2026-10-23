@@ -20,3 +20,11 @@ O174 → O173 (docs/13-14) → O140 → O159 → O7 → O39 → O121 → O163 �
 
 ## 剩餘開放 (誠實)
 🟡 P1/P3/P4/P5 等 Euclid 寬場 (LRD 位置密度 ∝ W(i) 可證偽); O182 可重用 hop+W(i) 框架
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `69bea80d97d73e5c` | 2026-10-24 | — | 凝聚揀位置 = 晶格幾何 + 譜量唯一決定, 冇隨機自由度: hop 階梯對稱 ⇒ <hop = B = 4 = 干涉相消圈 (重心定理), 位置權重 W(i) = (frust+1)·1+(B/L₅)cos(π·hop/4), 阻挫翻轉… | open_problems_fresh/o179_new_node_mechanism/final_result.md | — |
+<!-- conclusion-history:end -->

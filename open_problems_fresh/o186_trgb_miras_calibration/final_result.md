@@ -25,3 +25,11 @@ TRGB 負偏移與 Miras 正偏移的 ± 符號 = 能量流方向（收縮向內 
 
 ## 依賴
 O97 → O95 → O73 → O16 → O186
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `b06cd892ca3983fd` | 2026-10-24 | closed | TRGB 負偏移與 Miras 正偏移的 ± 符號 = 能量流方向（收縮向內 / 膨脹向外），4:1 幅度 = MERA 分支因子 B = φ³−φ⁻³ = 4；全部 H₀ 校準歸入兩層架構（L1: κφ⁻¹/n 恆星微觀投影，L2: φ… | open_problems_fresh/o186_trgb_miras_calibration/final_result.md | — |
+<!-- conclusion-history:end -->

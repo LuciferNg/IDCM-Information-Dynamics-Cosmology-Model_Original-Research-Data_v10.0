@@ -34,3 +34,11 @@ O51 (冇起始) / O98 (I 分歧審計) / O163 (κ 面型) / O165 (e⁻ⁿ 剔除
 - 含 BAO 聯合 (P-ACT+DESI 68.2-68.4) 偏離 → ΛCDM 內部幾何分歧 (I 2.18%, O73 docs/12) — 已移交
 - θ* SPT-3G+DESI 2.51σ 🟡 — 可證偽預言維持 (θ* 收窄 → 1.04110 否證 / 1.04125 確認)
 - D_H 徑向缺口 🔴 → 留新 O-series (IDCM 冇膨脹, 徑向 BAO = c/H(z) 概念唔適用; (1+z)^{−n/p} 部分有效)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `6010d28a875055af` | 2026-10-24 | closed | 「CMB 家族低 5-7%」= ωring × (1−π/44) 投影 (結構閉合, 零新常數): CMB H₀ 係 ΛCDM 模型依賴投影量 (θ·I/rs), IDCM 由世界環幾何直接預言投影後值 67.407 — CMB-only… | open_problems_fresh/o167_cmb_h0_tension/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -56,3 +56,11 @@ O7 → O41 → O161 → O39 → O173 → O175; O159 (J²=−1) + O32 (a₀) + O6
 
 ## 檔案
 scripts/00-17 (核心 119/119 + 二次核對 50/50 + 攻堅 30/30 + 數據層 17: 5/5, 14: 2P/3F, 15: 探針, 16: 5/5, 17: 2/2), docs/01-15, data/ (01-04 json + sparc/vizier/auger/planck)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `689f12541fbc2eea` | 2026-10-24 | closed | IDCM 熵定理由三定理閉合, 零新常數: ① 寫入可逆 (ΔE = Twrite·ΔS, 零熵稅), ② 平衡方程 dS/dt = Rwrite − Rdissipate (Rwrite = 61.5 kB/Tring 零參數, ∮dS… | open_problems_fresh/o175_entropy_theorem/final_result.md | — |
+<!-- conclusion-history:end -->

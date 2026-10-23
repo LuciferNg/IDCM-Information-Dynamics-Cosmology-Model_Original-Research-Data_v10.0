@@ -38,3 +38,11 @@ O173 (R-table) → crystal_stress → JWST (Kocevski+25/Zhang+26/Billand+25) →
 UHECR 82 數量級差 / 1D 2-pt 40× — 防錯誤閉合) · 🟡 **D6 部分閉合**
 (docs/11: arcsine 由 O174, δ_env 重尾硬結論 — UHz1 排除高斯; 剩 δ̂×δ_env 合成) ·
 🔴 D11/D12/D16/D20/D21/D22 (data-gated)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `11d70ab8833e5e25` | 2026-10-24 | closed | R1-R4 用新公布數據執行完畢: 種子先行結構三線確認 (Kocevski+25 70 BLAGN / Zhang+26 98 LRD halo / Billand+25 後代), 但 P12′ 定量曲線被否決 (中位 0.15→7% … | open_problems_fresh/o176_adjudication_followup/final_result.md | — |
+<!-- conclusion-history:end -->

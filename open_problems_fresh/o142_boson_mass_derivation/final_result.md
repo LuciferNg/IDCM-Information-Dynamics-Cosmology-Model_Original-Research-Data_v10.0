@@ -73,3 +73,11 @@ O34 → O64 → O86 → O142（v1→v2→v4→v5→v6→v7 審計→v8 重算→
 - **128 = 137 − N_gen²**：🟢 僅為**整數層恆等**（O124 §7.2 保留），**唔係** α_EM⁻¹(M_Z) 實測閉合（實測 127.930 ± 0.008，dev 0.0547%）
 - **Δα⁻¹ = 9 = N_gen²**：🔴 **已否證**（docs/18 §1：結構值 9=(B−1)² 雖美，但實測 9.1060±0.008 排除；`running=9.1060≠N_gen²`——13.25σ）
 - 詳細：docs/18_o124_handoff_verify.md（獨立重算 mpmath 40dps）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `ceb5d194a81a2891` | 2026-10-24 | partial | 玻色子係拍頻直接激發態（非 CY₃ 投射）。質量比值來自 O34 KChain 譜， g₂ 來自譜作用量（玻色子/費米子統一於拍頻嘅兩個投影層次）， 樹級玻色子質量閉合 Δ<0.8%。3/13 已撤回為數值湊數。 v9-v11 (2026… | open_problems_fresh/o142_boson_mass_derivation/final_result.md | — |
+<!-- conclusion-history:end -->

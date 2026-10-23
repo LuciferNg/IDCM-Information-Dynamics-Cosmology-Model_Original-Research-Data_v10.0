@@ -18,3 +18,11 @@ LHC null 一致）；正面量度面 = C_ℓ 峰位（O100 RMS 0.83%）+ γ-rati
 - brane 張力: E−O = μ² = 2λ = BC-cost = 2；Q = Σ_even k − Σ_odd k = 44
 
 ## 依賴 — O140 → O159 → O161 → O163/O164 → O190（已閉合；O191 僅 axiom 層審計選項）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `63d9261b2d270b80` | 2026-10-24 | closed | RS1（幾何 warp）與 IDCM 晶格傳輸（譜離散）結構對比完成 — IDCM 量化 rapidity（88 mode = 88 離散 boost）， RS1 量化質量（KK 塔）；AdS 徑向 ↔ MERA KTree 最強同構。 … | open_problems_fresh/o190_rs1_lattice_transport/final_result.md | — |
+<!-- conclusion-history:end -->

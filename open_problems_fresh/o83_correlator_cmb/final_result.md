@@ -138,3 +138,11 @@ H5 🔴 s 算子未導出: 族 1,326 命中 1 (7/4, dev −0.033%) ≈ 隨機期
 ```
 
 `07_file_verifier` **89/89 PASS**
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `7c94681632b180ff` | 2026-10-24 | partial | propagator → Cℓ 橋接形式成立（mode expansion + Gn(0) + 熱態）；但峰位與振幅係 P3/O9 後驗值，O83 只做代數重讀 ⟹ 非結構推導。 | open_problems_fresh/o83_correlator_cmb/final_result.md | — |
+<!-- conclusion-history:end -->

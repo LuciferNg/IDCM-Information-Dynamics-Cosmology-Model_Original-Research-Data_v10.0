@@ -433,3 +433,26 @@ o222 零寫入、MANIFEST 雙向 0 差、register 三向覆蓋 0 缺；**記錄�
 ### 15.3 新數字
 `A8 ≈ 3.516×10⁶`（±5σ）；含 ≥1 幀之 8-集 **446,542**（25,578 含 ≥2；核 `8584×55−25578` ✓）；
 **`F'_8 ≈ 3.07×10⁶`**（size-8 極小覆蓋 ≈ size-7 族之 358 倍）；`|C∩S|` 分佈 `{0:3569,…,7:2}`。
+
+---
+
+## 十六、closeout-2 獨立審計（2026-10-02；append-only）— **24/24 PASS**
+
+`scripts/27_closeout2_audit.py`、`logs/27_closeout2_audit.out`、`data/27_closeout2_audit.json`、`docs/00_closeout_audit.md`。
+
+- 獨立重建 M_edge（30×62、435 對）→ 8584 幀：**全部覆蓋 435 對、全部極小、兩兩相異** ✓
+- `S` 覆蓋 `ALLP`（435/435）✓；`C∩S` 分佈精確重現（含 **3569** 個不相交幀、`max = 7` 兩幀）✓
+- **`M_all = 1` EXACT**（LB ＋ UB 雙邊夾）✓；伴隨計數 **446,542**（25,578 含 ≥2）✓；
+  `A8 = 3.5163e6`、`F'_8 = 3.0698e6 = 357.6 × 8584` ✓
+- 衛生：o222 四釘 sha256 不變、本輪 o222 零新檔、register 無 O228 drift／MISSING ✓
+- 記錄修正：block drift 1 條、R1–R5 缺 close（backfill）、SESSION_START 狀態行；
+  **事故披露**：首版審計 import `scripts/25` 觸發 R13 重跑覆寫 `data/25_r13_separation.json` → `git checkout` 還原，sha256 ≡ MANIFEST 原值 ✓
+- 母項維持 **partial**（殘餘五項；α 必要性交 O218）。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `fd77034bb4876fb6` | 2026-10-24 | partial | 狀態: 🟡 部分閉合（§三 判決項 ① ② ④ 已答；③ 部分）｜輪次: R1–R4（2026-10-02） 本檔只寫最終結論、公式與依賴，不寫推導過程（推導見 docs/00–04、scripts/01–08） | open_problems_fresh/o228_evaluation_resource_geometry/final_result.md | — |
+<!-- conclusion-history:end -->

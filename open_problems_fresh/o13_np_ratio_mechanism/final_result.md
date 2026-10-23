@@ -27,3 +27,11 @@ bbn (06_complete_record, n/p 發現) → O13 (機制閉合) → O33 (投影機�
 
 ## 時序
 T0 (問題建立) → T1 (結構推導) → T2 (01 驗證 14/14) → T3 (完整閉合 3/3) → T4 (02 驗證 20/20) → T5 (README) → T6 (problem_record 更新) → T7 (SESSION_START 完成) → T8 (獨立核對 28/28)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `a6607bc554c28f76` | 2026-10-24 | — | n/p = γ₇/γ₂₀ = 0.142618 (0.17%) 係結構常數比，唔係 freeze-out/freeze-in 動力學產物：u quark 投影到 KChain 模式 n=20 (B×F₅)，d quark 投影到 n=7 … | open_problems_fresh/o13_np_ratio_mechanism/final_result.md | — |
+<!-- conclusion-history:end -->

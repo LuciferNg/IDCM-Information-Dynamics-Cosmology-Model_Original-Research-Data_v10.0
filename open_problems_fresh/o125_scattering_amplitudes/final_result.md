@@ -65,3 +65,11 @@ O80 → O82 → O94 → O122 → O142 → O211 → **O125**
 - ★ **正確離散振幅 = O124 `docs/05 §5.2` V₄ 張量** (有限) ⟹ 冇 counterterm (承零重整化定理)
 - 形式延拓界: `max |B_disc^{reg}| = 6.46×10¹²` (有限; 對照連續 → ∞); 正則化子 = **能階間距** (~`1/N²`)
 - 詳見 `docs/07_bdisc_regularization.md`
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `d03ccc2a7c8029c7` | 2026-10-24 | closed | v9.0 散射振幅推導 (連續 φ⁴ + dim-reg) 在 v10.0 非膨脹框架中整體失效 (6 衝突: 有限譜圈和/κ 混淆/GeV 標度/場縮放/模式結構/dim-reg vacuous), 已用有限離散 QFT 重建: 模式對… | open_problems_fresh/o125_scattering_amplitudes/final_result.md | — |
+<!-- conclusion-history:end -->

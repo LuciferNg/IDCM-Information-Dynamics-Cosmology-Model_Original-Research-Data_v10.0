@@ -28,3 +28,11 @@ O206(A5_MODES) → O239 → O136(逐點質量) + O247(天然污染) + O248(相�
 > ⚠️ 階段性: freeze v3 lattice 直量未到（J1 γ_v3∈[−4.82,−4.68], J2 k∈[1.95,2.05],
 > J3 α_v3∈φ²×(1±0.05%) 已凍結, 零後見空間）。O136 audit 數值層不可辨識
 > （docs/40-43）唔影響結構層鎖定（docs/41）。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `17d5d29910b1e990` | 2026-10-24 | partial | 質量閉合式主鏈閉合:γ = −19/4, β = −19/(4φ²), α = γ/β = φ²——質量 = 88-譜 \|Δm\| 冪投影 m = M₀\|Δm\|^α,結構層 α=φ² 鎖定(零任意常數生成鏈 + γ/β 雙反解 k=2),數… | open_problems_fresh/o239_a5_tension_condensate/final_result.md | — |
+<!-- conclusion-history:end -->

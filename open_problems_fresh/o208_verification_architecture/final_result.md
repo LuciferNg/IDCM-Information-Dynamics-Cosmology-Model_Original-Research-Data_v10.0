@@ -31,3 +31,11 @@ O115 → O208
 ## 剩餘（擴展污染 — 各 O 執行）
 - 190 script / 425 處字面 True（docs/04 清單）→ 各 O session 用 scripts/01 掃描修正
 - 三源一致率 100% 需各 O 執行 SESSION_START 跟進後重跑
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `18b6eeb60fa0a5d8` | 2026-10-24 | closed | 閉合帳本可信度修復標準確立: 密度基準分位數入場券 + 反硬編碼語義掃描 + 三源一致機制。 10 個高風險 script 全部重寫（9 真修正 + 1 假陽性豁免），45 處字面 True 歸零。 | open_problems_fresh/o208_verification_architecture/final_result.md | — |
+<!-- conclusion-history:end -->

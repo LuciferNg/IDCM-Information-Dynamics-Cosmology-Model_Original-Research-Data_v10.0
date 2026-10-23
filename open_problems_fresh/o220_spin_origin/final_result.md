@@ -115,3 +115,11 @@ O161（ΠU_k = i）→ O137（費米子反週期）→ O160（720°）→ O211�
 - 宇宙繞數為何落 Z₄ 生成元類（class 1）—— 是否結構強迫
 - 盲測預言 + MC null（現無觀測對比項）
 - 跨 O 待核實：O161「352 = B·N_d」行不一致；O182 `a5_nodes_ideal.txt` |Sym| = 24 ≠ 120
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `e1a37e1684b7fa38` | 2026-10-24 | — | 自旋唔係額外自由度，而係鏈 transport 之 holonomy 類：由譜由零導出 W = Π{k=1..n} Uk = i^{n+1}，ord(W) = 4 ⟺ n 偶 —— 宇宙鏈 n = 88 = 2Nd 為偶 ⟹ 雙覆蓋強制 … | open_problems_fresh/o220_spin_origin/final_result.md | — |
+<!-- conclusion-history:end -->

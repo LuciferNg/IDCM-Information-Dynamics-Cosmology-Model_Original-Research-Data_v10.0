@@ -414,3 +414,11 @@ docs/01 (配分佔比定理) · 02 (A₅ 群作用實算) · 03 (核對/證偽/�
 用戶指示（2026-09-17）由本 O 之 Q3 拆出，另 session 完全重構及推導。本 O **零推導**，
 只交付憲章（4 宣稱 C1–C4 · 8 子問題 R1–R8 · 6 攻擊路線 · 8 驗證標準 · 交付標準 A/B/C）
 + SESSION_START（含 M1–M4 四個已量化矛盾）+ Planck PR3 全譜副本 + README 註冊行。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `00f89b518220b906` | 2026-10-24 | closed | N/(N+1) 截斷因子 = 「d 個態中恰一個係真空態」嘅均分佔比 (Xobs = Xbare·(d−1)/d)； 真空唯一性係定理 (連通耦合結構 ⇒ dim ker(L) = 1, Perron–Frobenius) 而非歸納。 s… | open_problems_fresh/o171_a5_partition_theory/final_result.md | — |
+<!-- conclusion-history:end -->

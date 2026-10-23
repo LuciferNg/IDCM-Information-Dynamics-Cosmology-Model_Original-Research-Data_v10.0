@@ -18,3 +18,11 @@ O190 → O191 → O192 → O193 → O194（O193 β-domain 對偶）
 
 ## 交收
 🟢 已閉合。遺留 (新O候選): ① 幾乎整數 dev 衰減率閉式 ② κ_{2m}∈ℤ 證明 ③ k_odd 觀測對應 🔴。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `8bba5351a0811d80` | 2026-10-24 | closed | K(t) = lne^{2t}I₀(2t) + (e^{4t}−1)/176 = Karc + ΔK, ΔK = ln1 + sinh(2t)/(88·I₀)。 全階零新常數閉合: ① k₁..k₁₈ 精確有理, 分母只含 2,11=L₅… | open_problems_fresh/o194_cumulant_hierarchy/final_result.md | — |
+<!-- conclusion-history:end -->

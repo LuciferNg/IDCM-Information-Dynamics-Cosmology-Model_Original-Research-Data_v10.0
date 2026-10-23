@@ -61,3 +61,10 @@ o148 (f_unproj/f_proj) → O158 → o142 (玻色子比) ↔ o54/o144 (質子/輕
 (註: H/W (86,39) 已由 T28 升級 — 成員算子化 86=2N_d−μ², 39=N_d−F₅,
 「非算子」障礙移除; 6 重支持; scripts/36 確認 (86,39) = H/W 176 域 top1)
 
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `2620abe546a0c339` | 2026-10-24 | partial | ×41 聚類五成員 {17, 19, 38, 41, 47} 全部 = Nd ± k·Ngen, 全 T̂ 算子形式 零新常數。質量比 = 176 域觀察者/世界混合投影 (45-家族), 45 = 世界模式 質心。★★★ k 配對機制閉… | open_problems_fresh/o158_nd_pm_ngen_cluster/final_result.md | — |
+<!-- conclusion-history:end -->

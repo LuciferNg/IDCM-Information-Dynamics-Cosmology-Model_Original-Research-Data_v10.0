@@ -131,3 +131,11 @@ O73 → O11（距離階梯 κφ⁻¹）/ O14（Ω_b）/ O39（Ω_Λ = 41/60）/ 
 `docs/20` ★ 第 6 輪 session-DB 對帳）| `scripts/01–29` + `verify_all.py` + `25a`（v1 存檔）|
 `data/verify/*.out` | `POINTER_o204_*.md` ×3 | `01_problem_record.md`（時序索引 rows 1–122）|
 `SESSION_START.md` | `final_result.md`（本檔）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `583d534dbe9e3567` | 2026-10-24 | closed | ωring = 72.59 (km/s)/Mpc 唔係自由參數 — 佢係世界環角頻率，由 BBN 豐度（ηB(obs) + TCMB + Ωb） 第一性原理鎖定，並由 CMB 聲學視界投影（1−π/44）獨立交叉鎖定（0.07%）； ΛC… | open_problems_fresh/o73_h0_first_principles/final_result.md | — |
+<!-- conclusion-history:end -->

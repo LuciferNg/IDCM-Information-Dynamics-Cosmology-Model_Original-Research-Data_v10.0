@@ -21,3 +21,11 @@ O2（SMICA 地圖/熱斑方法）→ O5 → O27（node47 前景）→ O28（gp10
 - 熱斑 F₆/F₇ 距離節點 8-9° — 唔喺節點上（誠實負面結果）
 - 驗證：07_verify 12/12 ✅ · 12_file_verify 37/37 ✅ · 14_audit_independent 108/108 ✅（2026-09-11）
 - 已知瑕疵（不影響結論）：03_match_nodes node 欄位為最遠節點索引（argmin-dots），距離正確
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `4df0d6d1b890b35a` | 2026-10-24 | closed | 除大冷斑（節點 0）外，其餘 59 個 A₅ 節點冇對應任何公開冷斑/熱斑目錄 — 命中率同隨機冇分別；節點 9 經深挖確認係第二冷結構（三地圖一致）。 | open_problems_fresh/o5_catalog_compare/final_result.md | — |
+<!-- conclusion-history:end -->

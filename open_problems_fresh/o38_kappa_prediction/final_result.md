@@ -416,3 +416,11 @@ O34 → O36 → O38
 - ✅ 幾何來源: 88·sin(π/88) = 內接 88 邊形半周長 ≈ π (0.021%)
 - ⚠️ 近整圈 n=38 (δ≈4.0°) 係自然分佈 (誠實 null 5/44 vs 期望 4.4) — 唔升格
 - 🔄 O39「44-tone 完整週期」用語 → 降級為「鏈-主模同步週期」
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `f6be9065df46f13b` | 2026-10-24 | closed | κ 有獨立結構來源：κ̃² = 88 = Σγodd（觀察者維度）。ωscale = 88·H₀ 由 RH = c/H₀ 閉合（dev=0）。 | open_problems_fresh/o38_kappa_prediction/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -236,3 +236,11 @@ O80 → O122 → O142 → O85 → O211 → O144 → **O124**
 **register**: O124 無 drift；O124 note 已加 (2026-10-06)。
 **狀態**: O124 維持 partial/partial；σ/禁閉 → O144 §4.3。
 ⟹ **O124 本鏈 closeout 完成**。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `2828f867461425aa` | 2026-10-24 | partial | v9.0 推導在 v10.0 中失效（存活率 5/13，驗證空洞：15/15 PASS 全屬自指或恆真）。重建為 有限譜離散 QCD：膠子 = 88-site 環嘅連結相位（唔係連續規範場），其譜同 W-field KChain 譜同型，… | open_problems_fresh/o124_qcd_gluon_scattering/final_result.md | — |
+<!-- conclusion-history:end -->

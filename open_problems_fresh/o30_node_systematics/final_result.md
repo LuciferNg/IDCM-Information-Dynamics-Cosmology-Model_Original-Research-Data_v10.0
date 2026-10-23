@@ -18,3 +18,11 @@
 
 ## 依賴
 O5 → O30（O3/O24/O27 資源 + O27 多頻譜流程）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `c7ed8157a9457d93` | 2026-10-24 | — | 「全部 60 節點有溫度異常」假說被否定 — 60 節點 mean −1.25 μK vs 隨機 z=−0.21σ（強 null）。 溫度效應係離散而非連續: 跨尺度穩定異常 5 節點 vs 隨機 0.00±0.00 (p<0.001) … | open_problems_fresh/o30_node_systematics/final_result.md | — |
+<!-- conclusion-history:end -->

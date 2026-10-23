@@ -111,3 +111,11 @@ O210 → O140 → O139 → O138 → O86 → O213 → O221（並列 O202 / O212 /
 - **O246→O221 handoff（fold 語言）＝未接納（作為結果）**：B 盲測（docs/38，預註冊）——B1 VOID（cube 崩潰）、B2/B3 無 fold 結構 ⟹ 無正面盲測證據；fold 身份僅作可用數學工具；建議保持 OPEN；register note O246+O221。
 - 殘餘⑤ 終局狀態更新：候選③ 在 FD 階下最強（vert A_TT_fd 穩定 + deficit≈0.05）——仍需調律者批准 A_TT 主判準；或結構性最終陳述。
 - 尚未閉合：GR/EH 湧現、QM 導出（O222）、L-QFT 散射。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `5a32e826fd980c72` | 2026-10-24 | partial | IDCM 的低能過渡可由單一極限程序 L（細化流 ∘ 共動重標定，唯一控制變量 x = πn/M = ka/2）形式化；QM 骨架（正則結構、路徑積分測度）在細化下 ℓ-不變 ⟹ IDCM 係 QM 的有限維離散實現而非「導出 QM」；G… | open_problems_fresh/o221_low_energy_continuum/final_result.md | — |
+<!-- conclusion-history:end -->

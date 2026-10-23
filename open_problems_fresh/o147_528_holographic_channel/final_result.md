@@ -166,3 +166,11 @@ M₀ = E_kchain×φ^(47+37/528)，φ^47·φ^(37/528) = 6.8717e9 = M₀/E_kchain�
 - 後驗修正分子係結構數 → 強指向「隱含修正項」，但必須標記後驗
 - **（新）低精度比（s, u, d 誤差 ±9-28%）會誤導反推**：κ v1 用佢哋做判據得 4/13 PRED，改用高精度比（e/μ/τ/c/b）反推輕子 κ 即刻 21/21——**反推要用高精度數據**
 - **（新）「每粒子固有量之差」係比公式嘅正確形式**：k = κ(A) − κ(B) 有 13 個 out-of-sample 命中，證明唔係逐個擬合而係系統結構
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `aef79728283d8084` | 2026-10-24 | closed | 日期: 2026-09-05（v1）→ 2026-09-08（v2 κ 可加性閉合）→ 2026-09-08（v3 κ(t) + 種子 + 階梯算子）→ 2026-09-09（v4 全量審計 + O152 交叉） 狀態: 🟡 部分閉合 →… | open_problems_fresh/o147_528_holographic_channel/final_result.md | — |
+<!-- conclusion-history:end -->

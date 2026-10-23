@@ -1827,7 +1827,8 @@ def cmd_conclusion(a):
                  refs=json.dumps(refs, ensure_ascii=False),
                  concl_hash=cid,
                  supersedes=json.dumps(a.supersedes or [], ensure_ascii=False),
-                 version=a.version, origin=a.origin, note=a.note)
+                 version=a.version, origin=a.origin,
+                 note=(claim if not a.note else (a.note + "\n\n" + claim)))
     print("conclusion %s  pids=%s  refs=%d  verdict=%s" % (cid, ",".join(pids), len(refs), a.verdict or "-"))
     if a.supersedes:
         print("  supersedes: %s" % ", ".join(a.supersedes))
@@ -1878,6 +1879,94 @@ def cmd_conclusions(a):
                     walk(x, depth + 1)
         for h in roots:
             walk(h)
+    return 0
+
+
+CONC_MARK_START = "<!-- conclusion-history:start -->"
+CONC_MARK_END = "<!-- conclusion-history:end -->"
+
+
+def _concl_items(con, pid=None):
+    rows = con.execute(
+        "SELECT ts, pid, verdict, concl_hash, supersedes, pids, refs, title, origin, version, note "
+        "FROM event WHERE kind='conclusion' ORDER BY id"
+    ).fetchall()
+    out = []
+    for r in rows:
+        pids = json.loads(r["pids"] or "[]") or ([r["pid"]] if r["pid"] else [])
+        if pid and pid not in pids:
+            continue
+        out.append({"ts": r["ts"], "pid": r["pid"], "pids": pids, "verdict": r["verdict"],
+                    "concl_hash": r["concl_hash"], "supersedes": json.loads(r["supersedes"] or "[]"),
+                    "refs": json.loads(r["refs"] or "[]"), "claim": r["title"] or "",
+                    "origin": r["origin"], "version": r["version"], "note": r["note"] or ""})
+    return out
+
+
+def _render_history(items):
+    lines = [CONC_MARK_START,
+             "## 迭代史（machine-generated from register.conclusion；append-only）", "",
+             "| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |",
+             "|---|---|---|---|---|---|"]
+    for it in items:
+        claim = " ".join((it["claim"] or "").split())[:120].replace("|", "\\|")
+        refs = "<br>".join(it["refs"][:3]) + ("…" if len(it["refs"]) > 3 else "")
+        sup = ", ".join(it["supersedes"]) or "—"
+        lines.append("| `%s` | %s | %s | %s | %s | %s |" % (
+            it["concl_hash"], it["ts"][:10], it["verdict"] or "—", claim, refs.replace("|", "\\|"), sup))
+    head = [it for it in items if not it["supersedes"]]
+    if len(items) > 1 and len(head) < len(items):
+        lines += ["", "**鏈**："]
+        def walk(it, depth=0):
+            lines.append("  " * depth + "- `%s` %s（%s）" % (it["concl_hash"], it["ts"][:10], it["verdict"] or "—"))
+            for x in items:
+                if it["concl_hash"] in x["supersedes"]:
+                    walk(x, depth + 1)
+        for h in head:
+            walk(h)
+    lines.append(CONC_MARK_END)
+    return "\n".join(lines)
+
+
+def cmd_conclusion_history(a):
+    """生成/寫入結論迭代史（final_result.md 尾部 marker 區塊）。"""
+    con = connect()
+    pids = [a.pid] if a.pid else sorted({p for it in _concl_items(con) for p in it["pids"]})
+    written, shown = 0, 0
+    for pid in pids:
+        items = _concl_items(con, pid)
+        if not items:
+            continue
+        block = _render_history(items)
+        if not a.write:
+            print("=== %s (%d) ===\n%s\n" % (pid, len(items), block))
+            shown += 1
+            continue
+        d = None
+        m = re.match(r"^O(\d+)", pid)
+        if m:
+            ds = sorted(glob.glob(os.path.join(OPF, "o%s_*" % m.group(1))))
+            d = ds[0] if ds else None
+        if not d:
+            print("SKIP %s: 找不到目錄" % pid)
+            continue
+        fp = os.path.join(d, "final_result.md")
+        if not os.path.exists(fp):
+            print("SKIP %s: 冇 final_result.md" % pid)
+            continue
+        txt = open(fp, encoding="utf-8").read()
+        if CONC_MARK_START in txt and CONC_MARK_END in txt:
+            pre = txt.split(CONC_MARK_START)[0]
+            post = txt.split(CONC_MARK_END, 1)[1]
+            txt = pre + block + post
+        else:
+            txt = txt.rstrip() + "\n\n" + block + "\n"
+        open(fp, "w", encoding="utf-8").write(txt)
+        written += 1
+    if a.write:
+        print("迭代史寫入: %d 個 final_result.md" % written)
+    elif not shown:
+        print("（冇結論）")
     return 0
 
 
@@ -2115,6 +2204,9 @@ def build_parser():
     s.add_argument("--hash")
     s.add_argument("--chain", action="store_true")
     s.add_argument("--json", action="store_true")
+    s = add("conclusion-history", cmd_conclusion_history)
+    s.add_argument("--pid")
+    s.add_argument("--write", action="store_true", help="寫入 final_result.md（marker 區塊）")
     s = add("find", cmd_find); keyargs(s)
     s.add_argument("--scope", help="resolve a stale label in this scope first")
     s.add_argument("--term")

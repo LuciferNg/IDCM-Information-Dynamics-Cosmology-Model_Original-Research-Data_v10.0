@@ -31,3 +31,11 @@
 
 ## 依賴
 O143 → O150 ; O182 → O150 ; O159 → O150 ; O7/O41 → O150 (自由位元)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `e0b96e727ad66326` | 2026-10-24 | partial | 正確算子 = I-covariant 局部取樣算子 𝒫₆₀fi = (Kσ f)(n̂i)，形式零自由參數，確認圖拓撲封死、破缺必為 sky-side。 破缺量 T₉/T₂₀ = 3.02 唔由低 ℓ 算子給出 (ℓ=3 只佔 8.9%;… | open_problems_fresh/o150_sky_side_projection/final_result.md | — |
+<!-- conclusion-history:end -->

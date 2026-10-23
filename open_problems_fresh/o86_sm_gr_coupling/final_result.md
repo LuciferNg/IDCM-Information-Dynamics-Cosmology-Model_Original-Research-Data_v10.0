@@ -89,3 +89,11 @@ O82/O94（34/34 引用基準 + `κ²=M₀`）| O100/O133（`ζWR`→`ξ|W|²R`�
 
 ## 檔案
 `docs/01`（§七 時序索引 + §九/§十 閉合 + §十一 總表時序索引）| `docs/02`（原文零改動 + §9/§10 時序標註）| `docs/03`（重驗）| `docs/04`（09-20 攻堅）| `docs/05`（外部開放問題攻堅）| `docs/06`（★ 驗證輪：Session-DB 對帳 + 文檔核對）| `docs/07`（★ 上下文壓縮交接）| `docs/08`（★ R_world 絕對值推導）| `docs/09`（★ 場身份 P1b + ξ 岔路 N3）| `docs/10`（★ R9 第一輪攻堅）+ `scripts/13`（★ 24/24）+ `scripts/14`（★ R9 6/7）| `scripts/01–05`（原推導 + 05 重建）+ `06–11`（重驗/攻堅/文檔核對）+ `12`（★ R_world 絕對值）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `d4bfb78b7163023e` | 2026-10-24 | partial | 統一 Lagrangian Ltotal = LGR + LW + LSM + Lcoupling 之算子/係數結構成立 （伸長律換新唔動任何耦合常數）；投影層數值多處曾引用已撤銷/已證偽之上游式（已更新）； 原「34/34 PASS」含… | open_problems_fresh/o86_sm_gr_coupling/final_result.md | — |
+<!-- conclusion-history:end -->

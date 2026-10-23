@@ -115,3 +115,11 @@ O118 (唔搬遷 SYNC 系列) · O100/O133 (P(k)/σ8) · O99 (σ8 純首推 🔴)
 - 未改 O31/O133 任何結論檔或腳本（只 append SESSION_START）。
 - 未修 O31 5 個硬編路徑腳本（屬 O31 自身工作）。
 - 未做 DESI DR2 P(k)（同一 script 換數據即可重跑，λ_sync 零參數不變）。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `4f8d12779e17b10b` | 2026-10-24 | — | v9.0 stackingtoolbox/01stackedwaveform.py（唯一檔案，239 行）之前置驗證完成： 骨架層遷移（λsync 幾何、γn=4sin²(πn/88)、vg=cos(πn/88)、諧波位置 λsync/n… | open_problems_fresh/o131_stacking_analysis/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -14,3 +14,11 @@ Cepheid 週光關係 (PL) 由 K_Chain 44-tone 振盪器基本模式 (n=1) 嘅投
 
 ## 依賴
 O17 (SN Ia/Maser) → O16 → H₀ 校準差異 (TRGB/Miras/SH0ES)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `93b541d74b74cf30` | 2026-10-24 | — | Cepheid 週光關係 (PL) 由 KChain 44-tone 振盪器基本模式 (n=1) 嘅投影決定 — 斜率、零點、波段依賴全部結構閉合，無自由參數。 | open_problems_fresh/o16_cepheid_pl/final_result.md | — |
+<!-- conclusion-history:end -->

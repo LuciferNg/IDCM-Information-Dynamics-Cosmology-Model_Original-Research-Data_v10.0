@@ -21,3 +21,11 @@ O254 → O255（O73 c 第一性原理; O140 FSR; O159 半整數; O160 K_Tree; O1
 ## 密度基準
 - N_search = 1（純代數恆等式；∀N∈[2,10000] 全譜族 + 獨立重驗 15/15）
 - 剩餘明確屬他 O：Bell 違反性結構層 → O222/B 系（CHSH |S|≤2 已有）; 觀測層 Bell → sky 系; C(L,T)→rate → O138; leapfrog=tick 物理演化橋 → O213
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `75cb611138fd8a9c` | 2026-10-24 | partial | v≤c 唔係 SR 公設 — 係 sin² 譜族嘅代數定理（c = Goldstone 無質量模譜速度）； no-signaling 係結構定義：即時關聯（全域相干）∩ 信息載體（有色散, n0） = ∅， 信息 v<c 喺可操作層（離散… | open_problems_fresh/o255_c_structural_no_signaling/final_result.md | — |
+<!-- conclusion-history:end -->

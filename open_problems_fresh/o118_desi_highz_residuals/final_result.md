@@ -33,3 +33,11 @@ O76 → O51 → O117 → O169 → O170 → O118（閉合：前提作廢）→ (�
 - `docs/02_premise_void.md` — 前提作廢裁決
 - `docs/03_closeout_audit.md` — 閉合審計輪報告
 - `01_problem_record.md` — 權威記錄 + 推導時序索引
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `45343c6ec7374c24` | 2026-10-24 | closed | O118 整個前提係假象：χ² = 18.09/7（χ²/dof = 2.58）與 LRG1 離群均係三重污染（伸長定律 E = 1+2φ⁻¹ℓ 已證偽 4.88σ、群延遲 C₁ = −0.16973 已證偽、DH = dDapp/dz … | open_problems_fresh/o118_desi_highz_residuals/final_result.md | — |
+<!-- conclusion-history:end -->

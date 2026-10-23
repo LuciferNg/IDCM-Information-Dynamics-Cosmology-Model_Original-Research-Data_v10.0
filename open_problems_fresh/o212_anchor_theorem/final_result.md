@@ -45,3 +45,11 @@ O73 §7（維度定理）→ O200（維度收束）→ O204 C5（1-錨最優）�
 - 🔴 O212-2 標度樹 4 個內部量未結構化（T_age, E_kchain, T_sync, m_δW）→ O51 / O38-O204 / O170
 - 🔴 O212-3 Ω_b 版本統一（BBN 預言值 72.71 vs 66.82）→ O73 O5-1
 - 🟡 O212-4 m_ν / v_SM / M_Z 無量綱因子係觀測比值（tautology）→ 各自 O
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `cb14e3629036ee73` | 2026-10-24 | closed | 「單錨 → 全標度」映射係結構的（維度齊次性必然，非逐項校準）：世界環 sector 自由度 = 4−3 = 1， 22/22 有量綱量 = (Planck 單位)^k × N^p × 結構數，絕對標度只有 N 一個來源。 錨候選裁決：錨… | open_problems_fresh/o212_anchor_theorem/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -44,3 +44,11 @@ O39 → O86 → O204 → O206（docs/14,24,25; docs/31,32 已併入本 O）→ O
 - 🔴 **Ω_b 版本統一**: O73 BBN 鎖 ω_ring=72.73 用 Ω_b=19/450（已棄）; 換 3/60 → ω_ring'=66.83, vs 結構 72.59 −7.93%（m₇ −4.05% 🔴）— 交 O73 SESSION_START
 - ⚠️ ~~IDCM h 未閉合~~ **已反證撤銷**（O38 docs/02 + O215 scripts/04 7/7）: h 係投影分解族, O215 所用 h=0.674 = IDCM 預言 h_cmb=0.67407（O167 🟢, dev 0.011%）
 - 🔴 bbn scripts/02,07 重寫為 Ω_b = 3/60 鏈（SESSION_START 已記錄）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `c590d66cdf37e6f8` | 2026-10-24 | closed | Ωb = (γmax−1)/(Σγodd+γmax²) = 3/60 由質量譜譜量零參數構成； Σ√γn = 1 + cot(π/176)（EXACT）係玻色塔質量譜總和嘅精確閉式（57+1/60 只係有理近似， 殘餘 ε = −7.68… | open_problems_fresh/o215_omegab_first_principles/final_result.md | — |
+<!-- conclusion-history:end -->

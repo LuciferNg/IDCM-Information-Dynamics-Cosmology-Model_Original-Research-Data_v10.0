@@ -15,3 +15,11 @@ EE 極化峰由 K_Chain 速度模式投影直接生成：整數部分為純等�
 
 ## 依賴
 O9 (TT 峰公式) → O20
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `a328803350000f09` | 2026-10-24 | — | EE 極化峰由 KChain 速度模式投影直接生成：整數部分為純等差數列（公差 L₄=7），相位為半節點基線 22 加上手性代數躍遷，CAMB raw 譜 7 峰零殘差閉合。EE 比 TT 更純粹（冇密度場勢井污染）。 | open_problems_fresh/o20_eb_polarization/final_result.md | — |
+<!-- conclusion-history:end -->

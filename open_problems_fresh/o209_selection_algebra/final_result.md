@@ -78,3 +78,11 @@ O88 / O67 → O209 docs/10 → O137 gap 5（手徵橋 🔴）
 
 > ⚠️ O208 規則: 冇分位數 = 未閉合。本 O 報 q_obs = 1.60%。
 > 純代數恆等式部分（模式集唯一）報 N_search = 1 + 唯一候選聲明。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `eabc540d13fd32e5` | 2026-10-24 | partial | 選擇代數 𝒮 = (M, V, Λ, ΣA5, ρ) 由兩個質量無關生成元（反週期 G1 + A₅ 動差等向 G2） 唯一選出 9 個模式 {1,2,3,4,5,7,9,11,13} = 3 輕子 + 6 夸克；分配由冪律 ansatz … | open_problems_fresh/o209_selection_algebra/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -40,3 +40,11 @@ O83 (C_ℓ 母函) → O100 (逆投影 ℳ) → O133; O86 (Lagrangian) → O133 
 ## 時序
 
 T0 (08-29 建立) → T1 (09-02 v9.0 驗證) → T2 (遷移構建) → T3 (broadband 1) → T4 (O86 微擾) → T5 (三路徑綜合) → T6 (審計) → T7 (09-03 時序索引+本文件)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `b65cca36e7d0b049` | 2026-10-24 | closed | v9.0 P(k) = Σγn·G(k−kn) 喺 v10.0 非膨脹框架中失效 (2/9 PASS, r=−0.914, χ²/dof=1.4×10⁴)。正確構建 = O100 逆投影算符 ℳ: 線譜 km = ℓm/Rworld + … | open_problems_fresh/o133_pk_chain_spectrum/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -19,3 +19,11 @@
 
 ## 依賴
 O3 → O24 (同源姊妹: O23 已閉合)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `50b9fe0a0e4bb188` | 2026-10-24 | — | 冷端 8/10 vs 熱端 6/10 匹配率不對稱無統計意義 (Fisher p=0.17)。冷端 8/10 係冷斑 (節點 0) selection artifact — 剔除後 7/9 (p=0.09), mean\|T\| 67.5 v… | open_problems_fresh/o24_extreme_side_asym/final_result.md | — |
+<!-- conclusion-history:end -->

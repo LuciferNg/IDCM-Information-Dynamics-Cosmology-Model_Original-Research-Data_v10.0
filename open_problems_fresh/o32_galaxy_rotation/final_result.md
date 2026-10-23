@@ -32,3 +32,11 @@ O31 → O32 → O34
 - 49_independent_verify_v2.py: 34/34 PASS (2026-08-19, 第一原理重算)
 - 50/50 腳本重跑 PASS (2026-08-19, foreground /usr/bin/python3)
 - 🟡 未閉合: SHMR β 低質量端斜率 (需 Nfof≥3 純淨群樣本)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `32ec3ae21e87a330` | 2026-10-24 | — | 星系旋轉曲線唔需要暗物質 — 佢係 KChain 44-site 拓撲結構嘅幾何投影， a₀ = c²/(2πRH) 係零自由參數結構常數，七重閉合全部命中觀測。 | open_problems_fresh/o32_galaxy_rotation/final_result.md | — |
+<!-- conclusion-history:end -->

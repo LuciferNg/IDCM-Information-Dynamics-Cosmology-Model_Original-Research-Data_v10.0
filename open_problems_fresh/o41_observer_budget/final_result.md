@@ -15,3 +15,11 @@
 
 ## 依賴
 O34 → O39 → O41（→ O42 獨立量度）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `0c6cd173e9b346ab` | 2026-10-24 | — | 真空能 ⟨W⟩² = 61.5 係觀察者嘅營運預算：均勻分配到 44 模態，讀數時按頻率消耗，回流時 V''0 回復力保證無損耗永續循環（宇宙 = 自相干無損耗永久循環系統）。μK→能量換算閉合冷斑 A = 134.2 μK，有限尺寸修正… | open_problems_fresh/o41_observer_budget/final_result.md | — |
+<!-- conclusion-history:end -->

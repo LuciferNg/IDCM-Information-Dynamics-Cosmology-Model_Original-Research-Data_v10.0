@@ -18,3 +18,11 @@ O188 → O222 → O245（handoff 回 O188：身份已驗證；升格唔 claim）
 - N_mc = 不適用（冇分位數 claim；scripts/01 6/6 PASS，判準零放寬）
 
 > R1：scripts/01 = 6 PASS + 0 FAIL，EXIT=0（A1 unit quaternions / A2 q·conj(q)=1 / A3 乘法封閉 120×120 / A4 逆封閉 / A5 double-cover / A6 verdict）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `8bee545de897bc56` | 2026-10-24 | closed | 2I（binary icosahedral，O222 quaternion 代數嘅 120 elements）作為 SU(2) 嘅 finite subgroup 身份，由直接計算建立：全部 120 elements 係 unit qua… | open_problems_fresh/o245_2i_su_2_finite_subgroup_idcm_lqg/final_result.md | — |
+<!-- conclusion-history:end -->

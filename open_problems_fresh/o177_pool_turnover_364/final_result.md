@@ -49,3 +49,11 @@ scripts/01_verify_364.py (23 PASS), scripts/02_residual_attack.py (17 PASS),
 scripts/03_coincidence_vs_identity.py (14 PASS), scripts/04_doc_audit.py (60 PASS),
 docs/01_operator_identity_364.md, docs/02_residual_attack.md,
 docs/03_coincidence_vs_identity.md, 01_problem_record.md
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `3637194805b81c15` | 2026-10-24 | closed | 池/圈 = 364 = B·L₄·F₇ = B(F₁₁+μ²) = 8(Nd+1)+B — 家族四成員, 零新常數。 O175 🟡 候選 (觀測率衍生) 升級為結構身份: 池 = 準靜態庫存, 每 Tring 圈週轉 364 次。 巧合 … | open_problems_fresh/o177_pool_turnover_364/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -44,3 +44,11 @@ O222 → O231 → O189；τ = 1/ω_ring (O121)；譜 (O221)
 - **R-A 閉合（scripts/09, 10/10）**：O222 求值語義層計算類 = **限界版有限態機（唔係 TC）**——force 單值＋200 步上限＋memo≤3844＋有限 gen；基數論證（1.63e11 上限、實測 1）+ 全總終止（4000 orders）。**TC 需要 O222 冇寫嘅 D7 條款**（遞歸 thunk 圖）：加咗 = μ-遞歸 ⟹ TC（ack(3,3)=61 經 memoized thunk 引擎盲測）。**stated cap = TC-blocker**（countdown 1000→0：200 步禁、1000 步過；對接 O228）
 - **O189 所有歸屬殘餘（R-A/B/C/D + R2 殘餘①②）全答完**；O189 保持 partial（三層分離，唔宣稱「IDCM 世界 = 通用電腦」）
 - 累計 107 PASS（97+10）＋ 4 記錄 FAIL
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `fe958e7151999596` | 2026-10-24 | partial | IDCM 88-site 鏈同 CA 家族同格但不同 module：生成元係 radius-1 線性局部規則（CHL 類、平移等變、Fourier 可對角化），但任何單一 ECA 都複製唔到其軌跡（256 窮舉零命中）；88-ring 動… | open_problems_fresh/o189_cellular_automata_correspondence/final_result.md | — |
+<!-- conclusion-history:end -->

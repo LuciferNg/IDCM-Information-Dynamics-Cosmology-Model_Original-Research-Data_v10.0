@@ -25,3 +25,11 @@ O128 → O100（ℳ 線譜）→ O83/O9（ℓ_m + A_m）；O128 → O213 R4（A_
 - d_obs = 1.10546（所需 σ8² 缺口因子）
 - d_med = —（覆蓋率法）；**覆蓋率 = 94.2%** ⇒ q_obs ≈ 94% → 🔴（無判別力）
 - 可證偽預言：若 O100 #1 閉合出 σ8 < 0.77 ⇒ A_φφ FAIL > 2σ（O213 docs/05 §六 已註冊）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `793f329f36cb23af` | 2026-10-24 | closed | v9.0 sigma8norm 冇可遷移結構內容（σ8 = √Achain × 0.1，0.1 手調、PASS 準則 post-hoc）； v10.0 之 σ8 歸一化（O100 逆投影算符 ℳ，唯一錨 D₁ = 5750 μK²）係零參… | open_problems_fresh/o128_sigma8_normalization/final_result.md | — |
+<!-- conclusion-history:end -->

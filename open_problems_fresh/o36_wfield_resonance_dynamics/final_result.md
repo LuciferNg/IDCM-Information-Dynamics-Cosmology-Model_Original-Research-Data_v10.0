@@ -18,3 +18,11 @@
 
 ## 依賴
 O34（質量譜/觀察者/級聯）→ O35（拍頻 link-up/8/8 質量比）→ O36（W-field 動力學閉合）→ O37（Lagrangian, 🔴）→ O38（κ 預言, 🔴）→ O39（⟨W⟩ 凝聚, 🔴）
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `56ffb34230c88966` | 2026-10-24 | — | 質量 = W-field 對 KChain 模態嘅二階微擾自能 ∝ 模態頻率：mn ∝ ωn = 2sin(nπ/88)。「共振響應 ∝ 模態正弦」嘅動力學機制已閉合 — 質量生成係線性耦合諧振子嘅二階自能位移（ΔEn = −gn²/ωn… | open_problems_fresh/o36_wfield_resonance_dynamics/final_result.md | — |
+<!-- conclusion-history:end -->

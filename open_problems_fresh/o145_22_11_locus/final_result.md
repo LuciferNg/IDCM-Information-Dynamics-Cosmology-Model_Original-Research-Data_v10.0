@@ -26,3 +26,11 @@ scripts/01-06: 136/136 PASS (41+16+26+28+12+13); scripts/07 獨立審計: 78/78 
 
 ## 依賴
 O95 → O106 → O142 → O145 (O137, O100, O74/O101, O34 交叉)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `19c616a3bafe6dc6` | 2026-10-24 | closed | 22 同 11 係 L₅ 階梯 {11..88} = L₅×{1..8} 嘅第 1、2 級，有完整譜身份 (n=11, n=22 模式)、能量權重身份 (v₂ 分層 Σγ=22/11)、mod-4 閉式身份 (44±sec(π/88))。… | open_problems_fresh/o145_22_11_locus/final_result.md | — |
+<!-- conclusion-history:end -->

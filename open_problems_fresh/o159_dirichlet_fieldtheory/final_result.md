@@ -29,3 +29,11 @@ L + U(1) + Dirichlet/Neumann 全部由 176-Laplacian 邊界值問題推出（零
 ## 依賴
 O152 → O155 (T31-T32, T17-T18) → O157 (P2 拆出) → O159 → O161 (動態層延續)
 交接: O182 (裁決) → 本 O (原 O205 併入) → O143 (𝒫 重建); 旁證 O7 / O21
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `37e57b02d889ce97` | 2026-10-24 | closed | L + U(1) + Dirichlet/Neumann 全部由 176-Laplacian 邊界值問題推出（零貼上參數）; 176-Laplacian = 88-site half-site D-D 鏈 BVP 嚴格解; μ² = E−… | open_problems_fresh/o159_dirichlet_fieldtheory/final_result.md | — |
+<!-- conclusion-history:end -->

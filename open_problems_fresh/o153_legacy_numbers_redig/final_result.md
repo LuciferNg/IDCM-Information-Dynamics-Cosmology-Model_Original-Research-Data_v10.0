@@ -25,3 +25,11 @@ O95 → O148 → O140 → O151 → O152 → O153（→ O75 命名收尾、O152 �
 
 ## 驗證
 scripts 01–10 全部 PASS: 16/16 + 12/12 + 12/12 + 18/18 + scan + 18/18 + 15/15 + 18/18 + 30/30 + 76/76（文檔獨立核對）= **215 checks 0 FAIL**; 推導時序索引見 01_problem_record.md §7
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `a3d61c63c04a97db` | 2026-10-24 | partial | IDM v1.0–v4.0 嘅降級數字重新研究完成（scripts 01–10, 共 215 checks 全 PASS）: ε/α/44/42 四個有譜幾何/T̂ 結構身份（ε 唔係 CLT 而係投影比÷世代數, α 有 T̂ 形式, … | open_problems_fresh/o153_legacy_numbers_redig/final_result.md | — |
+<!-- conclusion-history:end -->

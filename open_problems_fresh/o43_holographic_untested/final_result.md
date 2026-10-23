@@ -18,3 +18,11 @@ O26 衍生嘅 6 個全息框架未測試項目全部執行完畢: M=33 相干截
 
 ## 依賴
 O26 → O43 (→ O9 高ℓ峰數據, O3 節點溫度, cmb_cold_spot 圖數據) → O43-E 修正 O26 非平面聲稱
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `e053211c4ea78922` | 2026-10-24 | closed | O26 衍生嘅 6 個全息框架未測試項目全部執行完畢: M=33 相干截斷被 Planck 數據否定 (平滑衰減, 冇 ℓ=1452 階梯); 同調群 ≠ Fibonacci (β₁=41), 但振幅級聯 Fibonacci 比獨立成立;… | open_problems_fresh/o43_holographic_untested/final_result.md | — |
+<!-- conclusion-history:end -->

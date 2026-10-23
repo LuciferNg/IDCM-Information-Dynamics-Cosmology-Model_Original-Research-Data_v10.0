@@ -20,3 +20,11 @@ O53 → O56 → O57 → **O61** → O62 / O64 / O65 / O67 / O69 / O70（O62 修�
 - q_obs = 🟢（結構代數恆等，無外部擬合參數）
 
 > ⚠️ O208 規則: 純代數恆等 + 唯一候選（N_search=1），跳過 MC 分位數。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `19113e37fdd29853` | 2026-10-24 | closed | Aij(z) = Yukawa 矩陣 Yij(t) = Σk κijk·tk（κ 內稟 3×12 block = sector-dependent 幾何嘅 CY₃ 實現）; moduli stabilization: kernel(A) … | open_problems_fresh/o61_aij_moduli/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -37,3 +37,11 @@ O41 → O42 → O45 (SMHW 獨立方法), 前置數據 O5/O7
 - scripts/13_sech2_closure.py: sech² 孤子證偽 (χ²=2505); top-hat 證偽 (χ²=304) (2026-09-12)
 - 推導時序索引: 01_problem_record.md §〇 (25 步, 2026-09-12 更新)
 - 🟡 待推導: 疇壁厚度 ← O7 阻挫邊/調律者耦合 (建議新 O-series: 相位滑移疇輪廓)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `dc14257a9de211c4` | 2026-10-24 | — | SMHW 小波獨立驗證冷斑係全天空最極端 wavelet 結構 (rank 1-2/60 @ R=3-5°), SMHW 譜峰值 R=4-5° 與內稟 FWHM=8.66° 一致。2026-09-12 攻堅閉合兩項: (1) 1.4× 偏… | open_problems_fresh/o45_smhw_verify/final_result.md | — |
+<!-- conclusion-history:end -->

@@ -18,3 +18,11 @@ O90 → O85 → O96 → O107 → O114 (O114-1 修正物理身份, O114-2~5 補�
 
 ## 驗證
 01: 16/16 · 02: 57/57 · 03: 18/18 · 04: 14/14 · 10: 26/26 · 99: 55/55 (推導時序索引 T1-T9, docs/01)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `42f606f14d3715af` | 2026-10-24 | closed | 6 extra U(1) = 6 個 Cartan 方向, 正交於 SU(4)×SU(3) tensor embedding — 純水平對稱性, 只區分 generation indices, 唔帶任何 SM 量子數 (O114-1 修正… | open_problems_fresh/o107_extra_u1_physical/final_result.md | — |
+<!-- conclusion-history:end -->

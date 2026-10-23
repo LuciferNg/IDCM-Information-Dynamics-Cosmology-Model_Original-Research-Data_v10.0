@@ -21,3 +21,11 @@ K_Chain 結構 (O95 44 唯一性) → O31 → O32 (星系旋轉, 已開)
 - P(k) Wiggle 獨立驗證: 9/9 理論零點匹配（平均偏差 1.74×10⁻³ h/Mpc），數據: BOSS DR12 82 點
 - 實證: BOSS DR12 P(k) 47 零點; eBOSS DR16 ξ(s) 支持性 🟡
 - 完整記錄: COMPLETE_RECORD.md；推導時序索引: 01_problem_record.md
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `c3e218ff272c0bab` | 2026-10-24 | closed | IDCM ξ(s) 零點精確位於半整數諧波干涉節點 sn = λsync/(n+0.5)，建立 88 不動點定理（44 nulls + 44 peaks）；宇宙中無限不存在，物理版黎曼猜想（有限譜）已閉合；真空能量密度由 KChain 零… | open_problems_fresh/o31_xi_zeros_fixedpoints/final_result.md | — |
+<!-- conclusion-history:end -->

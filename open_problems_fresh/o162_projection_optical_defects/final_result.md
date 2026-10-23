@@ -44,3 +44,11 @@
 O159 (BVP/扇區/μ²) → O162 ← O157 (γ₈₈ 定標) ← O149 (v_g 色散) ← O156 (尺度家/焦距)
 ← O161 (相位/移位) ← O140 (FSR 家族); 對接 O138 (觀測/投影結構) + O42 (冷斑) + O110
 (調律者/資訊出納)
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `8f0602af4d68e313` | 2026-10-24 | closed | 世界 (even, Σγ=90) → 觀察者 (odd, Σγ=88) 投影 = 成像系統; 九項光學缺陷 (重影/色差/失焦/銳化/移位/彗差/振鈴/畸變/暈影) 全部 trace 到譜量閉合, 光學詞只係翻譯層。R12 (12 節點嵌… | open_problems_fresh/o162_projection_optical_defects/final_result.md | — |
+<!-- conclusion-history:end -->

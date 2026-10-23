@@ -40,3 +40,11 @@ O4 (h0_tension TRGB/Miras/SH0ES κφ⁻¹ 家族) → O11 → (ngVLA 觀測 2028
 
 10 scripts (01–10) 全部 exit=0; 文檔 verifier 20/20; 公式級審計 37/37 (2026-09-11)。
 詳見 02_closure_record.md §9 + 01_problem_record.md 推導時序索引。
+
+<!-- conclusion-history:start -->
+## 迭代史（machine-generated from register.conclusion；append-only）
+
+| concl_hash | 日期 | verdict | 結論摘要 | 支撐 | 取代 |
+|---|---|---|---|---|---|
+| `cd6c451ecf083428` | 2026-10-24 | closed | 「Maser +1.80% 偏移」= 0.44σ 統計漲落 + peculiar velocity 模型依賴，唔係結構效應。 Maser (純幾何 angular diameter distance) 冇恆星投影層 → 偏移 = 0 → … | open_problems_fresh/o11_maser_h0/final_result.md | — |
+<!-- conclusion-history:end -->
