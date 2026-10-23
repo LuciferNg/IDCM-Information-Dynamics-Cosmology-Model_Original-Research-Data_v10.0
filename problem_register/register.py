@@ -546,6 +546,19 @@ def append_chained(rec):
             fh.write(json.dumps(rec, ensure_ascii=False, sort_keys=True) + "\n")
             fh.flush()
             os.fsync(fh.fileno())
+            # H (2026-10-24): 落盤自驗 —— 讀回尾行確認 hash 一致（防寫入後 mutate）
+            fh.seek(0)
+            last = None
+            for line in fh:
+                if line.strip():
+                    last = line.strip()
+            try:
+                disk = json.loads(last) if last else {}
+            except json.JSONDecodeError:
+                disk = {}
+            if disk.get("hash") != rec["hash"]:
+                raise SystemExit("[register gate] 落盤 hash 自驗失敗：disk=%r rec=%r"
+                                 % (disk.get("hash"), rec["hash"]))
         finally:
             fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
     return rec
@@ -710,7 +723,68 @@ def insert_event(con, r):
         {c: r.get(c) for c in EV_COLS})
 
 
+KIND_WHITELIST = {
+    "registered", "note", "progress", "closed", "reopened", "handed_off", "retracted",
+    "merged", "alias", "tombstone", "unreserve", "collision", "collision_resolved",
+    "posthoc", "assigned", "conclusion",
+}
+PID_RE = re.compile(r"^(O\d{1,3}|P\d{1,2}(?:/[\w.-]+)?|M\d+)(?:/[\w.-]+)?$")
+REF_BAD = re.compile(r"[+;|,\n]|\s")
+NOTE_WARN = 200
+NOTE_HARD = 2000
+
+# 2026-10-24 寫入 gate（用戶指示「1」）：A/B/C/D/F/H
+#  A kind 白名單  B pid 格式  C state 枚舉  D ref 單一路徑＋存在性
+#  F note 只警告唔靜默截斷  H 寫入後 hash 自驗
+# 逃生門：--allow-missing-ref（closeout 先寫 event 後建檔）或 REGISTER_ALLOW_MISSING_REF=1
+
+
+def ref_exists(ref):
+    """ref 存在性；外部/語義 ref（http/data:/scratch:/O…/P…/M…）不檢查。"""
+    if not ref:
+        return True
+    if ref.startswith(("http://", "https://", "data:", "scratch:")) or re.match(r"^(O\d+|P\d+|M\d+)\b", ref):
+        return True
+    return os.path.exists(os.path.join(REPO, ref))
+
+
+def validate_event(con, kind, pid=None, state=None, ref=None, target_pid=None,
+                   note=None, allow_missing_ref=False):
+    """回傳 (errs, warns)。errs 非空 ⟹ 拒絕寫入。"""
+    errs, warns = [], []
+    if kind not in KIND_WHITELIST:
+        errs.append("kind %r 不在白名單（%s）" % (kind, ", ".join(sorted(KIND_WHITELIST))))
+    if pid and not PID_RE.match(str(pid)):
+        spid = str(pid)
+        if re.match(r"^[opm]\d+(?:$|/)", spid):
+            errs.append("pid %r 主編號必須大寫（O/P/M，唔可以細寫）" % pid)
+        elif spid.split("/")[0] not in THEME_DIRS:
+            errs.append("pid %r 格式不合法（O123 / P3 / M2 / O123/sub；legacy theme pid 必須喺 THEME_DIRS）" % pid)
+    if state and state not in STATES:
+        errs.append("state %r 不合法（%s）" % (state, "|".join(STATES)))
+    if ref:
+        if REF_BAD.search(str(ref)):
+            errs.append("ref 必須單一路徑（禁 ' + ; | ,'、空格、換行）：%r" % str(ref)[:80])
+        elif not ref_exists(str(ref)) and not allow_missing_ref \
+                and not os.environ.get("REGISTER_ALLOW_MISSING_REF"):
+            errs.append("ref 不存在：%s（逃生：--allow-missing-ref 或 REGISTER_ALLOW_MISSING_REF=1）" % ref)
+    if target_pid and target_pid not in ("O0",):
+        row = con.execute("SELECT 1 FROM o_problem WHERE pid=?", (target_pid,)).fetchone()
+        if not row:
+            errs.append("target_pid %r 未註冊（先 register 再 handoff/merge）" % target_pid)
+    if note and len(str(note)) > NOTE_WARN:
+        warns.append("note %d 字 > %d（保留全文，上限 %d）" % (len(str(note)), NOTE_WARN, NOTE_HARD))
+    return errs, warns
+
+
 def record(con, kind, pid=None, **kw):
+    errs, warns = validate_event(con, kind, pid, kw.get("state"), kw.get("ref"),
+                                 kw.get("target_pid"), kw.get("note"),
+                                 allow_missing_ref=kw.get("allow_missing_ref", False))
+    if errs:
+        raise SystemExit("[register gate] 拒絕寫入:\n  - " + "\n  - ".join(errs))
+    for w in warns:
+        print("[register gate] WARN: " + w, file=sys.stderr)
     rec = {
         "ts": now_iso(), "pid": pid, "num": kw.get("num", num_of(pid)), "kind": kind,
         "verdict": kw.get("verdict"), "owner": kw.get("owner"),
@@ -718,7 +792,7 @@ def record(con, kind, pid=None, **kw):
         "slug": kw.get("slug"), "title": clip(kw.get("title"), 120),
         "keywords": clip(kw.get("keywords"), 200), "state": kw.get("state"),
         "state_source": kw.get("state_source"),
-        "note": clip(kw.get("note"), 200), "session": kw.get("session") or session_id(),
+        "note": clip(kw.get("note"), NOTE_HARD), "session": kw.get("session") or session_id(),
         "source": kw.get("source") or "cli",
     }
     # prev_hash/hash 由 append_chained() 喺 file lock 內按 JSONL 真源尾決定
@@ -1717,6 +1791,8 @@ def cmd_find(a):
 # ---------------------------------------------------------------- main
 def build_parser():
     p = argparse.ArgumentParser(description="IDCM open-problem lifecycle register")
+    p.add_argument("--allow-missing-ref", action="store_true",
+                   help="逃生門：容許寫入 ref 指向未存在檔（closeout 先寫 event 後建檔）")
     sub = p.add_subparsers(dest="cmd", required=True)
 
     def add(name, fn, **kw):
@@ -1824,4 +1900,6 @@ def build_parser():
 
 if __name__ == "__main__":
     args = build_parser().parse_args()
+    if getattr(args, "allow_missing_ref", False):
+        os.environ["REGISTER_ALLOW_MISSING_REF"] = "1"
     sys.exit(args.func(args) or 0)
