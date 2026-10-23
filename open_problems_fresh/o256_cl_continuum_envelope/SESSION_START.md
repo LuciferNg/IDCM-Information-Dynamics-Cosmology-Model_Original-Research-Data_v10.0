@@ -3,8 +3,8 @@
 <!-- registry
 pid:     O256
 title:   C_ℓ 連續譜包絡 (lensed Silk 複合形式) — 由 K_Chain/K_Tree 推出, 閉合 O202 R6
-state:   registered
-verdict: -
+state:   partial
+verdict: partial
 flags:   -
 owner:   O256
 created: 2026-10-21
@@ -12,6 +12,8 @@ updated: 2026-10-21
 prereq:  O202; O180; O48; O214
 source:  P3/high-l-tail-transfer 第二輪攻堅流向 + O202 R6 delivery C; 2026-10-21 開題只註冊禁推
 -->
+
+> ⚠️ **機器塊 live field (2026-10-23)**: registry block 已同步 register `state=partial, verdict=partial`（階段性 closeout 2026-10-21；本文 §〇 為開題快照，正文保留原文不改）。
 
 > **Session**: 2026-10-21（新建立）
 > **狀態**: 📄 **已註冊 — 未開始（只註冊，禁推）**
