@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O240
 title:   真空能閉合攻堅: V_Lambda 鏈審計 + 5 殘餘 (Delta/19/gamma-VEV/V_Lambda-SSB) + 標籤審計
-state:   registered
-verdict: -
+state:   closed
+verdict: closed
 flags:   -
 owner:   O240
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-08
 prereq:  O39, O41, O62, O84, O86, O148, O212
 source:  2026-10-07 調律者提問:「IDCM 是否足以解釋真空能」; 能力評估主線 O39/O41/O84/O86/O148
 -->
