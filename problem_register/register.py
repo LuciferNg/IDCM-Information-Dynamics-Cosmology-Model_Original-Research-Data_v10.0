@@ -259,6 +259,14 @@ O258_RETRACT_FIX = {
         os.path.join(MAIN, "p6_neutrino/docs/10_closeout_20261020.md"),
 }
 
+# 2026-10-19 O142 類⑦ (用戶指令「O38 內不寫檔」): 曾寫入 o38 docs/29 嘅更正表
+# 已撤回刪除, 內容遷至 O142 docs/37。歷史 handoff/note ref 仍指舊路徑 →
+# 翻譯層處理 (append-only: 唔改 JSONL 舊 event)。
+O142_MOVE_FIX = {
+    os.path.join(OPF, "o38_kappa_prediction/docs/29_lambda_scale_reconciliation.md"):
+        os.path.join(OPF, "o142_boson_mass_derivation/docs/37_lambda_scale_o38_reconciliation.md"),
+}
+
 
 # 2026-10-20 P6 結構重組 (root 建齊四檔, *.py→scripts/): registered 事件 ref 指
 # main_problems/p6_neutrino/neutrino_p6_derivation.py，該檔已移入 scripts/01_。
@@ -333,6 +341,10 @@ def resolve_ref(fp):
         return new
     # 2026-10-21 O258 開立後旋即撤回 (目錄已刪) 翻譯層
     new = O258_RETRACT_FIX.get(fp)
+    if new and os.path.exists(new):
+        return new
+    # 2026-10-19 O142 遷移 (O38 docs/29 撤回 → O142 docs/37) 翻譯層
+    new = O142_MOVE_FIX.get(fp)
     if new and os.path.exists(new):
         return new
     for src, dst in MOVED_SRC.items():
@@ -1164,11 +1176,17 @@ def cmd_check(a):
     rdm = readme_nums()
     problems = []
 
-    for n, v in {n: v for n, v in ddirs.items() if len(v) > 1}.items():
-        problems.append(("DUPLICATE-DIR", "O%d has %d directories: %s" % (n, len(v), v)))
-
     # registered collisions must still be real; a resolved one should be retired
     reg = {r["num"]: r for r in con.execute("SELECT * FROM collision")}
+    # 2026-10-24 修正: 已註冊 collision 豁免 DUPLICATE-DIR
+    #   原因: collision 表 = 顯式聲明白名單（`collision --scan/--add`）；
+    #   舊版無條件 append DUPLICATE-DIR，令下面 `known + still colliding = expected`
+    #   嘅設計意圖（原 pass 分支）失效，已聲明接受嘅重複目錄永遠報 HARD DRIFT。
+    #   豁免唔等於放寬: 重複消失時仍由 COLLISION-STALE 反向偵測（雙向覆蓋，冇盲點）。
+    dup = {n: v for n, v in ddirs.items() if len(v) > 1 and n not in reg}
+    for n, v in dup.items():
+        problems.append(("DUPLICATE-DIR", "O%d has %d directories: %s" % (n, len(v), v)))
+
     for n, r in sorted(reg.items()):
         if n not in ddirs or len(ddirs[n]) < 2:
             problems.append(("COLLISION-STALE", "O%d registered as collision but now has %d dir(s)"
@@ -1233,7 +1251,12 @@ def cmd_check(a):
             rf = re.split(r"\s*§\s*", rf)[0].strip()
             if not rf or rf.startswith(("http", "-")):
                 continue
-            segs = [s.strip() for s in re.split(r"\s*[+;]\s+", rf)]
+            # 2026-10-19 類⑥ 延伸 (O142 自引入): ref 用 ' ;; ' 分隔時，regex 喺第二個
+            # ';' 處分拆，首段遺留尾隨 ' ;'（'…docs/36_x.md ;; …docs/37_y.md'）。
+            # repo 檔名以 ';'/'+' 結尾不可能（docs/scripts/data 一級檔名全 ASCII，
+            # 無此類尾綴）⟹ 剝段尾分隔符屬格式正規化，唔係放寬 MISSING 判準
+            # （真缺檔仍報；負面控制 docs/99 照 MISSING）。
+            segs = [s.strip().strip(";+").strip() for s in re.split(r"\s*[+;]\s+", rf)]
             # 2026-10-09 類⑥ 延伸 (O148 自引入): 該 event 把備註文字混入 ref
             # （'o148/docs/12 + S11 反事實'——'+' 之後係註釋唔係路徑）。repo 檔名全
             # ASCII（docs/scripts/data 層一級檔名無中文），含 CJK 字元嘅段唔可能係
