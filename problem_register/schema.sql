@@ -55,7 +55,15 @@ CREATE TABLE IF NOT EXISTS event (
   session   TEXT,
   source    TEXT,                           -- cli | backfill:<path>
   prev_hash TEXT,                           -- tamper-evident chain
-  hash      TEXT
+  hash      TEXT,
+  -- 2026-10-24 結論迭代層（conclusion）
+  -- 一文件可含多結論；多文件可支撐一結論；腳本 A 可解決問題 B
+  pids      TEXT,                           -- JSON array: 結論歸屬問題（可多個）
+  refs      TEXT,                           -- JSON array: 支撐文件/腳本（可多個）
+  concl_hash TEXT,                          -- 結論 node id = sha256(claim)[:16]
+  supersedes TEXT,                          -- JSON array: 被本結論取代嘅 concl_hash（DAG 邊）
+  version   TEXT,                           -- 框架版本（v10.0 / v11.0）
+  origin    TEXT                           -- 產生來源（pid/script/doc；可跨問題）
 );
 
 CREATE INDEX IF NOT EXISTS idx_event_pid  ON event(pid, id);

@@ -496,6 +496,7 @@ def connect(create=True):
     if create:
         with open(SCHEMA, encoding="utf-8") as fh:
             con.executescript(fh.read())
+        migrate_columns(con)
     return con
 
 
@@ -713,7 +714,23 @@ def _pid(a):
 # ---------------------------------------------------------------- event write
 EV_COLS = ("ts", "pid", "num", "kind", "verdict", "owner", "slug", "title", "keywords",
            "state", "state_source", "target_pid", "ref", "note", "session", "source",
-           "prev_hash", "hash")
+           "prev_hash", "hash",
+           "pids", "refs", "concl_hash", "supersedes", "version", "origin")
+
+CONCL_COLS = ("pids", "refs", "concl_hash", "supersedes", "version", "origin")
+
+
+def migrate_columns(con):
+    """舊 DB 加結論層欄位（CREATE TABLE IF NOT EXISTS 唔會改舊表）。"""
+    have = {r[1] for r in con.execute("PRAGMA table_info(event)").fetchall()}
+    for c, typ in (("pids", "TEXT"), ("refs", "TEXT"), ("concl_hash", "TEXT"),
+                   ("supersedes", "TEXT"), ("version", "TEXT"), ("origin", "TEXT")):
+        if c not in have:
+            try:
+                con.execute("ALTER TABLE event ADD COLUMN %s %s" % (c, typ))
+            except sqlite3.OperationalError:
+                pass
+    con.commit()
 
 
 def insert_event(con, r):
@@ -794,6 +811,9 @@ def record(con, kind, pid=None, **kw):
         "state_source": kw.get("state_source"),
         "note": clip(kw.get("note"), NOTE_HARD), "session": kw.get("session") or session_id(),
         "source": kw.get("source") or "cli",
+        "pids": kw.get("pids"), "refs": kw.get("refs"), "concl_hash": kw.get("concl_hash"),
+        "supersedes": kw.get("supersedes"), "version": kw.get("version"),
+        "origin": kw.get("origin"),
     }
     # prev_hash/hash 由 append_chained() 喺 file lock 內按 JSONL 真源尾決定
     # （2026-10-16 修：唔再由 sqlite 投影取 prev，避免並行寫入鏈斷）
@@ -1756,6 +1776,111 @@ def cmd_audit_refs(a):
     return 0 if not stale and not fmt else 2
 
 
+# ---------------------------------------------------------------- conclusions (2026-10-24)
+def _norm_claim(s):
+    return " ".join((s or "").split())
+
+
+def concl_id(claim):
+    """結論 node id：sha256(正規化 claim)[:16]。文字不變 ⟹ id 不變（idempotent）。"""
+    return hashlib.sha256(_norm_claim(claim).encode("utf-8")).hexdigest()[:16]
+
+
+def cmd_conclusion(a):
+    """記錄一條結論（append-only）：可屬多個問題、多份文件支撐、跨問題來源。"""
+    con = connect()
+    pids = list(dict.fromkeys(a.pid or []))
+    refs = list(dict.fromkeys(a.ref or []))
+    claim = _norm_claim(a.claim)
+    if not pids:
+        sys.exit("--pid 至少一個")
+    if not claim:
+        sys.exit("--claim 不可以空")
+
+    errs = []
+    for p in pids:
+        e, _ = validate_event(con, "conclusion", p)
+        errs += e
+        if not con.execute("SELECT 1 FROM o_problem WHERE pid=?", (p,)).fetchone():
+            errs.append("pid %r 未註冊（先 register 再記結論）" % p)
+    for r in refs:
+        if REF_BAD.search(r):
+            errs.append("refs item 必須單一路徑：%r" % r[:80])
+        elif not ref_exists(r) and not os.environ.get("REGISTER_ALLOW_MISSING_REF"):
+            errs.append("refs item 不存在：%s（逃生：--allow-missing-ref）" % r)
+    if a.supersedes:
+        for h in a.supersedes:
+            if not con.execute("SELECT 1 FROM event WHERE kind='conclusion' AND concl_hash=?", (h,)).fetchone():
+                errs.append("supersedes %r 不是已知結論 concl_hash" % h)
+    if errs:
+        sys.exit("[register gate] 拒絕結論:\n  - " + "\n  - ".join(errs))
+
+    cid = concl_id(claim)
+    ex = con.execute("SELECT ts FROM event WHERE kind='conclusion' AND concl_hash=? ORDER BY id DESC LIMIT 1",
+                     (cid,)).fetchone()
+    if ex and not a.force:
+        print("SKIP: 同結論已存在 concl_hash=%s（ts=%s）；--force 可重複記錄" % (cid, ex["ts"]))
+        return 0
+
+    rec = record(con, "conclusion", pids[0], verdict=a.verdict, title=claim,
+                 pids=json.dumps(pids, ensure_ascii=False),
+                 refs=json.dumps(refs, ensure_ascii=False),
+                 concl_hash=cid,
+                 supersedes=json.dumps(a.supersedes or [], ensure_ascii=False),
+                 version=a.version, origin=a.origin, note=a.note)
+    print("conclusion %s  pids=%s  refs=%d  verdict=%s" % (cid, ",".join(pids), len(refs), a.verdict or "-"))
+    if a.supersedes:
+        print("  supersedes: %s" % ", ".join(a.supersedes))
+    print("  claim: %s" % claim[:140])
+    return 0
+
+
+def cmd_conclusions(a):
+    """列出結論（可按 pid / concl_hash / 顯示迭代鏈）。只讀。"""
+    con = connect()
+    rows = con.execute(
+        "SELECT ts, pid, verdict, concl_hash, supersedes, pids, refs, title, origin, version "
+        "FROM event WHERE kind='conclusion' ORDER BY id"
+    ).fetchall()
+    items = []
+    for r in rows:
+        pids = json.loads(r["pids"] or "[]") or ([r["pid"]] if r["pid"] else [])
+        refs = json.loads(r["refs"] or "[]")
+        sup = json.loads(r["supersedes"] or "[]")
+        if a.pid and a.pid not in pids:
+            continue
+        if a.hash and r["concl_hash"] != a.hash:
+            continue
+        items.append({"ts": r["ts"], "pid": r["pid"], "pids": pids, "verdict": r["verdict"],
+                      "concl_hash": r["concl_hash"], "supersedes": sup, "refs": refs,
+                      "claim": r["title"], "origin": r["origin"], "version": r["version"]})
+    if getattr(a, "json", False):
+        print(json.dumps(items, ensure_ascii=False, indent=2))
+        return 0
+    print("conclusions: %d" % len(items))
+    for it in items:
+        print("\n%s  %s  %s  pids=%s" % (it["concl_hash"], it["ts"][:10], it["verdict"] or "-", ",".join(it["pids"])))
+        print("  claim: %s" % (it["claim"] or "")[:150])
+        if it["origin"]:
+            print("  origin: %s" % it["origin"])
+        if it["refs"]:
+            print("  refs: %s" % ", ".join(it["refs"][:4]) + (" …" if len(it["refs"]) > 4 else ""))
+        if it["supersedes"]:
+            print("  supersedes: %s" % ", ".join(it["supersedes"]))
+    if getattr(a, "chain", False) and items:
+        print("\n=== 迭代鏈 ===")
+        # root = 冇 supersedes；leaf = 冇被其他人 supersede
+        roots = [it for it in items if not (it.get("supersedes") or [])]
+        def walk(it, depth=0):
+            print("  " * depth + "%s %s %s" % (it["concl_hash"], it["ts"][:10], (it["verdict"] or "-")))
+            for x in items:
+                if it["concl_hash"] in (x.get("supersedes") or []):
+                    walk(x, depth + 1)
+        for h in roots:
+            walk(h)
+    return 0
+
+
 # ---------------------------------------------------------------- clue index
 def cmd_clues(a):
     """Build the derived clue index: pid mentions + full-text, over the docs.
@@ -1974,6 +2099,21 @@ def build_parser():
     add("backfill", cmd_backfill)
     add("clues", cmd_clues)
     s = add("audit-refs", cmd_audit_refs)
+    s.add_argument("--json", action="store_true")
+    s = add("conclusion", cmd_conclusion)
+    s.add_argument("--pid", action="append", required=True, help="可多次：結論歸屬多個問題")
+    s.add_argument("--claim", required=True, help="結論正文（正規化後 hash 作 node id）")
+    s.add_argument("--ref", action="append", default=[], help="可多次：支撐文件/腳本")
+    s.add_argument("--verdict", choices=VERDICTS)
+    s.add_argument("--supersedes", action="append", default=[], help="可多次：被取代嘅 concl_hash")
+    s.add_argument("--version")
+    s.add_argument("--origin", help="產生來源（可跨問題，例如 O38/scripts/32）")
+    s.add_argument("--note")
+    s.add_argument("--force", action="store_true", help="同 claim 已存在時仍重複記錄")
+    s = add("conclusions", cmd_conclusions)
+    s.add_argument("--pid")
+    s.add_argument("--hash")
+    s.add_argument("--chain", action="store_true")
     s.add_argument("--json", action="store_true")
     s = add("find", cmd_find); keyargs(s)
     s.add_argument("--scope", help="resolve a stale label in this scope first")
