@@ -3,12 +3,12 @@
 <!-- registry
 pid:     O185
 title:   IDCM ↔ 弦論家族結構對應（全弦論/M理論/AdS-CFT）
-state:   open
-verdict: -
-flags:   -
+state:   closed
+verdict: closed
+flags:   S1-done S2-done S3-done IF2-done IF3-done IF4-done IF5-done IF6-done IF7-done
 owner:   O185
 created: 2026-10-04
-updated: 2026-10-04
+updated: 2026-10-10
 prereq:  O147, O151, O222, O121, O134, O137
 source:  調律者批准 O185 三軸方案（墓碑重用）
 -->
