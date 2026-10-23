@@ -239,6 +239,19 @@ python3 register.py find --term "13/15" --limit 5
   `PID-NO-FOLDER`/`PID-ORPHAN`/`REF-MISSING`(新增) 皆 0。備份：`~/.hermes/backups/problem_register__register.py.v22pre.*`。
 - **待定**：政策切換點；`register.jsonl` 是否 commit；4 個編號碰撞裁決（O1/O4/O17/O143）。
 
+- **P25（2026-10-16，ledger 鏈斷根因修復）**：`hash`/`prev_hash` 鏈斷——症狀 L2147（prev 指
+  不存在 hash `0a3ae40cfab2`）、L2412（無 hash 之外來行）、L2413（跳 L2412）、L2420（跳
+  L2416–L2419）。**根因兩處**：①`record()` 由 **sqlite 投影**取 prev（
+  `SELECT hash FROM event ORDER BY id DESC`），並行 session 之投影滯後 ⟹ prev 指住舊尾；
+  ②`append_jsonl()` 無 file lock ⟹ 兩流可同時寫分叉鏈。
+  **修法**：新 `append_chained(rec)`——`fcntl.flock` 臨界區內由 **JSONL 真源**讀尾、
+  計 `prev_hash`/`hash`、append、`fsync`；`record()` 改為只填欄位後交 `append_chained`
+  決定鏈接（唔再讀 sqlite）。
+  **驗證**：單寫入接尾（L2878 prev = L2877 hash）；並行雙流測試（L2879/L2880）零分叉、
+  鏈接正確；`rebuild` 2880/2880 一致。
+  **歷史斷點**：append-only 鐵律 ⟹ 不改舊行，只留診斷事件（L2878）。
+  備份：`~/.hermes/backups/problem_register__register.py.v24pre.20261023_205003`。
+
 ### 試點發現（bbn）
 
 `bbn/he3`（³He/H 結構預測）**三個來源互相矛盾**：

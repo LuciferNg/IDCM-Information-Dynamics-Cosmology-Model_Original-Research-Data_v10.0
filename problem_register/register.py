@@ -462,6 +462,41 @@ def append_jsonl(rec):
         fh.write(json.dumps(rec, ensure_ascii=False, sort_keys=True) + "\n")
 
 
+def append_chained(rec):
+    """原子 append：喺 file lock 內由 **JSONL 真源**讀尾 → 計 prev_hash/hash → 寫入。
+
+    根因修正（2026-10-16, ledger 鏈斷事件）：
+      舊版 record() 由 sqlite 投影取 prev（SELECT hash FROM event ORDER BY id DESC），
+      並行 session 寫入時投影滯後 ⟹ prev 指住舊尾，造成鏈斷（實例 L2147 指
+      不存在 hash、L2420 跳過 L2416-2419）。真源係 register.jsonl，所以鏈接
+      必須以 JSONL 為準；且「讀尾 + 計 hash + append」要在同一 fcntl.flock 臨界區，
+      否則兩條並行流仍會各讀同一個尾而寫出分叉鏈。
+    """
+    import fcntl
+    with open(JSONL, "a+", encoding="utf-8") as fh:
+        fcntl.flock(fh.fileno(), fcntl.LOCK_EX)
+        try:
+            fh.seek(0)
+            prev = None
+            for line in fh:
+                s = line.strip()
+                if not s:
+                    continue
+                try:
+                    prev = json.loads(s).get("hash")
+                except json.JSONDecodeError:
+                    continue
+            rec["prev_hash"] = prev
+            rec["hash"] = chain_hash(rec, prev)
+            fh.seek(0, 2)
+            fh.write(json.dumps(rec, ensure_ascii=False, sort_keys=True) + "\n")
+            fh.flush()
+            os.fsync(fh.fileno())
+        finally:
+            fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
+    return rec
+
+
 def chain_hash(rec, prev):
     blob = json.dumps({k: v for k, v in rec.items() if k != "hash"},
                       ensure_ascii=False, sort_keys=True) + "|" + (prev or "")
@@ -608,8 +643,6 @@ def insert_event(con, r):
 
 
 def record(con, kind, pid=None, **kw):
-    rows = con.execute("SELECT hash FROM event ORDER BY id DESC LIMIT 1").fetchone()
-    prev = rows["hash"] if rows else None
     rec = {
         "ts": now_iso(), "pid": pid, "num": kw.get("num", num_of(pid)), "kind": kind,
         "verdict": kw.get("verdict"), "owner": kw.get("owner"),
@@ -618,10 +651,11 @@ def record(con, kind, pid=None, **kw):
         "keywords": clip(kw.get("keywords"), 200), "state": kw.get("state"),
         "state_source": kw.get("state_source"),
         "note": clip(kw.get("note"), 200), "session": kw.get("session") or session_id(),
-        "source": kw.get("source") or "cli", "prev_hash": prev,
+        "source": kw.get("source") or "cli",
     }
-    rec["hash"] = chain_hash(rec, prev)
-    append_jsonl(rec)
+    # prev_hash/hash 由 append_chained() 喺 file lock 內按 JSONL 真源尾決定
+    # （2026-10-16 修：唔再由 sqlite 投影取 prev，避免並行寫入鏈斷）
+    append_chained(rec)
     insert_event(con, rec)
     con.commit()
     return rec
