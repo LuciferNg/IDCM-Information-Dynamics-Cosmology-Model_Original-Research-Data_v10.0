@@ -192,6 +192,11 @@ O237_SHORTHAND_RANGE = os.path.join(REPO, "o237/docs/02-04")
 # JSONL 歷史事件唔改（append-only），呢度提供舊 ref → 現存路徑翻譯層。
 # 逐條核對真實存在先加入；同 O85_RENAME/O206_TO_O233 先例一致。
 REF_PATH_FIX = {
+    # 2026-10-23 修 O124 自引入 REF-MISSING: 兩條 register 自身審計 note 嘅 ref 寫成
+    # "register.jsonl#L…"（相對 REPO 根唔存在；實檔喺 problem_register/）。JSONL 歷史
+    # 事件唔改（append-only），翻譯層指向真源（同 O85_RENAME 先例一致）。
+    os.path.join(REPO, "register.jsonl"):
+        JSONL,
     os.path.join(REPO, "o222_qm_evaluation_semantics/docs/40_r26_g1g8.md"):
         os.path.join(OPF, "o222_qm_evaluation_semantics/docs/40_r26_g1g8.md"),
     os.path.join(REPO, "o222_qm_evaluation_semantics/scripts/70_r27d_nogo.py"):
