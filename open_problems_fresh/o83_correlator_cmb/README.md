@@ -41,3 +41,7 @@ scripts/08_audit.py      審計腳本 (獨立重算 + AST 空洞掃描)
 ## 未閉合（跨 O 移交）
 🟡 母函數生成規則 → O9/O48　🟡 m=5 F₆/F₈ → O9　🟡 m=2 obs 527 vs 537 → O9　🟡 w_n 獨立生成 → 新問題
 📤 P3 標籤錯：`ℓ_sync = 2N_d`（N_d=44 ⟹ 2N_d=88）、`T_CMB (0.01%)`（實 0.104%）— register handoff 已立
+
+## 缺口清單
+**`docs/04_current_gaps.md`** — A 本 O 內 4（A1 `w_n` 無獨立生成★ / A2 密度基準未建 / A3 88-site 未接入 / A4 熱態未接振幅）／B 已發還 P3 ×2／C 跨 O 5（已 handoff O9 ×2）／D 非缺口 5。
+register: **state=partial, verdict=partial**（2026-10-23）。

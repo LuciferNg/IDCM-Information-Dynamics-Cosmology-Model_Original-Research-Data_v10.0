@@ -39,3 +39,21 @@ P3/O86 → λ_sync = L_ring/88 = πR_world/44 = 294.8770 Mpc
 🟡 m=2 obs 527 vs 537「重子負載」→ O9
 🟡 w_n 由 K_Tree 階梯獨立生成 → 新問題
 📤 P3 標籤錯 `ℓ_sync = 2N_d`（N_d=44 ⟹ 2N_d=88）、`T_CMB (0.01%)`（實 0.104%）→ register handoff 已立
+
+---
+
+## ★ 2026-10-23 缺口清單（append-only 補充）
+
+完整缺口清單 → **`docs/04_current_gaps.md`**（A 本 O 內 4 項 / B 已發還 2 / C 跨 O 5 / D 非缺口 5）。
+
+```
+A1 🔴 w_n 無獨立生成式 (★核心 — C_ℓ 譜形狀閉合卡喺此)
+A2 🔴 密度基準/MC null 未建立 (O208 ⟹ 未閉合)
+A3 🔴 88-site 雙鏈譜未接入 C_ℓ (178=2F₁₁ 只做恆等)
+A4 🔴 熱態未接振幅 (T_CMB 係外來後驗式, β 未由 Z_0 決定)
+B  ✅ 已 handoff → P3 ×2 (10-23 13:16, 13:19)
+C  📤 已 handoff → O9 ×2 (10-23 13:50, 14:13) — C1 母函數 / C2 A₅,A₇ / C3 F₆,F₈ / C4 m=2 obs
+C5 🟡 高 ℓ 尾傳輸函數 → P3/O48 (未發還, 屬 P3 final_result 自認缺口)
+```
+
+register: `state=partial, verdict=partial`（10-23 13:49 progress）。
