@@ -182,6 +182,8 @@ expected_scripts = [
     "08_audit.py",
     "09_w_n_structural.py",
     "10_thermal_amplitude.py",
+    "11_dual_chain_role.py",
+    "12_absolute_normalization.py",
 ]
 for s in expected_scripts:
     path = os.path.join(script_dir, s)

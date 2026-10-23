@@ -56,6 +56,8 @@ expected_scripts = [
     "08_audit.py",
     "09_w_n_structural.py",
     "10_thermal_amplitude.py",
+    "11_dual_chain_role.py",
+    "12_absolute_normalization.py",
 ]
 for s in expected_scripts:
     path = os.path.join(SCRIPTS, s)
@@ -257,7 +259,8 @@ for phrase, context in checks_doc3:
 # ──────────────────────────────────────────────
 print("\n─── [H] 腳本 exit code 驗證 ───")
 # 審計 2026-10-23: 08_audit 用 sympy 精確求和需 >30s ⟹ 個別 timeout (唔降級標準)
-TIMEOUTS = {"08_audit.py": 300, "09_w_n_structural.py": 300, "10_thermal_amplitude.py": 300}
+TIMEOUTS = {"08_audit.py": 300, "09_w_n_structural.py": 300, "10_thermal_amplitude.py": 300,
+            "11_dual_chain_role.py": 300, "12_absolute_normalization.py": 300}
 for s in expected_scripts:
     path = os.path.join(SCRIPTS, s)
     try:

@@ -55,3 +55,14 @@ A4 🔴→🟢  熱佔據 < 10^(−3.7×10⁹) ⟹ C_ℓ 振幅 ≡ 真空 propa
 A5 🔴新   w_n 絕對歸一化 ((δT/T)² 結構式) — φ-power 陷阱 ⟹ 只登記未掃
 ```
 `scripts/09_w_n_structural.py` 6/6 ／ `scripts/10_thermal_amplitude.py` 4/4 ／ `07_file_verifier` **83/83**
+
+## 第二輪攻堅（2026-10-23）
+**`docs/06_a3_a5_a6_attack.md`** — 真 Planck PR3 譜實讀，腳本 `11`(5/5) + `12`(6/6)
+```
+A3 🔴→🟢  λ_sync=L_ring/88 已接入定義層; W_A=W_B=22 恆1/2 (87/87) ⟹ 唔提供振幅自由度
+A6 🟡新    級聯吻合 D_ℓ binned 比 (1.85%), C_ℓ 比差 7.17× ⟹ A_m ≡ D_ℓ 比, 度量因子結構未推
+A5 🔴      ε⁵/8 需 14.57° 平滑 (非結構角); 7峰+γ49.5 方差不足 ⟹ 需全ℓ包絡
+A3′🟡新    44 奇模 (observer sector) 觀測通道
+🟢 定理    Niven ⟹ γ/ω/sin/cos 算子族永久排除; w_n² 只可由計數原子構成
+```
+`07_file_verifier` **87/87 PASS**（含 11/12）
