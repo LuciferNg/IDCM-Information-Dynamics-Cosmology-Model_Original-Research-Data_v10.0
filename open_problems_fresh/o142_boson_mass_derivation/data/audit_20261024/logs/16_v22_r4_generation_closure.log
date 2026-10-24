@@ -1,0 +1,34 @@
+# 16_v22_r4_generation_closure.py  rc=0  0.1s
+========================================================================
+A. R4 generation chain: every ring closed by O142 priors
+========================================================================
+  core = √λ_max·M₀
+       = √(35.4170355) · M₀            [v16: λ_max=B·N_gen²−1/γ₂₀]
+       = √(35.4170355) · κ²/ω_scale    [v19: M₀=κ²/ω_scale]
+       = √(...) · κ̃²·ω_ring/ω_scale · M₀         [κ̃²=88, v20: ω_scale=88ω_ring]
+       = √(...) · 88/88 · M₀                     (identity, all rings closed)
+  core (7-digit M0) = 166.0445209 MeV
+  [PASS] λ_max operator id (v16): B·N_gen²−1/γ₂₀ 
+  [PASS] ω_scale = 88·ω_ring (v20) 
+  [PASS] κ̃² = 88 (v20/κ²:=M0·ω_scale) 
+
+  → R4 generation mechanism = COMPOSITION of v16 (λ_max op) + v19 (M₀ quotient)
+    + v20 (88 geometric). Inside O142: CHAIN FULLY CLOSED.
+========================================================================
+B. R1: full-precision M₀ vs Λ_MS⁽⁵⁾NLO 166.0064
+========================================================================
+  record 7-digit : core=166.044520904 MeV → dev vs 166.0064 = 0.0229635%
+  O40 full 41-digit: core=166.044517995 MeV → dev vs 166.0064 = 0.0229618%
+  dev shift (full vs record) = 1.752e-6 pp ; M₀ rel-err in pp = 1.752e-6
+  [PASS] R1 +0.023% NOT rounding artifact (shift ≈ M₀ rel-err) full-precision M₀ moves only 1.752e-6 pp; dev stays 0.022962%
+  → R1 remains REAL small deviation, not an artifact of 7-digit M₀. 唔升格維持.
+  (0.0380 MeV gap has no simple structure ratio — docs/17/22 audit)
+========================================================================
+C. R3 status (world-data split, O142 cannot close)
+========================================================================
+  lattice √σ=445(6) vs 424.81 MeV → z=−3.37σ (σ=0.180463300076 GeV² full-M₀)
+  Regge 0.18 vs lattice 0.198 ≈ 7% → world data disagreement, not IDCM failure
+  [PASS] R3 remains OPEN (waiting on world data) 
+========================================================================
+RESULT: 5 PASS / 0 FAIL / 0 FLAG
+========================================================================

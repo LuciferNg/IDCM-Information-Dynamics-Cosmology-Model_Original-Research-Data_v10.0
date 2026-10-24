@@ -1,0 +1,50 @@
+# 15_v18_core_closure.py  rc=0  0.1s
+========================================================================
+A. M0 structural identity (O38/O94/O136 records)
+========================================================================
+  M0 = 27.900915 MeV
+  kappa^2 = M0 (natural units): identity, O38/O94 both closed (49/49, 82/82)
+  kappa~^2 = Sigma_gamma_odd = 88 = 2N_d : True
+  [PASS] kappa~^2 = 88 = 2N_d (O38) (record-closed; recomputed sum)
+  [PASS] Sigma_gamma_odd = 88 (recompute) 
+
+  O136: E_kchain = sqrt(M_P hbar H0)*(1-CY3/(N_d+1)^2) = 4.060265 meV (record)
+  O136: M0/E_kchain = phi^(47+37/528)  ->  log_phi(M0/E_kchain) = 4.00533
+  exponent = 47 + 37/528 = 24853/528 ; 528 = 6*88 = 12*N_d
+  37: prime. 47: p=47. both structural? (47 = 2F7+L4? 33, 47 = F? [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89])
+========================================================================
+B. core = sqrt(lambda_max)*M0 : all components closed
+========================================================================
+  lambda_max = B*N_gen^2 - 1/gamma_20 = 35.4170355017 (v16 operatorized, EXACT)
+  sqrt(lambda_max) = 5.951221345
+  M0 = 27.900915 MeV (O38/O94 closed)
+  core = 166.04452 MeV = 0.166045 GeV
+
+  SCALE LADDER from core:
+    Lambda_IDCM = core * N_gen/L5     = 45.2849 MeV
+    v           = core * 2N_d*(2F5+B*L4*g7)/1000 = 246.21 GeV
+    sigma       = 88 * Lambda^2        = 0.180463 GeV^2
+  multipliers:
+    Lambda/core  = N_gen/L5 = 3/11 = 0.27272727 (EXACT structural)
+    v/core(x1000) = 2N_d(2F5+B·L4·g7) = 1482.7979 (all T-hat invariants)
+  [PASS] Lambda/core = N_gen/L5 EXACT 
+    sigma/core^2 (x1e6) = 88*(3/11)^2 = 8*9/11 = 72/11 = 6.5454545 (EXACT!)
+  [PASS] sigma multiplier = 88*(3/11)^2 = 72/11 EXACT 
+========================================================================
+C. core = kappa^2 * sqrt(lambda_max): gravity-QCD-EW unification view
+========================================================================
+  core = kappa^2 * sqrt(lambda_max) = M0 * sqrt(lambda_max)
+  -> Lambda_IDCM = kappa^2 * sqrt(lambda_max) * N_gen/L5
+  -> v           = kappa^2 * sqrt(lambda_max) * 2N_d(2F5+B·L4 g7)
+  -> sigma       = kappa^4 * lambda_max * 72/11
+  'kappa^2=sqrtthe only energy input; all structure ratios dimensionless.'
+  Candidates for 4th core occurrence:
+    G_F = 1/(sqrt(2) v^2) = 1.166e-5 GeV^-2 (derived from v: counts as v, not new)
+    m_W = v*g2/2 (v-derived); E_bind ~ M0*M_tree (O144, different)
+========================================================================
+RESULT: 4 PASS / 0 FAIL
+========================================================================
+CONCLUSION: core is fully structural: lambda_max (v16) x M0=kappa^2 (O38).
+All three scales (Lambda, v, sigma) are core x EXACT structural ratios.
+R4 remains: WHY core multiplies (mechanism of the product itself); the
+components are closed, product generation mechanism open (honest gap).

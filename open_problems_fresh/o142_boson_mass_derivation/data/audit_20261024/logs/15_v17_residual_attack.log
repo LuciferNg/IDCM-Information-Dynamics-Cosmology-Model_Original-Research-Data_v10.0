@@ -1,0 +1,46 @@
+# 15_v17_residual_attack.py  rc=0  0.4s
+========================================================================
+R4. v / Lambda common-core analysis
+========================================================================
+  core = sqrt(lam_max)*M0 = 166.044520904 MeV = 0.1660445209 GeV
+  Lambda_IDCM = core*N_gen/L5 = 45.28486934 MeV
+  v = core*2N_d*(2F5+B*L4*gamma7)/1000 = 246.21047 GeV (dev vs PDG 246.2196: -0.0037067%)
+  v/Lambda ratio = 5436.9258
+    = (core*88*(10+28g7)/1000) / (core*3/11/1000) = 88*(10+28g7)*11/3
+    recompute: 5436.9258  match: True
+    factor: 88*(10+28g7) = 1482.7979
+    inner = 10+28*gamma7 = 16.849977 ; gamma7 = 0.2446420209
+    -> v/Lam = (2N_d * L5/N_gen) * (2F5 + B*L4*gamma7)
+            = (88 * 11/3) * (10 + 28*gamma7)
+NOTE: 88*11/3 = 322.6666666666667 = 2N_d*L5/N_gen (N_gen and L5 swapped vs Lambda!)
+     v uses *N_d*N_d-ish, Lambda uses /L5: v scales UP by sites, Lambda by ratio - check docs/11
+
+  inner = 2F5 + B*L4*gamma7 = 10 + 112*sin^2(7pi/88)).
+  (harmonic relation: gamma7 = mu-lepton mode, closed in v6 framework; inner is
+   composition of closed quantities -> NOT a new residual)
+========================================================================
+R2. rho*pi = 3pi/11 algebraic identity
+========================================================================
+  cos(3pi/11) = 0.654860733945285
+  gamma20 = 4cos^2(3pi/11) = 1.71537032345 = 1.71537032345 (match: True)
+  minimal polynomial of 2cos(3pi/11): x**5 - x**4 - 4*x**3 + 3*x**2 + 3*x - 1
+  degree: 5
+  factor over Q: x**5 - x**4 - 4*x**3 + 3*x**2 + 3*x - 1
+
+  structural probe: 3pi/11 vs golden angle?
+    2pi/11 = 0.57119866
+    3pi/11 = 0.856798
+    pi/2 - 3pi/11 = 0.71399833 = 5pi/22
+    3pi/11 + pi/2 = 2.4275943
+    N_gen*pi/L5: 3*pi/11 = 0.856798 (def)
+    B*N_gen*pi/N_d? 4*3*pi/44 = 0.856798 = 3pi/11 (EXACT: 12/44=3/11)
+  -> 3pi/11 = B*N_gen*pi/N_d : rho = B*N_gen/N_d = 12/44 = 3/11 (v13b identity, EXACT)
+========================================================================
+R1/R3 status (no new computation, restated)
+========================================================================
+  R1: Lambda_MS5 NLO 166.0064 vs core 166.0445: +0.023%, not exact -> NOT upgraded
+      (both closed qty; 0.023% = 0.0380 MeV; no simple ratio; docs/16 §6.1 note)
+  R3: sigma lattice tension: lattice sqrt(sigma)=445(6) vs 424.8 MeV (-3.0 sigma)
+      world self-discrepancy Regge 0.18 vs lattice 0.198 (~7%); kept open
+
+DONE

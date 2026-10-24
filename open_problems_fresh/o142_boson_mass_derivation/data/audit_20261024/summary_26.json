@@ -1,0 +1,408 @@
+{
+  "A": [
+    {
+      "script": "15_v17_residual_attack.py",
+      "doc": "22_v17_residual_attack.md",
+      "rc": 0,
+      "secs": 0.4,
+      "claimed": null,
+      "got": "—",
+      "claim_pass": null,
+      "got_pass": null,
+      "n_pass_markers": 0,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/15_v17_residual_attack.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "15_v18_core_closure.py",
+      "doc": "23_v18_core_closure.md",
+      "rc": 0,
+      "secs": 0.1,
+      "claimed": "4/4",
+      "got": "4/0FAIL",
+      "claim_pass": 4,
+      "got_pass": 4,
+      "n_pass_markers": 4,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/15_v18_core_closure.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "16_v22_r4_generation_closure.py",
+      "doc": "28_v22_r4_generation_closure.md",
+      "rc": 0,
+      "secs": 0.1,
+      "claimed": "5/5",
+      "got": "5/0FAIL",
+      "claim_pass": 5,
+      "got_pass": 5,
+      "n_pass_markers": 5,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/16_v22_r4_generation_closure.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "17_v23_90_47_samesource.py",
+      "doc": "29_v23_90_47_samesource.md",
+      "rc": 0,
+      "secs": 0.0,
+      "claimed": "7/7",
+      "got": "7/7",
+      "claim_pass": 7,
+      "got_pass": 7,
+      "n_pass_markers": 7,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/17_v23_90_47_samesource.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "18_v24_shadow_identity.py",
+      "doc": "30_v24_shadow_identity.md",
+      "rc": 0,
+      "secs": 0.1,
+      "claimed": "5/5",
+      "got": "5/0FAIL",
+      "claim_pass": 5,
+      "got_pass": 5,
+      "n_pass_markers": 5,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/18_v24_shadow_identity.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "19_v25_alpha_integer_necessity.py",
+      "doc": "31_v25_alpha_integer_necessity.md",
+      "rc": 0,
+      "secs": 0.1,
+      "claimed": "4/4",
+      "got": "4/0FAIL",
+      "claim_pass": 4,
+      "got_pass": 4,
+      "n_pass_markers": 4,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/19_v25_alpha_integer_necessity.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "20_v26_z_alpha_tautology.py",
+      "doc": "32_v26_z_alpha_tautology.md",
+      "rc": 0,
+      "secs": 0.1,
+      "claimed": "5/5",
+      "got": "5/0FAIL",
+      "claim_pass": 5,
+      "got_pass": 5,
+      "n_pass_markers": 5,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/20_v26_z_alpha_tautology.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "21_v27_residual_mechanism_test.py",
+      "doc": "33_v27_residual_mechanism_test.md",
+      "rc": 0,
+      "secs": 0.1,
+      "claimed": "4/4",
+      "got": "4/0FAIL",
+      "claim_pass": 4,
+      "got_pass": 4,
+      "n_pass_markers": 4,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/21_v27_residual_mechanism_test.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "22_v28_counting_fix.py",
+      "doc": "34_v28_counting_fix.md",
+      "rc": 0,
+      "secs": 0.0,
+      "claimed": "7/7",
+      "got": "7/0FAIL",
+      "claim_pass": 7,
+      "got_pass": 7,
+      "n_pass_markers": 7,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/22_v28_counting_fix.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "23_v29_floor_round_integration.py",
+      "doc": "35_v29_floor_round_integration.md",
+      "rc": 0,
+      "secs": 0.0,
+      "claimed": "9/9",
+      "got": "9/0FAIL",
+      "claim_pass": 9,
+      "got_pass": 9,
+      "n_pass_markers": 9,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/23_v29_floor_round_integration.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "24_lambda_scale_adjudication.py",
+      "doc": "36_lambda_scale_adjudication.md",
+      "rc": 0,
+      "secs": 0.1,
+      "claimed": "11/11",
+      "got": "11/0FAIL",
+      "claim_pass": 11,
+      "got_pass": 11,
+      "n_pass_markers": 11,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/24_lambda_scale_adjudication.log",
+      "verdict": "✅"
+    },
+    {
+      "script": "25_m4_a_identity.py",
+      "doc": "38_m4_a_spectral_identity.md",
+      "rc": 0,
+      "secs": 2.7,
+      "claimed": null,
+      "got": "—",
+      "claim_pass": null,
+      "got_pass": null,
+      "n_pass_markers": 0,
+      "n_fail_markers": 0,
+      "log": "data/audit_20261024/logs/25_m4_a_identity.log",
+      "verdict": "✅"
+    }
+  ],
+  "B": [
+    {
+      "name": "γ₁",
+      "computed": "0.0050957707794929",
+      "doc_claim": "0.0050957707794929",
+      "rel_dev": "3.390e-15",
+      "verdict": "✅"
+    },
+    {
+      "name": "γ₂₀=4cos²(ρπ)",
+      "computed": "1.7153703234534",
+      "doc_claim": "1.71537032345343",
+      "rel_dev": "1.637e-16",
+      "verdict": "✅"
+    },
+    {
+      "name": "λ_max=36−1/γ₂₀",
+      "computed": "35.417035501706",
+      "doc_claim": "35.4170355017063",
+      "rel_dev": "1.143e-15",
+      "verdict": "✅"
+    },
+    {
+      "name": "Λ_IDCM [MeV]",
+      "computed": "45.284869337354",
+      "doc_claim": "45.2848693374",
+      "rel_dev": "1.010e-12",
+      "verdict": "✅"
+    },
+    {
+      "name": "v [GeV] (v13 值)",
+      "computed": "246.21047344665",
+      "doc_claim": "246.2105",
+      "rel_dev": "1.078e-07",
+      "verdict": "✅"
+    },
+    {
+      "name": "Σγ (n=1..44)",
+      "computed": "90.0",
+      "doc_claim": "90",
+      "rel_dev": "1.106e-61",
+      "verdict": "✅"
+    },
+    {
+      "name": "σ_macro=88Λ² [GeV²]",
+      "computed": "0.18046330639931",
+      "doc_claim": "0.1804633",
+      "rel_dev": "3.546e-08",
+      "verdict": "✅"
+    },
+    {
+      "name": "σ_macro/σ_link=λ_max·72/11",
+      "computed": "231.82059601117",
+      "doc_claim": "231.8206",
+      "rel_dev": "1.721e-08",
+      "verdict": "✅"
+    }
+  ],
+  "C": [
+    {
+      "doc": "22",
+      "name": "mode 20 = N_d−2B·N_gen",
+      "computed": "20.0",
+      "claim": "20",
+      "rel_dev": "0.00e+00",
+      "verdict": "✅"
+    },
+    {
+      "doc": "22",
+      "name": "v/Λ",
+      "computed": "5436.92577785",
+      "claim": "5436.9258",
+      "rel_dev": "4.07e-09",
+      "verdict": "✅"
+    },
+    {
+      "doc": "22",
+      "name": "R1 dev vs 166.0064",
+      "computed": "0.0229635144382",
+      "claim": "0.0229635",
+      "rel_dev": "6.29e-07",
+      "verdict": "✅"
+    },
+    {
+      "doc": "23",
+      "name": "72/11 = 2N_d·N_gen²/L₅²",
+      "computed": "6.54545454545",
+      "claim": "6.54545454545454545454545454545454545454545454545454545454545",
+      "rel_dev": "7.61e-61",
+      "verdict": "✅"
+    },
+    {
+      "doc": "23",
+      "name": "σ = core²·72/11 [GeV²]",
+      "computed": "0.180463306399",
+      "claim": "0.18046330",
+      "rel_dev": "3.55e-08",
+      "verdict": "✅"
+    },
+    {
+      "doc": "28",
+      "name": "core full-M₀ [MeV]",
+      "computed": "166.044517995",
+      "claim": "166.044517995",
+      "rel_dev": "1.96e-12",
+      "verdict": "✅"
+    },
+    {
+      "doc": "28",
+      "name": "dev full-M₀ [%]",
+      "computed": "0.022961762122",
+      "claim": "0.0229618",
+      "rel_dev": "1.65e-06",
+      "verdict": "✅"
+    },
+    {
+      "doc": "29",
+      "name": "90 = 2N_d + B/2",
+      "computed": "90.0",
+      "claim": "90",
+      "rel_dev": "0.00e+00",
+      "verdict": "✅"
+    },
+    {
+      "doc": "29",
+      "name": "47 = L₄² − B/2",
+      "computed": "47.0",
+      "claim": "47",
+      "rel_dev": "0.00e+00",
+      "verdict": "✅"
+    },
+    {
+      "doc": "29",
+      "name": "53 = L₄² + B",
+      "computed": "53.0",
+      "claim": "53",
+      "rel_dev": "0.00e+00",
+      "verdict": "✅"
+    },
+    {
+      "doc": "29",
+      "name": "Σ4sin²(kπ/68), k=1..33",
+      "computed": "66.0",
+      "claim": "66",
+      "rel_dev": "0.00e+00",
+      "verdict": "✅"
+    },
+    {
+      "doc": "30",
+      "name": "E(136)/mc² (α=1/137 結構值)",
+      "computed": "0.120603734612",
+      "claim": "0.1206037",
+      "rel_dev": "2.87e-07",
+      "verdict": "✅"
+    },
+    {
+      "doc": "31",
+      "name": "1/(1/137.035999074) − 137",
+      "computed": "0.035999074",
+      "claim": "0.035999074",
+      "rel_dev": "2.08e-58",
+      "verdict": "✅"
+    },
+    {
+      "doc": "31",
+      "name": "dev [%]",
+      "computed": "0.0262766963504",
+      "claim": "0.0262774",
+      "rel_dev": "2.68e-05",
+      "verdict": "🔴"
+    },
+    {
+      "doc": "33",
+      "name": "(α/π)·137 (α=1/137)",
+      "computed": "0.318309886184",
+      "claim": "0.31833",
+      "rel_dev": "6.32e-05",
+      "verdict": "✅"
+    },
+    {
+      "doc": "33",
+      "name": "ratio (1/π) / δ",
+      "computed": "8.84216872311",
+      "claim": "8.8424",
+      "rel_dev": "2.62e-05",
+      "verdict": "✅"
+    },
+    {
+      "doc": "33",
+      "name": "Q* = exp(δ/(2/(3π)))",
+      "computed": "1.18488016113",
+      "claim": "1.18484",
+      "rel_dev": "3.39e-05",
+      "verdict": "✅"
+    },
+    {
+      "doc": "34",
+      "name": "137α",
+      "computed": "0.999737302065",
+      "claim": "0.999737",
+      "rel_dev": "3.02e-07",
+      "verdict": "✅"
+    },
+    {
+      "doc": "34",
+      "name": "138α",
+      "computed": "1.00703465463",
+      "claim": "1.007035",
+      "rel_dev": "3.43e-07",
+      "verdict": "✅"
+    },
+    {
+      "doc": "34",
+      "name": "E(137)/mc²",
+      "computed": "0.0229200100376",
+      "claim": "0.0229233",
+      "rel_dev": "1.44e-04",
+      "verdict": "🔴"
+    },
+    {
+      "doc": "35",
+      "name": "137.036−127.930",
+      "computed": "9.105999074",
+      "claim": "9.105999074",
+      "rel_dev": "2.73e-61",
+      "verdict": "✅"
+    },
+    {
+      "doc": "35",
+      "name": "(137.036−137)+(128−127.930)",
+      "computed": "0.105999074",
+      "claim": "0.106",
+      "rel_dev": "8.74e-06",
+      "verdict": "✅"
+    }
+  ]
+}
