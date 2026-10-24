@@ -39,7 +39,7 @@
 
   ✅ 色數 3 = B−1 = N_gen（O68 閉合）
   ✅ 4 = 3⊕1 分解結構（O88 閉合）
-  ✅ O88 = closed, O68 = closed（register 核實）  (O88 closed / O68 closed)
+  ✅ O88 = closed, O68 = closed（register 真查）  (replay register.jsonl)
   ⟹ 色荷**存在性與計數**（3 色）已由規範嵌入層導出 — 唔係外部標籤
   ⟹ 剩餘問題只有「Δn_color 繞數規則」— 屏障 A/B/C 已否證其鏈層結構
 

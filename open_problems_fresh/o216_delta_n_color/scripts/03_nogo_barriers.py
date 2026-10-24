@@ -14,9 +14,35 @@ SESSION_START 驗證標準: 「色荷規則：零參數閉式 + 盲測」或「�
 裁決（SESSION_START §五）: 色荷唔可以由鏈層導出（no-go），
 色數本身已由規範嵌入層導出（O68/O88 閉合, 引用）。
 """
-import random, math, sys
+import random, math, sys, os, json
 
 PASS, FAIL = [], []
+def _reg_closed(pids):
+    """真查 register.jsonl 追閉合狀態（replay: closed→True, reopen/open→False）。
+    路徑自動適配 register 搬遷（repo 內 / repo 上一層）。查唔到 → False（誠實 FAIL）。"""
+    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    for cand in (os.path.join(root, "problem_register", "register.jsonl"),
+                 os.path.join(os.path.dirname(root), "problem_register", "register.jsonl")):
+        if not os.path.exists(cand):
+            continue
+        st = {}
+        for ln in open(cand, encoding="utf-8"):
+            ln = ln.strip()
+            if not ln:
+                continue
+            try:
+                d = json.loads(ln)
+            except Exception:
+                continue
+            p = str(d.get("pid") or "").split("/")[0]
+            if p not in pids:
+                continue
+            if d.get("kind") == "closed" or d.get("verdict") == "closed":
+                st[p] = True
+            elif d.get("kind") == "reopen" or d.get("verdict") == "open":
+                st[p] = False
+        return all(st.get(p) is True for p in pids)
+    return False
 def ck(name, ok, detail=""):
     (PASS if ok else FAIL).append(name)
     print(f"  {'✅' if ok else '❌'} {name}" + (f"  ({detail})" if detail else ""))
@@ -102,7 +128,7 @@ print("""
 """)
 ck("色數 3 = B−1 = N_gen（O68 閉合）", B-1 == N_gen == 3)
 ck("4 = 3⊕1 分解結構（O88 閉合）", 4 == 3+1 and 1 == B-(B-1))
-ck("O88 = closed, O68 = closed（register 核實）", True, "O88 closed / O68 closed")
+ck("O88 = closed, O68 = closed（register 真查）", _reg_closed({"O88","O68"}), "replay register.jsonl")
 print("  ⟹ 色荷**存在性與計數**（3 色）已由規範嵌入層導出 — 唔係外部標籤")
 print("  ⟹ 剩餘問題只有「Δn_color 繞數規則」— 屏障 A/B/C 已否證其鏈層結構")
 

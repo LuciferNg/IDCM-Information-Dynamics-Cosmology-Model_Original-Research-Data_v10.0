@@ -4,6 +4,8 @@
 > **腳本**: `scripts/02_color_routes.py`（17/17）、`scripts/03_nogo_barriers.py`（11/11）
 > **前置**: 本 O docs/02 密度基準；O137 R19 §二；O209 docs/10；O88 docs/02；O68 docs/02；O210 docs/08
 > **狀態**: 🟡 **判定完成 — 色荷屬規範嵌入層（非鏈層譜量）；Δn_color 繞數規則不存在（no-go）**
+>
+> > 📌 **(2026-10-24 審計附註)** 本檔 🟡 = 「判定完成」語義，非「未閉合」。O 整體閉合狀態之權威 = `01_problem_record.md` / `final_result.md` / register（`v10.0/O216` = 🟢 closed）。見 `docs/05_audit_report.md` §三 F3。
 
 ---
 
