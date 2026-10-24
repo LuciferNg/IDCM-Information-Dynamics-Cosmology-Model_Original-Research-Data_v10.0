@@ -98,3 +98,12 @@ m₂ = (γ₄+Δ·cosπ/5)²·A = 0.022645 eV   (A₅ 五邊形角, cosπ/5 = φ
 ---
 
 *上述更正只加註，上面 §1-§6 原文保留（append-only）。*
+## 8. 🔴 M_comp「0.051% 閉合」降級（2026-10-21 O257 發還，append-only）
+
+> ref: `open_problems_fresh/o257_mcomp_log10_mechanism/docs/06_round6_gap_identity_final.md` §六
+
+- **§1 表格「M_comp 結構 vs 校準 −6.14% 缺口 ✅ 閉合（0.051%）」降級**：誠實狀態 = **量級閉合（~3%）**。
+- 理由：M_cal（3.6909e13）= P6 scripts/05 由 PDG Δm²₃₁ **反推**（後驗）；結構值 3.6890e13 對後驗目標嘅 0.051% = **三重 fit 全循環**，無預言力。
+- 保留：主項 **1/γ₆ det ratio**（量級 operator）；大數 **88³/2 = L₅·Πγ(176) EXACT**。
+- **#2「1/76 log10 修正機制」= falsified**（O257 R1-R6）：機制唔存在，唔再攻。
+- 連帶：A = v²/M_comp×1e9 嘅 M_comp 依賴 = 唯一殘留 🔴；m₃=γ₆²A 之 0.002% 係讀數比，不受影響。

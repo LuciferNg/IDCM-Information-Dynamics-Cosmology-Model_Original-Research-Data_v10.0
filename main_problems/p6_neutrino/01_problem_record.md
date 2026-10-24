@@ -123,6 +123,10 @@ M_comp(φ法) = 4.5965×10¹⁶ GeV → m_ν = **4.30×10⁻⁵** eV（唔係聲
 
 > 調律者裁決：**新 O 只含 #2；#3、#4 繼續留喺 P6**（唔開新 O）。
 
+- ✅ **#2 1/76 log10 修正機制** → 已開 **O257**（`open_problems_fresh/o257_mcomp_log10_mechanism`，state=registered 只開不推）。承接後 O257 嘅前置 = P6/O66/O212/O179；禁區（譜積路已否證、O49 docs/03 後驗凑合、Z₃=9/φ-power）已寫入其 problem record。
+- 🟡 **#3 m_ββ Majorana 相位** → **繼續留喺 P6**（曾開 O258 後根據「新O只含#2」即時撤回，2026-10-21 retracted；register 已加 O258_RETRACT_FIX 翻譯層，基線 REF-MISSING 5/HARD DRIFT 47 不變）。重點仍係 6.321 meV 候選無結構必要性、6.108 唔排除 CP。
+- 🟡 **#4 Σm vs DESI** → **繼續留喺 P6**（等 DESI LRG/ELG + KATRIN/LEGEND 數據，維持 partial 唔 close）。
+
 ## 11. v_SM 錨統一（2026-10-21，append-only）
 
 > 調律者裁定：**v_SM（246.2196 GeV）及 v（246.0 GeV）皆保留**——文檔兩版數字並存，原文唔刪。
@@ -133,6 +137,22 @@ M_comp(φ法) = 4.5965×10¹⁶ GeV → m_ν = **4.30×10⁻⁵** eV（唔係聲
 - 詳見 docs/11（審計報告）＋ docs/12（v_SM 基準附註＋呈報精度原則：m 6 位有效、dev 2 位）。
 - scripts/03/04/05/09 已改 v_SM 重跑；docs/02/05/07/10/README 已加更正段（原文保留）。
 
-- ✅ **#2 1/76 log10 修正機制** → 已開 **O257**（`open_problems_fresh/o257_mcomp_log10_mechanism`，state=registered 只開不推）。承接後 O257 嘅前置 = P6/O66/O212/O179；禁區（譜積路已否證、O49 docs/03 後驗凑合、Z₃=9/φ-power）已寫入其 problem record。
-- 🟡 **#3 m_ββ Majorana 相位** → **繼續留喺 P6**（曾開 O258 後根據「新O只含#2」即時撤回，2026-10-21 retracted；register 已加 O258_RETRACT_FIX 翻譯層，基線 REF-MISSING 5/HARD DRIFT 47 不變）。重點仍係 6.321 meV 候選無結構必要性、6.108 唔排除 CP。
-- 🟡 **#4 Σm vs DESI** → **繼續留喺 P6**（等 DESI LRG/ELG + KATRIN/LEGEND 數據，維持 partial 唔 close）。
+## 12. 收到 handoff 落地：O257（#2 判死）＋ M4（A 譜身份 negative）
+
+> register 檢查發現兩條 `handed_off` 發還 P6 而 P6 未落附註（2026-10-24 補）。原文一律不刪。
+
+### 12.1 O257 → P6（2026-10-21T19:27，ref O257 docs/06 §六）
+
+- 🔴 **#2「1/76 log10 修正機制」= falsified（機制唔存在）**——§10 嘅「已開 O257 承接」就此終結；O257 R1-R6 全 negative。
+- 🔴 **M_comp 0.051% 閉合聲稱降級** → 誠實狀態 = **量級閉合（~3%）**：M_cal（3.6909e13）本身係 05 由 PDG Δm²₃₁ 反推（後驗）⟹ 「結構 3.6890e13 vs 校準 0.051%」係**三重 fit 全循環**，冇精確閉合。docs/02 §1 表格、docs/07 §1、README、§8 嘅 0.051% 一律按此降級（原文保留）。
+- ✅ 保留：主項 **1/γ₆ det ratio（量級 operator）**；大數 **88³/2 = L₅·Πγ(176) EXACT**。
+- 影響：A = v²/M_comp×1e9 嘅 M_comp 依賴 = **唯一殘留 🔴**（唔再由 0.051% 支撐）；m₃=γ₆²A 嘅 0.002% 閉合係對 A 嘅讀數比，唔受降級影響。
+
+### 12.2 M4 → P6（2026-10-24T05:16，ref v11 m4 docs/12）
+
+- 🔴 **A 譜身份（A=1.64337 eV/γ², v_SM）攻堅 negative**：族 F = {8 anchor × γ₁^k(k∈[−45,45]) × 18 結構常數} = **13104 組合，dev<0.1% 命中 0**；族 density（隨機目標）= **5.21%**（thr 0.1%）⟹ 即使命中亦唔可辨識。
+- 🔴 **M_comp 反解 3.689e13 GeV 無結構身份**。
+- 結論：A 無法由現有譜常數族零參數表達；需 **σ 橋算子化（O142）** 或 **Λ_eff 通道（O86）** 才能推導。A 身份維持開放（🔴）。
+- 歸一化提醒：A 有兩版（v=246.0 → 1.64044；v_SM → 1.64337）；跨版本引用必先核。
+
+**P6 剩餘項現況（2026-10-24）**：#2 = 判死（O257 falsified）；#3 m_ββ 相位 🟡（留 P6）；#4 Σm vs DESI 🟡（等數據）；新增 **A 譜身份 🔴**（M4 發還，需 σ 橋/Λ_eff 通道）。
