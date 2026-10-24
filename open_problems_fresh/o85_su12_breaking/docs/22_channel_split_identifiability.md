@@ -101,3 +101,16 @@ SM 費米子 12 個（6 quark + 6 lepton）vs O85 模式 7 個（m ∈ {1,3,…,
 ## 八、驗證
 
 `scripts/24_channel_split_identifiability.py` **21/21 PASS**（A1–A6 Cartan 結構、B1–B4 rank 分析、C1–C2 最小二乘、D1–D4 自由度、E1–E3 譜權重、F1–F2 判定；rank/線代全 `Fraction` 精確、0 字面 True）。
+
+---
+
+## 九、交付記錄（2026-10-24，append-only 附註）
+
+§七 兩項剩餘已依 register 紀律**正式交付**（本 O 內禁推）：
+
+| 剩餘 | 交付目標 | register handoff |
+|:--|:--|:--|
+| 跨尺度投影算子（143 高能 → QCD 低能）| **O86** | 2026-10-24 |
+| flavour 自由度缺口 5（12 費米子 vs 7 模式）| **O86**（與 O140 no-go 同構）| 2026-10-24 |
+
+O85 側可辨識性判決（scripts/24 21/21）維持不變：Cartan 11 參數 > 8 數據 ⟹ 欠定、rank=2、R²=0.3100 ⟹ channel 分裂唔可純用 143 Cartan 泛函。

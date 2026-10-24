@@ -122,3 +122,16 @@ scripts/22_lambda_identity.py   ✅ 16/16 PASS
 data/22_lambda_identity.json    ✅
 docs/20_lambda_identity.md      ← 本檔
 ```
+
+
+---
+
+## 八、附註（2026-10-24，append-only）—— §六 剩餘項交付記錄
+
+| §六 剩餘 | 交付目標 | 理由 |
+|:--|:--|:--|
+| 1. 87 結構身份（三重候選不可分）| **O238/LO1** | 該項正等 freeze v2 新量度落地；freeze v2 獨立量度即可分辨 88−1 / 3×29 / 90−3 |
+| 2. Λ 量綱式精度（f_p/renorm）| **O124** | 有限譜離散 QCD 之 renormalization 框架屬該 O 範疇 |
+| 3. 夸克譜 → O120/O136 | （原有，O86/N4 已 handoff）| 不重複交付 |
+
+以上三項按 register `handoff --target-pid` 正式交付（2026-10-24）；本 O 內不再推。
