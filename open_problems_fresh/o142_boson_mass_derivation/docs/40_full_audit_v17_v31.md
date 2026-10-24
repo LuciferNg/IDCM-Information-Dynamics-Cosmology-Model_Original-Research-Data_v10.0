@@ -122,7 +122,7 @@ docs/34 bound/dive；docs/35 round artifact 分解）。**結果：20 ✅、2 FL
 
 ## §7 誠實標記（審計自身邊界）
 
-1. Phase C 只抽 **22 個代表數字**（headline claims），唔係逐個數字全掃——但 Phase A 已用「腳本重跑」覆蓋每版本嘅自檢集（合計 68 個 PASS 檢查）。
+1. Phase C 只抽 **22 個代表數字**（headline claims），唔係逐個數字全掃——但 Phase A 已用「腳本重跑」覆蓋每版本嘅自檢集（10 個有計數腳本合計 **61 個 PASS 檢查**，另 v17 inline、v31 表格）。
 2. `docs/36–39`（v30/v31）係本 session 自己產出，帶自審成分；Phase B 已獨立覆蓋其核心常量（Λ、σ、γ₂₀、v），Phase C 覆蓋 v/Λ 比值與 M4 交付數字。
 3. 審計引擎 `scripts/26` 本身**未被第三方審計**（自指問題，同 docs/12 對 scripts/05 嘅處理相同）。
 4. 本輪冇改任何歷史結論，只加附註與狀態行；更正全部 append-only（原文一字不動）。
