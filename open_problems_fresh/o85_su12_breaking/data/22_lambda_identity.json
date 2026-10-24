@@ -61,7 +61,7 @@
       "tag": "D2",
       "name": "★ 觀測輸入: τ_p 下限（Super-K）、m_p、ħ —— Λ 非純結構（半結構量）",
       "pass": true,
-      "detail": "τ_p > 2.4e34 yr = 觀測, 唔係 IDCM 結構輸出"
+      "detail": "τ_p=2.4e+34 yr, m_p=0.9382720813 GeV, ħ=6.58212e-25 — 三項皆 PDG/Super-K 觀測, 非 IDCM 結構輸出"
     },
     {
       "tag": "D3",
@@ -79,25 +79,25 @@
       "tag": "E1",
       "name": "⚠️ Λ 係量綱式下限（冇強子矩陣元 f_p、冇 renorm、冇 phase space）⟹ 數量級級",
       "pass": true,
-      "detail": "docs/06 §E 維持"
+      "detail": "源碼變數掃描: f_p 定義=False, renorm 定義=False ⟹ 計算式純量綱（真掃描）"
     },
     {
       "tag": "E2",
       "name": "⚠️ M_Pl/Λ = 86.800 ≠ 87（dev −0.23%）⟹「= M_Pl/87」唔可以升格為結構恆等",
       "pass": true,
-      "detail": "87 只係下界投影四捨五入；任何「87=結構數」推導必須解釋 0.23% 缺口"
+      "detail": "|86.800195 − 87| = 0.199805 ≫ 0 ⟹ 非恆等（87 屬下界投影四捨五入）"
     },
     {
       "tag": "E3",
       "name": "⚠️ 87 三重候選數值不可分 ⟹ 結構身份未決（需 freeze v2 / lattice 直量）",
       "pass": true,
-      "detail": "docs/20 記錄 🟡 維持, 唔 close"
+      "detail": "{'2N_d−1': 87, 'N_gen·L7': 87, 'Σγ−N_gen': 87} 三個表達式全等 ⟹ 純數值不可分"
     },
     {
       "tag": "E4",
       "name": "★★ 唯一可升格結論: Λ 解析式（g 抵消）＋ Λ ∝ 1/(λ₂(N_gen−λ₂)) 結構依賴",
       "pass": true,
-      "detail": "零新常數；VL 絕對質量仍依賴觀測 τ_p（半結構）"
+      "detail": "Λ(g₂)−Λ(g₃) rel = 0.000e+00 ⟹ g 完全抵消; xy = λ₂(N_gen−λ₂) = 0.060656936533（零新常數）"
     }
   ],
   "Lambda_GeV": 1.4065751749622846e+17,

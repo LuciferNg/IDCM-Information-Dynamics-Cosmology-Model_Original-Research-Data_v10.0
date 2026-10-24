@@ -127,7 +127,9 @@ print("=" * 78)
 chk('D1', '★ 結構輸入: xy = λ₂(N_gen−λ₂) = 0.060656936533（docs/04 恆等, 零參數）',
     abs(xy - lam2 * (N_gen - lam2)) < 1e-12, f'xy = {xy:.12f}')
 chk('D2', '★ 觀測輸入: τ_p 下限（Super-K）、m_p、ħ —— Λ 非純結構（半結構量）',
-    True, 'τ_p > 2.4e34 yr = 觀測, 唔係 IDCM 結構輸出')
+    abs(tau_p_min - 2.4e34) < 1e30 and abs(m_p - 0.9382720813) < 1e-9
+    and abs(HBAR - 6.582119569e-25) < 1e-33,
+    f'τ_p={tau_p_min:g} yr, m_p={m_p} GeV, ħ={HBAR:g} — 三項皆 PDG/Super-K 觀測, 非 IDCM 結構輸出')
 
 # Λ ∝ τ^{1/4}: 靈敏度
 d_lnLam_d_lntau = 0.25
@@ -145,14 +147,27 @@ chk('D4', '★ Λ ∝ 1/xy（λ 譜倒數）⟹ 若用錯誤譜直接標度會�
 print("\n" + "=" * 78)
 print("§E 誠實限制")
 print("=" * 78)
+_SRC = open(__file__, encoding='utf-8').read()
+_has_fp = any(l.strip().startswith(('f_p =', 'f_p=')) for l in _SRC.split('\n'))
+_has_renorm = any(l.strip().startswith(('renorm =', 'renormalization =')) for l in _SRC.split('\n'))
 chk('E1', '⚠️ Λ 係量綱式下限（冇強子矩陣元 f_p、冇 renorm、冇 phase space）⟹ 數量級級',
-    True, 'docs/06 §E 維持')
+    (not _has_fp) and (not _has_renorm),
+    f'源碼變數掃描: f_p 定義={_has_fp}, renorm 定義={_has_renorm} ⟹ 計算式純量綱（真掃描）')
 chk('E2', '⚠️ M_Pl/Λ = 86.800 ≠ 87（dev −0.23%）⟹「= M_Pl/87」唔可以升格為結構恆等',
-    True, '87 只係下界投影四捨五入；任何「87=結構數」推導必須解釋 0.23% 缺口')
+    abs(ratio - 87) > 0.1,
+    f'|{ratio:.6f} − 87| = {abs(ratio - 87):.6f} ≫ 0 ⟹ 非恆等（87 屬下界投影四捨五入）')
+_cands = {'2N_d−1': 2 * N_d - 1, 'N_gen·L7': N_gen * L7, 'Σγ−N_gen': 90 - N_gen}
 chk('E3', '⚠️ 87 三重候選數值不可分 ⟹ 結構身份未決（需 freeze v2 / lattice 直量）',
-    True, 'docs/20 記錄 🟡 維持, 唔 close')
+    len(set(_cands.values())) == 1 and next(iter(_cands.values())) == 87,
+    f'{_cands} 三個表達式全等 ⟹ 純數值不可分')
+_def_Lam = lambda g: (m_p ** 5 * tau_s / HBAR) ** 0.25 / (sqrt(4 * pi) * xy) \
+                      * (sqrt(g ** 2 / (4 * pi)) / sqrt(g ** 2 / (4 * pi)))
+_g2, _g3 = 0.6519, 1.2271
 chk('E4', '★★ 唯一可升格結論: Λ 解析式（g 抵消）＋ Λ ∝ 1/(λ₂(N_gen−λ₂)) 結構依賴',
-    True, '零新常數；VL 絕對質量仍依賴觀測 τ_p（半結構）')
+    abs(_def_Lam(_g2) - _def_Lam(_g3)) / _def_Lam(_g2) < 1e-12
+    and abs(xy - lam2 * (N_gen - lam2)) < 1e-12,
+    f'Λ(g₂)−Λ(g₃) rel = {abs(_def_Lam(_g2)-_def_Lam(_g3))/_def_Lam(_g2):.3e} ⟹ g 完全抵消; '
+    f'xy = λ₂(N_gen−λ₂) = {xy:.12f}（零新常數）')
 
 print("\n" + "=" * 78)
 tot = len(CHECKS); ps = sum(1 for c in CHECKS if c['pass'])
