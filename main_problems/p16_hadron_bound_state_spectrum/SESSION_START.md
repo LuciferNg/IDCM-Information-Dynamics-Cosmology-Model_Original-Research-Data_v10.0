@@ -6,3 +6,14 @@
 - 首批交付：`scripts/01`＋`data/run_01…log`＋`docs/01_chain_coulomb_kernel.md`
 - H1 已完成：C_N 環 Coulomb 核精確閉式；證 **K_chain 單獨無 1/r**（反屏蔽），主戰場移至 K_tree
 - 下一輪入口：H2（K_tree 徑向核 + tensor 結構）
+
+## 2026-10-24 進度（H2–H3b 完成）
+
+| 子問題 | 結果 | 檔 |
+|:--|:--|:--|
+| H2 | 🟢 α = ln b/ln w；1/r ⟺ w = b；IDCM 因果階梯 w_t = 4 = B ⟹ α = 1 EXACT（🟡 r = c·t）| `docs/02` |
+| H3a | 🔴 味層正核否證（n−p = −κ/3 ⟹ κ = 3.8001；K 通道符號矛盾 2.6407 MeV）| `docs/03` |
+| H3b | 🔴 含號（Z₂）核否證（0/314 432，最佳 17.87σ，null 0/200）| `docs/04` |
+| 下一步 | H4：束縛態波函數／重疊矩陣元（態而非味標籤）| — |
+
+4 支腳本重跑全部 byte-identical。
