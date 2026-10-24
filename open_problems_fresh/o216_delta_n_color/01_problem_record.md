@@ -104,6 +104,7 @@ O137 確立 9 模式集 `Sel = {1,2,3,4,5,7,9,11,13}`（3 帶電輕子 + 6 夸�
 | 10 | RESULT.md | 2026-10-08 | 2026-10-08 21:09 | 全文 | ✅ 已驗 |
 | 11 | final_result.md | 2026-10-08（T5） | — | — | ✅ 已驗 |
 | 12 | docs/01_problem_record.md | 2026-10-08（遷移路徑指標） | — | 只含指標 | ✅ 已驗 |
+| 13 | docs/04_handoff_response_spectator_label_operator.md | 2026-10-24（入站答覆） | — | 全文（新檔） | ✅ 已驗 |
 
 備註：`docs/01_problem_record.md` 已按慣例遷 root（§10-E.7），docs 舊路徑保留路徑指標，內容以 root 正本為準。
 
@@ -131,8 +132,9 @@ O137 確立 9 模式集 `Sel = {1,2,3,4,5,7,9,11,13}`（3 帶電輕子 + 6 夸�
 | 16 | 2026-10-08 | （closeout）register check 修正：O216 ref 雙路徑＋slug 前綴 → check_ref_path 延伸 | register.py ×3 處 | REF-MISSING 13→9（O216 兩條清零；HARD DRIFT 33→29）；其他 O 移交 |
 | 17 | 2026-10-08 | （closeout）T4 時序索引＋水位；§1 佈局：01_problem_record 遷 root | 01_problem_record.md（root） | 正本遷移，docs 留路徑指標 |
 | 18 | 2026-10-08 | （closeout）T5 final_result.md | final_result.md | template 格式 |
+| 19 | 2026-10-24 | 入站 handoff 接收（M4 v11.0 docs/20 §六，2026-10-24T13:50:13）：三條列舉 → 讀來源 → 8 通道 Fraction 重算 8/8 PASS → 判定 → docs/04 → register note 落 M4＋本 O | docs/04_handoff_response_spectator_label_operator.md；register note×2 | 🔴 標籤層冇 spectator 依賴算子（範疇性）；O216 保持 closed，M4 目錄零寫入 |
 
-時序完整性確認：scripts（01–04）全部寫於 docs（02–03）之前；audit（04）寫於全部 docs 之後；closeout 各步 append 記實（無回溯改動舊 doc）；SESSION_START.md 未改（快照）。
+時序完整性確認：scripts（01–04）全部寫於 docs（02–03）之前；audit（04）寫於全部 docs 之後；closeout 各步 append 記實（無回溯改動舊 doc）；SESSION_START.md 未改（快照）；docs/04（2026-10-24 入站答覆）為閉合後 append，唔改舊結論。
 
 ### 時序完整性規則（令後人無法重排歷史）
 1. 新推導只可開新 docs／新 section，唔准 back-edit 舊 doc 正文。
