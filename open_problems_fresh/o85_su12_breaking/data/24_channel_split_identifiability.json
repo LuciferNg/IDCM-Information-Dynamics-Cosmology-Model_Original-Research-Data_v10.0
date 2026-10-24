@@ -1,0 +1,265 @@
+{
+  "total": 21,
+  "passed": 21,
+  "failed": 0,
+  "checks": [
+    {
+      "tag": "A1",
+      "name": "rank su(12) = 11",
+      "pass": true,
+      "detail": "11"
+    },
+    {
+      "tag": "A2",
+      "name": "Cartan 拆分 3(色)+2(弱)+7(單態) − 1(U(1) 重複) = 11",
+      "pass": true,
+      "detail": "3+2+7−1 = 11"
+    },
+    {
+      "tag": "A3",
+      "name": "7 = L₄ = 2B−1 單態 Cartan 方向數",
+      "pass": true,
+      "detail": "7"
+    },
+    {
+      "tag": "A4",
+      "name": "dim S(U(3)×U(2)×U(1)⁷) = 8 + 3 + 7 = 18（帶 Levi 因子）",
+      "pass": true,
+      "detail": "adjoint 143 = 18(Levi) + 124(破缺) + 1(迹)"
+    },
+    {
+      "tag": "A5",
+      "name": "143 = 18 + 124 + 1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "A6",
+      "name": "G6: λ₄ = 4λ₂ − λ₂²（θ=2π/88 三角恆等）",
+      "pass": true,
+      "detail": "4λ₂−λ₂² = 0.081014052771005 vs λ₄ = 0.081014052771005"
+    },
+    {
+      "tag": "B1",
+      "name": "8 通道硬約束齊",
+      "pass": true,
+      "detail": "8"
+    },
+    {
+      "tag": "B2",
+      "name": "★ 8 通道量子數差矩陣 rank = 2（≠ 8 ⟹ Cartan 線性泛函維度不足）",
+      "pass": true,
+      "detail": "rank=2 vs 數據點 8"
+    },
+    {
+      "tag": "B3",
+      "name": "rank = 2（獨立方向僅 ΔQ 與 ΔI₃）",
+      "pass": true,
+      "detail": "2"
+    },
+    {
+      "tag": "B4",
+      "name": "活躍量子數方向 = {ΔQ, ΔI₃}（ΔS/ΔC/ΔB/ΔL 全通道恆 0）",
+      "pass": true,
+      "detail": "active cols = [0, 1]"
+    },
+    {
+      "tag": "C1",
+      "name": "★ Cartan 線性泛函 (ΔQ, ΔI₃) 之 R² < 0.5 ⟹ 解釋力不足",
+      "pass": true,
+      "detail": "R² = 0.3100"
+    },
+    {
+      "tag": "C2",
+      "name": "R² 值（記錄，對照 M4 已排除之電荷加性 R²=0.0026）",
+      "pass": true,
+      "detail": "加入 ΔI₃ 後 R² = 0.3100 vs 純電荷 0.0026"
+    },
+    {
+      "tag": "D1",
+      "name": "★ 完整 Cartan 參數 11 > 數據點 8 ⟹ 欠定（零預言力）",
+      "pass": true,
+      "detail": "11 > 8"
+    },
+    {
+      "tag": "D2",
+      "name": "SM 有身份方向數 = 5（Q, Y, B, L, B−L）< Cartan 11",
+      "pass": true,
+      "detail": "5 vs 11"
+    },
+    {
+      "tag": "D3",
+      "name": "8 通道實際活躍方向 = 2 ⟹ 即使全用仍 R² 低（見 C1）",
+      "pass": true,
+      "detail": "2 vs 8"
+    },
+    {
+      "tag": "D4",
+      "name": "自由度成本: 每 Cartan 參數承載數據點 = 8/11 < 1 ⟹ 不可辨識",
+      "pass": true,
+      "detail": "8/11 = 0.7273"
+    },
+    {
+      "tag": "E1",
+      "name": "SM 費米子 12 個 vs 模式 7 個 ⟹ 一對一指派覆蓋唔完（與 O140 no-go 同構）",
+      "pass": true,
+      "detail": "12 > 7, 覆蓋率 7/12 = 0.583"
+    },
+    {
+      "tag": "E2",
+      "name": "O85 譜 λ_m = 4sin²(πm/88) 存在（7 模式，全在 (0,4)）",
+      "pass": true,
+      "detail": "[0.0051, 0.04571, 0.1261, 0.24464, 0.39892, 0.58579, 0.80144]"
+    },
+    {
+      "tag": "E3",
+      "name": "⟹ 12 通道需譜權重但只有 7 個模式 ⟹ ≥5 通道無獨立權重來源（上游缺 flavour 指派）",
+      "pass": true,
+      "detail": "缺口 5"
+    },
+    {
+      "tag": "F1",
+      "name": "★ 判決: channel 分裂『形式上』可寫成 143 Cartan 泛函，但『讀數層』不可辨識 ⟹ 唔升格為算子",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "tag": "F2",
+      "name": "5 類路線全屬「線性/單標度」家族 ⟹ 同族判死",
+      "pass": true,
+      "detail": "5 類"
+    }
+  ],
+  "cartan": {
+    "rank_su12": 11,
+    "color": 3,
+    "weak": 2,
+    "singlet": 7,
+    "levi": 18
+  },
+  "channels": [
+    {
+      "name": "E(n−p)",
+      "dM_MeV": -1.2667,
+      "err": 0.094,
+      "qnum": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "E(K)",
+      "dM_MeV": -1.374,
+      "err": 0.0963,
+      "qnum": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "E(π)",
+      "dM_MeV": 2.0336,
+      "err": 0.094,
+      "qnum": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Σ−−Σ0",
+      "dM_MeV": 2.247,
+      "err": 0.094,
+      "qnum": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Σ0−Σ+",
+      "dM_MeV": 0.712,
+      "err": 0.094,
+      "qnum": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Σ−−Σ+",
+      "dM_MeV": 2.959,
+      "err": 0.094,
+      "qnum": [
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Ξ−−Ξ0",
+      "dM_MeV": 4.29,
+      "err": 0.094,
+      "qnum": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "D+−D0",
+      "dM_MeV": 2.26,
+      "err": 0.094,
+      "qnum": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "qnum_rank": 2,
+  "least_squares": {
+    "beta_dQ_MeV": 0.00027037037037037036,
+    "beta_dI3_MeV": 3.142225925925926,
+    "beta0_MeV": 1.8755259259259258,
+    "R2": 0.31000109635769396
+  },
+  "identifiability": {
+    "n_data": 8,
+    "n_cartan": 11,
+    "n_sm_identity": 5,
+    "n_active": 2
+  },
+  "verdict": {
+    "形式層": "✓ 可以 — 143 Cartan 權重差 (11 維) 形式上可定義為泛函",
+    "可辨識層": "✗ 唔可以 — 11 參數 > 8 數據 ⟹ 欠定；實際活躍方向僅 2 (ΔQ, ΔI₃) 且 R² 低",
+    "譜權重層": "✗ 唔可以 — O140 flavour→mode no-go ⟹ 無 λ_m 權重可掛",
+    "物理層": "⚠️ 8 通道 MeV 級係低能 QCD 強子分裂，143 adjoint 係高能通道；跨尺度投影未建立"
+  }
+}

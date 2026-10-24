@@ -1,7 +1,7 @@
 # O85 — SESSION START（由零重建）
 
 > **Session**: 2026-10-05（由零重新推導；舊 O85 全刪——污染另見 01_problem_record）
-> **狀態**: 🟢 已閉合（2026-10-05 closeout ＋ 2026-10-10 攻関輪 S(m) ＋ 2026-10-15 攻関輪 Λ）—— scripts 01–22 = 344/344 PASS（含 Layer-2 38/38 + Layer-3 8/8）；docs/01–20；final_result.md
+> **狀態**: 🟢 已閉合（2026-10-05 closeout ＋ 攻関輪 ×3 ＋ 2026-10-24 handoff 處理輪）—— scripts 01–24 = 396/396 PASS（含 Layer-2 38/38 + Layer-3 8/8）；docs/01–22；final_result.md
 > **依賴檢查 (2026-10-05)**: O59 只有 scripts 路徑 note（未動結構）；O124「Δα⁻¹=9」已被排除（13.2σ）—— 唔作證據；其他依賴無框架更新
 > **備份**: `~/.hermes/backups/o85_su12_breaking_ARCHIVE_20261005.tar.gz`
 

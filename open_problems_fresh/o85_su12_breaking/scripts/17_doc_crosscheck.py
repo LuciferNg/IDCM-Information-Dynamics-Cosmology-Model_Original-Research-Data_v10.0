@@ -43,7 +43,7 @@ for df in data_files:
     all_ok &= ok
 chk('D1', f'★ 01-20 共 {len(data_files)-1} 個 data JSON: total==passed==checks 數',
     all_ok, f'每檔 {[os.path.basename(f) for f in data_files if os.path.basename(f) != "17_doc_crosscheck.json"]}')
-chk('D2', '★ data 檔數 = 21（01-20 + 22 攻関 Λ；scripts/21 無 data 輸出）', len(data_files) == 21)
+chk('D2', '★ data 檔數 = 23（01-20 + 22 Λ + 23 X/Y B−L + 24 channel 可辨識性；scripts/21 無 data 輸出）', len(data_files) == 23)
 
 # =====================================================================
 # ② docs 關鍵數字抽樣
@@ -77,6 +77,8 @@ pairs = [
     ('docs/18_vl_yukawa_o86.md', ['√2·M₀', 'O86', '35.41']),
     ('docs/19_sm_geometric_overlap.md', ['S_f', 'C1', '15/15']),
     ('docs/20_lambda_identity.md', ['Λ', '86.800', '16/16']),
+    ('docs/21_xy_bl_judgement.md', ['B−L', '4/3', '31/31']),
+    ('docs/22_channel_split_identifiability.md', ['Cartan', 'rank = 2', '21/21']),
 ]
 ok_docs = True
 for fname, needles in pairs:
@@ -96,9 +98,9 @@ print("③ 檔案集對稱")
 print("=" * 78)
 
 scripts = sorted(glob.glob('scripts/*.py'))
-chk('D4', f'★ scripts 數 = 22（01-20 + 21 攻関 S(m) + 22 攻関 Λ）', len(scripts) == 22,
+chk('D4', f'★ scripts 數 = 24（01-20 + 21 S(m) + 22 Λ + 23 X/Y B−L + 24 channel 可辨識性）', len(scripts) == 24,
     f'實際 {[os.path.basename(s) for s in scripts]}')
-chk('D5', '★ docs 數 = 20（01-20）', len(glob.glob('docs/*.md')) == 20)
+chk('D5', '★ docs 數 = 22（01-22）', len(glob.glob('docs/*.md')) == 22)
 # logs 正典
 logs = sorted(glob.glob('logs/*.out'))
 chk('D6', '★ logs/ 有正典 log（每 script 一支 .out）', len(logs) >= len(scripts),
